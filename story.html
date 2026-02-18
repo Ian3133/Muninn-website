@@ -11,15 +11,28 @@
 				max-width: 900px;
 				margin: 0 auto;
 			}
+			.story-title {
+				width: 100%;
+				margin-bottom: 1.5em;
+			}
 			.story-container h1 {
 				font-size: 1.8em;
+				margin: 0;
+			}
+			.story-content-wrapper {
+				display: flex;
+				gap: 2em;
+				margin-bottom: 3em;
+			}
+			.story-header-text {
+				flex: 1;
 			}
 			.story-image {
-				width: 100%;
-				max-height: 500px;
+				width: 300px;
+				height: 250px;
 				object-fit: cover;
 				border-radius: 8px;
-				margin-bottom: 2em;
+				flex-shrink: 0;
 			}
 			.story-summary {
 				font-size: 1.1em;
@@ -195,8 +208,47 @@
 						return;
 					}
 
+					// Helper function to get canonical logo name for major publishers
+					function getCanonicalLogoName(sourceName) {
+						var lowerSource = sourceName.toLowerCase();
+
+						// Map major publishers to canonical logo names
+						var publisherMap = {
+							'fox': 'fox-news',
+							'new york times': 'new-york-times',
+							'cnn': 'cnn',
+							'bbc': 'bbc',
+							'reuters': 'reuters',
+							'associated press': 'associated-press',
+							'ap news': 'associated-press',
+							'the guardian': 'the-guardian',
+							'washington post': 'washington-post',
+							'wall street journal': 'wall-street-journal',
+							'bloomberg': 'bloomberg',
+							'nbc': 'nbc',
+							'abc': 'abc',
+							'cbs': 'cbs'
+						};
+
+						// Check if source matches any major publisher
+						for (var publisher in publisherMap) {
+							if (lowerSource.indexOf(publisher) !== -1) {
+								return publisherMap[publisher];
+							}
+						}
+
+						return null;
+					}
+
 					// Helper function to extract domain from source name
 					function getSourceDomain(sourceName) {
+						// First check if it's a major publisher
+						var canonical = getCanonicalLogoName(sourceName);
+						if (canonical) {
+							return canonical;
+						}
+
+						// Otherwise, extract domain from source name
 						var domain = sourceName.toLowerCase()
 							.replace(/\s*\(google news\)\s*/gi, '')
 							.replace(/\s*google news\s*-\s*/gi, '')
@@ -220,16 +272,21 @@
 						// Back button
 						content += '<a href="index.html" class="back-button">\u2190 Back to Home</a>';
 
-						// Story title
-						content += '<header class="major"><h1>' + story.title + '</h1></header>';
+						// Story title (full width)
+						content += '<div class="story-title"><h1>' + story.title + '</h1></div>';
+
+						// Content wrapper with summary and image side by side
+						content += '<div class="story-content-wrapper">';
+						content += '<div class="story-header-text">';
+						content += '<div class="story-summary">' + story.summary + '</div>';
+						content += '</div>';
 
 						// Story image
 						if (story.image && (story.image.url || story.image.thumbnail_url)) {
 							content += '<img src="' + (story.image.url || story.image.thumbnail_url) + '" alt="' + (story.image.title || story.title) + '" class="story-image">';
 						}
 
-						// Story summary
-						content += '<div class="story-summary">' + story.summary + '</div>';
+						content += '</div>';
 
 						// Sources section
 						if (story.items && story.items.length > 0) {
@@ -241,7 +298,7 @@
 								var logoPath = 'assets/logos/' + domain + '.png';
 
 								content += '<div class="source-item">';
-								content += '<img src="' + logoPath + '" alt="' + item.source + '" class="source-logo" onerror="this.src=\'assets/logos/news_placeholder.avif\'" onclick="window.open(\'' + item.link + '\', \'_blank\')">';
+								content += '<img src="' + logoPath + '" alt="' + item.source + '" class="source-logo" onerror="this.src=\'assets/logos/news_placeholder.png\'" onclick="window.open(\'' + item.link + '\', \'_blank\')">';
 								content += '<div class="source-info">';
 								content += '<a href="' + item.link + '" target="_blank" rel="noopener noreferrer">' + item.title + '</a>';
 								content += '<div class="source-bias">Source: ' + item.source + ' | Bias: ' + item.source_bias + '</div>';

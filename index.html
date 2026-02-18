@@ -7,10 +7,20 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
+			.header-date {
+				font-size: 1.1em;
+				color: #000000;
+				margin-top: 0.5em;
+				margin-bottom: 0.5em;
+				text-align: left;
+			}
 			.news-item {
 				margin-bottom: 2em;
 				padding-bottom: 2em;
 				border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+			}
+			.category-content:first-of-type .news-item:first-child {
+				margin-top: 0;
 			}
 			.news-item:last-child {
 				border-bottom: none;
@@ -83,10 +93,12 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
+							<li><a href="#" data-category="your-newsletter">Your Newsletter</a></li>
 							<li class="active"><a href="#" data-category="top-stories">Top Stories</a></li>
-							<li><a href="#" data-category="sports">Sports</a></li>
 							<li><a href="#" data-category="local">Local</a></li>
-							<li><a href="#" data-category="global">Global</a></li>
+							<li><a href="#" data-category="happy">Happy</a></li>
+							<li><a href="#" data-category="science">Science</a></li>
+							<li><a href="#" data-category="other">Other</a></li>
 						</ul>
 					</nav>
 
@@ -95,19 +107,20 @@
 						<section class="post">
 							<header class="major">
 								<h1>Muninn</h1>
+								<div class="header-date"></div>
 							</header>
+
+							<!-- Your Newsletter -->
+							<div id="your-newsletter" class="category-content">
+								<div class="news-item">
+									<h3>No newsletter stories available</h3>
+									<p>Check back later for newsletter updates.</p>
+								</div>
+							</div>
 
 							<!-- Top Stories -->
 							<div id="top-stories" class="category-content active">
 								<div class="loading">Loading news...</div>
-							</div>
-
-							<!-- Sports -->
-							<div id="sports" class="category-content">
-								<div class="news-item">
-									<h3>No sports stories available</h3>
-									<p>Check back later for sports updates.</p>
-								</div>
 							</div>
 
 							<!-- Local -->
@@ -118,11 +131,27 @@
 								</div>
 							</div>
 
-							<!-- Global -->
-							<div id="global" class="category-content">
+							<!-- Happy -->
+							<div id="happy" class="category-content">
 								<div class="news-item">
-									<h3>No global stories available</h3>
-									<p>Check back later for global news.</p>
+									<h3>No happy stories available</h3>
+									<p>Check back later for happy news.</p>
+								</div>
+							</div>
+
+							<!-- Science -->
+							<div id="science" class="category-content">
+								<div class="news-item">
+									<h3>No science stories available</h3>
+									<p>Check back later for science updates.</p>
+								</div>
+							</div>
+
+							<!-- Other -->
+							<div id="other" class="category-content">
+								<div class="news-item">
+									<h3>No other stories available</h3>
+									<p>Check back later for updates.</p>
 								</div>
 							</div>
 
@@ -179,7 +208,34 @@
 						// Show selected category
 						var category = $(this).data('category');
 						$('#' + category).addClass('active');
+
+						// Update header title based on category
+						var categoryTitles = {
+							'your-newsletter': 'Your Newsletter',
+							'top-stories': 'Top Stories',
+							'local': 'Local News',
+							'happy': 'Happy News',
+							'science': 'Science News',
+							'other': 'Other News'
+						};
+						var title = categoryTitles[category] || 'Muninn';
+						$('header.major h1').text(title);
+
+						// Add date for Top Stories
+						if (category === 'top-stories') {
+							var today = new Date();
+							var dateStr = today.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+							$('.header-date').text(dateStr);
+						} else {
+							$('.header-date').text('');
+						}
 					});
+
+					// Set initial title and date
+					$('header.major h1').text('Top Stories');
+					var today = new Date();
+					var dateStr = today.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+					$('.header-date').text(dateStr);
 
 					// Load news from JSON
 					$.getJSON('Current_news/digest.json', function(data) {
