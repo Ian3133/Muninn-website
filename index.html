@@ -22,6 +22,11 @@
 				-webkit-box-orient: vertical;
 				overflow: hidden;
 				text-overflow: ellipsis;
+				cursor: pointer;
+				transition: color 0.2s;
+			}
+			.news-item h3:hover {
+				color: #18bfef;
 			}
 			.news-item-content-row {
 				display: flex;
@@ -186,11 +191,15 @@
 							$('#top-stories').empty();
 
 							// Create news items
-							stories.forEach(function(story) {
+							stories.forEach(function(story, index) {
 								var newsItem = $('<div class="news-item"></div>');
 
-								// Add title at the top
-								var title = $('<h3></h3>').text(story.title);
+								// Add title at the top (clickable)
+								var title = $('<h3></h3>')
+									.text(story.title)
+									.on('click', function() {
+										window.location.href = 'story.html?id=' + index;
+									});
 								newsItem.append(title);
 
 								// Create content row for description and image

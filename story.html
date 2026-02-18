@@ -1,0 +1,299 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Muninn - Story</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.story-container {
+				max-width: 900px;
+				margin: 0 auto;
+			}
+			.story-container h1 {
+				font-size: 1.8em;
+			}
+			.story-image {
+				width: 100%;
+				max-height: 500px;
+				object-fit: cover;
+				border-radius: 8px;
+				margin-bottom: 2em;
+			}
+			.story-summary {
+				font-size: 1.1em;
+				line-height: 1.8;
+				margin-bottom: 3em;
+				color: #000000;
+			}
+			.sources-section {
+				background: rgba(255, 255, 255, 0.05);
+				padding: 2em;
+				border-radius: 8px;
+				margin-bottom: 3em;
+			}
+			.sources-section h2 {
+				margin-top: 0;
+				margin-bottom: 1.5em;
+				font-size: 1.5em;
+			}
+			.source-item {
+				display: flex;
+				align-items: center;
+				gap: 1em;
+				padding: 1em;
+				background: rgba(255, 255, 255, 0.9);
+				border-radius: 5px;
+				margin-bottom: 1em;
+				transition: background 0.2s;
+			}
+			.source-item:hover {
+				background: rgba(255, 255, 255, 1);
+			}
+			.source-logo {
+				width: 80px;
+				height: 50px;
+				object-fit: contain;
+				flex-shrink: 0;
+				background: white;
+				padding: 5px;
+				border-radius: 4px;
+				cursor: pointer;
+			}
+			.source-info {
+				flex: 1;
+				min-width: 0;
+			}
+			.source-info a {
+				color: #000000;
+				text-decoration: none;
+				font-size: 1.05em;
+				display: block;
+				margin-bottom: 0.3em;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			.source-info a:hover {
+				color: #18bfef;
+			}
+			.source-bias {
+				font-size: 0.85em;
+				color: rgba(0, 0, 0, 0.6);
+				text-transform: capitalize;
+			}
+			.other-stories-section {
+				margin-bottom: 3em;
+			}
+			.other-stories-section h2 {
+				margin-bottom: 1.5em;
+				font-size: 1.5em;
+			}
+			.other-stories-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+				gap: 1.5em;
+			}
+			.other-story-card {
+				cursor: pointer;
+				transition: transform 0.2s;
+			}
+			.other-story-card:hover {
+				transform: translateY(-5px);
+			}
+			.other-story-image {
+				width: 100%;
+				height: 150px;
+				object-fit: cover;
+				border-radius: 8px;
+				margin-top: 0.8em;
+			}
+			.other-story-title {
+				font-size: 0.95em;
+				line-height: 1.4;
+				color: #000000;
+				font-weight: bold;
+				margin-bottom: 0.3em;
+				overflow: hidden;
+				display: block;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+			}
+			.back-button {
+				display: inline-block;
+				margin-bottom: 2em;
+				padding: 0.8em 1.5em;
+				background: rgba(255, 255, 255, 0.9);
+				border: 1px solid rgba(0, 0, 0, 0.2);
+				border-radius: 5px;
+				color: #000000;
+				text-decoration: none;
+				transition: all 0.2s;
+				font-weight: bold;
+			}
+			.back-button:hover {
+				background: rgba(255, 255, 255, 1);
+				border-color: rgba(0, 0, 0, 0.3);
+			}
+			.loading {
+				text-align: center;
+				padding: 4em 2em;
+				color: rgba(255, 255, 255, 0.7);
+			}
+			.error {
+				text-align: center;
+				padding: 4em 2em;
+				color: rgba(255, 100, 100, 0.9);
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Muninn</a>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+						<section class="post">
+							<div id="story-content" class="story-container">
+								<div class="loading">Loading story...</div>
+							</div>
+						</section>
+					</div>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Muninn</li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+			<!-- Story loading script -->
+			<script>
+				$(document).ready(function() {
+					// Get story ID from URL parameter
+					var urlParams = new URLSearchParams(window.location.search);
+					var storyId = parseInt(urlParams.get('id'));
+
+					if (isNaN(storyId) || storyId < 0) {
+						$('#story-content').html('<div class="error"><h2>Invalid Story</h2><p>Story not found. <a href="index.html">Return to home</a></p></div>');
+						return;
+					}
+
+					// Helper function to extract domain from source name
+					function getSourceDomain(sourceName) {
+						var domain = sourceName.toLowerCase()
+							.replace(/\s*\(google news\)\s*/gi, '')
+							.replace(/\s*google news\s*-\s*/gi, '')
+							.replace(/\s*\(site\)\s*/gi, '')
+							.trim()
+							.replace(/\s+/g, '-')
+							.replace(/[^a-z0-9-]/g, '');
+						return domain;
+					}
+
+					// Load story from JSON
+					$.getJSON('Current_news/digest.json', function(data) {
+						if (!data.clusters || storyId >= data.clusters.length) {
+							$('#story-content').html('<div class="error"><h2>Story Not Found</h2><p>The requested story does not exist. <a href="index.html">Return to home</a></p></div>');
+							return;
+						}
+
+						var story = data.clusters[storyId];
+						var content = '';
+
+						// Back button
+						content += '<a href="index.html" class="back-button">\u2190 Back to Home</a>';
+
+						// Story title
+						content += '<header class="major"><h1>' + story.title + '</h1></header>';
+
+						// Story image
+						if (story.image && (story.image.url || story.image.thumbnail_url)) {
+							content += '<img src="' + (story.image.url || story.image.thumbnail_url) + '" alt="' + (story.image.title || story.title) + '" class="story-image">';
+						}
+
+						// Story summary
+						content += '<div class="story-summary">' + story.summary + '</div>';
+
+						// Sources section
+						if (story.items && story.items.length > 0) {
+							content += '<div class="sources-section">';
+							content += '<h2>Read directly from:</h2>';
+
+							story.items.forEach(function(item) {
+								var domain = getSourceDomain(item.source);
+								var logoPath = 'assets/logos/' + domain + '.png';
+
+								content += '<div class="source-item">';
+								content += '<img src="' + logoPath + '" alt="' + item.source + '" class="source-logo" onerror="this.src=\'assets/logos/news_placeholder.avif\'" onclick="window.open(\'' + item.link + '\', \'_blank\')">';
+								content += '<div class="source-info">';
+								content += '<a href="' + item.link + '" target="_blank" rel="noopener noreferrer">' + item.title + '</a>';
+								content += '<div class="source-bias">Source: ' + item.source + ' | Bias: ' + item.source_bias + '</div>';
+								content += '</div>';
+								content += '</div>';
+							});
+
+							content += '</div>';
+						}
+
+						// Other stories section
+						content += '<div class="other-stories-section">';
+						content += '<h2>Other Stories of the Day</h2>';
+						content += '<div class="other-stories-grid" id="other-stories-grid"></div>';
+						content += '</div>';
+
+						$('#story-content').html(content);
+
+						// Load other stories (up to 6, excluding current story)
+						// Prioritize stories with images, but include others if needed
+						var storiesWithImages = data.clusters.filter(function(s, index) {
+							return index !== storyId && s.image && (s.image.url || s.image.thumbnail_url);
+						});
+						var storiesWithoutImages = data.clusters.filter(function(s, index) {
+							return index !== storyId && (!s.image || (!s.image.url && !s.image.thumbnail_url));
+						});
+						var otherStories = storiesWithImages.concat(storiesWithoutImages).slice(0, 6);
+
+						otherStories.forEach(function(otherStory, index) {
+							// Find the actual index in the original array
+							var actualIndex = data.clusters.findIndex(function(s) {
+								return s.title === otherStory.title;
+							});
+
+							var card = '<div class="other-story-card" onclick="window.location.href=\'story.html?id=' + actualIndex + '\'">';
+
+							card += '<div class="other-story-title">' + otherStory.title + '</div>';
+
+							if (otherStory.image && (otherStory.image.url || otherStory.image.thumbnail_url)) {
+								card += '<img src="' + (otherStory.image.thumbnail_url || otherStory.image.url) + '" alt="' + otherStory.title + '" class="other-story-image">';
+							}
+
+							card += '</div>';
+
+							$('#other-stories-grid').append(card);
+						});
+
+					}).fail(function() {
+						$('#story-content').html('<div class="error"><h2>Error Loading Story</h2><p>Unable to load the story. Please try again later. <a href="index.html">Return to home</a></p></div>');
+					});
+				});
+			</script>
+
+	</body>
+</html>
