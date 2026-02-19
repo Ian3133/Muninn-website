@@ -16,6 +16,10 @@ export const onCreateUserState = /* GraphQL */ `subscription OnCreateUserState(
     id
     noteText
     flag
+    newsletterComment
+    checkbox1
+    checkbox2
+    checkbox3
     updatedAt
     createdAt
     owner
@@ -34,6 +38,10 @@ export const onUpdateUserState = /* GraphQL */ `subscription OnUpdateUserState(
     id
     noteText
     flag
+    newsletterComment
+    checkbox1
+    checkbox2
+    checkbox3
     updatedAt
     createdAt
     owner
@@ -52,6 +60,10 @@ export const onDeleteUserState = /* GraphQL */ `subscription OnDeleteUserState(
     id
     noteText
     flag
+    newsletterComment
+    checkbox1
+    checkbox2
+    checkbox3
     updatedAt
     createdAt
     owner

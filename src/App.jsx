@@ -8,7 +8,7 @@ export default function App() {
       {({ signOut }) => (
         <>
           <div style={{ position: 'fixed', top: 12, right: 12, zIndex: 9999 }}>
-            <button onClick={signOut}>Sign out</button>
+            <button className="signout-button" onClick={signOut}>Sign out</button>
           </div>
           <LegacyHome />
         </>

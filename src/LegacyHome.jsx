@@ -1,4 +1,11 @@
 import { useEffect, useMemo, useState } from 'react';
+import { generateClient } from 'aws-amplify/api';
+import { getUserState } from './graphql/queries';
+import { createUserState, updateUserState } from './graphql/mutations';
+import { getCurrentUser } from 'aws-amplify/auth';
+import CustomizeModal from './CustomizeModal';
+
+const client = generateClient();
 
 const categoryTitles = {
   'your-newsletter': 'Your Newsletter',
@@ -26,6 +33,15 @@ export default function LegacyHome() {
   const [stories, setStories] = useState([]);
   const [loading, setLoading] = useState(activeCategory === 'top-stories');
   const [error, setError] = useState('');
+  const [modalOpen, setModalOpen] = useState(false);
+  const [newsletterData, setNewsletterData] = useState({
+    comment: '',
+    checkbox1: false,
+    checkbox2: false,
+    checkbox3: false
+  });
+  const [userId, setUserId] = useState(null);
+  const [loadingNewsletter, setLoadingNewsletter] = useState(false);
 
   const title = categoryTitles[activeCategory] || 'Muninn';
   const showDate = activeCategory === 'top-stories';
@@ -60,6 +76,83 @@ export default function LegacyHome() {
     })();
   }, [activeCategory]);
 
+  useEffect(() => {
+    if (activeCategory !== 'your-newsletter') return;
+
+    (async () => {
+      try {
+        setLoadingNewsletter(true);
+        const user = await getCurrentUser();
+        setUserId(user.userId);
+
+        const response = await client.graphql({
+          query: getUserState,
+          variables: { id: user.userId }
+        });
+
+        if (response.data.getUserState) {
+          setNewsletterData({
+            comment: response.data.getUserState.newsletterComment || '',
+            checkbox1: response.data.getUserState.checkbox1 || false,
+            checkbox2: response.data.getUserState.checkbox2 || false,
+            checkbox3: response.data.getUserState.checkbox3 || false
+          });
+        }
+      } catch (e) {
+        console.error('Error loading newsletter preferences:', e);
+      } finally {
+        setLoadingNewsletter(false);
+      }
+    })();
+  }, [activeCategory]);
+
+  async function handleSavePreferences(data) {
+    if (!userId) return;
+
+    try {
+      const existing = await client.graphql({
+        query: getUserState,
+        variables: { id: userId }
+      });
+
+      if (!existing.data.getUserState) {
+        await client.graphql({
+          query: createUserState,
+          variables: {
+            input: {
+              id: userId,
+              newsletterComment: data.comment,
+              checkbox1: data.checkbox1,
+              checkbox2: data.checkbox2,
+              checkbox3: data.checkbox3,
+              updatedAt: new Date().toISOString()
+            }
+          }
+        });
+      } else {
+        await client.graphql({
+          query: updateUserState,
+          variables: {
+            input: {
+              id: userId,
+              newsletterComment: data.comment,
+              checkbox1: data.checkbox1,
+              checkbox2: data.checkbox2,
+              checkbox3: data.checkbox3,
+              updatedAt: new Date().toISOString()
+            }
+          }
+        });
+      }
+
+      setNewsletterData(data);
+      setModalOpen(false);
+    } catch (e) {
+      console.error('Error saving preferences:', e);
+      alert('Failed to save preferences. Please try again.');
+    }
+  }
+
   return (
     <div id="wrapper" className="fade-in">
       <header id="header">
@@ -93,10 +186,42 @@ export default function LegacyHome() {
 
           {/* Your Newsletter */}
           <div id="your-newsletter" className={`category-content ${activeCategory === 'your-newsletter' ? 'active' : ''}`}>
-            <div className="news-item">
-              <h3>No newsletter stories available</h3>
-              <p>Check back later for newsletter updates.</p>
-            </div>
+            {loadingNewsletter && <div className="loading">Loading preferences...</div>}
+
+            {!loadingNewsletter && (newsletterData.comment || newsletterData.checkbox1 || newsletterData.checkbox2 || newsletterData.checkbox3) && (
+              <div className="newsletter-preferences-card">
+                <div className="preferences-header">
+                  <h3>Your Preferences</h3>
+                  <button className="edit-button" onClick={() => setModalOpen(true)}>
+                    Edit
+                  </button>
+                </div>
+                <div className="preferences-content">
+                  {newsletterData.comment && (
+                    <p>Comment: {newsletterData.comment}</p>
+                  )}
+                  {(newsletterData.checkbox1 || newsletterData.checkbox2 || newsletterData.checkbox3) && (
+                    <div className="preferences-options">
+                      Options selected: {[
+                        newsletterData.checkbox1 && '1',
+                        newsletterData.checkbox2 && '2',
+                        newsletterData.checkbox3 && '3'
+                      ].filter(Boolean).join(', ')}
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
+
+            {!loadingNewsletter && !newsletterData.comment && !newsletterData.checkbox1 && !newsletterData.checkbox2 && !newsletterData.checkbox3 && (
+              <div className="news-item">
+                <h3>Customize Your Newsletter</h3>
+                <p>Click the button below to set your newsletter preferences.</p>
+                <button className="customize-button" onClick={() => setModalOpen(true)}>
+                  Customize
+                </button>
+              </div>
+            )}
           </div>
 
           {/* Top Stories */}
@@ -182,6 +307,13 @@ export default function LegacyHome() {
       <div id="copyright">
         <ul><li>&copy; Muninn</li></ul>
       </div>
+
+      <CustomizeModal
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+        onSave={handleSavePreferences}
+        initialData={newsletterData}
+      />
     </div>
   );
 }

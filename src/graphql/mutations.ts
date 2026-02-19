@@ -16,6 +16,10 @@ export const createUserState = /* GraphQL */ `mutation CreateUserState(
     id
     noteText
     flag
+    newsletterComment
+    checkbox1
+    checkbox2
+    checkbox3
     updatedAt
     createdAt
     owner
@@ -34,6 +38,10 @@ export const updateUserState = /* GraphQL */ `mutation UpdateUserState(
     id
     noteText
     flag
+    newsletterComment
+    checkbox1
+    checkbox2
+    checkbox3
     updatedAt
     createdAt
     owner
@@ -52,6 +60,10 @@ export const deleteUserState = /* GraphQL */ `mutation DeleteUserState(
     id
     noteText
     flag
+    newsletterComment
+    checkbox1
+    checkbox2
+    checkbox3
     updatedAt
     createdAt
     owner

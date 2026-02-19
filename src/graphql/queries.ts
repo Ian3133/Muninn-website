@@ -13,6 +13,10 @@ export const getUserState = /* GraphQL */ `query GetUserState($id: ID!) {
     id
     noteText
     flag
+    newsletterComment
+    checkbox1
+    checkbox2
+    checkbox3
     updatedAt
     createdAt
     owner
@@ -33,6 +37,10 @@ export const listUserStates = /* GraphQL */ `query ListUserStates(
       id
       noteText
       flag
+      newsletterComment
+      checkbox1
+      checkbox2
+      checkbox3
       updatedAt
       createdAt
       owner
