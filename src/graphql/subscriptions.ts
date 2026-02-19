@@ -20,6 +20,7 @@ export const onCreateUserState = /* GraphQL */ `subscription OnCreateUserState(
     checkbox1
     checkbox2
     checkbox3
+    selectedState
     updatedAt
     createdAt
     owner
@@ -42,6 +43,7 @@ export const onUpdateUserState = /* GraphQL */ `subscription OnUpdateUserState(
     checkbox1
     checkbox2
     checkbox3
+    selectedState
     updatedAt
     createdAt
     owner
@@ -64,6 +66,7 @@ export const onDeleteUserState = /* GraphQL */ `subscription OnDeleteUserState(
     checkbox1
     checkbox2
     checkbox3
+    selectedState
     updatedAt
     createdAt
     owner

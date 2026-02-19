@@ -110,7 +110,7 @@ export default function LegacyHome() {
     return () => document.body.classList.remove('is-preload');
   }, []);
 
-  // Load selected state from backend on mount
+  // Load selected state from backend (with localStorage fallback)
   useEffect(() => {
     (async () => {
       try {
@@ -122,10 +122,8 @@ export default function LegacyHome() {
 
         if (response.data.getUserState?.selectedState) {
           setSelectedState(response.data.getUserState.selectedState);
-          // Also save to localStorage for quick access
           localStorage.setItem('muninn-selected-state', response.data.getUserState.selectedState);
         } else {
-          // Fallback to localStorage if not in backend
           const saved = localStorage.getItem('muninn-selected-state');
           if (saved) {
             setSelectedState(saved);
@@ -133,7 +131,6 @@ export default function LegacyHome() {
         }
       } catch (e) {
         console.error('Error loading selected state:', e);
-        // Fallback to localStorage
         const saved = localStorage.getItem('muninn-selected-state');
         if (saved) {
           setSelectedState(saved);
@@ -257,6 +254,7 @@ export default function LegacyHome() {
               checkbox1: data.checkbox1,
               checkbox2: data.checkbox2,
               checkbox3: data.checkbox3,
+              selectedState: existing.data.getUserState.selectedState,
               updatedAt: new Date().toISOString()
             }
           }
@@ -296,7 +294,9 @@ export default function LegacyHome() {
         variables: { id }
       });
 
-      if (!existing.data.getUserState) {
+      const existingData = existing.data.getUserState;
+
+      if (!existingData) {
         await client.graphql({
           query: createUserState,
           variables: {
@@ -314,6 +314,11 @@ export default function LegacyHome() {
             input: {
               id,
               selectedState: stateCode,
+              // Preserve existing newsletter preferences
+              newsletterComment: existingData.newsletterComment,
+              checkbox1: existingData.checkbox1,
+              checkbox2: existingData.checkbox2,
+              checkbox3: existingData.checkbox3,
               updatedAt: new Date().toISOString()
             }
           }
@@ -330,7 +335,6 @@ export default function LegacyHome() {
     setLocalStories([]);
     setLocalError('');
 
-    // Remove from backend
     if (userId) {
       try {
         const existing = await client.graphql({
@@ -345,6 +349,11 @@ export default function LegacyHome() {
               input: {
                 id: userId,
                 selectedState: null,
+                // Preserve existing newsletter preferences
+                newsletterComment: existing.data.getUserState.newsletterComment,
+                checkbox1: existing.data.getUserState.checkbox1,
+                checkbox2: existing.data.getUserState.checkbox2,
+                checkbox3: existing.data.getUserState.checkbox3,
                 updatedAt: new Date().toISOString()
               }
             }
