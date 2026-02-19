@@ -292,6 +292,62 @@
         background-color: #1fa8d6;
         box-shadow: 0 4px 12px rgba(24, 191, 239, 0.3);
       }
+      /* State Selector Styles */
+      .state-selector-container {
+        text-align: center;
+        padding: 3em 2em;
+      }
+      .state-selector-container h3 {
+        margin-bottom: 1em;
+        color: #000000;
+      }
+      .state-selector-container p {
+        margin-bottom: 1.5em;
+        color: #000000;
+      }
+      .state-selector {
+        padding: 0.75em 1.5em;
+        background-color: rgba(255, 255, 255, 0.95);
+        border: 2px solid rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        color: #1e252d;
+        font-size: 1em;
+        font-family: inherit;
+        cursor: pointer;
+        transition: all 0.2s;
+        min-width: 250px;
+      }
+      .state-selector:hover {
+        border-color: #18bfef;
+        box-shadow: 0 4px 12px rgba(24, 191, 239, 0.2);
+      }
+      .state-selector:focus {
+        outline: none;
+        border-color: #18bfef;
+        box-shadow: 0 0 0 3px rgba(24, 191, 239, 0.2);
+      }
+      .state-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1em;
+      }
+      .change-state-button {
+        padding: 0.5em 1em;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #000000;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 0.9em;
+        transition: all 0.2s;
+      }
+      .change-state-button:hover {
+        background-color: rgba(24, 191, 239, 0.1);
+        border-color: #18bfef;
+        color: #18bfef;
+      }
       /* Signout Button */
       .signout-button {
         background-color: #f0f0f0;

@@ -16,6 +16,59 @@ const categoryTitles = {
   other: 'Other News',
 };
 
+const US_STATES = [
+  { code: 'AL', name: 'Alabama' },
+  { code: 'AK', name: 'Alaska' },
+  { code: 'AZ', name: 'Arizona' },
+  { code: 'AR', name: 'Arkansas' },
+  { code: 'CA', name: 'California' },
+  { code: 'CO', name: 'Colorado' },
+  { code: 'CT', name: 'Connecticut' },
+  { code: 'DE', name: 'Delaware' },
+  { code: 'FL', name: 'Florida' },
+  { code: 'GA', name: 'Georgia' },
+  { code: 'HI', name: 'Hawaii' },
+  { code: 'ID', name: 'Idaho' },
+  { code: 'IL', name: 'Illinois' },
+  { code: 'IN', name: 'Indiana' },
+  { code: 'IA', name: 'Iowa' },
+  { code: 'KS', name: 'Kansas' },
+  { code: 'KY', name: 'Kentucky' },
+  { code: 'LA', name: 'Louisiana' },
+  { code: 'ME', name: 'Maine' },
+  { code: 'MD', name: 'Maryland' },
+  { code: 'MA', name: 'Massachusetts' },
+  { code: 'MI', name: 'Michigan' },
+  { code: 'MN', name: 'Minnesota' },
+  { code: 'MS', name: 'Mississippi' },
+  { code: 'MO', name: 'Missouri' },
+  { code: 'MT', name: 'Montana' },
+  { code: 'NE', name: 'Nebraska' },
+  { code: 'NV', name: 'Nevada' },
+  { code: 'NH', name: 'New Hampshire' },
+  { code: 'NJ', name: 'New Jersey' },
+  { code: 'NM', name: 'New Mexico' },
+  { code: 'NY', name: 'New York' },
+  { code: 'NC', name: 'North Carolina' },
+  { code: 'ND', name: 'North Dakota' },
+  { code: 'OH', name: 'Ohio' },
+  { code: 'OK', name: 'Oklahoma' },
+  { code: 'OR', name: 'Oregon' },
+  { code: 'PA', name: 'Pennsylvania' },
+  { code: 'RI', name: 'Rhode Island' },
+  { code: 'SC', name: 'South Carolina' },
+  { code: 'SD', name: 'South Dakota' },
+  { code: 'TN', name: 'Tennessee' },
+  { code: 'TX', name: 'Texas' },
+  { code: 'UT', name: 'Utah' },
+  { code: 'VT', name: 'Vermont' },
+  { code: 'VA', name: 'Virginia' },
+  { code: 'WA', name: 'Washington' },
+  { code: 'WV', name: 'West Virginia' },
+  { code: 'WI', name: 'Wisconsin' },
+  { code: 'WY', name: 'Wyoming' }
+];
+
 function formatDate(d) {
   return d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 }
@@ -42,6 +95,10 @@ export default function LegacyHome() {
   });
   const [userId, setUserId] = useState(null);
   const [loadingNewsletter, setLoadingNewsletter] = useState(false);
+  const [selectedState, setSelectedState] = useState(null);
+  const [localStories, setLocalStories] = useState([]);
+  const [loadingLocal, setLoadingLocal] = useState(false);
+  const [localError, setLocalError] = useState('');
 
   const title = categoryTitles[activeCategory] || 'Muninn';
   const showDate = activeCategory === 'top-stories';
@@ -51,6 +108,38 @@ export default function LegacyHome() {
     // match your template body class behavior
     document.body.classList.add('is-preload');
     return () => document.body.classList.remove('is-preload');
+  }, []);
+
+  // Load selected state from backend on mount
+  useEffect(() => {
+    (async () => {
+      try {
+        const user = await getCurrentUser();
+        const response = await client.graphql({
+          query: getUserState,
+          variables: { id: user.userId }
+        });
+
+        if (response.data.getUserState?.selectedState) {
+          setSelectedState(response.data.getUserState.selectedState);
+          // Also save to localStorage for quick access
+          localStorage.setItem('muninn-selected-state', response.data.getUserState.selectedState);
+        } else {
+          // Fallback to localStorage if not in backend
+          const saved = localStorage.getItem('muninn-selected-state');
+          if (saved) {
+            setSelectedState(saved);
+          }
+        }
+      } catch (e) {
+        console.error('Error loading selected state:', e);
+        // Fallback to localStorage
+        const saved = localStorage.getItem('muninn-selected-state');
+        if (saved) {
+          setSelectedState(saved);
+        }
+      }
+    })();
   }, []);
 
   useEffect(() => {
@@ -106,6 +195,35 @@ export default function LegacyHome() {
     })();
   }, [activeCategory]);
 
+  // Load local news when local tab is active and state is selected
+  useEffect(() => {
+    if (activeCategory !== 'local' || !selectedState) return;
+
+    (async () => {
+      try {
+        setLocalError('');
+        setLoadingLocal(true);
+
+        const res = await fetch(`/Local_news/${selectedState}-news.json`, { cache: 'no-store' });
+        if (!res.ok) {
+          // File doesn't exist yet
+          setLocalError('not-available');
+          setLocalStories([]);
+          return;
+        }
+
+        const data = await res.json();
+        const clusters = Array.isArray(data?.clusters) ? data.clusters : [];
+        setLocalStories(clusters);
+      } catch (e) {
+        setLocalError('not-available');
+        setLocalStories([]);
+      } finally {
+        setLoadingLocal(false);
+      }
+    })();
+  }, [activeCategory, selectedState]);
+
   async function handleSavePreferences(data) {
     if (!userId) return;
 
@@ -150,6 +268,91 @@ export default function LegacyHome() {
     } catch (e) {
       console.error('Error saving preferences:', e);
       alert('Failed to save preferences. Please try again.');
+    }
+  }
+
+  async function handleStateSelection(stateCode) {
+    setSelectedState(stateCode);
+    localStorage.setItem('muninn-selected-state', stateCode);
+
+    // Save to backend
+    if (!userId) {
+      try {
+        const user = await getCurrentUser();
+        setUserId(user.userId);
+        await saveStateToBackend(user.userId, stateCode);
+      } catch (e) {
+        console.error('Error saving state selection:', e);
+      }
+    } else {
+      await saveStateToBackend(userId, stateCode);
+    }
+  }
+
+  async function saveStateToBackend(id, stateCode) {
+    try {
+      const existing = await client.graphql({
+        query: getUserState,
+        variables: { id }
+      });
+
+      if (!existing.data.getUserState) {
+        await client.graphql({
+          query: createUserState,
+          variables: {
+            input: {
+              id,
+              selectedState: stateCode,
+              updatedAt: new Date().toISOString()
+            }
+          }
+        });
+      } else {
+        await client.graphql({
+          query: updateUserState,
+          variables: {
+            input: {
+              id,
+              selectedState: stateCode,
+              updatedAt: new Date().toISOString()
+            }
+          }
+        });
+      }
+    } catch (e) {
+      console.error('Error saving state to backend:', e);
+    }
+  }
+
+  async function handleChangeState() {
+    setSelectedState(null);
+    localStorage.removeItem('muninn-selected-state');
+    setLocalStories([]);
+    setLocalError('');
+
+    // Remove from backend
+    if (userId) {
+      try {
+        const existing = await client.graphql({
+          query: getUserState,
+          variables: { id: userId }
+        });
+
+        if (existing.data.getUserState) {
+          await client.graphql({
+            query: updateUserState,
+            variables: {
+              input: {
+                id: userId,
+                selectedState: null,
+                updatedAt: new Date().toISOString()
+              }
+            }
+          });
+        }
+      } catch (e) {
+        console.error('Error removing state from backend:', e);
+      }
     }
   }
 
@@ -272,10 +475,96 @@ export default function LegacyHome() {
 
           {/* Local */}
           <div id="local" className={`category-content ${activeCategory === 'local' ? 'active' : ''}`}>
-            <div className="news-item">
-              <h3>No local stories available</h3>
-              <p>Check back later for local news.</p>
-            </div>
+            {!selectedState ? (
+              <div className="news-item state-selector-container">
+                <h3>Where are you from?</h3>
+                <p>Select your state to see local news tailored to your area.</p>
+                <select
+                  className="state-selector"
+                  onChange={(e) => handleStateSelection(e.target.value)}
+                  defaultValue=""
+                >
+                  <option value="" disabled>Select your state</option>
+                  {US_STATES.map(state => (
+                    <option key={state.code} value={state.code}>
+                      {state.name}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            ) : (
+              <>
+                {loadingLocal && <div className="loading">Loading local news...</div>}
+
+                {!loadingLocal && localError === 'not-available' && (
+                  <div className="news-item">
+                    <div className="state-header">
+                      <h3>
+                        {US_STATES.find(s => s.code === selectedState)?.name || selectedState} News
+                      </h3>
+                      <button className="change-state-button" onClick={handleChangeState}>
+                        Change State
+                      </button>
+                    </div>
+                    <p>
+                      We haven't expanded our news pipeline to cover {US_STATES.find(s => s.code === selectedState)?.name} yet,
+                      but we're working on it! Check back soon for local news from your area.
+                    </p>
+                  </div>
+                )}
+
+                {!loadingLocal && !localError && localStories.length === 0 && (
+                  <div className="news-item">
+                    <div className="state-header">
+                      <h3>
+                        {US_STATES.find(s => s.code === selectedState)?.name || selectedState} News
+                      </h3>
+                      <button className="change-state-button" onClick={handleChangeState}>
+                        Change State
+                      </button>
+                    </div>
+                    <p>No local stories available right now. Check back later for updates.</p>
+                  </div>
+                )}
+
+                {!loadingLocal && !localError && localStories.map((story, index) => (
+                  <div className="news-item" key={index}>
+                    {index === 0 && (
+                      <div className="state-header">
+                        <h3 style={{ marginBottom: '1rem' }}>
+                          {US_STATES.find(s => s.code === selectedState)?.name || selectedState} News
+                        </h3>
+                        <button className="change-state-button" onClick={handleChangeState}>
+                          Change State
+                        </button>
+                      </div>
+                    )}
+                    <h3
+                      onClick={() => { window.location.href = `/story.html?id=${index}`; }}
+                      style={{ cursor: 'pointer' }}
+                      title={story?.title}
+                    >
+                      {story?.title}
+                    </h3>
+
+                    <div className="news-item-content-row">
+                      <div className="news-item-text">
+                        <p>{truncateText(story?.summary || '', 350)}</p>
+                      </div>
+
+                      {story?.image?.url || story?.image?.thumbnail_url ? (
+                        <div className="news-item-image">
+                          <img
+                            src={story.image.url || story.image.thumbnail_url}
+                            alt={story.image.title || story.title || 'Story image'}
+                          />
+                        </div>
+                      ) : null}
+                    </div>
+                  </div>
+                ))}
+              </>
+            )}
           </div>
 
           {/* Happy */}

@@ -17,6 +17,7 @@ export const getUserState = /* GraphQL */ `query GetUserState($id: ID!) {
     checkbox1
     checkbox2
     checkbox3
+    selectedState
     updatedAt
     createdAt
     owner
@@ -41,6 +42,7 @@ export const listUserStates = /* GraphQL */ `query ListUserStates(
       checkbox1
       checkbox2
       checkbox3
+      selectedState
       updatedAt
       createdAt
       owner
