@@ -1,295 +1,87 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Muninn</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
-			.header-date {
-				font-size: 1.1em;
-				color: #000000;
-				margin-top: 0.5em;
-				margin-bottom: 0.5em;
-				text-align: left;
-			}
-			.news-item {
-				margin-bottom: 2em;
-				padding-bottom: 2em;
-				border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-			}
-			.category-content:first-of-type .news-item:first-child {
-				margin-top: 0;
-			}
-			.news-item:last-child {
-				border-bottom: none;
-			}
-			.news-item h3 {
-				margin-bottom: 0.5em;
-				display: -webkit-box;
-				-webkit-line-clamp: 1;
-				-webkit-box-orient: vertical;
-				overflow: hidden;
-				text-overflow: ellipsis;
-				cursor: pointer;
-				transition: color 0.2s;
-			}
-			.news-item h3:hover {
-				color: #18bfef;
-			}
-			.news-item-content-row {
-				display: flex;
-				gap: 1.5em;
-				align-items: flex-start;
-				min-height: 150px;
-			}
-			.news-item-text {
-				flex: 1;
-			}
-			.news-item-image {
-				flex-shrink: 0;
-				width: 200px;
-				height: 150px;
-				overflow: hidden;
-				border-radius: 8px;
-			}
-			.news-item-image img {
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-			}
-			.news-item p {
-				margin: 0;
-				color: #000000;
-				font-size: 0.95em;
-				line-height: 1.6;
-				max-height: 6.4em;
-				overflow: hidden;
-			}
-			.category-content {
-				display: none;
-			}
-			.category-content.active {
-				display: block;
-			}
-			.loading {
-				text-align: center;
-				padding: 2em;
-				color: rgba(255, 255, 255, 0.7);
-			}
-		</style>
-	</head>
-	<body class="is-preload">
-
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
-
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Muninn</a>
-					</header>
-
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li><a href="#" data-category="your-newsletter">Your Newsletter</a></li>
-							<li class="active"><a href="#" data-category="top-stories">Top Stories</a></li>
-							<li><a href="#" data-category="local">Local</a></li>
-							<li><a href="#" data-category="happy">Happy</a></li>
-							<li><a href="#" data-category="science">Science</a></li>
-							<li><a href="#" data-category="other">Other</a></li>
-						</ul>
-					</nav>
-
-				<!-- Main -->
-					<div id="main">
-						<section class="post">
-							<header class="major">
-								<h1>Muninn</h1>
-								<div class="header-date"></div>
-							</header>
-
-							<!-- Your Newsletter -->
-							<div id="your-newsletter" class="category-content">
-								<div class="news-item">
-									<h3>No newsletter stories available</h3>
-									<p>Check back later for newsletter updates.</p>
-								</div>
-							</div>
-
-							<!-- Top Stories -->
-							<div id="top-stories" class="category-content active">
-								<div class="loading">Loading news...</div>
-							</div>
-
-							<!-- Local -->
-							<div id="local" class="category-content">
-								<div class="news-item">
-									<h3>No local stories available</h3>
-									<p>Check back later for local news.</p>
-								</div>
-							</div>
-
-							<!-- Happy -->
-							<div id="happy" class="category-content">
-								<div class="news-item">
-									<h3>No happy stories available</h3>
-									<p>Check back later for happy news.</p>
-								</div>
-							</div>
-
-							<!-- Science -->
-							<div id="science" class="category-content">
-								<div class="news-item">
-									<h3>No science stories available</h3>
-									<p>Check back later for science updates.</p>
-								</div>
-							</div>
-
-							<!-- Other -->
-							<div id="other" class="category-content">
-								<div class="news-item">
-									<h3>No other stories available</h3>
-									<p>Check back later for updates.</p>
-								</div>
-							</div>
-
-						</section>
-					</div>
-
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Muninn</li></ul>
-					</div>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-			<!-- News loading script -->
-			<script>
-				$(document).ready(function() {
-					// Function to truncate text at word boundary
-					function truncateText(text, maxLength) {
-						if (text.length <= maxLength) {
-							return text;
-						}
-
-						// Find the last space before maxLength
-						var truncated = text.substring(0, maxLength);
-						var lastSpace = truncated.lastIndexOf(' ');
-
-						if (lastSpace > 0) {
-							truncated = truncated.substring(0, lastSpace);
-						}
-
-						return truncated + ' ...';
-					}
-
-					// Category switching
-					$('nav a[data-category]').on('click', function(e) {
-						e.preventDefault();
-
-						// Update active nav item
-						$('nav li').removeClass('active');
-						$(this).parent().addClass('active');
-
-						// Hide all categories
-						$('.category-content').removeClass('active');
-
-						// Show selected category
-						var category = $(this).data('category');
-						$('#' + category).addClass('active');
-
-						// Update header title based on category
-						var categoryTitles = {
-							'your-newsletter': 'Your Newsletter',
-							'top-stories': 'Top Stories',
-							'local': 'Local News',
-							'happy': 'Happy News',
-							'science': 'Science News',
-							'other': 'Other News'
-						};
-						var title = categoryTitles[category] || 'Muninn';
-						$('header.major h1').text(title);
-
-						// Add date for Top Stories
-						if (category === 'top-stories') {
-							var today = new Date();
-							var dateStr = today.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
-							$('.header-date').text(dateStr);
-						} else {
-							$('.header-date').text('');
-						}
-					});
-
-					// Set initial title and date
-					$('header.major h1').text('Top Stories');
-					var today = new Date();
-					var dateStr = today.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
-					$('.header-date').text(dateStr);
-
-					// Load news from JSON
-					$.getJSON('Current_news/digest.json', function(data) {
-						if (data.clusters && data.clusters.length > 0) {
-							// Get first 20 stories
-							var stories = data.clusters.slice(0, 20);
-
-							// Clear loading message
-							$('#top-stories').empty();
-
-							// Create news items
-							stories.forEach(function(story, index) {
-								var newsItem = $('<div class="news-item"></div>');
-
-								// Add title at the top (clickable)
-								var title = $('<h3></h3>')
-									.text(story.title)
-									.on('click', function() {
-										window.location.href = 'story.html?id=' + index;
-									});
-								newsItem.append(title);
-
-								// Create content row for description and image
-								var contentRow = $('<div class="news-item-content-row"></div>');
-
-								// Add description text
-								var textContainer = $('<div class="news-item-text"></div>');
-								var maxLength = 350;
-								var summaryText = truncateText(story.summary, maxLength);
-								var summary = $('<p></p>').text(summaryText);
-								textContainer.append(summary);
-								contentRow.append(textContainer);
-
-								// Add image if available
-								if (story.image && (story.image.url || story.image.thumbnail_url)) {
-									var imageContainer = $('<div class="news-item-image"></div>');
-									var img = $('<img>');
-									img.attr('src', story.image.url || story.image.thumbnail_url);
-									img.attr('alt', story.image.title || story.title);
-									imageContainer.append(img);
-									contentRow.append(imageContainer);
-								}
-
-								newsItem.append(contentRow);
-								$('#top-stories').append(newsItem);
-							});
-						} else {
-							$('#top-stories').html('<div class="news-item"><h3>No stories available</h3><p>Check back later for updates.</p></div>');
-						}
-					}).fail(function() {
-						$('#top-stories').html('<div class="news-item"><h3>Error loading news</h3><p>Unable to load news stories. Please try again later.</p></div>');
-					});
-				});
-			</script>
-
-	</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muninn</title>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+    <style>
+      .header-date {
+        font-size: 1.1em;
+        color: #000000;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        text-align: left;
+      }
+      .news-item {
+        margin-bottom: 2em;
+        padding-bottom: 2em;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .category-content:first-of-type .news-item:first-child {
+        margin-top: 0;
+      }
+      .news-item:last-child {
+        border-bottom: none;
+      }
+      .news-item h3 {
+        margin-bottom: 0.5em;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        cursor: pointer;
+        transition: color 0.2s;
+      }
+      .news-item h3:hover {
+        color: #18bfef;
+      }
+      .news-item-content-row {
+        display: flex;
+        gap: 1.5em;
+        align-items: flex-start;
+        min-height: 150px;
+      }
+      .news-item-text {
+        flex: 1;
+      }
+      .news-item-image {
+        flex-shrink: 0;
+        width: 200px;
+        height: 150px;
+        overflow: hidden;
+        border-radius: 8px;
+      }
+      .news-item-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .news-item p {
+        margin: 0;
+        color: #000000;
+        font-size: 0.95em;
+        line-height: 1.6;
+        max-height: 6.4em;
+        overflow: hidden;
+      }
+      .category-content {
+        display: none;
+      }
+      .category-content.active {
+        display: block;
+      }
+      .loading {
+        text-align: center;
+        padding: 2em;
+        color: rgba(255, 255, 255, 0.7);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

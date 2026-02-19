@@ -8,8 +8,9 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
 			.story-container {
-				max-width: 900px;
-				margin: 0 auto;
+				max-width: 100%;
+				margin: 0;
+				padding: 0;
 			}
 			.story-title {
 				width: 100%;
@@ -317,7 +318,7 @@
 
 						$('#story-content').html(content);
 
-						// Load other stories (up to 6, excluding current story)
+						// Load other stories (up to 8, excluding current story)
 						// Prioritize stories with images, but include others if needed
 						var storiesWithImages = data.clusters.filter(function(s, index) {
 							return index !== storyId && s.image && (s.image.url || s.image.thumbnail_url);
@@ -325,7 +326,7 @@
 						var storiesWithoutImages = data.clusters.filter(function(s, index) {
 							return index !== storyId && (!s.image || (!s.image.url && !s.image.thumbnail_url));
 						});
-						var otherStories = storiesWithImages.concat(storiesWithoutImages).slice(0, 6);
+						var otherStories = storiesWithImages.concat(storiesWithoutImages).slice(0, 8);
 
 						otherStories.forEach(function(otherStory, index) {
 							// Find the actual index in the original array

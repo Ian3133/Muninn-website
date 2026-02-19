@@ -1,0 +1,8 @@
+type UserState
+  @model
+  @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  noteText: String
+  flag: Boolean
+  updatedAt: AWSDateTime
+}
