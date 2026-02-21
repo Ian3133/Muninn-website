@@ -4,16 +4,53 @@ import { getUserState } from './graphql/queries';
 import { createUserState, updateUserState } from './graphql/mutations';
 import { getCurrentUser } from 'aws-amplify/auth';
 import CustomizeModal from './CustomizeModal';
+import NewsSectionsModal from './NewsSectionsModal';
 
 const client = generateClient();
 
+const PINNED_CATEGORY_ORDER = ['your-newsletter', 'top-stories'];
+const CUSTOMIZABLE_CATEGORY_ORDER = [
+  'local',
+  'happy',
+  'science',
+  'sports',
+  'politics',
+  'business',
+  'technology',
+  'health',
+  'world',
+  'other',
+];
+const DEFAULT_CUSTOM_SELECTED = ['local', 'happy', 'science'];
+const SECTION_STORAGE_KEY = 'muninn-selected-sections';
+const STATE_STORAGE_KEY = 'muninn-selected-state';
+const NOTE_TEXT_PREFIX = '[muninn-sections]';
+
 const categoryTitles = {
-  'your-newsletter': 'Your Newsletter',
   'top-stories': 'Top Stories',
+  'your-newsletter': 'Your Newsletter',
   local: 'Local News',
   happy: 'Happy News',
   science: 'Science News',
+  sports: 'Sports News',
+  politics: 'Politics News',
+  business: 'Business News',
+  technology: 'Technology News',
+  health: 'Health News',
+  world: 'World News',
   other: 'Other News',
+};
+
+const placeholderCopy = {
+  happy: 'No happy stories available yet.',
+  science: 'No science stories available yet.',
+  sports: 'No sports stories available yet.',
+  politics: 'No politics stories available yet.',
+  business: 'No business stories available yet.',
+  technology: 'No technology stories available yet.',
+  health: 'No health stories available yet.',
+  world: 'No world stories available yet.',
+  other: 'No other stories available yet.',
 };
 
 const US_STATES = [
@@ -66,7 +103,7 @@ const US_STATES = [
   { code: 'WA', name: 'Washington' },
   { code: 'WV', name: 'West Virginia' },
   { code: 'WI', name: 'Wisconsin' },
-  { code: 'WY', name: 'Wyoming' }
+  { code: 'WY', name: 'Wyoming' },
 ];
 
 function formatDate(d) {
@@ -81,17 +118,63 @@ function truncateText(text, maxLength) {
   return (lastSpace > 0 ? truncated.substring(0, lastSpace) : truncated) + ' ...';
 }
 
+function sanitizeSelectedSections(sections) {
+  if (!Array.isArray(sections)) return [...DEFAULT_CUSTOM_SELECTED];
+  const allowed = new Set(CUSTOMIZABLE_CATEGORY_ORDER);
+  const seen = new Set();
+  const ordered = [];
+  for (const key of sections) {
+    if (!allowed.has(key) || seen.has(key)) continue;
+    seen.add(key);
+    ordered.push(key);
+  }
+  return ordered;
+}
+
+function parseSectionsFromNoteText(noteText) {
+  if (!noteText || typeof noteText !== 'string') return null;
+  const line = noteText.split('\n').find((entry) => entry.startsWith(NOTE_TEXT_PREFIX));
+  if (!line) return null;
+
+  try {
+    const parsed = JSON.parse(line.slice(NOTE_TEXT_PREFIX.length));
+    return sanitizeSelectedSections(parsed);
+  } catch (_e) {
+    return null;
+  }
+}
+
+function upsertSectionsInNoteText(noteText, sections) {
+  const cleaned = typeof noteText === 'string' ? noteText.split('\n').filter((line) => !line.startsWith(NOTE_TEXT_PREFIX)) : [];
+  cleaned.push(`${NOTE_TEXT_PREFIX}${JSON.stringify(sections)}`);
+  return cleaned.filter(Boolean).join('\n');
+}
+
+function parseSectionsFromLocalStorage() {
+  try {
+    const saved = localStorage.getItem(SECTION_STORAGE_KEY);
+    if (!saved) return null;
+    const parsed = JSON.parse(saved);
+    return sanitizeSelectedSections(parsed);
+  } catch (_e) {
+    return null;
+  }
+}
+
 export default function LegacyHome() {
   const [activeCategory, setActiveCategory] = useState('top-stories');
   const [stories, setStories] = useState([]);
-  const [loading, setLoading] = useState(activeCategory === 'top-stories');
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [modalOpen, setModalOpen] = useState(false);
+  const [sectionsModalOpen, setSectionsModalOpen] = useState(false);
+  const [selectedSections, setSelectedSections] = useState([...DEFAULT_CUSTOM_SELECTED]);
+  const [draggedSection, setDraggedSection] = useState(null);
   const [newsletterData, setNewsletterData] = useState({
     comment: '',
     checkbox1: false,
     checkbox2: false,
-    checkbox3: false
+    checkbox3: false,
   });
   const [userId, setUserId] = useState(null);
   const [loadingNewsletter, setLoadingNewsletter] = useState(false);
@@ -100,41 +183,57 @@ export default function LegacyHome() {
   const [loadingLocal, setLoadingLocal] = useState(false);
   const [localError, setLocalError] = useState('');
 
+  const visibleCategories = useMemo(
+    () => [...PINNED_CATEGORY_ORDER, ...selectedSections],
+    [selectedSections]
+  );
+  const addNewsOptions = useMemo(
+    () => CUSTOMIZABLE_CATEGORY_ORDER.map((key) => ({ key, label: categoryTitles[key] })),
+    []
+  );
   const title = categoryTitles[activeCategory] || 'Muninn';
   const showDate = activeCategory === 'top-stories';
   const dateStr = useMemo(() => (showDate ? formatDate(new Date()) : ''), [showDate]);
 
   useEffect(() => {
-    // match your template body class behavior
     document.body.classList.add('is-preload');
     return () => document.body.classList.remove('is-preload');
   }, []);
 
-  // Load selected state from backend (with localStorage fallback)
   useEffect(() => {
     (async () => {
       try {
         const user = await getCurrentUser();
+        setUserId(user.userId);
+
         const response = await client.graphql({
           query: getUserState,
-          variables: { id: user.userId }
+          variables: { id: user.userId },
         });
 
-        if (response.data.getUserState?.selectedState) {
-          setSelectedState(response.data.getUserState.selectedState);
-          localStorage.setItem('muninn-selected-state', response.data.getUserState.selectedState);
+        const backendState = response.data.getUserState;
+        if (backendState?.selectedState) {
+          setSelectedState(backendState.selectedState);
+          localStorage.setItem(STATE_STORAGE_KEY, backendState.selectedState);
         } else {
-          const saved = localStorage.getItem('muninn-selected-state');
-          if (saved) {
-            setSelectedState(saved);
-          }
+          const savedState = localStorage.getItem(STATE_STORAGE_KEY);
+          if (savedState) setSelectedState(savedState);
+        }
+
+        const backendSections = parseSectionsFromNoteText(backendState?.noteText);
+        if (backendSections !== null) {
+          setSelectedSections(backendSections);
+          localStorage.setItem(SECTION_STORAGE_KEY, JSON.stringify(backendSections));
+        } else {
+          const localSections = parseSectionsFromLocalStorage();
+          if (localSections !== null) setSelectedSections(localSections);
         }
       } catch (e) {
-        console.error('Error loading selected state:', e);
-        const saved = localStorage.getItem('muninn-selected-state');
-        if (saved) {
-          setSelectedState(saved);
-        }
+        console.error('Error loading user state:', e);
+        const savedState = localStorage.getItem(STATE_STORAGE_KEY);
+        if (savedState) setSelectedState(savedState);
+        const localSections = parseSectionsFromLocalStorage();
+        if (localSections !== null) setSelectedSections(localSections);
       }
     })();
   }, []);
@@ -168,12 +267,12 @@ export default function LegacyHome() {
     (async () => {
       try {
         setLoadingNewsletter(true);
-        const user = await getCurrentUser();
-        setUserId(user.userId);
+        const id = userId || (await getCurrentUser()).userId;
+        if (!userId) setUserId(id);
 
         const response = await client.graphql({
           query: getUserState,
-          variables: { id: user.userId }
+          variables: { id },
         });
 
         if (response.data.getUserState) {
@@ -181,7 +280,7 @@ export default function LegacyHome() {
             comment: response.data.getUserState.newsletterComment || '',
             checkbox1: response.data.getUserState.checkbox1 || false,
             checkbox2: response.data.getUserState.checkbox2 || false,
-            checkbox3: response.data.getUserState.checkbox3 || false
+            checkbox3: response.data.getUserState.checkbox3 || false,
           });
         }
       } catch (e) {
@@ -190,9 +289,8 @@ export default function LegacyHome() {
         setLoadingNewsletter(false);
       }
     })();
-  }, [activeCategory]);
+  }, [activeCategory, userId]);
 
-  // Load local news when local tab is active and state is selected
   useEffect(() => {
     if (activeCategory !== 'local' || !selectedState) return;
 
@@ -203,7 +301,6 @@ export default function LegacyHome() {
 
         const res = await fetch(`/Local_news/${selectedState}-news.json`, { cache: 'no-store' });
         if (!res.ok) {
-          // File doesn't exist yet
           setLocalError('not-available');
           setLocalStories([]);
           return;
@@ -212,7 +309,7 @@ export default function LegacyHome() {
         const data = await res.json();
         const clusters = Array.isArray(data?.clusters) ? data.clusters : [];
         setLocalStories(clusters);
-      } catch (e) {
+      } catch (_e) {
         setLocalError('not-available');
         setLocalStories([]);
       } finally {
@@ -221,43 +318,61 @@ export default function LegacyHome() {
     })();
   }, [activeCategory, selectedState]);
 
-  async function handleSavePreferences(data) {
-    if (!userId) return;
+  useEffect(() => {
+    if (PINNED_CATEGORY_ORDER.includes(activeCategory)) return;
+    if (selectedSections.includes(activeCategory)) return;
+    setActiveCategory('top-stories');
+  }, [activeCategory, selectedSections]);
 
+  async function ensureUserId() {
+    if (userId) return userId;
+    const user = await getCurrentUser();
+    setUserId(user.userId);
+    return user.userId;
+  }
+
+  async function handleSavePreferences(data) {
     try {
+      const id = await ensureUserId();
       const existing = await client.graphql({
         query: getUserState,
-        variables: { id: userId }
+        variables: { id },
       });
 
-      if (!existing.data.getUserState) {
+      const existingState = existing.data.getUserState;
+      const noteText = upsertSectionsInNoteText(existingState?.noteText, selectedSections);
+
+      if (!existingState) {
         await client.graphql({
           query: createUserState,
           variables: {
             input: {
-              id: userId,
+              id,
               newsletterComment: data.comment,
               checkbox1: data.checkbox1,
               checkbox2: data.checkbox2,
               checkbox3: data.checkbox3,
-              updatedAt: new Date().toISOString()
-            }
-          }
+              selectedState: selectedState || null,
+              noteText,
+              updatedAt: new Date().toISOString(),
+            },
+          },
         });
       } else {
         await client.graphql({
           query: updateUserState,
           variables: {
             input: {
-              id: userId,
+              id,
               newsletterComment: data.comment,
               checkbox1: data.checkbox1,
               checkbox2: data.checkbox2,
               checkbox3: data.checkbox3,
-              selectedState: existing.data.getUserState.selectedState,
-              updatedAt: new Date().toISOString()
-            }
-          }
+              selectedState: existingState.selectedState,
+              noteText,
+              updatedAt: new Date().toISOString(),
+            },
+          },
         });
       }
 
@@ -269,21 +384,80 @@ export default function LegacyHome() {
     }
   }
 
+  async function saveSectionsToBackend(nextSections) {
+    try {
+      const id = await ensureUserId();
+      const existing = await client.graphql({
+        query: getUserState,
+        variables: { id },
+      });
+
+      const existingState = existing.data.getUserState;
+      const noteText = upsertSectionsInNoteText(existingState?.noteText, nextSections);
+
+      if (!existingState) {
+        await client.graphql({
+          query: createUserState,
+          variables: {
+            input: {
+              id,
+              selectedState: selectedState || null,
+              noteText,
+              updatedAt: new Date().toISOString(),
+            },
+          },
+        });
+      } else {
+        await client.graphql({
+          query: updateUserState,
+          variables: {
+            input: {
+              id,
+              noteText,
+              updatedAt: new Date().toISOString(),
+            },
+          },
+        });
+      }
+    } catch (e) {
+      console.error('Error saving section preferences:', e);
+    }
+  }
+
+  async function handleSaveSections(nextSections) {
+    const sanitized = sanitizeSelectedSections(nextSections);
+    setSelectedSections(sanitized);
+    localStorage.setItem(SECTION_STORAGE_KEY, JSON.stringify(sanitized));
+    setSectionsModalOpen(false);
+    await saveSectionsToBackend(sanitized);
+  }
+
+  async function reorderSectionTabs(sourceKey, targetKey) {
+    if (!sourceKey || !targetKey || sourceKey === targetKey) return;
+    if (!selectedSections.includes(sourceKey) || !selectedSections.includes(targetKey)) return;
+
+    const next = [...selectedSections];
+    const fromIndex = next.indexOf(sourceKey);
+    const toIndex = next.indexOf(targetKey);
+    if (fromIndex === -1 || toIndex === -1) return;
+
+    const [moved] = next.splice(fromIndex, 1);
+    next.splice(toIndex, 0, moved);
+
+    setSelectedSections(next);
+    localStorage.setItem(SECTION_STORAGE_KEY, JSON.stringify(next));
+    await saveSectionsToBackend(next);
+  }
+
   async function handleStateSelection(stateCode) {
     setSelectedState(stateCode);
-    localStorage.setItem('muninn-selected-state', stateCode);
+    localStorage.setItem(STATE_STORAGE_KEY, stateCode);
 
-    // Save to backend
-    if (!userId) {
-      try {
-        const user = await getCurrentUser();
-        setUserId(user.userId);
-        await saveStateToBackend(user.userId, stateCode);
-      } catch (e) {
-        console.error('Error saving state selection:', e);
-      }
-    } else {
-      await saveStateToBackend(userId, stateCode);
+    try {
+      const id = await ensureUserId();
+      await saveStateToBackend(id, stateCode);
+    } catch (e) {
+      console.error('Error saving state selection:', e);
     }
   }
 
@@ -291,10 +465,11 @@ export default function LegacyHome() {
     try {
       const existing = await client.graphql({
         query: getUserState,
-        variables: { id }
+        variables: { id },
       });
 
       const existingData = existing.data.getUserState;
+      const noteText = upsertSectionsInNoteText(existingData?.noteText, selectedSections);
 
       if (!existingData) {
         await client.graphql({
@@ -303,9 +478,10 @@ export default function LegacyHome() {
             input: {
               id,
               selectedState: stateCode,
-              updatedAt: new Date().toISOString()
-            }
-          }
+              noteText,
+              updatedAt: new Date().toISOString(),
+            },
+          },
         });
       } else {
         await client.graphql({
@@ -314,14 +490,14 @@ export default function LegacyHome() {
             input: {
               id,
               selectedState: stateCode,
-              // Preserve existing newsletter preferences
               newsletterComment: existingData.newsletterComment,
               checkbox1: existingData.checkbox1,
               checkbox2: existingData.checkbox2,
               checkbox3: existingData.checkbox3,
-              updatedAt: new Date().toISOString()
-            }
-          }
+              noteText,
+              updatedAt: new Date().toISOString(),
+            },
+          },
         });
       }
     } catch (e) {
@@ -331,38 +507,54 @@ export default function LegacyHome() {
 
   async function handleChangeState() {
     setSelectedState(null);
-    localStorage.removeItem('muninn-selected-state');
+    localStorage.removeItem(STATE_STORAGE_KEY);
     setLocalStories([]);
     setLocalError('');
 
-    if (userId) {
-      try {
-        const existing = await client.graphql({
-          query: getUserState,
-          variables: { id: userId }
-        });
+    if (!userId) return;
 
-        if (existing.data.getUserState) {
-          await client.graphql({
-            query: updateUserState,
-            variables: {
-              input: {
-                id: userId,
-                selectedState: null,
-                // Preserve existing newsletter preferences
-                newsletterComment: existing.data.getUserState.newsletterComment,
-                checkbox1: existing.data.getUserState.checkbox1,
-                checkbox2: existing.data.getUserState.checkbox2,
-                checkbox3: existing.data.getUserState.checkbox3,
-                updatedAt: new Date().toISOString()
-              }
-            }
-          });
-        }
-      } catch (e) {
-        console.error('Error removing state from backend:', e);
+    try {
+      const existing = await client.graphql({
+        query: getUserState,
+        variables: { id: userId },
+      });
+
+      if (existing.data.getUserState) {
+        const backendState = existing.data.getUserState;
+        const noteText = upsertSectionsInNoteText(backendState.noteText, selectedSections);
+        await client.graphql({
+          query: updateUserState,
+          variables: {
+            input: {
+              id: userId,
+              selectedState: null,
+              newsletterComment: backendState.newsletterComment,
+              checkbox1: backendState.checkbox1,
+              checkbox2: backendState.checkbox2,
+              checkbox3: backendState.checkbox3,
+              noteText,
+              updatedAt: new Date().toISOString(),
+            },
+          },
+        });
       }
+    } catch (e) {
+      console.error('Error removing state from backend:', e);
     }
+  }
+
+  function renderPlaceholderSection(sectionKey) {
+    if (!selectedSections.includes(sectionKey) || activeCategory !== sectionKey) return null;
+
+    return (
+      <div id={sectionKey} className="category-content active">
+        <div className="news-item">
+          <h3>{categoryTitles[sectionKey]}</h3>
+          <p>{placeholderCopy[sectionKey] || 'No stories available yet.'}</p>
+          <p>Check back later for updates.</p>
+        </div>
+      </div>
+    );
   }
 
   return (
@@ -374,19 +566,55 @@ export default function LegacyHome() {
       </header>
 
       <nav id="nav">
-        <ul className="links">
-          {Object.keys(categoryTitles).map((key) => (
-            <li key={key} className={activeCategory === key ? 'active' : ''}>
-              <a
-                href="#"
-                data-category={key}
-                onClick={(e) => { e.preventDefault(); setActiveCategory(key); }}
-              >
-                {categoryTitles[key]}
+        <div style={{ display: 'flex', alignItems: 'stretch', width: '100%', minWidth: 0 }}>
+          <ul className="links news-tabs-scroll" style={{ display: 'flex', flex: '1 1 auto' }}>
+            {visibleCategories.map((key) => {
+              const isCustomSection = selectedSections.includes(key);
+              return (
+                <li
+                  key={key}
+                  className={activeCategory === key ? 'active' : ''}
+                  style={{
+                    flex: '0 0 auto',
+                    cursor: isCustomSection ? 'grab' : 'default',
+                    opacity: draggedSection === key ? 0.6 : 1,
+                  }}
+                  draggable={isCustomSection}
+                  onDragStart={(e) => {
+                    e.dataTransfer.setData('text/plain', key);
+                    setDraggedSection(key);
+                  }}
+                  onDragEnd={() => setDraggedSection(null)}
+                  onDragOver={(e) => {
+                    if (!isCustomSection || !draggedSection) return;
+                    e.preventDefault();
+                  }}
+                  onDrop={async (e) => {
+                    e.preventDefault();
+                    if (!isCustomSection) return;
+                    await reorderSectionTabs(draggedSection, key);
+                    setDraggedSection(null);
+                  }}
+                >
+                  <a
+                    href="#"
+                    data-category={key}
+                    onClick={(e) => { e.preventDefault(); setActiveCategory(key); }}
+                  >
+                    {categoryTitles[key]}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+          <ul className="links" style={{ flex: '0 0 auto' }}>
+            <li className={sectionsModalOpen ? 'active' : ''}>
+              <a href="#" style={{ color: '#ffffff' }} onClick={(e) => { e.preventDefault(); setSectionsModalOpen(true); }}>
+                Add News
               </a>
             </li>
-          ))}
-        </ul>
+          </ul>
+        </div>
       </nav>
 
       <div id="main">
@@ -396,7 +624,6 @@ export default function LegacyHome() {
             <div className="header-date">{dateStr}</div>
           </header>
 
-          {/* Your Newsletter */}
           <div id="your-newsletter" className={`category-content ${activeCategory === 'your-newsletter' ? 'active' : ''}`}>
             {loadingNewsletter && <div className="loading">Loading preferences...</div>}
 
@@ -417,7 +644,7 @@ export default function LegacyHome() {
                       Options selected: {[
                         newsletterData.checkbox1 && '1',
                         newsletterData.checkbox2 && '2',
-                        newsletterData.checkbox3 && '3'
+                        newsletterData.checkbox3 && '3',
                       ].filter(Boolean).join(', ')}
                     </div>
                   )}
@@ -436,7 +663,6 @@ export default function LegacyHome() {
             )}
           </div>
 
-          {/* Top Stories */}
           <div id="top-stories" className={`category-content ${activeCategory === 'top-stories' ? 'active' : ''}`}>
             {loading && <div className="loading">Loading news...</div>}
 
@@ -482,9 +708,8 @@ export default function LegacyHome() {
             ))}
           </div>
 
-          {/* Local */}
           <div id="local" className={`category-content ${activeCategory === 'local' ? 'active' : ''}`}>
-            {!selectedState ? (
+            {activeCategory === 'local' && !selectedState ? (
               <div className="news-item state-selector-container">
                 <h3>Where are you from?</h3>
                 <p>Select your state to see local news tailored to your area.</p>
@@ -494,14 +719,16 @@ export default function LegacyHome() {
                   defaultValue=""
                 >
                   <option value="" disabled>Select your state</option>
-                  {US_STATES.map(state => (
+                  {US_STATES.map((state) => (
                     <option key={state.code} value={state.code}>
                       {state.name}
                     </option>
                   ))}
                 </select>
               </div>
-            ) : (
+            ) : null}
+
+            {activeCategory === 'local' && selectedState ? (
               <>
                 {loadingLocal && <div className="loading">Loading local news...</div>}
 
@@ -509,15 +736,15 @@ export default function LegacyHome() {
                   <div className="news-item">
                     <div className="state-header">
                       <h3>
-                        {US_STATES.find(s => s.code === selectedState)?.name || selectedState} News
+                        {US_STATES.find((s) => s.code === selectedState)?.name || selectedState} News
                       </h3>
                       <button className="change-state-button" onClick={handleChangeState}>
                         Change State
                       </button>
                     </div>
                     <p>
-                      We haven't expanded our news pipeline to cover {US_STATES.find(s => s.code === selectedState)?.name} yet,
-                      but we're working on it! Check back soon for local news from your area.
+                      We have not expanded our news pipeline to cover {US_STATES.find((s) => s.code === selectedState)?.name} yet,
+                      but we are working on it.
                     </p>
                   </div>
                 )}
@@ -526,7 +753,7 @@ export default function LegacyHome() {
                   <div className="news-item">
                     <div className="state-header">
                       <h3>
-                        {US_STATES.find(s => s.code === selectedState)?.name || selectedState} News
+                        {US_STATES.find((s) => s.code === selectedState)?.name || selectedState} News
                       </h3>
                       <button className="change-state-button" onClick={handleChangeState}>
                         Change State
@@ -541,7 +768,7 @@ export default function LegacyHome() {
                     {index === 0 && (
                       <div className="state-header">
                         <h3 style={{ marginBottom: '1rem' }}>
-                          {US_STATES.find(s => s.code === selectedState)?.name || selectedState} News
+                          {US_STATES.find((s) => s.code === selectedState)?.name || selectedState} News
                         </h3>
                         <button className="change-state-button" onClick={handleChangeState}>
                           Change State
@@ -573,32 +800,18 @@ export default function LegacyHome() {
                   </div>
                 ))}
               </>
-            )}
+            ) : null}
           </div>
 
-          {/* Happy */}
-          <div id="happy" className={`category-content ${activeCategory === 'happy' ? 'active' : ''}`}>
-            <div className="news-item">
-              <h3>No happy stories available</h3>
-              <p>Check back later for happy news.</p>
-            </div>
-          </div>
-
-          {/* Science */}
-          <div id="science" className={`category-content ${activeCategory === 'science' ? 'active' : ''}`}>
-            <div className="news-item">
-              <h3>No science stories available</h3>
-              <p>Check back later for science updates.</p>
-            </div>
-          </div>
-
-          {/* Other */}
-          <div id="other" className={`category-content ${activeCategory === 'other' ? 'active' : ''}`}>
-            <div className="news-item">
-              <h3>No other stories available</h3>
-              <p>Check back later for updates.</p>
-            </div>
-          </div>
+          {renderPlaceholderSection('happy')}
+          {renderPlaceholderSection('science')}
+          {renderPlaceholderSection('sports')}
+          {renderPlaceholderSection('politics')}
+          {renderPlaceholderSection('business')}
+          {renderPlaceholderSection('technology')}
+          {renderPlaceholderSection('health')}
+          {renderPlaceholderSection('world')}
+          {renderPlaceholderSection('other')}
         </section>
       </div>
 
@@ -611,6 +824,14 @@ export default function LegacyHome() {
         onClose={() => setModalOpen(false)}
         onSave={handleSavePreferences}
         initialData={newsletterData}
+      />
+
+      <NewsSectionsModal
+        isOpen={sectionsModalOpen}
+        onClose={() => setSectionsModalOpen(false)}
+        onSave={handleSaveSections}
+        options={addNewsOptions}
+        selectedKeys={selectedSections}
       />
     </div>
   );

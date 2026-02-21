@@ -4,8 +4,8 @@
 		<title>Muninn - Story</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
 		<style>
 			.story-container {
 				max-width: 100%;
@@ -169,7 +169,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<a href="index.html" class="logo">Muninn</a>
+						<a href="/" class="logo">Muninn</a>
 					</header>
 
 				<!-- Main -->
@@ -189,13 +189,13 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/jquery.scrollex.min.js"></script>
+			<script src="/assets/js/jquery.scrolly.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
 
 			<!-- Story loading script -->
 			<script>
@@ -205,7 +205,7 @@
 					var storyId = parseInt(urlParams.get('id'));
 
 					if (isNaN(storyId) || storyId < 0) {
-						$('#story-content').html('<div class="error"><h2>Invalid Story</h2><p>Story not found. <a href="index.html">Return to home</a></p></div>');
+						$('#story-content').html('<div class="error"><h2>Invalid Story</h2><p>Story not found. <a href="/">Return to home</a></p></div>');
 						return;
 					}
 
@@ -261,9 +261,9 @@
 					}
 
 					// Load story from JSON
-					$.getJSON('Current_news/digest.json', function(data) {
+					$.getJSON('/Current_news/digest.json', function(data) {
 						if (!data.clusters || storyId >= data.clusters.length) {
-							$('#story-content').html('<div class="error"><h2>Story Not Found</h2><p>The requested story does not exist. <a href="index.html">Return to home</a></p></div>');
+							$('#story-content').html('<div class="error"><h2>Story Not Found</h2><p>The requested story does not exist. <a href="/">Return to home</a></p></div>');
 							return;
 						}
 
@@ -271,7 +271,7 @@
 						var content = '';
 
 						// Back button
-						content += '<a href="index.html" class="back-button">\u2190 Back to Home</a>';
+						content += '<a href="/" class="back-button">\u2190 Back to Home</a>';
 
 						// Story title (full width)
 						content += '<div class="story-title"><h1>' + story.title + '</h1></div>';
@@ -296,10 +296,10 @@
 
 							story.items.forEach(function(item) {
 								var domain = getSourceDomain(item.source);
-								var logoPath = 'assets/logos/' + domain + '.png';
+								var logoPath = '/assets/logos/' + domain + '.png';
 
 								content += '<div class="source-item">';
-								content += '<img src="' + logoPath + '" alt="' + item.source + '" class="source-logo" onerror="this.src=\'assets/logos/news_placeholder.png\'" onclick="window.open(\'' + item.link + '\', \'_blank\')">';
+								content += '<img src="' + logoPath + '" alt="' + item.source + '" class="source-logo" onerror="this.src=\'/assets/logos/news_placeholder.png\'" onclick="window.open(\'' + item.link + '\', \'_blank\')">';
 								content += '<div class="source-info">';
 								content += '<a href="' + item.link + '" target="_blank" rel="noopener noreferrer">' + item.title + '</a>';
 								content += '<div class="source-bias">Source: ' + item.source + ' | Bias: ' + item.source_bias + '</div>';
@@ -348,7 +348,7 @@
 						});
 
 					}).fail(function() {
-						$('#story-content').html('<div class="error"><h2>Error Loading Story</h2><p>Unable to load the story. Please try again later. <a href="index.html">Return to home</a></p></div>');
+						$('#story-content').html('<div class="error"><h2>Error Loading Story</h2><p>Unable to load the story. Please try again later. <a href="/">Return to home</a></p></div>');
 					});
 				});
 			</script>
