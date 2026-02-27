@@ -203,7 +203,14 @@ export default function LegacyHome() {
 
   useEffect(() => {
     document.body.classList.add('is-preload');
-    return () => document.body.classList.remove('is-preload');
+    const timeoutId = window.setTimeout(() => {
+      document.body.classList.remove('is-preload');
+    }, 100);
+
+    return () => {
+      window.clearTimeout(timeoutId);
+      document.body.classList.remove('is-preload');
+    };
   }, []);
 
   useEffect(() => {

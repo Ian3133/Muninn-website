@@ -53,3 +53,35 @@
   color: #ffffff !important;
   border-color: #ffffff !important;
 }
+
+@media screen and (max-width: 980px) {
+  #nav {
+    display: block !important;
+  }
+
+  #navPanelToggle {
+    display: none !important;
+  }
+
+  #main {
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .news-item-content-row {
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .news-item-image {
+    width: 100%;
+    height: auto;
+    max-width: 20rem;
+    aspect-ratio: 4 / 3;
+  }
+
+  .category-content.active {
+    display: block !important;
+  }
+}
