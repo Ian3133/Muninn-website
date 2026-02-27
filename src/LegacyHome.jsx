@@ -182,6 +182,12 @@ export default function LegacyHome() {
   const [localStories, setLocalStories] = useState([]);
   const [loadingLocal, setLoadingLocal] = useState(false);
   const [localError, setLocalError] = useState('');
+  const [happyStories, setHappyStories] = useState([]);
+  const [loadingHappy, setLoadingHappy] = useState(false);
+  const [happyError, setHappyError] = useState('');
+  const [healthStories, setHealthStories] = useState([]);
+  const [loadingHealth, setLoadingHealth] = useState(false);
+  const [healthError, setHealthError] = useState('');
 
   const visibleCategories = useMemo(
     () => [...PINNED_CATEGORY_ORDER, ...selectedSections],
@@ -317,6 +323,50 @@ export default function LegacyHome() {
       }
     })();
   }, [activeCategory, selectedState]);
+
+  useEffect(() => {
+    if (activeCategory !== 'happy') return;
+
+    (async () => {
+      try {
+        setHappyError('');
+        setLoadingHappy(true);
+
+        const res = await fetch('/Current_news/happy_digest.json', { cache: 'no-store' });
+        if (!res.ok) throw new Error(`Failed to load happy_digest.json (${res.status})`);
+        const data = await res.json();
+        const clusters = Array.isArray(data?.clusters) ? data.clusters : [];
+        setHappyStories(clusters.slice(0, 20));
+      } catch (e) {
+        setHappyError(e?.message || String(e));
+        setHappyStories([]);
+      } finally {
+        setLoadingHappy(false);
+      }
+    })();
+  }, [activeCategory]);
+
+  useEffect(() => {
+    if (activeCategory !== 'health') return;
+
+    (async () => {
+      try {
+        setHealthError('');
+        setLoadingHealth(true);
+
+        const res = await fetch('/Current_news/health_digest.json', { cache: 'no-store' });
+        if (!res.ok) throw new Error(`Failed to load health_digest.json (${res.status})`);
+        const data = await res.json();
+        const clusters = Array.isArray(data?.clusters) ? data.clusters : [];
+        setHealthStories(clusters.slice(0, 20));
+      } catch (e) {
+        setHealthError(e?.message || String(e));
+        setHealthStories([]);
+      } finally {
+        setLoadingHealth(false);
+      }
+    })();
+  }, [activeCategory]);
 
   useEffect(() => {
     if (PINNED_CATEGORY_ORDER.includes(activeCategory)) return;
@@ -803,13 +853,85 @@ export default function LegacyHome() {
             ) : null}
           </div>
 
-          {renderPlaceholderSection('happy')}
+          <div id="happy" className={`category-content ${activeCategory === 'happy' ? 'active' : ''}`}>
+            {loadingHappy && <div className="loading">Loading happy news...</div>}
+
+            {!loadingHappy && happyError && (
+              <div className="news-item">
+                <h3>Error loading happy news</h3>
+                <p>{happyError}</p>
+              </div>
+            )}
+
+            {!loadingHappy && !happyError && happyStories.length === 0 && (
+              <div className="news-item">
+                <h3>No happy stories available</h3>
+                <p>Check back later for updates.</p>
+              </div>
+            )}
+
+            {!loadingHappy && !happyError && happyStories.map((story, index) => (
+              <div className="news-item" key={index}>
+                <h3
+                  onClick={() => {
+                    const link = story?.items?.[0]?.link;
+                    if (link) window.open(link, '_blank', 'noopener,noreferrer');
+                  }}
+                  style={{ cursor: story?.items?.[0]?.link ? 'pointer' : 'default' }}
+                  title={story?.title}
+                >
+                  {story?.title}
+                </h3>
+                <div className="news-item-content-row">
+                  <div className="news-item-text">
+                    <p>{truncateText(story?.summary || '', 350)}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
           {renderPlaceholderSection('science')}
           {renderPlaceholderSection('sports')}
           {renderPlaceholderSection('politics')}
           {renderPlaceholderSection('business')}
           {renderPlaceholderSection('technology')}
-          {renderPlaceholderSection('health')}
+          <div id="health" className={`category-content ${activeCategory === 'health' ? 'active' : ''}`}>
+            {loadingHealth && <div className="loading">Loading health news...</div>}
+
+            {!loadingHealth && healthError && (
+              <div className="news-item">
+                <h3>Error loading health news</h3>
+                <p>{healthError}</p>
+              </div>
+            )}
+
+            {!loadingHealth && !healthError && healthStories.length === 0 && (
+              <div className="news-item">
+                <h3>No health stories available</h3>
+                <p>Check back later for updates.</p>
+              </div>
+            )}
+
+            {!loadingHealth && !healthError && healthStories.map((story, index) => (
+              <div className="news-item" key={index}>
+                <h3
+                  onClick={() => {
+                    const link = story?.items?.[0]?.link;
+                    if (link) window.open(link, '_blank', 'noopener,noreferrer');
+                  }}
+                  style={{ cursor: story?.items?.[0]?.link ? 'pointer' : 'default' }}
+                  title={story?.title}
+                >
+                  {story?.title}
+                </h3>
+                <div className="news-item-content-row">
+                  <div className="news-item-text">
+                    <p>{truncateText(story?.summary || '', 350)}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
           {renderPlaceholderSection('world')}
           {renderPlaceholderSection('other')}
         </section>
