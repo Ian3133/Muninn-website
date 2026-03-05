@@ -35,7 +35,7 @@ const categoryTitles = {
   sports: 'Sports News',
   politics: 'Politics News',
   business: 'Business News',
-  technology: 'Technology News',
+  technology: 'AI News',
   health: 'Health News',
   world: 'World News',
   other: 'Other News',
@@ -47,7 +47,7 @@ const placeholderCopy = {
   sports: 'No sports stories available yet.',
   politics: 'No politics stories available yet.',
   business: 'No business stories available yet.',
-  technology: 'No technology stories available yet.',
+  technology: 'No AI stories available yet.',
   health: 'No health stories available yet.',
   world: 'No world stories available yet.',
   other: 'No other stories available yet.',
@@ -106,6 +106,8 @@ const US_STATES = [
   { code: 'WY', name: 'Wyoming' },
 ];
 
+const SUPPORTED_LOCAL_STATE_CODES = new Set(['CT', 'MA', 'CA']);
+
 function formatDate(d) {
   return d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 }
@@ -162,7 +164,17 @@ function parseSectionsFromLocalStorage() {
 }
 
 export default function LegacyHome() {
-  const [activeCategory, setActiveCategory] = useState('top-stories');
+  const [activeCategory, setActiveCategory] = useState(() => {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const requested = (params.get('category') || '').trim();
+      const allowed = [...PINNED_CATEGORY_ORDER, ...CUSTOMIZABLE_CATEGORY_ORDER];
+      if (allowed.includes(requested)) return requested;
+    } catch (_e) {
+      // no-op
+    }
+    return 'top-stories';
+  });
   const [stories, setStories] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -185,6 +197,9 @@ export default function LegacyHome() {
   const [happyStories, setHappyStories] = useState([]);
   const [loadingHappy, setLoadingHappy] = useState(false);
   const [happyError, setHappyError] = useState('');
+  const [aiStories, setAiStories] = useState([]);
+  const [loadingAi, setLoadingAi] = useState(false);
+  const [aiError, setAiError] = useState('');
   const [healthStories, setHealthStories] = useState([]);
   const [loadingHealth, setLoadingHealth] = useState(false);
   const [healthError, setHealthError] = useState('');
@@ -200,6 +215,25 @@ export default function LegacyHome() {
   const title = categoryTitles[activeCategory] || 'Muninn';
   const showDate = activeCategory === 'top-stories';
   const dateStr = useMemo(() => (showDate ? formatDate(new Date()) : ''), [showDate]);
+  const availableLocalStates = useMemo(
+    () => US_STATES.filter((state) => SUPPORTED_LOCAL_STATE_CODES.has(state.code)),
+    []
+  );
+
+  useEffect(() => {
+    try {
+      const url = new URL(window.location.href);
+      if (activeCategory === 'top-stories') {
+        url.searchParams.delete('category');
+      } else {
+        url.searchParams.set('category', activeCategory);
+      }
+      const next = `${url.pathname}${url.search}${url.hash}`;
+      window.history.replaceState({}, '', next);
+    } catch (_e) {
+      // no-op
+    }
+  }, [activeCategory]);
 
   useEffect(() => {
     document.body.classList.add('is-preload');
@@ -225,12 +259,16 @@ export default function LegacyHome() {
         });
 
         const backendState = response.data.getUserState;
-        if (backendState?.selectedState) {
+        if (backendState?.selectedState && SUPPORTED_LOCAL_STATE_CODES.has(backendState.selectedState)) {
           setSelectedState(backendState.selectedState);
           localStorage.setItem(STATE_STORAGE_KEY, backendState.selectedState);
         } else {
           const savedState = localStorage.getItem(STATE_STORAGE_KEY);
-          if (savedState) setSelectedState(savedState);
+          if (savedState && SUPPORTED_LOCAL_STATE_CODES.has(savedState)) {
+            setSelectedState(savedState);
+          } else {
+            localStorage.removeItem(STATE_STORAGE_KEY);
+          }
         }
 
         const backendSections = parseSectionsFromNoteText(backendState?.noteText);
@@ -244,7 +282,11 @@ export default function LegacyHome() {
       } catch (e) {
         console.error('Error loading user state:', e);
         const savedState = localStorage.getItem(STATE_STORAGE_KEY);
-        if (savedState) setSelectedState(savedState);
+        if (savedState && SUPPORTED_LOCAL_STATE_CODES.has(savedState)) {
+          setSelectedState(savedState);
+        } else {
+          localStorage.removeItem(STATE_STORAGE_KEY);
+        }
         const localSections = parseSectionsFromLocalStorage();
         if (localSections !== null) setSelectedSections(localSections);
       }
@@ -306,6 +348,11 @@ export default function LegacyHome() {
 
   useEffect(() => {
     if (activeCategory !== 'local' || !selectedState) return;
+    if (!SUPPORTED_LOCAL_STATE_CODES.has(selectedState)) {
+      setLocalStories([]);
+      setLocalError('');
+      return;
+    }
 
     (async () => {
       try {
@@ -314,7 +361,7 @@ export default function LegacyHome() {
 
         const res = await fetch(`/Local_news/${selectedState}-news.json`, { cache: 'no-store' });
         if (!res.ok) {
-          setLocalError('not-available');
+          setLocalError('load-failed');
           setLocalStories([]);
           return;
         }
@@ -323,7 +370,7 @@ export default function LegacyHome() {
         const clusters = Array.isArray(data?.clusters) ? data.clusters : [];
         setLocalStories(clusters);
       } catch (_e) {
-        setLocalError('not-available');
+        setLocalError('load-failed');
         setLocalStories([]);
       } finally {
         setLoadingLocal(false);
@@ -354,6 +401,28 @@ export default function LegacyHome() {
   }, [activeCategory]);
 
   useEffect(() => {
+    if (activeCategory !== 'technology') return;
+
+    (async () => {
+      try {
+        setAiError('');
+        setLoadingAi(true);
+
+        const res = await fetch('/Current_news/ai_digest.json', { cache: 'no-store' });
+        if (!res.ok) throw new Error(`Failed to load ai_digest.json (${res.status})`);
+        const data = await res.json();
+        const clusters = Array.isArray(data?.clusters) ? data.clusters : [];
+        setAiStories(clusters.slice(0, 20));
+      } catch (e) {
+        setAiError(e?.message || String(e));
+        setAiStories([]);
+      } finally {
+        setLoadingAi(false);
+      }
+    })();
+  }, [activeCategory]);
+
+  useEffect(() => {
     if (activeCategory !== 'health') return;
 
     (async () => {
@@ -378,6 +447,24 @@ export default function LegacyHome() {
   useEffect(() => {
     if (PINNED_CATEGORY_ORDER.includes(activeCategory)) return;
     if (selectedSections.includes(activeCategory)) return;
+
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const requested = (params.get('category') || '').trim();
+      const isCustomCategory = CUSTOMIZABLE_CATEGORY_ORDER.includes(activeCategory);
+      if (requested === activeCategory && isCustomCategory) {
+        setSelectedSections((prev) => {
+          if (prev.includes(activeCategory)) return prev;
+          const next = sanitizeSelectedSections([...prev, activeCategory]);
+          localStorage.setItem(SECTION_STORAGE_KEY, JSON.stringify(next));
+          return next;
+        });
+        return;
+      }
+    } catch (_e) {
+      // no-op
+    }
+
     setActiveCategory('top-stories');
   }, [activeCategory, selectedSections]);
 
@@ -507,6 +594,7 @@ export default function LegacyHome() {
   }
 
   async function handleStateSelection(stateCode) {
+    if (!SUPPORTED_LOCAL_STATE_CODES.has(stateCode)) return;
     setSelectedState(stateCode);
     localStorage.setItem(STATE_STORAGE_KEY, stateCode);
 
@@ -776,7 +864,7 @@ export default function LegacyHome() {
                   defaultValue=""
                 >
                   <option value="" disabled>Select your state</option>
-                  {US_STATES.map((state) => (
+                  {availableLocalStates.map((state) => (
                     <option key={state.code} value={state.code}>
                       {state.name}
                     </option>
@@ -789,24 +877,7 @@ export default function LegacyHome() {
               <>
                 {loadingLocal && <div className="loading">Loading local news...</div>}
 
-                {!loadingLocal && localError === 'not-available' && (
-                  <div className="news-item">
-                    <div className="state-header">
-                      <h3>
-                        {US_STATES.find((s) => s.code === selectedState)?.name || selectedState} News
-                      </h3>
-                      <button className="change-state-button" onClick={handleChangeState}>
-                        Change State
-                      </button>
-                    </div>
-                    <p>
-                      We have not expanded our news pipeline to cover {US_STATES.find((s) => s.code === selectedState)?.name} yet,
-                      but we are working on it.
-                    </p>
-                  </div>
-                )}
-
-                {!loadingLocal && !localError && localStories.length === 0 && (
+                {!loadingLocal && localStories.length === 0 && (
                   <div className="news-item">
                     <div className="state-header">
                       <h3>
@@ -820,7 +891,9 @@ export default function LegacyHome() {
                   </div>
                 )}
 
-                {!loadingLocal && !localError && localStories.map((story, index) => (
+                {!loadingLocal && localStories.map((story, index) => {
+                  const sourceLink = story?.items?.[0]?.link;
+                  return (
                   <div className="news-item" key={index}>
                     {index === 0 && (
                       <div className="state-header">
@@ -833,29 +906,24 @@ export default function LegacyHome() {
                       </div>
                     )}
                     <h3
-                      onClick={() => { window.location.href = `/story.html?id=${index}`; }}
-                      style={{ cursor: 'pointer' }}
+                      onClick={() => {
+                        if (sourceLink) window.open(sourceLink, '_blank', 'noopener,noreferrer');
+                      }}
+                      style={{
+                        cursor: sourceLink ? 'pointer' : 'default',
+                        display: 'block',
+                        WebkitLineClamp: 'unset',
+                        WebkitBoxOrient: 'initial',
+                        overflow: 'visible',
+                        textOverflow: 'unset',
+                        whiteSpace: 'normal',
+                      }}
                       title={story?.title}
                     >
                       {story?.title}
                     </h3>
-
-                    <div className="news-item-content-row">
-                      <div className="news-item-text">
-                        <p>{truncateText(story?.summary || '', 350)}</p>
-                      </div>
-
-                      {story?.image?.url || story?.image?.thumbnail_url ? (
-                        <div className="news-item-image">
-                          <img
-                            src={story.image.url || story.image.thumbnail_url}
-                            alt={story.image.title || story.title || 'Story image'}
-                          />
-                        </div>
-                      ) : null}
-                    </div>
                   </div>
-                ))}
+                )})}
               </>
             ) : null}
           </div>
@@ -901,7 +969,74 @@ export default function LegacyHome() {
           {renderPlaceholderSection('sports')}
           {renderPlaceholderSection('politics')}
           {renderPlaceholderSection('business')}
-          {renderPlaceholderSection('technology')}
+          <div id="technology" className={`category-content ${activeCategory === 'technology' ? 'active' : ''}`}>
+            {loadingAi && <div className="loading">Loading AI news...</div>}
+
+            {!loadingAi && aiError && (
+              <div className="news-item">
+                <h3>Error loading AI news</h3>
+                <p>{aiError}</p>
+              </div>
+            )}
+
+            {!loadingAi && !aiError && aiStories.length === 0 && (
+              <div className="news-item">
+                <h3>No AI stories available</h3>
+                <p>Check back later for updates.</p>
+              </div>
+            )}
+
+            {!loadingAi && !aiError && aiStories.map((story, index) => (
+              <div className="news-item" key={index}>
+                <h3
+                  onClick={() => {
+                    const sourceCount = Number(
+                      story?.source_count || (Array.isArray(story?.sources) ? story.sources.length : 0)
+                    );
+                    if (sourceCount > 1) {
+                      window.location.href = `/story.html?id=${index}&feed=ai&returnCategory=technology`;
+                      return;
+                    }
+
+                    const link = story?.items?.[0]?.link;
+                    if (link) window.open(link, '_blank', 'noopener,noreferrer');
+                  }}
+                  style={{
+                    cursor: (
+                      Number(story?.source_count || (Array.isArray(story?.sources) ? story.sources.length : 0)) > 1
+                      || !!story?.items?.[0]?.link
+                    ) ? 'pointer' : 'default',
+                  }}
+                  title={story?.title}
+                >
+                  {story?.title}
+                </h3>
+                {(() => {
+                  const sourceCount = Number(
+                    story?.source_count || (Array.isArray(story?.sources) ? story.sources.length : 0)
+                  );
+                  if (sourceCount < 2) {
+                    const sourceName = story?.sources?.[0] || story?.items?.[0]?.source || 'Unknown source';
+                    return (
+                      <div className="news-item-content-row">
+                        <div className="news-item-text">
+                          <p>Source: {sourceName}</p>
+                        </div>
+                      </div>
+                    );
+                  }
+
+                  return (
+                    <div className="news-item-content-row">
+                      <div className="news-item-text">
+                        <p>{truncateText(story?.summary || '', 350)}</p>
+                      </div>
+                    </div>
+                  );
+                })()}
+              </div>
+            ))}
+          </div>
           <div id="health" className={`category-content ${activeCategory === 'health' ? 'active' : ''}`}>
             {loadingHealth && <div className="loading">Loading health news...</div>}
 
