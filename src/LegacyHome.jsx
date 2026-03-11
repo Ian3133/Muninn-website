@@ -3,7 +3,7 @@ import { generateClient } from 'aws-amplify/api';
 import { getUserState } from './graphql/queries';
 import { createUserState, updateUserState } from './graphql/mutations';
 import { getCurrentUser } from 'aws-amplify/auth';
-import CustomizeModal from './CustomizeModal';
+import NewsletterWizardModal from './NewsletterWizardModal';
 import NewsSectionsModal from './NewsSectionsModal';
 
 const client = generateClient();
@@ -25,6 +25,7 @@ const DEFAULT_CUSTOM_SELECTED = ['local', 'happy', 'science'];
 const SECTION_STORAGE_KEY = 'muninn-selected-sections';
 const STATE_STORAGE_KEY = 'muninn-selected-state';
 const NOTE_TEXT_PREFIX = '[muninn-sections]';
+const NEWSLETTER_TEXT_PREFIX = '[muninn-newsletters]';
 
 const categoryTitles = {
   'top-stories': 'Top Stories',
@@ -152,6 +153,36 @@ function upsertSectionsInNoteText(noteText, sections) {
   return cleaned.filter(Boolean).join('\n');
 }
 
+function parseNewslettersFromNoteText(noteText) {
+  if (!noteText || typeof noteText !== 'string') return [];
+  const line = noteText.split('\n').find((entry) => entry.startsWith(NEWSLETTER_TEXT_PREFIX));
+  if (!line) return [];
+
+  try {
+    const parsed = JSON.parse(line.slice(NEWSLETTER_TEXT_PREFIX.length));
+    if (Array.isArray(parsed)) {
+      return parsed.filter((entry) => entry && typeof entry === 'object');
+    }
+    if (parsed && typeof parsed === 'object') return [parsed];
+    return [];
+  } catch (_e) {
+    return [];
+  }
+}
+
+function upsertNewslettersInNoteText(noteText, newsletters) {
+  const cleaned = typeof noteText === 'string'
+    ? noteText.split('\n').filter((line) => !line.startsWith(NEWSLETTER_TEXT_PREFIX))
+    : [];
+  cleaned.push(`${NEWSLETTER_TEXT_PREFIX}${JSON.stringify(newsletters)}`);
+  return cleaned.filter(Boolean).join('\n');
+}
+
+function createNewsletterId() {
+  if (typeof crypto !== 'undefined' && crypto.randomUUID) return crypto.randomUUID();
+  return `nl_${Date.now()}_${Math.random().toString(16).slice(2, 8)}`;
+}
+
 function parseSectionsFromLocalStorage() {
   try {
     const saved = localStorage.getItem(SECTION_STORAGE_KEY);
@@ -178,16 +209,12 @@ export default function LegacyHome() {
   const [stories, setStories] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
-  const [modalOpen, setModalOpen] = useState(false);
   const [sectionsModalOpen, setSectionsModalOpen] = useState(false);
+  const [newsletterModalOpen, setNewsletterModalOpen] = useState(false);
+  const [newsletterDraft, setNewsletterDraft] = useState(null);
+  const [newsletters, setNewsletters] = useState([]);
   const [selectedSections, setSelectedSections] = useState([...DEFAULT_CUSTOM_SELECTED]);
   const [draggedSection, setDraggedSection] = useState(null);
-  const [newsletterData, setNewsletterData] = useState({
-    comment: '',
-    checkbox1: false,
-    checkbox2: false,
-    checkbox3: false,
-  });
   const [userId, setUserId] = useState(null);
   const [loadingNewsletter, setLoadingNewsletter] = useState(false);
   const [selectedState, setSelectedState] = useState(null);
@@ -279,6 +306,11 @@ export default function LegacyHome() {
           const localSections = parseSectionsFromLocalStorage();
           if (localSections !== null) setSelectedSections(localSections);
         }
+
+        const backendNewsletters = parseNewslettersFromNoteText(backendState?.noteText);
+        if (backendNewsletters.length) {
+          setNewsletters(backendNewsletters);
+        }
       } catch (e) {
         console.error('Error loading user state:', e);
         const savedState = localStorage.getItem(STATE_STORAGE_KEY);
@@ -331,12 +363,8 @@ export default function LegacyHome() {
         });
 
         if (response.data.getUserState) {
-          setNewsletterData({
-            comment: response.data.getUserState.newsletterComment || '',
-            checkbox1: response.data.getUserState.checkbox1 || false,
-            checkbox2: response.data.getUserState.checkbox2 || false,
-            checkbox3: response.data.getUserState.checkbox3 || false,
-          });
+          const backendNewsletters = parseNewslettersFromNoteText(response.data.getUserState.noteText);
+          setNewsletters(backendNewsletters);
         }
       } catch (e) {
         console.error('Error loading newsletter preferences:', e);
@@ -475,7 +503,7 @@ export default function LegacyHome() {
     return user.userId;
   }
 
-  async function handleSavePreferences(data) {
+  async function saveNewslettersToBackend(nextNewsletters) {
     try {
       const id = await ensureUserId();
       const existing = await client.graphql({
@@ -484,7 +512,7 @@ export default function LegacyHome() {
       });
 
       const existingState = existing.data.getUserState;
-      const noteText = upsertSectionsInNoteText(existingState?.noteText, selectedSections);
+      const noteText = upsertNewslettersInNoteText(existingState?.noteText, nextNewsletters);
 
       if (!existingState) {
         await client.graphql({
@@ -492,10 +520,6 @@ export default function LegacyHome() {
           variables: {
             input: {
               id,
-              newsletterComment: data.comment,
-              checkbox1: data.checkbox1,
-              checkbox2: data.checkbox2,
-              checkbox3: data.checkbox3,
               selectedState: selectedState || null,
               noteText,
               updatedAt: new Date().toISOString(),
@@ -508,24 +532,51 @@ export default function LegacyHome() {
           variables: {
             input: {
               id,
-              newsletterComment: data.comment,
-              checkbox1: data.checkbox1,
-              checkbox2: data.checkbox2,
-              checkbox3: data.checkbox3,
-              selectedState: existingState.selectedState,
               noteText,
               updatedAt: new Date().toISOString(),
             },
           },
         });
       }
-
-      setNewsletterData(data);
-      setModalOpen(false);
     } catch (e) {
-      console.error('Error saving preferences:', e);
-      alert('Failed to save preferences. Please try again.');
+      console.error('Error saving newsletter preferences:', e);
+      alert('Failed to save newsletter preferences. Please try again.');
     }
+  }
+
+  async function handleSaveNewsletter(payload, generateNow) {
+    const next = [...newsletters];
+    const existingIndex = next.findIndex((item) => item.id === payload.id);
+    if (existingIndex >= 0) {
+      next[existingIndex] = payload;
+    } else {
+      next.push(payload);
+    }
+
+    setNewsletters(next);
+    await saveNewslettersToBackend(next);
+    setNewsletterModalOpen(false);
+    setNewsletterDraft(null);
+
+    if (generateNow) {
+      alert('Generation request saved. This will run once the pipeline is wired up.');
+    }
+  }
+
+  async function handleDeleteNewsletter(id) {
+    const next = newsletters.filter((entry) => entry.id !== id);
+    setNewsletters(next);
+    await saveNewslettersToBackend(next);
+  }
+
+  async function handleGenerateNow(id) {
+    const next = newsletters.map((entry) => {
+      if (entry.id !== id) return entry;
+      return { ...entry, lastGeneratedAt: new Date().toISOString() };
+    });
+    setNewsletters(next);
+    await saveNewslettersToBackend(next);
+    alert('Generation request saved. This will run once the pipeline is wired up.');
   }
 
   async function saveSectionsToBackend(nextSections) {
@@ -772,38 +823,125 @@ export default function LegacyHome() {
           <div id="your-newsletter" className={`category-content ${activeCategory === 'your-newsletter' ? 'active' : ''}`}>
             {loadingNewsletter && <div className="loading">Loading preferences...</div>}
 
-            {!loadingNewsletter && (newsletterData.comment || newsletterData.checkbox1 || newsletterData.checkbox2 || newsletterData.checkbox3) && (
-              <div className="newsletter-preferences-card">
-                <div className="preferences-header">
-                  <h3>Your Preferences</h3>
-                  <button className="edit-button" onClick={() => setModalOpen(true)}>
-                    Edit
-                  </button>
-                </div>
-                <div className="preferences-content">
-                  {newsletterData.comment && (
-                    <p>Comment: {newsletterData.comment}</p>
-                  )}
-                  {(newsletterData.checkbox1 || newsletterData.checkbox2 || newsletterData.checkbox3) && (
-                    <div className="preferences-options">
-                      Options selected: {[
-                        newsletterData.checkbox1 && '1',
-                        newsletterData.checkbox2 && '2',
-                        newsletterData.checkbox3 && '3',
-                      ].filter(Boolean).join(', ')}
-                    </div>
-                  )}
-                </div>
+            {!loadingNewsletter && newsletters.length === 0 && (
+              <div className="news-item">
+                <h3>Create your first newsletter custom to you</h3>
+                <p>Tell us what you care about and we’ll build a weekly (or daily) newsletter just for you.</p>
+                <button
+                  className="customize-button"
+                  onClick={() => {
+                    setNewsletterDraft({
+                      id: createNewsletterId(),
+                      newsletterName: '',
+                      personName: '',
+                      location: { state: selectedState || '', district: '' },
+                      topics: ['top-stories'],
+                      schedule: { frequency: 'weekly', days: ['Mon'], lookbackDays: 7 },
+                      emails: [],
+                    });
+                    setNewsletterModalOpen(true);
+                  }}
+                >
+                  Create your first newsletter
+                </button>
               </div>
             )}
 
-            {!loadingNewsletter && !newsletterData.comment && !newsletterData.checkbox1 && !newsletterData.checkbox2 && !newsletterData.checkbox3 && (
-              <div className="news-item">
-                <h3>Customize Your Newsletter</h3>
-                <p>Click the button below to set your newsletter preferences.</p>
-                <button className="customize-button" onClick={() => setModalOpen(true)}>
-                  Customize
-                </button>
+            {!loadingNewsletter && newsletters.length > 0 && (
+              <div className="newsletter-preferences-card">
+                <div className="preferences-header">
+                  <h3>Your Newsletters</h3>
+                  <button
+                    className="edit-button"
+                    onClick={() => {
+                      setNewsletterDraft({
+                        id: createNewsletterId(),
+                        newsletterName: '',
+                        personName: '',
+                        location: { state: selectedState || '', district: '' },
+                        topics: ['top-stories'],
+                        schedule: { frequency: 'weekly', days: ['Mon'], lookbackDays: 7 },
+                        emails: [],
+                      });
+                      setNewsletterModalOpen(true);
+                    }}
+                  >
+                    Create another
+                  </button>
+                </div>
+
+                <div className="preferences-content">
+                  {newsletters.map((entry) => (
+                    <div key={entry.id} className="news-item" style={{ marginBottom: '1rem' }}>
+                      <h3>{entry.newsletterName || 'Personal Newsletter'}</h3>
+                      <p>
+                        <strong>For:</strong> {entry.personName || 'Unnamed'}{' '}
+                        {entry?.location?.state ? `(${entry.location.state})` : ''}
+                      </p>
+                      <p>
+                        <strong>Topics:</strong> {(entry.topics || []).join(', ') || 'None'}
+                      </p>
+                      {entry?.topicDepths && Object.keys(entry.topicDepths).length > 0 && (
+                        <p>
+                          <strong>Depth:</strong>{' '}
+                          {Object.entries(entry.topicDepths)
+                            .map(([topic, depth]) => {
+                              const label = depth === 1 ? 'Brief' : depth === 3 ? 'Deep' : 'Standard';
+                              return `${topic}: ${label}`;
+                            })
+                            .join(', ')}
+                        </p>
+                      )}
+                      {entry?.tone && (
+                        <p>
+                          <strong>Tone:</strong> {entry.tone}
+                        </p>
+                      )}
+                      {entry?.keywords?.include?.length ? (
+                        <p>
+                          <strong>Keywords:</strong>{' '}
+                          include [{entry.keywords.include.join(', ')}]
+                        </p>
+                      ) : null}
+                      <p>
+                        <strong>Schedule:</strong>{' '}
+                        {entry?.schedule?.frequency === 'daily'
+                          ? 'Daily'
+                          : `Weekly on ${(entry?.schedule?.days || []).join(', ') || 'unspecified days'}`}
+                      </p>
+                      <p>
+                        <strong>Lookback:</strong> {entry?.schedule?.lookbackDays || 7} days
+                      </p>
+                      {entry?.emails?.length ? (
+                        <p><strong>Emails:</strong> {entry.emails.join(', ')}</p>
+                      ) : null}
+
+                      <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+                        <button
+                          className="edit-button"
+                          onClick={() => {
+                            setNewsletterDraft(entry);
+                            setNewsletterModalOpen(true);
+                          }}
+                        >
+                          Edit
+                        </button>
+                        <button
+                          className="edit-button"
+                          onClick={() => handleGenerateNow(entry.id)}
+                        >
+                          Generate Now
+                        </button>
+                        <button
+                          className="button-secondary delete-button"
+                          onClick={() => handleDeleteNewsletter(entry.id)}
+                        >
+                          Delete
+                        </button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             )}
           </div>
@@ -1083,11 +1221,28 @@ export default function LegacyHome() {
         <ul><li>&copy; Muninn</li></ul>
       </div>
 
-      <CustomizeModal
-        isOpen={modalOpen}
-        onClose={() => setModalOpen(false)}
-        onSave={handleSavePreferences}
-        initialData={newsletterData}
+      <NewsletterWizardModal
+        isOpen={newsletterModalOpen}
+        onClose={() => {
+          setNewsletterModalOpen(false);
+          setNewsletterDraft(null);
+        }}
+        onSave={handleSaveNewsletter}
+        initialData={newsletterDraft}
+        allStates={US_STATES}
+        topicOptions={[
+          { key: 'top-stories', label: 'Top Stories' },
+          { key: 'local', label: 'Local News' },
+          { key: 'technology', label: 'AI News' },
+          { key: 'health', label: 'Health' },
+          { key: 'business', label: 'Business' },
+          { key: 'science', label: 'Science' },
+          { key: 'sports', label: 'Sports' },
+          { key: 'politics', label: 'Politics' },
+          { key: 'world', label: 'World' },
+          { key: 'happy', label: 'Happy News' },
+          { key: 'other', label: 'Other' },
+        ]}
       />
 
       <NewsSectionsModal
