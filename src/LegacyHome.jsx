@@ -7,6 +7,7 @@ import NewsletterWizardModal from './NewsletterWizardModal';
 import NewsSectionsModal from './NewsSectionsModal';
 
 const client = generateClient();
+const GENERATE_URL = import.meta.env.VITE_NEWSLETTER_GENERATE_URL || '';
 
 const PINNED_CATEGORY_ORDER = ['your-newsletter', 'top-stories'];
 const CUSTOMIZABLE_CATEGORY_ORDER = [
@@ -559,7 +560,7 @@ export default function LegacyHome() {
     setNewsletterDraft(null);
 
     if (generateNow) {
-      alert('Generation request saved. This will run once the pipeline is wired up.');
+      await triggerGenerateNow(payload.id);
     }
   }
 
@@ -569,6 +570,59 @@ export default function LegacyHome() {
     await saveNewslettersToBackend(next);
   }
 
+  async function triggerGenerateNow(newsletterId) {
+    try {
+      if (!GENERATE_URL) {
+        alert('Generate URL not configured. Set VITE_NEWSLETTER_GENERATE_URL.');
+        return;
+      }
+      const id = await ensureUserId();
+      const res = await fetch(GENERATE_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ userId: id, newsletterId }),
+      });
+      if (!res.ok) {
+        const text = await res.text();
+        throw new Error(text || `HTTP ${res.status}`);
+      }
+      const data = await res.json();
+      const key = data?.key || data?.body?.key || data?.keyPath;
+      const bucket = data?.bucket || data?.body?.bucket;
+      const urlFromResponse = data?.url || data?.body?.url;
+      const url = urlFromResponse || (key && bucket ? `https://${bucket}.s3.amazonaws.com/${key}` : '');
+      const nowIso = new Date().toISOString();
+
+      if (key) {
+        setNewsletters((prev) => prev.map((entry) => {
+          if (entry.id !== newsletterId) return entry;
+          return {
+            ...entry,
+            lastGeneratedAt: nowIso,
+            lastGeneratedKey: key,
+            lastGeneratedUrl: url,
+          };
+        }));
+        await saveNewslettersToBackend(
+          newsletters.map((entry) => {
+            if (entry.id !== newsletterId) return entry;
+            return {
+              ...entry,
+              lastGeneratedAt: nowIso,
+              lastGeneratedKey: key,
+              lastGeneratedUrl: url,
+            };
+          })
+        );
+      }
+
+      alert(key ? `Generated: ${key}` : 'Generation complete.');
+    } catch (e) {
+      console.error('Generate now failed:', e);
+      alert('Failed to generate newsletter. Check Lambda logs.');
+    }
+  }
+
   async function handleGenerateNow(id) {
     const next = newsletters.map((entry) => {
       if (entry.id !== id) return entry;
@@ -576,7 +630,7 @@ export default function LegacyHome() {
     });
     setNewsletters(next);
     await saveNewslettersToBackend(next);
-    alert('Generation request saved. This will run once the pipeline is wired up.');
+    await triggerGenerateNow(id);
   }
 
   async function saveSectionsToBackend(nextSections) {
@@ -915,6 +969,11 @@ export default function LegacyHome() {
                       {entry?.emails?.length ? (
                         <p><strong>Emails:</strong> {entry.emails.join(', ')}</p>
                       ) : null}
+                      {entry?.lastGeneratedKey ? (
+                        <p style={{ wordBreak: 'break-word' }}>
+                          <strong>Last Output:</strong> {entry.lastGeneratedKey}
+                        </p>
+                      ) : null}
 
                       <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
                         <button
@@ -926,6 +985,14 @@ export default function LegacyHome() {
                         >
                           Edit
                         </button>
+                        {entry?.lastGeneratedUrl ? (
+                          <button
+                            className="edit-button"
+                            onClick={() => window.open(entry.lastGeneratedUrl, '_blank', 'noopener,noreferrer')}
+                          >
+                            View
+                          </button>
+                        ) : null}
                         <button
                           className="edit-button"
                           onClick={() => handleGenerateNow(entry.id)}

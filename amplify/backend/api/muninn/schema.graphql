@@ -1,6 +1,10 @@
 type UserState
   @model
-  @auth(rules: [{ allow: owner }]) {
+  @auth(rules: [
+    { allow: owner },
+    { allow: private, provider: iam },
+    { allow: public, provider: apiKey }
+  ]) {
   id: ID!
   noteText: String
   flag: Boolean

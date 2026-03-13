@@ -8,6 +8,16 @@
       "cognitoUserPoolId": "authmuninna9e43977"
     },
     "conflictResolution": {},
-    "additionalAuthTypes": []
+    "additionalAuthTypes": [
+      {
+        "mode": "AWS_IAM"
+      },
+      {
+        "mode": "API_KEY",
+        "expirationTime": 7,
+        "apiKeyExpirationDate": "2026-03-20T18:35:23.600Z",
+        "keyDescription": "lambda-test"
+      }
+    ]
   }
 }
