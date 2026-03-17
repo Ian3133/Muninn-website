@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Newsletter Summary</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+      }
+      body {
+        margin: 0;
+        padding: 2.5rem 1.5rem;
+        font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+        background: #0f0f12;
+        color: #f5f5f5;
+      }
+      .container {
+        max-width: 880px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        padding: 2rem;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+      }
+      h1 {
+        margin: 0 0 0.75rem;
+        font-size: 2rem;
+        letter-spacing: 0.01em;
+      }
+      .meta {
+        font-size: 0.95rem;
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 1.5rem;
+      }
+      .summary h2 {
+        margin: 1.5rem 0 0.75rem;
+        font-size: 1.35rem;
+        color: #f0f0f0;
+      }
+      .summary p {
+        line-height: 1.6;
+        margin: 0 0 1rem;
+      }
+      .story-list {
+        margin: 1.5rem 0 0;
+        padding-left: 1.25rem;
+      }
+      .story-list li {
+        margin-bottom: 0.75rem;
+      }
+      .story-list small {
+        color: rgba(255, 255, 255, 0.7);
+      }
+      .error {
+        color: #ffb3b3;
+        font-weight: 600;
+      }
+      .back-link {
+        display: inline-block;
+        margin-top: 1rem;
+        color: #8ab4ff;
+        text-decoration: none;
+      }
+      .back-link:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Newsletter Summary</h1>
+      <div id="meta" class="meta">Loading...</div>
+      <div id="summary" class="summary"></div>
+      <a class="back-link" href="/" rel="noopener">Back to Muninn</a>
+    </div>
+
+    <script>
+      function escapeHtml(str) {
+        return (str || '')
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#039;');
+      }
+
+      function formatSummary(text) {
+        if (!text) return '';
+        const raw = text.trim();
+        const paragraphs = raw.split(/\n{2,}/g).map((p) => p.trim()).filter(Boolean);
+        if (!paragraphs.length) return '';
+
+        return paragraphs.map((paragraph, index) => {
+          let html = escapeHtml(paragraph);
+          html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+          html = html.replace(/\n/g, '<br />');
+          return `<h2>Section ${index + 1}</h2><p>${html}</p>`;
+        }).join('');
+      }
+
+      function formatTimestamp(ts) {
+        if (!ts) return null;
+        const value = typeof ts === 'string' ? Number(ts) : ts;
+        if (!Number.isFinite(value)) return null;
+        const millis = value > 2_000_000_000 ? value * 1000 : value;
+        const d = new Date(millis);
+        if (Number.isNaN(d.getTime())) return null;
+        return d.toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' });
+      }
+
+      (async function () {
+        const params = new URLSearchParams(window.location.search);
+        const url = params.get('url');
+        const metaEl = document.getElementById('meta');
+        const summaryEl = document.getElementById('summary');
+
+        if (!url) {
+          metaEl.textContent = 'Missing output URL.';
+          summaryEl.innerHTML = '<p class="error">No summary URL provided.</p>';
+          return;
+        }
+
+        try {
+          const res = await fetch(url, { cache: 'no-store' });
+          if (!res.ok) throw new Error(`Failed to fetch output (${res.status})`);
+          const data = await res.json();
+
+          const summary = data?.summary || data?.newsletter?.summary || '';
+          const generated = formatTimestamp(data?.generated_at) || 'Unknown time';
+          const user = data?.user_id || 'Unknown user';
+          const clusters = Array.isArray(data?.clusters) ? data.clusters : [];
+
+          metaEl.textContent = `Generated ${generated} · ${user}`;
+          summaryEl.innerHTML = summary ? formatSummary(summary) : '<p class="error">Summary not found.</p>';
+
+          if (clusters.length) {
+            const listItems = clusters.map((cluster) => {
+              const title = escapeHtml(cluster?.title || 'Untitled story');
+              const sources = Array.isArray(cluster?.sources) ? cluster.sources.slice(0, 6).join(', ') : '';
+              const sourceCount = cluster?.source_count ? ` · ${cluster.source_count} sources` : '';
+              const link = cluster?.items?.[0]?.link;
+              const titleHtml = link
+                ? `<a href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer">${title}</a>`
+                : title;
+              const sourcesHtml = sources ? `<br /><small>${escapeHtml(sources)}${sourceCount}</small>` : '';
+              return `<li>${titleHtml}${sourcesHtml}</li>`;
+            }).join('');
+
+            summaryEl.insertAdjacentHTML(
+              'beforeend',
+              `<h2>Stories Referenced</h2><ol class="story-list">${listItems}</ol>`
+            );
+          }
+        } catch (err) {
+          metaEl.textContent = 'Unable to load summary.';
+          summaryEl.innerHTML = `<p class="error">${escapeHtml(err?.message || 'Failed to load summary.')}</p>`;
+        }
+      })();
+    </script>
+  </body>
+</html>

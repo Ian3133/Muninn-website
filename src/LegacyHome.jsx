@@ -214,6 +214,9 @@ export default function LegacyHome() {
   const [newsletterModalOpen, setNewsletterModalOpen] = useState(false);
   const [newsletterDraft, setNewsletterDraft] = useState(null);
   const [newsletters, setNewsletters] = useState([]);
+  const [summaryByNewsletter, setSummaryByNewsletter] = useState({});
+  const [summaryLoadingId, setSummaryLoadingId] = useState(null);
+  const [summaryErrorById, setSummaryErrorById] = useState({});
   const [selectedSections, setSelectedSections] = useState([...DEFAULT_CUSTOM_SELECTED]);
   const [draggedSection, setDraggedSection] = useState(null);
   const [userId, setUserId] = useState(null);
@@ -570,6 +573,32 @@ export default function LegacyHome() {
     await saveNewslettersToBackend(next);
   }
 
+  async function fetchSummaryFromUrl(url, newsletterId) {
+    if (!url) return null;
+    setSummaryLoadingId(newsletterId);
+    setSummaryErrorById((prev) => ({ ...prev, [newsletterId]: null }));
+
+    try {
+      const res = await fetch(url, { cache: 'no-store' });
+      if (!res.ok) {
+        throw new Error(`Failed to fetch output (${res.status})`);
+      }
+      const data = await res.json();
+      const summaryText = data?.summary || data?.newsletter?.summary || '';
+      if (!summaryText) {
+        throw new Error('Summary not found in output.');
+      }
+      setSummaryByNewsletter((prev) => ({ ...prev, [newsletterId]: summaryText }));
+      return summaryText;
+    } catch (e) {
+      console.error('Failed to load summary:', e);
+      setSummaryErrorById((prev) => ({ ...prev, [newsletterId]: e?.message || 'Failed to load summary.' }));
+      return null;
+    } finally {
+      setSummaryLoadingId((prev) => (prev === newsletterId ? null : prev));
+    }
+  }
+
   async function triggerGenerateNow(newsletterId) {
     try {
       if (!GENERATE_URL) {
@@ -587,9 +616,18 @@ export default function LegacyHome() {
         throw new Error(text || `HTTP ${res.status}`);
       }
       const data = await res.json();
-      const key = data?.key || data?.body?.key || data?.keyPath;
-      const bucket = data?.bucket || data?.body?.bucket;
-      const urlFromResponse = data?.url || data?.body?.url;
+      let bodyJson = data?.body;
+      if (typeof bodyJson === 'string') {
+        try {
+          bodyJson = JSON.parse(bodyJson);
+        } catch (_e) {
+          bodyJson = null;
+        }
+      }
+      const key = data?.key || bodyJson?.key || data?.body?.key || data?.keyPath;
+      const bucket = data?.bucket || bodyJson?.bucket || data?.body?.bucket;
+      const urlFromResponse = data?.url || bodyJson?.url || data?.body?.url;
+      const summaryFromResponse = data?.summary || bodyJson?.summary || data?.body?.summary;
       const url = urlFromResponse || (key && bucket ? `https://${bucket}.s3.amazonaws.com/${key}` : '');
       const nowIso = new Date().toISOString();
 
@@ -614,6 +652,12 @@ export default function LegacyHome() {
             };
           })
         );
+      }
+
+      if (summaryFromResponse) {
+        setSummaryByNewsletter((prev) => ({ ...prev, [newsletterId]: summaryFromResponse }));
+      } else if (url) {
+        await fetchSummaryFromUrl(url, newsletterId);
       }
 
       alert(key ? `Generated: ${key}` : 'Generation complete.');
@@ -975,6 +1019,19 @@ export default function LegacyHome() {
                         </p>
                       ) : null}
 
+                      {summaryByNewsletter[entry.id] ? (
+                        <div style={{ border: '1px solid rgba(255,255,255,0.15)', borderRadius: '12px', padding: '0.75rem', marginTop: '0.75rem' }}>
+                          <p style={{ marginTop: 0 }}><strong>Latest Summary</strong></p>
+                          <p style={{ whiteSpace: 'pre-wrap' }}>{summaryByNewsletter[entry.id]}</p>
+                        </div>
+                      ) : null}
+                      {summaryLoadingId === entry.id ? (
+                        <p style={{ opacity: 0.8 }}>Loading summary...</p>
+                      ) : null}
+                      {summaryErrorById[entry.id] ? (
+                        <p style={{ color: '#ffb3b3' }}>{summaryErrorById[entry.id]}</p>
+                      ) : null}
+
                       <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
                         <button
                           className="edit-button"
@@ -988,9 +1045,9 @@ export default function LegacyHome() {
                         {entry?.lastGeneratedUrl ? (
                           <button
                             className="edit-button"
-                            onClick={() => window.open(entry.lastGeneratedUrl, '_blank', 'noopener,noreferrer')}
+                            onClick={() => window.open(`/summary.html?url=${encodeURIComponent(entry.lastGeneratedUrl)}`, '_blank', 'noopener,noreferrer')}
                           >
-                            View
+                            View Summary
                           </button>
                         ) : null}
                         <button
