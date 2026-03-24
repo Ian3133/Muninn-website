@@ -113,17 +113,23 @@
       (async function () {
         const params = new URLSearchParams(window.location.search);
         const url = params.get('url');
+        const key = params.get('key');
+        const lambdaUrl = params.get('lambda');
         const metaEl = document.getElementById('meta');
         const summaryEl = document.getElementById('summary');
 
-        if (!url) {
+        const hasLambdaKey = Boolean(lambdaUrl && key);
+        if (!url && !hasLambdaKey) {
           metaEl.textContent = 'Missing output URL.';
-          summaryEl.innerHTML = '<p class="error">No summary URL provided.</p>';
+          summaryEl.innerHTML = '<p class="error">No summary URL or key provided.</p>';
           return;
         }
 
         try {
-          const res = await fetch(url, { cache: 'no-store' });
+          const res = await fetch(
+            hasLambdaKey ? `${lambdaUrl}?key=${encodeURIComponent(key)}` : url,
+            { cache: 'no-store' }
+          );
           if (!res.ok) throw new Error(`Failed to fetch output (${res.status})`);
           const data = await res.json();
 

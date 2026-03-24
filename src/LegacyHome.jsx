@@ -1045,7 +1045,14 @@ export default function LegacyHome() {
                         {entry?.lastGeneratedUrl ? (
                           <button
                             className="edit-button"
-                            onClick={() => window.open(`/summary.html?url=${encodeURIComponent(entry.lastGeneratedUrl)}`, '_blank', 'noopener,noreferrer')}
+                            onClick={() => {
+                              const key = entry.lastGeneratedKey || '';
+                              const lambdaUrl = GENERATE_URL;
+                              const query = new URLSearchParams();
+                              if (key) query.set('key', key);
+                              if (lambdaUrl) query.set('lambda', lambdaUrl);
+                              window.open(`/summary.html?${query.toString()}`, '_blank', 'noopener,noreferrer');
+                            }}
                           >
                             View Summary
                           </button>
