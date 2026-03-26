@@ -1019,12 +1019,6 @@ export default function LegacyHome() {
                         </p>
                       ) : null}
 
-                      {summaryByNewsletter[entry.id] ? (
-                        <div style={{ border: '1px solid rgba(255,255,255,0.15)', borderRadius: '12px', padding: '0.75rem', marginTop: '0.75rem' }}>
-                          <p style={{ marginTop: 0 }}><strong>Latest Summary</strong></p>
-                          <p style={{ whiteSpace: 'pre-wrap' }}>{summaryByNewsletter[entry.id]}</p>
-                        </div>
-                      ) : null}
                       {summaryLoadingId === entry.id ? (
                         <p style={{ opacity: 0.8 }}>Loading summary...</p>
                       ) : null}
