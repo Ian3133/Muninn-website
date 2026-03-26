@@ -34,11 +34,6 @@
         color: rgba(255, 255, 255, 0.7);
         margin-bottom: 1.5rem;
       }
-      .summary h2 {
-        margin: 1.5rem 0 0.75rem;
-        font-size: 1.35rem;
-        color: #f0f0f0;
-      }
       .summary p {
         line-height: 1.6;
         margin: 0 0 1rem;
@@ -88,15 +83,16 @@
 
       function formatSummary(text) {
         if (!text) return '';
-        const raw = text.trim();
+        let raw = text.trim();
+        raw = raw.replace(/^#{1,6}\s+.*\n+/i, '');
         const paragraphs = raw.split(/\n{2,}/g).map((p) => p.trim()).filter(Boolean);
         if (!paragraphs.length) return '';
 
-        return paragraphs.map((paragraph, index) => {
+        return paragraphs.map((paragraph) => {
           let html = escapeHtml(paragraph);
           html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
           html = html.replace(/\n/g, '<br />');
-          return `<h2>Section ${index + 1}</h2><p>${html}</p>`;
+          return `<p>${html}</p>`;
         }).join('');
       }
 
@@ -147,8 +143,11 @@
               const sources = Array.isArray(cluster?.sources) ? cluster.sources.slice(0, 6).join(', ') : '';
               const sourceCount = cluster?.source_count ? ` · ${cluster.source_count} sources` : '';
               const link = cluster?.items?.[0]?.link;
-              const titleHtml = link
-                ? `<a href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer">${title}</a>`
+              const storyLink = hasLambdaKey
+                ? `/summary_story.html?key=${encodeURIComponent(key)}&lambda=${encodeURIComponent(lambdaUrl)}&index=${clusters.indexOf(cluster)}`
+                : (link ? escapeHtml(link) : '');
+              const titleHtml = storyLink
+                ? `<a href="${storyLink}" target="_blank" rel="noopener noreferrer">${title}</a>`
                 : title;
               const sourcesHtml = sources ? `<br /><small>${escapeHtml(sources)}${sourceCount}</small>` : '';
               return `<li>${titleHtml}${sourcesHtml}</li>`;

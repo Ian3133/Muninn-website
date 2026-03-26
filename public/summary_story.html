@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Story Detail</title>
+    <style>
+      :root { color-scheme: light dark; }
+      body {
+        margin: 0;
+        padding: 2.5rem 1.5rem;
+        font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+        background: #0f0f12;
+        color: #f5f5f5;
+      }
+      .container {
+        max-width: 880px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        padding: 2rem;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+      }
+      h1 { margin: 0 0 0.75rem; font-size: 2rem; }
+      .meta { font-size: 0.95rem; color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; }
+      .summary p { line-height: 1.6; margin: 0 0 1rem; }
+      .error { color: #ffb3b3; font-weight: 600; }
+      .sources, .items { margin: 1.25rem 0 0; padding-left: 1.25rem; }
+      .sources li, .items li { margin-bottom: 0.5rem; }
+      .back-link { display: inline-block; margin-top: 1rem; color: #8ab4ff; text-decoration: none; }
+      .back-link:hover { text-decoration: underline; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="title">Story Detail</h1>
+      <div id="meta" class="meta">Loading...</div>
+      <div id="summary" class="summary"></div>
+      <div id="sources"></div>
+      <div id="items"></div>
+      <a class="back-link" href="javascript:history.back()">Back</a>
+    </div>
+
+    <script>
+      function escapeHtml(str) {
+        return (str || '')
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#039;');
+      }
+      function formatParagraphs(text) {
+        if (!text) return '';
+        const parts = text.trim().split(/\n{2,}/g).map((p) => p.trim()).filter(Boolean);
+        return parts.map((p) => `<p>${escapeHtml(p)}</p>`).join('');
+      }
+
+      (async function () {
+        const params = new URLSearchParams(window.location.search);
+        const key = params.get('key');
+        const lambdaUrl = params.get('lambda');
+        const index = Number(params.get('index') || 0);
+        const titleEl = document.getElementById('title');
+        const metaEl = document.getElementById('meta');
+        const summaryEl = document.getElementById('summary');
+        const sourcesEl = document.getElementById('sources');
+        const itemsEl = document.getElementById('items');
+
+        if (!key || !lambdaUrl) {
+          metaEl.textContent = 'Missing data to load story.';
+          summaryEl.innerHTML = '<p class="error">Missing key or lambda URL.</p>';
+          return;
+        }
+
+        try {
+          const res = await fetch(`${lambdaUrl}?key=${encodeURIComponent(key)}`, { cache: 'no-store' });
+          if (!res.ok) throw new Error(`Failed to fetch output (${res.status})`);
+          const data = await res.json();
+          const clusters = Array.isArray(data?.clusters) ? data.clusters : [];
+          const cluster = clusters[index];
+
+          if (!cluster) {
+            metaEl.textContent = 'Story not found.';
+            summaryEl.innerHTML = '<p class="error">Story index is out of range.</p>';
+            return;
+          }
+
+          titleEl.textContent = cluster.title || 'Story Detail';
+          metaEl.textContent = `${cluster.source_count || 0} sources`;
+          summaryEl.innerHTML = formatParagraphs(cluster.summary || '');
+
+          if (Array.isArray(cluster.sources) && cluster.sources.length) {
+            const list = cluster.sources.map((s) => `<li>${escapeHtml(s)}</li>`).join('');
+            sourcesEl.innerHTML = `<h2>Sources</h2><ol class="sources">${list}</ol>`;
+          }
+
+          if (Array.isArray(cluster.items) && cluster.items.length) {
+            const list = cluster.items.map((item) => {
+              const title = escapeHtml(item?.title || 'Source');
+              const link = item?.link ? escapeHtml(item.link) : '';
+              const linkHtml = link ? `<a href="${link}" target="_blank" rel="noopener noreferrer">${title}</a>` : title;
+              return `<li>${linkHtml}</li>`;
+            }).join('');
+            itemsEl.innerHTML = `<h2>Related Coverage</h2><ol class="items">${list}</ol>`;
+          }
+        } catch (err) {
+          metaEl.textContent = 'Unable to load story.';
+          summaryEl.innerHTML = `<p class="error">${escapeHtml(err?.message || 'Failed to load story.')}</p>`;
+        }
+      })();
+    </script>
+  </body>
+</html>
