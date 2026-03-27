@@ -606,10 +606,20 @@ export default function LegacyHome() {
         return;
       }
       const id = await ensureUserId();
+      const selectedNewsletter = newsletters.find((entry) => entry.id === newsletterId);
+      const sectionLabels = (selectedNewsletter?.topics || [])
+        .map((topic) => categoryTitles[topic] || topic)
+        .filter(Boolean);
       const res = await fetch(GENERATE_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ userId: id, newsletterId }),
+        body: JSON.stringify({
+          userId: id,
+          newsletterId,
+          tone: selectedNewsletter?.tone || 'neutral',
+          sections: sectionLabels,
+          lookbackDays: selectedNewsletter?.schedule?.lookbackDays || 7,
+        }),
       });
       if (!res.ok) {
         const text = await res.text();

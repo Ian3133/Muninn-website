@@ -1,13 +1,11 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Newsletter Summary</title>
     <style>
-      :root {
-        color-scheme: light dark;
-      }
+      :root { color-scheme: light dark; }
       body {
         margin: 0;
         padding: 2.5rem 1.5rem;
@@ -24,43 +22,17 @@
         padding: 2rem;
         box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
       }
-      h1 {
-        margin: 0 0 0.75rem;
-        font-size: 2rem;
-        letter-spacing: 0.01em;
-      }
-      .meta {
-        font-size: 0.95rem;
-        color: rgba(255, 255, 255, 0.7);
-        margin-bottom: 1.5rem;
-      }
-      .summary p {
-        line-height: 1.6;
-        margin: 0 0 1rem;
-      }
-      .story-list {
-        margin: 1.5rem 0 0;
-        padding-left: 1.25rem;
-      }
-      .story-list li {
-        margin-bottom: 0.75rem;
-      }
-      .story-list small {
-        color: rgba(255, 255, 255, 0.7);
-      }
-      .error {
-        color: #ffb3b3;
-        font-weight: 600;
-      }
-      .back-link {
-        display: inline-block;
-        margin-top: 1rem;
-        color: #8ab4ff;
-        text-decoration: none;
-      }
-      .back-link:hover {
-        text-decoration: underline;
-      }
+      h1 { margin: 0 0 0.75rem; font-size: 2rem; letter-spacing: 0.01em; }
+      h2 { margin: 1.5rem 0 0.5rem; font-size: 1.35rem; }
+      h3 { margin: 1rem 0 0.5rem; font-size: 1.05rem; color: rgba(255,255,255,0.85); }
+      .meta { font-size: 0.95rem; color: rgba(255, 255, 255, 0.7); margin-bottom: 1.5rem; }
+      .summary p { line-height: 1.6; margin: 0 0 1rem; }
+      .story-list { margin: 1.5rem 0 0; padding-left: 1.25rem; }
+      .story-list li { margin-bottom: 0.75rem; }
+      .story-list small { color: rgba(255, 255, 255, 0.7); }
+      .error { color: #ffb3b3; font-weight: 600; }
+      .back-link { display: inline-block; margin-top: 1rem; color: #8ab4ff; text-decoration: none; }
+      .back-link:hover { text-decoration: underline; }
     </style>
   </head>
   <body>
@@ -81,15 +53,20 @@
           .replace(/'/g, '&#039;');
       }
 
-      function formatSummary(text) {
+      function renderMarkdown(text) {
         if (!text) return '';
         let raw = text.trim();
-        raw = raw.replace(/^#{1,6}\s+.*\n+/i, '');
-        const paragraphs = raw.split(/\n{2,}/g).map((p) => p.trim()).filter(Boolean);
-        if (!paragraphs.length) return '';
-
-        return paragraphs.map((paragraph) => {
-          let html = escapeHtml(paragraph);
+        raw = raw.replace(/```[a-z]*\n([\s\S]*?)```/gi, '$1');
+        raw = raw.replace(/^#{1,6}\s+Newsletter Summary\s*\n+/i, '');
+        const blocks = raw.split(/\n{2,}/g).map((b) => b.trim()).filter(Boolean);
+        return blocks.map((block) => {
+          if (block.startsWith('### ')) {
+            return `<h3>${escapeHtml(block.slice(4))}</h3>`;
+          }
+          if (block.startsWith('## ')) {
+            return `<h2>${escapeHtml(block.slice(3))}</h2>`;
+          }
+          let html = escapeHtml(block);
           html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
           html = html.replace(/\n/g, '<br />');
           return `<p>${html}</p>`;
@@ -100,7 +77,7 @@
         if (!ts) return null;
         const value = typeof ts === 'string' ? Number(ts) : ts;
         if (!Number.isFinite(value)) return null;
-        const millis = value > 2_000_000_000 ? value * 1000 : value;
+        const millis = value < 1_000_000_000_000 ? value * 1000 : value;
         const d = new Date(millis);
         if (Number.isNaN(d.getTime())) return null;
         return d.toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' });
@@ -133,18 +110,29 @@
           const generated = formatTimestamp(data?.generated_at) || 'Unknown time';
           const user = data?.user_id || 'Unknown user';
           const clusters = Array.isArray(data?.clusters) ? data.clusters : [];
+          const lookbackDays = Number(data?.lookback_days || data?.lookbackDays);
+          let rangeText = '';
+          if (Number.isFinite(lookbackDays) && lookbackDays > 0 && data?.generated_at) {
+            const endMs = (typeof data.generated_at === 'number' ? data.generated_at : Number(data.generated_at)) * 1000;
+            const startMs = endMs - (lookbackDays - 1) * 24 * 60 * 60 * 1000;
+            const startDate = new Date(startMs);
+            const endDate = new Date(endMs);
+            const startStr = startDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+            const endStr = endDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+            rangeText = ` · ${startStr} – ${endStr}`;
+          }
 
-          metaEl.textContent = `Generated ${generated} · ${user}`;
-          summaryEl.innerHTML = summary ? formatSummary(summary) : '<p class="error">Summary not found.</p>';
+          metaEl.textContent = `Generated ${generated} · ${user}${rangeText}`;
+          summaryEl.innerHTML = summary ? renderMarkdown(summary) : '<p class="error">Summary not found.</p>';
 
           if (clusters.length) {
-            const listItems = clusters.map((cluster) => {
+            const listItems = clusters.map((cluster, index) => {
               const title = escapeHtml(cluster?.title || 'Untitled story');
               const sources = Array.isArray(cluster?.sources) ? cluster.sources.slice(0, 6).join(', ') : '';
               const sourceCount = cluster?.source_count ? ` · ${cluster.source_count} sources` : '';
               const link = cluster?.items?.[0]?.link;
               const storyLink = hasLambdaKey
-                ? `/summary_story.html?key=${encodeURIComponent(key)}&lambda=${encodeURIComponent(lambdaUrl)}&index=${clusters.indexOf(cluster)}`
+                ? `/summary_story.html?key=${encodeURIComponent(key)}&lambda=${encodeURIComponent(lambdaUrl)}&index=${index}`
                 : (link ? escapeHtml(link) : '');
               const titleHtml = storyLink
                 ? `<a href="${storyLink}" target="_blank" rel="noopener noreferrer">${title}</a>`
