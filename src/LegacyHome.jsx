@@ -607,9 +607,22 @@ export default function LegacyHome() {
       }
       const id = await ensureUserId();
       const selectedNewsletter = newsletters.find((entry) => entry.id === newsletterId);
-      const sectionLabels = (selectedNewsletter?.topics || [])
+      const topics = selectedNewsletter?.topics || [];
+      const topicDepths = selectedNewsletter?.topicDepths || {};
+      const sectionLabels = topics
         .map((topic) => categoryTitles[topic] || topic)
         .filter(Boolean);
+      const sectionDepths = {};
+      topics.forEach((topic) => {
+        const label = categoryTitles[topic] || topic;
+        if (!label) return;
+        const rawDepth = Number(topicDepths?.[topic]);
+        sectionDepths[label] = Number.isFinite(rawDepth) ? rawDepth : 2;
+      });
+      const overallDepthValues = Object.values(sectionDepths);
+      const overallDepth = overallDepthValues.length
+        ? Math.max(...overallDepthValues.map((value) => (Number.isFinite(value) ? value : 2)))
+        : 2;
       const res = await fetch(GENERATE_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -618,6 +631,14 @@ export default function LegacyHome() {
           newsletterId,
           tone: selectedNewsletter?.tone || 'neutral',
           sections: sectionLabels,
+          sectionDepths,
+          overallDepth,
+          topics,
+          topicDepths,
+          keywords: selectedNewsletter?.keywords || {},
+          personName: selectedNewsletter?.personName || '',
+          newsletterName: selectedNewsletter?.newsletterName || '',
+          location: selectedNewsletter?.location || {},
           lookbackDays: selectedNewsletter?.schedule?.lookbackDays || 7,
         }),
       });
