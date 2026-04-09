@@ -26,6 +26,26 @@
       h2 { margin: 1.5rem 0 0.5rem; font-size: 1.35rem; }
       h3 { margin: 1rem 0 0.5rem; font-size: 1.05rem; color: rgba(255,255,255,0.85); }
       .meta { font-size: 0.95rem; color: rgba(255, 255, 255, 0.7); margin-bottom: 1.5rem; }
+      .tabs { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0 0 1.25rem; }
+      .tab-button {
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.06);
+        color: #f5f5f5;
+        padding: 0.4rem 0.85rem;
+        border-radius: 999px;
+        cursor: pointer;
+        font-size: 0.95rem;
+      }
+      .tab-button.active {
+        background: rgba(138, 180, 255, 0.3);
+        border-color: rgba(138, 180, 255, 0.6);
+        color: #ffffff;
+        font-weight: 600;
+      }
+      .tab-button:focus-visible {
+        outline: 2px solid rgba(138, 180, 255, 0.8);
+        outline-offset: 2px;
+      }
       .summary p { line-height: 1.6; margin: 0 0 1rem; }
       .story-list { margin: 1.5rem 0 0; padding-left: 1.25rem; }
       .story-list li { margin-bottom: 0.75rem; }
@@ -39,7 +59,9 @@
     <div class="container">
       <h1>Newsletter Summary</h1>
       <div id="meta" class="meta">Loading...</div>
-      <div id="summary" class="summary"></div>
+      <div id="tabs" class="tabs" aria-label="Summary sections"></div>
+      <div id="summary-content" class="summary"></div>
+      <div id="summary-related" class="summary"></div>
       <a class="back-link" href="/" rel="noopener">Back to Muninn</a>
     </div>
 
@@ -67,10 +89,97 @@
             return `<h2>${escapeHtml(block.slice(3))}</h2>`;
           }
           let html = escapeHtml(block);
-          html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+          html = html.replace(/\*\*(.+?)\*\*/g, '$1');
           html = html.replace(/\n/g, '<br />');
           return `<p>${html}</p>`;
         }).join('');
+      }
+
+      function splitSections(text) {
+        if (!text) return [];
+        const raw = text.trim().replace(/```[a-z]*\n([\s\S]*?)```/gi, '$1');
+        const lines = raw.split(/\r?\n/);
+        const sections = [];
+        let current = null;
+
+        lines.forEach((line) => {
+          const match = line.match(/^##\s+(.*)/);
+          if (match) {
+            if (current) {
+              sections.push(current);
+            }
+            current = { title: match[1].trim() || 'Section', lines: [] };
+            return;
+          }
+          if (!current) current = { title: 'Summary', lines: [] };
+          current.lines.push(line);
+        });
+
+        if (current) sections.push(current);
+
+        return sections.map((section) => {
+          const content = section.lines.join('\n').trim();
+          const storyTitles = section.lines
+            .map((line) => {
+              const match = line.match(/^###\s+(.*)/);
+              return match ? match[1].trim() : null;
+            })
+            .filter(Boolean);
+          return { title: section.title, content, storyTitles };
+        });
+      }
+
+      function normalizeTitle(value) {
+        return (value || '')
+          .toLowerCase()
+          .replace(/[^a-z0-9\s]/g, '')
+          .replace(/\s+/g, ' ')
+          .trim();
+      }
+
+      function matchClustersToSection(section, clusters) {
+        if (!section || !clusters.length) return [];
+        const normalizedTargets = (section.storyTitles || []).map(normalizeTitle).filter(Boolean);
+        if (!normalizedTargets.length) return [];
+
+        const matches = [];
+        clusters.forEach((cluster, index) => {
+          const title = normalizeTitle(cluster?.title || '');
+          if (!title) return;
+          const hit = normalizedTargets.some((target) => (
+            target === title
+            || (target.length > 8 && title.includes(target))
+            || (title.length > 8 && target.includes(title))
+          ));
+          if (hit) matches.push(index);
+        });
+        return matches;
+      }
+
+      function renderTabs(sections, onSelect) {
+        const tabsEl = document.getElementById('tabs');
+        tabsEl.innerHTML = '';
+        if (!sections.length || sections.length === 1) {
+          tabsEl.style.display = 'none';
+          return;
+        }
+        tabsEl.style.display = 'flex';
+        sections.forEach((section, index) => {
+          const button = document.createElement('button');
+          button.type = 'button';
+          button.className = `tab-button${index === 0 ? ' active' : ''}`;
+          button.textContent = section.title;
+          button.addEventListener('click', () => onSelect(index));
+          tabsEl.appendChild(button);
+        });
+      }
+
+      function setActiveTab(index) {
+        const tabsEl = document.getElementById('tabs');
+        const buttons = Array.from(tabsEl.querySelectorAll('.tab-button'));
+        buttons.forEach((button, idx) => {
+          button.classList.toggle('active', idx === index);
+        });
       }
 
       function formatTimestamp(ts) {
@@ -89,7 +198,8 @@
         const key = params.get('key');
         const lambdaUrl = params.get('lambda');
         const metaEl = document.getElementById('meta');
-        const summaryEl = document.getElementById('summary');
+        const summaryEl = document.getElementById('summary-content');
+        const relatedEl = document.getElementById('summary-related');
 
         const hasLambdaKey = Boolean(lambdaUrl && key);
         if (!url && !hasLambdaKey) {
@@ -123,10 +233,13 @@
           }
 
           metaEl.textContent = `Generated ${generated} · ${user}${rangeText}`;
-          summaryEl.innerHTML = summary ? renderMarkdown(summary) : '<p class="error">Summary not found.</p>';
-
-          if (clusters.length) {
-            const listItems = clusters.map((cluster, index) => {
+          const renderReferences = (indices) => {
+            if (!clusters.length) {
+              relatedEl.innerHTML = '';
+              return;
+            }
+            const listItems = (indices.length ? indices : clusters.map((_, idx) => idx)).map((index) => {
+              const cluster = clusters[index];
               const title = escapeHtml(cluster?.title || 'Untitled story');
               const sources = Array.isArray(cluster?.sources) ? cluster.sources.slice(0, 6).join(', ') : '';
               const sourceCount = cluster?.source_count ? ` · ${cluster.source_count} sources` : '';
@@ -140,11 +253,23 @@
               const sourcesHtml = sources ? `<br /><small>${escapeHtml(sources)}${sourceCount}</small>` : '';
               return `<li>${titleHtml}${sourcesHtml}</li>`;
             }).join('');
+            relatedEl.innerHTML = `<h2>Stories Referenced</h2><ol class="story-list">${listItems}</ol>`;
+          };
 
-            summaryEl.insertAdjacentHTML(
-              'beforeend',
-              `<h2>Stories Referenced</h2><ol class="story-list">${listItems}</ol>`
-            );
+          if (!summary) {
+            summaryEl.innerHTML = '<p class="error">Summary not found.</p>';
+          } else {
+            const sections = splitSections(summary);
+            const safeSections = sections.length ? sections : [{ title: 'Summary', content: summary }];
+            const renderSection = (index) => {
+              const section = safeSections[index] || safeSections[0];
+              summaryEl.innerHTML = renderMarkdown(section.content || '');
+              setActiveTab(index);
+              const matched = matchClustersToSection(section, clusters);
+              renderReferences(matched);
+            };
+            renderTabs(safeSections, renderSection);
+            renderSection(0);
           }
         } catch (err) {
           metaEl.textContent = 'Unable to load summary.';

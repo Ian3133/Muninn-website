@@ -110,6 +110,12 @@ const US_STATES = [
 
 const SUPPORTED_LOCAL_STATE_CODES = new Set(['CT', 'MA', 'CA']);
 
+function resolveStateName(code) {
+  if (!code) return '';
+  const match = US_STATES.find((state) => state.code === code);
+  return match ? match.name : code;
+}
+
 function formatDate(d) {
   return d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 }
@@ -609,9 +615,14 @@ export default function LegacyHome() {
       const selectedNewsletter = newsletters.find((entry) => entry.id === newsletterId);
       const topics = selectedNewsletter?.topics || [];
       const topicDepths = selectedNewsletter?.topicDepths || {};
-      const sectionLabels = topics
-        .map((topic) => categoryTitles[topic] || topic)
-        .filter(Boolean);
+      const sectionLabels = topics.map((topic) => {
+        if (topic === 'local') {
+          const stateName = resolveStateName(selectedNewsletter?.location?.state);
+          if (stateName) return `${stateName} News`;
+          return categoryTitles[topic] || topic;
+        }
+        return categoryTitles[topic] || topic;
+      }).filter(Boolean);
       const sectionDepths = {};
       topics.forEach((topic) => {
         const label = categoryTitles[topic] || topic;
