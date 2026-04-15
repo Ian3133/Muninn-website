@@ -53,11 +53,13 @@
         line-height: 1.8;
         margin: 0 0 1rem;
         color: #000000;
+        font-weight: 400;
       }
       .summary h2,
       .summary h3 {
         color: #000000;
         margin: 1.25rem 0 0.5rem;
+        font-weight: 400;
       }
       .story-list {
         margin: 1.5rem 0 0;
@@ -150,29 +152,55 @@
             .replace(/'/g, '&#039;');
         }
 
-        function renderMarkdown(text) {
+        function cleanSummaryText(text) {
           if (!text) return '';
           let raw = text.trim();
           raw = raw.replace(/```[a-z]*\n([\s\S]*?)```/gi, '$1');
           raw = raw.replace(/^#{1,6}\s+Newsletter Summary\s*\n+/i, '');
+          raw = raw.replace(/\n*\s*Let me know if you need any further information!?\s*$/i, '');
+          return raw.trim();
+        }
+
+        function renderMarkdown(text) {
+          const raw = cleanSummaryText(text);
+          if (!raw) return '';
           const blocks = raw.split(/\n{2,}/g).map((b) => b.trim()).filter(Boolean);
           return blocks.map((block) => {
-            if (block.startsWith('### ')) {
-              return `<h3>${escapeHtml(block.slice(4))}</h3>`;
+            const lines = block.split(/\n/).map((line) => line.trim()).filter(Boolean);
+            if (!lines.length) return '';
+
+            let html = '';
+            let startIndex = 0;
+
+            if (lines[0].startsWith('### ')) {
+              html += `<h3>${escapeHtml(lines[0].slice(4))}</h3>`;
+              startIndex = 1;
+            } else if (lines[0].startsWith('## ')) {
+              html += `<h2>${escapeHtml(lines[0].slice(3))}</h2>`;
+              startIndex = 1;
             }
-            if (block.startsWith('## ')) {
-              return `<h2>${escapeHtml(block.slice(3))}</h2>`;
+
+            if (startIndex < lines.length) {
+              let paragraph = escapeHtml(lines.slice(startIndex).join('\n'));
+              paragraph = paragraph.replace(/\*\*(.+?)\*\*/g, '$1');
+              paragraph = paragraph.replace(/\n/g, '<br />');
+              html += `<p>${paragraph}</p>`;
             }
-            let html = escapeHtml(block);
-            html = html.replace(/\*\*(.+?)\*\*/g, '$1');
-            html = html.replace(/\n/g, '<br />');
-            return `<p>${html}</p>`;
+
+            if (!html) {
+              let paragraph = escapeHtml(block);
+              paragraph = paragraph.replace(/\*\*(.+?)\*\*/g, '$1');
+              paragraph = paragraph.replace(/\n/g, '<br />');
+              html = `<p>${paragraph}</p>`;
+            }
+
+            return html;
           }).join('');
         }
 
         function splitSections(text) {
-          if (!text) return [];
-          const raw = text.trim().replace(/```[a-z]*\n([\s\S]*?)```/gi, '$1');
+          const raw = cleanSummaryText(text);
+          if (!raw) return [];
           const lines = raw.split(/\r?\n/);
           const sections = [];
           let current = null;
@@ -307,7 +335,7 @@
               rangeText = ` | ${startStr} - ${endStr}`;
             }
 
-            metaEl.textContent = `Generated ${generated} · ${user}${rangeText}`;
+            metaEl.textContent = `Generated ${generated} | ${user}${rangeText}`;
             const renderReferences = (indices) => {
               if (!clusters.length) {
                 relatedEl.innerHTML = '';
@@ -317,7 +345,7 @@
                 const cluster = clusters[index];
                 const title = escapeHtml(cluster?.title || 'Untitled story');
                 const sources = Array.isArray(cluster?.sources) ? cluster.sources.slice(0, 6).join(', ') : '';
-                const sourceCount = cluster?.source_count ? ` · ${cluster.source_count} sources` : '';
+                const sourceCount = cluster?.source_count ? ` | ${cluster.source_count} sources` : '';
                 const link = cluster?.items?.[0]?.link;
                 const storyLink = hasLambdaKey
                   ? `/summary_story.html?key=${encodeURIComponent(key)}&lambda=${encodeURIComponent(lambdaUrl)}&index=${index}`
