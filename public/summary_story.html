@@ -57,6 +57,64 @@
         return parts.map((p) => `<p>${escapeHtml(p)}</p>`).join('');
       }
 
+      function cleanSummaryText(text) {
+        if (!text) return '';
+        let raw = text.trim();
+        raw = raw.replace(/```[a-z]*\n([\s\S]*?)```/gi, '$1');
+        raw = raw.replace(/^#{1,6}\s+Newsletter Summary\s*\n+/i, '');
+        raw = raw.replace(/\n*\s*Let me know if you need any further information!?\s*$/i, '');
+        return raw.trim();
+      }
+
+      function normalizeTitle(value) {
+        return (value || '')
+          .toLowerCase()
+          .replace(/[^a-z0-9\s]/g, '')
+          .replace(/\s+/g, ' ')
+          .trim();
+      }
+
+      function extractStoryBlocks(summaryText) {
+        const raw = cleanSummaryText(summaryText);
+        if (!raw) return [];
+
+        const blocks = raw.split(/\n{2,}/g).map((block) => block.trim()).filter(Boolean);
+        return blocks.map((block) => {
+          const lines = block.split(/\n/).map((line) => line.trim()).filter(Boolean);
+          if (!lines.length || !lines[0].startsWith('### ')) return null;
+          return {
+            title: lines[0].slice(4).trim(),
+            body: lines.slice(1).join('\n').trim()
+          };
+        }).filter(Boolean);
+      }
+
+      function findNewsletterStoryText(summaryText, clusterTitle) {
+        const normalizedTarget = normalizeTitle(clusterTitle);
+        if (!normalizedTarget) return '';
+
+        const storyBlocks = extractStoryBlocks(summaryText);
+        const match = storyBlocks.find((block) => {
+          const normalizedBlockTitle = normalizeTitle(block.title);
+          return (
+            normalizedBlockTitle === normalizedTarget
+            || (normalizedTarget.length > 8 && normalizedBlockTitle.includes(normalizedTarget))
+            || (normalizedBlockTitle.length > 8 && normalizedTarget.includes(normalizedBlockTitle))
+          );
+        });
+
+        return match?.body || '';
+      }
+
+      function pickMostDetailedText(clusterSummary, newsletterSummary) {
+        const clusterText = (clusterSummary || '').trim();
+        const newsletterText = (newsletterSummary || '').trim();
+
+        if (!clusterText) return newsletterText;
+        if (!newsletterText) return clusterText;
+        return newsletterText.length >= clusterText.length ? newsletterText : clusterText;
+      }
+
       (async function () {
         const params = new URLSearchParams(window.location.search);
         const key = params.get('key');
@@ -80,6 +138,7 @@
           const data = await res.json();
           const clusters = Array.isArray(data?.clusters) ? data.clusters : [];
           const cluster = clusters[index];
+          const newsletterSummary = data?.summary || data?.newsletter?.summary || '';
 
           if (!cluster) {
             metaEl.textContent = 'Story not found.';
@@ -87,9 +146,12 @@
             return;
           }
 
+          const detailedNewsletterText = findNewsletterStoryText(newsletterSummary, cluster.title || '');
+          const bestSummaryText = pickMostDetailedText(cluster.summary || '', detailedNewsletterText);
+
           titleEl.textContent = cluster.title || 'Story Detail';
           metaEl.textContent = `${cluster.source_count || 0} sources`;
-          summaryEl.innerHTML = formatParagraphs(cluster.summary || '');
+          summaryEl.innerHTML = formatParagraphs(bestSummaryText);
 
           if (Array.isArray(cluster.sources) && cluster.sources.length) {
             const list = cluster.sources.map((s) => `<li>${escapeHtml(s)}</li>`).join('');

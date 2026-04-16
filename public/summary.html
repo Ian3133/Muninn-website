@@ -23,6 +23,12 @@
         color: rgba(0, 0, 0, 0.6);
         font-size: 0.95em;
       }
+      .meta-secondary {
+        margin-top: 2rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(0, 0, 0, 0.08);
+        font-size: 0.85em;
+      }
       .tabs {
         display: flex;
         flex-wrap: wrap;
@@ -49,6 +55,64 @@
         outline: 2px solid #18bfef;
         outline-offset: 2px;
       }
+      .tabs-secondary {
+        display: none;
+        margin-top: -0.5em;
+        margin-bottom: 1.75em;
+        gap: 0.9em;
+      }
+      .tabs-secondary .tab-button {
+        appearance: none;
+        -webkit-appearance: none;
+        background: transparent;
+        border: 0;
+        box-shadow: none;
+        border-radius: 0;
+        color: rgba(0, 0, 0, 0.62);
+        font-size: 0.8em;
+        padding: 0;
+        line-height: 1.2;
+      }
+      .tabs-secondary .tab-button:focus {
+        outline: none;
+      }
+      .tabs-secondary .tab-button:focus-visible {
+        outline: none;
+        text-decoration: underline;
+        text-underline-offset: 0.18em;
+      }
+      .tabs-secondary .tab-button:hover {
+        color: #18bfef;
+      }
+      .tabs-secondary .tab-button.active {
+        background: transparent;
+        border: 0;
+        color: #18bfef;
+        text-decoration: underline;
+        text-underline-offset: 0.18em;
+      }
+      .summary-group {
+        margin: 0 0 2rem;
+        scroll-margin-top: 1.5rem;
+      }
+      .summary-group + .summary-group {
+        padding-top: 1.25rem;
+        border-top: 1px solid rgba(0, 0, 0, 0.08);
+      }
+      .summary-group-title {
+        margin: 0 0 1rem;
+        color: #000000;
+        font-size: 1.15em;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        text-transform: none;
+      }
+      .story-entry {
+        margin: 0 0 1.75rem;
+      }
+      .story-entry:last-child {
+        margin-bottom: 0;
+      }
       .summary p {
         line-height: 1.8;
         margin: 0 0 1rem;
@@ -60,6 +124,20 @@
         color: #000000;
         margin: 1.25rem 0 0.5rem;
         font-weight: 400;
+      }
+      .inline-story-link {
+        display: inline-block;
+        margin-left: 0.45em;
+        font-size: 0.95em;
+        white-space: nowrap;
+      }
+      .inline-story-link a {
+        color: #18bfef;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .inline-story-link a:hover {
+        text-decoration: underline;
       }
       .story-list {
         margin: 1.5rem 0 0;
@@ -116,12 +194,14 @@
               <div class="summary-container">
                 <a class="back-button" href="/" rel="noopener">&larr; Back</a>
                 <div class="summary-header">
-                  <h1>Newsletter Summary</h1>
+                  <h1 id="summary-title">Newsletter Summary</h1>
                   <div id="meta" class="meta">Loading...</div>
                 </div>
                 <div id="tabs" class="tabs" aria-label="Summary sections"></div>
+                <div id="subtabs" class="tabs tabs-secondary" aria-label="Top Stories subsections"></div>
                 <div id="summary-content" class="summary"></div>
                 <div id="summary-related" class="summary"></div>
+                <div id="meta-footer" class="meta meta-secondary"></div>
               </div>
             </section>
           </div>
@@ -157,45 +237,449 @@
           let raw = text.trim();
           raw = raw.replace(/```[a-z]*\n([\s\S]*?)```/gi, '$1');
           raw = raw.replace(/^#{1,6}\s+Newsletter Summary\s*\n+/i, '');
+          raw = raw.replace(/^#{1,6}\s+.*newsletter.*\n+/i, '');
+          raw = raw.replace(/^\s*dear\s+[^,\n]+,\s*(?:\r?\n)*/i, '');
+          raw = raw.replace(/(?:^|\n)\s*dear\s+[^,\n]+,\s*(?=\n|$)/gi, '');
           raw = raw.replace(/\n*\s*Let me know if you need any further information!?\s*$/i, '');
           return raw.trim();
         }
 
-        function renderMarkdown(text) {
-          const raw = cleanSummaryText(text);
-          if (!raw) return '';
-          const blocks = raw.split(/\n{2,}/g).map((b) => b.trim()).filter(Boolean);
-          return blocks.map((block) => {
-            const lines = block.split(/\n/).map((line) => line.trim()).filter(Boolean);
-            if (!lines.length) return '';
+        function buildStoryLink(clusterIndex, clusters, options) {
+          if (!Number.isInteger(clusterIndex) || clusterIndex < 0) return '';
+          const cluster = clusters[clusterIndex];
+          if (!cluster) return '';
 
-            let html = '';
-            let startIndex = 0;
+          if (options.hasLambdaKey) {
+            return `/summary_story.html?key=${encodeURIComponent(options.key)}&lambda=${encodeURIComponent(options.lambdaUrl)}&index=${clusterIndex}`;
+          }
+
+          return cluster?.items?.[0]?.link || '';
+        }
+
+        function renderParagraphText(text) {
+          let paragraph = escapeHtml(text || '');
+          paragraph = paragraph.replace(/\*\*(.+?)\*\*/g, '$1');
+          paragraph = paragraph.replace(
+            /\[Read full coverage\]\((.*?)\)/g,
+            '<span class="inline-story-link"><a href="$1" target="_blank" rel="noopener noreferrer">Read full coverage</a></span>'
+          );
+          paragraph = paragraph.replace(/\n/g, '<br />');
+          return paragraph;
+        }
+
+        function dedupeIndices(indices) {
+          const seen = new Set();
+          return (indices || []).filter((index) => {
+            if (!Number.isInteger(index) || index < 0 || seen.has(index)) return false;
+            seen.add(index);
+            return true;
+          });
+        }
+
+        function findClusterIndexByTitle(title, clusters) {
+          const normalizedTarget = normalizeTitle(title);
+          if (!normalizedTarget) return -1;
+
+          for (let index = 0; index < clusters.length; index += 1) {
+            const clusterTitle = normalizeTitle(clusters[index]?.title || '');
+            if (!clusterTitle) continue;
+            if (
+              clusterTitle === normalizedTarget
+              || (normalizedTarget.length > 8 && clusterTitle.includes(normalizedTarget))
+              || (clusterTitle.length > 8 && normalizedTarget.includes(clusterTitle))
+            ) {
+              return index;
+            }
+          }
+
+          return -1;
+        }
+
+        function parseContentBlocks(text) {
+          const raw = cleanSummaryText(text);
+          if (!raw) return [];
+
+          return raw.split(/\n{2,}/g).map((block) => {
+            const trimmed = block.trim();
+            if (!trimmed) return null;
+
+            const lines = trimmed.split(/\n/).map((line) => line.trim()).filter(Boolean);
+            if (!lines.length) return null;
 
             if (lines[0].startsWith('### ')) {
-              html += `<h3>${escapeHtml(lines[0].slice(4))}</h3>`;
-              startIndex = 1;
-            } else if (lines[0].startsWith('## ')) {
-              html += `<h2>${escapeHtml(lines[0].slice(3))}</h2>`;
-              startIndex = 1;
+              return {
+                type: 'story',
+                title: lines[0].slice(4),
+                body: lines.slice(1).join('\n')
+              };
             }
 
-            if (startIndex < lines.length) {
-              let paragraph = escapeHtml(lines.slice(startIndex).join('\n'));
-              paragraph = paragraph.replace(/\*\*(.+?)\*\*/g, '$1');
-              paragraph = paragraph.replace(/\n/g, '<br />');
-              html += `<p>${paragraph}</p>`;
+            if (lines[0].startsWith('## ')) {
+              return {
+                type: 'heading',
+                title: lines[0].slice(3),
+                body: lines.slice(1).join('\n')
+              };
             }
 
-            if (!html) {
-              let paragraph = escapeHtml(block);
-              paragraph = paragraph.replace(/\*\*(.+?)\*\*/g, '$1');
-              paragraph = paragraph.replace(/\n/g, '<br />');
-              html = `<p>${paragraph}</p>`;
+            return {
+              type: 'paragraph',
+              text: trimmed
+            };
+          }).filter(Boolean);
+        }
+
+        function isGreetingBlock(block) {
+          if (!block || block.type !== 'paragraph') return false;
+          return /^\s*dear\s+[^,\n]+,\s*$/i.test((block.text || '').trim());
+        }
+
+        function isDuplicateSectionLabel(block, sections) {
+          if (!block) return false;
+          const rawLabel = block.type === 'heading' ? block.title : block.text;
+          const normalized = normalizeTitle(rawLabel || '');
+          if (!normalized) return false;
+          return (sections || []).some((section) => normalizeTitle(section?.title || '') === normalized);
+        }
+
+        function renderGenericBlocks(blocks, clusters, options) {
+          const storyIndices = [];
+          const html = (blocks || []).map((block) => {
+            if (block.type === 'story') {
+              let htmlParts = `<div class="story-entry"><h3>${escapeHtml(block.title)}</h3>`;
+              const clusterIndex = findClusterIndexByTitle(block.title, clusters || []);
+              if (Number.isInteger(clusterIndex) && clusterIndex >= 0) {
+                storyIndices.push(clusterIndex);
+              }
+
+              let body = block.body || '';
+              const storyLink = buildStoryLink(clusterIndex, clusters || [], options || {});
+              if (storyLink && body) {
+                body += ` [Read full coverage](${storyLink})`;
+              }
+              if (body) {
+                htmlParts += `<p>${renderParagraphText(body)}</p>`;
+              }
+              htmlParts += '</div>';
+              return htmlParts;
             }
 
-            return html;
+            if (block.type === 'heading') {
+              let htmlParts = `<h2>${escapeHtml(block.title)}</h2>`;
+              if (block.body) {
+                htmlParts += `<p>${renderParagraphText(block.body)}</p>`;
+              }
+              return htmlParts;
+            }
+
+            return `<p>${renderParagraphText(block.text || '')}</p>`;
           }).join('');
+
+          return {
+            html,
+            storyIndices: dedupeIndices(storyIndices)
+          };
+        }
+
+        const TOP_STORY_CATEGORY_RULES = [
+          {
+            key: 'world-affairs',
+            label: 'World Affairs',
+            keywords: ['iran', 'israel', 'lebanon', 'gaza', 'ukraine', 'russia', 'china', 'taiwan', 'ceasefire', 'blockade', 'hormuz', 'war', 'military', 'diplomatic', 'foreign policy', 'state department']
+          },
+          {
+            key: 'science-space',
+            label: 'Science & Space',
+            keywords: ['artemis', 'nasa', 'moon', 'lunar', 'astronaut', 'space', 'science', 'scientist', 'mission', 'rocket', 'telescope', 'discovery', 'research']
+          },
+          {
+            key: 'politics-government',
+            label: 'Politics & Government',
+            keywords: ['election', 'campaign', 'governor', 'president', 'white house', 'congress', 'senate', 'house', 'administration', 'democrat', 'republican', 'lawmakers', 'parliament', 'cabinet', 'minister', 'mayor', 'policy']
+          },
+          {
+            key: 'justice-accountability',
+            label: 'Justice & Accountability',
+            keywords: ['court', 'judge', 'trial', 'charged', 'indicted', 'indictment', 'convicted', 'guilty', 'murder', 'assault', 'misconduct', 'investigation', 'lawsuit', 'allegations']
+          },
+          {
+            key: 'business-economy',
+            label: 'Business & Economy',
+            keywords: ['market', 'economy', 'earnings', 'tariff', 'trade', 'company', 'ceo', 'stocks', 'jobs', 'inflation', 'merger', 'deal']
+          },
+          {
+            key: 'public-figures-culture',
+            label: 'Public Figures & Culture',
+            keywords: ['celebrity', 'actor', 'singer', 'artist', 'festival', 'movie', 'television', 'pope', 'melania', 'epstein', 'entertainment', 'public image']
+          }
+        ];
+
+        function classifyTopStory(block, cluster) {
+          const haystack = [
+            block?.title || '',
+            block?.body || '',
+            cluster?.summary || '',
+            Array.isArray(cluster?.sources) ? cluster.sources.join(' ') : ''
+          ].join(' ').toLowerCase();
+
+          for (const rule of TOP_STORY_CATEGORY_RULES) {
+            if (rule.keywords.some((keyword) => haystack.includes(keyword))) {
+              return { key: rule.key, label: rule.label };
+            }
+          }
+
+          return { key: 'more-news', label: 'More News' };
+        }
+
+        function trimSentence(text, maxLength) {
+          const normalized = (text || '').replace(/\s+/g, ' ').trim();
+          if (!normalized) return '';
+          if (normalized.length <= maxLength) return normalized;
+
+          let shortened = normalized.slice(0, maxLength).trim();
+          shortened = shortened.replace(/[,\s;:-]+$/g, '').trim();
+          return `${shortened}...`;
+        }
+
+        function stripLeadIn(text, title) {
+          let cleaned = (text || '').trim();
+          const normalizedTitle = normalizeTitle(title || '');
+          const titleWords = normalizedTitle.split(' ').filter(Boolean);
+          if (!cleaned || titleWords.length < 3) return cleaned;
+
+          const leadPattern = new RegExp(`^${titleWords.slice(0, 6).join('\\s+')}`, 'i');
+          const normalizedCleaned = normalizeTitle(cleaned);
+          if (normalizedCleaned.startsWith(titleWords.slice(0, 6).join(' '))) {
+            cleaned = cleaned.replace(leadPattern, '').replace(/^[\s,:-]+/, '');
+          }
+          return cleaned;
+        }
+
+        function firstSentence(text) {
+          const normalized = (text || '').replace(/\s+/g, ' ').trim();
+          if (!normalized) return '';
+          const match = normalized.match(/.*?[.!?](?=\s|$)/);
+          return (match ? match[0] : normalized).trim();
+        }
+
+        function titleToMention(title) {
+          return (title || '').trim().replace(/[.!?]+$/g, '');
+        }
+
+        function joinList(items) {
+          const values = (items || []).filter(Boolean);
+          if (!values.length) return '';
+          if (values.length === 1) return values[0];
+          if (values.length === 2) return `${values[0]} and ${values[1]}`;
+          return `${values.slice(0, -1).join(', ')}, and ${values[values.length - 1]}`;
+        }
+
+        function buildTopStoriesOverview(storyEntries) {
+          if (!storyEntries.length) return '';
+
+          const groups = [];
+          const seen = new Set();
+          storyEntries.forEach((entry) => {
+            const category = classifyTopStory(entry.block, entry.cluster);
+            if (seen.has(category.key)) return;
+            seen.add(category.key);
+            groups.push({ ...category, entry });
+          });
+
+          const mentions = groups.slice(0, 4).map((group) => {
+            const mention = titleToMention(group.entry.block.title);
+            return mention ? `updates on ${mention}` : '';
+          }).filter(Boolean);
+
+          if (!mentions.length) return '';
+          return `Top Stories focused on ${joinList(mentions)}.`;
+        }
+
+        function buildGenericSectionOverview(sectionTitle, storyEntries) {
+          const mentions = storyEntries
+            .slice(0, 3)
+            .map((entry) => titleToMention(entry.block.title))
+            .filter(Boolean);
+
+          if (!mentions.length) return '';
+          return `${sectionTitle} highlighted ${joinList(mentions)}.`;
+        }
+
+        function buildSectionOverview(section, clusters) {
+          const blocks = parseContentBlocks(section?.content || '');
+          const storyEntries = blocks
+            .filter((block) => block.type === 'story')
+            .map((block) => {
+              const clusterIndex = findClusterIndexByTitle(block.title, clusters || []);
+              const cluster = Number.isInteger(clusterIndex) && clusterIndex >= 0 ? clusters[clusterIndex] : null;
+              return { block, clusterIndex, cluster };
+            });
+
+          if (!storyEntries.length) {
+            return { text: '', storyIndices: [] };
+          }
+
+          const sectionKey = normalizeTitle(section?.title || '');
+          let text = '';
+
+          if (sectionKey === 'top stories') {
+            text = buildTopStoriesOverview(storyEntries);
+          } else {
+            text = buildGenericSectionOverview(section?.title || 'Section', storyEntries);
+          }
+
+          if (!text) {
+            const leadEntry = storyEntries[0];
+            const leadSentence = firstSentence(leadEntry?.block?.body || leadEntry?.cluster?.summary || '');
+            const compactLead = trimSentence(stripLeadIn(leadSentence, leadEntry?.block?.title || ''), 190);
+            text = compactLead
+              ? `${section?.title || 'Section'} centered on ${compactLead.charAt(0).toLowerCase()}${compactLead.slice(1)}`
+              : `${section?.title || 'Section'} featured ${titleToMention(leadEntry?.block?.title || 'recent developments')}.`;
+            if (!/[.!?]$/.test(text)) text += '.';
+          }
+
+          return {
+            text,
+            storyIndices: dedupeIndices(
+              storyEntries
+                .slice(0, sectionKey === 'top stories' ? 4 : 3)
+                .map((entry) => entry.clusterIndex)
+            )
+          };
+        }
+
+        function renderSummaryOverview(sections, clusters) {
+          const summarySection = (sections || []).find((section) => normalizeTitle(section.title || '') === 'summary');
+          const otherSections = (sections || []).filter((section) => normalizeTitle(section.title || '') !== 'summary');
+
+          if (!otherSections.length) {
+            return {
+              html: renderMarkdown(summarySection?.content || '', clusters, {}),
+              storyIndices: matchClustersToSection(summarySection, clusters),
+              subSections: []
+            };
+          }
+
+          const introBlocks = summarySection ? parseContentBlocks(summarySection.content || '') : [];
+          const intro = renderGenericBlocks(
+            introBlocks.filter((block) => (
+              block.type !== 'story'
+              && !isGreetingBlock(block)
+              && !isDuplicateSectionLabel(block, otherSections)
+            )),
+            clusters,
+            {}
+          );
+
+          const storyIndices = [...intro.storyIndices];
+          const subSections = [];
+          const groupsHtml = otherSections.map((section) => {
+            const overview = buildSectionOverview(section, clusters);
+            storyIndices.push(...overview.storyIndices);
+            const anchorId = `summary-subsection-${slugify(section.title || 'section')}`;
+            subSections.push({ id: anchorId, label: section.title || 'Section' });
+
+            const paragraph = overview.text
+              ? `<p>${renderParagraphText(overview.text)}</p>`
+              : '<p>No quick summary available yet.</p>';
+
+            return `<section id="${anchorId}" class="summary-group"><h2 class="summary-group-title">${escapeHtml(section.title || 'Section')}</h2>${paragraph}</section>`;
+          }).join('');
+
+          return {
+            html: `${intro.html}${groupsHtml}`,
+            storyIndices: dedupeIndices(storyIndices),
+            subSections
+          };
+        }
+
+        function slugify(value) {
+          return (value || '')
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, '-')
+            .replace(/^-+|-+$/g, '');
+        }
+
+        function renderTopStoriesSection(section, clusters, options) {
+          const blocks = parseContentBlocks(section?.content || '');
+          const introBlocks = [];
+          const storyBlocks = [];
+
+          blocks.forEach((block) => {
+            if (block.type === 'story') {
+              storyBlocks.push(block);
+            } else {
+              introBlocks.push(block);
+            }
+          });
+
+          if (!storyBlocks.length) {
+            const generic = renderGenericBlocks(blocks, clusters, options);
+            return {
+              html: generic.html,
+              storyIndices: generic.storyIndices,
+              subSections: []
+            };
+          }
+
+          const groups = [];
+          const groupsByKey = new Map();
+
+          storyBlocks.forEach((block, position) => {
+            const clusterIndex = findClusterIndexByTitle(block.title, clusters || []);
+            const cluster = Number.isInteger(clusterIndex) && clusterIndex >= 0 ? clusters[clusterIndex] : null;
+            const category = classifyTopStory(block, cluster);
+
+            if (!groupsByKey.has(category.key)) {
+              const nextGroup = {
+                key: category.key,
+                label: category.label,
+                anchorId: `subsection-${slugify(category.key)}`,
+                firstPosition: position,
+                stories: []
+              };
+              groupsByKey.set(category.key, nextGroup);
+              groups.push(nextGroup);
+            }
+
+            groupsByKey.get(category.key).stories.push({
+              ...block,
+              clusterIndex
+            });
+          });
+
+          groups.sort((a, b) => a.firstPosition - b.firstPosition);
+
+          const intro = renderGenericBlocks(introBlocks, clusters, options);
+          const storyIndices = [...intro.storyIndices];
+          const groupsHtml = groups.map((group) => {
+            const entriesHtml = group.stories.map((story) => {
+              if (Number.isInteger(story.clusterIndex) && story.clusterIndex >= 0) {
+                storyIndices.push(story.clusterIndex);
+              }
+
+              let body = story.body || '';
+              const storyLink = buildStoryLink(story.clusterIndex, clusters || [], options || {});
+              if (storyLink && body) {
+                body += ` [Read full coverage](${storyLink})`;
+              }
+
+              const bodyHtml = body ? `<p>${renderParagraphText(body)}</p>` : '';
+              return `<div class="story-entry"><h3>${escapeHtml(story.title)}</h3>${bodyHtml}</div>`;
+            }).join('');
+
+            return `<section id="${group.anchorId}" class="summary-group"><h2 class="summary-group-title">${escapeHtml(group.label)}</h2>${entriesHtml}</section>`;
+          }).join('');
+
+          return {
+            html: `${intro.html}${groupsHtml}`,
+            storyIndices: dedupeIndices(storyIndices),
+            subSections: groups.map((group) => ({ id: group.anchorId, label: group.label }))
+          };
+        }
+
+        function renderMarkdown(text, clusters, options) {
+          return renderGenericBlocks(parseContentBlocks(text), clusters, options).html;
         }
 
         function splitSections(text) {
@@ -277,6 +761,26 @@
           });
         }
 
+        function renderSubtabs(subSections, onSelect) {
+          const subtabsEl = document.getElementById('subtabs');
+          subtabsEl.innerHTML = '';
+
+          if (!subSections || subSections.length <= 1) {
+            subtabsEl.style.display = 'none';
+            return;
+          }
+
+          subtabsEl.style.display = 'flex';
+          subSections.forEach((section, index) => {
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.className = `tab-button${index === 0 ? ' active' : ''}`;
+            button.textContent = section.label;
+            button.addEventListener('click', () => onSelect(index, section));
+            subtabsEl.appendChild(button);
+          });
+        }
+
         function setActiveTab(index) {
           const tabsEl = document.getElementById('tabs');
           const buttons = Array.from(tabsEl.querySelectorAll('.tab-button'));
@@ -285,14 +789,61 @@
           });
         }
 
+        function setActiveSubtab(index) {
+          const subtabsEl = document.getElementById('subtabs');
+          const buttons = Array.from(subtabsEl.querySelectorAll('.tab-button'));
+          buttons.forEach((button, idx) => {
+            button.classList.toggle('active', idx === index);
+          });
+        }
+
+        function hideSubtabs() {
+          const subtabsEl = document.getElementById('subtabs');
+          subtabsEl.innerHTML = '';
+          subtabsEl.style.display = 'none';
+        }
+
         function formatTimestamp(ts) {
           if (!ts) return null;
           const value = typeof ts === 'string' ? Number(ts) : ts;
-          if (!Number.isFinite(value)) return null;
-          const millis = value < 1_000_000_000_000 ? value * 1000 : value;
-          const d = new Date(millis);
+          let d = null;
+
+          if (Number.isFinite(value)) {
+            const millis = value < 1_000_000_000_000 ? value * 1000 : value;
+            d = new Date(millis);
+          } else {
+            d = new Date(ts);
+          }
+
           if (Number.isNaN(d.getTime())) return null;
           return d.toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' });
+        }
+
+        function formatDateRange(startDate, endDate) {
+          if (!(startDate instanceof Date) || Number.isNaN(startDate.getTime())) return '';
+          if (!(endDate instanceof Date) || Number.isNaN(endDate.getTime())) return '';
+
+          function ordinal(day) {
+            const mod10 = day % 10;
+            const mod100 = day % 100;
+            if (mod10 === 1 && mod100 !== 11) return `${day}st`;
+            if (mod10 === 2 && mod100 !== 12) return `${day}nd`;
+            if (mod10 === 3 && mod100 !== 13) return `${day}rd`;
+            return `${day}th`;
+          }
+
+          const startMonth = startDate.toLocaleDateString('en-US', { month: 'short' });
+          const endMonth = endDate.toLocaleDateString('en-US', { month: 'short' });
+          const endYear = endDate.getFullYear();
+
+          if (
+            startDate.getFullYear() === endDate.getFullYear()
+            && startDate.getMonth() === endDate.getMonth()
+          ) {
+            return `${startMonth} ${ordinal(startDate.getDate())} - ${ordinal(endDate.getDate())} ${endYear}`;
+          }
+
+          return `${startMonth} ${ordinal(startDate.getDate())} - ${endMonth} ${ordinal(endDate.getDate())} ${endYear}`;
         }
 
         (async function () {
@@ -300,13 +851,21 @@
           const url = params.get('url');
           const key = params.get('key');
           const lambdaUrl = params.get('lambda');
+          const newsletterName = (params.get('newsletterName') || '').trim();
           const metaEl = document.getElementById('meta');
+          const metaFooterEl = document.getElementById('meta-footer');
+          const titleEl = document.getElementById('summary-title');
           const summaryEl = document.getElementById('summary-content');
           const relatedEl = document.getElementById('summary-related');
+          const pageTitle = newsletterName || 'Newsletter Summary';
+
+          titleEl.textContent = pageTitle;
+          document.title = `Muninn - ${pageTitle}`;
 
           const hasLambdaKey = Boolean(lambdaUrl && key);
           if (!url && !hasLambdaKey) {
             metaEl.textContent = 'Missing output URL.';
+            metaFooterEl.textContent = '';
             summaryEl.innerHTML = '<p class="error">No summary URL or key provided.</p>';
             return;
           }
@@ -326,16 +885,21 @@
             const lookbackDays = Number(data?.lookback_days || data?.lookbackDays);
             let rangeText = '';
             if (Number.isFinite(lookbackDays) && lookbackDays > 0 && data?.generated_at) {
-              const endMs = (typeof data.generated_at === 'number' ? data.generated_at : Number(data.generated_at)) * 1000;
+              const rawGeneratedAt = data.generated_at;
+              const numericGeneratedAt = typeof rawGeneratedAt === 'number'
+                ? rawGeneratedAt
+                : Number(rawGeneratedAt);
+              const endMs = Number.isFinite(numericGeneratedAt)
+                ? numericGeneratedAt * 1000
+                : new Date(rawGeneratedAt).getTime();
               const startMs = endMs - (lookbackDays - 1) * 24 * 60 * 60 * 1000;
               const startDate = new Date(startMs);
               const endDate = new Date(endMs);
-              const startStr = startDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-              const endStr = endDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-              rangeText = ` | ${startStr} - ${endStr}`;
+              rangeText = formatDateRange(startDate, endDate);
             }
 
-            metaEl.textContent = `Generated ${generated} | ${user}${rangeText}`;
+            metaEl.textContent = rangeText || generated;
+            metaFooterEl.textContent = `Generated ${generated} | ${user}`;
             const renderReferences = (indices) => {
               if (!clusters.length) {
                 relatedEl.innerHTML = '';
@@ -366,16 +930,47 @@
               const safeSections = sections.length ? sections : [{ title: 'Summary', content: summary }];
               const renderSection = (index) => {
                 const section = safeSections[index] || safeSections[0];
-                summaryEl.innerHTML = renderMarkdown(section.content || '');
+                const options = {
+                  hasLambdaKey,
+                  key,
+                  lambdaUrl
+                };
+                const sectionKey = normalizeTitle(section.title || '');
+                const isTopStories = sectionKey === 'top stories';
+                const isSummary = sectionKey === 'summary';
+                const rendered = isSummary
+                  ? renderSummaryOverview(safeSections, clusters)
+                  : isTopStories
+                  ? renderTopStoriesSection(section, clusters, options)
+                  : {
+                      html: renderMarkdown(section.content || '', clusters, options),
+                      storyIndices: matchClustersToSection(section, clusters),
+                      subSections: []
+                    };
+
+                summaryEl.innerHTML = rendered.html;
                 setActiveTab(index);
-                const matched = matchClustersToSection(section, clusters);
-                renderReferences(matched);
+
+                if (isTopStories || isSummary) {
+                  renderSubtabs(rendered.subSections, (subIndex, subSection) => {
+                    setActiveSubtab(subIndex);
+                    const target = document.getElementById(subSection.id);
+                    if (target) {
+                      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                  });
+                } else {
+                  hideSubtabs();
+                }
+
+                renderReferences(rendered.storyIndices);
               };
               renderTabs(safeSections, renderSection);
               renderSection(0);
             }
           } catch (err) {
             metaEl.textContent = 'Unable to load summary.';
+            metaFooterEl.textContent = '';
             summaryEl.innerHTML = `<p class="error">${escapeHtml(err?.message || 'Failed to load summary.')}</p>`;
           }
         })();

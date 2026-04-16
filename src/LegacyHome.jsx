@@ -1087,6 +1087,7 @@ export default function LegacyHome() {
                               const query = new URLSearchParams();
                               if (key) query.set('key', key);
                               if (lambdaUrl) query.set('lambda', lambdaUrl);
+                              if (entry?.newsletterName) query.set('newsletterName', entry.newsletterName);
                               window.open(`/summary.html?${query.toString()}`, '_blank', 'noopener,noreferrer');
                             }}
                           >
