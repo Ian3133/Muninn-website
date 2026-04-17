@@ -116,6 +116,14 @@ function resolveStateName(code) {
   return match ? match.name : code;
 }
 
+function buildNewsletterSectionLabel(topic, stateCode) {
+  if (topic === 'local') {
+    const stateName = resolveStateName(stateCode);
+    return stateName ? `${stateName} News` : (categoryTitles[topic] || topic);
+  }
+  return categoryTitles[topic] || topic;
+}
+
 function formatDate(d) {
   return d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 }
@@ -615,17 +623,15 @@ export default function LegacyHome() {
       const selectedNewsletter = newsletters.find((entry) => entry.id === newsletterId);
       const topics = selectedNewsletter?.topics || [];
       const topicDepths = selectedNewsletter?.topicDepths || {};
-      const sectionLabels = topics.map((topic) => {
-        if (topic === 'local') {
-          const stateName = resolveStateName(selectedNewsletter?.location?.state);
-          if (stateName) return `${stateName} News`;
-          return categoryTitles[topic] || topic;
-        }
-        return categoryTitles[topic] || topic;
-      }).filter(Boolean);
+      const localStateCode = selectedNewsletter?.location?.state || selectedState || '';
+      const localStateName = resolveStateName(localStateCode);
+      const localSectionLabel = buildNewsletterSectionLabel('local', localStateCode);
+      const sectionLabels = topics
+        .map((topic) => buildNewsletterSectionLabel(topic, localStateCode))
+        .filter(Boolean);
       const sectionDepths = {};
       topics.forEach((topic) => {
-        const label = categoryTitles[topic] || topic;
+        const label = buildNewsletterSectionLabel(topic, localStateCode);
         if (!label) return;
         const rawDepth = Number(topicDepths?.[topic]);
         sectionDepths[label] = Number.isFinite(rawDepth) ? rawDepth : 2;
@@ -649,7 +655,19 @@ export default function LegacyHome() {
           keywords: selectedNewsletter?.keywords || {},
           personName: selectedNewsletter?.personName || '',
           newsletterName: selectedNewsletter?.newsletterName || '',
-          location: selectedNewsletter?.location || {},
+          location: {
+            ...(selectedNewsletter?.location || {}),
+            state: localStateCode,
+            stateName: localStateName,
+          },
+          selectedState: localStateCode,
+          state: localStateCode,
+          stateCode: localStateCode,
+          stateName: localStateName,
+          localState: localStateCode,
+          localStateName,
+          selectedLocalState: localStateCode,
+          localSectionLabel,
           lookbackDays: selectedNewsletter?.schedule?.lookbackDays || 7,
         }),
       });
@@ -1088,6 +1106,11 @@ export default function LegacyHome() {
                               if (key) query.set('key', key);
                               if (lambdaUrl) query.set('lambda', lambdaUrl);
                               if (entry?.newsletterName) query.set('newsletterName', entry.newsletterName);
+                              if (entry?.location?.state) query.set('state', entry.location.state);
+                              if (entry?.location?.state) {
+                                const stateName = resolveStateName(entry.location.state);
+                                if (stateName) query.set('stateName', stateName);
+                              }
                               window.open(`/summary.html?${query.toString()}`, '_blank', 'noopener,noreferrer');
                             }}
                           >
