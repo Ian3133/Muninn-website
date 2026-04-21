@@ -240,6 +240,7 @@
           raw = raw.replace(/^#{1,6}\s+.*newsletter.*\n+/i, '');
           raw = raw.replace(/^\s*dear\s+[^,\n]+,\s*(?:\r?\n)*/i, '');
           raw = raw.replace(/(?:^|\n)\s*dear\s+[^,\n]+,\s*(?=\n|$)/gi, '');
+          raw = raw.replace(/(?:^|\n)\s*\*for\s+[^*]+\*\s*(?=\n|$)/gi, '');
           raw = raw.replace(/\n*\s*Let me know if you need any further information!?\s*$/i, '');
           return raw.trim();
         }
@@ -340,6 +341,25 @@
           const normalized = normalizeTitle(rawLabel || '');
           if (!normalized) return false;
           return (sections || []).some((section) => normalizeTitle(section?.title || '') === normalized);
+        }
+
+        function isDisplayTitleBlock(block) {
+          if (!block || block.type !== 'paragraph') return false;
+          return /^\s*#{1,6}\s+/.test(block.text || '');
+        }
+
+        function isSectionLabelsOnlyBlock(block, sections) {
+          if (!block || block.type !== 'paragraph') return false;
+          const lines = (block.text || '')
+            .split(/\r?\n/)
+            .map((line) => normalizeTitle(line))
+            .filter(Boolean);
+
+          if (!lines.length) return false;
+
+          return lines.every((line) => (
+            (sections || []).some((section) => normalizeTitle(section?.title || '') === line)
+          ));
         }
 
         function renderGenericBlocks(blocks, clusters, options) {
@@ -629,6 +649,8 @@
               block.type !== 'story'
               && !isGreetingBlock(block)
               && !isDuplicateSectionLabel(block, otherSections)
+              && !isDisplayTitleBlock(block)
+              && !isSectionLabelsOnlyBlock(block, otherSections)
             )),
             clusters,
             {}
