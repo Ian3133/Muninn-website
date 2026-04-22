@@ -125,6 +125,11 @@
         margin: 1.25rem 0 0.5rem;
         font-weight: 400;
       }
+      .story-date {
+        margin: -0.15rem 0 0.7rem;
+        color: rgba(0, 0, 0, 0.58);
+        font-size: 0.85em;
+      }
       .inline-story-link {
         display: inline-block;
         margin-left: 0.45em;
@@ -368,8 +373,13 @@
             if (block.type === 'story') {
               let htmlParts = `<div class="story-entry"><h3>${escapeHtml(block.title)}</h3>`;
               const clusterIndex = findClusterIndexByTitle(block.title, clusters || []);
+              const cluster = Number.isInteger(clusterIndex) && clusterIndex >= 0 ? clusters[clusterIndex] : null;
               if (Number.isInteger(clusterIndex) && clusterIndex >= 0) {
                 storyIndices.push(clusterIndex);
+              }
+              const storyDate = getStoryDateRange(cluster);
+              if (storyDate) {
+                htmlParts += `<div class="story-date">${escapeHtml(storyDate)}</div>`;
               }
 
               let body = block.body || '';
@@ -419,11 +429,13 @@
           const html = storiesToShow.map((story) => {
             const link = story?.items?.[0]?.link || '';
             const titleHtml = `<h3>${escapeHtml(story?.title || 'Untitled local story')}</h3>`;
+            const storyDate = getStoryDateRange(story);
+            const dateHtml = storyDate ? `<div class="story-date">${escapeHtml(storyDate)}</div>` : '';
             const summaryText = story?.summary || '';
             const summaryHtml = summaryText
               ? `<p>${renderParagraphText(`${summaryText}${link ? ` [Read full coverage](${link})` : ''}`)}</p>`
               : '';
-            return `<div class="story-entry">${titleHtml}${summaryHtml}</div>`;
+            return `<div class="story-entry">${titleHtml}${dateHtml}${summaryHtml}</div>`;
           }).join('');
 
           const referencesHtml = `<h2>Stories Referenced</h2><ol class="story-list">${
@@ -908,15 +920,6 @@
           if (!(startDate instanceof Date) || Number.isNaN(startDate.getTime())) return '';
           if (!(endDate instanceof Date) || Number.isNaN(endDate.getTime())) return '';
 
-          function ordinal(day) {
-            const mod10 = day % 10;
-            const mod100 = day % 100;
-            if (mod10 === 1 && mod100 !== 11) return `${day}st`;
-            if (mod10 === 2 && mod100 !== 12) return `${day}nd`;
-            if (mod10 === 3 && mod100 !== 13) return `${day}rd`;
-            return `${day}th`;
-          }
-
           const startMonth = startDate.toLocaleDateString('en-US', { month: 'short' });
           const endMonth = endDate.toLocaleDateString('en-US', { month: 'short' });
           const endYear = endDate.getFullYear();
@@ -929,6 +932,44 @@
           }
 
           return `${startMonth} ${ordinal(startDate.getDate())} - ${endMonth} ${ordinal(endDate.getDate())} ${endYear}`;
+        }
+
+        function ordinal(day) {
+          const mod10 = day % 10;
+          const mod100 = day % 100;
+          if (mod10 === 1 && mod100 !== 11) return `${day}st`;
+          if (mod10 === 2 && mod100 !== 12) return `${day}nd`;
+          if (mod10 === 3 && mod100 !== 13) return `${day}rd`;
+          return `${day}th`;
+        }
+
+        function formatSingleStoryDate(date) {
+          if (!(date instanceof Date) || Number.isNaN(date.getTime())) return '';
+          const month = date.toLocaleDateString('en-US', { month: 'short' });
+          return `${month} ${ordinal(date.getDate())} ${date.getFullYear()}`;
+        }
+
+        function getStoryDateRange(clusterLike) {
+          const items = Array.isArray(clusterLike?.items) ? clusterLike.items : [];
+          const timestamps = items
+            .map((item) => Number(item?.published_ts))
+            .filter((value) => Number.isFinite(value) && value > 0)
+            .map((value) => new Date(value < 1_000_000_000_000 ? value * 1000 : value))
+            .filter((date) => !Number.isNaN(date.getTime()))
+            .sort((a, b) => a.getTime() - b.getTime());
+
+          if (!timestamps.length) return '';
+
+          const startDate = timestamps[0];
+          const endDate = timestamps[timestamps.length - 1];
+          const sameDay =
+            startDate.getFullYear() === endDate.getFullYear()
+            && startDate.getMonth() === endDate.getMonth()
+            && startDate.getDate() === endDate.getDate();
+
+          return sameDay
+            ? formatSingleStoryDate(startDate)
+            : formatDateRange(startDate, endDate);
         }
 
         (async function () {
