@@ -125,6 +125,20 @@
         margin: 1.25rem 0 0.5rem;
         font-weight: 400;
       }
+      .summary-section-link {
+        color: inherit;
+        text-decoration: underline;
+        text-decoration-color: rgba(24, 191, 239, 0.4);
+        text-underline-offset: 0.18em;
+      }
+      .summary-section-link:hover {
+        color: #18bfef;
+        text-decoration-color: currentColor;
+      }
+      .summary-section-link:focus-visible {
+        outline: 2px solid #18bfef;
+        outline-offset: 3px;
+      }
       .story-date {
         margin: -0.15rem 0 0.7rem;
         color: rgba(0, 0, 0, 0.58);
@@ -301,6 +315,25 @@
           return -1;
         }
 
+        function renderSectionHeading(title, sectionIndexMap, currentSectionIndex, className = '') {
+          const safeTitle = escapeHtml(title || 'Section');
+          const normalizedTitle = normalizeTitle(title || '');
+          const targetSectionIndex = normalizedTitle && sectionIndexMap instanceof Map
+            ? sectionIndexMap.get(normalizedTitle)
+            : undefined;
+          const headingClass = className ? ` class="${className}"` : '';
+
+          if (
+            Number.isInteger(targetSectionIndex)
+            && targetSectionIndex >= 0
+            && targetSectionIndex !== currentSectionIndex
+          ) {
+            return `<h2${headingClass}><a href="#section-${targetSectionIndex}" class="summary-section-link" data-section-index="${targetSectionIndex}">${safeTitle}</a></h2>`;
+          }
+
+          return `<h2${headingClass}>${safeTitle}</h2>`;
+        }
+
         function parseContentBlocks(text) {
           const raw = cleanSummaryText(text);
           if (!raw) return [];
@@ -395,7 +428,11 @@
             }
 
             if (block.type === 'heading') {
-              let htmlParts = `<h2>${escapeHtml(block.title)}</h2>`;
+              let htmlParts = renderSectionHeading(
+                block.title,
+                options?.sectionIndexMap,
+                options?.currentSectionIndex
+              );
               if (block.body) {
                 htmlParts += `<p>${renderParagraphText(block.body)}</p>`;
               }
@@ -680,7 +717,14 @@
               ? `<p>${renderParagraphText(overview.text)}</p>`
               : '<p>No quick summary available yet.</p>';
 
-            return `<section id="${anchorId}" class="summary-group"><h2 class="summary-group-title">${escapeHtml(section.title || 'Section')}</h2>${paragraph}</section>`;
+            const titleHtml = renderSectionHeading(
+              section.title || 'Section',
+              options?.sectionIndexMap,
+              options?.currentSectionIndex,
+              'summary-group-title'
+            );
+
+            return `<section id="${anchorId}" class="summary-group">${titleHtml}${paragraph}</section>`;
           }).join('');
 
           return {
@@ -821,6 +865,16 @@
             .trim();
         }
 
+        function buildSectionIndexMap(sections) {
+          const map = new Map();
+          (sections || []).forEach((section, index) => {
+            const normalizedTitle = normalizeTitle(section?.title || '');
+            if (!normalizedTitle || map.has(normalizedTitle)) return;
+            map.set(normalizedTitle, index);
+          });
+          return map;
+        }
+
         function matchClustersToSection(section, clusters) {
           if (!section || !clusters.length) return [];
           const normalizedTargets = (section.storyTitles || []).map(normalizeTitle).filter(Boolean);
@@ -898,6 +952,18 @@
           const subtabsEl = document.getElementById('subtabs');
           subtabsEl.innerHTML = '';
           subtabsEl.style.display = 'none';
+        }
+
+        function bindSectionJumpLinks(rootEl, onSelect) {
+          Array.from(rootEl.querySelectorAll('.summary-section-link[data-section-index]')).forEach((link) => {
+            link.addEventListener('click', (event) => {
+              event.preventDefault();
+              const index = Number(link.getAttribute('data-section-index'));
+              if (Number.isInteger(index) && index >= 0) {
+                onSelect(index);
+              }
+            });
+          });
         }
 
         function formatTimestamp(ts) {
@@ -1067,12 +1133,15 @@
             } else {
               const sections = splitSections(summary);
               const safeSections = sections.length ? sections : [{ title: 'Summary', content: summary }];
+              const sectionIndexMap = buildSectionIndexMap(safeSections);
               const renderSection = (index) => {
                 const section = safeSections[index] || safeSections[0];
                 const options = {
                   hasLambdaKey,
                   key,
-                  lambdaUrl
+                  lambdaUrl,
+                  sectionIndexMap,
+                  currentSectionIndex: index
                 };
                 const sectionKey = normalizeTitle(section.title || '');
                 const isTopStories = sectionKey === 'top stories';
@@ -1083,7 +1152,12 @@
                   && localFeed
                 );
                 const rendered = isSummary
-                  ? renderSummaryOverview(safeSections, clusters, { localFeed, stateName })
+                  ? renderSummaryOverview(safeSections, clusters, {
+                      localFeed,
+                      stateName,
+                      sectionIndexMap,
+                      currentSectionIndex: index
+                    })
                   : isLocalSection
                   ? renderLocalFeedSection(section, localFeed, stateName)
                   : isTopStories
@@ -1095,6 +1169,7 @@
                     };
 
                 summaryEl.innerHTML = rendered.html;
+                bindSectionJumpLinks(summaryEl, renderSection);
                 setActiveTab(index);
 
                 if (isTopStories || isSummary) {
