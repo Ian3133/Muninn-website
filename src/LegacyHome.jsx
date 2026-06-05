@@ -6,7 +6,6 @@ import { getCurrentUser } from 'aws-amplify/auth';
 import NewsletterWizardModal from './NewsletterWizardModal';
 import NewsSectionsModal from './NewsSectionsModal';
 
-const client = generateClient();
 const GENERATE_URL = import.meta.env.VITE_NEWSLETTER_GENERATE_URL || '';
 
 const PINNED_CATEGORY_ORDER = ['your-newsletter', 'top-stories'];
@@ -209,6 +208,33 @@ function parseSectionsFromLocalStorage() {
   }
 }
 
+async function fetchJsonFrom(path, label) {
+  const res = await fetch(path, {
+    cache: 'no-store',
+    headers: { Accept: 'application/json' },
+  });
+  if (!res.ok) throw new Error(`Failed to load ${label} (${res.status})`);
+
+  const text = await res.text();
+  try {
+    return JSON.parse(text);
+  } catch (_e) {
+    throw new Error(`${label} did not return JSON from ${path}`);
+  }
+}
+
+async function fetchFirstJson(paths, label) {
+  const errors = [];
+  for (const path of paths) {
+    try {
+      return await fetchJsonFrom(path, label);
+    } catch (e) {
+      errors.push(e);
+    }
+  }
+  throw errors[errors.length - 1] || new Error(`Failed to load ${label}`);
+}
+
 export default function LegacyHome() {
   const [activeCategory, setActiveCategory] = useState(() => {
     try {
@@ -248,6 +274,7 @@ export default function LegacyHome() {
   const [healthStories, setHealthStories] = useState([]);
   const [loadingHealth, setLoadingHealth] = useState(false);
   const [healthError, setHealthError] = useState('');
+  const client = useMemo(() => generateClient(), []);
 
   const visibleCategories = useMemo(
     () => [...PINNED_CATEGORY_ORDER, ...selectedSections],
@@ -351,9 +378,10 @@ export default function LegacyHome() {
         setError('');
         setLoading(true);
 
-        const res = await fetch('/Current_news/digest.json', { cache: 'no-store' });
-        if (!res.ok) throw new Error(`Failed to load digest.json (${res.status})`);
-        const data = await res.json();
+        const data = await fetchFirstJson(
+          ['/Current_news/digest.json', '/current_news/digest.json'],
+          'digest.json'
+        );
 
         const clusters = Array.isArray(data?.clusters) ? data.clusters : [];
         setStories(clusters.slice(0, 20));
@@ -405,14 +433,16 @@ export default function LegacyHome() {
         setLocalError('');
         setLoadingLocal(true);
 
-        const res = await fetch(`/Local_news/${selectedState}-news.json`, { cache: 'no-store' });
-        if (!res.ok) {
+        const data = await fetchFirstJson(
+          [`/Local_news/${selectedState}-news.json`, `/local_news/${selectedState}-news.json`],
+          `${selectedState}-news.json`
+        ).catch(() => null);
+        if (!data) {
           setLocalError('load-failed');
           setLocalStories([]);
           return;
         }
 
-        const data = await res.json();
         const clusters = Array.isArray(data?.clusters) ? data.clusters : [];
         setLocalStories(clusters);
       } catch (_e) {
@@ -432,9 +462,10 @@ export default function LegacyHome() {
         setHappyError('');
         setLoadingHappy(true);
 
-        const res = await fetch('/Current_news/happy_digest.json', { cache: 'no-store' });
-        if (!res.ok) throw new Error(`Failed to load happy_digest.json (${res.status})`);
-        const data = await res.json();
+        const data = await fetchFirstJson(
+          ['/Current_news/happy_digest.json', '/current_news/happy_digest.json'],
+          'happy_digest.json'
+        );
         const clusters = Array.isArray(data?.clusters) ? data.clusters : [];
         setHappyStories(clusters.slice(0, 20));
       } catch (e) {
@@ -454,9 +485,10 @@ export default function LegacyHome() {
         setAiError('');
         setLoadingAi(true);
 
-        const res = await fetch('/Current_news/ai_digest.json', { cache: 'no-store' });
-        if (!res.ok) throw new Error(`Failed to load ai_digest.json (${res.status})`);
-        const data = await res.json();
+        const data = await fetchFirstJson(
+          ['/Current_news/ai_digest.json', '/current_news/ai_digest.json'],
+          'ai_digest.json'
+        );
         const clusters = Array.isArray(data?.clusters) ? data.clusters : [];
         setAiStories(clusters.slice(0, 20));
       } catch (e) {
@@ -476,9 +508,10 @@ export default function LegacyHome() {
         setHealthError('');
         setLoadingHealth(true);
 
-        const res = await fetch('/Current_news/health_digest.json', { cache: 'no-store' });
-        if (!res.ok) throw new Error(`Failed to load health_digest.json (${res.status})`);
-        const data = await res.json();
+        const data = await fetchFirstJson(
+          ['/Current_news/health_digest.json', '/current_news/health_digest.json'],
+          'health_digest.json'
+        );
         const clusters = Array.isArray(data?.clusters) ? data.clusters : [];
         setHealthStories(clusters.slice(0, 20));
       } catch (e) {
