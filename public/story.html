@@ -47,6 +47,55 @@
 				border-radius: 8px;
 				margin-bottom: 3em;
 			}
+			.timeline-section {
+				background: rgba(255, 255, 255, 0.08);
+				padding: 2em;
+				border-radius: 8px;
+				margin-bottom: 3em;
+				color: #000000;
+			}
+			.timeline-section h2 {
+				margin-top: 0;
+				margin-bottom: 0.5em;
+				font-size: 1.5em;
+			}
+			.timeline-summary {
+				margin-bottom: 1.5em;
+				line-height: 1.6;
+			}
+			.timeline-list {
+				border-left: 3px solid #18bfef;
+				margin-left: 0.35em;
+				padding-left: 1.5em;
+			}
+			.timeline-item {
+				margin-bottom: 1.5em;
+				position: relative;
+			}
+			.timeline-item::before {
+				content: '';
+				position: absolute;
+				left: -1.85em;
+				top: 0.35em;
+				width: 0.7em;
+				height: 0.7em;
+				border-radius: 50%;
+				background: #18bfef;
+			}
+			.timeline-date {
+				font-size: 0.85em;
+				font-weight: bold;
+				letter-spacing: 0;
+				color: rgba(0, 0, 0, 0.65);
+			}
+			.timeline-title {
+				font-weight: bold;
+				margin: 0.2em 0;
+			}
+			.timeline-meta {
+				font-size: 0.85em;
+				color: rgba(0, 0, 0, 0.65);
+			}
 			.sources-section h2 {
 				margin-top: 0;
 				margin-bottom: 1.5em;
@@ -270,6 +319,48 @@
 						return domain;
 					}
 
+					function escapeHtml(value) {
+						return String(value || '')
+							.replace(/&/g, '&amp;')
+							.replace(/</g, '&lt;')
+							.replace(/>/g, '&gt;')
+							.replace(/"/g, '&quot;')
+							.replace(/'/g, '&#039;');
+					}
+
+					function renderTimeline(eventData, fallbackHighlights) {
+						var event = eventData || {};
+						var timeline = Array.isArray(event.timeline) && event.timeline.length
+							? event.timeline
+							: (Array.isArray(fallbackHighlights) ? fallbackHighlights : []);
+						if (!timeline.length) return '';
+
+						var html = '<div class="timeline-section">';
+						html += '<h2>Event Timeline</h2>';
+						if (event.title) {
+							html += '<div class="timeline-meta">' + escapeHtml(event.title) + '</div>';
+						}
+						if (event.summary) {
+							html += '<p class="timeline-summary">' + escapeHtml(event.summary) + '</p>';
+						}
+						html += '<div class="timeline-list">';
+						timeline.slice().reverse().forEach(function(entry) {
+							html += '<div class="timeline-item">';
+							html += '<div class="timeline-date">' + escapeHtml(entry.date || '') + '</div>';
+							html += '<div class="timeline-title">' + escapeHtml(entry.title || 'Update') + '</div>';
+							html += '<p>' + escapeHtml(entry.summary || '') + '</p>';
+							var verification = entry.verification || {};
+							var confidence = typeof entry.confidence === 'number' ? Math.round(entry.confidence * 100) + '%' : '';
+							html += '<div class="timeline-meta">Sources: ' + escapeHtml(entry.source_count || 0);
+							if (confidence) html += ' | Confidence: ' + confidence;
+							if (verification.provider) html += ' | Verification: ' + escapeHtml(verification.provider);
+							html += '</div>';
+							html += '</div>';
+						});
+						html += '</div></div>';
+						return html;
+					}
+
 					// Load story from JSON
 					$.getJSON(digestPath, function(data) {
 						if (!data.clusters || storyId >= data.clusters.length) {
@@ -299,6 +390,12 @@
 
 						content += '</div>';
 
+						if (story.event_id || (story.timeline_highlights && story.timeline_highlights.length)) {
+							content += '<div id="event-timeline-slot">';
+							content += renderTimeline(null, story.timeline_highlights);
+							content += '</div>';
+						}
+
 						// Sources section
 						if (story.items && story.items.length > 0) {
 							content += '<div class="sources-section">';
@@ -327,6 +424,19 @@
 						content += '</div>';
 
 						$('#story-content').html(content);
+
+						if (story.event_id) {
+							$.getJSON('/Current_news/event_timelines.json', function(timelineData) {
+								var events = Array.isArray(timelineData.events) ? timelineData.events : [];
+								var eventData = events.find(function(event) {
+									return event.event_id === story.event_id;
+								});
+								var timelineHtml = renderTimeline(eventData, story.timeline_highlights);
+								if (timelineHtml) {
+									$('#event-timeline-slot').html(timelineHtml);
+								}
+							});
+						}
 
 						// Load other stories (up to 8, excluding current story)
 						// Prioritize stories with images, but include others if needed

@@ -3,6 +3,8 @@ import './App.css';
 import { Authenticator } from '@aws-amplify/ui-react';
 import LegacyHome from './LegacyHome';
 
+const ENABLE_AUTH = import.meta.env.VITE_ENABLE_AUTH === 'true';
+
 function getUserLabel(user) {
   return (
     user?.signInDetails?.loginId ||
@@ -13,6 +15,10 @@ function getUserLabel(user) {
 }
 
 export default function App() {
+  if (!ENABLE_AUTH) {
+    return <LegacyHome />;
+  }
+
   return (
     <Authenticator>
       {({ signOut, user }) => (

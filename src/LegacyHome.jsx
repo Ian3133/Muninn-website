@@ -7,8 +7,12 @@ import NewsletterWizardModal from './NewsletterWizardModal';
 import NewsSectionsModal from './NewsSectionsModal';
 
 const GENERATE_URL = import.meta.env.VITE_NEWSLETTER_GENERATE_URL || '';
+const ENABLE_CLOUD_SETTINGS = import.meta.env.VITE_ENABLE_CLOUD_SETTINGS === 'true';
+const ENABLE_NEWSLETTERS = import.meta.env.VITE_ENABLE_NEWSLETTERS !== 'false';
+const ENABLE_NEWSLETTER_GENERATION = import.meta.env.VITE_ENABLE_NEWSLETTER_GENERATION === 'true';
+const ENABLE_EXTRA_SECTIONS = import.meta.env.VITE_ENABLE_EXTRA_SECTIONS === 'true';
 
-const PINNED_CATEGORY_ORDER = ['your-newsletter', 'top-stories'];
+const PINNED_CATEGORY_ORDER = ENABLE_NEWSLETTERS ? ['your-newsletter', 'top-stories'] : ['top-stories'];
 const CUSTOMIZABLE_CATEGORY_ORDER = [
   'local',
   'happy',
@@ -21,9 +25,10 @@ const CUSTOMIZABLE_CATEGORY_ORDER = [
   'world',
   'other',
 ];
-const DEFAULT_CUSTOM_SELECTED = ['local', 'happy', 'science'];
+const DEFAULT_CUSTOM_SELECTED = [];
 const SECTION_STORAGE_KEY = 'muninn-selected-sections';
 const STATE_STORAGE_KEY = 'muninn-selected-state';
+const NEWSLETTER_STORAGE_KEY = 'muninn-newsletters';
 const NOTE_TEXT_PREFIX = '[muninn-sections]';
 const NEWSLETTER_TEXT_PREFIX = '[muninn-newsletters]';
 
@@ -208,6 +213,21 @@ function parseSectionsFromLocalStorage() {
   }
 }
 
+function parseNewslettersFromLocalStorage() {
+  try {
+    const saved = localStorage.getItem(NEWSLETTER_STORAGE_KEY);
+    if (!saved) return [];
+    const parsed = JSON.parse(saved);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch (_e) {
+    return [];
+  }
+}
+
+function saveNewslettersToLocalStorage(newsletters) {
+  localStorage.setItem(NEWSLETTER_STORAGE_KEY, JSON.stringify(newsletters));
+}
+
 async function fetchJsonFrom(path, label) {
   const res = await fetch(path, {
     cache: 'no-store',
@@ -240,7 +260,7 @@ export default function LegacyHome() {
     try {
       const params = new URLSearchParams(window.location.search);
       const requested = (params.get('category') || '').trim();
-      const allowed = [...PINNED_CATEGORY_ORDER, ...CUSTOMIZABLE_CATEGORY_ORDER];
+      const allowed = [...PINNED_CATEGORY_ORDER, ...(ENABLE_EXTRA_SECTIONS ? CUSTOMIZABLE_CATEGORY_ORDER : [])];
       if (allowed.includes(requested)) return requested;
     } catch (_e) {
       // no-op
@@ -274,10 +294,10 @@ export default function LegacyHome() {
   const [healthStories, setHealthStories] = useState([]);
   const [loadingHealth, setLoadingHealth] = useState(false);
   const [healthError, setHealthError] = useState('');
-  const client = useMemo(() => generateClient(), []);
+  const client = useMemo(() => (ENABLE_CLOUD_SETTINGS ? generateClient() : null), []);
 
   const visibleCategories = useMemo(
-    () => [...PINNED_CATEGORY_ORDER, ...selectedSections],
+    () => [...PINNED_CATEGORY_ORDER, ...(ENABLE_EXTRA_SECTIONS ? selectedSections : [])],
     [selectedSections]
   );
   const addNewsOptions = useMemo(
@@ -321,6 +341,25 @@ export default function LegacyHome() {
 
   useEffect(() => {
     (async () => {
+      if (!ENABLE_CLOUD_SETTINGS) {
+        const savedState = localStorage.getItem(STATE_STORAGE_KEY);
+        if (savedState && SUPPORTED_LOCAL_STATE_CODES.has(savedState)) {
+          setSelectedState(savedState);
+        } else {
+          localStorage.removeItem(STATE_STORAGE_KEY);
+        }
+
+        if (ENABLE_EXTRA_SECTIONS) {
+          const localSections = parseSectionsFromLocalStorage();
+          if (localSections !== null) setSelectedSections(localSections);
+        }
+
+        if (ENABLE_NEWSLETTERS) {
+          setNewsletters(parseNewslettersFromLocalStorage());
+        }
+        return;
+      }
+
       try {
         const user = await getCurrentUser();
         setUserId(user.userId);
@@ -343,13 +382,15 @@ export default function LegacyHome() {
           }
         }
 
-        const backendSections = parseSectionsFromNoteText(backendState?.noteText);
-        if (backendSections !== null) {
-          setSelectedSections(backendSections);
-          localStorage.setItem(SECTION_STORAGE_KEY, JSON.stringify(backendSections));
-        } else {
-          const localSections = parseSectionsFromLocalStorage();
-          if (localSections !== null) setSelectedSections(localSections);
+        if (ENABLE_EXTRA_SECTIONS) {
+          const backendSections = parseSectionsFromNoteText(backendState?.noteText);
+          if (backendSections !== null) {
+            setSelectedSections(backendSections);
+            localStorage.setItem(SECTION_STORAGE_KEY, JSON.stringify(backendSections));
+          } else {
+            const localSections = parseSectionsFromLocalStorage();
+            if (localSections !== null) setSelectedSections(localSections);
+          }
         }
 
         const backendNewsletters = parseNewslettersFromNoteText(backendState?.noteText);
@@ -364,8 +405,10 @@ export default function LegacyHome() {
         } else {
           localStorage.removeItem(STATE_STORAGE_KEY);
         }
-        const localSections = parseSectionsFromLocalStorage();
-        if (localSections !== null) setSelectedSections(localSections);
+        if (ENABLE_EXTRA_SECTIONS) {
+          const localSections = parseSectionsFromLocalStorage();
+          if (localSections !== null) setSelectedSections(localSections);
+        }
       }
     })();
   }, []);
@@ -396,6 +439,7 @@ export default function LegacyHome() {
 
   useEffect(() => {
     if (activeCategory !== 'your-newsletter') return;
+    if (!ENABLE_NEWSLETTERS || !ENABLE_CLOUD_SETTINGS) return;
 
     (async () => {
       try {
@@ -525,7 +569,7 @@ export default function LegacyHome() {
 
   useEffect(() => {
     if (PINNED_CATEGORY_ORDER.includes(activeCategory)) return;
-    if (selectedSections.includes(activeCategory)) return;
+    if (ENABLE_EXTRA_SECTIONS && selectedSections.includes(activeCategory)) return;
 
     try {
       const params = new URLSearchParams(window.location.search);
@@ -548,6 +592,7 @@ export default function LegacyHome() {
   }, [activeCategory, selectedSections]);
 
   async function ensureUserId() {
+    if (!ENABLE_CLOUD_SETTINGS) return 'local-user';
     if (userId) return userId;
     const user = await getCurrentUser();
     setUserId(user.userId);
@@ -555,6 +600,11 @@ export default function LegacyHome() {
   }
 
   async function saveNewslettersToBackend(nextNewsletters) {
+    if (!ENABLE_CLOUD_SETTINGS) {
+      saveNewslettersToLocalStorage(nextNewsletters);
+      return;
+    }
+
     try {
       const id = await ensureUserId();
       const existing = await client.graphql({
@@ -648,6 +698,10 @@ export default function LegacyHome() {
 
   async function triggerGenerateNow(newsletterId) {
     try {
+      if (!ENABLE_NEWSLETTER_GENERATION) {
+        alert('Newsletter generation is disabled for the public site build.');
+        return;
+      }
       if (!GENERATE_URL) {
         alert('Generate URL not configured. Set VITE_NEWSLETTER_GENERATE_URL.');
         return;
@@ -771,6 +825,8 @@ export default function LegacyHome() {
   }
 
   async function saveSectionsToBackend(nextSections) {
+    if (!ENABLE_CLOUD_SETTINGS) return;
+
     try {
       const id = await ensureUserId();
       const existing = await client.graphql({
@@ -840,15 +896,19 @@ export default function LegacyHome() {
     setSelectedState(stateCode);
     localStorage.setItem(STATE_STORAGE_KEY, stateCode);
 
-    try {
-      const id = await ensureUserId();
-      await saveStateToBackend(id, stateCode);
-    } catch (e) {
-      console.error('Error saving state selection:', e);
+    if (ENABLE_CLOUD_SETTINGS) {
+      try {
+        const id = await ensureUserId();
+        await saveStateToBackend(id, stateCode);
+      } catch (e) {
+        console.error('Error saving state selection:', e);
+      }
     }
   }
 
   async function saveStateToBackend(id, stateCode) {
+    if (!ENABLE_CLOUD_SETTINGS) return;
+
     try {
       const existing = await client.graphql({
         query: getUserState,
@@ -898,7 +958,7 @@ export default function LegacyHome() {
     setLocalStories([]);
     setLocalError('');
 
-    if (!userId) return;
+    if (!ENABLE_CLOUD_SETTINGS || !userId) return;
 
     try {
       const existing = await client.graphql({
@@ -994,13 +1054,15 @@ export default function LegacyHome() {
               );
             })}
           </ul>
-          <ul className="links" style={{ flex: '0 0 auto' }}>
-            <li className={sectionsModalOpen ? 'active' : ''}>
-              <a href="#" style={{ color: '#ffffff' }} onClick={(e) => { e.preventDefault(); setSectionsModalOpen(true); }}>
-                Add News
-              </a>
-            </li>
-          </ul>
+          {ENABLE_EXTRA_SECTIONS ? (
+            <ul className="links" style={{ flex: '0 0 auto' }}>
+              <li className={sectionsModalOpen ? 'active' : ''}>
+                <a href="#" style={{ color: '#ffffff' }} onClick={(e) => { e.preventDefault(); setSectionsModalOpen(true); }}>
+                  Add News
+                </a>
+              </li>
+            </ul>
+          ) : null}
         </div>
       </nav>
 
@@ -1011,6 +1073,7 @@ export default function LegacyHome() {
             <div className="header-date">{dateStr}</div>
           </header>
 
+          {ENABLE_NEWSLETTERS ? (
           <div id="your-newsletter" className={`category-content ${activeCategory === 'your-newsletter' ? 'active' : ''}`}>
             {loadingNewsletter && <div className="loading">Loading preferences...</div>}
 
@@ -1169,6 +1232,7 @@ export default function LegacyHome() {
               </div>
             )}
           </div>
+          ) : null}
 
           <div id="top-stories" className={`category-content ${activeCategory === 'top-stories' ? 'active' : ''}`}>
             {loading && <div className="loading">Loading news...</div>}
@@ -1445,37 +1509,41 @@ export default function LegacyHome() {
         <ul><li>&copy; Muninn</li></ul>
       </div>
 
-      <NewsletterWizardModal
-        isOpen={newsletterModalOpen}
-        onClose={() => {
-          setNewsletterModalOpen(false);
-          setNewsletterDraft(null);
-        }}
-        onSave={handleSaveNewsletter}
-        initialData={newsletterDraft}
-        allStates={US_STATES}
-        topicOptions={[
-          { key: 'top-stories', label: 'Top Stories' },
-          { key: 'local', label: 'Local News' },
-          { key: 'technology', label: 'AI News' },
-          { key: 'health', label: 'Health' },
-          { key: 'business', label: 'Business' },
-          { key: 'science', label: 'Science' },
-          { key: 'sports', label: 'Sports' },
-          { key: 'politics', label: 'Politics' },
-          { key: 'world', label: 'World' },
-          { key: 'happy', label: 'Happy News' },
-          { key: 'other', label: 'Other' },
-        ]}
-      />
+      {ENABLE_NEWSLETTERS ? (
+        <NewsletterWizardModal
+          isOpen={newsletterModalOpen}
+          onClose={() => {
+            setNewsletterModalOpen(false);
+            setNewsletterDraft(null);
+          }}
+          onSave={handleSaveNewsletter}
+          initialData={newsletterDraft}
+          allStates={US_STATES}
+          topicOptions={[
+            { key: 'top-stories', label: 'Top Stories' },
+            { key: 'local', label: 'Local News' },
+            { key: 'technology', label: 'AI News' },
+            { key: 'health', label: 'Health' },
+            { key: 'business', label: 'Business' },
+            { key: 'science', label: 'Science' },
+            { key: 'sports', label: 'Sports' },
+            { key: 'politics', label: 'Politics' },
+            { key: 'world', label: 'World' },
+            { key: 'happy', label: 'Happy News' },
+            { key: 'other', label: 'Other' },
+          ]}
+        />
+      ) : null}
 
-      <NewsSectionsModal
-        isOpen={sectionsModalOpen}
-        onClose={() => setSectionsModalOpen(false)}
-        onSave={handleSaveSections}
-        options={addNewsOptions}
-        selectedKeys={selectedSections}
-      />
+      {ENABLE_EXTRA_SECTIONS ? (
+        <NewsSectionsModal
+          isOpen={sectionsModalOpen}
+          onClose={() => setSectionsModalOpen(false)}
+          onSave={handleSaveSections}
+          options={addNewsOptions}
+          selectedKeys={selectedSections}
+        />
+      ) : null}
     </div>
   );
 }
