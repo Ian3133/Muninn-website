@@ -12,7 +12,9 @@ const ENABLE_NEWSLETTERS = import.meta.env.VITE_ENABLE_NEWSLETTERS !== 'false';
 const ENABLE_NEWSLETTER_GENERATION = import.meta.env.VITE_ENABLE_NEWSLETTER_GENERATION === 'true';
 const ENABLE_EXTRA_SECTIONS = import.meta.env.VITE_ENABLE_EXTRA_SECTIONS === 'true';
 
-const PINNED_CATEGORY_ORDER = ENABLE_NEWSLETTERS ? ['your-newsletter', 'top-stories'] : ['top-stories'];
+const PINNED_CATEGORY_ORDER = ENABLE_NEWSLETTERS
+  ? ['top-stories', 'timelines', 'your-newsletter']
+  : ['top-stories', 'timelines'];
 const CUSTOMIZABLE_CATEGORY_ORDER = [
   'local',
   'happy',
@@ -34,6 +36,7 @@ const NEWSLETTER_TEXT_PREFIX = '[muninn-newsletters]';
 
 const categoryTitles = {
   'top-stories': 'Top Stories',
+  timelines: 'Timelines',
   'your-newsletter': 'Your Newsletter',
   local: 'Local News',
   happy: 'Happy News',
@@ -294,6 +297,9 @@ export default function LegacyHome() {
   const [healthStories, setHealthStories] = useState([]);
   const [loadingHealth, setLoadingHealth] = useState(false);
   const [healthError, setHealthError] = useState('');
+  const [timelineEvents, setTimelineEvents] = useState([]);
+  const [loadingTimelines, setLoadingTimelines] = useState(false);
+  const [timelineError, setTimelineError] = useState('');
   const client = useMemo(() => (ENABLE_CLOUD_SETTINGS ? generateClient() : null), []);
 
   const visibleCategories = useMemo(
@@ -433,6 +439,30 @@ export default function LegacyHome() {
         setStories([]);
       } finally {
         setLoading(false);
+      }
+    })();
+  }, [activeCategory]);
+
+  useEffect(() => {
+    if (activeCategory !== 'timelines') return;
+
+    (async () => {
+      try {
+        setTimelineError('');
+        setLoadingTimelines(true);
+
+        const data = await fetchFirstJson(
+          ['/Current_news/event_timelines.json', '/current_news/event_timelines.json'],
+          'event_timelines.json'
+        );
+
+        const events = Array.isArray(data?.events) ? data.events : [];
+        setTimelineEvents(events);
+      } catch (e) {
+        setTimelineError(e?.message || String(e));
+        setTimelineEvents([]);
+      } finally {
+        setLoadingTimelines(false);
       }
     })();
   }, [activeCategory]);
@@ -1277,6 +1307,76 @@ export default function LegacyHome() {
                 </div>
               </div>
             ))}
+          </div>
+
+          <div id="timelines" className={`category-content ${activeCategory === 'timelines' ? 'active' : ''}`}>
+            {loadingTimelines && <div className="loading">Loading timelines...</div>}
+
+            {!loadingTimelines && timelineError && (
+              <div className="news-item">
+                <h3>No timeline file published yet</h3>
+                <p>
+                  The timeline tab reads <code>/Current_news/event_timelines.json</code>. Run the daily pipeline once
+                  after the event-memory changes are deployed, then refresh this page.
+                </p>
+              </div>
+            )}
+
+            {!loadingTimelines && !timelineError && timelineEvents.length === 0 && (
+              <div className="news-item">
+                <h3>No tracked timelines yet</h3>
+                <p>Major ongoing events will appear here after the daily pipeline creates timeline memory.</p>
+              </div>
+            )}
+
+            {!loadingTimelines && !timelineError && timelineEvents.map((event) => {
+              const entries = Array.isArray(event?.timeline) ? event.timeline.slice(-5).reverse() : [];
+              return (
+                <div className="news-item" key={event.event_id || event.title}>
+                  <h3>{event.title || 'Tracked Event'}</h3>
+                  {event.summary ? <p>{event.summary}</p> : null}
+                  <p>
+                    <strong>Status:</strong> {event.status || 'active'}
+                    {event.last_seen_at ? (
+                      <>
+                        {' '}<strong>Last seen:</strong> {event.last_seen_at}
+                      </>
+                    ) : null}
+                  </p>
+
+                  {entries.length > 0 ? (
+                    <div>
+                      {entries.map((entry, entryIndex) => {
+                        const sourceUrls = Array.isArray(entry?.source_urls) ? entry.source_urls.slice(0, 3) : [];
+                        return (
+                          <div key={`${event.event_id || event.title}-${entry.date || entryIndex}`} style={{ marginTop: '1rem' }}>
+                            <p style={{ marginBottom: '0.25rem' }}>
+                              <strong>{entry.date || 'Recent update'}:</strong> {entry.title || 'Update'}
+                            </p>
+                            {entry.summary ? <p>{truncateText(entry.summary, 260)}</p> : null}
+                            {sourceUrls.length > 0 ? (
+                              <p>
+                                <strong>Sources:</strong>{' '}
+                                {sourceUrls.map((url, sourceIndex) => (
+                                  <span key={url}>
+                                    <a href={url} target="_blank" rel="noopener noreferrer">
+                                      {sourceIndex + 1}
+                                    </a>
+                                    {sourceIndex < sourceUrls.length - 1 ? ', ' : ''}
+                                  </span>
+                                ))}
+                              </p>
+                            ) : null}
+                          </div>
+                        );
+                      })}
+                    </div>
+                  ) : (
+                    <p>No dated entries yet.</p>
+                  )}
+                </div>
+              );
+            })}
           </div>
 
           <div id="local" className={`category-content ${activeCategory === 'local' ? 'active' : ''}`}>
