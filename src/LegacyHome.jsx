@@ -216,6 +216,55 @@ function parseSectionsFromLocalStorage() {
   }
 }
 
+function escapeRegex(text) {
+  return String(text || '').replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function cleanDisplayTitle(title, sources = []) {
+  let cleaned = String(title || '').replace(/\s+/g, ' ').trim();
+  const knownOutlets = [
+    'AP News', 'AP', 'Reuters', 'Politico', 'UPI.com', 'UPI', 'BBC News', 'BBC', 'NPR',
+    'ABC News', 'CBS News', 'NBC News', 'The Guardian', 'New York Times', 'Al Jazeera',
+    'The Hill', 'Fox News', 'USA Today', 'Roll Call', 'Axios', 'CNN', 'CNBC', 'Bloomberg',
+  ];
+  const outletNames = [...new Set([...knownOutlets, ...(Array.isArray(sources) ? sources : [])])]
+    .filter(Boolean)
+    .sort((left, right) => String(right).length - String(left).length);
+
+  outletNames.forEach((outlet) => {
+    const suffix = new RegExp(`\\s*(?:[-–—|]\\s*|\\s+)${escapeRegex(outlet)}\\s*$`, 'i');
+    cleaned = cleaned.replace(suffix, '').trim();
+  });
+
+  const trailingAttribution = cleaned.match(/^(.*?)\s+[-–—|]\s*([^–—|]{2,40})$/);
+  if (trailingAttribution) {
+    const normalizeOutlet = (value) => String(value || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+    const suffixKey = normalizeOutlet(trailingAttribution[2]);
+    const isDomain = /^[a-z0-9-]+\.(?:com|org|net|co|news)$/i.test(trailingAttribution[2].trim());
+    const isOutletPrefix = outletNames.some((outlet) => {
+      const outletKey = normalizeOutlet(outlet);
+      return suffixKey === outletKey || (suffixKey.length >= 4 && outletKey.startsWith(suffixKey));
+    });
+    if (isDomain || isOutletPrefix) cleaned = trailingAttribution[1].trim();
+  }
+  return cleaned || 'Untitled story';
+}
+
+function inferDisplayCategory(story) {
+  const text = `${story?.title || ''} ${story?.summary || ''}`.toLowerCase();
+  const rules = [
+    ['Sports', ['world cup', 'tournament', 'match', 'league', 'playoff', 'semifinal', 'quarterfinal']],
+    ['Technology', ['artificial intelligence', 'openai', 'chatgpt', 'software', 'cyber', 'technology', 'robot']],
+    ['Health', ['health', 'hospital', 'disease', 'vaccine', 'medical', 'doctor', 'patient']],
+    ['Science', ['science', 'space', 'nasa', 'research', 'study', 'climate', 'wildfire', 'earthquake']],
+    ['Business', ['market', 'business', 'economy', 'trade', 'tariff', 'bank', 'stock', 'tax']],
+    ['Politics', ['election', 'congress', 'senate', 'campaign', 'president', 'parliament', 'minister', 'legislation', 'bill']],
+    ['World', ['war', 'missile', 'ceasefire', 'military', 'diplomatic', 'border', 'iran', 'israel', 'ukraine', 'russia']],
+    ['Public Safety', ['police', 'shooting', 'murder', 'killed', 'crime', 'missing', 'rescue']],
+  ];
+  return rules.find(([, terms]) => terms.some((term) => text.includes(term)))?.[0] || 'Top Story';
+}
+
 function parseNewslettersFromLocalStorage() {
   try {
     const saved = localStorage.getItem(NEWSLETTER_STORAGE_KEY);
@@ -1097,7 +1146,7 @@ export default function LegacyHome() {
       </nav>
 
       <div id="main">
-        <section className="post">
+        <section className={`post ${activeCategory === 'top-stories' ? 'top-stories-post' : ''}`}>
           <header className="major">
             <h1>{title}</h1>
             <div className="header-date">{dateStr}</div>
@@ -1281,32 +1330,76 @@ export default function LegacyHome() {
               </div>
             )}
 
-            {!loading && !error && stories.map((story, index) => (
-              <div className="news-item" key={index}>
-                <h3
-                  onClick={() => { window.location.href = `/story.html?id=${index}`; }}
-                  style={{ cursor: 'pointer' }}
-                  title={story?.title}
-                >
-                  {story?.title}
-                </h3>
+            {!loading && !error && stories.length > 0 && (
+              <div className="top-stories-grid">
+                {stories.map((story, index) => {
+                  const sourceCount = Number(
+                    story?.source_count || (Array.isArray(story?.sources) ? story.sources.length : 0)
+                  );
+                  const timelineCount = Array.isArray(story?.timeline_highlights)
+                    ? story.timeline_highlights.length
+                    : 0;
+                  const imageUrl = story?.image?.url || story?.image?.thumbnail_url || '';
+                  const displayTitle = cleanDisplayTitle(story?.title, story?.sources);
+                  const category = story?.category || inferDisplayCategory(story);
+                  const openStory = () => {
+                    const storyRef = story?.story_id
+                      ? `sid=${encodeURIComponent(story.story_id)}`
+                      : `id=${index}`;
+                    window.location.href = `/story.html?${storyRef}`;
+                  };
 
-                <div className="news-item-content-row">
-                  <div className="news-item-text">
-                    <p>{truncateText(story?.summary || '', 350)}</p>
-                  </div>
+                  return (
+                    <article
+                      className="top-story-card"
+                      key={story?.story_id || index}
+                      role="link"
+                      tabIndex={0}
+                      aria-label={`Read ${displayTitle}`}
+                      onClick={openStory}
+                      onKeyDown={(event) => {
+                        if (event.key === 'Enter' || event.key === ' ') {
+                          event.preventDefault();
+                          openStory();
+                        }
+                      }}
+                    >
+                      <div className={`top-story-card-image ${imageUrl ? '' : 'is-placeholder'}`}>
+                        {imageUrl ? (
+                          <img
+                            src={imageUrl}
+                            alt={story.image.title || displayTitle}
+                            loading="lazy"
+                            onError={(event) => {
+                              event.currentTarget.style.display = 'none';
+                              event.currentTarget.parentElement?.classList.add('is-placeholder');
+                            }}
+                          />
+                        ) : null}
+                      </div>
 
-                  {story?.image?.url || story?.image?.thumbnail_url ? (
-                    <div className="news-item-image">
-                      <img
-                        src={story.image.url || story.image.thumbnail_url}
-                        alt={story.image.title || story.title || 'Story image'}
-                      />
-                    </div>
-                  ) : null}
-                </div>
+                      <div className="top-story-card-body">
+                        <div className="top-story-category">{category}</div>
+
+                        {timelineCount > 1 ? (
+                          <div className="top-story-timeline-label">
+                            <span className="top-story-timeline-dot" aria-hidden="true" />
+                            Latest development · {timelineCount} timeline updates
+                          </div>
+                        ) : null}
+
+                        <h3 title={displayTitle}>{displayTitle}</h3>
+
+                        <div className="top-story-card-footer">
+                          <span>{sourceCount || 1} {(sourceCount || 1) === 1 ? 'source' : 'sources'}</span>
+                          <span className="top-story-open">Open story <span aria-hidden="true">→</span></span>
+                        </div>
+                      </div>
+                    </article>
+                  );
+                })}
               </div>
-            ))}
+            )}
           </div>
 
           <div id="timelines" className={`category-content ${activeCategory === 'timelines' ? 'active' : ''}`}>
@@ -1349,7 +1442,7 @@ export default function LegacyHome() {
                       {entries.map((entry, entryIndex) => {
                         const sourceUrls = Array.isArray(entry?.source_urls) ? entry.source_urls.slice(0, 3) : [];
                         return (
-                          <div key={`${event.event_id || event.title}-${entry.date || entryIndex}`} style={{ marginTop: '1rem' }}>
+                          <div key={entry.development_id || `${event.event_id || event.title}-${entry.date || entryIndex}-${entryIndex}`} style={{ marginTop: '1rem' }}>
                             <p style={{ marginBottom: '0.25rem' }}>
                               <strong>{entry.date || 'Recent update'}:</strong> {entry.title || 'Update'}
                             </p>

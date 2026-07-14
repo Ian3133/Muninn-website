@@ -252,6 +252,7 @@
 					// Get story ID from URL parameter
 					var urlParams = new URLSearchParams(window.location.search);
 					var storyId = parseInt(urlParams.get('id'));
+					var storyKey = (urlParams.get('sid') || '').trim();
 					var feed = (urlParams.get('feed') || '').toLowerCase();
 					var returnCategory = (urlParams.get('returnCategory') || '').trim();
 					var digestPath = '/Current_news/digest.json';
@@ -263,7 +264,7 @@
 						backHref = '/?category=' + encodeURIComponent(returnCategory);
 					}
 
-					if (isNaN(storyId) || storyId < 0) {
+					if (!storyKey && (isNaN(storyId) || storyId < 0)) {
 						$('#story-content').html('<div class="error"><h2>Invalid Story</h2><p>Story not found. <a href="/">Return to home</a></p></div>');
 						return;
 					}
@@ -363,12 +364,16 @@
 
 					// Load story from JSON
 					$.getJSON(digestPath, function(data) {
-						if (!data.clusters || storyId >= data.clusters.length) {
+						var clusters = Array.isArray(data.clusters) ? data.clusters : [];
+						var storyIndex = storyKey
+							? clusters.findIndex(function(candidate) { return candidate.story_id === storyKey; })
+							: storyId;
+						if (storyIndex < 0 || storyIndex >= clusters.length) {
 							$('#story-content').html('<div class="error"><h2>Story Not Found</h2><p>The requested story does not exist. <a href="/">Return to home</a></p></div>');
 							return;
 						}
 
-						var story = data.clusters[storyId];
+						var story = data.clusters[storyIndex];
 						var content = '';
 
 						// Back button
@@ -441,10 +446,10 @@
 						// Load other stories (up to 8, excluding current story)
 						// Prioritize stories with images, but include others if needed
 						var storiesWithImages = data.clusters.filter(function(s, index) {
-							return index !== storyId && s.image && (s.image.url || s.image.thumbnail_url);
+							return index !== storyIndex && s.image && (s.image.url || s.image.thumbnail_url);
 						});
 						var storiesWithoutImages = data.clusters.filter(function(s, index) {
-							return index !== storyId && (!s.image || (!s.image.url && !s.image.thumbnail_url));
+							return index !== storyIndex && (!s.image || (!s.image.url && !s.image.thumbnail_url));
 						});
 						var otherStories = storiesWithImages.concat(storiesWithoutImages).slice(0, 8);
 
@@ -454,7 +459,10 @@
 								return s.title === otherStory.title;
 							});
 
-							var card = '<div class="other-story-card" onclick="window.location.href=\'story.html?id=' + actualIndex + (feed ? '&feed=' + encodeURIComponent(feed) : '') + (returnCategory ? '&returnCategory=' + encodeURIComponent(returnCategory) : '') + '\'">';
+							var otherRef = otherStory.story_id
+								? 'sid=' + encodeURIComponent(otherStory.story_id)
+								: 'id=' + actualIndex;
+							var card = '<div class="other-story-card" onclick="window.location.href=\'story.html?' + otherRef + (feed ? '&feed=' + encodeURIComponent(feed) : '') + (returnCategory ? '&returnCategory=' + encodeURIComponent(returnCategory) : '') + '\'">';
 
 							card += '<div class="other-story-title">' + otherStory.title + '</div>';
 
