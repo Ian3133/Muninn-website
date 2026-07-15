@@ -52,9 +52,10 @@ export default function CustomizeModal({ isOpen, onClose, onSave, initialData })
 
   return (
     <div className="modal-overlay" onClick={handleBackdropClick}>
-      <div className="modal-container">
+      <div className="modal-container" role="dialog" aria-modal="true" aria-labelledby="customize-newsletter-title">
         <div className="modal-header">
-          <h2>Customize Newsletter</h2>
+          <h2 id="customize-newsletter-title">Customize Newsletter</h2>
+          <button type="button" className="modal-close accessible-modal-close" onClick={handleClose} aria-label="Close newsletter customization">×</button>
           <button className="modal-close" onClick={handleClose}>×</button>
         </div>
 

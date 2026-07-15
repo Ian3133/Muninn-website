@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "mode": "demo",
+  "generated_at": "2026-07-15T12:00:00+00:00",
+  "pending_count": 1,
+  "items": [
+    {
+      "packet_id": "packet_demo_iran_geneva",
+      "event_id": "event_demo_iran_talks",
+      "event_title": "Iran nuclear talks resume in Geneva",
+      "gap_type": "internal_date_gap",
+      "date_window": {
+        "from": "2026-07-02",
+        "to": "2026-07-04"
+      },
+      "review_status": "pending",
+      "review_notes": "",
+      "queued_at": "2026-07-15T12:00:00+00:00",
+      "classification": {
+        "relation": "same_event",
+        "confidence": 0.86,
+        "rationale": "The actors, location, sanctions proposal, and negotiation sequence align with the tracked event, but the source-recognition requirement is not fully satisfied.",
+        "classifier": "openai_source_grounded_event_classifier_v1",
+        "model": "demo-model",
+        "proposed_development": {
+          "title": "Negotiators report progress after sanctions proposal",
+          "summary": "Iranian and European negotiators reported movement in Geneva after discussing a proposal tied to sanctions relief.",
+          "occurred_at": "2026-07-03",
+          "key_facts": [
+            "Negotiators met in Geneva.",
+            "The discussion included a sanctions proposal."
+          ]
+        }
+      },
+      "verification": {
+        "status": "pending_review",
+        "requirements": {
+          "same_event": true,
+          "ai_classified": true,
+          "high_confidence": true,
+          "two_independent_sources": true,
+          "two_recognized_sources": false,
+          "grounded_development": true
+        },
+        "independent_source_count": 2,
+        "recognized_source_count": 1,
+        "verified_at": null
+      },
+      "citations": [
+        {
+          "title": "Negotiators discuss sanctions proposal during Geneva talks",
+          "source": "Reuters",
+          "url": "https://example.com/demo-reuters",
+          "published_at": "2026-07-03T10:15:00+00:00",
+          "retrieved_at": "2026-07-15T12:00:00+00:00"
+        },
+        {
+          "title": "Geneva meeting brings cautious movement in nuclear discussions",
+          "source": "Regional Monitor",
+          "url": "https://example.com/demo-regional",
+          "published_at": "2026-07-03T12:40:00+00:00",
+          "retrieved_at": "2026-07-15T12:00:00+00:00"
+        }
+      ]
+    }
+  ]
+}

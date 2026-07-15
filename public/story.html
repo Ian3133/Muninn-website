@@ -14,8 +14,12 @@
 			}
 			.story-title {
 				width: 100%;
-				margin-bottom: 1.5em;
+				margin-bottom: 1em;
 			}
+			.story-eyebrow { margin-bottom: 0.65em; color: #167f9e; font-size: 0.72em; font-weight: bold; letter-spacing: 0.1em; text-transform: uppercase; }
+			.story-meta-row { display: flex; flex-wrap: wrap; gap: 0.55em; margin-bottom: 1.6em; }
+			.story-meta-chip { padding: 0.42em 0.7em; border: 1px solid #d1d7dc; border-radius: 999px; background: #f4f6f7; color: #53606b; font-size: 0.76em; font-weight: bold; }
+			.story-meta-chip.caution { border-color: #e1c27d; background: #fff3d4; color: #78520c; }
 			.story-container h1 {
 				font-size: 1.8em;
 				margin: 0;
@@ -31,7 +35,8 @@
 			.story-image {
 				width: 300px;
 				height: 250px;
-				object-fit: cover;
+				object-fit: contain;
+				background: #e2e6e9;
 				border-radius: 8px;
 				flex-shrink: 0;
 			}
@@ -47,6 +52,11 @@
 				border-radius: 8px;
 				margin-bottom: 3em;
 			}
+			.story-section-label { margin-bottom: 0.55em; color: #64717c; font-size: 0.72em; font-weight: bold; letter-spacing: 0.08em; text-transform: uppercase; }
+			.what-changed { margin: -1em 0 2.5em; padding: 1.2em 1.35em; border-left: 4px solid #18a9d3; border-radius: 0 12px 12px 0; background: #edf6f8; color: #26333d; }
+			.what-changed strong { display: block; margin-bottom: 0.35em; }
+			.what-changed p { margin: 0; line-height: 1.55; }
+			.section-intro { margin: -0.8em 0 1.4em; color: #66727c; font-size: 0.9em; }
 			.timeline-section {
 				background: #f1f3f5;
 				border: 1px solid #d9dee3;
@@ -192,7 +202,10 @@
 				gap: 1.5em;
 			}
 			.other-story-card {
+				display: block;
+				color: inherit;
 				cursor: pointer;
+				text-decoration: none;
 				transition: transform 0.2s;
 			}
 			.other-story-card:hover {
@@ -241,6 +254,12 @@
 				text-align: center;
 				padding: 4em 2em;
 				color: rgba(255, 100, 100, 0.9);
+			}
+			@media screen and (max-width: 736px) {
+				.story-content-wrapper { flex-direction: column; }
+				.story-image { width: 100%; height: auto; aspect-ratio: 16 / 9; }
+				.sources-section { padding: 1.2em; }
+				.source-item { align-items: flex-start; }
 			}
 		</style>
 	</head>
@@ -362,6 +381,39 @@
 							.replace(/'/g, '&#039;');
 					}
 
+					function safeHttpUrl(value) {
+						try {
+							var parsed = new URL(String(value || ''), window.location.origin);
+							return parsed.protocol === 'http:' || parsed.protocol === 'https:' ? parsed.href : '#';
+						} catch (_error) {
+							return '#';
+						}
+					}
+
+					function formatStoryDate(value) {
+						if (!value) return 'Date unavailable';
+						var parsed = new Date(String(value).length === 10 ? value + 'T12:00:00Z' : value);
+						if (isNaN(parsed.getTime())) return String(value);
+						return parsed.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+					}
+
+					function displayCategory(story) {
+						var category = String(story.category || '').trim();
+						return !category || category.toLowerCase() === 'top story' ? 'News' : category;
+					}
+
+					function relatednessScore(left, right) {
+						var stop = { the: 1, and: 1, for: 1, with: 1, from: 1, after: 1, amid: 1, into: 1, over: 1, 2026: 1 };
+						var words = function(value) {
+							return String(value || '').toLowerCase().replace(/[^a-z0-9\s]/g, ' ').split(/\s+/).filter(function(word) { return word.length > 2 && !stop[word]; });
+						};
+						var leftWords = words(left.title);
+						var rightWords = words(right.title);
+						var shared = leftWords.filter(function(word) { return rightWords.indexOf(word) !== -1; }).length;
+						var sameCategory = displayCategory(left) === displayCategory(right) ? 2 : 0;
+						return shared * 3 + sameCategory;
+					}
+
 					function renderStoryContext(story, eventData) {
 						var event = eventData || {};
 						var context = story.story_context || {};
@@ -382,12 +434,17 @@
 						html += '<div class="timeline-list">';
 						timeline.slice(-4).forEach(function(entry) {
 							html += '<div class="timeline-item">';
-							html += '<div class="timeline-date">' + escapeHtml(entry.date || '') + '</div>';
+							html += '<div class="timeline-date">' + escapeHtml(formatStoryDate(entry.date)) + '</div>';
 							html += '<div class="timeline-title">' + escapeHtml(entry.title || 'Update') + '</div>';
 							html += '</div>';
 						});
 						html += '</div>';
-						var developmentCount = context.development_count || presentation.development_count || timeline.length;
+						var developmentCount = Math.max(
+							Number(context.development_count || 0),
+							Number(presentation.development_count || 0),
+							timeline.length,
+							Array.isArray(story.timeline_highlights) ? story.timeline_highlights.length : 0
+						);
 						var dateCount = context.date_count || presentation.date_count || 0;
 						html += '<div class="timeline-actions"><span class="timeline-meta">' + escapeHtml(developmentCount) + ' developments';
 						if (dateCount) html += ' across ' + escapeHtml(dateCount) + ' dates';
@@ -423,25 +480,35 @@
 
 						var story = data.clusters[storyIndex];
 						var content = '';
+						var sourceCount = Number(story.source_count || (Array.isArray(story.items) ? story.items.length : 0) || 1);
+						var developmentCount = Array.isArray(story.timeline_highlights) ? story.timeline_highlights.length : 0;
+						var storyState = developmentCount > 1 ? 'Timeline updated' : sourceCount > 1 ? 'New story' : 'Single-source report';
 
 						// Back button
 						content += '<a href="' + backHref + '" class="back-button">\u2190 Back</a>';
 
-						// Story title (full width)
-						content += '<div class="story-title"><h1>' + story.title + '</h1></div>';
+						// Story title and trust context
+						content += '<div class="story-eyebrow">' + escapeHtml(displayCategory(story)) + ' · ' + escapeHtml(storyState) + '</div>';
+						content += '<div class="story-title"><h1>' + escapeHtml(story.title) + '</h1></div>';
+						content += '<div class="story-meta-row">';
+						content += '<span class="story-meta-chip' + (sourceCount === 1 ? ' caution' : '') + '">' + sourceCount + ' ' + (sourceCount === 1 ? 'source' : 'sources') + '</span>';
+						if (developmentCount > 1) content += '<span class="story-meta-chip">' + developmentCount + ' developments tracked</span>';
+						content += '<span class="story-meta-chip">Updated today</span></div>';
 
 						// Content wrapper with summary and image side by side
 						content += '<div class="story-content-wrapper">';
 						content += '<div class="story-header-text">';
-						content += '<div class="story-summary">' + story.summary + '</div>';
+						content += '<div class="story-section-label">What happened</div>';
+						content += '<div class="story-summary">' + escapeHtml(story.summary) + '</div>';
 						content += '</div>';
 
 						// Story image
 						if (story.image && (story.image.url || story.image.thumbnail_url)) {
-							content += '<img src="' + (story.image.url || story.image.thumbnail_url) + '" alt="' + (story.image.title || story.title) + '" class="story-image">';
+							content += '<img src="' + escapeHtml(safeHttpUrl(story.image.url || story.image.thumbnail_url)) + '" alt="' + escapeHtml(story.image.title || story.title) + '" class="story-image">';
 						}
 
 						content += '</div>';
+						content += '<div class="what-changed"><strong>What changed today</strong><p>This is the latest confirmed development' + (developmentCount > 1 ? ' in a story Muninn is tracking across ' + developmentCount + ' developments' : '') + '.</p></div>';
 
 						if (story.event_id || (story.timeline_highlights && story.timeline_highlights.length)) {
 							content += '<div id="event-timeline-slot">';
@@ -452,17 +519,20 @@
 						// Sources section
 						if (story.items && story.items.length > 0) {
 							content += '<div class="sources-section">';
-							content += '<h2>Read directly from:</h2>';
+							content += '<h2>Sources behind this summary</h2>';
+							content += '<p class="section-intro">Open the original reporting and see which outlets support this development.</p>';
 
 							story.items.forEach(function(item) {
 								var domain = getSourceDomain(item.source);
 								var logoPath = '/assets/logos/' + domain + '.png';
 
 								content += '<div class="source-item">';
-								content += '<img src="' + logoPath + '" alt="' + item.source + '" class="source-logo" onerror="this.src=\'/assets/logos/news_placeholder.png\'" onclick="window.open(\'' + item.link + '\', \'_blank\')">';
+								content += '<img src="' + escapeHtml(logoPath) + '" alt="" class="source-logo" onerror="this.src=\'/assets/logos/news_placeholder.png\'">';
 								content += '<div class="source-info">';
-								content += '<a href="' + item.link + '" target="_blank" rel="noopener noreferrer">' + item.title + '</a>';
-								content += '<div class="source-bias">Source: ' + item.source + ' | Bias: ' + item.source_bias + '</div>';
+								content += '<a href="' + escapeHtml(safeHttpUrl(item.link)) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(item.title || 'Read original report') + '</a>';
+								content += '<div class="source-bias">Source: ' + escapeHtml(item.source || 'Unknown outlet');
+								if (item.source_bias && item.source_bias !== 'unknown') content += ' · Bias rating: ' + escapeHtml(item.source_bias);
+								content += '</div>';
 								content += '</div>';
 								content += '</div>';
 							});
@@ -472,7 +542,7 @@
 
 						// Other stories section
 						content += '<div class="other-stories-section">';
-						content += '<h2>Other Stories of the Day</h2>';
+						content += '<h2>More from today</h2>';
 						content += '<div class="other-stories-grid" id="other-stories-grid"></div>';
 						content += '</div>';
 
@@ -491,15 +561,14 @@
 							});
 						}
 
-						// Load other stories (up to 8, excluding current story)
-						// Prioritize stories with images, but include others if needed
-						var storiesWithImages = data.clusters.filter(function(s, index) {
-							return index !== storyIndex && s.image && (s.image.url || s.image.thumbnail_url);
-						});
-						var storiesWithoutImages = data.clusters.filter(function(s, index) {
-							return index !== storyIndex && (!s.image || (!s.image.url && !s.image.thumbnail_url));
-						});
-						var otherStories = storiesWithImages.concat(storiesWithoutImages).slice(0, 8);
+						// Prefer genuinely related coverage, then fill with a small selection from today.
+						var otherStories = data.clusters.filter(function(s, index) {
+							return index !== storyIndex;
+						}).map(function(candidate, index) {
+							return { story: candidate, index: index, score: relatednessScore(story, candidate) };
+						}).sort(function(left, right) {
+							return right.score - left.score || left.index - right.index;
+						}).slice(0, 4).map(function(entry) { return entry.story; });
 
 						otherStories.forEach(function(otherStory, index) {
 							// Find the actual index in the original array
@@ -510,15 +579,16 @@
 							var otherRef = otherStory.story_id
 								? 'sid=' + encodeURIComponent(otherStory.story_id)
 								: 'id=' + actualIndex;
-							var card = '<div class="other-story-card" onclick="window.location.href=\'story.html?' + otherRef + (feed ? '&feed=' + encodeURIComponent(feed) : '') + (returnCategory ? '&returnCategory=' + encodeURIComponent(returnCategory) : '') + '\'">';
+							var otherUrl = '/story.html?' + otherRef + (feed ? '&feed=' + encodeURIComponent(feed) : '') + (returnCategory ? '&returnCategory=' + encodeURIComponent(returnCategory) : '');
+							var card = '<a class="other-story-card" href="' + escapeHtml(otherUrl) + '">';
 
-							card += '<div class="other-story-title">' + otherStory.title + '</div>';
+							card += '<div class="other-story-title">' + escapeHtml(otherStory.title) + '</div>';
 
 							if (otherStory.image && (otherStory.image.url || otherStory.image.thumbnail_url)) {
-								card += '<img src="' + (otherStory.image.thumbnail_url || otherStory.image.url) + '" alt="' + otherStory.title + '" class="other-story-image">';
+								card += '<img src="' + escapeHtml(safeHttpUrl(otherStory.image.thumbnail_url || otherStory.image.url)) + '" alt="" class="other-story-image">';
 							}
 
-							card += '</div>';
+							card += '</a>';
 
 							$('#other-stories-grid').append(card);
 						});

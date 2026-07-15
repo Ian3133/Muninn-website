@@ -61,8 +61,36 @@
 						.replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;');
 				}
 				function eventUrl(eventId) { return '/timeline.html?event=' + encodeURIComponent(eventId || ''); }
+				function formatTimelineDate(value) {
+					if (!value) return 'Date unavailable';
+					var parsed = new Date(String(value).length === 10 ? value + 'T12:00:00Z' : value);
+					if (isNaN(parsed.getTime())) return String(value);
+					return parsed.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+				}
+				function safeHttpUrl(value) {
+					try {
+						var parsed = new URL(String(value || ''), window.location.origin);
+						return parsed.protocol === 'http:' || parsed.protocol === 'https:' ? parsed.href : '#';
+					} catch (_error) { return '#'; }
+				}
+				function sourceLabelForUrl(value, sourceNames) {
+					var host = '';
+					try { host = new URL(String(value || '')).hostname.toLowerCase().replace(/^www\./, ''); } catch (_error) { return 'Original source'; }
+					var known = [
+						['abcnews', 'ABC News'], ['bbc.', 'BBC'], ['cbsnews', 'CBS News'], ['nbcnews', 'NBC News'],
+						['theguardian', 'The Guardian'], ['reuters', 'Reuters'], ['apnews', 'AP News'],
+						['politico', 'Politico'], ['nytimes', 'The New York Times'], ['washingtonpost', 'The Washington Post'],
+					];
+					var knownMatch = known.find(function (item) { return host.indexOf(item[0]) !== -1; });
+					if (knownMatch) return knownMatch[1];
+					var matchingName = (sourceNames || []).find(function (name) {
+						var key = String(name || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+						return key.length >= 3 && host.replace(/[^a-z0-9]/g, '').indexOf(key) !== -1;
+					});
+					return matchingName || host.split('.')[0].replace(/[-_]/g, ' ').replace(/\b\w/g, function (letter) { return letter.toUpperCase(); });
+				}
 				function renderSearch(events) {
-					return '<div class="timeline-search"><label for="timeline-search-input">Search continuing stories</label>' +
+					return '<div class="timeline-search"><label for="timeline-search-input">Search events</label>' +
 						'<input id="timeline-search-input" type="search" placeholder="Try Iran, Hormuz, elections..." autocomplete="off" />' +
 						'<div class="search-results" id="timeline-search-results"></div></div>';
 				}
@@ -85,8 +113,8 @@
 				function renderEvent(event, events) {
 					var timeline = Array.isArray(event.timeline) ? event.timeline : [];
 					var presentation = event.presentation || {};
-					var html = '<a class="timeline-back" href="/">&larr; Back to today\'s stories</a>';
-					html += '<div class="timeline-hero"><div class="timeline-kicker">Continuing story</div>';
+					var html = '<a class="timeline-back" href="/?category=timelines">&larr; Back to events</a>';
+					html += '<div class="timeline-hero"><div class="timeline-kicker">' + escapeHtml(presentation.stage_label || 'Developing event') + '</div>';
 					html += '<h1>' + escapeHtml(event.canonical_title || event.title || 'Timeline') + '</h1>';
 					html += '<p>' + escapeHtml(presentation.context_summary || event.summary || '') + '</p>';
 					html += '<div class="timeline-stats"><span class="timeline-stat">' + escapeHtml(presentation.development_count || timeline.length) + ' developments</span>';
@@ -94,15 +122,16 @@
 					if (presentation.source_count) html += '<span class="timeline-stat">' + escapeHtml(presentation.source_count) + ' sources</span>';
 					html += '</div></div>' + renderSearch(events) + '<div class="timeline-nodes">';
 					timeline.forEach(function (entry) {
-						html += '<article class="timeline-node"><div class="node-date">' + escapeHtml(entry.date || 'Date unavailable');
+						html += '<article class="timeline-node"><div class="node-date">' + escapeHtml(formatTimelineDate(entry.date));
 						if (entry.development_type && entry.development_type !== 'development') html += '<span class="node-type">' + escapeHtml(entry.development_type.replace(/_/g, ' ')) + '</span>';
 						html += '</div><h2>' + escapeHtml(entry.title || 'Update') + '</h2>';
 						if (entry.summary) html += '<p>' + escapeHtml(entry.summary) + '</p>';
 						var urls = Array.isArray(entry.source_urls) ? entry.source_urls : [];
+						var sourceNames = Array.isArray(entry.sources) ? entry.sources : [];
 						if (urls.length) {
 							html += '<div class="node-sources">';
 							urls.slice(0, 6).forEach(function (url, index) {
-								html += '<a href="' + escapeHtml(url) + '" target="_blank" rel="noopener noreferrer">Source ' + (index + 1) + '</a>';
+								html += '<a href="' + escapeHtml(safeHttpUrl(url)) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(sourceLabelForUrl(url, sourceNames)) + '</a>';
 							});
 							html += '</div>';
 						}
@@ -125,7 +154,7 @@
 					var events = Array.isArray(data.events) ? data.events : [];
 					var event = events.find(function (item) { return item.event_id === eventId; });
 					if (!event) {
-						document.getElementById('timeline-content').innerHTML = '<a class="timeline-back" href="/">&larr; Back to today\'s stories</a><div class="timeline-message"><h1>Timeline not available</h1><p>This continuing story may not have enough verified developments yet.</p></div>' + renderSearch(events);
+						document.getElementById('timeline-content').innerHTML = '<a class="timeline-back" href="/?category=timelines">&larr; Back to events</a><div class="timeline-message"><h1>Event not available</h1><p>This story may not have enough verified developments yet.</p></div>' + renderSearch(events);
 						bindSearch(events);
 						return;
 					}

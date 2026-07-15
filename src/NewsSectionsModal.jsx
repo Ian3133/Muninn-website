@@ -68,12 +68,14 @@ export default function NewsSectionsModal({ isOpen, onClose, onSave, options, se
 
   return (
     <div className="modal-overlay" onClick={handleBackdropClick}>
-      <div className="modal-container">
+      <div className="modal-container" role="dialog" aria-modal="true" aria-labelledby="news-sections-title">
         <div className="modal-header">
-          <h2>Add News Sections</h2>
+          <h2 id="news-sections-title">Add News Sections</h2>
           <button
+            type="button"
             className="modal-close modal-close-white"
             onClick={onClose}
+            aria-label="Close news sections"
             style={{ color: '#ffffff', opacity: 1, borderColor: '#ffffff' }}
           >
             x

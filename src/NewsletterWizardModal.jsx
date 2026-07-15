@@ -146,9 +146,10 @@ export default function NewsletterWizardModal({
 
   return (
     <div className="modal-overlay" onClick={handleBackdropClick}>
-      <div className="modal-container" style={{ maxWidth: '760px' }}>
+      <div className="modal-container" style={{ maxWidth: '760px' }} role="dialog" aria-modal="true" aria-labelledby="newsletter-wizard-title">
         <div className="modal-header">
-          <h2>Personal Newsletter Setup</h2>
+          <h2 id="newsletter-wizard-title">Personal Newsletter Setup</h2>
+          <button type="button" className="modal-close accessible-modal-close" onClick={onClose} aria-label="Close newsletter setup">×</button>
           <button className="modal-close" onClick={onClose}>Ã—</button>
         </div>
 
