@@ -48,9 +48,10 @@
 				margin-bottom: 3em;
 			}
 			.timeline-section {
-				background: rgba(255, 255, 255, 0.08);
-				padding: 2em;
-				border-radius: 8px;
+				background: #f1f3f5;
+				border: 1px solid #d9dee3;
+				padding: 1.6em;
+				border-radius: 16px;
 				margin-bottom: 3em;
 				color: #000000;
 			}
@@ -64,7 +65,7 @@
 				line-height: 1.6;
 			}
 			.timeline-list {
-				border-left: 3px solid #18bfef;
+				border-left: 2px solid #18a9d3;
 				margin-left: 0.35em;
 				padding-left: 1.5em;
 			}
@@ -80,7 +81,39 @@
 				width: 0.7em;
 				height: 0.7em;
 				border-radius: 50%;
-				background: #18bfef;
+				background: #18a9d3;
+			}
+			.timeline-actions {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				gap: 0.8em;
+				margin-top: 1.25em;
+			}
+			.timeline-button,
+			.related-topic-link {
+				display: inline-block;
+				border-radius: 999px;
+				text-decoration: none;
+				font-weight: bold;
+			}
+			.timeline-button {
+				padding: 0.7em 1.1em;
+				background: #17202a;
+				color: #ffffff !important;
+			}
+			.related-topics {
+				margin-top: 1.25em;
+				padding-top: 1em;
+				border-top: 1px solid #d3d9df;
+			}
+			.related-topic-link {
+				margin: 0.45em 0.45em 0 0;
+				padding: 0.5em 0.85em;
+				background: #ffffff;
+				border: 1px solid #cbd3da;
+				color: #26323d !important;
+				font-size: 0.85em;
 			}
 			.timeline-date {
 				font-size: 0.85em;
@@ -329,36 +362,51 @@
 							.replace(/'/g, '&#039;');
 					}
 
-					function renderTimeline(eventData, fallbackHighlights) {
+					function renderStoryContext(story, eventData) {
 						var event = eventData || {};
-						var timeline = Array.isArray(event.timeline) && event.timeline.length
-							? event.timeline
-							: (Array.isArray(fallbackHighlights) ? fallbackHighlights : []);
+						var context = story.story_context || {};
+						var presentation = event.presentation || {};
+						var timeline = Array.isArray(context.highlights) && context.highlights.length
+							? context.highlights
+							: (Array.isArray(story.timeline_highlights) ? story.timeline_highlights : []);
+						timeline = timeline.filter(function(entry) {
+							return !story.story_id || entry.development_id !== story.story_id;
+						});
 						if (!timeline.length) return '';
 
 						var html = '<div class="timeline-section">';
-						html += '<h2>Event Timeline</h2>';
-						if (event.title) {
-							html += '<div class="timeline-meta">' + escapeHtml(event.title) + '</div>';
-						}
-						if (event.summary) {
-							html += '<p class="timeline-summary">' + escapeHtml(event.summary) + '</p>';
+						html += '<h2>' + escapeHtml(context.label || 'The story so far') + '</h2>';
+						if (context.summary || presentation.context_summary) {
+							html += '<p class="timeline-summary">' + escapeHtml(context.summary || presentation.context_summary) + '</p>';
 						}
 						html += '<div class="timeline-list">';
-						timeline.slice().reverse().forEach(function(entry) {
+						timeline.slice(-4).forEach(function(entry) {
 							html += '<div class="timeline-item">';
 							html += '<div class="timeline-date">' + escapeHtml(entry.date || '') + '</div>';
 							html += '<div class="timeline-title">' + escapeHtml(entry.title || 'Update') + '</div>';
-							html += '<p>' + escapeHtml(entry.summary || '') + '</p>';
-							var verification = entry.verification || {};
-							var confidence = typeof entry.confidence === 'number' ? Math.round(entry.confidence * 100) + '%' : '';
-							html += '<div class="timeline-meta">Sources: ' + escapeHtml(entry.source_count || 0);
-							if (confidence) html += ' | Confidence: ' + confidence;
-							if (verification.provider) html += ' | Verification: ' + escapeHtml(verification.provider);
-							html += '</div>';
 							html += '</div>';
 						});
-						html += '</div></div>';
+						html += '</div>';
+						var developmentCount = context.development_count || presentation.development_count || timeline.length;
+						var dateCount = context.date_count || presentation.date_count || 0;
+						html += '<div class="timeline-actions"><span class="timeline-meta">' + escapeHtml(developmentCount) + ' developments';
+						if (dateCount) html += ' across ' + escapeHtml(dateCount) + ' dates';
+						html += '</span>';
+						var fullTimeline = context.full_timeline_available || presentation.has_full_timeline;
+						if (fullTimeline && story.event_id) {
+							var timelineUrl = context.timeline_url || ('/timeline.html?event=' + encodeURIComponent(story.event_id));
+							html += '<a class="timeline-button" href="' + escapeHtml(timelineUrl) + '">' + escapeHtml(context.cta_label || presentation.cta_label || 'Explore full timeline') + ' &rarr;</a>';
+						}
+						html += '</div>';
+						var related = Array.isArray(event.related_events) && event.related_events.length ? event.related_events : context.related_events;
+						if (Array.isArray(related) && related.length) {
+							html += '<div class="related-topics"><strong>Related threads</strong><div>';
+							related.slice(0, 4).forEach(function(item) {
+								html += '<a class="related-topic-link" href="/timeline.html?event=' + encodeURIComponent(item.event_id || '') + '">' + escapeHtml(item.title || 'Related topic') + '</a>';
+							});
+							html += '</div></div>';
+						}
+						html += '</div>';
 						return html;
 					}
 
@@ -397,7 +445,7 @@
 
 						if (story.event_id || (story.timeline_highlights && story.timeline_highlights.length)) {
 							content += '<div id="event-timeline-slot">';
-							content += renderTimeline(null, story.timeline_highlights);
+							content += renderStoryContext(story, null);
 							content += '</div>';
 						}
 
@@ -436,7 +484,7 @@
 								var eventData = events.find(function(event) {
 									return event.event_id === story.event_id;
 								});
-								var timelineHtml = renderTimeline(eventData, story.timeline_highlights);
+								var timelineHtml = renderStoryContext(story, eventData);
 								if (timelineHtml) {
 									$('#event-timeline-slot').html(timelineHtml);
 								}

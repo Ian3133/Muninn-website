@@ -349,6 +349,7 @@ export default function LegacyHome() {
   const [timelineEvents, setTimelineEvents] = useState([]);
   const [loadingTimelines, setLoadingTimelines] = useState(false);
   const [timelineError, setTimelineError] = useState('');
+  const [timelineQuery, setTimelineQuery] = useState('');
   const client = useMemo(() => (ENABLE_CLOUD_SETTINGS ? generateClient() : null), []);
 
   const visibleCategories = useMemo(
@@ -1422,52 +1423,67 @@ export default function LegacyHome() {
               </div>
             )}
 
-            {!loadingTimelines && !timelineError && timelineEvents.map((event) => {
-              const entries = Array.isArray(event?.timeline) ? event.timeline.slice(-5).reverse() : [];
+            {!loadingTimelines && !timelineError && timelineEvents.length > 0 && (
+              <div className="timeline-search-panel">
+                <label htmlFor="timeline-search">Search continuing stories</label>
+                <input
+                  id="timeline-search"
+                  type="search"
+                  value={timelineQuery}
+                  onChange={(event) => setTimelineQuery(event.target.value)}
+                  placeholder="Try Iran, Hormuz, elections..."
+                />
+              </div>
+            )}
+
+            {!loadingTimelines && !timelineError && timelineEvents.filter((event) => {
+              const query = timelineQuery.trim().toLowerCase();
+              if (!query) return true;
+              const haystack = [
+                event?.title,
+                event?.canonical_title,
+                event?.latest_title,
+                event?.search_text,
+                ...(Array.isArray(event?.entities) ? event.entities : []),
+              ].filter(Boolean).join(' ').toLowerCase();
+              return haystack.includes(query);
+            }).map((event) => {
+              const entries = Array.isArray(event?.timeline) ? event.timeline.slice(-3).reverse() : [];
+              const presentation = event?.presentation || {};
               return (
-                <div className="news-item" key={event.event_id || event.title}>
-                  <h3>{event.title || 'Tracked Event'}</h3>
-                  {event.summary ? <p>{event.summary}</p> : null}
-                  <p>
-                    <strong>Status:</strong> {event.status || 'active'}
-                    {event.last_seen_at ? (
-                      <>
-                        {' '}<strong>Last seen:</strong> {event.last_seen_at}
-                      </>
-                    ) : null}
-                  </p>
+                <article className="news-item timeline-overview-card" key={event.event_id || event.title}>
+                  <div className="timeline-overview-kicker">Continuing story</div>
+                  <h3>{event.canonical_title || event.title || 'Tracked Event'}</h3>
+                  {presentation.context_summary || event.summary ? (
+                    <p>{truncateText(presentation.context_summary || event.summary, 360)}</p>
+                  ) : null}
+                  <div className="timeline-overview-stats">
+                    <span>{presentation.development_count || entries.length} developments</span>
+                    {presentation.date_count ? <span>{presentation.date_count} dates</span> : null}
+                    {presentation.source_count ? <span>{presentation.source_count} sources</span> : null}
+                  </div>
 
                   {entries.length > 0 ? (
-                    <div>
+                    <div className="timeline-overview-updates">
                       {entries.map((entry, entryIndex) => {
-                        const sourceUrls = Array.isArray(entry?.source_urls) ? entry.source_urls.slice(0, 3) : [];
                         return (
-                          <div key={entry.development_id || `${event.event_id || event.title}-${entry.date || entryIndex}-${entryIndex}`} style={{ marginTop: '1rem' }}>
-                            <p style={{ marginBottom: '0.25rem' }}>
+                          <div key={entry.development_id || `${event.event_id || event.title}-${entry.date || entryIndex}-${entryIndex}`}>
+                            <p>
                               <strong>{entry.date || 'Recent update'}:</strong> {entry.title || 'Update'}
                             </p>
-                            {entry.summary ? <p>{truncateText(entry.summary, 260)}</p> : null}
-                            {sourceUrls.length > 0 ? (
-                              <p>
-                                <strong>Sources:</strong>{' '}
-                                {sourceUrls.map((url, sourceIndex) => (
-                                  <span key={url}>
-                                    <a href={url} target="_blank" rel="noopener noreferrer">
-                                      {sourceIndex + 1}
-                                    </a>
-                                    {sourceIndex < sourceUrls.length - 1 ? ', ' : ''}
-                                  </span>
-                                ))}
-                              </p>
-                            ) : null}
                           </div>
                         );
                       })}
                     </div>
+                  ) : null}
+                  {presentation.has_full_timeline ? (
+                    <a className="timeline-overview-link" href={`/timeline.html?event=${encodeURIComponent(event.event_id)}`}>
+                      {presentation.cta_label || 'Explore full timeline'} →
+                    </a>
                   ) : (
-                    <p>No dated entries yet.</p>
+                    <div className="timeline-overview-building">Timeline building as more developments are verified</div>
                   )}
-                </div>
+                </article>
               );
             })}
           </div>
