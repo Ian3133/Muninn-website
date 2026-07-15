@@ -1,11 +1,1275 @@
 {
-  "version": 1,
-  "generated_at": "2026-07-14T14:57:36.282711+00:00",
+  "version": 2,
+  "generated_at": "2026-07-15T14:54:12.560129+00:00",
   "lookback_days": 30,
-  "verification_provider": "deterministic_source_grounded_event_match_v1",
-  "tracked_event_count": 117,
-  "event_count": 19,
+  "verification_provider": "deterministic_source_grounded_event_match_v2",
+  "tracked_event_count": 131,
+  "event_count": 21,
   "events": [
+    {
+      "event_id": "event_trump-threatens-control-over-strait-of-hormu_02a37c0650",
+      "title": "Escalating Tensions in Hormuz Strait Following Attacks on UAE Tankers",
+      "summary": "Explosions were reported across Iran after the UAE claimed that Iranian cruise missiles struck two oil tankers in the Hormuz Strait, resulting in one death and eight injuries. In response, the US has conducted a series of strikes on Iranian targets for three consecutive nights, while President Trump announced a maritime blockade of the strait, stating that ships would be charged for safe passage. Iran has retaliated by targeting US allies in the region.",
+      "status": "active",
+      "first_seen_at": "2026-07-13",
+      "last_seen_at": "2026-07-15",
+      "timeline": [
+        {
+          "development_id": "story_62645bed21833b7f",
+          "daily_story_id": "story_62645bed21833b7f",
+          "date": "2026-07-13",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Trump Threatens Control Over Strait of Hormuz Amid Iran Tensions",
+          "summary": "President Donald Trump has announced the reimposition of a naval blockade on Iran and threatened to take control of the Strait of Hormuz. He stated that the strait will remain open 'with or without' Iran and proposed a 20% tariff on all cargoes passing through this crucial maritime passage. This announcement comes amid ongoing military exchanges between the US and Iran, with both sides engaging in drone and missile strikes.",
+          "key_facts": [
+            "Trump announced a naval blockade on Iran.",
+            "He threatened to take control of the Strait of Hormuz.",
+            "A 20% tariff on cargoes through the strait was proposed.",
+            "Heavy military exchanges are ongoing between the US and Iran."
+          ],
+          "source_count": 3,
+          "sources": [
+            "ABC News",
+            "The Guardian"
+          ],
+          "source_urls": [
+            "https://abcnews.com/International/live-updates/iran-live-updates-kuwait-reports-attacks-after-latest?id=134704698",
+            "https://www.theguardian.com/world/2026/jul/13/us-iran-war-missile-strikes-news-attacks-strait-of-hormuz",
+            "https://www.theguardian.com/world/live/2026/jul/13/us-iran-strikes-middle-east-strait-of-hormuz-military-latest-news-updates"
+          ],
+          "confidence": 1.0,
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-13",
+          "last_seen_at": "2026-07-13",
+          "development_type": "military_action",
+          "match_evidence": {
+            "score": 1.0,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
+        },
+        {
+          "development_id": "story_e99c7d3379279ffb",
+          "daily_story_id": "story_e99c7d3379279ffb",
+          "date": "2026-07-14",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Escalating Tensions in Hormuz Strait Following Attacks on UAE Tankers",
+          "summary": "Explosions were reported across Iran after the UAE claimed that Iranian cruise missiles struck two oil tankers in the Hormuz Strait, resulting in one death and eight injuries. In response, the US has conducted a series of strikes on Iranian targets for three consecutive nights, while President Trump announced a maritime blockade of the strait, stating that ships would be charged for safe passage. Iran has retaliated by targeting US allies in the region.",
+          "key_facts": [
+            "UAE claims Iranian cruise missiles hit two oil tankers in the Hormuz Strait.",
+            "One crew member was killed and eight others were wounded in the attack.",
+            "The US launched its third consecutive night of strikes on Iran.",
+            "Trump announced a maritime blockade of the Hormuz Strait, charging ships for safe passage.",
+            "Iran retaliated by targeting Bahrain and Jordan."
+          ],
+          "source_count": 3,
+          "sources": [
+            "The Guardian"
+          ],
+          "source_urls": [
+            "https://www.theguardian.com/world/live/2026/jul/14/us-iran-war-live-updates-strikes-strait-of-hormuz-middle-east-crisis-trump-latest-news",
+            "https://www.theguardian.com/world/2026/jul/14/us-strikes-iran-bahrain-jordan-uae-tankers",
+            "https://www.theguardian.com/world/2026/jul/13/us-launches-third-night-of-strikes-on-iran-as-trump-announces-hormuz-blockade"
+          ],
+          "confidence": 0.398,
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-14",
+          "last_seen_at": "2026-07-14",
+          "development_type": "military_action",
+          "match_evidence": {
+            "score": 0.398,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
+        },
+        {
+          "development_id": "story_38c5ddb7329604cc",
+          "daily_story_id": "story_38c5ddb7329604cc",
+          "date": "2026-07-15",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "US Launches Daytime Strikes Against Iran Amid IRGC Claims of Targeting US Bases",
+          "summary": "President Trump announced significant military operations against Iran, including joint U.S.-Israeli strikes. This escalation follows claims from the Islamic Revolutionary Guard Corps (IRGC) regarding their targeting of US bases.",
+          "development_type": "military_action",
+          "key_facts": [
+            "President Trump announced major combat operations against Iran.",
+            "The operations include massive joint U.S.-Israeli strikes.",
+            "IRGC claims to have targeted US bases."
+          ],
+          "source_count": 1,
+          "sources": [
+            "ABC News"
+          ],
+          "source_urls": [
+            "https://abcnews.com/International/live-updates/iran-live-updates-kuwait-reports-attacks-after-latest?id=134704698"
+          ],
+          "confidence": 1.0,
+          "match_evidence": {
+            "score": 1.0,
+            "matched_development_id": "story_62645bed21833b7f",
+            "shared_tokens": [
+              "announced",
+              "iran",
+              "military",
+              "strike",
+              "trump"
+            ],
+            "shared_entities": [
+              "iran"
+            ],
+            "source_url_match": true,
+            "method": "deterministic_event_match_v2",
+            "threshold": 0.38
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-15",
+          "last_seen_at": "2026-07-15"
+        }
+      ],
+      "canonical_title": "Escalating Tensions in Hormuz Strait Following Attacks on UAE Tankers",
+      "related_events": [
+        {
+          "event_id": "event_uk-designates-iran-s-irgc-as-terrorist-organ_6d901a79ef",
+          "title": "UK Designates Iran's IRGC as Terrorist Organisation",
+          "relationship": "related_topic",
+          "confidence": 0.868,
+          "shared_entities": [
+            "corps_irgc",
+            "guard_corps",
+            "iran",
+            "irgc",
+            "islamic_revolutionary",
+            "revolutionary_guard"
+          ]
+        },
+        {
+          "event_id": "event_us-launches-additional-strikes-against-iran_893672228d",
+          "title": "Trump Announces US Blockade and Tolls in Strait of Hormuz",
+          "relationship": "related_topic",
+          "confidence": 0.765,
+          "shared_entities": [
+            "donald_trump",
+            "iran",
+            "us"
+          ]
+        },
+        {
+          "event_id": "event_oil-prices-rise-as-trump-proposes-fees-for-s_6908a722e7",
+          "title": "Oil Prices Rise as Trump Proposes Fees for Strait of Hormuz Passage",
+          "relationship": "related_topic",
+          "confidence": 0.732,
+          "shared_entities": [
+            "iran",
+            "us"
+          ]
+        },
+        {
+          "event_id": "event_us-seeks-iran-s-commitment-to-cease-attacks_a57c20a716",
+          "title": "US Seeks Iran's Commitment to Cease Attacks on Ships in Hormuz",
+          "relationship": "related_topic",
+          "confidence": 0.716,
+          "shared_entities": [
+            "hormuz",
+            "iran",
+            "us"
+          ]
+        }
+      ],
+      "latest_title": "US Launches Daytime Strikes Against Iran Amid IRGC Claims of Targeting US Bases",
+      "latest_summary": "President Trump announced significant military operations against Iran, including joint U.S.-Israeli strikes. This escalation follows claims from the Islamic Revolutionary Guard Corps (IRGC) regarding their targeting of US bases.",
+      "search_tokens": [
+        "across",
+        "allie",
+        "announced",
+        "announcement",
+        "attack",
+        "bases",
+        "blockade",
+        "both",
+        "cargoe",
+        "charged",
+        "claim",
+        "claimed",
+        "comes",
+        "conducted",
+        "consecutive",
+        "control",
+        "corps",
+        "crucial",
+        "cruise",
+        "daytime",
+        "death",
+        "donald",
+        "drone",
+        "eight",
+        "engaging",
+        "escalating",
+        "escalation",
+        "exchange",
+        "explosion",
+        "follow",
+        "guard",
+        "hormuz",
+        "including",
+        "injurie",
+        "iran",
+        "irgc",
+        "islamic",
+        "israel",
+        "joint",
+        "launche",
+        "maritime",
+        "military",
+        "missile",
+        "naval",
+        "night",
+        "oil",
+        "ongoing",
+        "open",
+        "operation",
+        "passage",
+        "passing",
+        "proposed",
+        "regarding",
+        "region",
+        "reimposition",
+        "remain",
+        "reported",
+        "response",
+        "resulting",
+        "retaliated",
+        "revolutionary",
+        "safe",
+        "serie",
+        "ships",
+        "sides",
+        "significant",
+        "stated",
+        "stating",
+        "strait",
+        "strike",
+        "struck",
+        "take",
+        "tanker",
+        "target",
+        "targeting",
+        "tariff",
+        "tension",
+        "threaten",
+        "threatened",
+        "three",
+        "through",
+        "trump",
+        "while",
+        "without",
+        "would"
+      ],
+      "entities": [
+        "corps_irgc",
+        "donald_trump",
+        "escalating_tension",
+        "guard_corps",
+        "hormuz",
+        "hormuz_strait",
+        "iran",
+        "iran_tension",
+        "irgc",
+        "irgc_claim",
+        "islamic_revolutionary",
+        "launche_daytime",
+        "revolutionary_guard",
+        "tanker_explosion",
+        "threaten_control",
+        "trump_threaten",
+        "u.s.-israeli",
+        "uae",
+        "uae_tanker",
+        "us"
+      ],
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "development_count": 3,
+        "date_count": 3,
+        "source_count": 6,
+        "first_date": "2026-07-13",
+        "latest_date": "2026-07-15",
+        "context_summary": "Muninn first tracked this thread on 2026-07-13: Trump Threatens Control Over Strait of Hormuz Amid Iran Tensions. The latest development is US Launches Daytime Strikes Against Iran Amid IRGC Claims of Targeting US Bases.",
+        "cta_label": ""
+      },
+      "search_text": "across allie announced announcement attack bases blockade both cargoe charged claim claimed comes conducted consecutive control corps corps_irgc crucial cruise daytime death donald donald_trump drone eight engaging escalating escalating_tension escalation exchange explosion follow guard guard_corps hormuz hormuz_strait including injurie iran iran_tension irgc irgc_claim islamic islamic_revolutionary israel joint launche launche_daytime maritime military missile naval night oil ongoing open operation passage passing proposed regarding region reimposition remain reported response resulting retaliated revolutionary revolutionary_guard safe serie ships sides significant stated stating strait strike struck take tanker tanker_explosion target targeting tariff tension threaten threaten_control threatened three through trump trump_threaten u.s.-israeli uae uae_tanker us while without would"
+    },
+    {
+      "event_id": "event_darline-graham-nordone-appointed-to-complete_c22df1b018",
+      "title": "Darline Graham Nordone appointed to complete Lindsey Graham's Senate term after his death",
+      "summary": "Following the death of Senator Lindsey Graham due to a brief illness, South Carolina Governor Henry McMaster has appointed Graham's sister, Darline Graham Nordone, to serve the remainder of his Senate term. This appointment sets the stage for a primary election to determine the GOP nominee for a full Senate term.",
+      "status": "active",
+      "first_seen_at": "2026-07-14",
+      "last_seen_at": "2026-07-15",
+      "timeline": [
+        {
+          "development_id": "story_2de2efd8071e756d",
+          "daily_story_id": "story_2de2efd8071e756d",
+          "date": "2026-07-14",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Darline Graham Nordone appointed to complete Lindsey Graham's Senate term after his death",
+          "summary": "Following the death of Senator Lindsey Graham due to a brief illness, South Carolina Governor Henry McMaster has appointed Graham's sister, Darline Graham Nordone, to serve the remainder of his Senate term. This appointment sets the stage for a primary election to determine the GOP nominee for a full Senate term.",
+          "key_facts": [
+            "Lindsey Graham passed away after a brief illness.",
+            "Darline Graham Nordone has been appointed as the interim senator.",
+            "A primary election will be held to select a full-term successor."
+          ],
+          "source_count": 4,
+          "sources": [
+            "ABC News",
+            "BBC",
+            "Politico"
+          ],
+          "source_urls": [
+            "https://abcnews.com/Politics/sen-lindsey-graham-south-carolina-dies-71/story?id=134688641",
+            "https://abcnews.com/Politics/trump-lindsey-grahams-sister-finish-senate-term/story?id=134716714",
+            "https://www.bbc.co.uk/news/articles/c05y3rlvp20o?at_medium=RSS&at_campaign=rss",
+            "https://www.politico.com/news/2026/07/13/lindsey-graham-sister-finish-senate-term-00995350"
+          ],
+          "confidence": 1.0,
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-14",
+          "last_seen_at": "2026-07-14",
+          "development_type": "election",
+          "match_evidence": {
+            "score": 1.0,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
+        },
+        {
+          "development_id": "story_72fa281fee36fc62",
+          "daily_story_id": "story_72fa281fee36fc62",
+          "date": "2026-07-15",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Darline Graham Sworn in to Complete Late Brother's Senate Term",
+          "summary": "Darline Graham Nordone, sister of the late senator Lindsey Graham, has been sworn in to serve the remainder of his Senate term. Her appointment as interim senator follows her brother's death and will lead to a primary election for the GOP nomination for a full term.",
+          "development_type": "election",
+          "key_facts": [
+            "Darline Graham Nordone has inherited her brother's Senate seat after his death.",
+            "She was sworn in to complete Lindsey Graham's term.",
+            "Her appointment triggers a primary election for the GOP nomination."
+          ],
+          "source_count": 3,
+          "sources": [
+            "ABC News",
+            "Al Jazeera English",
+            "Politico"
+          ],
+          "source_urls": [
+            "https://abcnews.com/Politics/darline-graham-lindsey-grahams-sister-set-sworn-senator/story?id=134745885",
+            "https://www.politico.com/news/2026/07/13/lindsey-graham-sister-finish-senate-term-00995350",
+            "https://www.aljazeera.com/news/2026/7/15/why-has-lindsey-grahams-sister-inherited-his-senate-seat-after-his-death?traffic_source=rss"
+          ],
+          "confidence": 1.0,
+          "match_evidence": {
+            "score": 1.0,
+            "matched_development_id": "story_2de2efd8071e756d",
+            "shared_tokens": [
+              "appointment",
+              "complete",
+              "darline",
+              "death",
+              "election",
+              "full",
+              "graham",
+              "interim",
+              "lindsey",
+              "nordone",
+              "primary",
+              "remainder",
+              "serve",
+              "sister",
+              "term"
+            ],
+            "shared_entities": [
+              "darline_graham"
+            ],
+            "source_url_match": true,
+            "method": "deterministic_event_match_v2",
+            "threshold": 0.38
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-15",
+          "last_seen_at": "2026-07-15"
+        }
+      ],
+      "canonical_title": "Darline Graham Nordone appointed to complete Lindsey Graham's Senate term after his death",
+      "related_events": [
+        {
+          "event_id": "event_lindsey-graham-republican-senator-dies-from_02763a7a46",
+          "title": "Lindsey Graham, Republican Senator, Dies From Sudden Illness",
+          "relationship": "related_topic",
+          "confidence": 0.669,
+          "shared_entities": [
+            "lindsey_graham",
+            "south_carolina"
+          ]
+        }
+      ],
+      "latest_title": "Darline Graham Sworn in to Complete Late Brother's Senate Term",
+      "latest_summary": "Darline Graham Nordone, sister of the late senator Lindsey Graham, has been sworn in to serve the remainder of his Senate term. Her appointment as interim senator follows her brother's death and will lead to a primary election for the GOP nomination for a full term.",
+      "search_tokens": [
+        "appointed",
+        "appointment",
+        "brief",
+        "brother",
+        "carolina",
+        "complete",
+        "darline",
+        "death",
+        "determine",
+        "election",
+        "follow",
+        "full",
+        "governor",
+        "graham",
+        "henry",
+        "illness",
+        "interim",
+        "late",
+        "lead",
+        "lindsey",
+        "mcmaster",
+        "nomination",
+        "nominee",
+        "nordone",
+        "primary",
+        "remainder",
+        "serve",
+        "sets",
+        "sister",
+        "south",
+        "stage",
+        "sworn",
+        "term"
+      ],
+      "entities": [
+        "carolina_governor",
+        "complete",
+        "complete_late",
+        "darline_graham",
+        "gop",
+        "governor_henry",
+        "graham_nordone",
+        "graham_sworn",
+        "henry_mcmaster",
+        "late_brother",
+        "lindsey_graham",
+        "mcmaster",
+        "south_carolina",
+        "term_darline"
+      ],
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "development_count": 2,
+        "date_count": 2,
+        "source_count": 6,
+        "first_date": "2026-07-14",
+        "latest_date": "2026-07-15",
+        "context_summary": "Muninn first tracked this thread on 2026-07-14: Darline Graham Nordone appointed to complete Lindsey Graham's Senate term after his death. The latest development is Darline Graham Sworn in to Complete Late Brother's Senate Term.",
+        "cta_label": ""
+      },
+      "search_text": "appointed appointment brief brother carolina carolina_governor complete complete_late darline darline_graham death determine election follow full gop governor governor_henry graham graham_nordone graham_sworn henry henry_mcmaster illness interim late late_brother lead lindsey lindsey_graham mcmaster nomination nominee nordone primary remainder serve sets sister south south_carolina stage sworn term term_darline"
+    },
+    {
+      "event_id": "event_us-launches-additional-strikes-against-iran_893672228d",
+      "title": "Trump Announces US Blockade and Tolls in Strait of Hormuz",
+      "summary": "President Trump declared that the US will reinstate a blockade in the Strait of Hormuz, positioning the country as the 'guardian' of the waterway. He announced a 20% fee on all cargo shipped through the strait to cover security costs. This declaration comes amid escalating tensions and strikes between the US and Iran, with both nations claiming control over the strategic passage. Oil prices have surged following these developments.",
+      "status": "active",
+      "first_seen_at": "2026-07-08",
+      "last_seen_at": "2026-07-15",
+      "timeline": [
+        {
+          "development_id": "story_d1ee5a5456809d2c",
+          "daily_story_id": "story_d1ee5a5456809d2c",
+          "date": "2026-07-08",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "US Launches Additional Strikes Against Iran Amid Rising Tensions",
+          "summary": "The US military has conducted a new round of strikes against Iran, as confirmed by US Central Command. These strikes are described as a response to recent attacks on oil tankers in the Strait of Hormuz and are part of ongoing military actions following President Trump's declaration that a ceasefire with Iran is 'over.' Iran has promised strong retaliation against these actions.",
+          "key_facts": [
+            "US Central Command confirmed new strikes against Iran.",
+            "The strikes are in response to attacks on oil tankers.",
+            "President Trump stated that the ceasefire with Iran is 'over.'",
+            "Iran has vowed to retaliate against US actions."
+          ],
+          "source_count": 4,
+          "sources": [
+            "ABC News",
+            "BBC",
+            "CBS News",
+            "Google News"
+          ],
+          "source_urls": [
+            "https://abcnews.com/International/live-updates/iran-live-updates-thousands-throng-tehran-streets-khamenei?id=134509610",
+            "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPbUJvWmM1dG1ldjh4TmdlYUJyTVRiWjhIVUFqcEJIVzcwdVJOb2c0ZlU2V3gxaktFWU9acnkzMGNDUHcwTEtPR2lJQVpaYjd1SU50UWpWUEdLNXBzWWZQbC1LcFBmMjNSRGRQMnRWYTAtRVJydTEwZ1dHMVlfdDVQNl9DMVNxVnlX?oc=5",
+            "https://www.bbc.co.uk/news/articles/cz75zjj5wp8o?at_medium=RSS&at_campaign=rss",
+            "https://www.cbsnews.com/video/us-launches-another-round-strikes-against-iran-centcom-says"
+          ],
+          "confidence": 1.0,
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-08",
+          "last_seen_at": "2026-07-08",
+          "development_type": "military_action",
+          "match_evidence": {
+            "score": 1.0,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
+        },
+        {
+          "development_id": "story_ef70249d38e4ccaf",
+          "daily_story_id": "story_ef70249d38e4ccaf",
+          "date": "2026-07-09",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "US and Iran Exchange Strikes Amid Ceasefire Tensions",
+          "summary": "The US and Iran engaged in significant military strikes, resulting in at least 17 fatalities in Iran. The attacks occurred just before the burial of Ayatollah Ali Khamenei, marking the most intense exchanges since a ceasefire was extended. US strikes targeted coastal cities, including Bandar Abbas and Sirik, as part of efforts to diminish Iran's military capabilities in the region.",
+          "key_facts": [
+            "At least 17 people killed in Iran due to US strikes.",
+            "Strikes occurred before the burial of Ayatollah Ali Khamenei.",
+            "US attacks targeted port cities including Bandar Abbas and Sirik."
+          ],
+          "source_count": 2,
+          "sources": [
+            "The Guardian"
+          ],
+          "source_urls": [
+            "https://www.theguardian.com/world/2026/jul/09/iran-trade-strikes-ceasefire-extended-donald-trump",
+            "https://www.theguardian.com/world/2026/jul/09/iran-residents-terror-us-fresh-strikes-port-cities"
+          ],
+          "confidence": 0.441,
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-09",
+          "last_seen_at": "2026-07-09",
+          "development_type": "military_action",
+          "match_evidence": {
+            "score": 0.441,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
+        },
+        {
+          "development_id": "story_223d2585807b8350",
+          "daily_story_id": "story_223d2585807b8350",
+          "date": "2026-07-12",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Gulf Countries Under Attack Following US Strikes on Iran",
+          "summary": "Iran has launched retaliatory attacks on Gulf countries following recent US airstrikes. The situation escalated after Tehran declared the Strait of Hormuz closed, reversing a prior agreement aimed at restoring maritime traffic. President Trump has announced the end of a ceasefire, while efforts for diplomatic resolution continue amidst the intensifying conflict.",
+          "key_facts": [
+            "Iran retaliated against Gulf countries after US strikes.",
+            "The Strait of Hormuz has been declared closed by Iran.",
+            "President Trump announced the end of the ceasefire."
+          ],
+          "source_count": 3,
+          "sources": [
+            "ABC News",
+            "The Guardian"
+          ],
+          "source_urls": [
+            "https://abcnews.com/International/live-updates/iran-live-updates-thousands-throng-tehran-streets-khamenei?id=134509610",
+            "https://www.theguardian.com/world/live/2026/jul/12/iran-gulf-us-strikes-jordan-qatar-uae-strait-hormuz-latest-news-updates-live",
+            "https://www.theguardian.com/world/2026/jul/12/us-and-iran-exchange-strikes-as-tehran-again-says-strait-of-hormuz-is-closed"
+          ],
+          "confidence": 1.0,
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-12",
+          "last_seen_at": "2026-07-12",
+          "development_type": "military_action",
+          "match_evidence": {
+            "score": 1.0,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
+        },
+        {
+          "development_id": "story_4da28630c62b4e6c",
+          "daily_story_id": "story_4da28630c62b4e6c",
+          "date": "2026-07-12",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "US Strikes Iran After Attack on Ship; Iran Closes Strait of Hormuz",
+          "summary": "The United States has launched a series of airstrikes against Iran in response to an attack on a commercial vessel in the Strait of Hormuz. The Pentagon reported that US forces targeted 140 sites in Iran. In retaliation, Iran has reportedly closed the Strait of Hormuz and launched attacks on Gulf states, escalating tensions in the region.",
+          "key_facts": [
+            "US conducted airstrikes on Iran after an attack on a commercial ship.",
+            "Pentagon confirmed strikes targeted 140 sites in Iran.",
+            "Iran closed the Strait of Hormuz and retaliated against Gulf states."
+          ],
+          "source_count": 6,
+          "sources": [
+            "BBC",
+            "CBS News",
+            "Google News",
+            "NBC News",
+            "NPR"
+          ],
+          "source_urls": [
+            "https://news.google.com/rss/articles/CBMinAFBVV95cUxPZWNIZWpPMUROMXlXU0EwT1pjWWUycXFoTjBobEJLM0JpWGhjTWZwN0Q2RkxaY3N6cU9fNXZOT194MWFHYllDYUh4RWdEdmF3NVpGQ2tlOTl4dWI5VzVMWlgycVBYcmtSRDR6UV9lQmtoWkZMUWRvLUYwZXhIQzlGcVVpTGlMZElhRkxkT0pkMXlEZDJmSll0c2JsYkY?oc=5",
+            "https://www.today.com/video/iran-s-new-supreme-leader-vows-revenge-for-death-of-his-dad-266559045774",
+            "https://www.npr.org/2026/07/11/g-s1-133212/us-iran-vessel-attack-strait-hormuz-gulf",
+            "https://www.cbsnews.com/live-updates/us-iran-war-trump-ceasefire-talks-strait-of-hormuz",
+            "https://www.bbc.co.uk/news/articles/cj9gkpp0dkeo?at_medium=RSS&at_campaign=rss",
+            "https://news.google.com/rss/articles/CBMihAFBVV95cUxQNVNPY0lhcGZoRXpWWmVWclhKWGcxQWM3OG1ncGdmVkJZbEd6djExLU5nVjlMdk9abUZ5WHJZVThDaWktMi1FSW9DUU0zQ0syN2ctOUlGcU9NUjFwd2w1OWFDUDNZSHRPd1RMYVhvN2lSLVpYUDFEeXEyTnM4bVpGRXVwX1M?oc=5"
+          ],
+          "confidence": 0.391,
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-12",
+          "last_seen_at": "2026-07-12",
+          "development_type": "military_action",
+          "match_evidence": {
+            "score": 0.391,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
+        },
+        {
+          "development_id": "story_da2da45e315e1ae0",
+          "daily_story_id": "story_da2da45e315e1ae0",
+          "date": "2026-07-13",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Trump Announces US Blockade and Tolls in Strait of Hormuz",
+          "summary": "President Trump declared that the US will reinstate a blockade in the Strait of Hormuz, positioning the country as the 'guardian' of the waterway. He announced a 20% fee on all cargo shipped through the strait to cover security costs. This declaration comes amid escalating tensions and strikes between the US and Iran, with both nations claiming control over the strategic passage. Oil prices have surged following these developments.",
+          "key_facts": [
+            "Trump announced the US will charge a 20% fee on cargo in the Strait of Hormuz.",
+            "Iran has rejected US control over the strait amid ongoing military tensions.",
+            "Oil prices increased significantly following Trump's announcement."
+          ],
+          "source_count": 4,
+          "sources": [
+            "Al Jazeera English",
+            "CBS News",
+            "NBC News"
+          ],
+          "source_urls": [
+            "https://www.cbsnews.com/news/trump-iran-war-us-guardian-strait-of-hormuz-get-paid",
+            "https://www.aljazeera.com/news/2026/7/13/trump-says-us-will-become-guardian-of-strait-of-hormuz-and-collect-tolls?traffic_source=rss",
+            "https://www.nbcnews.com/business/markets/oil-rises-trump-reimposes-hormuz-blockade-rcna587297",
+            "https://www.cbsnews.com/video/iran-and-us-both-claim-control-over-strait-of-hormuz-trade-strikes"
+          ],
+          "confidence": 0.399,
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-13",
+          "last_seen_at": "2026-07-13",
+          "development_type": "military_action",
+          "match_evidence": {
+            "score": 0.399,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
+        },
+        {
+          "development_id": "story_55ebf5545ebb757a",
+          "daily_story_id": "story_55ebf5545ebb757a",
+          "date": "2026-07-15",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Tensions Rise as Iran Threatens to Block Oil Exports Amid US Maritime Blockade",
+          "summary": "The standoff between the US and Iran over the Strait of Hormuz escalated as Iran threatened to block all oil exporting routes in the region. This response follows the US reimposing a maritime blockade on Iranian ports, intensifying the ongoing tensions in the area.",
+          "development_type": "development",
+          "key_facts": [
+            "Iran threatened to block oil exporting routes in response to US actions.",
+            "The US has reimposed a maritime blockade on Iranian ports in the Strait of Hormuz."
+          ],
+          "source_count": 2,
+          "sources": [
+            "Google News",
+            "NPR"
+          ],
+          "source_urls": [
+            "https://www.npr.org/2026/07/15/nx-s1-5894582/us-iran-updates",
+            "https://news.google.com/rss/articles/CBMibEFVX3lxTE5VZVRQYUszT2dpanVJbzYyMzZvVjEzUW44ekpUVU5TanJ4cnhKdWNwSWl6NXpQM2NFM1E0b0lSQ2ltN3VZR0hPdWpBRDVPV29CYWg3N0t4TWlmc1RrYmc1a25Rd0dUeExwVVk2SQ?oc=5"
+          ],
+          "confidence": 0.558,
+          "match_evidence": {
+            "score": 0.558,
+            "matched_development_id": "story_7c20e9fd1e66b747",
+            "shared_tokens": [
+              "blockade",
+              "export",
+              "hormuz",
+              "iran",
+              "ports",
+              "response",
+              "strait",
+              "tension",
+              "threatened"
+            ],
+            "shared_entities": [
+              "iran",
+              "us"
+            ],
+            "source_url_match": false,
+            "method": "deterministic_event_match_v2",
+            "threshold": 0.38
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-15",
+          "last_seen_at": "2026-07-15"
+        },
+        {
+          "development_id": "story_7c20e9fd1e66b747",
+          "daily_story_id": "story_7c20e9fd1e66b747",
+          "date": "2026-07-15",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "US and Iran Exchange Strikes Amid Tensions Over Hormuz and Blockade",
+          "summary": "Donald Trump has withdrawn a proposed 20% toll on ships passing through the Strait of Hormuz, opting instead for investment and trade deals with Gulf Arab states. This decision comes as US airstrikes target Iranian port cities, while Iran retaliates against Bahrain and Jordan. Amid escalating tensions, Iran has threatened to halt all energy exports from the Middle East in response to a renewed US blockade of its ports, which has led to the closure of the Strait of Hormuz.",
+          "development_type": "military_action",
+          "key_facts": [
+            "Trump withdrew a threat for a 20% toll on ships in the Strait of Hormuz.",
+            "US airstrikes have targeted Iranian port cities of Bushehr and Bandar Abbas.",
+            "Iran has threatened to stop all Middle East energy exports and closed the Strait of Hormuz."
+          ],
+          "source_count": 2,
+          "sources": [
+            "The Guardian"
+          ],
+          "source_urls": [
+            "https://www.theguardian.com/world/2026/jul/14/us-strikes-iran-bahrain-jordan-uae-tankers",
+            "https://www.theguardian.com/world/2026/jul/15/trump-iran-power-plants-strike-threat-strait-of-hormuz"
+          ],
+          "confidence": 0.58,
+          "match_evidence": {
+            "score": 0.58,
+            "matched_development_id": "story_4da28630c62b4e6c",
+            "shared_tokens": [
+              "airstrike",
+              "closed",
+              "escalating",
+              "gulf",
+              "hormuz",
+              "iran",
+              "response",
+              "strait",
+              "strike",
+              "targeted",
+              "tension"
+            ],
+            "shared_entities": [
+              "iran",
+              "us"
+            ],
+            "source_url_match": false,
+            "method": "deterministic_event_match_v2",
+            "threshold": 0.38
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-15",
+          "last_seen_at": "2026-07-15"
+        }
+      ],
+      "canonical_title": "Trump Announces US Blockade and Tolls in Strait of Hormuz",
+      "related_events": [
+        {
+          "event_id": "event_iran-prepares-for-burial-of-slain-leader-kha_bf98c0d666",
+          "title": "Iran Prepares for Burial of Slain Leader Khamenei",
+          "relationship": "related_topic",
+          "confidence": 0.767,
+          "shared_entities": [
+            "ali_khamenei",
+            "ayatollah_ali",
+            "iran",
+            "us"
+          ]
+        },
+        {
+          "event_id": "event_trump-threatens-control-over-strait-of-hormu_02a37c0650",
+          "title": "Escalating Tensions in Hormuz Strait Following Attacks on UAE Tankers",
+          "relationship": "related_topic",
+          "confidence": 0.765,
+          "shared_entities": [
+            "donald_trump",
+            "iran",
+            "us"
+          ]
+        },
+        {
+          "event_id": "event_oil-prices-rise-as-trump-proposes-fees-for-s_6908a722e7",
+          "title": "Oil Prices Rise as Trump Proposes Fees for Strait of Hormuz Passage",
+          "relationship": "related_topic",
+          "confidence": 0.764,
+          "shared_entities": [
+            "iran",
+            "us"
+          ]
+        },
+        {
+          "event_id": "event_us-and-iran-intensify-strikes-ahead-of-khame_d5dafd6b11",
+          "title": "US and Iran Intensify Strikes Ahead of Khamenei's Burial",
+          "relationship": "related_topic",
+          "confidence": 0.699,
+          "shared_entities": [
+            "iran",
+            "us"
+          ]
+        }
+      ],
+      "latest_title": "US and Iran Exchange Strikes Amid Tensions Over Hormuz and Blockade",
+      "latest_summary": "Donald Trump has withdrawn a proposed 20% toll on ships passing through the Strait of Hormuz, opting instead for investment and trade deals with Gulf Arab states. This decision comes as US airstrikes target Iranian port cities, while Iran retaliates against Bahrain and Jordan. Amid escalating tensions, Iran has threatened to halt all energy exports from the Middle East in response to a renewed US blockade of its ports, which has led to the closure of the Strait of Hormuz.",
+      "search_tokens": [
+        "140",
+        "abbas",
+        "action",
+        "additional",
+        "agreement",
+        "aimed",
+        "airstrike",
+        "amidst",
+        "announce",
+        "announced",
+        "arab",
+        "area",
+        "attack",
+        "ayatollah",
+        "bahrain",
+        "bandar",
+        "block",
+        "blockade",
+        "both",
+        "burial",
+        "capabilitie",
+        "cargo",
+        "ceasefire",
+        "central",
+        "citie",
+        "claiming",
+        "close",
+        "closed",
+        "closure",
+        "coastal",
+        "comes",
+        "command",
+        "commercial",
+        "conducted",
+        "confirmed",
+        "conflict",
+        "continue",
+        "control",
+        "costs",
+        "countrie",
+        "cover",
+        "deals",
+        "decision",
+        "declaration",
+        "declared",
+        "described",
+        "development",
+        "diminish",
+        "diplomatic",
+        "donald",
+        "east",
+        "effort",
+        "energy",
+        "engaged",
+        "escalated",
+        "escalating",
+        "exchange",
+        "export",
+        "exporting",
+        "extended",
+        "fatalitie",
+        "follow",
+        "force",
+        "guardian",
+        "gulf",
+        "halt",
+        "hormuz",
+        "including",
+        "instead",
+        "intense",
+        "intensifying",
+        "investment",
+        "iran",
+        "jordan",
+        "just",
+        "khamenei",
+        "launche",
+        "launched",
+        "least",
+        "maritime",
+        "marking",
+        "middle",
+        "military",
+        "most",
+        "nation",
+        "occurred",
+        "oil",
+        "ongoing",
+        "opting",
+        "part",
+        "passage",
+        "passing",
+        "pentagon",
+        "port",
+        "ports",
+        "positioning",
+        "price",
+        "prior",
+        "promised",
+        "proposed",
+        "recent",
+        "region",
+        "reimposing",
+        "reinstate",
+        "renewed",
+        "reported",
+        "reportedly",
+        "resolution",
+        "response",
+        "restoring",
+        "resulting",
+        "retaliate",
+        "retaliation",
+        "retaliatory",
+        "reversing",
+        "rise",
+        "rising",
+        "round",
+        "route",
+        "security",
+        "serie",
+        "ship",
+        "shipped",
+        "ships",
+        "significant",
+        "since",
+        "sirik",
+        "sites",
+        "situation",
+        "standoff",
+        "strait",
+        "strategic",
+        "strike",
+        "strong",
+        "surged",
+        "tanker",
+        "target",
+        "targeted",
+        "tehran",
+        "tension",
+        "these",
+        "threaten",
+        "threatened",
+        "through",
+        "toll",
+        "tolls",
+        "trade",
+        "traffic",
+        "trump",
+        "under",
+        "united",
+        "vessel",
+        "waterway",
+        "which",
+        "while",
+        "withdrawn"
+      ],
+      "entities": [
+        "ali_khamenei",
+        "ayatollah_ali",
+        "bandar_abbas",
+        "block",
+        "blockade_donald",
+        "ceasefire_tension",
+        "central_command.",
+        "close_strait",
+        "command._these",
+        "countrie_under",
+        "donald_trump",
+        "gulf_arab",
+        "gulf_countrie",
+        "iran",
+        "iran.",
+        "iran_close",
+        "iran_iran",
+        "iran_threaten",
+        "launche_additional",
+        "maritime_blockade",
+        "middle_east",
+        "rising_tension",
+        "ship_iran",
+        "strait",
+        "tension_rise",
+        "us"
+      ],
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": true,
+        "development_count": 7,
+        "date_count": 5,
+        "source_count": 22,
+        "first_date": "2026-07-08",
+        "latest_date": "2026-07-15",
+        "context_summary": "Muninn first tracked this thread on 2026-07-08: US Launches Additional Strikes Against Iran Amid Rising Tensions. The latest development is US and Iran Exchange Strikes Amid Tensions Over Hormuz and Blockade.",
+        "cta_label": "Explore 7 developments"
+      },
+      "search_text": "140 abbas action additional agreement aimed airstrike ali_khamenei amidst announce announced arab area attack ayatollah ayatollah_ali bahrain bandar bandar_abbas block blockade blockade_donald both burial capabilitie cargo ceasefire ceasefire_tension central central_command. citie claiming close close_strait closed closure coastal comes command command._these commercial conducted confirmed conflict continue control costs countrie countrie_under cover deals decision declaration declared described development diminish diplomatic donald donald_trump east effort energy engaged escalated escalating exchange export exporting extended fatalitie follow force guardian gulf gulf_arab gulf_countrie halt hormuz including instead intense intensifying investment iran iran. iran_close iran_iran iran_threaten jordan just khamenei launche launche_additional launched least maritime maritime_blockade marking middle middle_east military most nation occurred oil ongoing opting part passage passing pentagon port ports positioning price prior promised proposed recent region reimposing reinstate renewed reported reportedly resolution response restoring resulting retaliate retaliation retaliatory reversing rise rising rising_tension round route security serie ship ship_iran shipped ships significant since sirik sites situation standoff strait strategic strike strong surged tanker target targeted tehran tension tension_rise these threaten threatened through toll tolls trade traffic trump under united us vessel waterway which while withdrawn"
+    },
+    {
+      "event_id": "event_judge-orders-trump-to-pay-5-8-million-to-e-j_4283aeef78",
+      "title": "Judge Orders Trump to Pay $5.8 Million to E. Jean Carroll",
+      "summary": "A federal judge has ordered the release of a $5.8 million judgment to E. Jean Carroll, following a jury's finding that Donald Trump sexually abused and defamed her. This ruling comes after the US Supreme Court declined to hear Trump's appeal regarding the case.",
+      "status": "active",
+      "first_seen_at": "2026-07-08",
+      "last_seen_at": "2026-07-15",
+      "timeline": [
+        {
+          "development_id": "story_70d291447d49dc5c",
+          "daily_story_id": "story_70d291447d49dc5c",
+          "date": "2026-07-08",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Judge Orders Trump to Pay $5.8 Million to E. Jean Carroll",
+          "summary": "A federal judge has ordered the release of a $5.8 million judgment to E. Jean Carroll, following a jury's finding that Donald Trump sexually abused and defamed her. This ruling comes after the US Supreme Court declined to hear Trump's appeal regarding the case.",
+          "key_facts": [
+            "E. Jean Carroll was awarded $5.8 million after a jury found Trump liable for sexual abuse and defamation.",
+            "The US Supreme Court rejected Trump's appeal, allowing the judgment to be enforced."
+          ],
+          "source_count": 3,
+          "sources": [
+            "ABC News",
+            "NBC News",
+            "New York Times"
+          ],
+          "source_urls": [
+            "https://abcnews.com/US/judge-orders-trump-pay-jean-carroll-5-million/story?id=134591703",
+            "https://www.nbcnews.com/politics/donald-trump/judge-orders-release-58-million-payment-trump-owed-e-jean-carroll-rcna353512",
+            "https://www.nytimes.com/2026/07/08/us/politics/trump-e-jean-carroll-5-million-payment.html"
+          ],
+          "confidence": 1.0,
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-08",
+          "last_seen_at": "2026-07-08",
+          "development_type": "policy",
+          "match_evidence": {
+            "score": 1.0,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
+        },
+        {
+          "development_id": "story_5e4d5a98e8b21a2d",
+          "daily_story_id": "story_5e4d5a98e8b21a2d",
+          "date": "2026-07-15",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Trump Pays E. Jean Carroll $5 Million in Damages for Sexual Abuse and Defamation",
+          "summary": "E. Jean Carroll has received over $5 million from Donald Trump as part of a civil judgment related to her claims of sexual abuse and defamation. Trump had previously sought to delay the payment while attempting to challenge the judgment in the Supreme Court.",
+          "development_type": "development",
+          "key_facts": [
+            "E. Jean Carroll received more than $5 million from Donald Trump.",
+            "The payment is part of a civil judgment related to claims of sexual abuse and defamation.",
+            "Trump attempted to delay the payment while appealing the judgment."
+          ],
+          "source_count": 2,
+          "sources": [
+            "ABC News",
+            "BBC"
+          ],
+          "source_urls": [
+            "https://www.bbc.co.uk/news/articles/c2dydj1wp93o?at_medium=RSS&at_campaign=rss",
+            "https://abcnews.com/US/jean-carroll-receives-5-million-payment-trump-civil/story?id=134748551"
+          ],
+          "confidence": 0.422,
+          "match_evidence": {
+            "score": 0.422,
+            "matched_development_id": "story_70d291447d49dc5c",
+            "shared_tokens": [
+              "abuse",
+              "carroll",
+              "court",
+              "defamation",
+              "donald",
+              "jean",
+              "judgment",
+              "million",
+              "sexual",
+              "supreme",
+              "trump"
+            ],
+            "shared_entities": [
+              "e.",
+              "jean_carroll"
+            ],
+            "source_url_match": false,
+            "method": "deterministic_event_match_v2",
+            "threshold": 0.38
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-15",
+          "last_seen_at": "2026-07-15"
+        }
+      ],
+      "canonical_title": "Judge Orders Trump to Pay $5.8 Million to E. Jean Carroll",
+      "related_events": [
+        {
+          "event_id": "event_trump-threatens-control-over-strait-of-hormu_02a37c0650",
+          "title": "Escalating Tensions in Hormuz Strait Following Attacks on UAE Tankers",
+          "relationship": "related_topic",
+          "confidence": 0.659,
+          "shared_entities": [
+            "donald_trump",
+            "us"
+          ]
+        },
+        {
+          "event_id": "event_fourth-person-killed-by-federal-agents-in-me_4b2716ba7d",
+          "title": "Fourth Person Killed by Federal Agents in Memphis Taskforce Operation",
+          "relationship": "related_topic",
+          "confidence": 0.657,
+          "shared_entities": [
+            "donald",
+            "donald_trump"
+          ]
+        },
+        {
+          "event_id": "event_us-launches-additional-strikes-against-iran_893672228d",
+          "title": "Trump Announces US Blockade and Tolls in Strait of Hormuz",
+          "relationship": "related_topic",
+          "confidence": 0.653,
+          "shared_entities": [
+            "donald_trump",
+            "us"
+          ]
+        }
+      ],
+      "latest_title": "Trump Pays E. Jean Carroll $5 Million in Damages for Sexual Abuse and Defamation",
+      "latest_summary": "E. Jean Carroll has received over $5 million from Donald Trump as part of a civil judgment related to her claims of sexual abuse and defamation. Trump had previously sought to delay the payment while attempting to challenge the judgment in the Supreme Court.",
+      "search_tokens": [
+        "abuse",
+        "abused",
+        "appeal",
+        "attempting",
+        "carroll",
+        "case",
+        "challenge",
+        "civil",
+        "claim",
+        "comes",
+        "court",
+        "damage",
+        "declined",
+        "defamation",
+        "defamed",
+        "delay",
+        "donald",
+        "federal",
+        "finding",
+        "hear",
+        "jean",
+        "judge",
+        "judgment",
+        "jury",
+        "million",
+        "order",
+        "ordered",
+        "part",
+        "payment",
+        "pays",
+        "previously",
+        "received",
+        "regarding",
+        "related",
+        "release",
+        "ruling",
+        "sexual",
+        "sexually",
+        "sought",
+        "supreme",
+        "trump",
+        "while"
+      ],
+      "entities": [
+        "carroll_million",
+        "damage",
+        "donald",
+        "donald_trump",
+        "e.",
+        "jean_carroll",
+        "order_trump",
+        "pay",
+        "pay_million",
+        "sexual_abuse",
+        "trump_pays",
+        "us"
+      ],
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "development_count": 2,
+        "date_count": 2,
+        "source_count": 5,
+        "first_date": "2026-07-08",
+        "latest_date": "2026-07-15",
+        "context_summary": "Muninn first tracked this thread on 2026-07-08: Judge Orders Trump to Pay $5.8 Million to E. Jean Carroll. The latest development is Trump Pays E. Jean Carroll $5 Million in Damages for Sexual Abuse and Defamation.",
+        "cta_label": ""
+      },
+      "search_text": "abuse abused appeal attempting carroll carroll_million case challenge civil claim comes court damage declined defamation defamed delay donald donald_trump e. federal finding hear jean jean_carroll judge judgment jury million order order_trump ordered part pay pay_million payment pays previously received regarding related release ruling sexual sexual_abuse sexually sought supreme trump trump_pays us while"
+    },
     {
       "event_id": "event_toronto-street-festival-shooting-leaves-two_7bad7b78e4",
       "title": "Shooting at Toronto Street Festival Leaves Two Dead and Four Injured",
@@ -48,7 +1312,14 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-12",
-          "last_seen_at": "2026-07-12"
+          "last_seen_at": "2026-07-12",
+          "development_type": "policy",
+          "match_evidence": {
+            "score": 1.0,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         },
         {
           "development_id": "story_65fdf9846fb20aa6",
@@ -79,7 +1350,14 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-13",
-          "last_seen_at": "2026-07-13"
+          "last_seen_at": "2026-07-13",
+          "development_type": "impact",
+          "match_evidence": {
+            "score": 1.0,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         },
         {
           "development_id": "story_97f6b326f606645c",
@@ -107,9 +1385,82 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-14",
-          "last_seen_at": "2026-07-14"
+          "last_seen_at": "2026-07-14",
+          "development_type": "impact",
+          "match_evidence": {
+            "score": 1.0,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         }
-      ]
+      ],
+      "canonical_title": "Shooting at Toronto Street Festival Leaves Two Dead and Four Injured",
+      "related_events": [],
+      "search_tokens": [
+        "attended",
+        "authoritie",
+        "clair",
+        "condemned",
+        "dead",
+        "death",
+        "described",
+        "enforcement",
+        "event",
+        "exchange",
+        "familie",
+        "family-attended",
+        "fatalitie",
+        "festival",
+        "firearm",
+        "four",
+        "gunfire",
+        "incident",
+        "individual",
+        "injured",
+        "injurie",
+        "involved",
+        "irresponsible",
+        "leave",
+        "local",
+        "mayor",
+        "multiple",
+        "occurred",
+        "occurring",
+        "other",
+        "prompting",
+        "recovered",
+        "reported",
+        "response",
+        "resulted",
+        "salsa",
+        "scene",
+        "several",
+        "shooting",
+        "street",
+        "toronto",
+        "violence",
+        "which"
+      ],
+      "entities": [
+        "st._clair",
+        "street",
+        "street_festival",
+        "toronto",
+        "toronto_street"
+      ],
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "development_count": 3,
+        "date_count": 3,
+        "source_count": 5,
+        "first_date": "2026-07-12",
+        "latest_date": "2026-07-14",
+        "context_summary": "Muninn first tracked this thread on 2026-07-12: Toronto street festival shooting leaves two dead, several injured. The latest development is Shooting at Toronto Street Festival Leaves Two Dead and Four Injured.",
+        "cta_label": ""
+      },
+      "search_text": "attended authoritie clair condemned dead death described enforcement event exchange familie family-attended fatalitie festival firearm four gunfire incident individual injured injurie involved irresponsible leave local mayor multiple occurred occurring other prompting recovered reported response resulted salsa scene several shooting st._clair street street_festival toronto toronto_street violence which"
     },
     {
       "event_id": "event_lindsey-graham-dies-sam-neill-passes-away-at_410851c2f2",
@@ -152,7 +1503,14 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-13",
-          "last_seen_at": "2026-07-13"
+          "last_seen_at": "2026-07-13",
+          "development_type": "policy",
+          "match_evidence": {
+            "score": 1.0,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         },
         {
           "development_id": "story_1ecce05090466b1c",
@@ -183,83 +1541,95 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-14",
-          "last_seen_at": "2026-07-14"
+          "last_seen_at": "2026-07-14",
+          "development_type": "development",
+          "match_evidence": {
+            "score": 0.435,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         }
-      ]
-    },
-    {
-      "event_id": "event_trump-threatens-control-over-strait-of-hormu_02a37c0650",
-      "title": "Escalating Tensions in Hormuz Strait Following Attacks on UAE Tankers",
-      "summary": "Explosions were reported across Iran after the UAE claimed that Iranian cruise missiles struck two oil tankers in the Hormuz Strait, resulting in one death and eight injuries. In response, the US has conducted a series of strikes on Iranian targets for three consecutive nights, while President Trump announced a maritime blockade of the strait, stating that ships would be charged for safe passage. Iran has retaliated by targeting US allies in the region.",
-      "status": "active",
-      "first_seen_at": "2026-07-13",
-      "last_seen_at": "2026-07-14",
-      "timeline": [
-        {
-          "development_id": "story_62645bed21833b7f",
-          "daily_story_id": "story_62645bed21833b7f",
-          "date": "2026-07-13",
-          "occurred_at": null,
-          "date_basis": "first_reported_by_muninn",
-          "title": "Trump Threatens Control Over Strait of Hormuz Amid Iran Tensions",
-          "summary": "President Donald Trump has announced the reimposition of a naval blockade on Iran and threatened to take control of the Strait of Hormuz. He stated that the strait will remain open 'with or without' Iran and proposed a 20% tariff on all cargoes passing through this crucial maritime passage. This announcement comes amid ongoing military exchanges between the US and Iran, with both sides engaging in drone and missile strikes.",
-          "key_facts": [
-            "Trump announced a naval blockade on Iran.",
-            "He threatened to take control of the Strait of Hormuz.",
-            "A 20% tariff on cargoes through the strait was proposed.",
-            "Heavy military exchanges are ongoing between the US and Iran."
-          ],
-          "source_count": 3,
-          "sources": [
-            "ABC News",
-            "The Guardian"
-          ],
-          "source_urls": [
-            "https://abcnews.com/International/live-updates/iran-live-updates-kuwait-reports-attacks-after-latest?id=134704698",
-            "https://www.theguardian.com/world/2026/jul/13/us-iran-war-missile-strikes-news-attacks-strait-of-hormuz",
-            "https://www.theguardian.com/world/live/2026/jul/13/us-iran-strikes-middle-east-strait-of-hormuz-military-latest-news-updates"
-          ],
-          "confidence": 1.0,
-          "verification": {
-            "provider": "deterministic_source_grounded_event_match_v1",
-            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
-          },
-          "first_seen_at": "2026-07-13",
-          "last_seen_at": "2026-07-13"
-        },
-        {
-          "development_id": "story_e99c7d3379279ffb",
-          "daily_story_id": "story_e99c7d3379279ffb",
-          "date": "2026-07-14",
-          "occurred_at": null,
-          "date_basis": "first_reported_by_muninn",
-          "title": "Escalating Tensions in Hormuz Strait Following Attacks on UAE Tankers",
-          "summary": "Explosions were reported across Iran after the UAE claimed that Iranian cruise missiles struck two oil tankers in the Hormuz Strait, resulting in one death and eight injuries. In response, the US has conducted a series of strikes on Iranian targets for three consecutive nights, while President Trump announced a maritime blockade of the strait, stating that ships would be charged for safe passage. Iran has retaliated by targeting US allies in the region.",
-          "key_facts": [
-            "UAE claims Iranian cruise missiles hit two oil tankers in the Hormuz Strait.",
-            "One crew member was killed and eight others were wounded in the attack.",
-            "The US launched its third consecutive night of strikes on Iran.",
-            "Trump announced a maritime blockade of the Hormuz Strait, charging ships for safe passage.",
-            "Iran retaliated by targeting Bahrain and Jordan."
-          ],
-          "source_count": 3,
-          "sources": [
-            "The Guardian"
-          ],
-          "source_urls": [
-            "https://www.theguardian.com/world/live/2026/jul/14/us-iran-war-live-updates-strikes-strait-of-hormuz-middle-east-crisis-trump-latest-news",
-            "https://www.theguardian.com/world/2026/jul/14/us-strikes-iran-bahrain-jordan-uae-tankers",
-            "https://www.theguardian.com/world/2026/jul/13/us-launches-third-night-of-strikes-on-iran-as-trump-announces-hormuz-blockade"
-          ],
-          "confidence": 0.398,
-          "verification": {
-            "provider": "deterministic_source_grounded_event_match_v1",
-            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
-          },
-          "first_seen_at": "2026-07-14",
-          "last_seen_at": "2026-07-14"
-        }
-      ]
+      ],
+      "canonical_title": "Sam Neill, Acclaimed Actor Known for 'Jurassic Park,' Passes Away at 78",
+      "related_events": [],
+      "search_tokens": [
+        "acclaimed",
+        "actor",
+        "also",
+        "appointed",
+        "away",
+        "battle",
+        "co-star",
+        "complete",
+        "darline",
+        "death",
+        "described",
+        "died",
+        "dies",
+        "discussion",
+        "event",
+        "famou",
+        "fellow",
+        "friend",
+        "graham",
+        "jurassic",
+        "known",
+        "legacy",
+        "lindsey",
+        "lymphoma",
+        "neill",
+        "park",
+        "passe",
+        "passed",
+        "passing",
+        "piano",
+        "pneumonia",
+        "political",
+        "pouring",
+        "prior",
+        "prompting",
+        "renowned",
+        "revealed",
+        "role",
+        "roles",
+        "separate",
+        "sister",
+        "sudden",
+        "suffering",
+        "suggested",
+        "term",
+        "tribute",
+        "trump",
+        "unexpected",
+        "unexpectedly",
+        "zealand"
+      ],
+      "entities": [
+        "acclaimed_actor",
+        "actor_known",
+        "dies_sam",
+        "graham_dies",
+        "jurassic_park",
+        "lindsey_graham",
+        "neill_acclaimed",
+        "neill_passe",
+        "park_passe",
+        "passe_away",
+        "sam_neill"
+      ],
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "development_count": 2,
+        "date_count": 2,
+        "source_count": 6,
+        "first_date": "2026-07-13",
+        "latest_date": "2026-07-14",
+        "context_summary": "Muninn first tracked this thread on 2026-07-13: Lindsey Graham Dies; Sam Neill Passes Away at 78. The latest development is Sam Neill, Acclaimed Actor Known for 'Jurassic Park,' Passes Away at 78.",
+        "cta_label": ""
+      },
+      "search_text": "acclaimed acclaimed_actor actor actor_known also appointed away battle co-star complete darline death described died dies dies_sam discussion event famou fellow friend graham graham_dies jurassic jurassic_park known legacy lindsey lindsey_graham lymphoma neill neill_acclaimed neill_passe park park_passe passe passe_away passed passing piano pneumonia political pouring prior prompting renowned revealed role roles sam_neill separate sister sudden suffering suggested term tribute trump unexpected unexpectedly zealand"
     },
     {
       "event_id": "event_yemen-government-forces-attack-sanaa-airport_6a3a8cdde3",
@@ -295,7 +1665,14 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-13",
-          "last_seen_at": "2026-07-13"
+          "last_seen_at": "2026-07-13",
+          "development_type": "military_action",
+          "match_evidence": {
+            "score": 1.0,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         },
         {
           "development_id": "story_98e272932064165a",
@@ -325,9 +1702,77 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-14",
-          "last_seen_at": "2026-07-14"
+          "last_seen_at": "2026-07-14",
+          "development_type": "military_action",
+          "match_evidence": {
+            "score": 0.56,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         }
-      ]
+      ],
+      "canonical_title": "Houthis Launch Missile Attacks on Saudi Arabia Following Strikes on Sanaa Airport",
+      "related_events": [],
+      "search_tokens": [
+        "abha",
+        "action",
+        "aircraft",
+        "airport",
+        "arabia",
+        "attack",
+        "blame",
+        "conducted",
+        "escalation",
+        "follow",
+        "force",
+        "highlight",
+        "houthi",
+        "houthi-controlled",
+        "iran",
+        "iran-backed",
+        "landing",
+        "launch",
+        "launched",
+        "missile",
+        "movement",
+        "ongoing",
+        "prevent",
+        "recent",
+        "region",
+        "reported",
+        "retaliatory",
+        "sanaa",
+        "saudi",
+        "strike",
+        "targeting",
+        "tension",
+        "which",
+        "yemen",
+        "yemeni"
+      ],
+      "entities": [
+        "houthi-controlled_sanaa",
+        "iran",
+        "iran-backed_houthi",
+        "sanaa_airport",
+        "saudi",
+        "saudi_arabia",
+        "saudi_arabia.",
+        "yemen"
+      ],
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "development_count": 2,
+        "date_count": 2,
+        "source_count": 4,
+        "first_date": "2026-07-13",
+        "latest_date": "2026-07-14",
+        "context_summary": "Muninn first tracked this thread on 2026-07-13: Yemen Government Forces Attack Sanaa Airport. The latest development is Houthis Launch Missile Attacks on Saudi Arabia Following Strikes on Sanaa Airport.",
+        "cta_label": ""
+      },
+      "search_text": "abha action aircraft airport arabia attack blame conducted escalation follow force highlight houthi houthi-controlled houthi-controlled_sanaa iran iran-backed iran-backed_houthi landing launch launched missile movement ongoing prevent recent region reported retaliatory sanaa sanaa_airport saudi saudi_arabia saudi_arabia. strike targeting tension which yemen yemeni"
     },
     {
       "event_id": "event_france-faces-spain-in-fifa-world-cup-semifin_0245030435",
@@ -363,7 +1808,14 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-13",
-          "last_seen_at": "2026-07-13"
+          "last_seen_at": "2026-07-13",
+          "development_type": "development",
+          "match_evidence": {
+            "score": 1.0,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         },
         {
           "development_id": "story_16fe45ea3a128d2c",
@@ -395,9 +1847,121 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-14",
-          "last_seen_at": "2026-07-14"
+          "last_seen_at": "2026-07-14",
+          "development_type": "development",
+          "match_evidence": {
+            "score": 0.441,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         }
-      ]
+      ],
+      "canonical_title": "France and Spain Set for Unbeaten Semifinal Clash at FIFA World Cup",
+      "related_events": [
+        {
+          "event_id": "event_argentina-and-switzerland-advance-to-world-c_9a15bfa608",
+          "title": "Spain and France Prepare for Semifinal Clash in World Cup 2026",
+          "relationship": "related_topic",
+          "confidence": 0.817,
+          "shared_entities": [
+            "cup_semifinal",
+            "fifa",
+            "france",
+            "semifinal_clash",
+            "spain"
+          ]
+        },
+        {
+          "event_id": "event_england-and-argentina-prepare-for-world-cup_bedeedc8d3",
+          "title": "England and Argentina Prepare for World Cup Semifinal Clash",
+          "relationship": "related_topic",
+          "confidence": 0.711,
+          "shared_entities": [
+            "cup_semifinal",
+            "semifinal_clash"
+          ]
+        }
+      ],
+      "search_tokens": [
+        "1990",
+        "advance",
+        "among",
+        "anticipated",
+        "both",
+        "clash",
+        "continue",
+        "entering",
+        "face",
+        "faces",
+        "feat",
+        "feature",
+        "fifa",
+        "final",
+        "first",
+        "four",
+        "france",
+        "highly",
+        "include",
+        "kylian",
+        "lamine",
+        "marks",
+        "match",
+        "mbappe",
+        "neither",
+        "only",
+        "other",
+        "player",
+        "previou",
+        "quest",
+        "seen",
+        "semifinal",
+        "semifinalist",
+        "showdown",
+        "since",
+        "spain",
+        "spot",
+        "team",
+        "teams",
+        "they",
+        "time",
+        "title",
+        "tournament",
+        "trailed",
+        "unbeaten",
+        "vying",
+        "watch",
+        "winner",
+        "yamal"
+      ],
+      "entities": [
+        "cup_france",
+        "cup_semifinal",
+        "faces_spain",
+        "fifa",
+        "france",
+        "france_faces",
+        "kylian_mbappe",
+        "lamine_yamal",
+        "semifinal_clash",
+        "semifinal_showdown",
+        "spain",
+        "spain._key",
+        "spain_set",
+        "unbeaten_semifinal"
+      ],
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "development_count": 2,
+        "date_count": 2,
+        "source_count": 5,
+        "first_date": "2026-07-13",
+        "latest_date": "2026-07-14",
+        "context_summary": "Muninn first tracked this thread on 2026-07-13: France Faces Spain in FIFA World Cup Semifinal Showdown. The latest development is France and Spain Set for Unbeaten Semifinal Clash at FIFA World Cup.",
+        "cta_label": ""
+      },
+      "search_text": "1990 advance among anticipated both clash continue cup_france cup_semifinal entering face faces faces_spain feat feature fifa final first four france france_faces highly include kylian kylian_mbappe lamine lamine_yamal marks match mbappe neither only other player previou quest seen semifinal semifinal_clash semifinal_showdown semifinalist showdown since spain spain._key spain_set spot team teams they time title tournament trailed unbeaten unbeaten_semifinal vying watch winner yamal"
     },
     {
       "event_id": "event_argentina-and-switzerland-advance-to-world-c_9a15bfa608",
@@ -436,7 +2000,14 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-08",
-          "last_seen_at": "2026-07-08"
+          "last_seen_at": "2026-07-08",
+          "development_type": "development",
+          "match_evidence": {
+            "score": 1.0,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         },
         {
           "development_id": "story_43eedccabac5ed6b",
@@ -463,7 +2034,14 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-11",
-          "last_seen_at": "2026-07-11"
+          "last_seen_at": "2026-07-11",
+          "development_type": "development",
+          "match_evidence": {
+            "score": 0.425,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         },
         {
           "development_id": "story_fc469e784bb914f3",
@@ -493,7 +2071,14 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-11",
-          "last_seen_at": "2026-07-11"
+          "last_seen_at": "2026-07-11",
+          "development_type": "development",
+          "match_evidence": {
+            "score": 0.455,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         },
         {
           "development_id": "story_c126c4f96fcb1df3",
@@ -521,7 +2106,14 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-14",
-          "last_seen_at": "2026-07-14"
+          "last_seen_at": "2026-07-14",
+          "development_type": "development",
+          "match_evidence": {
+            "score": 0.418,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         },
         {
           "development_id": "story_c6c946a050cee335",
@@ -550,9 +2142,198 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-14",
-          "last_seen_at": "2026-07-14"
+          "last_seen_at": "2026-07-14",
+          "development_type": "development",
+          "match_evidence": {
+            "score": 0.397,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         }
-      ]
+      ],
+      "canonical_title": "Spain and France Prepare for Semifinal Clash in World Cup 2026",
+      "related_events": [
+        {
+          "event_id": "event_france-faces-spain-in-fifa-world-cup-semifin_0245030435",
+          "title": "France and Spain Set for Unbeaten Semifinal Clash at FIFA World Cup",
+          "relationship": "related_topic",
+          "confidence": 0.817,
+          "shared_entities": [
+            "cup_semifinal",
+            "fifa",
+            "france",
+            "semifinal_clash",
+            "spain"
+          ]
+        },
+        {
+          "event_id": "event_england-and-argentina-prepare-for-world-cup_bedeedc8d3",
+          "title": "England and Argentina Prepare for World Cup Semifinal Clash",
+          "relationship": "related_topic",
+          "confidence": 0.793,
+          "shared_entities": [
+            "argentina",
+            "cup_semifinal",
+            "england",
+            "semifinal_clash"
+          ]
+        },
+        {
+          "event_id": "event_argentina-advances-to-semifinals-players-ref_7ac44eca97",
+          "title": "Argentina Advances to Semifinals; Players Reflect on Upcoming Match",
+          "relationship": "related_topic",
+          "confidence": 0.75,
+          "shared_entities": [
+            "argentina",
+            "england",
+            "switzerland"
+          ]
+        }
+      ],
+      "search_tokens": [
+        "2-0",
+        "2026",
+        "ability",
+        "advance",
+        "advancing",
+        "afraid",
+        "ahead",
+        "america",
+        "argentina",
+        "around",
+        "arrive",
+        "austria",
+        "available",
+        "belgium",
+        "both",
+        "citing",
+        "clash",
+        "coach",
+        "colombia",
+        "comeback",
+        "conference",
+        "confidence",
+        "confirmed",
+        "crucial",
+        "defeat",
+        "defeating",
+        "deficit",
+        "demb",
+        "deschamp",
+        "didier",
+        "egypt",
+        "eliminating",
+        "emphasizing",
+        "energized",
+        "england",
+        "expressed",
+        "face",
+        "favorite",
+        "feature",
+        "fifa",
+        "final",
+        "form",
+        "france",
+        "highlight",
+        "historical",
+        "like",
+        "match",
+        "matche",
+        "matchup",
+        "mbapp",
+        "meanwhile",
+        "messi",
+        "midfielder",
+        "morocco",
+        "names",
+        "norway",
+        "opponent",
+        "overcoming",
+        "paraguay",
+        "penalty",
+        "performance",
+        "player",
+        "playing",
+        "poor",
+        "portugal",
+        "prepare",
+        "press",
+        "quarterfinal",
+        "re-emery",
+        "reach",
+        "reaction",
+        "readiness",
+        "recent",
+        "role",
+        "secured",
+        "securing",
+        "semifinal",
+        "shootout",
+        "south",
+        "spain",
+        "spot",
+        "spots",
+        "stated",
+        "sweden",
+        "switzerland",
+        "take",
+        "team",
+        "tense",
+        "they",
+        "tournament",
+        "triumphed",
+        "turn",
+        "victorie",
+        "victory",
+        "while"
+      ],
+      "entities": [
+        "advance",
+        "america",
+        "argentina",
+        "austria_portugal",
+        "belgium._meanwhile",
+        "cup_quarterfinal",
+        "cup_semifinal",
+        "cup_spain",
+        "defeat_belgium",
+        "deschamp_names",
+        "didier_deschamp",
+        "england",
+        "fifa",
+        "france",
+        "france_prepare",
+        "meanwhile_france",
+        "meanwhile_switzerland",
+        "names_spain",
+        "norway",
+        "norway_argentina",
+        "quarterfinal_argentina",
+        "quarterfinal_england",
+        "semifinal_clash",
+        "semifinal_spain",
+        "south_america",
+        "spain",
+        "spain_defeat",
+        "sweden_paraguay",
+        "switzerland",
+        "switzerland._both",
+        "switzerland_advance",
+        "world"
+      ],
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": true,
+        "development_count": 5,
+        "date_count": 3,
+        "source_count": 11,
+        "first_date": "2026-07-08",
+        "latest_date": "2026-07-14",
+        "context_summary": "Muninn first tracked this thread on 2026-07-08: Argentina and Switzerland Advance to World Cup Quarterfinals. The latest development is Spain and France Prepare for Semifinal Clash in World Cup 2026.",
+        "cta_label": "Explore 5 developments"
+      },
+      "search_text": "2-0 2026 ability advance advancing afraid ahead america argentina around arrive austria austria_portugal available belgium belgium._meanwhile both citing clash coach colombia comeback conference confidence confirmed crucial cup_quarterfinal cup_semifinal cup_spain defeat defeat_belgium defeating deficit demb deschamp deschamp_names didier didier_deschamp egypt eliminating emphasizing energized england expressed face favorite feature fifa final form france france_prepare highlight historical like match matche matchup mbapp meanwhile meanwhile_france meanwhile_switzerland messi midfielder morocco names names_spain norway norway_argentina opponent overcoming paraguay penalty performance player playing poor portugal prepare press quarterfinal quarterfinal_argentina quarterfinal_england re-emery reach reaction readiness recent role secured securing semifinal semifinal_clash semifinal_spain shootout south south_america spain spain_defeat spot spots stated sweden sweden_paraguay switzerland switzerland._both switzerland_advance take team tense they tournament triumphed turn victorie victory while world"
     },
     {
       "event_id": "event_apple-sues-openai-for-alleged-trade-secret-t_0964ead618",
@@ -590,7 +2371,14 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-11",
-          "last_seen_at": "2026-07-11"
+          "last_seen_at": "2026-07-11",
+          "development_type": "policy",
+          "match_evidence": {
+            "score": 1.0,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         },
         {
           "development_id": "story_6ac4d99c73eed7d3",
@@ -619,184 +2407,87 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-14",
-          "last_seen_at": "2026-07-14"
+          "last_seen_at": "2026-07-14",
+          "development_type": "policy",
+          "match_evidence": {
+            "score": 0.675,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         }
-      ]
-    },
-    {
-      "event_id": "event_us-launches-additional-strikes-against-iran_893672228d",
-      "title": "Trump Announces US Blockade and Tolls in Strait of Hormuz",
-      "summary": "President Trump declared that the US will reinstate a blockade in the Strait of Hormuz, positioning the country as the 'guardian' of the waterway. He announced a 20% fee on all cargo shipped through the strait to cover security costs. This declaration comes amid escalating tensions and strikes between the US and Iran, with both nations claiming control over the strategic passage. Oil prices have surged following these developments.",
-      "status": "active",
-      "first_seen_at": "2026-07-08",
-      "last_seen_at": "2026-07-13",
-      "timeline": [
-        {
-          "development_id": "story_d1ee5a5456809d2c",
-          "daily_story_id": "story_d1ee5a5456809d2c",
-          "date": "2026-07-08",
-          "occurred_at": null,
-          "date_basis": "first_reported_by_muninn",
-          "title": "US Launches Additional Strikes Against Iran Amid Rising Tensions",
-          "summary": "The US military has conducted a new round of strikes against Iran, as confirmed by US Central Command. These strikes are described as a response to recent attacks on oil tankers in the Strait of Hormuz and are part of ongoing military actions following President Trump's declaration that a ceasefire with Iran is 'over.' Iran has promised strong retaliation against these actions.",
-          "key_facts": [
-            "US Central Command confirmed new strikes against Iran.",
-            "The strikes are in response to attacks on oil tankers.",
-            "President Trump stated that the ceasefire with Iran is 'over.'",
-            "Iran has vowed to retaliate against US actions."
-          ],
-          "source_count": 4,
-          "sources": [
-            "ABC News",
-            "BBC",
-            "CBS News",
-            "Google News"
-          ],
-          "source_urls": [
-            "https://abcnews.com/International/live-updates/iran-live-updates-thousands-throng-tehran-streets-khamenei?id=134509610",
-            "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPbUJvWmM1dG1ldjh4TmdlYUJyTVRiWjhIVUFqcEJIVzcwdVJOb2c0ZlU2V3gxaktFWU9acnkzMGNDUHcwTEtPR2lJQVpaYjd1SU50UWpWUEdLNXBzWWZQbC1LcFBmMjNSRGRQMnRWYTAtRVJydTEwZ1dHMVlfdDVQNl9DMVNxVnlX?oc=5",
-            "https://www.bbc.co.uk/news/articles/cz75zjj5wp8o?at_medium=RSS&at_campaign=rss",
-            "https://www.cbsnews.com/video/us-launches-another-round-strikes-against-iran-centcom-says"
-          ],
-          "confidence": 1.0,
-          "verification": {
-            "provider": "deterministic_source_grounded_event_match_v1",
-            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
-          },
-          "first_seen_at": "2026-07-08",
-          "last_seen_at": "2026-07-08"
-        },
-        {
-          "development_id": "story_ef70249d38e4ccaf",
-          "daily_story_id": "story_ef70249d38e4ccaf",
-          "date": "2026-07-09",
-          "occurred_at": null,
-          "date_basis": "first_reported_by_muninn",
-          "title": "US and Iran Exchange Strikes Amid Ceasefire Tensions",
-          "summary": "The US and Iran engaged in significant military strikes, resulting in at least 17 fatalities in Iran. The attacks occurred just before the burial of Ayatollah Ali Khamenei, marking the most intense exchanges since a ceasefire was extended. US strikes targeted coastal cities, including Bandar Abbas and Sirik, as part of efforts to diminish Iran's military capabilities in the region.",
-          "key_facts": [
-            "At least 17 people killed in Iran due to US strikes.",
-            "Strikes occurred before the burial of Ayatollah Ali Khamenei.",
-            "US attacks targeted port cities including Bandar Abbas and Sirik."
-          ],
-          "source_count": 2,
-          "sources": [
-            "The Guardian"
-          ],
-          "source_urls": [
-            "https://www.theguardian.com/world/2026/jul/09/iran-trade-strikes-ceasefire-extended-donald-trump",
-            "https://www.theguardian.com/world/2026/jul/09/iran-residents-terror-us-fresh-strikes-port-cities"
-          ],
-          "confidence": 0.441,
-          "verification": {
-            "provider": "deterministic_source_grounded_event_match_v1",
-            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
-          },
-          "first_seen_at": "2026-07-09",
-          "last_seen_at": "2026-07-09"
-        },
-        {
-          "development_id": "story_223d2585807b8350",
-          "daily_story_id": "story_223d2585807b8350",
-          "date": "2026-07-12",
-          "occurred_at": null,
-          "date_basis": "first_reported_by_muninn",
-          "title": "Gulf Countries Under Attack Following US Strikes on Iran",
-          "summary": "Iran has launched retaliatory attacks on Gulf countries following recent US airstrikes. The situation escalated after Tehran declared the Strait of Hormuz closed, reversing a prior agreement aimed at restoring maritime traffic. President Trump has announced the end of a ceasefire, while efforts for diplomatic resolution continue amidst the intensifying conflict.",
-          "key_facts": [
-            "Iran retaliated against Gulf countries after US strikes.",
-            "The Strait of Hormuz has been declared closed by Iran.",
-            "President Trump announced the end of the ceasefire."
-          ],
-          "source_count": 3,
-          "sources": [
-            "ABC News",
-            "The Guardian"
-          ],
-          "source_urls": [
-            "https://abcnews.com/International/live-updates/iran-live-updates-thousands-throng-tehran-streets-khamenei?id=134509610",
-            "https://www.theguardian.com/world/live/2026/jul/12/iran-gulf-us-strikes-jordan-qatar-uae-strait-hormuz-latest-news-updates-live",
-            "https://www.theguardian.com/world/2026/jul/12/us-and-iran-exchange-strikes-as-tehran-again-says-strait-of-hormuz-is-closed"
-          ],
-          "confidence": 1.0,
-          "verification": {
-            "provider": "deterministic_source_grounded_event_match_v1",
-            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
-          },
-          "first_seen_at": "2026-07-12",
-          "last_seen_at": "2026-07-12"
-        },
-        {
-          "development_id": "story_4da28630c62b4e6c",
-          "daily_story_id": "story_4da28630c62b4e6c",
-          "date": "2026-07-12",
-          "occurred_at": null,
-          "date_basis": "first_reported_by_muninn",
-          "title": "US Strikes Iran After Attack on Ship; Iran Closes Strait of Hormuz",
-          "summary": "The United States has launched a series of airstrikes against Iran in response to an attack on a commercial vessel in the Strait of Hormuz. The Pentagon reported that US forces targeted 140 sites in Iran. In retaliation, Iran has reportedly closed the Strait of Hormuz and launched attacks on Gulf states, escalating tensions in the region.",
-          "key_facts": [
-            "US conducted airstrikes on Iran after an attack on a commercial ship.",
-            "Pentagon confirmed strikes targeted 140 sites in Iran.",
-            "Iran closed the Strait of Hormuz and retaliated against Gulf states."
-          ],
-          "source_count": 6,
-          "sources": [
-            "BBC",
-            "CBS News",
-            "Google News",
-            "NBC News",
-            "NPR"
-          ],
-          "source_urls": [
-            "https://news.google.com/rss/articles/CBMinAFBVV95cUxPZWNIZWpPMUROMXlXU0EwT1pjWWUycXFoTjBobEJLM0JpWGhjTWZwN0Q2RkxaY3N6cU9fNXZOT194MWFHYllDYUh4RWdEdmF3NVpGQ2tlOTl4dWI5VzVMWlgycVBYcmtSRDR6UV9lQmtoWkZMUWRvLUYwZXhIQzlGcVVpTGlMZElhRkxkT0pkMXlEZDJmSll0c2JsYkY?oc=5",
-            "https://www.today.com/video/iran-s-new-supreme-leader-vows-revenge-for-death-of-his-dad-266559045774",
-            "https://www.npr.org/2026/07/11/g-s1-133212/us-iran-vessel-attack-strait-hormuz-gulf",
-            "https://www.cbsnews.com/live-updates/us-iran-war-trump-ceasefire-talks-strait-of-hormuz",
-            "https://www.bbc.co.uk/news/articles/cj9gkpp0dkeo?at_medium=RSS&at_campaign=rss",
-            "https://news.google.com/rss/articles/CBMihAFBVV95cUxQNVNPY0lhcGZoRXpWWmVWclhKWGcxQWM3OG1ncGdmVkJZbEd6djExLU5nVjlMdk9abUZ5WHJZVThDaWktMi1FSW9DUU0zQ0syN2ctOUlGcU9NUjFwd2w1OWFDUDNZSHRPd1RMYVhvN2lSLVpYUDFEeXEyTnM4bVpGRXVwX1M?oc=5"
-          ],
-          "confidence": 0.391,
-          "verification": {
-            "provider": "deterministic_source_grounded_event_match_v1",
-            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
-          },
-          "first_seen_at": "2026-07-12",
-          "last_seen_at": "2026-07-12"
-        },
-        {
-          "development_id": "story_da2da45e315e1ae0",
-          "daily_story_id": "story_da2da45e315e1ae0",
-          "date": "2026-07-13",
-          "occurred_at": null,
-          "date_basis": "first_reported_by_muninn",
-          "title": "Trump Announces US Blockade and Tolls in Strait of Hormuz",
-          "summary": "President Trump declared that the US will reinstate a blockade in the Strait of Hormuz, positioning the country as the 'guardian' of the waterway. He announced a 20% fee on all cargo shipped through the strait to cover security costs. This declaration comes amid escalating tensions and strikes between the US and Iran, with both nations claiming control over the strategic passage. Oil prices have surged following these developments.",
-          "key_facts": [
-            "Trump announced the US will charge a 20% fee on cargo in the Strait of Hormuz.",
-            "Iran has rejected US control over the strait amid ongoing military tensions.",
-            "Oil prices increased significantly following Trump's announcement."
-          ],
-          "source_count": 4,
-          "sources": [
-            "Al Jazeera English",
-            "CBS News",
-            "NBC News"
-          ],
-          "source_urls": [
-            "https://www.cbsnews.com/news/trump-iran-war-us-guardian-strait-of-hormuz-get-paid",
-            "https://www.aljazeera.com/news/2026/7/13/trump-says-us-will-become-guardian-of-strait-of-hormuz-and-collect-tolls?traffic_source=rss",
-            "https://www.nbcnews.com/business/markets/oil-rises-trump-reimposes-hormuz-blockade-rcna587297",
-            "https://www.cbsnews.com/video/iran-and-us-both-claim-control-over-strait-of-hormuz-trade-strikes"
-          ],
-          "confidence": 0.399,
-          "verification": {
-            "provider": "deterministic_source_grounded_event_match_v1",
-            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
-          },
-          "first_seen_at": "2026-07-13",
-          "last_seen_at": "2026-07-13"
-        }
-      ]
+      ],
+      "canonical_title": "Apple Files Lawsuit Against OpenAI for Alleged Trade Secret Theft",
+      "related_events": [],
+      "search_tokens": [
+        "acquire",
+        "allegation",
+        "allege",
+        "alleged",
+        "apple",
+        "appropriation",
+        "bring",
+        "business",
+        "claiming",
+        "company",
+        "confidential",
+        "coordinated",
+        "core",
+        "described",
+        "effort",
+        "employee",
+        "engaged",
+        "filed",
+        "files",
+        "hardware",
+        "information",
+        "initiated",
+        "instructed",
+        "interview",
+        "lawsuit",
+        "misconduct",
+        "openai",
+        "operation",
+        "outline",
+        "pattern",
+        "proprietary",
+        "prototype",
+        "regarding",
+        "related",
+        "rotten",
+        "scheme",
+        "secret",
+        "specific",
+        "steal",
+        "stolen",
+        "sues",
+        "suggesting",
+        "theft",
+        "trade"
+      ],
+      "entities": [
+        "alleged_trade",
+        "apple_files",
+        "apple_sues",
+        "files_lawsuit",
+        "openai",
+        "secret_theft",
+        "sues_openai",
+        "theft_apple",
+        "trade_secret"
+      ],
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "development_count": 2,
+        "date_count": 2,
+        "source_count": 3,
+        "first_date": "2026-07-11",
+        "latest_date": "2026-07-14",
+        "context_summary": "Muninn first tracked this thread on 2026-07-11: Apple Sues OpenAI for Alleged Trade Secret Theft. The latest development is Apple Files Lawsuit Against OpenAI for Alleged Trade Secret Theft.",
+        "cta_label": ""
+      },
+      "search_text": "acquire allegation allege alleged alleged_trade apple apple_files apple_sues appropriation bring business claiming company confidential coordinated core described effort employee engaged filed files files_lawsuit hardware information initiated instructed interview lawsuit misconduct openai operation outline pattern proprietary prototype regarding related rotten scheme secret secret_theft specific steal stolen sues sues_openai suggesting theft theft_apple trade trade_secret"
     },
     {
       "event_id": "event_graham-platner-faces-pressure-to-withdraw-fr_8c5bbae010",
@@ -840,7 +2531,14 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-08",
-          "last_seen_at": "2026-07-08"
+          "last_seen_at": "2026-07-08",
+          "development_type": "development",
+          "match_evidence": {
+            "score": 1.0,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         },
         {
           "development_id": "story_6781b78ea24f0852",
@@ -870,7 +2568,14 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-09",
-          "last_seen_at": "2026-07-09"
+          "last_seen_at": "2026-07-09",
+          "development_type": "election",
+          "match_evidence": {
+            "score": 0.409,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         },
         {
           "development_id": "story_ddddb96190c15eee",
@@ -903,7 +2608,14 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-09",
-          "last_seen_at": "2026-07-09"
+          "last_seen_at": "2026-07-09",
+          "development_type": "election",
+          "match_evidence": {
+            "score": 1.0,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         },
         {
           "development_id": "story_93df529dd89c31a4",
@@ -937,7 +2649,14 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-10",
-          "last_seen_at": "2026-07-10"
+          "last_seen_at": "2026-07-10",
+          "development_type": "election",
+          "match_evidence": {
+            "score": 1.0,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         },
         {
           "development_id": "story_15b3786cea682901",
@@ -969,7 +2688,14 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-11",
-          "last_seen_at": "2026-07-11"
+          "last_seen_at": "2026-07-11",
+          "development_type": "election",
+          "match_evidence": {
+            "score": 0.506,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         },
         {
           "development_id": "story_f5db42a44e0de298",
@@ -1000,7 +2726,14 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-11",
-          "last_seen_at": "2026-07-11"
+          "last_seen_at": "2026-07-11",
+          "development_type": "development",
+          "match_evidence": {
+            "score": 0.574,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         },
         {
           "development_id": "story_edf1697f43f0fe07",
@@ -1028,9 +2761,223 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-13",
-          "last_seen_at": "2026-07-13"
+          "last_seen_at": "2026-07-13",
+          "development_type": "election",
+          "match_evidence": {
+            "score": 0.408,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         }
-      ]
+      ],
+      "canonical_title": "Maine Democrats Urge Schumer to Avoid Senate Race Involvement",
+      "related_events": [
+        {
+          "event_id": "event_maine-democrats-prepare-for-senate-debate-fo_0735fbfa02",
+          "title": "Maine Democrats Prepare for Senate Debate Following Platner's Exit",
+          "relationship": "related_topic",
+          "confidence": 0.704,
+          "shared_entities": [
+            "graham_platner",
+            "maine_democrat"
+          ]
+        }
+      ],
+      "search_tokens": [
+        "accountability",
+        "advising",
+        "ahead",
+        "allegation",
+        "already",
+        "among",
+        "aside",
+        "assault",
+        "associated",
+        "avoid",
+        "ballot",
+        "bernie",
+        "best",
+        "called",
+        "campaign",
+        "candidacy",
+        "candidate",
+        "categorically",
+        "challenge",
+        "change",
+        "chuck",
+        "citing",
+        "collapse",
+        "collin",
+        "comes",
+        "created",
+        "crucial",
+        "dated",
+        "deadline",
+        "decision",
+        "democrat",
+        "democratic",
+        "denie",
+        "desire",
+        "discussed",
+        "discussion",
+        "dissatisfaction",
+        "division",
+        "dropped",
+        "editor",
+        "election",
+        "elizabeth",
+        "emphasized",
+        "emphasizing",
+        "exit",
+        "exits",
+        "explore",
+        "expressed",
+        "faces",
+        "fallout",
+        "false",
+        "figure",
+        "fill",
+        "find",
+        "forward",
+        "graham",
+        "grassroot",
+        "highlighting",
+        "including",
+        "increasing",
+        "incumbent",
+        "interest",
+        "intervening",
+        "involvement",
+        "july",
+        "leader",
+        "leadership",
+        "left",
+        "local",
+        "loss",
+        "made",
+        "maine",
+        "majority",
+        "member",
+        "midterm",
+        "moderate",
+        "movement",
+        "need",
+        "nomination",
+        "nominee",
+        "notice",
+        "officially",
+        "party",
+        "path",
+        "platner",
+        "political",
+        "potential",
+        "pressure",
+        "process",
+        "prominent",
+        "prompting",
+        "public",
+        "publication",
+        "publicly",
+        "race",
+        "rape",
+        "reflect",
+        "refrain",
+        "renewed",
+        "replace",
+        "replacement",
+        "reporting",
+        "revealing",
+        "sander",
+        "schumer",
+        "scramble",
+        "search",
+        "seat",
+        "seek",
+        "select",
+        "selection",
+        "senior",
+        "several",
+        "sexual",
+        "significant",
+        "sparked",
+        "stated",
+        "step",
+        "subsequent",
+        "successor",
+        "support",
+        "susan",
+        "suspend",
+        "suspended",
+        "taking",
+        "they",
+        "time",
+        "treatment",
+        "turmoil",
+        "under",
+        "until",
+        "upcoming",
+        "urge",
+        "vacancy",
+        "warren",
+        "which",
+        "wing",
+        "withdraw",
+        "withdrawal",
+        "withdrawn",
+        "within",
+        "woman",
+        "women"
+      ],
+      "entities": [
+        "allegation_graham",
+        "assault_allegation",
+        "avoid",
+        "bernie_sander",
+        "bernie_sanders.",
+        "chuck_schumer",
+        "collins._several",
+        "democrat_urge",
+        "democratic_party",
+        "division_graham",
+        "elizabeth_warren",
+        "faces_pressure",
+        "graham_platner",
+        "graham_platner.",
+        "involvement_maine",
+        "leader_chuck",
+        "maine",
+        "maine_democrat",
+        "maine_democratic",
+        "majority_leader",
+        "nominee_graham",
+        "party_division",
+        "platner._local",
+        "platner_exits",
+        "platner_faces",
+        "platner_graham",
+        "prominent_democrat",
+        "race_involvement",
+        "race_revealing",
+        "revealing_party",
+        "sanders._senior",
+        "senate",
+        "susan_collins.",
+        "urge_schumer",
+        "withdraw"
+      ],
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": true,
+        "development_count": 7,
+        "date_count": 5,
+        "source_count": 19,
+        "first_date": "2026-07-08",
+        "latest_date": "2026-07-13",
+        "context_summary": "Muninn first tracked this thread on 2026-07-08: Graham Platner Faces Pressure to Withdraw from Senate Race Amid Allegations. The latest development is Maine Democrats Urge Schumer to Avoid Senate Race Involvement.",
+        "cta_label": "Explore 7 developments"
+      },
+      "search_text": "accountability advising ahead allegation allegation_graham already among aside assault assault_allegation associated avoid ballot bernie bernie_sander bernie_sanders. best called campaign candidacy candidate categorically challenge change chuck chuck_schumer citing collapse collin collins._several comes created crucial dated deadline decision democrat democrat_urge democratic democratic_party denie desire discussed discussion dissatisfaction division division_graham dropped editor election elizabeth elizabeth_warren emphasized emphasizing exit exits explore expressed faces faces_pressure fallout false figure fill find forward graham graham_platner graham_platner. grassroot highlighting including increasing incumbent interest intervening involvement involvement_maine july leader leader_chuck leadership left local loss made maine maine_democrat maine_democratic majority majority_leader member midterm moderate movement need nomination nominee nominee_graham notice officially party party_division path platner platner._local platner_exits platner_faces platner_graham political potential pressure process prominent prominent_democrat prompting public publication publicly race race_involvement race_revealing rape reflect refrain renewed replace replacement reporting revealing revealing_party sander sanders._senior schumer scramble search seat seek select selection senate senior several sexual significant sparked stated step subsequent successor support susan susan_collins. suspend suspended taking they time treatment turmoil under until upcoming urge urge_schumer vacancy warren which wing withdraw withdrawal withdrawn within woman women"
     },
     {
       "event_id": "event_murder-investigation-launched-after-former-u_c4b66aa2c9",
@@ -1071,7 +3018,14 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-11",
-          "last_seen_at": "2026-07-11"
+          "last_seen_at": "2026-07-11",
+          "development_type": "military_action",
+          "match_evidence": {
+            "score": 1.0,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         },
         {
           "development_id": "story_74de70de5144baae",
@@ -1105,9 +3059,95 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-13",
-          "last_seen_at": "2026-07-13"
+          "last_seen_at": "2026-07-13",
+          "development_type": "policy",
+          "match_evidence": {
+            "score": 0.529,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         }
-      ]
+      ],
+      "canonical_title": "UK Police Rearrest Suspect in Ann Widdecombe's Death on Terrorism Charges",
+      "related_events": [
+        {
+          "event_id": "event_police-no-political-motive-in-ann-widdecombe_b530316bf2",
+          "title": "Police: No Political Motive in Ann Widdecombe Murder Investigation",
+          "relationship": "related_topic",
+          "confidence": 0.688,
+          "shared_entities": [
+            "ann",
+            "ann_widdecombe"
+          ]
+        }
+      ],
+      "search_tokens": [
+        "28-year-old",
+        "approximately",
+        "arrested",
+        "attacked",
+        "believe",
+        "body",
+        "charge",
+        "circumstance",
+        "counterterrorism",
+        "dead",
+        "death",
+        "deceased",
+        "devon",
+        "discovered",
+        "emergence",
+        "england",
+        "evidence",
+        "found",
+        "haytor",
+        "home",
+        "hours",
+        "injurie",
+        "investigating",
+        "investigation",
+        "launched",
+        "member",
+        "murder",
+        "parliament",
+        "previously",
+        "rearrest",
+        "rearrested",
+        "released",
+        "seriou",
+        "sought",
+        "southwest",
+        "surrounding",
+        "suspect",
+        "suspicion",
+        "taken",
+        "terrorism",
+        "widdecombe",
+        "without"
+      ],
+      "entities": [
+        "ann",
+        "ann_widdecombe",
+        "england",
+        "haytor",
+        "haytor_devon",
+        "rearrest_suspect",
+        "terrorism_charge",
+        "uk"
+      ],
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "development_count": 2,
+        "date_count": 2,
+        "source_count": 8,
+        "first_date": "2026-07-11",
+        "latest_date": "2026-07-13",
+        "context_summary": "Muninn first tracked this thread on 2026-07-11: Murder investigation launched after former UK politician found dead. The latest development is UK Police Rearrest Suspect in Ann Widdecombe's Death on Terrorism Charges.",
+        "cta_label": ""
+      },
+      "search_text": "28-year-old ann ann_widdecombe approximately arrested attacked believe body charge circumstance counterterrorism dead death deceased devon discovered emergence england evidence found haytor haytor_devon home hours injurie investigating investigation launched member murder parliament previously rearrest rearrest_suspect rearrested released seriou sought southwest surrounding suspect suspicion taken terrorism terrorism_charge uk widdecombe without"
     },
     {
       "event_id": "event_hundreds-of-thousands-evacuated-as-typhoon-b_eb4a80888a",
@@ -1145,7 +3185,14 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-11",
-          "last_seen_at": "2026-07-11"
+          "last_seen_at": "2026-07-11",
+          "development_type": "development",
+          "match_evidence": {
+            "score": 1.0,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         },
         {
           "development_id": "story_f335f5e2e55ed86f",
@@ -1175,9 +3222,95 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-12",
-          "last_seen_at": "2026-07-12"
+          "last_seen_at": "2026-07-12",
+          "development_type": "development",
+          "match_evidence": {
+            "score": 0.436,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         }
-      ]
+      ],
+      "canonical_title": "Typhoon Bavi Weakens but Continues to Impact China",
+      "related_events": [],
+      "search_tokens": [
+        "across",
+        "adverse",
+        "although",
+        "approache",
+        "authoritie",
+        "bavi",
+        "bring",
+        "causing",
+        "china",
+        "comparable",
+        "continue",
+        "downgraded",
+        "eastern",
+        "evacuated",
+        "expected",
+        "france",
+        "heavy",
+        "hundred",
+        "impact",
+        "near",
+        "northern",
+        "particularly",
+        "parts",
+        "path",
+        "projected",
+        "province",
+        "rain",
+        "remain",
+        "resident",
+        "several",
+        "significant",
+        "size",
+        "still",
+        "storm",
+        "strong",
+        "super",
+        "thousand",
+        "threat",
+        "tropical",
+        "typhoon",
+        "weaken",
+        "weakened",
+        "weather",
+        "wenzhou",
+        "which",
+        "winds",
+        "zhejiang"
+      ],
+      "entities": [
+        "approache_china",
+        "bavi_approache",
+        "bavi_weaken",
+        "china",
+        "china._authoritie",
+        "china_super",
+        "china_typhoon",
+        "france",
+        "impact",
+        "impact_china",
+        "super_typhoon",
+        "thousand_evacuated",
+        "typhoon_bavi",
+        "zhejiang"
+      ],
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "development_count": 2,
+        "date_count": 2,
+        "source_count": 4,
+        "first_date": "2026-07-11",
+        "latest_date": "2026-07-12",
+        "context_summary": "Muninn first tracked this thread on 2026-07-11: Hundreds of Thousands Evacuated as Typhoon Bavi Approaches China. The latest development is Typhoon Bavi Weakens but Continues to Impact China.",
+        "cta_label": ""
+      },
+      "search_text": "across adverse although approache approache_china authoritie bavi bavi_approache bavi_weaken bring causing china china._authoritie china_super china_typhoon comparable continue downgraded eastern evacuated expected france heavy hundred impact impact_china near northern particularly parts path projected province rain remain resident several significant size still storm strong super super_typhoon thousand thousand_evacuated threat tropical typhoon typhoon_bavi weaken weakened weather wenzhou which winds zhejiang"
     },
     {
       "event_id": "event_at-least-12-dead-23-missing-in-deadly-wildfi_8daaaaefb8",
@@ -1221,7 +3354,14 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-10",
-          "last_seen_at": "2026-07-10"
+          "last_seen_at": "2026-07-10",
+          "development_type": "development",
+          "match_evidence": {
+            "score": 1.0,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         },
         {
           "development_id": "story_464cc4beecbe1599",
@@ -1254,9 +3394,91 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-11",
-          "last_seen_at": "2026-07-11"
+          "last_seen_at": "2026-07-11",
+          "development_type": "development",
+          "match_evidence": {
+            "score": 1.0,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         }
-      ]
+      ],
+      "canonical_title": "Wildfires in Spain Kill at Least 12, Leave 23 Missing",
+      "related_events": [],
+      "search_tokens": [
+        "affected",
+        "affecting",
+        "almer",
+        "among",
+        "around",
+        "attempting",
+        "believed",
+        "blaze",
+        "britain",
+        "burnt-out",
+        "condition",
+        "dead",
+        "deadliest",
+        "deadly",
+        "deceased",
+        "died",
+        "effort",
+        "escape",
+        "exacerbated",
+        "extreme",
+        "fast-moving",
+        "fast-spreading",
+        "fatalitie",
+        "flame",
+        "found",
+        "four",
+        "heat",
+        "heatwave",
+        "identify",
+        "individual",
+        "kill",
+        "land",
+        "least",
+        "leave",
+        "many",
+        "miles",
+        "missing",
+        "national",
+        "ongoing",
+        "province",
+        "region",
+        "reported",
+        "rescue",
+        "resulted",
+        "southeastern",
+        "southern",
+        "spain",
+        "square",
+        "vehicle",
+        "victim",
+        "which",
+        "while",
+        "wildfire",
+        "work"
+      ],
+      "entities": [
+        "britain",
+        "least",
+        "spain"
+      ],
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "development_count": 2,
+        "date_count": 2,
+        "source_count": 6,
+        "first_date": "2026-07-10",
+        "latest_date": "2026-07-11",
+        "context_summary": "Muninn first tracked this thread on 2026-07-10: At least 12 dead, 23 missing in deadly wildfire in southern Spain. The latest development is Wildfires in Spain Kill at Least 12, Leave 23 Missing.",
+        "cta_label": ""
+      },
+      "search_text": "affected affecting almer among around attempting believed blaze britain burnt-out condition dead deadliest deadly deceased died effort escape exacerbated extreme fast-moving fast-spreading fatalitie flame found four heat heatwave identify individual kill land least leave many miles missing national ongoing province region reported rescue resulted southeastern southern spain square vehicle victim which while wildfire work"
     },
     {
       "event_id": "event_trump-refuses-to-sign-housing-bill-set-to-be_25015a3547",
@@ -1300,7 +3522,14 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-10",
-          "last_seen_at": "2026-07-10"
+          "last_seen_at": "2026-07-10",
+          "development_type": "policy",
+          "match_evidence": {
+            "score": 1.0,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         },
         {
           "development_id": "story_b1a01369a313bfe0",
@@ -1334,9 +3563,93 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-11",
-          "last_seen_at": "2026-07-11"
+          "last_seen_at": "2026-07-11",
+          "development_type": "policy",
+          "match_evidence": {
+            "score": 1.0,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         }
-      ]
+      ],
+      "canonical_title": "Bipartisan Housing Bill Becomes Law Without Trump's Signature",
+      "related_events": [],
+      "search_tokens": [
+        "10-day",
+        "aims",
+        "approval",
+        "automatic",
+        "automatically",
+        "become",
+        "bill",
+        "bipartisan",
+        "congress",
+        "costs",
+        "declined",
+        "does",
+        "effect",
+        "enactment",
+        "endorsement",
+        "expected",
+        "growing",
+        "housing",
+        "increase",
+        "indicated",
+        "issue",
+        "landmark",
+        "legislation",
+        "midnight",
+        "occur",
+        "passe",
+        "period",
+        "poised",
+        "proposed",
+        "reduce",
+        "reflecting",
+        "refuse",
+        "republican",
+        "rift",
+        "sign",
+        "signature",
+        "soon",
+        "stated",
+        "supply",
+        "took",
+        "trump",
+        "until",
+        "veto",
+        "voter",
+        "which",
+        "withholding",
+        "without"
+      ],
+      "entities": [
+        "become",
+        "bill_set",
+        "bipartisan_housing",
+        "housing_bill",
+        "id",
+        "law_soon",
+        "law_without",
+        "sign",
+        "sign_housing",
+        "trump_refuse",
+        "trump_signature",
+        "without_trump"
+      ],
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "development_count": 2,
+        "date_count": 2,
+        "source_count": 8,
+        "first_date": "2026-07-10",
+        "latest_date": "2026-07-11",
+        "context_summary": "Muninn first tracked this thread on 2026-07-10: Trump Refuses to Sign Housing Bill Set to Become Law Soon. The latest development is Bipartisan Housing Bill Becomes Law Without Trump's Signature.",
+        "cta_label": ""
+      },
+      "search_text": "10-day aims approval automatic automatically become bill bill_set bipartisan bipartisan_housing congress costs declined does effect enactment endorsement expected growing housing housing_bill id increase indicated issue landmark law_soon law_without legislation midnight occur passe period poised proposed reduce reflecting refuse republican rift sign sign_housing signature soon stated supply took trump trump_refuse trump_signature until veto voter which withholding without without_trump"
     },
     {
       "event_id": "event_israeli-strike-kills-gaza-aid-worker-heading_7d395b0efb",
@@ -1374,7 +3687,14 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-09",
-          "last_seen_at": "2026-07-09"
+          "last_seen_at": "2026-07-09",
+          "development_type": "military_action",
+          "match_evidence": {
+            "score": 1.0,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         },
         {
           "development_id": "story_620afa000bb79fae",
@@ -1404,9 +3724,100 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-10",
-          "last_seen_at": "2026-07-10"
+          "last_seen_at": "2026-07-10",
+          "development_type": "military_action",
+          "match_evidence": {
+            "score": 0.476,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         }
-      ]
+      ],
+      "canonical_title": "Palestinians mourn aid worker killed in Israeli strike amid conflict",
+      "related_events": [],
+      "search_tokens": [
+        "accusation",
+        "acknowledged",
+        "ahmad",
+        "aid",
+        "al-wahidi",
+        "among",
+        "became",
+        "casualtie",
+        "civilian",
+        "conflict",
+        "death",
+        "delivering",
+        "driver",
+        "esleem",
+        "execution",
+        "field",
+        "figure",
+        "food",
+        "gaza",
+        "hamas",
+        "heading",
+        "humanitarian",
+        "incident",
+        "israel",
+        "israel-hama",
+        "killed",
+        "kills",
+        "leading",
+        "local",
+        "militant",
+        "military",
+        "mohammed",
+        "mourn",
+        "mourning",
+        "ongoing",
+        "operation",
+        "organized",
+        "palestinian",
+        "potential",
+        "prominent",
+        "prompting",
+        "reportedly",
+        "resulted",
+        "role",
+        "screening",
+        "separate",
+        "shot",
+        "soldier",
+        "stated",
+        "strike",
+        "suspension",
+        "targeted",
+        "trucker",
+        "watch",
+        "worker"
+      ],
+      "entities": [
+        "ahmad_esleem",
+        "aid_worker",
+        "al-wahidi",
+        "cup_screening",
+        "gaza",
+        "gaza_aid",
+        "israel",
+        "israel-hama",
+        "palestinians._his",
+        "worker_heading",
+        "world"
+      ],
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "development_count": 2,
+        "date_count": 2,
+        "source_count": 4,
+        "first_date": "2026-07-09",
+        "latest_date": "2026-07-10",
+        "context_summary": "Muninn first tracked this thread on 2026-07-09: Israeli Strike Kills Gaza Aid Worker Heading to World Cup Screening. The latest development is Palestinians mourn aid worker killed in Israeli strike amid conflict.",
+        "cta_label": ""
+      },
+      "search_text": "accusation acknowledged ahmad ahmad_esleem aid aid_worker al-wahidi among became casualtie civilian conflict cup_screening death delivering driver esleem execution field figure food gaza gaza_aid hamas heading humanitarian incident israel israel-hama killed kills leading local militant military mohammed mourn mourning ongoing operation organized palestinian palestinians._his potential prominent prompting reportedly resulted role screening separate shot soldier stated strike suspension targeted trucker watch worker worker_heading world"
     },
     {
       "event_id": "event_west-palm-beach-airport-renamed-after-trump_5df009ed32",
@@ -1445,7 +3856,14 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-09",
-          "last_seen_at": "2026-07-09"
+          "last_seen_at": "2026-07-09",
+          "development_type": "development",
+          "match_evidence": {
+            "score": 1.0,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         },
         {
           "development_id": "story_35fee82deb53d9f0",
@@ -1474,9 +3892,101 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-10",
-          "last_seen_at": "2026-07-10"
+          "last_seen_at": "2026-07-10",
+          "development_type": "development",
+          "match_evidence": {
+            "score": 0.491,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         }
-      ]
+      ],
+      "canonical_title": "Florida Airport and Tennessee Bridge Renamed After Trump",
+      "related_events": [],
+      "search_tokens": [
+        "additionally",
+        "airport",
+        "although",
+        "beach",
+        "bridge",
+        "called",
+        "change",
+        "code",
+        "continue",
+        "county",
+        "despite",
+        "donald",
+        "expert",
+        "first",
+        "florida",
+        "honor",
+        "international",
+        "jefferson",
+        "legal",
+        "loophole",
+        "making",
+        "mixed",
+        "name",
+        "named",
+        "officially",
+        "organization",
+        "palm",
+        "potential",
+        "reaction",
+        "receive",
+        "renamed",
+        "renaming",
+        "royaltie",
+        "sitting",
+        "some",
+        "stated",
+        "suggest",
+        "tennessee",
+        "there",
+        "time",
+        "trump",
+        "west"
+      ],
+      "entities": [
+        "airport._additionally",
+        "airport_renamed",
+        "beach_airport",
+        "beach_international",
+        "bridge_renamed",
+        "county_tennessee",
+        "donald_trump",
+        "florida",
+        "florida_airport",
+        "florida_west",
+        "international_airport",
+        "international_airport.",
+        "j.",
+        "jefferson",
+        "jefferson_county",
+        "mixed_reaction",
+        "palm_beach",
+        "pbi",
+        "reaction_florida",
+        "tennessee_bridge",
+        "trump_bridge.",
+        "trump_international",
+        "trump_organization",
+        "trump_palm",
+        "west_palm"
+      ],
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "development_count": 2,
+        "date_count": 2,
+        "source_count": 4,
+        "first_date": "2026-07-09",
+        "latest_date": "2026-07-10",
+        "context_summary": "Muninn first tracked this thread on 2026-07-09: West Palm Beach Airport Renamed After Trump Amid Mixed Reactions. The latest development is Florida Airport and Tennessee Bridge Renamed After Trump.",
+        "cta_label": ""
+      },
+      "search_text": "additionally airport airport._additionally airport_renamed although beach beach_airport beach_international bridge bridge_renamed called change code continue county county_tennessee despite donald donald_trump expert first florida florida_airport florida_west honor international international_airport international_airport. j. jefferson jefferson_county legal loophole making mixed mixed_reaction name named officially organization palm palm_beach pbi potential reaction reaction_florida receive renamed renaming royaltie sitting some stated suggest tennessee tennessee_bridge there time trump trump_bridge. trump_international trump_organization trump_palm west west_palm"
     },
     {
       "event_id": "event_ukraine-to-receive-license-for-patriot-missi_fc7b340aec",
@@ -1518,7 +4028,14 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-08",
-          "last_seen_at": "2026-07-08"
+          "last_seen_at": "2026-07-08",
+          "development_type": "military_action",
+          "match_evidence": {
+            "score": 1.0,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         },
         {
           "development_id": "story_505ffcf384686084",
@@ -1548,9 +4065,86 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-09",
-          "last_seen_at": "2026-07-09"
+          "last_seen_at": "2026-07-09",
+          "development_type": "military_action",
+          "match_evidence": {
+            "score": 1.0,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         }
-      ]
+      ],
+      "canonical_title": "Ukraine to Receive License for Patriot Missile Production",
+      "related_events": [
+        {
+          "event_id": "event_russian-strikes-on-kyiv-result-in-multiple-i_5c9bade12b",
+          "title": "Russian Strikes on Kyiv Result in Multiple Injuries",
+          "relationship": "related_topic",
+          "confidence": 0.679,
+          "shared_entities": [
+            "russia",
+            "ukraine"
+          ]
+        }
+      ],
+      "search_tokens": [
+        "aimed",
+        "ammunition",
+        "amount",
+        "announced",
+        "attack",
+        "ballistic",
+        "bolstering",
+        "comes",
+        "conflict",
+        "continue",
+        "decision",
+        "defense",
+        "effective",
+        "expected",
+        "granted",
+        "however",
+        "license",
+        "missile",
+        "move",
+        "need",
+        "patriot",
+        "produce",
+        "production",
+        "receive",
+        "russia",
+        "shortfall",
+        "significant",
+        "take",
+        "these",
+        "time",
+        "trump",
+        "ukraine",
+        "urgent",
+        "which"
+      ],
+      "entities": [
+        "missile_production",
+        "patriot_missile",
+        "production_trump",
+        "receive",
+        "receive_license",
+        "russia",
+        "ukraine"
+      ],
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "development_count": 2,
+        "date_count": 2,
+        "source_count": 4,
+        "first_date": "2026-07-08",
+        "latest_date": "2026-07-09",
+        "context_summary": "Muninn first tracked this thread on 2026-07-08: Ukraine to Receive License for Patriot Missile Production. The latest development is Ukraine to Receive License for Patriot Missile Production.",
+        "cta_label": ""
+      },
+      "search_text": "aimed ammunition amount announced attack ballistic bolstering comes conflict continue decision defense effective expected granted however license missile missile_production move need patriot patriot_missile produce production production_trump receive receive_license russia shortfall significant take these time trump ukraine urgent which"
     },
     {
       "event_id": "event_arizona-toddler-declared-dead-found-alive-in_bed540f2af",
@@ -1589,7 +4183,14 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-08",
-          "last_seen_at": "2026-07-08"
+          "last_seen_at": "2026-07-08",
+          "development_type": "development",
+          "match_evidence": {
+            "score": 1.0,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         },
         {
           "development_id": "story_e14ed747290baf16",
@@ -1620,9 +4221,80 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-09",
-          "last_seen_at": "2026-07-09"
+          "last_seen_at": "2026-07-09",
+          "development_type": "development",
+          "match_evidence": {
+            "score": 1.0,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         }
-      ]
+      ],
+      "canonical_title": "Arizona Toddler Found Alive in Morgue After Drowning Declaration",
+      "related_events": [],
+      "search_tokens": [
+        "18-month-old",
+        "alive",
+        "another",
+        "arizona",
+        "backyard",
+        "child",
+        "cold",
+        "confirmed",
+        "dead",
+        "death",
+        "declaration",
+        "declared",
+        "despite",
+        "discovered",
+        "doctor",
+        "drowning",
+        "flown",
+        "found",
+        "hospital",
+        "hours",
+        "incident",
+        "indication",
+        "initially",
+        "later",
+        "life",
+        "mistakenly",
+        "morgue",
+        "nurse",
+        "observed",
+        "officer",
+        "placed",
+        "pool",
+        "pulled",
+        "room",
+        "show",
+        "signs",
+        "staff",
+        "subsequently",
+        "survived",
+        "toddler",
+        "treated",
+        "treatment"
+      ],
+      "entities": [
+        "arizona",
+        "arizona_toddler",
+        "drowning_declaration",
+        "morgue"
+      ],
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "development_count": 2,
+        "date_count": 2,
+        "source_count": 4,
+        "first_date": "2026-07-08",
+        "latest_date": "2026-07-09",
+        "context_summary": "Muninn first tracked this thread on 2026-07-08: Arizona toddler declared dead found alive in hospital morgue. The latest development is Arizona Toddler Found Alive in Morgue After Drowning Declaration.",
+        "cta_label": ""
+      },
+      "search_text": "18-month-old alive another arizona arizona_toddler backyard child cold confirmed dead death declaration declared despite discovered doctor drowning drowning_declaration flown found hospital hours incident indication initially later life mistakenly morgue nurse observed officer placed pool pulled room show signs staff subsequently survived toddler treated treatment"
     },
     {
       "event_id": "event_openai-introduces-new-features-for-chatgpt-a_3d29a732ac",
@@ -1661,7 +4333,14 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-08",
-          "last_seen_at": "2026-07-08"
+          "last_seen_at": "2026-07-08",
+          "development_type": "development",
+          "match_evidence": {
+            "score": 0.395,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         },
         {
           "development_id": "story_e380c49aa3408242",
@@ -1695,9 +4374,158 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-08",
-          "last_seen_at": "2026-07-08"
+          "last_seen_at": "2026-07-08",
+          "development_type": "development",
+          "match_evidence": {
+            "score": 1.0,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         }
-      ]
+      ],
+      "canonical_title": "OpenAI Introduces New Features for ChatGPT and Voice Models",
+      "related_events": [
+        {
+          "event_id": "event_openai-releases-gpt-5-4-thinking-system-card_2207bfcc29",
+          "title": "OpenAI Releases GPT-5.4 Thinking System Card",
+          "relationship": "related_topic",
+          "confidence": 0.719,
+          "shared_entities": [
+            "ai",
+            "openai"
+          ]
+        },
+        {
+          "event_id": "event_openai-enhances-customer-support-and-sales-w_4d8f37c044",
+          "title": "OpenAI Enhances Customer Support and Sales with AI Solutions",
+          "relationship": "related_topic",
+          "confidence": 0.713,
+          "shared_entities": [
+            "additionally_openai",
+            "ai",
+            "openai"
+          ]
+        },
+        {
+          "event_id": "event_openai-expands-stargate-project-with-new-dat_09e68ab67e",
+          "title": "OpenAI Expands Stargate AI Infrastructure Globally",
+          "relationship": "related_topic",
+          "confidence": 0.711,
+          "shared_entities": [
+            "additionally_openai",
+            "ai",
+            "openai"
+          ]
+        },
+        {
+          "event_id": "event_openai-announces-leadership-changes-and-new_e3a4e7fe2e",
+          "title": "OpenAI Announces Leadership Changes and New Initiatives",
+          "relationship": "related_topic",
+          "confidence": 0.702,
+          "shared_entities": [
+            "additionally_openai",
+            "ai",
+            "openai"
+          ]
+        }
+      ],
+      "search_tokens": [
+        "additionally",
+        "advanced",
+        "aimed",
+        "along",
+        "apps",
+        "based",
+        "broadening",
+        "cards",
+        "catastrophic",
+        "chatgpt",
+        "company",
+        "conducted",
+        "conversation",
+        "cover",
+        "deep",
+        "designed",
+        "detailing",
+        "developer",
+        "developing",
+        "enhance",
+        "evaluation",
+        "external",
+        "feature",
+        "framework",
+        "frontier",
+        "generation",
+        "gpt-live",
+        "human-ai",
+        "include",
+        "including",
+        "input",
+        "interaction",
+        "introduce",
+        "introduced",
+        "introduction",
+        "launched",
+        "model",
+        "natural",
+        "o3-mini",
+        "openai",
+        "other",
+        "plan",
+        "plans",
+        "platform",
+        "preparedness",
+        "published",
+        "release",
+        "research",
+        "risk",
+        "safety",
+        "several",
+        "strategie",
+        "subscription",
+        "such",
+        "support",
+        "syncs",
+        "system",
+        "teaming",
+        "teams",
+        "these",
+        "usage",
+        "voice",
+        "which",
+        "within",
+        "work"
+      ],
+      "entities": [
+        "additionally_openai",
+        "ai",
+        "apps_sdk",
+        "chatgpt",
+        "chatgpt_pro",
+        "framework._additionally",
+        "gpt-live",
+        "human-ai",
+        "ios",
+        "model_openai",
+        "openai",
+        "openai_introduce",
+        "preparedness_framework.",
+        "sdk",
+        "voice_model"
+      ],
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "development_count": 2,
+        "date_count": 1,
+        "source_count": 9,
+        "first_date": "2026-07-08",
+        "latest_date": "2026-07-08",
+        "context_summary": "Muninn first tracked this thread on 2026-07-08: OpenAI Releases Safety Reports for AI Models. The latest development is OpenAI Introduces New Features for ChatGPT and Voice Models.",
+        "cta_label": ""
+      },
+      "search_text": "additionally additionally_openai advanced ai aimed along apps apps_sdk based broadening cards catastrophic chatgpt chatgpt_pro company conducted conversation cover deep designed detailing developer developing enhance evaluation external feature framework framework._additionally frontier generation gpt-live human-ai include including input interaction introduce introduced introduction ios launched model model_openai natural o3-mini openai openai_introduce other plan plans platform preparedness preparedness_framework. published release research risk safety sdk several strategie subscription such support syncs system teaming teams these usage voice voice_model which within work"
     },
     {
       "event_id": "event_openai-expands-stargate-project-with-new-dat_09e68ab67e",
@@ -1734,7 +4562,14 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-08",
-          "last_seen_at": "2026-07-08"
+          "last_seen_at": "2026-07-08",
+          "development_type": "development",
+          "match_evidence": {
+            "score": 1.0,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         },
         {
           "development_id": "story_a0d46324e949df8d",
@@ -1765,9 +4600,139 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-08",
-          "last_seen_at": "2026-07-08"
+          "last_seen_at": "2026-07-08",
+          "development_type": "development",
+          "match_evidence": {
+            "score": 0.488,
+            "method": "legacy_event_memory",
+            "shared_tokens": [],
+            "shared_entities": []
+          }
         }
-      ]
+      ],
+      "canonical_title": "OpenAI Expands Stargate AI Infrastructure Globally",
+      "related_events": [
+        {
+          "event_id": "event_openai-launches-50m-fund-for-nonprofits-and_cc48e0b8ed",
+          "title": "OpenAI Launches $50M Fund for Nonprofits and Community Innovation",
+          "relationship": "related_topic",
+          "confidence": 0.713,
+          "shared_entities": [
+            "ai",
+            "openai",
+            "us"
+          ]
+        },
+        {
+          "event_id": "event_openai-introduces-new-features-for-chatgpt-a_3d29a732ac",
+          "title": "OpenAI Introduces New Features for ChatGPT and Voice Models",
+          "relationship": "related_topic",
+          "confidence": 0.711,
+          "shared_entities": [
+            "additionally_openai",
+            "ai",
+            "openai"
+          ]
+        },
+        {
+          "event_id": "event_openai-announces-leadership-changes-and-new_e3a4e7fe2e",
+          "title": "OpenAI Announces Leadership Changes and New Initiatives",
+          "relationship": "related_topic",
+          "confidence": 0.71,
+          "shared_entities": [
+            "additionally_openai",
+            "ai",
+            "openai"
+          ]
+        },
+        {
+          "event_id": "event_openai-releases-gpt-5-4-thinking-system-card_2207bfcc29",
+          "title": "OpenAI Releases GPT-5.4 Thinking System Card",
+          "relationship": "related_topic",
+          "confidence": 0.676,
+          "shared_entities": [
+            "ai",
+            "openai"
+          ]
+        }
+      ],
+      "search_tokens": [
+        "additionally",
+        "aims",
+        "announced",
+        "begun",
+        "broader",
+        "capabilitie",
+        "capacity",
+        "center",
+        "construction",
+        "create",
+        "data",
+        "demand",
+        "designed",
+        "develop",
+        "economic",
+        "enhance",
+        "expand",
+        "expansion",
+        "follow",
+        "gigawatt",
+        "globally",
+        "growth",
+        "including",
+        "increasing",
+        "infrastructure",
+        "initiative",
+        "introduction",
+        "jobs",
+        "launch",
+        "leadership",
+        "meet",
+        "michigan",
+        "midwest",
+        "norway",
+        "one-gigawatt",
+        "openai",
+        "oracle",
+        "other",
+        "part",
+        "partnered",
+        "platform",
+        "project",
+        "region",
+        "stargate",
+        "stimulate",
+        "which"
+      ],
+      "entities": [
+        "additionally_openai",
+        "ai",
+        "expand_stargate",
+        "globally_openai",
+        "infrastructure_globally",
+        "michigan",
+        "michigan_openai",
+        "norway._additionally",
+        "openai",
+        "openai_expand",
+        "stargate_project",
+        "u.s.",
+        "uae",
+        "uk",
+        "us"
+      ],
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "development_count": 2,
+        "date_count": 1,
+        "source_count": 6,
+        "first_date": "2026-07-08",
+        "latest_date": "2026-07-08",
+        "context_summary": "Muninn first tracked this thread on 2026-07-08: OpenAI Expands Stargate Project with New Data Center in Michigan. The latest development is OpenAI Expands Stargate AI Infrastructure Globally.",
+        "cta_label": ""
+      },
+      "search_text": "additionally additionally_openai ai aims announced begun broader capabilitie capacity center construction create data demand designed develop economic enhance expand expand_stargate expansion follow gigawatt globally globally_openai growth including increasing infrastructure infrastructure_globally initiative introduction jobs launch leadership meet michigan michigan_openai midwest norway norway._additionally one-gigawatt openai openai_expand oracle other part partnered platform project region stargate stargate_project stimulate u.s. uae uk us which"
     }
   ]
 }
