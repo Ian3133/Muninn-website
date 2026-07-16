@@ -324,6 +324,68 @@ function uniqueSourceCount(stories) {
   return keys.size || stories.reduce((sum, story) => sum + Number(story?.source_count || 0), 0) || 1;
 }
 
+function storyNavigationTopic(story) {
+  const explicit = String(story?.topic_label || '').trim();
+  if (explicit) return explicit;
+
+  const text = `${story?.title || ''} ${story?.summary || ''}`;
+  if (/\b(fifa|world cup)\b/i.test(text)) return 'FIFA World Cup';
+  if (/\biran\b/i.test(text) && /\b(war|strike|missile|hormuz|blockade|ceasefire)\b/i.test(text)) return 'Iran War';
+  if (/\b(russia|russian|ukraine|ukrainian)\b/i.test(text) && /\b(war|invasion|missile|strike|troops)\b/i.test(text)) return 'Russia-Ukraine War';
+  if (/\b(openai|chatgpt)\b/i.test(text)) return 'OpenAI';
+  if (/\b(gaza|israel-hamas)\b/i.test(text) && /\b(war|strike|ceasefire|hostage|aid)\b/i.test(text)) return 'Israel-Gaza War';
+
+  const namedStorm = text.match(/\b(?:Typhoon|Hurricane|Cyclone)\s+[A-Z][A-Za-z'-]+/);
+  if (namedStorm) return namedStorm[0];
+
+  const eventTitle = String(story?.event_title || '').trim();
+  if (eventTitle && eventTitle.length <= 40 && eventTitle.split(/\s+/).length <= 5) return eventTitle;
+  return '';
+}
+
+function groupNavigationTopic(group) {
+  return [group.primary, ...group.related].map(storyNavigationTopic).find(Boolean) || '';
+}
+
+function normalizeFocalCoordinate(value, fallback) {
+  const numeric = Number.parseFloat(String(value ?? '').replace('%', ''));
+  if (!Number.isFinite(numeric)) return fallback;
+  const percentage = numeric >= 0 && numeric <= 1 ? numeric * 100 : numeric;
+  return Math.min(100, Math.max(0, percentage));
+}
+
+function storyImageCropPresentation(story, variant = 'tall') {
+  const image = story?.image || {};
+  const metadata = image?.metadata && typeof image.metadata === 'object' ? image.metadata : {};
+  const focalPoint = image?.focal_point || metadata?.focal_point || metadata?.focal || {};
+  const variantX = variant === 'wide' ? image?.focal_wide_x : image?.focal_tall_x;
+  const variantY = variant === 'wide' ? image?.focal_wide_y : image?.focal_tall_y;
+  const explicitX = variantX ?? focalPoint?.x ?? image?.focal_x ?? metadata?.focal_x;
+  const explicitY = variantY ?? focalPoint?.y ?? image?.focal_y ?? metadata?.focal_y;
+  const rawConfidence = image?.crop_confidence ?? metadata?.crop_confidence;
+  const cropConfidence = rawConfidence == null ? null : normalizeFocalCoordinate(rawConfidence, 0) / 100;
+  const cropAllowed = image?.allows_crop !== false;
+  const visionMarkedUnsafe = image?.safe_to_crop === false;
+  const lowConfidence = cropConfidence != null && cropConfidence < 0.55;
+  const preserveFullImage = !cropAllowed || visionMarkedUnsafe || lowConfidence;
+
+  if (!preserveFullImage && (explicitX != null || explicitY != null)) {
+    return {
+      position: `${normalizeFocalCoordinate(explicitX, 50)}% ${normalizeFocalCoordinate(explicitY, 42)}%`,
+      preserveFullImage: false,
+    };
+  }
+
+  const description = `${image?.title || ''} ${image?.alt || ''} ${story?.title || ''}`;
+  let position = '50% 48%';
+  if (/\b(portrait|headshot|close-up|person|people|man|men|woman|women|boy|girl|actor|president|minister|senator|player|coach|fans?)\b/i.test(description)) {
+    position = '50% 34%';
+  } else if (/\b(match|game|football|soccer|basketball|baseball|racing|celebrat|protest|crowd|troops?)\b/i.test(description)) {
+    position = '50% 42%';
+  }
+  return { position, preserveFullImage };
+}
+
 function parseNewslettersFromLocalStorage() {
   try {
     const saved = localStorage.getItem(NEWSLETTER_STORAGE_KEY);
@@ -410,7 +472,7 @@ export default function LegacyHome() {
   const [timelineError, setTimelineError] = useState('');
   const [timelineQuery, setTimelineQuery] = useState('');
   const [eventStageFilter, setEventStageFilter] = useState('all');
-  const [todayCategory, setTodayCategory] = useState('All stories');
+  const [todayTopic, setTodayTopic] = useState('All updates');
   const client = useMemo(() => (ENABLE_CLOUD_SETTINGS ? generateClient() : null), []);
 
   const visibleCategories = useMemo(
@@ -429,15 +491,25 @@ export default function LegacyHome() {
     []
   );
   const todayGroups = useMemo(() => groupStoriesForToday(stories), [stories]);
-  const todayCategories = useMemo(
-    () => ['All stories', ...new Set(todayGroups.map((group) => normalizedStoryCategory(group.primary)))],
-    [todayGroups]
-  );
+  const todayTopics = useMemo(() => {
+    const topics = new Map();
+    todayGroups.forEach((group, index) => {
+      const label = groupNavigationTopic(group);
+      if (!label) return;
+      const current = topics.get(label) || { label, count: 0, firstIndex: index };
+      current.count += 1 + group.related.length;
+      topics.set(label, current);
+    });
+    return ['All updates', ...[...topics.values()]
+      .sort((left, right) => right.count - left.count || left.firstIndex - right.firstIndex)
+      .slice(0, 7)
+      .map((topic) => topic.label)];
+  }, [todayGroups]);
   const visibleTodayGroups = useMemo(
-    () => todayCategory === 'All stories'
+    () => todayTopic === 'All updates'
       ? todayGroups
-      : todayGroups.filter((group) => normalizedStoryCategory(group.primary) === todayCategory),
-    [todayCategory, todayGroups]
+      : todayGroups.filter((group) => groupNavigationTopic(group) === todayTopic),
+    [todayTopic, todayGroups]
   );
   const filteredTimelineEvents = useMemo(() => {
     const query = timelineQuery.trim().toLowerCase();
@@ -483,6 +555,10 @@ export default function LegacyHome() {
       document.body.classList.remove('is-preload');
     };
   }, []);
+
+  useEffect(() => {
+    if (!todayTopics.includes(todayTopic)) setTodayTopic('All updates');
+  }, [todayTopics, todayTopic]);
 
   useEffect(() => {
     (async () => {
@@ -1423,17 +1499,21 @@ export default function LegacyHome() {
             )}
 
             {!loading && !error && stories.length > 0 && (<>
-              <div className="today-category-filter" aria-label="Filter today's stories">
-                {todayCategories.map((category) => (
-                  <button type="button" className={todayCategory === category ? 'active' : ''} onClick={() => setTodayCategory(category)} key={category}>{category}</button>
-                ))}
-              </div>
+              {todayTopics.length > 1 ? (
+                <div className="today-category-filter" aria-label="Browse today's topics">
+                  {todayTopics.map((topic) => (
+                    <button type="button" className={todayTopic === topic ? 'active' : ''} onClick={() => setTodayTopic(topic)} key={topic}>{topic}</button>
+                  ))}
+                </div>
+              ) : null}
               <div className="top-stories-grid">
                 {visibleTodayGroups.map(({ primary: story, related }, index) => {
                   const groupedStories = [story, ...related];
                   const sourceCount = uniqueSourceCount(groupedStories);
                   const timelineCount = Math.max(...groupedStories.map((item) => Array.isArray(item?.timeline_highlights) ? item.timeline_highlights.length : 0));
                   const imageUrl = story?.image?.url || story?.image?.thumbnail_url || '';
+                  const isLead = index === 0 && todayTopic === 'All updates';
+                  const imageCrop = storyImageCropPresentation(story, isLead ? 'wide' : 'tall');
                   const displayTitle = cleanDisplayTitle(story?.title, story?.sources);
                   const category = normalizedStoryCategory(story);
                   const storyState = related.length
@@ -1451,7 +1531,7 @@ export default function LegacyHome() {
 
                   return (
                     <article
-                      className={`top-story-card ${index === 0 && todayCategory === 'All stories' ? 'is-lead' : ''}`}
+                      className={`top-story-card ${isLead ? 'is-lead' : ''}`}
                       key={story?.story_id || displayTitle}
                       role="link"
                       tabIndex={0}
@@ -1465,23 +1545,14 @@ export default function LegacyHome() {
                       }}
                     >
                       <div
-                        className={`top-story-card-image ${imageUrl ? '' : 'is-placeholder'}`}
-                        style={imageUrl ? { '--story-image': `url("${imageUrl.replace(/"/g, '%22')}")` } : undefined}
+                        className={`top-story-card-image ${imageUrl ? '' : 'is-placeholder'} ${imageCrop.preserveFullImage ? 'preserve-full-image' : ''}`}
+                        style={imageUrl ? { '--story-focus': imageCrop.position } : undefined}
                       >
                         {imageUrl ? (
                           <img
                             src={imageUrl}
-                            alt={story.image.title || displayTitle}
+                            alt=""
                             loading="lazy"
-                            onLoad={(event) => {
-                              const image = event.currentTarget;
-                              const container = image.parentElement;
-                              if (!container || !image.naturalWidth || !image.naturalHeight) return;
-                              const imageRatio = image.naturalWidth / image.naturalHeight;
-                              const containerRatio = container.clientWidth / Math.max(container.clientHeight, 1);
-                              const visibleFraction = Math.min(imageRatio, containerRatio) / Math.max(imageRatio, containerRatio);
-                              container.classList.toggle('preserve-subject', visibleFraction < 0.82);
-                            }}
                             onError={(event) => {
                               event.currentTarget.style.display = 'none';
                               event.currentTarget.parentElement?.classList.add('is-placeholder');

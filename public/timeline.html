@@ -5,6 +5,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="/assets/css/main.css" />
+		<link rel="stylesheet" href="/assets/css/event-experience.css" />
 		<noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
 		<style>
 			.timeline-shell { max-width: 980px; margin: 0 auto; color: #171a1f; }
@@ -54,6 +55,7 @@
 		<script src="/assets/js/breakpoints.min.js"></script>
 		<script src="/assets/js/util.js"></script>
 		<script src="/assets/js/main.js"></script>
+		<script src="/assets/js/event-experience.js"></script>
 		<script>
 			(function () {
 				function escapeHtml(value) {
@@ -111,42 +113,9 @@
 					});
 				}
 				function renderEvent(event, events) {
-					var timeline = Array.isArray(event.timeline) ? event.timeline : [];
-					var presentation = event.presentation || {};
-					var html = '<a class="timeline-back" href="/?category=timelines">&larr; Back to events</a>';
-					html += '<div class="timeline-hero"><div class="timeline-kicker">' + escapeHtml(presentation.stage_label || 'Developing event') + '</div>';
-					html += '<h1>' + escapeHtml(event.canonical_title || event.title || 'Timeline') + '</h1>';
-					html += '<p>' + escapeHtml(presentation.context_summary || event.summary || '') + '</p>';
-					html += '<div class="timeline-stats"><span class="timeline-stat">' + escapeHtml(presentation.development_count || timeline.length) + ' developments</span>';
-					if (presentation.date_count) html += '<span class="timeline-stat">' + escapeHtml(presentation.date_count) + ' dates</span>';
-					if (presentation.source_count) html += '<span class="timeline-stat">' + escapeHtml(presentation.source_count) + ' sources</span>';
-					html += '</div></div>' + renderSearch(events) + '<div class="timeline-nodes">';
-					timeline.forEach(function (entry) {
-						html += '<article class="timeline-node"><div class="node-date">' + escapeHtml(formatTimelineDate(entry.date));
-						if (entry.development_type && entry.development_type !== 'development') html += '<span class="node-type">' + escapeHtml(entry.development_type.replace(/_/g, ' ')) + '</span>';
-						html += '</div><h2>' + escapeHtml(entry.title || 'Update') + '</h2>';
-						if (entry.summary) html += '<p>' + escapeHtml(entry.summary) + '</p>';
-						var urls = Array.isArray(entry.source_urls) ? entry.source_urls : [];
-						var sourceNames = Array.isArray(entry.sources) ? entry.sources : [];
-						if (urls.length) {
-							html += '<div class="node-sources">';
-							urls.slice(0, 6).forEach(function (url, index) {
-								html += '<a href="' + escapeHtml(safeHttpUrl(url)) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(sourceLabelForUrl(url, sourceNames)) + '</a>';
-							});
-							html += '</div>';
-						}
-						html += '</article>';
-					});
-					html += '</div>';
-					var related = Array.isArray(event.related_events) ? event.related_events : [];
-					if (related.length) {
-						html += '<div class="related-panel"><h2>Related threads</h2>';
-						related.forEach(function (item) {
-							html += '<a class="related-link" href="' + eventUrl(item.event_id) + '">' + escapeHtml(item.title || 'Related topic') + '</a>';
-						});
-						html += '</div>';
-					}
+					var html = '<a class="timeline-back" href="/?category=timelines">&larr; Back to events</a><div id="event-experience-page"></div>' + renderSearch(events);
 					document.getElementById('timeline-content').innerHTML = html;
+					window.MuninnEventExperience.mount('#event-experience-page', { event: event, mode: 'page' });
 					bindSearch(events);
 				}
 				var eventId = new URLSearchParams(window.location.search).get('event') || '';

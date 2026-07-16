@@ -5,6 +5,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="/assets/css/main.css" />
+		<link rel="stylesheet" href="/assets/css/event-experience.css" />
 		<noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
 		<style>
 			.story-container {
@@ -261,6 +262,23 @@
 				.sources-section { padding: 1.2em; }
 				.source-item { align-items: flex-start; }
 			}
+			/* Progressive story detail overrides. Event/timeline styles live in event-experience.css. */
+			.story-container { max-width: 1080px; margin: 0 auto; }
+			.story-container h1 { font-size: clamp(2rem, 5vw, 3.25rem); line-height: 1.08; text-transform: none; }
+			.story-image { width: min(34%, 340px); object-fit: cover; }
+			.story-summary { margin-bottom: 0; }
+			.sources-section { border: 1px solid #dce1e5; background: #f2f4f5; }
+			.source-item { border: 1px solid #dce2e6; border-radius: 12px; }
+			.source-info a { overflow: visible; line-height: 1.35; white-space: normal; }
+			.story-explainer { margin: 0 0 3rem; padding: clamp(1.25rem, 3vw, 1.8rem); border: 1px solid #d8e1e5; border-radius: 16px; background: #edf6f8; color: #22303a; }
+			.story-explainer h2 { margin: 0 0 0.65rem; font-size: 1.35rem; text-transform: none; }
+			.story-explainer p { margin: 0 0 0.8rem; line-height: 1.7; }
+			.story-explainer p:last-child { margin-bottom: 0; }
+			.story-explainer ul { margin: 0.9rem 0 0; }
+			.story-explainer-citations { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 1rem; padding-top: 0.9rem; border-top: 1px solid #cedde2; }
+			.story-update-note { margin: -1.25rem 0 2.5rem; padding: 1rem 1.2rem; border-left: 4px solid #18a9d3; border-radius: 0 10px 10px 0; background: #edf6f8; color: #26333d; line-height: 1.6; }
+			.source-outlet { color: #5e6a74; font-size: 0.78rem; font-weight: 700; }
+			@media screen and (max-width: 736px) { .story-image { width: 100%; } }
 		</style>
 	</head>
 	<body class="is-preload">
@@ -297,6 +315,7 @@
 			<script src="/assets/js/breakpoints.min.js"></script>
 			<script src="/assets/js/util.js"></script>
 			<script src="/assets/js/main.js"></script>
+			<script src="/assets/js/event-experience.js"></script>
 
 			<!-- Story loading script -->
 			<script>
@@ -467,6 +486,28 @@
 						return html;
 					}
 
+					function renderStoryExplainer(story) {
+						var explainer = story.explainer || story.context_explainer || (story.story_context || {}).explainer;
+						if (!explainer) return '';
+						if (typeof explainer === 'string') explainer = { summary: explainer };
+						var paragraphs = Array.isArray(explainer.paragraphs) ? explainer.paragraphs : [explainer.summary || explainer.text].filter(Boolean);
+						var points = Array.isArray(explainer.key_points) ? explainer.key_points.filter(Boolean) : [];
+						if (!paragraphs.length && !points.length) return '';
+						var html = '<section class="story-explainer"><div class="story-section-label">Additional context</div><h2>' + escapeHtml(explainer.title || 'Why this story matters') + '</h2>';
+						paragraphs.forEach(function(paragraph) { html += '<p>' + escapeHtml(paragraph) + '</p>'; });
+						if (points.length) html += '<ul>' + points.map(function(point) { return '<li>' + escapeHtml(point) + '</li>'; }).join('') + '</ul>';
+						var sources = Array.isArray(explainer.sources) ? explainer.sources : [];
+						if (sources.length) {
+							html += '<div class="story-explainer-citations">';
+							sources.forEach(function(source) {
+								var url = safeHttpUrl(source.url || source.link);
+								if (url !== '#') html += '<a class="event-evidence-link" href="' + escapeHtml(url) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(source.source || source.name || 'Context source') + '</a>';
+							});
+							html += '</div>';
+						}
+						return html + '</section>';
+					}
+
 					// Load story from JSON
 					$.getJSON(digestPath, function(data) {
 						var clusters = Array.isArray(data.clusters) ? data.clusters : [];
@@ -508,12 +549,12 @@
 						}
 
 						content += '</div>';
-						content += '<div class="what-changed"><strong>What changed today</strong><p>This is the latest confirmed development' + (developmentCount > 1 ? ' in a story Muninn is tracking across ' + developmentCount + ' developments' : '') + '.</p></div>';
+						var updateNote = story.what_changed || (story.story_context || {}).what_changed;
+						if (updateNote) content += '<div class="story-update-note"><strong>What changed:</strong> ' + escapeHtml(updateNote) + '</div>';
+						content += renderStoryExplainer(story);
 
 						if (story.event_id || (story.timeline_highlights && story.timeline_highlights.length)) {
-							content += '<div id="event-timeline-slot">';
-							content += renderStoryContext(story, null);
-							content += '</div>';
+							content += '<div id="event-timeline-slot"></div>';
 						}
 
 						// Sources section
@@ -530,9 +571,8 @@
 								content += '<img src="' + escapeHtml(logoPath) + '" alt="" class="source-logo" onerror="this.src=\'/assets/logos/news_placeholder.png\'">';
 								content += '<div class="source-info">';
 								content += '<a href="' + escapeHtml(safeHttpUrl(item.link)) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(item.title || 'Read original report') + '</a>';
-								content += '<div class="source-bias">Source: ' + escapeHtml(item.source || 'Unknown outlet');
-								if (item.source_bias && item.source_bias !== 'unknown') content += ' · Bias rating: ' + escapeHtml(item.source_bias);
-								content += '</div>';
+								content += '<div class="source-outlet">' + escapeHtml(item.source || 'Unknown outlet') + '</div>';
+								content += window.MuninnEventExperience.renderSourceBadges(item);
 								content += '</div>';
 								content += '</div>';
 							});
@@ -547,6 +587,11 @@
 						content += '</div>';
 
 						$('#story-content').html(content);
+						window.MuninnEventExperience.mount('#event-timeline-slot', {
+							event: { event_id: story.event_id },
+							story: story,
+							mode: 'story'
+						});
 
 						if (story.event_id) {
 							$.getJSON('/Current_news/event_timelines.json', function(timelineData) {
@@ -554,10 +599,7 @@
 								var eventData = events.find(function(event) {
 									return event.event_id === story.event_id;
 								});
-								var timelineHtml = renderStoryContext(story, eventData);
-								if (timelineHtml) {
-									$('#event-timeline-slot').html(timelineHtml);
-								}
+								if (eventData) window.MuninnEventExperience.mount('#event-timeline-slot', { event: eventData, story: story, mode: 'story' });
 							});
 						}
 
