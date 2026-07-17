@@ -41,6 +41,21 @@
 				border-radius: 8px;
 				flex-shrink: 0;
 			}
+			.story-image-frame { position: relative; width: min(42%, 480px); flex-shrink: 0; }
+			.story-image-frame .story-image { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: contain; }
+			.story-image-role {
+				position: absolute;
+				right: 10px;
+				bottom: 10px;
+				padding: 0.35em 0.65em;
+				border-radius: 999px;
+				background: rgba(16, 24, 32, 0.84);
+				color: #fff;
+				font-size: 0.7em;
+				font-weight: bold;
+				letter-spacing: 0.04em;
+				text-transform: uppercase;
+			}
 			.story-summary {
 				font-size: 1.1em;
 				line-height: 1.8;
@@ -258,6 +273,7 @@
 			}
 			@media screen and (max-width: 736px) {
 				.story-content-wrapper { flex-direction: column; }
+				.story-image-frame { width: 100%; }
 				.story-image { width: 100%; height: auto; aspect-ratio: 16 / 9; }
 				.sources-section { padding: 1.2em; }
 				.source-item { align-items: flex-start; }
@@ -265,7 +281,7 @@
 			/* Progressive story detail overrides. Event/timeline styles live in event-experience.css. */
 			.story-container { max-width: 1080px; margin: 0 auto; }
 			.story-container h1 { font-size: clamp(2rem, 5vw, 3.25rem); line-height: 1.08; text-transform: none; }
-			.story-image { width: min(34%, 340px); object-fit: cover; }
+			.story-image-frame .story-image { width: 100%; height: auto; object-fit: contain; }
 			.story-summary { margin-bottom: 0; }
 			.sources-section { border: 1px solid #dce1e5; background: #f2f4f5; }
 			.source-item { border: 1px solid #dce2e6; border-radius: 12px; }
@@ -545,7 +561,10 @@
 
 						// Story image
 						if (story.image && (story.image.url || story.image.thumbnail_url)) {
-							content += '<img src="' + escapeHtml(safeHttpUrl(story.image.url || story.image.thumbnail_url)) + '" alt="' + escapeHtml(story.image.title || story.title) + '" class="story-image">';
+							var imageRoleLabel = story.image.image_role_label || (story.image.image_role === 'illustrative' ? 'Illustrative image' : '');
+							content += '<div class="story-image-frame"><img src="' + escapeHtml(safeHttpUrl(story.image.url || story.image.thumbnail_url)) + '" alt="' + escapeHtml(story.image.title || story.title) + '" class="story-image">';
+							if (imageRoleLabel) content += '<span class="story-image-role">' + escapeHtml(imageRoleLabel) + '</span>';
+							content += '</div>';
 						}
 
 						content += '</div>';
