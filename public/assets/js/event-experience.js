@@ -139,9 +139,16 @@
 		var type = String(entry.development_type || 'development').replace(/_/g, ' ');
 		var facts = Array.isArray(entry.key_facts) ? entry.key_facts.filter(Boolean).slice(0, 5) : [];
 		var details = entrySourceDetails(entry);
+		var isBackfilled = Boolean(entry.backfilled || entry.origin === 'search_backfill');
+		var backfillLabel = entry.backfill_label || ({
+			origin: 'Background before Muninn began tracking',
+			bridge: 'Backfilled from sourced reporting',
+			latest: 'Latest update found through sourced search'
+		}[entry.timeline_role] || 'Sourced timeline backfill');
 		var html = '<div class="event-development-meta"><span>' + escapeHtml(formatDate(entry.date)) + '</span>';
 		if (type !== 'development') html += '<span>' + escapeHtml(type) + '</span>';
 		if (isCurrent) html += '<span>Current update</span>';
+		if (isBackfilled) html += '<span class="event-backfill-label">' + escapeHtml(backfillLabel) + '</span>';
 		html += '</div><h3>' + escapeHtml(entry.title || 'Update') + '</h3>';
 		if (entry.summary) html += '<p>' + escapeHtml(entry.summary) + '</p>';
 		if (facts.length) html += '<ul class="event-key-facts">' + facts.map(function (fact) { return '<li>' + escapeHtml(fact) + '</li>'; }).join('') + '</ul>';
@@ -179,6 +186,32 @@
 		return html + '</div>';
 	}
 
+	function renderEventOverview(event, context) {
+		var overview = event && event.event_overview || context && context.event_overview || {};
+		if (!overview.available || !overview.summary) return '';
+		var sources = Array.isArray(overview.sources) ? overview.sources : [];
+		var sourceById = {};
+		sources.forEach(function (source) { if (source && source.id) sourceById[source.id] = source; });
+		var facts = Array.isArray(overview.facts) ? overview.facts.slice(0, 5) : [];
+		var html = '<aside class="event-overview"><div class="event-overview-kicker">About this event</div>';
+		html += '<h3>' + escapeHtml(overview.title || ('About ' + (overview.subject || 'this event'))) + '</h3>';
+		html += '<p>' + escapeHtml(overview.summary) + '</p>';
+		if (facts.length) {
+			html += '<details class="event-overview-details"><summary>Event facts and sources</summary><dl class="event-overview-facts">';
+			facts.forEach(function (fact) {
+				var factSources = (fact.source_ids || []).map(function (id) { return sourceById[id]; }).filter(Boolean);
+				html += '<div><dt>' + escapeHtml(fact.label || 'Fact') + '</dt><dd>' + escapeHtml(fact.value || '');
+				if (factSources.length) html += '<span class="event-overview-citations">' + factSources.map(function (source) { return '<a aria-label="Open event overview source" href="' + escapeHtml(safeHttpUrl(source.url || source.link)) + '" target="_blank" rel="noopener noreferrer">[' + escapeHtml(String(source.id).replace(/^o/i, '')) + ']</a>'; }).join('') + '</span>';
+				html += '</dd></div>';
+			});
+			html += '</dl>';
+			if (overview.scope_note) html += '<p class="event-overview-scope">' + escapeHtml(overview.scope_note) + '</p>';
+			if (sources.length) html += '<div class="event-evidence"><div class="event-evidence-label">Background sources</div><div class="event-evidence-links">' + sourceLinks(sources.map(function (source) { return {link: source.url, source: source.publisher}; }), 8) + '</div></div>';
+			html += '</details>';
+		}
+		return html + '</aside>';
+	}
+
 	function renderRelated(event, context) {
 		var related = Array.isArray(event && event.related_events) && event.related_events.length ? event.related_events : context.related_events;
 		if (!Array.isArray(related) || !related.length) return '';
@@ -208,7 +241,7 @@
 		var title = displayTitle(event, story, stage);
 		var description = presentation.context_summary || context.summary || event.summary || '';
 		var dateCount = presentation.date_count || context.date_count || new Set(timeline.map(function (entry) { return entry.date; }).filter(Boolean)).size;
-		var sourceCount = presentation.source_count || 0;
+		var sourceCount = presentation.independent_source_count || presentation.source_count || 0;
 		var railHtml = '';
 		timeline.forEach(function (entry, index) {
 			if (index > 0 && milestoneLookup[index] && !milestoneLookup[index - 1]) {
@@ -218,8 +251,10 @@
 			}
 			var classes = 'event-rail-item' + (milestoneLookup[index] ? '' : ' is-collapsed-node');
 			var isCurrent = index === currentIndex;
+			var isBackfilled = Boolean(entry.backfilled || entry.origin === 'search_backfill');
 			railHtml += '<div class="' + classes + '"><button class="event-node-button' + (isCurrent ? ' is-current' : '') + '" type="button" role="tab" aria-selected="' + (isCurrent ? 'true' : 'false') + '" data-development-index="' + index + '">';
 			railHtml += '<span class="event-node-date">' + escapeHtml(formatDate(entry.date, true)) + '</span><span class="event-node-name">' + escapeHtml(entry.title || 'Update') + '</span>';
+			if (isBackfilled) railHtml += '<span class="event-node-backfill">Sourced backfill</span>';
 			if (isCurrent) railHtml += '<span class="event-node-current">Current</span>';
 			railHtml += '</button></div>';
 		});
@@ -233,8 +268,8 @@
 		if (description) html += '<p class="event-experience-summary">' + escapeHtml(description) + '</p>';
 		html += '<div class="event-experience-stats"><span class="event-stat">' + timeline.length + ' developments</span>';
 		if (dateCount) html += '<span class="event-stat">' + escapeHtml(dateCount) + ' dates</span>';
-		if (sourceCount) html += '<span class="event-stat">' + escapeHtml(sourceCount) + ' sources</span>';
-		html += '</div></div><div class="event-rail-region"><div class="event-rail-label"><strong>Follow the developments</strong><span class="event-rail-hint">Select a point to read it · // expands hidden updates</span></div>';
+		if (sourceCount) html += '<span class="event-stat">' + escapeHtml(sourceCount) + ' publisher' + (sourceCount === 1 ? '' : 's') + '</span>';
+		html += '</div></div>' + renderEventOverview(event, context) + '<div class="event-rail-region"><div class="event-rail-label"><strong>Follow the developments</strong><span class="event-rail-hint">Select a point to read it · // expands hidden updates</span></div>';
 		html += '<div class="event-rail-scroll"><div class="event-rail" role="tablist" aria-label="Event developments">' + railHtml + '</div></div>';
 		html += '<article class="event-development" data-event-development tabindex="-1">' + developmentDetail(timeline[currentIndex], true) + '</article></div>';
 		html += '<div class="event-experience-actions"><button class="event-action" type="button" data-summary-toggle aria-expanded="false">Read the story so far</button>';

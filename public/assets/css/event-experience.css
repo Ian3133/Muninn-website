@@ -15,6 +15,20 @@
 .event-experience-stats { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.25rem; }
 .event-stat { padding: 0.38rem 0.66rem; border: 1px solid #cbd3da; border-radius: 999px; background: rgba(255,255,255,0.78); color: #52606d; font-size: 0.72rem; font-weight: 750; }
 
+.event-overview { margin-top: 1.25rem; padding: 1rem 1.1rem; border: 1px solid #cedee4; border-radius: 13px; background: rgba(255,255,255,0.76); }
+.event-overview-kicker { color: #167f9e; font-size: 0.65rem; font-weight: 850; letter-spacing: 0.08em; text-transform: uppercase; }
+.event-overview h3 { margin: 0.2rem 0 0.45rem; color: #17202a; font-size: 1.1rem; text-transform: none; }
+.event-overview > p { max-width: 52rem; margin: 0; color: #46535f; line-height: 1.6; }
+.event-overview-details { margin-top: 0.65rem; }
+.event-overview-details summary { color: #176f89; font-size: 0.76rem; font-weight: 800; cursor: pointer; }
+.event-overview-facts { display: grid; gap: 0.6rem; margin: 0.85rem 0 0; }
+.event-overview-facts > div { display: grid; grid-template-columns: minmax(5rem, 7rem) 1fr; gap: 0.7rem; padding-bottom: 0.55rem; border-bottom: 1px solid #e0e6e9; }
+.event-overview-facts dt { color: #63717c; font-size: 0.68rem; font-weight: 850; letter-spacing: 0.05em; text-transform: uppercase; }
+.event-overview-facts dd { margin: 0; color: #35424c; line-height: 1.5; }
+.event-overview-citations { display: inline-flex; gap: 0.2rem; margin-left: 0.35rem; }
+.event-overview-citations a { color: #147d9c; font-size: 0.7rem; font-weight: 850; text-decoration: none; }
+.event-overview-scope { margin: 0.75rem 0 0; color: #66737d; font-size: 0.75rem; line-height: 1.5; }
+
 .event-rail-region { margin-top: 1.75rem; }
 .event-rail-label { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: 0.75rem; }
 .event-rail-label strong { color: #26313b; font-size: 0.82rem; letter-spacing: 0.06em; text-transform: uppercase; }
@@ -33,6 +47,7 @@
 .event-node-button.is-current::before { background: #17202a; box-shadow: 0 0 0 3px #17202a, 0 0 0 7px #dde3e7; }
 .event-node-date { display: block; margin-bottom: 0.3rem; color: #6b7781; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; }
 .event-node-name { display: -webkit-box; overflow: hidden; color: inherit; font-size: 0.78rem; font-weight: 750; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+.event-node-backfill { display: inline-block; margin-top: 0.32rem; color: #167f9e; font-size: 0.58rem; font-weight: 800; letter-spacing: 0.045em; text-transform: uppercase; }
 .event-node-current { display: inline-block; margin-top: 0.32rem; padding: 0.14rem 0.36rem; border-radius: 999px; background: #17202a; color: #fff; font-size: 0.6rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; }
 .event-rail-item.is-collapsed-node { display: none; }
 .event-rail.is-expanded .event-rail-item.is-collapsed-node { display: flex; }
@@ -43,6 +58,7 @@
 
 .event-development { min-height: 13rem; margin-top: 0.25rem; padding: clamp(1.1rem, 2.5vw, 1.55rem); border: 1px solid #d6dde2; border-radius: 15px; background: #fff; }
 .event-development-meta { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-bottom: 0.55rem; color: #62707c; font-size: 0.72rem; font-weight: 750; letter-spacing: 0.04em; text-transform: uppercase; }
+.event-development-meta .event-backfill-label { padding: 0.14rem 0.42rem; border: 1px solid #b9dce6; border-radius: 999px; background: #eaf7fa; color: #167f9e; }
 .event-development h3 { margin: 0 0 0.65rem; color: #17202a; font-size: clamp(1.15rem, 3vw, 1.45rem); line-height: 1.28; text-transform: none; }
 .event-development p { margin: 0; color: #3f4b56; line-height: 1.65; }
 .event-key-facts { margin: 0.9rem 0 0; padding-left: 1.2rem; color: #3f4b56; }
@@ -83,6 +99,7 @@
 	.event-rail-item { flex-basis: 132px; scroll-snap-align: center; }
 	.event-rail-gap { flex-basis: 64px; }
 	.event-development { min-height: 0; }
+	.event-overview-facts > div { grid-template-columns: 1fr; gap: 0.15rem; }
 	.event-experience-actions { align-items: stretch; flex-direction: column; }
 	.event-action { display: flex; align-items: center; justify-content: center; width: 100%; }
 }

@@ -41,27 +41,51 @@
 				border-radius: 8px;
 				flex-shrink: 0;
 			}
-			.story-image-frame { position: relative; width: min(42%, 480px); flex-shrink: 0; }
+			.story-image-frame { display: flex; width: min(42%, 480px); flex-shrink: 0; flex-direction: column; align-items: flex-end; }
 			.story-image-frame .story-image { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: contain; }
 			.story-image-role {
-				position: absolute;
-				right: 10px;
-				bottom: 10px;
-				padding: 0.35em 0.65em;
+				display: inline-flex;
+				margin-top: 0.4rem;
+				padding: 0.22em 0.5em;
+				border: 1px solid #d9dee2;
 				border-radius: 999px;
-				background: rgba(16, 24, 32, 0.84);
-				color: #fff;
-				font-size: 0.7em;
+				background: #f2f4f5;
+				color: #69757f;
+				font-size: 0.62em;
 				font-weight: bold;
-				letter-spacing: 0.04em;
+				letter-spacing: 0.055em;
 				text-transform: uppercase;
 			}
 			.story-summary {
-				font-size: 1.1em;
-				line-height: 1.8;
+				font-size: clamp(1.2rem, 2.1vw, 1.42rem);
+				line-height: 1.72;
 				margin-bottom: 3em;
 				color: #000000;
 			}
+			.story-explore { margin: 0 0 3rem; padding: clamp(1.2rem, 3vw, 1.7rem); border: 1px solid #dbe2e6; border-radius: 16px; background: #fafbfb; }
+			.story-explore-header { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
+			.story-explore-header h2 { margin: 0; font-size: clamp(1.35rem, 3vw, 1.7rem); text-transform: none; }
+			.story-explore-header p { max-width: 34rem; margin: 0; color: #66737d; font-size: 0.82rem; line-height: 1.5; text-align: right; }
+			.story-explore-options { display: flex; flex-wrap: wrap; gap: 0.55rem; }
+			.story-explore-option { min-height: 2.55rem; padding: 0.55rem 0.85rem; border: 1px solid #cfd8dd; border-radius: 999px; background: #fff; color: #34414b; cursor: pointer; font: inherit; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.02em; text-transform: none; }
+			.story-explore-option:hover { border-color: #18a9d3; color: #147d9c; }
+			.story-explore-option[aria-expanded="true"] { border-color: #167f9e; background: #167f9e; color: #fff; }
+			.story-explore-panel { display: none; margin-top: 1rem; padding: 1.05rem 1.15rem; border-left: 3px solid #18a9d3; border-radius: 0 10px 10px 0; background: #edf6f8; color: #26343e; }
+			.story-explore-panel.active { display: block; }
+			.story-explore-panel h3 { margin: 0 0 0.55rem; font-size: 1.1rem; text-transform: none; }
+			.story-explore-panel p { margin: 0 0 0.65rem; line-height: 1.65; }
+			.story-explore-details { margin-top: 0.7rem; }
+			.story-explore-details summary { color: #147d9c; font-size: 0.74rem; font-weight: 800; cursor: pointer; }
+			.story-explore-details[open] summary { margin-bottom: 0.55rem; }
+			.story-explore-panel ul { margin: 0.65rem 0 0; }
+			.story-explore-panel li { margin-bottom: 0.35rem; line-height: 1.5; }
+			.story-explore-claim-type { display: inline-block; margin-right: 0.42rem; color: #61717b; font-size: 0.62rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; }
+			.story-explore-claim-citations { display: inline-flex; gap: 0.25rem; margin-left: 0.35rem; vertical-align: middle; }
+			.story-explore-claim-citations a { color: #147d9c; font-size: 0.68rem; font-weight: 850; text-decoration: none; }
+			.story-explore-note { color: #65727c; font-size: 0.74rem; }
+			.story-explore-freshness { margin-top: 0.7rem !important; color: #61717b; font-size: 0.7rem; }
+			.story-explore-sources { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.85rem; padding-top: 0.75rem; border-top: 1px solid #cfdee3; }
+			.story-explore-sources a { padding: 0.28rem 0.5rem; border: 1px solid #c6d8de; border-radius: 999px; background: rgba(255,255,255,0.72); color: #176f89; font-size: 0.7rem; font-weight: 750; text-decoration: none; }
 			.sources-section {
 				background: rgba(255, 255, 255, 0.05);
 				padding: 2em;
@@ -275,6 +299,8 @@
 				.story-content-wrapper { flex-direction: column; }
 				.story-image-frame { width: 100%; }
 				.story-image { width: 100%; height: auto; aspect-ratio: 16 / 9; }
+				.story-explore-header { align-items: flex-start; flex-direction: column; }
+				.story-explore-header p { text-align: left; }
 				.sources-section { padding: 1.2em; }
 				.source-item { align-items: flex-start; }
 			}
@@ -524,6 +550,165 @@
 						return html + '</section>';
 					}
 
+					function renderExploreStory(story) {
+						var items = Array.isArray(story.items) ? story.items.filter(Boolean) : [];
+						var keyFacts = Array.isArray(story.key_facts) ? story.key_facts.filter(Boolean) : [];
+						var context = story.story_context || {};
+						var eventSummary = context.event_summary || {};
+						var lenses = [];
+
+						function cleanList(values) {
+							var seen = {};
+							return (values || []).map(function(value) { return String(value || '').trim(); }).filter(function(value) {
+								var key = value.toLowerCase();
+								if (!value || seen[key]) return false;
+								seen[key] = true;
+								return true;
+							});
+						}
+
+						function sentences(value) {
+							return cleanList(String(value || '').match(/[^.!?]+[.!?]+|[^.!?]+$/g) || []);
+						}
+
+						function addLens(lens) {
+							if (!lens || (!lens.summary && !(lens.points || []).length && !(lens.claims || []).length)) return;
+							lens.id = String(lens.id || ('lens-' + lenses.length)).toLowerCase().replace(/[^a-z0-9-]+/g, '-');
+							lens.points = cleanList(lens.points || []);
+							lens.claims = Array.isArray(lens.claims) ? lens.claims.filter(function(claim) { return claim && claim.text; }) : [];
+							lens.sources = Array.isArray(lens.sources) ? lens.sources.filter(Boolean) : [];
+							lenses.push(lens);
+						}
+
+						var suppliedLenses = Array.isArray(story.explore_lenses) ? story.explore_lenses : [];
+						if (suppliedLenses.length) {
+							suppliedLenses.slice(0, 5).forEach(function(lens, index) {
+								addLens({
+									id: lens.id || ('researched-' + index),
+									label: lens.label || lens.title,
+									title: lens.title || lens.label,
+									summary: lens.summary || lens.answer || lens.text,
+									points: lens.points || lens.key_points,
+									claims: lens.claims,
+									sources: lens.sources,
+									note: lens.uncertainty_note || lens.note || 'Additional context generated from the cited reporting.',
+									generatedAt: lens.generated_at
+								});
+							});
+						} else {
+							addLens({
+								id: 'key-facts',
+								label: 'Key facts',
+								title: 'What the reporting establishes',
+								summary: keyFacts.length ? '' : story.summary,
+								points: keyFacts,
+								sources: items,
+								note: 'Facts drawn from the reporting used for this story.'
+							});
+
+							var summaryNextStatements = sentences(story.summary).filter(function(statement) {
+								return /\b(will|scheduled|next|set to|plans? to|expected to|due to)\b/i.test(statement);
+							});
+							var nextStatements = summaryNextStatements.length ? summaryNextStatements : keyFacts.filter(function(statement) {
+								return /\b(will|scheduled|next|set to|plans? to|expected to|due to)\b/i.test(statement);
+							});
+							if (nextStatements.length) addLens({
+								id: 'what-next',
+								label: 'What happens next?',
+								title: 'The next confirmed step',
+								points: nextStatements,
+								sources: items,
+								note: 'This includes only next steps stated in the current reporting, not a forecast.'
+							});
+
+							var developments = Array.isArray(eventSummary.key_developments) && eventSummary.key_developments.length
+								? eventSummary.key_developments
+								: (Array.isArray(story.timeline_highlights) ? story.timeline_highlights : []);
+							if (eventSummary.summary || developments.length) addLens({
+								id: 'story-so-far',
+								label: displayCategory(story) === 'Sports' ? 'Path to this point' : 'Story so far',
+								title: displayCategory(story) === 'Sports' ? 'How this point was reached' : 'How the story developed',
+								summary: eventSummary.summary || context.summary || '',
+								points: developments.slice(-4).map(function(item) {
+									return (item.date ? formatStoryDate(item.date) + ': ' : '') + (item.title || item.summary || 'Update');
+								}),
+								sources: Array.isArray(eventSummary.sources) ? eventSummary.sources : items,
+								note: 'Timeline dates reflect the information stored with this event.'
+							});
+
+							var biasGroups = {};
+							items.forEach(function(item) {
+								var bias = String(item.source_bias || '').toLowerCase();
+								if (bias !== 'left' && bias !== 'center' && bias !== 'right') return;
+								if (!biasGroups[bias]) biasGroups[bias] = [];
+								biasGroups[bias].push(item);
+							});
+							var representedBiases = Object.keys(biasGroups);
+							if (representedBiases.length > 1) addLens({
+								id: 'reporting-perspectives',
+								label: 'Reporting perspectives',
+								title: 'How the available sources are classified',
+								summary: 'The current source set includes reporting classified across ' + representedBiases.join(', ') + '.',
+								points: representedBiases.map(function(bias) {
+									return bias.charAt(0).toUpperCase() + bias.slice(1) + ': ' + cleanList(biasGroups[bias].map(function(item) { return item.source || item.station; })).join(', ');
+								}),
+								sources: items,
+								note: 'These labels describe supplied outlet metadata; they do not determine whether an individual claim is true.'
+							});
+
+							addLens({
+								id: 'reporting-basis',
+								label: 'Reporting behind it',
+								title: 'Where this summary comes from',
+								summary: 'This story summary draws on ' + Math.max(Number(story.source_count || 0), items.length) + ' reporting source' + (Math.max(Number(story.source_count || 0), items.length) === 1 ? '' : 's') + '.',
+								points: items.slice(0, 5).map(function(item) { return (item.source || item.station || 'Source') + ': ' + (item.title || 'Original reporting'); }),
+								sources: items,
+								note: 'Open the cited reporting for full context and wording.'
+							});
+						}
+
+						if (!lenses.length) return '';
+						var html = '<section class="story-explore"><div class="story-explore-header"><div><div class="story-section-label">Optional context</div><h2>Explore this story</h2></div><p>Choose a lens. Nothing here replaces the factual summary above.</p></div><div class="story-explore-options">';
+						lenses.forEach(function(lens) {
+							html += '<button type="button" class="story-explore-option" aria-expanded="false" aria-controls="explore-' + escapeHtml(lens.id) + '">' + escapeHtml(lens.label || lens.title || 'Read more') + '</button>';
+						});
+						html += '</div>';
+						lenses.forEach(function(lens) {
+							html += '<div class="story-explore-panel" id="explore-' + escapeHtml(lens.id) + '"><h3>' + escapeHtml(lens.title || lens.label || 'Additional context') + '</h3>';
+							if (lens.summary) html += '<p>' + escapeHtml(lens.summary) + '</p>';
+							html += '<details class="story-explore-details"' + (lens.summary ? '' : ' open') + '><summary>Show evidence and details</summary>';
+							var sourceById = {};
+							lens.sources.forEach(function(source) { if (source.id) sourceById[source.id] = source; });
+							if (lens.claims.length) {
+								html += '<ul>' + lens.claims.map(function(claim) {
+									var claimHtml = '<li><span class="story-explore-claim-type">' + escapeHtml(claim.claim_type || 'fact') + '</span>' + escapeHtml(claim.text);
+									var claimSources = (claim.source_ids || []).map(function(id) { return sourceById[id]; }).filter(Boolean);
+									if (claimSources.length) claimHtml += '<span class="story-explore-claim-citations">' + claimSources.map(function(source, sourceIndex) { var citationNumber = String(source.id || (sourceIndex + 1)).replace(/^s/i, ''); return '<a aria-label="Open supporting source" href="' + escapeHtml(safeHttpUrl(source.url || source.link)) + '" target="_blank" rel="noopener noreferrer">[' + escapeHtml(citationNumber) + ']</a>'; }).join('') + '</span>';
+									return claimHtml + '</li>';
+								}).join('') + '</ul>';
+							} else if (lens.points.length) html += '<ul>' + lens.points.map(function(point) { return '<li>' + escapeHtml(point) + '</li>'; }).join('') + '</ul>';
+							if (lens.note) html += '<p class="story-explore-note">' + escapeHtml(lens.note) + '</p>';
+							if (lens.generatedAt) html += '<p class="story-explore-freshness">Last researched ' + escapeHtml(new Date(lens.generatedAt).toLocaleString([], { dateStyle: 'medium', timeStyle: 'short' })) + '</p>';
+							var sourcePillSeen = {};
+							var validSources = lens.sources.filter(function(source) {
+								if (safeHttpUrl(source.url || source.link) === '#') return false;
+								var publisher = String(source.publisher || source.source || source.name || source.station || 'Source').toLowerCase();
+								if (sourcePillSeen[publisher]) return false;
+								sourcePillSeen[publisher] = true;
+								return true;
+							}).slice(0, 5);
+							if (validSources.length) {
+								html += '<div class="story-explore-sources">';
+								validSources.forEach(function(source) {
+									html += '<a title="' + escapeHtml(source.title || '') + '" href="' + escapeHtml(safeHttpUrl(source.url || source.link)) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(source.publisher || source.source || source.name || source.station || 'Source') + (source.source_type === 'primary' ? ' · Official' : '') + '</a>';
+								});
+								html += '</div>';
+							}
+							html += '</details></div>';
+						});
+						return html + '</section>';
+					}
+
 					// Load story from JSON
 					$.getJSON(digestPath, function(data) {
 						var clusters = Array.isArray(data.clusters) ? data.clusters : [];
@@ -535,11 +720,18 @@
 							return;
 						}
 
-						var story = data.clusters[storyIndex];
-						var content = '';
-						var sourceCount = Number(story.source_count || (Array.isArray(story.items) ? story.items.length : 0) || 1);
-						var developmentCount = Array.isArray(story.timeline_highlights) ? story.timeline_highlights.length : 0;
-						var storyState = developmentCount > 1 ? 'Timeline updated' : sourceCount > 1 ? 'New story' : 'Single-source report';
+					var story = data.clusters[storyIndex];
+					var content = '';
+					var sourceCount = Number(story.source_count || (Array.isArray(story.items) ? story.items.length : 0) || 1);
+					var publisherLookup = {};
+					(Array.isArray(story.items) ? story.items : []).forEach(function(item) {
+						var publisher = String(item.source || item.station || '').trim().toLowerCase();
+						if (!publisher) { try { publisher = new URL(item.link || item.url).hostname.replace(/^www\./, ''); } catch (_error) {} }
+						if (publisher) publisherLookup[publisher] = true;
+					});
+					var publisherCount = Object.keys(publisherLookup).length || sourceCount;
+					var developmentCount = Number((story.story_context || {}).development_count || (Array.isArray(story.timeline_highlights) ? story.timeline_highlights.length : 0));
+					var storyState = developmentCount > 1 ? 'Timeline updated' : sourceCount > 1 ? 'New story' : 'Single-source report';
 
 						// Back button
 						content += '<a href="' + backHref + '" class="back-button">\u2190 Back</a>';
@@ -548,7 +740,10 @@
 						content += '<div class="story-eyebrow">' + escapeHtml(displayCategory(story)) + ' · ' + escapeHtml(storyState) + '</div>';
 						content += '<div class="story-title"><h1>' + escapeHtml(story.title) + '</h1></div>';
 						content += '<div class="story-meta-row">';
-						content += '<span class="story-meta-chip' + (sourceCount === 1 ? ' caution' : '') + '">' + sourceCount + ' ' + (sourceCount === 1 ? 'source' : 'sources') + '</span>';
+					var sourceLabel = publisherCount < sourceCount
+						? sourceCount + ' reports · ' + publisherCount + ' publisher' + (publisherCount === 1 ? '' : 's')
+						: sourceCount + ' ' + (sourceCount === 1 ? 'source' : 'sources');
+					content += '<span class="story-meta-chip' + (publisherCount === 1 ? ' caution' : '') + '">' + escapeHtml(sourceLabel) + '</span>';
 						if (developmentCount > 1) content += '<span class="story-meta-chip">' + developmentCount + ' developments tracked</span>';
 						content += '<span class="story-meta-chip">Updated today</span></div>';
 
@@ -561,13 +756,14 @@
 
 						// Story image
 						if (story.image && (story.image.url || story.image.thumbnail_url)) {
-							var imageRoleLabel = story.image.image_role_label || (story.image.image_role === 'illustrative' ? 'Illustrative image' : '');
+							var imageRoleLabel = story.image.image_role_label || (story.image.image_role === 'illustrative' ? 'AI illustration' : '');
 							content += '<div class="story-image-frame"><img src="' + escapeHtml(safeHttpUrl(story.image.url || story.image.thumbnail_url)) + '" alt="' + escapeHtml(story.image.title || story.title) + '" class="story-image">';
 							if (imageRoleLabel) content += '<span class="story-image-role">' + escapeHtml(imageRoleLabel) + '</span>';
 							content += '</div>';
 						}
 
 						content += '</div>';
+						content += renderExploreStory(story);
 						var updateNote = story.what_changed || (story.story_context || {}).what_changed;
 						if (updateNote) content += '<div class="story-update-note"><strong>What changed:</strong> ' + escapeHtml(updateNote) + '</div>';
 						content += renderStoryExplainer(story);
@@ -606,6 +802,17 @@
 						content += '</div>';
 
 						$('#story-content').html(content);
+						$('#story-content').off('click', '.story-explore-option').on('click', '.story-explore-option', function() {
+							var button = $(this);
+							var wasOpen = button.attr('aria-expanded') === 'true';
+							var panelId = button.attr('aria-controls');
+							$('#story-content .story-explore-option').attr('aria-expanded', 'false');
+							$('#story-content .story-explore-panel').removeClass('active');
+							if (!wasOpen) {
+								button.attr('aria-expanded', 'true');
+								$('#' + panelId).addClass('active');
+							}
+						});
 						window.MuninnEventExperience.mount('#event-timeline-slot', {
 							event: { event_id: story.event_id },
 							story: story,
