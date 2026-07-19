@@ -384,30 +384,54 @@
 
 					// Helper function to get canonical logo name for major publishers
 					function getCanonicalLogoName(sourceName) {
-						var lowerSource = sourceName.toLowerCase();
+						var lowerSource = String(sourceName || '').toLowerCase().trim();
 
-						// Map major publishers to canonical logo names
-						var publisherMap = {
-							'fox': 'fox-news',
-							'new york times': 'new-york-times',
-							'cnn': 'cnn',
-							'bbc': 'bbc',
-							'reuters': 'reuters',
-							'associated press': 'associated-press',
-							'ap news': 'associated-press',
-							'the guardian': 'the-guardian',
-							'washington post': 'washington-post',
-							'wall street journal': 'wall-street-journal',
-							'bloomberg': 'bloomberg',
-							'nbc': 'nbc',
-							'abc': 'abc',
-							'cbs': 'cbs'
-						};
+						// Keep feed/desk suffixes from producing different files for one newsroom.
+						// More specific names must appear before short names such as TIME and AP.
+						var publisherMap = [
+							['google news', 'google-news'],
+							['new york times', 'new-york-times'],
+							['japan times', 'japan-times'],
+							['associated press', 'ap'],
+							['ap news', 'ap'],
+							['npr', 'npr'],
+							['nbc', 'nbc-news'],
+							['abc news', 'abc-news'],
+							['cbs', 'cbs-news'],
+							['politico', 'politico'],
+							['cnn', 'cnn'],
+							['fox', 'fox-news'],
+							['pbs', 'pbs-news'],
+							['newsnation', 'newsnation'],
+							['bbc', 'bbc'],
+							['al jazeera', 'al-jazeera'],
+							['guardian', 'the-guardian'],
+							['sky news', 'sky-news'],
+							['france 24', 'france-24'],
+							['deutsche welle', 'dw'],
+							['cbc', 'cbc-news'],
+							['channel newsasia', 'channel-newsasia'],
+							['sbs news', 'sbs-news'],
+							['africanews', 'africanews'],
+							['the hindu', 'the-hindu'],
+							['rte news', 'rte-news'],
+							['euronews', 'euronews'],
+							['time', 'time'],
+							['reuters', 'reuters'],
+							['los angeles times', 'los-angeles-times'],
+							['roll call', 'roll-call'],
+							['the hill', 'the-hill'],
+							['upi', 'upi'],
+							['usa today', 'usa-today'],
+							['vox', 'vox']
+						];
 
 						// Check if source matches any major publisher
-						for (var publisher in publisherMap) {
-							if (lowerSource.indexOf(publisher) !== -1) {
-								return publisherMap[publisher];
+						if (lowerSource === 'ap' || lowerSource.indexOf('ap -') === 0) return 'ap';
+						if (lowerSource === 'dw' || lowerSource.indexOf('dw -') === 0) return 'dw';
+						for (var i = 0; i < publisherMap.length; i++) {
+							if (lowerSource.indexOf(publisherMap[i][0]) !== -1) {
+								return publisherMap[i][1];
 							}
 						}
 
@@ -638,8 +662,10 @@
 
 							var biasGroups = {};
 							items.forEach(function(item) {
-								var bias = String(item.source_bias || '').toLowerCase();
-								if (bias !== 'left' && bias !== 'center' && bias !== 'right') return;
+								var bias = String(item.source_bias || '').toLowerCase().replace(/_/g, '-');
+								if (bias === 'left-center' || bias === 'center-left') bias = 'lean-left';
+								if (bias === 'right-center' || bias === 'center-right') bias = 'lean-right';
+								if (['left', 'lean-left', 'center', 'lean-right', 'right', 'mixed'].indexOf(bias) === -1) return;
 								if (!biasGroups[bias]) biasGroups[bias] = [];
 								biasGroups[bias].push(item);
 							});
@@ -783,7 +809,7 @@
 								var logoPath = '/assets/logos/' + domain + '.png';
 
 								content += '<div class="source-item">';
-								content += '<img src="' + escapeHtml(logoPath) + '" alt="" class="source-logo" onerror="this.src=\'/assets/logos/news_placeholder.png\'">';
+								content += '<img src="' + escapeHtml(logoPath) + '" alt="' + escapeHtml((item.source || 'News outlet') + ' logo') + '" title="' + escapeHtml(item.source || 'News outlet') + '" class="source-logo" onerror="this.onerror=null;this.src=\'/assets/logos/news_placeholder.png\'">';
 								content += '<div class="source-info">';
 								content += '<a href="' + escapeHtml(safeHttpUrl(item.link)) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(item.title || 'Read original report') + '</a>';
 								content += '<div class="source-outlet">' + escapeHtml(item.source || 'Unknown outlet') + '</div>';

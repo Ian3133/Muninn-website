@@ -1,10 +1,21 @@
 # News Outlet Logos
 
-This folder contains logos for all news outlets that appear in the digest.
+This folder contains local logos for news outlets that appear in the digest.
 
 ## Required Logo Files
 
-Below is the complete list of logo files needed. All files should be PNG format (80x50px recommended, transparent background preferred).
+The Top Stories panel currently maps these files in `public/story.html`:
+
+- US/discovery: `google-news`, `ap`, `npr`, `new-york-times`, `nbc-news`,
+  `abc-news`, `cbs-news`, `politico`, `cnn`, `fox-news`, `pbs-news`,
+  `newsnation`, and `time`.
+- International: `bbc`, `al-jazeera`, `the-guardian`, `sky-news`,
+  `france-24`, `dw`, `cbc-news`, `channel-newsasia`, `sbs-news`,
+  `africanews`, `the-hindu`, `japan-times`, `rte-news`, and `euronews`.
+
+All files are PNG. Transparent backgrounds are preferred; square official-site
+brand icons are displayed with `object-fit: contain` inside the existing 80x50
+source-logo frame.
 
 ### Logo Files Needed:
 
@@ -30,6 +41,8 @@ Below is the complete list of logo files needed. All files should be PNG format 
 - Format: PNG with transparent background recommended
 - Logos are displayed with white background padding in the UI
 
-## Where to Find Logos:
+## Where to Find Logos
 
-Most news outlet logos can be found on their official websites or through a simple image search for "[outlet name] logo png".
+Prefer the outlet's official site icon or press/brand kit. The July 2026 panel
+fill used official-site identities retrieved as local assets, so the story page
+does not depend on a third-party logo service at runtime.

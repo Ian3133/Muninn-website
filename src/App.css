@@ -137,7 +137,7 @@
   display: flex;
   flex-direction: row;
   height: auto;
-  min-height: 11.75rem;
+  min-height: 10.25rem;
   overflow: hidden;
   color: #171a1f;
   background: #f1f2f4;
@@ -146,6 +146,10 @@
   box-shadow: 0 5px 18px rgba(20, 27, 36, 0.07);
   cursor: pointer;
   transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.top-story-card.no-image {
+  min-height: 0;
 }
 
 @media screen and (min-width: 981px) {
@@ -271,6 +275,79 @@
   letter-spacing: 0.015em;
   overflow-wrap: anywhere;
   text-transform: none;
+}
+
+.top-story-deck {
+  display: -webkit-box;
+  margin: 0.5rem 0 0;
+  overflow: hidden;
+  color: #56616b;
+  font-size: 0.78rem;
+  line-height: 1.46;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.top-story-evidence {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.7rem;
+  margin-top: 0.58rem;
+  padding-top: 0.52rem;
+  border-top: 1px solid rgba(115, 128, 139, 0.2);
+}
+
+.top-story-source-logos {
+  display: flex;
+  align-items: center;
+  flex: 1 1 12rem;
+  flex-wrap: wrap;
+  gap: 0.22rem;
+  min-width: 0;
+}
+
+.top-story-source-logo {
+  display: grid;
+  width: 1.72rem;
+  height: 1.72rem;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid #d4dbe0;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(20, 27, 36, 0.08);
+}
+
+.top-story-source-logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0.22rem;
+  object-fit: contain;
+}
+
+.top-story-why {
+  display: grid;
+  min-width: 0;
+  gap: 0.12rem;
+  text-align: right;
+}
+
+.top-story-why span {
+  color: #75818a;
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.065em;
+  text-transform: uppercase;
+}
+
+.top-story-why strong {
+  color: #3f4d58;
+  font-size: 0.68rem;
+  font-weight: 750;
+  line-height: 1.25;
 }
 
 .top-story-context-label {
@@ -878,7 +955,7 @@
   }
 
   .top-story-card {
-    min-height: 10.5rem;
+    min-height: 9.5rem;
     flex-direction: row;
   }
 
@@ -905,6 +982,24 @@
   .top-story-card-body {
     min-height: 0;
     padding: 0.9rem 0.85rem 0.8rem;
+  }
+
+  .top-story-deck {
+    font-size: 0.72rem;
+    -webkit-line-clamp: 2;
+  }
+
+  .top-story-evidence {
+    align-items: flex-start;
+  }
+
+  .top-story-source-logo {
+    width: 1.55rem;
+    height: 1.55rem;
+  }
+
+  .top-story-why strong {
+    font-size: 0.63rem;
   }
 
   .connected-coverage {

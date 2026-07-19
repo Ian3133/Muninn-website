@@ -39,12 +39,22 @@
 
 	function normalizeBias(value) {
 		var bias = String(value || '').trim().toLowerCase().replace(/_/g, '-');
-		var labels = {
-			'left': 'Left', 'left-center': 'Left center', 'center-left': 'Left center',
-			'center': 'Center', 'centre': 'Center',
-			'right-center': 'Right center', 'center-right': 'Right center', 'right': 'Right'
+		var ratings = {
+			'left': { label: 'Left', className: 'bias-left' },
+			'lean-left': { label: 'Left', detail: 'Lean Left', className: 'bias-lean-left' },
+			'left-center': { label: 'Left', detail: 'Lean Left', className: 'bias-lean-left' },
+			'center-left': { label: 'Left', detail: 'Lean Left', className: 'bias-lean-left' },
+			'center': { label: 'Center', className: 'bias-center' },
+			'centre': { label: 'Center', className: 'bias-center' },
+			'lean-right': { label: 'Right', detail: 'Lean Right', className: 'bias-lean-right' },
+			'right-center': { label: 'Right', detail: 'Lean Right', className: 'bias-lean-right' },
+			'center-right': { label: 'Right', detail: 'Lean Right', className: 'bias-lean-right' },
+			'right': { label: 'Right', className: 'bias-right' },
+			'mixed': { label: 'Mixed', className: 'bias-mixed' },
+			'unrated': { label: 'Unrated', className: 'bias-unrated' },
+			'unknown': { label: 'Unrated', className: 'bias-unrated' }
 		};
-		return labels[bias] ? { label: labels[bias], className: bias.indexOf('left') !== -1 ? 'bias-left' : bias.indexOf('right') !== -1 ? 'bias-right' : 'bias-center' } : null;
+		return ratings[bias] || null;
 	}
 
 	function normalizeAccess(item) {
@@ -59,7 +69,7 @@
 		var badges = [];
 		var bias = normalizeBias(item && item.source_bias);
 		var access = normalizeAccess(item || {});
-		if (bias) badges.push('<span class="source-trust-badge ' + bias.className + '">' + escapeHtml(bias.label) + '</span>');
+		if (bias) badges.push('<span class="source-trust-badge ' + bias.className + '" title="' + escapeHtml((bias.detail || bias.label) + ' — outlet-level orientation, not an article score') + '">' + escapeHtml(bias.label) + '</span>');
 		if (access) badges.push('<span class="source-trust-badge access">' + escapeHtml(access) + '</span>');
 		return badges.length ? '<div class="source-trust-badges">' + badges.join('') + '</div>' : '';
 	}

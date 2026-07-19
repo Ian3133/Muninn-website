@@ -404,6 +404,93 @@ function uniqueSourceCount(stories) {
   return keys.size || stories.reduce((sum, story) => sum + Number(story?.source_count || 0), 0) || 1;
 }
 
+const SOURCE_LOGO_MATCHES = [
+  ['google news', 'google-news'],
+  ['new york times', 'new-york-times'],
+  ['japan times', 'japan-times'],
+  ['associated press', 'ap'],
+  ['ap news', 'ap'],
+  ['npr', 'npr'],
+  ['nbc', 'nbc-news'],
+  ['abc news', 'abc-news'],
+  ['cbs', 'cbs-news'],
+  ['politico', 'politico'],
+  ['cnn', 'cnn'],
+  ['fox', 'fox-news'],
+  ['pbs', 'pbs-news'],
+  ['newsnation', 'newsnation'],
+  ['bbc', 'bbc'],
+  ['al jazeera', 'al-jazeera'],
+  ['guardian', 'the-guardian'],
+  ['sky news', 'sky-news'],
+  ['france 24', 'france-24'],
+  ['deutsche welle', 'dw'],
+  ['cbc', 'cbc-news'],
+  ['channel newsasia', 'channel-newsasia'],
+  ['sbs news', 'sbs-news'],
+  ['africanews', 'africanews'],
+  ['the hindu', 'the-hindu'],
+  ['rte news', 'rte-news'],
+  ['euronews', 'euronews'],
+  ['time', 'time'],
+  ['reuters', 'reuters'],
+  ['los angeles times', 'los-angeles-times'],
+  ['roll call', 'roll-call'],
+  ['the hill', 'the-hill'],
+  ['upi', 'upi'],
+  ['usa today', 'usa-today'],
+  ['vox', 'vox'],
+];
+
+function sourceLogoUrl(sourceName) {
+  const normalized = String(sourceName || '').toLowerCase().trim();
+  if (normalized === 'ap' || normalized.startsWith('ap -')) return '/assets/logos/ap.png';
+  if (normalized === 'dw' || normalized.startsWith('dw -')) return '/assets/logos/dw.png';
+  const match = SOURCE_LOGO_MATCHES.find(([name]) => normalized.includes(name));
+  return `/assets/logos/${match ? match[1] : 'news_placeholder'}.png`;
+}
+
+function sourceEntriesForStories(stories) {
+  const byOutlet = new Map();
+  const addSource = (entry) => {
+    const name = String(
+      typeof entry === 'string'
+        ? entry
+        : (entry?.station || entry?.source || entry?.publisher || entry?.name || '')
+    ).trim();
+    if (!name || byOutlet.has(name.toLowerCase())) return;
+    byOutlet.set(name.toLowerCase(), {
+      name,
+      bias: typeof entry === 'string' ? '' : (entry?.source_bias || entry?.bias || ''),
+    });
+  };
+
+  stories.forEach((story) => {
+    const items = Array.isArray(story?.items) ? story.items : (story?.items ? [story.items] : []);
+    const sources = Array.isArray(story?.sources) ? story.sources : (story?.sources ? [story.sources] : []);
+    items.forEach(addSource);
+    sources.forEach(addSource);
+  });
+  return [...byOutlet.values()];
+}
+
+function storyCoverageReason(sourceEntries, fallbackCount) {
+  const outletCount = sourceEntries.length || fallbackCount || 1;
+  const sides = new Set(sourceEntries.map((entry) => {
+    const bias = String(entry?.bias || '').toLowerCase().replace(/_/g, '-');
+    if (bias.includes('left')) return 'left';
+    if (bias.includes('right')) return 'right';
+    if (bias === 'center' || bias === 'mixed') return 'center';
+    return '';
+  }).filter(Boolean));
+
+  if (sides.has('left') && sides.has('right')) return `${outletCount} outlets \u00b7 left/right coverage`;
+  if (outletCount >= 4 && sides.size > 1) return `${outletCount} outlets \u00b7 varied source mix`;
+  if (outletCount >= 4) return `${outletCount} outlets \u00b7 broad coverage`;
+  if (outletCount >= 2) return `${outletCount} outlets covering this event`;
+  return 'One outlet report';
+}
+
 function storyNavigationTopic(story) {
   const explicit = String(story?.topic_label || '').trim();
   if (explicit) return explicit;
@@ -1680,7 +1767,9 @@ export default function LegacyHome() {
               <div className="top-stories-grid">
                 {todayGroups.map(({ primary: story, related }, index) => {
                   const groupedStories = [story, ...related];
-                  const sourceCount = uniqueSourceCount(groupedStories);
+                  const sourceEntries = sourceEntriesForStories(groupedStories);
+                  const sourceCount = sourceEntries.length || uniqueSourceCount(groupedStories);
+                  const coverageReason = storyCoverageReason(sourceEntries, sourceCount);
                   const timelineCount = Math.max(...groupedStories.map((item) => Array.isArray(item?.timeline_highlights) ? item.timeline_highlights.length : 0));
                   const imageUrl = story?.image?.url || story?.image?.thumbnail_url || '';
                   const isLead = index === 0;
@@ -1715,7 +1804,7 @@ export default function LegacyHome() {
                       ) : null}
 
                       <article
-                        className={`top-story-card ${isLead ? 'is-lead' : ''}`}
+                        className={`top-story-card ${isLead ? 'is-lead' : ''} ${imageUrl ? 'has-image' : 'no-image'}`}
                         role="link"
                         tabIndex={0}
                         aria-label={`Read ${displayTitle}`}
@@ -1749,6 +1838,8 @@ export default function LegacyHome() {
                       <div className="top-story-card-body">
                         <h3 title={displayTitle}>{displayTitle}</h3>
 
+                        {story?.summary ? <p className="top-story-deck">{story.summary}</p> : null}
+
                         {story?.update_kind === 'factual_update' && (story?.what_changed || story?.new_facts?.[0]) ? (
                           <div className="top-story-change-note">
                             <span>What changed</span>
@@ -1764,9 +1855,33 @@ export default function LegacyHome() {
                           </div>
                         ) : null}
 
+                        <div className="top-story-evidence" title="Based on distinct outlets represented in this story. This is not an accuracy score.">
+                          {sourceEntries.length ? (
+                            <div className="top-story-source-logos" aria-label={`Sources include ${sourceEntries.map((entry) => entry.name).join(', ')}`}>
+                              {sourceEntries.map((entry) => (
+                                <span className="top-story-source-logo" title={entry.name} key={entry.name}>
+                                  <img
+                                    src={sourceLogoUrl(entry.name)}
+                                    alt=""
+                                    aria-hidden="true"
+                                    loading="lazy"
+                                    onError={(event) => {
+                                      event.currentTarget.onerror = null;
+                                      event.currentTarget.src = '/assets/logos/news_placeholder.png';
+                                    }}
+                                  />
+                                </span>
+                              ))}
+                            </div>
+                          ) : null}
+                          <div className="top-story-why">
+                            <span>Why it's here</span>
+                            <strong>{coverageReason}</strong>
+                          </div>
+                        </div>
+
                         <div className="top-story-card-footer">
                           <div className="top-story-meta">
-                            <span>{sourceCount} {sourceCount === 1 ? 'source' : 'sources'}</span>
                             {freshness ? <span>{freshness}</span> : null}
                           </div>
                           <span className="top-story-open">Open story <span aria-hidden="true">→</span></span>
