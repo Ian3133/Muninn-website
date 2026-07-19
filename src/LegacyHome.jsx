@@ -474,6 +474,50 @@ function sourceEntriesForStories(stories) {
   return [...byOutlet.values()];
 }
 
+const SOURCE_LOGO_DISPLAY_LIMIT = 5;
+
+function sourceOrientationCounts(sourceEntries) {
+  return sourceEntries.reduce((counts, entry) => {
+    const bias = String(entry?.bias || '').toLowerCase().replace(/_/g, '-');
+    if (bias.includes('left')) counts.left += 1;
+    else if (bias.includes('right')) counts.right += 1;
+    else if (bias === 'center' || bias === 'mixed') counts.center += 1;
+    else counts.unknown += 1;
+    return counts;
+  }, { left: 0, center: 0, right: 0, unknown: 0 });
+}
+
+function SourceOrientationBar({ sourceEntries }) {
+  const counts = sourceOrientationCounts(sourceEntries);
+  const total = counts.left + counts.center + counts.right + counts.unknown;
+  if (!total) return null;
+  const segments = [
+    { key: 'left', label: 'Left', count: counts.left },
+    { key: 'center', label: 'Center / mixed', count: counts.center },
+    { key: 'right', label: 'Right', count: counts.right },
+    { key: 'unknown', label: 'Not classified', count: counts.unknown },
+  ].filter((segment) => segment.count > 0);
+  const description = segments.map((segment) => `${segment.count} ${segment.label.toLowerCase()}`).join(', ');
+  return (
+    <div className="source-orientation" aria-label={`Source orientation: ${description}`}>
+      <div className="source-orientation-heading">
+        <span>Source mix</span>
+        <small>{description}</small>
+      </div>
+      <div className="source-orientation-bar" aria-hidden="true">
+        {segments.map((segment) => (
+          <span
+            className={`source-orientation-segment is-${segment.key}`}
+            style={{ flexGrow: segment.count }}
+            title={`${segment.label}: ${segment.count} of ${total}`}
+            key={segment.key}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function storyCoverageReason(sourceEntries, fallbackCount) {
   const outletCount = sourceEntries.length || fallbackCount || 1;
   const sides = new Set(sourceEntries.map((entry) => {
@@ -489,6 +533,83 @@ function storyCoverageReason(sourceEntries, fallbackCount) {
   if (outletCount >= 4) return `${outletCount} outlets \u00b7 broad coverage`;
   if (outletCount >= 2) return `${outletCount} outlets covering this event`;
   return 'One outlet report';
+}
+
+function storyArchiveHref(story, editionDate, currentDate) {
+  const params = new URLSearchParams();
+  if (story?.story_id) params.set('sid', story.story_id);
+  else params.set('id', '0');
+  if (editionDate && editionDate !== currentDate) params.set('archiveDate', editionDate);
+  params.set('returnMore', '1');
+  return `/story.html?${params.toString()}`;
+}
+
+function storyContinuityKeys(story) {
+  const keys = [];
+  const eventId = String(story?.event_id || '').trim();
+  if (eventId) keys.push(`event:${eventId}`);
+  const topic = String(story?.event_title || story?.topic_label || storyNavigationTopic(story) || '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
+  if (topic && topic.split(/\s+/).length >= 2 && !['top stories', 'world news', 'general news'].includes(topic)) {
+    keys.push(`topic:${topic}`);
+  }
+  return keys;
+}
+
+function latestDevelopmentForStory(story, editionDate, latestByKey) {
+  const matches = storyContinuityKeys(story)
+    .map((key) => latestByKey.get(key))
+    .filter(Boolean)
+    .sort((left, right) => String(right.date).localeCompare(String(left.date)));
+  const latest = matches[0];
+  if (!latest || latest.story?.story_id === story?.story_id || String(latest.date) <= String(editionDate)) return null;
+  return latest;
+}
+
+function MoreNewsCard({ story, editionDate, currentDate, latest }) {
+  const title = cleanDisplayTitle(story?.title, story?.sources);
+  const sourceEntries = sourceEntriesForStories([story]);
+  const visibleSourceEntries = sourceEntries.slice(0, SOURCE_LOGO_DISPLAY_LIMIT);
+  const hiddenSourceCount = Math.max(0, sourceEntries.length - visibleSourceEntries.length);
+  const sourceCount = sourceEntries.length || Number(story?.source_count || 1);
+  return (
+    <article className="more-news-card">
+      <a className="more-news-card-main" href={storyArchiveHref(story, editionDate, currentDate)}>
+        <h3>{title}</h3>
+        {story?.summary ? <p>{story.summary}</p> : null}
+        <div className="more-news-card-evidence">
+          {sourceEntries.length ? (
+            <div className="more-news-source-logos" aria-label={`Sources include ${sourceEntries.map((entry) => entry.name).join(', ')}`}>
+              {visibleSourceEntries.map((entry) => (
+                <span className="top-story-source-logo" title={entry.name} key={entry.name}>
+                  <img
+                    src={sourceLogoUrl(entry.name)}
+                    alt=""
+                    aria-hidden="true"
+                    loading="lazy"
+                    onError={(event) => {
+                      event.currentTarget.onerror = null;
+                      event.currentTarget.src = '/assets/logos/news_placeholder.png';
+                    }}
+                  />
+                </span>
+              ))}
+              {hiddenSourceCount ? <span className="top-story-source-more" title={`${hiddenSourceCount} more sources`}>+{hiddenSourceCount}</span> : null}
+            </div>
+          ) : null}
+          <strong>{storyCoverageReason(sourceEntries, sourceCount)}</strong>
+        </div>
+      </a>
+      {latest ? (
+        <a className="more-news-latest" href={storyArchiveHref(latest.story, latest.date, currentDate)}>
+          <span>Latest development &middot; {formatStoredDate(latest.date)}</span>
+          <strong>{cleanDisplayTitle(latest.story?.title, latest.story?.sources)}</strong>
+        </a>
+      ) : null}
+    </article>
+  );
 }
 
 function storyNavigationTopic(story) {
@@ -648,6 +769,13 @@ export default function LegacyHome() {
   const [digestGeneratedAt, setDigestGeneratedAt] = useState('');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
+  const [moreNewsOpen, setMoreNewsOpen] = useState(() => {
+    try { return new URLSearchParams(window.location.search).get('moreNews') === '1'; } catch (_e) { return false; }
+  });
+  const [recentNewsDays, setRecentNewsDays] = useState([]);
+  const [recentNewsLoaded, setRecentNewsLoaded] = useState(false);
+  const [recentNewsLoading, setRecentNewsLoading] = useState(false);
+  const [recentNewsError, setRecentNewsError] = useState('');
   const [sectionsModalOpen, setSectionsModalOpen] = useState(false);
   const [newsletterModalOpen, setNewsletterModalOpen] = useState(false);
   const [newsletterDraft, setNewsletterDraft] = useState(null);
@@ -696,10 +824,37 @@ export default function LegacyHome() {
     []
   );
   const todayGroups = useMemo(() => groupStoriesForToday(stories), [stories]);
-  const firstSingleSourceIndex = useMemo(
+  const additionalNewsStartIndex = useMemo(
     () => todayGroups.findIndex(({ primary, related }) => uniqueSourceCount([primary, ...related]) === 1),
     [todayGroups]
   );
+  const primaryTodayGroups = useMemo(
+    () => additionalNewsStartIndex < 0 ? todayGroups : todayGroups.slice(0, additionalNewsStartIndex),
+    [todayGroups, additionalNewsStartIndex]
+  );
+  const moreTodayGroups = useMemo(
+    () => additionalNewsStartIndex < 0 ? [] : todayGroups.slice(additionalNewsStartIndex),
+    [todayGroups, additionalNewsStartIndex]
+  );
+  const currentDateKey = useMemo(
+    () => toUtcDateKey(digestGeneratedAt) || toUtcDateKey(new Date()),
+    [digestGeneratedAt]
+  );
+  const latestByContinuityKey = useMemo(() => {
+    const map = new Map();
+    const editions = [
+      { date: currentDateKey, stories },
+      ...recentNewsDays.map((day) => ({ date: day.date, stories: Array.isArray(day.stories) ? day.stories : [] })),
+    ].sort((left, right) => String(right.date).localeCompare(String(left.date)));
+    editions.forEach((edition) => {
+      edition.stories.forEach((story) => {
+        storyContinuityKeys(story).forEach((key) => {
+          if (!map.has(key)) map.set(key, { story, date: edition.date });
+        });
+      });
+    });
+    return map;
+  }, [stories, currentDateKey, recentNewsDays]);
   const filteredTimelineEvents = useMemo(() => {
     const query = timelineQuery.trim().toLowerCase();
     return [...timelineEvents]
@@ -848,6 +1003,38 @@ export default function LegacyHome() {
       }
     })();
   }, [activeCategory]);
+
+  useEffect(() => {
+    if (!moreNewsOpen || recentNewsLoaded || recentNewsLoading) return;
+    (async () => {
+      try {
+        setRecentNewsError('');
+        setRecentNewsLoading(true);
+        const data = await fetchFirstJson(
+          ['/Current_news/recent_news.json', '/current_news/recent_news.json'],
+          'recent_news.json'
+        );
+        setRecentNewsDays(Array.isArray(data?.days) ? data.days : []);
+      } catch (e) {
+        setRecentNewsError(e?.message || String(e));
+        setRecentNewsDays([]);
+      } finally {
+        setRecentNewsLoaded(true);
+        setRecentNewsLoading(false);
+      }
+    })();
+  }, [moreNewsOpen, recentNewsLoaded, recentNewsLoading]);
+
+  useEffect(() => {
+    if (!moreNewsOpen) return undefined;
+    document.body.classList.add('more-news-open');
+    const closeOnEscape = (event) => { if (event.key === 'Escape') setMoreNewsOpen(false); };
+    window.addEventListener('keydown', closeOnEscape);
+    return () => {
+      document.body.classList.remove('more-news-open');
+      window.removeEventListener('keydown', closeOnEscape);
+    };
+  }, [moreNewsOpen]);
 
   useEffect(() => {
     if (activeCategory !== 'timelines' && activeCategory !== 'your-newsletter') return;
@@ -1765,11 +1952,12 @@ export default function LegacyHome() {
 
             {!loading && !error && stories.length > 0 && (<>
               <div className="top-stories-grid">
-                {todayGroups.map(({ primary: story, related }, index) => {
+                {primaryTodayGroups.map(({ primary: story, related }, index) => {
                   const groupedStories = [story, ...related];
                   const sourceEntries = sourceEntriesForStories(groupedStories);
+                  const visibleSourceEntries = sourceEntries.slice(0, SOURCE_LOGO_DISPLAY_LIMIT);
+                  const hiddenSourceCount = Math.max(0, sourceEntries.length - visibleSourceEntries.length);
                   const sourceCount = sourceEntries.length || uniqueSourceCount(groupedStories);
-                  const coverageReason = storyCoverageReason(sourceEntries, sourceCount);
                   const timelineCount = Math.max(...groupedStories.map((item) => Array.isArray(item?.timeline_highlights) ? item.timeline_highlights.length : 0));
                   const imageUrl = story?.image?.url || story?.image?.thumbnail_url || '';
                   const isLead = index === 0;
@@ -1787,13 +1975,6 @@ export default function LegacyHome() {
 
                   return (
                     <Fragment key={story?.story_id || displayTitle}>
-                      {index === firstSingleSourceIndex ? (
-                        <div className="single-source-divider" role="separator">
-                          <span>Additional reports</span>
-                          <small>Single-source coverage</small>
-                        </div>
-                      ) : null}
-
                       <div className={`top-story-item ${isLead ? 'is-lead' : ''}`}>
                       {cardContext ? (
                         <div className="top-story-context-label" title={cardContext.detail ? `${cardContext.label} · ${cardContext.detail}` : cardContext.label}>
@@ -1838,8 +2019,6 @@ export default function LegacyHome() {
                       <div className="top-story-card-body">
                         <h3 title={displayTitle}>{displayTitle}</h3>
 
-                        {story?.summary ? <p className="top-story-deck">{story.summary}</p> : null}
-
                         {story?.update_kind === 'factual_update' && (story?.what_changed || story?.new_facts?.[0]) ? (
                           <div className="top-story-change-note">
                             <span>What changed</span>
@@ -1856,33 +2035,34 @@ export default function LegacyHome() {
                         ) : null}
 
                         <div className="top-story-evidence" title="Based on distinct outlets represented in this story. This is not an accuracy score.">
-                          {sourceEntries.length ? (
-                            <div className="top-story-source-logos" aria-label={`Sources include ${sourceEntries.map((entry) => entry.name).join(', ')}`}>
-                              {sourceEntries.map((entry) => (
-                                <span className="top-story-source-logo" title={entry.name} key={entry.name}>
-                                  <img
-                                    src={sourceLogoUrl(entry.name)}
-                                    alt=""
-                                    aria-hidden="true"
-                                    loading="lazy"
-                                    onError={(event) => {
-                                      event.currentTarget.onerror = null;
-                                      event.currentTarget.src = '/assets/logos/news_placeholder.png';
-                                    }}
-                                  />
-                                </span>
-                              ))}
-                            </div>
-                          ) : null}
-                          <div className="top-story-why">
-                            <span>Why it's here</span>
-                            <strong>{coverageReason}</strong>
+                          <div className="top-story-source-stack">
+                            {sourceEntries.length ? (
+                              <div className="top-story-source-logos" aria-label={`Sources include ${sourceEntries.map((entry) => entry.name).join(', ')}`}>
+                                {visibleSourceEntries.map((entry) => (
+                                  <span className="top-story-source-logo" title={entry.name} key={entry.name}>
+                                    <img
+                                      src={sourceLogoUrl(entry.name)}
+                                      alt=""
+                                      aria-hidden="true"
+                                      loading="lazy"
+                                      onError={(event) => {
+                                        event.currentTarget.onerror = null;
+                                        event.currentTarget.src = '/assets/logos/news_placeholder.png';
+                                      }}
+                                    />
+                                  </span>
+                                ))}
+                                {hiddenSourceCount ? <span className="top-story-source-more" title={`${hiddenSourceCount} more sources`}>+{hiddenSourceCount}</span> : null}
+                              </div>
+                            ) : null}
                           </div>
+                          <SourceOrientationBar sourceEntries={sourceEntries} />
                         </div>
 
                         <div className="top-story-card-footer">
                           <div className="top-story-meta">
                             {freshness ? <span>{freshness}</span> : null}
+                            <span>{sourceCount} {sourceCount === 1 ? 'source' : 'sources'}</span>
                           </div>
                           <span className="top-story-open">Open story <span aria-hidden="true">→</span></span>
                         </div>
@@ -1895,6 +2075,67 @@ export default function LegacyHome() {
               </div>
             </>)}
           </div>
+
+          {activeCategory === 'top-stories' && !loading && !error && stories.length ? (
+            <>
+              <button className="more-news-trigger" type="button" onClick={() => setMoreNewsOpen(true)} aria-haspopup="dialog">
+                <span>More news</span>
+                {moreTodayGroups.length ? <small>{moreTodayGroups.length} more today</small> : null}
+              </button>
+              {moreNewsOpen ? (
+                <div className="more-news-backdrop" role="presentation" onMouseDown={(event) => {
+                  if (event.target === event.currentTarget) setMoreNewsOpen(false);
+                }}>
+                  <aside className="more-news-drawer" role="dialog" aria-modal="true" aria-labelledby="more-news-title">
+                    <header className="more-news-drawer-header">
+                      <div>
+                        <span className="more-news-eyebrow">Daily editions</span>
+                        <h2 id="more-news-title">More news</h2>
+                        <p>Additional reporting from today, followed by the two latest available editions.</p>
+                      </div>
+                      <button type="button" className="more-news-close" onClick={() => setMoreNewsOpen(false)} aria-label="Close more news">&times;</button>
+                    </header>
+
+                    {moreTodayGroups.length ? (
+                      <section className="more-news-day">
+                        <div className="more-news-day-heading"><span>More from</span><h3>{formatStoredDate(currentDateKey)}</h3></div>
+                        <div className="more-news-list">
+                          {moreTodayGroups.map(({ primary }, index) => (
+                            <MoreNewsCard
+                              story={primary}
+                              editionDate={currentDateKey}
+                              currentDate={currentDateKey}
+                              latest={latestDevelopmentForStory(primary, currentDateKey, latestByContinuityKey)}
+                              key={primary?.story_id || `${currentDateKey}-${index}`}
+                            />
+                          ))}
+                        </div>
+                      </section>
+                    ) : null}
+
+                    {recentNewsLoading ? <div className="more-news-status">Loading previous editions...</div> : null}
+                    {recentNewsError ? <div className="more-news-status caution">Previous editions are unavailable. Today's additional reports are still shown.</div> : null}
+                    {recentNewsDays.map((day) => (
+                      <section className="more-news-day is-archive" key={day.date}>
+                        <div className="more-news-day-heading"><span>Edition</span><h3>{formatStoredDate(day.date)}</h3></div>
+                        <div className="more-news-list">
+                          {(Array.isArray(day.stories) ? day.stories : []).map((story, index) => (
+                            <MoreNewsCard
+                              story={story}
+                              editionDate={day.date}
+                              currentDate={currentDateKey}
+                              latest={latestDevelopmentForStory(story, day.date, latestByContinuityKey)}
+                              key={story?.story_id || `${day.date}-${index}`}
+                            />
+                          ))}
+                        </div>
+                      </section>
+                    ))}
+                  </aside>
+                </div>
+              ) : null}
+            </>
+          ) : null}
 
           <div id="timelines" className={`category-content ${activeCategory === 'timelines' ? 'active' : ''}`}>
             {loadingTimelines && <div className="loading">Loading events...</div>}

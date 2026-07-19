@@ -224,6 +224,28 @@
 			.source-info a:hover {
 				color: #18bfef;
 			}
+			.source-overflow {
+				margin: 0.25em 0 1em;
+			}
+			.source-overflow > summary {
+				display: inline-flex;
+				align-items: center;
+				padding: 0.65em 0.9em;
+				border: 1px solid #d5dde2;
+				border-radius: 999px;
+				background: #f3f6f7;
+				color: #52616b;
+				cursor: pointer;
+				font-size: 0.82em;
+				font-weight: 700;
+				list-style: none;
+			}
+			.source-overflow > summary::-webkit-details-marker {
+				display: none;
+			}
+			.source-overflow[open] > summary {
+				margin-bottom: 1em;
+			}
 			.source-bias {
 				font-size: 0.85em;
 				color: rgba(0, 0, 0, 0.6);
@@ -368,6 +390,8 @@
 					var storyKey = (urlParams.get('sid') || '').trim();
 					var feed = (urlParams.get('feed') || '').toLowerCase();
 					var returnCategory = (urlParams.get('returnCategory') || '').trim();
+					var archiveDate = (urlParams.get('archiveDate') || '').trim();
+					var returnMore = urlParams.get('returnMore') === '1';
 					var digestPath = '/Current_news/digest.json';
 					if (feed === 'ai') {
 						digestPath = '/Current_news/ai_digest.json';
@@ -375,6 +399,8 @@
 					var backHref = '/';
 					if (returnCategory) {
 						backHref = '/?category=' + encodeURIComponent(returnCategory);
+					} else if (returnMore) {
+						backHref = '/?moreNews=1';
 					}
 
 					if (!storyKey && (isNaN(storyId) || storyId < 0)) {
@@ -735,8 +761,17 @@
 						return html + '</section>';
 					}
 
-					// Load story from JSON
-					$.getJSON(digestPath, function(data) {
+					// Load either the live digest or one of the two published archive editions.
+					var storyRequest = archiveDate
+						? $.getJSON('/Current_news/recent_news.json').then(function(archivePayload) {
+							var days = Array.isArray(archivePayload.days) ? archivePayload.days : [];
+							var edition = days.find(function(day) { return day.date === archiveDate; });
+							if (!edition) throw new Error('Archive edition not found');
+							return { clusters: Array.isArray(edition.stories) ? edition.stories : [], generated_at: edition.generated_at };
+						})
+						: $.getJSON(digestPath);
+
+					storyRequest.done(function(data) {
 						var clusters = Array.isArray(data.clusters) ? data.clusters : [];
 						var storyIndex = storyKey
 							? clusters.findIndex(function(candidate) { return candidate.story_id === storyKey; })
@@ -748,9 +783,10 @@
 
 					var story = data.clusters[storyIndex];
 					var content = '';
-					var sourceCount = Number(story.source_count || (Array.isArray(story.items) ? story.items.length : 0) || 1);
+					var storyItems = Array.isArray(story.items) ? story.items : (story.items ? [story.items] : []);
+					var sourceCount = Number(story.source_count || storyItems.length || 1);
 					var publisherLookup = {};
-					(Array.isArray(story.items) ? story.items : []).forEach(function(item) {
+					storyItems.forEach(function(item) {
 						var publisher = String(item.source || item.station || '').trim().toLowerCase();
 						if (!publisher) { try { publisher = new URL(item.link || item.url).hostname.replace(/^www\./, ''); } catch (_error) {} }
 						if (publisher) publisherLookup[publisher] = true;
@@ -771,7 +807,7 @@
 						: sourceCount + ' ' + (sourceCount === 1 ? 'source' : 'sources');
 					content += '<span class="story-meta-chip' + (publisherCount === 1 ? ' caution' : '') + '">' + escapeHtml(sourceLabel) + '</span>';
 						if (developmentCount > 1) content += '<span class="story-meta-chip">' + developmentCount + ' developments tracked</span>';
-						content += '<span class="story-meta-chip">Updated today</span></div>';
+						content += '<span class="story-meta-chip">' + escapeHtml(archiveDate ? 'Edition ' + formatStoryDate(archiveDate) : 'Updated today') + '</span></div>';
 
 						// Content wrapper with summary and image side by side
 						content += '<div class="story-content-wrapper">';
@@ -799,31 +835,40 @@
 						}
 
 						// Sources section
-						if (story.items && story.items.length > 0) {
+						if (storyItems.length > 0) {
 							content += '<div class="sources-section">';
 							content += '<h2>Sources behind this summary</h2>';
 							content += '<p class="section-intro">Open the original reporting and see which outlets support this development.</p>';
 
-							story.items.forEach(function(item) {
+							var renderSourceItem = function(item) {
 								var domain = getSourceDomain(item.source);
 								var logoPath = '/assets/logos/' + domain + '.png';
+								var sourceHtml = '<div class="source-item">';
+								sourceHtml += '<img src="' + escapeHtml(logoPath) + '" alt="' + escapeHtml((item.source || 'News outlet') + ' logo') + '" title="' + escapeHtml(item.source || 'News outlet') + '" class="source-logo" onerror="this.onerror=null;this.src=\'/assets/logos/news_placeholder.png\'">';
+								sourceHtml += '<div class="source-info">';
+								sourceHtml += '<a href="' + escapeHtml(safeHttpUrl(item.link)) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(item.title || 'Read original report') + '</a>';
+								sourceHtml += '<div class="source-outlet">' + escapeHtml(item.source || 'Unknown outlet') + '</div>';
+								sourceHtml += window.MuninnEventExperience.renderSourceBadges(item);
+								sourceHtml += '</div>';
+								sourceHtml += '</div>';
+								return sourceHtml;
+							};
 
-								content += '<div class="source-item">';
-								content += '<img src="' + escapeHtml(logoPath) + '" alt="' + escapeHtml((item.source || 'News outlet') + ' logo') + '" title="' + escapeHtml(item.source || 'News outlet') + '" class="source-logo" onerror="this.onerror=null;this.src=\'/assets/logos/news_placeholder.png\'">';
-								content += '<div class="source-info">';
-								content += '<a href="' + escapeHtml(safeHttpUrl(item.link)) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(item.title || 'Read original report') + '</a>';
-								content += '<div class="source-outlet">' + escapeHtml(item.source || 'Unknown outlet') + '</div>';
-								content += window.MuninnEventExperience.renderSourceBadges(item);
-								content += '</div>';
-								content += '</div>';
+							storyItems.slice(0, 5).forEach(function(item) {
+								content += renderSourceItem(item);
 							});
+							if (storyItems.length > 5) {
+								content += '<details class="source-overflow"><summary>Show ' + (storyItems.length - 5) + ' more source' + (storyItems.length - 5 === 1 ? '' : 's') + '</summary>';
+								storyItems.slice(5).forEach(function(item) { content += renderSourceItem(item); });
+								content += '</details>';
+							}
 
 							content += '</div>';
 						}
 
 						// Other stories section
 						content += '<div class="other-stories-section">';
-						content += '<h2>More from today</h2>';
+						content += '<h2>' + escapeHtml(archiveDate ? 'More from ' + formatStoryDate(archiveDate) : 'More from today') + '</h2>';
 						content += '<div class="other-stories-grid" id="other-stories-grid"></div>';
 						content += '</div>';
 
@@ -873,7 +918,7 @@
 							var otherRef = otherStory.story_id
 								? 'sid=' + encodeURIComponent(otherStory.story_id)
 								: 'id=' + actualIndex;
-							var otherUrl = '/story.html?' + otherRef + (feed ? '&feed=' + encodeURIComponent(feed) : '') + (returnCategory ? '&returnCategory=' + encodeURIComponent(returnCategory) : '');
+							var otherUrl = '/story.html?' + otherRef + (feed ? '&feed=' + encodeURIComponent(feed) : '') + (archiveDate ? '&archiveDate=' + encodeURIComponent(archiveDate) : '') + (returnCategory ? '&returnCategory=' + encodeURIComponent(returnCategory) : '') + (returnMore ? '&returnMore=1' : '');
 							var card = '<a class="other-story-card" href="' + escapeHtml(otherUrl) + '">';
 
 							card += '<div class="other-story-title">' + escapeHtml(otherStory.title) + '</div>';
