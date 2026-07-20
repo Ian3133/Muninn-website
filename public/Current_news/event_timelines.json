@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "generated_at": "2026-07-19T16:15:21.089165+00:00",
+  "generated_at": "2026-07-20T15:08:12.647386+00:00",
   "lookback_days": 30,
   "verification_provider": "deterministic_source_grounded_event_match_v2",
-  "tracked_event_count": 52,
-  "event_count": 11,
+  "tracked_event_count": 68,
+  "event_count": 14,
   "events": [
     {
       "event_id": "event_us-continues-strikes-on-iran-amid-traffic-st_41c26ce1d9",
@@ -14,7 +14,7 @@
       "summary": "The US has completed its seventh consecutive night of strikes against Iran as the conflict escalates 140 days in. An industry analyst reports that traffic has come to a halt in the Strait of Hormuz, with no vessels willing to transit the area due to the ongoing military actions. Recent attacks have resulted in significant casualties, with reports indicating 50 killed and 500 wounded this month alone.",
       "status": "active",
       "first_seen_at": "2026-07-18",
-      "last_seen_at": "2026-07-19",
+      "last_seen_at": "2026-07-20",
       "timeline": [
         {
           "development_id": "story_cee8447079637163",
@@ -191,15 +191,99 @@
             "story_bb63543406ee815b"
           ],
           "revision_count": 1
+        },
+        {
+          "development_id": "story_a6aad1b5891894c4",
+          "daily_story_id": "story_a6aad1b5891894c4",
+          "date": "2026-07-20",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Pentagon Confirms Deaths of Two US Soldiers in Jordan Following Iranian Attack",
+          "summary": "The Pentagon has identified two active-duty US soldiers killed in an Iranian strike on a US base in Jordan. The attack occurred on Friday, resulting in the deaths of the soldiers and injuries to four others. This incident has prompted a series of retaliatory strikes by the US against Iranian targets, escalating tensions in the region.",
+          "development_type": "military_action",
+          "key_facts": [
+            "Two US soldiers were killed in an Iranian attack on a US base in Jordan.",
+            "The Pentagon confirmed the soldiers were active-duty members.",
+            "The attack resulted in injuries to four other service members.",
+            "The US has launched retaliatory strikes against Iran following the incident."
+          ],
+          "source_count": 3,
+          "sources": [
+            "New York Times",
+            "PBS News",
+            "SBS News"
+          ],
+          "source_urls": [
+            "https://www.nytimes.com/2026/07/20/us/iran-war-us-soldiers-killed-jordan-identified.html",
+            "https://www.pbs.org/newshour/politics/u-s-military-identifies-2-soldiers-killed-in-iranian-attack-on-jordan",
+            "https://www.sbs.com.au/news/article/two-us-troops-killed-in-jordan-one-missing-as-fears-of-all-out-war-grow/tdui30b32"
+          ],
+          "source_details": [
+            {
+              "title": "Pentagon Identifies 2 US Soldiers Killed in Jordan",
+              "source": "New York Times",
+              "link": "https://www.nytimes.com/2026/07/20/us/iran-war-us-soldiers-killed-jordan-identified.html",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "US military identifies 2 soldiers killed in Iranian attack on Jordan",
+              "source": "PBS News",
+              "link": "https://www.pbs.org/newshour/politics/u-s-military-identifies-2-soldiers-killed-in-iranian-attack-on-jordan",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "United States launches new strikes on Iran after two US soldiers killed by Iranian attack",
+              "source": "SBS News",
+              "link": "https://www.sbs.com.au/news/article/two-us-troops-killed-in-jordan-one-missing-as-fears-of-all-out-war-grow/tdui30b32",
+              "source_bias": "lean-left"
+            }
+          ],
+          "confidence": 0.582,
+          "match_evidence": {
+            "score": 0.582,
+            "matched_development_id": "story_240d2dba60a210a6",
+            "shared_tokens": [
+              "attack",
+              "base",
+              "death",
+              "iran",
+              "jordan",
+              "killed",
+              "launched",
+              "member",
+              "resulted",
+              "serie",
+              "service",
+              "soldier",
+              "strike",
+              "target"
+            ],
+            "shared_entities": [
+              "iran",
+              "jordan",
+              "jordan.",
+              "us"
+            ],
+            "source_url_match": false,
+            "method": "deterministic_event_match_v2",
+            "threshold": 0.38
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-20",
+          "last_seen_at": "2026-07-20",
+          "integrity_status": "trusted"
         }
       ],
       "integrity": {
-        "public_development_count": 2,
+        "public_development_count": 3,
         "questionable_development_count": 1,
         "review_required": true
       },
-      "latest_title": "US Conducts Airstrikes on Iran Following Deaths of Two Soldiers in Jordan",
-      "latest_summary": "The United States has launched a series of airstrikes against Iranian military targets in response to an attack that killed two American service members at a base in Jordan. The strikes, which are part of an ongoing military campaign, reportedly targeted Iranian coast surveillance and air defense facilities, as well as missile and drone storage sites. Iran claims that the US strikes resulted in significant casualties, with reports of at least 50 people killed and hundreds wounded.",
+      "latest_title": "Pentagon Confirms Deaths of Two US Soldiers in Jordan Following Iranian Attack",
+      "latest_summary": "The Pentagon has identified two active-duty US soldiers killed in an Iranian strike on a US base in Jordan. The attack occurred on Friday, resulting in the deaths of the soldiers and injuries to four others. This incident has prompted a series of retaliatory strikes by the US against Iranian targets, escalating tensions in the region.",
       "presentation": {
         "has_context": true,
         "has_full_timeline": false,
@@ -209,28 +293,29 @@
         "display_title": "Iran War",
         "milestone_development_ids": [
           "story_cee8447079637163",
-          "story_240d2dba60a210a6"
+          "story_240d2dba60a210a6",
+          "story_a6aad1b5891894c4"
         ],
         "summary_available": true,
         "summary_label": "Read the story so far",
-        "summary_updated_at": "2026-07-19",
-        "development_count": 2,
-        "coverage_packet_count": 3,
-        "date_count": 2,
-        "source_count": 7,
-        "independent_source_count": 6,
+        "summary_updated_at": "2026-07-20",
+        "development_count": 3,
+        "coverage_packet_count": 4,
+        "date_count": 3,
+        "source_count": 10,
+        "independent_source_count": 9,
         "first_date": "2026-07-18",
-        "latest_date": "2026-07-19",
-        "latest_update_title": "US Conducts Airstrikes on Iran Following Deaths of Two Soldiers in Jordan",
-        "coverage_score": 0.509,
+        "latest_date": "2026-07-20",
+        "latest_update_title": "Pentagon Confirms Deaths of Two US Soldiers in Jordan Following Iranian Attack",
+        "coverage_score": 0.72,
         "recency_score": 1.0,
-        "rank_score": 0.794,
-        "context_summary": "Muninn first tracked this thread on 2026-07-18: US Continues Strikes on Iran Amid Traffic Standstill in Strait of Hormuz. The latest development is US Conducts Airstrikes on Iran Following Deaths of Two Soldiers in Jordan.",
+        "rank_score": 0.882,
+        "context_summary": "Muninn first tracked this thread on 2026-07-18: US Continues Strikes on Iran Amid Traffic Standstill in Strait of Hormuz. The latest development is Pentagon Confirms Deaths of Two US Soldiers in Jordan Following Iranian Attack.",
         "cta_label": ""
       },
       "event_summary": {
         "available": true,
-        "summary": "The US has completed its seventh consecutive night of strikes against Iran as the conflict escalates 140 days in. Most recently, the United States has launched a series of airstrikes against Iranian military targets in response to an attack that killed two American service members at a base in Jordan.",
+        "summary": "The US has completed its seventh consecutive night of strikes against Iran as the conflict escalates 140 days in. A later development was US Conducts Airstrikes on Iran Following Deaths of Two Soldiers in Jordan. Most recently, the Pentagon has identified two active-duty US soldiers killed in an Iranian strike on a US base in Jordan.",
         "key_developments": [
           {
             "development_id": "story_cee8447079637163",
@@ -241,6 +326,11 @@
             "development_id": "story_240d2dba60a210a6",
             "date": "2026-07-19",
             "title": "US Conducts Airstrikes on Iran Following Deaths of Two Soldiers in Jordan"
+          },
+          {
+            "development_id": "story_a6aad1b5891894c4",
+            "date": "2026-07-20",
+            "title": "Pentagon Confirms Deaths of Two US Soldiers in Jordan Following Iranian Attack"
           }
         ],
         "sources": [
@@ -285,9 +375,27 @@
             "source": "The Guardian",
             "link": "https://www.theguardian.com/world/live/2026/jul/19/middle-east-crisis-live-us-launches-new-round-of-airstrikes-to-swiftly-punish-iran-after-american-troops-killed",
             "source_bias": "left"
+          },
+          {
+            "title": "Pentagon Identifies 2 US Soldiers Killed in Jordan",
+            "source": "New York Times",
+            "link": "https://www.nytimes.com/2026/07/20/us/iran-war-us-soldiers-killed-jordan-identified.html",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "US military identifies 2 soldiers killed in Iranian attack on Jordan",
+            "source": "PBS News",
+            "link": "https://www.pbs.org/newshour/politics/u-s-military-identifies-2-soldiers-killed-in-iranian-attack-on-jordan",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "United States launches new strikes on Iran after two US soldiers killed by Iranian attack",
+            "source": "SBS News",
+            "link": "https://www.sbs.com.au/news/article/two-us-troops-killed-in-jordan-one-missing-as-fears-of-all-out-war-grow/tdui30b32",
+            "source_bias": "lean-left"
           }
         ],
-        "updated_at": "2026-07-19",
+        "updated_at": "2026-07-20",
         "provenance": "source_grounded_event_memory"
       },
       "event_stage": "developing_event",
@@ -296,7 +404,7 @@
           "event_id": "event_iranian-missiles-target-aqaba-airport-amid-r_c7e08248c6",
           "title": "Iranian Missiles Target Aqaba Airport Amid Regional Escalation",
           "relationship": "related_topic",
-          "confidence": 0.766,
+          "confidence": 0.769,
           "shared_entities": [
             "america",
             "iran",
@@ -399,6 +507,7 @@
         "140",
         "500",
         "action",
+        "active-duty",
         "airstrike",
         "alone",
         "america",
@@ -413,6 +522,7 @@
         "come",
         "completed",
         "conduct",
+        "confirm",
         "conflict",
         "consecutive",
         "continue",
@@ -420,12 +530,18 @@
         "defense",
         "drone",
         "escalate",
+        "escalating",
         "facilitie",
+        "four",
+        "friday",
         "halt",
         "hormuz",
         "hundred",
+        "identified",
+        "incident",
         "indicating",
         "industry",
+        "injurie",
         "iran",
         "jordan",
         "killed",
@@ -436,12 +552,19 @@
         "missile",
         "month",
         "night",
+        "occurred",
         "ongoing",
+        "other",
         "part",
+        "pentagon",
+        "prompted",
         "recent",
+        "region",
         "reportedly",
         "response",
         "resulted",
+        "resulting",
+        "retaliatory",
         "serie",
         "service",
         "seventh",
@@ -455,6 +578,7 @@
         "surveillance",
         "target",
         "targeted",
+        "tension",
         "traffic",
         "transit",
         "united",
@@ -470,11 +594,1429 @@
         "iran",
         "jordan",
         "jordan.",
+        "pentagon_confirm",
         "strait",
         "traffic_standstill",
         "us"
       ],
-      "search_text": "140 500 action airstrike alone america analyst area attack base campaign casualtie claim coast come completed conduct conduct_airstrike conflict consecutive continue death defense drone escalate facilitie halt hormuz hundred indicating industry iran jordan jordan. killed launched least member military missile month night ongoing part recent reportedly response resulted serie service seventh significant sites soldier standstill storage strait strike surveillance target targeted traffic traffic_standstill transit united us vessel well which willing wounded"
+      "search_text": "140 500 action active-duty airstrike alone america analyst area attack base campaign casualtie claim coast come completed conduct conduct_airstrike confirm conflict consecutive continue death defense drone escalate escalating facilitie four friday halt hormuz hundred identified incident indicating industry injurie iran jordan jordan. killed launched least member military missile month night occurred ongoing other part pentagon pentagon_confirm prompted recent region reportedly response resulted resulting retaliatory serie service seventh significant sites soldier standstill storage strait strike surveillance target targeted tension traffic traffic_standstill transit united us vessel well which willing wounded"
+    },
+    {
+      "event_id": "event_tate-brothers-arrested-in-miami-as-uk-seeks_ef1d546745",
+      "title": "Tate Brothers Arrested in Miami as UK Seeks Extradition on New Charges",
+      "canonical_title": "Tate Brothers Arrested in Miami as UK Seeks Extradition on New Charges",
+      "topic_label": "Tate Brothers Arrest",
+      "summary": "Influencers Andrew and Tristan Tate were arrested by US federal authorities in Miami on a sealed warrant. The United Kingdom is seeking their extradition to face 38 new charges, including rape, sex trafficking, and assault. This brings the total number of charges against them in the UK to 59.",
+      "status": "active",
+      "first_seen_at": "2026-07-19",
+      "last_seen_at": "2026-07-20",
+      "timeline": [
+        {
+          "development_id": "story_9d7121f21c8d3c65",
+          "daily_story_id": "story_9d7121f21c8d3c65",
+          "date": "2026-07-19",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Tate Brothers Arrested in Miami Facing UK Charges",
+          "summary": "Andrew and Tristan Tate have been arrested in Miami by the US Marshals Service. They are set to appear in court to face charges of rape and sex trafficking in the United Kingdom, which they deny. The brothers may face extradition to the UK as part of the legal proceedings.",
+          "development_type": "investigation",
+          "key_facts": [
+            "Andrew and Tristan Tate were arrested in Miami.",
+            "They face charges of rape and sex trafficking in the UK",
+            "The brothers deny the charges and may be extradited."
+          ],
+          "source_count": 7,
+          "sources": [
+            "Al Jazeera English",
+            "CBC",
+            "CBS News",
+            "DW - English",
+            "NPR",
+            "Sky News",
+            "TIME"
+          ],
+          "source_urls": [
+            "https://news.sky.com/story/andrew-and-tristan-tate-arrested-in-miami-on-uk-extradition-request-over-rape-and-sex-trafficking-charges-13564845",
+            "https://time.com/article/2026/07/20/andrew-tristan-tate-brothers-arrest-uk-extradition-trump-rubio",
+            "https://www.aljazeera.com/news/2026/7/19/why-were-andrew-and-tristan-tate-arrested-will-they-be-extradited-to-uk?traffic_source=rss",
+            "https://www.cbc.ca/news/world/andrew-tristan-tate-arrested-9.7275618?cmp=rss",
+            "https://www.cbsnews.com/video/tate-brothers-to-appear-in-miami-court-on-uk-rape-sex-trafficking-charges",
+            "https://www.dw.com/en/andrew-tate-brother-arrested-in-miami-uk-seeks-extradition/a-78022447?maca=en-rss-en-all-1573-rdf",
+            "https://www.npr.org/2026/07/18/g-s1-134475/tate-brothers-arrested-miami"
+          ],
+          "source_details": [
+            {
+              "title": "UK seeks extradition after influencer Tate brothers arrested in US",
+              "source": "CBC",
+              "link": "https://www.cbc.ca/news/world/andrew-tristan-tate-arrested-9.7275618?cmp=rss",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Why were Andrew and Tristan Tate arrested? Will they be extradited to UK?",
+              "source": "Al Jazeera English",
+              "link": "https://www.aljazeera.com/news/2026/7/19/why-were-andrew-and-tristan-tate-arrested-will-they-be-extradited-to-uk?traffic_source=rss",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Tate brothers arrested in Miami on UK extradition request over rape and sex trafficking charges",
+              "source": "Sky News",
+              "link": "https://news.sky.com/story/andrew-and-tristan-tate-arrested-in-miami-on-uk-extradition-request-over-rape-and-sex-trafficking-charges-13564845",
+              "source_bias": "center"
+            },
+            {
+              "title": "Andrew Tate, brother arrested in Miami, UK seeks extradition",
+              "source": "DW - English",
+              "link": "https://www.dw.com/en/andrew-tate-brother-arrested-in-miami-uk-seeks-extradition/a-78022447?maca=en-rss-en-all-1573-rdf",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Andrew and Tristan Tate arrested in Florida on charges of rape and sex trafficking",
+              "source": "NPR",
+              "link": "https://www.npr.org/2026/07/18/g-s1-134475/tate-brothers-arrested-miami",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Tate brothers to appear in Miami court on UK rape, sex trafficking charges",
+              "source": "CBS News",
+              "link": "https://www.cbsnews.com/video/tate-brothers-to-appear-in-miami-court-on-uk-rape-sex-trafficking-charges",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "What to Know About the Tate Brothers’ Arrest",
+              "source": "TIME",
+              "link": "https://time.com/article/2026/07/20/andrew-tristan-tate-brothers-arrest-uk-extradition-trump-rubio",
+              "source_bias": "lean-left"
+            }
+          ],
+          "confidence": 1.0,
+          "match_evidence": {
+            "score": 1.0,
+            "method": "new_event",
+            "shared_tokens": [],
+            "shared_entities": []
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-19",
+          "last_seen_at": "2026-07-20",
+          "integrity_status": "trusted",
+          "revisions": [
+            {
+              "daily_story_id": "story_b323fddd75eabba5",
+              "reported_at": "2026-07-19",
+              "update_kind": "factual_update",
+              "title": "Tate Brothers Arrested in Miami as UK Seeks Extradition on New Charges",
+              "summary": "Influencer brothers Andrew and Tristan Tate were arrested by US federal authorities in Miami on Saturday. The United Kingdom has requested their extradition to face new charges, including rape and sex trafficking, following the issuance of 38 new charges against them by British prosecutors.",
+              "key_facts": [
+                "Andrew and Tristan Tate were arrested in Miami by US Marshals Service.",
+                "The UK is seeking extradition for the Tate brothers.",
+                "New charges against them include rape and sex trafficking."
+              ],
+              "source_urls": [
+                "https://www.cbc.ca/news/world/andrew-tristan-tate-arrested-9.7275618?cmp=rss",
+                "https://www.aljazeera.com/news/2026/7/19/why-were-andrew-and-tristan-tate-arrested-will-they-be-extradited-to-uk?traffic_source=rss",
+                "https://news.sky.com/story/andrew-and-tristan-tate-arrested-in-miami-on-uk-extradition-request-over-rape-and-sex-trafficking-charges-13564845",
+                "https://www.npr.org/2026/07/18/g-s1-134475/tate-brothers-arrested-miami"
+              ]
+            },
+            {
+              "daily_story_id": "story_b228deed398ff6a0",
+              "reported_at": "2026-07-20",
+              "update_kind": "factual_update",
+              "title": "Tate Brothers Arrested in Miami Facing UK Charges",
+              "summary": "Andrew and Tristan Tate have been arrested in Miami by the US Marshals Service. They are set to appear in court to face charges of rape and sex trafficking in the United Kingdom, which they deny. The brothers may face extradition to the UK as part of the legal proceedings.",
+              "key_facts": [
+                "Andrew and Tristan Tate were arrested in Miami.",
+                "They face charges of rape and sex trafficking in the UK",
+                "The brothers deny the charges and may be extradited."
+              ],
+              "source_urls": [
+                "https://www.cbsnews.com/video/tate-brothers-to-appear-in-miami-court-on-uk-rape-sex-trafficking-charges",
+                "https://time.com/article/2026/07/20/andrew-tristan-tate-brothers-arrest-uk-extradition-trump-rubio"
+              ]
+            }
+          ],
+          "last_updated_at": "2026-07-20",
+          "merged_development_ids": [
+            "story_b228deed398ff6a0",
+            "story_b323fddd75eabba5"
+          ],
+          "revision_count": 2
+        },
+        {
+          "development_id": "story_9376b2fb8ea89f5c",
+          "daily_story_id": "story_9376b2fb8ea89f5c",
+          "date": "2026-07-20",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Andrew and Tristan Tate Arrested in US as UK Seeks Extradition",
+          "summary": "Influencer brothers Andrew and Tristan Tate were arrested in Miami, Florida, as the United Kingdom seeks their extradition. British authorities have accused them of serious crimes, including rape, human trafficking, and sexual exploitation.",
+          "development_type": "investigation",
+          "key_facts": [
+            "Andrew and Tristan Tate were arrested in Miami.",
+            "The UK is seeking their extradition.",
+            "They face accusations of serious offences including rape and human trafficking."
+          ],
+          "source_count": 2,
+          "sources": [
+            "Euronews",
+            "SBS News"
+          ],
+          "source_urls": [
+            "https://www.sbs.com.au/news/article/influencers-andrew-and-tristan-tate-arrested-in-us-on-new-charges-face-extradition/6a5y4dd6a",
+            "http://www.euronews.com/2026/07/19/andrew-and-tristan-tate-arrested-in-miami-as-uk-seeks-extradition"
+          ],
+          "source_details": [
+            {
+              "title": "Influencers Andrew and Tristan Tate arrested in US on new charges, face extradition",
+              "source": "SBS News",
+              "link": "https://www.sbs.com.au/news/article/influencers-andrew-and-tristan-tate-arrested-in-us-on-new-charges-face-extradition/6a5y4dd6a",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Andrew and Tristan Tate arrested in Miami as UK seeks extradition",
+              "source": "Euronews",
+              "link": "http://www.euronews.com/2026/07/19/andrew-and-tristan-tate-arrested-in-miami-as-uk-seeks-extradition",
+              "source_bias": "lean-left"
+            }
+          ],
+          "confidence": 0.69,
+          "match_evidence": {
+            "score": 0.69,
+            "matched_development_id": "story_9d7121f21c8d3c65",
+            "shared_tokens": [
+              "andrew",
+              "arrested",
+              "authoritie",
+              "britain",
+              "brother",
+              "extradition",
+              "face",
+              "including",
+              "influencer",
+              "kingdom",
+              "miami",
+              "rape",
+              "seeking",
+              "seeks",
+              "tate",
+              "them",
+              "trafficking",
+              "tristan",
+              "united"
+            ],
+            "shared_entities": [
+              "britain",
+              "miami",
+              "seeks_extradition",
+              "tristan_tate",
+              "uk",
+              "united_kingdom",
+              "us"
+            ],
+            "source_url_match": false,
+            "method": "deterministic_event_match_v2",
+            "threshold": 0.38
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-20",
+          "last_seen_at": "2026-07-20",
+          "integrity_status": "trusted"
+        }
+      ],
+      "integrity": {
+        "public_development_count": 2,
+        "questionable_development_count": 0,
+        "review_required": false
+      },
+      "latest_title": "Andrew and Tristan Tate Arrested in US as UK Seeks Extradition",
+      "latest_summary": "Influencer brothers Andrew and Tristan Tate were arrested in Miami, Florida, as the United Kingdom seeks their extradition. British authorities have accused them of serious crimes, including rape, human trafficking, and sexual exploitation.",
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "stage": "developing_event",
+        "stage_label": "Developing event",
+        "base_title": "Tate Brothers Arrest",
+        "display_title": "Tate Brothers Arrest",
+        "milestone_development_ids": [
+          "story_9d7121f21c8d3c65",
+          "story_9376b2fb8ea89f5c"
+        ],
+        "summary_available": true,
+        "summary_label": "Read the story so far",
+        "summary_updated_at": "2026-07-20",
+        "development_count": 2,
+        "coverage_packet_count": 4,
+        "date_count": 2,
+        "source_count": 9,
+        "independent_source_count": 9,
+        "first_date": "2026-07-19",
+        "latest_date": "2026-07-20",
+        "latest_update_title": "Andrew and Tristan Tate Arrested in US as UK Seeks Extradition",
+        "coverage_score": 0.609,
+        "recency_score": 1.0,
+        "rank_score": 0.836,
+        "context_summary": "Muninn first tracked this thread on 2026-07-19: Tate Brothers Arrested in Miami Facing UK Charges. The latest development is Andrew and Tristan Tate Arrested in US as UK Seeks Extradition.",
+        "cta_label": ""
+      },
+      "event_summary": {
+        "available": true,
+        "summary": "Andrew and Tristan Tate have been arrested in Miami by the US Marshals Service. Most recently, influencer brothers Andrew and Tristan Tate were arrested in Miami, Florida, as the United Kingdom seeks their extradition.",
+        "key_developments": [
+          {
+            "development_id": "story_9d7121f21c8d3c65",
+            "date": "2026-07-19",
+            "title": "Tate Brothers Arrested in Miami Facing UK Charges"
+          },
+          {
+            "development_id": "story_9376b2fb8ea89f5c",
+            "date": "2026-07-20",
+            "title": "Andrew and Tristan Tate Arrested in US as UK Seeks Extradition"
+          }
+        ],
+        "sources": [
+          {
+            "title": "UK seeks extradition after influencer Tate brothers arrested in US",
+            "source": "CBC",
+            "link": "https://www.cbc.ca/news/world/andrew-tristan-tate-arrested-9.7275618?cmp=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Why were Andrew and Tristan Tate arrested? Will they be extradited to UK?",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/news/2026/7/19/why-were-andrew-and-tristan-tate-arrested-will-they-be-extradited-to-uk?traffic_source=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Tate brothers arrested in Miami on UK extradition request over rape and sex trafficking charges",
+            "source": "Sky News",
+            "link": "https://news.sky.com/story/andrew-and-tristan-tate-arrested-in-miami-on-uk-extradition-request-over-rape-and-sex-trafficking-charges-13564845",
+            "source_bias": "center"
+          },
+          {
+            "title": "Andrew Tate, brother arrested in Miami, UK seeks extradition",
+            "source": "DW - English",
+            "link": "https://www.dw.com/en/andrew-tate-brother-arrested-in-miami-uk-seeks-extradition/a-78022447?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Andrew and Tristan Tate arrested in Florida on charges of rape and sex trafficking",
+            "source": "NPR",
+            "link": "https://www.npr.org/2026/07/18/g-s1-134475/tate-brothers-arrested-miami",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Tate brothers to appear in Miami court on UK rape, sex trafficking charges",
+            "source": "CBS News",
+            "link": "https://www.cbsnews.com/video/tate-brothers-to-appear-in-miami-court-on-uk-rape-sex-trafficking-charges",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "What to Know About the Tate Brothers’ Arrest",
+            "source": "TIME",
+            "link": "https://time.com/article/2026/07/20/andrew-tristan-tate-brothers-arrest-uk-extradition-trump-rubio",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Influencers Andrew and Tristan Tate arrested in US on new charges, face extradition",
+            "source": "SBS News",
+            "link": "https://www.sbs.com.au/news/article/influencers-andrew-and-tristan-tate-arrested-in-us-on-new-charges-face-extradition/6a5y4dd6a",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Andrew and Tristan Tate arrested in Miami as UK seeks extradition",
+            "source": "Euronews",
+            "link": "http://www.euronews.com/2026/07/19/andrew-and-tristan-tate-arrested-in-miami-as-uk-seeks-extradition",
+            "source_bias": "lean-left"
+          }
+        ],
+        "updated_at": "2026-07-20",
+        "provenance": "source_grounded_event_memory"
+      },
+      "event_stage": "developing_event",
+      "related_events": [],
+      "search_tokens": [
+        "accused",
+        "andrew",
+        "appear",
+        "arrested",
+        "authoritie",
+        "britain",
+        "brother",
+        "charge",
+        "court",
+        "crime",
+        "deny",
+        "exploitation",
+        "extradition",
+        "face",
+        "facing",
+        "florida",
+        "human",
+        "including",
+        "influencer",
+        "kingdom",
+        "legal",
+        "marshal",
+        "miami",
+        "part",
+        "proceeding",
+        "rape",
+        "seeks",
+        "seriou",
+        "service",
+        "sexual",
+        "tate",
+        "them",
+        "they",
+        "trafficking",
+        "tristan",
+        "united",
+        "which"
+      ],
+      "entities": [
+        "britain",
+        "brother_arrested",
+        "charge_andrew",
+        "extradition_influencer",
+        "marshal_service.",
+        "miami",
+        "miami_facing",
+        "miami_florida",
+        "seeks_extradition",
+        "service._they",
+        "tate_arrested",
+        "tate_brother",
+        "tristan_tate",
+        "uk",
+        "united",
+        "united_kingdom",
+        "us"
+      ],
+      "search_text": "accused andrew appear arrested authoritie britain brother brother_arrested charge charge_andrew court crime deny exploitation extradition extradition_influencer face facing florida human including influencer kingdom legal marshal marshal_service. miami miami_facing miami_florida part proceeding rape seeks seeks_extradition seriou service service._they sexual tate tate_arrested tate_brother them they trafficking tristan tristan_tate uk united united_kingdom us which"
+    },
+    {
+      "event_id": "event_russia-launches-major-ballistic-missile-atta_e12d127249",
+      "title": "Russia Launches Major Ballistic Missile Attack on Ukrainian Cities, Causing Casualties",
+      "canonical_title": "Russia Launches Major Ballistic Missile Attack on Ukrainian Cities, Causing Casualties",
+      "topic_label": "Ukraine Conflict",
+      "summary": "Russia conducted a significant ballistic missile attack on Ukraine, targeting major cities including Kyiv. The Ukrainian air force reported that 41 missiles and 125 drones were launched overnight. Casualties include at least five fatalities and over 35 injuries, with damage reported across the capital, including fires in residential areas. This attack is noted as one of the largest since the beginning of the conflict.",
+      "status": "active",
+      "first_seen_at": "2026-07-19",
+      "last_seen_at": "2026-07-20",
+      "timeline": [
+        {
+          "development_id": "story_a130bc8e56eeaaef",
+          "daily_story_id": "story_a130bc8e56eeaaef",
+          "date": "2026-07-19",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Russia Launches Major Ballistic Missile Attack on Ukrainian Cities, Causing Casualties",
+          "summary": "Russia conducted one of its largest ballistic missile attacks on Ukraine, targeting Kyiv and other cities. The assault involved approximately 41 missiles and 125 drones, resulting in at least six deaths and dozens of injuries. Significant damage was reported, with multiple districts in Kyiv affected and civilian infrastructure hit.",
+          "development_type": "military_action",
+          "key_facts": [
+            "At least six people killed and dozens injured in the attack.",
+            "Approximately 41 missiles and 125 drones were launched.",
+            "Kyiv and other cities were targeted, with significant damage reported."
+          ],
+          "source_count": 6,
+          "sources": [
+            "Al Jazeera English",
+            "BBC",
+            "France 24",
+            "NPR",
+            "RTE News",
+            "The Guardian"
+          ],
+          "source_urls": [
+            "https://www.aljazeera.com/news/2026/7/19/russia-launches-largest-ballistic-missile-attack-on-kyiv-since-start-of-war?traffic_source=rss",
+            "https://www.bbc.co.uk/news/articles/c2el7xpnzrpo?at_medium=RSS&at_campaign=rss",
+            "https://www.france24.com/en/russia-hits-kyiv-with-ballistic-missiles",
+            "https://www.npr.org/2026/07/19/nx-s1-5899518/russia-attack-kyiv",
+            "https://www.rte.ie/news/2026/0719/1584041-ukraine-russia",
+            "https://www.theguardian.com/world/2026/jul/19/dozens-of-russian-missiles-pound-kyiv-ukraine-in-major-attack"
+          ],
+          "source_details": [
+            {
+              "title": "Russia launches major ballistic missile attack on Ukrainian cities",
+              "source": "BBC",
+              "link": "https://www.bbc.co.uk/news/articles/c2el7xpnzrpo?at_medium=RSS&at_campaign=rss",
+              "source_bias": "center"
+            },
+            {
+              "title": "Deadly overnight Russian attack on Ukraine targets the capital",
+              "source": "NPR",
+              "link": "https://www.npr.org/2026/07/19/nx-s1-5899518/russia-attack-kyiv",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Russia launches largest ballistic missile attack on Kyiv since start of war",
+              "source": "Al Jazeera English",
+              "link": "https://www.aljazeera.com/news/2026/7/19/russia-launches-largest-ballistic-missile-attack-on-kyiv-since-start-of-war?traffic_source=rss",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Russia pounds Kyiv for five hours in one of its biggest ballistic missile attacks",
+              "source": "The Guardian",
+              "link": "https://www.theguardian.com/world/2026/jul/19/dozens-of-russian-missiles-pound-kyiv-ukraine-in-major-attack",
+              "source_bias": "left"
+            },
+            {
+              "title": "Russia pounds Kyiv in major ballistic missile attack",
+              "source": "RTE News",
+              "link": "https://www.rte.ie/news/2026/0719/1584041-ukraine-russia",
+              "source_bias": "center"
+            },
+            {
+              "title": "Russia hits Kyiv with ballistic missiles",
+              "source": "France 24",
+              "link": "https://www.france24.com/en/russia-hits-kyiv-with-ballistic-missiles",
+              "source_bias": "lean-left"
+            }
+          ],
+          "confidence": 1.0,
+          "match_evidence": {
+            "score": 1.0,
+            "method": "new_event",
+            "shared_tokens": [],
+            "shared_entities": []
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-19",
+          "last_seen_at": "2026-07-19",
+          "integrity_status": "trusted",
+          "revisions": [
+            {
+              "daily_story_id": "story_dcde4509a3131f6b",
+              "reported_at": "2026-07-19",
+              "update_kind": "factual_update",
+              "title": "Russia Launches Major Ballistic Missile Attack on Ukrainian Cities, Causing Casualties",
+              "summary": "Russia conducted one of its largest ballistic missile attacks on Ukraine, targeting Kyiv and other cities. The assault involved approximately 41 missiles and 125 drones, resulting in at least six deaths and dozens of injuries. Significant damage was reported, with multiple districts in Kyiv affected and civilian infrastructure hit.",
+              "key_facts": [
+                "At least six people killed and dozens injured in the attack.",
+                "Approximately 41 missiles and 125 drones were launched.",
+                "Kyiv and other cities were targeted, with significant damage reported."
+              ],
+              "source_urls": [
+                "https://www.bbc.co.uk/news/articles/c2el7xpnzrpo?at_medium=RSS&at_campaign=rss",
+                "https://www.npr.org/2026/07/19/nx-s1-5899518/russia-attack-kyiv",
+                "https://www.theguardian.com/world/2026/jul/19/dozens-of-russian-missiles-pound-kyiv-ukraine-in-major-attack",
+                "https://www.france24.com/en/russia-hits-kyiv-with-ballistic-missiles"
+              ]
+            }
+          ],
+          "last_updated_at": "2026-07-19",
+          "merged_development_ids": [
+            "story_dcde4509a3131f6b"
+          ],
+          "revision_count": 1
+        },
+        {
+          "development_id": "story_16d8d26cbe68f590",
+          "daily_story_id": "story_16d8d26cbe68f590",
+          "date": "2026-07-20",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Russia Launches Major Missile Assault on Ukrainian Cities Amid Escalating Conflict",
+          "summary": "Russia has conducted one of its largest ballistic missile attacks on Ukrainian cities, including Kyiv, resulting in at least eight deaths and numerous injuries. This assault marks a significant escalation in the ongoing conflict, with fires reported across the capital. In response, Ukraine launched over 400 drones targeting Moscow, intensifying the cycle of retaliatory strikes between the two nations.",
+          "development_type": "military_action",
+          "key_facts": [
+            "Russia's missile attack on Ukrainian cities is one of the largest of the war.",
+            "At least eight people have died and dozens are injured in the attacks.",
+            "Ukraine retaliated by launching over 400 drones at Moscow."
+          ],
+          "source_count": 4,
+          "sources": [
+            "BBC",
+            "DW - English",
+            "Euronews",
+            "France 24"
+          ],
+          "source_urls": [
+            "https://www.bbc.co.uk/news/articles/c2el7xpnzrpo?at_medium=RSS&at_campaign=rss",
+            "http://www.euronews.com/2026/07/20/ukraine-fires-400-drones-at-moscow-as-russia-steps-up-ballistic-missile-attacks",
+            "https://www.dw.com/en/russia-s-largest-ballistic-assault-of-war-rocks-kyiv/a-78022851?maca=en-rss-en-all-1573-rdf",
+            "https://www.france24.com/en/ukraine-fires-400-missiles-on-moscow-after-deadly-russian-attacks"
+          ],
+          "source_details": [
+            {
+              "title": "Russia launches major ballistic missile attack on Ukrainian cities",
+              "source": "BBC",
+              "link": "https://www.bbc.co.uk/news/articles/c2el7xpnzrpo?at_medium=RSS&at_campaign=rss",
+              "source_bias": "center"
+            },
+            {
+              "title": "Ukraine fires 400 drones at Moscow as Russia steps up ballistic missile attacks",
+              "source": "Euronews",
+              "link": "http://www.euronews.com/2026/07/20/ukraine-fires-400-drones-at-moscow-as-russia-steps-up-ballistic-missile-attacks",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Russia's largest ballistic assault of war rocks Kyiv",
+              "source": "DW - English",
+              "link": "https://www.dw.com/en/russia-s-largest-ballistic-assault-of-war-rocks-kyiv/a-78022851?maca=en-rss-en-all-1573-rdf",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Ukraine fires 400 missiles at Moscow after deadly Russian attacks",
+              "source": "France 24",
+              "link": "https://www.france24.com/en/ukraine-fires-400-missiles-on-moscow-after-deadly-russian-attacks",
+              "source_bias": "lean-left"
+            }
+          ],
+          "confidence": 1.0,
+          "match_evidence": {
+            "score": 1.0,
+            "matched_development_id": "story_a130bc8e56eeaaef",
+            "shared_tokens": [
+              "assault",
+              "attack",
+              "ballistic",
+              "citie",
+              "conducted",
+              "death",
+              "dozen",
+              "drone",
+              "injured",
+              "injurie",
+              "kyiv",
+              "largest",
+              "launche",
+              "launched",
+              "least",
+              "missile",
+              "reported",
+              "resulting",
+              "russia",
+              "significant",
+              "targeting",
+              "ukraine"
+            ],
+            "shared_entities": [
+              "russia",
+              "russia_launche",
+              "ukraine",
+              "ukraine_citie"
+            ],
+            "source_url_match": true,
+            "method": "deterministic_event_match_v2",
+            "threshold": 0.38
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-20",
+          "last_seen_at": "2026-07-20",
+          "integrity_status": "trusted"
+        }
+      ],
+      "integrity": {
+        "public_development_count": 2,
+        "questionable_development_count": 1,
+        "review_required": true
+      },
+      "latest_title": "Russia Launches Major Missile Assault on Ukrainian Cities Amid Escalating Conflict",
+      "latest_summary": "Russia has conducted one of its largest ballistic missile attacks on Ukrainian cities, including Kyiv, resulting in at least eight deaths and numerous injuries. This assault marks a significant escalation in the ongoing conflict, with fires reported across the capital. In response, Ukraine launched over 400 drones targeting Moscow, intensifying the cycle of retaliatory strikes between the two nations.",
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "stage": "developing_event",
+        "stage_label": "Developing event",
+        "base_title": "Ukraine Conflict",
+        "display_title": "Ukraine Conflict",
+        "milestone_development_ids": [
+          "story_a130bc8e56eeaaef",
+          "story_16d8d26cbe68f590"
+        ],
+        "summary_available": true,
+        "summary_label": "Read the story so far",
+        "summary_updated_at": "2026-07-20",
+        "development_count": 2,
+        "coverage_packet_count": 3,
+        "date_count": 2,
+        "source_count": 9,
+        "independent_source_count": 8,
+        "first_date": "2026-07-19",
+        "latest_date": "2026-07-20",
+        "latest_update_title": "Russia Launches Major Missile Assault on Ukrainian Cities Amid Escalating Conflict",
+        "coverage_score": 0.609,
+        "recency_score": 1.0,
+        "rank_score": 0.836,
+        "context_summary": "Muninn first tracked this thread on 2026-07-19: Russia Launches Major Ballistic Missile Attack on Ukrainian Cities, Causing Casualties. The latest development is Russia Launches Major Missile Assault on Ukrainian Cities Amid Escalating Conflict.",
+        "cta_label": ""
+      },
+      "event_summary": {
+        "available": true,
+        "summary": "Russia conducted one of its largest ballistic missile attacks on Ukraine, targeting Kyiv and other cities. Most recently, russia has conducted one of its largest ballistic missile attacks on Ukrainian cities, including Kyiv, resulting in at least eight deaths and numerous injuries.",
+        "key_developments": [
+          {
+            "development_id": "story_a130bc8e56eeaaef",
+            "date": "2026-07-19",
+            "title": "Russia Launches Major Ballistic Missile Attack on Ukrainian Cities, Causing Casualties"
+          },
+          {
+            "development_id": "story_16d8d26cbe68f590",
+            "date": "2026-07-20",
+            "title": "Russia Launches Major Missile Assault on Ukrainian Cities Amid Escalating Conflict"
+          }
+        ],
+        "sources": [
+          {
+            "title": "Russia launches major ballistic missile attack on Ukrainian cities",
+            "source": "BBC",
+            "link": "https://www.bbc.co.uk/news/articles/c2el7xpnzrpo?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          },
+          {
+            "title": "Deadly overnight Russian attack on Ukraine targets the capital",
+            "source": "NPR",
+            "link": "https://www.npr.org/2026/07/19/nx-s1-5899518/russia-attack-kyiv",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Russia launches largest ballistic missile attack on Kyiv since start of war",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/news/2026/7/19/russia-launches-largest-ballistic-missile-attack-on-kyiv-since-start-of-war?traffic_source=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Russia pounds Kyiv for five hours in one of its biggest ballistic missile attacks",
+            "source": "The Guardian",
+            "link": "https://www.theguardian.com/world/2026/jul/19/dozens-of-russian-missiles-pound-kyiv-ukraine-in-major-attack",
+            "source_bias": "left"
+          },
+          {
+            "title": "Russia pounds Kyiv in major ballistic missile attack",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/2026/0719/1584041-ukraine-russia",
+            "source_bias": "center"
+          },
+          {
+            "title": "Russia hits Kyiv with ballistic missiles",
+            "source": "France 24",
+            "link": "https://www.france24.com/en/russia-hits-kyiv-with-ballistic-missiles",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Ukraine fires 400 drones at Moscow as Russia steps up ballistic missile attacks",
+            "source": "Euronews",
+            "link": "http://www.euronews.com/2026/07/20/ukraine-fires-400-drones-at-moscow-as-russia-steps-up-ballistic-missile-attacks",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Russia's largest ballistic assault of war rocks Kyiv",
+            "source": "DW - English",
+            "link": "https://www.dw.com/en/russia-s-largest-ballistic-assault-of-war-rocks-kyiv/a-78022851?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Ukraine fires 400 missiles at Moscow after deadly Russian attacks",
+            "source": "France 24",
+            "link": "https://www.france24.com/en/ukraine-fires-400-missiles-on-moscow-after-deadly-russian-attacks",
+            "source_bias": "lean-left"
+          }
+        ],
+        "updated_at": "2026-07-20",
+        "provenance": "source_grounded_event_memory"
+      },
+      "event_stage": "developing_event",
+      "related_events": [
+        {
+          "event_id": "event_ukrainian-drones-strike-russian-targets-resu_d4dae47237",
+          "title": "Ukrainian Drones Strike Russian Targets, Resulting in Casualties",
+          "relationship": "related_topic",
+          "confidence": 0.706,
+          "shared_entities": [
+            "russia",
+            "ukraine"
+          ]
+        }
+      ],
+      "event_overview": {
+        "available": true,
+        "title": "About Ukraine Conflict",
+        "subject": "Ukraine Conflict",
+        "summary": "The Ukraine conflict is the ongoing armed conflict between Russia and Ukraine, including Russia’s full-scale military operations that began on February 24, 2022. Large-scale long-range missile and drone attacks on Ukrainian cities are a recurring feature of the war and have caused civilian casualties and damage to homes and essential infrastructure.",
+        "facts": [
+          {
+            "label": "Start of full-scale war",
+            "value": "The International Court of Justice records that the Russian Federation’s military operations in Ukraine commenced on February 24, 2022.",
+            "source_ids": [
+              "o1"
+            ]
+          },
+          {
+            "label": "Parties and main location",
+            "value": "The conflict centers on Ukraine and involves Russian armed forces; UN human-rights monitors also document effects in territory occupied by the Russian Federation and, where information can be verified, impacts in the Russian Federation.",
+            "source_ids": [
+              "o2"
+            ]
+          },
+          {
+            "label": "Attack pattern",
+            "value": "Long-range missiles and drones used by Russian armed forces have been a major driver of civilian harm, particularly in urban areas away from the front line; short-range drones are also a major source of casualties near front lines.",
+            "source_ids": [
+              "o3",
+              "o4"
+            ]
+          },
+          {
+            "label": "International monitoring",
+            "value": "The UN Human Rights Monitoring Mission in Ukraine was deployed in March 2014 and publicly monitors and reports on the human-rights situation, including civilian casualties, across the country.",
+            "source_ids": [
+              "o5"
+            ]
+          },
+          {
+            "label": "International legal context",
+            "value": "On March 16, 2022, the International Court of Justice indicated provisional measures ordering Russia to suspend the military operations it had commenced in Ukraine; the order stated that it did not decide the Court’s jurisdiction or the merits of the case.",
+            "source_ids": [
+              "o1",
+              "o6"
+            ]
+          }
+        ],
+        "scope_note": "This Muninn timeline follows the selected July 19–20, 2026 missile-attack developments and their immediate escalation context, rather than providing a complete chronology of the Russia-Ukraine war or a full accounting of all casualties and strikes.",
+        "sources": [
+          {
+            "title": "Icj Cij",
+            "publisher": "Icj Cij",
+            "url": "https://www.icj-cij.org/node/106135",
+            "source_type": "reporting",
+            "id": "o1"
+          },
+          {
+            "title": "Ohchr",
+            "publisher": "Ohchr",
+            "url": "https://ukraine.ohchr.org/en/UN-Human-Rights-Monitors-Report-Extensive-Civilian-Harm-from-Recent-Attacks",
+            "source_type": "reporting",
+            "id": "o2"
+          },
+          {
+            "title": "Ohchr",
+            "publisher": "Ohchr",
+            "url": "https://ukraine.ohchr.org/en/Protection-of-Civilians-in-Armed-Conflict-January-2026",
+            "source_type": "reporting",
+            "id": "o3"
+          },
+          {
+            "title": "Ohchr",
+            "publisher": "Ohchr",
+            "url": "https://ukraine.ohchr.org/en/UN-Human-Rights-Monitors-Warn-of-Rising-Civilian-Casualties",
+            "source_type": "reporting",
+            "id": "o4"
+          },
+          {
+            "title": "Ohchr",
+            "publisher": "Ohchr",
+            "url": "https://ukraine.ohchr.org/en",
+            "source_type": "reporting",
+            "id": "o5"
+          },
+          {
+            "title": "Icj Cij",
+            "publisher": "Icj Cij",
+            "url": "https://www.icj-cij.org/case/182/orders",
+            "source_type": "reporting",
+            "id": "o6"
+          }
+        ],
+        "publisher_count": 2,
+        "generated_at": "2026-07-20T15:08:12.653125+00:00",
+        "expires_at": "2026-07-27T15:08:12.653125+00:00",
+        "model": "gpt-5.6-terra",
+        "provenance": "openai_web_search_source_grounded_event_overview_v1"
+      },
+      "search_tokens": [
+        "125",
+        "400",
+        "across",
+        "affected",
+        "approximately",
+        "assault",
+        "attack",
+        "ballistic",
+        "capital",
+        "casualtie",
+        "causing",
+        "citie",
+        "civilian",
+        "conducted",
+        "conflict",
+        "cycle",
+        "damage",
+        "death",
+        "district",
+        "dozen",
+        "drone",
+        "eight",
+        "escalating",
+        "escalation",
+        "fires",
+        "including",
+        "infrastructure",
+        "injurie",
+        "intensifying",
+        "involved",
+        "kyiv",
+        "largest",
+        "launche",
+        "launched",
+        "least",
+        "marks",
+        "missile",
+        "moscow",
+        "multiple",
+        "nation",
+        "numerou",
+        "ongoing",
+        "other",
+        "reported",
+        "response",
+        "resulting",
+        "retaliatory",
+        "russia",
+        "significant",
+        "strike",
+        "targeting",
+        "ukraine"
+      ],
+      "entities": [
+        "ballistic_missile",
+        "casualtie_russia",
+        "causing_casualtie",
+        "citie_causing",
+        "kyiv",
+        "missile_assault",
+        "russia",
+        "russia_launche",
+        "ukraine",
+        "ukraine_citie"
+      ],
+      "search_text": "125 400 across affected approximately assault attack ballistic ballistic_missile capital casualtie casualtie_russia causing causing_casualtie citie citie_causing civilian conducted conflict cycle damage death district dozen drone eight escalating escalation fires including infrastructure injurie intensifying involved kyiv largest launche launched least marks missile missile_assault moscow multiple nation numerou ongoing other reported response resulting retaliatory russia russia_launche significant strike targeting ukraine ukraine_citie"
+    },
+    {
+      "event_id": "event_andy-burnham-takes-office-as-uk-prime-minist_6a6783b0f0",
+      "title": "Andy Burnham Becomes U.K.'s New Prime Minister Following Keir Starmer's Resignation",
+      "canonical_title": "Andy Burnham Becomes U.K.'s New Prime Minister Following Keir Starmer's Resignation",
+      "topic_label": "UK Prime Minister Transition",
+      "summary": "Andy Burnham has been formally appointed as the new Prime Minister of the United Kingdom, succeeding Keir Starmer, who stepped down after two years in office. Burnham's appointment marks the seventh change in leadership in the UK within the last decade. Following a meeting with King Charles III at Buckingham Palace, Burnham expressed his vision for a new social and political model for the country.",
+      "status": "active",
+      "first_seen_at": "2026-07-20",
+      "last_seen_at": "2026-07-20",
+      "timeline": [
+        {
+          "development_id": "story_56f45dff841793d0",
+          "daily_story_id": "story_56f45dff841793d0",
+          "date": "2026-07-20",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Andy Burnham Takes Office as UK Prime Minister",
+          "summary": "Andy Burnham has officially become the Prime Minister of the United Kingdom, succeeding Keir Starmer in a transition of power overseen by King Charles. Burnham, previously the mayor of Manchester, is a prominent figure in the Labour Party.",
+          "development_type": "development",
+          "key_facts": [
+            "Andy Burnham has replaced Keir Starmer as Prime Minister.",
+            "The transition was presided over by King Charles.",
+            "Burnham is a former mayor of Manchester."
+          ],
+          "source_count": 8,
+          "sources": [
+            "AP - Top News via Google News",
+            "Africanews",
+            "CBS News",
+            "DW",
+            "NBC News",
+            "NPR",
+            "PBS News",
+            "The Hindu"
+          ],
+          "source_urls": [
+            "http://www.africanews.com/2026/07/20/andy-burnham-becomes-britains-new-prime-minister",
+            "https://news.google.com/rss/articles/CBMiqAFBVV95cUxObmpFTnBJcVJSbTdmSFR6SXIyOU9saWNFLWJ5QW1uS2QzanBfU3hyREhOdHJGTGI2VTlqeHJXTXA5NjZ5OEJyQ0k0bmliV0lsMTZfQXZWOGpmR244SUFCX3hRMjFFVFlCNV9feWNBMXd1NDFMRE9ZNkZrTTVMcWZZT3h4RHFxZzlZc3B6UlZsLUdndGdUUW93Rk1MdGY5MlJYamc2ZWdvaE4?oc=5",
+            "https://www.cbsnews.com/news/andy-burnham-new-uk-prime-minister-7th-in-decade-after-keir-starmer",
+            "https://www.dw.com/en/meet-andy-burnham-britain-s-prime-minister/a-77664543?maca=en-rss-en-all-1573-rdf",
+            "https://www.nbcnews.com/now/video/andy-burnham-formally-appointed-u-k-prime-minster-266940485538",
+            "https://www.npr.org/2026/07/19/nx-s1-5895993/andy-burnham-prime-minister-keir-starmer",
+            "https://www.pbs.org/newshour/world/why-britain-is-getting-a-new-prime-minister-without-a-general-election",
+            "https://www.thehindu.com/news/international/i-go-with-good-grace-and-a-smile-on-my-face-starmer-says-making-way-for-burnham/article71244798.ece"
+          ],
+          "source_details": [
+            {
+              "title": "Andy Burnham becomes UK PM, promising new social and political model",
+              "source": "The Hindu",
+              "link": "https://www.thehindu.com/news/international/i-go-with-good-grace-and-a-smile-on-my-face-starmer-says-making-way-for-burnham/article71244798.ece",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Andy Burnham formally appointed UK prime minster",
+              "source": "NBC News",
+              "link": "https://www.nbcnews.com/now/video/andy-burnham-formally-appointed-u-k-prime-minster-266940485538",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Andy Burnham becomes Britain's new Prime Minister",
+              "source": "Africanews",
+              "link": "http://www.africanews.com/2026/07/20/andy-burnham-becomes-britains-new-prime-minister",
+              "source_bias": "center"
+            },
+            {
+              "title": "Andy Burnham becomes the UK’s seventh prime minister in a decade after Starmer resigns",
+              "source": "AP - Top News via Google News",
+              "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxObmpFTnBJcVJSbTdmSFR6SXIyOU9saWNFLWJ5QW1uS2QzanBfU3hyREhOdHJGTGI2VTlqeHJXTXA5NjZ5OEJyQ0k0bmliV0lsMTZfQXZWOGpmR244SUFCX3hRMjFFVFlCNV9feWNBMXd1NDFMRE9ZNkZrTTVMcWZZT3h4RHFxZzlZc3B6UlZsLUdndGdUUW93Rk1MdGY5MlJYamc2ZWdvaE4?oc=5",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Andy Burnham takes the reins as U.K.'s 7th prime minister in a decade",
+              "source": "CBS News",
+              "link": "https://www.cbsnews.com/news/andy-burnham-new-uk-prime-minister-7th-in-decade-after-keir-starmer",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Why Britain is getting a new prime minister without a general election",
+              "source": "PBS News",
+              "link": "https://www.pbs.org/newshour/world/why-britain-is-getting-a-new-prime-minister-without-a-general-election",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Andy Burnham becomes UK prime minister",
+              "source": "NPR",
+              "link": "https://www.npr.org/2026/07/19/nx-s1-5895993/andy-burnham-prime-minister-keir-starmer",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Meet Andy Burnham, Britain's prime minister",
+              "source": "DW",
+              "link": "https://www.dw.com/en/meet-andy-burnham-britain-s-prime-minister/a-77664543?maca=en-rss-en-all-1573-rdf",
+              "source_bias": "lean-left"
+            }
+          ],
+          "confidence": 1.0,
+          "match_evidence": {
+            "score": 1.0,
+            "method": "new_event",
+            "shared_tokens": [],
+            "shared_entities": []
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-20",
+          "last_seen_at": "2026-07-20",
+          "integrity_status": "trusted",
+          "revisions": [
+            {
+              "daily_story_id": "story_b7c417466d13db4f",
+              "reported_at": "2026-07-20",
+              "update_kind": "factual_update",
+              "title": "Andy Burnham Becomes U.K.'s New Prime Minister Following Keir Starmer's Resignation",
+              "summary": "Andy Burnham has been appointed as the new Prime Minister of the United Kingdom, becoming the seventh individual to hold the office in the past decade. His appointment follows the resignation of Keir Starmer, who stepped down last month. Burnham was asked by King Charles III to form a new government, marking a significant transition in British leadership without a general election.",
+              "key_facts": [
+                "Andy Burnham is the new Prime Minister of the UK",
+                "He succeeds Keir Starmer, who resigned last month.",
+                "Burnham is the seventh prime minister in the UK in a decade.",
+                "His appointment was made by King Charles III."
+              ],
+              "source_urls": [
+                "https://www.cbsnews.com/news/andy-burnham-new-uk-prime-minister-7th-in-decade-after-keir-starmer",
+                "https://www.pbs.org/newshour/world/why-britain-is-getting-a-new-prime-minister-without-a-general-election"
+              ]
+            },
+            {
+              "daily_story_id": "story_9e5d37c5df85149c",
+              "reported_at": "2026-07-20",
+              "update_kind": "factual_update",
+              "title": "Andy Burnham Takes Office as UK Prime Minister",
+              "summary": "Andy Burnham has officially become the Prime Minister of the United Kingdom, succeeding Keir Starmer in a transition of power overseen by King Charles. Burnham, previously the mayor of Manchester, is a prominent figure in the Labour Party.",
+              "key_facts": [
+                "Andy Burnham has replaced Keir Starmer as Prime Minister.",
+                "The transition was presided over by King Charles.",
+                "Burnham is a former mayor of Manchester."
+              ],
+              "source_urls": [
+                "https://www.npr.org/2026/07/19/nx-s1-5895993/andy-burnham-prime-minister-keir-starmer",
+                "https://www.dw.com/en/meet-andy-burnham-britain-s-prime-minister/a-77664543?maca=en-rss-en-all-1573-rdf"
+              ]
+            }
+          ],
+          "last_updated_at": "2026-07-20",
+          "merged_development_ids": [
+            "story_9e5d37c5df85149c",
+            "story_b7c417466d13db4f"
+          ],
+          "revision_count": 2
+        },
+        {
+          "development_id": "story_aeeb35dfeeed1a15",
+          "daily_story_id": "story_aeeb35dfeeed1a15",
+          "date": "2026-07-20",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Andy Burnham Assumes Role as UK Prime Minister Amidst Major Challenges",
+          "summary": "Andy Burnham officially became the Prime Minister of the United Kingdom, taking office at Downing Street. He faces significant challenges, including a call for a new political model and a 10-year plan for the country. Burnham's leadership marks the sixth prime ministerial change in the last decade.",
+          "development_type": "development",
+          "key_facts": [
+            "Andy Burnham has taken over as UK Prime Minister.",
+            "He is the sixth prime minister in the last ten years.",
+            "Burnham has outlined a 10-year plan for Britain.",
+            "He aims to shift power away from London."
+          ],
+          "source_count": 3,
+          "sources": [
+            "Channel NewsAsia",
+            "Fox News",
+            "New York Times"
+          ],
+          "source_urls": [
+            "https://www.nytimes.com/2026/07/20/world/europe/britain-new-prime-minister-challenges.html",
+            "https://www.foxnews.com/world/andy-burnham-takes-over-uk-prime-minister-calls-new-political-model",
+            "https://www.channelnewsasia.com/world/andy-burham-new-british-prime-minister-6265696"
+          ],
+          "source_details": [
+            {
+              "title": "Five of the Main Challenges Awaiting Andy Burnham When He Becomes Prime Minister",
+              "source": "New York Times",
+              "link": "https://www.nytimes.com/2026/07/20/world/europe/britain-new-prime-minister-challenges.html",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Andy Burnham takes over as UK prime minister, calls for 'new political model'",
+              "source": "Fox News",
+              "link": "https://www.foxnews.com/world/andy-burnham-takes-over-uk-prime-minister-calls-new-political-model",
+              "source_bias": "right"
+            },
+            {
+              "title": "Andy Burnham becomes prime minister vowing 10-year plan for Britain",
+              "source": "Channel NewsAsia",
+              "link": "https://www.channelnewsasia.com/world/andy-burham-new-british-prime-minister-6265696",
+              "source_bias": "center"
+            }
+          ],
+          "confidence": 0.399,
+          "match_evidence": {
+            "score": 0.399,
+            "matched_development_id": "story_56f45dff841793d0",
+            "shared_tokens": [
+              "andy",
+              "burnham",
+              "change",
+              "decade",
+              "kingdom",
+              "last",
+              "leadership",
+              "marks",
+              "model",
+              "office",
+              "political",
+              "prime",
+              "united",
+              "years"
+            ],
+            "shared_entities": [
+              "andy_burnham",
+              "uk",
+              "united_kingdom"
+            ],
+            "source_url_match": false,
+            "method": "deterministic_event_match_v2",
+            "threshold": 0.38
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-20",
+          "last_seen_at": "2026-07-20",
+          "integrity_status": "trusted"
+        }
+      ],
+      "integrity": {
+        "public_development_count": 2,
+        "questionable_development_count": 0,
+        "review_required": false
+      },
+      "latest_title": "Andy Burnham Assumes Role as UK Prime Minister Amidst Major Challenges",
+      "latest_summary": "Andy Burnham officially became the Prime Minister of the United Kingdom, taking office at Downing Street. He faces significant challenges, including a call for a new political model and a 10-year plan for the country. Burnham's leadership marks the sixth prime ministerial change in the last decade.",
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "stage": "developing_event",
+        "stage_label": "Developing event",
+        "base_title": "UK Prime Minister Transition",
+        "display_title": "UK Prime Minister Transition",
+        "milestone_development_ids": [
+          "story_56f45dff841793d0",
+          "story_aeeb35dfeeed1a15"
+        ],
+        "summary_available": true,
+        "summary_label": "Read the story so far",
+        "summary_updated_at": "2026-07-20",
+        "development_count": 2,
+        "coverage_packet_count": 4,
+        "date_count": 1,
+        "source_count": 11,
+        "independent_source_count": 11,
+        "first_date": "2026-07-20",
+        "latest_date": "2026-07-20",
+        "latest_update_title": "Andy Burnham Assumes Role as UK Prime Minister Amidst Major Challenges",
+        "coverage_score": 0.594,
+        "recency_score": 1.0,
+        "rank_score": 0.83,
+        "context_summary": "Muninn first tracked this thread on 2026-07-20: Andy Burnham Takes Office as UK Prime Minister. The latest development is Andy Burnham Assumes Role as UK Prime Minister Amidst Major Challenges.",
+        "cta_label": ""
+      },
+      "event_summary": {
+        "available": true,
+        "summary": "Andy Burnham has officially become the Prime Minister of the United Kingdom, succeeding Keir Starmer in a transition of power overseen by King Charles. Most recently, andy Burnham officially became the Prime Minister of the United Kingdom, taking office at Downing Street.",
+        "key_developments": [
+          {
+            "development_id": "story_56f45dff841793d0",
+            "date": "2026-07-20",
+            "title": "Andy Burnham Takes Office as UK Prime Minister"
+          },
+          {
+            "development_id": "story_aeeb35dfeeed1a15",
+            "date": "2026-07-20",
+            "title": "Andy Burnham Assumes Role as UK Prime Minister Amidst Major Challenges"
+          }
+        ],
+        "sources": [
+          {
+            "title": "Andy Burnham becomes UK PM, promising new social and political model",
+            "source": "The Hindu",
+            "link": "https://www.thehindu.com/news/international/i-go-with-good-grace-and-a-smile-on-my-face-starmer-says-making-way-for-burnham/article71244798.ece",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Andy Burnham formally appointed UK prime minster",
+            "source": "NBC News",
+            "link": "https://www.nbcnews.com/now/video/andy-burnham-formally-appointed-u-k-prime-minster-266940485538",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Andy Burnham becomes Britain's new Prime Minister",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/07/20/andy-burnham-becomes-britains-new-prime-minister",
+            "source_bias": "center"
+          },
+          {
+            "title": "Andy Burnham becomes the UK’s seventh prime minister in a decade after Starmer resigns",
+            "source": "AP - Top News via Google News",
+            "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxObmpFTnBJcVJSbTdmSFR6SXIyOU9saWNFLWJ5QW1uS2QzanBfU3hyREhOdHJGTGI2VTlqeHJXTXA5NjZ5OEJyQ0k0bmliV0lsMTZfQXZWOGpmR244SUFCX3hRMjFFVFlCNV9feWNBMXd1NDFMRE9ZNkZrTTVMcWZZT3h4RHFxZzlZc3B6UlZsLUdndGdUUW93Rk1MdGY5MlJYamc2ZWdvaE4?oc=5",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Andy Burnham takes the reins as U.K.'s 7th prime minister in a decade",
+            "source": "CBS News",
+            "link": "https://www.cbsnews.com/news/andy-burnham-new-uk-prime-minister-7th-in-decade-after-keir-starmer",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Why Britain is getting a new prime minister without a general election",
+            "source": "PBS News",
+            "link": "https://www.pbs.org/newshour/world/why-britain-is-getting-a-new-prime-minister-without-a-general-election",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Andy Burnham becomes UK prime minister",
+            "source": "NPR",
+            "link": "https://www.npr.org/2026/07/19/nx-s1-5895993/andy-burnham-prime-minister-keir-starmer",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Meet Andy Burnham, Britain's prime minister",
+            "source": "DW",
+            "link": "https://www.dw.com/en/meet-andy-burnham-britain-s-prime-minister/a-77664543?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Five of the Main Challenges Awaiting Andy Burnham When He Becomes Prime Minister",
+            "source": "New York Times",
+            "link": "https://www.nytimes.com/2026/07/20/world/europe/britain-new-prime-minister-challenges.html",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Andy Burnham takes over as UK prime minister, calls for 'new political model'",
+            "source": "Fox News",
+            "link": "https://www.foxnews.com/world/andy-burnham-takes-over-uk-prime-minister-calls-new-political-model",
+            "source_bias": "right"
+          },
+          {
+            "title": "Andy Burnham becomes prime minister vowing 10-year plan for Britain",
+            "source": "Channel NewsAsia",
+            "link": "https://www.channelnewsasia.com/world/andy-burham-new-british-prime-minister-6265696",
+            "source_bias": "center"
+          }
+        ],
+        "updated_at": "2026-07-20",
+        "provenance": "source_grounded_event_memory"
+      },
+      "event_stage": "developing_event",
+      "search_tokens": [
+        "10-year",
+        "amidst",
+        "andy",
+        "assume",
+        "became",
+        "become",
+        "burnham",
+        "call",
+        "challenge",
+        "change",
+        "charle",
+        "decade",
+        "downing",
+        "faces",
+        "figure",
+        "including",
+        "keir",
+        "king",
+        "kingdom",
+        "labour",
+        "last",
+        "leadership",
+        "manchester",
+        "marks",
+        "mayor",
+        "ministerial",
+        "model",
+        "office",
+        "officially",
+        "overseen",
+        "party",
+        "plan",
+        "political",
+        "power",
+        "previously",
+        "prime",
+        "prominent",
+        "role",
+        "significant",
+        "sixth",
+        "starmer",
+        "street",
+        "succeeding",
+        "takes",
+        "taking",
+        "transition",
+        "united"
+      ],
+      "entities": [
+        "andy_burnham",
+        "assume_role",
+        "burnham_assume",
+        "burnham_takes",
+        "challenge_andy",
+        "charles._burnham",
+        "downing",
+        "downing_street.",
+        "keir_starmer",
+        "king_charles.",
+        "labour",
+        "labour_party.",
+        "party._andy",
+        "takes_office",
+        "uk",
+        "united_kingdom"
+      ],
+      "search_text": "10-year amidst andy andy_burnham assume assume_role became become burnham burnham_assume burnham_takes call challenge challenge_andy change charle charles._burnham decade downing downing_street. faces figure including keir keir_starmer king king_charles. kingdom labour labour_party. last leadership manchester marks mayor ministerial model office officially overseen party party._andy plan political power previously prime prominent role significant sixth starmer street succeeding takes takes_office taking transition uk united united_kingdom",
+      "related_events": [],
+      "event_overview": {
+        "available": true,
+        "title": "About UK Prime Minister Transition",
+        "subject": "UK Prime Minister Transition",
+        "summary": "This event concerns the transfer of leadership of the UK government from Keir Starmer to Andy Burnham after Starmer announced that he would resign as Labour leader and prime minister. In the UK’s parliamentary system, a change of prime minister can occur within an existing Parliament when the Sovereign appoints the person judged most likely to command the confidence of the House of Commons; it does not itself require a general election.",
+        "facts": [
+          {
+            "label": "Transition date",
+            "value": "The leadership transition was expected to conclude on 20 July 2026, the end of Labour’s nomination stage; parliamentary material described Burnham as the sole confirmed candidate at the time and said he would become Labour leader and prime minister if unopposed.",
+            "source_ids": [
+              "o1"
+            ]
+          },
+          {
+            "label": "Predecessor and resignation",
+            "value": "Keir Starmer, who had been prime minister since 5 July 2024, announced on 22 June 2026 that he would resign as Labour leader.",
+            "source_ids": [
+              "o2",
+              "o1"
+            ]
+          },
+          {
+            "label": "Incoming leader",
+            "value": "Andy Burnham was elected MP for Makerfield on 18 June 2026 and is recorded by the UK Parliament as Labour Party leader from 17 July 2026.",
+            "source_ids": [
+              "o3"
+            ]
+          },
+          {
+            "label": "Constitutional basis",
+            "value": "When a prime minister resigns, the Sovereign invites the person most likely to command House of Commons confidence to serve as prime minister and form a government; the relevant political parties are expected to make clear who that person is.",
+            "source_ids": [
+              "o4"
+            ]
+          },
+          {
+            "label": "Election implications",
+            "value": "Replacing a prime minister does not automatically dissolve Parliament or trigger a general election. Under the Dissolution and Calling of Parliament Act 2022, dissolution is by the Sovereign using prerogative powers, conventionally following a prime ministerial request, and a Parliament otherwise has a maximum five-year term.",
+            "source_ids": [
+              "o5"
+            ]
+          }
+        ],
+        "scope_note": "The selected Muninn timeline covers the 20 July 2026 assumption of office and immediate transition context, not the full Labour leadership process, subsequent Cabinet decisions, or the broader record of the new government.",
+        "sources": [
+          {
+            "title": "Parliament",
+            "publisher": "Parliament",
+            "url": "https://lordslibrary.parliament.uk/education-employment-and-welfare-government-policy/",
+            "source_type": "reporting",
+            "id": "o1"
+          },
+          {
+            "title": "Gov",
+            "publisher": "Gov",
+            "url": "https://www.gov.uk/government/ministers/prime-minister",
+            "source_type": "reporting",
+            "id": "o2"
+          },
+          {
+            "title": "Parliament",
+            "publisher": "Parliament",
+            "url": "https://members.parliament.uk/member/1427/career",
+            "source_type": "reporting",
+            "id": "o3"
+          },
+          {
+            "title": "Gov",
+            "publisher": "Gov",
+            "url": "https://www.cabinetoffice.gov.uk/sites/default/files/resources/cabinetdraftmanual.pdf",
+            "source_type": "reporting",
+            "id": "o4"
+          },
+          {
+            "title": "Parliament",
+            "publisher": "Parliament",
+            "url": "https://commonslibrary.parliament.uk/research-briefings/sn05085/",
+            "source_type": "reporting",
+            "id": "o5"
+          }
+        ],
+        "publisher_count": 2,
+        "generated_at": "2026-07-20T15:08:12.653125+00:00",
+        "expires_at": "2026-07-27T15:08:12.653125+00:00",
+        "model": "gpt-5.6-terra",
+        "provenance": "openai_web_search_source_grounded_event_overview_v1"
+      }
     },
     {
       "event_id": "event_world-cup-final-spain-to-face-argentina-fran_ca15e3b715",
@@ -680,8 +2222,8 @@
         "latest_date": "2026-07-19",
         "latest_update_title": "Argentina and Spain Set for World Cup Final Featuring Messi",
         "coverage_score": 0.497,
-        "recency_score": 1.0,
-        "rank_score": 0.789,
+        "recency_score": 0.875,
+        "rank_score": 0.716,
         "context_summary": "Muninn first tracked this thread on 2026-07-18: World Cup Final: Spain to Face Argentina, France and England Compete for Third Place. The latest development is Argentina and Spain Set for World Cup Final Featuring Messi.",
         "cta_label": ""
       },
@@ -745,13 +2287,24 @@
       "related_events": [
         {
           "event_id": "event_england-defeats-france-6-4-to-secure-third-p_56746b458a",
-          "title": "England Defeats France 6-4 to Secure Third Place in World Cup",
+          "title": "England Secures Third Place with 6-4 Victory Over France in World Cup Thriller",
           "relationship": "related_topic",
-          "confidence": 0.751,
+          "confidence": 0.75,
           "shared_entities": [
             "england",
             "france",
             "third_place"
+          ]
+        },
+        {
+          "event_id": "event_spain-claims-second-world-cup-title-with-ext_00a076ebf4",
+          "title": "Spain Claims Second World Cup Title with Extra Time Victory Over Argentina",
+          "relationship": "related_topic",
+          "confidence": 0.715,
+          "shared_entities": [
+            "argentina",
+            "lionel_messi",
+            "spain"
           ]
         },
         {
@@ -938,6 +2491,218 @@
         "world"
       ],
       "search_text": "000 2023 34th ahead anticipated argentina argentina_france attend back-to-back become biggest both captain clash classic compete cup_final cups england england_compete expected face fans featuring featuring_messi final final_featuring final_spain first football france highly jersey lamine lamine_yamal. lionel lionel_messi marking marks match meanwhile meanwhile_france messi messi_argentina moment nation place prepare prize rising showdown significant spain spain_set star take team they third third_place tournament victory women world yamal"
+    },
+    {
+      "event_id": "event_khalil-al-hayya-elected-as-new-leader-of-ham_8e1ba2169a",
+      "title": "Khalil al-Hayya Elected as New Leader of Hamas Following Run-off",
+      "canonical_title": "Khalil al-Hayya Elected as New Leader of Hamas Following Run-off",
+      "topic_label": "Hamas Leadership",
+      "summary": "Khalil al-Hayya has been elected as the new political chief of Hamas following a wartime election process. A founding member of the group, al-Hayya is recognized as a pragmatic leader and has survived previous attacks targeting Hamas leadership. His election comes at a critical time for the organization amid ongoing conflict.",
+      "status": "active",
+      "first_seen_at": "2026-07-20",
+      "last_seen_at": "2026-07-20",
+      "timeline": [
+        {
+          "development_id": "story_2cc03340119f668e",
+          "daily_story_id": "story_2cc03340119f668e",
+          "date": "2026-07-20",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Khalil al-Hayya Elected as New Leader of Hamas Following Run-off",
+          "summary": "Khalil al-Hayya has been appointed as the new leader of Hamas after a run-off election against Khaled Meshaal. Al-Hayya, who was previously part of the five-member leadership council, succeeds Yahya Sinwar, who was killed by Israeli forces in 2024.",
+          "development_type": "military_action",
+          "key_facts": [
+            "Khalil al-Hayya has been elected as the new leader of Hamas.",
+            "He won a run-off election against Khaled Meshaal.",
+            "Al-Hayya was previously a member of the five-member leadership council.",
+            "Yahya Sinwar, the former leader, was killed by Israeli forces in 2024."
+          ],
+          "source_count": 4,
+          "sources": [
+            "Al Jazeera English",
+            "BBC - World",
+            "France 24 - English"
+          ],
+          "source_urls": [
+            "https://www.aljazeera.com/news/2026/7/20/hamas-names-khalil-al-hayya-as-new-leader-after-run-off-with-khaled-meshaal?traffic_source=rss",
+            "https://www.aljazeera.com/news/2026/7/20/who-is-khalil-al-hayya-hamas-newly-elected-political-chief?traffic_source=rss",
+            "https://www.bbc.co.uk/news/articles/cx25nzkyj50o?at_medium=RSS&at_campaign=rss",
+            "https://www.france24.com/en/middle-east/20260720-who-is-khalil-al-hayya-hamas-s-new-leader"
+          ],
+          "source_details": [
+            {
+              "title": "Who is Khalil al-Hayya, Hamas’s newly elected political chief?",
+              "source": "Al Jazeera English",
+              "link": "https://www.aljazeera.com/news/2026/7/20/who-is-khalil-al-hayya-hamas-newly-elected-political-chief?traffic_source=rss",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Who is Khalil al-Hayya, Hamas’s new leader?",
+              "source": "France 24 - English",
+              "link": "https://www.france24.com/en/middle-east/20260720-who-is-khalil-al-hayya-hamas-s-new-leader",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Hamas names Khalil al-Hayya as new leader after run-off with Khaled Meshaal",
+              "source": "Al Jazeera English",
+              "link": "https://www.aljazeera.com/news/2026/7/20/hamas-names-khalil-al-hayya-as-new-leader-after-run-off-with-khaled-meshaal?traffic_source=rss",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Hamas names Khalil al-Hayya as new overall leader",
+              "source": "BBC - World",
+              "link": "https://www.bbc.co.uk/news/articles/cx25nzkyj50o?at_medium=RSS&at_campaign=rss",
+              "source_bias": "center"
+            }
+          ],
+          "confidence": 1.0,
+          "match_evidence": {
+            "score": 1.0,
+            "method": "new_event",
+            "shared_tokens": [],
+            "shared_entities": []
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-20",
+          "last_seen_at": "2026-07-20",
+          "integrity_status": "trusted",
+          "revisions": [
+            {
+              "daily_story_id": "story_b2c3ab2eb35a0ab8",
+              "reported_at": "2026-07-20",
+              "update_kind": "factual_update",
+              "title": "Khalil al-Hayya Elected as New Leader of Hamas Following Run-off",
+              "summary": "Khalil al-Hayya has been appointed as the new leader of Hamas after a run-off election against Khaled Meshaal. Al-Hayya, who was previously part of the five-member leadership council, succeeds Yahya Sinwar, who was killed by Israeli forces in 2024.",
+              "key_facts": [
+                "Khalil al-Hayya has been elected as the new leader of Hamas.",
+                "He won a run-off election against Khaled Meshaal.",
+                "Al-Hayya was previously a member of the five-member leadership council.",
+                "Yahya Sinwar, the former leader, was killed by Israeli forces in 2024."
+              ],
+              "source_urls": [
+                "https://www.aljazeera.com/news/2026/7/20/hamas-names-khalil-al-hayya-as-new-leader-after-run-off-with-khaled-meshaal?traffic_source=rss",
+                "https://www.bbc.co.uk/news/articles/cx25nzkyj50o?at_medium=RSS&at_campaign=rss"
+              ]
+            }
+          ],
+          "last_updated_at": "2026-07-20",
+          "merged_development_ids": [
+            "story_b2c3ab2eb35a0ab8"
+          ],
+          "revision_count": 1
+        }
+      ],
+      "integrity": {
+        "public_development_count": 1,
+        "questionable_development_count": 0,
+        "review_required": false
+      },
+      "latest_title": "Khalil al-Hayya Elected as New Leader of Hamas Following Run-off",
+      "latest_summary": "Khalil al-Hayya has been appointed as the new leader of Hamas after a run-off election against Khaled Meshaal. Al-Hayya, who was previously part of the five-member leadership council, succeeds Yahya Sinwar, who was killed by Israeli forces in 2024.",
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "stage": "developing_event",
+        "stage_label": "Developing event",
+        "base_title": "Hamas Leadership",
+        "display_title": "Hamas Leadership",
+        "milestone_development_ids": [
+          "story_2cc03340119f668e"
+        ],
+        "summary_available": true,
+        "summary_label": "Read the story so far",
+        "summary_updated_at": "2026-07-20",
+        "development_count": 1,
+        "coverage_packet_count": 2,
+        "date_count": 1,
+        "source_count": 4,
+        "independent_source_count": 3,
+        "first_date": "2026-07-20",
+        "latest_date": "2026-07-20",
+        "latest_update_title": "Khalil al-Hayya Elected as New Leader of Hamas Following Run-off",
+        "coverage_score": 0.261,
+        "recency_score": 1.0,
+        "rank_score": 0.69,
+        "context_summary": "Khalil al-Hayya has been appointed as the new leader of Hamas after a run-off election against Khaled Meshaal. Al-Hayya, who was previously part of the five-member leadership council, succeeds Yahya Sinwar, who was killed by Israeli forces in 2024.",
+        "cta_label": ""
+      },
+      "event_summary": {
+        "available": true,
+        "summary": "Khalil al-Hayya has been appointed as the new leader of Hamas after a run-off election against Khaled Meshaal.",
+        "key_developments": [
+          {
+            "development_id": "story_2cc03340119f668e",
+            "date": "2026-07-20",
+            "title": "Khalil al-Hayya Elected as New Leader of Hamas Following Run-off"
+          }
+        ],
+        "sources": [
+          {
+            "title": "Who is Khalil al-Hayya, Hamas’s newly elected political chief?",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/news/2026/7/20/who-is-khalil-al-hayya-hamas-newly-elected-political-chief?traffic_source=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Who is Khalil al-Hayya, Hamas’s new leader?",
+            "source": "France 24 - English",
+            "link": "https://www.france24.com/en/middle-east/20260720-who-is-khalil-al-hayya-hamas-s-new-leader",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Hamas names Khalil al-Hayya as new leader after run-off with Khaled Meshaal",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/news/2026/7/20/hamas-names-khalil-al-hayya-as-new-leader-after-run-off-with-khaled-meshaal?traffic_source=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Hamas names Khalil al-Hayya as new overall leader",
+            "source": "BBC - World",
+            "link": "https://www.bbc.co.uk/news/articles/cx25nzkyj50o?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          }
+        ],
+        "updated_at": "2026-07-20",
+        "provenance": "source_grounded_event_memory"
+      },
+      "event_stage": "developing_event",
+      "search_tokens": [
+        "2024",
+        "al-hayya",
+        "appointed",
+        "council",
+        "elected",
+        "election",
+        "five-member",
+        "force",
+        "hamas",
+        "israel",
+        "khaled",
+        "khalil",
+        "killed",
+        "leader",
+        "leadership",
+        "meshaal",
+        "part",
+        "previously",
+        "run-off",
+        "sinwar",
+        "succeed",
+        "yahya"
+      ],
+      "entities": [
+        "al-hayya",
+        "israel",
+        "khaled_meshaal.",
+        "meshaal._al-hayya",
+        "run-off_khalil",
+        "yahya_sinwar"
+      ],
+      "search_text": "2024 al-hayya appointed council elected election five-member force hamas israel khaled khaled_meshaal. khalil killed leader leadership meshaal meshaal._al-hayya part previously run-off run-off_khalil sinwar succeed yahya yahya_sinwar",
+      "related_events": []
     },
     {
       "event_id": "event_dhs-secretary-mullin-supports-trump-s-claims_1f1de09f5b",
@@ -1139,8 +2904,8 @@
         "latest_date": "2026-07-19",
         "latest_update_title": "Trump Claims China Interfered in 2020 Election During National Address",
         "coverage_score": 0.422,
-        "recency_score": 1.0,
-        "rank_score": 0.757,
+        "recency_score": 0.875,
+        "rank_score": 0.685,
         "context_summary": "Muninn first tracked this thread on 2026-07-18: DHS Secretary Mullin Supports Trump's Claims of Election Interference. The latest development is Trump Claims China Interfered in 2020 Election During National Address.",
         "cta_label": ""
       },
@@ -1292,82 +3057,83 @@
       "search_text": "2020 220 address allegation although assertion belief china china_interfered claim claim_china claiming contradict data declassify dhs dhs_secretary difficult disputed document election election_interference emphasized evidence expert files foreign found however intelligence intention interfered interference interference_dhs manipulate meddling million mullin mullin_support national national_address noted obtained particularly previou primetime purported recent referenced reiterated review revived secretary secretary_mullin significant stated substantial suggest support support_trump supporting system targeting these trump trump_claim unlawfully us voter vulnerabilitie within"
     },
     {
-      "event_id": "event_russia-launches-major-ballistic-missile-atta_e12d127249",
-      "title": "Russia Launches Major Ballistic Missile Attack on Ukrainian Cities, Causing Casualties",
-      "canonical_title": "Russia Launches Major Ballistic Missile Attack on Ukrainian Cities, Causing Casualties",
-      "topic_label": "Ukraine Conflict",
-      "summary": "Russia conducted a significant ballistic missile attack on Ukraine, targeting major cities including Kyiv. The Ukrainian air force reported that 41 missiles and 125 drones were launched overnight. Casualties include at least five fatalities and over 35 injuries, with damage reported across the capital, including fires in residential areas. This attack is noted as one of the largest since the beginning of the conflict.",
+      "event_id": "event_england-defeats-france-6-4-to-secure-third-p_56746b458a",
+      "title": "England Secures Third Place with 6-4 Victory Over France in World Cup Thriller",
+      "canonical_title": "England Secures Third Place with 6-4 Victory Over France in World Cup Thriller",
+      "topic_label": "World Cup 2026",
+      "summary": "In a thrilling World Cup third-place playoff, England triumphed over France with a score of 6-4. Bukayo Saka's hat-trick played a crucial role in England's victory, marking their best finish in the tournament since 1966. Despite the loss, Kylian Mbappé scored twice, setting a new record for the most goals in World Cup history with 22.",
       "status": "active",
       "first_seen_at": "2026-07-19",
-      "last_seen_at": "2026-07-19",
+      "last_seen_at": "2026-07-20",
       "timeline": [
         {
-          "development_id": "story_a130bc8e56eeaaef",
-          "daily_story_id": "story_a130bc8e56eeaaef",
+          "development_id": "story_33bcd5630ff26b6b",
+          "daily_story_id": "story_33bcd5630ff26b6b",
           "date": "2026-07-19",
           "occurred_at": null,
           "date_basis": "first_reported_by_muninn",
-          "title": "Russia Launches Major Ballistic Missile Attack on Ukrainian Cities, Causing Casualties",
-          "summary": "Russia conducted one of its largest ballistic missile attacks on Ukraine, targeting Kyiv and other cities. The assault involved approximately 41 missiles and 125 drones, resulting in at least six deaths and dozens of injuries. Significant damage was reported, with multiple districts in Kyiv affected and civilian infrastructure hit.",
-          "development_type": "military_action",
+          "title": "England Secures Third Place with 6-4 Victory Over France in World Cup Thriller",
+          "summary": "In a record-breaking World Cup third-place playoff, England defeated France 6-4. Bukayo Saka scored a hat trick, helping England to a significant lead of 4-0 at halftime. Despite a spirited comeback from France in the second half, England held on to secure their best World Cup finish since 1966.",
+          "development_type": "development",
           "key_facts": [
-            "At least six people killed and dozens injured in the attack.",
-            "Approximately 41 missiles and 125 drones were launched.",
-            "Kyiv and other cities were targeted, with significant damage reported."
+            "England won 6-4 against France in the World Cup 2026 third-place playoff.",
+            "Bukayo Saka scored a hat trick for England.",
+            "England led 4-0 at halftime.",
+            "France mounted a comeback but ultimately lost."
           ],
           "source_count": 6,
           "sources": [
-            "Al Jazeera English",
-            "BBC",
+            "Africanews",
+            "CBC",
+            "DW",
+            "Euronews",
             "France 24",
-            "NPR",
-            "RTE News",
-            "The Guardian"
+            "RTE News"
           ],
           "source_urls": [
-            "https://www.aljazeera.com/news/2026/7/19/russia-launches-largest-ballistic-missile-attack-on-kyiv-since-start-of-war?traffic_source=rss",
-            "https://www.bbc.co.uk/news/articles/c2el7xpnzrpo?at_medium=RSS&at_campaign=rss",
-            "https://www.france24.com/en/russia-hits-kyiv-with-ballistic-missiles",
-            "https://www.npr.org/2026/07/19/nx-s1-5899518/russia-attack-kyiv",
-            "https://www.rte.ie/news/2026/0719/1584041-ukraine-russia",
-            "https://www.theguardian.com/world/2026/jul/19/dozens-of-russian-missiles-pound-kyiv-ukraine-in-major-attack"
+            "http://www.africanews.com/2026/07/19/world-cup-2026-england-and-france-deliver-10-goal-thriller-in-bronze-playoff",
+            "http://www.euronews.com/2026/07/19/england-beat-france-6-4-in-world-cup-third-place-thriller",
+            "https://www.cbc.ca/sports/soccer/worldcup/fifa-world-cup-recap-england-france-july-18-9.7275619?cmp=rss",
+            "https://www.dw.com/en/france-s-mbappe-sets-world-cup-scoring-record-with-22-goals/a-78022308?maca=en-rss-en-all-1573-rdf",
+            "https://www.france24.com/en/england-beat-france-6-4-to-finish-third",
+            "https://www.rte.ie/sport/world-cup-2026/2026/0718/1583988-world-cup-2026-3rd-place-p-o-france-v-england-updates"
           ],
           "source_details": [
             {
-              "title": "Russia launches major ballistic missile attack on Ukrainian cities",
-              "source": "BBC",
-              "link": "https://www.bbc.co.uk/news/articles/c2el7xpnzrpo?at_medium=RSS&at_campaign=rss",
-              "source_bias": "center"
-            },
-            {
-              "title": "Deadly overnight Russian attack on Ukraine targets the capital",
-              "source": "NPR",
-              "link": "https://www.npr.org/2026/07/19/nx-s1-5899518/russia-attack-kyiv",
-              "source_bias": "lean-left"
-            },
-            {
-              "title": "Russia launches largest ballistic missile attack on Kyiv since start of war",
-              "source": "Al Jazeera English",
-              "link": "https://www.aljazeera.com/news/2026/7/19/russia-launches-largest-ballistic-missile-attack-on-kyiv-since-start-of-war?traffic_source=rss",
-              "source_bias": "lean-left"
-            },
-            {
-              "title": "Russia pounds Kyiv for five hours in one of its biggest ballistic missile attacks",
-              "source": "The Guardian",
-              "link": "https://www.theguardian.com/world/2026/jul/19/dozens-of-russian-missiles-pound-kyiv-ukraine-in-major-attack",
-              "source_bias": "left"
-            },
-            {
-              "title": "Russia pounds Kyiv in major ballistic missile attack",
-              "source": "RTE News",
-              "link": "https://www.rte.ie/news/2026/0719/1584041-ukraine-russia",
-              "source_bias": "center"
-            },
-            {
-              "title": "Russia hits Kyiv with ballistic missiles",
+              "title": "England beat France 6-4 to finish third",
               "source": "France 24",
-              "link": "https://www.france24.com/en/russia-hits-kyiv-with-ballistic-missiles",
+              "link": "https://www.france24.com/en/england-beat-france-6-4-to-finish-third",
               "source_bias": "lean-left"
+            },
+            {
+              "title": "France's Mbappe sets World Cup scoring record with 22 goals",
+              "source": "DW",
+              "link": "https://www.dw.com/en/france-s-mbappe-sets-world-cup-scoring-record-with-22-goals/a-78022308?maca=en-rss-en-all-1573-rdf",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "England beat France 6-4 to claim World Cup third place",
+              "source": "Euronews",
+              "link": "http://www.euronews.com/2026/07/19/england-beat-france-6-4-in-world-cup-third-place-thriller",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Saka's hat trick lifts England past Mbappé, France 6-4 in wild World Cup 3rd-place game",
+              "source": "CBC",
+              "link": "https://www.cbc.ca/sports/soccer/worldcup/fifa-world-cup-recap-england-france-july-18-9.7275619?cmp=rss",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "World Cup 2026 3rd Place P/O: France 4-6 England recap",
+              "source": "RTE News",
+              "link": "https://www.rte.ie/sport/world-cup-2026/2026/0718/1583988-world-cup-2026-3rd-place-p-o-france-v-england-updates",
+              "source_bias": "center"
+            },
+            {
+              "title": "World Cup 2026: England and France deliver 10-goal thriller in bronze playoff",
+              "source": "Africanews",
+              "link": "http://www.africanews.com/2026/07/19/world-cup-2026-england-and-france-deliver-10-goal-thriller-in-bronze-playoff",
+              "source_bias": "center"
             }
           ],
           "confidence": 1.0,
@@ -1382,51 +3148,50 @@
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
           "first_seen_at": "2026-07-19",
-          "last_seen_at": "2026-07-19",
+          "last_seen_at": "2026-07-20",
           "integrity_status": "trusted",
           "revisions": [
             {
-              "daily_story_id": "story_dcde4509a3131f6b",
-              "reported_at": "2026-07-19",
+              "daily_story_id": "story_1d592a22a0234240",
+              "reported_at": "2026-07-20",
               "update_kind": "factual_update",
-              "title": "Russia Launches Major Ballistic Missile Attack on Ukrainian Cities, Causing Casualties",
-              "summary": "Russia conducted one of its largest ballistic missile attacks on Ukraine, targeting Kyiv and other cities. The assault involved approximately 41 missiles and 125 drones, resulting in at least six deaths and dozens of injuries. Significant damage was reported, with multiple districts in Kyiv affected and civilian infrastructure hit.",
+              "title": "England Secures Third Place with 6-4 Victory Over France in World Cup Thriller",
+              "summary": "In a record-breaking World Cup third-place playoff, England defeated France 6-4. Bukayo Saka scored a hat trick, helping England to a significant lead of 4-0 at halftime. Despite a spirited comeback from France in the second half, England held on to secure their best World Cup finish since 1966.",
               "key_facts": [
-                "At least six people killed and dozens injured in the attack.",
-                "Approximately 41 missiles and 125 drones were launched.",
-                "Kyiv and other cities were targeted, with significant damage reported."
+                "England won 6-4 against France in the World Cup 2026 third-place playoff.",
+                "Bukayo Saka scored a hat trick for England.",
+                "England led 4-0 at halftime.",
+                "France mounted a comeback but ultimately lost."
               ],
               "source_urls": [
-                "https://www.bbc.co.uk/news/articles/c2el7xpnzrpo?at_medium=RSS&at_campaign=rss",
-                "https://www.npr.org/2026/07/19/nx-s1-5899518/russia-attack-kyiv",
-                "https://www.theguardian.com/world/2026/jul/19/dozens-of-russian-missiles-pound-kyiv-ukraine-in-major-attack",
-                "https://www.france24.com/en/russia-hits-kyiv-with-ballistic-missiles"
+                "http://www.africanews.com/2026/07/19/world-cup-2026-england-and-france-deliver-10-goal-thriller-in-bronze-playoff",
+                "http://www.euronews.com/2026/07/19/england-beat-france-6-4-in-world-cup-third-place-thriller"
               ]
             }
           ],
-          "last_updated_at": "2026-07-19",
+          "last_updated_at": "2026-07-20",
           "merged_development_ids": [
-            "story_dcde4509a3131f6b"
+            "story_1d592a22a0234240"
           ],
           "revision_count": 1
         }
       ],
       "integrity": {
         "public_development_count": 1,
-        "questionable_development_count": 1,
-        "review_required": true
+        "questionable_development_count": 0,
+        "review_required": false
       },
-      "latest_title": "Russia Launches Major Ballistic Missile Attack on Ukrainian Cities, Causing Casualties",
-      "latest_summary": "Russia conducted one of its largest ballistic missile attacks on Ukraine, targeting Kyiv and other cities. The assault involved approximately 41 missiles and 125 drones, resulting in at least six deaths and dozens of injuries. Significant damage was reported, with multiple districts in Kyiv affected and civilian infrastructure hit.",
+      "latest_title": "England Secures Third Place with 6-4 Victory Over France in World Cup Thriller",
+      "latest_summary": "In a record-breaking World Cup third-place playoff, England defeated France 6-4. Bukayo Saka scored a hat trick, helping England to a significant lead of 4-0 at halftime. Despite a spirited comeback from France in the second half, England held on to secure their best World Cup finish since 1966.",
       "presentation": {
         "has_context": true,
         "has_full_timeline": false,
         "stage": "developing_event",
         "stage_label": "Developing event",
-        "base_title": "Ukraine Conflict",
-        "display_title": "Ukraine Conflict",
+        "base_title": "World Cup 2026",
+        "display_title": "World Cup 2026",
         "milestone_development_ids": [
-          "story_a130bc8e56eeaaef"
+          "story_33bcd5630ff26b6b"
         ],
         "summary_available": true,
         "summary_label": "Read the story so far",
@@ -1438,59 +3203,59 @@
         "independent_source_count": 6,
         "first_date": "2026-07-19",
         "latest_date": "2026-07-19",
-        "latest_update_title": "Russia Launches Major Ballistic Missile Attack on Ukrainian Cities, Causing Casualties",
+        "latest_update_title": "England Secures Third Place with 6-4 Victory Over France in World Cup Thriller",
         "coverage_score": 0.398,
-        "recency_score": 1.0,
-        "rank_score": 0.747,
-        "context_summary": "Russia conducted one of its largest ballistic missile attacks on Ukraine, targeting Kyiv and other cities. The assault involved approximately 41 missiles and 125 drones, resulting in at least six deaths and dozens of injuries. Significant damage was reported, with multiple districts in Kyiv affected and civilian infrastructure hit.",
+        "recency_score": 0.875,
+        "rank_score": 0.675,
+        "context_summary": "In a record-breaking World Cup third-place playoff, England defeated France 6-4. Bukayo Saka scored a hat trick, helping England to a significant lead of 4-0 at halftime. Despite a spirited comeback from France in the second half, England held on to secure their best World Cup finish since 1966.",
         "cta_label": ""
       },
       "event_summary": {
         "available": true,
-        "summary": "Russia conducted one of its largest ballistic missile attacks on Ukraine, targeting Kyiv and other cities.",
+        "summary": "In a record-breaking World Cup third-place playoff, England defeated France 6-4.",
         "key_developments": [
           {
-            "development_id": "story_a130bc8e56eeaaef",
+            "development_id": "story_33bcd5630ff26b6b",
             "date": "2026-07-19",
-            "title": "Russia Launches Major Ballistic Missile Attack on Ukrainian Cities, Causing Casualties"
+            "title": "England Secures Third Place with 6-4 Victory Over France in World Cup Thriller"
           }
         ],
         "sources": [
           {
-            "title": "Russia launches major ballistic missile attack on Ukrainian cities",
-            "source": "BBC",
-            "link": "https://www.bbc.co.uk/news/articles/c2el7xpnzrpo?at_medium=RSS&at_campaign=rss",
-            "source_bias": "center"
-          },
-          {
-            "title": "Deadly overnight Russian attack on Ukraine targets the capital",
-            "source": "NPR",
-            "link": "https://www.npr.org/2026/07/19/nx-s1-5899518/russia-attack-kyiv",
-            "source_bias": "lean-left"
-          },
-          {
-            "title": "Russia launches largest ballistic missile attack on Kyiv since start of war",
-            "source": "Al Jazeera English",
-            "link": "https://www.aljazeera.com/news/2026/7/19/russia-launches-largest-ballistic-missile-attack-on-kyiv-since-start-of-war?traffic_source=rss",
-            "source_bias": "lean-left"
-          },
-          {
-            "title": "Russia pounds Kyiv for five hours in one of its biggest ballistic missile attacks",
-            "source": "The Guardian",
-            "link": "https://www.theguardian.com/world/2026/jul/19/dozens-of-russian-missiles-pound-kyiv-ukraine-in-major-attack",
-            "source_bias": "left"
-          },
-          {
-            "title": "Russia pounds Kyiv in major ballistic missile attack",
-            "source": "RTE News",
-            "link": "https://www.rte.ie/news/2026/0719/1584041-ukraine-russia",
-            "source_bias": "center"
-          },
-          {
-            "title": "Russia hits Kyiv with ballistic missiles",
+            "title": "England beat France 6-4 to finish third",
             "source": "France 24",
-            "link": "https://www.france24.com/en/russia-hits-kyiv-with-ballistic-missiles",
+            "link": "https://www.france24.com/en/england-beat-france-6-4-to-finish-third",
             "source_bias": "lean-left"
+          },
+          {
+            "title": "France's Mbappe sets World Cup scoring record with 22 goals",
+            "source": "DW",
+            "link": "https://www.dw.com/en/france-s-mbappe-sets-world-cup-scoring-record-with-22-goals/a-78022308?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "England beat France 6-4 to claim World Cup third place",
+            "source": "Euronews",
+            "link": "http://www.euronews.com/2026/07/19/england-beat-france-6-4-in-world-cup-third-place-thriller",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Saka's hat trick lifts England past Mbappé, France 6-4 in wild World Cup 3rd-place game",
+            "source": "CBC",
+            "link": "https://www.cbc.ca/sports/soccer/worldcup/fifa-world-cup-recap-england-france-july-18-9.7275619?cmp=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "World Cup 2026 3rd Place P/O: France 4-6 England recap",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/sport/world-cup-2026/2026/0718/1583988-world-cup-2026-3rd-place-p-o-france-v-england-updates",
+            "source_bias": "center"
+          },
+          {
+            "title": "World Cup 2026: England and France deliver 10-goal thriller in bronze playoff",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/07/19/world-cup-2026-england-and-france-deliver-10-goal-thriller-in-bronze-playoff",
+            "source_bias": "center"
           }
         ],
         "updated_at": "2026-07-19",
@@ -1499,413 +3264,72 @@
       "event_stage": "developing_event",
       "related_events": [
         {
-          "event_id": "event_ukrainian-drones-strike-russian-targets-resu_d4dae47237",
-          "title": "Ukrainian Drones Strike Russian Targets, Resulting in Casualties",
+          "event_id": "event_world-cup-final-spain-to-face-argentina-fran_ca15e3b715",
+          "title": "World Cup Final: Spain to Face Argentina, France and England Compete for Third Place",
           "relationship": "related_topic",
-          "confidence": 0.691,
+          "confidence": 0.75,
           "shared_entities": [
-            "russia",
-            "ukraine"
+            "england",
+            "france",
+            "third_place"
+          ]
+        },
+        {
+          "event_id": "event_deschamps-to-bid-farewell-as-france-faces-en_04ae33a22a",
+          "title": "Deschamps to Bid Farewell as France Faces England in World Cup Playoff",
+          "relationship": "related_topic",
+          "confidence": 0.716,
+          "shared_entities": [
+            "england",
+            "france"
           ]
         }
       ],
-      "event_overview": {
-        "available": true,
-        "title": "About Ukraine Conflict",
-        "subject": "Ukraine Conflict",
-        "summary": "The Ukraine conflict is an ongoing international armed conflict between Russia and Ukraine, rooted in Russia’s 2014 occupation of Crimea and the subsequent fighting in eastern Ukraine, and greatly expanded by Russia’s full-scale armed attack beginning on 24 February 2022. It has involved long-range strikes, ground combat, occupation of parts of Ukrainian territory, major civilian harm and displacement, and international diplomatic and legal responses.",
-        "facts": [
-          {
-            "label": "Origins and full-scale phase",
-            "value": "The UN Human Rights Monitoring Mission in Ukraine was deployed in 2014 amid the deteriorating situation in Crimea and other parts of the country; it identifies 24 February 2022 as the start of Russia’s armed attack that expanded the conflict nationwide.",
-            "source_ids": [
-              "o1",
-              "o2"
-            ]
-          },
-          {
-            "label": "Geographic scope",
-            "value": "Hostilities affect territory across Ukraine, including areas occupied by Russia and cities far from the front line; UN monitoring has documented civilian casualties in numerous regions as well as Kyiv from long-range weapons and frontline fighting.",
-            "source_ids": [
-              "o3",
-              "o4"
-            ]
-          },
-          {
-            "label": "International position",
-            "value": "On 2 March 2022, the UN General Assembly adopted resolution ES-11/1, titled “Aggression against Ukraine,” demanding that Russia immediately cease its use of force and withdraw its military forces from Ukraine.",
-            "source_ids": [
-              "o5"
-            ]
-          },
-          {
-            "label": "Legal proceedings",
-            "value": "Ukraine brought a case against Russia at the International Court of Justice under the Genocide Convention; on 16 March 2022, the Court indicated provisional measures requiring Russia to suspend the military operations it had commenced on 24 February 2022.",
-            "source_ids": [
-              "o6",
-              "o7"
-            ]
-          },
-          {
-            "label": "Humanitarian and accountability dimensio",
-            "value": "The conflict has produced large-scale displacement and humanitarian needs. The International Criminal Court’s Ukraine situation investigation covers alleged Rome Statute crimes committed on Ukrainian territory since 21 November 2013, while UNHCR coordinates protection and assistance for displaced and war-affected people.",
-            "source_ids": [
-              "o8",
-              "o9"
-            ]
-          }
-        ],
-        "scope_note": "This Muninn timeline follows selected major developments in the Russia-Ukraine war, including prominent attacks and their immediate consequences; it does not aim to catalogue every battlefield action, strike, casualty update, diplomatic initiative, or legal proceeding.",
-        "sources": [
-          {
-            "title": "Ohchr",
-            "publisher": "Ohchr",
-            "url": "https://ukraine.ohchr.org/en/aboutus/ourwork",
-            "source_type": "reporting",
-            "id": "o1"
-          },
-          {
-            "title": "Ohchr",
-            "publisher": "Ohchr",
-            "url": "https://ukraine.ohchr.org/en/situation-human-rights-ukraine-context-armed-attack-russian-federation-EN",
-            "source_type": "reporting",
-            "id": "o2"
-          },
-          {
-            "title": "Ohchr",
-            "publisher": "Ohchr",
-            "url": "https://ukraine.ohchr.org/en/Protection-of-Civilians-in-Armed-Conflict-March-2026",
-            "source_type": "reporting",
-            "id": "o3"
-          },
-          {
-            "title": "Ohchr",
-            "publisher": "Ohchr",
-            "url": "https://ukraine.ohchr.org/en/human-rights-situation-during-russian-occupation-territory-ukraine-and-its-aftermath-EN",
-            "source_type": "reporting",
-            "id": "o4"
-          },
-          {
-            "title": "UN",
-            "publisher": "UN",
-            "url": "https://digitallibrary.un.org/record/3965290/files/A_RES_ES-11_1-EN.pdf",
-            "source_type": "reporting",
-            "id": "o5"
-          },
-          {
-            "title": "Icj Cij",
-            "publisher": "Icj Cij",
-            "url": "https://www.icj-cij.org/case/182",
-            "source_type": "reporting",
-            "id": "o6"
-          },
-          {
-            "title": "Icj Cij",
-            "publisher": "Icj Cij",
-            "url": "https://www.icj-cij.org/node/106135",
-            "source_type": "reporting",
-            "id": "o7"
-          },
-          {
-            "title": "Icc Cpi",
-            "publisher": "Icc Cpi",
-            "url": "https://www.icc-cpi.int/situations/ukraine",
-            "source_type": "primary",
-            "id": "o8"
-          },
-          {
-            "title": "Unhcr",
-            "publisher": "Unhcr",
-            "url": "https://www.unhcr.org/emergencies/ukraine-emergency",
-            "source_type": "reporting",
-            "id": "o9"
-          }
-        ],
-        "publisher_count": 5,
-        "generated_at": "2026-07-19T14:23:43.132553+00:00",
-        "expires_at": "2026-07-26T14:23:43.132553+00:00",
-        "model": "gpt-5.6-terra",
-        "provenance": "openai_web_search_source_grounded_event_overview_v1"
-      },
       "search_tokens": [
-        "125",
-        "affected",
-        "approximately",
-        "assault",
-        "attack",
-        "ballistic",
-        "casualtie",
-        "causing",
-        "citie",
-        "civilian",
-        "conducted",
-        "damage",
-        "death",
-        "district",
-        "dozen",
-        "drone",
-        "infrastructure",
-        "injurie",
-        "involved",
-        "kyiv",
-        "largest",
-        "launche",
-        "least",
-        "missile",
-        "multiple",
-        "other",
-        "reported",
-        "resulting",
-        "russia",
+        "1966",
+        "4-0",
+        "6-4",
+        "best",
+        "bukayo",
+        "comeback",
+        "defeated",
+        "despite",
+        "england",
+        "finish",
+        "france",
+        "half",
+        "halftime",
+        "held",
+        "helping",
+        "lead",
+        "place",
+        "playoff",
+        "record-breaking",
+        "saka",
+        "scored",
+        "second",
+        "secure",
         "significant",
-        "targeting",
-        "ukraine"
+        "since",
+        "spirited",
+        "third",
+        "third-place",
+        "thriller",
+        "trick",
+        "victory"
       ],
       "entities": [
-        "ballistic_missile",
-        "casualtie_russia",
-        "causing_casualtie",
-        "citie_causing",
-        "kyiv",
-        "russia",
-        "russia_launche",
-        "ukraine",
-        "ukraine_citie"
+        "bukayo_saka",
+        "cup_thriller",
+        "england",
+        "england_secure",
+        "france",
+        "france_bukayo",
+        "secure_third",
+        "third_place",
+        "world"
       ],
-      "search_text": "125 affected approximately assault attack ballistic ballistic_missile casualtie casualtie_russia causing causing_casualtie citie citie_causing civilian conducted damage death district dozen drone infrastructure injurie involved kyiv largest launche least missile multiple other reported resulting russia russia_launche significant targeting ukraine ukraine_citie"
-    },
-    {
-      "event_id": "event_tate-brothers-arrested-in-miami-as-uk-seeks_ef1d546745",
-      "title": "Tate Brothers Arrested in Miami as UK Seeks Extradition on New Charges",
-      "canonical_title": "Tate Brothers Arrested in Miami as UK Seeks Extradition on New Charges",
-      "topic_label": "Tate Brothers Arrest",
-      "summary": "Influencers Andrew and Tristan Tate were arrested by US federal authorities in Miami on a sealed warrant. The United Kingdom is seeking their extradition to face 38 new charges, including rape, sex trafficking, and assault. This brings the total number of charges against them in the UK to 59.",
-      "status": "active",
-      "first_seen_at": "2026-07-19",
-      "last_seen_at": "2026-07-19",
-      "timeline": [
-        {
-          "development_id": "story_9d7121f21c8d3c65",
-          "daily_story_id": "story_9d7121f21c8d3c65",
-          "date": "2026-07-19",
-          "occurred_at": null,
-          "date_basis": "first_reported_by_muninn",
-          "title": "Tate Brothers Arrested in Miami as UK Seeks Extradition on New Charges",
-          "summary": "Influencer brothers Andrew and Tristan Tate were arrested by US federal authorities in Miami on Saturday. The United Kingdom has requested their extradition to face new charges, including rape and sex trafficking, following the issuance of 38 new charges against them by British prosecutors.",
-          "development_type": "investigation",
-          "key_facts": [
-            "Andrew and Tristan Tate were arrested in Miami by US Marshals Service.",
-            "The UK is seeking extradition for the Tate brothers.",
-            "New charges against them include rape and sex trafficking."
-          ],
-          "source_count": 5,
-          "sources": [
-            "Al Jazeera English",
-            "CBC",
-            "DW - English",
-            "NPR",
-            "Sky News"
-          ],
-          "source_urls": [
-            "https://news.sky.com/story/andrew-and-tristan-tate-arrested-in-miami-on-uk-extradition-request-over-rape-and-sex-trafficking-charges-13564845",
-            "https://www.aljazeera.com/news/2026/7/19/why-were-andrew-and-tristan-tate-arrested-will-they-be-extradited-to-uk?traffic_source=rss",
-            "https://www.cbc.ca/news/world/andrew-tristan-tate-arrested-9.7275618?cmp=rss",
-            "https://www.dw.com/en/andrew-tate-brother-arrested-in-miami-uk-seeks-extradition/a-78022447?maca=en-rss-en-all-1573-rdf",
-            "https://www.npr.org/2026/07/18/g-s1-134475/tate-brothers-arrested-miami"
-          ],
-          "source_details": [
-            {
-              "title": "UK seeks extradition after influencer Tate brothers arrested in US",
-              "source": "CBC",
-              "link": "https://www.cbc.ca/news/world/andrew-tristan-tate-arrested-9.7275618?cmp=rss",
-              "source_bias": "lean-left"
-            },
-            {
-              "title": "Why were Andrew and Tristan Tate arrested? Will they be extradited to UK?",
-              "source": "Al Jazeera English",
-              "link": "https://www.aljazeera.com/news/2026/7/19/why-were-andrew-and-tristan-tate-arrested-will-they-be-extradited-to-uk?traffic_source=rss",
-              "source_bias": "lean-left"
-            },
-            {
-              "title": "Tate brothers arrested in Miami on UK extradition request over rape and sex trafficking charges",
-              "source": "Sky News",
-              "link": "https://news.sky.com/story/andrew-and-tristan-tate-arrested-in-miami-on-uk-extradition-request-over-rape-and-sex-trafficking-charges-13564845",
-              "source_bias": "center"
-            },
-            {
-              "title": "Andrew Tate, brother arrested in Miami, UK seeks extradition",
-              "source": "DW - English",
-              "link": "https://www.dw.com/en/andrew-tate-brother-arrested-in-miami-uk-seeks-extradition/a-78022447?maca=en-rss-en-all-1573-rdf",
-              "source_bias": "lean-left"
-            },
-            {
-              "title": "Andrew and Tristan Tate arrested in Florida on charges of rape and sex trafficking",
-              "source": "NPR",
-              "link": "https://www.npr.org/2026/07/18/g-s1-134475/tate-brothers-arrested-miami",
-              "source_bias": "lean-left"
-            }
-          ],
-          "confidence": 1.0,
-          "match_evidence": {
-            "score": 1.0,
-            "method": "new_event",
-            "shared_tokens": [],
-            "shared_entities": []
-          },
-          "verification": {
-            "provider": "deterministic_source_grounded_event_match_v1",
-            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
-          },
-          "first_seen_at": "2026-07-19",
-          "last_seen_at": "2026-07-19",
-          "integrity_status": "trusted",
-          "revisions": [
-            {
-              "daily_story_id": "story_b323fddd75eabba5",
-              "reported_at": "2026-07-19",
-              "update_kind": "factual_update",
-              "title": "Tate Brothers Arrested in Miami as UK Seeks Extradition on New Charges",
-              "summary": "Influencer brothers Andrew and Tristan Tate were arrested by US federal authorities in Miami on Saturday. The United Kingdom has requested their extradition to face new charges, including rape and sex trafficking, following the issuance of 38 new charges against them by British prosecutors.",
-              "key_facts": [
-                "Andrew and Tristan Tate were arrested in Miami by US Marshals Service.",
-                "The UK is seeking extradition for the Tate brothers.",
-                "New charges against them include rape and sex trafficking."
-              ],
-              "source_urls": [
-                "https://www.cbc.ca/news/world/andrew-tristan-tate-arrested-9.7275618?cmp=rss",
-                "https://www.aljazeera.com/news/2026/7/19/why-were-andrew-and-tristan-tate-arrested-will-they-be-extradited-to-uk?traffic_source=rss",
-                "https://news.sky.com/story/andrew-and-tristan-tate-arrested-in-miami-on-uk-extradition-request-over-rape-and-sex-trafficking-charges-13564845",
-                "https://www.npr.org/2026/07/18/g-s1-134475/tate-brothers-arrested-miami"
-              ]
-            }
-          ],
-          "last_updated_at": "2026-07-19",
-          "merged_development_ids": [
-            "story_b323fddd75eabba5"
-          ],
-          "revision_count": 1
-        }
-      ],
-      "integrity": {
-        "public_development_count": 1,
-        "questionable_development_count": 0,
-        "review_required": false
-      },
-      "latest_title": "Tate Brothers Arrested in Miami as UK Seeks Extradition on New Charges",
-      "latest_summary": "Influencer brothers Andrew and Tristan Tate were arrested by US federal authorities in Miami on Saturday. The United Kingdom has requested their extradition to face new charges, including rape and sex trafficking, following the issuance of 38 new charges against them by British prosecutors.",
-      "presentation": {
-        "has_context": true,
-        "has_full_timeline": false,
-        "stage": "developing_event",
-        "stage_label": "Developing event",
-        "base_title": "Tate Brothers Arrest",
-        "display_title": "Tate Brothers Arrest",
-        "milestone_development_ids": [
-          "story_9d7121f21c8d3c65"
-        ],
-        "summary_available": true,
-        "summary_label": "Read the story so far",
-        "summary_updated_at": "2026-07-19",
-        "development_count": 1,
-        "coverage_packet_count": 2,
-        "date_count": 1,
-        "source_count": 5,
-        "independent_source_count": 5,
-        "first_date": "2026-07-19",
-        "latest_date": "2026-07-19",
-        "latest_update_title": "Tate Brothers Arrested in Miami as UK Seeks Extradition on New Charges",
-        "coverage_score": 0.348,
-        "recency_score": 1.0,
-        "rank_score": 0.726,
-        "context_summary": "Influencer brothers Andrew and Tristan Tate were arrested by US federal authorities in Miami on Saturday. The United Kingdom has requested their extradition to face new charges, including rape and sex trafficking, following the issuance of 38 new charges against them by British prosecutors.",
-        "cta_label": ""
-      },
-      "event_summary": {
-        "available": true,
-        "summary": "Influencer brothers Andrew and Tristan Tate were arrested by US federal authorities in Miami on Saturday.",
-        "key_developments": [
-          {
-            "development_id": "story_9d7121f21c8d3c65",
-            "date": "2026-07-19",
-            "title": "Tate Brothers Arrested in Miami as UK Seeks Extradition on New Charges"
-          }
-        ],
-        "sources": [
-          {
-            "title": "UK seeks extradition after influencer Tate brothers arrested in US",
-            "source": "CBC",
-            "link": "https://www.cbc.ca/news/world/andrew-tristan-tate-arrested-9.7275618?cmp=rss",
-            "source_bias": "lean-left"
-          },
-          {
-            "title": "Why were Andrew and Tristan Tate arrested? Will they be extradited to UK?",
-            "source": "Al Jazeera English",
-            "link": "https://www.aljazeera.com/news/2026/7/19/why-were-andrew-and-tristan-tate-arrested-will-they-be-extradited-to-uk?traffic_source=rss",
-            "source_bias": "lean-left"
-          },
-          {
-            "title": "Tate brothers arrested in Miami on UK extradition request over rape and sex trafficking charges",
-            "source": "Sky News",
-            "link": "https://news.sky.com/story/andrew-and-tristan-tate-arrested-in-miami-on-uk-extradition-request-over-rape-and-sex-trafficking-charges-13564845",
-            "source_bias": "center"
-          },
-          {
-            "title": "Andrew Tate, brother arrested in Miami, UK seeks extradition",
-            "source": "DW - English",
-            "link": "https://www.dw.com/en/andrew-tate-brother-arrested-in-miami-uk-seeks-extradition/a-78022447?maca=en-rss-en-all-1573-rdf",
-            "source_bias": "lean-left"
-          },
-          {
-            "title": "Andrew and Tristan Tate arrested in Florida on charges of rape and sex trafficking",
-            "source": "NPR",
-            "link": "https://www.npr.org/2026/07/18/g-s1-134475/tate-brothers-arrested-miami",
-            "source_bias": "lean-left"
-          }
-        ],
-        "updated_at": "2026-07-19",
-        "provenance": "source_grounded_event_memory"
-      },
-      "event_stage": "developing_event",
-      "related_events": [],
-      "search_tokens": [
-        "andrew",
-        "arrested",
-        "authoritie",
-        "britain",
-        "brother",
-        "charge",
-        "extradition",
-        "face",
-        "federal",
-        "including",
-        "influencer",
-        "issuance",
-        "kingdom",
-        "miami",
-        "prosecutor",
-        "rape",
-        "requested",
-        "saturday",
-        "seeks",
-        "tate",
-        "them",
-        "trafficking",
-        "tristan",
-        "united"
-      ],
-      "entities": [
-        "britain",
-        "brother_arrested",
-        "charge_influencer",
-        "miami",
-        "seeks_extradition",
-        "tate_brother",
-        "tristan_tate",
-        "uk",
-        "united_kingdom",
-        "us"
-      ],
-      "search_text": "andrew arrested authoritie britain brother brother_arrested charge charge_influencer extradition face federal including influencer issuance kingdom miami prosecutor rape requested saturday seeks seeks_extradition tate tate_brother them trafficking tristan tristan_tate uk united united_kingdom us"
+      "search_text": "1966 4-0 6-4 best bukayo bukayo_saka comeback cup_thriller defeated despite england england_secure finish france france_bukayo half halftime held helping lead place playoff record-breaking saka scored second secure secure_third significant since spirited third third-place third_place thriller trick victory world"
     },
     {
       "event_id": "event_cuban-dissident-artist-luis-manuel-otero-alc_b8971abbb7",
@@ -2038,8 +3462,8 @@
         "latest_date": "2026-07-19",
         "latest_update_title": "Cuban Dissident Artist Luis Manuel Otero Alcántara Arrives in the US After Prison Release",
         "coverage_score": 0.298,
-        "recency_score": 1.0,
-        "rank_score": 0.705,
+        "recency_score": 0.875,
+        "rank_score": 0.633,
         "context_summary": "Luis Manuel Otero Alcántara, a prominent Cuban artist and dissident, arrived in Miami after being released from a five-year prison sentence. His release was contingent upon his exile from Cuba, following his arrest during the 2021 anti-government protests. Otero Alcántara is known for co-founding the San Isidro Movement, which advocates for artistic freedom and human rights in Cuba.",
         "cta_label": ""
       },
@@ -2272,8 +3696,8 @@
         "latest_date": "2026-07-19",
         "latest_update_title": "Passenger Ferry Capsizes Off Guyana, Search and Rescue Underway",
         "coverage_score": 0.298,
-        "recency_score": 1.0,
-        "rank_score": 0.705,
+        "recency_score": 0.875,
+        "rank_score": 0.633,
         "context_summary": "A passenger ferry carrying 116 people has capsized off the coast of Guyana, prompting an ongoing search and rescue operation. Authorities report that at least 67 individuals have been rescued so far, while efforts continue to locate the remaining passengers and crew. The incident occurred between Georgetown and Port Kaituma, with a distress call made shortly after 11 PM local time.",
         "cta_label": ""
       },
@@ -2493,8 +3917,8 @@
         "latest_date": "2026-07-19",
         "latest_update_title": "Thunderstorms to Clear Wildfire Smoke Ahead of World Cup Final",
         "coverage_score": 0.248,
-        "recency_score": 1.0,
-        "rank_score": 0.684,
+        "recency_score": 0.875,
+        "rank_score": 0.612,
         "context_summary": "Thunderstorms are expected to clear wildfire smoke from the Northeast United States before the World Cup final between Spain and Argentina. While the storm front has largely moved the smoke out of the Northeast, some smoke remains over the central US Warnings for unhealthy air quality are still in effect across a wide area.",
         "cta_label": ""
       },
@@ -2703,8 +4127,8 @@
         "latest_date": "2026-07-19",
         "latest_update_title": "Lettuce Recall Issued Due to Cyclospora Contamination Risk",
         "coverage_score": 0.236,
-        "recency_score": 1.0,
-        "rank_score": 0.679,
+        "recency_score": 0.875,
+        "rank_score": 0.607,
         "context_summary": "Taylor Farms has issued a recall of iceberg lettuce shipped to 27 states due to potential contamination with Cyclospora, a parasite that can cause severe gastrointestinal illness. The affected states include Texas, Florida, Pennsylvania, Illinois, and New Jersey. The FDA has confirmed that a sample of the recalled lettuce tested positive for Cyclospora.",
         "cta_label": ""
       },
@@ -2897,8 +4321,8 @@
         "latest_date": "2026-07-19",
         "latest_update_title": "Laos Unable to Confirm Methanol Poisoning in Tourist Deaths Due to Lack of Autopsies",
         "coverage_score": 0.198,
-        "recency_score": 1.0,
-        "rank_score": 0.663,
+        "recency_score": 0.875,
+        "rank_score": 0.591,
         "context_summary": "Laos officials have stated that they cannot determine the cause of deaths of tourists linked to methanol poisoning due to the absence of autopsies. As a result, there is no evidence to support claims of poisoning. Those indicted in connection with the deaths are facing charges related to selling harmful food and operating an illegal business.",
         "cta_label": ""
       },
@@ -3091,8 +4515,8 @@
         "latest_date": "2026-07-19",
         "latest_update_title": "Rescue Efforts Underway in China After Landslide Traps Residents",
         "coverage_score": 0.198,
-        "recency_score": 1.0,
-        "rank_score": 0.663,
+        "recency_score": 0.875,
+        "rank_score": 0.591,
         "context_summary": "A large-scale rescue operation is underway in Pengshui County, Chongqing municipality, following a landslide on July 17 that buried part of a residential area. Authorities are working to locate and rescue an unknown number of people trapped under the debris.",
         "cta_label": ""
       },
