@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "generated_at": "2026-07-20T15:08:12.647386+00:00",
+  "generated_at": "2026-07-21T15:03:08.231666+00:00",
   "lookback_days": 30,
   "verification_provider": "deterministic_source_grounded_event_match_v2",
-  "tracked_event_count": 68,
-  "event_count": 14,
+  "tracked_event_count": 84,
+  "event_count": 18,
   "events": [
     {
       "event_id": "event_us-continues-strikes-on-iran-amid-traffic-st_41c26ce1d9",
@@ -14,7 +14,7 @@
       "summary": "The US has completed its seventh consecutive night of strikes against Iran as the conflict escalates 140 days in. An industry analyst reports that traffic has come to a halt in the Strait of Hormuz, with no vessels willing to transit the area due to the ongoing military actions. Recent attacks have resulted in significant casualties, with reports indicating 50 killed and 500 wounded this month alone.",
       "status": "active",
       "first_seen_at": "2026-07-18",
-      "last_seen_at": "2026-07-20",
+      "last_seen_at": "2026-07-21",
       "timeline": [
         {
           "development_id": "story_cee8447079637163",
@@ -275,47 +275,213 @@
           "first_seen_at": "2026-07-20",
           "last_seen_at": "2026-07-20",
           "integrity_status": "trusted"
+        },
+        {
+          "development_id": "story_2acd2900e5d5ba96",
+          "daily_story_id": "story_2acd2900e5d5ba96",
+          "date": "2026-07-21",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Pentagon Confirms Identity of Third US Soldier Killed in Iranian Attack",
+          "summary": "The Pentagon has identified Sgt. Michael Emmanuel Swinton, a 30-year-old from Fayetteville, North Carolina, as the third US soldier killed in a recent Iranian attack. He was reportedly involved in the disposal of a drone in northern Iraq when the incident occurred. This marks the 17th service member to be named in connection with this ongoing conflict.",
+          "development_type": "military_action",
+          "key_facts": [
+            "Sgt. Michael Emmanuel Swinton identified as killed in Iranian attack",
+            "Swinton was 30 years old and from Fayetteville, North Carolina",
+            "Incident occurred during the disposal of a drone in northern Iraq"
+          ],
+          "source_count": 3,
+          "sources": [
+            "CBS News",
+            "New York Times",
+            "NewsNation"
+          ],
+          "source_urls": [
+            "https://www.newsnationnow.com/us-news/military/pentagon-ids-third-soldier-killed-iranian-attack",
+            "https://www.cbsnews.com/news/iran-war-us-soldier-killed-iraq-controlled-explosion-drone-michael-emmanuel-swinton",
+            "https://www.nytimes.com/2026/07/21/us/pentagon-identifies-soldier-killed-iran-war-emmanuel-swinton.html"
+          ],
+          "source_details": [
+            {
+              "title": "Pentagon IDs third US soldier killed in weekend Iranian attack",
+              "source": "NewsNation",
+              "link": "https://www.newsnationnow.com/us-news/military/pentagon-ids-third-soldier-killed-iranian-attack",
+              "source_bias": "center"
+            },
+            {
+              "title": "US soldier killed in Iraq identified as 30-year-old from North Carolina",
+              "source": "CBS News",
+              "link": "https://www.cbsnews.com/news/iran-war-us-soldier-killed-iraq-controlled-explosion-drone-michael-emmanuel-swinton",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Pentagon Identifies Soldier Killed in Iran War as Sgt. Michael Emmanuel Swinton",
+              "source": "New York Times",
+              "link": "https://www.nytimes.com/2026/07/21/us/pentagon-identifies-soldier-killed-iran-war-emmanuel-swinton.html",
+              "source_bias": "lean-left"
+            }
+          ],
+          "confidence": 0.455,
+          "match_evidence": {
+            "score": 0.455,
+            "matched_development_id": "story_a6aad1b5891894c4",
+            "shared_tokens": [
+              "attack",
+              "confirm",
+              "identified",
+              "incident",
+              "iran",
+              "killed",
+              "member",
+              "occurred",
+              "pentagon",
+              "service",
+              "soldier"
+            ],
+            "shared_entities": [
+              "iran",
+              "pentagon_confirm",
+              "us"
+            ],
+            "source_url_match": false,
+            "method": "deterministic_event_match_v2",
+            "threshold": 0.38
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-21",
+          "last_seen_at": "2026-07-21",
+          "integrity_status": "trusted"
+        },
+        {
+          "development_id": "story_8ee22f922fe1917a",
+          "daily_story_id": "story_8ee22f922fe1917a",
+          "date": "2026-07-21",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "US Intensifies Airstrikes on Iran Following Deaths of Service Members",
+          "summary": "The United States has escalated its military operations against Iran, launching a new series of airstrikes after the deaths of three American soldiers in recent Iranian attacks. President Trump has vowed that Iran will face consequences for the killings, and US forces have targeted various military sites within Iran. The conflict has also seen retaliatory strikes from Iran against US allies in the region, heightening tensions in the Strait of Hormuz.",
+          "development_type": "military_action",
+          "key_facts": [
+            "US launched airstrikes against Iran following the deaths of three American soldiers.",
+            "President Trump has threatened retaliation against Iran.",
+            "Iran has conducted attacks on US allies in the region."
+          ],
+          "source_count": 3,
+          "sources": [
+            "CBS News",
+            "NBC News",
+            "PBS News"
+          ],
+          "source_urls": [
+            "https://www.pbs.org/newshour/show/u-s-launches-more-strikes-on-iran-after-deaths-of-service-members",
+            "https://www.cbsnews.com/news/iran-strike-jordan-us-troops-killed",
+            "https://www.today.com/video/trump-says-iran-will-pay-for-killing-of-us-service-members-267004485593"
+          ],
+          "source_details": [
+            {
+              "title": "US launches more strikes on Iran after deaths of service members",
+              "source": "PBS News",
+              "link": "https://www.pbs.org/newshour/show/u-s-launches-more-strikes-on-iran-after-deaths-of-service-members",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "2 soldiers from Texas and Hawaii killed in Iran strike in Jordan; 1 still missing",
+              "source": "CBS News",
+              "link": "https://www.cbsnews.com/news/iran-strike-jordan-us-troops-killed",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "US Carries out 10th Night of Strikes After Service Members Killed",
+              "source": "NBC News",
+              "link": "https://www.today.com/video/trump-says-iran-will-pay-for-killing-of-us-service-members-267004485593",
+              "source_bias": "lean-left"
+            }
+          ],
+          "confidence": 0.48,
+          "match_evidence": {
+            "score": 0.48,
+            "matched_development_id": "story_240d2dba60a210a6",
+            "shared_tokens": [
+              "airstrike",
+              "america",
+              "attack",
+              "death",
+              "iran",
+              "launched",
+              "member",
+              "military",
+              "retaliation",
+              "serie",
+              "service",
+              "sites",
+              "soldier",
+              "strike",
+              "targeted",
+              "united"
+            ],
+            "shared_entities": [
+              "america",
+              "iran",
+              "iran._iran",
+              "us"
+            ],
+            "source_url_match": false,
+            "method": "deterministic_event_match_v2",
+            "threshold": 0.38
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-21",
+          "last_seen_at": "2026-07-21",
+          "integrity_status": "trusted"
         }
       ],
       "integrity": {
-        "public_development_count": 3,
+        "public_development_count": 5,
         "questionable_development_count": 1,
         "review_required": true
       },
-      "latest_title": "Pentagon Confirms Deaths of Two US Soldiers in Jordan Following Iranian Attack",
-      "latest_summary": "The Pentagon has identified two active-duty US soldiers killed in an Iranian strike on a US base in Jordan. The attack occurred on Friday, resulting in the deaths of the soldiers and injuries to four others. This incident has prompted a series of retaliatory strikes by the US against Iranian targets, escalating tensions in the region.",
+      "latest_title": "US Intensifies Airstrikes on Iran Following Deaths of Service Members",
+      "latest_summary": "The United States has escalated its military operations against Iran, launching a new series of airstrikes after the deaths of three American soldiers in recent Iranian attacks. President Trump has vowed that Iran will face consequences for the killings, and US forces have targeted various military sites within Iran. The conflict has also seen retaliatory strikes from Iran against US allies in the region, heightening tensions in the Strait of Hormuz.",
       "presentation": {
         "has_context": true,
-        "has_full_timeline": false,
-        "stage": "developing_event",
-        "stage_label": "Developing event",
+        "has_full_timeline": true,
+        "stage": "timeline",
+        "stage_label": "Timeline",
         "base_title": "Iran War",
-        "display_title": "Iran War",
+        "display_title": "Iran War Timeline",
         "milestone_development_ids": [
           "story_cee8447079637163",
           "story_240d2dba60a210a6",
-          "story_a6aad1b5891894c4"
+          "story_a6aad1b5891894c4",
+          "story_2acd2900e5d5ba96",
+          "story_8ee22f922fe1917a"
         ],
         "summary_available": true,
         "summary_label": "Read the story so far",
-        "summary_updated_at": "2026-07-20",
-        "development_count": 3,
-        "coverage_packet_count": 4,
-        "date_count": 3,
-        "source_count": 10,
-        "independent_source_count": 9,
+        "summary_updated_at": "2026-07-21",
+        "development_count": 5,
+        "coverage_packet_count": 6,
+        "date_count": 4,
+        "source_count": 16,
+        "independent_source_count": 11,
         "first_date": "2026-07-18",
-        "latest_date": "2026-07-20",
-        "latest_update_title": "Pentagon Confirms Deaths of Two US Soldiers in Jordan Following Iranian Attack",
-        "coverage_score": 0.72,
+        "latest_date": "2026-07-21",
+        "latest_update_title": "US Intensifies Airstrikes on Iran Following Deaths of Service Members",
+        "coverage_score": 0.902,
         "recency_score": 1.0,
-        "rank_score": 0.882,
-        "context_summary": "Muninn first tracked this thread on 2026-07-18: US Continues Strikes on Iran Amid Traffic Standstill in Strait of Hormuz. The latest development is Pentagon Confirms Deaths of Two US Soldiers in Jordan Following Iranian Attack.",
-        "cta_label": ""
+        "rank_score": 0.959,
+        "context_summary": "Muninn first tracked this thread on 2026-07-18: US Continues Strikes on Iran Amid Traffic Standstill in Strait of Hormuz. The latest development is US Intensifies Airstrikes on Iran Following Deaths of Service Members.",
+        "cta_label": "Explore 5 developments"
       },
       "event_summary": {
         "available": true,
-        "summary": "The US has completed its seventh consecutive night of strikes against Iran as the conflict escalates 140 days in. A later development was US Conducts Airstrikes on Iran Following Deaths of Two Soldiers in Jordan. Most recently, the Pentagon has identified two active-duty US soldiers killed in an Iranian strike on a US base in Jordan.",
+        "summary": "The US has completed its seventh consecutive night of strikes against Iran as the conflict escalates 140 days in. A later development was Pentagon Confirms Deaths of Two US Soldiers in Jordan Following Iranian Attack. Most recently, the United States has escalated its military operations against Iran, launching a new series of airstrikes after the deaths of three American soldiers in recent Iranian attacks.",
         "key_developments": [
           {
             "development_id": "story_cee8447079637163",
@@ -331,6 +497,16 @@
             "development_id": "story_a6aad1b5891894c4",
             "date": "2026-07-20",
             "title": "Pentagon Confirms Deaths of Two US Soldiers in Jordan Following Iranian Attack"
+          },
+          {
+            "development_id": "story_2acd2900e5d5ba96",
+            "date": "2026-07-21",
+            "title": "Pentagon Confirms Identity of Third US Soldier Killed in Iranian Attack"
+          },
+          {
+            "development_id": "story_8ee22f922fe1917a",
+            "date": "2026-07-21",
+            "title": "US Intensifies Airstrikes on Iran Following Deaths of Service Members"
           }
         ],
         "sources": [
@@ -393,18 +569,54 @@
             "source": "SBS News",
             "link": "https://www.sbs.com.au/news/article/two-us-troops-killed-in-jordan-one-missing-as-fears-of-all-out-war-grow/tdui30b32",
             "source_bias": "lean-left"
+          },
+          {
+            "title": "Pentagon IDs third US soldier killed in weekend Iranian attack",
+            "source": "NewsNation",
+            "link": "https://www.newsnationnow.com/us-news/military/pentagon-ids-third-soldier-killed-iranian-attack",
+            "source_bias": "center"
+          },
+          {
+            "title": "US soldier killed in Iraq identified as 30-year-old from North Carolina",
+            "source": "CBS News",
+            "link": "https://www.cbsnews.com/news/iran-war-us-soldier-killed-iraq-controlled-explosion-drone-michael-emmanuel-swinton",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Pentagon Identifies Soldier Killed in Iran War as Sgt. Michael Emmanuel Swinton",
+            "source": "New York Times",
+            "link": "https://www.nytimes.com/2026/07/21/us/pentagon-identifies-soldier-killed-iran-war-emmanuel-swinton.html",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "US launches more strikes on Iran after deaths of service members",
+            "source": "PBS News",
+            "link": "https://www.pbs.org/newshour/show/u-s-launches-more-strikes-on-iran-after-deaths-of-service-members",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "2 soldiers from Texas and Hawaii killed in Iran strike in Jordan; 1 still missing",
+            "source": "CBS News",
+            "link": "https://www.cbsnews.com/news/iran-strike-jordan-us-troops-killed",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "US Carries out 10th Night of Strikes After Service Members Killed",
+            "source": "NBC News",
+            "link": "https://www.today.com/video/trump-says-iran-will-pay-for-killing-of-us-service-members-267004485593",
+            "source_bias": "lean-left"
           }
         ],
-        "updated_at": "2026-07-20",
+        "updated_at": "2026-07-21",
         "provenance": "source_grounded_event_memory"
       },
-      "event_stage": "developing_event",
+      "event_stage": "timeline",
       "related_events": [
         {
           "event_id": "event_iranian-missiles-target-aqaba-airport-amid-r_c7e08248c6",
           "title": "Iranian Missiles Target Aqaba Airport Amid Regional Escalation",
           "relationship": "related_topic",
-          "confidence": 0.769,
+          "confidence": 0.776,
           "shared_entities": [
             "america",
             "iran",
@@ -505,17 +717,22 @@
       },
       "search_tokens": [
         "140",
+        "17th",
+        "30-year-old",
         "500",
         "action",
         "active-duty",
         "airstrike",
+        "allie",
         "alone",
+        "also",
         "america",
         "analyst",
         "area",
         "attack",
         "base",
         "campaign",
+        "carolina",
         "casualtie",
         "claim",
         "coast",
@@ -524,36 +741,57 @@
         "conduct",
         "confirm",
         "conflict",
+        "connection",
         "consecutive",
+        "consequence",
         "continue",
         "death",
         "defense",
+        "disposal",
         "drone",
+        "emmanuel",
         "escalate",
+        "escalated",
         "escalating",
+        "face",
         "facilitie",
+        "fayetteville",
+        "force",
         "four",
         "friday",
         "halt",
+        "heightening",
         "hormuz",
         "hundred",
         "identified",
+        "identity",
         "incident",
         "indicating",
         "industry",
         "injurie",
+        "intensifie",
+        "involved",
         "iran",
+        "iraq",
         "jordan",
         "killed",
+        "killing",
         "launched",
+        "launching",
         "least",
+        "marks",
         "member",
+        "michael",
         "military",
         "missile",
         "month",
+        "named",
         "night",
+        "north",
+        "northern",
         "occurred",
         "ongoing",
+        "operation",
         "other",
         "part",
         "pentagon",
@@ -565,6 +803,7 @@
         "resulted",
         "resulting",
         "retaliatory",
+        "seen",
         "serie",
         "service",
         "seventh",
@@ -576,30 +815,48 @@
         "strait",
         "strike",
         "surveillance",
+        "swinton",
         "target",
         "targeted",
         "tension",
+        "third",
+        "three",
         "traffic",
         "transit",
+        "trump",
         "united",
+        "variou",
         "vessel",
+        "vowed",
         "well",
+        "when",
         "which",
         "willing",
+        "within",
         "wounded"
       ],
       "entities": [
         "america",
         "conduct_airstrike",
+        "confirm_identity",
+        "emmanuel_swinton",
+        "fayetteville",
+        "fayetteville_north",
+        "intensifie_airstrike",
         "iran",
+        "iraq",
         "jordan",
         "jordan.",
+        "michael_emmanuel",
+        "north_carolina",
         "pentagon_confirm",
+        "service_member",
+        "sgt._michael",
         "strait",
         "traffic_standstill",
         "us"
       ],
-      "search_text": "140 500 action active-duty airstrike alone america analyst area attack base campaign casualtie claim coast come completed conduct conduct_airstrike confirm conflict consecutive continue death defense drone escalate escalating facilitie four friday halt hormuz hundred identified incident indicating industry injurie iran jordan jordan. killed launched least member military missile month night occurred ongoing other part pentagon pentagon_confirm prompted recent region reportedly response resulted resulting retaliatory serie service seventh significant sites soldier standstill storage strait strike surveillance target targeted tension traffic traffic_standstill transit united us vessel well which willing wounded"
+      "search_text": "140 17th 30-year-old 500 action active-duty airstrike allie alone also america analyst area attack base campaign carolina casualtie claim coast come completed conduct conduct_airstrike confirm confirm_identity conflict connection consecutive consequence continue death defense disposal drone emmanuel emmanuel_swinton escalate escalated escalating face facilitie fayetteville fayetteville_north force four friday halt heightening hormuz hundred identified identity incident indicating industry injurie intensifie intensifie_airstrike involved iran iraq jordan jordan. killed killing launched launching least marks member michael michael_emmanuel military missile month named night north north_carolina northern occurred ongoing operation other part pentagon pentagon_confirm prompted recent region reportedly response resulted resulting retaliatory seen serie service service_member seventh sgt._michael significant sites soldier standstill storage strait strike surveillance swinton target targeted tension third three traffic traffic_standstill transit trump united us variou vessel vowed well when which willing within wounded"
     },
     {
       "event_id": "event_tate-brothers-arrested-in-miami-as-uk-seeks_ef1d546745",
@@ -609,7 +866,7 @@
       "summary": "Influencers Andrew and Tristan Tate were arrested by US federal authorities in Miami on a sealed warrant. The United Kingdom is seeking their extradition to face 38 new charges, including rape, sex trafficking, and assault. This brings the total number of charges against them in the UK to 59.",
       "status": "active",
       "first_seen_at": "2026-07-19",
-      "last_seen_at": "2026-07-20",
+      "last_seen_at": "2026-07-21",
       "timeline": [
         {
           "development_id": "story_9d7121f21c8d3c65",
@@ -827,15 +1084,90 @@
           "first_seen_at": "2026-07-20",
           "last_seen_at": "2026-07-20",
           "integrity_status": "trusted"
+        },
+        {
+          "development_id": "story_6dc8611fd2eda5c5",
+          "daily_story_id": "story_6dc8611fd2eda5c5",
+          "date": "2026-07-21",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Tate Brothers Challenge Extradition to the UK Amid Rape Charges",
+          "summary": "Andrew and Tristan Tate are set to contest their extradition to the United Kingdom, where they face charges of rape and sex trafficking. Their lawyer has claimed that the brothers are victims of a 'political witch hunt' and is committed to fighting the extradition process.",
+          "development_type": "policy",
+          "key_facts": [
+            "Andrew and Tristan Tate are accused of rape and sex trafficking in the UK.",
+            "Their lawyer stated they will fight the extradition.",
+            "The lawyer described the situation as a 'political witch hunt.'"
+          ],
+          "source_count": 2,
+          "sources": [
+            "CBC",
+            "DW"
+          ],
+          "source_urls": [
+            "https://www.cbc.ca/news/world/us-miami-hearing-tate-brothers-uk-9.7277705?cmp=rss",
+            "https://www.dw.com/en/tate-brothers-to-fight-extradition-to-uk-says-lawyer/a-78043889?maca=en-rss-en-all-1573-rdf"
+          ],
+          "source_details": [
+            {
+              "title": "Tate brothers to fight extradition to U.K., where both face charges of rape",
+              "source": "CBC",
+              "link": "https://www.cbc.ca/news/world/us-miami-hearing-tate-brothers-uk-9.7277705?cmp=rss",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Tate brothers to fight extradition to UK, says lawyer",
+              "source": "DW",
+              "link": "https://www.dw.com/en/tate-brothers-to-fight-extradition-to-uk-says-lawyer/a-78043889?maca=en-rss-en-all-1573-rdf",
+              "source_bias": "lean-left"
+            }
+          ],
+          "confidence": 0.539,
+          "match_evidence": {
+            "score": 0.539,
+            "matched_development_id": "story_9d7121f21c8d3c65",
+            "shared_tokens": [
+              "andrew",
+              "brother",
+              "charge",
+              "extradition",
+              "face",
+              "kingdom",
+              "rape",
+              "tate",
+              "they",
+              "trafficking",
+              "tristan",
+              "united"
+            ],
+            "shared_entities": [
+              "charge_andrew",
+              "tate_brother",
+              "tristan_tate",
+              "uk",
+              "united",
+              "united_kingdom"
+            ],
+            "source_url_match": false,
+            "method": "deterministic_event_match_v2",
+            "threshold": 0.38
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-21",
+          "last_seen_at": "2026-07-21",
+          "integrity_status": "trusted"
         }
       ],
       "integrity": {
-        "public_development_count": 2,
+        "public_development_count": 3,
         "questionable_development_count": 0,
         "review_required": false
       },
-      "latest_title": "Andrew and Tristan Tate Arrested in US as UK Seeks Extradition",
-      "latest_summary": "Influencer brothers Andrew and Tristan Tate were arrested in Miami, Florida, as the United Kingdom seeks their extradition. British authorities have accused them of serious crimes, including rape, human trafficking, and sexual exploitation.",
+      "latest_title": "Tate Brothers Challenge Extradition to the UK Amid Rape Charges",
+      "latest_summary": "Andrew and Tristan Tate are set to contest their extradition to the United Kingdom, where they face charges of rape and sex trafficking. Their lawyer has claimed that the brothers are victims of a 'political witch hunt' and is committed to fighting the extradition process.",
       "presentation": {
         "has_context": true,
         "has_full_timeline": false,
@@ -845,28 +1177,29 @@
         "display_title": "Tate Brothers Arrest",
         "milestone_development_ids": [
           "story_9d7121f21c8d3c65",
-          "story_9376b2fb8ea89f5c"
+          "story_9376b2fb8ea89f5c",
+          "story_6dc8611fd2eda5c5"
         ],
         "summary_available": true,
         "summary_label": "Read the story so far",
-        "summary_updated_at": "2026-07-20",
-        "development_count": 2,
-        "coverage_packet_count": 4,
-        "date_count": 2,
-        "source_count": 9,
-        "independent_source_count": 9,
+        "summary_updated_at": "2026-07-21",
+        "development_count": 3,
+        "coverage_packet_count": 5,
+        "date_count": 3,
+        "source_count": 11,
+        "independent_source_count": 10,
         "first_date": "2026-07-19",
-        "latest_date": "2026-07-20",
-        "latest_update_title": "Andrew and Tristan Tate Arrested in US as UK Seeks Extradition",
-        "coverage_score": 0.609,
+        "latest_date": "2026-07-21",
+        "latest_update_title": "Tate Brothers Challenge Extradition to the UK Amid Rape Charges",
+        "coverage_score": 0.732,
         "recency_score": 1.0,
-        "rank_score": 0.836,
-        "context_summary": "Muninn first tracked this thread on 2026-07-19: Tate Brothers Arrested in Miami Facing UK Charges. The latest development is Andrew and Tristan Tate Arrested in US as UK Seeks Extradition.",
+        "rank_score": 0.888,
+        "context_summary": "Muninn first tracked this thread on 2026-07-19: Tate Brothers Arrested in Miami Facing UK Charges. The latest development is Tate Brothers Challenge Extradition to the UK Amid Rape Charges.",
         "cta_label": ""
       },
       "event_summary": {
         "available": true,
-        "summary": "Andrew and Tristan Tate have been arrested in Miami by the US Marshals Service. Most recently, influencer brothers Andrew and Tristan Tate were arrested in Miami, Florida, as the United Kingdom seeks their extradition.",
+        "summary": "Andrew and Tristan Tate have been arrested in Miami by the US Marshals Service. A later development was Andrew and Tristan Tate Arrested in US as UK Seeks Extradition. Most recently, andrew and Tristan Tate are set to contest their extradition to the United Kingdom, where they face charges of rape and sex trafficking.",
         "key_developments": [
           {
             "development_id": "story_9d7121f21c8d3c65",
@@ -877,6 +1210,11 @@
             "development_id": "story_9376b2fb8ea89f5c",
             "date": "2026-07-20",
             "title": "Andrew and Tristan Tate Arrested in US as UK Seeks Extradition"
+          },
+          {
+            "development_id": "story_6dc8611fd2eda5c5",
+            "date": "2026-07-21",
+            "title": "Tate Brothers Challenge Extradition to the UK Amid Rape Charges"
           }
         ],
         "sources": [
@@ -933,13 +1271,36 @@
             "source": "Euronews",
             "link": "http://www.euronews.com/2026/07/19/andrew-and-tristan-tate-arrested-in-miami-as-uk-seeks-extradition",
             "source_bias": "lean-left"
+          },
+          {
+            "title": "Tate brothers to fight extradition to U.K., where both face charges of rape",
+            "source": "CBC",
+            "link": "https://www.cbc.ca/news/world/us-miami-hearing-tate-brothers-uk-9.7277705?cmp=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Tate brothers to fight extradition to UK, says lawyer",
+            "source": "DW",
+            "link": "https://www.dw.com/en/tate-brothers-to-fight-extradition-to-uk-says-lawyer/a-78043889?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
           }
         ],
-        "updated_at": "2026-07-20",
+        "updated_at": "2026-07-21",
         "provenance": "source_grounded_event_memory"
       },
       "event_stage": "developing_event",
-      "related_events": [],
+      "related_events": [
+        {
+          "event_id": "event_andy-burnham-takes-office-as-uk-prime-minist_6a6783b0f0",
+          "title": "Andy Burnham Becomes U.K.'s New Prime Minister Following Keir Starmer's Resignation",
+          "relationship": "related_topic",
+          "confidence": 0.656,
+          "shared_entities": [
+            "uk",
+            "united_kingdom"
+          ]
+        }
+      ],
       "search_tokens": [
         "accused",
         "andrew",
@@ -948,7 +1309,11 @@
         "authoritie",
         "britain",
         "brother",
+        "challenge",
         "charge",
+        "claimed",
+        "committed",
+        "contest",
         "court",
         "crime",
         "deny",
@@ -956,16 +1321,21 @@
         "extradition",
         "face",
         "facing",
+        "fighting",
         "florida",
         "human",
+        "hunt",
         "including",
         "influencer",
         "kingdom",
+        "lawyer",
         "legal",
         "marshal",
         "miami",
         "part",
+        "political",
         "proceeding",
+        "process",
         "rape",
         "seeks",
         "seriou",
@@ -977,17 +1347,23 @@
         "trafficking",
         "tristan",
         "united",
-        "which"
+        "victim",
+        "where",
+        "which",
+        "witch"
       ],
       "entities": [
         "britain",
         "brother_arrested",
+        "brother_challenge",
+        "challenge_extradition",
         "charge_andrew",
         "extradition_influencer",
         "marshal_service.",
         "miami",
         "miami_facing",
         "miami_florida",
+        "rape_charge",
         "seeks_extradition",
         "service._they",
         "tate_arrested",
@@ -998,7 +1374,1121 @@
         "united_kingdom",
         "us"
       ],
-      "search_text": "accused andrew appear arrested authoritie britain brother brother_arrested charge charge_andrew court crime deny exploitation extradition extradition_influencer face facing florida human including influencer kingdom legal marshal marshal_service. miami miami_facing miami_florida part proceeding rape seeks seeks_extradition seriou service service._they sexual tate tate_arrested tate_brother them they trafficking tristan tristan_tate uk united united_kingdom us which"
+      "search_text": "accused andrew appear arrested authoritie britain brother brother_arrested brother_challenge challenge challenge_extradition charge charge_andrew claimed committed contest court crime deny exploitation extradition extradition_influencer face facing fighting florida human hunt including influencer kingdom lawyer legal marshal marshal_service. miami miami_facing miami_florida part political proceeding process rape rape_charge seeks seeks_extradition seriou service service._they sexual tate tate_arrested tate_brother them they trafficking tristan tristan_tate uk united united_kingdom us victim where which witch",
+      "event_overview": {
+        "available": true,
+        "title": "About Tate Brothers Arrest",
+        "subject": "Tate Brothers Arrest",
+        "summary": "The event concerns the July 2026 U.S. arrest of Andrew and Tristan Tate after UK prosecutors sought their extradition to face criminal charges in England. It is an extradition and charging matter, not a finding of guilt: the Crown Prosecution Service says the proceedings are active and that guilt can be determined only by a court.",
+        "facts": [
+          {
+            "label": "Arrest and location",
+            "value": "The brothers were arrested by the U.S. Marshals Service in the United States on July 18, 2026; reporting and the selected timeline identify Miami, Florida, as the location of the arrest.",
+            "source_ids": [
+              "o1",
+              "o2"
+            ]
+          },
+          {
+            "label": "UK charging scope",
+            "value": "The CPS said it would pursue extradition on 21 pre-existing charges and further charges involving four additional alleged victims. The added allegations include rape, arranging or facilitating trafficking for sexual exploitation, assault, and offences relating to indecent images of a child and extreme pornography.",
+            "source_ids": [
+              "o1"
+            ]
+          },
+          {
+            "label": "Alleged time period and victims",
+            "value": "According to the CPS, the further alleged offending occurred between July 2010 and August 2017; the charging decisions brought the stated total number of alleged victims in the UK case to seven.",
+            "source_ids": [
+              "o1"
+            ]
+          },
+          {
+            "label": "Earlier extradition history",
+            "value": "UK extradition warrants were issued at Westminster Magistrates’ Court in January 2024. In March 2024, the Bucharest Court of Appeal ordered extradition to the UK only after separate Romanian criminal proceedings concluded.",
+            "source_ids": [
+              "o3"
+            ]
+          },
+          {
+            "label": "Legal status",
+            "value": "The CPS requested extradition from the United States, and as of July 19, 2026 said the brothers had been arrested and were awaiting extradition proceedings. The CPS emphasizes that a charging decision is not a finding of fact or guilt and that the defendants have a right to a fair trial.",
+            "source_ids": [
+              "o1"
+            ]
+          }
+        ],
+        "scope_note": "The selected Muninn timeline covers the Miami arrest and the initial U.S. extradition challenge from July 19–21, 2026, rather than the underlying evidence, the separate Romanian proceedings, or any eventual extradition or trial outcome.",
+        "sources": [
+          {
+            "title": "Gov",
+            "publisher": "Gov",
+            "url": "https://www.cps.gov.uk/national-news/news/cps-decides-prosecute-tate-brothers-additional-sexual-offences",
+            "source_type": "reporting",
+            "id": "o1"
+          },
+          {
+            "title": "AP News",
+            "publisher": "AP News",
+            "url": "https://apnews.com/article/3a3748e075f49b00f286a003f5103485",
+            "source_type": "reporting",
+            "id": "o2"
+          },
+          {
+            "title": "Judiciary",
+            "publisher": "Judiciary",
+            "url": "https://www.judiciary.uk/wp-content/uploads/2026/06/The-King-on-the-application-of-Tate-v-Director-of-Public-Prosecutions-Press-Summary.pdf",
+            "source_type": "reporting",
+            "id": "o3"
+          }
+        ],
+        "publisher_count": 3,
+        "generated_at": "2026-07-21T15:03:08.239650+00:00",
+        "expires_at": "2026-07-28T15:03:08.239650+00:00",
+        "model": "gpt-5.6-terra",
+        "provenance": "openai_web_search_source_grounded_event_overview_v1"
+      }
+    },
+    {
+      "event_id": "event_andy-burnham-takes-office-as-uk-prime-minist_6a6783b0f0",
+      "title": "Andy Burnham Becomes U.K.'s New Prime Minister Following Keir Starmer's Resignation",
+      "canonical_title": "Andy Burnham Becomes U.K.'s New Prime Minister Following Keir Starmer's Resignation",
+      "topic_label": "UK Prime Minister Transition",
+      "summary": "Andy Burnham has been formally appointed as the new Prime Minister of the United Kingdom, succeeding Keir Starmer, who stepped down after two years in office. Burnham's appointment marks the seventh change in leadership in the UK within the last decade. Following a meeting with King Charles III at Buckingham Palace, Burnham expressed his vision for a new social and political model for the country.",
+      "status": "active",
+      "first_seen_at": "2026-07-20",
+      "last_seen_at": "2026-07-21",
+      "timeline": [
+        {
+          "development_id": "story_56f45dff841793d0",
+          "daily_story_id": "story_56f45dff841793d0",
+          "date": "2026-07-20",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Andy Burnham Assumes Role as UK Prime Minister Amidst Major Challenges",
+          "summary": "Andy Burnham officially became the Prime Minister of the United Kingdom, taking office at Downing Street. He faces significant challenges, including a call for a new political model and a 10-year plan for the country. Burnham's leadership marks the sixth prime ministerial change in the last decade.",
+          "development_type": "development",
+          "key_facts": [
+            "Andy Burnham has taken over as UK Prime Minister.",
+            "He is the sixth prime minister in the last ten years.",
+            "Burnham has outlined a 10-year plan for Britain.",
+            "He aims to shift power away from London."
+          ],
+          "source_count": 11,
+          "sources": [
+            "AP - Top News via Google News",
+            "Africanews",
+            "CBS News",
+            "Channel NewsAsia",
+            "DW",
+            "Fox News",
+            "NBC News",
+            "NPR",
+            "New York Times",
+            "PBS News",
+            "The Hindu"
+          ],
+          "source_urls": [
+            "http://www.africanews.com/2026/07/20/andy-burnham-becomes-britains-new-prime-minister",
+            "https://news.google.com/rss/articles/CBMiqAFBVV95cUxObmpFTnBJcVJSbTdmSFR6SXIyOU9saWNFLWJ5QW1uS2QzanBfU3hyREhOdHJGTGI2VTlqeHJXTXA5NjZ5OEJyQ0k0bmliV0lsMTZfQXZWOGpmR244SUFCX3hRMjFFVFlCNV9feWNBMXd1NDFMRE9ZNkZrTTVMcWZZT3h4RHFxZzlZc3B6UlZsLUdndGdUUW93Rk1MdGY5MlJYamc2ZWdvaE4?oc=5",
+            "https://www.cbsnews.com/news/andy-burnham-new-uk-prime-minister-7th-in-decade-after-keir-starmer",
+            "https://www.channelnewsasia.com/world/andy-burham-new-british-prime-minister-6265696",
+            "https://www.dw.com/en/meet-andy-burnham-britain-s-prime-minister/a-77664543?maca=en-rss-en-all-1573-rdf",
+            "https://www.foxnews.com/world/andy-burnham-takes-over-uk-prime-minister-calls-new-political-model",
+            "https://www.nbcnews.com/now/video/andy-burnham-formally-appointed-u-k-prime-minster-266940485538",
+            "https://www.npr.org/2026/07/19/nx-s1-5895993/andy-burnham-prime-minister-keir-starmer",
+            "https://www.nytimes.com/2026/07/20/world/europe/britain-new-prime-minister-challenges.html",
+            "https://www.pbs.org/newshour/world/why-britain-is-getting-a-new-prime-minister-without-a-general-election",
+            "https://www.thehindu.com/news/international/i-go-with-good-grace-and-a-smile-on-my-face-starmer-says-making-way-for-burnham/article71244798.ece"
+          ],
+          "source_details": [
+            {
+              "title": "Andy Burnham becomes UK PM, promising new social and political model",
+              "source": "The Hindu",
+              "link": "https://www.thehindu.com/news/international/i-go-with-good-grace-and-a-smile-on-my-face-starmer-says-making-way-for-burnham/article71244798.ece",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Andy Burnham formally appointed UK prime minster",
+              "source": "NBC News",
+              "link": "https://www.nbcnews.com/now/video/andy-burnham-formally-appointed-u-k-prime-minster-266940485538",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Andy Burnham becomes Britain's new Prime Minister",
+              "source": "Africanews",
+              "link": "http://www.africanews.com/2026/07/20/andy-burnham-becomes-britains-new-prime-minister",
+              "source_bias": "center"
+            },
+            {
+              "title": "Andy Burnham becomes the UK’s seventh prime minister in a decade after Starmer resigns",
+              "source": "AP - Top News via Google News",
+              "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxObmpFTnBJcVJSbTdmSFR6SXIyOU9saWNFLWJ5QW1uS2QzanBfU3hyREhOdHJGTGI2VTlqeHJXTXA5NjZ5OEJyQ0k0bmliV0lsMTZfQXZWOGpmR244SUFCX3hRMjFFVFlCNV9feWNBMXd1NDFMRE9ZNkZrTTVMcWZZT3h4RHFxZzlZc3B6UlZsLUdndGdUUW93Rk1MdGY5MlJYamc2ZWdvaE4?oc=5",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Andy Burnham takes the reins as U.K.'s 7th prime minister in a decade",
+              "source": "CBS News",
+              "link": "https://www.cbsnews.com/news/andy-burnham-new-uk-prime-minister-7th-in-decade-after-keir-starmer",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Why Britain is getting a new prime minister without a general election",
+              "source": "PBS News",
+              "link": "https://www.pbs.org/newshour/world/why-britain-is-getting-a-new-prime-minister-without-a-general-election",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Andy Burnham becomes UK prime minister",
+              "source": "NPR",
+              "link": "https://www.npr.org/2026/07/19/nx-s1-5895993/andy-burnham-prime-minister-keir-starmer",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Meet Andy Burnham, Britain's prime minister",
+              "source": "DW",
+              "link": "https://www.dw.com/en/meet-andy-burnham-britain-s-prime-minister/a-77664543?maca=en-rss-en-all-1573-rdf",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Five of the Main Challenges Awaiting Andy Burnham When He Becomes Prime Minister",
+              "source": "New York Times",
+              "link": "https://www.nytimes.com/2026/07/20/world/europe/britain-new-prime-minister-challenges.html",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Andy Burnham takes over as UK prime minister, calls for 'new political model'",
+              "source": "Fox News",
+              "link": "https://www.foxnews.com/world/andy-burnham-takes-over-uk-prime-minister-calls-new-political-model",
+              "source_bias": "right"
+            },
+            {
+              "title": "Andy Burnham becomes prime minister vowing 10-year plan for Britain",
+              "source": "Channel NewsAsia",
+              "link": "https://www.channelnewsasia.com/world/andy-burham-new-british-prime-minister-6265696",
+              "source_bias": "center"
+            }
+          ],
+          "confidence": 1.0,
+          "match_evidence": {
+            "score": 1.0,
+            "method": "new_event",
+            "shared_tokens": [],
+            "shared_entities": []
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-20",
+          "last_seen_at": "2026-07-20",
+          "integrity_status": "trusted",
+          "revisions": [
+            {
+              "daily_story_id": "story_b7c417466d13db4f",
+              "reported_at": "2026-07-20",
+              "update_kind": "factual_update",
+              "title": "Andy Burnham Becomes U.K.'s New Prime Minister Following Keir Starmer's Resignation",
+              "summary": "Andy Burnham has been appointed as the new Prime Minister of the United Kingdom, becoming the seventh individual to hold the office in the past decade. His appointment follows the resignation of Keir Starmer, who stepped down last month. Burnham was asked by King Charles III to form a new government, marking a significant transition in British leadership without a general election.",
+              "key_facts": [
+                "Andy Burnham is the new Prime Minister of the UK",
+                "He succeeds Keir Starmer, who resigned last month.",
+                "Burnham is the seventh prime minister in the UK in a decade.",
+                "His appointment was made by King Charles III."
+              ],
+              "source_urls": [
+                "https://www.cbsnews.com/news/andy-burnham-new-uk-prime-minister-7th-in-decade-after-keir-starmer",
+                "https://www.pbs.org/newshour/world/why-britain-is-getting-a-new-prime-minister-without-a-general-election"
+              ]
+            },
+            {
+              "daily_story_id": "story_9e5d37c5df85149c",
+              "reported_at": "2026-07-20",
+              "update_kind": "factual_update",
+              "title": "Andy Burnham Takes Office as UK Prime Minister",
+              "summary": "Andy Burnham has officially become the Prime Minister of the United Kingdom, succeeding Keir Starmer in a transition of power overseen by King Charles. Burnham, previously the mayor of Manchester, is a prominent figure in the Labour Party.",
+              "key_facts": [
+                "Andy Burnham has replaced Keir Starmer as Prime Minister.",
+                "The transition was presided over by King Charles.",
+                "Burnham is a former mayor of Manchester."
+              ],
+              "source_urls": [
+                "https://www.npr.org/2026/07/19/nx-s1-5895993/andy-burnham-prime-minister-keir-starmer",
+                "https://www.dw.com/en/meet-andy-burnham-britain-s-prime-minister/a-77664543?maca=en-rss-en-all-1573-rdf"
+              ]
+            },
+            {
+              "daily_story_id": "story_aeeb35dfeeed1a15",
+              "reported_at": "2026-07-20",
+              "update_kind": "factual_update",
+              "title": "Andy Burnham Assumes Role as UK Prime Minister Amidst Major Challenges",
+              "summary": "Andy Burnham officially became the Prime Minister of the United Kingdom, taking office at Downing Street. He faces significant challenges, including a call for a new political model and a 10-year plan for the country. Burnham's leadership marks the sixth prime ministerial change in the last decade.",
+              "key_facts": [
+                "Andy Burnham has taken over as UK Prime Minister.",
+                "He is the sixth prime minister in the last ten years.",
+                "Burnham has outlined a 10-year plan for Britain.",
+                "He aims to shift power away from London."
+              ],
+              "source_urls": [
+                "https://www.nytimes.com/2026/07/20/world/europe/britain-new-prime-minister-challenges.html",
+                "https://www.foxnews.com/world/andy-burnham-takes-over-uk-prime-minister-calls-new-political-model",
+                "https://www.channelnewsasia.com/world/andy-burham-new-british-prime-minister-6265696"
+              ]
+            }
+          ],
+          "last_updated_at": "2026-07-20",
+          "merged_development_ids": [
+            "story_9e5d37c5df85149c",
+            "story_aeeb35dfeeed1a15",
+            "story_b7c417466d13db4f"
+          ],
+          "revision_count": 3
+        },
+        {
+          "development_id": "story_aa304c14af95a605",
+          "daily_story_id": "story_aa304c14af95a605",
+          "date": "2026-07-21",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Andy Burnham Sworn in as New Prime Minister of the UK",
+          "summary": "Andy Burnham has been officially appointed as the new Prime Minister of the United Kingdom, succeeding Keir Starmer, who stepped down after two years in office. Burnham, previously the mayor of Manchester, met with King Charles III at Buckingham Palace as part of the formal transition. He is the seventh individual to hold the position in the last decade.",
+          "development_type": "development",
+          "key_facts": [
+            "Andy Burnham is the new Prime Minister of the UK.",
+            "He succeeded Keir Starmer, who stepped down after two years.",
+            "Burnham previously served as the mayor of Manchester.",
+            "He is the seventh Prime Minister in the UK in the last decade."
+          ],
+          "source_count": 4,
+          "sources": [
+            "AP - Top News via Google News",
+            "Africanews",
+            "DW - English",
+            "NBC News - Top Stories"
+          ],
+          "source_urls": [
+            "https://www.dw.com/en/meet-andy-burnham-britain-s-new-prime-minister/a-77664543?maca=en-rss-en-all-1573-rdf",
+            "https://www.nbcnews.com/now/video/andy-burnham-formally-appointed-u-k-prime-minster-266940485538",
+            "http://www.africanews.com/2026/07/20/andy-burnham-becomes-britains-new-prime-minister",
+            "https://news.google.com/rss/articles/CBMiqAFBVV95cUxObmpFTnBJcVJSbTdmSFR6SXIyOU9saWNFLWJ5QW1uS2QzanBfU3hyREhOdHJGTGI2VTlqeHJXTXA5NjZ5OEJyQ0k0bmliV0lsMTZfQXZWOGpmR244SUFCX3hRMjFFVFlCNV9feWNBMXd1NDFMRE9ZNkZrTTVMcWZZT3h4RHFxZzlZc3B6UlZsLUdndGdUUW93Rk1MdGY5MlJYamc2ZWdvaE4?oc=5"
+          ],
+          "source_details": [
+            {
+              "title": "Meet Andy Burnham, Britain's new prime minister",
+              "source": "DW - English",
+              "link": "https://www.dw.com/en/meet-andy-burnham-britain-s-new-prime-minister/a-77664543?maca=en-rss-en-all-1573-rdf",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Andy Burnham formally appointed UK prime minster",
+              "source": "NBC News - Top Stories",
+              "link": "https://www.nbcnews.com/now/video/andy-burnham-formally-appointed-u-k-prime-minster-266940485538",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Andy Burnham becomes Britain's new Prime Minister",
+              "source": "Africanews",
+              "link": "http://www.africanews.com/2026/07/20/andy-burnham-becomes-britains-new-prime-minister",
+              "source_bias": "center"
+            },
+            {
+              "title": "Andy Burnham becomes the UK’s seventh prime minister in a decade after Starmer resigns",
+              "source": "AP - Top News via Google News",
+              "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxObmpFTnBJcVJSbTdmSFR6SXIyOU9saWNFLWJ5QW1uS2QzanBfU3hyREhOdHJGTGI2VTlqeHJXTXA5NjZ5OEJyQ0k0bmliV0lsMTZfQXZWOGpmR244SUFCX3hRMjFFVFlCNV9feWNBMXd1NDFMRE9ZNkZrTTVMcWZZT3h4RHFxZzlZc3B6UlZsLUdndGdUUW93Rk1MdGY5MlJYamc2ZWdvaE4?oc=5",
+              "source_bias": "lean-left"
+            }
+          ],
+          "confidence": 1.0,
+          "match_evidence": {
+            "score": 1.0,
+            "matched_development_id": "story_56f45dff841793d0",
+            "shared_tokens": [
+              "andy",
+              "burnham",
+              "decade",
+              "kingdom",
+              "last",
+              "office",
+              "officially",
+              "prime",
+              "united",
+              "years"
+            ],
+            "shared_entities": [
+              "andy_burnham",
+              "uk",
+              "united_kingdom"
+            ],
+            "source_url_match": true,
+            "method": "deterministic_event_match_v2",
+            "threshold": 0.38
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-21",
+          "last_seen_at": "2026-07-21",
+          "integrity_status": "trusted"
+        }
+      ],
+      "integrity": {
+        "public_development_count": 2,
+        "questionable_development_count": 0,
+        "review_required": false
+      },
+      "latest_title": "Andy Burnham Sworn in as New Prime Minister of the UK",
+      "latest_summary": "Andy Burnham has been officially appointed as the new Prime Minister of the United Kingdom, succeeding Keir Starmer, who stepped down after two years in office. Burnham, previously the mayor of Manchester, met with King Charles III at Buckingham Palace as part of the formal transition. He is the seventh individual to hold the position in the last decade.",
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "stage": "developing_event",
+        "stage_label": "Developing event",
+        "base_title": "UK Prime Minister Transition",
+        "display_title": "UK Prime Minister Transition",
+        "milestone_development_ids": [
+          "story_56f45dff841793d0",
+          "story_aa304c14af95a605"
+        ],
+        "summary_available": true,
+        "summary_label": "Read the story so far",
+        "summary_updated_at": "2026-07-21",
+        "development_count": 2,
+        "coverage_packet_count": 5,
+        "date_count": 2,
+        "source_count": 12,
+        "independent_source_count": 13,
+        "first_date": "2026-07-20",
+        "latest_date": "2026-07-21",
+        "latest_update_title": "Andy Burnham Sworn in as New Prime Minister of the UK",
+        "coverage_score": 0.647,
+        "recency_score": 1.0,
+        "rank_score": 0.852,
+        "context_summary": "Muninn first tracked this thread on 2026-07-20: Andy Burnham Assumes Role as UK Prime Minister Amidst Major Challenges. The latest development is Andy Burnham Sworn in as New Prime Minister of the UK.",
+        "cta_label": ""
+      },
+      "event_summary": {
+        "available": true,
+        "summary": "Andy Burnham officially became the Prime Minister of the United Kingdom, taking office at Downing Street. Most recently, andy Burnham has been officially appointed as the new Prime Minister of the United Kingdom, succeeding Keir Starmer, who stepped down after two years in office.",
+        "key_developments": [
+          {
+            "development_id": "story_56f45dff841793d0",
+            "date": "2026-07-20",
+            "title": "Andy Burnham Assumes Role as UK Prime Minister Amidst Major Challenges"
+          },
+          {
+            "development_id": "story_aa304c14af95a605",
+            "date": "2026-07-21",
+            "title": "Andy Burnham Sworn in as New Prime Minister of the UK"
+          }
+        ],
+        "sources": [
+          {
+            "title": "Andy Burnham becomes UK PM, promising new social and political model",
+            "source": "The Hindu",
+            "link": "https://www.thehindu.com/news/international/i-go-with-good-grace-and-a-smile-on-my-face-starmer-says-making-way-for-burnham/article71244798.ece",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Andy Burnham formally appointed UK prime minster",
+            "source": "NBC News",
+            "link": "https://www.nbcnews.com/now/video/andy-burnham-formally-appointed-u-k-prime-minster-266940485538",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Andy Burnham becomes Britain's new Prime Minister",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/07/20/andy-burnham-becomes-britains-new-prime-minister",
+            "source_bias": "center"
+          },
+          {
+            "title": "Andy Burnham becomes the UK’s seventh prime minister in a decade after Starmer resigns",
+            "source": "AP - Top News via Google News",
+            "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxObmpFTnBJcVJSbTdmSFR6SXIyOU9saWNFLWJ5QW1uS2QzanBfU3hyREhOdHJGTGI2VTlqeHJXTXA5NjZ5OEJyQ0k0bmliV0lsMTZfQXZWOGpmR244SUFCX3hRMjFFVFlCNV9feWNBMXd1NDFMRE9ZNkZrTTVMcWZZT3h4RHFxZzlZc3B6UlZsLUdndGdUUW93Rk1MdGY5MlJYamc2ZWdvaE4?oc=5",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Andy Burnham takes the reins as U.K.'s 7th prime minister in a decade",
+            "source": "CBS News",
+            "link": "https://www.cbsnews.com/news/andy-burnham-new-uk-prime-minister-7th-in-decade-after-keir-starmer",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Why Britain is getting a new prime minister without a general election",
+            "source": "PBS News",
+            "link": "https://www.pbs.org/newshour/world/why-britain-is-getting-a-new-prime-minister-without-a-general-election",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Andy Burnham becomes UK prime minister",
+            "source": "NPR",
+            "link": "https://www.npr.org/2026/07/19/nx-s1-5895993/andy-burnham-prime-minister-keir-starmer",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Meet Andy Burnham, Britain's prime minister",
+            "source": "DW",
+            "link": "https://www.dw.com/en/meet-andy-burnham-britain-s-prime-minister/a-77664543?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Five of the Main Challenges Awaiting Andy Burnham When He Becomes Prime Minister",
+            "source": "New York Times",
+            "link": "https://www.nytimes.com/2026/07/20/world/europe/britain-new-prime-minister-challenges.html",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Andy Burnham takes over as UK prime minister, calls for 'new political model'",
+            "source": "Fox News",
+            "link": "https://www.foxnews.com/world/andy-burnham-takes-over-uk-prime-minister-calls-new-political-model",
+            "source_bias": "right"
+          },
+          {
+            "title": "Andy Burnham becomes prime minister vowing 10-year plan for Britain",
+            "source": "Channel NewsAsia",
+            "link": "https://www.channelnewsasia.com/world/andy-burham-new-british-prime-minister-6265696",
+            "source_bias": "center"
+          },
+          {
+            "title": "Meet Andy Burnham, Britain's new prime minister",
+            "source": "DW - English",
+            "link": "https://www.dw.com/en/meet-andy-burnham-britain-s-new-prime-minister/a-77664543?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          }
+        ],
+        "updated_at": "2026-07-21",
+        "provenance": "source_grounded_event_memory"
+      },
+      "event_stage": "developing_event",
+      "related_events": [
+        {
+          "event_id": "event_tate-brothers-arrested-in-miami-as-uk-seeks_ef1d546745",
+          "title": "Tate Brothers Arrested in Miami as UK Seeks Extradition on New Charges",
+          "relationship": "related_topic",
+          "confidence": 0.656,
+          "shared_entities": [
+            "uk",
+            "united_kingdom"
+          ]
+        }
+      ],
+      "event_overview": {
+        "available": true,
+        "title": "About UK Prime Minister Transition",
+        "subject": "UK Prime Minister Transition",
+        "summary": "This event is the July 2026 transfer of leadership of the UK government from Keir Starmer to Andy Burnham after Starmer resigned and Burnham became Labour leader. Burnham formally took office on 20 July 2026, when he accepted King Charles III’s invitation to form a government; reports dated 21 July cover his first full day in office rather than a separate constitutional swearing-in.",
+        "facts": [
+          {
+            "label": "Effective date",
+            "value": "Andy Burnham became Prime Minister on 20 July 2026; the UK Parliament records his premiership as beginning that day.",
+            "source_ids": [
+              "o1",
+              "o2"
+            ]
+          },
+          {
+            "label": "Transfer of office",
+            "value": "Keir Starmer said he was resigning on 20 July 2026, and Burnham stated that he had accepted the King’s invitation at Buckingham Palace to form a government.",
+            "source_ids": [
+              "o3",
+              "o4"
+            ]
+          },
+          {
+            "label": "Constitutional basis",
+            "value": "The prime minister is head of the UK government and holds office by being able to command the confidence of the House of Commons; political parties determine and communicate who is best placed to do so, after which the Sovereign appoints the successor.",
+            "source_ids": [
+              "o5",
+              "o6"
+            ]
+          },
+          {
+            "label": "Political and parliamentary position",
+            "value": "Burnham was elected Labour leader in July 2026 and is the Labour MP for Makerfield, elected in June 2026.",
+            "source_ids": [
+              "o1",
+              "o2"
+            ]
+          },
+          {
+            "label": "Office and responsibilities",
+            "value": "As prime minister, Burnham is also First Lord of the Treasury, Minister for the Civil Service and Minister for the Union; the prime minister leads His Majesty’s Government and is ultimately responsible for government policy and decisions.",
+            "source_ids": [
+              "o1",
+              "o7"
+            ]
+          }
+        ],
+        "scope_note": "The selected Muninn timeline covers the immediate July 20–21, 2026 leadership handover and Burnham’s assumption of office, not the full Labour leadership contest, Starmer’s wider record, or subsequent actions of the new government.",
+        "sources": [
+          {
+            "title": "Gov",
+            "publisher": "Gov",
+            "url": "https://www.gov.uk/government/people/andy-burnham",
+            "source_type": "reporting",
+            "id": "o1"
+          },
+          {
+            "title": "Parliament",
+            "publisher": "Parliament",
+            "url": "https://members.parliament.uk/member/1427/career",
+            "source_type": "reporting",
+            "id": "o2"
+          },
+          {
+            "title": "Gov",
+            "publisher": "Gov",
+            "url": "https://www.gov.uk/government/speeches/keir-starmers-final-speech-as-prime-minister-20-july-2026",
+            "source_type": "reporting",
+            "id": "o3"
+          },
+          {
+            "title": "Gov",
+            "publisher": "Gov",
+            "url": "https://www.gov.uk/government/speeches/andy-burnhams-first-speech-as-prime-minister-20-july-2026",
+            "source_type": "reporting",
+            "id": "o4"
+          },
+          {
+            "title": "Parliament",
+            "publisher": "Parliament",
+            "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-23/122718",
+            "source_type": "reporting",
+            "id": "o5"
+          },
+          {
+            "title": "Parliament",
+            "publisher": "Parliament",
+            "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-10840/",
+            "source_type": "reporting",
+            "id": "o6"
+          },
+          {
+            "title": "Gov",
+            "publisher": "Gov",
+            "url": "https://www.gov.uk/government/how-government-works",
+            "source_type": "reporting",
+            "id": "o7"
+          }
+        ],
+        "publisher_count": 2,
+        "generated_at": "2026-07-21T15:03:08.239650+00:00",
+        "expires_at": "2026-07-28T15:03:08.239650+00:00",
+        "model": "gpt-5.6-terra",
+        "provenance": "openai_web_search_source_grounded_event_overview_v1"
+      },
+      "development_consolidation": {
+        "merged_entry_count": 1,
+        "method": "deterministic_cross_day_reconciliation_v1"
+      },
+      "search_tokens": [
+        "10-year",
+        "amidst",
+        "andy",
+        "appointed",
+        "assume",
+        "became",
+        "buckingham",
+        "burnham",
+        "call",
+        "challenge",
+        "change",
+        "charle",
+        "decade",
+        "down",
+        "downing",
+        "faces",
+        "formal",
+        "hold",
+        "including",
+        "individual",
+        "keir",
+        "king",
+        "kingdom",
+        "last",
+        "leadership",
+        "manchester",
+        "marks",
+        "mayor",
+        "ministerial",
+        "model",
+        "office",
+        "officially",
+        "palace",
+        "part",
+        "plan",
+        "political",
+        "position",
+        "previously",
+        "prime",
+        "role",
+        "seventh",
+        "significant",
+        "sixth",
+        "starmer",
+        "stepped",
+        "street",
+        "succeeding",
+        "sworn",
+        "taking",
+        "transition",
+        "united",
+        "years"
+      ],
+      "entities": [
+        "andy_burnham",
+        "assume_role",
+        "buckingham",
+        "buckingham_palace",
+        "burnham_assume",
+        "burnham_sworn",
+        "challenge_andy",
+        "charle_iii",
+        "downing",
+        "downing_street.",
+        "iii",
+        "keir_starmer",
+        "king_charle",
+        "uk",
+        "united_kingdom"
+      ],
+      "search_text": "10-year amidst andy andy_burnham appointed assume assume_role became buckingham buckingham_palace burnham burnham_assume burnham_sworn call challenge challenge_andy change charle charle_iii decade down downing downing_street. faces formal hold iii including individual keir keir_starmer king king_charle kingdom last leadership manchester marks mayor ministerial model office officially palace part plan political position previously prime role seventh significant sixth starmer stepped street succeeding sworn taking transition uk united united_kingdom years"
+    },
+    {
+      "event_id": "event_police-clash-with-cockroach-movement-support_754a567a98",
+      "title": "Police Clash with Cockroach Movement Supporters During Protest in New Delhi",
+      "canonical_title": "Police Clash with Cockroach Movement Supporters During Protest in New Delhi",
+      "topic_label": "Cockroach Movement Protests",
+      "summary": "Police in New Delhi used tear gas to disperse supporters of the youth-led Cockroach Janta Party during a protest demanding the resignation of India's education minister over exam leaks. The demonstration escalated as protesters marched towards Parliament.",
+      "status": "active",
+      "first_seen_at": "2026-07-20",
+      "last_seen_at": "2026-07-21",
+      "timeline": [
+        {
+          "development_id": "story_f2c66fff126fd303",
+          "daily_story_id": "story_f2c66fff126fd303",
+          "date": "2026-07-20",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Police Clash with Cockroach Movement Supporters During Protest in New Delhi",
+          "summary": "Police in New Delhi used tear gas to disperse supporters of the youth-led Cockroach Janta Party during a protest demanding the resignation of India's education minister over exam leaks. The demonstration escalated as protesters marched towards Parliament.",
+          "development_type": "development",
+          "key_facts": [
+            "Protesters are part of the youth-led Cockroach Janta Party.",
+            "The protest was aimed at demanding the resignation of India's education minister.",
+            "Police used tear gas to control the crowd."
+          ],
+          "source_count": 2,
+          "sources": [
+            "AP News",
+            "Al Jazeera English"
+          ],
+          "source_urls": [
+            "https://news.google.com/rss/articles/CBMitwFBVV95cUxQUm03WGJ4dXBXemV0VkZrdVotZHNnYU5NZXpNMUNrcXExUHh2SGRfOC1UNWo5ZmNWWG9lVk82ZmZmVWpMNTRfaDR4YmpSU1BFbm1UZl9GR0tHbEJvdXhVWXBQcWhYaTg4dlVCeHBVZG1yamNVOTgwTXNrMXlVZ1U4RVlxZnhuQ3VXYmxsdG94ZHBnZFM5TGxfazRrRDJESjRwZEFFamdKWGMzN3puaXZjTDhKTTl3Vk0?oc=5",
+            "https://www.aljazeera.com/gallery/2026/7/20/photos-police-fire-tear-gas-at-indias-cockroach-movement-supporters?traffic_source=rss"
+          ],
+          "source_details": [
+            {
+              "title": "India police use tear gas to stop march on Parliament by Cockroach movement supporters",
+              "source": "AP News",
+              "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQUm03WGJ4dXBXemV0VkZrdVotZHNnYU5NZXpNMUNrcXExUHh2SGRfOC1UNWo5ZmNWWG9lVk82ZmZmVWpMNTRfaDR4YmpSU1BFbm1UZl9GR0tHbEJvdXhVWXBQcWhYaTg4dlVCeHBVZG1yamNVOTgwTXNrMXlVZ1U4RVlxZnhuQ3VXYmxsdG94ZHBnZFM5TGxfazRrRDJESjRwZEFFamdKWGMzN3puaXZjTDhKTTl3Vk0?oc=5",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Photos: Police fire tear gas at India’s Cockroach movement supporters",
+              "source": "Al Jazeera English",
+              "link": "https://www.aljazeera.com/gallery/2026/7/20/photos-police-fire-tear-gas-at-indias-cockroach-movement-supporters?traffic_source=rss",
+              "source_bias": "lean-left"
+            }
+          ],
+          "confidence": 1.0,
+          "match_evidence": {
+            "score": 1.0,
+            "method": "new_event",
+            "shared_tokens": [],
+            "shared_entities": []
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-20",
+          "last_seen_at": "2026-07-20",
+          "integrity_status": "trusted"
+        },
+        {
+          "development_id": "story_d9e890008dc0e995",
+          "daily_story_id": "story_d9e890008dc0e995",
+          "date": "2026-07-21",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Youth-led Cockroach Movement in India Vows to Continue Protests After Police Crackdown",
+          "summary": "The youth-led Cockroach movement in India has pledged to persist with their protests following a violent police crackdown that left at least 60 protesters injured. The demonstrators were attempting to march towards Parliament to demand the resignation of the education minister amid ongoing issues with medical school entrance test leaks. While the movement has halted further marches for now, its leaders remain committed to their cause and continue to gather in New Delhi.",
+          "development_type": "impact",
+          "key_facts": [
+            "At least 60 protesters were injured during the police crackdown.",
+            "The movement is demanding the resignation of the education minister.",
+            "Protesters faced police batons and tear gas while marching towards Parliament."
+          ],
+          "source_count": 4,
+          "sources": [
+            "Al Jazeera",
+            "BBC",
+            "France 24",
+            "NPR"
+          ],
+          "source_urls": [
+            "https://www.npr.org/2026/07/21/g-s1-134722/indias-youth-led-cockroach-movement-vows-to-continue-protest-after-police-crackdown",
+            "https://www.bbc.co.uk/news/articles/c98v349r9lro?at_medium=RSS&at_campaign=rss",
+            "https://www.france24.com/en/india-s-cockroach-protests-vow-to-continue-despite-police-crackdown",
+            "https://www.aljazeera.com/news/2026/7/21/indias-cockroach-protest-movement-halts-marches-after-police-violence?traffic_source=rss"
+          ],
+          "source_details": [
+            {
+              "title": "India's youth-led Cockroach movement vows to continue protest after police crackdown",
+              "source": "NPR",
+              "link": "https://www.npr.org/2026/07/21/g-s1-134722/indias-youth-led-cockroach-movement-vows-to-continue-protest-after-police-crackdown",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "India's 'cockroach' protest continues a day after police crackdown",
+              "source": "BBC",
+              "link": "https://www.bbc.co.uk/news/articles/c98v349r9lro?at_medium=RSS&at_campaign=rss",
+              "source_bias": "center"
+            },
+            {
+              "title": "India's Cockroach protests vow to continue despite police crackdown",
+              "source": "France 24",
+              "link": "https://www.france24.com/en/india-s-cockroach-protests-vow-to-continue-despite-police-crackdown",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "India’s ‘cockroach’ protest movement halts marches after police violence",
+              "source": "Al Jazeera",
+              "link": "https://www.aljazeera.com/news/2026/7/21/indias-cockroach-protest-movement-halts-marches-after-police-violence?traffic_source=rss",
+              "source_bias": "lean-left"
+            }
+          ],
+          "confidence": 0.46,
+          "match_evidence": {
+            "score": 0.46,
+            "matched_development_id": "story_f2c66fff126fd303",
+            "shared_tokens": [
+              "cockroach",
+              "delhi",
+              "demanding",
+              "education",
+              "gas",
+              "india",
+              "leaks",
+              "movement",
+              "parliament",
+              "protest",
+              "protester",
+              "resignation",
+              "tear",
+              "toward",
+              "youth-led"
+            ],
+            "shared_entities": [
+              "cockroach_movement",
+              "india"
+            ],
+            "source_url_match": false,
+            "method": "deterministic_event_match_v2",
+            "threshold": 0.38
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-21",
+          "last_seen_at": "2026-07-21",
+          "integrity_status": "trusted"
+        }
+      ],
+      "integrity": {
+        "public_development_count": 2,
+        "questionable_development_count": 0,
+        "review_required": false
+      },
+      "latest_title": "Youth-led Cockroach Movement in India Vows to Continue Protests After Police Crackdown",
+      "latest_summary": "The youth-led Cockroach movement in India has pledged to persist with their protests following a violent police crackdown that left at least 60 protesters injured. The demonstrators were attempting to march towards Parliament to demand the resignation of the education minister amid ongoing issues with medical school entrance test leaks. While the movement has halted further marches for now, its leaders remain committed to their cause and continue to gather in New Delhi.",
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "stage": "developing_event",
+        "stage_label": "Developing event",
+        "base_title": "Cockroach Movement Protests",
+        "display_title": "Cockroach Movement Protests",
+        "milestone_development_ids": [
+          "story_f2c66fff126fd303",
+          "story_d9e890008dc0e995"
+        ],
+        "summary_available": true,
+        "summary_label": "Read the story so far",
+        "summary_updated_at": "2026-07-21",
+        "development_count": 2,
+        "coverage_packet_count": 2,
+        "date_count": 2,
+        "source_count": 6,
+        "independent_source_count": 6,
+        "first_date": "2026-07-20",
+        "latest_date": "2026-07-21",
+        "latest_update_title": "Youth-led Cockroach Movement in India Vows to Continue Protests After Police Crackdown",
+        "coverage_score": 0.497,
+        "recency_score": 1.0,
+        "rank_score": 0.789,
+        "context_summary": "Muninn first tracked this thread on 2026-07-20: Police Clash with Cockroach Movement Supporters During Protest in New Delhi. The latest development is Youth-led Cockroach Movement in India Vows to Continue Protests After Police Crackdown.",
+        "cta_label": ""
+      },
+      "event_summary": {
+        "available": true,
+        "summary": "Police in New Delhi used tear gas to disperse supporters of the youth-led Cockroach Janta Party during a protest demanding the resignation of India's education minister over exam leaks. Most recently, the youth-led Cockroach movement in India has pledged to persist with their protests following a violent police crackdown that left at least 60 protesters injured.",
+        "key_developments": [
+          {
+            "development_id": "story_f2c66fff126fd303",
+            "date": "2026-07-20",
+            "title": "Police Clash with Cockroach Movement Supporters During Protest in New Delhi"
+          },
+          {
+            "development_id": "story_d9e890008dc0e995",
+            "date": "2026-07-21",
+            "title": "Youth-led Cockroach Movement in India Vows to Continue Protests After Police Crackdown"
+          }
+        ],
+        "sources": [
+          {
+            "title": "India police use tear gas to stop march on Parliament by Cockroach movement supporters",
+            "source": "AP News",
+            "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQUm03WGJ4dXBXemV0VkZrdVotZHNnYU5NZXpNMUNrcXExUHh2SGRfOC1UNWo5ZmNWWG9lVk82ZmZmVWpMNTRfaDR4YmpSU1BFbm1UZl9GR0tHbEJvdXhVWXBQcWhYaTg4dlVCeHBVZG1yamNVOTgwTXNrMXlVZ1U4RVlxZnhuQ3VXYmxsdG94ZHBnZFM5TGxfazRrRDJESjRwZEFFamdKWGMzN3puaXZjTDhKTTl3Vk0?oc=5",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Photos: Police fire tear gas at India’s Cockroach movement supporters",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/gallery/2026/7/20/photos-police-fire-tear-gas-at-indias-cockroach-movement-supporters?traffic_source=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "India's youth-led Cockroach movement vows to continue protest after police crackdown",
+            "source": "NPR",
+            "link": "https://www.npr.org/2026/07/21/g-s1-134722/indias-youth-led-cockroach-movement-vows-to-continue-protest-after-police-crackdown",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "India's 'cockroach' protest continues a day after police crackdown",
+            "source": "BBC",
+            "link": "https://www.bbc.co.uk/news/articles/c98v349r9lro?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          },
+          {
+            "title": "India's Cockroach protests vow to continue despite police crackdown",
+            "source": "France 24",
+            "link": "https://www.france24.com/en/india-s-cockroach-protests-vow-to-continue-despite-police-crackdown",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "India’s ‘cockroach’ protest movement halts marches after police violence",
+            "source": "Al Jazeera",
+            "link": "https://www.aljazeera.com/news/2026/7/21/indias-cockroach-protest-movement-halts-marches-after-police-violence?traffic_source=rss",
+            "source_bias": "lean-left"
+          }
+        ],
+        "updated_at": "2026-07-21",
+        "provenance": "source_grounded_event_memory"
+      },
+      "event_stage": "developing_event",
+      "related_events": [
+        {
+          "event_id": "event_indian-activist-hospitalized-after-20-day-hu_34ff80b82a",
+          "title": "Indian Activist Hospitalized After 20-Day Hunger Strike Amid Protests",
+          "relationship": "related_topic",
+          "confidence": 0.663,
+          "shared_entities": [
+            "cockroach_janta",
+            "janta_party"
+          ]
+        }
+      ],
+      "search_tokens": [
+        "attempting",
+        "cause",
+        "clash",
+        "cockroach",
+        "committed",
+        "continue",
+        "crackdown",
+        "delhi",
+        "demand",
+        "demanding",
+        "demonstration",
+        "demonstrator",
+        "disperse",
+        "education",
+        "entrance",
+        "escalated",
+        "exam",
+        "further",
+        "gas",
+        "gather",
+        "halted",
+        "india",
+        "injured",
+        "issue",
+        "janta",
+        "leader",
+        "leaks",
+        "least",
+        "left",
+        "march",
+        "marche",
+        "marched",
+        "medical",
+        "movement",
+        "ongoing",
+        "parliament",
+        "party",
+        "persist",
+        "pledged",
+        "protest",
+        "protester",
+        "remain",
+        "resignation",
+        "school",
+        "supporter",
+        "tear",
+        "test",
+        "toward",
+        "used",
+        "violent",
+        "vows",
+        "while",
+        "youth-led"
+      ],
+      "entities": [
+        "cockroach_janta",
+        "cockroach_movement",
+        "continue",
+        "continue_protest",
+        "india",
+        "india_vows",
+        "janta_party",
+        "movement_supporter",
+        "parliament._youth-led",
+        "youth-led_cockroach"
+      ],
+      "search_text": "attempting cause clash cockroach cockroach_janta cockroach_movement committed continue continue_protest crackdown delhi demand demanding demonstration demonstrator disperse education entrance escalated exam further gas gather halted india india_vows injured issue janta janta_party leader leaks least left march marche marched medical movement movement_supporter ongoing parliament parliament._youth-led party persist pledged protest protester remain resignation school supporter tear test toward used violent vows while youth-led youth-led_cockroach",
+      "event_overview": {
+        "available": true,
+        "title": "About Cockroach Movement Protests",
+        "subject": "Cockroach Movement Protests",
+        "summary": "The Cockroach Movement is a youth-led Indian protest movement organized around the self-styled Cockroach Janta Party (CJP). It began as online satire in May 2026 and developed into street protests focused on alleged examination irregularities, education reform, unemployment and government accountability; supporters have specifically called for the resignation of Education Minister Dharmendra Pradhan.",
+        "facts": [
+          {
+            "label": "Origins and status",
+            "value": "The CJP emerged online in May 2026 and had become an active, ongoing protest movement by July 21, 2026 rather than a formally established political party or a time-limited event.",
+            "source_ids": [
+              "o1"
+            ]
+          },
+          {
+            "label": "First major street action",
+            "value": "Its first reported public street demonstration took place in New Delhi on June 6, 2026, moving the campaign from social media into in-person protest.",
+            "source_ids": [
+              "o2",
+              "o3"
+            ]
+          },
+          {
+            "label": "Organization and participants",
+            "value": "The movement is associated with the Cockroach Janta Party and its founder, Abhijeet Dipke; it is chiefly youth- and student-led, while later protests also drew professionals and families.",
+            "source_ids": [
+              "o4",
+              "o5"
+            ]
+          },
+          {
+            "label": "Stated aims",
+            "value": "Its central demands concern accountability for alleged failures in India’s examination system and education reform, including a demand that the education minister resign; the movement also frames unemployment and broader government accountability as concerns.",
+            "source_ids": [
+              "o6"
+            ]
+          },
+          {
+            "label": "Examination context",
+            "value": "The protests arose amid controversy over NEET (UG) 2026. The National Testing Agency officially conducted a re-examination on June 21, 2026 and issued fee-refund notices for candidates from the original May 3 examination.",
+            "source_ids": [
+              "o7",
+              "o8"
+            ]
+          }
+        ],
+        "scope_note": "The selected Muninn timeline covers the New Delhi confrontation of July 20, 2026 and protesters’ stated intention to continue on July 21; it does not attempt to catalog the movement’s full online origins, every local protest, or all examination-related proceedings.",
+        "sources": [
+          {
+            "title": "AP News",
+            "publisher": "AP News",
+            "url": "https://apnews.com/article/688cd957d2db3b1206193df046140bb4",
+            "source_type": "reporting",
+            "id": "o1"
+          },
+          {
+            "title": "Channelnewsasia",
+            "publisher": "Channelnewsasia",
+            "url": "https://www.channelnewsasia.com/asia/india-cockroach-janta-party-abhijeet-dipke-protest-6166131",
+            "source_type": "reporting",
+            "id": "o2"
+          },
+          {
+            "title": "The Guardian",
+            "publisher": "The Guardian",
+            "url": "https://www.theguardian.com/world/2026/jun/08/cockroach-janta-party-youth-movement-india-politics",
+            "source_type": "reporting",
+            "id": "o3"
+          },
+          {
+            "title": "AP News",
+            "publisher": "AP News",
+            "url": "https://apnews.com/article/dc9d61bf27f26510c0bd427f4d889699",
+            "source_type": "reporting",
+            "id": "o4"
+          },
+          {
+            "title": "Aljazeera",
+            "publisher": "Aljazeera",
+            "url": "https://www.aljazeera.com/news/2026/6/21/indias-cockroach-movement-camps-out-until-education-minister-resigns",
+            "source_type": "reporting",
+            "id": "o5"
+          },
+          {
+            "title": "AP News",
+            "publisher": "AP News",
+            "url": "https://apnews.com/article/cbeb4773e89d67250f0bcad1670fcd38",
+            "source_type": "reporting",
+            "id": "o6"
+          },
+          {
+            "title": "Ac",
+            "publisher": "Ac",
+            "url": "https://www.nta.ac.in/Download/Notice/Notice_20260527222829.pdf",
+            "source_type": "reporting",
+            "id": "o7"
+          },
+          {
+            "title": "Nic",
+            "publisher": "Nic",
+            "url": "https://neet.nta.nic.in/document-category/public-notices/",
+            "source_type": "reporting",
+            "id": "o8"
+          }
+        ],
+        "publisher_count": 6,
+        "generated_at": "2026-07-21T15:03:08.239650+00:00",
+        "expires_at": "2026-07-28T15:03:08.239650+00:00",
+        "model": "gpt-5.6-terra",
+        "provenance": "openai_web_search_source_grounded_event_overview_v1"
+      }
     },
     {
       "event_id": "event_russia-launches-major-ballistic-missile-atta_e12d127249",
@@ -1249,8 +2739,8 @@
         "latest_date": "2026-07-20",
         "latest_update_title": "Russia Launches Major Missile Assault on Ukrainian Cities Amid Escalating Conflict",
         "coverage_score": 0.609,
-        "recency_score": 1.0,
-        "rank_score": 0.836,
+        "recency_score": 0.875,
+        "rank_score": 0.763,
         "context_summary": "Muninn first tracked this thread on 2026-07-19: Russia Launches Major Ballistic Missile Attack on Ukrainian Cities, Causing Casualties. The latest development is Russia Launches Major Missile Assault on Ukrainian Cities Amid Escalating Conflict.",
         "cta_label": ""
       },
@@ -1505,98 +2995,50 @@
       "search_text": "125 400 across affected approximately assault attack ballistic ballistic_missile capital casualtie casualtie_russia causing causing_casualtie citie citie_causing civilian conducted conflict cycle damage death district dozen drone eight escalating escalation fires including infrastructure injurie intensifying involved kyiv largest launche launched least marks missile missile_assault moscow multiple nation numerou ongoing other reported response resulting retaliatory russia russia_launche significant strike targeting ukraine ukraine_citie"
     },
     {
-      "event_id": "event_andy-burnham-takes-office-as-uk-prime-minist_6a6783b0f0",
-      "title": "Andy Burnham Becomes U.K.'s New Prime Minister Following Keir Starmer's Resignation",
-      "canonical_title": "Andy Burnham Becomes U.K.'s New Prime Minister Following Keir Starmer's Resignation",
-      "topic_label": "UK Prime Minister Transition",
-      "summary": "Andy Burnham has been formally appointed as the new Prime Minister of the United Kingdom, succeeding Keir Starmer, who stepped down after two years in office. Burnham's appointment marks the seventh change in leadership in the UK within the last decade. Following a meeting with King Charles III at Buckingham Palace, Burnham expressed his vision for a new social and political model for the country.",
+      "event_id": "event_houthis-declare-maritime-embargo-against-sau_3cc7dd1ca6",
+      "title": "Houthis Declare Maritime Embargo Against Saudi Arabia Amid Ongoing Conflict",
+      "canonical_title": "Houthis Declare Maritime Embargo Against Saudi Arabia Amid Ongoing Conflict",
+      "topic_label": "Yemen Conflict",
+      "summary": "Yemen's Iranian-backed Houthi rebels have announced a maritime embargo against Saudi Arabia, effective immediately. This decision is described as retaliation for a blockade on Yemen and a recent attack on Sanaa International Airport. A military spokesman emphasized that the embargo is based on the principle of 'an eye for an eye'.",
       "status": "active",
       "first_seen_at": "2026-07-20",
-      "last_seen_at": "2026-07-20",
+      "last_seen_at": "2026-07-21",
       "timeline": [
         {
-          "development_id": "story_56f45dff841793d0",
-          "daily_story_id": "story_56f45dff841793d0",
+          "development_id": "story_453428317eb818d2",
+          "daily_story_id": "story_453428317eb818d2",
           "date": "2026-07-20",
           "occurred_at": null,
           "date_basis": "first_reported_by_muninn",
-          "title": "Andy Burnham Takes Office as UK Prime Minister",
-          "summary": "Andy Burnham has officially become the Prime Minister of the United Kingdom, succeeding Keir Starmer in a transition of power overseen by King Charles. Burnham, previously the mayor of Manchester, is a prominent figure in the Labour Party.",
-          "development_type": "development",
+          "title": "Houthis Declare Maritime Embargo Against Saudi Arabia Amid Ongoing Conflict",
+          "summary": "Yemen's Iranian-backed Houthi rebels have announced a maritime embargo against Saudi Arabia, effective immediately. This decision is described as retaliation for a blockade on Yemen and a recent attack on Sanaa International Airport. A military spokesman emphasized that the embargo is based on the principle of 'an eye for an eye'.",
+          "development_type": "military_action",
           "key_facts": [
-            "Andy Burnham has replaced Keir Starmer as Prime Minister.",
-            "The transition was presided over by King Charles.",
-            "Burnham is a former mayor of Manchester."
+            "Houthis announced a maritime embargo against Saudi Arabia.",
+            "The embargo is in retaliation for a blockade on Yemen.",
+            "The decision follows an attack on Sanaa International Airport."
           ],
-          "source_count": 8,
+          "source_count": 2,
           "sources": [
-            "AP - Top News via Google News",
-            "Africanews",
-            "CBS News",
-            "DW",
-            "NBC News",
-            "NPR",
-            "PBS News",
-            "The Hindu"
+            "Channel NewsAsia",
+            "PBS News"
           ],
           "source_urls": [
-            "http://www.africanews.com/2026/07/20/andy-burnham-becomes-britains-new-prime-minister",
-            "https://news.google.com/rss/articles/CBMiqAFBVV95cUxObmpFTnBJcVJSbTdmSFR6SXIyOU9saWNFLWJ5QW1uS2QzanBfU3hyREhOdHJGTGI2VTlqeHJXTXA5NjZ5OEJyQ0k0bmliV0lsMTZfQXZWOGpmR244SUFCX3hRMjFFVFlCNV9feWNBMXd1NDFMRE9ZNkZrTTVMcWZZT3h4RHFxZzlZc3B6UlZsLUdndGdUUW93Rk1MdGY5MlJYamc2ZWdvaE4?oc=5",
-            "https://www.cbsnews.com/news/andy-burnham-new-uk-prime-minister-7th-in-decade-after-keir-starmer",
-            "https://www.dw.com/en/meet-andy-burnham-britain-s-prime-minister/a-77664543?maca=en-rss-en-all-1573-rdf",
-            "https://www.nbcnews.com/now/video/andy-burnham-formally-appointed-u-k-prime-minster-266940485538",
-            "https://www.npr.org/2026/07/19/nx-s1-5895993/andy-burnham-prime-minister-keir-starmer",
-            "https://www.pbs.org/newshour/world/why-britain-is-getting-a-new-prime-minister-without-a-general-election",
-            "https://www.thehindu.com/news/international/i-go-with-good-grace-and-a-smile-on-my-face-starmer-says-making-way-for-burnham/article71244798.ece"
+            "https://www.pbs.org/newshour/world/yemens-iranian-backed-houthis-announce-a-maritime-embargo-against-saudi-arabia",
+            "https://www.channelnewsasia.com/world/yemen-saudi-arabia-houthis-maritime-blockade-6265876"
           ],
           "source_details": [
             {
-              "title": "Andy Burnham becomes UK PM, promising new social and political model",
-              "source": "The Hindu",
-              "link": "https://www.thehindu.com/news/international/i-go-with-good-grace-and-a-smile-on-my-face-starmer-says-making-way-for-burnham/article71244798.ece",
-              "source_bias": "lean-left"
-            },
-            {
-              "title": "Andy Burnham formally appointed UK prime minster",
-              "source": "NBC News",
-              "link": "https://www.nbcnews.com/now/video/andy-burnham-formally-appointed-u-k-prime-minster-266940485538",
-              "source_bias": "lean-left"
-            },
-            {
-              "title": "Andy Burnham becomes Britain's new Prime Minister",
-              "source": "Africanews",
-              "link": "http://www.africanews.com/2026/07/20/andy-burnham-becomes-britains-new-prime-minister",
-              "source_bias": "center"
-            },
-            {
-              "title": "Andy Burnham becomes the UK’s seventh prime minister in a decade after Starmer resigns",
-              "source": "AP - Top News via Google News",
-              "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxObmpFTnBJcVJSbTdmSFR6SXIyOU9saWNFLWJ5QW1uS2QzanBfU3hyREhOdHJGTGI2VTlqeHJXTXA5NjZ5OEJyQ0k0bmliV0lsMTZfQXZWOGpmR244SUFCX3hRMjFFVFlCNV9feWNBMXd1NDFMRE9ZNkZrTTVMcWZZT3h4RHFxZzlZc3B6UlZsLUdndGdUUW93Rk1MdGY5MlJYamc2ZWdvaE4?oc=5",
-              "source_bias": "lean-left"
-            },
-            {
-              "title": "Andy Burnham takes the reins as U.K.'s 7th prime minister in a decade",
-              "source": "CBS News",
-              "link": "https://www.cbsnews.com/news/andy-burnham-new-uk-prime-minister-7th-in-decade-after-keir-starmer",
-              "source_bias": "lean-left"
-            },
-            {
-              "title": "Why Britain is getting a new prime minister without a general election",
+              "title": "Yemen's Iranian-backed Houthis announce a maritime embargo against Saudi Arabia",
               "source": "PBS News",
-              "link": "https://www.pbs.org/newshour/world/why-britain-is-getting-a-new-prime-minister-without-a-general-election",
+              "link": "https://www.pbs.org/newshour/world/yemens-iranian-backed-houthis-announce-a-maritime-embargo-against-saudi-arabia",
               "source_bias": "lean-left"
             },
             {
-              "title": "Andy Burnham becomes UK prime minister",
-              "source": "NPR",
-              "link": "https://www.npr.org/2026/07/19/nx-s1-5895993/andy-burnham-prime-minister-keir-starmer",
-              "source_bias": "lean-left"
-            },
-            {
-              "title": "Meet Andy Burnham, Britain's prime minister",
-              "source": "DW",
-              "link": "https://www.dw.com/en/meet-andy-burnham-britain-s-prime-minister/a-77664543?maca=en-rss-en-all-1573-rdf",
-              "source_bias": "lean-left"
+              "title": "Yemen's Iran-backed Houthis announce maritime blockade of Saudi Arabia",
+              "source": "Channel NewsAsia",
+              "link": "https://www.channelnewsasia.com/world/yemen-saudi-arabia-houthis-maritime-blockade-6265876",
+              "source_bias": "center"
             }
           ],
           "confidence": 1.0,
@@ -1612,119 +3054,66 @@
           },
           "first_seen_at": "2026-07-20",
           "last_seen_at": "2026-07-20",
-          "integrity_status": "trusted",
-          "revisions": [
-            {
-              "daily_story_id": "story_b7c417466d13db4f",
-              "reported_at": "2026-07-20",
-              "update_kind": "factual_update",
-              "title": "Andy Burnham Becomes U.K.'s New Prime Minister Following Keir Starmer's Resignation",
-              "summary": "Andy Burnham has been appointed as the new Prime Minister of the United Kingdom, becoming the seventh individual to hold the office in the past decade. His appointment follows the resignation of Keir Starmer, who stepped down last month. Burnham was asked by King Charles III to form a new government, marking a significant transition in British leadership without a general election.",
-              "key_facts": [
-                "Andy Burnham is the new Prime Minister of the UK",
-                "He succeeds Keir Starmer, who resigned last month.",
-                "Burnham is the seventh prime minister in the UK in a decade.",
-                "His appointment was made by King Charles III."
-              ],
-              "source_urls": [
-                "https://www.cbsnews.com/news/andy-burnham-new-uk-prime-minister-7th-in-decade-after-keir-starmer",
-                "https://www.pbs.org/newshour/world/why-britain-is-getting-a-new-prime-minister-without-a-general-election"
-              ]
-            },
-            {
-              "daily_story_id": "story_9e5d37c5df85149c",
-              "reported_at": "2026-07-20",
-              "update_kind": "factual_update",
-              "title": "Andy Burnham Takes Office as UK Prime Minister",
-              "summary": "Andy Burnham has officially become the Prime Minister of the United Kingdom, succeeding Keir Starmer in a transition of power overseen by King Charles. Burnham, previously the mayor of Manchester, is a prominent figure in the Labour Party.",
-              "key_facts": [
-                "Andy Burnham has replaced Keir Starmer as Prime Minister.",
-                "The transition was presided over by King Charles.",
-                "Burnham is a former mayor of Manchester."
-              ],
-              "source_urls": [
-                "https://www.npr.org/2026/07/19/nx-s1-5895993/andy-burnham-prime-minister-keir-starmer",
-                "https://www.dw.com/en/meet-andy-burnham-britain-s-prime-minister/a-77664543?maca=en-rss-en-all-1573-rdf"
-              ]
-            }
-          ],
-          "last_updated_at": "2026-07-20",
-          "merged_development_ids": [
-            "story_9e5d37c5df85149c",
-            "story_b7c417466d13db4f"
-          ],
-          "revision_count": 2
+          "integrity_status": "trusted"
         },
         {
-          "development_id": "story_aeeb35dfeeed1a15",
-          "daily_story_id": "story_aeeb35dfeeed1a15",
-          "date": "2026-07-20",
+          "development_id": "story_dec05a9598d59b42",
+          "daily_story_id": "story_dec05a9598d59b42",
+          "date": "2026-07-21",
           "occurred_at": null,
           "date_basis": "first_reported_by_muninn",
-          "title": "Andy Burnham Assumes Role as UK Prime Minister Amidst Major Challenges",
-          "summary": "Andy Burnham officially became the Prime Minister of the United Kingdom, taking office at Downing Street. He faces significant challenges, including a call for a new political model and a 10-year plan for the country. Burnham's leadership marks the sixth prime ministerial change in the last decade.",
+          "title": "Houthis Impose Maritime Embargo on Saudi Arabia in Response to Blockade",
+          "summary": "The Houthis have announced an immediate maritime embargo on Saudi Arabia, citing it as a reaction to the Saudi blockade of Yemeni ports and airports. In response, the Saudi-led coalition has threatened to use force against any ships affected by the embargo, indicating a potential escalation in the ongoing conflict.",
           "development_type": "development",
           "key_facts": [
-            "Andy Burnham has taken over as UK Prime Minister.",
-            "He is the sixth prime minister in the last ten years.",
-            "Burnham has outlined a 10-year plan for Britain.",
-            "He aims to shift power away from London."
+            "Houthis declare maritime embargo on Saudi Arabia.",
+            "Embargo is a response to Saudi blockade of Yemeni ports and airports.",
+            "Saudi-led coalition threatens to respond with force."
           ],
-          "source_count": 3,
+          "source_count": 2,
           "sources": [
-            "Channel NewsAsia",
-            "Fox News",
-            "New York Times"
+            "BBC",
+            "SBS News"
           ],
           "source_urls": [
-            "https://www.nytimes.com/2026/07/20/world/europe/britain-new-prime-minister-challenges.html",
-            "https://www.foxnews.com/world/andy-burnham-takes-over-uk-prime-minister-calls-new-political-model",
-            "https://www.channelnewsasia.com/world/andy-burham-new-british-prime-minister-6265696"
+            "https://www.bbc.co.uk/news/articles/cm2gmddx1ldo?at_medium=RSS&at_campaign=rss",
+            "https://www.sbs.com.au/news/article/houthi-blockade-of-saudi-arabia-us-iran-war/ii1v861my"
           ],
           "source_details": [
             {
-              "title": "Five of the Main Challenges Awaiting Andy Burnham When He Becomes Prime Minister",
-              "source": "New York Times",
-              "link": "https://www.nytimes.com/2026/07/20/world/europe/britain-new-prime-minister-challenges.html",
-              "source_bias": "lean-left"
-            },
-            {
-              "title": "Andy Burnham takes over as UK prime minister, calls for 'new political model'",
-              "source": "Fox News",
-              "link": "https://www.foxnews.com/world/andy-burnham-takes-over-uk-prime-minister-calls-new-political-model",
-              "source_bias": "right"
-            },
-            {
-              "title": "Andy Burnham becomes prime minister vowing 10-year plan for Britain",
-              "source": "Channel NewsAsia",
-              "link": "https://www.channelnewsasia.com/world/andy-burham-new-british-prime-minister-6265696",
+              "title": "Yemen's Houthis announce 'maritime embargo' on Saudi Arabia",
+              "source": "BBC",
+              "link": "https://www.bbc.co.uk/news/articles/cm2gmddx1ldo?at_medium=RSS&at_campaign=rss",
               "source_bias": "center"
+            },
+            {
+              "title": "Yemen's Houthis declare Saudi maritime blockade, threatening new front in US-Iran war",
+              "source": "SBS News",
+              "link": "https://www.sbs.com.au/news/article/houthi-blockade-of-saudi-arabia-us-iran-war/ii1v861my",
+              "source_bias": "lean-left"
             }
           ],
-          "confidence": 0.399,
+          "confidence": 0.4,
           "match_evidence": {
-            "score": 0.399,
-            "matched_development_id": "story_56f45dff841793d0",
+            "score": 0.4,
+            "matched_development_id": "story_453428317eb818d2",
             "shared_tokens": [
-              "andy",
-              "burnham",
-              "change",
-              "decade",
-              "kingdom",
-              "last",
-              "leadership",
-              "marks",
-              "model",
-              "office",
-              "political",
-              "prime",
-              "united",
-              "years"
+              "airport",
+              "announced",
+              "arabia",
+              "blockade",
+              "conflict",
+              "declare",
+              "embargo",
+              "houthi",
+              "maritime",
+              "ongoing",
+              "saudi"
             ],
             "shared_entities": [
-              "andy_burnham",
-              "uk",
-              "united_kingdom"
+              "maritime_embargo",
+              "saudi_arabia",
+              "saudi_arabia."
             ],
             "source_url_match": false,
             "method": "deterministic_event_match_v2",
@@ -1734,8 +3123,8 @@
             "provider": "deterministic_source_grounded_event_match_v1",
             "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
           },
-          "first_seen_at": "2026-07-20",
-          "last_seen_at": "2026-07-20",
+          "first_seen_at": "2026-07-21",
+          "last_seen_at": "2026-07-21",
           "integrity_status": "trusted"
         }
       ],
@@ -1744,279 +3133,627 @@
         "questionable_development_count": 0,
         "review_required": false
       },
-      "latest_title": "Andy Burnham Assumes Role as UK Prime Minister Amidst Major Challenges",
-      "latest_summary": "Andy Burnham officially became the Prime Minister of the United Kingdom, taking office at Downing Street. He faces significant challenges, including a call for a new political model and a 10-year plan for the country. Burnham's leadership marks the sixth prime ministerial change in the last decade.",
+      "latest_title": "Houthis Impose Maritime Embargo on Saudi Arabia in Response to Blockade",
+      "latest_summary": "The Houthis have announced an immediate maritime embargo on Saudi Arabia, citing it as a reaction to the Saudi blockade of Yemeni ports and airports. In response, the Saudi-led coalition has threatened to use force against any ships affected by the embargo, indicating a potential escalation in the ongoing conflict.",
       "presentation": {
         "has_context": true,
         "has_full_timeline": false,
         "stage": "developing_event",
         "stage_label": "Developing event",
-        "base_title": "UK Prime Minister Transition",
-        "display_title": "UK Prime Minister Transition",
+        "base_title": "Yemen Conflict",
+        "display_title": "Yemen Conflict",
         "milestone_development_ids": [
-          "story_56f45dff841793d0",
-          "story_aeeb35dfeeed1a15"
+          "story_453428317eb818d2",
+          "story_dec05a9598d59b42"
         ],
         "summary_available": true,
         "summary_label": "Read the story so far",
-        "summary_updated_at": "2026-07-20",
+        "summary_updated_at": "2026-07-21",
         "development_count": 2,
-        "coverage_packet_count": 4,
-        "date_count": 1,
-        "source_count": 11,
-        "independent_source_count": 11,
+        "coverage_packet_count": 2,
+        "date_count": 2,
+        "source_count": 4,
+        "independent_source_count": 4,
         "first_date": "2026-07-20",
-        "latest_date": "2026-07-20",
-        "latest_update_title": "Andy Burnham Assumes Role as UK Prime Minister Amidst Major Challenges",
-        "coverage_score": 0.594,
+        "latest_date": "2026-07-21",
+        "latest_update_title": "Houthis Impose Maritime Embargo on Saudi Arabia in Response to Blockade",
+        "coverage_score": 0.397,
         "recency_score": 1.0,
-        "rank_score": 0.83,
-        "context_summary": "Muninn first tracked this thread on 2026-07-20: Andy Burnham Takes Office as UK Prime Minister. The latest development is Andy Burnham Assumes Role as UK Prime Minister Amidst Major Challenges.",
+        "rank_score": 0.747,
+        "context_summary": "Muninn first tracked this thread on 2026-07-20: Houthis Declare Maritime Embargo Against Saudi Arabia Amid Ongoing Conflict. The latest development is Houthis Impose Maritime Embargo on Saudi Arabia in Response to Blockade.",
         "cta_label": ""
       },
       "event_summary": {
         "available": true,
-        "summary": "Andy Burnham has officially become the Prime Minister of the United Kingdom, succeeding Keir Starmer in a transition of power overseen by King Charles. Most recently, andy Burnham officially became the Prime Minister of the United Kingdom, taking office at Downing Street.",
+        "summary": "Yemen's Iranian-backed Houthi rebels have announced a maritime embargo against Saudi Arabia, effective immediately. Most recently, the Houthis have announced an immediate maritime embargo on Saudi Arabia, citing it as a reaction to the Saudi blockade of Yemeni ports and airports.",
         "key_developments": [
           {
-            "development_id": "story_56f45dff841793d0",
+            "development_id": "story_453428317eb818d2",
             "date": "2026-07-20",
-            "title": "Andy Burnham Takes Office as UK Prime Minister"
+            "title": "Houthis Declare Maritime Embargo Against Saudi Arabia Amid Ongoing Conflict"
           },
           {
-            "development_id": "story_aeeb35dfeeed1a15",
-            "date": "2026-07-20",
-            "title": "Andy Burnham Assumes Role as UK Prime Minister Amidst Major Challenges"
+            "development_id": "story_dec05a9598d59b42",
+            "date": "2026-07-21",
+            "title": "Houthis Impose Maritime Embargo on Saudi Arabia in Response to Blockade"
           }
         ],
         "sources": [
           {
-            "title": "Andy Burnham becomes UK PM, promising new social and political model",
-            "source": "The Hindu",
-            "link": "https://www.thehindu.com/news/international/i-go-with-good-grace-and-a-smile-on-my-face-starmer-says-making-way-for-burnham/article71244798.ece",
-            "source_bias": "lean-left"
-          },
-          {
-            "title": "Andy Burnham formally appointed UK prime minster",
-            "source": "NBC News",
-            "link": "https://www.nbcnews.com/now/video/andy-burnham-formally-appointed-u-k-prime-minster-266940485538",
-            "source_bias": "lean-left"
-          },
-          {
-            "title": "Andy Burnham becomes Britain's new Prime Minister",
-            "source": "Africanews",
-            "link": "http://www.africanews.com/2026/07/20/andy-burnham-becomes-britains-new-prime-minister",
-            "source_bias": "center"
-          },
-          {
-            "title": "Andy Burnham becomes the UK’s seventh prime minister in a decade after Starmer resigns",
-            "source": "AP - Top News via Google News",
-            "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxObmpFTnBJcVJSbTdmSFR6SXIyOU9saWNFLWJ5QW1uS2QzanBfU3hyREhOdHJGTGI2VTlqeHJXTXA5NjZ5OEJyQ0k0bmliV0lsMTZfQXZWOGpmR244SUFCX3hRMjFFVFlCNV9feWNBMXd1NDFMRE9ZNkZrTTVMcWZZT3h4RHFxZzlZc3B6UlZsLUdndGdUUW93Rk1MdGY5MlJYamc2ZWdvaE4?oc=5",
-            "source_bias": "lean-left"
-          },
-          {
-            "title": "Andy Burnham takes the reins as U.K.'s 7th prime minister in a decade",
-            "source": "CBS News",
-            "link": "https://www.cbsnews.com/news/andy-burnham-new-uk-prime-minister-7th-in-decade-after-keir-starmer",
-            "source_bias": "lean-left"
-          },
-          {
-            "title": "Why Britain is getting a new prime minister without a general election",
+            "title": "Yemen's Iranian-backed Houthis announce a maritime embargo against Saudi Arabia",
             "source": "PBS News",
-            "link": "https://www.pbs.org/newshour/world/why-britain-is-getting-a-new-prime-minister-without-a-general-election",
+            "link": "https://www.pbs.org/newshour/world/yemens-iranian-backed-houthis-announce-a-maritime-embargo-against-saudi-arabia",
             "source_bias": "lean-left"
           },
           {
-            "title": "Andy Burnham becomes UK prime minister",
-            "source": "NPR",
-            "link": "https://www.npr.org/2026/07/19/nx-s1-5895993/andy-burnham-prime-minister-keir-starmer",
-            "source_bias": "lean-left"
-          },
-          {
-            "title": "Meet Andy Burnham, Britain's prime minister",
-            "source": "DW",
-            "link": "https://www.dw.com/en/meet-andy-burnham-britain-s-prime-minister/a-77664543?maca=en-rss-en-all-1573-rdf",
-            "source_bias": "lean-left"
-          },
-          {
-            "title": "Five of the Main Challenges Awaiting Andy Burnham When He Becomes Prime Minister",
-            "source": "New York Times",
-            "link": "https://www.nytimes.com/2026/07/20/world/europe/britain-new-prime-minister-challenges.html",
-            "source_bias": "lean-left"
-          },
-          {
-            "title": "Andy Burnham takes over as UK prime minister, calls for 'new political model'",
-            "source": "Fox News",
-            "link": "https://www.foxnews.com/world/andy-burnham-takes-over-uk-prime-minister-calls-new-political-model",
-            "source_bias": "right"
-          },
-          {
-            "title": "Andy Burnham becomes prime minister vowing 10-year plan for Britain",
+            "title": "Yemen's Iran-backed Houthis announce maritime blockade of Saudi Arabia",
             "source": "Channel NewsAsia",
-            "link": "https://www.channelnewsasia.com/world/andy-burham-new-british-prime-minister-6265696",
+            "link": "https://www.channelnewsasia.com/world/yemen-saudi-arabia-houthis-maritime-blockade-6265876",
             "source_bias": "center"
+          },
+          {
+            "title": "Yemen's Houthis announce 'maritime embargo' on Saudi Arabia",
+            "source": "BBC",
+            "link": "https://www.bbc.co.uk/news/articles/cm2gmddx1ldo?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          },
+          {
+            "title": "Yemen's Houthis declare Saudi maritime blockade, threatening new front in US-Iran war",
+            "source": "SBS News",
+            "link": "https://www.sbs.com.au/news/article/houthi-blockade-of-saudi-arabia-us-iran-war/ii1v861my",
+            "source_bias": "lean-left"
+          }
+        ],
+        "updated_at": "2026-07-21",
+        "provenance": "source_grounded_event_memory"
+      },
+      "event_stage": "developing_event",
+      "related_events": [],
+      "search_tokens": [
+        "affected",
+        "airport",
+        "announced",
+        "arabia",
+        "attack",
+        "based",
+        "blockade",
+        "citing",
+        "coalition",
+        "conflict",
+        "decision",
+        "declare",
+        "described",
+        "effective",
+        "embargo",
+        "emphasized",
+        "escalation",
+        "force",
+        "houthi",
+        "immediate",
+        "immediately",
+        "impose",
+        "indicating",
+        "international",
+        "iranian-backed",
+        "maritime",
+        "military",
+        "ongoing",
+        "ports",
+        "potential",
+        "principle",
+        "reaction",
+        "rebel",
+        "recent",
+        "response",
+        "retaliation",
+        "sanaa",
+        "saudi",
+        "saudi-led",
+        "ships",
+        "spokesman",
+        "threatened",
+        "yemen",
+        "yemeni"
+      ],
+      "entities": [
+        "blockade",
+        "declare_maritime",
+        "houthi_declare",
+        "houthi_impose",
+        "impose_maritime",
+        "international_airport.",
+        "iranian-backed_houthi",
+        "maritime_embargo",
+        "response",
+        "sanaa_international",
+        "saudi",
+        "saudi_arabia",
+        "yemen_iranian-backed"
+      ],
+      "search_text": "affected airport announced arabia attack based blockade citing coalition conflict decision declare declare_maritime described effective embargo emphasized escalation force houthi houthi_declare houthi_impose immediate immediately impose impose_maritime indicating international international_airport. iranian-backed iranian-backed_houthi maritime maritime_embargo military ongoing ports potential principle reaction rebel recent response retaliation sanaa sanaa_international saudi saudi-led saudi_arabia ships spokesman threatened yemen yemen_iranian-backed yemeni"
+    },
+    {
+      "event_id": "event_lebanese-army-deploys-in-southern-town-follo_08af998bbd",
+      "title": "Lebanese Army Deploys in Zawtar al-Gharbiyeh Following Israeli Withdrawal",
+      "canonical_title": "Lebanese Army Deploys in Zawtar al-Gharbiyeh Following Israeli Withdrawal",
+      "topic_label": "Lebanon-Israel Conflict",
+      "summary": "The Lebanese army has begun deploying troops in a southern town as part of a US-brokered agreement following the withdrawal of Israeli forces from a small area of Lebanon. This marks the first test of the deal aimed at stabilizing the region after recent conflicts with Hezbollah.",
+      "status": "active",
+      "first_seen_at": "2026-07-21",
+      "last_seen_at": "2026-07-21",
+      "timeline": [
+        {
+          "development_id": "story_957e2704227f2783",
+          "daily_story_id": "story_957e2704227f2783",
+          "date": "2026-07-21",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Lebanese Army Deploys in Zawtar al-Gharbiyeh Following Israeli Withdrawal",
+          "summary": "The Lebanese army has begun deploying troops in the southern town of Zawtar al-Gharbiyeh after Israeli forces withdrew from the area. This move aligns with a U.S.-brokered plan, according to a senior Lebanese security official.",
+          "development_type": "military_action",
+          "key_facts": [
+            "Lebanese army troops are deploying in Zawtar al-Gharbiyeh.",
+            "Israeli forces have withdrawn from the area.",
+            "The deployment is part of a U.S.-brokered plan."
+          ],
+          "source_count": 4,
+          "sources": [
+            "BBC",
+            "CBC - Top Stories",
+            "Channel NewsAsia",
+            "RTE News"
+          ],
+          "source_urls": [
+            "https://www.bbc.co.uk/news/articles/cy8mynlmn55o?at_medium=RSS&at_campaign=rss",
+            "https://www.cbc.ca/news/world/south-lebanon-army-israeli-troop-withdraws-9.7277803?cmp=rss",
+            "https://www.channelnewsasia.com/world/lebanese-army-enters-southern-town-after-israeli-withdrawal-in-first-test-us-brokered-deal-6267621",
+            "https://www.rte.ie/news/middle-east/2026/0721/1584319-israel-lebanon"
+          ],
+          "source_details": [
+            {
+              "title": "Lebanese army says troops deploying in 'pilot zone' after Israeli withdrawal",
+              "source": "BBC",
+              "link": "https://www.bbc.co.uk/news/articles/cy8mynlmn55o?at_medium=RSS&at_campaign=rss",
+              "source_bias": "center"
+            },
+            {
+              "title": "Lebanese army enters southern town after Israeli withdrawal, in first test of US-brokered deal",
+              "source": "Channel NewsAsia",
+              "link": "https://www.channelnewsasia.com/world/lebanese-army-enters-southern-town-after-israeli-withdrawal-in-first-test-us-brokered-deal-6267621",
+              "source_bias": "center"
+            },
+            {
+              "title": "Lebanese army enters southern town after Israel withdraws",
+              "source": "RTE News",
+              "link": "https://www.rte.ie/news/middle-east/2026/0721/1584319-israel-lebanon",
+              "source_bias": "center"
+            },
+            {
+              "title": "Lebanese army enters southern town after Israeli withdrawal",
+              "source": "CBC - Top Stories",
+              "link": "https://www.cbc.ca/news/world/south-lebanon-army-israeli-troop-withdraws-9.7277803?cmp=rss",
+              "source_bias": "lean-left"
+            }
+          ],
+          "confidence": 1.0,
+          "match_evidence": {
+            "score": 1.0,
+            "method": "new_event",
+            "shared_tokens": [],
+            "shared_entities": []
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-21",
+          "last_seen_at": "2026-07-21",
+          "integrity_status": "trusted",
+          "revisions": [
+            {
+              "daily_story_id": "story_d82671dca5e9fff9",
+              "reported_at": "2026-07-21",
+              "update_kind": "factual_update",
+              "title": "Lebanese Army Deploys in Zawtar al-Gharbiyeh Following Israeli Withdrawal",
+              "summary": "The Lebanese army has begun deploying troops in the southern town of Zawtar al-Gharbiyeh after Israeli forces withdrew from the area. This move aligns with a U.S.-brokered plan, according to a senior Lebanese security official.",
+              "key_facts": [
+                "Lebanese army troops are deploying in Zawtar al-Gharbiyeh.",
+                "Israeli forces have withdrawn from the area.",
+                "The deployment is part of a U.S.-brokered plan."
+              ],
+              "source_urls": [
+                "https://www.rte.ie/news/middle-east/2026/0721/1584319-israel-lebanon",
+                "https://www.cbc.ca/news/world/south-lebanon-army-israeli-troop-withdraws-9.7277803?cmp=rss"
+              ]
+            }
+          ],
+          "last_updated_at": "2026-07-21",
+          "merged_development_ids": [
+            "story_d82671dca5e9fff9"
+          ],
+          "revision_count": 1
+        }
+      ],
+      "integrity": {
+        "public_development_count": 1,
+        "questionable_development_count": 0,
+        "review_required": false
+      },
+      "latest_title": "Lebanese Army Deploys in Zawtar al-Gharbiyeh Following Israeli Withdrawal",
+      "latest_summary": "The Lebanese army has begun deploying troops in the southern town of Zawtar al-Gharbiyeh after Israeli forces withdrew from the area. This move aligns with a U.S.-brokered plan, according to a senior Lebanese security official.",
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "stage": "developing_event",
+        "stage_label": "Developing event",
+        "base_title": "Lebanon-Israel Conflict",
+        "display_title": "Lebanon-Israel Conflict",
+        "milestone_development_ids": [
+          "story_957e2704227f2783"
+        ],
+        "summary_available": true,
+        "summary_label": "Read the story so far",
+        "summary_updated_at": "2026-07-21",
+        "development_count": 1,
+        "coverage_packet_count": 2,
+        "date_count": 1,
+        "source_count": 4,
+        "independent_source_count": 4,
+        "first_date": "2026-07-21",
+        "latest_date": "2026-07-21",
+        "latest_update_title": "Lebanese Army Deploys in Zawtar al-Gharbiyeh Following Israeli Withdrawal",
+        "coverage_score": 0.298,
+        "recency_score": 1.0,
+        "rank_score": 0.705,
+        "context_summary": "The Lebanese army has begun deploying troops in the southern town of Zawtar al-Gharbiyeh after Israeli forces withdrew from the area. This move aligns with a U.S.-brokered plan, according to a senior Lebanese security official.",
+        "cta_label": ""
+      },
+      "event_summary": {
+        "available": true,
+        "summary": "The Lebanese army has begun deploying troops in the southern town of Zawtar al-Gharbiyeh after Israeli forces withdrew from the area.",
+        "key_developments": [
+          {
+            "development_id": "story_957e2704227f2783",
+            "date": "2026-07-21",
+            "title": "Lebanese Army Deploys in Zawtar al-Gharbiyeh Following Israeli Withdrawal"
+          }
+        ],
+        "sources": [
+          {
+            "title": "Lebanese army says troops deploying in 'pilot zone' after Israeli withdrawal",
+            "source": "BBC",
+            "link": "https://www.bbc.co.uk/news/articles/cy8mynlmn55o?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          },
+          {
+            "title": "Lebanese army enters southern town after Israeli withdrawal, in first test of US-brokered deal",
+            "source": "Channel NewsAsia",
+            "link": "https://www.channelnewsasia.com/world/lebanese-army-enters-southern-town-after-israeli-withdrawal-in-first-test-us-brokered-deal-6267621",
+            "source_bias": "center"
+          },
+          {
+            "title": "Lebanese army enters southern town after Israel withdraws",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/middle-east/2026/0721/1584319-israel-lebanon",
+            "source_bias": "center"
+          },
+          {
+            "title": "Lebanese army enters southern town after Israeli withdrawal",
+            "source": "CBC - Top Stories",
+            "link": "https://www.cbc.ca/news/world/south-lebanon-army-israeli-troop-withdraws-9.7277803?cmp=rss",
+            "source_bias": "lean-left"
+          }
+        ],
+        "updated_at": "2026-07-21",
+        "provenance": "source_grounded_event_memory"
+      },
+      "event_stage": "developing_event",
+      "search_tokens": [
+        "al-gharbiyeh",
+        "align",
+        "area",
+        "army",
+        "begun",
+        "brokered",
+        "deploy",
+        "deploying",
+        "force",
+        "israel",
+        "lebanese",
+        "move",
+        "plan",
+        "security",
+        "senior",
+        "southern",
+        "town",
+        "troop",
+        "withdrawal",
+        "withdrew",
+        "zawtar"
+      ],
+      "entities": [
+        "al-gharbiyeh",
+        "army_deploy",
+        "israel",
+        "israel_withdrawal",
+        "lebanese_army",
+        "u.s.-brokered",
+        "zawtar"
+      ],
+      "search_text": "al-gharbiyeh align area army army_deploy begun brokered deploy deploying force israel israel_withdrawal lebanese lebanese_army move plan security senior southern town troop u.s.-brokered withdrawal withdrew zawtar",
+      "related_events": []
+    },
+    {
+      "event_id": "event_spain-claims-second-world-cup-title-with-ext_00a076ebf4",
+      "title": "Spain Claims Second FIFA World Cup Title with Victory Over Argentina",
+      "canonical_title": "Spain Claims Second FIFA World Cup Title with Victory Over Argentina",
+      "topic_label": "FIFA World Cup",
+      "summary": "Spain won its second men's World Cup by defeating Argentina 1-0 in the final, with Ferran Torres scoring the decisive goal in the 106th minute of extra time. This victory denied Lionel Messi a second consecutive title in what he indicated might be his final World Cup appearance. Fans celebrated the win across Spain, while Argentine supporters acknowledged their team's effort despite the loss.",
+      "status": "active",
+      "first_seen_at": "2026-07-20",
+      "last_seen_at": "2026-07-21",
+      "timeline": [
+        {
+          "development_id": "story_32b09305763e4143",
+          "daily_story_id": "story_32b09305763e4143",
+          "date": "2026-07-20",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Spain Claims Second FIFA World Cup Title with Victory Over Argentina",
+          "summary": "Spain has won its second FIFA World Cup title, defeating Argentina 1-0 in the final match. Ferran Torres scored the decisive goal in extra time, securing the victory after a 16-year wait for the championship. Fans celebrated the win across Spain and in various locations worldwide, including Times Square in New York.",
+          "development_type": "development",
+          "key_facts": [
+            "Spain won the FIFA World Cup by defeating Argentina 1-0.",
+            "Ferran Torres scored the winning goal in extra time.",
+            "This victory marks Spain's second World Cup title, the first being in 2010."
+          ],
+          "source_count": 5,
+          "sources": [
+            "DW",
+            "DW - English",
+            "France 24 - English",
+            "PBS News",
+            "RTE News",
+            "SBS News - Top Stories"
+          ],
+          "source_urls": [
+            "https://www.dw.com/en/spain-wins-second-world-cup-after-beating-argentina-in-final/a-78029285?maca=en-rss-en-all-1573-rdf",
+            "https://www.france24.com/en/spain-welcomes-back-its-world-cup-heroes",
+            "https://www.pbs.org/newshour/world/photos-spain-wins-the-world-cup-by-beating-argentina-1-0-on-ferran-torres-goal-in-extra-time",
+            "https://www.rte.ie/sport/world-cup-2026/2026/0719/1584092-super-sub-torres-fires-spain-to-world-cup-glory",
+            "https://www.sbs.com.au/news/live-blog/spain-v-argentina-world-cup-final-live-score-updates-reaction/owhsrb9py"
+          ],
+          "source_details": [
+            {
+              "title": "PHOTOS: Spain wins the World Cup by beating Argentina 1-0 on Ferran Torres' goal in extra time",
+              "source": "PBS News",
+              "link": "https://www.pbs.org/newshour/world/photos-spain-wins-the-world-cup-by-beating-argentina-1-0-on-ferran-torres-goal-in-extra-time",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Spain wins second World Cup after beating Argentina in final",
+              "source": "DW - English",
+              "link": "https://www.dw.com/en/spain-wins-second-world-cup-after-beating-argentina-in-final/a-78029285?maca=en-rss-en-all-1573-rdf",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Super sub Torres fires Spain to World Cup glory",
+              "source": "RTE News",
+              "link": "https://www.rte.ie/sport/world-cup-2026/2026/0719/1584092-super-sub-torres-fires-spain-to-world-cup-glory",
+              "source_bias": "center"
+            },
+            {
+              "title": "Spain beat Argentina 1-0 to win World Cup final — as it happened",
+              "source": "SBS News - Top Stories",
+              "link": "https://www.sbs.com.au/news/live-blog/spain-v-argentina-world-cup-final-live-score-updates-reaction/owhsrb9py",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Spain welcomes back its World Cup heroes",
+              "source": "France 24 - English",
+              "link": "https://www.france24.com/en/spain-welcomes-back-its-world-cup-heroes",
+              "source_bias": "lean-left"
+            }
+          ],
+          "confidence": 1.0,
+          "match_evidence": {
+            "score": 1.0,
+            "method": "new_event",
+            "shared_tokens": [],
+            "shared_entities": []
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-20",
+          "last_seen_at": "2026-07-21",
+          "integrity_status": "trusted",
+          "revisions": [
+            {
+              "daily_story_id": "story_ea1676cfc9984304",
+              "reported_at": "2026-07-21",
+              "update_kind": "factual_update",
+              "title": "Spain Claims Second FIFA World Cup Title with Victory Over Argentina",
+              "summary": "Spain has won its second FIFA World Cup title, defeating Argentina 1-0 in the final match. Ferran Torres scored the decisive goal in extra time, securing the victory after a 16-year wait for the championship. Fans celebrated the win across Spain and in various locations worldwide, including Times Square in New York.",
+              "key_facts": [
+                "Spain won the FIFA World Cup by defeating Argentina 1-0.",
+                "Ferran Torres scored the winning goal in extra time.",
+                "This victory marks Spain's second World Cup title, the first being in 2010."
+              ],
+              "source_urls": [
+                "https://www.dw.com/en/spain-wins-second-world-cup-after-beating-argentina-in-final/a-78029285?maca=en-rss-en-all-1573-rdf",
+                "https://www.sbs.com.au/news/live-blog/spain-v-argentina-world-cup-final-live-score-updates-reaction/owhsrb9py",
+                "https://www.france24.com/en/spain-welcomes-back-its-world-cup-heroes"
+              ]
+            }
+          ],
+          "last_updated_at": "2026-07-21",
+          "merged_development_ids": [
+            "story_ea1676cfc9984304"
+          ],
+          "revision_count": 1
+        }
+      ],
+      "integrity": {
+        "public_development_count": 1,
+        "questionable_development_count": 0,
+        "review_required": false
+      },
+      "latest_title": "Spain Claims Second FIFA World Cup Title with Victory Over Argentina",
+      "latest_summary": "Spain has won its second FIFA World Cup title, defeating Argentina 1-0 in the final match. Ferran Torres scored the decisive goal in extra time, securing the victory after a 16-year wait for the championship. Fans celebrated the win across Spain and in various locations worldwide, including Times Square in New York.",
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "stage": "developing_event",
+        "stage_label": "Developing event",
+        "base_title": "FIFA World Cup",
+        "display_title": "FIFA World Cup",
+        "milestone_development_ids": [
+          "story_32b09305763e4143"
+        ],
+        "summary_available": true,
+        "summary_label": "Read the story so far",
+        "summary_updated_at": "2026-07-20",
+        "development_count": 1,
+        "coverage_packet_count": 2,
+        "date_count": 1,
+        "source_count": 5,
+        "independent_source_count": 6,
+        "first_date": "2026-07-20",
+        "latest_date": "2026-07-20",
+        "latest_update_title": "Spain Claims Second FIFA World Cup Title with Victory Over Argentina",
+        "coverage_score": 0.386,
+        "recency_score": 0.875,
+        "rank_score": 0.67,
+        "context_summary": "Spain has won its second FIFA World Cup title, defeating Argentina 1-0 in the final match. Ferran Torres scored the decisive goal in extra time, securing the victory after a 16-year wait for the championship. Fans celebrated the win across Spain and in various locations worldwide, including Times Square in New York.",
+        "cta_label": ""
+      },
+      "event_summary": {
+        "available": true,
+        "summary": "Spain has won its second FIFA World Cup title, defeating Argentina 1-0 in the final match.",
+        "key_developments": [
+          {
+            "development_id": "story_32b09305763e4143",
+            "date": "2026-07-20",
+            "title": "Spain Claims Second FIFA World Cup Title with Victory Over Argentina"
+          }
+        ],
+        "sources": [
+          {
+            "title": "PHOTOS: Spain wins the World Cup by beating Argentina 1-0 on Ferran Torres' goal in extra time",
+            "source": "PBS News",
+            "link": "https://www.pbs.org/newshour/world/photos-spain-wins-the-world-cup-by-beating-argentina-1-0-on-ferran-torres-goal-in-extra-time",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Spain wins second World Cup after beating Argentina in final",
+            "source": "DW - English",
+            "link": "https://www.dw.com/en/spain-wins-second-world-cup-after-beating-argentina-in-final/a-78029285?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Super sub Torres fires Spain to World Cup glory",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/sport/world-cup-2026/2026/0719/1584092-super-sub-torres-fires-spain-to-world-cup-glory",
+            "source_bias": "center"
+          },
+          {
+            "title": "Spain beat Argentina 1-0 to win World Cup final — as it happened",
+            "source": "SBS News - Top Stories",
+            "link": "https://www.sbs.com.au/news/live-blog/spain-v-argentina-world-cup-final-live-score-updates-reaction/owhsrb9py",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Spain welcomes back its World Cup heroes",
+            "source": "France 24 - English",
+            "link": "https://www.france24.com/en/spain-welcomes-back-its-world-cup-heroes",
+            "source_bias": "lean-left"
           }
         ],
         "updated_at": "2026-07-20",
         "provenance": "source_grounded_event_memory"
       },
       "event_stage": "developing_event",
+      "related_events": [
+        {
+          "event_id": "event_trump-and-infantino-present-world-cup-trophy_06cb42752d",
+          "title": "Trump and Infantino Present World Cup Trophy to Spain Amid Mixed Reactions",
+          "relationship": "related_topic",
+          "confidence": 0.712,
+          "shared_entities": [
+            "argentina",
+            "spain"
+          ]
+        },
+        {
+          "event_id": "event_world-cup-final-spain-to-face-argentina-fran_ca15e3b715",
+          "title": "World Cup Final: Spain to Face Argentina, France and England Compete for Third Place",
+          "relationship": "related_topic",
+          "confidence": 0.669,
+          "shared_entities": [
+            "argentina",
+            "spain"
+          ]
+        },
+        {
+          "event_id": "event_spain-s-world-cup-champions-celebrate-return_43f873c6a3",
+          "title": "Spain's World Cup Champions Celebrate Return with Royal Welcome and Parade",
+          "relationship": "related_topic",
+          "confidence": 0.657,
+          "shared_entities": [
+            "argentina",
+            "spain"
+          ]
+        }
+      ],
       "search_tokens": [
-        "10-year",
-        "amidst",
-        "andy",
-        "assume",
-        "became",
-        "become",
-        "burnham",
-        "call",
-        "challenge",
-        "change",
-        "charle",
-        "decade",
-        "downing",
-        "faces",
-        "figure",
+        "1-0",
+        "16-year",
+        "across",
+        "argentina",
+        "celebrated",
+        "championship",
+        "claim",
+        "decisive",
+        "defeating",
+        "extra",
+        "fans",
+        "ferran",
+        "fifa",
+        "final",
+        "goal",
         "including",
-        "keir",
-        "king",
-        "kingdom",
-        "labour",
-        "last",
-        "leadership",
-        "manchester",
-        "marks",
-        "mayor",
-        "ministerial",
-        "model",
-        "office",
-        "officially",
-        "overseen",
-        "party",
-        "plan",
-        "political",
-        "power",
-        "previously",
-        "prime",
-        "prominent",
-        "role",
-        "significant",
-        "sixth",
-        "starmer",
-        "street",
-        "succeeding",
-        "takes",
-        "taking",
-        "transition",
-        "united"
+        "location",
+        "match",
+        "scored",
+        "second",
+        "securing",
+        "spain",
+        "square",
+        "time",
+        "times",
+        "title",
+        "torre",
+        "variou",
+        "victory",
+        "wait",
+        "worldwide",
+        "york"
       ],
       "entities": [
-        "andy_burnham",
-        "assume_role",
-        "burnham_assume",
-        "burnham_takes",
-        "challenge_andy",
-        "charles._burnham",
-        "downing",
-        "downing_street.",
-        "keir_starmer",
-        "king_charles.",
-        "labour",
-        "labour_party.",
-        "party._andy",
-        "takes_office",
-        "uk",
-        "united_kingdom"
+        "argentina",
+        "argentina_spain",
+        "claim_second",
+        "cup_title",
+        "ferran_torre",
+        "fifa",
+        "second_fifa",
+        "spain",
+        "spain_claim",
+        "times_square"
       ],
-      "search_text": "10-year amidst andy andy_burnham assume assume_role became become burnham burnham_assume burnham_takes call challenge challenge_andy change charle charles._burnham decade downing downing_street. faces figure including keir keir_starmer king king_charles. kingdom labour labour_party. last leadership manchester marks mayor ministerial model office officially overseen party party._andy plan political power previously prime prominent role significant sixth starmer street succeeding takes takes_office taking transition uk united united_kingdom",
-      "related_events": [],
-      "event_overview": {
-        "available": true,
-        "title": "About UK Prime Minister Transition",
-        "subject": "UK Prime Minister Transition",
-        "summary": "This event concerns the transfer of leadership of the UK government from Keir Starmer to Andy Burnham after Starmer announced that he would resign as Labour leader and prime minister. In the UK’s parliamentary system, a change of prime minister can occur within an existing Parliament when the Sovereign appoints the person judged most likely to command the confidence of the House of Commons; it does not itself require a general election.",
-        "facts": [
-          {
-            "label": "Transition date",
-            "value": "The leadership transition was expected to conclude on 20 July 2026, the end of Labour’s nomination stage; parliamentary material described Burnham as the sole confirmed candidate at the time and said he would become Labour leader and prime minister if unopposed.",
-            "source_ids": [
-              "o1"
-            ]
-          },
-          {
-            "label": "Predecessor and resignation",
-            "value": "Keir Starmer, who had been prime minister since 5 July 2024, announced on 22 June 2026 that he would resign as Labour leader.",
-            "source_ids": [
-              "o2",
-              "o1"
-            ]
-          },
-          {
-            "label": "Incoming leader",
-            "value": "Andy Burnham was elected MP for Makerfield on 18 June 2026 and is recorded by the UK Parliament as Labour Party leader from 17 July 2026.",
-            "source_ids": [
-              "o3"
-            ]
-          },
-          {
-            "label": "Constitutional basis",
-            "value": "When a prime minister resigns, the Sovereign invites the person most likely to command House of Commons confidence to serve as prime minister and form a government; the relevant political parties are expected to make clear who that person is.",
-            "source_ids": [
-              "o4"
-            ]
-          },
-          {
-            "label": "Election implications",
-            "value": "Replacing a prime minister does not automatically dissolve Parliament or trigger a general election. Under the Dissolution and Calling of Parliament Act 2022, dissolution is by the Sovereign using prerogative powers, conventionally following a prime ministerial request, and a Parliament otherwise has a maximum five-year term.",
-            "source_ids": [
-              "o5"
-            ]
-          }
-        ],
-        "scope_note": "The selected Muninn timeline covers the 20 July 2026 assumption of office and immediate transition context, not the full Labour leadership process, subsequent Cabinet decisions, or the broader record of the new government.",
-        "sources": [
-          {
-            "title": "Parliament",
-            "publisher": "Parliament",
-            "url": "https://lordslibrary.parliament.uk/education-employment-and-welfare-government-policy/",
-            "source_type": "reporting",
-            "id": "o1"
-          },
-          {
-            "title": "Gov",
-            "publisher": "Gov",
-            "url": "https://www.gov.uk/government/ministers/prime-minister",
-            "source_type": "reporting",
-            "id": "o2"
-          },
-          {
-            "title": "Parliament",
-            "publisher": "Parliament",
-            "url": "https://members.parliament.uk/member/1427/career",
-            "source_type": "reporting",
-            "id": "o3"
-          },
-          {
-            "title": "Gov",
-            "publisher": "Gov",
-            "url": "https://www.cabinetoffice.gov.uk/sites/default/files/resources/cabinetdraftmanual.pdf",
-            "source_type": "reporting",
-            "id": "o4"
-          },
-          {
-            "title": "Parliament",
-            "publisher": "Parliament",
-            "url": "https://commonslibrary.parliament.uk/research-briefings/sn05085/",
-            "source_type": "reporting",
-            "id": "o5"
-          }
-        ],
-        "publisher_count": 2,
-        "generated_at": "2026-07-20T15:08:12.653125+00:00",
-        "expires_at": "2026-07-27T15:08:12.653125+00:00",
-        "model": "gpt-5.6-terra",
-        "provenance": "openai_web_search_source_grounded_event_overview_v1"
-      }
+      "search_text": "1-0 16-year across argentina argentina_spain celebrated championship claim claim_second cup_title decisive defeating extra fans ferran ferran_torre fifa final goal including location match scored second second_fifa securing spain spain_claim square time times times_square title torre variou victory wait worldwide york"
     },
     {
       "event_id": "event_world-cup-final-spain-to-face-argentina-fran_ca15e3b715",
@@ -2222,8 +3959,8 @@
         "latest_date": "2026-07-19",
         "latest_update_title": "Argentina and Spain Set for World Cup Final Featuring Messi",
         "coverage_score": 0.497,
-        "recency_score": 0.875,
-        "rank_score": 0.716,
+        "recency_score": 0.778,
+        "rank_score": 0.66,
         "context_summary": "Muninn first tracked this thread on 2026-07-18: World Cup Final: Spain to Face Argentina, France and England Compete for Third Place. The latest development is Argentina and Spain Set for World Cup Final Featuring Messi.",
         "cta_label": ""
       },
@@ -2297,17 +4034,6 @@
           ]
         },
         {
-          "event_id": "event_spain-claims-second-world-cup-title-with-ext_00a076ebf4",
-          "title": "Spain Claims Second World Cup Title with Extra Time Victory Over Argentina",
-          "relationship": "related_topic",
-          "confidence": 0.715,
-          "shared_entities": [
-            "argentina",
-            "lionel_messi",
-            "spain"
-          ]
-        },
-        {
           "event_id": "event_deschamps-to-bid-farewell-as-france-faces-en_04ae33a22a",
           "title": "Deschamps to Bid Farewell as France Faces England in World Cup Playoff",
           "relationship": "related_topic",
@@ -2324,6 +4050,16 @@
           "confidence": 0.683,
           "shared_entities": [
             "france",
+            "spain"
+          ]
+        },
+        {
+          "event_id": "event_trump-and-infantino-present-world-cup-trophy_06cb42752d",
+          "title": "Trump and Infantino Present World Cup Trophy to Spain Amid Mixed Reactions",
+          "relationship": "related_topic",
+          "confidence": 0.678,
+          "shared_entities": [
+            "argentina",
             "spain"
           ]
         }
@@ -2491,218 +4227,6 @@
         "world"
       ],
       "search_text": "000 2023 34th ahead anticipated argentina argentina_france attend back-to-back become biggest both captain clash classic compete cup_final cups england england_compete expected face fans featuring featuring_messi final final_featuring final_spain first football france highly jersey lamine lamine_yamal. lionel lionel_messi marking marks match meanwhile meanwhile_france messi messi_argentina moment nation place prepare prize rising showdown significant spain spain_set star take team they third third_place tournament victory women world yamal"
-    },
-    {
-      "event_id": "event_khalil-al-hayya-elected-as-new-leader-of-ham_8e1ba2169a",
-      "title": "Khalil al-Hayya Elected as New Leader of Hamas Following Run-off",
-      "canonical_title": "Khalil al-Hayya Elected as New Leader of Hamas Following Run-off",
-      "topic_label": "Hamas Leadership",
-      "summary": "Khalil al-Hayya has been elected as the new political chief of Hamas following a wartime election process. A founding member of the group, al-Hayya is recognized as a pragmatic leader and has survived previous attacks targeting Hamas leadership. His election comes at a critical time for the organization amid ongoing conflict.",
-      "status": "active",
-      "first_seen_at": "2026-07-20",
-      "last_seen_at": "2026-07-20",
-      "timeline": [
-        {
-          "development_id": "story_2cc03340119f668e",
-          "daily_story_id": "story_2cc03340119f668e",
-          "date": "2026-07-20",
-          "occurred_at": null,
-          "date_basis": "first_reported_by_muninn",
-          "title": "Khalil al-Hayya Elected as New Leader of Hamas Following Run-off",
-          "summary": "Khalil al-Hayya has been appointed as the new leader of Hamas after a run-off election against Khaled Meshaal. Al-Hayya, who was previously part of the five-member leadership council, succeeds Yahya Sinwar, who was killed by Israeli forces in 2024.",
-          "development_type": "military_action",
-          "key_facts": [
-            "Khalil al-Hayya has been elected as the new leader of Hamas.",
-            "He won a run-off election against Khaled Meshaal.",
-            "Al-Hayya was previously a member of the five-member leadership council.",
-            "Yahya Sinwar, the former leader, was killed by Israeli forces in 2024."
-          ],
-          "source_count": 4,
-          "sources": [
-            "Al Jazeera English",
-            "BBC - World",
-            "France 24 - English"
-          ],
-          "source_urls": [
-            "https://www.aljazeera.com/news/2026/7/20/hamas-names-khalil-al-hayya-as-new-leader-after-run-off-with-khaled-meshaal?traffic_source=rss",
-            "https://www.aljazeera.com/news/2026/7/20/who-is-khalil-al-hayya-hamas-newly-elected-political-chief?traffic_source=rss",
-            "https://www.bbc.co.uk/news/articles/cx25nzkyj50o?at_medium=RSS&at_campaign=rss",
-            "https://www.france24.com/en/middle-east/20260720-who-is-khalil-al-hayya-hamas-s-new-leader"
-          ],
-          "source_details": [
-            {
-              "title": "Who is Khalil al-Hayya, Hamas’s newly elected political chief?",
-              "source": "Al Jazeera English",
-              "link": "https://www.aljazeera.com/news/2026/7/20/who-is-khalil-al-hayya-hamas-newly-elected-political-chief?traffic_source=rss",
-              "source_bias": "lean-left"
-            },
-            {
-              "title": "Who is Khalil al-Hayya, Hamas’s new leader?",
-              "source": "France 24 - English",
-              "link": "https://www.france24.com/en/middle-east/20260720-who-is-khalil-al-hayya-hamas-s-new-leader",
-              "source_bias": "lean-left"
-            },
-            {
-              "title": "Hamas names Khalil al-Hayya as new leader after run-off with Khaled Meshaal",
-              "source": "Al Jazeera English",
-              "link": "https://www.aljazeera.com/news/2026/7/20/hamas-names-khalil-al-hayya-as-new-leader-after-run-off-with-khaled-meshaal?traffic_source=rss",
-              "source_bias": "lean-left"
-            },
-            {
-              "title": "Hamas names Khalil al-Hayya as new overall leader",
-              "source": "BBC - World",
-              "link": "https://www.bbc.co.uk/news/articles/cx25nzkyj50o?at_medium=RSS&at_campaign=rss",
-              "source_bias": "center"
-            }
-          ],
-          "confidence": 1.0,
-          "match_evidence": {
-            "score": 1.0,
-            "method": "new_event",
-            "shared_tokens": [],
-            "shared_entities": []
-          },
-          "verification": {
-            "provider": "deterministic_source_grounded_event_match_v1",
-            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
-          },
-          "first_seen_at": "2026-07-20",
-          "last_seen_at": "2026-07-20",
-          "integrity_status": "trusted",
-          "revisions": [
-            {
-              "daily_story_id": "story_b2c3ab2eb35a0ab8",
-              "reported_at": "2026-07-20",
-              "update_kind": "factual_update",
-              "title": "Khalil al-Hayya Elected as New Leader of Hamas Following Run-off",
-              "summary": "Khalil al-Hayya has been appointed as the new leader of Hamas after a run-off election against Khaled Meshaal. Al-Hayya, who was previously part of the five-member leadership council, succeeds Yahya Sinwar, who was killed by Israeli forces in 2024.",
-              "key_facts": [
-                "Khalil al-Hayya has been elected as the new leader of Hamas.",
-                "He won a run-off election against Khaled Meshaal.",
-                "Al-Hayya was previously a member of the five-member leadership council.",
-                "Yahya Sinwar, the former leader, was killed by Israeli forces in 2024."
-              ],
-              "source_urls": [
-                "https://www.aljazeera.com/news/2026/7/20/hamas-names-khalil-al-hayya-as-new-leader-after-run-off-with-khaled-meshaal?traffic_source=rss",
-                "https://www.bbc.co.uk/news/articles/cx25nzkyj50o?at_medium=RSS&at_campaign=rss"
-              ]
-            }
-          ],
-          "last_updated_at": "2026-07-20",
-          "merged_development_ids": [
-            "story_b2c3ab2eb35a0ab8"
-          ],
-          "revision_count": 1
-        }
-      ],
-      "integrity": {
-        "public_development_count": 1,
-        "questionable_development_count": 0,
-        "review_required": false
-      },
-      "latest_title": "Khalil al-Hayya Elected as New Leader of Hamas Following Run-off",
-      "latest_summary": "Khalil al-Hayya has been appointed as the new leader of Hamas after a run-off election against Khaled Meshaal. Al-Hayya, who was previously part of the five-member leadership council, succeeds Yahya Sinwar, who was killed by Israeli forces in 2024.",
-      "presentation": {
-        "has_context": true,
-        "has_full_timeline": false,
-        "stage": "developing_event",
-        "stage_label": "Developing event",
-        "base_title": "Hamas Leadership",
-        "display_title": "Hamas Leadership",
-        "milestone_development_ids": [
-          "story_2cc03340119f668e"
-        ],
-        "summary_available": true,
-        "summary_label": "Read the story so far",
-        "summary_updated_at": "2026-07-20",
-        "development_count": 1,
-        "coverage_packet_count": 2,
-        "date_count": 1,
-        "source_count": 4,
-        "independent_source_count": 3,
-        "first_date": "2026-07-20",
-        "latest_date": "2026-07-20",
-        "latest_update_title": "Khalil al-Hayya Elected as New Leader of Hamas Following Run-off",
-        "coverage_score": 0.261,
-        "recency_score": 1.0,
-        "rank_score": 0.69,
-        "context_summary": "Khalil al-Hayya has been appointed as the new leader of Hamas after a run-off election against Khaled Meshaal. Al-Hayya, who was previously part of the five-member leadership council, succeeds Yahya Sinwar, who was killed by Israeli forces in 2024.",
-        "cta_label": ""
-      },
-      "event_summary": {
-        "available": true,
-        "summary": "Khalil al-Hayya has been appointed as the new leader of Hamas after a run-off election against Khaled Meshaal.",
-        "key_developments": [
-          {
-            "development_id": "story_2cc03340119f668e",
-            "date": "2026-07-20",
-            "title": "Khalil al-Hayya Elected as New Leader of Hamas Following Run-off"
-          }
-        ],
-        "sources": [
-          {
-            "title": "Who is Khalil al-Hayya, Hamas’s newly elected political chief?",
-            "source": "Al Jazeera English",
-            "link": "https://www.aljazeera.com/news/2026/7/20/who-is-khalil-al-hayya-hamas-newly-elected-political-chief?traffic_source=rss",
-            "source_bias": "lean-left"
-          },
-          {
-            "title": "Who is Khalil al-Hayya, Hamas’s new leader?",
-            "source": "France 24 - English",
-            "link": "https://www.france24.com/en/middle-east/20260720-who-is-khalil-al-hayya-hamas-s-new-leader",
-            "source_bias": "lean-left"
-          },
-          {
-            "title": "Hamas names Khalil al-Hayya as new leader after run-off with Khaled Meshaal",
-            "source": "Al Jazeera English",
-            "link": "https://www.aljazeera.com/news/2026/7/20/hamas-names-khalil-al-hayya-as-new-leader-after-run-off-with-khaled-meshaal?traffic_source=rss",
-            "source_bias": "lean-left"
-          },
-          {
-            "title": "Hamas names Khalil al-Hayya as new overall leader",
-            "source": "BBC - World",
-            "link": "https://www.bbc.co.uk/news/articles/cx25nzkyj50o?at_medium=RSS&at_campaign=rss",
-            "source_bias": "center"
-          }
-        ],
-        "updated_at": "2026-07-20",
-        "provenance": "source_grounded_event_memory"
-      },
-      "event_stage": "developing_event",
-      "search_tokens": [
-        "2024",
-        "al-hayya",
-        "appointed",
-        "council",
-        "elected",
-        "election",
-        "five-member",
-        "force",
-        "hamas",
-        "israel",
-        "khaled",
-        "khalil",
-        "killed",
-        "leader",
-        "leadership",
-        "meshaal",
-        "part",
-        "previously",
-        "run-off",
-        "sinwar",
-        "succeed",
-        "yahya"
-      ],
-      "entities": [
-        "al-hayya",
-        "israel",
-        "khaled_meshaal.",
-        "meshaal._al-hayya",
-        "run-off_khalil",
-        "yahya_sinwar"
-      ],
-      "search_text": "2024 al-hayya appointed council elected election five-member force hamas israel khaled khaled_meshaal. khalil killed leader leadership meshaal meshaal._al-hayya part previously run-off run-off_khalil sinwar succeed yahya yahya_sinwar",
-      "related_events": []
     },
     {
       "event_id": "event_dhs-secretary-mullin-supports-trump-s-claims_1f1de09f5b",
@@ -2904,8 +4428,8 @@
         "latest_date": "2026-07-19",
         "latest_update_title": "Trump Claims China Interfered in 2020 Election During National Address",
         "coverage_score": 0.422,
-        "recency_score": 0.875,
-        "rank_score": 0.685,
+        "recency_score": 0.778,
+        "rank_score": 0.628,
         "context_summary": "Muninn first tracked this thread on 2026-07-18: DHS Secretary Mullin Supports Trump's Claims of Election Interference. The latest development is Trump Claims China Interfered in 2020 Election During National Address.",
         "cta_label": ""
       },
@@ -3205,8 +4729,8 @@
         "latest_date": "2026-07-19",
         "latest_update_title": "England Secures Third Place with 6-4 Victory Over France in World Cup Thriller",
         "coverage_score": 0.398,
-        "recency_score": 0.875,
-        "rank_score": 0.675,
+        "recency_score": 0.778,
+        "rank_score": 0.618,
         "context_summary": "In a record-breaking World Cup third-place playoff, England defeated France 6-4. Bukayo Saka scored a hat trick, helping England to a significant lead of 4-0 at halftime. Despite a spirited comeback from France in the second half, England held on to secure their best World Cup finish since 1966.",
         "cta_label": ""
       },
@@ -3330,6 +4854,218 @@
         "world"
       ],
       "search_text": "1966 4-0 6-4 best bukayo bukayo_saka comeback cup_thriller defeated despite england england_secure finish france france_bukayo half halftime held helping lead place playoff record-breaking saka scored second secure secure_third significant since spirited third third-place third_place thriller trick victory world"
+    },
+    {
+      "event_id": "event_khalil-al-hayya-elected-as-new-leader-of-ham_8e1ba2169a",
+      "title": "Khalil al-Hayya Elected as New Leader of Hamas Following Run-off",
+      "canonical_title": "Khalil al-Hayya Elected as New Leader of Hamas Following Run-off",
+      "topic_label": "Hamas Leadership",
+      "summary": "Khalil al-Hayya has been elected as the new political chief of Hamas following a wartime election process. A founding member of the group, al-Hayya is recognized as a pragmatic leader and has survived previous attacks targeting Hamas leadership. His election comes at a critical time for the organization amid ongoing conflict.",
+      "status": "active",
+      "first_seen_at": "2026-07-20",
+      "last_seen_at": "2026-07-20",
+      "timeline": [
+        {
+          "development_id": "story_2cc03340119f668e",
+          "daily_story_id": "story_2cc03340119f668e",
+          "date": "2026-07-20",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Khalil al-Hayya Elected as New Leader of Hamas Following Run-off",
+          "summary": "Khalil al-Hayya has been appointed as the new leader of Hamas after a run-off election against Khaled Meshaal. Al-Hayya, who was previously part of the five-member leadership council, succeeds Yahya Sinwar, who was killed by Israeli forces in 2024.",
+          "development_type": "military_action",
+          "key_facts": [
+            "Khalil al-Hayya has been elected as the new leader of Hamas.",
+            "He won a run-off election against Khaled Meshaal.",
+            "Al-Hayya was previously a member of the five-member leadership council.",
+            "Yahya Sinwar, the former leader, was killed by Israeli forces in 2024."
+          ],
+          "source_count": 4,
+          "sources": [
+            "Al Jazeera English",
+            "BBC - World",
+            "France 24 - English"
+          ],
+          "source_urls": [
+            "https://www.aljazeera.com/news/2026/7/20/hamas-names-khalil-al-hayya-as-new-leader-after-run-off-with-khaled-meshaal?traffic_source=rss",
+            "https://www.aljazeera.com/news/2026/7/20/who-is-khalil-al-hayya-hamas-newly-elected-political-chief?traffic_source=rss",
+            "https://www.bbc.co.uk/news/articles/cx25nzkyj50o?at_medium=RSS&at_campaign=rss",
+            "https://www.france24.com/en/middle-east/20260720-who-is-khalil-al-hayya-hamas-s-new-leader"
+          ],
+          "source_details": [
+            {
+              "title": "Who is Khalil al-Hayya, Hamas’s newly elected political chief?",
+              "source": "Al Jazeera English",
+              "link": "https://www.aljazeera.com/news/2026/7/20/who-is-khalil-al-hayya-hamas-newly-elected-political-chief?traffic_source=rss",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Who is Khalil al-Hayya, Hamas’s new leader?",
+              "source": "France 24 - English",
+              "link": "https://www.france24.com/en/middle-east/20260720-who-is-khalil-al-hayya-hamas-s-new-leader",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Hamas names Khalil al-Hayya as new leader after run-off with Khaled Meshaal",
+              "source": "Al Jazeera English",
+              "link": "https://www.aljazeera.com/news/2026/7/20/hamas-names-khalil-al-hayya-as-new-leader-after-run-off-with-khaled-meshaal?traffic_source=rss",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Hamas names Khalil al-Hayya as new overall leader",
+              "source": "BBC - World",
+              "link": "https://www.bbc.co.uk/news/articles/cx25nzkyj50o?at_medium=RSS&at_campaign=rss",
+              "source_bias": "center"
+            }
+          ],
+          "confidence": 1.0,
+          "match_evidence": {
+            "score": 1.0,
+            "method": "new_event",
+            "shared_tokens": [],
+            "shared_entities": []
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-20",
+          "last_seen_at": "2026-07-20",
+          "integrity_status": "trusted",
+          "revisions": [
+            {
+              "daily_story_id": "story_b2c3ab2eb35a0ab8",
+              "reported_at": "2026-07-20",
+              "update_kind": "factual_update",
+              "title": "Khalil al-Hayya Elected as New Leader of Hamas Following Run-off",
+              "summary": "Khalil al-Hayya has been appointed as the new leader of Hamas after a run-off election against Khaled Meshaal. Al-Hayya, who was previously part of the five-member leadership council, succeeds Yahya Sinwar, who was killed by Israeli forces in 2024.",
+              "key_facts": [
+                "Khalil al-Hayya has been elected as the new leader of Hamas.",
+                "He won a run-off election against Khaled Meshaal.",
+                "Al-Hayya was previously a member of the five-member leadership council.",
+                "Yahya Sinwar, the former leader, was killed by Israeli forces in 2024."
+              ],
+              "source_urls": [
+                "https://www.aljazeera.com/news/2026/7/20/hamas-names-khalil-al-hayya-as-new-leader-after-run-off-with-khaled-meshaal?traffic_source=rss",
+                "https://www.bbc.co.uk/news/articles/cx25nzkyj50o?at_medium=RSS&at_campaign=rss"
+              ]
+            }
+          ],
+          "last_updated_at": "2026-07-20",
+          "merged_development_ids": [
+            "story_b2c3ab2eb35a0ab8"
+          ],
+          "revision_count": 1
+        }
+      ],
+      "integrity": {
+        "public_development_count": 1,
+        "questionable_development_count": 0,
+        "review_required": false
+      },
+      "latest_title": "Khalil al-Hayya Elected as New Leader of Hamas Following Run-off",
+      "latest_summary": "Khalil al-Hayya has been appointed as the new leader of Hamas after a run-off election against Khaled Meshaal. Al-Hayya, who was previously part of the five-member leadership council, succeeds Yahya Sinwar, who was killed by Israeli forces in 2024.",
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "stage": "developing_event",
+        "stage_label": "Developing event",
+        "base_title": "Hamas Leadership",
+        "display_title": "Hamas Leadership",
+        "milestone_development_ids": [
+          "story_2cc03340119f668e"
+        ],
+        "summary_available": true,
+        "summary_label": "Read the story so far",
+        "summary_updated_at": "2026-07-20",
+        "development_count": 1,
+        "coverage_packet_count": 2,
+        "date_count": 1,
+        "source_count": 4,
+        "independent_source_count": 3,
+        "first_date": "2026-07-20",
+        "latest_date": "2026-07-20",
+        "latest_update_title": "Khalil al-Hayya Elected as New Leader of Hamas Following Run-off",
+        "coverage_score": 0.261,
+        "recency_score": 0.875,
+        "rank_score": 0.617,
+        "context_summary": "Khalil al-Hayya has been appointed as the new leader of Hamas after a run-off election against Khaled Meshaal. Al-Hayya, who was previously part of the five-member leadership council, succeeds Yahya Sinwar, who was killed by Israeli forces in 2024.",
+        "cta_label": ""
+      },
+      "event_summary": {
+        "available": true,
+        "summary": "Khalil al-Hayya has been appointed as the new leader of Hamas after a run-off election against Khaled Meshaal.",
+        "key_developments": [
+          {
+            "development_id": "story_2cc03340119f668e",
+            "date": "2026-07-20",
+            "title": "Khalil al-Hayya Elected as New Leader of Hamas Following Run-off"
+          }
+        ],
+        "sources": [
+          {
+            "title": "Who is Khalil al-Hayya, Hamas’s newly elected political chief?",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/news/2026/7/20/who-is-khalil-al-hayya-hamas-newly-elected-political-chief?traffic_source=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Who is Khalil al-Hayya, Hamas’s new leader?",
+            "source": "France 24 - English",
+            "link": "https://www.france24.com/en/middle-east/20260720-who-is-khalil-al-hayya-hamas-s-new-leader",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Hamas names Khalil al-Hayya as new leader after run-off with Khaled Meshaal",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/news/2026/7/20/hamas-names-khalil-al-hayya-as-new-leader-after-run-off-with-khaled-meshaal?traffic_source=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Hamas names Khalil al-Hayya as new overall leader",
+            "source": "BBC - World",
+            "link": "https://www.bbc.co.uk/news/articles/cx25nzkyj50o?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          }
+        ],
+        "updated_at": "2026-07-20",
+        "provenance": "source_grounded_event_memory"
+      },
+      "event_stage": "developing_event",
+      "related_events": [],
+      "search_tokens": [
+        "2024",
+        "al-hayya",
+        "appointed",
+        "council",
+        "elected",
+        "election",
+        "five-member",
+        "force",
+        "hamas",
+        "israel",
+        "khaled",
+        "khalil",
+        "killed",
+        "leader",
+        "leadership",
+        "meshaal",
+        "part",
+        "previously",
+        "run-off",
+        "sinwar",
+        "succeed",
+        "yahya"
+      ],
+      "entities": [
+        "al-hayya",
+        "israel",
+        "khaled_meshaal.",
+        "meshaal._al-hayya",
+        "run-off_khalil",
+        "yahya_sinwar"
+      ],
+      "search_text": "2024 al-hayya appointed council elected election five-member force hamas israel khaled khaled_meshaal. khalil killed leader leadership meshaal meshaal._al-hayya part previously run-off run-off_khalil sinwar succeed yahya yahya_sinwar"
     },
     {
       "event_id": "event_cuban-dissident-artist-luis-manuel-otero-alc_b8971abbb7",
@@ -3462,8 +5198,8 @@
         "latest_date": "2026-07-19",
         "latest_update_title": "Cuban Dissident Artist Luis Manuel Otero Alcántara Arrives in the US After Prison Release",
         "coverage_score": 0.298,
-        "recency_score": 0.875,
-        "rank_score": 0.633,
+        "recency_score": 0.778,
+        "rank_score": 0.576,
         "context_summary": "Luis Manuel Otero Alcántara, a prominent Cuban artist and dissident, arrived in Miami after being released from a five-year prison sentence. His release was contingent upon his exile from Cuba, following his arrest during the 2021 anti-government protests. Otero Alcántara is known for co-founding the San Isidro Movement, which advocates for artistic freedom and human rights in Cuba.",
         "cta_label": ""
       },
@@ -3696,8 +5432,8 @@
         "latest_date": "2026-07-19",
         "latest_update_title": "Passenger Ferry Capsizes Off Guyana, Search and Rescue Underway",
         "coverage_score": 0.298,
-        "recency_score": 0.875,
-        "rank_score": 0.633,
+        "recency_score": 0.778,
+        "rank_score": 0.576,
         "context_summary": "A passenger ferry carrying 116 people has capsized off the coast of Guyana, prompting an ongoing search and rescue operation. Authorities report that at least 67 individuals have been rescued so far, while efforts continue to locate the remaining passengers and crew. The incident occurred between Georgetown and Port Kaituma, with a distress call made shortly after 11 PM local time.",
         "cta_label": ""
       },
@@ -3917,8 +5653,8 @@
         "latest_date": "2026-07-19",
         "latest_update_title": "Thunderstorms to Clear Wildfire Smoke Ahead of World Cup Final",
         "coverage_score": 0.248,
-        "recency_score": 0.875,
-        "rank_score": 0.612,
+        "recency_score": 0.778,
+        "rank_score": 0.555,
         "context_summary": "Thunderstorms are expected to clear wildfire smoke from the Northeast United States before the World Cup final between Spain and Argentina. While the storm front has largely moved the smoke out of the Northeast, some smoke remains over the central US Warnings for unhealthy air quality are still in effect across a wide area.",
         "cta_label": ""
       },
@@ -4127,8 +5863,8 @@
         "latest_date": "2026-07-19",
         "latest_update_title": "Lettuce Recall Issued Due to Cyclospora Contamination Risk",
         "coverage_score": 0.236,
-        "recency_score": 0.875,
-        "rank_score": 0.607,
+        "recency_score": 0.778,
+        "rank_score": 0.55,
         "context_summary": "Taylor Farms has issued a recall of iceberg lettuce shipped to 27 states due to potential contamination with Cyclospora, a parasite that can cause severe gastrointestinal illness. The affected states include Texas, Florida, Pennsylvania, Illinois, and New Jersey. The FDA has confirmed that a sample of the recalled lettuce tested positive for Cyclospora.",
         "cta_label": ""
       },
@@ -4160,7 +5896,18 @@
         "provenance": "source_grounded_event_memory"
       },
       "event_stage": "developing_event",
-      "related_events": [],
+      "related_events": [
+        {
+          "event_id": "event_houthis-declare-blockade-on-red-sea-waterway_9713c4a88d",
+          "title": "Houthis Declare Blockade on Red Sea Waterway Amid Ongoing Cyclospora Investigation",
+          "relationship": "related_topic",
+          "confidence": 0.682,
+          "shared_entities": [
+            "fda",
+            "taylor_farms"
+          ]
+        }
+      ],
       "search_tokens": [
         "affected",
         "cause",
@@ -4321,8 +6068,8 @@
         "latest_date": "2026-07-19",
         "latest_update_title": "Laos Unable to Confirm Methanol Poisoning in Tourist Deaths Due to Lack of Autopsies",
         "coverage_score": 0.198,
-        "recency_score": 0.875,
-        "rank_score": 0.591,
+        "recency_score": 0.778,
+        "rank_score": 0.534,
         "context_summary": "Laos officials have stated that they cannot determine the cause of deaths of tourists linked to methanol poisoning due to the absence of autopsies. As a result, there is no evidence to support claims of poisoning. Those indicted in connection with the deaths are facing charges related to selling harmful food and operating an illegal business.",
         "cta_label": ""
       },
@@ -4515,8 +6262,8 @@
         "latest_date": "2026-07-19",
         "latest_update_title": "Rescue Efforts Underway in China After Landslide Traps Residents",
         "coverage_score": 0.198,
-        "recency_score": 0.875,
-        "rank_score": 0.591,
+        "recency_score": 0.778,
+        "rank_score": 0.534,
         "context_summary": "A large-scale rescue operation is underway in Pengshui County, Chongqing municipality, following a landslide on July 17 that buried part of a residential area. Authorities are working to locate and rescue an unknown number of people trapped under the debris.",
         "cta_label": ""
       },
