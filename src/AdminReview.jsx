@@ -299,7 +299,7 @@ export default function AdminReview({ accountLabel, onSignOut, localPreview = fa
     <div className="admin-review-app">
       <link rel="stylesheet" href="/admin-review.css" />
       <header className="topbar">
-        <a className="brand" href="/"><span className="brand-mark">M</span><span>Muninn</span></a>
+        <a className="brand" href="/"><span className="brand-mark"><img className="brand-mark-image" src="/brand/muninn-mark-dark.svg" alt="" /></span><span>Muninn</span></a>
         <div className="topbar-meta"><span className="environment-dot" />Timeline administration</div>
         <div className="admin-account-links">
           <a className="reader-link" href="/">Back to reader</a>
@@ -375,7 +375,7 @@ export function AdminAccessDenied({ onSignOut }) {
     <div className="admin-review-app">
       <link rel="stylesheet" href="/admin-review.css" />
       <main className="access-shell">
-        <div className="brand-mark">M</div><p className="eyebrow">Muninn administration</p><h1>Admin access required</h1>
+        <div className="brand-mark"><img className="brand-mark-image" src="/brand/muninn-mark.svg" alt="" /></div><p className="eyebrow">Muninn administration</p><h1>Admin access required</h1>
         <p>Your account is signed in but is not in the configured admin group or email allowlist.</p>
         <div><a href="/">Return to Muninn</a>{onSignOut ? <button type="button" onClick={onSignOut}>Sign out</button> : null}</div>
       </main>

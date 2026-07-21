@@ -4,6 +4,44 @@
 		<title>Muninn - Story</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="theme-color" content="#17252d" />
+		<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+		<link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="mask-icon" href="/brand/muninn-mask.svg" color="#286a7a" />
+		<link rel="manifest" href="/site.webmanifest" />
+		<script>
+			(function () {
+				var storageKey = 'muninn-theme';
+				var savedTheme = null;
+				try { savedTheme = localStorage.getItem(storageKey); } catch (_error) {}
+				var theme = savedTheme === 'dark' || savedTheme === 'light'
+					? savedTheme
+					: (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+				document.documentElement.dataset.theme = theme;
+				document.addEventListener('DOMContentLoaded', function () {
+					var toggle = document.getElementById('theme-toggle');
+					var themeColor = document.querySelector('meta[name="theme-color"]');
+					function syncThemeControl() {
+						var isDark = document.documentElement.dataset.theme === 'dark';
+						if (toggle) {
+							toggle.setAttribute('aria-pressed', String(isDark));
+							var label = toggle.querySelector('.theme-toggle-label');
+							if (label) label.textContent = isDark ? 'Light' : 'Dark';
+						}
+						if (themeColor) themeColor.setAttribute('content', isDark ? '#11191e' : '#f3f5f4');
+					}
+					if (toggle) toggle.addEventListener('click', function () {
+						var nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+						document.documentElement.dataset.theme = nextTheme;
+						try { localStorage.setItem(storageKey, nextTheme); } catch (_error) {}
+						syncThemeControl();
+					});
+					syncThemeControl();
+				});
+			})();
+		</script>
 		<link rel="stylesheet" href="/assets/css/main.css" />
 		<link rel="stylesheet" href="/assets/css/event-experience.css" />
 		<noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
@@ -344,25 +382,44 @@
 			.source-outlet { color: #5e6a74; font-size: 0.78rem; font-weight: 700; }
 			@media screen and (max-width: 736px) { .story-image { width: 100%; } }
 		</style>
+		<link rel="stylesheet" href="/assets/css/story-redesign.css" />
 	</head>
-	<body class="is-preload">
+	<body class="is-preload muninn-story-page">
 
 		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+			<div id="wrapper" class="fade-in muninn-story-shell">
 
 				<!-- Header -->
-					<header id="header">
-						<a href="/" class="logo">Muninn</a>
+					<header class="app-header">
+						<div class="app-header-inner">
+							<a href="/" class="brand-lockup">
+								<span class="brand-mark" aria-hidden="true"><img class="brand-logo" src="/brand/muninn-mark.svg" alt="" /></span>
+								<span><strong>Muninn</strong><small>News, Simplified.</small></span>
+							</a>
+							<nav class="primary-navigation" aria-label="Primary navigation">
+								<ul>
+									<li class="active"><a href="/" aria-current="page">Today</a></li>
+									<li><a href="/?category=timelines">Events</a></li>
+									<li><a href="/?category=your-newsletter">Newsletter</a></li>
+								</ul>
+							</nav>
+							<div class="header-actions">
+								<button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false">
+									<span class="theme-toggle-icon" aria-hidden="true"></span>
+									<span class="theme-toggle-label">Dark</span>
+								</button>
+							</div>
+						</div>
 					</header>
 
 				<!-- Main -->
-					<div id="main">
-						<section class="post">
+					<main id="main" class="story-main">
+						<section class="post story-view">
 							<div id="story-content" class="story-container">
 								<div class="loading">Loading story...</div>
 							</div>
 						</section>
-					</div>
+					</main>
 
 				<!-- Copyright -->
 					<div id="copyright">
@@ -529,55 +586,86 @@
 						var event = eventData || {};
 						var context = story.story_context || {};
 						var presentation = event.presentation || {};
-						var timeline = Array.isArray(context.highlights) && context.highlights.length
-							? context.highlights
-							: (Array.isArray(story.timeline_highlights) ? story.timeline_highlights : []);
-						timeline = timeline.filter(function(entry) {
-							return !story.story_id || entry.development_id !== story.story_id;
+						var timeline = Array.isArray(event.timeline) && event.timeline.length
+							? event.timeline.slice()
+							: (Array.isArray(context.highlights) && context.highlights.length
+								? context.highlights.slice()
+								: (Array.isArray(story.timeline_highlights) ? story.timeline_highlights.slice() : []));
+						var currentId = story.story_id || story.cluster_id;
+						var hasCurrent = timeline.some(function(entry) {
+							return entry && (entry.development_id === currentId || entry.daily_story_id === currentId);
 						});
-						if (!timeline.length) return '';
-
-						var html = '<div class="timeline-section">';
-						html += '<h2>' + escapeHtml(context.label || 'The story so far') + '</h2>';
-						if (context.summary || presentation.context_summary) {
-							html += '<p class="timeline-summary">' + escapeHtml(context.summary || presentation.context_summary) + '</p>';
-						}
-						html += '<div class="timeline-list">';
-						timeline.slice(-4).forEach(function(entry) {
-							html += '<div class="timeline-item">';
-							html += '<div class="timeline-date">' + escapeHtml(formatStoryDate(entry.date)) + '</div>';
-							html += '<div class="timeline-title">' + escapeHtml(entry.title || 'Update') + '</div>';
-							html += '</div>';
-						});
-						html += '</div>';
-						var developmentCount = Math.max(
-							Number(context.development_count || 0),
-							Number(presentation.development_count || 0),
-							timeline.length,
-							Array.isArray(story.timeline_highlights) ? story.timeline_highlights.length : 0
-						);
-						var dateCount = context.date_count || presentation.date_count || 0;
-						html += '<div class="timeline-actions"><span class="timeline-meta">' + escapeHtml(developmentCount) + ' developments';
-						if (dateCount) html += ' across ' + escapeHtml(dateCount) + ' dates';
-						html += '</span>';
-						var fullTimeline = context.full_timeline_available || presentation.has_full_timeline;
-						if (fullTimeline && story.event_id) {
-							var timelineUrl = context.timeline_url || ('/timeline.html?event=' + encodeURIComponent(story.event_id));
-							html += '<a class="timeline-button" href="' + escapeHtml(timelineUrl) + '">' + escapeHtml(context.cta_label || presentation.cta_label || 'Explore full timeline') + ' &rarr;</a>';
-						}
-						html += '</div>';
-						var related = Array.isArray(event.related_events) && event.related_events.length ? event.related_events : context.related_events;
-						if (Array.isArray(related) && related.length) {
-							html += '<div class="related-topics"><strong>Related threads</strong><div>';
-							related.slice(0, 4).forEach(function(item) {
-								html += '<a class="related-topic-link" href="/timeline.html?event=' + encodeURIComponent(item.event_id || '') + '">' + escapeHtml(item.title || 'Related topic') + '</a>';
+						if (!hasCurrent) {
+							timeline.push({
+								development_id: currentId || 'current-story',
+								date: story.date || story.run_date || story.published_date || new Date().toISOString().slice(0, 10),
+								title: story.title,
+								summary: story.summary,
+								development_type: story.development_type || story.update_kind || 'new_development',
+								key_facts: Array.isArray(story.key_facts) ? story.key_facts : [],
+								source_count: Number(story.source_count || (Array.isArray(story.items) ? story.items.length : 0))
 							});
-							html += '</div></div>';
 						}
-						html += '</div>';
+						timeline = timeline.filter(function(entry) {
+							return entry && (entry.title || entry.summary);
+						}).sort(function(left, right) {
+							return String(left.date || '').localeCompare(String(right.date || ''));
+						});
+						if (timeline.length < 2 && !context.available) return '';
+
+						var eventTitle = String(
+							presentation.display_title
+							|| presentation.base_title
+							|| event.display_title
+							|| event.topic_label
+							|| event.canonical_title
+							|| event.title
+							|| context.display_title
+							|| context.event_title
+							|| story.event_title
+							|| 'Event timeline'
+						).trim();
+						var timelineUrl = context.timeline_url || (story.event_id ? '/timeline.html?event=' + encodeURIComponent(story.event_id) : '/?category=timelines');
+						var recent = timeline.slice(-5);
+						var selected = recent[recent.length - 1];
+						var statusLabel = presentation.stage_label || (String(event.status || '').toLowerCase() === 'active' ? 'Developing event' : event.status) || 'Tracked event';
+						var shortDate = function(value) {
+							var parsed = new Date(String(value || '').length === 10 ? value + 'T12:00:00Z' : value);
+							return value && !isNaN(parsed.getTime()) ? parsed.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : 'Date pending';
+						};
+						var dateRange = shortDate(recent[0].date) + (recent.length > 1 ? ' – ' + shortDate(selected.date) : '');
+						var selectedFacts = Array.isArray(selected.key_facts) ? selected.key_facts.filter(Boolean).slice(0, 3) : [];
+						var selectedType = String(selected.development_type || 'update').replace(/_/g, ' ');
+						var selectedSources = Number(selected.source_count || 0);
+
+						var html = '<section class="event-storyline" data-event-count="' + recent.length + '" aria-label="Recent event developments">';
+						html += '<header class="event-storyline-header"><div class="event-storyline-identity"><span class="event-storyline-kicker">Part of a developing story</span>';
+						html += '<a class="event-storyline-title" href="' + escapeHtml(timelineUrl) + '">' + escapeHtml(eventTitle) + ' <span aria-hidden="true">&rarr;</span></a></div>';
+						html += '<div class="event-storyline-stats"><span>' + escapeHtml(statusLabel) + '</span><span>' + escapeHtml(dateRange) + '</span><span>' + recent.length + ' development' + (recent.length === 1 ? '' : 's') + '</span></div></header>';
+						html += '<div class="event-storyline-scroll"><div class="event-storyline-track" role="list" aria-label="Recent developments">';
+						recent.forEach(function(entry, index) {
+							var fullDate = formatStoryDate(entry.date);
+							var title = entry.title || entry.summary || 'Update';
+							var summary = entry.summary || '';
+							var facts = Array.isArray(entry.key_facts) ? entry.key_facts.filter(Boolean).slice(0, 3) : [];
+							var type = String(entry.development_type || 'update').replace(/_/g, ' ');
+							var sourceCount = Number(entry.source_count || 0);
+							var isSelected = index === recent.length - 1;
+							html += '<button type="button" class="event-storyline-card' + (isSelected ? ' is-active' : '') + '" aria-pressed="' + (isSelected ? 'true' : 'false') + '" aria-label="Preview ' + escapeHtml(fullDate + ': ' + title) + '" data-event-preview-date="' + escapeHtml(fullDate) + '" data-event-preview-label="' + (isSelected ? 'Latest development' : 'Earlier development') + '" data-event-preview-title="' + escapeHtml(title) + '" data-event-preview-summary="' + escapeHtml(summary) + '" data-event-preview-facts="' + escapeHtml(JSON.stringify(facts)) + '" data-event-preview-type="' + escapeHtml(type) + '" data-event-preview-sources="' + sourceCount + '">';
+							html += '<span class="event-storyline-card-top"><span class="event-storyline-step">' + (isSelected ? 'Latest' : 'Earlier') + '</span><time>' + escapeHtml(shortDate(entry.date)) + '</time></span>';
+							html += '<strong>' + escapeHtml(title) + '</strong>';
+							if (summary) html += '<span class="event-storyline-card-summary">' + escapeHtml(summary) + '</span>';
+							html += '<span class="event-storyline-card-meta"><span>' + escapeHtml(type) + '</span>' + (sourceCount ? '<span>' + sourceCount + ' source' + (sourceCount === 1 ? '' : 's') + '</span>' : '') + '</span></button>';
+						});
+						html += '</div></div>';
+						html += '<div class="event-storyline-detail" aria-live="polite"><div class="event-storyline-detail-heading"><span class="event-storyline-detail-label">Latest development</span><time class="event-storyline-detail-date">' + escapeHtml(formatStoryDate(selected.date)) + '</time></div>';
+						html += '<h3 class="event-storyline-detail-title">' + escapeHtml(selected.title || selected.summary || 'Update') + '</h3>';
+						html += '<p class="event-storyline-detail-summary"' + (selected.summary ? '' : ' hidden') + '>' + escapeHtml(selected.summary || '') + '</p>';
+						html += '<ul class="event-storyline-detail-facts"' + (selectedFacts.length ? '' : ' hidden') + '>' + selectedFacts.map(function(fact) { return '<li>' + escapeHtml(fact) + '</li>'; }).join('') + '</ul>';
+						html += '<div class="event-storyline-detail-meta"><span class="event-storyline-detail-type">' + escapeHtml(selectedType) + '</span><span class="event-storyline-detail-sources"' + (selectedSources ? '' : ' hidden') + '>' + selectedSources + ' source' + (selectedSources === 1 ? '' : 's') + '</span></div></div>';
+						html += '</section>';
 						return html;
 					}
-
 					function renderStoryExplainer(story) {
 						var explainer = story.explainer || story.context_explainer || (story.story_context || {}).explainer;
 						if (!explainer) return '';
@@ -720,13 +808,13 @@
 						}
 
 						if (!lenses.length) return '';
-						var html = '<section class="story-explore"><div class="story-explore-header"><div><div class="story-section-label">Optional context</div><h2>Explore this story</h2></div><p>Choose a lens. Nothing here replaces the factual summary above.</p></div><div class="story-explore-options">';
-						lenses.forEach(function(lens) {
-							html += '<button type="button" class="story-explore-option" aria-expanded="false" aria-controls="explore-' + escapeHtml(lens.id) + '">' + escapeHtml(lens.label || lens.title || 'Read more') + '</button>';
+						var html = '<section class="story-explore" aria-label="Story context"><div class="story-explore-options">';
+						lenses.forEach(function(lens, lensIndex) {
+							html += '<button type="button" class="story-explore-option" aria-expanded="' + (lensIndex === 0 ? 'true' : 'false') + '" aria-controls="explore-' + escapeHtml(lens.id) + '">' + escapeHtml(lens.label || lens.title || 'Read more') + '</button>';
 						});
 						html += '</div>';
-						lenses.forEach(function(lens) {
-							html += '<div class="story-explore-panel" id="explore-' + escapeHtml(lens.id) + '"><h3>' + escapeHtml(lens.title || lens.label || 'Additional context') + '</h3>';
+						lenses.forEach(function(lens, lensIndex) {
+							html += '<div class="story-explore-panel' + (lensIndex === 0 ? ' active' : '') + '" id="explore-' + escapeHtml(lens.id) + '"><h3>' + escapeHtml(lens.title || lens.label || 'Additional context') + '</h3>';
 							if (lens.summary) html += '<p>' + escapeHtml(lens.summary) + '</p>';
 							html += '<details class="story-explore-details"' + (lens.summary ? '' : ' open') + '><summary>Show evidence and details</summary>';
 							var sourceById = {};
@@ -760,7 +848,6 @@
 						});
 						return html + '</section>';
 					}
-
 					// Load either the live digest or one of the two published archive editions.
 					var storyRequest = archiveDate
 						? $.getJSON('/Current_news/recent_news.json').then(function(archivePayload) {
@@ -792,14 +879,14 @@
 						if (publisher) publisherLookup[publisher] = true;
 					});
 					var publisherCount = Object.keys(publisherLookup).length || sourceCount;
-					var developmentCount = Number((story.story_context || {}).development_count || (Array.isArray(story.timeline_highlights) ? story.timeline_highlights.length : 0));
-					var storyState = developmentCount > 1 ? 'Timeline updated' : sourceCount > 1 ? 'New story' : 'Single-source report';
-
-						// Back button
+					var storyContext = story.story_context || {};
+					var developmentCount = Number(storyContext.development_count || (Array.isArray(story.timeline_highlights) ? story.timeline_highlights.length : 0));
+					var hasEventTimeline = Boolean(storyContext.available || developmentCount > 1 || (Array.isArray(story.timeline_highlights) && story.timeline_highlights.length > 1));
+					var writtenDate = archiveDate || story.date || story.run_date || story.published_date || data.generated_at || new Date().toISOString();						// Back button
 						content += '<a href="' + backHref + '" class="back-button">\u2190 Back</a>';
 
 						// Story title and trust context
-						content += '<div class="story-eyebrow">' + escapeHtml(displayCategory(story)) + ' · ' + escapeHtml(storyState) + '</div>';
+						content += '<time class="story-written-date" datetime="' + escapeHtml(String(writtenDate).slice(0, 10)) + '">' + escapeHtml(formatStoryDate(writtenDate)) + '</time>';
 						content += '<div class="story-title"><h1>' + escapeHtml(story.title) + '</h1></div>';
 						content += '<div class="story-meta-row">';
 					var sourceLabel = publisherCount < sourceCount
@@ -807,32 +894,27 @@
 						: sourceCount + ' ' + (sourceCount === 1 ? 'source' : 'sources');
 					content += '<span class="story-meta-chip' + (publisherCount === 1 ? ' caution' : '') + '">' + escapeHtml(sourceLabel) + '</span>';
 						if (developmentCount > 1) content += '<span class="story-meta-chip">' + developmentCount + ' developments tracked</span>';
-						content += '<span class="story-meta-chip">' + escapeHtml(archiveDate ? 'Edition ' + formatStoryDate(archiveDate) : 'Updated today') + '</span></div>';
-
-						// Content wrapper with summary and image side by side
-						content += '<div class="story-content-wrapper">';
-						content += '<div class="story-header-text">';
-						content += '<div class="story-section-label">What happened</div>';
-						content += '<div class="story-summary">' + escapeHtml(story.summary) + '</div>';
 						content += '</div>';
-
-						// Story image
+						// Editorial story lead: image floats while summary and context wrap around it
+						content += '<div class="story-content-wrapper">';
 						if (story.image && (story.image.url || story.image.thumbnail_url)) {
 							var imageRoleLabel = story.image.image_role_label || (story.image.image_role === 'illustrative' ? 'AI illustration' : '');
 							content += '<div class="story-image-frame"><img src="' + escapeHtml(safeHttpUrl(story.image.url || story.image.thumbnail_url)) + '" alt="' + escapeHtml(story.image.title || story.title) + '" class="story-image">';
 							if (imageRoleLabel) content += '<span class="story-image-role">' + escapeHtml(imageRoleLabel) + '</span>';
 							content += '</div>';
 						}
-
-						content += '</div>';
+						content += '<div class="story-header-text">';
+						content += '<div class="story-section-label">What happened</div>';
+						content += '<div class="story-summary">' + escapeHtml(story.summary) + '</div>';
 						content += renderExploreStory(story);
+						content += '</div>';
+						content += '</div>';
+
 						var updateNote = story.what_changed || (story.story_context || {}).what_changed;
 						if (updateNote) content += '<div class="story-update-note"><strong>What changed:</strong> ' + escapeHtml(updateNote) + '</div>';
 						content += renderStoryExplainer(story);
 
-						if (story.event_id || (story.timeline_highlights && story.timeline_highlights.length)) {
-							content += '<div id="event-timeline-slot"></div>';
-						}
+						if (hasEventTimeline) content += '<section class="story-event-timeline" aria-label="Event timeline"><div id="event-timeline-slot"></div></section>';
 
 						// Sources section
 						if (storyItems.length > 0) {
@@ -884,22 +966,42 @@
 								$('#' + panelId).addClass('active');
 							}
 						});
-						window.MuninnEventExperience.mount('#event-timeline-slot', {
-							event: { event_id: story.event_id },
-							story: story,
-							mode: 'story'
+						$('#story-content').off('mouseenter focus click', '.event-storyline-card').on('mouseenter focus click', '.event-storyline-card', function(event) {
+							if (event.type === 'click') event.preventDefault();
+							var card = $(this);
+							var preview = card.closest('.event-storyline');
+							preview.find('.event-storyline-card').removeClass('is-active').attr('aria-pressed', 'false');
+							card.addClass('is-active').attr('aria-pressed', 'true');
+							preview.find('.event-storyline-detail-label').text(card.attr('data-event-preview-label') || 'Development');
+							preview.find('.event-storyline-detail-date').text(card.attr('data-event-preview-date') || '');
+							preview.find('.event-storyline-detail-title').text(card.attr('data-event-preview-title') || 'Update');
+							var summary = card.attr('data-event-preview-summary') || '';
+							preview.find('.event-storyline-detail-summary').text(summary).prop('hidden', !summary);
+							var facts = [];
+							try { facts = JSON.parse(card.attr('data-event-preview-facts') || '[]'); } catch (_error) {}
+							var factsList = preview.find('.event-storyline-detail-facts').empty().prop('hidden', !facts.length);
+							facts.forEach(function(fact) { factsList.append($('<li>').text(fact)); });
+							var type = card.attr('data-event-preview-type') || 'update';
+							var sourceCount = Number(card.attr('data-event-preview-sources') || 0);
+							preview.find('.event-storyline-detail-type').text(type);
+							preview.find('.event-storyline-detail-sources').text(sourceCount + ' source' + (sourceCount === 1 ? '' : 's')).prop('hidden', !sourceCount);
 						});
 
-						if (story.event_id) {
+						var mountCompactEventPreview = function(eventData) {
+							var slot = $('#event-timeline-slot');
+							if (slot.length) slot.html(renderStoryContext(story, eventData));
+						};
+						if (hasEventTimeline) mountCompactEventPreview(null);
+
+						if (hasEventTimeline && story.event_id) {
 							$.getJSON('/Current_news/event_timelines.json', function(timelineData) {
 								var events = Array.isArray(timelineData.events) ? timelineData.events : [];
 								var eventData = events.find(function(event) {
 									return event.event_id === story.event_id;
 								});
-								if (eventData) window.MuninnEventExperience.mount('#event-timeline-slot', { event: eventData, story: story, mode: 'story' });
+								if (eventData) mountCompactEventPreview(eventData);
 							});
 						}
-
 						// Prefer genuinely related coverage, then fill with a small selection from today.
 						var otherStories = data.clusters.filter(function(s, index) {
 							return index !== storyIndex;

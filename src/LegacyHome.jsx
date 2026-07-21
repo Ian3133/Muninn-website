@@ -32,12 +32,13 @@ const SECTION_STORAGE_KEY = 'muninn-selected-sections';
 const STATE_STORAGE_KEY = 'muninn-selected-state';
 const NEWSLETTER_STORAGE_KEY = 'muninn-newsletters';
 const NOTE_TEXT_PREFIX = '[muninn-sections]';
+const THEME_STORAGE_KEY = 'muninn-theme';
 const NEWSLETTER_TEXT_PREFIX = '[muninn-newsletters]';
 
 const categoryTitles = {
   'top-stories': 'Today',
   timelines: 'Events',
-  'your-newsletter': 'Your Newsletter',
+  'your-newsletter': 'Newsletter',
   local: 'Local News',
   happy: 'Happy News',
   science: 'Science News',
@@ -500,10 +501,6 @@ function SourceOrientationBar({ sourceEntries }) {
   const description = segments.map((segment) => `${segment.count} ${segment.label.toLowerCase()}`).join(', ');
   return (
     <div className="source-orientation" aria-label={`Source orientation: ${description}`}>
-      <div className="source-orientation-heading">
-        <span>Source mix</span>
-        <small>{description}</small>
-      </div>
       <div className="source-orientation-bar" aria-hidden="true">
         {segments.map((segment) => (
           <span
@@ -542,6 +539,16 @@ function storyArchiveHref(story, editionDate, currentDate) {
   if (editionDate && editionDate !== currentDate) params.set('archiveDate', editionDate);
   params.set('returnMore', '1');
   return `/story.html?${params.toString()}`;
+}
+
+function briefingStoryHref(item) {
+  const href = String(item?.story_url || '').trim();
+  return href.startsWith('/story.html?') ? href : '';
+}
+
+function briefingSegmentHref(segment) {
+  const href = String(segment?.href || '').trim();
+  return href.startsWith('/story.html?') || href.startsWith('/timeline.html?') ? href : '';
 }
 
 function storyContinuityKeys(story) {
@@ -635,43 +642,40 @@ function groupNavigationTopic(group) {
   return [group.primary, ...group.related].map(storyNavigationTopic).find(Boolean) || '';
 }
 
-function storyCardContext(groupedStories, relatedCount, timelineCount) {
+function storyCardContext(groupedStories, _relatedCount, timelineCount) {
   const group = { primary: groupedStories[0], related: groupedStories.slice(1) };
   const navigationLabel = groupNavigationTopic(group);
   const contextStory = groupedStories.find((story) => (
     story?.story_context?.available
     || Number(story?.story_context?.development_count || 0) > 1
   ));
-  const hasConnectedCoverage = relatedCount > 0;
-  if (!contextStory && !hasConnectedCoverage) {
-    return navigationLabel ? { label: navigationLabel, detail: '' } : null;
+
+  if (!contextStory) {
+    return { kind: 'new', label: 'New story', detail: '' };
   }
 
-  const context = contextStory?.story_context || {};
-  const label = String(
+  const context = contextStory.story_context || {};
+  const eventLabel = String(
     context.display_title
     || context.event_title
-    || contextStory?.event_title
+    || contextStory.event_title
     || navigationLabel
-    || 'Developing event'
+    || 'Earlier coverage'
   ).trim();
   const developmentCount = Math.max(
     Number(context.development_count || 0),
     Number(timelineCount || 0),
   );
+  const earlierUpdateCount = Math.max(0, developmentCount - 1);
 
-  if (hasConnectedCoverage) {
-    return { label, detail: `${groupedStories.length} connected reports` };
-  }
-  if (context.stage === 'timeline') {
-    return { label, detail: developmentCount > 1 ? `${developmentCount} developments` : 'Timeline' };
-  }
   return {
-    label,
-    detail: developmentCount > 1 ? `${developmentCount} developments` : 'Developing event',
+    kind: 'update',
+    label: `Event update \u00b7 ${eventLabel}`,
+    detail: earlierUpdateCount > 0
+      ? `${earlierUpdateCount} earlier update${earlierUpdateCount === 1 ? '' : 's'}`
+      : 'Previous coverage',
   };
 }
-
 function normalizeFocalCoordinate(value, fallback) {
   const numeric = Number.parseFloat(String(value ?? '').replace('%', ''));
   if (!Number.isFinite(numeric)) return fallback;
@@ -765,8 +769,18 @@ export default function LegacyHome() {
     }
     return 'top-stories';
   });
+  const [theme, setTheme] = useState(() => {
+    try {
+      const storedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+      if (storedTheme === 'dark' || storedTheme === 'light') return storedTheme;
+      return window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    } catch (_e) {
+      return 'light';
+    }
+  });
   const [stories, setStories] = useState([]);
   const [digestGeneratedAt, setDigestGeneratedAt] = useState('');
+  const [dailyBriefing, setDailyBriefing] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [moreNewsOpen, setMoreNewsOpen] = useState(() => {
@@ -818,7 +832,7 @@ export default function LegacyHome() {
   );
   const title = categoryTitles[activeCategory] || 'Muninn';
   const showDate = activeCategory === 'top-stories';
-  const dateStr = useMemo(() => (showDate ? formatDate(new Date()) : ''), [showDate]);
+  const dateStr = useMemo(() => (showDate ? formatDate(digestGeneratedAt ? new Date(digestGeneratedAt) : new Date()) : ''), [showDate, digestGeneratedAt]);
   const availableLocalStates = useMemo(
     () => US_STATES.filter((state) => SUPPORTED_LOCAL_STATE_CODES.has(state.code)),
     []
@@ -832,6 +846,35 @@ export default function LegacyHome() {
     () => additionalNewsStartIndex < 0 ? todayGroups : todayGroups.slice(0, additionalNewsStartIndex),
     [todayGroups, additionalNewsStartIndex]
   );
+  const dailyBriefingText = useMemo(() => {
+    const publishedBriefing = String(
+      typeof dailyBriefing === 'string' ? dailyBriefing : dailyBriefing?.summary || ''
+    ).trim();
+    if (publishedBriefing) return publishedBriefing;
+    const leadSummary = String(primaryTodayGroups[0]?.primary?.summary || '').trim();
+    return leadSummary ? truncateText(leadSummary, 360) : 'The day?s leading stories are gathered below.';
+  }, [dailyBriefing, primaryTodayGroups]);
+  const dailyBriefingParagraphs = useMemo(
+    () => Array.isArray(dailyBriefing?.paragraphs)
+      ? dailyBriefing.paragraphs
+        .map((paragraph) => ({
+          segments: Array.isArray(paragraph?.segments)
+            ? paragraph.segments.filter((segment) => String(segment?.text || '').trim())
+            : [],
+        }))
+        .filter((paragraph) => paragraph.segments.length)
+        .slice(0, 3)
+      : [],
+    [dailyBriefing]
+  );
+
+  const todayAtGlance = useMemo(
+    () => dailyBriefingParagraphs.length
+      ? dailyBriefingParagraphs[0]
+      : { segments: [{ text: dailyBriefingText }] },
+    [dailyBriefingParagraphs, dailyBriefingText]
+  );
+
   const moreTodayGroups = useMemo(
     () => additionalNewsStartIndex < 0 ? [] : todayGroups.slice(additionalNewsStartIndex),
     [todayGroups, additionalNewsStartIndex]
@@ -891,6 +934,15 @@ export default function LegacyHome() {
       // no-op
     }
   }, [activeCategory]);
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    try {
+      localStorage.setItem(THEME_STORAGE_KEY, theme);
+    } catch (_e) {
+      // no-op
+    }
+  }, [theme]);
 
   useEffect(() => {
     document.body.classList.add('is-preload');
@@ -994,9 +1046,13 @@ export default function LegacyHome() {
         const clusters = Array.isArray(data?.clusters) ? data.clusters : [];
         setStories(clusters.slice(0, 20));
         setDigestGeneratedAt(data?.generated_at || '');
+        const structuredBriefing = data?.briefing && typeof data.briefing === 'object' ? data.briefing : null;
+        const publishedBriefing = typeof data?.daily_briefing === 'string' ? data.daily_briefing.trim() : '';
+        setDailyBriefing(structuredBriefing || publishedBriefing || null);
       } catch (e) {
         setError(e?.message || String(e));
         setStories([]);
+        setDailyBriefing(null);
         setDigestGeneratedAt('');
       } finally {
         setLoading(false);
@@ -1630,17 +1686,22 @@ export default function LegacyHome() {
   }
 
   return (
-    <div id="wrapper" className="fade-in">
-      <header id="header">
-        <a href="/" className="logo" onClick={(e) => { e.preventDefault(); setActiveCategory('top-stories'); }}>
-          Muninn
-        </a>
-      </header>
+    <div id="wrapper" className="fade-in muninn-app-shell">
+      <header className="app-header">
+        <div className="app-header-inner">
+          <a href="/" className="brand-lockup" onClick={(e) => { e.preventDefault(); setActiveCategory('top-stories'); }}>
+            <span className="brand-mark" aria-hidden="true">
+              <img className="brand-logo" src="/brand/muninn-mark.svg" alt="" />
+            </span>
+            <span>
+              <strong>Muninn</strong>
+              <small>News, Simplified.</small>
+            </span>
+          </a>
 
-      <nav id="nav">
-        <div style={{ display: 'flex', alignItems: 'stretch', width: '100%', minWidth: 0 }}>
-          <ul className="links news-tabs-scroll" style={{ display: 'flex', flex: '1 1 auto' }}>
-            {visibleCategories.map((key) => {
+          <nav className="primary-navigation" aria-label="Primary navigation">
+            <ul className="news-tabs-scroll">
+            {PINNED_CATEGORY_ORDER.map((key) => {
               const isCustomSection = selectedSections.includes(key);
               return (
                 <li
@@ -1673,31 +1734,45 @@ export default function LegacyHome() {
                     data-category={key}
                     onClick={(e) => { e.preventDefault(); setActiveCategory(key); }}
                   >
-                    {key === 'your-newsletter' ? 'Newsletter' : categoryTitles[key]}
+                    {categoryTitles[key]}
                   </a>
                 </li>
               );
             })}
-          </ul>
-          {ENABLE_EXTRA_SECTIONS ? (
-            <ul className="links" style={{ flex: '0 0 auto' }}>
-              <li className={sectionsModalOpen ? 'active' : ''}>
-                <a href="#" style={{ color: '#ffffff' }} onClick={(e) => { e.preventDefault(); setSectionsModalOpen(true); }}>
-                  Add News
-                </a>
-              </li>
             </ul>
-          ) : null}
-        </div>
-      </nav>
+          </nav>
 
-      <div id="main">
-        <section className={`post ${activeCategory === 'top-stories' ? 'top-stories-post' : ''}`}>
-          <header className="major">
-            <h1>{title}</h1>
-            <div className="header-date">{dateStr}</div>
-            {activeCategory === 'timelines' ? <p className="today-intro">Follow stories that are still developing, from their latest update to the broader timeline.</p> : null}
-            {activeCategory === 'your-newsletter' ? <p className="today-intro">One week of developing stories, organized by event so repeated coverage across days only appears once.</p> : null}
+          <div className="header-actions">
+            <button
+              className="theme-toggle"
+              type="button"
+              aria-pressed={theme === 'dark'}
+              onClick={() => setTheme((current) => current === 'dark' ? 'light' : 'dark')}
+            >
+              <span className="theme-toggle-icon" aria-hidden="true" />
+              <span>{theme === 'dark' ? 'Light' : 'Dark'}</span>
+            </button>
+            {ENABLE_EXTRA_SECTIONS ? (
+              <button className="header-action" type="button" onClick={() => setSectionsModalOpen(true)}>Customize</button>
+            ) : null}
+          </div>
+        </div>
+      </header>
+
+      <main id="main" className={`view-${activeCategory}`}>
+        <section className={`post app-view ${activeCategory === 'top-stories' ? 'top-stories-post' : ''}`}>
+          <header className="major page-intro">
+            <div className="page-intro-copy">
+              {activeCategory !== 'top-stories' ? (
+                <span className="page-kicker">
+                  {activeCategory === 'timelines' ? 'Living news record' : 'Made for you'}
+                </span>
+              ) : null}
+              <h1>{activeCategory === 'top-stories' ? 'Daily Brief' : title}</h1>
+              {activeCategory === 'timelines' ? <p className="today-intro">Follow important stories from their latest development back through the full record.</p> : null}
+              {activeCategory === 'your-newsletter' ? <p className="today-intro">A focused briefing built around the stories, places, and events that matter to you.</p> : null}
+            </div>
+            {showDate ? <time className="header-date" dateTime={currentDateKey}>{dateStr}</time> : null}
           </header>
 
           {ENABLE_NEWSLETTERS ? (
@@ -1951,6 +2026,26 @@ export default function LegacyHome() {
             )}
 
             {!loading && !error && stories.length > 0 && (<>
+              <section className="daily-briefing" aria-label="The daily briefing">
+                <div className="daily-briefing-intro">
+                  <span className="daily-briefing-kicker">Today at a glance</span>
+                </div>
+                <div className="daily-briefing-prose">
+                  <p>
+                    {todayAtGlance.segments.map((segment, segmentIndex) => {
+                      const href = briefingSegmentHref(segment);
+                      return href
+                        ? <a href={href} key={segmentIndex}>{segment.text}</a>
+                        : <Fragment key={segmentIndex}>{segment.text}</Fragment>;
+                    })}
+                  </p>
+                </div>
+              </section>
+
+              <div className="stories-section-heading">
+                <h2>Stories</h2>
+              </div>
+
               <div className="top-stories-grid">
                 {primaryTodayGroups.map(({ primary: story, related }, index) => {
                   const groupedStories = [story, ...related];
@@ -1961,9 +2056,15 @@ export default function LegacyHome() {
                   const timelineCount = Math.max(...groupedStories.map((item) => Array.isArray(item?.timeline_highlights) ? item.timeline_highlights.length : 0));
                   const imageUrl = story?.image?.url || story?.image?.thumbnail_url || '';
                   const isLead = index === 0;
-                  const imageCrop = storyImageCropPresentation(story, isLead ? 'wide' : 'tall');
+                  const isSecondaryFeature = index > 0 && index <= 4;
+                  const imageCrop = storyImageCropPresentation(story, isLead || isSecondaryFeature ? 'wide' : 'tall');
                   const displayTitle = cleanDisplayTitle(story?.title, story?.sources);
                   const cardContext = storyCardContext(groupedStories, related.length, timelineCount);
+                  const eventStory = cardContext.kind === 'update'
+                    ? groupedStories.find((item) => item?.story_context?.timeline_url || item?.event_id)
+                    : null;
+                  const eventHref = eventStory?.story_context?.timeline_url
+                    || (eventStory?.event_id ? `/timeline.html?event=${encodeURIComponent(eventStory.event_id)}` : '');
                   const freshness = formatCardFreshness(digestGeneratedAt);
                   const openStory = () => {
                     const storyIndex = stories.indexOf(story);
@@ -1975,9 +2076,13 @@ export default function LegacyHome() {
 
                   return (
                     <Fragment key={story?.story_id || displayTitle}>
-                      <div className={`top-story-item ${isLead ? 'is-lead' : ''}`}>
+                      <div className={`top-story-item ${isLead ? 'is-lead' : ''} ${isSecondaryFeature ? 'is-secondary-feature' : ''}`}>
                       {cardContext ? (
-                        <div className="top-story-context-label" title={cardContext.detail ? `${cardContext.label} · ${cardContext.detail}` : cardContext.label}>
+                        eventHref ? <a className={`top-story-context-label is-${cardContext.kind}-story`} href={eventHref} title={cardContext.detail ? `${cardContext.label} · ${cardContext.detail}` : cardContext.label}>
+                          <span className="top-story-timeline-dot" aria-hidden="true" />
+                          <span className="top-story-context-name">{cardContext.label}</span>
+                          {cardContext.detail ? <span className="top-story-context-detail">{cardContext.detail}</span> : null}
+                        </a> : <div className={`top-story-context-label is-${cardContext.kind}-story`} title={cardContext.detail ? `${cardContext.label} · ${cardContext.detail}` : cardContext.label}>
                           <span className="top-story-timeline-dot" aria-hidden="true" />
                           <span className="top-story-context-name">{cardContext.label}</span>
                           {cardContext.detail ? <span className="top-story-context-detail">{cardContext.detail}</span> : null}
@@ -1985,7 +2090,7 @@ export default function LegacyHome() {
                       ) : null}
 
                       <article
-                        className={`top-story-card ${isLead ? 'is-lead' : ''} ${imageUrl ? 'has-image' : 'no-image'}`}
+                        className={`top-story-card ${isLead ? 'is-lead' : ''} ${isSecondaryFeature ? 'is-secondary-feature' : ''} ${imageUrl ? 'has-image' : 'no-image'}`}
                         role="link"
                         tabIndex={0}
                         aria-label={`Read ${displayTitle}`}
@@ -2014,25 +2119,36 @@ export default function LegacyHome() {
                             }}
                           />
                         </>) : null}
+                        {!isLead && !isSecondaryFeature && imageUrl ? (
+                          <div className="story-image-title">
+                            <h3>{displayTitle}</h3>
+                          </div>
+                        ) : null}
+                        {!isLead && !isSecondaryFeature && imageUrl && sourceEntries.length ? (
+                          <div className="image-source-logos" aria-label={`Sources include ${sourceEntries.map((entry) => entry.name).join(', ')}`}>
+                            <div className="top-story-source-logos">
+                              {visibleSourceEntries.map((entry) => (
+                                <span className="top-story-source-logo" title={entry.name} key={entry.name}>
+                                  <img
+                                    src={sourceLogoUrl(entry.name)}
+                                    alt=""
+                                    aria-hidden="true"
+                                    loading="lazy"
+                                    onError={(event) => {
+                                      event.currentTarget.onerror = null;
+                                      event.currentTarget.src = '/assets/logos/news_placeholder.png';
+                                    }}
+                                  />
+                                </span>
+                              ))}
+                              {hiddenSourceCount ? <span className="top-story-source-more" title={`${hiddenSourceCount} more sources`}>+{hiddenSourceCount}</span> : null}
+                            </div>
+                          </div>
+                        ) : null}
                       </div>
 
                       <div className="top-story-card-body">
-                        <h3 title={displayTitle}>{displayTitle}</h3>
-
-                        {story?.update_kind === 'factual_update' && (story?.what_changed || story?.new_facts?.[0]) ? (
-                          <div className="top-story-change-note">
-                            <span>What changed</span>
-                            <strong>{story.what_changed || story.new_facts[0]}</strong>
-                          </div>
-                        ) : null}
-
-                        {related.length ? (
-                          <div className="connected-coverage">
-                            <span>Also in this event</span>
-                            <strong>{cleanDisplayTitle(related[0]?.title, related[0]?.sources)}</strong>
-                            {related.length > 1 ? <small>+{related.length - 1} more development{related.length === 2 ? '' : 's'}</small> : null}
-                          </div>
-                        ) : null}
+                        {isLead || isSecondaryFeature || !imageUrl ? <h3 title={displayTitle}>{displayTitle}</h3> : null}
 
                         <div className="top-story-evidence" title="Based on distinct outlets represented in this story. This is not an accuracy score.">
                           <div className="top-story-source-stack">
@@ -2056,10 +2172,26 @@ export default function LegacyHome() {
                               </div>
                             ) : null}
                           </div>
-                          <SourceOrientationBar sourceEntries={sourceEntries} />
                         </div>
 
                         <div className="top-story-card-footer">
+                          {cardContext ? (
+                            eventHref ? <a
+                              className={`top-story-context-label card-inline-context is-${cardContext.kind}-story`}
+                              href={eventHref}
+                              title={cardContext.label}
+                              onClick={(event) => event.stopPropagation()}
+                              onKeyDown={(event) => event.stopPropagation()}
+                            >
+                              <span className="top-story-timeline-dot" aria-hidden="true" />
+                              <span className="top-story-context-name">{cardContext.label}</span>
+                              {cardContext.detail ? <span className="top-story-context-detail">{cardContext.detail}</span> : null}
+                            </a> : <div className={`top-story-context-label card-inline-context is-${cardContext.kind}-story`} title={cardContext.label}>
+                              <span className="top-story-timeline-dot" aria-hidden="true" />
+                              <span className="top-story-context-name">{cardContext.label}</span>
+                              {cardContext.detail ? <span className="top-story-context-detail">{cardContext.detail}</span> : null}
+                            </div>
+                          ) : null}
                           <div className="top-story-meta">
                             {freshness ? <span>{freshness}</span> : null}
                             <span>{sourceCount} {sourceCount === 1 ? 'source' : 'sources'}</span>
@@ -2190,7 +2322,7 @@ export default function LegacyHome() {
               <div className="timeline-empty-search"><h3>No matching events</h3><p>Try another topic or change the event filter.</p></div>
             ) : null}
 
-            {!loadingTimelines && !timelineError && filteredTimelineEvents.map((event) => {
+            {!loadingTimelines && !timelineError ? <div className="events-grid">{filteredTimelineEvents.map((event) => {
               const entries = Array.isArray(event?.timeline) ? event.timeline.slice(-3).reverse() : [];
               const presentation = event?.presentation || {};
               const developmentCount = Number(presentation.development_count || event?.timeline?.length || entries.length);
@@ -2246,7 +2378,7 @@ export default function LegacyHome() {
                   )}
                 </article>
               );
-            })}
+            })}</div> : null}
           </div>
 
           <div id="local" className={`category-content ${activeCategory === 'local' ? 'active' : ''}`}>
@@ -2473,7 +2605,7 @@ export default function LegacyHome() {
           {renderPlaceholderSection('world')}
           {renderPlaceholderSection('other')}
         </section>
-      </div>
+      </main>
 
       <div id="copyright">
         <ul><li>&copy; Muninn</li></ul>
