@@ -5,6 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Muninn brings together the stories shaping today and tracks how important events develop over time." />
     <meta name="theme-color" content="#17252d" />
+    <script>
+      (() => {
+        let theme = 'light';
+        try {
+          const savedTheme = localStorage.getItem('muninn-theme');
+          theme = savedTheme === 'dark' || savedTheme === 'light'
+            ? savedTheme
+            : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        } catch (_error) {
+          theme = 'light';
+        }
+
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.colorScheme = theme;
+        document.querySelector('meta[name="theme-color"]')
+          .setAttribute('content', theme === 'dark' ? '#11191e' : '#f3f5f4');
+      })();
+    </script>
     <meta name="application-name" content="Muninn" />
     <meta name="apple-mobile-web-app-title" content="Muninn" />
     <meta name="msapplication-TileColor" content="#17252d" />
@@ -29,6 +47,15 @@
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="/assets/css/main.css" />
     <noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+    <style id="theme-bootstrap">
+      html[data-theme="light"],
+      html[data-theme="light"] body,
+      html[data-theme="light"] #root { background: #f3f5f4 !important; }
+      html[data-theme="dark"],
+      html[data-theme="dark"] body,
+      html[data-theme="dark"] #root { background: #11191e !important; }
+      html, body, #root { min-height: 100%; }
+    </style>
     <style>
       .header-date {
         font-size: 1.1em;

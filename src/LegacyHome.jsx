@@ -475,7 +475,7 @@ function sourceEntriesForStories(stories) {
   return [...byOutlet.values()];
 }
 
-const SOURCE_LOGO_DISPLAY_LIMIT = 5;
+const SOURCE_LOGO_DISPLAY_LIMIT = 3;
 
 function sourceOrientationCounts(sourceEntries) {
   return sourceEntries.reduce((counts, entry) => {
@@ -771,6 +771,8 @@ export default function LegacyHome() {
   });
   const [theme, setTheme] = useState(() => {
     try {
+      const preloadedTheme = document.documentElement.dataset.theme;
+      if (preloadedTheme === 'dark' || preloadedTheme === 'light') return preloadedTheme;
       const storedTheme = localStorage.getItem(THEME_STORAGE_KEY);
       if (storedTheme === 'dark' || storedTheme === 'light') return storedTheme;
       return window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
@@ -875,6 +877,22 @@ export default function LegacyHome() {
     [dailyBriefingParagraphs, dailyBriefingText]
   );
 
+  const todayAtGlanceParagraphs = useMemo(() => {
+    const paragraphs = [];
+    let currentSegments = [];
+
+    todayAtGlance.segments.forEach((segment) => {
+      currentSegments.push(segment);
+      if (briefingSegmentHref(segment)) {
+        paragraphs.push(currentSegments);
+        currentSegments = [];
+      }
+    });
+
+    if (currentSegments.length) paragraphs.push(currentSegments);
+    return paragraphs;
+  }, [todayAtGlance]);
+
   const moreTodayGroups = useMemo(
     () => additionalNewsStartIndex < 0 ? [] : todayGroups.slice(additionalNewsStartIndex),
     [todayGroups, additionalNewsStartIndex]
@@ -937,24 +955,16 @@ export default function LegacyHome() {
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
+    document.documentElement.style.colorScheme = theme;
+    document.querySelector('meta[name="theme-color"]')?.setAttribute(
+      'content', theme === 'dark' ? '#11191e' : '#f3f5f4'
+    );
     try {
       localStorage.setItem(THEME_STORAGE_KEY, theme);
     } catch (_e) {
       // no-op
     }
   }, [theme]);
-
-  useEffect(() => {
-    document.body.classList.add('is-preload');
-    const timeoutId = window.setTimeout(() => {
-      document.body.classList.remove('is-preload');
-    }, 100);
-
-    return () => {
-      window.clearTimeout(timeoutId);
-      document.body.classList.remove('is-preload');
-    };
-  }, []);
 
   useEffect(() => {
     (async () => {
@@ -1686,7 +1696,7 @@ export default function LegacyHome() {
   }
 
   return (
-    <div id="wrapper" className="fade-in muninn-app-shell">
+    <div id="wrapper" className="muninn-app-shell">
       <header className="app-header">
         <div className="app-header-inner">
           <a href="/" className="brand-lockup" onClick={(e) => { e.preventDefault(); setActiveCategory('top-stories'); }}>
@@ -2031,14 +2041,27 @@ export default function LegacyHome() {
                   <span className="daily-briefing-kicker">Today at a glance</span>
                 </div>
                 <div className="daily-briefing-prose">
-                  <p>
-                    {todayAtGlance.segments.map((segment, segmentIndex) => {
-                      const href = briefingSegmentHref(segment);
-                      return href
-                        ? <a href={href} key={segmentIndex}>{segment.text}</a>
-                        : <Fragment key={segmentIndex}>{segment.text}</Fragment>;
-                    })}
-                  </p>
+                  {todayAtGlanceParagraphs.map((segments, paragraphIndex) => (
+                    <p key={paragraphIndex}>
+                      {segments.map((segment, segmentIndex) => {
+                        const href = briefingSegmentHref(segment);
+                        const linkedStory = stories.find((story) => story?.story_id === segment?.story_id);
+                        const referenceLabel = String(segment.text || '').trim();
+                        return href
+                          ? <Fragment key={segmentIndex}>
+                              {' '}
+                              <span className="daily-briefing-related">
+                                <a
+                                  className="daily-briefing-reference"
+                                  href={href}
+                                  title={linkedStory?.title || referenceLabel}
+                                >{referenceLabel}</a>
+                              </span>
+                            </Fragment>
+                          : <Fragment key={segmentIndex}>{segment.text}</Fragment>;
+                      })}
+                    </p>
+                  ))}
                 </div>
               </section>
 
@@ -2052,14 +2075,16 @@ export default function LegacyHome() {
                   const sourceEntries = sourceEntriesForStories(groupedStories);
                   const visibleSourceEntries = sourceEntries.slice(0, SOURCE_LOGO_DISPLAY_LIMIT);
                   const hiddenSourceCount = Math.max(0, sourceEntries.length - visibleSourceEntries.length);
-                  const sourceCount = sourceEntries.length || uniqueSourceCount(groupedStories);
                   const timelineCount = Math.max(...groupedStories.map((item) => Array.isArray(item?.timeline_highlights) ? item.timeline_highlights.length : 0));
                   const imageUrl = story?.image?.url || story?.image?.thumbnail_url || '';
                   const isLead = index === 0;
-                  const isSecondaryFeature = index > 0 && index <= 4;
+                  const isSecondaryFeature = index > 0 && index <= 2;
                   const imageCrop = storyImageCropPresentation(story, isLead || isSecondaryFeature ? 'wide' : 'tall');
                   const displayTitle = cleanDisplayTitle(story?.title, story?.sources);
                   const cardContext = storyCardContext(groupedStories, related.length, timelineCount);
+                  const visibleContextLabel = cardContext.kind === 'update'
+                    ? cardContext.label.replace(/^Event update\s*/i, '').replace(/^[^\w]+/, '')
+                    : cardContext.label;
                   const eventStory = cardContext.kind === 'update'
                     ? groupedStories.find((item) => item?.story_context?.timeline_url || item?.event_id)
                     : null;
@@ -2080,11 +2105,11 @@ export default function LegacyHome() {
                       {cardContext ? (
                         eventHref ? <a className={`top-story-context-label is-${cardContext.kind}-story`} href={eventHref} title={cardContext.detail ? `${cardContext.label} · ${cardContext.detail}` : cardContext.label}>
                           <span className="top-story-timeline-dot" aria-hidden="true" />
-                          <span className="top-story-context-name">{cardContext.label}</span>
+                          <span className="top-story-context-name">{visibleContextLabel}</span>
                           {cardContext.detail ? <span className="top-story-context-detail">{cardContext.detail}</span> : null}
                         </a> : <div className={`top-story-context-label is-${cardContext.kind}-story`} title={cardContext.detail ? `${cardContext.label} · ${cardContext.detail}` : cardContext.label}>
                           <span className="top-story-timeline-dot" aria-hidden="true" />
-                          <span className="top-story-context-name">{cardContext.label}</span>
+                          <span className="top-story-context-name">{visibleContextLabel}</span>
                           {cardContext.detail ? <span className="top-story-context-detail">{cardContext.detail}</span> : null}
                         </div>
                       ) : null}
@@ -2119,12 +2144,12 @@ export default function LegacyHome() {
                             }}
                           />
                         </>) : null}
-                        {!isLead && !isSecondaryFeature && imageUrl ? (
+                        {!isLead && imageUrl ? (
                           <div className="story-image-title">
                             <h3>{displayTitle}</h3>
                           </div>
                         ) : null}
-                        {!isLead && !isSecondaryFeature && imageUrl && sourceEntries.length ? (
+                        {!isLead && imageUrl && sourceEntries.length ? (
                           <div className="image-source-logos" aria-label={`Sources include ${sourceEntries.map((entry) => entry.name).join(', ')}`}>
                             <div className="top-story-source-logos">
                               {visibleSourceEntries.map((entry) => (
@@ -2184,17 +2209,16 @@ export default function LegacyHome() {
                               onKeyDown={(event) => event.stopPropagation()}
                             >
                               <span className="top-story-timeline-dot" aria-hidden="true" />
-                              <span className="top-story-context-name">{cardContext.label}</span>
+                              <span className="top-story-context-name">{visibleContextLabel}</span>
                               {cardContext.detail ? <span className="top-story-context-detail">{cardContext.detail}</span> : null}
                             </a> : <div className={`top-story-context-label card-inline-context is-${cardContext.kind}-story`} title={cardContext.label}>
                               <span className="top-story-timeline-dot" aria-hidden="true" />
-                              <span className="top-story-context-name">{cardContext.label}</span>
+                              <span className="top-story-context-name">{visibleContextLabel}</span>
                               {cardContext.detail ? <span className="top-story-context-detail">{cardContext.detail}</span> : null}
                             </div>
                           ) : null}
                           <div className="top-story-meta">
                             {freshness ? <span>{freshness}</span> : null}
-                            <span>{sourceCount} {sourceCount === 1 ? 'source' : 'sources'}</span>
                           </div>
                           <span className="top-story-open">Open story <span aria-hidden="true">→</span></span>
                         </div>

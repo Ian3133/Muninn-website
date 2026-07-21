@@ -820,15 +820,29 @@ a { color: var(--teal); }
 .daily-briefing-prose a {
   color: var(--teal-dark);
   font-weight: 700;
-  text-decoration-color: rgba(40, 106, 122, .38);
-  text-decoration-thickness: 1px;
-  text-underline-offset: .16em;
+  text-decoration: none;
+}
+
+.daily-briefing-prose .daily-briefing-related {
+  font-family: var(--sans);
+  font-size: .76em;
+  font-weight: 700;
+  letter-spacing: .015em;
+  white-space: nowrap;
+}
+
+.daily-briefing-prose .daily-briefing-reference {
+  color: var(--teal-dark);
+  font-weight: 800;
+  letter-spacing: 0;
 }
 
 .daily-briefing-prose a:hover,
 .daily-briefing-prose a:focus-visible {
   color: var(--teal);
-  text-decoration-color: currentColor;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .16em;
 }
 
 .daily-briefing-list small {
@@ -1129,16 +1143,34 @@ html[data-theme="dark"] .theme-toggle {
   line-height: 1.18;
 }
 
+.top-story-card.has-image:not(.is-lead) .story-image-title {
+  background: linear-gradient(to bottom, rgba(255,255,255,.94) 0%, rgba(255,255,255,.7) 36%, rgba(255,255,255,.12) 72%, transparent 88%);
+}
+
+.top-story-card.has-image:not(.is-lead) .story-image-title h3 {
+  color: #17252d !important;
+  text-shadow: 0 1px 2px rgba(255,255,255,.9), 0 0 10px rgba(255,255,255,.72);
+}
+
+html[data-theme="dark"] .top-story-card.has-image:not(.is-lead) .story-image-title {
+  background: linear-gradient(to bottom, rgba(10,22,28,.9) 0%, rgba(10,22,28,.58) 34%, transparent 72%);
+}
+
+html[data-theme="dark"] .top-story-card.has-image:not(.is-lead) .story-image-title h3 {
+  color: #fff !important;
+  text-shadow: 0 2px 12px rgba(0,0,0,.45);
+}
+
 .image-source-logos {
   position: absolute;
   z-index: 4;
   left: .8rem;
   bottom: .7rem;
   padding: .28rem .36rem;
-  border: 1px solid rgba(255,255,255,.32);
+  border: 1px solid rgba(117,137,145,.38);
   border-radius: 999px;
-  background: rgba(13,27,34,.72);
-  box-shadow: 0 4px 16px rgba(0,0,0,.24);
+  background: rgba(255,255,255,.82);
+  box-shadow: 0 4px 16px rgba(23,37,45,.14);
   backdrop-filter: blur(8px);
   pointer-events: none;
 }
@@ -1151,7 +1183,7 @@ html[data-theme="dark"] .theme-toggle {
 .image-source-logos .top-story-source-more {
   width: 1.65rem;
   height: 1.65rem;
-  border-color: rgba(255,255,255,.76);
+  border-color: #c7d1d5 !important;
   background: #fff;
   box-shadow: none;
 }
@@ -1159,6 +1191,7 @@ html[data-theme="dark"] .theme-toggle {
 .image-source-logos .top-story-source-more {
   display: grid;
   place-items: center;
+  background: #e9eef0;
   color: #33474f;
   font-size: .58rem;
 }
@@ -1211,6 +1244,17 @@ html[data-theme="dark"] .top-story-card:not(.is-lead) .top-story-card-footer {
 html[data-theme="dark"] .image-source-logos {
   border-color: rgba(255,255,255,.2);
   background: rgba(7,17,22,.78);
+  box-shadow: 0 4px 16px rgba(0,0,0,.24);
+}
+
+html[data-theme="dark"] .image-source-logos .top-story-source-logo,
+html[data-theme="dark"] .image-source-logos .top-story-source-more {
+  border-color: #52656d !important;
+}
+
+html[data-theme="dark"] .image-source-logos .top-story-source-more {
+  background: #33474f;
+  color: #f7fbfb;
 }
 
 @media screen and (max-width: 620px) {
@@ -1271,12 +1315,13 @@ html[data-theme="dark"] .image-source-logos {
     padding: 1.2rem 1.25rem 1.05rem;
   }
   .top-story-card.is-secondary-feature h3 {
+    padding-bottom: .12em;
     font-size: clamp(1.28rem, 1.7vw, 1.72rem);
     line-height: 1.12;
   }
   .top-story-card.is-secondary-feature .top-story-evidence { display: flex; }
   .top-story-card.is-secondary-feature {
-    padding-bottom: 3.15rem;
+    padding-bottom: 2.75rem;
   }
   .top-story-card.is-secondary-feature .top-story-card-footer {
     position: absolute;
@@ -1287,7 +1332,7 @@ html[data-theme="dark"] .image-source-logos {
     display: flex;
     align-items: center;
     gap: .8rem;
-    min-height: 3.15rem;
+    min-height: 2.75rem;
     margin: 0;
     padding: .62rem 1rem;
     border-top: 1px solid var(--border);
@@ -1318,7 +1363,7 @@ html[data-theme="dark"] .image-source-logos {
   }
   .top-story-card.is-secondary-feature.has-image .top-story-card-image {
     position: absolute;
-    inset: 0 0 3.15rem 43%;
+    inset: 0 0 2.75rem 43%;
     width: auto;
     min-width: 0;
     height: auto;
@@ -1344,7 +1389,7 @@ html[data-theme="dark"] .image-source-logos {
   .top-story-card.is-secondary-feature.has-image .top-story-card-body {
     position: absolute;
     z-index: 3;
-    inset: 0 0 3.15rem;
+    inset: 0 0 2.75rem;
     width: 100%;
     padding: 1.45rem 1.5rem;
     background: linear-gradient(90deg, var(--surface) 0%, var(--surface) 36%, transparent 76%);
@@ -1355,8 +1400,18 @@ html[data-theme="dark"] .image-source-logos {
     color: var(--ink);
     text-shadow: 0 1px 2px var(--surface), 0 0 12px var(--surface);
   }
-  .top-story-card.is-secondary-feature.has-image .top-story-evidence { display: none; }
-  .top-story-card.is-secondary-feature.has-image .top-story-card-footer { bottom: -3.15rem; pointer-events: auto; }
+  .top-story-card.is-secondary-feature.has-image .top-story-evidence {
+    position: absolute;
+    z-index: 4;
+    bottom: 1rem;
+    left: 1.5rem;
+    display: flex;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  .top-story-card.is-secondary-feature.has-image .top-story-card-footer { bottom: -2.75rem; pointer-events: auto; }
 }
 
 @media screen and (min-width: 621px) and (max-width: 980px) {
@@ -1371,4 +1426,174 @@ html[data-theme="dark"] .image-source-logos {
   .top-story-item,
   .top-story-item.is-secondary-feature,
   .top-story-item.is-lead { grid-column: auto; }
+}
+
+.top-story-open { display: none; }
+
+.top-story-card-footer {
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  height: 2.75rem;
+  min-height: 2.75rem;
+  max-height: 2.75rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.top-story-card-footer .card-inline-context {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.top-story-card-footer .top-story-context-name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.top-story-card-footer .top-story-context-detail { display: none; }
+
+.top-story-card-footer .top-story-meta {
+  flex: 0 0 auto;
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 981px) {
+  .top-story-card.is-secondary-feature .story-image-title,
+  .top-story-card.is-secondary-feature .image-source-logos { display: none; }
+}
+
+@media screen and (max-width: 980px) {
+  .top-story-card.is-secondary-feature.has-image .top-story-card-body > h3 { display: none; }
+}
+
+/* Theme-safe interactive controls */
+.more-news-close { color: var(--ink-soft); }
+
+#main .event-filter-row button {
+  border-color: var(--border) !important;
+  background: var(--surface) !important;
+  color: var(--muted) !important;
+}
+
+#main .event-filter-row button.active {
+  border-color: var(--teal) !important;
+  background: var(--teal) !important;
+  color: #fff !important;
+}
+
+html[data-theme="dark"] .more-news-trigger,
+html[data-theme="dark"] .more-news-close {
+  color: var(--ink-soft) !important;
+}
+
+html[data-theme="dark"] .more-news-drawer-header {
+  background: rgba(25, 36, 42, .98);
+}
+
+html[data-theme="dark"] .modal-body input,
+html[data-theme="dark"] .modal-body select,
+html[data-theme="dark"] .modal-body textarea {
+  border-color: var(--border) !important;
+  background: var(--canvas) !important;
+  color: var(--ink) !important;
+}
+
+html[data-theme="dark"] .modal-body input::placeholder,
+html[data-theme="dark"] .modal-body textarea::placeholder {
+  color: var(--muted) !important;
+}
+
+html[data-theme="dark"] .delete-button {
+  border-color: #754a46 !important;
+  background: #382522 !important;
+  color: #f0bcb5 !important;
+}
+/* Final date and event-link cleanup */
+#main .header-date {
+  border-color: var(--border) !important;
+  background: var(--surface) !important;
+  color: var(--muted) !important;
+}
+
+.top-story-card-footer .card-inline-context,
+.top-story-card-footer .card-inline-context:hover,
+.top-story-card-footer .card-inline-context:focus,
+.top-story-card-footer .card-inline-context:focus-visible {
+  border-bottom: 0 !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+}
+
+/* Compact Today heading and solid briefing treatment */
+#main > .post.top-stories-post .page-intro {
+  align-items: flex-end;
+  flex-direction: row;
+  gap: 1rem;
+  margin-bottom: .9rem;
+}
+
+#main > .post.top-stories-post .page-intro > .page-intro-copy {
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+#main > .post.top-stories-post .page-intro > .page-intro-copy > h1 {
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  letter-spacing: -.04em;
+  line-height: 1;
+}
+
+#main > .post.top-stories-post .page-intro .header-date {
+  flex: 0 0 auto;
+  margin-left: auto;
+}
+
+.daily-briefing:has(.daily-briefing-prose) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: .72rem;
+  padding: 1.15rem clamp(1.1rem, 2.2vw, 1.55rem);
+  border-color: var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  box-shadow: 0 8px 24px rgba(23, 37, 45, .055);
+}
+
+.daily-briefing:has(.daily-briefing-prose) .daily-briefing-kicker {
+  margin: 0;
+}
+
+html[data-theme="dark"] .daily-briefing:has(.daily-briefing-prose) {
+  border-color: var(--border);
+  background: var(--surface);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, .18);
+}
+
+/* Subtle newsprint texture with distributed ambient light */
+.muninn-app-shell {
+  background:
+    radial-gradient(circle, rgba(23, 37, 45, .03) .55px, transparent .75px) 0 0 / 9px 9px,
+    radial-gradient(ellipse 38rem 30rem at 84% 2%, rgba(40, 106, 122, .065), transparent 72%),
+    radial-gradient(ellipse 42rem 34rem at 5% 34%, rgba(40, 106, 122, .035), transparent 72%),
+    radial-gradient(ellipse 40rem 32rem at 95% 63%, rgba(40, 106, 122, .04), transparent 72%),
+    radial-gradient(ellipse 38rem 30rem at 8% 91%, rgba(40, 106, 122, .03), transparent 72%),
+    var(--canvas);
+}
+
+html[data-theme="dark"] .muninn-app-shell {
+  background:
+    radial-gradient(circle, rgba(238, 244, 245, .03) .55px, transparent .75px) 0 0 / 9px 9px,
+    radial-gradient(ellipse 38rem 30rem at 84% 2%, rgba(103, 175, 191, .065), transparent 72%),
+    radial-gradient(ellipse 42rem 34rem at 5% 34%, rgba(103, 175, 191, .035), transparent 72%),
+    radial-gradient(ellipse 40rem 32rem at 95% 63%, rgba(103, 175, 191, .04), transparent 72%),
+    radial-gradient(ellipse 38rem 30rem at 8% 91%, rgba(103, 175, 191, .03), transparent 72%),
+    var(--canvas);
 }
