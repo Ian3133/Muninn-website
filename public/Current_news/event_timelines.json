@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "generated_at": "2026-07-21T15:03:08.231666+00:00",
+  "generated_at": "2026-07-22T15:05:33.004199+00:00",
   "lookback_days": 30,
   "verification_provider": "deterministic_source_grounded_event_match_v2",
-  "tracked_event_count": 84,
-  "event_count": 18,
+  "tracked_event_count": 104,
+  "event_count": 22,
   "events": [
     {
       "event_id": "event_us-continues-strikes-on-iran-amid-traffic-st_41c26ce1d9",
@@ -474,8 +474,8 @@
         "latest_date": "2026-07-21",
         "latest_update_title": "US Intensifies Airstrikes on Iran Following Deaths of Service Members",
         "coverage_score": 0.902,
-        "recency_score": 1.0,
-        "rank_score": 0.959,
+        "recency_score": 0.875,
+        "rank_score": 0.886,
         "context_summary": "Muninn first tracked this thread on 2026-07-18: US Continues Strikes on Iran Amid Traffic Standstill in Strait of Hormuz. The latest development is US Intensifies Airstrikes on Iran Following Deaths of Service Members.",
         "cta_label": "Explore 5 developments"
       },
@@ -621,6 +621,27 @@
             "america",
             "iran",
             "jordan",
+            "us"
+          ]
+        },
+        {
+          "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+          "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
+          "relationship": "related_topic",
+          "confidence": 0.725,
+          "shared_entities": [
+            "iran",
+            "strait",
+            "us"
+          ]
+        },
+        {
+          "event_id": "event_trump-to-attend-dignified-transfer-of-four-u_c92dd717ef",
+          "title": "Trump to Attend Dignified Transfer of Four US Service Members Killed in Middle East",
+          "relationship": "related_topic",
+          "confidence": 0.721,
+          "shared_entities": [
+            "service_member",
             "us"
           ]
         }
@@ -1192,8 +1213,8 @@
         "latest_date": "2026-07-21",
         "latest_update_title": "Tate Brothers Challenge Extradition to the UK Amid Rape Charges",
         "coverage_score": 0.732,
-        "recency_score": 1.0,
-        "rank_score": 0.888,
+        "recency_score": 0.875,
+        "rank_score": 0.815,
         "context_summary": "Muninn first tracked this thread on 2026-07-19: Tate Brothers Arrested in Miami Facing UK Charges. The latest development is Tate Brothers Challenge Extradition to the UK Amid Rape Charges.",
         "cta_label": ""
       },
@@ -1301,6 +1322,79 @@
           ]
         }
       ],
+      "event_overview": {
+        "available": true,
+        "title": "About Tate Brothers Arrest",
+        "subject": "Tate Brothers Arrest",
+        "summary": "The event concerns the July 2026 U.S. arrest of Andrew and Tristan Tate after UK prosecutors sought their extradition to face criminal charges in England. It is an extradition and charging matter, not a finding of guilt: the Crown Prosecution Service says the proceedings are active and that guilt can be determined only by a court.",
+        "facts": [
+          {
+            "label": "Arrest and location",
+            "value": "The brothers were arrested by the U.S. Marshals Service in the United States on July 18, 2026; reporting and the selected timeline identify Miami, Florida, as the location of the arrest.",
+            "source_ids": [
+              "o1",
+              "o2"
+            ]
+          },
+          {
+            "label": "UK charging scope",
+            "value": "The CPS said it would pursue extradition on 21 pre-existing charges and further charges involving four additional alleged victims. The added allegations include rape, arranging or facilitating trafficking for sexual exploitation, assault, and offences relating to indecent images of a child and extreme pornography.",
+            "source_ids": [
+              "o1"
+            ]
+          },
+          {
+            "label": "Alleged time period and victims",
+            "value": "According to the CPS, the further alleged offending occurred between July 2010 and August 2017; the charging decisions brought the stated total number of alleged victims in the UK case to seven.",
+            "source_ids": [
+              "o1"
+            ]
+          },
+          {
+            "label": "Earlier extradition history",
+            "value": "UK extradition warrants were issued at Westminster Magistrates’ Court in January 2024. In March 2024, the Bucharest Court of Appeal ordered extradition to the UK only after separate Romanian criminal proceedings concluded.",
+            "source_ids": [
+              "o3"
+            ]
+          },
+          {
+            "label": "Legal status",
+            "value": "The CPS requested extradition from the United States, and as of July 19, 2026 said the brothers had been arrested and were awaiting extradition proceedings. The CPS emphasizes that a charging decision is not a finding of fact or guilt and that the defendants have a right to a fair trial.",
+            "source_ids": [
+              "o1"
+            ]
+          }
+        ],
+        "scope_note": "The selected Muninn timeline covers the Miami arrest and the initial U.S. extradition challenge from July 19–21, 2026, rather than the underlying evidence, the separate Romanian proceedings, or any eventual extradition or trial outcome.",
+        "sources": [
+          {
+            "title": "Gov",
+            "publisher": "Gov",
+            "url": "https://www.cps.gov.uk/national-news/news/cps-decides-prosecute-tate-brothers-additional-sexual-offences",
+            "source_type": "reporting",
+            "id": "o1"
+          },
+          {
+            "title": "AP News",
+            "publisher": "AP News",
+            "url": "https://apnews.com/article/3a3748e075f49b00f286a003f5103485",
+            "source_type": "reporting",
+            "id": "o2"
+          },
+          {
+            "title": "Judiciary",
+            "publisher": "Judiciary",
+            "url": "https://www.judiciary.uk/wp-content/uploads/2026/06/The-King-on-the-application-of-Tate-v-Director-of-Public-Prosecutions-Press-Summary.pdf",
+            "source_type": "reporting",
+            "id": "o3"
+          }
+        ],
+        "publisher_count": 3,
+        "generated_at": "2026-07-21T15:03:08.239650+00:00",
+        "expires_at": "2026-07-28T15:03:08.239650+00:00",
+        "model": "gpt-5.6-terra",
+        "provenance": "openai_web_search_source_grounded_event_overview_v1"
+      },
       "search_tokens": [
         "accused",
         "andrew",
@@ -1374,80 +1468,332 @@
         "united_kingdom",
         "us"
       ],
-      "search_text": "accused andrew appear arrested authoritie britain brother brother_arrested brother_challenge challenge challenge_extradition charge charge_andrew claimed committed contest court crime deny exploitation extradition extradition_influencer face facing fighting florida human hunt including influencer kingdom lawyer legal marshal marshal_service. miami miami_facing miami_florida part political proceeding process rape rape_charge seeks seeks_extradition seriou service service._they sexual tate tate_arrested tate_brother them they trafficking tristan tristan_tate uk united united_kingdom us victim where which witch",
-      "event_overview": {
+      "search_text": "accused andrew appear arrested authoritie britain brother brother_arrested brother_challenge challenge challenge_extradition charge charge_andrew claimed committed contest court crime deny exploitation extradition extradition_influencer face facing fighting florida human hunt including influencer kingdom lawyer legal marshal marshal_service. miami miami_facing miami_florida part political proceeding process rape rape_charge seeks seeks_extradition seriou service service._they sexual tate tate_arrested tate_brother them they trafficking tristan tristan_tate uk united united_kingdom us victim where which witch"
+    },
+    {
+      "event_id": "event_trump-implements-50-tariffs-on-various-canad_d99167fcaa",
+      "title": "Trump Implements 50% Tariffs on Various Canadian Goods",
+      "canonical_title": "Trump Implements 50% Tariffs on Various Canadian Goods",
+      "topic_label": "US-Canada Trade Dispute",
+      "summary": "President Donald Trump has announced the imposition of 50% tariffs on a range of Canadian goods, including dairy, alcohol, and automobiles. The tariffs are a response to perceived discriminatory practices by Canada against American products. This move marks a significant escalation in the ongoing trade tensions between the two countries.",
+      "status": "active",
+      "first_seen_at": "2026-07-21",
+      "last_seen_at": "2026-07-22",
+      "timeline": [
+        {
+          "development_id": "story_3eda052aa7e69339",
+          "daily_story_id": "story_3eda052aa7e69339",
+          "date": "2026-07-21",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Trump Implements 50% Tariffs on Various Canadian Goods",
+          "summary": "President Donald Trump has announced the imposition of 50% tariffs on a range of Canadian goods, including dairy, alcohol, and automobiles. The tariffs are a response to perceived discriminatory practices by Canada against American products. This move marks a significant escalation in the ongoing trade tensions between the two countries.",
+          "development_type": "policy",
+          "key_facts": [
+            "50% tariffs imposed on Canadian goods",
+            "Affected categories include dairy, alcohol, and cars",
+            "Tariffs are a response to alleged discrimination against US products"
+          ],
+          "source_count": 6,
+          "sources": [
+            "AP - Top News via Google News",
+            "CBS News - Latest",
+            "DW - English",
+            "Euronews",
+            "NBC News - Top Stories",
+            "RTE News"
+          ],
+          "source_urls": [
+            "https://www.rte.ie/news/world/2026/0721/1584317-us-canada-tariffs",
+            "https://www.nbcnews.com/video/trump-imposes-50-tariffs-on-dairy-alcohol-and-cars-from-canada-266971717891",
+            "https://www.dw.com/en/us-imposes-new-50-tariff-on-many-canadian-goods/a-78042667?maca=en-rss-en-all-1573-rdf",
+            "https://news.google.com/rss/articles/CBMipgFBVV95cUxNTVJzOTFERXBSclRBTElQM0l6VzlJV092REdRYkdyeFJRZVgwVzBhSEQ3NFItdWh6SGxCZnp1TFFqQzFyZnFzd21jSlpReEZDZ2lOVm51cV9GalNodHFyb0FsUC1kVy0tMFZUQ19hU2x6RDhYTHBWVDZlOXRUOWhXV2NQek1ONzVYblNGM3lIUDdVUnBnaEEzNmxMalV5NVdGX2c4UkJ3?oc=5",
+            "http://www.euronews.com/business/2026/07/21/trump-imposes-50-tariffs-on-canadian-goods-citing-disputes-over-autos",
+            "https://www.cbsnews.com/news/trump-canada-tariffs-hockey-milk-alcohol"
+          ],
+          "source_details": [
+            {
+              "title": "Trump orders new 50% tariff on many Canadian goods",
+              "source": "RTE News",
+              "link": "https://www.rte.ie/news/world/2026/0721/1584317-us-canada-tariffs",
+              "source_bias": "center"
+            },
+            {
+              "title": "Trump imposes 50% tariffs on dairy, alcohol, and cars from Canada",
+              "source": "NBC News - Top Stories",
+              "link": "https://www.nbcnews.com/video/trump-imposes-50-tariffs-on-dairy-alcohol-and-cars-from-canada-266971717891",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "US imposes new 50% tariff on many Canadian goods",
+              "source": "DW - English",
+              "link": "https://www.dw.com/en/us-imposes-new-50-tariff-on-many-canadian-goods/a-78042667?maca=en-rss-en-all-1573-rdf",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Trump imposes 50% tariffs on Canadian goods, citing disputes over autos, alcohol and cheese",
+              "source": "AP - Top News via Google News",
+              "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNTVJzOTFERXBSclRBTElQM0l6VzlJV092REdRYkdyeFJRZVgwVzBhSEQ3NFItdWh6SGxCZnp1TFFqQzFyZnFzd21jSlpReEZDZ2lOVm51cV9GalNodHFyb0FsUC1kVy0tMFZUQ19hU2x6RDhYTHBWVDZlOXRUOWhXV2NQek1ONzVYblNGM3lIUDdVUnBnaEEzNmxMalV5NVdGX2c4UkJ3?oc=5",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Trump imposes 50% tariffs on Canadian goods citing disputes over autos",
+              "source": "Euronews",
+              "link": "http://www.euronews.com/business/2026/07/21/trump-imposes-50-tariffs-on-canadian-goods-citing-disputes-over-autos",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Trump to impose 50% tariffs on Canadian hockey sticks, alcohol, other goods",
+              "source": "CBS News - Latest",
+              "link": "https://www.cbsnews.com/news/trump-canada-tariffs-hockey-milk-alcohol",
+              "source_bias": "lean-left"
+            }
+          ],
+          "confidence": 1.0,
+          "match_evidence": {
+            "score": 1.0,
+            "method": "new_event",
+            "shared_tokens": [],
+            "shared_entities": []
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-21",
+          "last_seen_at": "2026-07-21",
+          "integrity_status": "trusted"
+        },
+        {
+          "development_id": "story_6f31d6456a91ecb7",
+          "daily_story_id": "story_6f31d6456a91ecb7",
+          "date": "2026-07-22",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Trump Enacts 50% Tariffs on Canadian Dairy, Alcohol, and Cars",
+          "summary": "The Trump administration has imposed a 50% tariff on imports from Canada, specifically targeting dairy, alcohol, and cars. This decision is based on claims of unfair discrimination against American products. Additionally, there are considerations for further tariffs related to the impact of Canadian wildfires.",
+          "topic_label": "US-Canada Trade Dispute",
+          "development_type": "policy",
+          "key_facts": [
+            "50% tariffs imposed on Canadian dairy, alcohol, and cars",
+            "Tariffs cited due to claims of discrimination against American goods",
+            "Further tariffs may be considered due to Canadian wildfires"
+          ],
+          "source_count": 2,
+          "sources": [
+            "Euronews",
+            "NBC News"
+          ],
+          "source_urls": [
+            "https://www.nbcnews.com/video/trump-imposes-50-tariffs-on-dairy-alcohol-and-cars-from-canada-266971717891",
+            "http://www.euronews.com/business/2026/07/21/trump-imposes-50-tariffs-on-canadian-goods-citing-disputes-over-autos"
+          ],
+          "source_details": [
+            {
+              "title": "Trump imposes 50% tariffs on dairy, alcohol, and cars from Canada",
+              "source": "NBC News",
+              "link": "https://www.nbcnews.com/video/trump-imposes-50-tariffs-on-dairy-alcohol-and-cars-from-canada-266971717891",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Trump imposes 50% tariffs on Canadian goods citing disputes over autos",
+              "source": "Euronews",
+              "link": "http://www.euronews.com/business/2026/07/21/trump-imposes-50-tariffs-on-canadian-goods-citing-disputes-over-autos",
+              "source_bias": "lean-left"
+            }
+          ],
+          "confidence": 1.0,
+          "match_evidence": {
+            "score": 1.0,
+            "matched_development_id": "story_3eda052aa7e69339",
+            "shared_tokens": [
+              "alcohol",
+              "america",
+              "canada",
+              "canadian",
+              "cars",
+              "dairy",
+              "discrimination",
+              "goods",
+              "imposed",
+              "product",
+              "tariff",
+              "trade",
+              "trump"
+            ],
+            "shared_entities": [
+              "america"
+            ],
+            "source_url_match": true,
+            "method": "deterministic_event_match_v2",
+            "threshold": 0.38
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-22",
+          "last_seen_at": "2026-07-22",
+          "integrity_status": "trusted"
+        }
+      ],
+      "integrity": {
+        "public_development_count": 2,
+        "questionable_development_count": 0,
+        "review_required": false
+      },
+      "latest_title": "Trump Enacts 50% Tariffs on Canadian Dairy, Alcohol, and Cars",
+      "latest_summary": "The Trump administration has imposed a 50% tariff on imports from Canada, specifically targeting dairy, alcohol, and cars. This decision is based on claims of unfair discrimination against American products. Additionally, there are considerations for further tariffs related to the impact of Canadian wildfires.",
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "stage": "developing_event",
+        "stage_label": "Developing event",
+        "base_title": "US-Canada Trade Dispute",
+        "display_title": "US-Canada Trade Dispute",
+        "milestone_development_ids": [
+          "story_3eda052aa7e69339",
+          "story_6f31d6456a91ecb7"
+        ],
+        "summary_available": true,
+        "summary_label": "Read the story so far",
+        "summary_updated_at": "2026-07-22",
+        "development_count": 2,
+        "coverage_packet_count": 2,
+        "date_count": 2,
+        "source_count": 6,
+        "independent_source_count": 7,
+        "first_date": "2026-07-21",
+        "latest_date": "2026-07-22",
+        "latest_update_title": "Trump Enacts 50% Tariffs on Canadian Dairy, Alcohol, and Cars",
+        "coverage_score": 0.534,
+        "recency_score": 1.0,
+        "rank_score": 0.804,
+        "context_summary": "Muninn first tracked this thread on 2026-07-21: Trump Implements 50% Tariffs on Various Canadian Goods. The latest development is Trump Enacts 50% Tariffs on Canadian Dairy, Alcohol, and Cars.",
+        "cta_label": ""
+      },
+      "event_summary": {
         "available": true,
-        "title": "About Tate Brothers Arrest",
-        "subject": "Tate Brothers Arrest",
-        "summary": "The event concerns the July 2026 U.S. arrest of Andrew and Tristan Tate after UK prosecutors sought their extradition to face criminal charges in England. It is an extradition and charging matter, not a finding of guilt: the Crown Prosecution Service says the proceedings are active and that guilt can be determined only by a court.",
-        "facts": [
+        "summary": "President Donald Trump has announced the imposition of 50% tariffs on a range of Canadian goods, including dairy, alcohol, and automobiles. Most recently, the Trump administration has imposed a 50% tariff on imports from Canada, specifically targeting dairy, alcohol, and cars.",
+        "key_developments": [
           {
-            "label": "Arrest and location",
-            "value": "The brothers were arrested by the U.S. Marshals Service in the United States on July 18, 2026; reporting and the selected timeline identify Miami, Florida, as the location of the arrest.",
-            "source_ids": [
-              "o1",
-              "o2"
-            ]
+            "development_id": "story_3eda052aa7e69339",
+            "date": "2026-07-21",
+            "title": "Trump Implements 50% Tariffs on Various Canadian Goods"
           },
           {
-            "label": "UK charging scope",
-            "value": "The CPS said it would pursue extradition on 21 pre-existing charges and further charges involving four additional alleged victims. The added allegations include rape, arranging or facilitating trafficking for sexual exploitation, assault, and offences relating to indecent images of a child and extreme pornography.",
-            "source_ids": [
-              "o1"
-            ]
-          },
-          {
-            "label": "Alleged time period and victims",
-            "value": "According to the CPS, the further alleged offending occurred between July 2010 and August 2017; the charging decisions brought the stated total number of alleged victims in the UK case to seven.",
-            "source_ids": [
-              "o1"
-            ]
-          },
-          {
-            "label": "Earlier extradition history",
-            "value": "UK extradition warrants were issued at Westminster Magistrates’ Court in January 2024. In March 2024, the Bucharest Court of Appeal ordered extradition to the UK only after separate Romanian criminal proceedings concluded.",
-            "source_ids": [
-              "o3"
-            ]
-          },
-          {
-            "label": "Legal status",
-            "value": "The CPS requested extradition from the United States, and as of July 19, 2026 said the brothers had been arrested and were awaiting extradition proceedings. The CPS emphasizes that a charging decision is not a finding of fact or guilt and that the defendants have a right to a fair trial.",
-            "source_ids": [
-              "o1"
-            ]
+            "development_id": "story_6f31d6456a91ecb7",
+            "date": "2026-07-22",
+            "title": "Trump Enacts 50% Tariffs on Canadian Dairy, Alcohol, and Cars"
           }
         ],
-        "scope_note": "The selected Muninn timeline covers the Miami arrest and the initial U.S. extradition challenge from July 19–21, 2026, rather than the underlying evidence, the separate Romanian proceedings, or any eventual extradition or trial outcome.",
         "sources": [
           {
-            "title": "Gov",
-            "publisher": "Gov",
-            "url": "https://www.cps.gov.uk/national-news/news/cps-decides-prosecute-tate-brothers-additional-sexual-offences",
-            "source_type": "reporting",
-            "id": "o1"
+            "title": "Trump orders new 50% tariff on many Canadian goods",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/world/2026/0721/1584317-us-canada-tariffs",
+            "source_bias": "center"
           },
           {
-            "title": "AP News",
-            "publisher": "AP News",
-            "url": "https://apnews.com/article/3a3748e075f49b00f286a003f5103485",
-            "source_type": "reporting",
-            "id": "o2"
+            "title": "Trump imposes 50% tariffs on dairy, alcohol, and cars from Canada",
+            "source": "NBC News - Top Stories",
+            "link": "https://www.nbcnews.com/video/trump-imposes-50-tariffs-on-dairy-alcohol-and-cars-from-canada-266971717891",
+            "source_bias": "lean-left"
           },
           {
-            "title": "Judiciary",
-            "publisher": "Judiciary",
-            "url": "https://www.judiciary.uk/wp-content/uploads/2026/06/The-King-on-the-application-of-Tate-v-Director-of-Public-Prosecutions-Press-Summary.pdf",
-            "source_type": "reporting",
-            "id": "o3"
+            "title": "US imposes new 50% tariff on many Canadian goods",
+            "source": "DW - English",
+            "link": "https://www.dw.com/en/us-imposes-new-50-tariff-on-many-canadian-goods/a-78042667?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Trump imposes 50% tariffs on Canadian goods, citing disputes over autos, alcohol and cheese",
+            "source": "AP - Top News via Google News",
+            "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNTVJzOTFERXBSclRBTElQM0l6VzlJV092REdRYkdyeFJRZVgwVzBhSEQ3NFItdWh6SGxCZnp1TFFqQzFyZnFzd21jSlpReEZDZ2lOVm51cV9GalNodHFyb0FsUC1kVy0tMFZUQ19hU2x6RDhYTHBWVDZlOXRUOWhXV2NQek1ONzVYblNGM3lIUDdVUnBnaEEzNmxMalV5NVdGX2c4UkJ3?oc=5",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Trump imposes 50% tariffs on Canadian goods citing disputes over autos",
+            "source": "Euronews",
+            "link": "http://www.euronews.com/business/2026/07/21/trump-imposes-50-tariffs-on-canadian-goods-citing-disputes-over-autos",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Trump to impose 50% tariffs on Canadian hockey sticks, alcohol, other goods",
+            "source": "CBS News - Latest",
+            "link": "https://www.cbsnews.com/news/trump-canada-tariffs-hockey-milk-alcohol",
+            "source_bias": "lean-left"
           }
         ],
-        "publisher_count": 3,
-        "generated_at": "2026-07-21T15:03:08.239650+00:00",
-        "expires_at": "2026-07-28T15:03:08.239650+00:00",
-        "model": "gpt-5.6-terra",
-        "provenance": "openai_web_search_source_grounded_event_overview_v1"
-      }
+        "updated_at": "2026-07-22",
+        "provenance": "source_grounded_event_memory"
+      },
+      "event_stage": "developing_event",
+      "related_events": [],
+      "search_tokens": [
+        "additionally",
+        "administration",
+        "alcohol",
+        "america",
+        "announced",
+        "automobile",
+        "based",
+        "canada",
+        "canadian",
+        "cars",
+        "claim",
+        "consideration",
+        "countrie",
+        "dairy",
+        "decision",
+        "discrimination",
+        "discriminatory",
+        "donald",
+        "enact",
+        "escalation",
+        "further",
+        "goods",
+        "impact",
+        "implement",
+        "import",
+        "imposed",
+        "imposition",
+        "including",
+        "marks",
+        "move",
+        "ongoing",
+        "perceived",
+        "practice",
+        "product",
+        "range",
+        "related",
+        "response",
+        "significant",
+        "specifically",
+        "targeting",
+        "tariff",
+        "tension",
+        "there",
+        "trade",
+        "trump",
+        "unfair",
+        "variou",
+        "wildfire"
+      ],
+      "entities": [
+        "america",
+        "canada",
+        "canadian_dairy",
+        "canadian_goods",
+        "dairy_alcohol",
+        "donald_trump",
+        "enact_tariff",
+        "implement_tariff",
+        "trump_enact",
+        "trump_implement",
+        "variou_canadian"
+      ],
+      "search_text": "additionally administration alcohol america announced automobile based canada canadian canadian_dairy canadian_goods cars claim consideration countrie dairy dairy_alcohol decision discrimination discriminatory donald donald_trump enact enact_tariff escalation further goods impact implement implement_tariff import imposed imposition including marks move ongoing perceived practice product range related response significant specifically targeting tariff tension there trade trump trump_enact trump_implement unfair variou variou_canadian wildfire"
     },
     {
       "event_id": "event_andy-burnham-takes-office-as-uk-prime-minist_6a6783b0f0",
@@ -1762,8 +2108,8 @@
         "latest_date": "2026-07-21",
         "latest_update_title": "Andy Burnham Sworn in as New Prime Minister of the UK",
         "coverage_score": 0.647,
-        "recency_score": 1.0,
-        "rank_score": 0.852,
+        "recency_score": 0.875,
+        "rank_score": 0.779,
         "context_summary": "Muninn first tracked this thread on 2026-07-20: Andy Burnham Assumes Role as UK Prime Minister Amidst Major Challenges. The latest development is Andy Burnham Sworn in as New Prime Minister of the UK.",
         "cta_label": ""
       },
@@ -2055,6 +2401,315 @@
       "search_text": "10-year amidst andy andy_burnham appointed assume assume_role became buckingham buckingham_palace burnham burnham_assume burnham_sworn call challenge challenge_andy change charle charle_iii decade down downing downing_street. faces formal hold iii including individual keir keir_starmer king king_charle kingdom last leadership manchester marks mayor ministerial model office officially palace part plan political position previously prime role seventh significant sixth starmer stepped street succeeding sworn taking transition uk united united_kingdom years"
     },
     {
+      "event_id": "event_tropical-storm-bertha-approaches-gulf-coast_136f84f48e",
+      "title": "Tropical Storm Bertha Approaches Gulf Coast as Hurricane Fausto Develops in Eastern Pacific",
+      "canonical_title": "Tropical Storm Bertha Approaches Gulf Coast as Hurricane Fausto Develops in Eastern Pacific",
+      "topic_label": "Tropical Storms",
+      "summary": "Tropical Storm Bertha has formed in the Gulf of Mexico and is moving toward the Gulf Coast, posing risks of heavy rain, storm surge, and damaging winds. Meanwhile, Hurricane Fausto has developed in the eastern Pacific Ocean, although it is located far from populated areas. Preparations are underway in coastal regions as Bertha approaches.",
+      "status": "active",
+      "first_seen_at": "2026-07-21",
+      "last_seen_at": "2026-07-22",
+      "timeline": [
+        {
+          "development_id": "story_b7fba216df02338b",
+          "daily_story_id": "story_b7fba216df02338b",
+          "date": "2026-07-21",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Tropical Storm Bertha Approaches Gulf Coast as Hurricane Fausto Develops in Eastern Pacific",
+          "summary": "Tropical Storm Bertha has formed in the Gulf of Mexico and is moving toward the Gulf Coast, posing risks of heavy rain, storm surge, and damaging winds. Meanwhile, Hurricane Fausto has developed in the eastern Pacific Ocean, although it is located far from populated areas. Preparations are underway in coastal regions as Bertha approaches.",
+          "development_type": "development",
+          "key_facts": [
+            "Tropical Storm Bertha formed in the Gulf of Mexico south of the Florida Panhandle.",
+            "Bertha is moving toward populated coastal areas with threats of heavy rain and storm surge.",
+            "Hurricane Fausto has formed in the eastern Pacific Ocean."
+          ],
+          "source_count": 3,
+          "sources": [
+            "ABC News",
+            "AP News",
+            "NewsNation"
+          ],
+          "source_urls": [
+            "https://news.google.com/rss/articles/CBMimAFBVV95cUxPWUtZaU1rRXotenV4eWFXNm9PdnF3bHgxaWFyZ1hGeF9laVlyak1TWWdVSDNkY0FlUkw2YVhhWG1lVDhrc192Z0JlNllKc2ZrOFFCZEMwREtYelhTUlVWS1h0b2NvZXlHeENJYll6eDVMLTd0b04zTGR5SjlsNW5MZDZNeGFxalNLMlBNb0ZSY3l2dnQ1R3VJSw?oc=5",
+            "https://news.google.com/rss/articles/CBMimAFBVV95cUxPYkZrbUs2VENDVGRWQVpaNmx5ZE1NbG5UbDNUU1FZTDFUQ2NZYkdpalJyWkw2blo3X084WWtLRHdYUTByenhwOHlRYkFsMFRTNGpMcDVRMURkaGZMbE1qS0drTTlWa0RoWVNWTWtKNUxoT3VhNWhkZnh4WE56dVhwN3huS1pxdHV5SzhDdmJnaGEtWU9GQmxEbtIBngFBVV95cUxOQ2dlNHE3SnR0YXBXV1NTcm8xOHI0YWhHajg5ODdLVnJiMnhsSmRXaUNFZHZHdmJoN2pXb3dEaTlfNE5lUWxhdTJRMlAweGw2dU1jUDg0WEp0a3paYV9oWm8tamtiV0lhRmE3SS1OdkMyQU1kbzNBVjZaR2p5V3I3WHp4ZVBsVGhkZ1pXNGpVcVZXQlJPZEdSUzZwOXJQUQ?oc=5",
+            "https://www.newsnationnow.com/weather/ap-tropical-depression-nearing-us-gulf-coast-set-to-become-a-tropical-storm-forecasters-say"
+          ],
+          "source_details": [
+            {
+              "title": "Tropical Storm Bertha drifts toward land as Hurricane Fausto forms in the eastern Pacific",
+              "source": "AP News",
+              "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPWUtZaU1rRXotenV4eWFXNm9PdnF3bHgxaWFyZ1hGeF9laVlyak1TWWdVSDNkY0FlUkw2YVhhWG1lVDhrc192Z0JlNllKc2ZrOFFCZEMwREtYelhTUlVWS1h0b2NvZXlHeENJYll6eDVMLTd0b04zTGR5SjlsNW5MZDZNeGFxalNLMlBNb0ZSY3l2dnQ1R3VJSw?oc=5",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Tropical Storm Bertha churns off Florida coast, prompting storm alerts",
+              "source": "ABC News",
+              "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPYkZrbUs2VENDVGRWQVpaNmx5ZE1NbG5UbDNUU1FZTDFUQ2NZYkdpalJyWkw2blo3X084WWtLRHdYUTByenhwOHlRYkFsMFRTNGpMcDVRMURkaGZMbE1qS0drTTlWa0RoWVNWTWtKNUxoT3VhNWhkZnh4WE56dVhwN3huS1pxdHV5SzhDdmJnaGEtWU9GQmxEbtIBngFBVV95cUxOQ2dlNHE3SnR0YXBXV1NTcm8xOHI0YWhHajg5ODdLVnJiMnhsSmRXaUNFZHZHdmJoN2pXb3dEaTlfNE5lUWxhdTJRMlAweGw2dU1jUDg0WEp0a3paYV9oWm8tamtiV0lhRmE3SS1OdkMyQU1kbzNBVjZaR2p5V3I3WHp4ZVBsVGhkZ1pXNGpVcVZXQlJPZEdSUzZwOXJQUQ?oc=5",
+              "source_bias": "mixed"
+            },
+            {
+              "title": "Tropical Storm Bertha drifts toward land as Hurricane Fausto forms in the eastern Pacific",
+              "source": "NewsNation",
+              "link": "https://www.newsnationnow.com/weather/ap-tropical-depression-nearing-us-gulf-coast-set-to-become-a-tropical-storm-forecasters-say",
+              "source_bias": "center"
+            }
+          ],
+          "confidence": 1.0,
+          "match_evidence": {
+            "score": 1.0,
+            "method": "new_event",
+            "shared_tokens": [],
+            "shared_entities": []
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-21",
+          "last_seen_at": "2026-07-21",
+          "integrity_status": "trusted"
+        },
+        {
+          "development_id": "story_1f5d9e46b80eff28",
+          "daily_story_id": "story_1f5d9e46b80eff28",
+          "date": "2026-07-22",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Tropical Storm Bertha Approaches Gulf Coast, Prompting Beach Closures and Flood Preparations",
+          "summary": "Tropical Storm Bertha is approaching the Gulf Coast, leading to beach closures and the filling of sandbags in preparation for heavy rain and potential flooding. This storm follows Tropical Storm Arthur, which recently caused significant flooding in the region.",
+          "topic_label": "Tropical Storm Bertha",
+          "development_type": "development",
+          "key_facts": [
+            "Tropical Storm Bertha is the second storm of the Atlantic hurricane season.",
+            "Coastal areas are preparing for heavy rain and flooding.",
+            "Tropical Storm Arthur previously caused flooding in the southeastern US"
+          ],
+          "source_count": 2,
+          "sources": [
+            "NewsNation",
+            "PBS News"
+          ],
+          "source_urls": [
+            "https://www.newsnationnow.com/weather/ap-beaches-closed-and-sandbags-filled-as-tropical-storm-bertha-approaches-the-gulf-coast",
+            "https://www.pbs.org/newshour/nation/tropical-storm-bertha-forecast-to-bring-heavy-rain-flooding-along-the-gulf-coast"
+          ],
+          "source_details": [
+            {
+              "title": "Beaches closed and sandbags filled as Tropical Storm Bertha approaches the Gulf Coast",
+              "source": "NewsNation",
+              "link": "https://www.newsnationnow.com/weather/ap-beaches-closed-and-sandbags-filled-as-tropical-storm-bertha-approaches-the-gulf-coast",
+              "source_bias": "center"
+            },
+            {
+              "title": "Tropical Storm Bertha forecast to bring heavy rain, flooding along the Gulf Coast",
+              "source": "PBS News",
+              "link": "https://www.pbs.org/newshour/nation/tropical-storm-bertha-forecast-to-bring-heavy-rain-flooding-along-the-gulf-coast",
+              "source_bias": "lean-left"
+            }
+          ],
+          "confidence": 0.406,
+          "match_evidence": {
+            "score": 0.406,
+            "matched_development_id": "story_b7fba216df02338b",
+            "shared_tokens": [
+              "approache",
+              "areas",
+              "bertha",
+              "coast",
+              "coastal",
+              "gulf",
+              "heavy",
+              "hurricane",
+              "preparation",
+              "rain",
+              "region",
+              "storm",
+              "tropical"
+            ],
+            "shared_entities": [
+              "approache_gulf",
+              "bertha_approache",
+              "gulf_coast",
+              "storm_bertha",
+              "tropical_storm"
+            ],
+            "source_url_match": false,
+            "method": "deterministic_event_match_v2",
+            "threshold": 0.38
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-22",
+          "last_seen_at": "2026-07-22",
+          "integrity_status": "trusted"
+        }
+      ],
+      "integrity": {
+        "public_development_count": 2,
+        "questionable_development_count": 0,
+        "review_required": false
+      },
+      "latest_title": "Tropical Storm Bertha Approaches Gulf Coast, Prompting Beach Closures and Flood Preparations",
+      "latest_summary": "Tropical Storm Bertha is approaching the Gulf Coast, leading to beach closures and the filling of sandbags in preparation for heavy rain and potential flooding. This storm follows Tropical Storm Arthur, which recently caused significant flooding in the region.",
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "stage": "developing_event",
+        "stage_label": "Developing event",
+        "base_title": "Tropical Storms",
+        "display_title": "Tropical Storms",
+        "milestone_development_ids": [
+          "story_b7fba216df02338b",
+          "story_1f5d9e46b80eff28"
+        ],
+        "summary_available": true,
+        "summary_label": "Read the story so far",
+        "summary_updated_at": "2026-07-22",
+        "development_count": 2,
+        "coverage_packet_count": 2,
+        "date_count": 2,
+        "source_count": 5,
+        "independent_source_count": 4,
+        "first_date": "2026-07-21",
+        "latest_date": "2026-07-22",
+        "latest_update_title": "Tropical Storm Bertha Approaches Gulf Coast, Prompting Beach Closures and Flood Preparations",
+        "coverage_score": 0.409,
+        "recency_score": 1.0,
+        "rank_score": 0.752,
+        "context_summary": "Muninn first tracked this thread on 2026-07-21: Tropical Storm Bertha Approaches Gulf Coast as Hurricane Fausto Develops in Eastern Pacific. The latest development is Tropical Storm Bertha Approaches Gulf Coast, Prompting Beach Closures and Flood Preparations.",
+        "cta_label": ""
+      },
+      "event_summary": {
+        "available": true,
+        "summary": "Tropical Storm Bertha has formed in the Gulf of Mexico and is moving toward the Gulf Coast, posing risks of heavy rain, storm surge, and damaging winds. Most recently, tropical Storm Bertha is approaching the Gulf Coast, leading to beach closures and the filling of sandbags in preparation for heavy rain and potential flooding.",
+        "key_developments": [
+          {
+            "development_id": "story_b7fba216df02338b",
+            "date": "2026-07-21",
+            "title": "Tropical Storm Bertha Approaches Gulf Coast as Hurricane Fausto Develops in Eastern Pacific"
+          },
+          {
+            "development_id": "story_1f5d9e46b80eff28",
+            "date": "2026-07-22",
+            "title": "Tropical Storm Bertha Approaches Gulf Coast, Prompting Beach Closures and Flood Preparations"
+          }
+        ],
+        "sources": [
+          {
+            "title": "Tropical Storm Bertha drifts toward land as Hurricane Fausto forms in the eastern Pacific",
+            "source": "AP News",
+            "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPWUtZaU1rRXotenV4eWFXNm9PdnF3bHgxaWFyZ1hGeF9laVlyak1TWWdVSDNkY0FlUkw2YVhhWG1lVDhrc192Z0JlNllKc2ZrOFFCZEMwREtYelhTUlVWS1h0b2NvZXlHeENJYll6eDVMLTd0b04zTGR5SjlsNW5MZDZNeGFxalNLMlBNb0ZSY3l2dnQ1R3VJSw?oc=5",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Tropical Storm Bertha churns off Florida coast, prompting storm alerts",
+            "source": "ABC News",
+            "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPYkZrbUs2VENDVGRWQVpaNmx5ZE1NbG5UbDNUU1FZTDFUQ2NZYkdpalJyWkw2blo3X084WWtLRHdYUTByenhwOHlRYkFsMFRTNGpMcDVRMURkaGZMbE1qS0drTTlWa0RoWVNWTWtKNUxoT3VhNWhkZnh4WE56dVhwN3huS1pxdHV5SzhDdmJnaGEtWU9GQmxEbtIBngFBVV95cUxOQ2dlNHE3SnR0YXBXV1NTcm8xOHI0YWhHajg5ODdLVnJiMnhsSmRXaUNFZHZHdmJoN2pXb3dEaTlfNE5lUWxhdTJRMlAweGw2dU1jUDg0WEp0a3paYV9oWm8tamtiV0lhRmE3SS1OdkMyQU1kbzNBVjZaR2p5V3I3WHp4ZVBsVGhkZ1pXNGpVcVZXQlJPZEdSUzZwOXJQUQ?oc=5",
+            "source_bias": "mixed"
+          },
+          {
+            "title": "Tropical Storm Bertha drifts toward land as Hurricane Fausto forms in the eastern Pacific",
+            "source": "NewsNation",
+            "link": "https://www.newsnationnow.com/weather/ap-tropical-depression-nearing-us-gulf-coast-set-to-become-a-tropical-storm-forecasters-say",
+            "source_bias": "center"
+          },
+          {
+            "title": "Beaches closed and sandbags filled as Tropical Storm Bertha approaches the Gulf Coast",
+            "source": "NewsNation",
+            "link": "https://www.newsnationnow.com/weather/ap-beaches-closed-and-sandbags-filled-as-tropical-storm-bertha-approaches-the-gulf-coast",
+            "source_bias": "center"
+          },
+          {
+            "title": "Tropical Storm Bertha forecast to bring heavy rain, flooding along the Gulf Coast",
+            "source": "PBS News",
+            "link": "https://www.pbs.org/newshour/nation/tropical-storm-bertha-forecast-to-bring-heavy-rain-flooding-along-the-gulf-coast",
+            "source_bias": "lean-left"
+          }
+        ],
+        "updated_at": "2026-07-22",
+        "provenance": "source_grounded_event_memory"
+      },
+      "event_stage": "developing_event",
+      "related_events": [],
+      "search_tokens": [
+        "although",
+        "approache",
+        "approaching",
+        "areas",
+        "arthur",
+        "beach",
+        "bertha",
+        "caused",
+        "closure",
+        "coast",
+        "coastal",
+        "damaging",
+        "develop",
+        "developed",
+        "eastern",
+        "fausto",
+        "filling",
+        "flood",
+        "flooding",
+        "follow",
+        "formed",
+        "gulf",
+        "heavy",
+        "hurricane",
+        "leading",
+        "located",
+        "meanwhile",
+        "mexico",
+        "moving",
+        "ocean",
+        "pacific",
+        "populated",
+        "posing",
+        "potential",
+        "preparation",
+        "prompting",
+        "rain",
+        "recently",
+        "region",
+        "risks",
+        "sandbag",
+        "significant",
+        "storm",
+        "surge",
+        "toward",
+        "tropical",
+        "underway",
+        "which",
+        "winds"
+      ],
+      "entities": [
+        "approache_gulf",
+        "beach_closure",
+        "bertha_approache",
+        "coast_prompting",
+        "eastern",
+        "eastern_pacific",
+        "fausto_develop",
+        "flood_preparation",
+        "gulf",
+        "gulf_coast",
+        "hurricane_fausto",
+        "meanwhile_hurricane",
+        "mexico",
+        "pacific_ocean",
+        "pacific_tropical",
+        "preparation_tropical",
+        "prompting_beach",
+        "storm_arthur",
+        "storm_bertha",
+        "tropical_storm"
+      ],
+      "search_text": "although approache approache_gulf approaching areas arthur beach beach_closure bertha bertha_approache caused closure coast coast_prompting coastal damaging develop developed eastern eastern_pacific fausto fausto_develop filling flood flood_preparation flooding follow formed gulf gulf_coast heavy hurricane hurricane_fausto leading located meanwhile meanwhile_hurricane mexico moving ocean pacific pacific_ocean pacific_tropical populated posing potential preparation preparation_tropical prompting prompting_beach rain recently region risks sandbag significant storm storm_arthur storm_bertha surge toward tropical tropical_storm underway which winds"
+    },
+    {
       "event_id": "event_police-clash-with-cockroach-movement-support_754a567a98",
       "title": "Police Clash with Cockroach Movement Supporters During Protest in New Delhi",
       "canonical_title": "Police Clash with Cockroach Movement Supporters During Protest in New Delhi",
@@ -2237,8 +2892,8 @@
         "latest_date": "2026-07-21",
         "latest_update_title": "Youth-led Cockroach Movement in India Vows to Continue Protests After Police Crackdown",
         "coverage_score": 0.497,
-        "recency_score": 1.0,
-        "rank_score": 0.789,
+        "recency_score": 0.875,
+        "rank_score": 0.716,
         "context_summary": "Muninn first tracked this thread on 2026-07-20: Police Clash with Cockroach Movement Supporters During Protest in New Delhi. The latest development is Youth-led Cockroach Movement in India Vows to Continue Protests After Police Crackdown.",
         "cta_label": ""
       },
@@ -2311,74 +2966,6 @@
           ]
         }
       ],
-      "search_tokens": [
-        "attempting",
-        "cause",
-        "clash",
-        "cockroach",
-        "committed",
-        "continue",
-        "crackdown",
-        "delhi",
-        "demand",
-        "demanding",
-        "demonstration",
-        "demonstrator",
-        "disperse",
-        "education",
-        "entrance",
-        "escalated",
-        "exam",
-        "further",
-        "gas",
-        "gather",
-        "halted",
-        "india",
-        "injured",
-        "issue",
-        "janta",
-        "leader",
-        "leaks",
-        "least",
-        "left",
-        "march",
-        "marche",
-        "marched",
-        "medical",
-        "movement",
-        "ongoing",
-        "parliament",
-        "party",
-        "persist",
-        "pledged",
-        "protest",
-        "protester",
-        "remain",
-        "resignation",
-        "school",
-        "supporter",
-        "tear",
-        "test",
-        "toward",
-        "used",
-        "violent",
-        "vows",
-        "while",
-        "youth-led"
-      ],
-      "entities": [
-        "cockroach_janta",
-        "cockroach_movement",
-        "continue",
-        "continue_protest",
-        "india",
-        "india_vows",
-        "janta_party",
-        "movement_supporter",
-        "parliament._youth-led",
-        "youth-led_cockroach"
-      ],
-      "search_text": "attempting cause clash cockroach cockroach_janta cockroach_movement committed continue continue_protest crackdown delhi demand demanding demonstration demonstrator disperse education entrance escalated exam further gas gather halted india india_vows injured issue janta janta_party leader leaks least left march marche marched medical movement movement_supporter ongoing parliament parliament._youth-led party persist pledged protest protester remain resignation school supporter tear test toward used violent vows while youth-led youth-led_cockroach",
       "event_overview": {
         "available": true,
         "title": "About Cockroach Movement Protests",
@@ -2488,7 +3075,75 @@
         "expires_at": "2026-07-28T15:03:08.239650+00:00",
         "model": "gpt-5.6-terra",
         "provenance": "openai_web_search_source_grounded_event_overview_v1"
-      }
+      },
+      "search_tokens": [
+        "attempting",
+        "cause",
+        "clash",
+        "cockroach",
+        "committed",
+        "continue",
+        "crackdown",
+        "delhi",
+        "demand",
+        "demanding",
+        "demonstration",
+        "demonstrator",
+        "disperse",
+        "education",
+        "entrance",
+        "escalated",
+        "exam",
+        "further",
+        "gas",
+        "gather",
+        "halted",
+        "india",
+        "injured",
+        "issue",
+        "janta",
+        "leader",
+        "leaks",
+        "least",
+        "left",
+        "march",
+        "marche",
+        "marched",
+        "medical",
+        "movement",
+        "ongoing",
+        "parliament",
+        "party",
+        "persist",
+        "pledged",
+        "protest",
+        "protester",
+        "remain",
+        "resignation",
+        "school",
+        "supporter",
+        "tear",
+        "test",
+        "toward",
+        "used",
+        "violent",
+        "vows",
+        "while",
+        "youth-led"
+      ],
+      "entities": [
+        "cockroach_janta",
+        "cockroach_movement",
+        "continue",
+        "continue_protest",
+        "india",
+        "india_vows",
+        "janta_party",
+        "movement_supporter",
+        "parliament._youth-led",
+        "youth-led_cockroach"
+      ],
+      "search_text": "attempting cause clash cockroach cockroach_janta cockroach_movement committed continue continue_protest crackdown delhi demand demanding demonstration demonstrator disperse education entrance escalated exam further gas gather halted india india_vows injured issue janta janta_party leader leaks least left march marche marched medical movement movement_supporter ongoing parliament parliament._youth-led party persist pledged protest protester remain resignation school supporter tear test toward used violent vows while youth-led youth-led_cockroach"
     },
     {
       "event_id": "event_russia-launches-major-ballistic-missile-atta_e12d127249",
@@ -2739,8 +3394,8 @@
         "latest_date": "2026-07-20",
         "latest_update_title": "Russia Launches Major Missile Assault on Ukrainian Cities Amid Escalating Conflict",
         "coverage_score": 0.609,
-        "recency_score": 0.875,
-        "rank_score": 0.763,
+        "recency_score": 0.778,
+        "rank_score": 0.707,
         "context_summary": "Muninn first tracked this thread on 2026-07-19: Russia Launches Major Ballistic Missile Attack on Ukrainian Cities, Causing Casualties. The latest development is Russia Launches Major Missile Assault on Ukrainian Cities Amid Escalating Conflict.",
         "cta_label": ""
       },
@@ -2827,6 +3482,26 @@
           "confidence": 0.706,
           "shared_entities": [
             "russia",
+            "ukraine"
+          ]
+        },
+        {
+          "event_id": "event_ukrainian-drone-strikes-target-wildberries-w_744388bb72",
+          "title": "Ukrainian Drone Strikes Target Wildberries Warehouses Again",
+          "relationship": "related_topic",
+          "confidence": 0.694,
+          "shared_entities": [
+            "russia",
+            "ukraine"
+          ]
+        },
+        {
+          "event_id": "event_zelenskyy-dismisses-military-chief-amid-prot_8bf8977d0c",
+          "title": "Zelenskyy Dismisses Military Chief Amid Protests in Ukraine",
+          "relationship": "related_topic",
+          "confidence": 0.665,
+          "shared_entities": [
+            "kyiv",
             "ukraine"
           ]
         }
@@ -3158,8 +3833,8 @@
         "latest_date": "2026-07-21",
         "latest_update_title": "Houthis Impose Maritime Embargo on Saudi Arabia in Response to Blockade",
         "coverage_score": 0.397,
-        "recency_score": 1.0,
-        "rank_score": 0.747,
+        "recency_score": 0.875,
+        "rank_score": 0.674,
         "context_summary": "Muninn first tracked this thread on 2026-07-20: Houthis Declare Maritime Embargo Against Saudi Arabia Amid Ongoing Conflict. The latest development is Houthis Impose Maritime Embargo on Saudi Arabia in Response to Blockade.",
         "cta_label": ""
       },
@@ -3271,6 +3946,505 @@
         "yemen_iranian-backed"
       ],
       "search_text": "affected airport announced arabia attack based blockade citing coalition conflict decision declare declare_maritime described effective embargo emphasized escalation force houthi houthi_declare houthi_impose immediate immediately impose impose_maritime indicating international international_airport. iranian-backed iranian-backed_houthi maritime maritime_embargo military ongoing ports potential principle reaction rebel recent response retaliation sanaa sanaa_international saudi saudi-led saudi_arabia ships spokesman threatened yemen yemen_iranian-backed yemeni"
+    },
+    {
+      "event_id": "event_spain-s-world-cup-champions-celebrate-return_43f873c6a3",
+      "title": "Spain's World Cup Champions Celebrate with Royal Welcome and Parade",
+      "canonical_title": "Spain's World Cup Champions Celebrate with Royal Welcome and Parade",
+      "topic_label": "FIFA World Cup",
+      "summary": "Spain's World Cup-winning football team returned home to a hero's welcome, meeting with the country's royals and Prime Minister Pedro Sánchez. The 26-man squad then paraded through central Madrid on an open-top bus, celebrating their victory over Argentina in front of nearly 2 million fans who lined the streets.",
+      "status": "active",
+      "first_seen_at": "2026-07-21",
+      "last_seen_at": "2026-07-22",
+      "timeline": [
+        {
+          "development_id": "story_8d2c582f55e18326",
+          "daily_story_id": "story_8d2c582f55e18326",
+          "date": "2026-07-21",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Spain's World Cup Champions Celebrate with Royal Welcome and Parade",
+          "summary": "Spain's World Cup-winning football team received a grand welcome from the country's royals and fans in Madrid. The team celebrated their victory over Argentina with a bus parade through the city, where large crowds gathered to show their support.",
+          "development_type": "development",
+          "key_facts": [
+            "Spain's football team won the World Cup against Argentina.",
+            "The team was greeted by royals in Madrid.",
+            "A bus parade took place through the city with large crowds."
+          ],
+          "source_count": 5,
+          "sources": [
+            "AP - Top News via Google News",
+            "Africanews",
+            "Euronews",
+            "RTE News",
+            "SBS News",
+            "SBS News - Top Stories"
+          ],
+          "source_urls": [
+            "http://www.africanews.com/2026/07/20/spain-celebrates-world-cup-glory",
+            "http://www.euronews.com/video/2026/07/21/victorious-spanish-team-parade-through-madrid-after-world-cup-triumph",
+            "https://news.google.com/rss/articles/CBMimwFBVV95cUxQVFM3UXI1NGNfUHBCUTNkVmdLUEZzVkltcnZJeXJOZjNrb1UweHNYaDVoeXpGeG5iWmc1Y0Y5UXZ2bS1Fa18yT2Y3VzJDdmRzRlBSbC1ubFFFSWE3SkZYMll5OHdVN3VYSWlNRC1UUjdrRmdvRnAweXRtM3RYUzdfdVpYUUlQN1lkc3F4S2dzQ3BZbDlBTUNoNTU2SQ?oc=5",
+            "https://www.rte.ie/sport/world-cup-2026/2026/0720/1584272-spains-world-cup-champions-return-home",
+            "https://www.sbs.com.au/news/article/spain-football-team-gets-heroes-welcome-after-world-cup-win/8ii21aidk"
+          ],
+          "source_details": [
+            {
+              "title": "Spain's World Cup champions return home",
+              "source": "RTE News",
+              "link": "https://www.rte.ie/sport/world-cup-2026/2026/0720/1584272-spains-world-cup-champions-return-home",
+              "source_bias": "center"
+            },
+            {
+              "title": "'Kings of the World': Spain's World Cup stars get a hero's welcome from fans and royals",
+              "source": "SBS News",
+              "link": "https://www.sbs.com.au/news/article/spain-football-team-gets-heroes-welcome-after-world-cup-win/8ii21aidk",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Victorious Spanish team parade through Madrid after World Cup triumph",
+              "source": "Euronews",
+              "link": "http://www.euronews.com/video/2026/07/21/victorious-spanish-team-parade-through-madrid-after-world-cup-triumph",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Spain’s World Cup champions return home for royal welcome and parade in front of almost 2 million - AP News",
+              "source": "AP - Top News via Google News",
+              "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQVFM3UXI1NGNfUHBCUTNkVmdLUEZzVkltcnZJeXJOZjNrb1UweHNYaDVoeXpGeG5iWmc1Y0Y5UXZ2bS1Fa18yT2Y3VzJDdmRzRlBSbC1ubFFFSWE3SkZYMll5OHdVN3VYSWlNRC1UUjdrRmdvRnAweXRtM3RYUzdfdVpYUUlQN1lkc3F4S2dzQ3BZbDlBTUNoNTU2SQ?oc=5",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Spain celebrates World Cup glory",
+              "source": "Africanews",
+              "link": "http://www.africanews.com/2026/07/20/spain-celebrates-world-cup-glory",
+              "source_bias": "center"
+            }
+          ],
+          "confidence": 1.0,
+          "match_evidence": {
+            "score": 1.0,
+            "method": "new_event",
+            "shared_tokens": [],
+            "shared_entities": []
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-21",
+          "last_seen_at": "2026-07-22",
+          "integrity_status": "trusted",
+          "revisions": [
+            {
+              "daily_story_id": "story_a6b68744ef6c3bc9",
+              "reported_at": "2026-07-22",
+              "update_kind": "factual_update",
+              "title": "Spain's World Cup Champions Celebrate with Royal Welcome and Parade",
+              "summary": "Spain's World Cup-winning football team received a grand welcome from the country's royals and fans in Madrid. The team celebrated their victory over Argentina with a bus parade through the city, where large crowds gathered to show their support.",
+              "topic_label": "Spain World Cup Celebration",
+              "key_facts": [
+                "Spain's football team won the World Cup against Argentina.",
+                "The team was greeted by royals in Madrid.",
+                "A bus parade took place through the city with large crowds."
+              ],
+              "source_urls": [
+                "https://www.sbs.com.au/news/article/spain-football-team-gets-heroes-welcome-after-world-cup-win/8ii21aidk",
+                "http://www.euronews.com/video/2026/07/21/victorious-spanish-team-parade-through-madrid-after-world-cup-triumph"
+              ]
+            }
+          ],
+          "last_updated_at": "2026-07-22",
+          "merged_development_ids": [
+            "story_a6b68744ef6c3bc9"
+          ],
+          "revision_count": 1
+        }
+      ],
+      "integrity": {
+        "public_development_count": 1,
+        "questionable_development_count": 0,
+        "review_required": false
+      },
+      "latest_title": "Spain's World Cup Champions Celebrate with Royal Welcome and Parade",
+      "latest_summary": "Spain's World Cup-winning football team received a grand welcome from the country's royals and fans in Madrid. The team celebrated their victory over Argentina with a bus parade through the city, where large crowds gathered to show their support.",
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "stage": "developing_event",
+        "stage_label": "Developing event",
+        "base_title": "FIFA World Cup",
+        "display_title": "FIFA World Cup",
+        "milestone_development_ids": [
+          "story_8d2c582f55e18326"
+        ],
+        "summary_available": true,
+        "summary_label": "Read the story so far",
+        "summary_updated_at": "2026-07-21",
+        "development_count": 1,
+        "coverage_packet_count": 2,
+        "date_count": 1,
+        "source_count": 5,
+        "independent_source_count": 6,
+        "first_date": "2026-07-21",
+        "latest_date": "2026-07-21",
+        "latest_update_title": "Spain's World Cup Champions Celebrate with Royal Welcome and Parade",
+        "coverage_score": 0.386,
+        "recency_score": 0.875,
+        "rank_score": 0.67,
+        "context_summary": "Spain's World Cup-winning football team received a grand welcome from the country's royals and fans in Madrid. The team celebrated their victory over Argentina with a bus parade through the city, where large crowds gathered to show their support.",
+        "cta_label": ""
+      },
+      "event_summary": {
+        "available": true,
+        "summary": "Spain's World Cup-winning football team received a grand welcome from the country's royals and fans in Madrid.",
+        "key_developments": [
+          {
+            "development_id": "story_8d2c582f55e18326",
+            "date": "2026-07-21",
+            "title": "Spain's World Cup Champions Celebrate with Royal Welcome and Parade"
+          }
+        ],
+        "sources": [
+          {
+            "title": "Spain's World Cup champions return home",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/sport/world-cup-2026/2026/0720/1584272-spains-world-cup-champions-return-home",
+            "source_bias": "center"
+          },
+          {
+            "title": "'Kings of the World': Spain's World Cup stars get a hero's welcome from fans and royals",
+            "source": "SBS News",
+            "link": "https://www.sbs.com.au/news/article/spain-football-team-gets-heroes-welcome-after-world-cup-win/8ii21aidk",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Victorious Spanish team parade through Madrid after World Cup triumph",
+            "source": "Euronews",
+            "link": "http://www.euronews.com/video/2026/07/21/victorious-spanish-team-parade-through-madrid-after-world-cup-triumph",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Spain’s World Cup champions return home for royal welcome and parade in front of almost 2 million - AP News",
+            "source": "AP - Top News via Google News",
+            "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQVFM3UXI1NGNfUHBCUTNkVmdLUEZzVkltcnZJeXJOZjNrb1UweHNYaDVoeXpGeG5iWmc1Y0Y5UXZ2bS1Fa18yT2Y3VzJDdmRzRlBSbC1ubFFFSWE3SkZYMll5OHdVN3VYSWlNRC1UUjdrRmdvRnAweXRtM3RYUzdfdVpYUUlQN1lkc3F4S2dzQ3BZbDlBTUNoNTU2SQ?oc=5",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Spain celebrates World Cup glory",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/07/20/spain-celebrates-world-cup-glory",
+            "source_bias": "center"
+          }
+        ],
+        "updated_at": "2026-07-21",
+        "provenance": "source_grounded_event_memory"
+      },
+      "event_stage": "developing_event",
+      "related_events": [
+        {
+          "event_id": "event_world-cup-final-spain-to-face-argentina-fran_ca15e3b715",
+          "title": "World Cup Final: Spain to Face Argentina, France and England Compete for Third Place",
+          "relationship": "related_topic",
+          "confidence": 0.682,
+          "shared_entities": [
+            "argentina",
+            "spain"
+          ]
+        },
+        {
+          "event_id": "event_spain-claims-second-world-cup-title-with-ext_00a076ebf4",
+          "title": "Spain Claims Second FIFA World Cup Title with Victory Over Argentina",
+          "relationship": "related_topic",
+          "confidence": 0.676,
+          "shared_entities": [
+            "argentina",
+            "spain"
+          ]
+        },
+        {
+          "event_id": "event_trump-and-infantino-present-world-cup-trophy_06cb42752d",
+          "title": "Trump and Infantino Present World Cup Trophy to Spain Amid Mixed Reactions",
+          "relationship": "related_topic",
+          "confidence": 0.667,
+          "shared_entities": [
+            "argentina",
+            "spain"
+          ]
+        }
+      ],
+      "search_tokens": [
+        "argentina",
+        "celebrate",
+        "celebrated",
+        "champion",
+        "crowd",
+        "cup-winning",
+        "fans",
+        "football",
+        "gathered",
+        "grand",
+        "large",
+        "madrid",
+        "parade",
+        "received",
+        "royal",
+        "show",
+        "spain",
+        "support",
+        "team",
+        "through",
+        "victory",
+        "welcome",
+        "where"
+      ],
+      "entities": [
+        "argentina",
+        "champion_celebrate",
+        "cup_champion",
+        "madrid.",
+        "parade_spain",
+        "royal_welcome",
+        "spain"
+      ],
+      "search_text": "argentina celebrate celebrated champion champion_celebrate crowd cup-winning cup_champion fans football gathered grand large madrid madrid. parade parade_spain received royal royal_welcome show spain support team through victory welcome where"
+    },
+    {
+      "event_id": "event_court-denies-biden-s-request-to-block-releas_5d8365d06c",
+      "title": "Court Denies Biden's Request to Block Release of Ghostwriter Interview Recordings",
+      "canonical_title": "Court Denies Biden's Request to Block Release of Ghostwriter Interview Recordings",
+      "topic_label": "Biden Ghostwriter Recordings",
+      "summary": "A federal appeals court has denied Joe Biden's request to prevent the release of audio recordings and transcripts from his interviews with a ghostwriter prior to his presidency. The court's 2-1 ruling emphasized the significant public interest in disclosing these materials, which are to be provided to a conservative think tank.",
+      "status": "active",
+      "first_seen_at": "2026-07-21",
+      "last_seen_at": "2026-07-22",
+      "timeline": [
+        {
+          "development_id": "story_8eefdcea9dcb6d13",
+          "daily_story_id": "story_8eefdcea9dcb6d13",
+          "date": "2026-07-21",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Court Denies Biden's Request to Block Release of Ghostwriter Interview Recordings",
+          "summary": "A US appeals court has rejected Joe Biden's attempt to block the release of recordings from interviews with his memoir ghostwriter. The divided three-judge panel ruled that there is a significant public interest in disclosing the material. The decision is currently suspended until August 3, allowing Biden time to consider a further appeal.",
+          "development_type": "policy",
+          "key_facts": [
+            "US appeals court rejected Biden's request to block release of ghostwriter recordings.",
+            "The ruling was a 2-1 decision by a three-judge panel.",
+            "The court found substantial public interest in the recordings."
+          ],
+          "source_count": 5,
+          "sources": [
+            "AP",
+            "AP News",
+            "CBS News",
+            "Euronews",
+            "NBC News",
+            "NewsNation"
+          ],
+          "source_urls": [
+            "http://www.euronews.com/2026/07/21/us-appeals-court-rejects-biden-bid-to-block-release-of-memoir-ghostwriter-recordings",
+            "https://news.google.com/rss/articles/CBMiswFBVV95cUxQZnppZGVlVzI5ZUdPd2dXWWM4RldGdkY5RndqQjNSazJLUHBMc0pYZ0swTWJ3VlZCVFJ5VWVrekt0UHBHNUxack1vTVIyWVpNYWpvX2lvQWlMX3ZrNDZBQUhDcXBqQUpiZUtjWE1Db1dYQmpDNnlpYkhnTGVLaGZOenZhdXdaUDVoS0Y1Ym1reEljSXVpTm9sWFJBeFp4STZLaVZpM2JZcW1JSU1WOW1JRHF2TQ?oc=5",
+            "https://www.cbsnews.com/news/biden-bid-block-release-biographer-tapes-denied-decision-put-on-hold",
+            "https://www.nbcnews.com/politics/joe-biden/court-rejects-joe-biden-lawsuit-doj-release-memoir-recordings-rcna588515",
+            "https://www.newsnationnow.com/politics/ap-appeals-court-rejects-bidens-bid-to-block-release-of-recordings-of-ghostwriter-interviews"
+          ],
+          "source_details": [
+            {
+              "title": "Appeals court rejects Biden’s bid to block release of recordings of ghostwriter interviews",
+              "source": "AP News",
+              "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQZnppZGVlVzI5ZUdPd2dXWWM4RldGdkY5RndqQjNSazJLUHBMc0pYZ0swTWJ3VlZCVFJ5VWVrekt0UHBHNUxack1vTVIyWVpNYWpvX2lvQWlMX3ZrNDZBQUhDcXBqQUpiZUtjWE1Db1dYQmpDNnlpYkhnTGVLaGZOenZhdXdaUDVoS0Y1Ym1reEljSXVpTm9sWFJBeFp4STZLaVZpM2JZcW1JSU1WOW1JRHF2TQ?oc=5",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Appeals court rejects Biden’s bid to block release of recordings of ghostwriter interviews",
+              "source": "NBC News",
+              "link": "https://www.nbcnews.com/politics/joe-biden/court-rejects-joe-biden-lawsuit-doj-release-memoir-recordings-rcna588515",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Appeals court denies Biden bid to block release of tapes with biographer, for now",
+              "source": "CBS News",
+              "link": "https://www.cbsnews.com/news/biden-bid-block-release-biographer-tapes-denied-decision-put-on-hold",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Appeals court rejects Biden's bid to block ghostwriter interview recordings",
+              "source": "NewsNation",
+              "link": "https://www.newsnationnow.com/politics/ap-appeals-court-rejects-bidens-bid-to-block-release-of-recordings-of-ghostwriter-interviews",
+              "source_bias": "center"
+            },
+            {
+              "title": "US appeals court rejects Biden bid to block release of memoir ghostwriter recordings",
+              "source": "Euronews",
+              "link": "http://www.euronews.com/2026/07/21/us-appeals-court-rejects-biden-bid-to-block-release-of-memoir-ghostwriter-recordings",
+              "source_bias": "lean-left"
+            }
+          ],
+          "confidence": 1.0,
+          "match_evidence": {
+            "score": 1.0,
+            "method": "new_event",
+            "shared_tokens": [],
+            "shared_entities": []
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-21",
+          "last_seen_at": "2026-07-22",
+          "integrity_status": "trusted",
+          "revisions": [
+            {
+              "daily_story_id": "story_e39c427496d3f383",
+              "reported_at": "2026-07-22",
+              "update_kind": "factual_update",
+              "title": "Court Denies Biden's Request to Block Release of Ghostwriter Interview Recordings",
+              "summary": "A US appeals court has rejected Joe Biden's attempt to block the release of recordings from interviews with his memoir ghostwriter. The divided three-judge panel ruled that there is a significant public interest in disclosing the material. The decision is currently suspended until August 3, allowing Biden time to consider a further appeal.",
+              "topic_label": "Biden Memoir Recordings",
+              "key_facts": [
+                "US appeals court rejected Biden's request to block release of ghostwriter recordings.",
+                "The ruling was a 2-1 decision by a three-judge panel.",
+                "The court found substantial public interest in the recordings."
+              ],
+              "source_urls": [
+                "https://news.google.com/rss/articles/CBMiswFBVV95cUxQZnppZGVlVzI5ZUdPd2dXWWM4RldGdkY5RndqQjNSazJLUHBMc0pYZ0swTWJ3VlZCVFJ5VWVrekt0UHBHNUxack1vTVIyWVpNYWpvX2lvQWlMX3ZrNDZBQUhDcXBqQUpiZUtjWE1Db1dYQmpDNnlpYkhnTGVLaGZOenZhdXdaUDVoS0Y1Ym1reEljSXVpTm9sWFJBeFp4STZLaVZpM2JZcW1JSU1WOW1JRHF2TQ?oc=5",
+                "http://www.euronews.com/2026/07/21/us-appeals-court-rejects-biden-bid-to-block-release-of-memoir-ghostwriter-recordings",
+                "https://www.nbcnews.com/politics/joe-biden/court-rejects-joe-biden-lawsuit-doj-release-memoir-recordings-rcna588515"
+              ]
+            }
+          ],
+          "last_updated_at": "2026-07-22",
+          "merged_development_ids": [
+            "story_e39c427496d3f383"
+          ],
+          "revision_count": 1
+        }
+      ],
+      "integrity": {
+        "public_development_count": 1,
+        "questionable_development_count": 0,
+        "review_required": false
+      },
+      "latest_title": "Court Denies Biden's Request to Block Release of Ghostwriter Interview Recordings",
+      "latest_summary": "A US appeals court has rejected Joe Biden's attempt to block the release of recordings from interviews with his memoir ghostwriter. The divided three-judge panel ruled that there is a significant public interest in disclosing the material. The decision is currently suspended until August 3, allowing Biden time to consider a further appeal.",
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "stage": "developing_event",
+        "stage_label": "Developing event",
+        "base_title": "Biden Ghostwriter Recordings",
+        "display_title": "Biden Ghostwriter Recordings",
+        "milestone_development_ids": [
+          "story_8eefdcea9dcb6d13"
+        ],
+        "summary_available": true,
+        "summary_label": "Read the story so far",
+        "summary_updated_at": "2026-07-21",
+        "development_count": 1,
+        "coverage_packet_count": 2,
+        "date_count": 1,
+        "source_count": 5,
+        "independent_source_count": 6,
+        "first_date": "2026-07-21",
+        "latest_date": "2026-07-21",
+        "latest_update_title": "Court Denies Biden's Request to Block Release of Ghostwriter Interview Recordings",
+        "coverage_score": 0.386,
+        "recency_score": 0.875,
+        "rank_score": 0.67,
+        "context_summary": "A US appeals court has rejected Joe Biden's attempt to block the release of recordings from interviews with his memoir ghostwriter. The divided three-judge panel ruled that there is a significant public interest in disclosing the material. The decision is currently suspended until August 3, allowing Biden time to consider a further appeal.",
+        "cta_label": ""
+      },
+      "event_summary": {
+        "available": true,
+        "summary": "A US appeals court has rejected Joe Biden's attempt to block the release of recordings from interviews with his memoir ghostwriter.",
+        "key_developments": [
+          {
+            "development_id": "story_8eefdcea9dcb6d13",
+            "date": "2026-07-21",
+            "title": "Court Denies Biden's Request to Block Release of Ghostwriter Interview Recordings"
+          }
+        ],
+        "sources": [
+          {
+            "title": "Appeals court rejects Biden’s bid to block release of recordings of ghostwriter interviews",
+            "source": "AP News",
+            "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQZnppZGVlVzI5ZUdPd2dXWWM4RldGdkY5RndqQjNSazJLUHBMc0pYZ0swTWJ3VlZCVFJ5VWVrekt0UHBHNUxack1vTVIyWVpNYWpvX2lvQWlMX3ZrNDZBQUhDcXBqQUpiZUtjWE1Db1dYQmpDNnlpYkhnTGVLaGZOenZhdXdaUDVoS0Y1Ym1reEljSXVpTm9sWFJBeFp4STZLaVZpM2JZcW1JSU1WOW1JRHF2TQ?oc=5",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Appeals court rejects Biden’s bid to block release of recordings of ghostwriter interviews",
+            "source": "NBC News",
+            "link": "https://www.nbcnews.com/politics/joe-biden/court-rejects-joe-biden-lawsuit-doj-release-memoir-recordings-rcna588515",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Appeals court denies Biden bid to block release of tapes with biographer, for now",
+            "source": "CBS News",
+            "link": "https://www.cbsnews.com/news/biden-bid-block-release-biographer-tapes-denied-decision-put-on-hold",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Appeals court rejects Biden's bid to block ghostwriter interview recordings",
+            "source": "NewsNation",
+            "link": "https://www.newsnationnow.com/politics/ap-appeals-court-rejects-bidens-bid-to-block-release-of-recordings-of-ghostwriter-interviews",
+            "source_bias": "center"
+          },
+          {
+            "title": "US appeals court rejects Biden bid to block release of memoir ghostwriter recordings",
+            "source": "Euronews",
+            "link": "http://www.euronews.com/2026/07/21/us-appeals-court-rejects-biden-bid-to-block-release-of-memoir-ghostwriter-recordings",
+            "source_bias": "lean-left"
+          }
+        ],
+        "updated_at": "2026-07-21",
+        "provenance": "source_grounded_event_memory"
+      },
+      "event_stage": "developing_event",
+      "related_events": [],
+      "search_tokens": [
+        "allowing",
+        "appeal",
+        "attempt",
+        "august",
+        "biden",
+        "block",
+        "consider",
+        "court",
+        "currently",
+        "decision",
+        "denie",
+        "disclosing",
+        "divided",
+        "further",
+        "ghostwriter",
+        "interest",
+        "interview",
+        "material",
+        "memoir",
+        "panel",
+        "public",
+        "recording",
+        "rejected",
+        "release",
+        "request",
+        "ruled",
+        "significant",
+        "suspended",
+        "there",
+        "three-judge",
+        "time",
+        "until"
+      ],
+      "entities": [
+        "biden_request",
+        "block",
+        "denie_biden",
+        "ghostwriter_interview",
+        "interview_recording",
+        "joe_biden",
+        "us"
+      ],
+      "search_text": "allowing appeal attempt august biden biden_request block consider court currently decision denie denie_biden disclosing divided further ghostwriter ghostwriter_interview interest interview interview_recording joe_biden material memoir panel public recording rejected release request ruled significant suspended there three-judge time until us"
     },
     {
       "event_id": "event_lebanese-army-deploys-in-southern-town-follo_08af998bbd",
@@ -3403,8 +4577,8 @@
         "latest_date": "2026-07-21",
         "latest_update_title": "Lebanese Army Deploys in Zawtar al-Gharbiyeh Following Israeli Withdrawal",
         "coverage_score": 0.298,
-        "recency_score": 1.0,
-        "rank_score": 0.705,
+        "recency_score": 0.875,
+        "rank_score": 0.633,
         "context_summary": "The Lebanese army has begun deploying troops in the southern town of Zawtar al-Gharbiyeh after Israeli forces withdrew from the area. This move aligns with a U.S.-brokered plan, according to a senior Lebanese security official.",
         "cta_label": ""
       },
@@ -3448,6 +4622,7 @@
         "provenance": "source_grounded_event_memory"
       },
       "event_stage": "developing_event",
+      "related_events": [],
       "search_tokens": [
         "al-gharbiyeh",
         "align",
@@ -3480,280 +4655,7 @@
         "u.s.-brokered",
         "zawtar"
       ],
-      "search_text": "al-gharbiyeh align area army army_deploy begun brokered deploy deploying force israel israel_withdrawal lebanese lebanese_army move plan security senior southern town troop u.s.-brokered withdrawal withdrew zawtar",
-      "related_events": []
-    },
-    {
-      "event_id": "event_spain-claims-second-world-cup-title-with-ext_00a076ebf4",
-      "title": "Spain Claims Second FIFA World Cup Title with Victory Over Argentina",
-      "canonical_title": "Spain Claims Second FIFA World Cup Title with Victory Over Argentina",
-      "topic_label": "FIFA World Cup",
-      "summary": "Spain won its second men's World Cup by defeating Argentina 1-0 in the final, with Ferran Torres scoring the decisive goal in the 106th minute of extra time. This victory denied Lionel Messi a second consecutive title in what he indicated might be his final World Cup appearance. Fans celebrated the win across Spain, while Argentine supporters acknowledged their team's effort despite the loss.",
-      "status": "active",
-      "first_seen_at": "2026-07-20",
-      "last_seen_at": "2026-07-21",
-      "timeline": [
-        {
-          "development_id": "story_32b09305763e4143",
-          "daily_story_id": "story_32b09305763e4143",
-          "date": "2026-07-20",
-          "occurred_at": null,
-          "date_basis": "first_reported_by_muninn",
-          "title": "Spain Claims Second FIFA World Cup Title with Victory Over Argentina",
-          "summary": "Spain has won its second FIFA World Cup title, defeating Argentina 1-0 in the final match. Ferran Torres scored the decisive goal in extra time, securing the victory after a 16-year wait for the championship. Fans celebrated the win across Spain and in various locations worldwide, including Times Square in New York.",
-          "development_type": "development",
-          "key_facts": [
-            "Spain won the FIFA World Cup by defeating Argentina 1-0.",
-            "Ferran Torres scored the winning goal in extra time.",
-            "This victory marks Spain's second World Cup title, the first being in 2010."
-          ],
-          "source_count": 5,
-          "sources": [
-            "DW",
-            "DW - English",
-            "France 24 - English",
-            "PBS News",
-            "RTE News",
-            "SBS News - Top Stories"
-          ],
-          "source_urls": [
-            "https://www.dw.com/en/spain-wins-second-world-cup-after-beating-argentina-in-final/a-78029285?maca=en-rss-en-all-1573-rdf",
-            "https://www.france24.com/en/spain-welcomes-back-its-world-cup-heroes",
-            "https://www.pbs.org/newshour/world/photos-spain-wins-the-world-cup-by-beating-argentina-1-0-on-ferran-torres-goal-in-extra-time",
-            "https://www.rte.ie/sport/world-cup-2026/2026/0719/1584092-super-sub-torres-fires-spain-to-world-cup-glory",
-            "https://www.sbs.com.au/news/live-blog/spain-v-argentina-world-cup-final-live-score-updates-reaction/owhsrb9py"
-          ],
-          "source_details": [
-            {
-              "title": "PHOTOS: Spain wins the World Cup by beating Argentina 1-0 on Ferran Torres' goal in extra time",
-              "source": "PBS News",
-              "link": "https://www.pbs.org/newshour/world/photos-spain-wins-the-world-cup-by-beating-argentina-1-0-on-ferran-torres-goal-in-extra-time",
-              "source_bias": "lean-left"
-            },
-            {
-              "title": "Spain wins second World Cup after beating Argentina in final",
-              "source": "DW - English",
-              "link": "https://www.dw.com/en/spain-wins-second-world-cup-after-beating-argentina-in-final/a-78029285?maca=en-rss-en-all-1573-rdf",
-              "source_bias": "lean-left"
-            },
-            {
-              "title": "Super sub Torres fires Spain to World Cup glory",
-              "source": "RTE News",
-              "link": "https://www.rte.ie/sport/world-cup-2026/2026/0719/1584092-super-sub-torres-fires-spain-to-world-cup-glory",
-              "source_bias": "center"
-            },
-            {
-              "title": "Spain beat Argentina 1-0 to win World Cup final — as it happened",
-              "source": "SBS News - Top Stories",
-              "link": "https://www.sbs.com.au/news/live-blog/spain-v-argentina-world-cup-final-live-score-updates-reaction/owhsrb9py",
-              "source_bias": "lean-left"
-            },
-            {
-              "title": "Spain welcomes back its World Cup heroes",
-              "source": "France 24 - English",
-              "link": "https://www.france24.com/en/spain-welcomes-back-its-world-cup-heroes",
-              "source_bias": "lean-left"
-            }
-          ],
-          "confidence": 1.0,
-          "match_evidence": {
-            "score": 1.0,
-            "method": "new_event",
-            "shared_tokens": [],
-            "shared_entities": []
-          },
-          "verification": {
-            "provider": "deterministic_source_grounded_event_match_v1",
-            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
-          },
-          "first_seen_at": "2026-07-20",
-          "last_seen_at": "2026-07-21",
-          "integrity_status": "trusted",
-          "revisions": [
-            {
-              "daily_story_id": "story_ea1676cfc9984304",
-              "reported_at": "2026-07-21",
-              "update_kind": "factual_update",
-              "title": "Spain Claims Second FIFA World Cup Title with Victory Over Argentina",
-              "summary": "Spain has won its second FIFA World Cup title, defeating Argentina 1-0 in the final match. Ferran Torres scored the decisive goal in extra time, securing the victory after a 16-year wait for the championship. Fans celebrated the win across Spain and in various locations worldwide, including Times Square in New York.",
-              "key_facts": [
-                "Spain won the FIFA World Cup by defeating Argentina 1-0.",
-                "Ferran Torres scored the winning goal in extra time.",
-                "This victory marks Spain's second World Cup title, the first being in 2010."
-              ],
-              "source_urls": [
-                "https://www.dw.com/en/spain-wins-second-world-cup-after-beating-argentina-in-final/a-78029285?maca=en-rss-en-all-1573-rdf",
-                "https://www.sbs.com.au/news/live-blog/spain-v-argentina-world-cup-final-live-score-updates-reaction/owhsrb9py",
-                "https://www.france24.com/en/spain-welcomes-back-its-world-cup-heroes"
-              ]
-            }
-          ],
-          "last_updated_at": "2026-07-21",
-          "merged_development_ids": [
-            "story_ea1676cfc9984304"
-          ],
-          "revision_count": 1
-        }
-      ],
-      "integrity": {
-        "public_development_count": 1,
-        "questionable_development_count": 0,
-        "review_required": false
-      },
-      "latest_title": "Spain Claims Second FIFA World Cup Title with Victory Over Argentina",
-      "latest_summary": "Spain has won its second FIFA World Cup title, defeating Argentina 1-0 in the final match. Ferran Torres scored the decisive goal in extra time, securing the victory after a 16-year wait for the championship. Fans celebrated the win across Spain and in various locations worldwide, including Times Square in New York.",
-      "presentation": {
-        "has_context": true,
-        "has_full_timeline": false,
-        "stage": "developing_event",
-        "stage_label": "Developing event",
-        "base_title": "FIFA World Cup",
-        "display_title": "FIFA World Cup",
-        "milestone_development_ids": [
-          "story_32b09305763e4143"
-        ],
-        "summary_available": true,
-        "summary_label": "Read the story so far",
-        "summary_updated_at": "2026-07-20",
-        "development_count": 1,
-        "coverage_packet_count": 2,
-        "date_count": 1,
-        "source_count": 5,
-        "independent_source_count": 6,
-        "first_date": "2026-07-20",
-        "latest_date": "2026-07-20",
-        "latest_update_title": "Spain Claims Second FIFA World Cup Title with Victory Over Argentina",
-        "coverage_score": 0.386,
-        "recency_score": 0.875,
-        "rank_score": 0.67,
-        "context_summary": "Spain has won its second FIFA World Cup title, defeating Argentina 1-0 in the final match. Ferran Torres scored the decisive goal in extra time, securing the victory after a 16-year wait for the championship. Fans celebrated the win across Spain and in various locations worldwide, including Times Square in New York.",
-        "cta_label": ""
-      },
-      "event_summary": {
-        "available": true,
-        "summary": "Spain has won its second FIFA World Cup title, defeating Argentina 1-0 in the final match.",
-        "key_developments": [
-          {
-            "development_id": "story_32b09305763e4143",
-            "date": "2026-07-20",
-            "title": "Spain Claims Second FIFA World Cup Title with Victory Over Argentina"
-          }
-        ],
-        "sources": [
-          {
-            "title": "PHOTOS: Spain wins the World Cup by beating Argentina 1-0 on Ferran Torres' goal in extra time",
-            "source": "PBS News",
-            "link": "https://www.pbs.org/newshour/world/photos-spain-wins-the-world-cup-by-beating-argentina-1-0-on-ferran-torres-goal-in-extra-time",
-            "source_bias": "lean-left"
-          },
-          {
-            "title": "Spain wins second World Cup after beating Argentina in final",
-            "source": "DW - English",
-            "link": "https://www.dw.com/en/spain-wins-second-world-cup-after-beating-argentina-in-final/a-78029285?maca=en-rss-en-all-1573-rdf",
-            "source_bias": "lean-left"
-          },
-          {
-            "title": "Super sub Torres fires Spain to World Cup glory",
-            "source": "RTE News",
-            "link": "https://www.rte.ie/sport/world-cup-2026/2026/0719/1584092-super-sub-torres-fires-spain-to-world-cup-glory",
-            "source_bias": "center"
-          },
-          {
-            "title": "Spain beat Argentina 1-0 to win World Cup final — as it happened",
-            "source": "SBS News - Top Stories",
-            "link": "https://www.sbs.com.au/news/live-blog/spain-v-argentina-world-cup-final-live-score-updates-reaction/owhsrb9py",
-            "source_bias": "lean-left"
-          },
-          {
-            "title": "Spain welcomes back its World Cup heroes",
-            "source": "France 24 - English",
-            "link": "https://www.france24.com/en/spain-welcomes-back-its-world-cup-heroes",
-            "source_bias": "lean-left"
-          }
-        ],
-        "updated_at": "2026-07-20",
-        "provenance": "source_grounded_event_memory"
-      },
-      "event_stage": "developing_event",
-      "related_events": [
-        {
-          "event_id": "event_trump-and-infantino-present-world-cup-trophy_06cb42752d",
-          "title": "Trump and Infantino Present World Cup Trophy to Spain Amid Mixed Reactions",
-          "relationship": "related_topic",
-          "confidence": 0.712,
-          "shared_entities": [
-            "argentina",
-            "spain"
-          ]
-        },
-        {
-          "event_id": "event_world-cup-final-spain-to-face-argentina-fran_ca15e3b715",
-          "title": "World Cup Final: Spain to Face Argentina, France and England Compete for Third Place",
-          "relationship": "related_topic",
-          "confidence": 0.669,
-          "shared_entities": [
-            "argentina",
-            "spain"
-          ]
-        },
-        {
-          "event_id": "event_spain-s-world-cup-champions-celebrate-return_43f873c6a3",
-          "title": "Spain's World Cup Champions Celebrate Return with Royal Welcome and Parade",
-          "relationship": "related_topic",
-          "confidence": 0.657,
-          "shared_entities": [
-            "argentina",
-            "spain"
-          ]
-        }
-      ],
-      "search_tokens": [
-        "1-0",
-        "16-year",
-        "across",
-        "argentina",
-        "celebrated",
-        "championship",
-        "claim",
-        "decisive",
-        "defeating",
-        "extra",
-        "fans",
-        "ferran",
-        "fifa",
-        "final",
-        "goal",
-        "including",
-        "location",
-        "match",
-        "scored",
-        "second",
-        "securing",
-        "spain",
-        "square",
-        "time",
-        "times",
-        "title",
-        "torre",
-        "variou",
-        "victory",
-        "wait",
-        "worldwide",
-        "york"
-      ],
-      "entities": [
-        "argentina",
-        "argentina_spain",
-        "claim_second",
-        "cup_title",
-        "ferran_torre",
-        "fifa",
-        "second_fifa",
-        "spain",
-        "spain_claim",
-        "times_square"
-      ],
-      "search_text": "1-0 16-year across argentina argentina_spain celebrated championship claim claim_second cup_title decisive defeating extra fans ferran ferran_torre fifa final goal including location match scored second second_fifa securing spain spain_claim square time times times_square title torre variou victory wait worldwide york"
+      "search_text": "al-gharbiyeh align area army army_deploy begun brokered deploy deploying force israel israel_withdrawal lebanese lebanese_army move plan security senior southern town troop u.s.-brokered withdrawal withdrew zawtar"
     },
     {
       "event_id": "event_world-cup-final-spain-to-face-argentina-fran_ca15e3b715",
@@ -3959,8 +4861,8 @@
         "latest_date": "2026-07-19",
         "latest_update_title": "Argentina and Spain Set for World Cup Final Featuring Messi",
         "coverage_score": 0.497,
-        "recency_score": 0.778,
-        "rank_score": 0.66,
+        "recency_score": 0.7,
+        "rank_score": 0.615,
         "context_summary": "Muninn first tracked this thread on 2026-07-18: World Cup Final: Spain to Face Argentina, France and England Compete for Third Place. The latest development is Argentina and Spain Set for World Cup Final Featuring Messi.",
         "cta_label": ""
       },
@@ -4054,10 +4956,10 @@
           ]
         },
         {
-          "event_id": "event_trump-and-infantino-present-world-cup-trophy_06cb42752d",
-          "title": "Trump and Infantino Present World Cup Trophy to Spain Amid Mixed Reactions",
+          "event_id": "event_spain-s-world-cup-champions-celebrate-return_43f873c6a3",
+          "title": "Spain's World Cup Champions Celebrate with Royal Welcome and Parade",
           "relationship": "related_topic",
-          "confidence": 0.678,
+          "confidence": 0.682,
           "shared_entities": [
             "argentina",
             "spain"
@@ -4227,6 +5129,278 @@
         "world"
       ],
       "search_text": "000 2023 34th ahead anticipated argentina argentina_france attend back-to-back become biggest both captain clash classic compete cup_final cups england england_compete expected face fans featuring featuring_messi final final_featuring final_spain first football france highly jersey lamine lamine_yamal. lionel lionel_messi marking marks match meanwhile meanwhile_france messi messi_argentina moment nation place prepare prize rising showdown significant spain spain_set star take team they third third_place tournament victory women world yamal"
+    },
+    {
+      "event_id": "event_spain-claims-second-world-cup-title-with-ext_00a076ebf4",
+      "title": "Spain Claims Second FIFA World Cup Title with Victory Over Argentina",
+      "canonical_title": "Spain Claims Second FIFA World Cup Title with Victory Over Argentina",
+      "topic_label": "FIFA World Cup",
+      "summary": "Spain won its second men's World Cup by defeating Argentina 1-0 in the final, with Ferran Torres scoring the decisive goal in the 106th minute of extra time. This victory denied Lionel Messi a second consecutive title in what he indicated might be his final World Cup appearance. Fans celebrated the win across Spain, while Argentine supporters acknowledged their team's effort despite the loss.",
+      "status": "active",
+      "first_seen_at": "2026-07-20",
+      "last_seen_at": "2026-07-21",
+      "timeline": [
+        {
+          "development_id": "story_32b09305763e4143",
+          "daily_story_id": "story_32b09305763e4143",
+          "date": "2026-07-20",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Spain Claims Second FIFA World Cup Title with Victory Over Argentina",
+          "summary": "Spain has won its second FIFA World Cup title, defeating Argentina 1-0 in the final match. Ferran Torres scored the decisive goal in extra time, securing the victory after a 16-year wait for the championship. Fans celebrated the win across Spain and in various locations worldwide, including Times Square in New York.",
+          "development_type": "development",
+          "key_facts": [
+            "Spain won the FIFA World Cup by defeating Argentina 1-0.",
+            "Ferran Torres scored the winning goal in extra time.",
+            "This victory marks Spain's second World Cup title, the first being in 2010."
+          ],
+          "source_count": 5,
+          "sources": [
+            "DW",
+            "DW - English",
+            "France 24 - English",
+            "PBS News",
+            "RTE News",
+            "SBS News - Top Stories"
+          ],
+          "source_urls": [
+            "https://www.dw.com/en/spain-wins-second-world-cup-after-beating-argentina-in-final/a-78029285?maca=en-rss-en-all-1573-rdf",
+            "https://www.france24.com/en/spain-welcomes-back-its-world-cup-heroes",
+            "https://www.pbs.org/newshour/world/photos-spain-wins-the-world-cup-by-beating-argentina-1-0-on-ferran-torres-goal-in-extra-time",
+            "https://www.rte.ie/sport/world-cup-2026/2026/0719/1584092-super-sub-torres-fires-spain-to-world-cup-glory",
+            "https://www.sbs.com.au/news/live-blog/spain-v-argentina-world-cup-final-live-score-updates-reaction/owhsrb9py"
+          ],
+          "source_details": [
+            {
+              "title": "PHOTOS: Spain wins the World Cup by beating Argentina 1-0 on Ferran Torres' goal in extra time",
+              "source": "PBS News",
+              "link": "https://www.pbs.org/newshour/world/photos-spain-wins-the-world-cup-by-beating-argentina-1-0-on-ferran-torres-goal-in-extra-time",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Spain wins second World Cup after beating Argentina in final",
+              "source": "DW - English",
+              "link": "https://www.dw.com/en/spain-wins-second-world-cup-after-beating-argentina-in-final/a-78029285?maca=en-rss-en-all-1573-rdf",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Super sub Torres fires Spain to World Cup glory",
+              "source": "RTE News",
+              "link": "https://www.rte.ie/sport/world-cup-2026/2026/0719/1584092-super-sub-torres-fires-spain-to-world-cup-glory",
+              "source_bias": "center"
+            },
+            {
+              "title": "Spain beat Argentina 1-0 to win World Cup final — as it happened",
+              "source": "SBS News - Top Stories",
+              "link": "https://www.sbs.com.au/news/live-blog/spain-v-argentina-world-cup-final-live-score-updates-reaction/owhsrb9py",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Spain welcomes back its World Cup heroes",
+              "source": "France 24 - English",
+              "link": "https://www.france24.com/en/spain-welcomes-back-its-world-cup-heroes",
+              "source_bias": "lean-left"
+            }
+          ],
+          "confidence": 1.0,
+          "match_evidence": {
+            "score": 1.0,
+            "method": "new_event",
+            "shared_tokens": [],
+            "shared_entities": []
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-20",
+          "last_seen_at": "2026-07-21",
+          "integrity_status": "trusted",
+          "revisions": [
+            {
+              "daily_story_id": "story_ea1676cfc9984304",
+              "reported_at": "2026-07-21",
+              "update_kind": "factual_update",
+              "title": "Spain Claims Second FIFA World Cup Title with Victory Over Argentina",
+              "summary": "Spain has won its second FIFA World Cup title, defeating Argentina 1-0 in the final match. Ferran Torres scored the decisive goal in extra time, securing the victory after a 16-year wait for the championship. Fans celebrated the win across Spain and in various locations worldwide, including Times Square in New York.",
+              "key_facts": [
+                "Spain won the FIFA World Cup by defeating Argentina 1-0.",
+                "Ferran Torres scored the winning goal in extra time.",
+                "This victory marks Spain's second World Cup title, the first being in 2010."
+              ],
+              "source_urls": [
+                "https://www.dw.com/en/spain-wins-second-world-cup-after-beating-argentina-in-final/a-78029285?maca=en-rss-en-all-1573-rdf",
+                "https://www.sbs.com.au/news/live-blog/spain-v-argentina-world-cup-final-live-score-updates-reaction/owhsrb9py",
+                "https://www.france24.com/en/spain-welcomes-back-its-world-cup-heroes"
+              ]
+            }
+          ],
+          "last_updated_at": "2026-07-21",
+          "merged_development_ids": [
+            "story_ea1676cfc9984304"
+          ],
+          "revision_count": 1
+        }
+      ],
+      "integrity": {
+        "public_development_count": 1,
+        "questionable_development_count": 0,
+        "review_required": false
+      },
+      "latest_title": "Spain Claims Second FIFA World Cup Title with Victory Over Argentina",
+      "latest_summary": "Spain has won its second FIFA World Cup title, defeating Argentina 1-0 in the final match. Ferran Torres scored the decisive goal in extra time, securing the victory after a 16-year wait for the championship. Fans celebrated the win across Spain and in various locations worldwide, including Times Square in New York.",
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "stage": "developing_event",
+        "stage_label": "Developing event",
+        "base_title": "FIFA World Cup",
+        "display_title": "FIFA World Cup",
+        "milestone_development_ids": [
+          "story_32b09305763e4143"
+        ],
+        "summary_available": true,
+        "summary_label": "Read the story so far",
+        "summary_updated_at": "2026-07-20",
+        "development_count": 1,
+        "coverage_packet_count": 2,
+        "date_count": 1,
+        "source_count": 5,
+        "independent_source_count": 6,
+        "first_date": "2026-07-20",
+        "latest_date": "2026-07-20",
+        "latest_update_title": "Spain Claims Second FIFA World Cup Title with Victory Over Argentina",
+        "coverage_score": 0.386,
+        "recency_score": 0.778,
+        "rank_score": 0.613,
+        "context_summary": "Spain has won its second FIFA World Cup title, defeating Argentina 1-0 in the final match. Ferran Torres scored the decisive goal in extra time, securing the victory after a 16-year wait for the championship. Fans celebrated the win across Spain and in various locations worldwide, including Times Square in New York.",
+        "cta_label": ""
+      },
+      "event_summary": {
+        "available": true,
+        "summary": "Spain has won its second FIFA World Cup title, defeating Argentina 1-0 in the final match.",
+        "key_developments": [
+          {
+            "development_id": "story_32b09305763e4143",
+            "date": "2026-07-20",
+            "title": "Spain Claims Second FIFA World Cup Title with Victory Over Argentina"
+          }
+        ],
+        "sources": [
+          {
+            "title": "PHOTOS: Spain wins the World Cup by beating Argentina 1-0 on Ferran Torres' goal in extra time",
+            "source": "PBS News",
+            "link": "https://www.pbs.org/newshour/world/photos-spain-wins-the-world-cup-by-beating-argentina-1-0-on-ferran-torres-goal-in-extra-time",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Spain wins second World Cup after beating Argentina in final",
+            "source": "DW - English",
+            "link": "https://www.dw.com/en/spain-wins-second-world-cup-after-beating-argentina-in-final/a-78029285?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Super sub Torres fires Spain to World Cup glory",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/sport/world-cup-2026/2026/0719/1584092-super-sub-torres-fires-spain-to-world-cup-glory",
+            "source_bias": "center"
+          },
+          {
+            "title": "Spain beat Argentina 1-0 to win World Cup final — as it happened",
+            "source": "SBS News - Top Stories",
+            "link": "https://www.sbs.com.au/news/live-blog/spain-v-argentina-world-cup-final-live-score-updates-reaction/owhsrb9py",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Spain welcomes back its World Cup heroes",
+            "source": "France 24 - English",
+            "link": "https://www.france24.com/en/spain-welcomes-back-its-world-cup-heroes",
+            "source_bias": "lean-left"
+          }
+        ],
+        "updated_at": "2026-07-20",
+        "provenance": "source_grounded_event_memory"
+      },
+      "event_stage": "developing_event",
+      "related_events": [
+        {
+          "event_id": "event_trump-and-infantino-present-world-cup-trophy_06cb42752d",
+          "title": "Trump and Infantino Present World Cup Trophy to Spain Amid Mixed Reactions",
+          "relationship": "related_topic",
+          "confidence": 0.712,
+          "shared_entities": [
+            "argentina",
+            "spain"
+          ]
+        },
+        {
+          "event_id": "event_spain-s-world-cup-champions-celebrate-return_43f873c6a3",
+          "title": "Spain's World Cup Champions Celebrate with Royal Welcome and Parade",
+          "relationship": "related_topic",
+          "confidence": 0.676,
+          "shared_entities": [
+            "argentina",
+            "spain"
+          ]
+        },
+        {
+          "event_id": "event_world-cup-final-spain-to-face-argentina-fran_ca15e3b715",
+          "title": "World Cup Final: Spain to Face Argentina, France and England Compete for Third Place",
+          "relationship": "related_topic",
+          "confidence": 0.669,
+          "shared_entities": [
+            "argentina",
+            "spain"
+          ]
+        }
+      ],
+      "search_tokens": [
+        "1-0",
+        "16-year",
+        "across",
+        "argentina",
+        "celebrated",
+        "championship",
+        "claim",
+        "decisive",
+        "defeating",
+        "extra",
+        "fans",
+        "ferran",
+        "fifa",
+        "final",
+        "goal",
+        "including",
+        "location",
+        "match",
+        "scored",
+        "second",
+        "securing",
+        "spain",
+        "square",
+        "time",
+        "times",
+        "title",
+        "torre",
+        "variou",
+        "victory",
+        "wait",
+        "worldwide",
+        "york"
+      ],
+      "entities": [
+        "argentina",
+        "argentina_spain",
+        "claim_second",
+        "cup_title",
+        "ferran_torre",
+        "fifa",
+        "second_fifa",
+        "spain",
+        "spain_claim",
+        "times_square"
+      ],
+      "search_text": "1-0 16-year across argentina argentina_spain celebrated championship claim claim_second cup_title decisive defeating extra fans ferran ferran_torre fifa final goal including location match scored second second_fifa securing spain spain_claim square time times times_square title torre variou victory wait worldwide york"
     },
     {
       "event_id": "event_dhs-secretary-mullin-supports-trump-s-claims_1f1de09f5b",
@@ -4428,8 +5602,8 @@
         "latest_date": "2026-07-19",
         "latest_update_title": "Trump Claims China Interfered in 2020 Election During National Address",
         "coverage_score": 0.422,
-        "recency_score": 0.778,
-        "rank_score": 0.628,
+        "recency_score": 0.7,
+        "rank_score": 0.583,
         "context_summary": "Muninn first tracked this thread on 2026-07-18: DHS Secretary Mullin Supports Trump's Claims of Election Interference. The latest development is Trump Claims China Interfered in 2020 Election During National Address.",
         "cta_label": ""
       },
@@ -4729,8 +5903,8 @@
         "latest_date": "2026-07-19",
         "latest_update_title": "England Secures Third Place with 6-4 Victory Over France in World Cup Thriller",
         "coverage_score": 0.398,
-        "recency_score": 0.778,
-        "rank_score": 0.618,
+        "recency_score": 0.7,
+        "rank_score": 0.573,
         "context_summary": "In a record-breaking World Cup third-place playoff, England defeated France 6-4. Bukayo Saka scored a hat trick, helping England to a significant lead of 4-0 at halftime. Despite a spirited comeback from France in the second half, England held on to secure their best World Cup finish since 1966.",
         "cta_label": ""
       },
@@ -4987,8 +6161,8 @@
         "latest_date": "2026-07-20",
         "latest_update_title": "Khalil al-Hayya Elected as New Leader of Hamas Following Run-off",
         "coverage_score": 0.261,
-        "recency_score": 0.875,
-        "rank_score": 0.617,
+        "recency_score": 0.778,
+        "rank_score": 0.561,
         "context_summary": "Khalil al-Hayya has been appointed as the new leader of Hamas after a run-off election against Khaled Meshaal. Al-Hayya, who was previously part of the five-member leadership council, succeeds Yahya Sinwar, who was killed by Israeli forces in 2024.",
         "cta_label": ""
       },
@@ -5198,8 +6372,8 @@
         "latest_date": "2026-07-19",
         "latest_update_title": "Cuban Dissident Artist Luis Manuel Otero Alcántara Arrives in the US After Prison Release",
         "coverage_score": 0.298,
-        "recency_score": 0.778,
-        "rank_score": 0.576,
+        "recency_score": 0.7,
+        "rank_score": 0.531,
         "context_summary": "Luis Manuel Otero Alcántara, a prominent Cuban artist and dissident, arrived in Miami after being released from a five-year prison sentence. His release was contingent upon his exile from Cuba, following his arrest during the 2021 anti-government protests. Otero Alcántara is known for co-founding the San Isidro Movement, which advocates for artistic freedom and human rights in Cuba.",
         "cta_label": ""
       },
@@ -5432,8 +6606,8 @@
         "latest_date": "2026-07-19",
         "latest_update_title": "Passenger Ferry Capsizes Off Guyana, Search and Rescue Underway",
         "coverage_score": 0.298,
-        "recency_score": 0.778,
-        "rank_score": 0.576,
+        "recency_score": 0.7,
+        "rank_score": 0.531,
         "context_summary": "A passenger ferry carrying 116 people has capsized off the coast of Guyana, prompting an ongoing search and rescue operation. Authorities report that at least 67 individuals have been rescued so far, while efforts continue to locate the remaining passengers and crew. The incident occurred between Georgetown and Port Kaituma, with a distress call made shortly after 11 PM local time.",
         "cta_label": ""
       },
@@ -5653,8 +6827,8 @@
         "latest_date": "2026-07-19",
         "latest_update_title": "Thunderstorms to Clear Wildfire Smoke Ahead of World Cup Final",
         "coverage_score": 0.248,
-        "recency_score": 0.778,
-        "rank_score": 0.555,
+        "recency_score": 0.7,
+        "rank_score": 0.51,
         "context_summary": "Thunderstorms are expected to clear wildfire smoke from the Northeast United States before the World Cup final between Spain and Argentina. While the storm front has largely moved the smoke out of the Northeast, some smoke remains over the central US Warnings for unhealthy air quality are still in effect across a wide area.",
         "cta_label": ""
       },
@@ -5863,8 +7037,8 @@
         "latest_date": "2026-07-19",
         "latest_update_title": "Lettuce Recall Issued Due to Cyclospora Contamination Risk",
         "coverage_score": 0.236,
-        "recency_score": 0.778,
-        "rank_score": 0.55,
+        "recency_score": 0.7,
+        "rank_score": 0.505,
         "context_summary": "Taylor Farms has issued a recall of iceberg lettuce shipped to 27 states due to potential contamination with Cyclospora, a parasite that can cause severe gastrointestinal illness. The affected states include Texas, Florida, Pennsylvania, Illinois, and New Jersey. The FDA has confirmed that a sample of the recalled lettuce tested positive for Cyclospora.",
         "cta_label": ""
       },
@@ -6068,8 +7242,8 @@
         "latest_date": "2026-07-19",
         "latest_update_title": "Laos Unable to Confirm Methanol Poisoning in Tourist Deaths Due to Lack of Autopsies",
         "coverage_score": 0.198,
-        "recency_score": 0.778,
-        "rank_score": 0.534,
+        "recency_score": 0.7,
+        "rank_score": 0.489,
         "context_summary": "Laos officials have stated that they cannot determine the cause of deaths of tourists linked to methanol poisoning due to the absence of autopsies. As a result, there is no evidence to support claims of poisoning. Those indicted in connection with the deaths are facing charges related to selling harmful food and operating an illegal business.",
         "cta_label": ""
       },
@@ -6262,8 +7436,8 @@
         "latest_date": "2026-07-19",
         "latest_update_title": "Rescue Efforts Underway in China After Landslide Traps Residents",
         "coverage_score": 0.198,
-        "recency_score": 0.778,
-        "rank_score": 0.534,
+        "recency_score": 0.7,
+        "rank_score": 0.489,
         "context_summary": "A large-scale rescue operation is underway in Pengshui County, Chongqing municipality, following a landslide on July 17 that buried part of a residential area. Authorities are working to locate and rescue an unknown number of people trapped under the debris.",
         "cta_label": ""
       },
