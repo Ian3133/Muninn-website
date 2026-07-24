@@ -176,6 +176,59 @@ function toUtcDateKey(value) {
   return parsed.toISOString().slice(0, 10);
 }
 
+function eventTimelineEntries(event) {
+  const seen = new Set();
+  return (Array.isArray(event?.timeline) ? event.timeline : [])
+    .filter((entry) => {
+      const title = String(entry?.title || '').trim().toLowerCase().replace(/\s+/g, ' ');
+      const identity = entry?.development_id || `${toUtcDateKey(entry?.date)}:${title}`;
+      if (!identity || seen.has(identity)) return false;
+      seen.add(identity);
+      return true;
+    })
+    .sort((left, right) => String(left?.date || '').localeCompare(String(right?.date || '')));
+}
+
+function eventDisplayTitle(event) {
+  return String(
+    event?.presentation?.display_title
+    || event?.presentation?.base_title
+    || event?.topic_label
+    || event?.canonical_title
+    || event?.title
+    || 'Tracked event'
+  ).trim();
+}
+
+function eventActivityStatus(event, currentDateKey) {
+  const entries = eventTimelineEntries(event);
+  if (entries.length < 2) return 'emerging';
+  const latestKey = toUtcDateKey(event?.presentation?.latest_date || entries[entries.length - 1]?.date || event?.last_seen_at);
+  if (!latestKey || !currentDateKey) return 'ongoing';
+  if (latestKey === currentDateKey) return 'active';
+  const latestDate = new Date(`${latestKey}T12:00:00Z`);
+  const currentDate = new Date(`${currentDateKey}T12:00:00Z`);
+  const daysSinceUpdate = Math.max(0, Math.round((currentDate - latestDate) / (24 * 60 * 60 * 1000)));
+  return daysSinceUpdate >= 4 ? 'archive' : 'ongoing';
+}
+
+function eventDateRange(event) {
+  const entries = eventTimelineEntries(event);
+  if (!entries.length) return '';
+  const firstKey = toUtcDateKey(event?.presentation?.first_date || entries[0]?.date);
+  const latestKey = toUtcDateKey(event?.presentation?.latest_date || entries[entries.length - 1]?.date);
+  if (!firstKey || !latestKey) return '';
+  if (firstKey === latestKey) return formatStoredDate(firstKey);
+  const first = new Date(`${firstKey}T12:00:00Z`);
+  const latest = new Date(`${latestKey}T12:00:00Z`);
+  const firstLabel = first.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  const latestLabel = latest.toLocaleDateString('en-US', {
+    month: first.getUTCMonth() === latest.getUTCMonth() ? undefined : 'short',
+    day: 'numeric',
+  });
+  return `${firstLabel}\u2013${latestLabel}`;
+}
+
 function buildWeeklyRoundup(events, generatedAt) {
   const endKey = toUtcDateKey(generatedAt) || toUtcDateKey(new Date());
   const endDate = new Date(`${endKey}T12:00:00Z`);
@@ -333,7 +386,7 @@ function inferDisplayCategory(story) {
   const rules = [
     ['Sports', ['world cup', 'tournament', 'match', 'league', 'playoff', 'semifinal', 'quarterfinal', 'football', 'soccer', 'athlete', 'player', 'coach']],
     ['Culture', ['actor', 'actress', 'film', 'movie', 'musician', 'singer', 'television', 'jurassic park']],
-    ['Technology', ['artificial intelligence', 'openai', 'chatgpt', 'software', 'cyber', 'technology', 'robot']],
+    ['Technology', ['artificial intelligence', 'openai', 'chatgpt', 'software', 'cyber', 'technology', 'robot', 'sign-in', 'account access', 'selfie video']],
     ['Health', ['health', 'hospital', 'disease', 'vaccine', 'medical', 'doctor', 'patient']],
     ['Science', ['science', 'space', 'nasa', 'research', 'study', 'climate', 'wildfire', 'earthquake', 'astronomer', 'archaeology', 'ancient mayan', 'ruins']],
     ['Business', ['market', 'business', 'economy', 'trade', 'tariff', 'bank', 'stock', 'tax']],
@@ -399,8 +452,17 @@ function uniqueSourceCount(stories) {
   const keys = new Set();
   stories.forEach((story) => {
     const items = Array.isArray(story?.items) ? story.items : [];
-    if (items.length) items.forEach((item) => keys.add(item.link || item.source));
-    else (Array.isArray(story?.sources) ? story.sources : []).forEach((source) => keys.add(source));
+    if (items.length) {
+      items.forEach((item) => {
+        const outlet = String(item?.source || item?.station || '').trim().toLowerCase();
+        if (outlet) keys.add(outlet);
+      });
+    } else {
+      (Array.isArray(story?.sources) ? story.sources : []).forEach((source) => {
+        const outlet = String(source || '').trim().toLowerCase();
+        if (outlet) keys.add(outlet);
+      });
+    }
   });
   return keys.size || stories.reduce((sum, story) => sum + Number(story?.source_count || 0), 0) || 1;
 }
@@ -451,14 +513,26 @@ function sourceLogoUrl(sourceName) {
   return `/assets/logos/${match ? match[1] : 'news_placeholder'}.png`;
 }
 
+function cleanSourceDisplayName(value) {
+  const raw = String(value || '').trim();
+  if (!raw) return '';
+  if (/^ap\s*-\s*top news(?:\s+via\s+google news)?$/i.test(raw)) return 'AP';
+  if (/^dw(?:\s*-\s*english)?$/i.test(raw)) return 'DW';
+  return raw
+    .replace(/\s+via\s+Google News$/i, '')
+    .replace(/\s*-\s*(?:English|Latest|Headlines|World)$/i, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 function sourceEntriesForStories(stories) {
   const byOutlet = new Map();
   const addSource = (entry) => {
-    const name = String(
+    const name = cleanSourceDisplayName(
       typeof entry === 'string'
         ? entry
         : (entry?.station || entry?.source || entry?.publisher || entry?.name || '')
-    ).trim();
+    );
     if (!name || byOutlet.has(name.toLowerCase())) return;
     byOutlet.set(name.toLowerCase(), {
       name,
@@ -476,6 +550,13 @@ function sourceEntriesForStories(stories) {
 }
 
 const SOURCE_LOGO_DISPLAY_LIMIT = 3;
+
+function sourceSummaryText(sourceEntries, fallbackCount, visibleNameLimit = 2) {
+  const count = sourceEntries.length || Number(fallbackCount || 1);
+  const names = sourceEntries.slice(0, visibleNameLimit).map((entry) => entry.name);
+  const remainder = Math.max(0, count - names.length);
+  return `${count} source${count === 1 ? '' : 's'}${names.length ? ` · ${names.join(', ')}${remainder ? ` +${remainder}` : ''}` : ''}`;
+}
 
 function sourceOrientationCounts(sourceEntries) {
   return sourceEntries.reduce((counts, entry) => {
@@ -575,20 +656,65 @@ function latestDevelopmentForStory(story, editionDate, latestByKey) {
   return latest;
 }
 
-function MoreNewsCard({ story, editionDate, currentDate, latest }) {
+function EditionStoryCard({ story, editionDate, currentDate }) {
   const title = cleanDisplayTitle(story?.title, story?.sources);
   const sourceEntries = sourceEntriesForStories([story]);
   const visibleSourceEntries = sourceEntries.slice(0, SOURCE_LOGO_DISPLAY_LIMIT);
   const hiddenSourceCount = Math.max(0, sourceEntries.length - visibleSourceEntries.length);
   const sourceCount = sourceEntries.length || Number(story?.source_count || 1);
+  const imageUrl = story?.image?.url || story?.image?.thumbnail_url || '';
+  const imageCrop = storyImageCropPresentation(story, 'tall');
   return (
-    <article className="more-news-card">
-      <a className="more-news-card-main" href={storyArchiveHref(story, editionDate, currentDate)}>
-        <h3>{title}</h3>
-        {story?.summary ? <p>{story.summary}</p> : null}
-        <div className="more-news-card-evidence">
+    <div className="top-story-item edition-story-item">
+      <a
+        className={`top-story-card edition-story-card ${imageUrl ? 'has-image' : 'no-image'}`}
+        href={storyArchiveHref(story, editionDate, currentDate)}
+        aria-label={`Read ${title}`}
+      >
+        <div
+          className={`top-story-card-image ${imageUrl ? '' : 'is-placeholder'} ${imageCrop.preserveFullImage ? 'preserve-full-image' : ''}`}
+          style={imageUrl ? { '--story-focus': imageCrop.position } : undefined}
+        >
+          {imageUrl ? (
+            <img
+              className="top-story-card-image-primary"
+              src={imageUrl}
+              alt=""
+              loading="lazy"
+              onError={(event) => {
+                event.currentTarget.style.display = 'none';
+                event.currentTarget.parentElement?.classList.add('is-placeholder');
+              }}
+            />
+          ) : null}
+          {imageUrl ? <div className="story-image-title"><h3>{title}</h3></div> : null}
+          {imageUrl && sourceEntries.length ? (
+            <div className="image-source-logos" aria-label={`Sources include ${sourceEntries.map((entry) => entry.name).join(', ')}`}>
+              <div className="top-story-source-logos">
+                {visibleSourceEntries.map((entry) => (
+                  <span className="top-story-source-logo" title={entry.name} key={entry.name}>
+                    <img
+                      src={sourceLogoUrl(entry.name)}
+                      alt=""
+                      aria-hidden="true"
+                      loading="lazy"
+                      onError={(event) => {
+                        event.currentTarget.onerror = null;
+                        event.currentTarget.src = '/assets/logos/news_placeholder.png';
+                      }}
+                    />
+                  </span>
+                ))}
+                {hiddenSourceCount ? <span className="top-story-source-more" title={`${hiddenSourceCount} more sources`}>+{hiddenSourceCount}</span> : null}
+              </div>
+            </div>
+          ) : null}
+        </div>
+        <div className="top-story-card-body">
+          {!imageUrl ? <h3 title={title}>{title}</h3> : null}
+          <div className="top-story-evidence">
           {sourceEntries.length ? (
-            <div className="more-news-source-logos" aria-label={`Sources include ${sourceEntries.map((entry) => entry.name).join(', ')}`}>
+            <div className="top-story-source-logos" aria-label={`Sources include ${sourceEntries.map((entry) => entry.name).join(', ')}`}>
               {visibleSourceEntries.map((entry) => (
                 <span className="top-story-source-logo" title={entry.name} key={entry.name}>
                   <img
@@ -606,15 +732,98 @@ function MoreNewsCard({ story, editionDate, currentDate, latest }) {
               {hiddenSourceCount ? <span className="top-story-source-more" title={`${hiddenSourceCount} more sources`}>+{hiddenSourceCount}</span> : null}
             </div>
           ) : null}
-          <strong>{storyCoverageReason(sourceEntries, sourceCount)}</strong>
+          </div>
+          <div className="top-story-card-footer edition-story-footer">
+            <span>{sourceSummaryText(sourceEntries, sourceCount)}</span>
+            <span aria-hidden="true">→</span>
+          </div>
         </div>
       </a>
-      {latest ? (
-        <a className="more-news-latest" href={storyArchiveHref(latest.story, latest.date, currentDate)}>
-          <span>Latest development &middot; {formatStoredDate(latest.date)}</span>
-          <strong>{cleanDisplayTitle(latest.story?.title, latest.story?.sources)}</strong>
-        </a>
-      ) : null}
+    </div>
+  );
+}
+
+function TodayRailStory({ group, variant, storyIndex, generatedAt }) {
+  const story = group?.primary;
+  const related = Array.isArray(group?.related) ? group.related : [];
+  const groupedStories = [story, ...related].filter(Boolean);
+  const title = cleanDisplayTitle(story?.title, story?.sources);
+  const sourceEntries = sourceEntriesForStories(groupedStories);
+  const representativeSource = sourceEntries[0];
+  const visibleSources = representativeSource ? [representativeSource] : [];
+  const sourceCount = sourceEntries.length || Number(story?.source_count || 1);
+  const imageUrl = story?.image?.url || story?.image?.thumbnail_url || '';
+  const imageCrop = storyImageCropPresentation(story, ['rail', 'equal', 'small'].includes(variant) ? 'tall' : 'wide');
+  const category = normalizedStoryCategory(story);
+  const storyRef = story?.story_id
+    ? `sid=${encodeURIComponent(story.story_id)}`
+    : `id=${Math.max(0, storyIndex)}`;
+  const freshness = formatCardFreshness(generatedAt);
+
+  return (
+    <article className={`today-rail-story is-${variant} ${imageUrl ? 'has-image' : 'no-image'}`}>
+      <a className="today-rail-story-link" href={`/story.html?${storyRef}`} aria-label={`Read ${title}`}>
+        <div className="today-rail-copy">
+          <div className="today-rail-eyebrow">
+            <span>{category}</span>
+            {variant === 'lead' && freshness ? <time>{freshness}</time> : null}
+          </div>
+          <h2 title={title}>{title}</h2>
+          {variant === 'lead' && story?.summary ? (
+            <p className="today-rail-deck">{truncateText(story.summary, 310)}</p>
+          ) : null}
+          <div className="today-rail-source-line">
+            <strong>{sourceCount} sources</strong>
+            {sourceEntries.length ? (
+              <span className="today-rail-source-names">
+                {sourceEntries.slice(0, 2).map((entry) => entry.name).join(', ')}
+                {sourceEntries.length > 2 ? ` +${sourceEntries.length - 2}` : ''}
+              </span>
+            ) : null}
+          </div>
+        </div>
+
+        {imageUrl ? (
+          <div
+            className={`today-rail-image ${imageCrop.preserveFullImage ? 'preserve-full-image' : ''}`}
+            style={{ '--story-focus': imageCrop.position }}
+          >
+            <img className="today-rail-image-backdrop" src={imageUrl} alt="" aria-hidden="true" loading="lazy" />
+            <img
+              className="today-rail-image-primary"
+              src={imageUrl}
+              alt=""
+              loading="lazy"
+              onError={(event) => {
+                event.currentTarget.style.display = 'none';
+                event.currentTarget.parentElement?.classList.add('is-placeholder');
+              }}
+            />
+          </div>
+        ) : null}
+
+        <div className="today-rail-action">
+          {visibleSources.length ? (
+            <span className="today-rail-source-logos" aria-label={`Sources include ${visibleSources.map((entry) => entry.name).join(', ')}`}>
+              {visibleSources.map((entry) => (
+                <span className="today-rail-source-logo" title={entry.name} key={entry.name}>
+                  <img
+                    src={sourceLogoUrl(entry.name)}
+                    alt=""
+                    aria-hidden="true"
+                    loading="lazy"
+                    onError={(event) => {
+                      event.currentTarget.onerror = null;
+                      event.currentTarget.src = '/assets/logos/news_placeholder.png';
+                    }}
+                  />
+                </span>
+              ))}
+            </span>
+          ) : null}
+          <span className="today-rail-open">Open <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
     </article>
   );
 }
@@ -780,6 +989,13 @@ export default function LegacyHome() {
       return 'light';
     }
   });
+  const [todayLayout, setTodayLayout] = useState(() => {
+    try {
+      return localStorage.getItem('muninn-today-layout') === 'cards' ? 'cards' : 'rail';
+    } catch (_e) {
+      return 'rail';
+    }
+  });
   const [stories, setStories] = useState([]);
   const [digestGeneratedAt, setDigestGeneratedAt] = useState('');
   const [dailyBriefing, setDailyBriefing] = useState(null);
@@ -821,7 +1037,7 @@ export default function LegacyHome() {
   const [loadingTimelines, setLoadingTimelines] = useState(false);
   const [timelineError, setTimelineError] = useState('');
   const [timelineQuery, setTimelineQuery] = useState('');
-  const [eventStageFilter, setEventStageFilter] = useState('all');
+  const [eventStageFilter, setEventStageFilter] = useState('active');
   const client = useMemo(() => (ENABLE_CLOUD_SETTINGS ? generateClient() : null), []);
 
   const visibleCategories = useMemo(
@@ -840,14 +1056,15 @@ export default function LegacyHome() {
     []
   );
   const todayGroups = useMemo(() => groupStoriesForToday(stories), [stories]);
-  const additionalNewsStartIndex = useMemo(
-    () => todayGroups.findIndex(({ primary, related }) => uniqueSourceCount([primary, ...related]) === 1),
+  const primaryTodayGroups = useMemo(
+    () => todayGroups.filter(({ primary, related }) => uniqueSourceCount([primary, ...related]) > 1),
     [todayGroups]
   );
-  const primaryTodayGroups = useMemo(
-    () => additionalNewsStartIndex < 0 ? todayGroups : todayGroups.slice(0, additionalNewsStartIndex),
-    [todayGroups, additionalNewsStartIndex]
+  const visibleTodayGroups = useMemo(
+    () => primaryTodayGroups.slice(0, 4),
+    [primaryTodayGroups]
   );
+  const visualCompactStoryIds = useMemo(() => new Set(), []);
   const dailyBriefingText = useMemo(() => {
     const publishedBriefing = String(
       typeof dailyBriefing === 'string' ? dailyBriefing : dailyBriefing?.summary || ''
@@ -894,8 +1111,11 @@ export default function LegacyHome() {
   }, [todayAtGlance]);
 
   const moreTodayGroups = useMemo(
-    () => additionalNewsStartIndex < 0 ? [] : todayGroups.slice(additionalNewsStartIndex),
-    [todayGroups, additionalNewsStartIndex]
+    () => [
+      ...primaryTodayGroups.slice(4),
+      ...todayGroups.filter(({ primary, related }) => uniqueSourceCount([primary, ...related]) <= 1),
+    ],
+    [primaryTodayGroups, todayGroups]
   );
   const currentDateKey = useMemo(
     () => toUtcDateKey(digestGeneratedAt) || toUtcDateKey(new Date()),
@@ -916,23 +1136,58 @@ export default function LegacyHome() {
     });
     return map;
   }, [stories, currentDateKey, recentNewsDays]);
-  const filteredTimelineEvents = useMemo(() => {
-    const query = timelineQuery.trim().toLowerCase();
-    return [...timelineEvents]
+  const timelineCurrentDateKey = useMemo(
+    () => toUtcDateKey(timelinesGeneratedAt) || toUtcDateKey(new Date()),
+    [timelinesGeneratedAt]
+  );
+  const eventStoryById = useMemo(() => {
+    const matches = new Map();
+    stories.forEach((story) => {
+      if (story?.event_id && (story?.image?.url || story?.image?.thumbnail_url)) {
+        matches.set(story.event_id, story);
+      }
+    });
+    return matches;
+  }, [stories]);
+  const eligibleTimelineEvents = useMemo(
+    () => timelineEvents
+      .filter((event) => eventTimelineEntries(event).length >= 2)
       .sort((left, right) => {
         const rankDelta = Number(right?.presentation?.rank_score || 0) - Number(left?.presentation?.rank_score || 0);
         if (rankDelta) return rankDelta;
         return String(right?.last_seen_at || '').localeCompare(String(left?.last_seen_at || ''));
-      })
-      .filter((event) => eventStageFilter === 'all' || (event?.presentation?.stage || event?.event_stage) === eventStageFilter)
+      }),
+    [timelineEvents]
+  );
+  const eventStatusCounts = useMemo(
+    () => eligibleTimelineEvents.reduce((counts, event) => {
+      const status = eventActivityStatus(event, timelineCurrentDateKey);
+      counts[status] = (counts[status] || 0) + 1;
+      return counts;
+    }, { active: 0, ongoing: 0, archive: 0 }),
+    [eligibleTimelineEvents, timelineCurrentDateKey]
+  );
+  const filteredTimelineEvents = useMemo(() => {
+    const query = timelineQuery.trim().toLowerCase();
+    return eligibleTimelineEvents
+      .filter((event) => query || eventActivityStatus(event, timelineCurrentDateKey) === eventStageFilter)
       .filter((event) => !query || [
+        eventDisplayTitle(event),
         event?.title,
         event?.canonical_title,
         event?.latest_title,
         event?.search_text,
         ...(Array.isArray(event?.entities) ? event.entities : []),
       ].filter(Boolean).join(' ').toLowerCase().includes(query));
-  }, [timelineEvents, timelineQuery, eventStageFilter]);
+  }, [eligibleTimelineEvents, timelineCurrentDateKey, timelineQuery, eventStageFilter]);
+  const featuredTimelineEvents = useMemo(
+    () => !timelineQuery && eventStageFilter === 'active' ? filteredTimelineEvents.slice(0, 3) : [],
+    [filteredTimelineEvents, timelineQuery, eventStageFilter]
+  );
+  const directoryTimelineEvents = useMemo(
+    () => featuredTimelineEvents.length ? filteredTimelineEvents.slice(featuredTimelineEvents.length) : filteredTimelineEvents,
+    [featuredTimelineEvents, filteredTimelineEvents]
+  );
   const weeklyRoundup = useMemo(
     () => buildWeeklyRoundup(timelineEvents, timelinesGeneratedAt),
     [timelineEvents, timelinesGeneratedAt]
@@ -965,6 +1220,14 @@ export default function LegacyHome() {
       // no-op
     }
   }, [theme]);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem('muninn-today-layout', todayLayout);
+    } catch (_e) {
+      // no-op
+    }
+  }, [todayLayout]);
 
   useEffect(() => {
     (async () => {
@@ -1041,7 +1304,7 @@ export default function LegacyHome() {
   }, []);
 
   useEffect(() => {
-    if (activeCategory !== 'top-stories') return;
+    if (activeCategory !== 'top-stories' && activeCategory !== 'timelines') return;
 
     (async () => {
       try {
@@ -1090,17 +1353,6 @@ export default function LegacyHome() {
       }
     })();
   }, [moreNewsOpen, recentNewsLoaded, recentNewsLoading]);
-
-  useEffect(() => {
-    if (!moreNewsOpen) return undefined;
-    document.body.classList.add('more-news-open');
-    const closeOnEscape = (event) => { if (event.key === 'Escape') setMoreNewsOpen(false); };
-    window.addEventListener('keydown', closeOnEscape);
-    return () => {
-      document.body.classList.remove('more-news-open');
-      window.removeEventListener('keydown', closeOnEscape);
-    };
-  }, [moreNewsOpen]);
 
   useEffect(() => {
     if (activeCategory !== 'timelines' && activeCategory !== 'your-newsletter') return;
@@ -1778,11 +2030,38 @@ export default function LegacyHome() {
                   {activeCategory === 'timelines' ? 'Living news record' : 'Made for you'}
                 </span>
               ) : null}
-              <h1>{activeCategory === 'top-stories' ? 'Daily Brief' : title}</h1>
+              <h1>{activeCategory === 'top-stories' ? 'Today\u2019s Top Stories' : title}</h1>
               {activeCategory === 'timelines' ? <p className="today-intro">Follow important stories from their latest development back through the full record.</p> : null}
               {activeCategory === 'your-newsletter' ? <p className="today-intro">A focused briefing built around the stories, places, and events that matter to you.</p> : null}
             </div>
-            {showDate ? <time className="header-date" dateTime={currentDateKey}>{dateStr}</time> : null}
+            {showDate ? (
+              <div className="today-view-actions">
+                <div className="today-layout-switch" role="group" aria-label="Today story layout">
+                  <button
+                    className={todayLayout === 'rail' ? 'active' : ''}
+                    type="button"
+                    aria-pressed={todayLayout === 'rail'}
+                    onClick={() => setTodayLayout('rail')}
+                  >
+                    Rail
+                  </button>
+                  <button
+                    className={todayLayout === 'cards' ? 'active' : ''}
+                    type="button"
+                    aria-pressed={todayLayout === 'cards'}
+                    onClick={() => setTodayLayout('cards')}
+                  >
+                    Cards
+                  </button>
+                </div>
+                <div className="today-edition-time">
+                  <time className="header-date" dateTime={currentDateKey}>{dateStr}</time>
+                  {formatCardFreshness(digestGeneratedAt) ? (
+                    <span className="today-edition-freshness">{formatCardFreshness(digestGeneratedAt)}</span>
+                  ) : null}
+                </div>
+              </div>
+            ) : null}
           </header>
 
           {ENABLE_NEWSLETTERS ? (
@@ -2036,55 +2315,75 @@ export default function LegacyHome() {
             )}
 
             {!loading && !error && stories.length > 0 && (<>
-              <section className="daily-briefing" aria-label="The daily briefing">
-                <div className="daily-briefing-intro">
-                  <span className="daily-briefing-kicker">Today at a glance</span>
-                </div>
-                <div className="daily-briefing-prose">
-                  {todayAtGlanceParagraphs.map((segments, paragraphIndex) => (
-                    <p key={paragraphIndex}>
-                      {segments.map((segment, segmentIndex) => {
-                        const href = briefingSegmentHref(segment);
-                        const linkedStory = stories.find((story) => story?.story_id === segment?.story_id);
-                        const referenceLabel = String(segment.text || '').trim();
-                        return href
-                          ? <Fragment key={segmentIndex}>
-                              {' '}
-                              <span className="daily-briefing-related">
-                                <a
-                                  className="daily-briefing-reference"
-                                  href={href}
-                                  title={linkedStory?.title || referenceLabel}
-                                >{referenceLabel}</a>
-                              </span>
-                            </Fragment>
-                          : <Fragment key={segmentIndex}>{segment.text}</Fragment>;
-                      })}
-                    </p>
+              <div className={`today-image-rail layout-${todayLayout}`}>
+                <div className="today-rail-equal-grid">
+                  {visibleTodayGroups.map((group) => (
+                    <TodayRailStory
+                      group={group}
+                      variant="equal"
+                      storyIndex={stories.indexOf(group.primary)}
+                      generatedAt={digestGeneratedAt}
+                      key={group.primary?.story_id || group.primary?.title}
+                    />
                   ))}
                 </div>
-              </section>
 
-              <div className="stories-section-heading">
-                <h2>Stories</h2>
+                {moreTodayGroups.length ? (
+                  <section className="today-secondary-news" aria-labelledby="today-secondary-news-title">
+                    <header className="today-secondary-heading">
+                      <div>
+                        <span>Also in today’s edition</span>
+                        <h2 id="today-secondary-news-title">The rest of today</h2>
+                      </div>
+                      <p>{moreTodayGroups.length} stories</p>
+                    </header>
+                    {todayLayout === 'cards' ? (
+                      <div className="top-stories-grid edition-stories-grid today-current-edition-grid">
+                        {moreTodayGroups.map(({ primary }, index) => (
+                          <EditionStoryCard
+                            story={primary}
+                            editionDate={currentDateKey}
+                            currentDate={currentDateKey}
+                            key={`today-edition-${primary?.story_id || 'story'}-${index}`}
+                          />
+                        ))}
+                      </div>
+                    ) : (
+                      <div className="today-secondary-grid">
+                        {moreTodayGroups.map((group) => (
+                          <TodayRailStory
+                            group={group}
+                            variant="small"
+                            storyIndex={stories.indexOf(group.primary)}
+                            generatedAt={digestGeneratedAt}
+                            key={`today-secondary-${group.primary?.story_id || group.primary?.title}`}
+                          />
+                        ))}
+                      </div>
+                    )}
+                  </section>
+                ) : null}
+
               </div>
 
-              <div className="top-stories-grid">
-                {primaryTodayGroups.map(({ primary: story, related }, index) => {
+              {false ? (<div className="top-stories-grid legacy-today-cards" aria-hidden="true">
+                {visibleTodayGroups.map(({ primary: story, related }, index) => {
                   const groupedStories = [story, ...related];
                   const sourceEntries = sourceEntriesForStories(groupedStories);
                   const visibleSourceEntries = sourceEntries.slice(0, SOURCE_LOGO_DISPLAY_LIMIT);
                   const hiddenSourceCount = Math.max(0, sourceEntries.length - visibleSourceEntries.length);
                   const timelineCount = Math.max(...groupedStories.map((item) => Array.isArray(item?.timeline_highlights) ? item.timeline_highlights.length : 0));
-                  const imageUrl = story?.image?.url || story?.image?.thumbnail_url || '';
                   const isLead = index === 0;
                   const isSecondaryFeature = index > 0 && index <= 2;
+                  const isCompact = index > 2;
+                  const isVisualCompact = index > 2 && visualCompactStoryIds.has(story?.story_id);
+                  const imageUrl = isCompact && !isVisualCompact ? '' : (story?.image?.url || story?.image?.thumbnail_url || '');
                   const imageCrop = storyImageCropPresentation(story, isLead || isSecondaryFeature ? 'wide' : 'tall');
                   const displayTitle = cleanDisplayTitle(story?.title, story?.sources);
                   const cardContext = storyCardContext(groupedStories, related.length, timelineCount);
                   const visibleContextLabel = cardContext.kind === 'update'
                     ? cardContext.label.replace(/^Event update\s*/i, '').replace(/^[^\w]+/, '')
-                    : cardContext.label;
+                    : normalizedStoryCategory(story);
                   const eventStory = cardContext.kind === 'update'
                     ? groupedStories.find((item) => item?.story_context?.timeline_url || item?.event_id)
                     : null;
@@ -2101,7 +2400,7 @@ export default function LegacyHome() {
 
                   return (
                     <Fragment key={story?.story_id || displayTitle}>
-                      <div className={`top-story-item ${isLead ? 'is-lead' : ''} ${isSecondaryFeature ? 'is-secondary-feature' : ''}`}>
+                      <div className={`top-story-item ${isLead ? 'is-lead' : ''} ${isSecondaryFeature ? 'is-secondary-feature' : ''} ${isCompact ? 'is-compact' : ''} ${isVisualCompact ? 'is-visual-compact' : ''}`}>
                       {cardContext ? (
                         eventHref ? <a className={`top-story-context-label is-${cardContext.kind}-story`} href={eventHref} title={cardContext.detail ? `${cardContext.label} · ${cardContext.detail}` : cardContext.label}>
                           <span className="top-story-timeline-dot" aria-hidden="true" />
@@ -2115,7 +2414,7 @@ export default function LegacyHome() {
                       ) : null}
 
                       <article
-                        className={`top-story-card ${isLead ? 'is-lead' : ''} ${isSecondaryFeature ? 'is-secondary-feature' : ''} ${imageUrl ? 'has-image' : 'no-image'}`}
+                        className={`top-story-card ${isLead ? 'is-lead' : ''} ${isSecondaryFeature ? 'is-secondary-feature' : ''} ${isCompact ? 'is-compact' : ''} ${isVisualCompact ? 'is-visual-compact' : ''} ${imageUrl ? 'has-image' : 'no-image'}`}
                         role="link"
                         tabIndex={0}
                         aria-label={`Read ${displayTitle}`}
@@ -2144,6 +2443,9 @@ export default function LegacyHome() {
                             }}
                           />
                         </>) : null}
+                        {imageUrl && story?.image?.is_ai_generated ? (
+                          <span className="top-story-ai-label">AI illustration</span>
+                        ) : null}
                         {!isLead && imageUrl ? (
                           <div className="story-image-title">
                             <h3>{displayTitle}</h3>
@@ -2173,7 +2475,14 @@ export default function LegacyHome() {
                       </div>
 
                       <div className="top-story-card-body">
-                        {isLead || isSecondaryFeature || !imageUrl ? <h3 title={displayTitle}>{displayTitle}</h3> : null}
+                        {isLead || isSecondaryFeature || isCompact || !imageUrl ? <h3 title={displayTitle}>{displayTitle}</h3> : null}
+                        {isLead && story?.summary ? <p className="top-story-deck">{truncateText(story.summary, 300)}</p> : null}
+                        {sourceEntries.length ? (
+                          <p className="top-story-source-line">
+                            <strong>{sourceEntries.length} outlets</strong>
+                            <span>{sourceEntries.slice(0, 3).map((entry) => entry.name).join(', ')}{sourceEntries.length > 3 ? ` +${sourceEntries.length - 3}` : ''}</span>
+                          </p>
+                        ) : null}
 
                         <div className="top-story-evidence" title="Based on distinct outlets represented in this story. This is not an accuracy score.">
                           <div className="top-story-source-stack">
@@ -2218,7 +2527,7 @@ export default function LegacyHome() {
                             </div>
                           ) : null}
                           <div className="top-story-meta">
-                            {freshness ? <span>{freshness}</span> : null}
+                            {isLead && freshness ? <span>{freshness}</span> : null}
                           </div>
                           <span className="top-story-open">Open story <span aria-hidden="true">→</span></span>
                         </div>
@@ -2228,69 +2537,73 @@ export default function LegacyHome() {
                     </Fragment>
                   );
                 })}
-              </div>
+              </div>) : null}
             </>)}
           </div>
 
           {activeCategory === 'top-stories' && !loading && !error && stories.length ? (
-            <>
-              <button className="more-news-trigger" type="button" onClick={() => setMoreNewsOpen(true)} aria-haspopup="dialog">
-                <span>More news</span>
-                {moreTodayGroups.length ? <small>{moreTodayGroups.length} more today</small> : null}
+            <div className="more-news-inline">
+              <button
+                className="more-news-trigger"
+                type="button"
+                onClick={() => setMoreNewsOpen((current) => !current)}
+                aria-expanded={moreNewsOpen}
+                aria-controls="more-news-editions"
+              >
+                <span>{moreNewsOpen ? 'Hide yesterday’s edition' : 'Yesterday’s edition'}</span>
+                {recentNewsDays[0] ? (
+                  <small>
+                    {formatStoredDate(recentNewsDays[0].date)} · {Array.isArray(recentNewsDays[0].stories) ? recentNewsDays[0].stories.length : 0} stories
+                  </small>
+                ) : null}
+                <span className="more-news-trigger-icon" aria-hidden="true">{moreNewsOpen ? '↑' : '↓'}</span>
               </button>
               {moreNewsOpen ? (
-                <div className="more-news-backdrop" role="presentation" onMouseDown={(event) => {
-                  if (event.target === event.currentTarget) setMoreNewsOpen(false);
-                }}>
-                  <aside className="more-news-drawer" role="dialog" aria-modal="true" aria-labelledby="more-news-title">
-                    <header className="more-news-drawer-header">
-                      <div>
-                        <span className="more-news-eyebrow">Daily editions</span>
-                        <h2 id="more-news-title">More news</h2>
-                        <p>Additional reporting from today, followed by the two latest available editions.</p>
-                      </div>
-                      <button type="button" className="more-news-close" onClick={() => setMoreNewsOpen(false)} aria-label="Close more news">&times;</button>
-                    </header>
-
-                    {moreTodayGroups.length ? (
-                      <section className="more-news-day">
-                        <div className="more-news-day-heading"><span>More from</span><h3>{formatStoredDate(currentDateKey)}</h3></div>
-                        <div className="more-news-list">
+                <div id="more-news-editions" className="more-news-editions">
+                  {false && moreTodayGroups.length ? (
+                    <section className="news-edition-section is-today">
+                      <header className="news-edition-heading">
+                        <span>Still developing</span>
+                        <h2>More of Today’s News</h2>
+                        <time dateTime={currentDateKey}>{formatStoredDate(currentDateKey)}</time>
+                      </header>
+                      <div className="top-stories-grid edition-stories-grid">
                           {moreTodayGroups.map(({ primary }, index) => (
-                            <MoreNewsCard
+                            <EditionStoryCard
                               story={primary}
                               editionDate={currentDateKey}
                               currentDate={currentDateKey}
-                              latest={latestDevelopmentForStory(primary, currentDateKey, latestByContinuityKey)}
-                              key={primary?.story_id || `${currentDateKey}-${index}`}
+                              key={`${currentDateKey}-${primary?.story_id || 'story'}-${index}`}
                             />
                           ))}
-                        </div>
-                      </section>
-                    ) : null}
+                      </div>
+                    </section>
+                  ) : null}
 
-                    {recentNewsLoading ? <div className="more-news-status">Loading previous editions...</div> : null}
-                    {recentNewsError ? <div className="more-news-status caution">Previous editions are unavailable. Today's additional reports are still shown.</div> : null}
-                    {recentNewsDays.map((day) => (
-                      <section className="more-news-day is-archive" key={day.date}>
-                        <div className="more-news-day-heading"><span>Edition</span><h3>{formatStoredDate(day.date)}</h3></div>
-                        <div className="more-news-list">
+                  {recentNewsLoading ? <div className="more-news-status">Loading yesterday’s edition...</div> : null}
+                  {recentNewsError ? <div className="more-news-status caution">Yesterday’s edition is temporarily unavailable.</div> : null}
+                  {recentNewsDays.slice(0, 1).map((day) => (
+                    <section className="news-edition-section is-archive" key={day.date}>
+                      <header className="news-edition-heading">
+                        <span>Previous edition</span>
+                        <h2>Yesterday’s News</h2>
+                        <time dateTime={day.date}>{formatStoredDate(day.date)}</time>
+                      </header>
+                      <div className="top-stories-grid edition-stories-grid">
                           {(Array.isArray(day.stories) ? day.stories : []).map((story, index) => (
-                            <MoreNewsCard
+                            <EditionStoryCard
                               story={story}
                               editionDate={day.date}
                               currentDate={currentDateKey}
-                              latest={latestDevelopmentForStory(story, day.date, latestByContinuityKey)}
-                              key={story?.story_id || `${day.date}-${index}`}
+                              key={`${day.date}-${story?.story_id || 'story'}-${index}`}
                             />
                           ))}
-                        </div>
-                      </section>
-                    ))}
-                  </aside>
+                      </div>
+                    </section>
+                  ))}
                 </div>
               ) : null}
-            </>
+            </div>
           ) : null}
 
           <div id="timelines" className={`category-content ${activeCategory === 'timelines' ? 'active' : ''}`}>
@@ -2306,14 +2619,161 @@ export default function LegacyHome() {
               </div>
             )}
 
-            {!loadingTimelines && !timelineError && timelineEvents.length === 0 && (
+            {!loadingTimelines && !timelineError && eligibleTimelineEvents.length === 0 && (
               <div className="news-item">
                 <h3>No developing events yet</h3>
                 <p>Standalone stories stay on Today. Stories appear here after they receive a meaningful follow-up.</p>
               </div>
             )}
 
-            {!loadingTimelines && !timelineError && timelineEvents.length > 0 && (
+            {!loadingTimelines && !timelineError && eligibleTimelineEvents.length > 0 && (
+              <>
+                <div className="timeline-search-panel event-browser-tools">
+                  <div className="event-search-field">
+                    <label htmlFor="timeline-search">Find an event</label>
+                    <input
+                      id="timeline-search"
+                      type="search"
+                      value={timelineQuery}
+                      onChange={(event) => setTimelineQuery(event.target.value)}
+                      placeholder="Search topics, places, or developments"
+                    />
+                  </div>
+                  <div className="event-filter-row" aria-label="Filter events by activity">
+                    {[
+                      ['active', 'Updated today', eventStatusCounts.active],
+                      ['ongoing', 'Ongoing', eventStatusCounts.ongoing],
+                      ['archive', 'Archive', eventStatusCounts.archive],
+                    ].map(([value, label, count]) => (
+                      <button
+                        type="button"
+                        className={eventStageFilter === value && !timelineQuery ? 'active' : ''}
+                        onClick={() => {
+                          setTimelineQuery('');
+                          setEventStageFilter(value);
+                        }}
+                        key={value}
+                      >
+                        <span>{label}</span>
+                        <strong>{count}</strong>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {timelineQuery ? (
+                  <div className="event-results-heading">
+                    <p><strong>{filteredTimelineEvents.length}</strong> results for “{timelineQuery}”</p>
+                    <button type="button" onClick={() => setTimelineQuery('')}>Clear search</button>
+                  </div>
+                ) : null}
+
+                {filteredTimelineEvents.length === 0 ? (
+                  <div className="timeline-empty-search"><h3>No matching events</h3><p>Try another topic or change the activity filter.</p></div>
+                ) : null}
+
+                {featuredTimelineEvents.length ? (
+                  <section className="event-spotlight" aria-labelledby="event-spotlight-title">
+                    <div className="event-section-heading">
+                      <div>
+                        <span>Latest developments</span>
+                        <h2 id="event-spotlight-title">Updated today</h2>
+                      </div>
+                      <p>The latest meaningful changes across the day’s most active stories.</p>
+                    </div>
+                    <div className="event-spotlight-grid">
+                      {featuredTimelineEvents.map((event, eventIndex) => {
+                        const entries = eventTimelineEntries(event);
+                        const latest = entries[entries.length - 1] || {};
+                        const sourceCount = Number(event?.presentation?.independent_source_count || event?.presentation?.source_count || 0);
+                        const relatedStory = eventStoryById.get(event.event_id);
+                        const imageUrl = relatedStory?.image?.url || relatedStory?.image?.thumbnail_url || '';
+                        return (
+                          <a
+                            className={`event-spotlight-card ${eventIndex === 0 ? 'is-lead' : ''} ${imageUrl ? 'has-image' : ''}`}
+                            href={`/timeline.html?event=${encodeURIComponent(event.event_id)}`}
+                            key={event.event_id || event.title}
+                          >
+                            <div className="event-card-heading">
+                              <time dateTime={latest.date}>{formatStoredDate(latest.date)}</time>
+                            </div>
+                            {imageUrl ? (
+                              <div className="event-spotlight-media">
+                                <img src={imageUrl} alt="" loading="lazy" />
+                                {imageUrl ? (
+                                  <div className="event-image-title">
+                                    <span>Event timeline</span>
+                                    <h3>{eventDisplayTitle(event)}</h3>
+                                  </div>
+                                ) : null}
+                                {relatedStory?.image?.image_role_label ? (
+                                  <span className="event-image-role">{relatedStory.image.image_role_label}</span>
+                                ) : null}
+                              </div>
+                            ) : null}
+                            {!imageUrl ? <h3>{eventDisplayTitle(event)}</h3> : null}
+                            <div className="event-change">
+                              <span>What changed</span>
+                              <strong>{latest.title || 'New development'}</strong>
+                              {eventIndex === 0 && (latest.summary || event.summary) ? (
+                                <p>{truncateText(latest.summary || event.summary, 260)}</p>
+                              ) : null}
+                            </div>
+                            <div className="event-card-meta">
+                              <span>{entries.length} updates</span>
+                              <span>{eventDateRange(event)}</span>
+                              {sourceCount ? <span>{sourceCount} sources</span> : null}
+                              <strong className="event-card-action">Open timeline <span aria-hidden="true">→</span></strong>
+                            </div>
+                          </a>
+                        );
+                      })}
+                    </div>
+                  </section>
+                ) : null}
+
+                {directoryTimelineEvents.length ? (
+                  <section className="event-directory" aria-labelledby="event-directory-title">
+                    <div className="event-section-heading">
+                      <div>
+                        <span>{timelineQuery ? 'Search results' : eventStageFilter === 'active' ? 'More today' : 'Event directory'}</span>
+                        <h2 id="event-directory-title">
+                          {timelineQuery ? 'Matching events' : eventStageFilter === 'active' ? 'Also updated today' : eventStageFilter === 'ongoing' ? 'Ongoing events' : 'Archive'}
+                        </h2>
+                      </div>
+                      <p>{timelineQuery ? 'Results are ordered by the most recently updated event.' : 'A compact view of the rest of the reporting thread.'}</p>
+                    </div>
+                    <div className="event-directory-list">
+                      {directoryTimelineEvents.map((event) => {
+                        const entries = eventTimelineEntries(event);
+                        const latest = entries[entries.length - 1] || {};
+                        const status = eventActivityStatus(event, timelineCurrentDateKey);
+                        return (
+                          <a
+                            className="event-directory-row"
+                            href={`/timeline.html?event=${encodeURIComponent(event.event_id)}`}
+                            key={event.event_id || event.title}
+                          >
+                            <span className={`event-status-dot event-status-${status}`} aria-hidden="true" />
+                            <div className="event-directory-copy">
+                              <h3>{eventDisplayTitle(event)}</h3>
+                              <p>{latest.title || 'Latest development available'}</p>
+                            </div>
+                            <div className="event-directory-meta">
+                              <strong>{entries.length} updates</strong>
+                              <span>{eventDateRange(event)}</span>
+                            </div>
+                            <span className="event-directory-arrow" aria-hidden="true">→</span>
+                          </a>
+                        );
+                      })}
+                    </div>
+                  </section>
+                ) : null}
+              </>
+            )}
+
+            {false && (
               <div className="timeline-search-panel event-browser-tools">
                 <label htmlFor="timeline-search">Find an event</label>
                 <input
@@ -2342,11 +2802,11 @@ export default function LegacyHome() {
               </div>
             )}
 
-            {!loadingTimelines && !timelineError && (timelineQuery || eventStageFilter !== 'all') && filteredTimelineEvents.length === 0 ? (
+            {false && (timelineQuery || eventStageFilter !== 'all') && filteredTimelineEvents.length === 0 ? (
               <div className="timeline-empty-search"><h3>No matching events</h3><p>Try another topic or change the event filter.</p></div>
             ) : null}
 
-            {!loadingTimelines && !timelineError ? <div className="events-grid">{filteredTimelineEvents.map((event) => {
+            {false ? <div className="events-grid">{filteredTimelineEvents.map((event) => {
               const entries = Array.isArray(event?.timeline) ? event.timeline.slice(-3).reverse() : [];
               const presentation = event?.presentation || {};
               const developmentCount = Number(presentation.development_count || event?.timeline?.length || entries.length);
