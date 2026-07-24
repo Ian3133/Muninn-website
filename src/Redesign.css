@@ -3745,16 +3745,8 @@ html[data-theme="dark"] .more-news-trigger > span:first-child {
   border-bottom: 2px solid var(--teal);
 }
 
-.today-secondary-heading span {
-  color: var(--teal);
-  font-size: .61rem;
-  font-weight: 850;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-}
-
 .today-secondary-heading h2 {
-  margin: .15rem 0 0;
+  margin: 0;
   color: var(--ink);
   font-family: var(--serif);
   font-size: clamp(1.25rem, 1.8vw, 1.65rem);
@@ -3766,7 +3758,10 @@ html[data-theme="dark"] .more-news-trigger > span:first-child {
 .today-secondary-heading p {
   margin: 0;
   color: var(--muted);
-  font-size: .68rem;
+  font-size: .72rem;
+  font-style: normal;
+  font-weight: 650;
+  letter-spacing: .01em;
 }
 
 .today-secondary-grid {
@@ -4634,5 +4629,1347 @@ html[data-theme="dark"] .more-news-trigger {
 
   .today-image-rail.layout-cards .today-rail-story.is-equal .today-rail-source-line {
     width: 70%;
+  }
+}
+
+/* Rail view belongs to the page canvas, rather than a separate white sheet. */
+.today-image-rail.layout-rail {
+  --today-paper: var(--canvas);
+}
+
+.today-image-rail.layout-rail .today-rail-story.is-equal,
+.today-image-rail.layout-rail .today-rail-story.is-small,
+.today-image-rail.layout-rail .today-rail-story-link {
+  background-color: transparent;
+}
+
+html[data-theme="dark"] .today-image-rail.layout-rail .today-rail-story.is-equal,
+html[data-theme="dark"] .today-image-rail.layout-rail .today-rail-story.is-equal .today-rail-story-link {
+  background-color: transparent;
+}
+
+.today-image-rail.layout-rail .today-rail-story.is-equal .today-rail-story-link::after {
+  background: linear-gradient(
+    90deg,
+    var(--canvas) 0%,
+    var(--canvas) 48%,
+    color-mix(in srgb, var(--canvas) 93%, transparent) 62%,
+    color-mix(in srgb, var(--canvas) 56%, transparent) 79%,
+    transparent 100%
+  );
+}
+
+.today-image-rail.layout-rail .today-rail-story.is-small .today-rail-story-link::after {
+  background: linear-gradient(
+    90deg,
+    var(--canvas) 0%,
+    var(--canvas) 58%,
+    color-mix(in srgb, var(--canvas) 72%, transparent) 73%,
+    transparent 95%
+  );
+}
+
+/* Rail source evidence: one primary logo with two supporting outlets peeking behind. */
+.today-rail-source-stack {
+  display: none;
+}
+
+.today-image-rail.layout-rail .today-rail-source-names {
+  display: none;
+}
+
+.today-image-rail.layout-rail .today-rail-source-stack {
+  display: inline-flex;
+  order: 1;
+  min-width: 0;
+  align-items: center;
+  gap: .38rem;
+  overflow: visible;
+  white-space: normal;
+}
+
+.today-image-rail.layout-rail .today-rail-story.is-equal .today-rail-source-line > .today-rail-source-stack {
+  display: inline-flex;
+}
+
+.today-image-rail.layout-rail .today-rail-source-line > strong {
+  order: 2;
+}
+
+.today-image-rail.layout-cards .today-rail-source-line > strong {
+  order: 1;
+}
+
+.today-image-rail.layout-cards .today-rail-source-names {
+  order: 2;
+}
+
+.today-image-rail.layout-rail .today-rail-source-stack-logos {
+  display: flex;
+  align-items: center;
+  overflow: visible;
+}
+
+.today-image-rail.layout-rail .today-rail-stacked-logo {
+  position: relative;
+  display: grid;
+  width: 1.35rem;
+  height: 1.35rem;
+  flex: 0 0 1.35rem;
+  margin-left: -.42rem;
+  overflow: hidden;
+  place-items: center;
+  border: 2px solid var(--canvas);
+  border-radius: 50%;
+  background: var(--surface);
+  box-shadow: 0 1px 3px rgba(23, 37, 45, .12);
+}
+
+.today-image-rail.layout-rail .today-rail-stacked-logo:first-child {
+  margin-left: 0;
+}
+
+.today-image-rail.layout-rail .today-rail-stacked-logo img {
+  width: 100%;
+  height: 100%;
+  padding: .12rem;
+  object-fit: contain;
+}
+
+.today-image-rail.layout-rail .today-rail-source-overflow {
+  flex: 0 0 auto;
+  overflow: visible;
+  color: var(--muted);
+  font-size: .62rem;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+/* Keep Rail artwork crisp; unused image space should dissolve into the page. */
+.today-image-rail.layout-rail .today-rail-image {
+  background: var(--canvas);
+}
+
+.today-image-rail.layout-rail .today-rail-image-backdrop {
+  display: none;
+}
+
+/* Preserve a full descender pixel inside clamped Rail headlines. */
+.today-image-rail.layout-rail .today-rail-story h2 {
+  padding-bottom: 1px;
+}
+
+/* Keep Today's layout choice beside the theme control in the global header. */
+.header-actions .today-layout-switch.is-header-control {
+  flex: 0 0 auto;
+  border-radius: 999px;
+}
+
+.header-actions .today-layout-switch.is-header-control button {
+  min-height: 2.15rem;
+  padding: .5rem .68rem;
+}
+
+.header-actions .theme-toggle {
+  min-height: 2.15rem;
+}
+
+@media screen and (max-width: 620px) {
+  .header-actions {
+    gap: .35rem;
+  }
+
+  .header-actions .today-layout-switch.is-header-control button {
+    height: 2.2rem;
+    min-height: 0;
+    padding: 0 .42rem;
+    font-size: .55rem;
+  }
+}
+
+/* AI-ranked hierarchy without changing the equal lead geometry. */
+.today-rail-editorial-rank {
+  display: none;
+}
+
+.today-image-rail.layout-rail .today-rail-story.is-equal .today-rail-eyebrow {
+  justify-content: flex-start;
+  gap: .45rem;
+}
+
+.today-image-rail.layout-rail .today-rail-editorial-rank {
+  display: inline-flex;
+  min-width: 1.55rem;
+  align-items: center;
+  padding-right: .45rem;
+  border-right: 1px solid color-mix(in srgb, var(--teal) 40%, transparent);
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: .04em;
+}
+
+.today-edition-freshness.is-stale {
+  color: var(--amber);
+  font-weight: 750;
+}
+
+/* Side-screen Rail: keep all four leads visible as a compact 2x2. */
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .today-image-rail.layout-rail .today-rail-equal-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 .85rem;
+  }
+
+  .today-image-rail.layout-rail .today-rail-story.is-equal,
+  .today-image-rail.layout-rail .today-rail-story.is-equal .today-rail-story-link {
+    min-height: 10.25rem;
+  }
+
+  .today-image-rail.layout-rail .today-rail-story.is-equal .today-rail-story-link {
+    padding: .7rem 0 .65rem;
+  }
+
+  .today-image-rail.layout-rail .today-rail-story.is-equal .today-rail-copy {
+    width: 100%;
+    min-height: 8.85rem;
+    padding-right: 7.25rem;
+  }
+
+  .today-image-rail.layout-rail .today-rail-story.is-equal h2 {
+    width: 100%;
+    max-width: 100%;
+    margin: .42rem 0;
+    font-size: clamp(1rem, 2.45vw, 1.2rem);
+    line-height: 1.08;
+  }
+
+  .today-image-rail.layout-rail .today-rail-story.is-equal .today-rail-image {
+    width: 6.85rem;
+  }
+
+  .today-image-rail.layout-rail .today-rail-story.is-equal .today-rail-source-line {
+    width: calc(100% - 7.25rem);
+    padding-top: .35rem;
+  }
+}
+
+/* Sixteen continuation stories form a clean 4x4 at wide widths. */
+@media screen and (min-width: 1200px) {
+  .today-image-rail.layout-rail .today-secondary-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: 1rem;
+  }
+}
+
+/* Rail artwork should dissolve into the canvas without a visible image box. */
+.today-image-rail.layout-rail .today-rail-image {
+  border-radius: 0;
+  outline: 0;
+}
+
+/* Minimal click affordance without bringing back a permanent Open label. */
+.today-image-rail.layout-rail .today-rail-story {
+  transition: box-shadow 150ms ease, border-color 150ms ease;
+}
+
+.today-image-rail.layout-rail .today-rail-story:hover,
+.today-image-rail.layout-rail .today-rail-story:focus-within {
+  border-bottom-color: color-mix(in srgb, var(--teal) 72%, var(--border));
+  box-shadow: none;
+}
+
+/* Properly rounded segmented control: selected halves are pills, not clipped squares. */
+.header-actions .today-layout-switch.is-header-control {
+  display: inline-flex;
+  height: 2.5rem;
+  align-items: stretch;
+  gap: 2px;
+  padding: 2px;
+  background: transparent;
+}
+
+.header-actions .today-layout-switch.is-header-control button,
+.header-actions .today-layout-switch.is-header-control button:last-child {
+  height: 100%;
+  min-height: 0;
+  padding: 0 .68rem;
+  border: 0;
+  border-radius: 999px;
+}
+
+.header-actions .theme-toggle {
+  height: 2.5rem;
+  min-height: 0;
+}
+
+@media screen and (max-width: 620px) {
+  .app-header-inner .brand-lockup {
+    justify-self: start;
+  }
+
+  .header-actions .today-layout-switch.is-header-control,
+  .header-actions .theme-toggle {
+    height: 2.5rem;
+  }
+
+  .header-actions .theme-toggle {
+    width: 2.5rem;
+  }
+
+  .header-actions .today-layout-switch.is-header-control button {
+    height: 100%;
+    padding: 0 .4rem;
+  }
+}
+
+/* Rail evidence stays legible in either theme without repeating the source count. */
+.today-image-rail.layout-rail .today-rail-stacked-logo {
+  border-color: #fff;
+  background: #fff;
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--teal) 18%, transparent),
+    0 1px 3px rgba(23, 37, 45, .16);
+}
+
+/* Short per-story accents soften the image edge without boxing the Rail into columns. */
+.today-image-rail.layout-rail .today-rail-story::after {
+  position: absolute;
+  z-index: 5;
+  top: .45rem;
+  right: 0;
+  bottom: .45rem;
+  width: 1px;
+  border-radius: 999px;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    color-mix(in srgb, var(--teal) 36%, var(--border)) 14%,
+    color-mix(in srgb, var(--teal) 36%, var(--border)) 86%,
+    transparent 100%
+  );
+  content: "";
+  opacity: .68;
+  pointer-events: none;
+  transition: opacity 150ms ease;
+}
+
+.today-image-rail.layout-rail .today-rail-story:hover::after,
+.today-image-rail.layout-rail .today-rail-story:focus-within::after {
+  opacity: .86;
+}
+
+/* Cards view: one visual system built from the finished Rail hierarchy. */
+.today-image-rail.layout-cards .today-rail-equal-grid {
+  gap: 1rem;
+}
+
+.today-image-rail.layout-cards .today-rail-story.is-equal,
+.today-image-rail.layout-cards .today-rail-story.is-equal .today-rail-story-link {
+  min-height: 13.25rem;
+}
+
+.today-image-rail.layout-cards .today-rail-story.is-equal {
+  border-color: color-mix(in srgb, var(--border) 88%, transparent);
+  border-radius: 10px;
+  background: var(--surface);
+  box-shadow: 0 8px 24px rgba(23, 37, 45, .035);
+  transition: border-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+
+.today-image-rail.layout-cards .today-rail-story.is-equal:hover,
+.today-image-rail.layout-cards .today-rail-story.is-equal:focus-within {
+  border-color: color-mix(in srgb, var(--teal) 38%, var(--border));
+  box-shadow: 0 10px 28px rgba(23, 37, 45, .075);
+  transform: translateY(-1px);
+}
+
+.today-image-rail.layout-cards .today-rail-story.is-equal .today-rail-story-link {
+  background: var(--surface);
+}
+
+.today-image-rail.layout-cards .today-rail-story.is-equal .today-rail-image {
+  inset: 0 0 0 42%;
+  width: auto;
+  height: auto;
+  background: var(--surface);
+}
+
+.today-image-rail.layout-cards .today-rail-story.is-equal .today-rail-copy {
+  inset: 0;
+  padding: .85rem 1.05rem;
+  background: linear-gradient(
+    90deg,
+    var(--surface) 0%,
+    var(--surface) 34%,
+    color-mix(in srgb, var(--surface) 82%, transparent) 55%,
+    transparent 79%
+  );
+}
+
+.today-image-rail.layout-cards .today-rail-story.is-equal .today-rail-eyebrow {
+  justify-content: flex-start;
+  gap: .42rem;
+}
+
+.today-image-rail.layout-cards .today-rail-editorial-rank {
+  display: inline-flex;
+  min-width: 1.55rem;
+  padding-right: .42rem;
+  border-right: 1px solid color-mix(in srgb, var(--teal) 36%, transparent);
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: .04em;
+}
+
+.today-image-rail.layout-cards .today-rail-story.is-equal h2 {
+  width: 59%;
+  max-width: 59%;
+  margin: .45rem 0;
+  font-size: clamp(1.08rem, 1.42vw, 1.42rem);
+  line-height: 1.08;
+  text-shadow: 0 1px 2px var(--surface), 0 0 10px var(--surface);
+  -webkit-line-clamp: 4;
+}
+
+.today-image-rail.layout-cards .today-rail-source-names {
+  display: none;
+}
+
+.today-image-rail.layout-cards .today-rail-source-line {
+  position: absolute;
+  right: auto;
+  bottom: .78rem;
+  left: 1.05rem;
+  display: flex;
+  width: 55%;
+  height: auto;
+  align-items: center;
+  gap: .4rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.today-image-rail.layout-cards .today-rail-source-line > .today-rail-source-stack {
+  order: 1;
+}
+
+.today-image-rail.layout-cards .today-rail-source-line > strong {
+  order: 2;
+  color: var(--ink-soft);
+}
+
+.today-image-rail.layout-cards .today-rail-source-stack {
+  display: inline-flex;
+  min-width: 0;
+  align-items: center;
+}
+
+.today-image-rail.layout-cards .today-rail-source-stack-logos {
+  display: flex;
+  align-items: center;
+  overflow: visible;
+}
+
+.today-image-rail.layout-cards .today-rail-stacked-logo {
+  position: relative;
+  display: grid;
+  width: 1.35rem;
+  height: 1.35rem;
+  flex: 0 0 1.35rem;
+  margin-left: -.42rem;
+  overflow: hidden;
+  place-items: center;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--teal) 18%, transparent),
+    0 1px 3px rgba(23, 37, 45, .16);
+}
+
+.today-image-rail.layout-cards .today-rail-stacked-logo:first-child {
+  margin-left: 0;
+}
+
+.today-image-rail.layout-cards .today-rail-stacked-logo img {
+  width: 100%;
+  height: 100%;
+  padding: .12rem;
+  object-fit: contain;
+}
+
+html[data-theme="dark"] .today-image-rail.layout-cards .today-rail-story.is-equal,
+html[data-theme="dark"] .today-image-rail.layout-cards .today-rail-story.is-equal .today-rail-story-link {
+  background: var(--surface);
+}
+
+html[data-theme="dark"] .today-image-rail.layout-cards .today-rail-story.is-equal .today-rail-source-line > strong {
+  color: #dce5e7;
+}
+
+/* Today's continuation cards: visual, compact, and subordinate to the ranked four. */
+.today-current-edition-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-rows: auto;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.today-current-edition-grid .edition-story-item {
+  grid-column: auto;
+  min-width: 0;
+}
+
+.today-current-edition-grid .edition-story-card.is-today-card {
+  display: grid;
+  height: 13.5rem;
+  min-height: 0;
+  grid-template-rows: minmax(0, 1fr) 2.55rem;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--border) 88%, transparent);
+  border-radius: 10px;
+  background: var(--surface);
+  box-shadow: 0 8px 24px rgba(23, 37, 45, .035);
+  transition: border-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+
+.today-current-edition-grid .edition-story-card.is-today-card:hover,
+.today-current-edition-grid .edition-story-card.is-today-card:focus-visible {
+  border-color: color-mix(in srgb, var(--teal) 38%, var(--border));
+  box-shadow: 0 10px 28px rgba(23, 37, 45, .075);
+  transform: translateY(-1px);
+}
+
+.today-current-edition-grid .edition-story-card.is-today-card .top-story-card-image {
+  position: relative;
+  grid-row: 1;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  aspect-ratio: auto;
+  border: 0;
+  background: var(--surface-muted);
+}
+
+.today-current-edition-grid .edition-story-card.is-today-card .top-story-card-image-primary {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--story-focus, center);
+}
+
+.today-current-edition-grid .edition-story-card.is-today-card .story-image-title {
+  inset: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: .72rem .8rem 2.8rem;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, .96) 0%,
+    rgba(255, 255, 255, .74) 38%,
+    rgba(255, 255, 255, .16) 72%,
+    transparent 90%
+  );
+}
+
+.today-current-edition-grid .edition-story-card.is-today-card .edition-story-category {
+  margin-bottom: .28rem;
+  color: var(--teal-dark);
+  font-size: .56rem;
+  font-weight: 850;
+  letter-spacing: .015em;
+  line-height: 1.1;
+  text-transform: none;
+}
+
+.today-current-edition-grid .edition-story-card.is-today-card .story-image-title h3 {
+  display: -webkit-box !important;
+  margin: 0;
+  overflow: hidden !important;
+  color: var(--ink) !important;
+  font-family: var(--serif);
+  font-size: clamp(1rem, 1.35vw, 1.22rem);
+  letter-spacing: -.02em;
+  line-height: 1.1;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, .95), 0 0 10px rgba(255, 255, 255, .76);
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+html[data-theme="dark"] .today-current-edition-grid .edition-story-card.is-today-card .story-image-title {
+  background: linear-gradient(
+    180deg,
+    rgba(10, 22, 28, .92) 0%,
+    rgba(10, 22, 28, .68) 38%,
+    rgba(10, 22, 28, .14) 72%,
+    transparent 90%
+  );
+}
+
+html[data-theme="dark"] .today-current-edition-grid .edition-story-card.is-today-card .edition-story-category {
+  color: #8dc8d3;
+}
+
+html[data-theme="dark"] .today-current-edition-grid .edition-story-card.is-today-card .story-image-title h3 {
+  color: #fff !important;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, .55);
+}
+
+.today-current-edition-grid .edition-story-card.is-today-card .top-story-card-body {
+  display: flex;
+  grid-row: 2;
+  min-height: 0;
+  align-items: center;
+  padding: .42rem .7rem;
+  background: var(--surface);
+}
+
+.today-current-edition-grid .edition-story-card.is-today-card .edition-story-footer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  gap: .42rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: var(--ink-soft);
+  font-size: .64rem;
+}
+
+.today-current-edition-grid .edition-story-card.is-today-card .edition-story-footer > span[aria-hidden="true"] {
+  display: none;
+}
+
+.today-current-edition-grid .edition-story-card.is-today-card .edition-story-footer strong {
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+.today-current-edition-grid .edition-story-card.is-today-card.no-image {
+  grid-template-rows: 1fr;
+}
+
+.today-current-edition-grid .edition-story-card.is-today-card.no-image .top-story-card-image {
+  display: none;
+}
+
+.today-current-edition-grid .edition-story-card.is-today-card.no-image .top-story-card-body {
+  grid-row: 1;
+  align-items: stretch;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.today-current-edition-grid .edition-story-card.is-today-card .edition-story-text-title h3 {
+  margin: .45rem 0;
+  font-family: var(--serif);
+  font-size: 1.08rem;
+  line-height: 1.12;
+}
+
+@media screen and (max-width: 1199px) {
+  .today-current-edition-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .today-current-edition-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .today-image-rail.layout-cards .today-rail-story.is-equal,
+  .today-image-rail.layout-cards .today-rail-story.is-equal .today-rail-story-link {
+    min-height: 12.5rem;
+  }
+
+  .today-image-rail.layout-cards .today-rail-story.is-equal .today-rail-image {
+    left: 44%;
+  }
+
+  .today-image-rail.layout-cards .today-rail-story.is-equal h2 {
+    width: 61%;
+    max-width: 61%;
+    font-size: 1.05rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .today-current-edition-grid {
+    grid-template-columns: 1fr;
+    gap: .75rem;
+  }
+
+  .today-current-edition-grid .edition-story-card.is-today-card {
+    height: 11.75rem;
+  }
+
+  .today-current-edition-grid .edition-story-card.is-today-card .story-image-title h3 {
+    font-size: 1.05rem;
+    -webkit-line-clamp: 3;
+  }
+}
+
+/* Current Cards dissolve into the canvas until interaction reveals their boundary. */
+.today-image-rail.layout-cards .today-rail-story.is-equal {
+  --today-card-surface: var(--canvas);
+  border-color: transparent;
+  background: var(--today-card-surface);
+  box-shadow: none;
+}
+
+.today-image-rail.layout-cards .today-rail-story.is-equal:hover,
+.today-image-rail.layout-cards .today-rail-story.is-equal:focus-within {
+  --today-card-surface: var(--surface);
+  border-color: color-mix(in srgb, var(--teal) 38%, var(--border));
+  box-shadow: 0 10px 28px rgba(23, 37, 45, .075);
+}
+
+.today-image-rail.layout-cards .today-rail-story.is-equal .today-rail-story-link,
+html[data-theme="dark"] .today-image-rail.layout-cards .today-rail-story.is-equal,
+html[data-theme="dark"] .today-image-rail.layout-cards .today-rail-story.is-equal .today-rail-story-link,
+.today-image-rail.layout-cards .today-rail-story.is-equal .today-rail-image {
+  background: var(--today-card-surface);
+}
+
+.today-image-rail.layout-cards .today-rail-story.is-equal .today-rail-copy {
+  background: linear-gradient(
+    90deg,
+    var(--today-card-surface) 0%,
+    var(--today-card-surface) 34%,
+    color-mix(in srgb, var(--today-card-surface) 82%, transparent) 55%,
+    transparent 79%
+  );
+}
+
+.today-image-rail.layout-cards .today-rail-story.is-equal h2 {
+  text-shadow:
+    0 1px 2px var(--today-card-surface),
+    0 0 10px var(--today-card-surface);
+}
+
+/* Sources belong at the true bottom-left, independent of headline length. */
+.today-image-rail.layout-cards .today-rail-story.is-equal .today-rail-source-line {
+  position: absolute;
+  right: auto;
+  bottom: .78rem;
+  left: 1.05rem;
+  width: 55%;
+  margin: 0;
+}
+
+/* Preserve the complete artwork while making the outer edge flush with the card. */
+.today-image-rail.layout-cards .today-rail-story.is-equal .today-rail-image-primary {
+  object-position: right center;
+}
+
+.today-current-edition-grid .edition-story-card.is-today-card {
+  --today-card-surface: var(--canvas);
+  border-color: transparent;
+  background: var(--today-card-surface);
+  box-shadow: none;
+}
+
+.today-current-edition-grid .edition-story-card.is-today-card:hover,
+.today-current-edition-grid .edition-story-card.is-today-card:focus-visible {
+  --today-card-surface: var(--surface);
+  border-color: color-mix(in srgb, var(--teal) 38%, var(--border));
+  box-shadow: 0 10px 28px rgba(23, 37, 45, .075);
+}
+
+.today-current-edition-grid .edition-story-card.is-today-card .top-story-card-body {
+  background: var(--today-card-surface);
+}
+
+/* Compact the ranked four and remove the dead band between headline and sources. */
+.today-image-rail.layout-cards .today-rail-story.is-equal,
+.today-image-rail.layout-cards .today-rail-story.is-equal .today-rail-story-link {
+  min-height: 11rem;
+}
+
+/* Center the continuation evidence row inside its footer track. */
+.today-current-edition-grid .edition-story-card.is-today-card .top-story-card-body {
+  justify-content: center;
+  padding: 0 .7rem;
+}
+
+.today-current-edition-grid .edition-story-card.is-today-card .edition-story-footer {
+  width: 100%;
+  height: 1.35rem;
+  min-height: 0;
+  align-items: center;
+  overflow: visible;
+}
+
+@media screen and (max-width: 700px) {
+  .today-image-rail.layout-cards .today-rail-story.is-equal,
+  .today-image-rail.layout-cards .today-rail-story.is-equal .today-rail-story-link {
+    min-height: 11rem;
+  }
+}
+
+/* Cards use their image space for the headline; Rail retains rank and category. */
+.today-image-rail.layout-cards .today-rail-story.is-equal,
+.today-image-rail.layout-cards .today-rail-story.is-equal .today-rail-story-link {
+  min-height: 8.5rem;
+}
+
+.today-image-rail.layout-cards .today-rail-story.is-equal .today-rail-eyebrow {
+  display: none;
+}
+
+.today-image-rail.layout-cards .today-rail-story.is-equal .today-rail-copy {
+  padding: .72rem 1.05rem;
+  background: linear-gradient(
+    90deg,
+    var(--today-card-surface) 0%,
+    var(--today-card-surface) 36%,
+    color-mix(in srgb, var(--today-card-surface) 82%, transparent) 62%,
+    transparent 88%
+  );
+}
+
+.today-image-rail.layout-cards .today-rail-story.is-equal h2 {
+  width: 76%;
+  max-width: 76%;
+  margin: 0;
+  -webkit-line-clamp: 3;
+}
+
+.today-image-rail.layout-cards .today-rail-story.is-equal .today-rail-source-line {
+  bottom: .68rem;
+}
+
+@media screen and (max-width: 700px) {
+  .today-image-rail.layout-cards .today-rail-story.is-equal,
+  .today-image-rail.layout-cards .today-rail-story.is-equal .today-rail-story-link {
+    min-height: 8.5rem;
+  }
+
+  .today-image-rail.layout-cards .today-rail-story.is-equal h2 {
+    width: 76%;
+    max-width: 76%;
+  }
+}
+
+/* Give the current edition the same editorial rule as its continuation section. */
+#main > .post.top-stories-post .page-intro {
+  padding-bottom: .7rem;
+  border-bottom: 2px solid var(--teal);
+}
+
+/* Keep rank and desk attached to each Card without reopening the old dead space. */
+.today-image-rail.layout-cards .today-rail-story.is-equal .today-rail-eyebrow {
+  display: flex;
+  gap: .34rem;
+  font-size: .58rem;
+  line-height: 1;
+  letter-spacing: .085em;
+}
+
+.today-image-rail.layout-cards .today-rail-story.is-equal .today-rail-editorial-rank {
+  min-width: 1.4rem;
+  padding-right: .34rem;
+}
+
+.today-image-rail.layout-cards .today-rail-story.is-equal h2 {
+  margin-top: .38rem;
+}
+
+/* Show one classification at a time: a quiet desk or a specific amber event. */
+.story-card-labels,
+.event-card-labels {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .35rem;
+}
+
+.story-desk-label {
+  color: var(--muted) !important;
+  font-size: .58rem;
+  font-weight: 850;
+  line-height: 1.2;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.story-tracked-label {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  color: #a66d18;
+  font-size: .58rem;
+  font-weight: 850;
+  line-height: 1.2;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+.today-rail-eyebrow {
+  flex-wrap: wrap;
+}
+
+.today-rail-eyebrow .story-tracked-label {
+  letter-spacing: .055em;
+}
+
+.edition-image-title .story-card-labels,
+.edition-story-card .top-story-card-body > .story-card-labels {
+  margin-bottom: .45rem;
+}
+
+/* Events: latest updates, new containers, then a complete category directory. */
+.event-latest-section,
+.event-newest-section,
+.event-explore-section {
+  margin: 0 0 2.65rem;
+}
+
+.event-latest-slider {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.event-latest-card {
+  display: flex;
+  min-width: 0;
+  min-height: 24rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  color: inherit;
+  text-decoration: none;
+  box-shadow: 0 8px 22px rgba(23, 37, 45, .055);
+  transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+
+.event-latest-card.has-image {
+  flex-direction: column;
+}
+
+.event-latest-card.no-image {
+  background:
+    linear-gradient(145deg, color-mix(in srgb, var(--teal) 8%, var(--surface)), var(--surface) 54%);
+}
+
+.event-latest-card:hover,
+.event-latest-card:focus-visible {
+  border-color: color-mix(in srgb, var(--teal) 48%, var(--border));
+  box-shadow: 0 14px 32px rgba(23, 37, 45, .11);
+  transform: translateY(-2px);
+}
+
+.event-latest-media {
+  position: relative;
+  height: 9.5rem;
+  overflow: hidden;
+  background: var(--canvas);
+}
+
+.event-latest-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .35s ease;
+}
+
+.event-latest-card:hover .event-latest-media img {
+  transform: scale(1.025);
+}
+
+.event-latest-copy {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  padding: 1.05rem;
+}
+
+.event-latest-copy h3 {
+  margin: .72rem 0 .85rem;
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: clamp(1.18rem, 1.8vw, 1.55rem);
+  line-height: 1.08;
+}
+
+.event-latest-copy .event-change {
+  padding-top: .78rem;
+  border-top: 1px solid var(--border);
+}
+
+.event-latest-copy .event-change > span {
+  display: block;
+  margin-bottom: .28rem;
+  color: var(--muted);
+  font-size: .59rem;
+  font-weight: 850;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.event-latest-copy .event-change strong {
+  color: var(--ink);
+  font-size: .92rem;
+  line-height: 1.35;
+}
+
+.event-latest-copy .event-card-meta {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 0;
+}
+
+.event-latest-copy .event-card-action {
+  width: 100%;
+  margin: .42rem 0 0;
+}
+
+.event-newest-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .85rem;
+}
+
+.event-newest-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 13rem;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  background: var(--surface);
+  color: inherit;
+  text-decoration: none;
+  transition: border-color .18s ease, background .18s ease;
+}
+
+.event-newest-card:hover,
+.event-newest-card:focus-visible {
+  border-color: color-mix(in srgb, var(--teal) 48%, var(--border));
+  background: color-mix(in srgb, var(--teal) 5%, var(--surface));
+}
+
+.event-newest-card h3 {
+  margin: .72rem 0 .48rem;
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: 1.12rem;
+  line-height: 1.15;
+}
+
+.event-newest-card > p {
+  margin: 0 0 .85rem;
+  color: var(--muted);
+  font-size: .82rem;
+  line-height: 1.45;
+}
+
+.event-newest-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: .65rem;
+  margin-top: auto;
+  color: var(--muted);
+  font-size: .67rem;
+}
+
+.event-newest-meta strong {
+  color: var(--teal);
+}
+
+.event-section-empty {
+  padding: 1rem;
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  color: var(--muted);
+  background: color-mix(in srgb, var(--surface) 72%, transparent);
+}
+
+.event-section-empty p {
+  margin: 0;
+}
+
+.event-explore-tools {
+  display: grid;
+  grid-template-columns: minmax(14rem, .8fr) minmax(0, 2fr);
+  gap: 1rem;
+  align-items: end;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+}
+
+.event-category-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: .42rem;
+}
+
+.event-category-grid button {
+  display: flex;
+  justify-content: space-between;
+  gap: .35rem;
+  min-width: 0;
+  padding: .58rem .62rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--canvas);
+  color: var(--muted);
+  font: inherit;
+  font-size: .69rem;
+  font-weight: 760;
+  text-align: left;
+  cursor: pointer;
+}
+
+.event-category-grid button span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.event-category-grid button strong {
+  color: var(--ink);
+}
+
+.event-category-grid button:hover,
+.event-category-grid button.active {
+  border-color: color-mix(in srgb, var(--teal) 58%, var(--border));
+  background: var(--teal-soft);
+  color: var(--teal);
+}
+
+.event-explore-section .event-results-heading {
+  margin: 1rem 0 .65rem;
+}
+
+.event-explore-section .event-directory-list {
+  border-top: 1px solid var(--border);
+}
+
+.event-explore-section .event-directory-row {
+  grid-template-columns: minmax(0, 1fr) auto auto;
+}
+
+.event-explore-section .event-directory-copy .event-card-labels {
+  margin-bottom: .42rem;
+}
+
+@media screen and (max-width: 980px) {
+  .event-latest-slider {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(18rem, 46vw);
+    overflow-x: auto;
+    padding: .1rem .1rem .8rem;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+  }
+
+  .event-latest-card {
+    scroll-snap-align: start;
+  }
+
+  .event-explore-tools {
+    grid-template-columns: 1fr;
+  }
+
+  .event-category-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .event-latest-slider {
+    grid-auto-columns: minmax(16.5rem, 84vw);
+  }
+
+  .event-newest-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .event-newest-card {
+    min-height: 0;
+  }
+
+  .event-category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .event-explore-section .event-directory-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .event-explore-section .event-directory-meta {
+    grid-column: 1;
+  }
+
+  .event-explore-section .event-directory-arrow {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .story-tracked-label {
+    color: #efc778;
+  }
+}
+
+/* Today readability and responsive evidence cleanup. */
+.story-desk-label,
+.story-tracked-label {
+  font-size: .68rem;
+}
+
+.today-image-rail .today-rail-equal-grid {
+  border-top: 0;
+}
+
+.story-desk-label {
+  color: #62737a !important;
+  letter-spacing: .015em;
+  text-transform: none;
+}
+
+html[data-theme="dark"] .story-desk-label {
+  color: #9eafb5 !important;
+}
+
+.story-tracked-label.story-continuity-label {
+  display: inline-flex;
+  align-items: baseline;
+  color: #3d6f7c;
+  font-size: .68rem;
+  font-weight: 850;
+  letter-spacing: .015em;
+  line-height: 1.2;
+  text-transform: none;
+}
+
+.today-rail-story.is-equal .story-tracked-label.story-continuity-label {
+  padding-left: .42rem;
+  border-left: 2px solid currentColor;
+}
+
+html[data-theme="dark"] .story-tracked-label.story-continuity-label {
+  color: #74b2c0;
+}
+
+.today-rail-editorial-rank {
+  font-size: .64rem;
+}
+
+.today-image-rail.layout-rail .today-rail-editorial-rank,
+.today-image-rail.layout-cards .today-rail-editorial-rank {
+  padding-right: 0;
+  border-right: 0;
+  color: #3d6f7c;
+}
+
+html[data-theme="dark"] .today-image-rail.layout-rail .today-rail-editorial-rank,
+html[data-theme="dark"] .today-image-rail.layout-cards .today-rail-editorial-rank {
+  color: #74b2c0;
+}
+
+.today-rail-source-line strong,
+.today-current-edition-grid .edition-story-card.is-today-card .edition-story-footer {
+  font-size: .7rem;
+}
+
+.today-edition-freshness {
+  max-width: 28rem;
+  color: var(--muted);
+  font-size: .72rem;
+  font-weight: 650;
+  line-height: 1.35;
+  white-space: normal;
+}
+
+.today-edition-freshness.is-stale {
+  color: var(--muted);
+  font-weight: 650;
+}
+
+/* The flex item must include the visible width of its negatively stacked logos. */
+.today-image-rail .today-rail-source-stack,
+.today-image-rail .today-rail-source-stack-logos {
+  width: max-content;
+  min-width: max-content;
+  flex: 0 0 max-content;
+}
+
+.today-image-rail .today-rail-source-line > strong {
+  flex: 0 0 auto;
+  margin-left: .45rem;
+}
+
+/* Let Rail continuation artwork claim available space instead of staying thumbnail-sized. */
+.today-image-rail.layout-rail .today-rail-story.is-small {
+  --rail-continuation-image-width: clamp(7.5rem, 42%, 15rem);
+}
+
+.today-image-rail.layout-rail .today-rail-story.is-small .today-rail-story-link {
+  padding-right: calc(var(--rail-continuation-image-width) + .8rem);
+}
+
+.today-image-rail.layout-rail .today-rail-story.is-small .today-rail-image {
+  width: var(--rail-continuation-image-width);
+}
+
+.today-image-rail.layout-rail .today-rail-story.is-small .today-rail-image-primary {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--story-focus, center);
+}
+
+/* A side-screen has room for a full row; do not clip two lead headlines into a 2x2. */
+@media screen and (min-width: 600px) and (max-width: 720px) {
+  .today-image-rail.layout-rail .today-rail-equal-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .today-image-rail.layout-rail .today-rail-story.is-equal,
+  .today-image-rail.layout-rail .today-rail-story.is-equal .today-rail-story-link {
+    min-height: 9.75rem;
+  }
+
+  .today-image-rail.layout-rail .today-rail-story.is-equal .today-rail-copy {
+    min-height: 8.35rem;
+    padding-right: clamp(10rem, 42%, 14rem);
+  }
+
+  .today-image-rail.layout-rail .today-rail-story.is-equal .today-rail-image {
+    width: clamp(9.5rem, 40%, 13.5rem);
+  }
+
+  .today-image-rail.layout-rail .today-rail-story.is-equal .today-rail-source-line {
+    width: calc(58% - .5rem);
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .header-actions .today-layout-switch.is-header-control button {
+    font-size: .64rem;
+  }
+
+  .today-edition-freshness {
+    max-width: 13.5rem;
+    font-size: .68rem;
   }
 }
