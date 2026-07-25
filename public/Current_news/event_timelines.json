@@ -1,10 +1,10 @@
 {
   "version": 3,
-  "generated_at": "2026-07-25T00:32:39.285808+00:00",
+  "generated_at": "2026-07-25T14:32:36.874596+00:00",
   "lookback_days": 30,
   "verification_provider": "deterministic_source_grounded_event_match_v2",
-  "tracked_event_count": 137,
-  "event_count": 32,
+  "tracked_event_count": 144,
+  "event_count": 42,
   "events": [
     {
       "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
@@ -320,6 +320,99 @@
           "integrity_status": "trusted"
         },
         {
+          "development_id": "story_2f9632c2d61c646a",
+          "daily_story_id": "story_2f9632c2d61c646a",
+          "date": "2026-07-25",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Houthis Claim Missile Attack on Saudi Arabia Amid Escalating Tensions",
+          "summary": "The Iran-backed Houthi rebels have claimed responsibility for a missile attack targeting Saudi oil facilities in Jizan. This attack comes as tensions escalate in the region, with the Houthis also announcing a maritime blockade on Saudi Arabia and targeting its ships in the Red Sea. Meanwhile, US President Donald Trump is considering further military strikes on Iran in response to the ongoing conflict.",
+          "topic_label": "Iran War",
+          "development_type": "military_action",
+          "key_facts": [
+            "Houthis claimed a missile attack on Saudi Arabia's Jizan.",
+            "The attack targeted oil facilities owned by Aramco.",
+            "Houthis announced a maritime blockade on Saudi Arabia.",
+            "Trump is considering fresh strikes on Iran."
+          ],
+          "source_count": 4,
+          "sources": [
+            "CBS News",
+            "France 24",
+            "RTE News",
+            "SBS News"
+          ],
+          "source_urls": [
+            "https://www.sbs.com.au/news/article/more-fuel-price-pain-ahead-for-australians-as-war-ramps-up-and-de-escalation-dims/liu71xlm1",
+            "https://www.france24.com/en/middle-east/20260724-yemen-s-houthis-say-they-hit-saudi-arabia-as-trump-weighs-harder-iran-strikes",
+            "https://www.rte.ie/news/middle-east/2026/0725/1585036-houthis-strikes",
+            "https://www.cbsnews.com/live-updates/iran-war-us-trump-strait-hormuz-middle-east"
+          ],
+          "source_details": [
+            {
+              "title": "More fuel price pain ahead as Houthis widen war's front line, Trump considers fresh strikes",
+              "source": "SBS News",
+              "link": "https://www.sbs.com.au/news/article/more-fuel-price-pain-ahead-for-australians-as-war-ramps-up-and-de-escalation-dims/liu71xlm1",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Yemen's Houthis say they targeted Saudi oil facilities on Red Sea",
+              "source": "France 24",
+              "link": "https://www.france24.com/en/middle-east/20260724-yemen-s-houthis-say-they-hit-saudi-arabia-as-trump-weighs-harder-iran-strikes",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Houthis claim Saudi missile attack, US mulls Iran strikes",
+              "source": "RTE News",
+              "link": "https://www.rte.ie/news/middle-east/2026/0725/1585036-houthis-strikes",
+              "source_bias": "center"
+            },
+            {
+              "title": "Iran reports no new strikes by US for first time in 2 weeks",
+              "source": "CBS News",
+              "link": "https://www.cbsnews.com/live-updates/iran-war-us-trump-strait-hormuz-middle-east",
+              "source_bias": "lean-left"
+            }
+          ],
+          "confidence": 0.72,
+          "match_evidence": {
+            "score": 0.72,
+            "matched_development_id": "story_627e2a10f3d02720",
+            "shared_tokens": [
+              "attack",
+              "comes",
+              "donald",
+              "escalating",
+              "iran",
+              "oil",
+              "ongoing",
+              "region",
+              "ships",
+              "tension",
+              "trump",
+              "war"
+            ],
+            "shared_entities": [
+              "donald_trump",
+              "iran",
+              "iran_war",
+              "tension_iran",
+              "us"
+            ],
+            "source_url_match": false,
+            "topic_label_match": true,
+            "method": "deterministic_event_match_v2",
+            "threshold": 0.38
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-25",
+          "last_seen_at": "2026-07-25",
+          "integrity_status": "trusted"
+        },
+        {
           "development_id": "story_755dbaa84d64b279",
           "daily_story_id": "story_755dbaa84d64b279",
           "date": "2026-07-25",
@@ -385,86 +478,15 @@
           "first_seen_at": "2026-07-25",
           "last_seen_at": "2026-07-25",
           "integrity_status": "trusted"
-        },
-        {
-          "development_id": "story_75a978ecb710dcb2",
-          "daily_story_id": "story_75a978ecb710dcb2",
-          "date": "2026-07-25",
-          "occurred_at": null,
-          "date_basis": "first_reported_by_muninn",
-          "title": "Iran Launches Attacks on US Facilities Amid Ongoing Strikes",
-          "summary": "Iran conducted attacks on US military facilities in the Middle East as the US continued airstrikes against Iran. This escalation follows President Trump's 13 consecutive nights of strikes, with Trump indicating he is close to deciding on a potential major escalation in response to the situation.",
-          "topic_label": "Iran War",
-          "development_type": "military_action",
-          "key_facts": [
-            "Iran fired at US military facilities in the Middle East.",
-            "The US conducted airstrikes in Iran for 13 consecutive nights.",
-            "President Trump is considering a major escalation in response."
-          ],
-          "source_count": 2,
-          "sources": [
-            "CBS News",
-            "NPR"
-          ],
-          "source_urls": [
-            "https://www.cbsnews.com/video/iran-strikes-us-facilities-as-trump-is-pressed-on-exit-strategy",
-            "https://www.npr.org/2026/07/24/g-s1-135417/us-iran-war-updates"
-          ],
-          "source_details": [
-            {
-              "title": "Iran hits US facilities in the Middle East as Trump is pressed on exit strategy",
-              "source": "CBS News",
-              "link": "https://www.cbsnews.com/video/iran-strikes-us-facilities-as-trump-is-pressed-on-exit-strategy",
-              "source_bias": "lean-left"
-            },
-            {
-              "title": "Trump threatens a major escalation in Iran after 13 straight nights of strikes",
-              "source": "NPR",
-              "link": "https://www.npr.org/2026/07/24/g-s1-135417/us-iran-war-updates",
-              "source_bias": "lean-left"
-            }
-          ],
-          "confidence": 0.72,
-          "match_evidence": {
-            "score": 0.72,
-            "matched_development_id": "story_627e2a10f3d02720",
-            "shared_tokens": [
-              "attack",
-              "continued",
-              "escalation",
-              "fired",
-              "follow",
-              "iran",
-              "ongoing",
-              "trump",
-              "war"
-            ],
-            "shared_entities": [
-              "iran",
-              "iran_war",
-              "us"
-            ],
-            "source_url_match": false,
-            "topic_label_match": true,
-            "method": "deterministic_event_match_v2",
-            "threshold": 0.38
-          },
-          "verification": {
-            "provider": "deterministic_source_grounded_event_match_v1",
-            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
-          },
-          "first_seen_at": "2026-07-25",
-          "last_seen_at": "2026-07-25",
-          "integrity_status": "trusted"
         }
       ],
       "integrity": {
         "public_development_count": 6,
-        "questionable_development_count": 1,
+        "questionable_development_count": 2,
         "review_required": true
       },
-      "latest_title": "Iran Launches Attacks on US Facilities Amid Ongoing Strikes",
-      "latest_summary": "Iran conducted attacks on US military facilities in the Middle East as the US continued airstrikes against Iran. This escalation follows President Trump's 13 consecutive nights of strikes, with Trump indicating he is close to deciding on a potential major escalation in response to the situation.",
+      "latest_title": "Trump Weighs Military Action Against Iran Amid Diplomatic Efforts",
+      "latest_summary": "US President Donald Trump has not yet made a decision regarding potential military strikes on Iran, stating that Tehran is becoming more serious in diplomatic discussions. He emphasized that the US remains 'locked and loaded' while pursuing talks with Iran.",
       "presentation": {
         "has_context": true,
         "has_full_timeline": true,
@@ -477,8 +499,8 @@
           "story_373c5bd2bf29a4c5",
           "story_596648922aef07d7",
           "story_7d6a6f7b2cd2e251",
-          "story_755dbaa84d64b279",
-          "story_75a978ecb710dcb2"
+          "story_2f9632c2d61c646a",
+          "story_755dbaa84d64b279"
         ],
         "summary_available": true,
         "summary_label": "Read the story so far",
@@ -486,20 +508,20 @@
         "development_count": 6,
         "coverage_packet_count": 6,
         "date_count": 3,
-        "source_count": 17,
-        "independent_source_count": 12,
+        "source_count": 19,
+        "independent_source_count": 13,
         "first_date": "2026-07-22",
         "latest_date": "2026-07-25",
-        "latest_update_title": "Iran Launches Attacks on US Facilities Amid Ongoing Strikes",
+        "latest_update_title": "Trump Weighs Military Action Against Iran Amid Diplomatic Efforts",
         "coverage_score": 0.92,
         "recency_score": 1.0,
         "rank_score": 0.966,
-        "context_summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Iran Launches Attacks on US Facilities Amid Ongoing Strikes.",
+        "context_summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Trump Weighs Military Action Against Iran Amid Diplomatic Efforts.",
         "cta_label": "Explore 6 developments"
       },
       "event_summary": {
         "available": true,
-        "summary": "US President Donald Trump has threatened to target Iranian bridges and power plants in retaliation for any attacks on ships in the Strait of Hormuz. A later development was Oil Prices Exceed $100 a Barrel Amid Escalating Iran Conflict. Most recently, iran conducted attacks on US military facilities in the Middle East as the US continued airstrikes against Iran.",
+        "summary": "US President Donald Trump has threatened to target Iranian bridges and power plants in retaliation for any attacks on ships in the Strait of Hormuz. A later development was Oil Prices Exceed $100 a Barrel Amid Escalating Iran Conflict. Most recently, uS President Donald Trump has not yet made a decision regarding potential military strikes on Iran, stating that Tehran is becoming more serious in diplomatic discussions.",
         "key_developments": [
           {
             "development_id": "story_627e2a10f3d02720",
@@ -522,14 +544,14 @@
             "title": "Oil Prices Exceed $100 a Barrel Amid Escalating Iran Conflict"
           },
           {
+            "development_id": "story_2f9632c2d61c646a",
+            "date": "2026-07-25",
+            "title": "Houthis Claim Missile Attack on Saudi Arabia Amid Escalating Tensions"
+          },
+          {
             "development_id": "story_755dbaa84d64b279",
             "date": "2026-07-25",
             "title": "Trump Weighs Military Action Against Iran Amid Diplomatic Efforts"
-          },
-          {
-            "development_id": "story_75a978ecb710dcb2",
-            "date": "2026-07-25",
-            "title": "Iran Launches Attacks on US Facilities Amid Ongoing Strikes"
           }
         ],
         "sources": [
@@ -612,6 +634,30 @@
             "source_bias": "lean-left"
           },
           {
+            "title": "More fuel price pain ahead as Houthis widen war's front line, Trump considers fresh strikes",
+            "source": "SBS News",
+            "link": "https://www.sbs.com.au/news/article/more-fuel-price-pain-ahead-for-australians-as-war-ramps-up-and-de-escalation-dims/liu71xlm1",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Yemen's Houthis say they targeted Saudi oil facilities on Red Sea",
+            "source": "France 24",
+            "link": "https://www.france24.com/en/middle-east/20260724-yemen-s-houthis-say-they-hit-saudi-arabia-as-trump-weighs-harder-iran-strikes",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Houthis claim Saudi missile attack, US mulls Iran strikes",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/middle-east/2026/0725/1585036-houthis-strikes",
+            "source_bias": "center"
+          },
+          {
+            "title": "Iran reports no new strikes by US for first time in 2 weeks",
+            "source": "CBS News",
+            "link": "https://www.cbsnews.com/live-updates/iran-war-us-trump-strait-hormuz-middle-east",
+            "source_bias": "lean-left"
+          },
+          {
             "title": "Trump yet to decide whether to launch strikes on Iran",
             "source": "RTE News",
             "link": "https://www.rte.ie/news/2026/0724/1584878-us-strikes-iran",
@@ -621,18 +667,6 @@
             "title": "Iran war live: Trump says US ‘locked and loaded’ as it seeks Iran talks",
             "source": "Al Jazeera English",
             "link": "https://www.aljazeera.com/news/liveblog/2026/7/25/iran-war-live-trump-says-us-locked-and-loaded-as-it-seeks-iran-talks?traffic_source=rss",
-            "source_bias": "lean-left"
-          },
-          {
-            "title": "Iran hits US facilities in the Middle East as Trump is pressed on exit strategy",
-            "source": "CBS News",
-            "link": "https://www.cbsnews.com/video/iran-strikes-us-facilities-as-trump-is-pressed-on-exit-strategy",
-            "source_bias": "lean-left"
-          },
-          {
-            "title": "Trump threatens a major escalation in Iran after 13 straight nights of strikes",
-            "source": "NPR",
-            "link": "https://www.npr.org/2026/07/24/g-s1-135417/us-iran-war-updates",
             "source_bias": "lean-left"
           }
         ],
@@ -645,7 +679,7 @@
           "event_id": "event_houthi-attacks-on-saudi-tankers-raise-oil-pr_2ec7634023",
           "title": "Houthi Attacks on Saudi Tankers Raise Oil Price Concerns",
           "relationship": "related_topic",
-          "confidence": 0.795,
+          "confidence": 0.802,
           "shared_entities": [
             "iran",
             "red",
@@ -654,27 +688,28 @@
           ]
         },
         {
+          "event_id": "event_houthis-declare-blockade-on-red-sea-waterway_9713c4a88d",
+          "title": "Houthis Declare Blockade on Red Sea Waterway Amid Ongoing Cyclospora Investigation",
+          "relationship": "related_topic",
+          "confidence": 0.788,
+          "shared_entities": [
+            "iran-backed_houthi",
+            "red",
+            "red_sea",
+            "red_sea.",
+            "sea._meanwhile"
+          ]
+        },
+        {
           "event_id": "event_ongoing-u-s-iran-hostilities-complicate-dipl_e5f18057ed",
           "title": "Ongoing U.S.-Iran Hostilities Complicate Diplomatic Efforts in the Red Sea Region",
           "relationship": "related_topic",
-          "confidence": 0.795,
+          "confidence": 0.775,
           "shared_entities": [
             "diplomatic_effort",
             "iran",
             "red",
             "red_sea"
-          ]
-        },
-        {
-          "event_id": "event_trump-to-attend-dignified-transfer-of-four-u_c92dd717ef",
-          "title": "Trump to Attend Dignified Transfer of Four US Service Members Killed in Middle East",
-          "relationship": "related_topic",
-          "confidence": 0.793,
-          "shared_entities": [
-            "donald_trump",
-            "middle",
-            "middle_east",
-            "us"
           ]
         },
         {
@@ -758,25 +793,24 @@
       "search_tokens": [
         "100",
         "action",
-        "airstrike",
+        "also",
+        "announcing",
         "another",
+        "arabia",
         "attack",
         "barrel",
         "becoming",
         "bipartisan",
         "blockade",
         "bridge",
+        "claim",
         "claimed",
-        "close",
         "comes",
         "concern",
-        "conducted",
         "conflict",
-        "consecutive",
-        "continued",
+        "considering",
         "corresponding",
         "crossing",
-        "deciding",
         "decision",
         "democrat",
         "destroying",
@@ -786,9 +820,9 @@
         "disruption",
         "donald",
         "each",
-        "east",
         "effort",
         "emphasized",
+        "escalate",
         "escalating",
         "escalation",
         "exceed",
@@ -798,28 +832,30 @@
         "follow",
         "force",
         "four",
+        "further",
         "global",
         "handling",
         "hormuz",
         "house",
         "houthi",
         "increase",
-        "indicating",
         "infrastructure",
         "iran",
+        "iran-backed",
         "issue",
+        "jizan",
         "joining",
-        "launche",
         "limit",
         "loaded",
         "locked",
         "made",
+        "maritime",
         "mark",
         "marking",
         "marks",
-        "middle",
+        "meanwhile",
         "military",
-        "night",
+        "missile",
         "oil",
         "ongoing",
         "particularly",
@@ -831,6 +867,7 @@
         "punishment",
         "pursuing",
         "raised",
+        "rebel",
         "rebuke",
         "received",
         "recent",
@@ -851,7 +888,6 @@
         "ship",
         "ships",
         "significant",
-        "situation",
         "stated",
         "stating",
         "strait",
@@ -863,6 +899,7 @@
         "tanker",
         "target",
         "targeted",
+        "targeting",
         "tehran",
         "tension",
         "they",
@@ -884,20 +921,21 @@
         "would"
       ],
       "entities": [
+        "claim_missile",
         "diplomatic_effort",
         "donald_trump",
         "escalating_iran",
+        "escalating_tension",
         "hormuz_tension",
         "house_votes",
+        "houthi_claim",
         "iran",
-        "iran._iran",
+        "iran-backed_houthi",
         "iran_infrastructure",
-        "iran_launche",
         "issue_threat",
+        "jizan.",
         "limit",
         "limit_trump",
-        "middle",
-        "middle_east",
         "military_action",
         "power_regarding",
         "price_exceed",
@@ -905,6 +943,8 @@
         "red_sea",
         "red_sea.",
         "regarding_iran",
+        "saudi_arabia",
+        "sea._meanwhile",
         "strait",
         "trump_issue",
         "trump_war",
@@ -914,12 +954,12 @@
         "war_power",
         "weigh_military"
       ],
-      "search_text": "100 action airstrike another attack barrel becoming bipartisan blockade bridge claimed close comes concern conducted conflict consecutive continued corresponding crossing deciding decision democrat destroying diplomatic diplomatic_effort direct discussion disruption donald donald_trump each east effort emphasized escalating escalating_iran escalation exceed extension facilitie fired follow force four global handling hormuz hormuz_tension house house_votes houthi increase indicating infrastructure iran iran._iran iran_infrastructure iran_launche issue issue_threat joining launche limit limit_trump loaded locked made mark marking marks middle middle_east military military_action night oil ongoing particularly piece plant potential power power_regarding price price_exceed punishment pursuing raised rebuke received recent red red_sea red_sea. regarding regarding_iran region remain representative republican resolution respond response responsibility restrict retaliation rising saudi seriou ship ships significant situation stated stating strait strike supplie support surged talks tanker target targeted tehran tension they threat threatened thursday trump trump_issue trump_war trump_warns trump_weigh upon us vessel violating vote voted votes war war_power warns weigh weigh_military which while would"
+      "search_text": "100 action also announcing another arabia attack barrel becoming bipartisan blockade bridge claim claim_missile claimed comes concern conflict considering corresponding crossing decision democrat destroying diplomatic diplomatic_effort direct discussion disruption donald donald_trump each effort emphasized escalate escalating escalating_iran escalating_tension escalation exceed extension facilitie fired follow force four further global handling hormuz hormuz_tension house house_votes houthi houthi_claim increase infrastructure iran iran-backed iran-backed_houthi iran_infrastructure issue issue_threat jizan jizan. joining limit limit_trump loaded locked made maritime mark marking marks meanwhile military military_action missile oil ongoing particularly piece plant potential power power_regarding price price_exceed punishment pursuing raised rebel rebuke received recent red red_sea red_sea. regarding regarding_iran region remain representative republican resolution respond response responsibility restrict retaliation rising saudi saudi_arabia sea._meanwhile seriou ship ships significant stated stating strait strike supplie support surged talks tanker target targeted targeting tehran tension they threat threatened thursday trump trump_issue trump_war trump_warns trump_weigh upon us vessel violating vote voted votes war war_power warns weigh weigh_military which while would"
     },
     {
       "event_id": "event_over-200-000-evacuate-as-wildfires-spread-in_8326f845c8",
-      "title": "Mass Evacuations as Wildfires Rage in France and Spain",
-      "canonical_title": "Mass Evacuations as Wildfires Rage in France and Spain",
+      "title": "Mass Evacuations in France and Spain Due to Widespread Wildfires",
+      "canonical_title": "Mass Evacuations in France and Spain Due to Widespread Wildfires",
       "topic_label": "Wildfires",
       "summary": "Wildfires fueled by strong winds and drought conditions have led to the evacuation of over 200,000 people in France and Spain. Firefighters are actively battling the flames, which have consumed large areas. Authorities in Spain have accused a tractor driver of igniting one of the wildfires.",
       "status": "active",
@@ -932,21 +972,22 @@
           "date": "2026-07-25",
           "occurred_at": null,
           "date_basis": "first_reported_by_muninn",
-          "title": "Mass Evacuations as Wildfires Rage in France and Spain",
-          "summary": "Wildfires in France and Spain have led to the evacuation of over 166,000 people, with authorities in Madrid declaring it the worst fire in the region's history. French President Emmanuel Macron has mobilized the military to assist in firefighting efforts as blazes threaten areas near Bordeaux. Firefighters are struggling to contain the rapidly spreading fires, which have merged in some regions.",
+          "title": "Mass Evacuations in France and Spain Due to Widespread Wildfires",
+          "summary": "Wildfires in southwestern France and Spain have forced the evacuation of over 250,000 people. Authorities in both countries are responding to the crisis, with France appealing for international assistance and Spain declaring a national emergency. The fires have been exacerbated by extreme heat and strong winds, leading to significant destruction and ongoing danger in the affected regions.",
           "topic_label": "Wildfires",
           "development_type": "development",
           "key_facts": [
-            "Over 166,000 people evacuated in France and Spain due to wildfires.",
-            "Madrid officials describe the situation as the worst fire in the region's history.",
-            "French military mobilized to assist in firefighting efforts."
+            "Over 250,000 people evacuated from homes in France and Spain due to wildfires.",
+            "France has requested international help amid the crisis.",
+            "Spain has declared a national emergency in response to the wildfires."
           ],
-          "source_count": 9,
+          "source_count": 12,
           "sources": [
             "ABC News",
             "AP",
             "Al Jazeera English",
             "BBC",
+            "DW - English",
             "New York Times",
             "RTE News",
             "The Guardian",
@@ -956,9 +997,12 @@
             "https://abcnews.com/video/135069151",
             "https://news.google.com/rss/articles/CBMijgFBVV95cUxNZUw0V2R4RnNrNmFrdFhRUjB5QVQ4WThwQ2NkYTI3RUdyV0xZdWc3dS1EUmJyaFI4dzc2a0EtU2VOSmQwRkJsLWdlT0VuVG1HcWwtcDIxSkFCdk55T2tOM2ppVVd4Ql9RNXVHZzk5dHZCWlRXdU9VOW1ERmVTQ2s4SkRXRXdNZjlHaEZpd3FR?oc=5",
             "https://www.aljazeera.com/news/2026/7/24/spanish-police-accuse-tractor-driver-of-sparking-wildfire-as-blazes-spread?traffic_source=rss",
+            "https://www.aljazeera.com/news/2026/7/25/wildfires-in-spain-and-france-force-evacuation-of-200000-people?traffic_source=rss",
             "https://www.bbc.co.uk/news/articles/czjlenp0xk8o?at_medium=RSS&at_campaign=rss",
+            "https://www.dw.com/en/europe-wildfires-thousands-flee-by-boat-as-fires-spread-merge/a-78104513?maca=en-rss-en-all-1573-rdf",
             "https://www.nytimes.com/2026/07/24/world/europe/france-spain-wildfires.html",
             "https://www.rte.ie/news/europe/2026/0724/1584875-madrid-wildfires",
+            "https://www.rte.ie/news/europe/2026/0725/1585038-wildfires-france-spain",
             "https://www.theguardian.com/world/2026/jul/24/france-evacuation-cap-ferret-peninsula-wildfire",
             "https://www.theguardian.com/world/live/2026/jul/24/france-spain-wildfires-cap-ferret-europe-latest-news-updates",
             "https://www.thehindu.com/news/international/166000-evacuated-as-wildfires-spin-out-of-control-in-france-spain/article71264193.ece"
@@ -1017,6 +1061,24 @@
               "source": "The Hindu",
               "link": "https://www.thehindu.com/news/international/166000-evacuated-as-wildfires-spin-out-of-control-in-france-spain/article71264193.ece",
               "source_bias": "lean-left"
+            },
+            {
+              "title": "Wildfires in Spain and France force evacuation of more than 250,000 people",
+              "source": "Al Jazeera English",
+              "link": "https://www.aljazeera.com/news/2026/7/25/wildfires-in-spain-and-france-force-evacuation-of-200000-people?traffic_source=rss",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Over 250,000 evacuated as French, Spanish fires rage",
+              "source": "RTE News",
+              "link": "https://www.rte.ie/news/europe/2026/0725/1585038-wildfires-france-spain",
+              "source_bias": "center"
+            },
+            {
+              "title": "Europe wildfires: Thousands flee by boat as fires spread, merge",
+              "source": "DW - English",
+              "link": "https://www.dw.com/en/europe-wildfires-thousands-flee-by-boat-as-fires-spread-merge/a-78104513?maca=en-rss-en-all-1573-rdf",
+              "source_bias": "lean-left"
             }
           ],
           "confidence": 1.0,
@@ -1070,14 +1132,33 @@
                 "https://www.bbc.co.uk/news/articles/czjlenp0xk8o?at_medium=RSS&at_campaign=rss",
                 "https://www.thehindu.com/news/international/166000-evacuated-as-wildfires-spin-out-of-control-in-france-spain/article71264193.ece"
               ]
+            },
+            {
+              "daily_story_id": "story_0db0b2d21a61331b",
+              "reported_at": "2026-07-25",
+              "update_kind": "factual_update",
+              "title": "Mass Evacuations in France and Spain Due to Widespread Wildfires",
+              "summary": "Wildfires in southwestern France and Spain have forced the evacuation of over 250,000 people. Authorities in both countries are responding to the crisis, with France appealing for international assistance and Spain declaring a national emergency. The fires have been exacerbated by extreme heat and strong winds, leading to significant destruction and ongoing danger in the affected regions.",
+              "topic_label": "Wildfires",
+              "key_facts": [
+                "Over 250,000 people evacuated from homes in France and Spain due to wildfires.",
+                "France has requested international help amid the crisis.",
+                "Spain has declared a national emergency in response to the wildfires."
+              ],
+              "source_urls": [
+                "https://www.aljazeera.com/news/2026/7/25/wildfires-in-spain-and-france-force-evacuation-of-200000-people?traffic_source=rss",
+                "https://www.rte.ie/news/europe/2026/0725/1585038-wildfires-france-spain",
+                "https://www.dw.com/en/europe-wildfires-thousands-flee-by-boat-as-fires-spread-merge/a-78104513?maca=en-rss-en-all-1573-rdf"
+              ]
             }
           ],
           "last_updated_at": "2026-07-25",
           "merged_development_ids": [
+            "story_0db0b2d21a61331b",
             "story_112dd362ffbeceef",
             "story_6a56d606bed6b0e0"
           ],
-          "revision_count": 2
+          "revision_count": 3
         }
       ],
       "integrity": {
@@ -1085,8 +1166,8 @@
         "questionable_development_count": 0,
         "review_required": false
       },
-      "latest_title": "Mass Evacuations as Wildfires Rage in France and Spain",
-      "latest_summary": "Wildfires in France and Spain have led to the evacuation of over 166,000 people, with authorities in Madrid declaring it the worst fire in the region's history. French President Emmanuel Macron has mobilized the military to assist in firefighting efforts as blazes threaten areas near Bordeaux. Firefighters are struggling to contain the rapidly spreading fires, which have merged in some regions.",
+      "latest_title": "Mass Evacuations in France and Spain Due to Widespread Wildfires",
+      "latest_summary": "Wildfires in southwestern France and Spain have forced the evacuation of over 250,000 people. Authorities in both countries are responding to the crisis, with France appealing for international assistance and Spain declaring a national emergency. The fires have been exacerbated by extreme heat and strong winds, leading to significant destruction and ongoing danger in the affected regions.",
       "presentation": {
         "has_context": true,
         "has_full_timeline": false,
@@ -1101,27 +1182,27 @@
         "summary_label": "Read the story so far",
         "summary_updated_at": "2026-07-25",
         "development_count": 1,
-        "coverage_packet_count": 3,
+        "coverage_packet_count": 4,
         "date_count": 1,
-        "source_count": 9,
-        "independent_source_count": 8,
+        "source_count": 12,
+        "independent_source_count": 9,
         "first_date": "2026-07-25",
         "latest_date": "2026-07-25",
-        "latest_update_title": "Mass Evacuations as Wildfires Rage in France and Spain",
-        "coverage_score": 0.511,
+        "latest_update_title": "Mass Evacuations in France and Spain Due to Widespread Wildfires",
+        "coverage_score": 0.548,
         "recency_score": 1.0,
-        "rank_score": 0.795,
-        "context_summary": "Wildfires in France and Spain have led to the evacuation of over 166,000 people, with authorities in Madrid declaring it the worst fire in the region's history. French President Emmanuel Macron has mobilized the military to assist in firefighting efforts as blazes threaten areas near Bordeaux. Firefighters are struggling to contain the rapidly spreading fires, which have merged in some regions.",
+        "rank_score": 0.81,
+        "context_summary": "Wildfires in southwestern France and Spain have forced the evacuation of over 250,000 people. Authorities in both countries are responding to the crisis, with France appealing for international assistance and Spain declaring a national emergency. The fires have been exacerbated by extreme heat and strong winds, leading to significant destruction and ongoing danger in the affected regions.",
         "cta_label": ""
       },
       "event_summary": {
         "available": true,
-        "summary": "Wildfires in France and Spain have led to the evacuation of over 166,000 people, with authorities in Madrid declaring it the worst fire in the region's history.",
+        "summary": "Wildfires in southwestern France and Spain have forced the evacuation of over 250,000 people.",
         "key_developments": [
           {
             "development_id": "story_f765f351d0d52866",
             "date": "2026-07-25",
-            "title": "Mass Evacuations as Wildfires Rage in France and Spain"
+            "title": "Mass Evacuations in France and Spain Due to Widespread Wildfires"
           }
         ],
         "sources": [
@@ -1178,74 +1259,975 @@
             "source": "The Hindu",
             "link": "https://www.thehindu.com/news/international/166000-evacuated-as-wildfires-spin-out-of-control-in-france-spain/article71264193.ece",
             "source_bias": "lean-left"
+          },
+          {
+            "title": "Wildfires in Spain and France force evacuation of more than 250,000 people",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/news/2026/7/25/wildfires-in-spain-and-france-force-evacuation-of-200000-people?traffic_source=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Over 250,000 evacuated as French, Spanish fires rage",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/europe/2026/0725/1585038-wildfires-france-spain",
+            "source_bias": "center"
+          },
+          {
+            "title": "Europe wildfires: Thousands flee by boat as fires spread, merge",
+            "source": "DW - English",
+            "link": "https://www.dw.com/en/europe-wildfires-thousands-flee-by-boat-as-fires-spread-merge/a-78104513?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
           }
         ],
         "updated_at": "2026-07-25",
         "provenance": "source_grounded_event_memory"
       },
       "event_stage": "developing_event",
-      "search_tokens": [
-        "000",
-        "166",
-        "areas",
-        "assist",
-        "authoritie",
-        "blaze",
-        "bordeaux",
-        "contain",
-        "declaring",
-        "effort",
-        "emmanuel",
-        "evacuation",
-        "fire",
-        "firefighter",
-        "firefighting",
-        "fires",
-        "france",
-        "history",
-        "macron",
-        "madrid",
-        "mass",
-        "merged",
-        "military",
-        "mobilized",
-        "near",
-        "rage",
-        "rapidly",
-        "region",
-        "some",
-        "spain",
-        "spreading",
-        "struggling",
-        "threaten",
-        "which",
-        "wildfire",
-        "worst"
-      ],
-      "entities": [
-        "bordeaux.",
-        "bordeaux._firefighter",
-        "emmanuel_macron",
-        "france",
-        "madrid",
-        "mass_evacuation",
-        "spain",
-        "spain_wildfire",
-        "wildfire_rage"
-      ],
-      "search_text": "000 166 areas assist authoritie blaze bordeaux bordeaux. bordeaux._firefighter contain declaring effort emmanuel emmanuel_macron evacuation fire firefighter firefighting fires france history macron madrid mass mass_evacuation merged military mobilized near rage rapidly region some spain spain_wildfire spreading struggling threaten which wildfire wildfire_rage worst",
       "related_events": [
         {
-          "event_id": "event_spain-declares-national-emergency-as-wildfir_75ab9d7053",
-          "title": "Spain Declares National Emergency as Wildfires Force Evacuations Near Madrid",
+          "event_id": "event_world-cup-final-spain-to-face-argentina-fran_ca15e3b715",
+          "title": "World Cup Final: Spain to Face Argentina, France and England Compete for Third Place",
           "relationship": "related_topic",
-          "confidence": 0.699,
+          "confidence": 0.66,
           "shared_entities": [
-            "madrid",
+            "france",
+            "spain"
+          ]
+        },
+        {
+          "event_id": "event_france-and-spain-s-longstanding-partnership_abd955c8db",
+          "title": "France and Spain's Longstanding Partnership in Football and Politics",
+          "relationship": "related_topic",
+          "confidence": 0.657,
+          "shared_entities": [
+            "france",
             "spain"
           ]
         }
-      ]
+      ],
+      "search_tokens": [
+        "000",
+        "250",
+        "affected",
+        "appealing",
+        "assistance",
+        "authoritie",
+        "both",
+        "countrie",
+        "crisi",
+        "danger",
+        "declaring",
+        "destruction",
+        "emergency",
+        "evacuation",
+        "exacerbated",
+        "extreme",
+        "fires",
+        "forced",
+        "france",
+        "heat",
+        "international",
+        "leading",
+        "mass",
+        "national",
+        "ongoing",
+        "region",
+        "responding",
+        "significant",
+        "southwestern",
+        "spain",
+        "strong",
+        "widespread",
+        "wildfire",
+        "winds"
+      ],
+      "entities": [
+        "france",
+        "mass_evacuation",
+        "spain",
+        "spain_due",
+        "widespread",
+        "widespread_wildfire",
+        "wildfire_wildfire"
+      ],
+      "search_text": "000 250 affected appealing assistance authoritie both countrie crisi danger declaring destruction emergency evacuation exacerbated extreme fires forced france heat international leading mass mass_evacuation national ongoing region responding significant southwestern spain spain_due strong widespread widespread_wildfire wildfire wildfire_wildfire winds"
+    },
+    {
+      "event_id": "event_trump-addresses-rescheduled-white-house-corr_d7372ef9f6",
+      "title": "Trump Jokes About 2028 Run at Rescheduled White House Correspondents' Dinner",
+      "canonical_title": "Trump Jokes About 2028 Run at Rescheduled White House Correspondents' Dinner",
+      "topic_label": "White House Correspondents' Dinner",
+      "summary": "President Trump spoke at the rescheduled White House Correspondents' Dinner, which took place after the original event was disrupted by an armed assailant in April. The new dinner featured heightened security measures and was attended by journalists and politicians. The outgoing president of the White House Correspondents' Association also addressed the attendees during the event.",
+      "status": "active",
+      "first_seen_at": "2026-07-25",
+      "last_seen_at": "2026-07-25",
+      "timeline": [
+        {
+          "development_id": "story_349b69c9b9632186",
+          "daily_story_id": "story_349b69c9b9632186",
+          "date": "2026-07-25",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Trump Jokes About 2028 Run at Rescheduled White House Correspondents' Dinner",
+          "summary": "During the rescheduled White House Correspondents' Dinner, President Trump delivered a speech that included jokes about running for a third presidential term in 2028, despite constitutional restrictions. He also criticized the press and his political opponents, reflecting on his relationship with the media. The event took place after the original dinner was canceled due to a shooting incident in April.",
+          "topic_label": "White House Correspondents' Dinner",
+          "development_type": "military_action",
+          "key_facts": [
+            "Trump joked about a 2028 presidential run.",
+            "The dinner was rescheduled after an April shooting incident.",
+            "Trump criticized the press and his political rivals during his speech."
+          ],
+          "source_count": 12,
+          "sources": [
+            "ABC News",
+            "Al Jazeera English",
+            "BBC - World",
+            "CBS News",
+            "France 24 - English",
+            "NBC News",
+            "NBC News - Top Stories",
+            "NewsNation",
+            "PBS News",
+            "Sky News - Top Stories"
+          ],
+          "source_urls": [
+            "https://abcnews.com/Politics/trump-attend-rescheduled-white-house-correspondents-dinner-friday/story?id=135027808",
+            "https://news.sky.com/story/donald-trump-jokes-hell-run-for-president-again-at-white-house-correspondents-dinner-13566802",
+            "https://www.aljazeera.com/news/2026/7/25/the-show-must-go-on-trump-returns-to-rescheduled-white-house-press-gala?traffic_source=rss",
+            "https://www.bbc.co.uk/news/articles/cd7le4ylev2o?at_medium=RSS&at_campaign=rss",
+            "https://www.cbsnews.com/news/trump-white-house-correspondents-dinner-redo",
+            "https://www.cbsnews.com/video/whca-president-weijia-jiang-speaks-rescheduled-dinner-3-months-after-shooting",
+            "https://www.cbsnews.com/video/white-house-correspondents-dinner-scaled-down-scaled-up-security",
+            "https://www.france24.com/en/americas/20260725-trump-lashes-out-at-fake-news-and-jokes-about-2028-presidential-run-in-press-gala-do-over",
+            "https://www.nbcnews.com/now/video/trump-touts-his-accomplishments-and-relationship-with-the-press-at-correspondents-dinner-267263045743",
+            "https://www.nbcnews.com/video/watch-live-trump-attends-white-house-correspondents-dinner-267195973637",
+            "https://www.newsnationnow.com/politics/trump-white-house-correspondents-dinner-redux",
+            "https://www.pbs.org/newshour/politics/watch-live-trump-speaks-at-white-house-correspondents-dinner-after-attack-disrupted-april-event"
+          ],
+          "source_details": [
+            {
+              "title": "Trump speaks at rescheduled media dinner after April 25 attack",
+              "source": "NewsNation",
+              "link": "https://www.newsnationnow.com/politics/trump-white-house-correspondents-dinner-redux",
+              "source_bias": "center"
+            },
+            {
+              "title": "White House Correspondents' Dinner to be scaled down, with scaled-up security",
+              "source": "CBS News",
+              "link": "https://www.cbsnews.com/video/white-house-correspondents-dinner-scaled-down-scaled-up-security",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "WATCH LIVE: Trump speaks at White House Correspondents' Dinner after attack disrupted April event",
+              "source": "PBS News",
+              "link": "https://www.pbs.org/newshour/politics/watch-live-trump-speaks-at-white-house-correspondents-dinner-after-attack-disrupted-april-event",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "WHCA President Weijia Jiang speaks at rescheduled dinner 3 months after shooting",
+              "source": "CBS News",
+              "link": "https://www.cbsnews.com/video/whca-president-weijia-jiang-speaks-rescheduled-dinner-3-months-after-shooting",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Trump attending White House Correspondents' Dinner redo after April attack",
+              "source": "CBS News",
+              "link": "https://www.cbsnews.com/news/trump-white-house-correspondents-dinner-redo",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Trump attends White House Correspondents' Dinner",
+              "source": "NBC News",
+              "link": "https://www.nbcnews.com/video/watch-live-trump-attends-white-house-correspondents-dinner-267195973637",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Trump to give 'unifying yet vicious' speech at White House correspondents' dinner",
+              "source": "ABC News",
+              "link": "https://abcnews.com/Politics/trump-attend-rescheduled-white-house-correspondents-dinner-friday/story?id=135027808",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Trump lashes out at 'fake news' and jokes about 2028 presidential run in press gala do-over",
+              "source": "France 24 - English",
+              "link": "https://www.france24.com/en/americas/20260725-trump-lashes-out-at-fake-news-and-jokes-about-2028-presidential-run-in-press-gala-do-over",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Trump touts his accomplishments and relationship with the press at Correspondents' Dinner",
+              "source": "NBC News - Top Stories",
+              "link": "https://www.nbcnews.com/now/video/trump-touts-his-accomplishments-and-relationship-with-the-press-at-correspondents-dinner-267263045743",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Trump mixes jokes with jibes at press dinner - and says he'll run for president again",
+              "source": "Sky News - Top Stories",
+              "link": "https://news.sky.com/story/donald-trump-jokes-hell-run-for-president-again-at-white-house-correspondents-dinner-13566802",
+              "source_bias": "center"
+            },
+            {
+              "title": "Trump takes swipes at press during White House Correspondents' Dinner",
+              "source": "BBC - World",
+              "link": "https://www.bbc.co.uk/news/articles/cd7le4ylev2o?at_medium=RSS&at_campaign=rss",
+              "source_bias": "center"
+            },
+            {
+              "title": "‘The show must go on’: Trump returns to rescheduled White House press gala",
+              "source": "Al Jazeera English",
+              "link": "https://www.aljazeera.com/news/2026/7/25/the-show-must-go-on-trump-returns-to-rescheduled-white-house-press-gala?traffic_source=rss",
+              "source_bias": "lean-left"
+            }
+          ],
+          "confidence": 1.0,
+          "match_evidence": {
+            "score": 1.0,
+            "method": "new_event",
+            "shared_tokens": [],
+            "shared_entities": []
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-25",
+          "last_seen_at": "2026-07-25",
+          "integrity_status": "trusted",
+          "revisions": [
+            {
+              "daily_story_id": "story_9a86bf10d0ed9d14",
+              "reported_at": "2026-07-25",
+              "update_kind": "factual_update",
+              "title": "Trump Jokes About 2028 Run at Rescheduled White House Correspondents' Dinner",
+              "summary": "During the rescheduled White House Correspondents' Dinner, President Trump delivered a speech that included jokes about running for a third presidential term in 2028, despite constitutional restrictions. He also criticized the press and his political opponents, reflecting on his relationship with the media. The event took place after the original dinner was canceled due to a shooting incident in April.",
+              "topic_label": "",
+              "key_facts": [
+                "Trump joked about a 2028 presidential run.",
+                "The dinner was rescheduled after an April shooting incident.",
+                "Trump criticized the press and his political rivals during his speech."
+              ],
+              "source_urls": [
+                "https://www.france24.com/en/americas/20260725-trump-lashes-out-at-fake-news-and-jokes-about-2028-presidential-run-in-press-gala-do-over",
+                "https://www.nbcnews.com/now/video/trump-touts-his-accomplishments-and-relationship-with-the-press-at-correspondents-dinner-267263045743",
+                "https://news.sky.com/story/donald-trump-jokes-hell-run-for-president-again-at-white-house-correspondents-dinner-13566802",
+                "https://www.bbc.co.uk/news/articles/cd7le4ylev2o?at_medium=RSS&at_campaign=rss",
+                "https://www.aljazeera.com/news/2026/7/25/the-show-must-go-on-trump-returns-to-rescheduled-white-house-press-gala?traffic_source=rss"
+              ]
+            }
+          ],
+          "last_updated_at": "2026-07-25",
+          "merged_development_ids": [
+            "story_9a86bf10d0ed9d14"
+          ],
+          "revision_count": 1
+        }
+      ],
+      "integrity": {
+        "public_development_count": 1,
+        "questionable_development_count": 0,
+        "review_required": false
+      },
+      "latest_title": "Trump Jokes About 2028 Run at Rescheduled White House Correspondents' Dinner",
+      "latest_summary": "During the rescheduled White House Correspondents' Dinner, President Trump delivered a speech that included jokes about running for a third presidential term in 2028, despite constitutional restrictions. He also criticized the press and his political opponents, reflecting on his relationship with the media. The event took place after the original dinner was canceled due to a shooting incident in April.",
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "stage": "developing_event",
+        "stage_label": "Developing event",
+        "base_title": "White House Correspondents' Dinner",
+        "display_title": "White House Correspondents' Dinner",
+        "milestone_development_ids": [
+          "story_349b69c9b9632186"
+        ],
+        "summary_available": true,
+        "summary_label": "Read the story so far",
+        "summary_updated_at": "2026-07-25",
+        "development_count": 1,
+        "coverage_packet_count": 2,
+        "date_count": 1,
+        "source_count": 12,
+        "independent_source_count": 10,
+        "first_date": "2026-07-25",
+        "latest_date": "2026-07-25",
+        "latest_update_title": "Trump Jokes About 2028 Run at Rescheduled White House Correspondents' Dinner",
+        "coverage_score": 0.548,
+        "recency_score": 1.0,
+        "rank_score": 0.81,
+        "context_summary": "During the rescheduled White House Correspondents' Dinner, President Trump delivered a speech that included jokes about running for a third presidential term in 2028, despite constitutional restrictions. He also criticized the press and his political opponents, reflecting on his relationship with the media. The event took place after the original dinner was canceled due to a shooting incident in April.",
+        "cta_label": ""
+      },
+      "event_summary": {
+        "available": true,
+        "summary": "During the rescheduled White House Correspondents' Dinner, President Trump delivered a speech that included jokes about running for a third presidential term in 2028, despite constitutional restrictions.",
+        "key_developments": [
+          {
+            "development_id": "story_349b69c9b9632186",
+            "date": "2026-07-25",
+            "title": "Trump Jokes About 2028 Run at Rescheduled White House Correspondents' Dinner"
+          }
+        ],
+        "sources": [
+          {
+            "title": "Trump speaks at rescheduled media dinner after April 25 attack",
+            "source": "NewsNation",
+            "link": "https://www.newsnationnow.com/politics/trump-white-house-correspondents-dinner-redux",
+            "source_bias": "center"
+          },
+          {
+            "title": "White House Correspondents' Dinner to be scaled down, with scaled-up security",
+            "source": "CBS News",
+            "link": "https://www.cbsnews.com/video/white-house-correspondents-dinner-scaled-down-scaled-up-security",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "WATCH LIVE: Trump speaks at White House Correspondents' Dinner after attack disrupted April event",
+            "source": "PBS News",
+            "link": "https://www.pbs.org/newshour/politics/watch-live-trump-speaks-at-white-house-correspondents-dinner-after-attack-disrupted-april-event",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "WHCA President Weijia Jiang speaks at rescheduled dinner 3 months after shooting",
+            "source": "CBS News",
+            "link": "https://www.cbsnews.com/video/whca-president-weijia-jiang-speaks-rescheduled-dinner-3-months-after-shooting",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Trump attending White House Correspondents' Dinner redo after April attack",
+            "source": "CBS News",
+            "link": "https://www.cbsnews.com/news/trump-white-house-correspondents-dinner-redo",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Trump attends White House Correspondents' Dinner",
+            "source": "NBC News",
+            "link": "https://www.nbcnews.com/video/watch-live-trump-attends-white-house-correspondents-dinner-267195973637",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Trump to give 'unifying yet vicious' speech at White House correspondents' dinner",
+            "source": "ABC News",
+            "link": "https://abcnews.com/Politics/trump-attend-rescheduled-white-house-correspondents-dinner-friday/story?id=135027808",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Trump lashes out at 'fake news' and jokes about 2028 presidential run in press gala do-over",
+            "source": "France 24 - English",
+            "link": "https://www.france24.com/en/americas/20260725-trump-lashes-out-at-fake-news-and-jokes-about-2028-presidential-run-in-press-gala-do-over",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Trump touts his accomplishments and relationship with the press at Correspondents' Dinner",
+            "source": "NBC News - Top Stories",
+            "link": "https://www.nbcnews.com/now/video/trump-touts-his-accomplishments-and-relationship-with-the-press-at-correspondents-dinner-267263045743",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Trump mixes jokes with jibes at press dinner - and says he'll run for president again",
+            "source": "Sky News - Top Stories",
+            "link": "https://news.sky.com/story/donald-trump-jokes-hell-run-for-president-again-at-white-house-correspondents-dinner-13566802",
+            "source_bias": "center"
+          },
+          {
+            "title": "Trump takes swipes at press during White House Correspondents' Dinner",
+            "source": "BBC - World",
+            "link": "https://www.bbc.co.uk/news/articles/cd7le4ylev2o?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          },
+          {
+            "title": "‘The show must go on’: Trump returns to rescheduled White House press gala",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/news/2026/7/25/the-show-must-go-on-trump-returns-to-rescheduled-white-house-press-gala?traffic_source=rss",
+            "source_bias": "lean-left"
+          }
+        ],
+        "updated_at": "2026-07-25",
+        "provenance": "source_grounded_event_memory"
+      },
+      "event_stage": "developing_event",
+      "related_events": [],
+      "search_tokens": [
+        "2028",
+        "also",
+        "april",
+        "canceled",
+        "constitutional",
+        "correspondent",
+        "criticized",
+        "delivered",
+        "despite",
+        "dinner",
+        "event",
+        "house",
+        "incident",
+        "included",
+        "jokes",
+        "media",
+        "opponent",
+        "original",
+        "place",
+        "political",
+        "presidential",
+        "press",
+        "reflecting",
+        "relationship",
+        "rescheduled",
+        "restriction",
+        "running",
+        "shooting",
+        "speech",
+        "term",
+        "third",
+        "took",
+        "trump",
+        "white"
+      ],
+      "entities": [
+        "april.",
+        "correspondent_dinner",
+        "house_correspondent",
+        "rescheduled",
+        "rescheduled_white",
+        "trump_jokes",
+        "white_house"
+      ],
+      "search_text": "2028 also april april. canceled constitutional correspondent correspondent_dinner criticized delivered despite dinner event house house_correspondent incident included jokes media opponent original place political presidential press reflecting relationship rescheduled rescheduled_white restriction running shooting speech term third took trump trump_jokes white white_house"
+    },
+    {
+      "event_id": "event_paramount-delays-warner-bros-merger-amid-leg_be95e2ccda",
+      "title": "Paramount Delays Warner Bros. Buyout Amid Legal Challenge",
+      "canonical_title": "Paramount Delays Warner Bros. Buyout Amid Legal Challenge",
+      "topic_label": "Media Mergers",
+      "summary": "Paramount has agreed to postpone the closing of its $81 billion acquisition of Warner Bros. Discovery until at least June 2027. This decision comes as a federal judge considers a legal challenge from 12 states seeking to block the merger. Paramount will incur penalties for each day the deal remains unclosed after a September 30 deadline.",
+      "status": "active",
+      "first_seen_at": "2026-07-25",
+      "last_seen_at": "2026-07-25",
+      "timeline": [
+        {
+          "development_id": "story_d588f28fac015993",
+          "daily_story_id": "story_d588f28fac015993",
+          "date": "2026-07-25",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Paramount Delays Warner Bros. Buyout Amid Legal Challenge",
+          "summary": "Paramount has announced a delay in finalizing its $81 billion acquisition of Warner Bros. Discovery. The merger will be postponed until a court ruling on a lawsuit filed by twelve states or until June 1, 2027. The states argue that the merger would create a significant media monopoly detrimental to the entertainment industry.",
+          "topic_label": "",
+          "development_type": "development",
+          "key_facts": [
+            "Paramount's buyout of Warner Bros. is valued at $81 billion.",
+            "The merger is delayed until a court ruling or June 1, 2027.",
+            "Twelve states are challenging the merger, citing concerns over media monopolization."
+          ],
+          "source_count": 7,
+          "sources": [
+            "ABC News",
+            "CBC",
+            "CBS News",
+            "DW",
+            "NBC News",
+            "NPR",
+            "PBS News"
+          ],
+          "source_urls": [
+            "https://abcnews.com/Entertainment/wireStory/paramount-agrees-delay-closing-warner-bros-buyout-months-135065269",
+            "https://www.cbc.ca/news/entertainment/paramount-delays-warner-buyout-9.7283254?cmp=rss",
+            "https://www.cbsnews.com/news/paramount-delay-warner-bros-merger-until-as-late-as-june-2027",
+            "https://www.dw.com/en/paramount-agrees-to-delay-warner-bros-merger-amid-lawsuit/a-78107061?maca=en-rss-en-all-1573-rdf",
+            "https://www.nbcnews.com/business/business-news/paramount-skydance-agrees-halt-warner-bros-merger-june-2027-rcna589137",
+            "https://www.npr.org/2026/07/24/nx-s1-5906818/paramount-warner-bros-merger-pause-lawsuits",
+            "https://www.pbs.org/newshour/economy/paramount-will-delay-closing-warner-buyout-for-months-while-judge-considers-states-challenge"
+          ],
+          "source_details": [
+            {
+              "title": "Paramount delays closing Warner buyout while judge considers states' challenge",
+              "source": "ABC News",
+              "link": "https://abcnews.com/Entertainment/wireStory/paramount-agrees-delay-closing-warner-bros-buyout-months-135065269",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Paramount agrees to delay closing Warner Bros. buyout for months while judge considers states' challenge",
+              "source": "CBC",
+              "link": "https://www.cbc.ca/news/entertainment/paramount-delays-warner-buyout-9.7283254?cmp=rss",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Paramount says it will pause its Warner acquisition while legal challenges play out",
+              "source": "NPR",
+              "link": "https://www.npr.org/2026/07/24/nx-s1-5906818/paramount-warner-bros-merger-pause-lawsuits",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Paramount Skydance agrees to halt Warner Bros. merger until next June",
+              "source": "NBC News",
+              "link": "https://www.nbcnews.com/business/business-news/paramount-skydance-agrees-halt-warner-bros-merger-june-2027-rcna589137",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Paramount will delay closing Warner buyout for months while judge considers states' challenge",
+              "source": "PBS News",
+              "link": "https://www.pbs.org/newshour/economy/paramount-will-delay-closing-warner-buyout-for-months-while-judge-considers-states-challenge",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Paramount to delay Warner Bros. merger until as late as June 2027",
+              "source": "CBS News",
+              "link": "https://www.cbsnews.com/news/paramount-delay-warner-bros-merger-until-as-late-as-june-2027",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Paramount agrees to delay Warner Bros. merger amid lawsuit",
+              "source": "DW",
+              "link": "https://www.dw.com/en/paramount-agrees-to-delay-warner-bros-merger-amid-lawsuit/a-78107061?maca=en-rss-en-all-1573-rdf",
+              "source_bias": "lean-left"
+            }
+          ],
+          "confidence": 1.0,
+          "match_evidence": {
+            "score": 1.0,
+            "method": "new_event",
+            "shared_tokens": [],
+            "shared_entities": []
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-25",
+          "last_seen_at": "2026-07-25",
+          "integrity_status": "trusted",
+          "revisions": [
+            {
+              "daily_story_id": "story_c065758333ff82f7",
+              "reported_at": "2026-07-25",
+              "update_kind": "factual_update",
+              "title": "Paramount Delays Warner Bros. Buyout Amid Legal Challenge",
+              "summary": "Paramount has announced a delay in finalizing its $81 billion acquisition of Warner Bros. Discovery. The merger will be postponed until a court ruling on a lawsuit filed by twelve states or until June 1, 2027. The states argue that the merger would create a significant media monopoly detrimental to the entertainment industry.",
+              "topic_label": "Media Mergers",
+              "key_facts": [
+                "Paramount's buyout of Warner Bros. is valued at $81 billion.",
+                "The merger is delayed until a court ruling or June 1, 2027.",
+                "Twelve states are challenging the merger, citing concerns over media monopolization."
+              ],
+              "source_urls": [
+                "https://abcnews.com/Entertainment/wireStory/paramount-agrees-delay-closing-warner-bros-buyout-months-135065269",
+                "https://www.cbsnews.com/news/paramount-delay-warner-bros-merger-until-as-late-as-june-2027",
+                "https://www.pbs.org/newshour/economy/paramount-will-delay-closing-warner-buyout-for-months-while-judge-considers-states-challenge",
+                "https://www.dw.com/en/paramount-agrees-to-delay-warner-bros-merger-amid-lawsuit/a-78107061?maca=en-rss-en-all-1573-rdf"
+              ]
+            }
+          ],
+          "last_updated_at": "2026-07-25",
+          "merged_development_ids": [
+            "story_c065758333ff82f7"
+          ],
+          "revision_count": 1
+        }
+      ],
+      "integrity": {
+        "public_development_count": 1,
+        "questionable_development_count": 0,
+        "review_required": false
+      },
+      "latest_title": "Paramount Delays Warner Bros. Buyout Amid Legal Challenge",
+      "latest_summary": "Paramount has announced a delay in finalizing its $81 billion acquisition of Warner Bros. Discovery. The merger will be postponed until a court ruling on a lawsuit filed by twelve states or until June 1, 2027. The states argue that the merger would create a significant media monopoly detrimental to the entertainment industry.",
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "stage": "developing_event",
+        "stage_label": "Developing event",
+        "base_title": "Media Mergers",
+        "display_title": "Media Mergers",
+        "milestone_development_ids": [
+          "story_d588f28fac015993"
+        ],
+        "summary_available": true,
+        "summary_label": "Read the story so far",
+        "summary_updated_at": "2026-07-25",
+        "development_count": 1,
+        "coverage_packet_count": 2,
+        "date_count": 1,
+        "source_count": 7,
+        "independent_source_count": 7,
+        "first_date": "2026-07-25",
+        "latest_date": "2026-07-25",
+        "latest_update_title": "Paramount Delays Warner Bros. Buyout Amid Legal Challenge",
+        "coverage_score": 0.448,
+        "recency_score": 1.0,
+        "rank_score": 0.768,
+        "context_summary": "Paramount has announced a delay in finalizing its $81 billion acquisition of Warner Bros. Discovery. The merger will be postponed until a court ruling on a lawsuit filed by twelve states or until June 1, 2027. The states argue that the merger would create a significant media monopoly detrimental to the entertainment industry.",
+        "cta_label": ""
+      },
+      "event_summary": {
+        "available": true,
+        "summary": "Paramount has announced a delay in finalizing its $81 billion acquisition of Warner Bros.",
+        "key_developments": [
+          {
+            "development_id": "story_d588f28fac015993",
+            "date": "2026-07-25",
+            "title": "Paramount Delays Warner Bros. Buyout Amid Legal Challenge"
+          }
+        ],
+        "sources": [
+          {
+            "title": "Paramount delays closing Warner buyout while judge considers states' challenge",
+            "source": "ABC News",
+            "link": "https://abcnews.com/Entertainment/wireStory/paramount-agrees-delay-closing-warner-bros-buyout-months-135065269",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Paramount agrees to delay closing Warner Bros. buyout for months while judge considers states' challenge",
+            "source": "CBC",
+            "link": "https://www.cbc.ca/news/entertainment/paramount-delays-warner-buyout-9.7283254?cmp=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Paramount says it will pause its Warner acquisition while legal challenges play out",
+            "source": "NPR",
+            "link": "https://www.npr.org/2026/07/24/nx-s1-5906818/paramount-warner-bros-merger-pause-lawsuits",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Paramount Skydance agrees to halt Warner Bros. merger until next June",
+            "source": "NBC News",
+            "link": "https://www.nbcnews.com/business/business-news/paramount-skydance-agrees-halt-warner-bros-merger-june-2027-rcna589137",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Paramount will delay closing Warner buyout for months while judge considers states' challenge",
+            "source": "PBS News",
+            "link": "https://www.pbs.org/newshour/economy/paramount-will-delay-closing-warner-buyout-for-months-while-judge-considers-states-challenge",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Paramount to delay Warner Bros. merger until as late as June 2027",
+            "source": "CBS News",
+            "link": "https://www.cbsnews.com/news/paramount-delay-warner-bros-merger-until-as-late-as-june-2027",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Paramount agrees to delay Warner Bros. merger amid lawsuit",
+            "source": "DW",
+            "link": "https://www.dw.com/en/paramount-agrees-to-delay-warner-bros-merger-amid-lawsuit/a-78107061?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          }
+        ],
+        "updated_at": "2026-07-25",
+        "provenance": "source_grounded_event_memory"
+      },
+      "event_stage": "developing_event",
+      "related_events": [],
+      "search_tokens": [
+        "2027",
+        "acquisition",
+        "announced",
+        "argue",
+        "billion",
+        "bros",
+        "buyout",
+        "challenge",
+        "court",
+        "create",
+        "delay",
+        "detrimental",
+        "discovery",
+        "entertainment",
+        "filed",
+        "finalizing",
+        "industry",
+        "june",
+        "lawsuit",
+        "legal",
+        "media",
+        "merger",
+        "monopoly",
+        "paramount",
+        "postponed",
+        "ruling",
+        "significant",
+        "twelve",
+        "until",
+        "warner",
+        "would"
+      ],
+      "entities": [
+        "bros._buyout",
+        "bros._discovery.",
+        "challenge_paramount",
+        "delay_warner",
+        "legal_challenge",
+        "paramount_delay",
+        "warner_bros."
+      ],
+      "search_text": "2027 acquisition announced argue billion bros bros._buyout bros._discovery. buyout challenge challenge_paramount court create delay delay_warner detrimental discovery entertainment filed finalizing industry june lawsuit legal legal_challenge media merger monopoly paramount paramount_delay postponed ruling significant twelve until warner warner_bros. would"
+    },
+    {
+      "event_id": "event_international-criminal-court-dismisses-chief_08dfd68e39",
+      "title": "International Criminal Court Votes to Remove Chief Prosecutor Karim Khan",
+      "canonical_title": "International Criminal Court Votes to Remove Chief Prosecutor Karim Khan",
+      "topic_label": "ICC Leadership Changes",
+      "summary": "The International Criminal Court (ICC) has voted to dismiss chief prosecutor Karim Khan following allegations of sexual misconduct. This decision comes nearly two years after the allegations first surfaced. Khan has denied the claims, which include accusations of engaging in an improper relationship with a junior staff member and attempting to prevent her from pursuing her complaint.",
+      "status": "active",
+      "first_seen_at": "2026-07-25",
+      "last_seen_at": "2026-07-25",
+      "timeline": [
+        {
+          "development_id": "story_6b519d4694cf0c09",
+          "daily_story_id": "story_6b519d4694cf0c09",
+          "date": "2026-07-25",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "International Criminal Court Votes to Remove Chief Prosecutor Karim Khan",
+          "summary": "The International Criminal Court (ICC) has voted to remove Chief Prosecutor Karim Khan amid allegations of sexual misconduct. The decision comes nearly two years after the allegations first emerged. Khan has denied the accusations, which include claims of engaging in an improper relationship with a junior staff member and attempting to prevent her from pursuing her complaint.",
+          "topic_label": "ICC Leadership Changes",
+          "development_type": "election",
+          "key_facts": [
+            "Karim Khan was removed from his position as Chief Prosecutor of the ICC.",
+            "The vote to dismiss him was held by ICC member states.",
+            "Allegations against Khan include sexual misconduct and attempts to silence a complaint."
+          ],
+          "source_count": 7,
+          "sources": [
+            "Africanews",
+            "BBC",
+            "DW",
+            "Fox News",
+            "France 24",
+            "NPR",
+            "PBS News"
+          ],
+          "source_urls": [
+            "http://www.africanews.com/2026/07/24/icc-members-vote-to-dismiss-embattled-prosecutor-karim-khan",
+            "https://www.bbc.co.uk/news/articles/cqjxddx12qqo?at_medium=RSS&at_campaign=rss",
+            "https://www.dw.com/en/icc-votes-to-dismiss-chief-prosecutor-karim-khan/a-78092577?maca=en-rss-en-all-1573-rdf",
+            "https://www.foxnews.com/world/icc-prosecutor-whose-netanyahu-warrant-fueled-mamdani-arrest-threat-fired-over-sexual-misconduct",
+            "https://www.france24.com/en/europe/20260724-icc-chief-prosecutor-karim-khan-dismissed-over-sexual-misconduct-allegations-sources-say",
+            "https://www.npr.org/2026/07/24/g-s1-135498/icc-court-prosecutor-karim-khan-vote",
+            "https://www.pbs.org/newshour/world/icc-chief-prosecutor-karim-khan-removed-from-post-over-sexual-misconduct-allegations"
+          ],
+          "source_details": [
+            {
+              "title": "ICC dismisses chief prosecutor Karim Khan over sexual misconduct allegations",
+              "source": "France 24",
+              "link": "https://www.france24.com/en/europe/20260724-icc-chief-prosecutor-karim-khan-dismissed-over-sexual-misconduct-allegations-sources-say",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "ICC member states vote to remove chief prosecutor Karim Khan",
+              "source": "NPR",
+              "link": "https://www.npr.org/2026/07/24/g-s1-135498/icc-court-prosecutor-karim-khan-vote",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "ICC top prosecutor removed over sexual misconduct allegations",
+              "source": "BBC",
+              "link": "https://www.bbc.co.uk/news/articles/cqjxddx12qqo?at_medium=RSS&at_campaign=rss",
+              "source_bias": "center"
+            },
+            {
+              "title": "ICC prosecutor whose Netanyahu warrant fueled Mamdani arrest threat is fired over sexual misconduct",
+              "source": "Fox News",
+              "link": "https://www.foxnews.com/world/icc-prosecutor-whose-netanyahu-warrant-fueled-mamdani-arrest-threat-fired-over-sexual-misconduct",
+              "source_bias": "right"
+            },
+            {
+              "title": "ICC chief prosecutor Karim Khan removed from post over sexual misconduct allegations",
+              "source": "PBS News",
+              "link": "https://www.pbs.org/newshour/world/icc-chief-prosecutor-karim-khan-removed-from-post-over-sexual-misconduct-allegations",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "ICC votes to dismiss Chief Prosecutor Karim Khan",
+              "source": "DW",
+              "link": "https://www.dw.com/en/icc-votes-to-dismiss-chief-prosecutor-karim-khan/a-78092577?maca=en-rss-en-all-1573-rdf",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "ICC members vote to dismiss embattled prosecutor Karim Khan",
+              "source": "Africanews",
+              "link": "http://www.africanews.com/2026/07/24/icc-members-vote-to-dismiss-embattled-prosecutor-karim-khan",
+              "source_bias": "center"
+            }
+          ],
+          "confidence": 1.0,
+          "match_evidence": {
+            "score": 1.0,
+            "method": "new_event",
+            "shared_tokens": [],
+            "shared_entities": []
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-25",
+          "last_seen_at": "2026-07-25",
+          "integrity_status": "trusted",
+          "revisions": [
+            {
+              "daily_story_id": "story_b5a9df1edc7210be",
+              "reported_at": "2026-07-25",
+              "update_kind": "factual_update",
+              "title": "International Criminal Court Votes to Remove Chief Prosecutor Karim Khan",
+              "summary": "The International Criminal Court (ICC) has voted to remove Chief Prosecutor Karim Khan amid allegations of sexual misconduct. The decision comes nearly two years after the allegations first emerged. Khan has denied the accusations, which include claims of engaging in an improper relationship with a junior staff member and attempting to prevent her from pursuing her complaint.",
+              "topic_label": "ICC Leadership Change",
+              "key_facts": [
+                "Karim Khan was removed from his position as Chief Prosecutor of the ICC.",
+                "The vote to dismiss him was held by ICC member states.",
+                "Allegations against Khan include sexual misconduct and attempts to silence a complaint."
+              ],
+              "source_urls": [
+                "https://www.npr.org/2026/07/24/g-s1-135498/icc-court-prosecutor-karim-khan-vote",
+                "https://www.bbc.co.uk/news/articles/cqjxddx12qqo?at_medium=RSS&at_campaign=rss",
+                "https://www.pbs.org/newshour/world/icc-chief-prosecutor-karim-khan-removed-from-post-over-sexual-misconduct-allegations",
+                "https://www.dw.com/en/icc-votes-to-dismiss-chief-prosecutor-karim-khan/a-78092577?maca=en-rss-en-all-1573-rdf",
+                "http://www.africanews.com/2026/07/24/icc-members-vote-to-dismiss-embattled-prosecutor-karim-khan"
+              ]
+            }
+          ],
+          "last_updated_at": "2026-07-25",
+          "merged_development_ids": [
+            "story_b5a9df1edc7210be"
+          ],
+          "revision_count": 1
+        }
+      ],
+      "integrity": {
+        "public_development_count": 1,
+        "questionable_development_count": 0,
+        "review_required": false
+      },
+      "latest_title": "International Criminal Court Votes to Remove Chief Prosecutor Karim Khan",
+      "latest_summary": "The International Criminal Court (ICC) has voted to remove Chief Prosecutor Karim Khan amid allegations of sexual misconduct. The decision comes nearly two years after the allegations first emerged. Khan has denied the accusations, which include claims of engaging in an improper relationship with a junior staff member and attempting to prevent her from pursuing her complaint.",
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "stage": "developing_event",
+        "stage_label": "Developing event",
+        "base_title": "ICC Leadership Changes",
+        "display_title": "ICC Leadership Changes",
+        "milestone_development_ids": [
+          "story_6b519d4694cf0c09"
+        ],
+        "summary_available": true,
+        "summary_label": "Read the story so far",
+        "summary_updated_at": "2026-07-25",
+        "development_count": 1,
+        "coverage_packet_count": 2,
+        "date_count": 1,
+        "source_count": 7,
+        "independent_source_count": 7,
+        "first_date": "2026-07-25",
+        "latest_date": "2026-07-25",
+        "latest_update_title": "International Criminal Court Votes to Remove Chief Prosecutor Karim Khan",
+        "coverage_score": 0.448,
+        "recency_score": 1.0,
+        "rank_score": 0.768,
+        "context_summary": "The International Criminal Court (ICC) has voted to remove Chief Prosecutor Karim Khan amid allegations of sexual misconduct. The decision comes nearly two years after the allegations first emerged. Khan has denied the accusations, which include claims of engaging in an improper relationship with a junior staff member and attempting to prevent her from pursuing her complaint.",
+        "cta_label": ""
+      },
+      "event_summary": {
+        "available": true,
+        "summary": "The International Criminal Court (ICC) has voted to remove Chief Prosecutor Karim Khan amid allegations of sexual misconduct.",
+        "key_developments": [
+          {
+            "development_id": "story_6b519d4694cf0c09",
+            "date": "2026-07-25",
+            "title": "International Criminal Court Votes to Remove Chief Prosecutor Karim Khan"
+          }
+        ],
+        "sources": [
+          {
+            "title": "ICC dismisses chief prosecutor Karim Khan over sexual misconduct allegations",
+            "source": "France 24",
+            "link": "https://www.france24.com/en/europe/20260724-icc-chief-prosecutor-karim-khan-dismissed-over-sexual-misconduct-allegations-sources-say",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "ICC member states vote to remove chief prosecutor Karim Khan",
+            "source": "NPR",
+            "link": "https://www.npr.org/2026/07/24/g-s1-135498/icc-court-prosecutor-karim-khan-vote",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "ICC top prosecutor removed over sexual misconduct allegations",
+            "source": "BBC",
+            "link": "https://www.bbc.co.uk/news/articles/cqjxddx12qqo?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          },
+          {
+            "title": "ICC prosecutor whose Netanyahu warrant fueled Mamdani arrest threat is fired over sexual misconduct",
+            "source": "Fox News",
+            "link": "https://www.foxnews.com/world/icc-prosecutor-whose-netanyahu-warrant-fueled-mamdani-arrest-threat-fired-over-sexual-misconduct",
+            "source_bias": "right"
+          },
+          {
+            "title": "ICC chief prosecutor Karim Khan removed from post over sexual misconduct allegations",
+            "source": "PBS News",
+            "link": "https://www.pbs.org/newshour/world/icc-chief-prosecutor-karim-khan-removed-from-post-over-sexual-misconduct-allegations",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "ICC votes to dismiss Chief Prosecutor Karim Khan",
+            "source": "DW",
+            "link": "https://www.dw.com/en/icc-votes-to-dismiss-chief-prosecutor-karim-khan/a-78092577?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "ICC members vote to dismiss embattled prosecutor Karim Khan",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/07/24/icc-members-vote-to-dismiss-embattled-prosecutor-karim-khan",
+            "source_bias": "center"
+          }
+        ],
+        "updated_at": "2026-07-25",
+        "provenance": "source_grounded_event_memory"
+      },
+      "event_stage": "developing_event",
+      "related_events": [],
+      "search_tokens": [
+        "accusation",
+        "allegation",
+        "attempting",
+        "chief",
+        "claim",
+        "comes",
+        "complaint",
+        "court",
+        "criminal",
+        "decision",
+        "denied",
+        "emerged",
+        "engaging",
+        "first",
+        "improper",
+        "include",
+        "international",
+        "junior",
+        "karim",
+        "khan",
+        "member",
+        "misconduct",
+        "nearly",
+        "prevent",
+        "prosecutor",
+        "pursuing",
+        "relationship",
+        "remove",
+        "sexual",
+        "staff",
+        "voted",
+        "votes",
+        "which",
+        "years"
+      ],
+      "entities": [
+        "chief_prosecutor",
+        "icc",
+        "international_criminal",
+        "karim_khan",
+        "prosecutor_karim",
+        "remove",
+        "remove_chief"
+      ],
+      "search_text": "accusation allegation attempting chief chief_prosecutor claim comes complaint court criminal decision denied emerged engaging first icc improper include international international_criminal junior karim karim_khan khan member misconduct nearly prevent prosecutor prosecutor_karim pursuing relationship remove remove_chief sexual staff voted votes which years"
     },
     {
       "event_id": "event_iran-claims-attacks-on-us-bases-in-bahrain-j_2ed1fdd27a",
@@ -1471,84 +2453,6 @@
         "provenance": "source_grounded_event_memory"
       },
       "event_stage": "developing_event",
-      "search_tokens": [
-        "aimed",
-        "allie",
-        "also",
-        "amazon",
-        "america",
-        "announced",
-        "attack",
-        "attempting",
-        "bahrain",
-        "bases",
-        "blockade",
-        "breach",
-        "breaching",
-        "center",
-        "claim",
-        "conflict",
-        "continued",
-        "data",
-        "engage",
-        "escalating",
-        "escalation",
-        "fired",
-        "follow",
-        "guard",
-        "gulf",
-        "hostilitie",
-        "incident",
-        "iran",
-        "jordan",
-        "kuwait",
-        "linked",
-        "merchant",
-        "military",
-        "nation",
-        "occurred",
-        "ongoing",
-        "persian",
-        "port",
-        "ports",
-        "position",
-        "punishment",
-        "recent",
-        "reflect",
-        "reported",
-        "reportedly",
-        "retaliation",
-        "revolutionary",
-        "situation",
-        "strike",
-        "targeted",
-        "targeting",
-        "tehran",
-        "tension",
-        "upon",
-        "vessel"
-      ],
-      "entities": [
-        "amazon.",
-        "america",
-        "bahrain",
-        "bahrain_jordan",
-        "breaching_iran",
-        "engage_merchant",
-        "iran",
-        "iran_claim",
-        "iran_port",
-        "iran_revolutionary",
-        "merchant_vessel",
-        "military_engage",
-        "persian",
-        "persian_gulf.",
-        "port_blockade",
-        "revolutionary_guard",
-        "us",
-        "vessel_breaching"
-      ],
-      "search_text": "aimed allie also amazon amazon. america announced attack attempting bahrain bahrain_jordan bases blockade breach breaching breaching_iran center claim conflict continued data engage engage_merchant escalating escalation fired follow guard gulf hostilitie incident iran iran_claim iran_port iran_revolutionary jordan kuwait linked merchant merchant_vessel military military_engage nation occurred ongoing persian persian_gulf. port port_blockade ports position punishment recent reflect reported reportedly retaliation revolutionary revolutionary_guard situation strike targeted targeting tehran tension upon us vessel vessel_breaching",
       "related_events": [
         {
           "event_id": "event_iranian-missiles-target-aqaba-airport-amid-r_c7e08248c6",
@@ -1577,7 +2481,7 @@
           "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
           "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
           "relationship": "related_topic",
-          "confidence": 0.707,
+          "confidence": 0.71,
           "shared_entities": [
             "iran",
             "us"
@@ -1696,6 +2600,497 @@
         "publisher_count": 6,
         "generated_at": "2026-07-25T00:32:39.300887+00:00",
         "expires_at": "2026-08-01T00:32:39.300887+00:00",
+        "model": "gpt-5.6-terra",
+        "provenance": "openai_web_search_source_grounded_event_overview_v1"
+      },
+      "search_tokens": [
+        "aimed",
+        "allie",
+        "also",
+        "amazon",
+        "america",
+        "announced",
+        "attack",
+        "attempting",
+        "bahrain",
+        "bases",
+        "blockade",
+        "breach",
+        "breaching",
+        "center",
+        "claim",
+        "conflict",
+        "continued",
+        "data",
+        "engage",
+        "escalating",
+        "escalation",
+        "fired",
+        "follow",
+        "guard",
+        "gulf",
+        "hostilitie",
+        "incident",
+        "iran",
+        "jordan",
+        "kuwait",
+        "linked",
+        "merchant",
+        "military",
+        "nation",
+        "occurred",
+        "ongoing",
+        "persian",
+        "port",
+        "ports",
+        "position",
+        "punishment",
+        "recent",
+        "reflect",
+        "reported",
+        "reportedly",
+        "retaliation",
+        "revolutionary",
+        "situation",
+        "strike",
+        "targeted",
+        "targeting",
+        "tehran",
+        "tension",
+        "upon",
+        "vessel"
+      ],
+      "entities": [
+        "amazon.",
+        "america",
+        "bahrain",
+        "bahrain_jordan",
+        "breaching_iran",
+        "engage_merchant",
+        "iran",
+        "iran_claim",
+        "iran_port",
+        "iran_revolutionary",
+        "merchant_vessel",
+        "military_engage",
+        "persian",
+        "persian_gulf.",
+        "port_blockade",
+        "revolutionary_guard",
+        "us",
+        "vessel_breaching"
+      ],
+      "search_text": "aimed allie also amazon amazon. america announced attack attempting bahrain bahrain_jordan bases blockade breach breaching breaching_iran center claim conflict continued data engage engage_merchant escalating escalation fired follow guard gulf hostilitie incident iran iran_claim iran_port iran_revolutionary jordan kuwait linked merchant merchant_vessel military military_engage nation occurred ongoing persian persian_gulf. port port_blockade ports position punishment recent reflect reported reportedly retaliation revolutionary revolutionary_guard situation strike targeted targeting tehran tension upon us vessel vessel_breaching"
+    },
+    {
+      "event_id": "event_indian-education-minister-resigns-amid-youth_64cf760eee",
+      "title": "Indian Education Minister Resigns Amid Youth Protests Over Exam Scandal",
+      "canonical_title": "Indian Education Minister Resigns Amid Youth Protests Over Exam Scandal",
+      "topic_label": "Youth Protests",
+      "summary": "Dharmendra Pradhan has resigned as India's education minister following widespread protests by youth over exam paper leaks. The protests, led by a movement referred to as 'Cockroach,' culminated in celebrations among demonstrators after Pradhan's resignation was announced. The movement's leaders indicated that the government had accepted their demands, leading to the decision to end the protests.",
+      "status": "active",
+      "first_seen_at": "2026-07-25",
+      "last_seen_at": "2026-07-25",
+      "timeline": [
+        {
+          "development_id": "story_d29ad1c31f21edc2",
+          "daily_story_id": "story_d29ad1c31f21edc2",
+          "date": "2026-07-25",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "India's Youth Mobilizes in Response to Exam Paper Leaks",
+          "summary": "A significant youth-led protest movement has emerged in India, sparked by outrage over leaked national entrance exams. Initially focused on the exam issues, the protests have grown into one of the most notable student movements in recent years, reflecting broader discontent among the younger generation.",
+          "topic_label": "Youth Protests",
+          "development_type": "development",
+          "key_facts": [
+            "Protests began over leaked national entrance exams.",
+            "The movement has become one of India's notable youth-led protests in recent years."
+          ],
+          "source_count": 2,
+          "sources": [
+            "BBC",
+            "PBS News"
+          ],
+          "source_urls": [
+            "https://www.pbs.org/newshour/world/watch-what-to-know-about-indias-youth-led-gen-z-cockroach-protests",
+            "https://www.bbc.co.uk/news/articles/c07rgpxe51no?at_medium=RSS&at_campaign=rss"
+          ],
+          "source_details": [
+            {
+              "title": "WATCH: What to know about India's youth-led Gen Z 'cockroach' protests",
+              "source": "PBS News",
+              "link": "https://www.pbs.org/newshour/world/watch-what-to-know-about-indias-youth-led-gen-z-cockroach-protests",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "CJP protest: The youth movement India's Modi didn't see coming",
+              "source": "BBC",
+              "link": "https://www.bbc.co.uk/news/articles/c07rgpxe51no?at_medium=RSS&at_campaign=rss",
+              "source_bias": "center"
+            }
+          ],
+          "confidence": 0.72,
+          "match_evidence": {
+            "score": 0.72,
+            "matched_development_id": "story_dfa37d98a5130d11",
+            "shared_tokens": [
+              "among",
+              "exam",
+              "india",
+              "leaks",
+              "movement",
+              "paper",
+              "protest",
+              "youth"
+            ],
+            "shared_entities": [
+              "india"
+            ],
+            "source_url_match": false,
+            "topic_label_match": true,
+            "method": "deterministic_event_match_v2",
+            "threshold": 0.38
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-25",
+          "last_seen_at": "2026-07-25",
+          "integrity_status": "trusted"
+        },
+        {
+          "development_id": "story_dfa37d98a5130d11",
+          "daily_story_id": "story_dfa37d98a5130d11",
+          "date": "2026-07-25",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Indian Education Minister Resigns Amid Youth Protests Over Exam Scandal",
+          "summary": "Dharmendra Pradhan has resigned as India's education minister following widespread protests by youth over exam paper leaks. The protests, led by a movement referred to as 'Cockroach,' culminated in celebrations among demonstrators after Pradhan's resignation was announced. The movement's leaders indicated that the government had accepted their demands, leading to the decision to end the protests.",
+          "topic_label": "Youth Protests",
+          "development_type": "development",
+          "key_facts": [
+            "Dharmendra Pradhan resigned amid protests over exam paper leaks.",
+            "The protests were led by a youth movement known as 'Cockroach.'",
+            "Protesters celebrated Pradhan's resignation as a victory."
+          ],
+          "source_count": 3,
+          "sources": [
+            "Al Jazeera English",
+            "CBC",
+            "Channel NewsAsia"
+          ],
+          "source_urls": [
+            "https://www.channelnewsasia.com/asia/indian-education-minister-resigns-following-nationwide-youth-protests-6277891",
+            "https://www.aljazeera.com/news/2026/7/25/indias-education-minister-resigns-after-weeks-of-cockroach-protests?traffic_source=rss",
+            "https://www.cbc.ca/news/world/india-education-minister-resigns-9.7283715?cmp=rss"
+          ],
+          "source_details": [
+            {
+              "title": "Indian education minister resigns following nationwide youth protests",
+              "source": "Channel NewsAsia",
+              "link": "https://www.channelnewsasia.com/asia/indian-education-minister-resigns-following-nationwide-youth-protests-6277891",
+              "source_bias": "center"
+            },
+            {
+              "title": "India’s ‘Cockroach’ youth call off protests after education minister quits",
+              "source": "Al Jazeera English",
+              "link": "https://www.aljazeera.com/news/2026/7/25/indias-education-minister-resigns-after-weeks-of-cockroach-protests?traffic_source=rss",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Youth protesters celebrate after India's education minister resigns following exam leak scandal",
+              "source": "CBC",
+              "link": "https://www.cbc.ca/news/world/india-education-minister-resigns-9.7283715?cmp=rss",
+              "source_bias": "lean-left"
+            }
+          ],
+          "confidence": 1.0,
+          "match_evidence": {
+            "score": 1.0,
+            "method": "new_event",
+            "shared_tokens": [],
+            "shared_entities": []
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-25",
+          "last_seen_at": "2026-07-25",
+          "integrity_status": "trusted"
+        }
+      ],
+      "integrity": {
+        "public_development_count": 2,
+        "questionable_development_count": 0,
+        "review_required": false
+      },
+      "latest_title": "Indian Education Minister Resigns Amid Youth Protests Over Exam Scandal",
+      "latest_summary": "Dharmendra Pradhan has resigned as India's education minister following widespread protests by youth over exam paper leaks. The protests, led by a movement referred to as 'Cockroach,' culminated in celebrations among demonstrators after Pradhan's resignation was announced. The movement's leaders indicated that the government had accepted their demands, leading to the decision to end the protests.",
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "stage": "developing_event",
+        "stage_label": "Developing event",
+        "base_title": "Youth Protests",
+        "display_title": "Youth Protests",
+        "milestone_development_ids": [
+          "story_d29ad1c31f21edc2",
+          "story_dfa37d98a5130d11"
+        ],
+        "summary_available": true,
+        "summary_label": "Read the story so far",
+        "summary_updated_at": "2026-07-25",
+        "development_count": 2,
+        "coverage_packet_count": 2,
+        "date_count": 1,
+        "source_count": 5,
+        "independent_source_count": 5,
+        "first_date": "2026-07-25",
+        "latest_date": "2026-07-25",
+        "latest_update_title": "Indian Education Minister Resigns Amid Youth Protests Over Exam Scandal",
+        "coverage_score": 0.407,
+        "recency_score": 1.0,
+        "rank_score": 0.751,
+        "context_summary": "Muninn first tracked this thread on 2026-07-25: India's Youth Mobilizes in Response to Exam Paper Leaks. The latest development is Indian Education Minister Resigns Amid Youth Protests Over Exam Scandal.",
+        "cta_label": ""
+      },
+      "event_summary": {
+        "available": true,
+        "summary": "A significant youth-led protest movement has emerged in India, sparked by outrage over leaked national entrance exams. Most recently, dharmendra Pradhan has resigned as India's education minister following widespread protests by youth over exam paper leaks.",
+        "key_developments": [
+          {
+            "development_id": "story_d29ad1c31f21edc2",
+            "date": "2026-07-25",
+            "title": "India's Youth Mobilizes in Response to Exam Paper Leaks"
+          },
+          {
+            "development_id": "story_dfa37d98a5130d11",
+            "date": "2026-07-25",
+            "title": "Indian Education Minister Resigns Amid Youth Protests Over Exam Scandal"
+          }
+        ],
+        "sources": [
+          {
+            "title": "WATCH: What to know about India's youth-led Gen Z 'cockroach' protests",
+            "source": "PBS News",
+            "link": "https://www.pbs.org/newshour/world/watch-what-to-know-about-indias-youth-led-gen-z-cockroach-protests",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "CJP protest: The youth movement India's Modi didn't see coming",
+            "source": "BBC",
+            "link": "https://www.bbc.co.uk/news/articles/c07rgpxe51no?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          },
+          {
+            "title": "Indian education minister resigns following nationwide youth protests",
+            "source": "Channel NewsAsia",
+            "link": "https://www.channelnewsasia.com/asia/indian-education-minister-resigns-following-nationwide-youth-protests-6277891",
+            "source_bias": "center"
+          },
+          {
+            "title": "India’s ‘Cockroach’ youth call off protests after education minister quits",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/news/2026/7/25/indias-education-minister-resigns-after-weeks-of-cockroach-protests?traffic_source=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Youth protesters celebrate after India's education minister resigns following exam leak scandal",
+            "source": "CBC",
+            "link": "https://www.cbc.ca/news/world/india-education-minister-resigns-9.7283715?cmp=rss",
+            "source_bias": "lean-left"
+          }
+        ],
+        "updated_at": "2026-07-25",
+        "provenance": "source_grounded_event_memory"
+      },
+      "event_stage": "developing_event",
+      "search_tokens": [
+        "accepted",
+        "among",
+        "announced",
+        "broader",
+        "celebration",
+        "cockroach",
+        "culminated",
+        "decision",
+        "demand",
+        "demonstrator",
+        "dharmendra",
+        "discontent",
+        "education",
+        "emerged",
+        "entrance",
+        "exam",
+        "exams",
+        "focused",
+        "generation",
+        "grown",
+        "india",
+        "indian",
+        "indicated",
+        "initially",
+        "issue",
+        "leader",
+        "leading",
+        "leaked",
+        "leaks",
+        "mobilize",
+        "most",
+        "movement",
+        "national",
+        "notable",
+        "outrage",
+        "paper",
+        "pradhan",
+        "protest",
+        "recent",
+        "referred",
+        "reflecting",
+        "resign",
+        "resignation",
+        "resigned",
+        "response",
+        "scandal",
+        "significant",
+        "sparked",
+        "student",
+        "widespread",
+        "years",
+        "younger",
+        "youth",
+        "youth-led"
+      ],
+      "entities": [
+        "dharmendra_pradhan",
+        "exam",
+        "exam_paper",
+        "exam_scandal",
+        "india",
+        "indian_education",
+        "paper_leaks",
+        "response",
+        "scandal_dharmendra"
+      ],
+      "search_text": "accepted among announced broader celebration cockroach culminated decision demand demonstrator dharmendra dharmendra_pradhan discontent education emerged entrance exam exam_paper exam_scandal exams focused generation grown india indian indian_education indicated initially issue leader leading leaked leaks mobilize most movement national notable outrage paper paper_leaks pradhan protest recent referred reflecting resign resignation resigned response scandal scandal_dharmendra significant sparked student widespread years younger youth youth-led",
+      "related_events": [],
+      "event_overview": {
+        "available": true,
+        "title": "About Youth Protests",
+        "subject": "Youth Protests",
+        "summary": "Youth-led demonstrations in India grew around alleged irregularities in the 2026 National Eligibility-cum-Entrance Test for undergraduate medical education (NEET-UG), including claims of a leaked paper and the disruption caused by a nationwide re-examination. The protests, centered visibly in New Delhi but supported more broadly, expanded into demands for accountability, examination-system reforms, and the education minister’s departure.",
+        "facts": [
+          {
+            "label": "Examination and re-test dates",
+            "value": "NTA scheduled NEET-UG 2026 for May 3, 2026; its official notices show that a re-examination was conducted on June 21, 2026.",
+            "source_ids": [
+              "o1",
+              "o2"
+            ]
+          },
+          {
+            "label": "Examination purpose",
+            "value": "NEET-UG is the common, uniform entrance test for undergraduate medical education in India; it also applies to specified undergraduate Indian-system-of-medicine and homeopathy courses.",
+            "source_ids": [
+              "o3"
+            ]
+          },
+          {
+            "label": "Exam administrator",
+            "value": "The National Testing Agency (NTA), an autonomous organization under India’s Ministry of Education’s Department of Higher Education, administers NEET-UG and other national entrance examinations.",
+            "source_ids": [
+              "o4",
+              "o5"
+            ]
+          },
+          {
+            "label": "Protest setting and stated demands",
+            "value": "The movement’s most visible sit-in site was Jantar Mantar in central New Delhi. Organizers sought the education minister’s resignation, examination reforms, and compensation for families of students reported to have died by suicide after exam irregularities.",
+            "source_ids": [
+              "o6",
+              "o7"
+            ]
+          },
+          {
+            "label": "Legal context",
+            "value": "India’s Public Examinations (Prevention of Unfair Means) Act, 2024, in force from June 21, 2024, covers paper or answer-key leaks and related collusion among prohibited unfair means in covered public examinations.",
+            "source_ids": [
+              "o8",
+              "o9"
+            ]
+          }
+        ],
+        "scope_note": "The selected Muninn timeline focuses on the youth mobilization and ministerial-resignation developments of July 25, 2026, rather than providing a complete account of the NEET investigation, re-examination administration, court process, or all related education-policy disputes.",
+        "sources": [
+          {
+            "title": "Ac",
+            "publisher": "Ac",
+            "url": "https://nta.ac.in/Download/Notice/Notice_20260502215114.pdf",
+            "source_type": "reporting",
+            "id": "o1"
+          },
+          {
+            "title": "Nic",
+            "publisher": "Nic",
+            "url": "https://neet.nta.nic.in/document/list-of-toppers-of-neetug-2026-held-on-21st-june-2026/",
+            "source_type": "reporting",
+            "id": "o2"
+          },
+          {
+            "title": "Nic",
+            "publisher": "Nic",
+            "url": "https://neet.nta.nic.in/",
+            "source_type": "reporting",
+            "id": "o3"
+          },
+          {
+            "title": "Ac",
+            "publisher": "Ac",
+            "url": "https://www.nta.ac.in/contactus",
+            "source_type": "reporting",
+            "id": "o4"
+          },
+          {
+            "title": "Gov",
+            "publisher": "Gov",
+            "url": "https://www.education.gov.in/sites/upload_files/mhrd/files/NTA.pdf",
+            "source_type": "reporting",
+            "id": "o5"
+          },
+          {
+            "title": "AP News",
+            "publisher": "AP News",
+            "url": "https://apnews.com/article/d226d142657cd297c3d4232716a8a626",
+            "source_type": "reporting",
+            "id": "o6"
+          },
+          {
+            "title": "AP News",
+            "publisher": "AP News",
+            "url": "https://apnews.com/article/56d69c289589f057c0e72cde0c3d75d3",
+            "source_type": "reporting",
+            "id": "o7"
+          },
+          {
+            "title": "Nic",
+            "publisher": "Nic",
+            "url": "https://www.indiacode.nic.in/handle/123456789/20100?locale=en",
+            "source_type": "reporting",
+            "id": "o8"
+          },
+          {
+            "title": "Nic",
+            "publisher": "Nic",
+            "url": "https://www.indiacode.nic.in/show-data?actid=AC_CEN_26_36_00009_A2024-01_1719556801892&orderno=3",
+            "source_type": "reporting",
+            "id": "o9"
+          }
+        ],
+        "publisher_count": 4,
+        "generated_at": "2026-07-25T14:32:36.891955+00:00",
+        "expires_at": "2026-08-01T14:32:36.891955+00:00",
         "model": "gpt-5.6-terra",
         "provenance": "openai_web_search_source_grounded_event_overview_v1"
       }
@@ -2586,8 +3981,8 @@
     },
     {
       "event_id": "event_trump-implements-new-tariffs-on-60-countries_0f9429eb98",
-      "title": "US Implements New Tariffs on Over 80 Countries Amid Forced Labor Concerns",
-      "canonical_title": "US Implements New Tariffs on Over 80 Countries Amid Forced Labor Concerns",
+      "title": "New Tariffs Imposed on 60 Countries Over Forced Labor Concerns",
+      "canonical_title": "New Tariffs Imposed on 60 Countries Over Forced Labor Concerns",
       "topic_label": "Trade Policy",
       "summary": "The United States has announced new tariffs ranging from 10% to 12.5% on 60 economies, citing inadequate enforcement of a ban on goods produced with forced labor. This decision comes as a continuation of trade measures aimed at addressing labor issues in international supply chains. Australia has expressed strong opposition to the tariffs, claiming they violate the existing free trade agreement with the US",
       "status": "active",
@@ -2600,20 +3995,21 @@
           "date": "2026-07-25",
           "occurred_at": null,
           "date_basis": "first_reported_by_muninn",
-          "title": "US Implements New Tariffs on Over 80 Countries Amid Forced Labor Concerns",
-          "summary": "The United States has imposed new tariffs on more than 80 countries, citing concerns over forced labor. This action replaces a temporary global duty that was previously enacted after the US Supreme Court invalidated earlier tariffs in February.",
+          "title": "New Tariffs Imposed on 60 Countries Over Forced Labor Concerns",
+          "summary": "The United States has announced new tariffs ranging from 10% to 12.5% on 60 economies, citing inadequate enforcement of a ban on goods produced with forced labor. This decision comes as a temporary 10% tariff was set to expire.",
           "topic_label": "Trade Policy",
           "development_type": "policy",
           "key_facts": [
-            "New tariffs imposed on over 80 countries",
-            "Cited concerns over forced labor",
-            "Replaces temporary global duty after Supreme Court ruling in February"
+            "Tariffs imposed range from 10% to 12.5%",
+            "60 economies affected",
+            "Tariffs relate to forced labor enforcement"
           ],
           "source_count": 5,
           "sources": [
             "Africanews",
             "BBC",
             "CBS News",
+            "CBS News - Latest",
             "TIME",
             "The Guardian"
           ],
@@ -2639,7 +4035,7 @@
             },
             {
               "title": "What Trump's new 'forced labor' tariffs on 60 economies will mean for US consumers",
-              "source": "CBS News",
+              "source": "CBS News - Latest",
               "link": "https://www.cbsnews.com/video/what-trumps-new-forced-labor-tariffs-on-60-economies-will-mean-for-consumers",
               "source_bias": "lean-left"
             },
@@ -2687,13 +4083,31 @@
                 "https://www.bbc.co.uk/news/articles/cvgj61j6l08o?at_medium=RSS&at_campaign=rss",
                 "https://time.com/article/2026/07/24/trump-tariffs-forced-labor-explainer"
               ]
+            },
+            {
+              "daily_story_id": "story_480b0713c8b51186",
+              "reported_at": "2026-07-25",
+              "update_kind": "factual_update",
+              "title": "New Tariffs Imposed on 60 Countries Over Forced Labor Concerns",
+              "summary": "The United States has announced new tariffs ranging from 10% to 12.5% on 60 economies, citing inadequate enforcement of a ban on goods produced with forced labor. This decision comes as a temporary 10% tariff was set to expire.",
+              "topic_label": "Trade Policy",
+              "key_facts": [
+                "Tariffs imposed range from 10% to 12.5%",
+                "60 economies affected",
+                "Tariffs relate to forced labor enforcement"
+              ],
+              "source_urls": [
+                "http://www.africanews.com/2026/07/24/trump-imposes-double-digit-tariffs-on-dozens-of-countries",
+                "https://www.cbsnews.com/video/what-trumps-new-forced-labor-tariffs-on-60-economies-will-mean-for-consumers"
+              ]
             }
           ],
           "last_updated_at": "2026-07-25",
           "merged_development_ids": [
+            "story_480b0713c8b51186",
             "story_9131f7733a1cd3b4"
           ],
-          "revision_count": 1
+          "revision_count": 2
         }
       ],
       "integrity": {
@@ -2701,8 +4115,8 @@
         "questionable_development_count": 0,
         "review_required": false
       },
-      "latest_title": "US Implements New Tariffs on Over 80 Countries Amid Forced Labor Concerns",
-      "latest_summary": "The United States has imposed new tariffs on more than 80 countries, citing concerns over forced labor. This action replaces a temporary global duty that was previously enacted after the US Supreme Court invalidated earlier tariffs in February.",
+      "latest_title": "New Tariffs Imposed on 60 Countries Over Forced Labor Concerns",
+      "latest_summary": "The United States has announced new tariffs ranging from 10% to 12.5% on 60 economies, citing inadequate enforcement of a ban on goods produced with forced labor. This decision comes as a temporary 10% tariff was set to expire.",
       "presentation": {
         "has_context": true,
         "has_full_timeline": false,
@@ -2717,27 +4131,27 @@
         "summary_label": "Read the story so far",
         "summary_updated_at": "2026-07-25",
         "development_count": 1,
-        "coverage_packet_count": 2,
+        "coverage_packet_count": 3,
         "date_count": 1,
         "source_count": 5,
-        "independent_source_count": 5,
+        "independent_source_count": 6,
         "first_date": "2026-07-25",
         "latest_date": "2026-07-25",
-        "latest_update_title": "US Implements New Tariffs on Over 80 Countries Amid Forced Labor Concerns",
-        "coverage_score": 0.348,
+        "latest_update_title": "New Tariffs Imposed on 60 Countries Over Forced Labor Concerns",
+        "coverage_score": 0.386,
         "recency_score": 1.0,
-        "rank_score": 0.726,
-        "context_summary": "The United States has imposed new tariffs on more than 80 countries, citing concerns over forced labor. This action replaces a temporary global duty that was previously enacted after the US Supreme Court invalidated earlier tariffs in February.",
+        "rank_score": 0.742,
+        "context_summary": "The United States has announced new tariffs ranging from 10% to 12.5% on 60 economies, citing inadequate enforcement of a ban on goods produced with forced labor. This decision comes as a temporary 10% tariff was set to expire.",
         "cta_label": ""
       },
       "event_summary": {
         "available": true,
-        "summary": "The United States has imposed new tariffs on more than 80 countries, citing concerns over forced labor.",
+        "summary": "The United States has announced new tariffs ranging from 10% to 12.5% on 60 economies, citing inadequate enforcement of a ban on goods produced with forced labor.",
         "key_developments": [
           {
             "development_id": "story_0a5f7c7b1db8152a",
             "date": "2026-07-25",
-            "title": "US Implements New Tariffs on Over 80 Countries Amid Forced Labor Concerns"
+            "title": "New Tariffs Imposed on 60 Countries Over Forced Labor Concerns"
           }
         ],
         "sources": [
@@ -2755,7 +4169,7 @@
           },
           {
             "title": "What Trump's new 'forced labor' tariffs on 60 economies will mean for US consumers",
-            "source": "CBS News",
+            "source": "CBS News - Latest",
             "link": "https://www.cbsnews.com/video/what-trumps-new-forced-labor-tariffs-on-60-economies-will-mean-for-consumers",
             "source_bias": "lean-left"
           },
@@ -2776,38 +4190,578 @@
         "provenance": "source_grounded_event_memory"
       },
       "event_stage": "developing_event",
+      "related_events": [],
       "search_tokens": [
-        "action",
+        "announced",
         "citing",
+        "comes",
         "concern",
         "countrie",
-        "court",
-        "duty",
-        "earlier",
-        "enacted",
-        "february",
+        "decision",
+        "economie",
+        "enforcement",
+        "expire",
         "forced",
-        "global",
-        "implement",
+        "goods",
         "imposed",
-        "invalidated",
+        "inadequate",
         "labor",
-        "previously",
-        "replace",
-        "supreme",
+        "produced",
+        "ranging",
         "tariff",
         "temporary",
-        "than",
         "united"
       ],
       "entities": [
-        "february.",
         "forced_labor",
         "labor_concern",
-        "us"
+        "tariff_imposed"
       ],
-      "search_text": "action citing concern countrie court duty earlier enacted february february. forced forced_labor global implement imposed invalidated labor labor_concern previously replace supreme tariff temporary than united us",
-      "related_events": []
+      "search_text": "announced citing comes concern countrie decision economie enforcement expire forced forced_labor goods imposed inadequate labor labor_concern produced ranging tariff tariff_imposed temporary united"
+    },
+    {
+      "event_id": "event_wildfire-forces-evacuation-of-nearly-12-000_839c1db808",
+      "title": "Wildfire Forces Evacuation of Nearly 12,000 Tourists in Southwest France",
+      "canonical_title": "Wildfire Forces Evacuation of Nearly 12,000 Tourists in Southwest France",
+      "topic_label": "Southwest France Wildfire",
+      "summary": "A wildfire in Le Porge, southwest France, has led to the evacuation of nearly 12,000 people, primarily tourists. The fire, which began around midday on Wednesday, has prompted a significant response from hundreds of firefighters battling the flames. The region has been experiencing extreme heat, contributing to the wildfire's rapid spread.",
+      "status": "active",
+      "first_seen_at": "2026-07-23",
+      "last_seen_at": "2026-07-25",
+      "timeline": [
+        {
+          "development_id": "story_e32ff652b9406562",
+          "daily_story_id": "story_e32ff652b9406562",
+          "date": "2026-07-23",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Wildfire Forces Evacuation of Nearly 12,000 Tourists in Southwest France",
+          "summary": "A wildfire in Le Porge, southwest France, has led to the evacuation of nearly 12,000 people, primarily tourists. The fire, which began around midday on Wednesday, has prompted a significant response from hundreds of firefighters battling the flames. The region has been experiencing extreme heat, contributing to the wildfire's rapid spread.",
+          "topic_label": "Southwest France Wildfire",
+          "development_type": "development",
+          "key_facts": [
+            "Nearly 12,000 people evacuated, mostly tourists",
+            "Wildfire started midday on July 22, 2026",
+            "Hundreds of firefighters deployed to combat the fire",
+            "Region has faced three heatwaves since May"
+          ],
+          "source_count": 3,
+          "sources": [
+            "Euronews",
+            "France 24 - English"
+          ],
+          "source_urls": [
+            "https://www.france24.com/en/france/20260723-thousands-of-tourists-forced-to-evacuate-as-fire-rages-in-southwest-france",
+            "http://www.euronews.com/video/2026/07/23/thousands-evacuated-as-wildfire-spreads-in-southwestern-france",
+            "https://www.france24.com/en/france/20260723-in-pictures-wildfires-ravage-parts-of-southern-france"
+          ],
+          "source_details": [
+            {
+              "title": "Thousands of tourists forced to evacuate as fire rages in southwest France",
+              "source": "France 24 - English",
+              "link": "https://www.france24.com/en/france/20260723-thousands-of-tourists-forced-to-evacuate-as-fire-rages-in-southwest-france",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Thousands evacuated as wildfire spreads in southwestern France",
+              "source": "Euronews",
+              "link": "http://www.euronews.com/video/2026/07/23/thousands-evacuated-as-wildfire-spreads-in-southwestern-france",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "In pictures: Wildfires ravage parts of southern France",
+              "source": "France 24 - English",
+              "link": "https://www.france24.com/en/france/20260723-in-pictures-wildfires-ravage-parts-of-southern-france",
+              "source_bias": "lean-left"
+            }
+          ],
+          "confidence": 1.0,
+          "match_evidence": {
+            "score": 1.0,
+            "method": "new_event",
+            "shared_tokens": [],
+            "shared_entities": []
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-23",
+          "last_seen_at": "2026-07-23",
+          "integrity_status": "trusted"
+        },
+        {
+          "development_id": "story_0931698e3d163c3b",
+          "daily_story_id": "story_0931698e3d163c3b",
+          "date": "2026-07-25",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Wildfire Forces Evacuations in Cap Ferret, France",
+          "summary": "A fast-moving wildfire has led to the evacuation of the entire Cap Ferret peninsula in France, destroying dozens of homes. Approximately 700 firefighters are currently engaged in efforts to contain the blaze.",
+          "topic_label": "",
+          "development_type": "development",
+          "key_facts": [
+            "Wildfire in Cap Ferret peninsula, France",
+            "Entire peninsula evacuated",
+            "Dozens of homes destroyed",
+            "700 firefighters battling the blaze"
+          ],
+          "source_count": 2,
+          "sources": [
+            "Africanews",
+            "Euronews"
+          ],
+          "source_urls": [
+            "http://www.africanews.com/2026/07/24/france-massive-blaze-engulfs-cap-ferret-forests-as-thousands-evacuated",
+            "http://www.euronews.com/video/2026/07/24/france-massive-blaze-engulfs-cap-ferret-forests-as-thousands-evacuated"
+          ],
+          "source_details": [
+            {
+              "title": "France: Massive blaze engulfs Cap Ferret forests as thousands evacuated",
+              "source": "Africanews",
+              "link": "http://www.africanews.com/2026/07/24/france-massive-blaze-engulfs-cap-ferret-forests-as-thousands-evacuated",
+              "source_bias": "center"
+            },
+            {
+              "title": "France: Massive blaze engulfs Cap Ferret forests as thousands evacuated",
+              "source": "Euronews",
+              "link": "http://www.euronews.com/video/2026/07/24/france-massive-blaze-engulfs-cap-ferret-forests-as-thousands-evacuated",
+              "source_bias": "lean-left"
+            }
+          ],
+          "confidence": 0.382,
+          "match_evidence": {
+            "score": 0.382,
+            "matched_development_id": "story_e32ff652b9406562",
+            "shared_tokens": [
+              "battling",
+              "evacuated",
+              "evacuation",
+              "firefighter",
+              "force",
+              "france",
+              "wildfire"
+            ],
+            "shared_entities": [
+              "force_evacuation",
+              "france",
+              "wildfire_force"
+            ],
+            "source_url_match": false,
+            "method": "deterministic_event_match_v2",
+            "threshold": 0.38
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-25",
+          "last_seen_at": "2026-07-25",
+          "integrity_status": "trusted"
+        }
+      ],
+      "integrity": {
+        "public_development_count": 2,
+        "questionable_development_count": 0,
+        "review_required": false
+      },
+      "latest_title": "Wildfire Forces Evacuations in Cap Ferret, France",
+      "latest_summary": "A fast-moving wildfire has led to the evacuation of the entire Cap Ferret peninsula in France, destroying dozens of homes. Approximately 700 firefighters are currently engaged in efforts to contain the blaze.",
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "stage": "developing_event",
+        "stage_label": "Developing event",
+        "base_title": "Southwest France Wildfire",
+        "display_title": "Southwest France Wildfire",
+        "milestone_development_ids": [
+          "story_e32ff652b9406562",
+          "story_0931698e3d163c3b"
+        ],
+        "summary_available": true,
+        "summary_label": "Read the story so far",
+        "summary_updated_at": "2026-07-25",
+        "development_count": 2,
+        "coverage_packet_count": 2,
+        "date_count": 2,
+        "source_count": 5,
+        "independent_source_count": 3,
+        "first_date": "2026-07-23",
+        "latest_date": "2026-07-25",
+        "latest_update_title": "Wildfire Forces Evacuations in Cap Ferret, France",
+        "coverage_score": 0.372,
+        "recency_score": 1.0,
+        "rank_score": 0.736,
+        "context_summary": "Muninn first tracked this thread on 2026-07-23: Wildfire Forces Evacuation of Nearly 12,000 Tourists in Southwest France. The latest development is Wildfire Forces Evacuations in Cap Ferret, France.",
+        "cta_label": ""
+      },
+      "event_summary": {
+        "available": true,
+        "summary": "A wildfire in Le Porge, southwest France, has led to the evacuation of nearly 12,000 people, primarily tourists. Most recently, a fast-moving wildfire has led to the evacuation of the entire Cap Ferret peninsula in France, destroying dozens of homes.",
+        "key_developments": [
+          {
+            "development_id": "story_e32ff652b9406562",
+            "date": "2026-07-23",
+            "title": "Wildfire Forces Evacuation of Nearly 12,000 Tourists in Southwest France"
+          },
+          {
+            "development_id": "story_0931698e3d163c3b",
+            "date": "2026-07-25",
+            "title": "Wildfire Forces Evacuations in Cap Ferret, France"
+          }
+        ],
+        "sources": [
+          {
+            "title": "Thousands of tourists forced to evacuate as fire rages in southwest France",
+            "source": "France 24 - English",
+            "link": "https://www.france24.com/en/france/20260723-thousands-of-tourists-forced-to-evacuate-as-fire-rages-in-southwest-france",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Thousands evacuated as wildfire spreads in southwestern France",
+            "source": "Euronews",
+            "link": "http://www.euronews.com/video/2026/07/23/thousands-evacuated-as-wildfire-spreads-in-southwestern-france",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "In pictures: Wildfires ravage parts of southern France",
+            "source": "France 24 - English",
+            "link": "https://www.france24.com/en/france/20260723-in-pictures-wildfires-ravage-parts-of-southern-france",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "France: Massive blaze engulfs Cap Ferret forests as thousands evacuated",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/07/24/france-massive-blaze-engulfs-cap-ferret-forests-as-thousands-evacuated",
+            "source_bias": "center"
+          },
+          {
+            "title": "France: Massive blaze engulfs Cap Ferret forests as thousands evacuated",
+            "source": "Euronews",
+            "link": "http://www.euronews.com/video/2026/07/24/france-massive-blaze-engulfs-cap-ferret-forests-as-thousands-evacuated",
+            "source_bias": "lean-left"
+          }
+        ],
+        "updated_at": "2026-07-25",
+        "provenance": "source_grounded_event_memory"
+      },
+      "event_stage": "developing_event",
+      "related_events": [],
+      "search_tokens": [
+        "000",
+        "700",
+        "approximately",
+        "around",
+        "battling",
+        "began",
+        "blaze",
+        "contain",
+        "contributing",
+        "currently",
+        "destroying",
+        "dozen",
+        "effort",
+        "engaged",
+        "entire",
+        "evacuation",
+        "experiencing",
+        "extreme",
+        "fast-moving",
+        "ferret",
+        "fire",
+        "firefighter",
+        "flame",
+        "force",
+        "france",
+        "heat",
+        "homes",
+        "hundred",
+        "midday",
+        "nearly",
+        "peninsula",
+        "porge",
+        "primarily",
+        "prompted",
+        "rapid",
+        "region",
+        "response",
+        "significant",
+        "southwest",
+        "spread",
+        "tourist",
+        "wednesday",
+        "which",
+        "wildfire"
+      ],
+      "entities": [
+        "cap",
+        "cap_ferret",
+        "ferret_france",
+        "force_evacuation",
+        "france",
+        "nearly_tourist",
+        "southwest",
+        "southwest_france",
+        "wildfire_force"
+      ],
+      "search_text": "000 700 approximately around battling began blaze cap cap_ferret contain contributing currently destroying dozen effort engaged entire evacuation experiencing extreme fast-moving ferret ferret_france fire firefighter flame force force_evacuation france heat homes hundred midday nearly nearly_tourist peninsula porge primarily prompted rapid region response significant southwest southwest_france spread tourist wednesday which wildfire wildfire_force"
+    },
+    {
+      "event_id": "event_democrats-choose-south-carolina-as-first-sta_fcb083c1f9",
+      "title": "Democrats Select South Carolina for First Presidential Primary in 2028",
+      "canonical_title": "Democrats Select South Carolina for First Presidential Primary in 2028",
+      "topic_label": "2028 Presidential Primary",
+      "summary": "The Democratic National Committee has selected South Carolina to host the first primary contest for the 2028 presidential election, replacing Iowa. This decision aims to prioritize states with more diverse populations, including Nevada, which will follow South Carolina in the primary calendar. Other early voting states include New Hampshire, New Mexico, Michigan, and Virginia.",
+      "status": "active",
+      "first_seen_at": "2026-07-25",
+      "last_seen_at": "2026-07-25",
+      "timeline": [
+        {
+          "development_id": "story_6ff163f2d8da2692",
+          "daily_story_id": "story_6ff163f2d8da2692",
+          "date": "2026-07-25",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Democrats Select South Carolina for First Presidential Primary in 2028",
+          "summary": "The Democratic National Committee has recommended that South Carolina hold the first presidential primary for the 2028 election cycle. This decision marks a significant shift in the primary calendar, as South Carolina will replace Iowa as the opening contest. The move aims to prioritize representation among Black and Latino voters, with Nevada also scheduled for an early primary.",
+          "topic_label": "2028 Presidential Primary",
+          "development_type": "election",
+          "key_facts": [
+            "South Carolina will be the first state to hold a Democratic presidential primary in 2028.",
+            "The decision reflects a shift from Iowa to South Carolina for the opening contest.",
+            "The new primary calendar aims to prioritize Black and Latino voter representation."
+          ],
+          "source_count": 6,
+          "sources": [
+            "ABC News",
+            "AP",
+            "NBC News",
+            "NPR",
+            "PBS News"
+          ],
+          "source_urls": [
+            "https://abcnews.com/Politics/democratic-national-committee-set-key-vote-towards-determining/story?id=135000357",
+            "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOcHJPd3Nya3ZjUmV3ODlfOEtGeTNUZzlMLW45REEtelVoM01QaE1VanFiN2NIUFZVN0tGbjJjeHZhdEY3ODVDcDBBWmtxNzR0ZExkc2RaNTBvY0c5MlZmTHNQZHpJd195b2Njei14cFFMd3dpTlBybkV0TG1zTnNFLXllX3hUeHJPUlotX1JaUzZJZ2hDWGZsQm9HSE04bW5YSEtqZDE4OHlONkE?oc=5",
+            "https://www.nbcnews.com/meet-the-press/video/south-carolina-to-hold-first-democratic-2028-primary-indicating-dnc-s-push-to-court-minority-voters-267245125532",
+            "https://www.nbcnews.com/politics/2028-election/dnc-committee-sets-south-carolina-vote-first-democrats-2028-presidenti-rcna588863",
+            "https://www.npr.org/2026/07/24/nx-s1-5906834/dnc-primary-election-calendar-south-carolina-2028",
+            "https://www.pbs.org/newshour/politics/democrats-select-south-carolina-for-their-first-2028-presidential-nominating-contest"
+          ],
+          "source_details": [
+            {
+              "title": "Democrats select South Carolina for their first 2028 presidential nominating contest",
+              "source": "PBS News",
+              "link": "https://www.pbs.org/newshour/politics/democrats-select-south-carolina-for-their-first-2028-presidential-nominating-contest",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Democrats approve new primary election calendar, putting South Carolina first",
+              "source": "NPR",
+              "link": "https://www.npr.org/2026/07/24/nx-s1-5906834/dnc-primary-election-calendar-south-carolina-2028",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "South Carolina to hold first Democratic 2028 primary, indicating DNC's push to court minority voters",
+              "source": "NBC News",
+              "link": "https://www.nbcnews.com/meet-the-press/video/south-carolina-to-hold-first-democratic-2028-primary-indicating-dnc-s-push-to-court-minority-voters-267245125532",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "DNC panel recommends South Carolina hold the 1st presidential primary in 2028",
+              "source": "ABC News",
+              "link": "https://abcnews.com/Politics/democratic-national-committee-set-key-vote-towards-determining/story?id=135000357",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Democrats select South Carolina to kick off presidential nominating contest in 2028, leave Iowa out",
+              "source": "AP",
+              "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOcHJPd3Nya3ZjUmV3ODlfOEtGeTNUZzlMLW45REEtelVoM01QaE1VanFiN2NIUFZVN0tGbjJjeHZhdEY3ODVDcDBBWmtxNzR0ZExkc2RaNTBvY0c5MlZmTHNQZHpJd195b2Njei14cFFMd3dpTlBybkV0TG1zTnNFLXllX3hUeHJPUlotX1JaUzZJZ2hDWGZsQm9HSE04bW5YSEtqZDE4OHlONkE?oc=5",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "DNC committee sets up South Carolina to vote first in 2028 presidential primaries",
+              "source": "NBC News",
+              "link": "https://www.nbcnews.com/politics/2028-election/dnc-committee-sets-south-carolina-vote-first-democrats-2028-presidenti-rcna588863",
+              "source_bias": "lean-left"
+            }
+          ],
+          "confidence": 1.0,
+          "match_evidence": {
+            "score": 1.0,
+            "method": "new_event",
+            "shared_tokens": [],
+            "shared_entities": []
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-25",
+          "last_seen_at": "2026-07-25",
+          "integrity_status": "trusted",
+          "revisions": [
+            {
+              "daily_story_id": "story_69d3292c374bb2b3",
+              "reported_at": "2026-07-25",
+              "update_kind": "factual_update",
+              "title": "Democrats Select South Carolina for First Presidential Primary in 2028",
+              "summary": "The Democratic National Committee has recommended that South Carolina hold the first presidential primary for the 2028 election cycle. This decision marks a significant shift in the primary calendar, as South Carolina will replace Iowa as the opening contest. The move aims to prioritize representation among Black and Latino voters, with Nevada also scheduled for an early primary.",
+              "topic_label": "2028 Presidential Primaries",
+              "key_facts": [
+                "South Carolina will be the first state to hold a Democratic presidential primary in 2028.",
+                "The decision reflects a shift from Iowa to South Carolina for the opening contest.",
+                "The new primary calendar aims to prioritize Black and Latino voter representation."
+              ],
+              "source_urls": [
+                "https://abcnews.com/Politics/democratic-national-committee-set-key-vote-towards-determining/story?id=135000357",
+                "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOcHJPd3Nya3ZjUmV3ODlfOEtGeTNUZzlMLW45REEtelVoM01QaE1VanFiN2NIUFZVN0tGbjJjeHZhdEY3ODVDcDBBWmtxNzR0ZExkc2RaNTBvY0c5MlZmTHNQZHpJd195b2Njei14cFFMd3dpTlBybkV0TG1zTnNFLXllX3hUeHJPUlotX1JaUzZJZ2hDWGZsQm9HSE04bW5YSEtqZDE4OHlONkE?oc=5",
+                "https://www.npr.org/2026/07/24/nx-s1-5906834/dnc-primary-election-calendar-south-carolina-2028",
+                "https://www.nbcnews.com/politics/2028-election/dnc-committee-sets-south-carolina-vote-first-democrats-2028-presidenti-rcna588863"
+              ]
+            }
+          ],
+          "last_updated_at": "2026-07-25",
+          "merged_development_ids": [
+            "story_69d3292c374bb2b3"
+          ],
+          "revision_count": 1
+        }
+      ],
+      "integrity": {
+        "public_development_count": 1,
+        "questionable_development_count": 0,
+        "review_required": false
+      },
+      "latest_title": "Democrats Select South Carolina for First Presidential Primary in 2028",
+      "latest_summary": "The Democratic National Committee has recommended that South Carolina hold the first presidential primary for the 2028 election cycle. This decision marks a significant shift in the primary calendar, as South Carolina will replace Iowa as the opening contest. The move aims to prioritize representation among Black and Latino voters, with Nevada also scheduled for an early primary.",
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "stage": "developing_event",
+        "stage_label": "Developing event",
+        "base_title": "2028 Presidential Primary",
+        "display_title": "2028 Presidential Primary",
+        "milestone_development_ids": [
+          "story_6ff163f2d8da2692"
+        ],
+        "summary_available": true,
+        "summary_label": "Read the story so far",
+        "summary_updated_at": "2026-07-25",
+        "development_count": 1,
+        "coverage_packet_count": 2,
+        "date_count": 1,
+        "source_count": 6,
+        "independent_source_count": 5,
+        "first_date": "2026-07-25",
+        "latest_date": "2026-07-25",
+        "latest_update_title": "Democrats Select South Carolina for First Presidential Primary in 2028",
+        "coverage_score": 0.361,
+        "recency_score": 1.0,
+        "rank_score": 0.732,
+        "context_summary": "The Democratic National Committee has recommended that South Carolina hold the first presidential primary for the 2028 election cycle. This decision marks a significant shift in the primary calendar, as South Carolina will replace Iowa as the opening contest. The move aims to prioritize representation among Black and Latino voters, with Nevada also scheduled for an early primary.",
+        "cta_label": ""
+      },
+      "event_summary": {
+        "available": true,
+        "summary": "The Democratic National Committee has recommended that South Carolina hold the first presidential primary for the 2028 election cycle.",
+        "key_developments": [
+          {
+            "development_id": "story_6ff163f2d8da2692",
+            "date": "2026-07-25",
+            "title": "Democrats Select South Carolina for First Presidential Primary in 2028"
+          }
+        ],
+        "sources": [
+          {
+            "title": "Democrats select South Carolina for their first 2028 presidential nominating contest",
+            "source": "PBS News",
+            "link": "https://www.pbs.org/newshour/politics/democrats-select-south-carolina-for-their-first-2028-presidential-nominating-contest",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Democrats approve new primary election calendar, putting South Carolina first",
+            "source": "NPR",
+            "link": "https://www.npr.org/2026/07/24/nx-s1-5906834/dnc-primary-election-calendar-south-carolina-2028",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "South Carolina to hold first Democratic 2028 primary, indicating DNC's push to court minority voters",
+            "source": "NBC News",
+            "link": "https://www.nbcnews.com/meet-the-press/video/south-carolina-to-hold-first-democratic-2028-primary-indicating-dnc-s-push-to-court-minority-voters-267245125532",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "DNC panel recommends South Carolina hold the 1st presidential primary in 2028",
+            "source": "ABC News",
+            "link": "https://abcnews.com/Politics/democratic-national-committee-set-key-vote-towards-determining/story?id=135000357",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Democrats select South Carolina to kick off presidential nominating contest in 2028, leave Iowa out",
+            "source": "AP",
+            "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOcHJPd3Nya3ZjUmV3ODlfOEtGeTNUZzlMLW45REEtelVoM01QaE1VanFiN2NIUFZVN0tGbjJjeHZhdEY3ODVDcDBBWmtxNzR0ZExkc2RaNTBvY0c5MlZmTHNQZHpJd195b2Njei14cFFMd3dpTlBybkV0TG1zTnNFLXllX3hUeHJPUlotX1JaUzZJZ2hDWGZsQm9HSE04bW5YSEtqZDE4OHlONkE?oc=5",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "DNC committee sets up South Carolina to vote first in 2028 presidential primaries",
+            "source": "NBC News",
+            "link": "https://www.nbcnews.com/politics/2028-election/dnc-committee-sets-south-carolina-vote-first-democrats-2028-presidenti-rcna588863",
+            "source_bias": "lean-left"
+          }
+        ],
+        "updated_at": "2026-07-25",
+        "provenance": "source_grounded_event_memory"
+      },
+      "event_stage": "developing_event",
+      "related_events": [],
+      "search_tokens": [
+        "2028",
+        "aims",
+        "also",
+        "among",
+        "black",
+        "calendar",
+        "carolina",
+        "committee",
+        "contest",
+        "cycle",
+        "decision",
+        "democrat",
+        "democratic",
+        "early",
+        "election",
+        "first",
+        "hold",
+        "iowa",
+        "latino",
+        "marks",
+        "move",
+        "national",
+        "nevada",
+        "opening",
+        "presidential",
+        "primary",
+        "prioritize",
+        "recommended",
+        "replace",
+        "representation",
+        "scheduled",
+        "select",
+        "shift",
+        "significant",
+        "south",
+        "voter"
+      ],
+      "entities": [
+        "democrat_select",
+        "democratic_national",
+        "first_presidential",
+        "national_committee",
+        "presidential_primary",
+        "select_south",
+        "south_carolina"
+      ],
+      "search_text": "2028 aims also among black calendar carolina committee contest cycle decision democrat democrat_select democratic democratic_national early election first first_presidential hold iowa latino marks move national national_committee nevada opening presidential presidential_primary primary prioritize recommended replace representation scheduled select select_south shift significant south south_carolina voter"
     },
     {
       "event_id": "event_trump-approves-civil-nuclear-agreement-with_505a108523",
@@ -3123,20 +5077,21 @@
           ]
         },
         {
-          "event_id": "event_trump-warns-eu-of-tariffs-over-google-fine_4ffb315c00",
-          "title": "Trump Warns EU of Tariffs Over Google Fine",
+          "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+          "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
           "relationship": "related_topic",
-          "confidence": 0.676,
+          "confidence": 0.698,
           "shared_entities": [
             "donald_trump",
+            "saudi_arabia",
             "us"
           ]
         },
         {
-          "event_id": "event_trump-and-infantino-present-world-cup-trophy_06cb42752d",
-          "title": "Trump and Infantino Present World Cup Trophy to Spain Amid Mixed Reactions",
+          "event_id": "event_trump-warns-eu-of-tariffs-over-google-fine_4ffb315c00",
+          "title": "Trump Warns EU of Tariffs Over Google Fine",
           "relationship": "related_topic",
-          "confidence": 0.662,
+          "confidence": 0.676,
           "shared_entities": [
             "donald_trump",
             "us"
@@ -3312,6 +5267,468 @@
         "us"
       ],
       "search_text": "abdulaziz agreement allow allowing although announced anticipated approve approve_civil approved arabia arabia_finalize aspect broader build capabilitie chris chris_wright civil civil_nuclear civilian civilian_nuclear companie complication cooperation cooperation_agreement deal development discussion donald donald_trump energy energy_secretary enrich event expected faced finalize finalize_civilian included involved israel last multiple normalization nuclear nuclear_agreement nuclear_cooperation part potentially previously prince prince_abdulaziz program reactor recent relation salman saudi saudi_arabia saudi_energy secretary secretary_chris signed significant soon trump trump_approve united uranium us which wright years"
+    },
+    {
+      "event_id": "event_spain-declares-national-emergency-as-wildfir_75ab9d7053",
+      "title": "Wildfires Near Madrid Prompt Evacuations of Over 10,000 Residents",
+      "canonical_title": "Wildfires Near Madrid Prompt Evacuations of Over 10,000 Residents",
+      "topic_label": "Wildfire Emergency",
+      "summary": "Spain has declared a national emergency due to wildfires threatening communities near Madrid, leading to the evacuation of over 10,000 people. Firefighters, along with Civil Guard officers and the Military Emergency Unit, are actively battling the blazes exacerbated by extreme heat and dry conditions.",
+      "status": "active",
+      "first_seen_at": "2026-07-25",
+      "last_seen_at": "2026-07-25",
+      "timeline": [
+        {
+          "development_id": "story_29c318e42bdfc4bf",
+          "daily_story_id": "story_29c318e42bdfc4bf",
+          "date": "2026-07-25",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Wildfires Near Madrid Prompt Evacuations of Over 10,000 Residents",
+          "summary": "Fierce wildfires near Madrid have led to the evacuation of more than 10,000 people as emergency services, including the Civil Guard and firefighters, respond to the crisis. The situation is exacerbated by extreme heat conditions in the region.",
+          "topic_label": "Wildfire Emergency",
+          "development_type": "development",
+          "key_facts": [
+            "Over 10,000 people evacuated",
+            "Wildfires near Madrid",
+            "Emergency services involved include Civil Guard and firefighters",
+            "Extreme heat conditions reported"
+          ],
+          "source_count": 4,
+          "sources": [
+            "Africanews",
+            "Al Jazeera English",
+            "Euronews",
+            "France 24 - English"
+          ],
+          "source_urls": [
+            "http://www.africanews.com/2026/07/24/wildfire-emergency-near-madrid-forces-over-10000-to-flee-as-spain-sounds-alarm",
+            "http://www.euronews.com/video/2026/07/24/wildfire-emergency-near-madrid-forces-over-10000-to-flee-as-spain-sounds-alarm",
+            "https://www.aljazeera.com/video/newsfeed/2026/7/24/wildfire-survivors-tell-of-narrow-escape-as-spain-declares-emergency?traffic_source=rss",
+            "https://www.france24.com/en/spain-declares-emergency-as-fires-spread"
+          ],
+          "source_details": [
+            {
+              "title": "Spain declares emergency as fires spread",
+              "source": "France 24 - English",
+              "link": "https://www.france24.com/en/spain-declares-emergency-as-fires-spread",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Wildfire emergency near Madrid forces over 10,000 to flee as Spain sounds alarm",
+              "source": "Africanews",
+              "link": "http://www.africanews.com/2026/07/24/wildfire-emergency-near-madrid-forces-over-10000-to-flee-as-spain-sounds-alarm",
+              "source_bias": "center"
+            },
+            {
+              "title": "Wildfire emergency near Madrid forces over 10,000 to flee as Spain sounds alarm",
+              "source": "Euronews",
+              "link": "http://www.euronews.com/video/2026/07/24/wildfire-emergency-near-madrid-forces-over-10000-to-flee-as-spain-sounds-alarm",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Wildfire survivors tell of narrow escape as Spain declares emergency",
+              "source": "Al Jazeera English",
+              "link": "https://www.aljazeera.com/video/newsfeed/2026/7/24/wildfire-survivors-tell-of-narrow-escape-as-spain-declares-emergency?traffic_source=rss",
+              "source_bias": "lean-left"
+            }
+          ],
+          "confidence": 1.0,
+          "match_evidence": {
+            "score": 1.0,
+            "method": "new_event",
+            "shared_tokens": [],
+            "shared_entities": []
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-25",
+          "last_seen_at": "2026-07-25",
+          "integrity_status": "trusted",
+          "revisions": [
+            {
+              "daily_story_id": "story_21e49f86043db5de",
+              "reported_at": "2026-07-25",
+              "update_kind": "factual_update",
+              "title": "Wildfires Near Madrid Prompt Evacuations of Over 10,000 Residents",
+              "summary": "Fierce wildfires near Madrid have led to the evacuation of more than 10,000 people as emergency services, including the Civil Guard and firefighters, respond to the crisis. The situation is exacerbated by extreme heat conditions in the region.",
+              "topic_label": "Wildfire Emergency",
+              "key_facts": [
+                "Over 10,000 people evacuated",
+                "Wildfires near Madrid",
+                "Emergency services involved include Civil Guard and firefighters",
+                "Extreme heat conditions reported"
+              ],
+              "source_urls": [
+                "http://www.africanews.com/2026/07/24/wildfire-emergency-near-madrid-forces-over-10000-to-flee-as-spain-sounds-alarm",
+                "http://www.euronews.com/video/2026/07/24/wildfire-emergency-near-madrid-forces-over-10000-to-flee-as-spain-sounds-alarm"
+              ]
+            }
+          ],
+          "last_updated_at": "2026-07-25",
+          "merged_development_ids": [
+            "story_21e49f86043db5de"
+          ],
+          "revision_count": 1
+        }
+      ],
+      "integrity": {
+        "public_development_count": 1,
+        "questionable_development_count": 0,
+        "review_required": false
+      },
+      "latest_title": "Wildfires Near Madrid Prompt Evacuations of Over 10,000 Residents",
+      "latest_summary": "Fierce wildfires near Madrid have led to the evacuation of more than 10,000 people as emergency services, including the Civil Guard and firefighters, respond to the crisis. The situation is exacerbated by extreme heat conditions in the region.",
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "stage": "developing_event",
+        "stage_label": "Developing event",
+        "base_title": "Wildfire Emergency",
+        "display_title": "Wildfire Emergency",
+        "milestone_development_ids": [
+          "story_29c318e42bdfc4bf"
+        ],
+        "summary_available": true,
+        "summary_label": "Read the story so far",
+        "summary_updated_at": "2026-07-25",
+        "development_count": 1,
+        "coverage_packet_count": 2,
+        "date_count": 1,
+        "source_count": 4,
+        "independent_source_count": 4,
+        "first_date": "2026-07-25",
+        "latest_date": "2026-07-25",
+        "latest_update_title": "Wildfires Near Madrid Prompt Evacuations of Over 10,000 Residents",
+        "coverage_score": 0.298,
+        "recency_score": 1.0,
+        "rank_score": 0.705,
+        "context_summary": "Fierce wildfires near Madrid have led to the evacuation of more than 10,000 people as emergency services, including the Civil Guard and firefighters, respond to the crisis. The situation is exacerbated by extreme heat conditions in the region.",
+        "cta_label": ""
+      },
+      "event_summary": {
+        "available": true,
+        "summary": "Fierce wildfires near Madrid have led to the evacuation of more than 10,000 people as emergency services, including the Civil Guard and firefighters, respond to the crisis.",
+        "key_developments": [
+          {
+            "development_id": "story_29c318e42bdfc4bf",
+            "date": "2026-07-25",
+            "title": "Wildfires Near Madrid Prompt Evacuations of Over 10,000 Residents"
+          }
+        ],
+        "sources": [
+          {
+            "title": "Spain declares emergency as fires spread",
+            "source": "France 24 - English",
+            "link": "https://www.france24.com/en/spain-declares-emergency-as-fires-spread",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Wildfire emergency near Madrid forces over 10,000 to flee as Spain sounds alarm",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/07/24/wildfire-emergency-near-madrid-forces-over-10000-to-flee-as-spain-sounds-alarm",
+            "source_bias": "center"
+          },
+          {
+            "title": "Wildfire emergency near Madrid forces over 10,000 to flee as Spain sounds alarm",
+            "source": "Euronews",
+            "link": "http://www.euronews.com/video/2026/07/24/wildfire-emergency-near-madrid-forces-over-10000-to-flee-as-spain-sounds-alarm",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Wildfire survivors tell of narrow escape as Spain declares emergency",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/video/newsfeed/2026/7/24/wildfire-survivors-tell-of-narrow-escape-as-spain-declares-emergency?traffic_source=rss",
+            "source_bias": "lean-left"
+          }
+        ],
+        "updated_at": "2026-07-25",
+        "provenance": "source_grounded_event_memory"
+      },
+      "event_stage": "developing_event",
+      "related_events": [],
+      "search_tokens": [
+        "000",
+        "civil",
+        "condition",
+        "crisi",
+        "emergency",
+        "evacuation",
+        "exacerbated",
+        "extreme",
+        "fierce",
+        "firefighter",
+        "guard",
+        "heat",
+        "including",
+        "madrid",
+        "near",
+        "prompt",
+        "region",
+        "resident",
+        "respond",
+        "service",
+        "situation",
+        "than",
+        "wildfire"
+      ],
+      "entities": [
+        "civil_guard",
+        "madrid",
+        "madrid_prompt",
+        "near_madrid",
+        "prompt_evacuation",
+        "resident_fierce",
+        "wildfire_near"
+      ],
+      "search_text": "000 civil civil_guard condition crisi emergency evacuation exacerbated extreme fierce firefighter guard heat including madrid madrid_prompt near near_madrid prompt prompt_evacuation region resident resident_fierce respond service situation than wildfire wildfire_near"
+    },
+    {
+      "event_id": "event_plane-change-for-trump-due-to-iranian-threat_83974e3d9d",
+      "title": "Trump Changed Planes in Turkey Due to Threat from Iranian Proxies",
+      "canonical_title": "Trump Changed Planes in Turkey Due to Threat from Iranian Proxies",
+      "topic_label": "Iran Threats",
+      "summary": "President Trump switched from a new Qatari-donated jet to an older Air Force One after US officials identified a credible threat from Iranian proxy forces while he was attending the NATO summit in Turkey. The Secret Service recommended the change due to security concerns regarding the newer aircraft.",
+      "status": "active",
+      "first_seen_at": "2026-07-25",
+      "last_seen_at": "2026-07-25",
+      "timeline": [
+        {
+          "development_id": "story_a75baaf9b2b14dfb",
+          "daily_story_id": "story_a75baaf9b2b14dfb",
+          "date": "2026-07-25",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Trump Changed Planes in Turkey Due to Threat from Iranian Proxies",
+          "summary": "President Trump switched from a Qatari-donated Boeing 747-8 to an older Air Force One jet while in Turkey after US officials identified a credible threat from Iranian proxy forces. This change occurred during his attendance at the NATO summit in Ankara earlier this month.",
+          "topic_label": "",
+          "development_type": "diplomacy",
+          "key_facts": [
+            "Trump switched planes in Turkey due to a credible threat.",
+            "The threat was linked to Iranian proxy forces.",
+            "He attended the NATO summit in Ankara."
+          ],
+          "source_count": 4,
+          "sources": [
+            "CBS News",
+            "Google News",
+            "New York Times",
+            "The Guardian"
+          ],
+          "source_urls": [
+            "https://news.google.com/rss/articles/CBMigAFBVV95cUxQajZDeTBaXzAyWWkyYnRQM3FDT3doR1pYQkhuQXFTNjl6SzkwZEQ2ODVZMHdMb0E4bVRTRDBPQ3NFbTBiUTh0ZTRTNDV3TmhVWEt6c2Z4eGE1SEdnNFAwelAxNGk5ZWtocENGR0RFZnFSV0RYV19RSHpfaTVCWXVZUw?oc=5",
+            "https://www.cbsnews.com/news/trump-iran-proxies-credible-threat-air-force-one-turkey",
+            "https://www.nytimes.com/2026/07/24/us/politics/trump-plane-iran-threat.html",
+            "https://www.theguardian.com/us-news/2026/jul/24/trump-air-force-one-iran-threat"
+          ],
+          "source_details": [
+            {
+              "title": "Iranian Threat to Air Force One Prompted Plane Swap During NATO Summit",
+              "source": "Google News",
+              "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQajZDeTBaXzAyWWkyYnRQM3FDT3doR1pYQkhuQXFTNjl6SzkwZEQ2ODVZMHdMb0E4bVRTRDBPQ3NFbTBiUTh0ZTRTNDV3TmhVWEt6c2Z4eGE1SEdnNFAwelAxNGk5ZWtocENGR0RFZnFSV0RYV19RSHpfaTVCWXVZUw?oc=5",
+              "source_bias": "mixed"
+            },
+            {
+              "title": "Trump switched planes in Turkey earlier this month because of threat from Iran proxy forces – report",
+              "source": "The Guardian",
+              "link": "https://www.theguardian.com/us-news/2026/jul/24/trump-air-force-one-iran-threat",
+              "source_bias": "left"
+            },
+            {
+              "title": "Trump flew from Turkey on older plane after credible threat from Iran and proxies",
+              "source": "CBS News",
+              "link": "https://www.cbsnews.com/news/trump-iran-proxies-credible-threat-air-force-one-turkey",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Trump Switched to Old Air Force One at NATO Summit After Credible Iranian Threat",
+              "source": "New York Times",
+              "link": "https://www.nytimes.com/2026/07/24/us/politics/trump-plane-iran-threat.html",
+              "source_bias": "lean-left"
+            }
+          ],
+          "confidence": 1.0,
+          "match_evidence": {
+            "score": 1.0,
+            "method": "new_event",
+            "shared_tokens": [],
+            "shared_entities": []
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-25",
+          "last_seen_at": "2026-07-25",
+          "integrity_status": "trusted",
+          "revisions": [
+            {
+              "daily_story_id": "story_54228007b15cd35f",
+              "reported_at": "2026-07-25",
+              "update_kind": "factual_update",
+              "title": "Trump Changed Planes in Turkey Due to Threat from Iranian Proxies",
+              "summary": "President Trump switched from a Qatari-donated Boeing 747-8 to an older Air Force One jet while in Turkey after US officials identified a credible threat from Iranian proxy forces. This change occurred during his attendance at the NATO summit in Ankara earlier this month.",
+              "topic_label": "Iran Threats",
+              "key_facts": [
+                "Trump switched planes in Turkey due to a credible threat.",
+                "The threat was linked to Iranian proxy forces.",
+                "He attended the NATO summit in Ankara."
+              ],
+              "source_urls": [
+                "https://www.theguardian.com/us-news/2026/jul/24/trump-air-force-one-iran-threat",
+                "https://www.cbsnews.com/news/trump-iran-proxies-credible-threat-air-force-one-turkey"
+              ]
+            }
+          ],
+          "last_updated_at": "2026-07-25",
+          "merged_development_ids": [
+            "story_54228007b15cd35f"
+          ],
+          "revision_count": 1
+        }
+      ],
+      "integrity": {
+        "public_development_count": 1,
+        "questionable_development_count": 0,
+        "review_required": false
+      },
+      "latest_title": "Trump Changed Planes in Turkey Due to Threat from Iranian Proxies",
+      "latest_summary": "President Trump switched from a Qatari-donated Boeing 747-8 to an older Air Force One jet while in Turkey after US officials identified a credible threat from Iranian proxy forces. This change occurred during his attendance at the NATO summit in Ankara earlier this month.",
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "stage": "developing_event",
+        "stage_label": "Developing event",
+        "base_title": "Iran Threats",
+        "display_title": "Iran Threats",
+        "milestone_development_ids": [
+          "story_a75baaf9b2b14dfb"
+        ],
+        "summary_available": true,
+        "summary_label": "Read the story so far",
+        "summary_updated_at": "2026-07-25",
+        "development_count": 1,
+        "coverage_packet_count": 2,
+        "date_count": 1,
+        "source_count": 4,
+        "independent_source_count": 4,
+        "first_date": "2026-07-25",
+        "latest_date": "2026-07-25",
+        "latest_update_title": "Trump Changed Planes in Turkey Due to Threat from Iranian Proxies",
+        "coverage_score": 0.298,
+        "recency_score": 1.0,
+        "rank_score": 0.705,
+        "context_summary": "President Trump switched from a Qatari-donated Boeing 747-8 to an older Air Force One jet while in Turkey after US officials identified a credible threat from Iranian proxy forces. This change occurred during his attendance at the NATO summit in Ankara earlier this month.",
+        "cta_label": ""
+      },
+      "event_summary": {
+        "available": true,
+        "summary": "President Trump switched from a Qatari-donated Boeing 747-8 to an older Air Force One jet while in Turkey after US officials identified a credible threat from Iranian proxy forces.",
+        "key_developments": [
+          {
+            "development_id": "story_a75baaf9b2b14dfb",
+            "date": "2026-07-25",
+            "title": "Trump Changed Planes in Turkey Due to Threat from Iranian Proxies"
+          }
+        ],
+        "sources": [
+          {
+            "title": "Iranian Threat to Air Force One Prompted Plane Swap During NATO Summit",
+            "source": "Google News",
+            "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQajZDeTBaXzAyWWkyYnRQM3FDT3doR1pYQkhuQXFTNjl6SzkwZEQ2ODVZMHdMb0E4bVRTRDBPQ3NFbTBiUTh0ZTRTNDV3TmhVWEt6c2Z4eGE1SEdnNFAwelAxNGk5ZWtocENGR0RFZnFSV0RYV19RSHpfaTVCWXVZUw?oc=5",
+            "source_bias": "mixed"
+          },
+          {
+            "title": "Trump switched planes in Turkey earlier this month because of threat from Iran proxy forces – report",
+            "source": "The Guardian",
+            "link": "https://www.theguardian.com/us-news/2026/jul/24/trump-air-force-one-iran-threat",
+            "source_bias": "left"
+          },
+          {
+            "title": "Trump flew from Turkey on older plane after credible threat from Iran and proxies",
+            "source": "CBS News",
+            "link": "https://www.cbsnews.com/news/trump-iran-proxies-credible-threat-air-force-one-turkey",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Trump Switched to Old Air Force One at NATO Summit After Credible Iranian Threat",
+            "source": "New York Times",
+            "link": "https://www.nytimes.com/2026/07/24/us/politics/trump-plane-iran-threat.html",
+            "source_bias": "lean-left"
+          }
+        ],
+        "updated_at": "2026-07-25",
+        "provenance": "source_grounded_event_memory"
+      },
+      "event_stage": "developing_event",
+      "related_events": [
+        {
+          "event_id": "event_us-continues-strikes-on-iran-amid-traffic-st_41c26ce1d9",
+          "title": "US Continues Strikes on Iran Amid Traffic Standstill in Strait of Hormuz",
+          "relationship": "related_topic",
+          "confidence": 0.675,
+          "shared_entities": [
+            "iran",
+            "us"
+          ]
+        },
+        {
+          "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+          "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
+          "relationship": "related_topic",
+          "confidence": 0.668,
+          "shared_entities": [
+            "iran",
+            "us"
+          ]
+        }
+      ],
+      "search_tokens": [
+        "747-8",
+        "ankara",
+        "attendance",
+        "boeing",
+        "change",
+        "changed",
+        "credible",
+        "earlier",
+        "force",
+        "identified",
+        "iran",
+        "month",
+        "nato",
+        "occurred",
+        "older",
+        "plane",
+        "proxie",
+        "proxy",
+        "qatari-donated",
+        "summit",
+        "switched",
+        "threat",
+        "trump",
+        "turkey",
+        "while"
+      ],
+      "entities": [
+        "air_force",
+        "ankara",
+        "changed_plane",
+        "force_one",
+        "iran",
+        "iran_proxie",
+        "nato",
+        "qatari-donated",
+        "qatari-donated_boeing",
+        "threat",
+        "trump_changed",
+        "turkey",
+        "turkey_due",
+        "us"
+      ],
+      "search_text": "747-8 air_force ankara attendance boeing change changed changed_plane credible earlier force force_one identified iran iran_proxie month nato occurred older plane proxie proxy qatari-donated qatari-donated_boeing summit switched threat trump trump_changed turkey turkey_due us while"
     },
     {
       "event_id": "event_tropical-storm-bertha-approaches-gulf-coast_136f84f48e",
@@ -3843,6 +6260,209 @@
         "tropical_storm"
       ],
       "search_text": "although approache approache_gulf approaching approximately areas arthur beach beach_closure bertha bertha_approache bertha_makes bringing caused closure coast coast_prompting coastal continue damaging develop developed east eastern eastern_pacific fausto fausto_develop filling flood flood_preparation flooding florida florida_panhandle follow formed gulf gulf_coast heavy hurricane hurricane_fausto landfall leading located louisiana louisiana_tropical made makes makes_landfall meanwhile meanwhile_hurricane mexico miles mississippi mississippi. moving ocean orlean pacific pacific_ocean pacific_tropical panhandle populated posing potential preparation preparation_tropical prompting prompting_beach rain recently region risks sandbag significant southern storm storm_arthur storm_bertha strong surge texas toward tropical tropical_storm underway weaken which winds"
+    },
+    {
+      "event_id": "event_unesco-lists-sites-in-lebanon-and-west-bank_8344fe0569",
+      "title": "UNESCO Lists Lebanese and West Bank Sites as World Heritage in Danger",
+      "canonical_title": "UNESCO Lists Lebanese and West Bank Sites as World Heritage in Danger",
+      "topic_label": "Cultural Heritage",
+      "summary": "UNESCO has added five castles in Lebanon and the archaeological site of Sebastia in the occupied West Bank to its World Heritage in Danger list. This decision comes despite objections from Israel regarding the inclusion of these sites, which are under threat due to ongoing activities in the region.",
+      "status": "active",
+      "first_seen_at": "2026-07-25",
+      "last_seen_at": "2026-07-25",
+      "timeline": [
+        {
+          "development_id": "story_59c0e1dcf1a9bbb5",
+          "daily_story_id": "story_59c0e1dcf1a9bbb5",
+          "date": "2026-07-25",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "UNESCO Lists Lebanese and West Bank Sites as World Heritage in Danger",
+          "summary": "UNESCO has added a Lebanese castle and an archaeological site in the occupied West Bank to its World Heritage in Danger list. This decision comes despite objections from Israel regarding the inclusion of these sites, which are affected by ongoing Israeli activities.",
+          "topic_label": "Cultural Heritage",
+          "development_type": "policy",
+          "key_facts": [
+            "UNESCO added a Lebanese castle and a West Bank archaeological site to its endangered list.",
+            "Israel has rejected the listing of these sites.",
+            "The decision is linked to Israeli activities in the region."
+          ],
+          "source_count": 3,
+          "sources": [
+            "AP - Top News via Google News",
+            "Al Jazeera English",
+            "DW - English"
+          ],
+          "source_urls": [
+            "https://news.google.com/rss/articles/CBMirwFBVV95cUxOT2RmdWs1SzVTM3hDTTNHb09ZZHFaWnc4dEpHSTdjaUVpaEZBZV9oNUdQUVVCVW12VTdtZXlkSXZfSUV4ZEtlUkYxUi0yY1Z6X0R6VlNsQ19pUTdfaW1BMFJOb2VzN3c5ZkNGTTNRYnMzSlU0VW5hNnNuR3ROdFh5aEIxOHJkOERRd1pLMzQwSkpNVGpmNENYZ0xCWVQyZ0lzYTJVakkweEtXU0U0N1lv?oc=5",
+            "https://www.aljazeera.com/news/2026/7/24/unesco-places-occupied-west-bank-lebanon-sites-on-endangered-heritage-list?traffic_source=rss",
+            "https://www.dw.com/en/unesco-adds-lebanese-west-bank-sites-to-endangered-list/a-78102475?maca=en-rss-en-all-1573-rdf"
+          ],
+          "source_details": [
+            {
+              "title": "UNESCO adds Lebanese, West Bank sites to endangered list",
+              "source": "DW - English",
+              "link": "https://www.dw.com/en/unesco-adds-lebanese-west-bank-sites-to-endangered-list/a-78102475?maca=en-rss-en-all-1573-rdf",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "UNESCO places occupied West Bank, Lebanon sites on endangered heritage list",
+              "source": "Al Jazeera English",
+              "link": "https://www.aljazeera.com/news/2026/7/24/unesco-places-occupied-west-bank-lebanon-sites-on-endangered-heritage-list?traffic_source=rss",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "UNESCO adds West Bank site and Lebanese castles to World Heritage List despite Israeli objections",
+              "source": "AP - Top News via Google News",
+              "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOT2RmdWs1SzVTM3hDTTNHb09ZZHFaWnc4dEpHSTdjaUVpaEZBZV9oNUdQUVVCVW12VTdtZXlkSXZfSUV4ZEtlUkYxUi0yY1Z6X0R6VlNsQ19pUTdfaW1BMFJOb2VzN3c5ZkNGTTNRYnMzSlU0VW5hNnNuR3ROdFh5aEIxOHJkOERRd1pLMzQwSkpNVGpmNENYZ0xCWVQyZ0lzYTJVakkweEtXU0U0N1lv?oc=5",
+              "source_bias": "lean-left"
+            }
+          ],
+          "confidence": 1.0,
+          "match_evidence": {
+            "score": 1.0,
+            "method": "new_event",
+            "shared_tokens": [],
+            "shared_entities": []
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-25",
+          "last_seen_at": "2026-07-25",
+          "integrity_status": "trusted",
+          "revisions": [
+            {
+              "daily_story_id": "story_89db30c7f03d5cee",
+              "reported_at": "2026-07-25",
+              "update_kind": "factual_update",
+              "title": "UNESCO Lists Lebanese and West Bank Sites as World Heritage in Danger",
+              "summary": "UNESCO has added a Lebanese castle and an archaeological site in the occupied West Bank to its World Heritage in Danger list. This decision comes despite objections from Israel regarding the inclusion of these sites, which are affected by ongoing Israeli activities.",
+              "topic_label": "Cultural Heritage",
+              "key_facts": [
+                "UNESCO added a Lebanese castle and a West Bank archaeological site to its endangered list.",
+                "Israel has rejected the listing of these sites.",
+                "The decision is linked to Israeli activities in the region."
+              ],
+              "source_urls": [
+                "https://www.dw.com/en/unesco-adds-lebanese-west-bank-sites-to-endangered-list/a-78102475?maca=en-rss-en-all-1573-rdf",
+                "https://news.google.com/rss/articles/CBMirwFBVV95cUxOT2RmdWs1SzVTM3hDTTNHb09ZZHFaWnc4dEpHSTdjaUVpaEZBZV9oNUdQUVVCVW12VTdtZXlkSXZfSUV4ZEtlUkYxUi0yY1Z6X0R6VlNsQ19pUTdfaW1BMFJOb2VzN3c5ZkNGTTNRYnMzSlU0VW5hNnNuR3ROdFh5aEIxOHJkOERRd1pLMzQwSkpNVGpmNENYZ0xCWVQyZ0lzYTJVakkweEtXU0U0N1lv?oc=5"
+              ]
+            }
+          ],
+          "last_updated_at": "2026-07-25",
+          "merged_development_ids": [
+            "story_89db30c7f03d5cee"
+          ],
+          "revision_count": 1
+        }
+      ],
+      "integrity": {
+        "public_development_count": 1,
+        "questionable_development_count": 0,
+        "review_required": false
+      },
+      "latest_title": "UNESCO Lists Lebanese and West Bank Sites as World Heritage in Danger",
+      "latest_summary": "UNESCO has added a Lebanese castle and an archaeological site in the occupied West Bank to its World Heritage in Danger list. This decision comes despite objections from Israel regarding the inclusion of these sites, which are affected by ongoing Israeli activities.",
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "stage": "developing_event",
+        "stage_label": "Developing event",
+        "base_title": "Cultural Heritage",
+        "display_title": "Cultural Heritage",
+        "milestone_development_ids": [
+          "story_59c0e1dcf1a9bbb5"
+        ],
+        "summary_available": true,
+        "summary_label": "Read the story so far",
+        "summary_updated_at": "2026-07-25",
+        "development_count": 1,
+        "coverage_packet_count": 2,
+        "date_count": 1,
+        "source_count": 3,
+        "independent_source_count": 3,
+        "first_date": "2026-07-25",
+        "latest_date": "2026-07-25",
+        "latest_update_title": "UNESCO Lists Lebanese and West Bank Sites as World Heritage in Danger",
+        "coverage_score": 0.248,
+        "recency_score": 1.0,
+        "rank_score": 0.684,
+        "context_summary": "UNESCO has added a Lebanese castle and an archaeological site in the occupied West Bank to its World Heritage in Danger list. This decision comes despite objections from Israel regarding the inclusion of these sites, which are affected by ongoing Israeli activities.",
+        "cta_label": ""
+      },
+      "event_summary": {
+        "available": true,
+        "summary": "UNESCO has added a Lebanese castle and an archaeological site in the occupied West Bank to its World Heritage in Danger list.",
+        "key_developments": [
+          {
+            "development_id": "story_59c0e1dcf1a9bbb5",
+            "date": "2026-07-25",
+            "title": "UNESCO Lists Lebanese and West Bank Sites as World Heritage in Danger"
+          }
+        ],
+        "sources": [
+          {
+            "title": "UNESCO adds Lebanese, West Bank sites to endangered list",
+            "source": "DW - English",
+            "link": "https://www.dw.com/en/unesco-adds-lebanese-west-bank-sites-to-endangered-list/a-78102475?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "UNESCO places occupied West Bank, Lebanon sites on endangered heritage list",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/news/2026/7/24/unesco-places-occupied-west-bank-lebanon-sites-on-endangered-heritage-list?traffic_source=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "UNESCO adds West Bank site and Lebanese castles to World Heritage List despite Israeli objections",
+            "source": "AP - Top News via Google News",
+            "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOT2RmdWs1SzVTM3hDTTNHb09ZZHFaWnc4dEpHSTdjaUVpaEZBZV9oNUdQUVVCVW12VTdtZXlkSXZfSUV4ZEtlUkYxUi0yY1Z6X0R6VlNsQ19pUTdfaW1BMFJOb2VzN3c5ZkNGTTNRYnMzSlU0VW5hNnNuR3ROdFh5aEIxOHJkOERRd1pLMzQwSkpNVGpmNENYZ0xCWVQyZ0lzYTJVakkweEtXU0U0N1lv?oc=5",
+            "source_bias": "lean-left"
+          }
+        ],
+        "updated_at": "2026-07-25",
+        "provenance": "source_grounded_event_memory"
+      },
+      "event_stage": "developing_event",
+      "related_events": [],
+      "search_tokens": [
+        "activitie",
+        "added",
+        "affected",
+        "archaeological",
+        "bank",
+        "castle",
+        "comes",
+        "danger",
+        "decision",
+        "despite",
+        "heritage",
+        "inclusion",
+        "israel",
+        "lebanese",
+        "list",
+        "lists",
+        "objection",
+        "occupied",
+        "ongoing",
+        "regarding",
+        "site",
+        "sites",
+        "these",
+        "unesco",
+        "west",
+        "which"
+      ],
+      "entities": [
+        "danger",
+        "danger_unesco",
+        "israel",
+        "lists_lebanese",
+        "unesco",
+        "unesco_lists"
+      ],
+      "search_text": "activitie added affected archaeological bank castle comes danger danger_unesco decision despite heritage inclusion israel lebanese list lists lists_lebanese objection occupied ongoing regarding site sites these unesco unesco_lists west which"
     },
     {
       "event_id": "event_new-york-mayor-calls-for-federal-action-agai_68aca8b5ab",
@@ -4895,6 +7515,199 @@
         "us"
       ],
       "search_text": "accused andrew appear arrested authoritie britain brother brother_arrested brother_challenge challenge challenge_extradition charge charge_andrew claimed committed contest court crime deny exploitation extradition extradition_influencer face facing fighting florida human hunt including influencer kingdom lawyer legal marshal marshal_service. miami miami_facing miami_florida part political proceeding process rape rape_charge seeks seeks_extradition seriou service service._they sexual tate tate_arrested tate_brother them they trafficking tristan tristan_tate uk united united_kingdom us victim where which witch"
+    },
+    {
+      "event_id": "event_international-medieval-combat-federation-cha_e0ce58b0ca",
+      "title": "International Medieval Combat Federation Championship Held at Spøttrup Castle",
+      "canonical_title": "International Medieval Combat Federation Championship Held at Spøttrup Castle",
+      "topic_label": "IMCF Championship",
+      "summary": "Nearly 600 armoured fighters from 30 countries have convened at Spøttrup Castle in Denmark for the International Medieval Combat Federation (IMCF) World Championship. The event transforms the historic fortress into a venue for full-contact historical combat, showcasing the skills of participants in a unique setting.",
+      "status": "active",
+      "first_seen_at": "2026-07-25",
+      "last_seen_at": "2026-07-25",
+      "timeline": [
+        {
+          "development_id": "story_b454cb418f70e4a1",
+          "daily_story_id": "story_b454cb418f70e4a1",
+          "date": "2026-07-25",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "International Medieval Combat Federation Championship Held at Spøttrup Castle",
+          "summary": "Nearly 600 armoured fighters from 30 countries have convened at Spøttrup Castle in Denmark for the International Medieval Combat Federation (IMCF) World Championship. The event transforms the historic fortress into a venue for full-contact historical combat, showcasing the skills of participants in a unique setting.",
+          "topic_label": "IMCF Championship",
+          "development_type": "development",
+          "key_facts": [
+            "Nearly 600 fighters participating",
+            "30 countries represented",
+            "Event held at Spøttrup Castle"
+          ],
+          "source_count": 2,
+          "sources": [
+            "Africanews",
+            "Euronews"
+          ],
+          "source_urls": [
+            "http://www.africanews.com/2026/07/24/armoured-fighters-storm-denmarks-spottrup-castle-for-imcf-world-championship",
+            "http://www.euronews.com/video/2026/07/24/armoured-fighters-storm-denmarks-spottrup-castle-for-imcf-world-championship"
+          ],
+          "source_details": [
+            {
+              "title": "Armoured fighters storm Denmark’s Spøttrup Castle for IMCF world championship",
+              "source": "Africanews",
+              "link": "http://www.africanews.com/2026/07/24/armoured-fighters-storm-denmarks-spottrup-castle-for-imcf-world-championship",
+              "source_bias": "center"
+            },
+            {
+              "title": "Armoured fighters storm Denmark’s Spøttrup Castle for IMCF world championship",
+              "source": "Euronews",
+              "link": "http://www.euronews.com/video/2026/07/24/armoured-fighters-storm-denmarks-spottrup-castle-for-imcf-world-championship",
+              "source_bias": "lean-left"
+            }
+          ],
+          "confidence": 1.0,
+          "match_evidence": {
+            "score": 1.0,
+            "method": "new_event",
+            "shared_tokens": [],
+            "shared_entities": []
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-25",
+          "last_seen_at": "2026-07-25",
+          "integrity_status": "trusted",
+          "revisions": [
+            {
+              "daily_story_id": "story_366e26649cc6e2e5",
+              "reported_at": "2026-07-25",
+              "update_kind": "recirculation",
+              "title": "Armoured Fighters Compete at IMCF World Championship in Denmark",
+              "summary": "Nearly 600 armoured fighters from 30 countries have gathered at Spøttrup Castle in Denmark for the International Medieval Combat Federation (IMCF) World Championship. The event transforms the historic fortress into a venue for full-contact historical combat, showcasing the skills of participants in a unique setting.",
+              "topic_label": "IMCF Championship",
+              "key_facts": [
+                "Nearly 600 fighters participating",
+                "30 countries represented",
+                "Event held at Spøttrup Castle"
+              ],
+              "source_urls": [
+                "http://www.africanews.com/2026/07/24/armoured-fighters-storm-denmarks-spottrup-castle-for-imcf-world-championship",
+                "http://www.euronews.com/video/2026/07/24/armoured-fighters-storm-denmarks-spottrup-castle-for-imcf-world-championship"
+              ]
+            }
+          ],
+          "merged_development_ids": [
+            "story_366e26649cc6e2e5"
+          ],
+          "revision_count": 1
+        }
+      ],
+      "integrity": {
+        "public_development_count": 1,
+        "questionable_development_count": 0,
+        "review_required": false
+      },
+      "latest_title": "International Medieval Combat Federation Championship Held at Spøttrup Castle",
+      "latest_summary": "Nearly 600 armoured fighters from 30 countries have convened at Spøttrup Castle in Denmark for the International Medieval Combat Federation (IMCF) World Championship. The event transforms the historic fortress into a venue for full-contact historical combat, showcasing the skills of participants in a unique setting.",
+      "presentation": {
+        "has_context": true,
+        "has_full_timeline": false,
+        "stage": "developing_event",
+        "stage_label": "Developing event",
+        "base_title": "IMCF Championship",
+        "display_title": "IMCF Championship",
+        "milestone_development_ids": [
+          "story_b454cb418f70e4a1"
+        ],
+        "summary_available": true,
+        "summary_label": "Read the story so far",
+        "summary_updated_at": "2026-07-25",
+        "development_count": 1,
+        "coverage_packet_count": 2,
+        "date_count": 1,
+        "source_count": 2,
+        "independent_source_count": 2,
+        "first_date": "2026-07-25",
+        "latest_date": "2026-07-25",
+        "latest_update_title": "International Medieval Combat Federation Championship Held at Spøttrup Castle",
+        "coverage_score": 0.198,
+        "recency_score": 1.0,
+        "rank_score": 0.663,
+        "context_summary": "Nearly 600 armoured fighters from 30 countries have convened at Spøttrup Castle in Denmark for the International Medieval Combat Federation (IMCF) World Championship. The event transforms the historic fortress into a venue for full-contact historical combat, showcasing the skills of participants in a unique setting.",
+        "cta_label": ""
+      },
+      "event_summary": {
+        "available": true,
+        "summary": "Nearly 600 armoured fighters from 30 countries have convened at Spøttrup Castle in Denmark for the International Medieval Combat Federation (IMCF) World Championship.",
+        "key_developments": [
+          {
+            "development_id": "story_b454cb418f70e4a1",
+            "date": "2026-07-25",
+            "title": "International Medieval Combat Federation Championship Held at Spøttrup Castle"
+          }
+        ],
+        "sources": [
+          {
+            "title": "Armoured fighters storm Denmark’s Spøttrup Castle for IMCF world championship",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/07/24/armoured-fighters-storm-denmarks-spottrup-castle-for-imcf-world-championship",
+            "source_bias": "center"
+          },
+          {
+            "title": "Armoured fighters storm Denmark’s Spøttrup Castle for IMCF world championship",
+            "source": "Euronews",
+            "link": "http://www.euronews.com/video/2026/07/24/armoured-fighters-storm-denmarks-spottrup-castle-for-imcf-world-championship",
+            "source_bias": "lean-left"
+          }
+        ],
+        "updated_at": "2026-07-25",
+        "provenance": "source_grounded_event_memory"
+      },
+      "event_stage": "developing_event",
+      "related_events": [],
+      "search_tokens": [
+        "600",
+        "armoured",
+        "castle",
+        "championship",
+        "combat",
+        "convened",
+        "countrie",
+        "denmark",
+        "event",
+        "federation",
+        "fighter",
+        "fortress",
+        "full-contact",
+        "held",
+        "historic",
+        "historical",
+        "imcf",
+        "international",
+        "medieval",
+        "nearly",
+        "participant",
+        "setting",
+        "showcasing",
+        "skill",
+        "transform",
+        "ttrup",
+        "unique",
+        "venue"
+      ],
+      "entities": [
+        "castle_nearly",
+        "championship_held",
+        "combat_federation",
+        "denmark",
+        "federation_championship",
+        "federation_imcf",
+        "imcf",
+        "international_medieval",
+        "medieval_combat"
+      ],
+      "search_text": "600 armoured castle castle_nearly championship championship_held combat combat_federation convened countrie denmark event federation federation_championship federation_imcf fighter fortress full-contact held historic historical imcf international international_medieval medieval medieval_combat nearly participant setting showcasing skill transform ttrup unique venue"
     },
     {
       "event_id": "event_andy-biggs-secures-gop-nomination-for-arizon_385085780c",
@@ -6863,12 +9676,12 @@
           ]
         },
         {
-          "event_id": "event_zelenskyy-dismisses-military-chief-amid-prot_8bf8977d0c",
-          "title": "Zelenskyy Dismisses Military Chief Amid Protests in Ukraine",
+          "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
+          "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
           "relationship": "related_topic",
-          "confidence": 0.665,
+          "confidence": 0.685,
           "shared_entities": [
-            "kyiv",
+            "russia",
             "ukraine"
           ]
         }
