@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useMemo, useState } from 'react';
+import { Fragment, useEffect, useMemo, useRef, useState } from 'react';
 import { generateClient } from 'aws-amplify/api';
 import { getUserState } from './graphql/queries';
 import { createUserState, updateUserState } from './graphql/mutations';
@@ -247,7 +247,7 @@ function eventDisplayTitle(event) {
     || event?.canonical_title
     || event?.title
     || 'Tracked event'
-  ).trim();
+  ).replace(/\s+Timeline$/i, '').trim();
 }
 
 function eventActivityStatus(event, currentDateKey) {
@@ -310,6 +310,58 @@ function eventFirstDateKey(event) {
   );
 }
 
+function coverageDaysSinceUpdate(event, currentDateKey) {
+  const latestKey = eventLatestDateKey(event);
+  if (!latestKey || !currentDateKey) return 30;
+  const latest = new Date(`${latestKey}T12:00:00Z`);
+  const current = new Date(`${currentDateKey}T12:00:00Z`);
+  if (Number.isNaN(latest.getTime()) || Number.isNaN(current.getTime())) return 30;
+  return Math.max(0, Math.round((current - latest) / (24 * 60 * 60 * 1000)));
+}
+
+function coverageRecencySignal(event, currentDateKey, halfLifeDays) {
+  return Math.exp(-coverageDaysSinceUpdate(event, currentDateKey) / Math.max(1, halfLifeDays));
+}
+
+function coverageImportanceSignal(event) {
+  const explicit = Number(
+    event?.presentation?.editorial_importance_score
+    ?? event?.editorial_importance_score
+    ?? event?.importance_score
+    ?? event?.presentation?.rank_score
+    ?? 0
+  );
+  return Math.min(1, Math.max(0, explicit));
+}
+
+function coverageDepthSignal(event) {
+  const developmentCount = eventTimelineEntries(event).length;
+  const sourceCount = Number(
+    event?.presentation?.independent_source_count
+    || event?.presentation?.source_count
+    || 0
+  );
+  const developmentSignal = Math.min(1, developmentCount / 8);
+  const sourceSignal = Math.min(1, sourceCount / 12);
+  return (developmentSignal * 0.65) + (sourceSignal * 0.35);
+}
+
+function storylineSectionScore(event, currentDateKey) {
+  return (
+    coverageImportanceSignal(event) * 0.45
+    + coverageRecencySignal(event, currentDateKey, 10) * 0.35
+    + coverageDepthSignal(event) * 0.20
+  );
+}
+
+function developingEventSectionScore(event, currentDateKey) {
+  return (
+    coverageRecencySignal(event, currentDateKey, 4) * 0.65
+    + coverageImportanceSignal(event) * 0.25
+    + coverageDepthSignal(event) * 0.10
+  );
+}
+
 function eventDisplayCategory(event, relatedStory) {
   if (relatedStory) return normalizedStoryCategory(relatedStory);
   const coverageTitle = eventDisplayTitle(event);
@@ -336,6 +388,109 @@ function eventDisplayCategory(event, relatedStory) {
 function eventBrowseCategoryKey(category) {
   const knownCategories = new Set(EVENT_BROWSE_CATEGORIES.map((entry) => entry.key));
   return knownCategories.has(category) ? category : 'Other';
+}
+
+function eventVisual(event, relatedStory) {
+  const candidates = [
+    event?.hero_image,
+    event?.image,
+    event?.presentation?.image,
+    relatedStory?.image,
+  ];
+  for (const candidate of candidates) {
+    if (typeof candidate === 'string' && candidate.trim()) {
+      return { url: candidate.trim(), alt: '', roleLabel: '' };
+    }
+    if (!candidate || typeof candidate !== 'object') continue;
+    const url = String(candidate.url || candidate.thumbnail_url || candidate.src || '').trim();
+    if (!url) continue;
+    return {
+      url,
+      alt: String(candidate.alt || candidate.alt_text || '').trim(),
+      roleLabel: String(candidate.image_role_label || candidate.role_label || '').trim(),
+    };
+  }
+  return { url: '', alt: '', roleLabel: '' };
+}
+
+function eventArtMonogram(event) {
+  const ignored = new Set(['the', 'and', 'war', 'event', 'story', 'timeline', 'conflict']);
+  const words = eventDisplayTitle(event)
+    .replace(/[^a-z0-9 ]/gi, ' ')
+    .split(/\s+/)
+    .filter((word) => word && !ignored.has(word.toLowerCase()));
+  return (words.length ? words : ['Muninn'])
+    .slice(0, 2)
+    .map((word) => word.slice(0, 1))
+    .join('')
+    .toUpperCase();
+}
+
+function EventArtwork({ event, relatedStory, compact = false }) {
+  const visual = eventVisual(event, relatedStory);
+  const category = eventBrowseCategoryKey(eventDisplayCategory(event, relatedStory));
+  const crop = relatedStory ? storyImageCropPresentation(relatedStory, 'wide') : null;
+  if (visual.url) {
+    return (
+      <div className={`coverage-art ${compact ? 'is-compact' : ''}`}>
+        <img
+          src={visual.url}
+          alt={visual.alt}
+          loading="lazy"
+          style={crop ? { objectPosition: crop.position } : undefined}
+        />
+        {visual.roleLabel ? <span className="coverage-art-role">{visual.roleLabel}</span> : null}
+      </div>
+    );
+  }
+  return (
+    <div
+      className={`coverage-art coverage-art-placeholder ${compact ? 'is-compact' : ''}`}
+      data-category={category}
+      role="img"
+      aria-label={`${eventDisplayTitle(event)} editorial image placeholder`}
+    >
+      <span>Muninn event file</span>
+      <strong aria-hidden="true">{eventArtMonogram(event)}</strong>
+      <small>Editorial visual</small>
+    </div>
+  );
+}
+
+function CoverageRail({ children, label, itemCount, className = '', metaText = '' }) {
+  const railRef = useRef(null);
+  const scrollRail = (direction) => {
+    const rail = railRef.current;
+    if (!rail) return;
+    const distance = Math.max(280, Math.round(rail.clientWidth * 0.82));
+    rail.scrollBy({ left: direction * distance, behavior: 'smooth' });
+  };
+  return (
+    <div className="coverage-rail-shell">
+      <div className="coverage-rail-toolbar">
+        <span>{metaText || `${itemCount} ${itemCount === 1 ? 'item' : 'items'} · swipe for more`}</span>
+        {itemCount > 1 ? (
+          <div className="coverage-rail-controls" aria-label={`${label} carousel controls`}>
+            <button type="button" onClick={() => scrollRail(-1)} aria-label={`Show earlier ${label}`}>
+              <span aria-hidden="true">{'\u2190'}</span>
+            </button>
+            <button type="button" onClick={() => scrollRail(1)} aria-label={`Show more ${label}`}>
+              <span aria-hidden="true">{'\u2192'}</span>
+            </button>
+          </div>
+        ) : null}
+      </div>
+      <div
+        className={`coverage-rail ${className}`.trim()}
+        ref={railRef}
+        role="region"
+        aria-label={label}
+        tabIndex={0}
+      >
+        {children}
+      </div>
+    </div>
+  );
 }
 
 function trackedCoverageForStories(stories) {
@@ -1317,6 +1472,8 @@ export default function LegacyHome() {
   const [timelineQuery, setTimelineQuery] = useState('');
   const [eventStageFilter, setEventStageFilter] = useState('active');
   const [eventCategoryFilter, setEventCategoryFilter] = useState('all');
+  const [eventTypeFilter, setEventTypeFilter] = useState('all');
+  const [eventSort, setEventSort] = useState('recent');
   const [clockNow, setClockNow] = useState(() => Date.now());
   const client = useMemo(() => (ENABLE_CLOUD_SETTINGS ? generateClient() : null), []);
 
@@ -1465,14 +1622,43 @@ export default function LegacyHome() {
     }, { active: 0, ongoing: 0, archive: 0 }),
     [eligibleTimelineEvents, timelineCurrentDateKey]
   );
+  const eventCoverageSummary = useMemo(
+    () => eligibleTimelineEvents.reduce((summary, event) => {
+      const type = eventCoverageType(event);
+      summary.developmentCount += eventTimelineEntries(event).length;
+      summary.updatedToday += eventLatestDateKey(event) === timelineCurrentDateKey ? 1 : 0;
+      if (type === 'Ongoing Story') summary.ongoing += 1;
+      else summary.developing += 1;
+      return summary;
+    }, { developing: 0, ongoing: 0, developmentCount: 0, updatedToday: 0 }),
+    [eligibleTimelineEvents, timelineCurrentDateKey]
+  );
   const latestTimelineEvents = useMemo(
     () => [...eligibleTimelineEvents]
       .sort((left, right) => (
         String(eventLatestDateKey(right)).localeCompare(String(eventLatestDateKey(left)))
         || Number(right?.presentation?.rank_score || 0) - Number(left?.presentation?.rank_score || 0)
       ))
-      .slice(0, 3),
+      .slice(0, 6),
     [eligibleTimelineEvents]
+  );
+  const storylineTimelineEvents = useMemo(
+    () => eligibleTimelineEvents
+      .filter((event) => eventCoverageType(event) === 'Ongoing Story')
+      .sort((left, right) => (
+        storylineSectionScore(right, timelineCurrentDateKey) - storylineSectionScore(left, timelineCurrentDateKey)
+        || String(eventLatestDateKey(right)).localeCompare(String(eventLatestDateKey(left)))
+      )),
+    [eligibleTimelineEvents, timelineCurrentDateKey]
+  );
+  const rankedDevelopingTimelineEvents = useMemo(
+    () => eligibleTimelineEvents
+      .filter((event) => eventCoverageType(event) === 'Developing Event')
+      .sort((left, right) => (
+        developingEventSectionScore(right, timelineCurrentDateKey) - developingEventSectionScore(left, timelineCurrentDateKey)
+        || String(eventLatestDateKey(right)).localeCompare(String(eventLatestDateKey(left)))
+      )),
+    [eligibleTimelineEvents, timelineCurrentDateKey]
   );
   const newestTimelineEvents = useMemo(() => {
     const currentDate = new Date(`${timelineCurrentDateKey}T12:00:00Z`);
@@ -1507,6 +1693,11 @@ export default function LegacyHome() {
         eventCategoryFilter === 'all'
         || eventBrowseCategoryKey(eventDisplayCategory(event, eventStoryById.get(event.event_id))) === eventCategoryFilter
       ))
+      .filter((event) => (
+        eventTypeFilter === 'all'
+        || (eventTypeFilter === 'ongoing' && eventCoverageType(event) === 'Ongoing Story')
+        || (eventTypeFilter === 'developing' && eventCoverageType(event) === 'Developing Event')
+      ))
       .filter((event) => !query || [
         eventDisplayTitle(event),
         eventCoverageType(event),
@@ -1517,8 +1708,28 @@ export default function LegacyHome() {
         event?.search_text,
         ...(Array.isArray(event?.entities) ? event.entities : []),
       ].filter(Boolean).join(' ').toLowerCase().includes(query))
-      .sort((left, right) => String(eventLatestDateKey(right)).localeCompare(String(eventLatestDateKey(left))));
-  }, [eligibleTimelineEvents, eventStoryById, eventCategoryFilter, timelineQuery]);
+      .sort((left, right) => {
+        if (eventSort === 'developments') {
+          const developmentDelta = eventTimelineEntries(right).length - eventTimelineEntries(left).length;
+          if (developmentDelta) return developmentDelta;
+        }
+        if (eventSort === 'newest') {
+          const startedDelta = String(eventFirstDateKey(right)).localeCompare(String(eventFirstDateKey(left)));
+          if (startedDelta) return startedDelta;
+        }
+        return (
+          String(eventLatestDateKey(right)).localeCompare(String(eventLatestDateKey(left)))
+          || Number(right?.presentation?.rank_score || 0) - Number(left?.presentation?.rank_score || 0)
+        );
+      });
+  }, [
+    eligibleTimelineEvents,
+    eventStoryById,
+    eventCategoryFilter,
+    eventTypeFilter,
+    eventSort,
+    timelineQuery,
+  ]);
   const featuredTimelineEvents = useMemo(
     () => latestTimelineEvents,
     [latestTimelineEvents]
@@ -2415,7 +2626,7 @@ export default function LegacyHome() {
       </header>
 
       <main id="main" className={`view-${activeCategory}`}>
-        <section className={`post app-view ${activeCategory === 'top-stories' ? 'top-stories-post' : ''}`}>
+        <section className={`post app-view ${activeCategory === 'top-stories' ? 'top-stories-post' : ''} ${activeCategory === 'timelines' ? 'events-post' : ''}`}>
           <header className="major page-intro">
             <div className="page-intro-copy">
               {activeCategory !== 'top-stories' ? (
@@ -2424,7 +2635,7 @@ export default function LegacyHome() {
                 </span>
               ) : null}
               <h1>{activeCategory === 'top-stories' ? topStoriesHeading : title}</h1>
-              {activeCategory === 'timelines' ? <p className="today-intro">Follow important stories from their latest development back through the full record.</p> : null}
+              {activeCategory === 'timelines' ? <p className="today-intro">See what changed, why it matters, and how each developing story reached this point.</p> : null}
               {activeCategory === 'your-newsletter' ? <p className="today-intro">A focused briefing built around the stories, places, and events that matter to you.</p> : null}
             </div>
             {showDate ? (
@@ -3014,186 +3225,155 @@ export default function LegacyHome() {
                   <section className="event-latest-section" aria-labelledby="event-latest-title">
                     <div className="event-section-heading">
                       <div>
-                        <span>Latest developments</span>
-                        <h2 id="event-latest-title">What changed most recently</h2>
+                        <span>Across all tracked coverage</span>
+                        <h2 id="event-latest-title">Latest updates</h2>
                       </div>
-                      <p>Three fresh updates from Developing Events and Ongoing Stories.</p>
+                      <p>Pure recency first, with editorial weight breaking ties between updates published together.</p>
                     </div>
-                    <div className="event-latest-slider" aria-label="Latest Event and Ongoing Story updates">
+                    <CoverageRail
+                      label="latest Event and Ongoing Story updates"
+                      itemCount={featuredTimelineEvents.length}
+                      className="coverage-rail-featured"
+                      metaText={`${featuredTimelineEvents.length} newest changes · Events and Ongoing Stories`}
+                    >
                       {featuredTimelineEvents.map((event) => {
                         const entries = eventTimelineEntries(event);
                         const latest = entries[entries.length - 1] || {};
                         const sourceCount = Number(event?.presentation?.independent_source_count || event?.presentation?.source_count || 0);
                         const relatedStory = eventStoryById.get(event.event_id);
-                        const imageUrl = relatedStory?.image?.url || relatedStory?.image?.thumbnail_url || '';
                         const category = eventDisplayCategory(event, relatedStory);
                         const coverageType = eventCoverageType(event);
                         return (
                           <a
-                            className={`event-latest-card ${imageUrl ? 'has-image' : 'no-image'}`}
+                            className="coverage-feature-card"
                             href={`/timeline.html?event=${encodeURIComponent(event.event_id)}`}
                             key={event.event_id || event.title}
                           >
-                            {imageUrl ? (
-                              <div className="event-latest-media">
-                                <img src={imageUrl} alt="" loading="lazy" />
-                                {relatedStory?.image?.image_role_label ? (
-                                  <span className="event-image-role">{relatedStory.image.image_role_label}</span>
-                                ) : null}
-                              </div>
-                            ) : null}
-                            <div className="event-latest-copy">
+                            <div className="coverage-feature-copy">
                               <div className="event-card-labels">
                                 <span className="story-desk-label">{category}</span>
                                 <span className="story-tracked-label">{coverageType}</span>
                               </div>
                               <h3>{eventDisplayTitle(event)}</h3>
-                              <div className="event-change">
-                                <span>Latest update</span>
+                              <div className="coverage-latest-change">
+                                <span>What changed</span>
                                 <strong>{latest.title || 'New development'}</strong>
                               </div>
-                              <div className="event-card-meta">
-                                <time dateTime={latest.date}>{formatStoredDate(latest.date)}</time>
-                                <span>{entries.length} developments</span>
-                                {sourceCount ? <span>{sourceCount} sources</span> : null}
-                                <strong className="event-card-action">Open coverage <span aria-hidden="true">{'\u2192'}</span></strong>
+                              <div className="coverage-card-footer">
+                                <span>
+                                  <time dateTime={latest.date}>{formatStoredDate(latest.date)}</time>
+                                  {' \u00b7 '}{entries.length} developments
+                                  {sourceCount ? ` \u00b7 ${sourceCount} sources` : ''}
+                                </span>
+                                <strong>Story so far <span aria-hidden="true">{'\u2192'}</span></strong>
                               </div>
                             </div>
+                            <EventArtwork event={event} relatedStory={relatedStory} />
                           </a>
                         );
                       })}
-                    </div>
+                    </CoverageRail>
                   </section>
                 ) : null}
 
-                <section className="event-newest-section" aria-labelledby="event-newest-title">
+                <section className="event-storylines-section" aria-labelledby="event-storylines-title">
                   <div className="event-section-heading">
                     <div>
-                      <span>Recently confirmed</span>
-                      <h2 id="event-newest-title">Newest developing Events</h2>
+                      <span>Long-running coverage</span>
+                      <h2 id="event-storylines-title">Ongoing Stories</h2>
                     </div>
-                    <p>Stories promoted after meaningful follow-up reporting showed that they need active tracking.</p>
+                    <p>Ranked by editorial importance, then freshness and the depth of the record.</p>
                   </div>
-                  {newestTimelineEvents.length ? (
-                    <div className="event-newest-grid">
-                      {newestTimelineEvents.map((event) => {
+                  {storylineTimelineEvents.length ? (
+                    <CoverageRail
+                      label="Ongoing Stories"
+                      itemCount={storylineTimelineEvents.length}
+                      className="coverage-rail-storylines"
+                      metaText={`${storylineTimelineEvents.length} ${storylineTimelineEvents.length === 1 ? 'Ongoing Story' : 'Ongoing Stories'} · significance + freshness`}
+                    >
+                      {storylineTimelineEvents.map((event) => {
                         const entries = eventTimelineEntries(event);
                         const latest = entries[entries.length - 1] || {};
-                        const category = eventDisplayCategory(event, eventStoryById.get(event.event_id));
+                        const relatedStory = eventStoryById.get(event.event_id);
+                        const category = eventDisplayCategory(event, relatedStory);
                         return (
                           <a
-                            className="event-newest-card"
+                            className="coverage-new-card coverage-storyline-card"
                             href={`/timeline.html?event=${encodeURIComponent(event.event_id)}`}
                             key={event.event_id || event.title}
                           >
-                            <div className="event-card-labels">
-                              <span className="story-desk-label">{category}</span>
-                              <span className="story-tracked-label">New Event</span>
+                            <EventArtwork event={event} relatedStory={relatedStory} compact />
+                            <div className="coverage-new-copy">
+                              <div className="event-card-labels">
+                                <span className="story-desk-label">{category}</span>
+                                <span className="story-tracked-label">Ongoing Story</span>
+                              </div>
+                              <h3>{eventDisplayTitle(event)}</h3>
+                              <p>{latest.title || 'Latest development available'}</p>
                             </div>
-                            <h3>{eventDisplayTitle(event)}</h3>
-                            <p>{latest.title || 'Latest development available'}</p>
-                            <div className="event-newest-meta">
-                              <span>Started {formatStoredDate(eventFirstDateKey(event))}</span>
+                            <div className="coverage-new-footer">
+                              <span>Updated {formatStoredDate(eventLatestDateKey(event))}</span>
                               <strong>{entries.length} developments</strong>
                             </div>
                           </a>
                         );
                       })}
-                    </div>
+                    </CoverageRail>
                   ) : (
                     <div className="event-section-empty">
-                      <p>No new Events were confirmed in the last seven days. Existing coverage remains available below.</p>
+                      <p>No Ongoing Stories are public yet. Confirmed long-running coverage will appear here.</p>
                     </div>
                   )}
                 </section>
 
-                <section className="event-explore-section" aria-labelledby="event-explore-title">
+                <section className="event-ranked-section" aria-labelledby="event-ranked-title">
                   <div className="event-section-heading">
                     <div>
-                      <span>Everything has a home</span>
-                      <h2 id="event-explore-title">Explore coverage</h2>
+                      <span>Bounded developing coverage</span>
+                      <h2 id="event-ranked-title">Developing Events</h2>
                     </div>
-                    <p>Browse every Developing Event and Ongoing Story by its broad news category.</p>
+                    <p>Recency leads the ranking, with editorial importance and reporting depth as supporting signals.</p>
                   </div>
-                  <div className="event-explore-tools">
-                    <div className="event-search-field">
-                      <label htmlFor="timeline-search">Search tracked coverage</label>
-                      <input
-                        id="timeline-search"
-                        type="search"
-                        value={timelineQuery}
-                        onChange={(event) => setTimelineQuery(event.target.value)}
-                        placeholder="Search a place, person, or development"
-                      />
-                    </div>
-                    <div className="event-category-grid" aria-label="Browse coverage by category">
-                      {EVENT_BROWSE_CATEGORIES.map(({ key, label }) => (
-                        <button
-                          type="button"
-                          className={eventCategoryFilter === key ? 'active' : ''}
-                          onClick={() => setEventCategoryFilter(key)}
-                          aria-pressed={eventCategoryFilter === key}
-                          key={key}
-                        >
-                          <span>{label}</span>
-                          <strong>{eventCategoryCounts[key] || 0}</strong>
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="event-results-heading">
-                    <p>
-                      <strong>{filteredTimelineEvents.length}</strong>{' '}
-                      {filteredTimelineEvents.length === 1 ? 'tracked item' : 'tracked items'}
-                      {timelineQuery ? ` matching "${timelineQuery}"` : ''}
-                    </p>
-                    {(timelineQuery || eventCategoryFilter !== 'all') ? (
-                      <button
-                        type="button"
-                        onClick={() => {
-                          setTimelineQuery('');
-                          setEventCategoryFilter('all');
-                        }}
-                      >
-                        Clear filters
-                      </button>
-                    ) : null}
-                  </div>
-
-                  {filteredTimelineEvents.length === 0 ? (
-                    <div className="timeline-empty-search">
-                      <h3>No matching tracked coverage</h3>
-                      <p>Try another search or browse a different category.</p>
-                    </div>
-                  ) : (
-                    <div className="event-directory-list">
-                      {directoryTimelineEvents.map((event) => {
+                  {rankedDevelopingTimelineEvents.length ? (
+                    <CoverageRail
+                      label="Developing Events"
+                      itemCount={rankedDevelopingTimelineEvents.length}
+                      className="coverage-rail-events"
+                      metaText={`${rankedDevelopingTimelineEvents.length} Events · recency-weighted`}
+                    >
+                      {rankedDevelopingTimelineEvents.map((event) => {
                         const entries = eventTimelineEntries(event);
                         const latest = entries[entries.length - 1] || {};
                         const relatedStory = eventStoryById.get(event.event_id);
                         return (
                           <a
-                            className="event-directory-row"
+                            className="coverage-directory-card"
                             href={`/timeline.html?event=${encodeURIComponent(event.event_id)}`}
                             key={event.event_id || event.title}
                           >
-                            <div className="event-directory-copy">
+                            <EventArtwork event={event} relatedStory={relatedStory} compact />
+                            <div className="coverage-directory-copy">
                               <div className="event-card-labels">
                                 <span className="story-desk-label">{eventDisplayCategory(event, relatedStory)}</span>
                                 <span className="story-tracked-label">{eventCoverageType(event)}</span>
                               </div>
                               <h3>{eventDisplayTitle(event)}</h3>
-                              <p>{latest.title || 'Latest development available'}</p>
+                              <div className="coverage-directory-update">
+                                <span>Latest</span>
+                                <p>{latest.title || 'Latest development available'}</p>
+                              </div>
                             </div>
-                            <div className="event-directory-meta">
-                              <strong>{entries.length} developments</strong>
+                            <div className="coverage-directory-footer">
                               <span>{eventDateRange(event)}</span>
+                              <strong>{entries.length} developments <span aria-hidden="true">{'\u2192'}</span></strong>
                             </div>
-                            <span className="event-directory-arrow" aria-hidden="true">{'\u2192'}</span>
                           </a>
                         );
                       })}
+                    </CoverageRail>
+                  ) : (
+                    <div className="event-section-empty">
+                      <p>No Developing Events are public yet.</p>
                     </div>
                   )}
                 </section>
