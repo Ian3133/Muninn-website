@@ -4314,6 +4314,8 @@ html[data-theme="dark"] .today-layout-toggle > span:last-child {
 .today-view-actions {
   flex-wrap: wrap;
   justify-content: flex-end;
+  align-items: center;
+  gap: .65rem;
 }
 
 .today-layout-switch {
@@ -4759,17 +4761,6 @@ html[data-theme="dark"] .today-image-rail.layout-rail .today-rail-story.is-equal
   padding-bottom: 1px;
 }
 
-/* Keep Today's layout choice beside the theme control in the global header. */
-.header-actions .today-layout-switch.is-header-control {
-  flex: 0 0 auto;
-  border-radius: 999px;
-}
-
-.header-actions .today-layout-switch.is-header-control button {
-  min-height: 2.15rem;
-  padding: .5rem .68rem;
-}
-
 .header-actions .theme-toggle {
   min-height: 2.15rem;
 }
@@ -4779,12 +4770,6 @@ html[data-theme="dark"] .today-image-rail.layout-rail .today-rail-story.is-equal
     gap: .35rem;
   }
 
-  .header-actions .today-layout-switch.is-header-control button {
-    height: 2.2rem;
-    min-height: 0;
-    padding: 0 .42rem;
-    font-size: .55rem;
-  }
 }
 
 /* AI-ranked hierarchy without changing the equal lead geometry. */
@@ -4878,18 +4863,19 @@ html[data-theme="dark"] .today-image-rail.layout-rail .today-rail-story.is-equal
   box-shadow: none;
 }
 
-/* Properly rounded segmented control: selected halves are pills, not clipped squares. */
-.header-actions .today-layout-switch.is-header-control {
+/* Properly rounded segmented control beside Today's edition details. */
+.today-view-actions .today-layout-switch {
   display: inline-flex;
   height: 2.5rem;
   align-items: stretch;
   gap: 2px;
   padding: 2px;
+  border-radius: 999px;
   background: transparent;
 }
 
-.header-actions .today-layout-switch.is-header-control button,
-.header-actions .today-layout-switch.is-header-control button:last-child {
+.today-view-actions .today-layout-switch button,
+.today-view-actions .today-layout-switch button:last-child {
   height: 100%;
   min-height: 0;
   padding: 0 .68rem;
@@ -4907,7 +4893,7 @@ html[data-theme="dark"] .today-image-rail.layout-rail .today-rail-story.is-equal
     justify-self: start;
   }
 
-  .header-actions .today-layout-switch.is-header-control,
+  .today-view-actions .today-layout-switch,
   .header-actions .theme-toggle {
     height: 2.5rem;
   }
@@ -4916,7 +4902,7 @@ html[data-theme="dark"] .today-image-rail.layout-rail .today-rail-story.is-equal
     width: 2.5rem;
   }
 
-  .header-actions .today-layout-switch.is-header-control button {
+  .today-view-actions .today-layout-switch button {
     height: 100%;
     padding: 0 .4rem;
   }
@@ -5966,7 +5952,7 @@ html[data-theme="dark"] .today-image-rail.layout-cards .today-rail-editorial-ran
 }
 
 @media screen and (max-width: 620px) {
-  .header-actions .today-layout-switch.is-header-control button {
+  .today-view-actions .today-layout-switch button {
     font-size: .64rem;
   }
 
@@ -7173,7 +7159,7 @@ html[data-theme="dark"] .events-card-view .event-summary-meta > strong {
 
 .events-landing-view {
   display: grid;
-  gap: clamp(2.2rem, 4vw, 3.35rem);
+  gap: clamp(1.8rem, 3vw, 2.65rem);
 }
 
 .events-swipe-section {
@@ -8038,7 +8024,7 @@ html[data-theme="dark"] #main .events-explore-item.is-ongoing {
   }
 
   .events-landing-view {
-    gap: 2.25rem;
+    gap: 1.75rem;
   }
 
   .events-section-header {

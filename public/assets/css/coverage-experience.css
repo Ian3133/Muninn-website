@@ -1,0 +1,1073 @@
+/* Distinct parent-coverage and child-event layouts for tracked coverage pages. */
+
+body.muninn-event-page .event-parent-coverage {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 0 clamp(1rem, 2vw, 1.35rem);
+  padding: .85rem 1rem;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--teal);
+  border-radius: 12px;
+  background: var(--teal-soft);
+  color: var(--ink) !important;
+  text-decoration: none;
+}
+
+body.muninn-event-page .event-parent-coverage > span:first-child {
+  display: grid;
+  gap: .18rem;
+}
+
+body.muninn-event-page .event-parent-coverage small {
+  color: var(--teal-dark);
+  font-family: var(--sans);
+  font-size: .64rem;
+  font-weight: 850;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+body.muninn-event-page .event-parent-coverage strong {
+  color: var(--ink) !important;
+  font-family: var(--serif);
+  font-size: 1.05rem;
+}
+
+body.muninn-event-page .event-parent-coverage:hover,
+body.muninn-event-page .event-parent-coverage:focus-visible {
+  border-color: var(--teal);
+  color: var(--teal-dark) !important;
+}
+
+body.muninn-event-page .coverage-lead-card {
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: minmax(0, 1.32fr) minmax(18rem, .68fr);
+  margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+}
+
+body.muninn-event-page .coverage-lead-card-no-image {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+body.muninn-event-page .coverage-lead-copy {
+  display: grid;
+  align-content: start;
+  gap: 1.15rem;
+  padding: clamp(1.2rem, 2.4vw, 1.8rem);
+}
+
+body.muninn-event-page .coverage-summary-block {
+  display: grid;
+  gap: .55rem;
+}
+
+body.muninn-event-page .coverage-summary-block h2,
+body.muninn-event-page .coverage-section-eyebrow {
+  margin: 0;
+  color: var(--teal) !important;
+  font-family: var(--sans);
+  font-size: .68rem;
+  font-weight: 850;
+  letter-spacing: .09em;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+body.muninn-event-page .coverage-summary-block p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-family: var(--serif);
+  font-size: clamp(1.08rem, 1.55vw, 1.3rem);
+  line-height: 1.62;
+  text-align: left;
+}
+
+body.muninn-event-page .coverage-current-status {
+  padding: 1rem;
+  border-left: 3px solid var(--teal);
+  background: var(--teal-soft);
+}
+
+body.muninn-event-page .coverage-current-label {
+  margin-bottom: .42rem;
+  color: var(--teal-dark);
+  font-family: var(--sans);
+  font-size: .66rem;
+  font-weight: 850;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+body.muninn-event-page .coverage-current-status p {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  font-weight: 700;
+  line-height: 1.38;
+  text-align: left;
+}
+
+body.muninn-event-page .coverage-lead-image {
+  position: relative;
+  min-height: 100%;
+  margin: 0;
+  background: var(--surface-muted);
+}
+
+body.muninn-event-page .coverage-lead-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 26rem;
+  object-fit: cover;
+}
+
+body.muninn-event-page .coverage-lead-image figcaption {
+  position: absolute;
+  right: .75rem;
+  bottom: .75rem;
+  padding: .28rem .52rem;
+  border: 1px solid rgba(255, 255, 255, .72);
+  border-radius: 999px;
+  background: rgba(23, 37, 45, .78);
+  color: #fff;
+  font-size: .6rem;
+  font-weight: 850;
+  letter-spacing: .055em;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+}
+
+body.muninn-event-page .coverage-members,
+body.muninn-event-page .coverage-updates {
+  margin: 0 0 clamp(1.5rem, 3vw, 2.25rem);
+}
+
+body.muninn-event-page .coverage-section-heading {
+  display: grid;
+  max-width: 48rem;
+  gap: .25rem;
+  margin-bottom: .9rem;
+}
+
+body.muninn-event-page .coverage-section-heading h2 {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -.025em;
+  line-height: 1.18;
+  text-transform: none;
+}
+
+body.muninn-event-page .coverage-section-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: .75rem;
+  line-height: 1.5;
+}
+
+body.muninn-event-page .coverage-members-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .85rem;
+}
+
+body.muninn-event-page .coverage-member {
+  display: grid;
+  min-width: 0;
+  align-content: start;
+  gap: .65rem;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  background: var(--surface);
+  color: var(--ink) !important;
+  text-decoration: none;
+}
+
+body.muninn-event-page a.coverage-member:hover,
+body.muninn-event-page a.coverage-member:focus-visible {
+  border-color: var(--teal);
+  background: var(--teal-soft);
+}
+
+body.muninn-event-page .coverage-member-top,
+body.muninn-event-page .coverage-member-meta,
+body.muninn-event-page .coverage-update-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .45rem .7rem;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: .66rem;
+  font-weight: 800;
+}
+
+body.muninn-event-page .coverage-member-top {
+  justify-content: space-between;
+}
+
+body.muninn-event-page .coverage-member-status {
+  color: var(--teal-dark);
+  letter-spacing: .055em;
+  text-transform: uppercase;
+}
+
+body.muninn-event-page .coverage-member h3,
+body.muninn-event-page .coverage-update h3 {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(1.08rem, 1.7vw, 1.3rem);
+  font-weight: 700;
+  line-height: 1.28;
+  text-transform: none;
+}
+
+body.muninn-event-page .coverage-member p,
+body.muninn-event-page .coverage-update p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-family: var(--sans);
+  font-size: .78rem;
+  line-height: 1.55;
+  text-align: left;
+}
+
+body.muninn-event-page .event-lead-summary,
+body.muninn-event-page .event-development p,
+body.muninn-event-page .event-key-facts {
+  text-align: left;
+}
+
+body.muninn-event-page .coverage-member-meta {
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: .25rem;
+}
+
+body.muninn-event-page .coverage-updates-list {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+}
+
+body.muninn-event-page .coverage-update {
+  display: grid;
+  gap: .55rem;
+  padding: clamp(1rem, 2vw, 1.25rem);
+  border-bottom: 1px solid var(--border);
+}
+
+body.muninn-event-page .coverage-update:last-child {
+  border-bottom: 0;
+}
+
+body.muninn-event-page .coverage-update-meta span:first-child {
+  color: var(--teal-dark);
+  letter-spacing: .055em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 760px) {
+  body.muninn-event-page .coverage-lead-card,
+  body.muninn-event-page .coverage-members-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body.muninn-event-page .coverage-lead-copy {
+    order: 1;
+  }
+
+  body.muninn-event-page .coverage-lead-image {
+    min-height: 0;
+    order: 2;
+  }
+
+  body.muninn-event-page .coverage-lead-image img {
+    min-height: 0;
+    aspect-ratio: 3 / 2;
+  }
+}
+
+/* Compact coverage hierarchy and vertical event timeline. */
+
+body.muninn-event-page .coverage-current-status {
+  display: grid;
+  max-width: 72rem;
+  grid-template-columns: minmax(11rem, .3fr) minmax(0, 1fr) clamp(9rem, 17vw, 13rem);
+  align-items: center;
+  gap: clamp(1rem, 2.5vw, 2rem);
+  margin: 0 0 clamp(1.5rem, 3vw, 2.25rem);
+  padding: clamp(1rem, 2vw, 1.35rem);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--teal);
+  border-radius: 14px;
+  background: var(--surface);
+}
+
+body.muninn-event-page .coverage-current-status.no-image {
+  grid-template-columns: minmax(12rem, .32fr) minmax(0, 1fr);
+}
+
+body.muninn-event-page .coverage-current-heading {
+  display: grid;
+  gap: .2rem;
+}
+
+body.muninn-event-page .coverage-current-heading h2 {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(1.25rem, 2vw, 1.6rem);
+  font-weight: 700;
+  letter-spacing: -.02em;
+  line-height: 1.2;
+  text-transform: none;
+}
+
+body.muninn-event-page .coverage-current-heading > span:last-child {
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: .68rem;
+  font-weight: 800;
+}
+
+body.muninn-event-page .coverage-current-status p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-family: var(--serif);
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+body.muninn-event-page .coverage-current-image {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+  border-radius: 11px;
+  aspect-ratio: 4 / 3;
+  background: var(--surface-muted);
+}
+
+body.muninn-event-page .coverage-current-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+body.muninn-event-page .coverage-current-image figcaption {
+  position: absolute;
+  right: .45rem;
+  bottom: .45rem;
+  padding: .2rem .4rem;
+  border-radius: 999px;
+  background: rgba(23, 37, 45, .76);
+  color: #fff;
+  font-family: var(--sans);
+  font-size: .52rem;
+  font-weight: 850;
+  letter-spacing: .045em;
+  text-transform: uppercase;
+}
+
+body.muninn-event-page .coverage-members-list {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+}
+
+body.muninn-event-page .coverage-members-list .coverage-member {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1.25rem;
+  margin: 0;
+  padding: .95rem 1rem;
+  border: 0;
+  border-bottom: 1px solid var(--border);
+  border-radius: 0;
+  background: transparent;
+}
+
+body.muninn-event-page .coverage-members-list .coverage-member:last-child {
+  border-bottom: 0;
+}
+
+body.muninn-event-page .coverage-members-list a.coverage-member:hover,
+body.muninn-event-page .coverage-members-list a.coverage-member:focus-visible {
+  border-color: var(--border);
+  background: var(--teal-soft);
+}
+
+body.muninn-event-page .coverage-member-main {
+  display: grid;
+  min-width: 0;
+  gap: .3rem;
+}
+
+body.muninn-event-page .coverage-member-top {
+  justify-content: flex-start;
+}
+
+body.muninn-event-page .coverage-member-kind {
+  color: var(--teal-dark);
+  letter-spacing: .055em;
+  text-transform: uppercase;
+}
+
+body.muninn-event-page .coverage-member h3 {
+  font-size: clamp(1rem, 1.5vw, 1.18rem);
+}
+
+body.muninn-event-page .coverage-member p {
+  overflow: hidden;
+  margin: 0;
+  color: var(--muted);
+  font-size: .75rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+body.muninn-event-page .coverage-member p span {
+  color: var(--ink-soft);
+  font-weight: 800;
+}
+
+body.muninn-event-page .coverage-member-meta {
+  min-width: 7.2rem;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: .25rem;
+  margin: 0;
+  padding: 0;
+}
+
+body.muninn-event-page .coverage-member-card {
+  grid-template-columns: 8.5rem minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  align-content: stretch;
+  gap: .6rem .85rem;
+  padding: .75rem;
+}
+
+body.muninn-event-page .coverage-member-card.no-image {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+body.muninn-event-page .coverage-member-image {
+  position: relative;
+  overflow: hidden;
+  grid-row: 1 / span 2;
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  border-radius: 9px;
+  background: var(--surface-muted);
+}
+
+body.muninn-event-page .coverage-member-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 7.75rem;
+  object-fit: cover;
+}
+
+body.muninn-event-page .coverage-member-image figcaption {
+  position: absolute;
+  right: .35rem;
+  bottom: .35rem;
+  padding: .16rem .32rem;
+  border-radius: 999px;
+  background: rgba(23, 37, 45, .76);
+  color: #fff;
+  font-family: var(--sans);
+  font-size: .46rem;
+  font-weight: 850;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+body.muninn-event-page .coverage-member-card .coverage-member-meta {
+  grid-column: 2;
+  min-width: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
+  margin-top: auto;
+}
+
+body.muninn-event-page .coverage-member-card.no-image .coverage-member-meta {
+  grid-column: 1;
+}
+
+body.muninn-event-page .coverage-member-card p {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: clip;
+  white-space: normal;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+body.muninn-event-page .coverage-past-phases {
+  margin-top: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  background: var(--surface);
+}
+
+body.muninn-event-page .coverage-past-phases > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: .8rem 1rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+body.muninn-event-page .coverage-past-phases > summary::-webkit-details-marker {
+  display: none;
+}
+
+body.muninn-event-page .coverage-past-phases > summary > span:first-child {
+  display: grid;
+  gap: .1rem;
+}
+
+body.muninn-event-page .coverage-past-phases > summary strong {
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1rem;
+}
+
+body.muninn-event-page .coverage-past-phases > summary > span:last-child {
+  display: grid;
+  width: 1.7rem;
+  height: 1.7rem;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--surface-muted);
+  color: var(--muted);
+  font-size: .7rem;
+  font-weight: 850;
+}
+
+body.muninn-event-page .coverage-past-phases > p {
+  margin: 0;
+  padding: 0 1rem .85rem;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: .72rem;
+}
+
+body.muninn-event-page .coverage-past-phases .coverage-members-grid {
+  grid-template-columns: minmax(0, 40rem);
+  padding: 0 1rem 1rem;
+}
+
+body.muninn-event-page .coverage-past-phases .coverage-member {
+  background: var(--surface-muted);
+}
+
+@media screen and (max-width: 1050px) {
+  body.muninn-event-page .coverage-members-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  body.muninn-event-page .coverage-past-phases .coverage-members-grid {
+    grid-template-columns: minmax(0, 40rem);
+  }
+}
+
+body.muninn-event-page .coverage-updates-list {
+  border-radius: 14px;
+}
+
+body.muninn-event-page .coverage-update {
+  gap: .35rem;
+  padding: .9rem 1rem;
+}
+
+body.muninn-event-page .coverage-update h3 {
+  font-size: clamp(1rem, 1.5vw, 1.18rem);
+}
+
+body.muninn-event-page .coverage-update p {
+  color: var(--muted);
+  font-size: .75rem;
+  line-height: 1.5;
+}
+
+body.muninn-event-page .coverage-updates-more {
+  margin-top: .65rem;
+}
+
+body.muninn-event-page .coverage-updates-more > summary {
+  display: inline-flex;
+  min-height: 2.5rem;
+  align-items: center;
+  padding: .62rem .85rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--teal-dark);
+  font-family: var(--sans);
+  font-size: .72rem;
+  font-weight: 850;
+  cursor: pointer;
+  list-style: none;
+}
+
+body.muninn-event-page .coverage-updates-more > summary::-webkit-details-marker {
+  display: none;
+}
+
+body.muninn-event-page .coverage-updates-more[open] > summary {
+  margin-bottom: .65rem;
+}
+
+body.muninn-event-page .coverage-background {
+  overflow: hidden;
+  margin: 0 0 clamp(1.5rem, 3vw, 2.25rem);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+}
+
+body.muninn-event-page .coverage-background > summary {
+  display: flex;
+  min-height: 4.25rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: .9rem 1rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+body.muninn-event-page .coverage-background > summary::-webkit-details-marker {
+  display: none;
+}
+
+body.muninn-event-page .coverage-background > summary > span:first-child {
+  display: grid;
+  gap: .15rem;
+}
+
+body.muninn-event-page .coverage-background > summary strong {
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.15rem;
+}
+
+body.muninn-event-page .coverage-background > summary > span:last-child {
+  color: var(--teal-dark);
+  font-size: 1.4rem;
+}
+
+body.muninn-event-page .coverage-background[open] > summary {
+  border-bottom: 1px solid var(--border);
+}
+
+body.muninn-event-page .coverage-background[open] > summary > span:last-child {
+  transform: rotate(45deg);
+}
+
+body.muninn-event-page .coverage-background-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(15rem, .6fr);
+}
+
+body.muninn-event-page .coverage-background-body-no-image {
+  grid-template-columns: 1fr;
+}
+
+body.muninn-event-page .coverage-background-copy {
+  padding: clamp(1rem, 2vw, 1.35rem);
+}
+
+body.muninn-event-page .coverage-background-copy > p {
+  max-width: 48rem;
+  margin: 0;
+  color: var(--ink-soft);
+  font-family: var(--serif);
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+body.muninn-event-page .coverage-background-image {
+  position: relative;
+  min-height: 15rem;
+  margin: 0;
+  background: var(--surface-muted);
+}
+
+body.muninn-event-page .coverage-background-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 15rem;
+  object-fit: cover;
+}
+
+body.muninn-event-page .coverage-background-image figcaption {
+  position: absolute;
+  right: .65rem;
+  bottom: .65rem;
+  padding: .25rem .48rem;
+  border: 1px solid rgba(255, 255, 255, .72);
+  border-radius: 999px;
+  background: rgba(23, 37, 45, .78);
+  color: #fff;
+  font-size: .58rem;
+  font-weight: 850;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+
+body.muninn-event-page .event-coverage-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .42rem;
+  margin-bottom: .45rem;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: .72rem;
+  font-weight: 800;
+}
+
+body.muninn-event-page .event-coverage-breadcrumb a {
+  color: var(--teal-dark) !important;
+  text-decoration: none;
+}
+
+body.muninn-event-page .event-coverage-breadcrumb a:hover,
+body.muninn-event-page .event-coverage-breadcrumb a:focus-visible {
+  text-decoration: underline;
+}
+
+body.muninn-event-page .event-page-experience .event-lead-card {
+  grid-template-columns: minmax(0, 1fr) clamp(11rem, 20vw, 14rem);
+  align-items: center;
+}
+
+body.muninn-event-page .event-page-experience .event-lead-copy {
+  padding: clamp(1rem, 2vw, 1.35rem);
+}
+
+body.muninn-event-page .event-page-experience .event-lead-summary {
+  max-width: 48rem;
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  line-height: 1.55;
+}
+
+body.muninn-event-page .event-page-experience .event-latest-update {
+  margin-top: .9rem;
+  padding: .8rem .9rem;
+}
+
+body.muninn-event-page .event-page-experience .event-latest-update a {
+  font-size: 1rem;
+}
+
+body.muninn-event-page .event-page-experience .event-lead-image img {
+  min-height: 0;
+  max-height: none;
+}
+
+body.muninn-event-page .event-page-experience .event-lead-image {
+  align-self: center;
+  overflow: hidden;
+  min-height: 0;
+  margin: .9rem .9rem .9rem 0;
+  border-radius: 11px;
+  aspect-ratio: 4 / 3;
+}
+
+body.muninn-event-page .event-history-region {
+  margin: 0 0 clamp(1.5rem, 3vw, 2.25rem);
+}
+
+body.muninn-event-page .event-history-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: .85rem;
+}
+
+body.muninn-event-page .event-history-heading > div {
+  display: grid;
+  gap: .2rem;
+}
+
+body.muninn-event-page .event-history-heading h2 {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -.025em;
+  line-height: 1.18;
+  text-transform: none;
+}
+
+body.muninn-event-page .event-history-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: .72rem;
+}
+
+body.muninn-event-page .event-order-button {
+  min-height: 2.5rem;
+  margin: 0;
+  padding: .62rem .85rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--teal-dark);
+  font-family: var(--sans);
+  font-size: .72rem;
+  font-weight: 850;
+  letter-spacing: 0;
+  line-height: 1;
+  text-transform: none;
+  cursor: pointer;
+}
+
+body.muninn-event-page .event-order-button:hover,
+body.muninn-event-page .event-order-button:focus-visible {
+  border-color: var(--teal);
+  background: var(--teal-soft);
+}
+
+body.muninn-event-page .event-history-list {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+}
+
+body.muninn-event-page .event-history-item {
+  border-bottom: 1px solid var(--border);
+}
+
+body.muninn-event-page .event-history-item:last-child {
+  border-bottom: 0;
+}
+
+body.muninn-event-page .event-history-item > summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1rem;
+  padding: .9rem 1rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+body.muninn-event-page .event-history-item > summary::-webkit-details-marker {
+  display: none;
+}
+
+body.muninn-event-page .event-history-item > summary:hover,
+body.muninn-event-page .event-history-item > summary:focus-visible,
+body.muninn-event-page .event-history-item[open] > summary {
+  background: var(--teal-soft);
+}
+
+body.muninn-event-page .event-history-summary-copy {
+  display: grid;
+  min-width: 0;
+  gap: .28rem;
+}
+
+body.muninn-event-page .event-history-summary-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem;
+  color: var(--teal-dark);
+  font-family: var(--sans);
+  font-size: .66rem;
+  font-weight: 850;
+  letter-spacing: .045em;
+  text-transform: uppercase;
+}
+
+body.muninn-event-page .event-history-summary-copy > strong {
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(1rem, 1.5vw, 1.16rem);
+  line-height: 1.3;
+}
+
+body.muninn-event-page .event-history-source-count {
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: .68rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+body.muninn-event-page .event-history-body {
+  padding: 1rem;
+  border-top: 1px solid var(--border);
+  background: var(--surface-muted);
+}
+
+body.muninn-event-page .event-history-body > p {
+  max-width: 62rem;
+  margin: 0;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  text-align: left;
+}
+
+body.muninn-event-page .event-history-note {
+  margin-top: .75rem !important;
+  color: var(--muted) !important;
+  font-size: .72rem;
+}
+
+body.muninn-event-page .event-source-disclosure {
+  margin-top: .9rem;
+  padding-top: .8rem;
+  border-top: 1px solid var(--border);
+}
+
+body.muninn-event-page .event-source-disclosure > summary {
+  width: fit-content;
+  color: var(--teal-dark);
+  font-family: var(--sans);
+  font-size: .72rem;
+  font-weight: 850;
+  cursor: pointer;
+}
+
+body.muninn-event-page .event-source-disclosure .event-evidence-links {
+  margin-top: .65rem;
+}
+
+@media screen and (max-width: 760px) {
+  body.muninn-event-page .coverage-members-grid,
+  body.muninn-event-page .coverage-past-phases .coverage-members-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body.muninn-event-page .coverage-current-status {
+    grid-template-columns: minmax(0, 1fr) 6.5rem;
+    align-items: start;
+    gap: .75rem;
+  }
+
+  body.muninn-event-page .coverage-current-status.no-image {
+    grid-template-columns: 1fr;
+  }
+
+  body.muninn-event-page .coverage-current-status > p {
+    grid-column: 1 / -1;
+  }
+
+  body.muninn-event-page .coverage-current-image {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  body.muninn-event-page .coverage-members-list .coverage-member {
+    grid-template-columns: 1fr;
+    gap: .55rem;
+  }
+
+  body.muninn-event-page .coverage-member p {
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
+  }
+
+  body.muninn-event-page .coverage-member-meta {
+    min-width: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  body.muninn-event-page .coverage-member-card {
+    grid-template-columns: 6.5rem minmax(0, 1fr);
+  }
+
+  body.muninn-event-page .coverage-member-image img {
+    min-height: 6.8rem;
+  }
+
+  body.muninn-event-page .coverage-past-phases .coverage-members-grid {
+    padding: 0 .75rem .75rem;
+  }
+
+  body.muninn-event-page .coverage-background-body {
+    grid-template-columns: 1fr;
+  }
+
+  body.muninn-event-page .coverage-background-image {
+    order: -1;
+    min-height: 0;
+  }
+
+  body.muninn-event-page .coverage-background-image img {
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+  }
+
+  body.muninn-event-page .event-page-experience .event-lead-card {
+    grid-template-columns: 1fr;
+  }
+
+  body.muninn-event-page .event-page-experience .event-lead-image img {
+    min-height: 0;
+    max-height: none;
+    aspect-ratio: 16 / 9;
+  }
+
+  body.muninn-event-page .event-page-experience .event-lead-image {
+    margin: 0;
+    border-radius: 0;
+    aspect-ratio: auto;
+  }
+
+  body.muninn-event-page .event-history-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  body.muninn-event-page .event-history-item > summary {
+    grid-template-columns: 1fr;
+    gap: .35rem;
+  }
+
+  body.muninn-event-page .event-history-source-count {
+    justify-self: start;
+  }
+}

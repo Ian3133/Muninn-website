@@ -150,7 +150,6 @@ export default function NewsletterWizardModal({
         <div className="modal-header">
           <h2 id="newsletter-wizard-title">Personal Newsletter Setup</h2>
           <button type="button" className="modal-close accessible-modal-close" onClick={onClose} aria-label="Close newsletter setup">×</button>
-          <button className="modal-close" onClick={onClose}>Ã—</button>
         </div>
 
         <div className="modal-body">

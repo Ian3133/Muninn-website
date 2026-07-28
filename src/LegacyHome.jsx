@@ -253,6 +253,22 @@ function eventDisplayTitle(event) {
   ).replace(/\s+Timeline$/i, '').trim();
 }
 
+function eventReaderSummary(event) {
+  const candidates = [
+    event?.event_summary?.summary,
+    event?.event_overview?.summary,
+    event?.summary,
+    event?.presentation?.context_summary,
+  ];
+  return String(
+    candidates.find((value) => (
+      typeof value === 'string'
+      && value.trim()
+      && !/^Muninn first tracked\b/i.test(value.trim())
+    )) || ''
+  ).trim();
+}
+
 function coverageTextMatchesQuery(value, query) {
   const searchable = String(value || '').toLowerCase();
   if (!query) return true;
@@ -298,10 +314,62 @@ function eventCoverageType(event) {
   const stage = String(event?.presentation?.stage || event?.event_stage || '')
     .toLowerCase()
     .replace(/[\s-]+/g, '_');
+  if (explicit === 'event' || explicit === 'developing_event') {
+    return 'Developing Event';
+  }
   if (explicit === 'storyline' || explicit === 'ongoing_story' || stage === 'timeline' || stage === 'storyline') {
-    return 'Ongoing Story';
+    return 'Ongoing Coverage';
   }
   return 'Developing Event';
+}
+
+function applyCoverageCollectionsToEvents(events, collections) {
+  const parentById = new Map();
+  const childById = new Map();
+  (Array.isArray(collections) ? collections : []).forEach((coverage) => {
+    if (coverage?.legacy_event_id) parentById.set(coverage.legacy_event_id, coverage);
+    (Array.isArray(coverage?.child_events) ? coverage.child_events : []).forEach((member) => {
+      if (member?.event_id) childById.set(member.event_id, { coverage, member });
+    });
+  });
+
+  return (Array.isArray(events) ? events : []).map((event) => {
+    const parentCoverage = parentById.get(event?.event_id);
+    if (parentCoverage) {
+      return {
+        ...event,
+        coverage_type: 'storyline',
+        coverage_id: parentCoverage.coverage_id,
+        public_label: parentCoverage.public_label || 'Ongoing Coverage',
+        presentation: {
+          ...(event?.presentation || {}),
+          stage: 'storyline',
+          stage_label: parentCoverage.public_label || 'Ongoing Coverage',
+          base_title: parentCoverage.title || eventDisplayTitle(event),
+          display_title: parentCoverage.title || eventDisplayTitle(event),
+        },
+      };
+    }
+
+    const childMatch = childById.get(event?.event_id);
+    if (!childMatch) return event;
+    const { coverage, member } = childMatch;
+    return {
+      ...event,
+      coverage_type: 'event',
+      parent_coverage_id: coverage.coverage_id,
+      parent_coverage_title: coverage.title,
+      parent_coverage_event_id: coverage.legacy_event_id,
+      presentation: {
+        ...(event?.presentation || {}),
+        stage_label: 'Developing Event',
+        display_title: member.title || eventDisplayTitle(event),
+      },
+      event_summary: member.summary
+        ? { ...(typeof event?.event_summary === 'object' ? event.event_summary : {}), summary: member.summary }
+        : event?.event_summary,
+    };
+  });
 }
 
 function eventCoverageIdentity(event) {
@@ -703,7 +771,7 @@ function trackedCoverageForStories(stories) {
   if (!story) return null;
   const context = story.story_context || {};
   const stage = String(context.stage || '').toLowerCase();
-  const type = stage === 'timeline' || stage === 'storyline' ? 'Ongoing Story' : 'Developing Event';
+  const type = stage === 'timeline' || stage === 'storyline' ? 'Ongoing Coverage' : 'Developing Event';
   const name = String(
     context.base_title
     || context.event_title
@@ -714,7 +782,7 @@ function trackedCoverageForStories(stories) {
   return {
     name,
     type,
-    label: `${name} · ${type === 'Ongoing Story' ? 'Ongoing' : 'Developing'}`,
+    label: `${name} · ${type === 'Ongoing Coverage' ? 'Ongoing' : 'Developing'}`,
   };
 }
 
@@ -1663,6 +1731,7 @@ export default function LegacyHome() {
   const [loadingHealth, setLoadingHealth] = useState(false);
   const [healthError, setHealthError] = useState('');
   const [timelineEvents, setTimelineEvents] = useState([]);
+  const [coverageCollections, setCoverageCollections] = useState([]);
   const [timelinesGeneratedAt, setTimelinesGeneratedAt] = useState('');
   const [loadingTimelines, setLoadingTimelines] = useState(false);
   const [timelineError, setTimelineError] = useState('');
@@ -1844,15 +1913,19 @@ export default function LegacyHome() {
     });
     return matches;
   }, [allCoverageStoryRows]);
+  const coverageAwareTimelineEvents = useMemo(
+    () => applyCoverageCollectionsToEvents(timelineEvents, coverageCollections),
+    [timelineEvents, coverageCollections]
+  );
   const eligibleTimelineEvents = useMemo(
-    () => timelineEvents
+    () => coverageAwareTimelineEvents
       .filter((event) => eventTimelineEntries(event).length >= 2)
       .sort((left, right) => {
         const rankDelta = Number(right?.presentation?.rank_score || 0) - Number(left?.presentation?.rank_score || 0);
         if (rankDelta) return rankDelta;
         return String(right?.last_seen_at || '').localeCompare(String(left?.last_seen_at || ''));
       }),
-    [timelineEvents]
+    [coverageAwareTimelineEvents]
   );
   const publicTimelineEvents = useMemo(() => {
     const seen = new Set();
@@ -1876,7 +1949,7 @@ export default function LegacyHome() {
       const type = eventCoverageType(event);
       summary.developmentCount += eventTimelineEntries(event).length;
       summary.updatedToday += eventLatestDateKey(event) === timelineCurrentDateKey ? 1 : 0;
-      if (type === 'Ongoing Story') summary.ongoing += 1;
+      if (type === 'Ongoing Coverage') summary.ongoing += 1;
       else summary.developing += 1;
       return summary;
     }, { developing: 0, ongoing: 0, developmentCount: 0, updatedToday: 0 }),
@@ -1893,7 +1966,7 @@ export default function LegacyHome() {
   );
   const storylineTimelineEvents = useMemo(
     () => publicTimelineEvents
-      .filter((event) => eventCoverageType(event) === 'Ongoing Story')
+      .filter((event) => eventCoverageType(event) === 'Ongoing Coverage')
       .sort((left, right) => (
         storylineSectionScore(right, timelineCurrentDateKey) - storylineSectionScore(left, timelineCurrentDateKey)
         || String(eventLatestDateKey(right)).localeCompare(String(eventLatestDateKey(left)))
@@ -1950,7 +2023,7 @@ export default function LegacyHome() {
       ))
       .filter((event) => (
         eventTypeFilter === 'all'
-        || (eventTypeFilter === 'ongoing' && eventCoverageType(event) === 'Ongoing Story')
+        || (eventTypeFilter === 'ongoing' && eventCoverageType(event) === 'Ongoing Coverage')
         || (eventTypeFilter === 'developing' && eventCoverageType(event) === 'Developing Event')
       ))
       .filter((event) => !query || coverageTextMatchesQuery([
@@ -1989,7 +2062,7 @@ export default function LegacyHome() {
     all: allCoverageStoryRows.length + publicTimelineEvents.length,
     stories: allCoverageStoryRows.length,
     developing: publicTimelineEvents.filter((event) => eventCoverageType(event) === 'Developing Event').length,
-    ongoing: publicTimelineEvents.filter((event) => eventCoverageType(event) === 'Ongoing Story').length,
+    ongoing: publicTimelineEvents.filter((event) => eventCoverageType(event) === 'Ongoing Coverage').length,
   }), [allCoverageStoryRows, publicTimelineEvents]);
   const coverageSearchResults = useMemo(() => {
     const query = timelineQuery.trim().toLowerCase();
@@ -2018,7 +2091,7 @@ export default function LegacyHome() {
     }
     publicTimelineEvents.forEach((event) => {
       const type = eventCoverageType(event);
-      const typeKey = type === 'Ongoing Story' ? 'ongoing' : 'developing';
+      const typeKey = type === 'Ongoing Coverage' ? 'ongoing' : 'developing';
       if (eventsSearchType !== 'all' && eventsSearchType !== typeKey) return;
       const entries = eventTimelineEntries(event);
       const searchable = [
@@ -2076,10 +2149,9 @@ export default function LegacyHome() {
       .sort((left, right) => right.score - left.score || right.mentions - left.mentions || left.label.localeCompare(right.label))
       .slice(0, 8);
   }, [allCoverageStoryRows, currentDateKey]);
-  const showDedicatedOngoingSection = storylineTimelineEvents.length >= 3;
   const exploreOngoingStories = useMemo(
-    () => (showDedicatedOngoingSection ? [] : storylineTimelineEvents.slice(0, 2)),
-    [showDedicatedOngoingSection, storylineTimelineEvents]
+    () => storylineTimelineEvents.slice(0, 3),
+    [storylineTimelineEvents]
   );
   const exploreTopics = useMemo(() => {
     const ongoingLabels = new Set(
@@ -2102,7 +2174,7 @@ export default function LegacyHome() {
   const eventsBrowseTitle = eventsBrowseMode === 'developing'
     ? 'Developing events'
     : eventsBrowseMode === 'ongoing'
-      ? 'Ongoing stories'
+      ? 'Ongoing coverage'
       : 'Latest updates';
   const featuredTimelineEvents = useMemo(
     () => latestTimelineEvents,
@@ -2320,17 +2392,25 @@ export default function LegacyHome() {
         setTimelineError('');
         setLoadingTimelines(true);
 
-        const data = await fetchFirstJson(
-          ['/Current_news/event_timelines.json', '/current_news/event_timelines.json'],
-          'event_timelines.json'
-        );
+        const [data, coverageData] = await Promise.all([
+          fetchFirstJson(
+            ['/Current_news/event_timelines.json', '/current_news/event_timelines.json'],
+            'event_timelines.json'
+          ),
+          fetchFirstJson(
+            ['/Current_news/coverage_collections.json', '/current_news/coverage_collections.json'],
+            'coverage_collections.json'
+          ).catch(() => ({ collections: [] })),
+        ]);
 
         const events = Array.isArray(data?.events) ? data.events : [];
         setTimelineEvents(events);
+        setCoverageCollections(Array.isArray(coverageData?.collections) ? coverageData.collections : []);
         setTimelinesGeneratedAt(data?.generated_at || '');
       } catch (e) {
         setTimelineError(e?.message || String(e));
         setTimelineEvents([]);
+        setCoverageCollections([]);
         setTimelinesGeneratedAt('');
       } finally {
         setLoadingTimelines(false);
@@ -2963,26 +3043,6 @@ export default function LegacyHome() {
           </nav>
 
           <div className="header-actions">
-            {activeCategory === 'top-stories' ? (
-              <div className="today-layout-switch is-header-control" role="group" aria-label="Today story layout">
-                <button
-                  className={todayLayout === 'rail' ? 'active' : ''}
-                  type="button"
-                  aria-pressed={todayLayout === 'rail'}
-                  onClick={() => setTodayLayout('rail')}
-                >
-                  Rail
-                </button>
-                <button
-                  className={todayLayout === 'cards' ? 'active' : ''}
-                  type="button"
-                  aria-pressed={todayLayout === 'cards'}
-                  onClick={() => setTodayLayout('cards')}
-                >
-                  Cards
-                </button>
-              </div>
-            ) : null}
             <button
               className="theme-toggle"
               type="button"
@@ -3037,6 +3097,26 @@ export default function LegacyHome() {
                       </span>
                     ) : null}
                   </div>
+                  {activeCategory === 'top-stories' ? (
+                    <div className="today-layout-switch" role="group" aria-label="Today story layout">
+                      <button
+                        className={todayLayout === 'rail' ? 'active' : ''}
+                        type="button"
+                        aria-pressed={todayLayout === 'rail'}
+                        onClick={() => setTodayLayout('rail')}
+                      >
+                        Rail
+                      </button>
+                      <button
+                        className={todayLayout === 'cards' ? 'active' : ''}
+                        type="button"
+                        aria-pressed={todayLayout === 'cards'}
+                        onClick={() => setTodayLayout('cards')}
+                      >
+                        Cards
+                      </button>
+                    </div>
+                  ) : null}
                 </div>
               ) : null}
             </header>
@@ -3045,7 +3125,7 @@ export default function LegacyHome() {
           {activeCategory === 'timelines' && eventsView === 'landing' && eventsSearchOpen ? (
             <section
               className="coverage-search-panel"
-              aria-label="Search Stories, Events, and Ongoing Stories"
+              aria-label="Search Stories, Events, and Ongoing Coverage"
               onKeyDown={(event) => {
                 if (event.key === 'Escape') setEventsSearchOpen(false);
               }}
@@ -3056,7 +3136,7 @@ export default function LegacyHome() {
                   type="search"
                   value={timelineQuery}
                   onChange={(event) => setTimelineQuery(event.target.value)}
-                  placeholder="Search Stories, Events, and Ongoing Stories"
+                  placeholder="Search Stories, Events, and Ongoing Coverage"
                   aria-label="Search coverage"
                   autoFocus
                 />
@@ -3067,7 +3147,7 @@ export default function LegacyHome() {
                   ['all', 'All', coverageSearchCounts.all],
                   ['stories', 'Stories', coverageSearchCounts.stories],
                   ['developing', 'Events', coverageSearchCounts.developing],
-                  ['ongoing', 'Ongoing stories', coverageSearchCounts.ongoing],
+                  ['ongoing', 'Ongoing coverage', coverageSearchCounts.ongoing],
                 ].map(([value, label, count]) => (
                   <button
                     type="button"
@@ -3122,7 +3202,7 @@ export default function LegacyHome() {
               {!loadingTimelines && timelineError ? (
                 <div className="weekly-roundup-empty">
                   <h3>The weekly briefing is unavailable</h3>
-                  <p>Muninn could not load the current event record. Please try again shortly.</p>
+                  <p>Please try again shortly. Your saved newsletter preferences are unaffected.</p>
                 </div>
               ) : null}
 
@@ -3138,17 +3218,20 @@ export default function LegacyHome() {
                   {weeklyRoundup.events.map(({ event, developments }, index) => {
                     const presentation = event?.presentation || {};
                     const stage = presentation.stage || event?.event_stage || 'developing_event';
-                    const stageLabel = presentation.stage_label || (stage === 'timeline' ? 'Timeline' : 'Developing event');
+                    const stageLabel = stage === 'timeline' || stage === 'ongoing_story'
+                      ? 'Ongoing story'
+                      : 'Developing event';
                     const sourceCount = Number(presentation.independent_source_count || presentation.source_count || 0);
+                    const readerSummary = eventReaderSummary(event);
                     return (
                       <article className={`weekly-event-card ${index < 3 ? 'is-leading' : ''}`} key={event.event_id || event.title}>
                         <div className="weekly-event-card-heading">
                           <span className={`weekly-event-stage event-stage-${stage}`}>{stageLabel}</span>
                           <span>{developments.length} distinct development{developments.length === 1 ? '' : 's'} this week</span>
                         </div>
-                        <h3>{event.canonical_title || event.title || 'Tracked event'}</h3>
-                        {presentation.context_summary || event.summary ? (
-                          <p className="weekly-event-context">{truncateText(presentation.context_summary || event.summary, 320)}</p>
+                        <h3>{eventDisplayTitle(event)}</h3>
+                        {readerSummary ? (
+                          <p className="weekly-event-context">{truncateText(readerSummary, 320)}</p>
                         ) : null}
                         <ol className="weekly-development-list">
                           {developments.map((entry, entryIndex) => (
@@ -3336,8 +3419,8 @@ export default function LegacyHome() {
 
             {!loading && error && (
               <div className="news-item">
-                <h3>Error loading news</h3>
-                <p>{error}</p>
+                <h3>Today’s briefing is temporarily unavailable</h3>
+                <p>Please refresh in a moment.</p>
               </div>
             )}
 
@@ -3650,11 +3733,8 @@ export default function LegacyHome() {
 
             {!loadingTimelines && timelineError && (
               <div className="news-item">
-                <h3>No event file published yet</h3>
-                <p>
-                  The Events tab reads <code>/Current_news/event_timelines.json</code>. Run the daily pipeline once
-                  after the event-memory changes are deployed, then refresh this page.
-                </p>
+                <h3>Events are temporarily unavailable</h3>
+                <p>Please refresh in a moment. Today’s stories are still available.</p>
               </div>
             )}
 
@@ -3680,20 +3760,12 @@ export default function LegacyHome() {
                   relatedStories={eventStoryById}
                   browseType="developing"
                 />
-                {showDedicatedOngoingSection ? (
-                  <EventsSwipeSection
-                    title="Ongoing stories"
-                    items={storylineTimelineEvents}
-                    relatedStories={eventStoryById}
-                    browseType="ongoing"
-                  />
-                ) : null}
                 {exploreOngoingStories.length || exploreTopics.length ? (
                   <section className="events-explore-section" aria-labelledby="events-explore-title">
                     <header>
                       <div>
                         <h2 id="events-explore-title">Explore</h2>
-                        <p>Follow a subject or return to a long-running story.</p>
+                        <p>Follow a subject or return to long-running coverage.</p>
                       </div>
                     </header>
                     {exploreOngoingStories.length ? (
@@ -3704,10 +3776,10 @@ export default function LegacyHome() {
                           <a
                             className="events-explore-item is-ongoing"
                             href={`/timeline.html?event=${encodeURIComponent(event.event_id)}`}
-                            aria-label={`Open ongoing story: ${title}`}
+                            aria-label={`Open ongoing coverage: ${title}`}
                             key={`ongoing:${event.event_id || title}`}
                           >
-                            <span>Ongoing story</span>
+                            <span>Ongoing coverage</span>
                             <strong>{title}</strong>
                             <span aria-hidden="true">{'\u2192'}</span>
                           </a>
@@ -3753,7 +3825,7 @@ export default function LegacyHome() {
                       {[
                         ['all', 'All updates', publicTimelineEvents.length],
                         ['developing', 'Events', eventCoverageSummary.developing],
-                        ['ongoing', 'Ongoing stories', eventCoverageSummary.ongoing],
+                        ['ongoing', 'Ongoing coverage', eventCoverageSummary.ongoing],
                       ].map(([value, label, count]) => (
                         <button
                           type="button"
@@ -3799,7 +3871,7 @@ export default function LegacyHome() {
                     {eventsBrowseMode === 'latest'
                       ? (filteredTimelineEvents.length === 1 ? 'current update' : 'current updates')
                       : eventsBrowseMode === 'ongoing'
-                        ? (filteredTimelineEvents.length === 1 ? 'ongoing story' : 'ongoing stories')
+                        ? 'ongoing coverage'
                         : (filteredTimelineEvents.length === 1 ? 'developing event' : 'developing events')}
                   </span>
                 </div>
@@ -3865,10 +3937,10 @@ export default function LegacyHome() {
                       <p>Pure recency first, with editorial weight breaking ties between updates published together.</p>
                     </div>
                     <CoverageRail
-                      label="latest Event and Ongoing Story updates"
+                      label="latest Event and Ongoing Coverage updates"
                       itemCount={featuredTimelineEvents.length}
                       className="coverage-rail-featured"
-                      metaText={`${featuredTimelineEvents.length} newest changes · Events and Ongoing Stories`}
+                      metaText={`${featuredTimelineEvents.length} newest changes · Events and Ongoing Coverage`}
                     >
                       {featuredTimelineEvents.map((event) => {
                         const entries = eventTimelineEntries(event);
@@ -3914,16 +3986,16 @@ export default function LegacyHome() {
                   <div className="event-section-heading">
                     <div>
                       <span>Long-running coverage</span>
-                      <h2 id="event-storylines-title">Ongoing Stories</h2>
+                      <h2 id="event-storylines-title">Ongoing Coverage</h2>
                     </div>
                     <p>Ranked by editorial importance, then freshness and the depth of the record.</p>
                   </div>
                   {storylineTimelineEvents.length ? (
                     <CoverageRail
-                      label="Ongoing Stories"
+                      label="Ongoing Coverage"
                       itemCount={storylineTimelineEvents.length}
                       className="coverage-rail-storylines"
-                      metaText={`${storylineTimelineEvents.length} ${storylineTimelineEvents.length === 1 ? 'Ongoing Story' : 'Ongoing Stories'} · significance + freshness`}
+                      metaText={`${storylineTimelineEvents.length} coverage collection${storylineTimelineEvents.length === 1 ? '' : 's'} · significance + freshness`}
                     >
                       {storylineTimelineEvents.map((event) => {
                         const entries = eventTimelineEntries(event);
@@ -3940,7 +4012,7 @@ export default function LegacyHome() {
                             <div className="coverage-new-copy">
                               <div className="event-card-labels">
                                 <span className="story-desk-label">{category}</span>
-                                <span className="story-tracked-label">Ongoing Story</span>
+                                <span className="story-tracked-label">Ongoing Coverage</span>
                               </div>
                               <h3>{eventDisplayTitle(event)}</h3>
                               <p>{latest.title || 'Latest development available'}</p>
@@ -3955,7 +4027,7 @@ export default function LegacyHome() {
                     </CoverageRail>
                   ) : (
                     <div className="event-section-empty">
-                      <p>No Ongoing Stories are public yet. Confirmed long-running coverage will appear here.</p>
+                      <p>No Ongoing Coverage is public yet. Confirmed long-running coverage will appear here.</p>
                     </div>
                   )}
                 </section>
@@ -4333,8 +4405,8 @@ export default function LegacyHome() {
 
             {!loadingHappy && happyError && (
               <div className="news-item">
-                <h3>Error loading happy news</h3>
-                <p>{happyError}</p>
+                <h3>Good news is temporarily unavailable</h3>
+                <p>Please refresh in a moment.</p>
               </div>
             )}
 
@@ -4374,8 +4446,8 @@ export default function LegacyHome() {
 
             {!loadingAi && aiError && (
               <div className="news-item">
-                <h3>Error loading AI news</h3>
-                <p>{aiError}</p>
+                <h3>AI news is temporarily unavailable</h3>
+                <p>Please refresh in a moment.</p>
               </div>
             )}
 
@@ -4442,8 +4514,8 @@ export default function LegacyHome() {
 
             {!loadingHealth && healthError && (
               <div className="news-item">
-                <h3>Error loading health news</h3>
-                <p>{healthError}</p>
+                <h3>Health news is temporarily unavailable</h3>
+                <p>Please refresh in a moment.</p>
               </div>
             )}
 

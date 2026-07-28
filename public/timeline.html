@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Muninn - Timeline</title>
+		<title>Muninn - Event</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="theme-color" content="#17252d" />
@@ -11,57 +11,77 @@
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 		<link rel="mask-icon" href="/brand/muninn-mask.svg" color="#286a7a" />
 		<link rel="manifest" href="/site.webmanifest" />
+		<script>
+			(function () {
+				var storageKey = 'muninn-theme';
+				var savedTheme = null;
+				try { savedTheme = localStorage.getItem(storageKey); } catch (_error) {}
+				var theme = savedTheme === 'dark' || savedTheme === 'light'
+					? savedTheme
+					: (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+				document.documentElement.dataset.theme = theme;
+				document.addEventListener('DOMContentLoaded', function () {
+					var toggle = document.getElementById('theme-toggle');
+					var themeColor = document.querySelector('meta[name="theme-color"]');
+					function syncThemeControl() {
+						var isDark = document.documentElement.dataset.theme === 'dark';
+						if (toggle) {
+							toggle.setAttribute('aria-pressed', String(isDark));
+							var label = toggle.querySelector('.theme-toggle-label');
+							if (label) label.textContent = isDark ? 'Light' : 'Dark';
+						}
+						if (themeColor) themeColor.setAttribute('content', isDark ? '#11191e' : '#f3f5f4');
+					}
+					if (toggle) toggle.addEventListener('click', function () {
+						var nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+						document.documentElement.dataset.theme = nextTheme;
+						try { localStorage.setItem(storageKey, nextTheme); } catch (_error) {}
+						syncThemeControl();
+					});
+					syncThemeControl();
+				});
+			})();
+		</script>
 		<link rel="stylesheet" href="/assets/css/main.css" />
 		<link rel="stylesheet" href="/assets/css/event-experience.css" />
 		<noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
-		<style>
-			#header { height: 12rem; min-height: 0; }
-			#main > .post { padding-top: 3rem; }
-			.timeline-shell { max-width: 980px; margin: 0 auto; color: #171a1f; }
-			.timeline-back { display: inline-block; margin-bottom: 1.5rem; color: #4c5966; text-decoration: none; font-weight: 700; }
-			.timeline-hero { padding: 2rem; border: 1px solid #d9dee3; border-radius: 18px; background: #f1f3f5; }
-			.timeline-kicker { color: #167f9e; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; }
-			.timeline-hero h1 { margin: 0.45rem 0 0.8rem; font-size: clamp(2rem, 5vw, 3.6rem); line-height: 1.05; text-transform: none; }
-			.timeline-hero p { margin-bottom: 0; font-size: 1.05rem; line-height: 1.65; }
-			.timeline-stats { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.4rem; }
-			.timeline-stat { padding: 0.45rem 0.75rem; border: 1px solid #cfd6dc; border-radius: 999px; background: #fff; font-size: 0.78rem; font-weight: 700; }
-			.timeline-search { margin: 1.5rem 0; padding: 1.25rem; border: 1px solid #d9dee3; border-radius: 14px; background: #fff; }
-			.timeline-search label { display: block; margin-bottom: 0.45rem; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
-			.timeline-search input { width: 100%; margin: 0; border: 1px solid #bfc8d1; border-radius: 10px; background: #fff; color: #171a1f; }
-			.search-results { display: grid; gap: 0.55rem; margin-top: 0.8rem; }
-			.search-result { display: block; padding: 0.8rem 0.9rem; border-radius: 10px; background: #f1f3f5; color: #202832; text-decoration: none; font-weight: 700; }
-			.timeline-nodes { position: relative; margin: 2.5rem 0 3rem 0.65rem; padding-left: 2rem; border-left: 3px solid #18a9d3; }
-			.timeline-node { position: relative; margin-bottom: 1.25rem; padding: 1.35rem 1.45rem; border: 1px solid #d9dee3; border-radius: 14px; background: #fff; box-shadow: 0 5px 16px rgba(20, 27, 36, 0.06); }
-			.timeline-node::before { content: ''; position: absolute; left: -2.55rem; top: 1.7rem; width: 0.85rem; height: 0.85rem; border-radius: 50%; background: #18a9d3; box-shadow: 0 0 0 5px #e2f5fa; }
-			.node-date { color: #596674; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; }
-			.node-type { margin-left: 0.5rem; color: #167f9e; }
-			.timeline-node h2 { margin: 0.3rem 0 0.55rem; font-size: 1.25rem; line-height: 1.3; text-transform: none; }
-			.timeline-node p { margin-bottom: 0.8rem; line-height: 1.6; }
-			.node-sources a { margin-right: 0.7rem; font-size: 0.82rem; font-weight: 700; }
-			.related-panel { padding: 1.5rem; border-radius: 14px; background: #f1f3f5; }
-			.related-panel h2 { margin: 0 0 0.9rem; font-size: 1.15rem; text-transform: none; }
-			.related-link { display: inline-block; margin: 0.35rem 0.4rem 0 0; padding: 0.55rem 0.85rem; border: 1px solid #cbd3da; border-radius: 999px; background: #fff; color: #26323d; text-decoration: none; font-size: 0.85rem; font-weight: 700; }
-			.timeline-message { padding: 3rem 1rem; text-align: center; }
-			@media screen and (max-width: 736px) {
-				#header { height: 8rem; }
-				#main > .post { padding-top: 2rem; }
-				.timeline-hero { padding: 1.35rem; }
-				.timeline-nodes { padding-left: 1.25rem; }
-				.timeline-node::before { left: -1.8rem; }
-			}
-		</style>
+		<link rel="stylesheet" href="/assets/css/story-redesign.css" />
+		<link rel="stylesheet" href="/assets/css/detail-pages.css" />
+		<link rel="stylesheet" href="/assets/css/coverage-experience.css" />
 	</head>
-	<body class="is-preload">
-		<div id="wrapper" class="fade-in">
-			<header id="header"><a href="/" class="logo"><img src="/brand/muninn-mark-dark.svg" alt="" width="34" height="34" style="width:1.7em;height:1.7em;vertical-align:middle;margin-right:.55em" />Muninn</a></header>
-			<div id="main">
-				<section class="post">
-					<div class="timeline-shell" id="timeline-content"><div class="timeline-message">Loading timeline...</div></div>
+	<body class="is-preload muninn-story-page muninn-detail-page muninn-event-page">
+		<div id="wrapper" class="muninn-story-shell">
+			<header class="app-header">
+				<div class="app-header-inner">
+					<a href="/" class="brand-lockup">
+						<span class="brand-mark" aria-hidden="true"><img class="brand-logo" src="/brand/muninn-mark.svg" alt="" /></span>
+						<span><strong>Muninn</strong><small>News, Simplified.</small></span>
+					</a>
+					<nav class="primary-navigation" aria-label="Primary navigation">
+						<ul>
+							<li><a href="/">Today</a></li>
+							<li class="active"><a href="/?category=timelines" aria-current="page">Events</a></li>
+							<li><a href="/?category=your-newsletter">Newsletter</a></li>
+						</ul>
+					</nav>
+					<div class="header-actions">
+						<button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false">
+							<span class="theme-toggle-icon" aria-hidden="true"></span>
+							<span class="theme-toggle-label">Dark</span>
+						</button>
+					</div>
+				</div>
+			</header>
+			<main id="main" class="story-main">
+				<section class="post story-view">
+					<div class="timeline-shell detail-container" id="timeline-content"><div class="timeline-message">Loading event...</div></div>
 				</section>
-			</div>
+			</main>
 			<div id="copyright"><ul><li>&copy; Muninn</li></ul></div>
 		</div>
 		<script src="/assets/js/jquery.min.js"></script>
+		<script src="/assets/js/jquery.scrollex.min.js"></script>
+		<script src="/assets/js/jquery.scrolly.min.js"></script>
 		<script src="/assets/js/browser.min.js"></script>
 		<script src="/assets/js/breakpoints.min.js"></script>
 		<script src="/assets/js/util.js"></script>
@@ -69,76 +89,65 @@
 		<script src="/assets/js/event-experience.js"></script>
 		<script>
 			(function () {
-				function escapeHtml(value) {
-					return String(value || '').replace(/&/g, '&amp;').replace(/</g, '&lt;')
-						.replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;');
+				function syntheticCoverage(event) {
+					var presentation = event.presentation || {};
+					var timeline = Array.isArray(event.timeline) ? event.timeline : [];
+					var latest = timeline[timeline.length - 1] || {};
+					var overview = event.event_overview || {};
+					var suppliedSummary = event.event_summary || {};
+					return {
+						coverage_id: 'legacy-coverage-' + (event.event_id || ''),
+						legacy_event_id: event.event_id || '',
+						title: presentation.base_title || event.topic_label || event.canonical_title || event.title || 'Ongoing coverage',
+						coverage_begins: presentation.first_date || (timeline[0] || {}).date || '',
+						verified_through: presentation.latest_date || latest.date || '',
+						overview: overview.summary || (typeof suppliedSummary === 'string' ? suppliedSummary : suppliedSummary.summary) || event.summary || '',
+						current_status: latest.summary || '',
+						child_events: []
+					};
 				}
-				function eventUrl(eventId) { return '/timeline.html?event=' + encodeURIComponent(eventId || ''); }
-				function formatTimelineDate(value) {
-					if (!value) return 'Date unavailable';
-					var parsed = new Date(String(value).length === 10 ? value + 'T12:00:00Z' : value);
-					if (isNaN(parsed.getTime())) return String(value);
-					return parsed.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
-				}
-				function safeHttpUrl(value) {
-					try {
-						var parsed = new URL(String(value || ''), window.location.origin);
-						return parsed.protocol === 'http:' || parsed.protocol === 'https:' ? parsed.href : '#';
-					} catch (_error) { return '#'; }
-				}
-				function sourceLabelForUrl(value, sourceNames) {
-					var host = '';
-					try { host = new URL(String(value || '')).hostname.toLowerCase().replace(/^www\./, ''); } catch (_error) { return 'Original source'; }
-					var known = [
-						['abcnews', 'ABC News'], ['bbc.', 'BBC'], ['cbsnews', 'CBS News'], ['nbcnews', 'NBC News'],
-						['theguardian', 'The Guardian'], ['reuters', 'Reuters'], ['apnews', 'AP News'],
-						['politico', 'Politico'], ['nytimes', 'The New York Times'], ['washingtonpost', 'The Washington Post'],
-					];
-					var knownMatch = known.find(function (item) { return host.indexOf(item[0]) !== -1; });
-					if (knownMatch) return knownMatch[1];
-					var matchingName = (sourceNames || []).find(function (name) {
-						var key = String(name || '').toLowerCase().replace(/[^a-z0-9]/g, '');
-						return key.length >= 3 && host.replace(/[^a-z0-9]/g, '').indexOf(key) !== -1;
-					});
-					return matchingName || host.split('.')[0].replace(/[-_]/g, ' ').replace(/\b\w/g, function (letter) { return letter.toUpperCase(); });
-				}
-				function renderSearch(events) {
-					return '<div class="timeline-search"><label for="timeline-search-input">Search events</label>' +
-						'<input id="timeline-search-input" type="search" placeholder="Try Iran, Hormuz, elections..." autocomplete="off" />' +
-						'<div class="search-results" id="timeline-search-results"></div></div>';
-				}
-				function bindSearch(events) {
-					var input = document.getElementById('timeline-search-input');
-					var results = document.getElementById('timeline-search-results');
-					if (!input || !results) return;
-					input.addEventListener('input', function () {
-						var query = input.value.trim().toLowerCase();
-						if (query.length < 2) { results.innerHTML = ''; return; }
-						var matches = events.filter(function (event) {
-							var haystack = [event.title, event.canonical_title, event.latest_title, event.search_text, (event.entities || []).join(' ')].join(' ').toLowerCase();
-							return haystack.indexOf(query) !== -1;
-						}).slice(0, 6);
-						results.innerHTML = matches.length ? matches.map(function (event) {
-							return '<a class="search-result" href="' + eventUrl(event.event_id) + '">' + escapeHtml(event.canonical_title || event.title) + '</a>';
-						}).join('') : '<div class="timeline-meta">No matching continuing stories.</div>';
-					});
-				}
-				function renderEvent(event, events) {
-					var html = '<a class="timeline-back" href="/?category=timelines">&larr; Back to events</a><div id="event-experience-page"></div>' + renderSearch(events);
+
+				function renderEvent(event, coverage, events, parentCoverage, parentMember) {
+					var html = '<a class="timeline-back detail-back" href="/?category=timelines">&larr; Back to events</a><div id="event-experience-page"></div>';
 					document.getElementById('timeline-content').innerHTML = html;
-					window.MuninnEventExperience.mount('#event-experience-page', { event: event, mode: 'page' });
-					bindSearch(events);
+					document.title = 'Muninn - ' + ((coverage && coverage.title) || (parentMember && parentMember.title) || (event.presentation || {}).base_title || event.topic_label || event.canonical_title || event.title || 'Event');
+					window.MuninnEventExperience.mount('#event-experience-page', {
+						event: event,
+						coverage: coverage || null,
+						allEvents: events,
+						parentCoverage: parentCoverage || null,
+						titleOverride: parentMember && parentMember.title || '',
+						summaryOverride: parentMember && parentMember.summary || '',
+						mode: 'page'
+					});
 				}
-				var eventId = new URLSearchParams(window.location.search).get('event') || '';
-				$.getJSON('/Current_news/event_timelines.json').done(function (data) {
+
+				function resolvePage(data, coverageData) {
 					var events = Array.isArray(data.events) ? data.events : [];
+					var collections = Array.isArray(coverageData && coverageData.collections) ? coverageData.collections : [];
 					var event = events.find(function (item) { return item.event_id === eventId; });
 					if (!event) {
-						document.getElementById('timeline-content').innerHTML = '<a class="timeline-back" href="/?category=timelines">&larr; Back to events</a><div class="timeline-message"><h1>Event not available</h1><p>This story may not have enough verified developments yet.</p></div>' + renderSearch(events);
-						bindSearch(events);
+						document.getElementById('timeline-content').innerHTML = '<a class="timeline-back detail-back" href="/?category=timelines">&larr; Back to events</a><div class="timeline-message"><h1>Event not available</h1><p>This story may not have enough verified developments yet.</p></div>';
 						return;
 					}
-					renderEvent(event, events);
+					var coverage = collections.find(function (item) { return item.legacy_event_id === eventId; }) || null;
+					var parentCoverage = collections.find(function (item) {
+						return (item.child_events || []).some(function (member) { return member.event_id === eventId; });
+					}) || null;
+					var parentMember = parentCoverage
+						? (parentCoverage.child_events || []).find(function (member) { return member.event_id === eventId; }) || null
+						: null;
+					if (!coverage && !parentCoverage && (event.presentation || {}).stage === 'timeline') {
+						coverage = syntheticCoverage(event);
+					}
+					renderEvent(event, coverage, events, parentCoverage, parentMember);
+				}
+
+				var eventId = new URLSearchParams(window.location.search).get('event') || '';
+				$.getJSON('/Current_news/event_timelines.json').done(function (data) {
+					$.getJSON('/Current_news/coverage_collections.json')
+						.done(function (coverageData) { resolvePage(data, coverageData); })
+						.fail(function () { resolvePage(data, { collections: [] }); });
 				}).fail(function () {
 					document.getElementById('timeline-content').innerHTML = '<div class="timeline-message"><h1>Unable to load timelines</h1><p>Please try again later.</p></div>';
 				});

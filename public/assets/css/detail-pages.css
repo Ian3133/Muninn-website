@@ -1,0 +1,629 @@
+/* Shared detail-page system for daily stories and tracked events. */
+
+body.muninn-detail-page #copyright {
+  margin: 0;
+  padding: 1.25rem var(--gutter) 2rem;
+  color: var(--muted);
+}
+
+body.muninn-detail-page #copyright ul {
+  margin: 0;
+}
+
+body.muninn-detail-page .detail-container,
+body.muninn-detail-page .story-container {
+  width: 100%;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+}
+
+body.muninn-detail-page .detail-back,
+body.muninn-detail-page .back-button {
+  display: inline-flex;
+  width: fit-content;
+  min-height: 2.5rem;
+  align-items: center;
+  margin: 0 0 clamp(1.25rem, 2.5vw, 2rem);
+  padding: .6rem .82rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink-soft) !important;
+  font-family: var(--sans);
+  font-size: .72rem;
+  font-weight: 800;
+  line-height: 1;
+  text-decoration: none;
+}
+
+body.muninn-detail-page .detail-back:hover,
+body.muninn-detail-page .detail-back:focus-visible,
+body.muninn-detail-page .back-button:hover,
+body.muninn-detail-page .back-button:focus-visible {
+  border-color: var(--teal);
+  background: var(--teal-soft);
+  color: var(--teal-dark) !important;
+}
+
+body.muninn-detail-page .story-eyebrow,
+body.muninn-detail-page .story-written-date,
+body.muninn-detail-page .event-experience-kicker,
+body.muninn-detail-page .event-lead-label,
+body.muninn-detail-page .event-rail-eyebrow {
+  color: var(--teal) !important;
+  font-family: var(--sans);
+  font-size: .68rem;
+  font-weight: 850;
+  letter-spacing: .09em;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+body.muninn-detail-page h2.story-section-label,
+body.muninn-detail-page h2.event-lead-label {
+  margin: 0 0 .55rem;
+  font-family: var(--sans);
+  font-size: .68rem;
+  line-height: 1.25;
+}
+
+body.muninn-detail-page .story-title,
+body.muninn-detail-page .event-experience-header {
+  max-width: 62rem;
+}
+
+body.muninn-detail-page .story-title h1,
+body.muninn-detail-page .event-experience-title {
+  margin: 0;
+  color: var(--ink) !important;
+  font-family: var(--serif);
+  font-size: clamp(2.4rem, 4.25vw, 4rem) !important;
+  font-weight: 700;
+  letter-spacing: -.045em !important;
+  line-height: 1.02 !important;
+  text-transform: none;
+}
+
+body.muninn-detail-page .story-meta-chip,
+body.muninn-detail-page .event-stat {
+  display: inline-flex;
+  min-height: 2rem;
+  align-items: center;
+  padding: .42rem .68rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: .68rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+body.muninn-detail-page .story-meta-row,
+body.muninn-detail-page .event-experience-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-top: 1rem;
+}
+
+body.muninn-detail-page a.story-event-chip {
+  color: var(--teal-dark) !important;
+  text-decoration: none;
+}
+
+body.muninn-detail-page a.story-event-chip:hover,
+body.muninn-detail-page a.story-event-chip:focus-visible {
+  border-color: var(--teal);
+  background: var(--teal-soft);
+}
+
+/* Story lead */
+
+body.muninn-story-page.muninn-detail-page .story-written-date {
+  display: block;
+  margin-bottom: .55rem;
+}
+
+body.muninn-story-page.muninn-detail-page .story-title {
+  margin-bottom: .85rem !important;
+}
+
+body.muninn-story-page.muninn-detail-page .story-meta-row {
+  margin-bottom: clamp(1.25rem, 2.5vw, 1.8rem) !important;
+}
+
+body.muninn-story-page.muninn-detail-page .story-content-wrapper {
+  display: grid !important;
+  overflow: hidden;
+  grid-template-columns: minmax(0, 1.32fr) minmax(18rem, .68fr);
+  gap: 0 !important;
+  margin-bottom: clamp(1.5rem, 3vw, 2.25rem) !important;
+  padding: 0 !important;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+}
+
+body.muninn-story-page.muninn-detail-page .story-content-wrapper > .story-header-text {
+  display: block !important;
+  min-height: 100%;
+  padding: clamp(1.2rem, 2.4vw, 1.8rem) !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+body.muninn-story-page.muninn-detail-page .story-content-wrapper > .story-image-frame {
+  position: relative;
+  float: none !important;
+  width: 100% !important;
+  min-height: 100%;
+  margin: 0 !important;
+  aspect-ratio: auto;
+  background: var(--surface-muted);
+}
+
+body.muninn-story-page.muninn-detail-page .story-content-wrapper > .story-image-frame .story-image {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 22rem;
+  max-height: none;
+  aspect-ratio: auto;
+  object-fit: cover !important;
+}
+
+body.muninn-story-page.muninn-detail-page .story-image-role {
+  position: absolute;
+  right: .75rem;
+  bottom: .75rem;
+  margin: 0;
+  border-color: rgba(255, 255, 255, .72);
+  background: rgba(23, 37, 45, .78);
+  color: #fff;
+  backdrop-filter: blur(8px);
+}
+
+body.muninn-story-page.muninn-detail-page .story-summary {
+  color: var(--ink-soft) !important;
+  font-family: var(--serif);
+  font-size: clamp(1.08rem, 1.55vw, 1.3rem) !important;
+  line-height: 1.62 !important;
+}
+
+body.muninn-story-page.muninn-detail-page .story-header-text .story-explore {
+  margin: 1.2rem 0 0 !important;
+  padding: 1rem 0 0 !important;
+  border: 0 !important;
+  border-top: 1px solid var(--border) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+/* Event lead */
+
+body.muninn-event-page .event-experience {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: var(--ink);
+}
+
+body.muninn-event-page .event-experience-header {
+  gap: .5rem;
+  margin-bottom: clamp(1.25rem, 2.5vw, 1.8rem);
+}
+
+body.muninn-event-page .event-experience-stats {
+  margin-top: .7rem;
+}
+
+body.muninn-event-page .event-lead-card {
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: minmax(0, 1.32fr) minmax(18rem, .68fr);
+  margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+}
+
+body.muninn-event-page .event-lead-card-no-image {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+body.muninn-event-page .event-lead-copy {
+  padding: clamp(1.2rem, 2.4vw, 1.8rem);
+}
+
+body.muninn-event-page .event-lead-summary {
+  margin: .55rem 0 0;
+  color: var(--ink-soft);
+  font-family: var(--serif);
+  font-size: clamp(1.08rem, 1.55vw, 1.3rem);
+  line-height: 1.62;
+}
+
+body.muninn-event-page .event-latest-update {
+  margin-top: 1.2rem;
+  padding: 1rem;
+  border-left: 3px solid var(--teal);
+  background: var(--teal-soft);
+}
+
+body.muninn-event-page .event-latest-label {
+  margin-bottom: .4rem;
+  color: var(--teal-dark);
+  font-size: .66rem;
+  font-weight: 850;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+body.muninn-event-page .event-latest-update a {
+  display: block;
+  border-bottom: 0;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  font-weight: 700;
+  line-height: 1.3;
+  text-decoration: none;
+}
+
+body.muninn-event-page .event-latest-update a:hover,
+body.muninn-event-page .event-latest-update a:focus-visible {
+  color: var(--teal-dark);
+  text-decoration: underline;
+}
+
+body.muninn-event-page .event-lead-image {
+  position: relative;
+  min-height: 100%;
+  margin: 0;
+  background: var(--surface-muted);
+}
+
+body.muninn-event-page .event-lead-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 24rem;
+  object-fit: cover;
+}
+
+body.muninn-event-page .event-lead-image figcaption {
+  position: absolute;
+  right: .75rem;
+  bottom: .75rem;
+  padding: .28rem .52rem;
+  border: 1px solid rgba(255, 255, 255, .72);
+  border-radius: 999px;
+  background: rgba(23, 37, 45, .78);
+  color: #fff;
+  font-size: .6rem;
+  font-weight: 850;
+  letter-spacing: .055em;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+}
+
+body.muninn-event-page .event-overview-details {
+  margin-top: 1rem;
+  padding-top: .9rem;
+  border-top: 1px solid var(--border);
+}
+
+body.muninn-event-page .event-overview-details summary {
+  color: var(--teal-dark);
+  font-size: .72rem;
+  font-weight: 850;
+  cursor: pointer;
+}
+
+body.muninn-event-page .event-overview-facts {
+  margin-top: .85rem;
+}
+
+/* One slider language across event and story pages */
+
+body.muninn-event-page .event-rail-region,
+body.muninn-story-page .story-event-timeline {
+  overflow: hidden;
+  margin: 0 0 clamp(1.5rem, 3vw, 2.25rem);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+}
+
+body.muninn-event-page .event-rail-region {
+  padding: clamp(1rem, 2vw, 1.35rem);
+  scroll-margin-top: 6rem;
+}
+
+body.muninn-event-page .event-rail-label {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: .9rem;
+}
+
+body.muninn-event-page .event-rail-label > div:first-child {
+  display: grid;
+  gap: .2rem;
+}
+
+body.muninn-event-page .event-rail-label h2 {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+  font-weight: 700;
+  letter-spacing: -.02em;
+  line-height: 1.2;
+  text-transform: none;
+}
+
+body.muninn-event-page .event-rail-hint {
+  color: var(--muted);
+  font-size: .7rem;
+}
+
+body.muninn-event-page .event-rail-controls {
+  display: flex;
+  gap: .45rem;
+}
+
+body.muninn-event-page .event-rail-controls button {
+  display: inline-flex;
+  width: 2.5rem;
+  height: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--ink-soft);
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+body.muninn-event-page .event-rail-controls button:hover,
+body.muninn-event-page .event-rail-controls button:focus-visible {
+  border-color: var(--teal);
+  background: var(--teal-soft);
+  color: var(--teal-dark);
+}
+
+body.muninn-event-page .event-rail-controls button:disabled {
+  border-color: var(--border);
+  background: var(--surface-muted);
+  color: var(--muted);
+  cursor: default;
+  opacity: .42;
+}
+
+body.muninn-event-page .event-rail-scroll {
+  margin: 0;
+  padding: .15rem .1rem .8rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x proximity;
+}
+
+body.muninn-event-page .event-rail {
+  display: grid;
+  min-width: max-content;
+  grid-auto-columns: minmax(15rem, 18rem);
+  grid-auto-flow: column;
+  align-items: stretch;
+  gap: .85rem;
+}
+
+body.muninn-event-page .event-rail-item {
+  display: block;
+  min-width: 0;
+  padding: 0;
+  scroll-snap-align: start;
+}
+
+body.muninn-event-page .event-rail-item::before,
+body.muninn-event-page .event-node-button::before {
+  display: none;
+}
+
+body.muninn-event-page .event-node-button {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: 10.5rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .55rem;
+  margin: 0;
+  padding: .9rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--ink-soft);
+  text-align: left;
+}
+
+body.muninn-event-page .event-node-button:hover,
+body.muninn-event-page .event-node-button:focus-visible,
+body.muninn-event-page .event-node-button[aria-selected="true"] {
+  border-color: var(--teal);
+  background: var(--teal-soft);
+  color: var(--ink);
+  box-shadow: none;
+}
+
+body.muninn-event-page .event-node-date {
+  margin: 0;
+  color: var(--teal-dark);
+  font-size: .64rem;
+}
+
+body.muninn-event-page .event-node-name {
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.28;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
+body.muninn-event-page .event-node-current,
+body.muninn-event-page .event-node-backfill {
+  margin-top: auto;
+}
+
+body.muninn-event-page .event-development {
+  min-height: 0;
+  margin-top: .25rem;
+  padding: clamp(1rem, 2vw, 1.35rem);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface-muted);
+}
+
+body.muninn-event-page .event-development h3 {
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+}
+
+body.muninn-event-page .event-development p,
+body.muninn-event-page .event-key-facts {
+  color: var(--ink-soft);
+}
+
+body.muninn-event-page .event-experience-actions {
+  margin-top: 0;
+}
+
+body.muninn-event-page .event-action {
+  border-color: var(--ink);
+  border-radius: 999px;
+  background: var(--ink);
+}
+
+body.muninn-event-page .event-summary-panel,
+body.muninn-event-page .event-related {
+  border-color: var(--border);
+  background: var(--surface);
+}
+
+/* Make the story's embedded event rail feel like the full event rail. */
+
+body.muninn-story-page .event-storyline-header {
+  padding: 1.1rem 1.2rem;
+}
+
+body.muninn-story-page .event-storyline-heading {
+  margin: 0;
+  line-height: 1;
+}
+
+body.muninn-story-page .event-storyline-scroll {
+  padding: 0 1.2rem 1.1rem;
+  scroll-snap-type: x proximity;
+}
+
+body.muninn-story-page .event-storyline-track {
+  grid-auto-columns: minmax(15rem, 18rem);
+  gap: .85rem;
+}
+
+body.muninn-story-page .event-storyline-card {
+  min-height: 10.5rem !important;
+  scroll-snap-align: start;
+}
+
+body.muninn-story-page .event-storyline-detail {
+  padding: 1.1rem 1.2rem;
+}
+
+html[data-theme="dark"] body.muninn-event-page .event-lead-card,
+html[data-theme="dark"] body.muninn-event-page .event-rail-region,
+html[data-theme="dark"] body.muninn-event-page .event-node-button,
+html[data-theme="dark"] body.muninn-event-page .event-development,
+html[data-theme="dark"] body.muninn-event-page .event-summary-panel {
+  color: var(--ink-soft);
+}
+
+@media screen and (max-width: 760px) {
+  body.muninn-detail-page .story-title h1,
+  body.muninn-detail-page .event-experience-title {
+    font-size: clamp(2rem, 10vw, 3rem) !important;
+  }
+
+  body.muninn-story-page.muninn-detail-page .story-content-wrapper,
+  body.muninn-event-page .event-lead-card {
+    grid-template-columns: 1fr;
+  }
+
+  body.muninn-story-page.muninn-detail-page .story-content-wrapper > .story-header-text,
+  body.muninn-event-page .event-lead-copy {
+    order: 1;
+  }
+
+  body.muninn-story-page.muninn-detail-page .story-content-wrapper > .story-image-frame,
+  body.muninn-event-page .event-lead-image {
+    min-height: 0;
+    order: 2;
+  }
+
+  body.muninn-story-page.muninn-detail-page .story-content-wrapper > .story-image-frame .story-image,
+  body.muninn-event-page .event-lead-image img {
+    min-height: 0;
+    aspect-ratio: 3 / 2;
+  }
+
+  body.muninn-event-page .event-rail-label {
+    align-items: flex-start;
+  }
+
+  body.muninn-event-page .event-rail-hint {
+    max-width: 15rem;
+  }
+
+  body.muninn-event-page .event-rail {
+    grid-auto-columns: minmax(14rem, 82vw);
+  }
+
+  body.muninn-story-page .event-storyline-scroll {
+    overflow-x: auto;
+  }
+
+  body.muninn-story-page .event-storyline-track,
+  body.muninn-story-page .event-storyline[data-event-count="2"] .event-storyline-track {
+    grid-template-columns: none;
+    grid-auto-columns: minmax(14rem, 82vw);
+    grid-auto-flow: column;
+  }
+
+  body.muninn-story-page .event-storyline-card + .event-storyline-card::before {
+    top: 50%;
+    left: -.72rem;
+    content: "→";
+    transform: translateY(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.muninn-event-page .event-rail-scroll {
+    scroll-behavior: auto;
+  }
+}

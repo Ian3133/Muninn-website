@@ -383,11 +383,12 @@
 			@media screen and (max-width: 736px) { .story-image { width: 100%; } }
 		</style>
 		<link rel="stylesheet" href="/assets/css/story-redesign.css" />
+		<link rel="stylesheet" href="/assets/css/detail-pages.css" />
 	</head>
-	<body class="is-preload muninn-story-page">
+	<body class="is-preload muninn-story-page muninn-detail-page">
 
 		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in muninn-story-shell">
+			<div id="wrapper" class="muninn-story-shell">
 
 				<!-- Header -->
 					<header class="app-header">
@@ -624,11 +625,13 @@
 							|| context.event_title
 							|| story.event_title
 							|| 'Event timeline'
-						).trim();
+						).trim().replace(/\s+timeline$/i, '');
 						var timelineUrl = context.timeline_url || (story.event_id ? '/timeline.html?event=' + encodeURIComponent(story.event_id) : '/?category=timelines');
 						var recent = timeline.slice(-5);
 						var selected = recent[recent.length - 1];
-						var statusLabel = presentation.stage_label || (String(event.status || '').toLowerCase() === 'active' ? 'Developing event' : event.status) || 'Tracked event';
+						var isOngoingStory = presentation.stage === 'timeline' || String(event.event_stage || '').toLowerCase() === 'timeline';
+						var statusLabel = isOngoingStory ? 'Ongoing story' : (presentation.stage_label || (String(event.status || '').toLowerCase() === 'active' ? 'Developing event' : event.status) || 'Tracked event');
+						var storylineKicker = isOngoingStory ? 'Part of ongoing coverage' : 'Part of a developing event';
 						var shortDate = function(value) {
 							var parsed = new Date(String(value || '').length === 10 ? value + 'T12:00:00Z' : value);
 							return value && !isNaN(parsed.getTime()) ? parsed.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : 'Date pending';
@@ -639,8 +642,8 @@
 						var selectedSources = Number(selected.source_count || 0);
 
 						var html = '<section class="event-storyline" data-event-count="' + recent.length + '" aria-label="Recent event developments">';
-						html += '<header class="event-storyline-header"><div class="event-storyline-identity"><span class="event-storyline-kicker">Part of a developing story</span>';
-						html += '<a class="event-storyline-title" href="' + escapeHtml(timelineUrl) + '">' + escapeHtml(eventTitle) + ' <span aria-hidden="true">&rarr;</span></a></div>';
+						html += '<header class="event-storyline-header"><div class="event-storyline-identity"><span class="event-storyline-kicker">' + escapeHtml(storylineKicker) + '</span>';
+						html += '<h2 class="event-storyline-heading"><a class="event-storyline-title" href="' + escapeHtml(timelineUrl) + '">' + escapeHtml(eventTitle) + ' <span aria-hidden="true">&rarr;</span></a></h2></div>';
 						html += '<div class="event-storyline-stats"><span>' + escapeHtml(statusLabel) + '</span><span>' + escapeHtml(dateRange) + '</span><span>' + recent.length + ' development' + (recent.length === 1 ? '' : 's') + '</span></div></header>';
 						html += '<div class="event-storyline-scroll"><div class="event-storyline-track" role="list" aria-label="Recent developments">';
 						recent.forEach(function(entry, index) {
@@ -883,9 +886,11 @@
 					var developmentCount = Number(storyContext.development_count || (Array.isArray(story.timeline_highlights) ? story.timeline_highlights.length : 0));
 					var hasEventTimeline = Boolean(storyContext.available || developmentCount > 1 || (Array.isArray(story.timeline_highlights) && story.timeline_highlights.length > 1));
 					var writtenDate = archiveDate || story.date || story.run_date || story.published_date || data.generated_at || new Date().toISOString();						// Back button
-						content += '<a href="' + backHref + '" class="back-button">\u2190 Back</a>';
+						var backLabel = returnCategory === 'timelines' ? 'Back to events' : (returnMore ? 'Back to more news' : 'Back to Today');
+						content += '<a href="' + backHref + '" class="back-button detail-back">\u2190 ' + escapeHtml(backLabel) + '</a>';
 
 						// Story title and trust context
+						content += '<div class="story-eyebrow">Story</div>';
 						content += '<time class="story-written-date" datetime="' + escapeHtml(String(writtenDate).slice(0, 10)) + '">' + escapeHtml(formatStoryDate(writtenDate)) + '</time>';
 						content += '<div class="story-title"><h1>' + escapeHtml(story.title) + '</h1></div>';
 						content += '<div class="story-meta-row">';
@@ -893,7 +898,10 @@
 						? sourceCount + ' reports · ' + publisherCount + ' publisher' + (publisherCount === 1 ? '' : 's')
 						: sourceCount + ' ' + (sourceCount === 1 ? 'source' : 'sources');
 					content += '<span class="story-meta-chip' + (publisherCount === 1 ? ' caution' : '') + '">' + escapeHtml(sourceLabel) + '</span>';
-						if (developmentCount > 1) content += '<span class="story-meta-chip">' + developmentCount + ' developments tracked</span>';
+						if (developmentCount > 1) {
+							var trackedEventUrl = storyContext.timeline_url || (story.event_id ? '/timeline.html?event=' + encodeURIComponent(story.event_id) : '#event-timeline-slot');
+							content += '<a class="story-meta-chip story-event-chip" href="' + escapeHtml(trackedEventUrl) + '">' + developmentCount + ' developments tracked <span aria-hidden="true">&rarr;</span></a>';
+						}
 						content += '</div>';
 						// Editorial story lead: image floats while summary and context wrap around it
 						content += '<div class="story-content-wrapper">';
@@ -904,7 +912,7 @@
 							content += '</div>';
 						}
 						content += '<div class="story-header-text">';
-						content += '<div class="story-section-label">What happened</div>';
+						content += '<h2 class="story-section-label">What happened</h2>';
 						content += '<div class="story-summary">' + escapeHtml(story.summary) + '</div>';
 						content += renderExploreStory(story);
 						content += '</div>';
@@ -966,7 +974,7 @@
 								$('#' + panelId).addClass('active');
 							}
 						});
-						$('#story-content').off('mouseenter focus click', '.event-storyline-card').on('mouseenter focus click', '.event-storyline-card', function(event) {
+						$('#story-content').off('mouseenter focus click', '.event-storyline-card').on('focus click', '.event-storyline-card', function(event) {
 							if (event.type === 'click') event.preventDefault();
 							var card = $(this);
 							var preview = card.closest('.event-storyline');
