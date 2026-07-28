@@ -133,6 +133,9 @@ const US_STATES = [
 
 const SUPPORTED_LOCAL_STATE_CODES = new Set(['CT', 'MA', 'CA']);
 const WEEKLY_LOOKBACK_DAYS = 7;
+const EVENTS_RAIL_LIMIT = 10;
+const LATEST_EVENTS_RAIL_LIMIT = 6;
+const EVENTS_BROWSE_PAGE_SIZE = 24;
 
 function resolveStateName(code) {
   if (!code) return '';
@@ -250,6 +253,15 @@ function eventDisplayTitle(event) {
   ).replace(/\s+Timeline$/i, '').trim();
 }
 
+function coverageTextMatchesQuery(value, query) {
+  const searchable = String(value || '').toLowerCase();
+  if (!query) return true;
+  if (query.length > 4) return searchable.includes(query);
+  return searchable
+    .split(/[^a-z0-9]+/)
+    .some((token) => token === query || token.startsWith(query));
+}
+
 function eventActivityStatus(event, currentDateKey) {
   const entries = eventTimelineEntries(event);
   if (entries.length < 2) return 'emerging';
@@ -292,6 +304,13 @@ function eventCoverageType(event) {
   return 'Developing Event';
 }
 
+function eventCoverageIdentity(event) {
+  return `${eventCoverageType(event)}:${eventDisplayTitle(event)}`
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
+}
+
 function eventLatestDateKey(event) {
   const entries = eventTimelineEntries(event);
   return toUtcDateKey(
@@ -299,6 +318,13 @@ function eventLatestDateKey(event) {
     || entries[entries.length - 1]?.date
     || event?.last_seen_at
   );
+}
+
+function eventUpdateGroupLabel(event, currentDateKey) {
+  const daysSinceUpdate = coverageDaysSinceUpdate(event, currentDateKey);
+  if (daysSinceUpdate === 0) return 'Today';
+  if (daysSinceUpdate === 1) return 'Yesterday';
+  return formatStoredDate(eventLatestDateKey(event));
 }
 
 function eventFirstDateKey(event) {
@@ -413,19 +439,6 @@ function eventVisual(event, relatedStory) {
   return { url: '', alt: '', roleLabel: '' };
 }
 
-function eventArtMonogram(event) {
-  const ignored = new Set(['the', 'and', 'war', 'event', 'story', 'timeline', 'conflict']);
-  const words = eventDisplayTitle(event)
-    .replace(/[^a-z0-9 ]/gi, ' ')
-    .split(/\s+/)
-    .filter((word) => word && !ignored.has(word.toLowerCase()));
-  return (words.length ? words : ['Muninn'])
-    .slice(0, 2)
-    .map((word) => word.slice(0, 1))
-    .join('')
-    .toUpperCase();
-}
-
 function EventArtwork({ event, relatedStory, compact = false }) {
   const visual = eventVisual(event, relatedStory);
   const category = eventBrowseCategoryKey(eventDisplayCategory(event, relatedStory));
@@ -439,7 +452,6 @@ function EventArtwork({ event, relatedStory, compact = false }) {
           loading="lazy"
           style={crop ? { objectPosition: crop.position } : undefined}
         />
-        {visual.roleLabel ? <span className="coverage-art-role">{visual.roleLabel}</span> : null}
       </div>
     );
   }
@@ -450,10 +462,195 @@ function EventArtwork({ event, relatedStory, compact = false }) {
       role="img"
       aria-label={`${eventDisplayTitle(event)} editorial image placeholder`}
     >
-      <span>Muninn event file</span>
-      <strong aria-hidden="true">{eventArtMonogram(event)}</strong>
-      <small>Editorial visual</small>
+      <span>Muninn</span>
+      <strong>Event file</strong>
     </div>
+  );
+}
+
+function CoverageLandingCard({ event, relatedStory, showType = false }) {
+  const entries = eventTimelineEntries(event);
+  const latest = entries[entries.length - 1] || {};
+  const visual = eventVisual(event, relatedStory);
+  const category = eventDisplayCategory(event, relatedStory);
+  const coverageType = eventCoverageType(event);
+  const sourceCount = Number(
+    event?.presentation?.independent_source_count
+    || event?.presentation?.source_count
+    || 0
+  );
+  const crop = relatedStory ? storyImageCropPresentation(relatedStory, 'tall') : null;
+  const title = eventDisplayTitle(event);
+
+  return (
+    <article className={`coverage-landing-card ${visual.url ? 'has-image' : 'no-image'}`}>
+      <a href={`/timeline.html?event=${encodeURIComponent(event.event_id)}`} aria-label={`Open ${title}`}>
+        <div
+          className={`coverage-landing-media ${visual.url ? '' : 'coverage-landing-placeholder'}`}
+          data-category={eventBrowseCategoryKey(category)}
+          style={crop ? { '--story-focus': crop.position } : undefined}
+        >
+          {visual.url ? (
+            <img src={visual.url} alt={visual.alt} loading="lazy" />
+          ) : (
+            <div className="coverage-placeholder-copy" aria-hidden="true">
+              <span>Muninn</span>
+              <strong>Event file</strong>
+            </div>
+          )}
+          <div className="coverage-landing-title">
+            {showType ? <span>{coverageType}</span> : null}
+            <h3 title={title}>{title}</h3>
+          </div>
+        </div>
+        <div className="coverage-landing-footer">
+          <small>
+            Latest update{latest.date ? ` \u00b7 ${formatStoredDate(latest.date)}` : ''}
+          </small>
+          <strong title={latest.title || 'Latest development available'}>
+            {latest.title || 'Latest development available'}
+          </strong>
+          <div>
+            {sourceCount ? <span>{sourceCount} sources</span> : null}
+            <span>{entries.length} developments</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  );
+}
+
+function CoverageDirectoryCard({ event, relatedStory, showType = false }) {
+  const entries = eventTimelineEntries(event);
+  const latest = entries[entries.length - 1] || {};
+  const visual = eventVisual(event, relatedStory);
+  const category = eventDisplayCategory(event, relatedStory);
+  const coverageType = eventCoverageType(event);
+  const sourceCount = Number(
+    event?.presentation?.independent_source_count
+    || event?.presentation?.source_count
+    || 0
+  );
+  const crop = relatedStory ? storyImageCropPresentation(relatedStory, 'wide') : null;
+  const title = eventDisplayTitle(event);
+
+  return (
+    <article className={`events-directory-card ${visual.url ? 'has-image' : 'no-image'}`}>
+      <a href={`/timeline.html?event=${encodeURIComponent(event.event_id)}`} aria-label={`Open ${title}`}>
+        <div
+          className={`coverage-directory-media ${visual.url ? '' : 'coverage-directory-placeholder'}`}
+          data-category={eventBrowseCategoryKey(category)}
+          style={crop ? { '--story-focus': crop.position } : undefined}
+        >
+          {visual.url ? (
+            <img src={visual.url} alt={visual.alt} loading="lazy" />
+          ) : (
+            <div className="coverage-placeholder-copy" aria-hidden="true">
+              <span>Muninn</span>
+              <strong>Event file</strong>
+            </div>
+          )}
+        </div>
+        <div className="coverage-directory-body">
+          {showType ? <span className="coverage-directory-type">{coverageType}</span> : null}
+          <h2>{title}</h2>
+          <small>Latest update{latest.date ? ` \u00b7 ${formatStoredDate(latest.date)}` : ''}</small>
+          <strong>{latest.title || 'Latest development available'}</strong>
+          <div>
+            {sourceCount ? <span>{sourceCount} sources</span> : null}
+            <span>{entries.length} developments</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  );
+}
+
+function LatestUpdateRow({ event, relatedStory }) {
+  const entries = eventTimelineEntries(event);
+  const latest = entries[entries.length - 1] || {};
+  const visual = eventVisual(event, relatedStory);
+  const category = eventDisplayCategory(event, relatedStory);
+  const coverageType = eventCoverageType(event);
+  const sourceCount = Number(
+    event?.presentation?.independent_source_count
+    || event?.presentation?.source_count
+    || 0
+  );
+  const crop = relatedStory ? storyImageCropPresentation(relatedStory, 'wide') : null;
+  const title = eventDisplayTitle(event);
+
+  return (
+    <article className="latest-update-row">
+      <a href={`/timeline.html?event=${encodeURIComponent(event.event_id)}`} aria-label={`Open latest update for ${title}`}>
+        <div
+          className={`latest-update-media ${visual.url ? '' : 'latest-update-placeholder'}`}
+          data-category={eventBrowseCategoryKey(category)}
+          style={crop ? { '--story-focus': crop.position } : undefined}
+        >
+          {visual.url ? (
+            <img src={visual.url} alt={visual.alt} loading="lazy" />
+          ) : (
+            <span aria-hidden="true">Event file</span>
+          )}
+        </div>
+        <div className="latest-update-copy">
+          <span className="latest-update-context">{coverageType} · {title}</span>
+          <h2>{latest.title || 'Latest development available'}</h2>
+          <div>
+            <time dateTime={toUtcDateKey(latest.date || eventLatestDateKey(event))}>
+              {formatStoredDate(latest.date || eventLatestDateKey(event))}
+            </time>
+            {sourceCount ? <span>{sourceCount} sources</span> : null}
+            <span>{entries.length} developments</span>
+          </div>
+        </div>
+        <span className="latest-update-arrow" aria-hidden="true">{'\u2192'}</span>
+      </a>
+    </article>
+  );
+}
+
+function EventsSwipeSection({ title, items, relatedStories, browseType, showType = false }) {
+  const railRef = useRef(null);
+  const scrollRail = (direction) => {
+    const rail = railRef.current;
+    if (!rail) return;
+    const distance = Math.max(260, Math.round(rail.clientWidth * 0.9));
+    rail.scrollBy({ left: direction * distance, behavior: 'smooth' });
+  };
+
+  if (!items.length) return null;
+
+  return (
+    <section className="events-swipe-section" aria-labelledby={`events-${browseType}-title`}>
+      <header className="events-section-header">
+        <h2 id={`events-${browseType}-title`}>{title}</h2>
+        <div>
+          <a href={`/?category=timelines&view=browse&type=${browseType}`}>See all <span aria-hidden="true">{'\u2192'}</span></a>
+          {items.length > 4 ? (
+            <span className="events-swipe-controls" aria-label={`${title} carousel controls`}>
+              <button type="button" onClick={() => scrollRail(-1)} aria-label={`Show previous ${title}`}>
+                <span aria-hidden="true">←</span>
+              </button>
+              <button type="button" onClick={() => scrollRail(1)} aria-label={`Show more ${title}`}>
+                <span aria-hidden="true">→</span>
+              </button>
+            </span>
+          ) : null}
+        </div>
+      </header>
+      <div className="events-swipe-rail" ref={railRef} role="region" aria-label={title} tabIndex={0}>
+        {items.map((event) => (
+          <CoverageLandingCard
+            event={event}
+            relatedStory={relatedStories.get(event.event_id)}
+            showType={showType}
+            key={event.event_id || event.title}
+          />
+        ))}
+      </div>
+    </section>
   );
 }
 
@@ -1469,11 +1666,37 @@ export default function LegacyHome() {
   const [timelinesGeneratedAt, setTimelinesGeneratedAt] = useState('');
   const [loadingTimelines, setLoadingTimelines] = useState(false);
   const [timelineError, setTimelineError] = useState('');
-  const [timelineQuery, setTimelineQuery] = useState('');
+  const [timelineQuery, setTimelineQuery] = useState(() => {
+    try { return new URLSearchParams(window.location.search).get('search') || ''; } catch (_e) { return ''; }
+  });
   const [eventStageFilter, setEventStageFilter] = useState('active');
   const [eventCategoryFilter, setEventCategoryFilter] = useState('all');
-  const [eventTypeFilter, setEventTypeFilter] = useState('all');
+  const [eventTypeFilter, setEventTypeFilter] = useState(() => {
+    try {
+      const requested = new URLSearchParams(window.location.search).get('type');
+      return ['all', 'developing', 'ongoing'].includes(requested) ? requested : 'all';
+    } catch (_e) {
+      return 'all';
+    }
+  });
   const [eventSort, setEventSort] = useState('recent');
+  const [eventsView, setEventsView] = useState(() => {
+    try { return new URLSearchParams(window.location.search).get('view') === 'browse' ? 'browse' : 'landing'; } catch (_e) { return 'landing'; }
+  });
+  const [eventsBrowseMode] = useState(() => {
+    try {
+      const requested = new URLSearchParams(window.location.search).get('type');
+      if (requested === 'developing' || requested === 'ongoing') return requested;
+      return 'latest';
+    } catch (_e) {
+      return 'latest';
+    }
+  });
+  const [eventsSearchOpen, setEventsSearchOpen] = useState(() => {
+    try { return Boolean(new URLSearchParams(window.location.search).get('search')); } catch (_e) { return false; }
+  });
+  const [eventsSearchType, setEventsSearchType] = useState('all');
+  const [eventsBrowseLimit, setEventsBrowseLimit] = useState(EVENTS_BROWSE_PAGE_SIZE);
   const [clockNow, setClockNow] = useState(() => Date.now());
   const client = useMemo(() => (ENABLE_CLOUD_SETTINGS ? generateClient() : null), []);
 
@@ -1595,15 +1818,32 @@ export default function LegacyHome() {
     () => toUtcDateKey(timelinesGeneratedAt) || toUtcDateKey(new Date()),
     [timelinesGeneratedAt]
   );
+  const allCoverageStoryRows = useMemo(() => {
+    const seen = new Set();
+    const rows = [
+      ...stories.map((story) => ({ story, date: currentDateKey })),
+      ...recentNewsDays.flatMap((day) => (
+        (Array.isArray(day?.stories) ? day.stories : []).map((story) => ({ story, date: day.date }))
+      )),
+    ];
+    return rows.filter(({ story, date }) => {
+      const identity = story?.story_id || `${date}:${story?.title || story?.cluster_id || ''}`;
+      if (!identity || seen.has(identity)) return false;
+      seen.add(identity);
+      return true;
+    });
+  }, [stories, currentDateKey, recentNewsDays]);
   const eventStoryById = useMemo(() => {
     const matches = new Map();
-    stories.forEach((story) => {
-      if (story?.event_id && (story?.image?.url || story?.image?.thumbnail_url)) {
-        matches.set(story.event_id, story);
-      }
+    allCoverageStoryRows.forEach(({ story }) => {
+      if (!story?.event_id) return;
+      const existing = matches.get(story.event_id);
+      const hasImage = Boolean(story?.image?.url || story?.image?.thumbnail_url);
+      const existingHasImage = Boolean(existing?.image?.url || existing?.image?.thumbnail_url);
+      if (!existing || (hasImage && !existingHasImage)) matches.set(story.event_id, story);
     });
     return matches;
-  }, [stories]);
+  }, [allCoverageStoryRows]);
   const eligibleTimelineEvents = useMemo(
     () => timelineEvents
       .filter((event) => eventTimelineEntries(event).length >= 2)
@@ -1614,16 +1854,25 @@ export default function LegacyHome() {
       }),
     [timelineEvents]
   );
+  const publicTimelineEvents = useMemo(() => {
+    const seen = new Set();
+    return eligibleTimelineEvents.filter((event) => {
+      const identity = eventCoverageIdentity(event);
+      if (!identity || seen.has(identity)) return false;
+      seen.add(identity);
+      return true;
+    });
+  }, [eligibleTimelineEvents]);
   const eventStatusCounts = useMemo(
-    () => eligibleTimelineEvents.reduce((counts, event) => {
+    () => publicTimelineEvents.reduce((counts, event) => {
       const status = eventActivityStatus(event, timelineCurrentDateKey);
       counts[status] = (counts[status] || 0) + 1;
       return counts;
     }, { active: 0, ongoing: 0, archive: 0 }),
-    [eligibleTimelineEvents, timelineCurrentDateKey]
+    [publicTimelineEvents, timelineCurrentDateKey]
   );
   const eventCoverageSummary = useMemo(
-    () => eligibleTimelineEvents.reduce((summary, event) => {
+    () => publicTimelineEvents.reduce((summary, event) => {
       const type = eventCoverageType(event);
       summary.developmentCount += eventTimelineEntries(event).length;
       summary.updatedToday += eventLatestDateKey(event) === timelineCurrentDateKey ? 1 : 0;
@@ -1631,38 +1880,44 @@ export default function LegacyHome() {
       else summary.developing += 1;
       return summary;
     }, { developing: 0, ongoing: 0, developmentCount: 0, updatedToday: 0 }),
-    [eligibleTimelineEvents, timelineCurrentDateKey]
+    [publicTimelineEvents, timelineCurrentDateKey]
   );
   const latestTimelineEvents = useMemo(
-    () => [...eligibleTimelineEvents]
+    () => [...publicTimelineEvents]
       .sort((left, right) => (
         String(eventLatestDateKey(right)).localeCompare(String(eventLatestDateKey(left)))
         || Number(right?.presentation?.rank_score || 0) - Number(left?.presentation?.rank_score || 0)
       ))
-      .slice(0, 6),
-    [eligibleTimelineEvents]
+      .slice(0, LATEST_EVENTS_RAIL_LIMIT),
+    [publicTimelineEvents]
   );
   const storylineTimelineEvents = useMemo(
-    () => eligibleTimelineEvents
+    () => publicTimelineEvents
       .filter((event) => eventCoverageType(event) === 'Ongoing Story')
       .sort((left, right) => (
         storylineSectionScore(right, timelineCurrentDateKey) - storylineSectionScore(left, timelineCurrentDateKey)
         || String(eventLatestDateKey(right)).localeCompare(String(eventLatestDateKey(left)))
-      )),
-    [eligibleTimelineEvents, timelineCurrentDateKey]
+      ))
+      .slice(0, EVENTS_RAIL_LIMIT),
+    [publicTimelineEvents, timelineCurrentDateKey]
   );
   const rankedDevelopingTimelineEvents = useMemo(
-    () => eligibleTimelineEvents
+    () => {
+      const latestIds = new Set(latestTimelineEvents.map((event) => event.event_id));
+      return publicTimelineEvents
       .filter((event) => eventCoverageType(event) === 'Developing Event')
+      .filter((event) => !latestIds.has(event.event_id))
       .sort((left, right) => (
         developingEventSectionScore(right, timelineCurrentDateKey) - developingEventSectionScore(left, timelineCurrentDateKey)
         || String(eventLatestDateKey(right)).localeCompare(String(eventLatestDateKey(left)))
-      )),
-    [eligibleTimelineEvents, timelineCurrentDateKey]
+      ))
+      .slice(0, EVENTS_RAIL_LIMIT);
+    },
+    [publicTimelineEvents, latestTimelineEvents, timelineCurrentDateKey]
   );
   const newestTimelineEvents = useMemo(() => {
     const currentDate = new Date(`${timelineCurrentDateKey}T12:00:00Z`);
-    return eligibleTimelineEvents
+    return publicTimelineEvents
       .filter((event) => eventCoverageType(event) === 'Developing Event')
       .filter((event) => {
         const firstKey = eventFirstDateKey(event);
@@ -1676,19 +1931,19 @@ export default function LegacyHome() {
         || Number(right?.presentation?.rank_score || 0) - Number(left?.presentation?.rank_score || 0)
       ))
       .slice(0, 6);
-  }, [eligibleTimelineEvents, timelineCurrentDateKey]);
+  }, [publicTimelineEvents, timelineCurrentDateKey]);
   const eventCategoryCounts = useMemo(
-    () => eligibleTimelineEvents.reduce((counts, event) => {
+    () => publicTimelineEvents.reduce((counts, event) => {
       const category = eventBrowseCategoryKey(eventDisplayCategory(event, eventStoryById.get(event.event_id)));
       counts[category] = (counts[category] || 0) + 1;
       counts.all += 1;
       return counts;
     }, { all: 0 }),
-    [eligibleTimelineEvents, eventStoryById]
+    [publicTimelineEvents, eventStoryById]
   );
   const filteredTimelineEvents = useMemo(() => {
     const query = timelineQuery.trim().toLowerCase();
-    return eligibleTimelineEvents
+    return publicTimelineEvents
       .filter((event) => (
         eventCategoryFilter === 'all'
         || eventBrowseCategoryKey(eventDisplayCategory(event, eventStoryById.get(event.event_id))) === eventCategoryFilter
@@ -1698,7 +1953,7 @@ export default function LegacyHome() {
         || (eventTypeFilter === 'ongoing' && eventCoverageType(event) === 'Ongoing Story')
         || (eventTypeFilter === 'developing' && eventCoverageType(event) === 'Developing Event')
       ))
-      .filter((event) => !query || [
+      .filter((event) => !query || coverageTextMatchesQuery([
         eventDisplayTitle(event),
         eventCoverageType(event),
         eventDisplayCategory(event, eventStoryById.get(event.event_id)),
@@ -1707,7 +1962,7 @@ export default function LegacyHome() {
         event?.latest_title,
         event?.search_text,
         ...(Array.isArray(event?.entities) ? event.entities : []),
-      ].filter(Boolean).join(' ').toLowerCase().includes(query))
+      ].filter(Boolean).join(' '), query))
       .sort((left, right) => {
         if (eventSort === 'developments') {
           const developmentDelta = eventTimelineEntries(right).length - eventTimelineEntries(left).length;
@@ -1723,13 +1978,132 @@ export default function LegacyHome() {
         );
       });
   }, [
-    eligibleTimelineEvents,
+    publicTimelineEvents,
     eventStoryById,
     eventCategoryFilter,
     eventTypeFilter,
     eventSort,
     timelineQuery,
   ]);
+  const coverageSearchCounts = useMemo(() => ({
+    all: allCoverageStoryRows.length + publicTimelineEvents.length,
+    stories: allCoverageStoryRows.length,
+    developing: publicTimelineEvents.filter((event) => eventCoverageType(event) === 'Developing Event').length,
+    ongoing: publicTimelineEvents.filter((event) => eventCoverageType(event) === 'Ongoing Story').length,
+  }), [allCoverageStoryRows, publicTimelineEvents]);
+  const coverageSearchResults = useMemo(() => {
+    const query = timelineQuery.trim().toLowerCase();
+    if (!query) return [];
+    const results = [];
+    if (eventsSearchType === 'all' || eventsSearchType === 'stories') {
+      allCoverageStoryRows.forEach(({ story, date }) => {
+        const searchable = [
+          story?.title,
+          story?.summary,
+          story?.topic_label,
+          story?.event_title,
+          story?.category,
+          normalizedStoryCategory(story),
+          ...(Array.isArray(story?.entities) ? story.entities : []),
+        ].filter(Boolean).join(' ').toLowerCase();
+        if (!coverageTextMatchesQuery(searchable, query)) return;
+        results.push({
+          key: `story:${story?.story_id || story?.cluster_id || `${date}:${story?.title}`}`,
+          href: storyArchiveHref(story, date, currentDateKey),
+          type: 'Story',
+          title: story?.title || 'Untitled Story',
+          meta: `${formatStoredDate(date)} · ${Number(story?.source_count || uniqueSourceCount([story]) || 0)} sources`,
+        });
+      });
+    }
+    publicTimelineEvents.forEach((event) => {
+      const type = eventCoverageType(event);
+      const typeKey = type === 'Ongoing Story' ? 'ongoing' : 'developing';
+      if (eventsSearchType !== 'all' && eventsSearchType !== typeKey) return;
+      const entries = eventTimelineEntries(event);
+      const searchable = [
+        eventDisplayTitle(event),
+        type,
+        event?.title,
+        event?.canonical_title,
+        event?.latest_title,
+        event?.summary,
+        event?.search_text,
+        eventDisplayCategory(event, eventStoryById.get(event.event_id)),
+        ...entries.map((entry) => entry?.title),
+        ...(Array.isArray(event?.entities) ? event.entities : []),
+      ].filter(Boolean).join(' ').toLowerCase();
+      if (!coverageTextMatchesQuery(searchable, query)) return;
+      const sourceCount = Number(event?.presentation?.independent_source_count || event?.presentation?.source_count || 0);
+      results.push({
+        key: `coverage:${event.event_id}`,
+        href: `/timeline.html?event=${encodeURIComponent(event.event_id)}`,
+        type,
+        title: eventDisplayTitle(event),
+        meta: `${formatStoredDate(eventLatestDateKey(event))}${sourceCount ? ` · ${sourceCount} sources` : ''}`,
+      });
+    });
+    return results.slice(0, 12);
+  }, [timelineQuery, eventsSearchType, allCoverageStoryRows, publicTimelineEvents, currentDateKey, eventStoryById]);
+  const eventTopics = useMemo(() => {
+    const topics = new Map();
+    const categoryTopics = {
+      'Technology & AI': 'AI',
+      Health: 'Health',
+      'Science & Environment': 'Science',
+      Politics: 'Politics',
+      'Business & Economy': 'Business',
+      Sports: 'Sports',
+      Culture: 'Culture',
+      'Public Safety': 'Public Safety',
+      World: 'World',
+    };
+    const addTopic = (label, weight) => {
+      const clean = String(label || '').trim().replace(/\s+/g, ' ');
+      const key = clean.toLowerCase();
+      if (!clean || clean.length > 34) return;
+      const current = topics.get(key) || { label: clean, score: 0, mentions: 0 };
+      current.score += weight;
+      current.mentions += 1;
+      topics.set(key, current);
+    };
+    allCoverageStoryRows.forEach(({ story, date }) => {
+      const weight = date === currentDateKey ? 3 : 1;
+      const category = normalizedStoryCategory(story);
+      addTopic(categoryTopics[category], weight);
+    });
+    return [...topics.values()]
+      .sort((left, right) => right.score - left.score || right.mentions - left.mentions || left.label.localeCompare(right.label))
+      .slice(0, 8);
+  }, [allCoverageStoryRows, currentDateKey]);
+  const showDedicatedOngoingSection = storylineTimelineEvents.length >= 3;
+  const exploreOngoingStories = useMemo(
+    () => (showDedicatedOngoingSection ? [] : storylineTimelineEvents.slice(0, 2)),
+    [showDedicatedOngoingSection, storylineTimelineEvents]
+  );
+  const exploreTopics = useMemo(() => {
+    const ongoingLabels = new Set(
+      exploreOngoingStories.map((event) => eventDisplayTitle(event).toLowerCase())
+    );
+    const availableSlots = Math.max(0, 10 - exploreOngoingStories.length);
+    return eventTopics
+      .filter((topic) => !ongoingLabels.has(topic.label.toLowerCase()))
+      .slice(0, availableSlots);
+  }, [eventTopics, exploreOngoingStories]);
+  const latestBrowseGroups = useMemo(() => {
+    const groups = new Map();
+    filteredTimelineEvents.slice(0, eventsBrowseLimit).forEach((event) => {
+      const label = eventUpdateGroupLabel(event, timelineCurrentDateKey);
+      if (!groups.has(label)) groups.set(label, []);
+      groups.get(label).push(event);
+    });
+    return [...groups.entries()].map(([label, items]) => ({ label, items }));
+  }, [filteredTimelineEvents, eventsBrowseLimit, timelineCurrentDateKey]);
+  const eventsBrowseTitle = eventsBrowseMode === 'developing'
+    ? 'Developing events'
+    : eventsBrowseMode === 'ongoing'
+      ? 'Ongoing stories'
+      : 'Latest updates';
   const featuredTimelineEvents = useMemo(
     () => latestTimelineEvents,
     [latestTimelineEvents]
@@ -1917,7 +2291,8 @@ export default function LegacyHome() {
   }, [activeCategory, digestGeneratedAt]);
 
   useEffect(() => {
-    if (!moreNewsOpen || recentNewsLoaded || recentNewsLoading) return;
+    const needsRecentCoverage = moreNewsOpen || activeCategory === 'timelines';
+    if (!needsRecentCoverage || recentNewsLoaded || recentNewsLoading) return;
     (async () => {
       try {
         setRecentNewsError('');
@@ -1935,7 +2310,7 @@ export default function LegacyHome() {
         setRecentNewsLoading(false);
       }
     })();
-  }, [moreNewsOpen, recentNewsLoaded, recentNewsLoading]);
+  }, [activeCategory, moreNewsOpen, recentNewsLoaded, recentNewsLoading]);
 
   useEffect(() => {
     if (activeCategory !== 'timelines' && activeCategory !== 'your-newsletter') return;
@@ -2627,30 +3002,101 @@ export default function LegacyHome() {
 
       <main id="main" className={`view-${activeCategory}`}>
         <section className={`post app-view ${activeCategory === 'top-stories' ? 'top-stories-post' : ''} ${activeCategory === 'timelines' ? 'events-post' : ''}`}>
-          <header className="major page-intro">
-            <div className="page-intro-copy">
-              {activeCategory !== 'top-stories' ? (
-                <span className="page-kicker">
-                  {activeCategory === 'timelines' ? 'Living news record' : 'Made for you'}
-                </span>
-              ) : null}
-              <h1>{activeCategory === 'top-stories' ? topStoriesHeading : title}</h1>
-              {activeCategory === 'timelines' ? <p className="today-intro">See what changed, why it matters, and how each developing story reached this point.</p> : null}
-              {activeCategory === 'your-newsletter' ? <p className="today-intro">A focused briefing built around the stories, places, and events that matter to you.</p> : null}
-            </div>
-            {showDate ? (
-              <div className="today-view-actions">
-                <div className="today-edition-time">
-                  <time className="header-date" dateTime={headerDateKey}>{dateStr}</time>
-                  {editionFreshnessLabel ? (
-                    <span className={`today-edition-freshness ${editionIsToday ? '' : 'is-stale'}`.trim()}>
-                      {editionFreshnessLabel}
-                    </span>
-                  ) : null}
-                </div>
+          {activeCategory === 'timelines' ? (
+            <header className="events-page-header">
+              <div>
+                {eventsView === 'browse' ? <a href="/?category=timelines">{'\u2190'} Events</a> : null}
+                <h1>{eventsView === 'browse' ? eventsBrowseTitle : 'Events'}</h1>
               </div>
-            ) : null}
-          </header>
+              {eventsView === 'landing' ? (
+                <button
+                  className="events-search-button"
+                  type="button"
+                  aria-label={eventsSearchOpen ? 'Close coverage search' : 'Search coverage'}
+                  aria-expanded={eventsSearchOpen}
+                  onClick={() => setEventsSearchOpen((open) => !open)}
+                >
+                  {eventsSearchOpen ? <span aria-hidden="true">{'\u00d7'}</span> : <span className="events-search-glyph" aria-hidden="true" />}
+                </button>
+              ) : null}
+            </header>
+          ) : (
+            <header className="major page-intro">
+              <div className="page-intro-copy">
+                {activeCategory !== 'top-stories' ? <span className="page-kicker">Made for you</span> : null}
+                <h1>{activeCategory === 'top-stories' ? topStoriesHeading : title}</h1>
+                {activeCategory === 'your-newsletter' ? <p className="today-intro">A focused briefing built around the stories, places, and events that matter to you.</p> : null}
+              </div>
+              {showDate ? (
+                <div className="today-view-actions">
+                  <div className="today-edition-time">
+                    <time className="header-date" dateTime={headerDateKey}>{dateStr}</time>
+                    {editionFreshnessLabel ? (
+                      <span className={`today-edition-freshness ${editionIsToday ? '' : 'is-stale'}`.trim()}>
+                        {editionFreshnessLabel}
+                      </span>
+                    ) : null}
+                  </div>
+                </div>
+              ) : null}
+            </header>
+          )}
+
+          {activeCategory === 'timelines' && eventsView === 'landing' && eventsSearchOpen ? (
+            <section
+              className="coverage-search-panel"
+              aria-label="Search Stories, Events, and Ongoing Stories"
+              onKeyDown={(event) => {
+                if (event.key === 'Escape') setEventsSearchOpen(false);
+              }}
+            >
+              <div className="coverage-search-field">
+                <span className="events-search-glyph" aria-hidden="true" />
+                <input
+                  type="search"
+                  value={timelineQuery}
+                  onChange={(event) => setTimelineQuery(event.target.value)}
+                  placeholder="Search Stories, Events, and Ongoing Stories"
+                  aria-label="Search coverage"
+                  autoFocus
+                />
+                {timelineQuery ? <button type="button" onClick={() => setTimelineQuery('')}>Clear</button> : null}
+              </div>
+              <div className="coverage-search-tabs" aria-label="Filter search results">
+                {[
+                  ['all', 'All', coverageSearchCounts.all],
+                  ['stories', 'Stories', coverageSearchCounts.stories],
+                  ['developing', 'Events', coverageSearchCounts.developing],
+                  ['ongoing', 'Ongoing stories', coverageSearchCounts.ongoing],
+                ].map(([value, label, count]) => (
+                  <button
+                    type="button"
+                    className={eventsSearchType === value ? 'active' : ''}
+                    onClick={() => setEventsSearchType(value)}
+                    key={value}
+                  >
+                    <span>{label}</span>
+                    <strong>{count}</strong>
+                  </button>
+                ))}
+              </div>
+              {timelineQuery ? (
+                <div className="coverage-search-results" aria-live="polite">
+                  {coverageSearchResults.length ? coverageSearchResults.map((result) => (
+                    <a href={result.href} key={result.key}>
+                      <span>{result.type}</span>
+                      <strong>{result.title}</strong>
+                      <small>{result.meta}</small>
+                    </a>
+                  )) : (
+                    <p>No matching coverage. Try a person, place, or subject.</p>
+                  )}
+                </div>
+              ) : (
+                <p className="coverage-search-prompt">Search recent reporting and tracked coverage in one place.</p>
+              )}
+            </section>
+          ) : null}
 
           {ENABLE_NEWSLETTERS ? (
           <div id="your-newsletter" className={`category-content ${activeCategory === 'your-newsletter' ? 'active' : ''}`}>
@@ -3219,7 +3665,195 @@ export default function LegacyHome() {
               </div>
             )}
 
-            {!loadingTimelines && !timelineError && eligibleTimelineEvents.length > 0 && (
+            {!loadingTimelines && !timelineError && publicTimelineEvents.length > 0 && eventsView === 'landing' && (
+              <div className="events-landing-view">
+                <EventsSwipeSection
+                  title="Latest updates"
+                  items={latestTimelineEvents}
+                  relatedStories={eventStoryById}
+                  browseType="latest"
+                  showType
+                />
+                <EventsSwipeSection
+                  title="Developing events"
+                  items={rankedDevelopingTimelineEvents}
+                  relatedStories={eventStoryById}
+                  browseType="developing"
+                />
+                {showDedicatedOngoingSection ? (
+                  <EventsSwipeSection
+                    title="Ongoing stories"
+                    items={storylineTimelineEvents}
+                    relatedStories={eventStoryById}
+                    browseType="ongoing"
+                  />
+                ) : null}
+                {exploreOngoingStories.length || exploreTopics.length ? (
+                  <section className="events-explore-section" aria-labelledby="events-explore-title">
+                    <header>
+                      <div>
+                        <h2 id="events-explore-title">Explore</h2>
+                        <p>Follow a subject or return to a long-running story.</p>
+                      </div>
+                    </header>
+                    {exploreOngoingStories.length ? (
+                      <div className="events-explore-ongoing">
+                      {exploreOngoingStories.map((event) => {
+                        const title = eventDisplayTitle(event);
+                        return (
+                          <a
+                            className="events-explore-item is-ongoing"
+                            href={`/timeline.html?event=${encodeURIComponent(event.event_id)}`}
+                            aria-label={`Open ongoing story: ${title}`}
+                            key={`ongoing:${event.event_id || title}`}
+                          >
+                            <span>Ongoing story</span>
+                            <strong>{title}</strong>
+                            <span aria-hidden="true">{'\u2192'}</span>
+                          </a>
+                        );
+                      })}
+                      </div>
+                    ) : null}
+                    {exploreTopics.length ? (
+                      <div className="events-explore-topics" aria-label="Browse topics">
+                        <span>Topics</span>
+                      {exploreTopics.map((topic) => (
+                        <button
+                          type="button"
+                          className="events-explore-item is-topic"
+                          onClick={() => {
+                            setTimelineQuery(topic.label);
+                            setEventsSearchType('all');
+                            setEventsSearchOpen(true);
+                            window.requestAnimationFrame(() => {
+                              document.querySelector('.events-page-header')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            });
+                          }}
+                          key={`topic:${topic.label}`}
+                        >
+                          {topic.label}
+                        </button>
+                      ))}
+                      </div>
+                    ) : null}
+                  </section>
+                ) : null}
+              </div>
+            )}
+
+            {!loadingTimelines && !timelineError && publicTimelineEvents.length > 0 && eventsView === 'browse' && (
+              <section
+                className={`events-browse-view is-${eventsBrowseMode}`}
+                aria-label={eventsBrowseTitle}
+              >
+                <div className={`events-browse-toolbar ${eventsBrowseMode === 'latest' ? 'is-updates' : 'is-directory'}`}>
+                  {eventsBrowseMode === 'latest' ? (
+                    <div className="events-browse-types" aria-label="Filter updates by coverage type">
+                      {[
+                        ['all', 'All updates', publicTimelineEvents.length],
+                        ['developing', 'Events', eventCoverageSummary.developing],
+                        ['ongoing', 'Ongoing stories', eventCoverageSummary.ongoing],
+                      ].map(([value, label, count]) => (
+                        <button
+                          type="button"
+                          className={eventTypeFilter === value ? 'active' : ''}
+                          onClick={() => {
+                            setEventTypeFilter(value);
+                            setEventsBrowseLimit(EVENTS_BROWSE_PAGE_SIZE);
+                          }}
+                          key={value}
+                        >
+                          <span>{label}</span>
+                          <strong>{count}</strong>
+                        </button>
+                      ))}
+                    </div>
+                  ) : null}
+                  <label className="events-browse-search">
+                    <span>{eventsBrowseMode === 'latest' ? 'Filter updates' : 'Filter these events'}</span>
+                    <input
+                      type="search"
+                      value={timelineQuery}
+                      onChange={(event) => {
+                        setTimelineQuery(event.target.value);
+                        setEventsBrowseLimit(EVENTS_BROWSE_PAGE_SIZE);
+                      }}
+                      placeholder="Search current coverage"
+                    />
+                  </label>
+                  {eventsBrowseMode !== 'latest' ? (
+                    <label className="events-browse-sort">
+                      <span>Sort</span>
+                      <select value={eventSort} onChange={(event) => setEventSort(event.target.value)}>
+                        <option value="recent">Latest update</option>
+                        <option value="newest">Newest event</option>
+                        <option value="developments">Most developed</option>
+                      </select>
+                    </label>
+                  ) : null}
+                </div>
+                <div className="events-browse-summary">
+                  <strong>{filteredTimelineEvents.length}</strong>
+                  <span>
+                    {eventsBrowseMode === 'latest'
+                      ? (filteredTimelineEvents.length === 1 ? 'current update' : 'current updates')
+                      : eventsBrowseMode === 'ongoing'
+                        ? (filteredTimelineEvents.length === 1 ? 'ongoing story' : 'ongoing stories')
+                        : (filteredTimelineEvents.length === 1 ? 'developing event' : 'developing events')}
+                  </span>
+                </div>
+                {filteredTimelineEvents.length ? (
+                  <>
+                    {eventsBrowseMode === 'latest' ? (
+                      <div className="latest-updates-feed">
+                        {latestBrowseGroups.map((group) => (
+                          <section className="latest-update-group" aria-labelledby={`updates-${group.label.replace(/[^a-z0-9]+/gi, '-').toLowerCase()}`} key={group.label}>
+                            <h2 id={`updates-${group.label.replace(/[^a-z0-9]+/gi, '-').toLowerCase()}`}>{group.label}</h2>
+                            <div>
+                              {group.items.map((event) => (
+                                <LatestUpdateRow
+                                  event={event}
+                                  relatedStory={eventStoryById.get(event.event_id)}
+                                  key={event.event_id || event.title}
+                                />
+                              ))}
+                            </div>
+                          </section>
+                        ))}
+                      </div>
+                    ) : (
+                      <div className="events-browse-grid">
+                        {filteredTimelineEvents.slice(0, eventsBrowseLimit).map((event) => (
+                          <CoverageDirectoryCard
+                            event={event}
+                            relatedStory={eventStoryById.get(event.event_id)}
+                            showType={false}
+                            key={event.event_id || event.title}
+                          />
+                        ))}
+                      </div>
+                    )}
+                    {filteredTimelineEvents.length > eventsBrowseLimit ? (
+                      <button
+                        className="events-load-more"
+                        type="button"
+                        onClick={() => setEventsBrowseLimit((current) => current + EVENTS_BROWSE_PAGE_SIZE)}
+                      >
+                        Load more
+                      </button>
+                    ) : null}
+                  </>
+                ) : (
+                  <div className="events-browse-empty">
+                    <h2>No matching coverage</h2>
+                    <p>Try a broader search or another coverage type.</p>
+                  </div>
+                )}
+              </section>
+            )}
+
+            {false && !loadingTimelines && !timelineError && eligibleTimelineEvents.length > 0 && (
               <>
                 {featuredTimelineEvents.length ? (
                   <section className="event-latest-section" aria-labelledby="event-latest-title">
