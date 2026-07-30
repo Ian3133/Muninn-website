@@ -2371,10 +2371,18 @@ export default function LegacyHome() {
         setRecentNewsError('');
         setRecentNewsLoading(true);
         const data = await fetchFirstJson(
-          ['/Current_news/recent_news.json', '/current_news/recent_news.json'],
-          'recent_news.json'
+          [
+            '/Current_news/v1/more-news.json',
+            '/current_news/v1/more-news.json',
+            '/Current_news/recent_news.json',
+            '/current_news/recent_news.json',
+          ],
+          'recent coverage'
         );
-        setRecentNewsDays(Array.isArray(data?.days) ? data.days : []);
+        const editions = Array.isArray(data?.editions)
+          ? data.editions
+          : (Array.isArray(data?.days) ? data.days : []);
+        setRecentNewsDays(editions.slice(0, 7));
       } catch (e) {
         setRecentNewsError(e?.message || String(e));
         setRecentNewsDays([]);
@@ -3412,9 +3420,7 @@ export default function LegacyHome() {
                 aria-controls="more-news-editions"
               >
                 <span>
-                  {moreNewsOpen
-                    ? `Hide ${editionIsToday ? 'yesterday\u2019s' : 'previous'} edition`
-                    : `${editionIsToday ? 'Yesterday\u2019s' : 'Previous'} edition`}
+                  {moreNewsOpen ? 'Hide recent editions' : 'Recent editions'}
                 </span>
                 {recentNewsDays[0] ? (
                   <small>
@@ -3445,13 +3451,17 @@ export default function LegacyHome() {
                     </section>
                   ) : null}
 
-                  {recentNewsLoading ? <div className="more-news-status">Loading the previous edition...</div> : null}
-                  {recentNewsError ? <div className="more-news-status caution">The previous edition is temporarily unavailable.</div> : null}
-                  {recentNewsDays.slice(0, 1).map((day) => (
+                  {recentNewsLoading ? <div className="more-news-status">Loading recent editions...</div> : null}
+                  {recentNewsError ? <div className="more-news-status caution">Recent editions are temporarily unavailable.</div> : null}
+                  {recentNewsDays.slice(0, 7).map((day, editionIndex) => (
                     <section className="news-edition-section is-archive" key={day.date}>
                       <header className="news-edition-heading">
-                        <span>Previous edition</span>
-                        <h2>{editionIsToday ? 'Yesterday\u2019s News' : 'Previous News'}</h2>
+                        <span>{editionIndex === 0 ? 'Previous edition' : 'Earlier edition'}</span>
+                        <h2>
+                          {editionIndex === 0
+                            ? (editionIsToday ? 'Yesterday\u2019s News' : 'Previous News')
+                            : `News from ${formatStoredDate(day.date)}`}
+                        </h2>
                         <time dateTime={day.date}>{formatStoredDate(day.date)}</time>
                       </header>
                       <div className="top-stories-grid edition-stories-grid">

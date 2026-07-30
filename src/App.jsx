@@ -5,7 +5,7 @@ import { Authenticator } from '@aws-amplify/ui-react';
 import { fetchAuthSession } from 'aws-amplify/auth';
 import { useEffect, useState } from 'react';
 import AdminReview, { AdminAccessDenied } from './AdminReview';
-import LegacyHome from './LegacyHome';
+import ReaderApp from './ReaderApp';
 
 const ENABLE_AUTH = import.meta.env.VITE_ENABLE_AUTH === 'true';
 const ADMIN_VIEW = new URLSearchParams(window.location.search).get('view') === 'admin';
@@ -23,7 +23,7 @@ function getUserLabel(user) {
 
 export default function App() {
   if (!ENABLE_AUTH) {
-    return ADMIN_VIEW ? <AdminReview localPreview /> : <LegacyHome />;
+    return ADMIN_VIEW ? <AdminReview localPreview /> : <ReaderApp />;
   }
 
   return (
@@ -63,7 +63,7 @@ function AuthenticatedApp({ signOut, user }) {
           Sign out <span>{getUserLabel(user)}</span>
         </button>
       </div>
-      <LegacyHome />
+      <ReaderApp />
     </>
   );
 }

@@ -385,6 +385,93 @@
         "checked_at": "2026-07-29T14:02:44.026474+00:00",
         "model": "gpt-5.6-terra"
       },
+      "story_report": {
+        "schema_version": 1,
+        "status": "complete",
+        "summary": "Anthony Fauci invoked the Fifth Amendment and declined to answer senators’ questions at a hearing on the origins of COVID-19. He appeared under subpoena but withheld testimony on the advice of counsel, citing the risk of self-incrimination. The decision stopped lawmakers from obtaining his answers that day; it did not end the committee’s inquiry, establish wrongdoing, or resolve the underlying disputes over the pandemic’s origins and federally funded research. The committee had not announced whether it would narrow its questions, pursue enforcement, or seek another appearance.",
+        "summary_evidence_ids": [
+          "base-1",
+          "base-2",
+          "base-3",
+          "lens-1-claim-1",
+          "lens-1-claim-2",
+          "lens-1-claim-3",
+          "lens-2-claim-2",
+          "lens-3-uncertainty"
+        ],
+        "sections": [
+          {
+            "role": "meaning",
+            "heading": "What the Fifth Amendment changed",
+            "body": "The constitutional privilege can protect a congressional witness from being compelled to provide answers that could be used in a criminal case. Fauci’s invocation therefore limited what senators could obtain from him at the hearing, but it was not a finding that he committed an offense and did not settle the accusations discussed by the committee.",
+            "evidence_ids": [
+              "lens-1-claim-1",
+              "lens-1-claim-2",
+              "lens-1-claim-3"
+            ]
+          },
+          {
+            "role": "dispute",
+            "heading": "The dispute behind the hearing",
+            "body": "Rand Paul portrays the inquiry as an effort to uncover conflicts, withheld information, and possible links between U.S.-funded research and the pandemic. Fauci says Paul’s calls for prosecution made answering questions legally unsafe, while scientists defending Fauci say the accusations lack credible evidence. A 2024 Republican-led House investigation cited in the reviewed reporting did not link Fauci to wrongdoing.",
+            "evidence_ids": [
+              "lens-2-claim-1",
+              "lens-2-claim-2",
+              "lens-2-claim-3",
+              "lens-2-claim-4"
+            ]
+          },
+          {
+            "role": "next_steps",
+            "heading": "What could happen next",
+            "body": "A valid Fifth Amendment assertion limits Congress’s ability to compel answers, so any further attempt to obtain testimony would have to address the privilege’s scope. The committee could continue through documents, narrower questions, an enforcement decision, or a later appearance, but none of those steps had been announced. Separately, federal oversight of high-risk biological research has already changed since the pandemic.",
+            "evidence_ids": [
+              "lens-3-claim-1",
+              "lens-3-claim-2",
+              "lens-3-claim-3",
+              "lens-3-claim-4",
+              "lens-3-uncertainty"
+            ]
+          }
+        ],
+        "unresolved": [
+          {
+            "text": "The reviewed material does not establish whether Fauci invoked the privilege to every question or whether particular assertions will be challenged.",
+            "evidence_ids": [
+              "lens-1-uncertainty"
+            ]
+          },
+          {
+            "text": "The hearing did not determine the origin of SARS-CoV-2 or whether any individual committed an offense.",
+            "evidence_ids": [
+              "lens-2-uncertainty"
+            ]
+          },
+          {
+            "text": "No contempt action, civil enforcement effort, immunity proposal, or follow-up appearance had been identified.",
+            "evidence_ids": [
+              "lens-3-uncertainty"
+            ]
+          }
+        ],
+        "source_urls": [
+          "https://www.hsgac.senate.gov/hearings/testimony-of-anthony-fauci/",
+          "https://apnews.com/article/a774a79e46824ebec9e8e270b9cb9825",
+          "https://apnews.com/article/37660e6a4a555c739376cf9e2e96e94f",
+          "https://constitution.congress.gov/browse/essay/amdt5-3-2/ALDE_00000865/",
+          "https://www.hsgac.senate.gov/media/reps/chairman-paul-delivers-opening-remarks-during-whistleblower-hearing-on-the-multi-agency-cover-up-of-covid-19-and-gain-of-function-research/",
+          "https://grants.nih.gov/grants/guide/notice-files/NOT-OD-17-071.html",
+          "https://www.help.senate.gov/hearings/blank",
+          "https://www.whitehouse.gov/presidential-actions/2025/05/improving-the-safety-and-security-of-biological-research/?query-11-page=72"
+        ],
+        "generated_at": "2026-07-29T14:02:44.026474+00:00",
+        "model": "verified-prototype-composition"
+      },
+      "report_composition": {
+        "status": "complete",
+        "checked_at": "2026-07-29T14:02:44.026474+00:00",
+        "model": "verified-prototype-composition"
+      },
       "primary_category": "Politics",
       "secondary_categories": [],
       "category_method": "controlled_taxonomy_v1",

@@ -851,15 +851,38 @@
 						});
 						return html + '</section>';
 					}
-					// Load either the live digest or one of the two published archive editions.
-					var storyRequest = archiveDate
-						? $.getJSON('/Current_news/recent_news.json').then(function(archivePayload) {
-							var days = Array.isArray(archivePayload.days) ? archivePayload.days : [];
-							var edition = days.find(function(day) { return day.date === archiveDate; });
-							if (!edition) throw new Error('Archive edition not found');
-							return { clusters: Array.isArray(edition.stories) ? edition.stories : [], generated_at: edition.generated_at };
-						})
-						: $.getJSON(digestPath);
+					// Stable Story objects are permanent share targets. Legacy digest
+					// lookup remains as a fallback during the dual-write migration.
+					function legacyStoryRequest() {
+						return archiveDate
+							? $.getJSON('/Current_news/recent_news.json').then(function(archivePayload) {
+								var days = Array.isArray(archivePayload.days) ? archivePayload.days : [];
+								var edition = days.find(function(day) { return day.date === archiveDate; });
+								if (!edition) throw new Error('Archive edition not found');
+								return { clusters: Array.isArray(edition.stories) ? edition.stories : [], generated_at: edition.generated_at, edition_date: edition.date };
+							})
+							: $.getJSON(digestPath);
+					}
+
+					function storyObjectAsDigest(payload) {
+						if (!payload || !payload.story || payload.story.story_id !== storyKey) {
+							throw new Error('Invalid Story object');
+						}
+						var related = Array.isArray(payload.related_stories) ? payload.related_stories : [];
+						return {
+							clusters: [payload.story].concat(related),
+							generated_at: payload.edition && payload.edition.generated_at,
+							edition_date: payload.edition && payload.edition.date,
+							resolved_from: 'story_object'
+						};
+					}
+
+					var storyRequest = storyKey && feed !== 'ai'
+						? $.getJSON('/Current_news/v1/stories/' + encodeURIComponent(storyKey) + '.json').then(
+							storyObjectAsDigest,
+							function() { return legacyStoryRequest(); }
+						)
+						: legacyStoryRequest();
 
 					storyRequest.done(function(data) {
 						var clusters = Array.isArray(data.clusters) ? data.clusters : [];
@@ -885,7 +908,8 @@
 					var storyContext = story.story_context || {};
 					var developmentCount = Number(storyContext.development_count || (Array.isArray(story.timeline_highlights) ? story.timeline_highlights.length : 0));
 					var hasEventTimeline = Boolean(storyContext.available || developmentCount > 1 || (Array.isArray(story.timeline_highlights) && story.timeline_highlights.length > 1));
-					var writtenDate = archiveDate || story.date || story.run_date || story.published_date || data.generated_at || new Date().toISOString();						// Back button
+					var resolvedEditionDate = archiveDate || data.edition_date || '';
+					var writtenDate = resolvedEditionDate || story.date || story.run_date || story.published_date || data.generated_at || new Date().toISOString();						// Back button
 						var backLabel = returnCategory === 'timelines' ? 'Back to events' : (returnMore ? 'Back to more news' : 'Back to Today');
 						content += '<a href="' + backHref + '" class="back-button detail-back">\u2190 ' + escapeHtml(backLabel) + '</a>';
 
@@ -958,7 +982,7 @@
 
 						// Other stories section
 						content += '<div class="other-stories-section">';
-						content += '<h2>' + escapeHtml(archiveDate ? 'More from ' + formatStoryDate(archiveDate) : 'More from today') + '</h2>';
+						content += '<h2>' + escapeHtml(resolvedEditionDate ? 'More from ' + formatStoryDate(resolvedEditionDate) : 'More from today') + '</h2>';
 						content += '<div class="other-stories-grid" id="other-stories-grid"></div>';
 						content += '</div>';
 
