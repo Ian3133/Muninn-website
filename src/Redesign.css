@@ -1,22 +1,4 @@
-:root {
-  --ink: #17252d;
-  --ink-soft: #263840;
-  --teal: #286a7a;
-  --teal-dark: #1f5968;
-  --teal-soft: #e3f0f2;
-  --canvas: #f3f5f4;
-  --surface: #ffffff;
-  --surface-muted: #e9eeef;
-  --border: #d3dddf;
-  --muted: #66767d;
-  --amber: #c58a3a;
-  --amber-soft: #f7eddd;
-  --shadow: 0 14px 40px rgba(23, 37, 45, 0.08);
-  --gutter: clamp(1.25rem, 3.2vw, 4.5rem);
-  --radius: 14px;
-  --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
-  --sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-}
+@import url("/assets/css/muninn-theme.css");
 
 html { background: var(--canvas); }
 body, button, input, select, textarea { font-family: var(--sans); }
@@ -27,7 +9,7 @@ a { color: var(--teal); }
 .muninn-app-shell {
   min-height: 100vh;
   overflow: clip !important;
-  background: radial-gradient(circle at 84% 2%, rgba(40,106,122,.08), transparent 24rem), var(--canvas);
+  background: radial-gradient(circle at 84% 2%, var(--accent-wash), transparent 24rem), var(--canvas);
 }
 
 .app-header {
@@ -35,8 +17,8 @@ a { color: var(--teal); }
   z-index: 8000;
   top: 0;
   width: 100%;
-  border-bottom: 1px solid rgba(211,221,223,.92);
-  background: rgba(243,245,244,.94);
+  border-bottom: 1px solid var(--border);
+  background: var(--header-background);
   box-shadow: 0 4px 22px rgba(23,37,45,.04);
   backdrop-filter: blur(18px);
 }
@@ -109,7 +91,7 @@ a { color: var(--teal); }
   justify-content: center;
   padding: 0 1.15rem;
   border: 0;
-  color: #52656d;
+  color: var(--muted);
   font-size: .76rem;
   font-weight: 800;
   letter-spacing: .035em;
@@ -1755,8 +1737,8 @@ html[data-theme="dark"] .daily-briefing-prose a { color: #76b8c5; }
 }
 /* Lighter editorial balance and headline-first landscape cards */
 .app-header {
-  border-bottom-color: rgba(211, 221, 223, 0.92);
-  background: rgba(243, 245, 244, 0.96);
+  border-bottom-color: var(--border);
+  background: var(--header-background);
   box-shadow: 0 4px 22px rgba(23, 37, 45, 0.05);
 }
 
@@ -1897,35 +1879,18 @@ html[data-theme="dark"] .daily-briefing-prose a { color: #76b8c5; }
   border-top: 0;
 }
 
-html[data-theme="dark"] {
-  color-scheme: dark;
-  --ink: #eef4f5;
-  --ink-soft: #d3dfe2;
-  --teal: #67afbf;
-  --teal-dark: #83c1ce;
-  --teal-soft: #1d363e;
-  --canvas: #11191e;
-  --surface: #19242a;
-  --surface-muted: #223138;
-  --border: #34474f;
-  --muted: #9eafb5;
-  --amber: #d5a45d;
-  --amber-soft: #3c3022;
-  --shadow: 0 16px 44px rgba(0,0,0,.3);
-}
-
 html[data-theme="dark"],
 html[data-theme="dark"] body {
   background: var(--canvas) !important;
 }
 
 html[data-theme="dark"] .muninn-app-shell {
-  background: radial-gradient(circle at 84% 2%, rgba(103,175,191,.08), transparent 24rem), var(--canvas);
+  background: radial-gradient(circle at 84% 2%, var(--accent-wash), transparent 24rem), var(--canvas);
 }
 
 html[data-theme="dark"] .app-header {
   border-bottom-color: var(--border);
-  background: rgba(17,25,30,.95);
+  background: var(--header-background);
   box-shadow: 0 5px 24px rgba(0,0,0,.2);
 }
 

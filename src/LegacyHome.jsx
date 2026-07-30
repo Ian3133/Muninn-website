@@ -5,6 +5,7 @@ import { createUserState, updateUserState } from './graphql/mutations';
 import { getCurrentUser } from 'aws-amplify/auth';
 import NewsletterWizardModal from './NewsletterWizardModal';
 import NewsSectionsModal from './NewsSectionsModal';
+import WeeklyLetter from './WeeklyLetter';
 
 const GENERATE_URL = import.meta.env.VITE_NEWSLETTER_GENERATE_URL || '';
 const ENABLE_CLOUD_SETTINGS = import.meta.env.VITE_ENABLE_CLOUD_SETTINGS === 'true';
@@ -38,7 +39,7 @@ const NEWSLETTER_TEXT_PREFIX = '[muninn-newsletters]';
 const categoryTitles = {
   'top-stories': 'Today',
   timelines: 'Events',
-  'your-newsletter': 'Newsletter',
+  'your-newsletter': 'Weekly',
   local: 'Local News',
   happy: 'Happy News',
   science: 'Science News',
@@ -2385,7 +2386,7 @@ export default function LegacyHome() {
   }, [activeCategory, moreNewsOpen, recentNewsLoaded, recentNewsLoading]);
 
   useEffect(() => {
-    if (activeCategory !== 'timelines' && activeCategory !== 'your-newsletter') return;
+    if (activeCategory !== 'timelines') return;
 
     (async () => {
       try {
@@ -2417,33 +2418,6 @@ export default function LegacyHome() {
       }
     })();
   }, [activeCategory]);
-
-  useEffect(() => {
-    if (activeCategory !== 'your-newsletter') return;
-    if (!ENABLE_NEWSLETTERS || !ENABLE_CLOUD_SETTINGS) return;
-
-    (async () => {
-      try {
-        setLoadingNewsletter(true);
-        const id = userId || (await getCurrentUser()).userId;
-        if (!userId) setUserId(id);
-
-        const response = await client.graphql({
-          query: getUserState,
-          variables: { id },
-        });
-
-        if (response.data.getUserState) {
-          const backendNewsletters = parseNewslettersFromNoteText(response.data.getUserState.noteText);
-          setNewsletters(backendNewsletters);
-        }
-      } catch (e) {
-        console.error('Error loading newsletter preferences:', e);
-      } finally {
-        setLoadingNewsletter(false);
-      }
-    })();
-  }, [activeCategory, userId]);
 
   useEffect(() => {
     if (activeCategory !== 'local' || !selectedState) return;
@@ -3062,7 +3036,7 @@ export default function LegacyHome() {
 
       <main id="main" className={`view-${activeCategory}`}>
         <section className={`post app-view ${activeCategory === 'top-stories' ? 'top-stories-post' : ''} ${activeCategory === 'timelines' ? 'events-post' : ''}`}>
-          {activeCategory === 'timelines' ? (
+          {activeCategory === 'your-newsletter' ? null : activeCategory === 'timelines' ? (
             <header className="events-page-header">
               <div>
                 {eventsView === 'browse' ? <a href="/?category=timelines">{'\u2190'} Events</a> : null}
@@ -3085,7 +3059,6 @@ export default function LegacyHome() {
               <div className="page-intro-copy">
                 {activeCategory !== 'top-stories' ? <span className="page-kicker">Made for you</span> : null}
                 <h1>{activeCategory === 'top-stories' ? topStoriesHeading : title}</h1>
-                {activeCategory === 'your-newsletter' ? <p className="today-intro">A focused briefing built around the stories, places, and events that matter to you.</p> : null}
               </div>
               {showDate ? (
                 <div className="today-view-actions">
@@ -3179,239 +3152,9 @@ export default function LegacyHome() {
           ) : null}
 
           {ENABLE_NEWSLETTERS ? (
-          <div id="your-newsletter" className={`category-content ${activeCategory === 'your-newsletter' ? 'active' : ''}`}>
-            <section className="weekly-roundup" aria-labelledby="weekly-roundup-title">
-              <div className="weekly-roundup-heading">
-                <div>
-                  <span className="weekly-roundup-kicker">Seven-day briefing</span>
-                  <h2 id="weekly-roundup-title">The week in events</h2>
-                  <p>{formatStoredDate(weeklyRoundup.startKey)}–{formatStoredDate(weeklyRoundup.endKey)}</p>
-                </div>
-                {!loadingTimelines && !timelineError ? (
-                  <div className="weekly-roundup-totals" aria-label={`${weeklyRoundup.events.length} events and ${weeklyRoundup.developmentCount} developments`}>
-                    <strong>{weeklyRoundup.events.length}</strong>
-                    <span>events</span>
-                    <strong>{weeklyRoundup.developmentCount}</strong>
-                    <span>developments</span>
-                  </div>
-                ) : null}
-              </div>
-
-              {loadingTimelines ? <div className="loading">Building this week’s briefing...</div> : null}
-
-              {!loadingTimelines && timelineError ? (
-                <div className="weekly-roundup-empty">
-                  <h3>The weekly briefing is unavailable</h3>
-                  <p>Please try again shortly. Your saved newsletter preferences are unaffected.</p>
-                </div>
-              ) : null}
-
-              {!loadingTimelines && !timelineError && weeklyRoundup.events.length === 0 ? (
-                <div className="weekly-roundup-empty">
-                  <h3>No developing events this week</h3>
-                  <p>New events will appear here after Muninn identifies meaningful follow-up coverage.</p>
-                </div>
-              ) : null}
-
-              {!loadingTimelines && !timelineError && weeklyRoundup.events.length > 0 ? (
-                <div className="weekly-event-list">
-                  {weeklyRoundup.events.map(({ event, developments }, index) => {
-                    const presentation = event?.presentation || {};
-                    const stage = presentation.stage || event?.event_stage || 'developing_event';
-                    const stageLabel = stage === 'timeline' || stage === 'ongoing_story'
-                      ? 'Ongoing story'
-                      : 'Developing event';
-                    const sourceCount = Number(presentation.independent_source_count || presentation.source_count || 0);
-                    const readerSummary = eventReaderSummary(event);
-                    return (
-                      <article className={`weekly-event-card ${index < 3 ? 'is-leading' : ''}`} key={event.event_id || event.title}>
-                        <div className="weekly-event-card-heading">
-                          <span className={`weekly-event-stage event-stage-${stage}`}>{stageLabel}</span>
-                          <span>{developments.length} distinct development{developments.length === 1 ? '' : 's'} this week</span>
-                        </div>
-                        <h3>{eventDisplayTitle(event)}</h3>
-                        {readerSummary ? (
-                          <p className="weekly-event-context">{truncateText(readerSummary, 320)}</p>
-                        ) : null}
-                        <ol className="weekly-development-list">
-                          {developments.map((entry, entryIndex) => (
-                            <li key={entry.development_id || `${event.event_id || event.title}-${entry.date || entryIndex}`}>
-                              <time dateTime={toUtcDateKey(entry.date)}>{formatStoredDate(entry.date)}</time>
-                              <span>{entry.title || 'Event update'}</span>
-                            </li>
-                          ))}
-                        </ol>
-                        <div className="weekly-event-footer">
-                          {sourceCount ? <span>{sourceCount} independent source{sourceCount === 1 ? '' : 's'}</span> : <span>Source-grounded coverage</span>}
-                          <a href={`/timeline.html?event=${encodeURIComponent(event.event_id)}`}>Open full event <span aria-hidden="true">→</span></a>
-                        </div>
-                      </article>
-                    );
-                  })}
-                </div>
-              ) : null}
-            </section>
-
-            <div className="personal-newsletters-divider">
-              <span>Your personal newsletters</span>
+            <div id="your-newsletter" className={`category-content ${activeCategory === 'your-newsletter' ? 'active' : ''}`}>
+              <WeeklyLetter />
             </div>
-            {loadingNewsletter && <div className="loading">Loading preferences...</div>}
-
-            {!loadingNewsletter && newsletters.length === 0 && (
-              <div className="news-item">
-                <h3>Create your first newsletter custom to you</h3>
-                <p>Tell us what you care about and we’ll build a weekly (or daily) newsletter just for you.</p>
-                <button
-                  className="customize-button"
-                  onClick={() => {
-                    setNewsletterDraft({
-                      id: createNewsletterId(),
-                      newsletterName: '',
-                      personName: '',
-                      location: { state: selectedState || '', district: '' },
-                      topics: ['top-stories'],
-                      schedule: { frequency: 'weekly', days: ['Mon'], lookbackDays: 7 },
-                      emails: [],
-                    });
-                    setNewsletterModalOpen(true);
-                  }}
-                >
-                  Create your first newsletter
-                </button>
-              </div>
-            )}
-
-            {!loadingNewsletter && newsletters.length > 0 && (
-              <div className="newsletter-preferences-card">
-                <div className="preferences-header">
-                  <h3>Your Newsletters</h3>
-                  <button
-                    className="edit-button"
-                    onClick={() => {
-                      setNewsletterDraft({
-                        id: createNewsletterId(),
-                        newsletterName: '',
-                        personName: '',
-                        location: { state: selectedState || '', district: '' },
-                        topics: ['top-stories'],
-                        schedule: { frequency: 'weekly', days: ['Mon'], lookbackDays: 7 },
-                        emails: [],
-                      });
-                      setNewsletterModalOpen(true);
-                    }}
-                  >
-                    Create another
-                  </button>
-                </div>
-
-                <div className="preferences-content">
-                  {newsletters.map((entry) => (
-                    <div key={entry.id} className="news-item" style={{ marginBottom: '1rem' }}>
-                      <h3>{entry.newsletterName || 'Personal Newsletter'}</h3>
-                      <p>
-                        <strong>For:</strong> {entry.personName || 'Unnamed'}{' '}
-                        {entry?.location?.state ? `(${entry.location.state})` : ''}
-                      </p>
-                      <p>
-                        <strong>Topics:</strong> {(entry.topics || []).join(', ') || 'None'}
-                      </p>
-                      {entry?.topicDepths && Object.keys(entry.topicDepths).length > 0 && (
-                        <p>
-                          <strong>Depth:</strong>{' '}
-                          {Object.entries(entry.topicDepths)
-                            .map(([topic, depth]) => {
-                              const label = depth === 1 ? 'Brief' : depth === 3 ? 'Deep' : 'Standard';
-                              return `${topic}: ${label}`;
-                            })
-                            .join(', ')}
-                        </p>
-                      )}
-                      {entry?.tone && (
-                        <p>
-                          <strong>Tone:</strong> {entry.tone}
-                        </p>
-                      )}
-                      {entry?.keywords?.include?.length ? (
-                        <p>
-                          <strong>Keywords:</strong>{' '}
-                          include [{entry.keywords.include.join(', ')}]
-                        </p>
-                      ) : null}
-                      <p>
-                        <strong>Schedule:</strong>{' '}
-                        {entry?.schedule?.frequency === 'daily'
-                          ? 'Daily'
-                          : `Weekly on ${(entry?.schedule?.days || []).join(', ') || 'unspecified days'}`}
-                      </p>
-                      <p>
-                        <strong>Lookback:</strong> {entry?.schedule?.lookbackDays || 7} days
-                      </p>
-                      {entry?.emails?.length ? (
-                        <p><strong>Emails:</strong> {entry.emails.join(', ')}</p>
-                      ) : null}
-                      {entry?.lastGeneratedKey ? (
-                        <p style={{ wordBreak: 'break-word' }}>
-                          <strong>Last Output:</strong> {entry.lastGeneratedKey}
-                        </p>
-                      ) : null}
-
-                      {summaryLoadingId === entry.id ? (
-                        <p style={{ opacity: 0.8 }}>Loading summary...</p>
-                      ) : null}
-                      {summaryErrorById[entry.id] ? (
-                        <p style={{ color: '#ffb3b3' }}>{summaryErrorById[entry.id]}</p>
-                      ) : null}
-
-                      <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
-                        <button
-                          className="edit-button"
-                          onClick={() => {
-                            setNewsletterDraft(entry);
-                            setNewsletterModalOpen(true);
-                          }}
-                        >
-                          Edit
-                        </button>
-                        {entry?.lastGeneratedUrl ? (
-                          <button
-                            className="edit-button"
-                            onClick={() => {
-                              const key = entry.lastGeneratedKey || '';
-                              const lambdaUrl = GENERATE_URL;
-                              const query = new URLSearchParams();
-                              if (key) query.set('key', key);
-                              if (lambdaUrl) query.set('lambda', lambdaUrl);
-                              if (entry?.newsletterName) query.set('newsletterName', entry.newsletterName);
-                              if (entry?.location?.state) query.set('state', entry.location.state);
-                              if (entry?.location?.state) {
-                                const stateName = resolveStateName(entry.location.state);
-                                if (stateName) query.set('stateName', stateName);
-                              }
-                              window.open(`/summary.html?${query.toString()}`, '_blank', 'noopener,noreferrer');
-                            }}
-                          >
-                            View Summary
-                          </button>
-                        ) : null}
-                        <button
-                          className="edit-button"
-                          onClick={() => handleGenerateNow(entry.id)}
-                        >
-                          Generate Now
-                        </button>
-                        <button
-                          className="button-secondary delete-button"
-                          onClick={() => handleDeleteNewsletter(entry.id)}
-                        >
-                          Delete
-                        </button>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
           ) : null}
 
           <div id="top-stories" className={`category-content ${activeCategory === 'top-stories' ? 'active' : ''}`}>
