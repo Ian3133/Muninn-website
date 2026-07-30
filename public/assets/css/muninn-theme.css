@@ -1,0 +1,72 @@
+:root {
+  color-scheme: light;
+  --ink: #17252d;
+  --ink-soft: #263840;
+  --teal: #286a7a;
+  --teal-dark: #1f5968;
+  --teal-soft: #e3f0f2;
+  --canvas: #f3f5f4;
+  --surface: #ffffff;
+  --surface-muted: #e9eeef;
+  --border: #d3dddf;
+  --muted: #66767d;
+  --amber: #c58a3a;
+  --amber-soft: #f7eddd;
+  --shadow: 0 14px 40px rgba(23, 37, 45, 0.08);
+  --gutter: clamp(1.25rem, 3.2vw, 4.5rem);
+  --radius: 14px;
+  --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  --sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --header-background: rgba(243, 245, 244, 0.94);
+  --accent-wash: rgba(40, 106, 122, 0.08);
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --ink: #eef4f5;
+  --ink-soft: #d3dfe2;
+  --teal: #67afbf;
+  --teal-dark: #83c1ce;
+  --teal-soft: #1d363e;
+  --canvas: #11191e;
+  --surface: #19242a;
+  --surface-muted: #223138;
+  --border: #34474f;
+  --muted: #9eafb5;
+  --amber: #d5a45d;
+  --amber-soft: #3c3022;
+  --shadow: 0 16px 44px rgba(0, 0, 0, 0.3);
+  --header-background: rgba(17, 25, 30, 0.95);
+  --accent-wash: rgba(103, 175, 191, 0.08);
+}
+
+html .app-header {
+  border-bottom-color: var(--border) !important;
+  background: var(--header-background) !important;
+}
+
+html .app-header .primary-navigation a {
+  color: var(--muted) !important;
+}
+
+html .app-header .primary-navigation a:hover,
+html .app-header .primary-navigation li.active a {
+  color: var(--ink) !important;
+}
+
+html .app-header .primary-navigation a::after {
+  background: var(--teal) !important;
+}
+
+html .app-header .theme-toggle {
+  border-color: var(--border) !important;
+  background: var(--surface) !important;
+  color: var(--ink-soft) !important;
+}
+
+html .app-header .theme-toggle:hover,
+html .app-header .theme-toggle:focus-visible {
+  border-color: var(--teal) !important;
+  background: var(--teal-soft) !important;
+  color: var(--teal-dark) !important;
+}
