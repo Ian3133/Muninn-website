@@ -4,23 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Muninn brings together the stories shaping today and tracks how important events develop over time." />
-    <meta name="theme-color" content="#17252d" />
+    <meta name="theme-color" content="#f3f5f4" />
     <script>
       (() => {
-        let theme = 'light';
         try {
-          const savedTheme = localStorage.getItem('muninn-theme');
-          theme = savedTheme === 'dark' || savedTheme === 'light'
-            ? savedTheme
-            : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        } catch (_error) {
-          theme = 'light';
-        }
+          localStorage.removeItem('muninn-theme');
+        } catch (_error) {}
 
-        document.documentElement.dataset.theme = theme;
-        document.documentElement.style.colorScheme = theme;
+        document.documentElement.dataset.theme = 'light';
+        document.documentElement.style.colorScheme = 'light';
         document.querySelector('meta[name="theme-color"]')
-          .setAttribute('content', theme === 'dark' ? '#11191e' : '#f3f5f4');
+          .setAttribute('content', '#f3f5f4');
       })();
     </script>
     <meta name="application-name" content="Muninn" />
