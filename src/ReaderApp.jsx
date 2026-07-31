@@ -1,18 +1,41 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
+import WeeklyLetter from './WeeklyLetter';
 import './ReaderApp.css';
 
 const DIGEST_URLS = ['/Current_news/digest.json', '/current_news/digest.json'];
 const EVENT_URLS = ['/Current_news/event_timelines.json', '/current_news/event_timelines.json'];
+const RECENT_URLS = ['/Current_news/recent_news.json', '/current_news/recent_news.json'];
 
 const VIEW_LABELS = {
   today: 'Today',
+  events: 'Events',
   story: 'Story',
   event: 'Event',
+  weekly: 'Weekly',
+  archive: 'Archive',
+};
+
+const LEGACY_CATEGORY_VIEWS = {
+  'top-stories': { view: 'today' },
+  timelines: { view: 'events' },
+  'your-newsletter': { view: 'weekly' },
+  local: { view: 'events', topic: 'Local' },
+  happy: { view: 'events' },
+  science: { view: 'events', topic: 'Science & Environment' },
+  sports: { view: 'events', topic: 'Sports' },
+  politics: { view: 'events', topic: 'Politics' },
+  business: { view: 'events', topic: 'Business & Economy' },
+  technology: { view: 'events', topic: 'Technology & AI' },
+  health: { view: 'events', topic: 'Health' },
+  world: { view: 'events', topic: 'World' },
+  other: { view: 'events', topic: 'Other' },
 };
 
 const SOURCE_LOGO_ALIASES = {
   ap: 'ap',
   'ap news': 'ap',
+  'al jazeera': 'al-jazeera',
+  'al jazeera english': 'al-jazeera',
   bbc: 'bbc',
   'bbc news': 'bbc',
   cbc: 'cbc-news',
@@ -45,13 +68,27 @@ async function fetchFirst(urls) {
   throw new Error('Muninn preview data could not be loaded.');
 }
 
+async function fetchOptional(urls) {
+  try {
+    return await fetchFirst(urls);
+  } catch {
+    return null;
+  }
+}
+
 function readRoute() {
   const params = new URLSearchParams(window.location.search);
-  const view = params.get('view');
+  const requestedView = params.get('view');
+  const legacy = LEGACY_CATEGORY_VIEWS[params.get('category')];
+  const view = VIEW_LABELS[requestedView]
+    ? requestedView
+    : legacy?.view || 'today';
   return {
-    view: VIEW_LABELS[view] ? view : 'today',
-    sid: params.get('sid') || '',
+    view,
+    sid: params.get('sid') || params.get('id') || '',
     eventId: params.get('event') || '',
+    mode: params.get('mode') || params.get('type') || 'all',
+    topic: params.get('topic') || legacy?.topic || 'all',
   };
 }
 
@@ -60,6 +97,8 @@ function routeHref(view, extras = {}) {
   if (view !== 'today') params.set('view', view);
   if (extras.sid) params.set('sid', extras.sid);
   if (extras.eventId) params.set('event', extras.eventId);
+  if (extras.mode && extras.mode !== 'all') params.set('mode', extras.mode);
+  if (extras.topic && extras.topic !== 'all') params.set('topic', extras.topic);
   const query = params.toString();
   return `/${query ? `?${query}` : ''}`;
 }
@@ -78,28 +117,23 @@ function formatDate(value, options = {}) {
 }
 
 function editionTimestamp(value) {
-  if (!value) return { weekday: 'Daily edition', date: 'Today', time: '' };
+  if (!value) return { weekday: 'Daily edition', date: 'Today' };
   const date = new Date(value);
   if (Number.isNaN(date.getTime())) {
-    return { weekday: 'Daily edition', date: String(value), time: '' };
+    return { weekday: 'Daily edition', date: String(value) };
   }
   return {
     weekday: new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(date),
     date: new Intl.DateTimeFormat('en-US', {
       month: 'long',
       day: 'numeric',
-      year: 'numeric',
-    }).format(date),
-    time: new Intl.DateTimeFormat('en-US', {
-      hour: 'numeric',
-      minute: '2-digit',
     }).format(date),
   };
 }
 
 function cleanSourceName(value = '') {
   return String(value)
-    .replace(/\s*-\s*(top stories|english|home|politics)$/i, '')
+    .replace(/\s*-\s*(top stories|latest|world|english|home|politics)$/i, '')
     .trim();
 }
 
@@ -126,11 +160,8 @@ function imagePresentation(image, role = 'wide') {
   const y = roleY ?? (tall ? image.focal_tall_y : image.focal_wide_y);
   const fallbackX = image.focal_x ?? 0.5;
   const fallbackY = image.focal_y ?? 0.48;
-  const bottomRightComposed = image.is_ai_generated && (role === 'lead' || role === 'support');
-  const resolvedX = bottomRightComposed ? Math.max(x ?? fallbackX, role === 'lead' ? 0.7 : 0.66) : x ?? fallbackX;
-  const resolvedY = bottomRightComposed ? Math.max(y ?? fallbackY, role === 'lead' ? 0.66 : 0.62) : y ?? fallbackY;
   return {
-    objectPosition: `${Math.round(resolvedX * 100)}% ${Math.round(resolvedY * 100)}%`,
+    objectPosition: `${Math.round((x ?? fallbackX) * 100)}% ${Math.round((y ?? fallbackY) * 100)}%`,
   };
 }
 
@@ -147,7 +178,41 @@ function storyDate(story) {
 }
 
 function storyRouteId(story) {
-  return story?.cluster_id || story?.story_id || '';
+  return story?.__route_id || story?.cluster_id || story?.story_id || '';
+}
+
+function scopedStories(payload, scope) {
+  const stories = Array.isArray(payload?.clusters)
+    ? payload.clusters
+    : Array.isArray(payload?.stories)
+      ? payload.stories
+      : [];
+  return stories.map((story, index) => ({
+    ...story,
+    __route_id: `${scope}:${story.story_id || story.cluster_id || index + 1}`,
+    __scope: scope,
+  }));
+}
+
+function eventTitle(event) {
+  return event?.presentation?.base_title
+    || event?.topic_label
+    || event?.canonical_title
+    || event?.title
+    || 'Tracked event';
+}
+
+function eventCategory(event, relatedStory) {
+  return relatedStory?.primary_category
+    || relatedStory?.category
+    || event?.primary_category
+    || event?.category
+    || event?.presentation?.primary_category
+    || 'Ongoing coverage';
+}
+
+function eventDevelopmentCount(event) {
+  return event?.presentation?.development_count || event?.timeline?.length || 0;
 }
 
 function splitSentences(value = '') {
@@ -187,8 +252,23 @@ function sourceCount(story) {
   return story?.source_count || sourceList(story).length || 1;
 }
 
-function AppLink({ view, sid, eventId, onNavigate, children, className = '', ...props }) {
-  const href = routeHref(view, { sid, eventId });
+function AppLink({
+  view,
+  sid,
+  eventId,
+  mode,
+  topic,
+  onNavigate,
+  children,
+  className = '',
+  ...props
+}) {
+  const href = routeHref(view, {
+    sid,
+    eventId,
+    mode,
+    topic,
+  });
   return (
     <a
       href={href}
@@ -203,7 +283,12 @@ function AppLink({ view, sid, eventId, onNavigate, children, className = '', ...
           || event.altKey
         ) return;
         event.preventDefault();
-        onNavigate(view, { sid, eventId });
+        onNavigate(view, {
+          sid,
+          eventId,
+          mode,
+          topic,
+        });
       }}
       {...props}
     >
@@ -213,10 +298,11 @@ function AppLink({ view, sid, eventId, onNavigate, children, className = '', ...
 }
 
 function SourceMarks({ story, limit = 4, compact = false }) {
-  const sources = [...new Set(sourceList(story))].slice(0, limit);
+  const allSources = [...new Set(sourceList(story))];
+  const sources = allSources.slice(0, limit);
   return (
     <div className={`source-marks${compact ? ' is-compact' : ''}`}>
-      <div className="source-mark-stack" aria-label={`Sources include ${sources.join(', ')}`}>
+      <div className="source-mark-stack" aria-label={`Sources include ${allSources.join(', ')}`}>
         {sources.map((source) => {
           const logo = sourceLogoPath(source);
           return (
@@ -257,8 +343,9 @@ function StoryImage({
   );
 }
 
-function Header({ view, onNavigate, defaultEventId }) {
-  const todayActive = view === 'today' || view === 'story';
+function Header({ view, onNavigate }) {
+  const todayActive = view === 'today' || view === 'story' || view === 'archive';
+  const eventsActive = view === 'events' || view === 'event';
   return (
     <header className="site-header">
       <div className="site-header-inner">
@@ -279,13 +366,20 @@ function Header({ view, onNavigate, defaultEventId }) {
             Today
           </AppLink>
           <AppLink
-            view="event"
-            eventId={defaultEventId}
+            view="events"
             onNavigate={onNavigate}
-            className={view === 'event' ? 'is-active' : ''}
-            aria-current={view === 'event' ? 'page' : undefined}
+            className={eventsActive ? 'is-active' : ''}
+            aria-current={eventsActive ? 'page' : undefined}
           >
             Events
+          </AppLink>
+          <AppLink
+            view="weekly"
+            onNavigate={onNavigate}
+            className={view === 'weekly' ? 'is-active' : ''}
+            aria-current={view === 'weekly' ? 'page' : undefined}
+          >
+            Weekly
           </AppLink>
         </nav>
       </div>
@@ -294,8 +388,9 @@ function Header({ view, onNavigate, defaultEventId }) {
 }
 
 function LeadStory({ story, onNavigate }) {
+  const update = storyUpdateLabel(story);
   return (
-    <article className="lead-story">
+    <article className={`lead-story${update ? ' is-update' : ''}`}>
       <AppLink
         view="story"
         sid={storyRouteId(story)}
@@ -303,30 +398,42 @@ function LeadStory({ story, onNavigate }) {
         className="lead-story-link"
         aria-label={`Read ${story.title}`}
       >
-        <StoryImage
-          story={story}
-          className="lead-story-image"
-          role="lead"
-          eager
-          showRole={false}
-        />
-        <div className="lead-story-shade" />
-        <div className="lead-story-copy">
-          <div className="story-kicker-row">
-            <span>01 · {storyTopic(story)}</span>
+        <div className="lead-story-media">
+          <StoryImage
+            story={story}
+            className="lead-story-image"
+            role="lead"
+            eager
+            showRole={false}
+          />
+          <div className="lead-story-shade" />
+          <div className="lead-story-copy">
+            <div className={`story-kicker-row${update ? ' is-update' : ''}`}>
+              <span>
+                {update ? <span className="today-update-dot" aria-label="Updated" data-tooltip="Updated" /> : null}
+                {update || storyTopic(story)}
+              </span>
+            </div>
+            <h2>{story.title}</h2>
+            <SourceMarks story={story} limit={3} />
           </div>
-          <h2>{story.title}</h2>
-          <p>{conciseSummary(story.summary, 2)}</p>
-          <SourceMarks story={story} />
         </div>
       </AppLink>
     </article>
   );
 }
 
-function SupportingStory({ story, rank, onNavigate }) {
+function storyUpdateLabel(story) {
+  const context = story?.story_context || {};
+  if (!context.available || (context.development_count || context.highlights?.length || 0) < 2) return '';
+  const eventLabel = context.event_title || context.display_title || '';
+  return eventLabel && eventLabel.length <= 48 ? eventLabel : storyTopic(story);
+}
+
+function SupportingStory({ story, onNavigate }) {
+  const update = storyUpdateLabel(story);
   return (
-    <article className="support-story">
+    <article className={`support-story${update ? ' is-update' : ''}`}>
       <AppLink
         view="story"
         sid={storyRouteId(story)}
@@ -334,10 +441,13 @@ function SupportingStory({ story, rank, onNavigate }) {
         className="support-story-link"
         aria-label={`Read ${story.title}`}
       >
-        <div className="support-story-copy">
-          <div className="story-kicker-row">
-            <span>{rank ? `${String(rank).padStart(2, '0')} · ` : ''}{storyTopic(story)}</span>
-          </div>
+          <div className="support-story-copy">
+            <div className={`story-kicker-row${update ? ' is-update' : ''}`}>
+              <span>
+                {update ? <span className="today-update-dot" aria-label="Updated" data-tooltip="Updated" /> : null}
+                {update || storyTopic(story)}
+              </span>
+            </div>
           <h2>{story.title}</h2>
           <SourceMarks story={story} compact limit={3} />
         </div>
@@ -347,50 +457,46 @@ function SupportingStory({ story, rank, onNavigate }) {
   );
 }
 
-function StreamStory({ story, rank, onNavigate, kind = 'thread', showImage = true }) {
-  const context = story.story_context || {};
-  const isThread = kind === 'thread';
+function VisualStory({ story, onNavigate }) {
+  const update = storyUpdateLabel(story);
   return (
-    <article className={`stream-story is-${kind}`}>
+    <article className={`today-visual-story${update ? ' is-update' : ''}`}>
       <AppLink
         view="story"
         sid={storyRouteId(story)}
         onNavigate={onNavigate}
-        className="stream-story-link"
+        className="today-visual-story-link"
         aria-label={`Read ${story.title}`}
       >
-        <div className="stream-rank">{String(rank).padStart(2, '0')}</div>
-        <div className="stream-copy">
-          <span className="stream-topic">
-            {isThread ? context.event_title || storyTopic(story) : storyTopic(story)}
+        <div className="today-visual-copy">
+          <span className={`today-story-label${update ? ' is-update' : ''}`}>
+            {update ? <span className="today-update-dot" aria-label="Updated" data-tooltip="Updated" /> : null}
+            {storyTopic(story)}
           </span>
           <h3>{story.title}</h3>
-          {isThread ? (
-            <div className="thread-state">
-              <strong>{context.development_count || context.highlights?.length || 1} developments</strong>
-              <span>Latest {formatDate(latestContextDate(story), { short: true, year: false })}</span>
-            </div>
-          ) : <SourceMarks story={story} compact limit={3} />}
+          <SourceMarks story={story} compact limit={3} />
         </div>
-        {showImage ? <StoryImage story={story} className="stream-image" role="support" /> : null}
+        <StoryImage story={story} className="today-visual-image" role="standard" showRole={false} />
       </AppLink>
     </article>
   );
 }
 
-function BriefStory({ story, rank, onNavigate }) {
+function HeadlineStory({ story, onNavigate }) {
+  const update = storyUpdateLabel(story);
   return (
-    <article className="brief-story">
+    <article className={`today-headline-story${update ? ' is-update' : ''}`}>
       <AppLink
         view="story"
         sid={storyRouteId(story)}
         onNavigate={onNavigate}
         aria-label={`Read ${story.title}`}
       >
-        <span className="brief-rank">{String(rank).padStart(2, '0')}</span>
-        <span className="brief-topic">{storyTopic(story)}</span>
+        <span className={`today-story-label${update ? ' is-update' : ''}`}>
+          {update ? <span className="today-update-dot" aria-label="Updated" data-tooltip="Updated" /> : null}
+          {storyTopic(story)}
+        </span>
         <h3>{story.title}</h3>
-        <small>{sourceCount(story)} source{sourceCount(story) === 1 ? '' : 's'}</small>
       </AppLink>
     </article>
   );
@@ -399,112 +505,66 @@ function BriefStory({ story, rank, onNavigate }) {
 function TodayView({ digest, onNavigate }) {
   const stories = Array.isArray(digest?.clusters) ? digest.clusters : [];
   const edition = editionTimestamp(digest?.briefing?.as_of || digest?.generated_at);
-  const featured = stories.slice(0, 5);
-  const remainder = stories.slice(5);
-  const ongoing = remainder
-    .filter((story) => story.story_context?.available && (story.story_context?.development_count || 0) > 1)
-    .slice(0, 4);
-  const ongoingIds = new Set(ongoing.map(storyRouteId));
-  const afterOngoing = remainder.filter((story) => !ongoingIds.has(storyRouteId(story)));
-  const otherDevelopments = afterOngoing.slice(0, 6);
-  const inBrief = afterOngoing.slice(6);
+  const opening = stories.slice(0, 4);
+  const visualStories = stories.slice(4, 10);
+  const headlineStories = stories.slice(10);
+  const displayedHeadlineStories = headlineStories.length % 3 === 1
+    ? headlineStories.slice(0, -1)
+    : headlineStories;
   return (
     <main id="main" className="page-shell today-page">
       <section className="briefing-heading">
         <div className="briefing-heading-copy">
-          <p className="eyebrow">Finite daily briefing</p>
-          <h1>Today’s essential stories</h1>
+          <h1>Latest News</h1>
         </div>
-        <div className="edition-date">
-          <span>{edition.weekday}</span>
-          <strong>{edition.date}</strong>
-          {edition.time ? <small>Updated {edition.time}</small> : null}
-        </div>
+        <p className="edition-date">{edition.weekday}, {edition.date}</p>
       </section>
 
-      {featured.length ? (
+      {opening.length ? (
         <section className="opening-stories" aria-label="Top stories">
-          <LeadStory story={featured[0]} onNavigate={onNavigate} />
+          <LeadStory story={opening[0]} onNavigate={onNavigate} />
           <div className="supporting-stories">
-            {featured.slice(1, 4).map((story, index) => (
+            {opening.slice(1).map((story) => (
               <SupportingStory
                 key={storyRouteId(story)}
                 story={story}
-                rank={index + 2}
                 onNavigate={onNavigate}
               />
             ))}
           </div>
-          {featured[4] ? (
-            <div className="lead-buddy">
-              <SupportingStory
-                story={featured[4]}
-                rank={5}
-                onNavigate={onNavigate}
-              />
-            </div>
-          ) : null}
         </section>
       ) : null}
 
-      <section className="briefing-remainder" aria-labelledby="remainder-title">
-        <header className="section-heading">
-          <h2 id="remainder-title">Ongoing threads</h2>
-        </header>
-        <div className="stream-grid thread-grid">
-          {ongoing.map((story) => (
-            <StreamStory
+      {visualStories.length ? (
+        <section className="today-visual-grid" aria-label="More ranked news">
+          {visualStories.map((story) => (
+            <VisualStory
               key={storyRouteId(story)}
               story={story}
-              rank={stories.indexOf(story) + 1}
               onNavigate={onNavigate}
-              kind="thread"
             />
           ))}
-        </div>
-      </section>
+        </section>
+      ) : null}
 
-      <section className="briefing-group" aria-labelledby="developments-title">
-        <header className="section-heading compact">
-          <h2 id="developments-title">Other developments</h2>
-        </header>
-        <div className="stream-grid development-grid">
-          {otherDevelopments.map((story) => (
-            <StreamStory
+      {displayedHeadlineStories.length ? (
+        <section className="today-headline-grid" aria-label="More headlines">
+          {displayedHeadlineStories.map((story) => (
+            <HeadlineStory
               key={storyRouteId(story)}
               story={story}
-              rank={stories.indexOf(story) + 1}
               onNavigate={onNavigate}
-              kind="development"
-              showImage={false}
             />
           ))}
-        </div>
-      </section>
-
-      {inBrief.length ? (
-        <section className="in-brief" aria-labelledby="brief-title">
-          <header className="section-heading compact">
-            <h2 id="brief-title">In brief</h2>
-          </header>
-          <div className="brief-grid">
-            {inBrief.map((story) => (
-              <BriefStory
-                key={storyRouteId(story)}
-                story={story}
-                rank={stories.indexOf(story) + 1}
-                onNavigate={onNavigate}
-              />
-            ))}
-          </div>
         </section>
       ) : null}
 
       <section className="caught-up" aria-label="End of today's briefing">
         <img src="/brand/muninn-mark.svg" alt="" />
         <div>
-          <h2>You’re caught up.</h2>
-          <p>Return tomorrow for a new finite edition. Events remain available when you want the longer view.</p>
+          <h2>You’re caught up</h2>
+          <p>Follow developing stories in Events or browse previous weekly newsletters. These stories—and others—will be brought together in the next weekly edition, published Saturday.</p>
+          <AppLink view="archive" onNavigate={onNavigate}>Browse previous editions →</AppLink>
         </div>
       </section>
     </main>
@@ -607,7 +667,6 @@ function EditorialFeatureReport({ story }) {
   const sections = reportSections(story);
   const uncertaintyNotes = unresolvedReportItems(story);
   const [, ...narrativeSections] = sections;
-  const [flowingSection, ...remainingSections] = narrativeSections;
   const imageLabel = story.image?.image_role_label;
 
   return (
@@ -623,20 +682,11 @@ function EditorialFeatureReport({ story }) {
           <p className="eyebrow">The short version</p>
           <p>{conciseSummary(story.story_report?.summary || story.summary, 3)}</p>
         </div>
-        {flowingSection ? (
-          <ReportSection section={flowingSection} />
-        ) : null}
+        {narrativeSections.map((section) => (
+          <ReportSection section={section} key={section.id} />
+        ))}
       </div>
 
-      {remainingSections.length || (!flowingSection && uncertaintyNotes.length) ? (
-        <div className="story-feature-body">
-          <div className="story-feature-narrative">
-            {remainingSections.map((section) => (
-              <ReportSection section={section} key={section.id} />
-            ))}
-          </div>
-        </div>
-      ) : null}
       {uncertaintyNotes.length ? (
         <aside className="story-still-unknown is-standalone" aria-label="What remains unknown">
           <p className="eyebrow">What remains unresolved</p>
@@ -972,6 +1022,384 @@ function EventView({ event, currentStoryId, otherEvents, onNavigate }) {
   );
 }
 
+function DirectoryStoryCard({ story, onNavigate, featured = false }) {
+  return (
+    <article className={`directory-story-card${featured ? ' is-featured' : ''}`}>
+      <AppLink
+        view="story"
+        sid={storyRouteId(story)}
+        onNavigate={onNavigate}
+        aria-label={`Read ${story.title}`}
+      >
+        <StoryImage
+          story={story}
+          className="directory-story-image"
+          role={featured ? 'lead' : 'support'}
+          showRole={false}
+        />
+        <div className="directory-story-copy">
+          <p className="eyebrow">{storyTopic(story)}</p>
+          <h2>{story.title}</h2>
+          <p>{conciseSummary(story.summary, featured ? 2 : 1)}</p>
+          <SourceMarks story={story} compact limit={3} />
+        </div>
+      </AppLink>
+    </article>
+  );
+}
+
+function PageIntroduction({ eyebrow, title, description, aside }) {
+  return (
+    <header className="directory-heading">
+      <div>
+        <p className="eyebrow">{eyebrow}</p>
+        <h1>{title}</h1>
+        {description ? <p>{description}</p> : null}
+      </div>
+      {aside ? <p className="directory-heading-aside">{aside}</p> : null}
+    </header>
+  );
+}
+
+function eventIsOngoing(event) {
+  const stage = event?.presentation?.stage || event?.event_stage || '';
+  return stage === 'storyline' || stage === 'timeline' || eventDevelopmentCount(event) >= 4;
+}
+
+function EventRailCard({
+  event,
+  relatedStory,
+  onNavigate,
+  showType = false,
+  kind = 'event',
+}) {
+  const isUpdate = kind === 'update' && relatedStory;
+  const image = isUpdate ? storyImage(relatedStory) || eventImage(event) : eventImage(event);
+  const imageData = isUpdate && storyImage(relatedStory) ? relatedStory.image : event.hero_image;
+  const latestEntry = event?.timeline?.at(-1) || {};
+  const latest = event?.presentation?.latest_update_title || latestEntry.title;
+  const cardTitle = isUpdate ? relatedStory.title : eventTitle(event);
+  const cardSummary = isUpdate
+    ? conciseSummary(relatedStory.summary, 1)
+    : latest || 'Latest development available';
+  return (
+    <article className={`event-rail-card is-${kind}`}>
+      <AppLink
+        view={isUpdate ? 'story' : 'event'}
+        sid={isUpdate ? storyRouteId(relatedStory) : undefined}
+        eventId={isUpdate ? undefined : event.event_id}
+        onNavigate={onNavigate}
+        aria-label={`Open ${cardTitle}`}
+      >
+        <div className={`event-rail-media${image ? '' : ' is-empty'}`}>
+          {image ? (
+            <img src={image} alt="" style={imagePresentation(imageData, 'support')} />
+          ) : null}
+          <div className="event-rail-scrim" aria-hidden="true" />
+          <div className="event-rail-title">
+            {isUpdate ? <span>{eventTitle(event)}</span> : null}
+            {!isUpdate && showType ? <span>Ongoing story</span> : null}
+            <h3>{cardTitle}</h3>
+          </div>
+        </div>
+        <div className="event-rail-footer">
+          <small>
+            {isUpdate ? 'Latest update' : 'Ongoing coverage'}
+            {latestEntry.date ? ` · ${formatDate(latestEntry.date, { short: true, year: false })}` : ''}
+          </small>
+          <strong>{cardSummary}</strong>
+          <div>
+            <span>{eventDevelopmentCount(event)} developments</span>
+            <span>
+              {isUpdate
+                ? sourceCount(relatedStory)
+                : event.presentation?.independent_source_count || event.presentation?.source_count || '—'} sources
+            </span>
+          </div>
+        </div>
+      </AppLink>
+    </article>
+  );
+}
+
+function EventSwipeSection({
+  title,
+  items,
+  relatedStories,
+  showType = false,
+  kind = 'event',
+  onSeeAll,
+  onNavigate,
+}) {
+  const railRef = useRef(null);
+  const scroll = (direction) => {
+    const rail = railRef.current;
+    if (!rail) return;
+    rail.scrollBy({
+      left: direction * Math.max(280, Math.round(rail.clientWidth * .88)),
+      behavior: 'smooth',
+    });
+  };
+  if (!items.length) return null;
+  return (
+    <section className="event-swipe-section" aria-label={title}>
+      <header className="event-swipe-heading">
+        <h2>{title}</h2>
+        <div>
+          <button type="button" className="event-see-all" onClick={onSeeAll}>See all →</button>
+          <span className="event-swipe-controls">
+            <button type="button" onClick={() => scroll(-1)} aria-label={`Previous ${title}`}>←</button>
+            <button type="button" onClick={() => scroll(1)} aria-label={`More ${title}`}>→</button>
+          </span>
+        </div>
+      </header>
+      <div className="event-swipe-rail" ref={railRef} tabIndex={0}>
+        {items.map((event) => (
+          <EventRailCard
+            event={event}
+            relatedStory={relatedStories.get(event.event_id)}
+            onNavigate={onNavigate}
+            showType={showType}
+            kind={kind}
+            key={event.event_id}
+          />
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function EventsDirectoryView({
+  events,
+  stories,
+  initialMode,
+  initialTopic,
+  onNavigate,
+}) {
+  const [query, setQuery] = useState('');
+  const [mode, setMode] = useState(
+    ['all', 'latest', 'developing', 'ongoing'].includes(initialMode) ? initialMode : 'all',
+  );
+  const [topic, setTopic] = useState(initialTopic || 'all');
+  const ordered = useMemo(
+    () => [...events].sort((left, right) => (
+      (right.presentation?.rank_score || 0) - (left.presentation?.rank_score || 0)
+      || String(right.last_seen_at || '').localeCompare(String(left.last_seen_at || ''))
+    )),
+    [events],
+  );
+  const ongoing = ordered.filter(eventIsOngoing);
+  const relatedStories = useMemo(() => {
+    const map = new Map();
+    stories.forEach((story) => {
+      if (story.event_id && !map.has(story.event_id)) map.set(story.event_id, story);
+    });
+    return map;
+  }, [stories]);
+  const categoryFor = (event) => eventCategory(event, relatedStories.get(event.event_id));
+  const latestUpdates = ordered.filter((event) => relatedStories.has(event.event_id));
+  const topics = useMemo(() => {
+    const counts = new Map();
+    ordered.forEach((event) => {
+      const label = eventCategory(event, relatedStories.get(event.event_id));
+      if (!label || label === 'Ongoing coverage') return;
+      counts.set(label, (counts.get(label) || 0) + 1);
+    });
+    return [...counts.entries()]
+      .sort((left, right) => right[1] - left[1] || left[0].localeCompare(right[0]))
+      .slice(0, 10);
+  }, [ordered, relatedStories]);
+  const filtered = ordered.filter((event) => {
+    const haystack = [
+      eventTitle(event),
+      event.topic_label,
+      categoryFor(event),
+      event.summary,
+      event.presentation?.latest_update_title,
+    ].filter(Boolean).join(' ').toLowerCase();
+    const isOngoing = eventIsOngoing(event);
+    const matchesMode = mode === 'all'
+      || (mode === 'latest' && relatedStories.has(event.event_id))
+      || (mode === 'ongoing' && isOngoing)
+      || (mode === 'developing' && !isOngoing);
+    const matchesTopic = topic === 'all' || categoryFor(event) === topic;
+    return matchesMode
+      && matchesTopic
+      && (!query.trim() || haystack.includes(query.trim().toLowerCase()));
+  });
+  const browsing = Boolean(query.trim() || mode !== 'all' || topic !== 'all');
+  const resetFilters = () => {
+    setQuery('');
+    setMode('all');
+    setTopic('all');
+  };
+  return (
+    <main id="main" className="page-shell events-directory-page">
+      <PageIntroduction
+        eyebrow="Living coverage"
+        title="Events"
+        description="Follow the stories that outlast a single headline, with the latest change first and the full record close at hand."
+        aside={`${events.length} tracked events`}
+      />
+
+      <section className="event-search-bar" aria-label="Search events">
+        <label>
+          <span>Search coverage</span>
+          <input
+            type="search"
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            placeholder="Search a topic or event"
+          />
+        </label>
+        {browsing ? <button type="button" onClick={resetFilters}>Clear</button> : null}
+      </section>
+
+      {!browsing ? (
+        <div className="events-landing-rails">
+          <EventSwipeSection
+            title="Latest updates"
+            items={latestUpdates.slice(0, 12)}
+            relatedStories={relatedStories}
+            kind="update"
+            onSeeAll={() => setMode('latest')}
+            onNavigate={onNavigate}
+          />
+          <EventSwipeSection
+            title="Ongoing stories"
+            items={ongoing.slice(0, 12)}
+            relatedStories={relatedStories}
+            showType
+            kind="ongoing"
+            onSeeAll={() => setMode('ongoing')}
+            onNavigate={onNavigate}
+          />
+          <section className="event-explore" aria-labelledby="event-explore-title">
+            <header>
+              <h2 id="event-explore-title">Explore</h2>
+              <p>Follow a subject or return to long-running coverage.</p>
+            </header>
+            <div className="event-ongoing-links">
+              {ongoing.slice(0, 4).map((event) => (
+                <AppLink
+                  view="event"
+                  eventId={event.event_id}
+                  onNavigate={onNavigate}
+                  key={event.event_id}
+                >
+                  <span>Ongoing coverage</span>
+                  <strong>{eventTitle(event)}</strong>
+                  <b aria-hidden="true">→</b>
+                </AppLink>
+              ))}
+            </div>
+            <div className="event-topic-list" aria-label="Browse event topics">
+              <span>Topics</span>
+              {topics.map(([label, count]) => (
+                <button type="button" onClick={() => setTopic(label)} key={label}>
+                  {label} <small>{count}</small>
+                </button>
+              ))}
+            </div>
+          </section>
+        </div>
+      ) : null}
+
+      {browsing && filtered.length ? (
+        <section className="event-results" aria-labelledby="event-results-title">
+          <header className="event-swipe-heading">
+            <h2 id="event-results-title">
+              {topic !== 'all'
+                ? topic
+                : mode === 'ongoing'
+                  ? 'Ongoing coverage'
+                  : mode === 'developing'
+                    ? 'Developing events'
+                    : mode === 'latest'
+                      ? 'Latest updates'
+                      : 'Search results'}
+            </h2>
+            <p>{filtered.length} results</p>
+          </header>
+          <div className="event-results-grid">
+            {filtered.map((event) => (
+              <EventRailCard
+                event={event}
+                relatedStory={relatedStories.get(event.event_id)}
+                onNavigate={onNavigate}
+                showType
+                kind={mode === 'latest' ? 'update' : mode === 'ongoing' ? 'ongoing' : 'event'}
+                key={event.event_id}
+              />
+            ))}
+          </div>
+        </section>
+      ) : null}
+      {!filtered.length ? (
+        <section className="directory-empty">
+          <p className="eyebrow">No results</p>
+          <h2>No tracked event matches that search.</h2>
+          <p>Try a broader topic or return to all coverage.</p>
+          <button type="button" onClick={resetFilters}>Clear filters</button>
+        </section>
+      ) : null}
+    </main>
+  );
+}
+
+function ArchiveView({ recent, onNavigate }) {
+  const days = Array.isArray(recent?.days) ? recent.days : [];
+  return (
+    <main id="main" className="page-shell directory-page archive-page">
+      <AppLink view="today" onNavigate={onNavigate} className="back-link">
+        <span aria-hidden="true">←</span> Back to Today
+      </AppLink>
+      <PageIntroduction
+        eyebrow="Recent editions"
+        title="Archive"
+        description="A short record of the daily briefings that came before today."
+        aside={`${days.length} recent ${days.length === 1 ? 'edition' : 'editions'}`}
+      />
+      {days.map((day) => {
+        const stories = scopedStories(day, `archive-${day.date}`);
+        return (
+          <section className="archive-edition" key={day.date}>
+            <header className="section-heading compact">
+              <div>
+                <p className="eyebrow">Daily edition</p>
+                <h2>{formatDate(day.date)}</h2>
+              </div>
+              <p>{stories.length} stories</p>
+            </header>
+            <div className="archive-story-grid">
+              {stories.slice(0, 6).map((story) => (
+                <DirectoryStoryCard story={story} onNavigate={onNavigate} key={storyRouteId(story)} />
+              ))}
+            </div>
+          </section>
+        );
+      })}
+      {!days.length ? (
+        <section className="directory-empty">
+          <p className="eyebrow">Archive</p>
+          <h2>Recent editions are temporarily unavailable.</h2>
+          <p>Today’s briefing is still available from the main navigation.</p>
+        </section>
+      ) : null}
+    </main>
+  );
+}
+
+function WeeklyView() {
+  return (
+    <main id="main" className="page-shell weekly-page">
+      <div className="weekly-reader-frame">
+        <WeeklyLetter />
+      </div>
+    </main>
+  );
+}
+
 function MissingState({ message }) {
   return (
     <main id="main" className="page-shell missing-state">
@@ -994,12 +1422,31 @@ function LoadingState() {
 
 export default function ReaderApp() {
   const [route, setRoute] = useState(readRoute);
-  const [data, setData] = useState({ digest: null, events: null, error: '' });
+  const [data, setData] = useState({
+    digest: null,
+    events: null,
+    recent: null,
+    error: '',
+  });
 
   useEffect(() => {
-    Promise.all([fetchFirst(DIGEST_URLS), fetchFirst(EVENT_URLS)])
-      .then(([digest, events]) => setData({ digest, events, error: '' }))
-      .catch((error) => setData({ digest: null, events: null, error: error.message }));
+    Promise.all([
+      fetchFirst(DIGEST_URLS),
+      fetchFirst(EVENT_URLS),
+      fetchOptional(RECENT_URLS),
+    ])
+      .then(([digest, events, recent]) => setData({
+        digest,
+        events,
+        recent,
+        error: '',
+      }))
+      .catch((error) => setData((current) => ({
+        ...current,
+        digest: null,
+        events: null,
+        error: error.message,
+      })));
   }, []);
 
   useEffect(() => {
@@ -1015,6 +1462,18 @@ export default function ReaderApp() {
   const events = useMemo(
     () => (Array.isArray(data.events?.events) ? data.events.events : []),
     [data.events],
+  );
+  const archiveStories = useMemo(
+    () => (Array.isArray(data.recent?.days) ? data.recent.days : [])
+      .flatMap((day) => scopedStories(day, `archive-${day.date}`)),
+    [data.recent],
+  );
+  const allStories = useMemo(
+    () => [
+      ...stories,
+      ...archiveStories,
+    ],
+    [stories, archiveStories],
   );
 
   const defaultStory = stories[1] || stories[0];
@@ -1034,25 +1493,36 @@ export default function ReaderApp() {
   if (data.error) return <MissingState message={data.error} />;
   if (!data.digest || !data.events) return <LoadingState />;
 
-  const selectedStory = stories.find(
-    (story) => story.story_id === route.sid || story.cluster_id === route.sid,
+  const selectedStory = allStories.find(
+    (story) => storyRouteId(story) === route.sid
+      || story.story_id === route.sid
+      || story.cluster_id === route.sid,
   )
+    || (/^\d+$/.test(route.sid) ? stories[Number(route.sid)] : null)
     || defaultStory;
   const selectedEvent = events.find((event) => event.event_id === route.eventId)
     || events.find((event) => event.event_id === selectedStory?.event_id)
     || defaultEvent;
   const storyEvent = events.find((event) => event.event_id === selectedStory?.event_id);
-  const relatedStories = stories.filter((story) => story.story_id !== selectedStory?.story_id);
+  const relatedStories = stories.filter((story) => storyRouteId(story) !== storyRouteId(selectedStory));
   const otherEvents = events
     .filter((event) => event.event_id !== selectedEvent?.event_id && event.presentation?.has_full_timeline)
     .sort((a, b) => (b.presentation?.rank_score || 0) - (a.presentation?.rank_score || 0));
-
   return (
     <div className={`reader-app resolved-reader${route.view === 'event' ? ' event-layout-c' : ''}`}>
       <a className="skip-link" href="#main">Skip to content</a>
-      <Header view={route.view} onNavigate={navigate} defaultEventId={defaultEvent?.event_id} />
+      <Header view={route.view} onNavigate={navigate} />
       {route.view === 'today' ? (
         <TodayView digest={data.digest} onNavigate={navigate} />
+      ) : null}
+      {route.view === 'events' ? (
+        <EventsDirectoryView
+          events={events}
+          stories={stories}
+          initialMode={route.mode}
+          initialTopic={route.topic}
+          onNavigate={navigate}
+        />
       ) : null}
       {route.view === 'story' ? (
         <StoryView
@@ -1061,6 +1531,10 @@ export default function ReaderApp() {
           relatedStories={relatedStories}
           onNavigate={navigate}
         />
+      ) : null}
+      {route.view === 'weekly' ? <WeeklyView /> : null}
+      {route.view === 'archive' ? (
+        <ArchiveView recent={data.recent} onNavigate={navigate} />
       ) : null}
       {route.view === 'event' ? (
         <EventView
