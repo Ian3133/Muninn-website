@@ -1,0 +1,412 @@
+{
+  "schema_version": 1,
+  "resource_type": "event",
+  "event_id": "event_france-evacuates-20-000-amid-wildfires-in-so_9afdbe2ab0",
+  "publication": {
+    "status": "published",
+    "permalink": "/timeline.html?event=event_france-evacuates-20-000-amid-wildfires-in-so_9afdbe2ab0",
+    "share_expires_at": null
+  },
+  "event": {
+    "event_id": "event_france-evacuates-20-000-amid-wildfires-in-so_9afdbe2ab0",
+    "title": "France Evacuates 20,000 Amid Wildfires in Southwestern Region",
+    "canonical_title": "France Evacuates 20,000 Amid Wildfires in Southwestern Region",
+    "topic_label": "France Wildfires",
+    "summary": "Approximately 20,000 people have been evacuated from towns and holiday resorts in southwestern France due to a raging wildfire near the coastal town of Lege Cap-Ferret. Most of those evacuated were tourists from campsites around Arcachon Bay in the Gironde region.",
+    "status": "active",
+    "first_seen_at": "2026-07-23",
+    "last_seen_at": "2026-07-26",
+    "timeline": [
+      {
+        "development_id": "story_b3cd2e847f67656e",
+        "daily_story_id": "story_b3cd2e847f67656e",
+        "date": "2026-07-23",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "France Evacuates 20,000 Amid Wildfires in Southwestern Region",
+        "summary": "Approximately 20,000 people have been evacuated from towns and holiday resorts in southwestern France due to a raging wildfire near the coastal town of Lege Cap-Ferret. Most of those evacuated were tourists from campsites around Arcachon Bay in the Gironde region.",
+        "topic_label": "France Wildfires",
+        "development_type": "development",
+        "key_facts": [
+          "20,000 people evacuated",
+          "Wildfire near Lege Cap-Ferret",
+          "Evacuations primarily affected tourists"
+        ],
+        "source_count": 2,
+        "sources": [
+          "BBC",
+          "Sky News"
+        ],
+        "source_urls": [
+          "https://www.bbc.co.uk/news/articles/cy4kmr82n44o?at_medium=RSS&at_campaign=rss",
+          "https://news.sky.com/story/more-than-15000-people-evacuated-as-wildfire-spreads-in-france-13566261"
+        ],
+        "source_details": [
+          {
+            "title": "France evacuates 20,000 as wildfires spread in south-west",
+            "source": "BBC",
+            "link": "https://www.bbc.co.uk/news/articles/cy4kmr82n44o?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          },
+          {
+            "title": "More than 15,000 people evacuated from homes as wildfire spreads in France",
+            "source": "Sky News",
+            "link": "https://news.sky.com/story/more-than-15000-people-evacuated-as-wildfire-spreads-in-france-13566261",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 1.0,
+        "match_evidence": {
+          "score": 1.0,
+          "method": "new_event",
+          "shared_tokens": [],
+          "shared_entities": []
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-07-23",
+        "last_seen_at": "2026-07-23",
+        "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_a20032dc9fec2cf0",
+        "daily_story_id": "story_a20032dc9fec2cf0",
+        "date": "2026-07-26",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Wildfires Force Evacuations Near Bordeaux, Affecting Over 220,000 People",
+        "summary": "A severe wildfire in southwest France has led to the evacuation of 55,000 people overnight, raising the total number of evacuees in the region to 220,000. The flames are advancing towards the wine city of Bordeaux, prompting authorities to issue additional evacuation orders for five localities in the Gironde region. Complicating firefighting efforts are shifting winds and dry conditions.",
+        "topic_label": "France Wildfires",
+        "development_type": "policy",
+        "key_facts": [
+          "Wildfire in southwest France",
+          "Evacuations of 55,000 people overnight",
+          "Total evacuees reach 220,000",
+          "Flames approaching Bordeaux",
+          "Evacuation orders issued for five localities"
+        ],
+        "source_count": 2,
+        "sources": [
+          "CBC",
+          "France 24"
+        ],
+        "source_urls": [
+          "https://www.cbc.ca/news/world/wildfires-bordeaux-evacuations-9.7284915?cmp=rss",
+          "https://www.france24.com/en/wildfires-ravage-southwest-france-thousands-face-devastation-after-evacuation"
+        ],
+        "source_details": [
+          {
+            "title": "France wildfires creep toward wine city of Bordeaux",
+            "source": "CBC",
+            "link": "https://www.cbc.ca/news/world/wildfires-bordeaux-evacuations-9.7284915?cmp=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Wildfires ravage southwest France: Thousands face devastation after evacuation",
+            "source": "France 24",
+            "link": "https://www.france24.com/en/wildfires-ravage-southwest-france-thousands-face-devastation-after-evacuation",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_b3cd2e847f67656e",
+          "shared_tokens": [
+            "000",
+            "evacuation",
+            "france",
+            "gironde",
+            "near",
+            "region",
+            "wildfire"
+          ],
+          "shared_entities": [
+            "france",
+            "france_wildfire",
+            "gironde"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-07-26",
+        "last_seen_at": "2026-07-26",
+        "integrity_status": "trusted"
+      }
+    ],
+    "integrity": {
+      "public_development_count": 2,
+      "questionable_development_count": 0,
+      "review_required": false
+    },
+    "latest_title": "Wildfires Force Evacuations Near Bordeaux, Affecting Over 220,000 People",
+    "latest_summary": "A severe wildfire in southwest France has led to the evacuation of 55,000 people overnight, raising the total number of evacuees in the region to 220,000. The flames are advancing towards the wine city of Bordeaux, prompting authorities to issue additional evacuation orders for five localities in the Gironde region. Complicating firefighting efforts are shifting winds and dry conditions.",
+    "presentation": {
+      "has_context": true,
+      "has_full_timeline": false,
+      "stage": "developing_event",
+      "stage_label": "Developing event",
+      "base_title": "France Wildfires",
+      "display_title": "France Wildfires",
+      "milestone_development_ids": [
+        "story_b3cd2e847f67656e",
+        "story_a20032dc9fec2cf0"
+      ],
+      "summary_available": true,
+      "summary_label": "Read the story so far",
+      "summary_updated_at": "2026-07-26",
+      "development_count": 2,
+      "coverage_packet_count": 2,
+      "date_count": 2,
+      "source_count": 4,
+      "independent_source_count": 4,
+      "first_date": "2026-07-23",
+      "latest_date": "2026-07-26",
+      "latest_update_title": "Wildfires Force Evacuations Near Bordeaux, Affecting Over 220,000 People",
+      "coverage_score": 0.397,
+      "recency_score": 0.583,
+      "rank_score": 0.505,
+      "context_summary": "Muninn first tracked this thread on 2026-07-23: France Evacuates 20,000 Amid Wildfires in Southwestern Region. The latest development is Wildfires Force Evacuations Near Bordeaux, Affecting Over 220,000 People.",
+      "cta_label": ""
+    },
+    "event_summary": {
+      "available": true,
+      "summary": "Approximately 20,000 people have been evacuated from towns and holiday resorts in southwestern France due to a raging wildfire near the coastal town of Lege Cap-Ferret. Most recently, a severe wildfire in southwest France has led to the evacuation of 55,000 people overnight, raising the total number of evacuees in the region to 220,000.",
+      "key_developments": [
+        {
+          "development_id": "story_b3cd2e847f67656e",
+          "date": "2026-07-23",
+          "title": "France Evacuates 20,000 Amid Wildfires in Southwestern Region"
+        },
+        {
+          "development_id": "story_a20032dc9fec2cf0",
+          "date": "2026-07-26",
+          "title": "Wildfires Force Evacuations Near Bordeaux, Affecting Over 220,000 People"
+        }
+      ],
+      "sources": [
+        {
+          "title": "France evacuates 20,000 as wildfires spread in south-west",
+          "source": "BBC",
+          "link": "https://www.bbc.co.uk/news/articles/cy4kmr82n44o?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
+        },
+        {
+          "title": "More than 15,000 people evacuated from homes as wildfire spreads in France",
+          "source": "Sky News",
+          "link": "https://news.sky.com/story/more-than-15000-people-evacuated-as-wildfire-spreads-in-france-13566261",
+          "source_bias": "center"
+        },
+        {
+          "title": "France wildfires creep toward wine city of Bordeaux",
+          "source": "CBC",
+          "link": "https://www.cbc.ca/news/world/wildfires-bordeaux-evacuations-9.7284915?cmp=rss",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Wildfires ravage southwest France: Thousands face devastation after evacuation",
+          "source": "France 24",
+          "link": "https://www.france24.com/en/wildfires-ravage-southwest-france-thousands-face-devastation-after-evacuation",
+          "source_bias": "lean-left"
+        }
+      ],
+      "updated_at": "2026-07-26",
+      "provenance": "source_grounded_event_memory"
+    },
+    "event_stage": "developing_event",
+    "related_events": [
+      {
+        "event_id": "event_wildfire-forces-evacuation-of-nearly-12-000_839c1db808",
+        "title": "Wildfire Forces Evacuation of Nearly 12,000 Tourists in Southwest France",
+        "relationship": "related_topic",
+        "confidence": 0.744,
+        "shared_entities": [
+          "force_evacuation",
+          "france",
+          "wildfire_force"
+        ]
+      },
+      {
+        "event_id": "event_over-200-000-evacuate-as-wildfires-spread-in_8326f845c8",
+        "title": "Mass Evacuations in France and Spain Due to Widespread Wildfires",
+        "relationship": "related_topic",
+        "confidence": 0.706,
+        "shared_entities": [
+          "france",
+          "wildfire_force"
+        ]
+      }
+    ],
+    "hero_image": {
+      "url": "/Current_news/generated/events/event_france-evacuates-20-000-amid-wildfires-in-so_9afdbe2ab0.jpg",
+      "thumbnail_url": "/Current_news/generated/events/event_france-evacuates-20-000-amid-wildfires-in-so_9afdbe2ab0.jpg",
+      "source": "Muninn AI illustration",
+      "author": "OpenAI GPT Image 2",
+      "license": "AI-generated content",
+      "image_role": "illustrative",
+      "image_role_label": "AI illustration",
+      "is_ai_generated": true,
+      "generation_model": "gpt-image-2",
+      "generation_quality": "low",
+      "safe_to_crop": true,
+      "allows_crop": true,
+      "focal_x": 0.5,
+      "focal_y": 0.48,
+      "focal_wide_x": 0.5,
+      "focal_wide_y": 0.48,
+      "focal_tall_x": 0.5,
+      "focal_tall_y": 0.48
+    },
+    "search_tokens": [
+      "000",
+      "220",
+      "additional",
+      "advancing",
+      "affecting",
+      "approximately",
+      "arcachon",
+      "around",
+      "authoritie",
+      "bordeaux",
+      "campsite",
+      "cap-ferret",
+      "coastal",
+      "complicating",
+      "condition",
+      "effort",
+      "evacuate",
+      "evacuated",
+      "evacuation",
+      "evacuee",
+      "firefighting",
+      "five",
+      "flame",
+      "force",
+      "france",
+      "gironde",
+      "holiday",
+      "issue",
+      "lege",
+      "localitie",
+      "most",
+      "near",
+      "number",
+      "order",
+      "overnight",
+      "prompting",
+      "raging",
+      "raising",
+      "region",
+      "resort",
+      "severe",
+      "shifting",
+      "southwest",
+      "southwestern",
+      "those",
+      "total",
+      "tourist",
+      "toward",
+      "town",
+      "towns",
+      "wildfire",
+      "winds",
+      "wine"
+    ],
+    "entities": [
+      "arcachon_bay",
+      "bordeaux_affecting",
+      "cap-ferret.",
+      "cap-ferret._most",
+      "evacuation_near",
+      "force_evacuation",
+      "france",
+      "france_evacuate",
+      "gironde",
+      "lege_cap-ferret.",
+      "near_bordeaux",
+      "region_approximately",
+      "southwestern",
+      "southwestern_region",
+      "wildfire_force"
+    ],
+    "search_text": "000 220 additional advancing affecting approximately arcachon arcachon_bay around authoritie bordeaux bordeaux_affecting campsite cap-ferret cap-ferret. cap-ferret._most coastal complicating condition effort evacuate evacuated evacuation evacuation_near evacuee firefighting five flame force force_evacuation france france_evacuate gironde holiday issue lege lege_cap-ferret. localitie most near near_bordeaux number order overnight prompting raging raising region region_approximately resort severe shifting southwest southwestern southwestern_region those total tourist toward town towns wildfire wildfire_force winds wine"
+  },
+  "related_events": [
+    {
+      "event_id": "event_wildfire-forces-evacuation-of-nearly-12-000_839c1db808",
+      "title": "Southwest France Wildfire",
+      "summary": "Muninn first tracked this thread on 2026-07-23: Wildfire Forces Evacuation of Nearly 12,000 Tourists in Southwest France. The latest development is Massive Wildfire in Castellon, Spain Forces Evacuations.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-23",
+      "last_seen_at": "2026-07-30",
+      "development_count": 4,
+      "latest_title": "Massive Wildfire in Castellon, Spain Forces Evacuations",
+      "topic_label": "Southwest France Wildfire",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_wildfire-forces-evacuation-of-nearly-12-000_839c1db808.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_wildfire-forces-evacuation-of-nearly-12-000_839c1db808.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_wildfire-forces-evacuation-of-nearly-12-000_839c1db808"
+    },
+    {
+      "event_id": "event_over-200-000-evacuate-as-wildfires-spread-in_8326f845c8",
+      "title": "Wildfires",
+      "summary": "Muninn first tracked this thread on 2026-07-25: Severe Wildfires Force Mass Evacuations in France and Spain. The latest development is Evacuations in Crete as Wildfires Threaten Lives and Property.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-25",
+      "last_seen_at": "2026-07-31",
+      "development_count": 6,
+      "latest_title": "Evacuations in Crete as Wildfires Threaten Lives and Property",
+      "topic_label": "Wildfires",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_over-200-000-evacuate-as-wildfires-spread-in_8326f845c8.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_over-200-000-evacuate-as-wildfires-spread-in_8326f845c8.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_over-200-000-evacuate-as-wildfires-spread-in_8326f845c8"
+    }
+  ]
+}

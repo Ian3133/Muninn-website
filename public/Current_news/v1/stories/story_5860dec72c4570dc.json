@@ -1,0 +1,572 @@
+{
+  "schema_version": 1,
+  "resource_type": "story",
+  "story_id": "story_5860dec72c4570dc",
+  "edition": {
+    "date": "2026-07-25",
+    "generated_at": "2026-07-25T14:32:36.197239+00:00"
+  },
+  "publication": {
+    "status": "published",
+    "published_at": "2026-07-25T14:32:36.197239+00:00",
+    "permalink": "/story.html?sid=story_5860dec72c4570dc",
+    "share_expires_at": null,
+    "placements": [
+      {
+        "surface": "today",
+        "visible_from": "2026-07-25T14:32:36.197239+00:00",
+        "visible_until": "2026-07-26T14:32:36.197239+00:00"
+      },
+      {
+        "surface": "more_news",
+        "visible_from": "2026-07-26T14:32:36.197239+00:00",
+        "visible_until": "2026-08-01T14:32:36.197239+00:00"
+      }
+    ]
+  },
+  "story": {
+    "cluster_id": "demo_cluster_037",
+    "title": "Five Police Officers Injured in Westminster Bridge Incident",
+    "category": "Public Safety",
+    "topic_label": "",
+    "summary": "Five police officers were injured after their boat collided with Westminster Bridge while patrolling the River Thames. The incident occurred on Friday, resulting in the officers being thrown into the water, according to the Metropolitan Police Service.",
+    "occurred_at": "2026-07-24",
+    "occurrence_precision": "exact_time",
+    "occurrence_basis": "source_stated",
+    "source_count": 2,
+    "sources": [
+      "PBS News - Headlines",
+      "RTE News"
+    ],
+    "items": [
+      {
+        "title": "Five police officers injured in Westminster boat crash",
+        "description": "",
+        "source": "RTE News",
+        "station": "RTE News",
+        "source_bias": "center",
+        "access_type": null,
+        "published_ts": 1784931022,
+        "link": "https://www.rte.ie/news/uk/2026/0724/1585026-westminster-boat-crash/"
+      },
+      {
+        "title": "Police boat crashes into central London bridge, sending officers into River Thames",
+        "description": "",
+        "source": "PBS News - Headlines",
+        "station": "PBS News - Headlines",
+        "source_bias": "lean-left",
+        "access_type": null,
+        "published_ts": 1784923769,
+        "link": "https://www.pbs.org/newshour/world/police-boat-crashes-into-central-london-bridge-sending-officers-into-river-thames"
+      }
+    ],
+    "quality_label": "review",
+    "quality_score": 0.59,
+    "key_facts": [
+      "Five police officers injured",
+      "Incident occurred at Westminster Bridge",
+      "Officers were patrolling the River Thames"
+    ],
+    "primary_source": {
+      "title": "Five police officers injured in Westminster boat crash",
+      "source": "RTE News",
+      "source_bias": "center",
+      "access_type": null,
+      "link": "https://www.rte.ie/news/uk/2026/0724/1585026-westminster-boat-crash/",
+      "published_ts": 1784931022
+    },
+    "story_id": "story_5860dec72c4570dc",
+    "development_id": "story_5860dec72c4570dc",
+    "event_id": "event_police-boat-collision-sends-officers-into-ri_ee7886b444",
+    "event_match_confidence": 1.0,
+    "update_kind": "new_development",
+    "novelty_score": 0.9,
+    "new_facts": [
+      "Five police officers injured",
+      "Incident occurred at Westminster Bridge",
+      "Officers were patrolling the River Thames"
+    ],
+    "today_eligible": true,
+    "development_relation": {
+      "same_development": false,
+      "reason": "new state change inside a continuing event",
+      "numbers_changed": false
+    },
+    "timeline_highlights": [
+      {
+        "development_id": "story_ca7d73b8b232ed84",
+        "daily_story_id": "story_ca7d73b8b232ed84",
+        "date": "2026-07-25",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Police Boat Collision Sends Officers into River Thames, Injuring Five",
+        "summary": "A police boat crashed into Westminster Bridge in central London, resulting in five officers being injured as they were thrown into the River Thames. The incident occurred during a patrol on Friday, according to the Metropolitan Police.",
+        "topic_label": "",
+        "development_type": "impact",
+        "key_facts": [
+          "Police boat crashed into Westminster Bridge",
+          "Five officers injured in the incident",
+          "Officers were thrown into the River Thames"
+        ],
+        "source_count": 3,
+        "sources": [
+          "PBS News",
+          "RTE News",
+          "Sky News"
+        ],
+        "source_urls": [
+          "https://www.pbs.org/newshour/world/police-boat-crashes-into-central-london-bridge-sending-officers-into-river-thames",
+          "https://news.sky.com/story/five-officers-injured-after-police-boat-hits-bridge-in-london-13566704",
+          "https://www.rte.ie/news/2026/0724/1585026-westminster-boat-crash"
+        ],
+        "source_details": [
+          {
+            "title": "Police boat crashes into central London bridge, sending officers into River Thames",
+            "source": "PBS News",
+            "link": "https://www.pbs.org/newshour/world/police-boat-crashes-into-central-london-bridge-sending-officers-into-river-thames",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Four officers seriously injured after police boat crashes into bridge in London",
+            "source": "Sky News",
+            "link": "https://news.sky.com/story/five-officers-injured-after-police-boat-hits-bridge-in-london-13566704",
+            "source_bias": "center"
+          },
+          {
+            "title": "Five police officers injured in Westminster boat crash",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/2026/0724/1585026-westminster-boat-crash",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 1.0,
+        "match_evidence": {
+          "score": 1.0,
+          "method": "new_event",
+          "shared_tokens": [],
+          "shared_entities": []
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-07-25",
+        "last_seen_at": "2026-07-25",
+        "integrity_status": "trusted"
+      }
+    ],
+    "event_title": "Police Boat Collision Sends Officers into River Thames, Injuring Five",
+    "timeline_available": false,
+    "story_context": {
+      "available": true,
+      "label": "The story so far",
+      "event_title": "Police Boat Collision Sends Officers into River Thames, Injuring Five",
+      "display_title": "Police Boat Collision Sends Officers into River Thames, Injuring Five",
+      "stage": "standalone_candidate",
+      "stage_label": "Standalone story",
+      "summary": "A police boat crashed into Westminster Bridge in central London, resulting in five officers being injured as they were thrown into the River Thames. The incident occurred during a patrol on Friday, according to the Metropolitan Police.",
+      "highlights": [
+        {
+          "development_id": "story_ca7d73b8b232ed84",
+          "daily_story_id": "story_ca7d73b8b232ed84",
+          "date": "2026-07-25",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Police Boat Collision Sends Officers into River Thames, Injuring Five",
+          "summary": "A police boat crashed into Westminster Bridge in central London, resulting in five officers being injured as they were thrown into the River Thames. The incident occurred during a patrol on Friday, according to the Metropolitan Police.",
+          "topic_label": "",
+          "development_type": "impact",
+          "key_facts": [
+            "Police boat crashed into Westminster Bridge",
+            "Five officers injured in the incident",
+            "Officers were thrown into the River Thames"
+          ],
+          "source_count": 3,
+          "sources": [
+            "PBS News",
+            "RTE News",
+            "Sky News"
+          ],
+          "source_urls": [
+            "https://www.pbs.org/newshour/world/police-boat-crashes-into-central-london-bridge-sending-officers-into-river-thames",
+            "https://news.sky.com/story/five-officers-injured-after-police-boat-hits-bridge-in-london-13566704",
+            "https://www.rte.ie/news/2026/0724/1585026-westminster-boat-crash"
+          ],
+          "source_details": [
+            {
+              "title": "Police boat crashes into central London bridge, sending officers into River Thames",
+              "source": "PBS News",
+              "link": "https://www.pbs.org/newshour/world/police-boat-crashes-into-central-london-bridge-sending-officers-into-river-thames",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Four officers seriously injured after police boat crashes into bridge in London",
+              "source": "Sky News",
+              "link": "https://news.sky.com/story/five-officers-injured-after-police-boat-hits-bridge-in-london-13566704",
+              "source_bias": "center"
+            },
+            {
+              "title": "Five police officers injured in Westminster boat crash",
+              "source": "RTE News",
+              "link": "https://www.rte.ie/news/2026/0724/1585026-westminster-boat-crash",
+              "source_bias": "center"
+            }
+          ],
+          "confidence": 1.0,
+          "match_evidence": {
+            "score": 1.0,
+            "method": "new_event",
+            "shared_tokens": [],
+            "shared_entities": []
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-07-25",
+          "last_seen_at": "2026-07-25",
+          "integrity_status": "trusted"
+        }
+      ],
+      "development_count": 1,
+      "date_count": 1,
+      "full_timeline_available": false,
+      "timeline_url": "/timeline.html?event=event_police-boat-collision-sends-officers-into-ri_ee7886b444",
+      "cta_label": "",
+      "event_summary": {
+        "available": false,
+        "summary": "A police boat crashed into Westminster Bridge in central London, resulting in five officers being injured as they were thrown into the River Thames.",
+        "key_developments": [
+          {
+            "development_id": "story_ca7d73b8b232ed84",
+            "date": "2026-07-25",
+            "title": "Police Boat Collision Sends Officers into River Thames, Injuring Five"
+          }
+        ],
+        "sources": [
+          {
+            "title": "Police boat crashes into central London bridge, sending officers into River Thames",
+            "source": "PBS News",
+            "link": "https://www.pbs.org/newshour/world/police-boat-crashes-into-central-london-bridge-sending-officers-into-river-thames",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Four officers seriously injured after police boat crashes into bridge in London",
+            "source": "Sky News",
+            "link": "https://news.sky.com/story/five-officers-injured-after-police-boat-hits-bridge-in-london-13566704",
+            "source_bias": "center"
+          },
+          {
+            "title": "Five police officers injured in Westminster boat crash",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/2026/0724/1585026-westminster-boat-crash",
+            "source_bias": "center"
+          }
+        ],
+        "updated_at": "2026-07-25",
+        "provenance": "source_grounded_event_memory"
+      },
+      "related_events": [],
+      "event_overview": {
+        "available": true,
+        "title": "About Police Boat Collision Sends Officers into River Thames, Injuring Five",
+        "subject": "Police Boat Collision Sends Officers into River Thames, Injuring Five",
+        "summary": "A Metropolitan Police Marine Policing Unit boat struck Westminster Bridge on the River Thames in central London on July 24, 2026, while officers were responding to a report of a person in the water near Battersea. Five officers were injured and three were thrown into the river; nearby boats recovered them, and no civilians were reported injured.",
+        "facts": [
+          {
+            "label": "Date and location",
+            "value": "The collision occurred at about 3:40 p.m. on Friday, July 24, 2026, at Westminster Bridge on the River Thames in London.",
+            "source_ids": [
+              "o1"
+            ]
+          },
+          {
+            "label": "Police operation",
+            "value": "The vessel belonged to the Metropolitan Police's Marine Policing Unit and was responding to a report of a person in the water near Battersea when it hit the bridge.",
+            "source_ids": [
+              "o1"
+            ]
+          },
+          {
+            "label": "People affected",
+            "value": "Five officers were injured; three entered the river and were rescued by nearby vessels. As reported on July 25, four officers remained in hospital with serious but non-life-threatening injuries, while one had been discharged.",
+            "source_ids": [
+              "o1"
+            ]
+          },
+          {
+            "label": "Immediate response and review",
+            "value": "The Port of London Authority said it was managing river traffic alongside the Metropolitan Police and Coastguard, while the Met said the crash would be thoroughly reviewed; the cause was not immediately clear.",
+            "source_ids": [
+              "o2"
+            ]
+          }
+        ],
+        "scope_note": "This Muninn timeline tracks the July 24-25, 2026 collision and its immediate consequences, not the separate response concerning the reported person in the water or any later investigation findings.",
+        "sources": [
+          {
+            "title": "Itv",
+            "publisher": "Itv",
+            "url": "https://www.itv.com/news/london/2026-07-25/five-officers-hurt-in-police-boat-crash-were-responding-to-person-in-water",
+            "source_type": "reporting",
+            "id": "o1"
+          },
+          {
+            "title": "Gov",
+            "publisher": "Gov",
+            "url": "https://www.gov.uk/government/publications/marine-accident-investigation-branch-current-investigations",
+            "source_type": "reporting",
+            "id": "o2"
+          }
+        ],
+        "publisher_count": 2,
+        "generated_at": "2026-07-25T14:32:36.891955+00:00",
+        "expires_at": "2026-08-01T14:32:36.891955+00:00",
+        "model": "gpt-5.6-terra",
+        "provenance": "openai_web_search_source_grounded_event_overview_v1"
+      }
+    },
+    "original_daily_position": 20,
+    "today_rank_score": 0.425,
+    "today_rank": 17,
+    "primary_category": "Public Safety",
+    "secondary_categories": [],
+    "category_method": "controlled_taxonomy_v1",
+    "category_scores": {
+      "Public Safety": 5
+    },
+    "canonical_topic_label": null,
+    "image": {
+      "url": "/Current_news/generated/ai-daily/2026-07-25/demo_cluster_037.jpg",
+      "thumbnail_url": "/Current_news/generated/ai-daily/2026-07-25/demo_cluster_037.jpg",
+      "source": "Muninn AI illustration",
+      "author": "OpenAI GPT Image 2",
+      "license": "AI-generated content",
+      "image_role": "illustrative",
+      "image_role_label": "AI illustration",
+      "is_ai_generated": true,
+      "generation_model": "gpt-image-2",
+      "generation_quality": "low",
+      "safe_to_crop": true,
+      "allows_crop": true,
+      "focal_x": 0.5,
+      "focal_y": 0.48,
+      "focal_wide_x": 0.5,
+      "focal_wide_y": 0.48,
+      "focal_tall_x": 0.5,
+      "focal_tall_y": 0.48
+    }
+  },
+  "related_stories": [
+    {
+      "story_id": "story_f765f351d0d52866",
+      "title": "Mass Evacuations in France and Spain Due to Widespread Wildfires",
+      "summary": "Wildfires in southwestern France and Spain have forced the evacuation of over 250,000 people. Authorities in both countries are responding to the crisis, with France appealing for international assistance and Spain declaring a national emergency. The fires have been exacerbated by extreme heat and strong winds, leading to significant destruction and ongoing danger in the affected regions.",
+      "occurred_at": "2026-07-25",
+      "source_count": 3,
+      "category": "Science",
+      "primary_category": "Science & Environment",
+      "secondary_categories": [
+        "Public Safety"
+      ],
+      "topic_label": "Wildfires",
+      "canonical_topic_label": "Wildfires",
+      "event_id": "event_over-200-000-evacuate-as-wildfires-spread-in_8326f845c8",
+      "event_title": "Wildfires",
+      "story_context": {
+        "available": false,
+        "event_title": "Wildfires",
+        "display_title": "Wildfires",
+        "stage": "developing_event",
+        "stage_label": "Developing event",
+        "development_count": 1,
+        "timeline_url": "/timeline.html?event=event_over-200-000-evacuate-as-wildfires-spread-in_8326f845c8"
+      },
+      "tracked_coverage": {
+        "available": false,
+        "stage": "developing_event",
+        "stage_label": "Developing event"
+      },
+      "image": {
+        "url": "/Current_news/generated/ai-daily/2026-07-25/demo_cluster_003.jpg",
+        "thumbnail_url": "/Current_news/generated/ai-daily/2026-07-25/demo_cluster_003.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "edition_date": "2026-07-25",
+      "edition_generated_at": "2026-07-25T14:32:36.197239+00:00",
+      "visible_until": "2026-08-01T14:32:36.197239+00:00",
+      "href": "/story.html?sid=story_f765f351d0d52866"
+    },
+    {
+      "story_id": "story_f24b7238b1b0f3d3",
+      "title": "Trump Issues Order for Warnings on 'Inaccurate' History at Smithsonian",
+      "summary": "President Donald Trump has issued an executive order requiring the installation of signage at the Smithsonian's National Museum of American History. The signs will warn visitors about what the administration deems 'inaccurate historical information' within the museum. This move follows ongoing accusations from the Trump administration of anti-American bias in the museum's exhibits.",
+      "occurred_at": "2026-07-25",
+      "source_count": 3,
+      "category": "Politics",
+      "primary_category": "Politics",
+      "secondary_categories": [],
+      "topic_label": "US History",
+      "canonical_topic_label": "US History",
+      "event_id": "event_trump-directs-signage-at-smithsonian-to-addr_10c62992ab",
+      "event_title": "US History",
+      "story_context": {
+        "available": true,
+        "event_title": "US History",
+        "display_title": "US History",
+        "stage": "standalone_candidate",
+        "stage_label": "Standalone story",
+        "development_count": 1,
+        "timeline_url": "/timeline.html?event=event_trump-directs-signage-at-smithsonian-to-addr_10c62992ab"
+      },
+      "tracked_coverage": {
+        "available": true,
+        "stage": "standalone_candidate",
+        "stage_label": "Standalone story"
+      },
+      "image": {
+        "url": "/Current_news/generated/ai-daily/2026-07-25/reviewed_merge_demo_cluster_191.jpg",
+        "thumbnail_url": "/Current_news/generated/ai-daily/2026-07-25/reviewed_merge_demo_cluster_191.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "edition_date": "2026-07-25",
+      "edition_generated_at": "2026-07-25T14:32:36.197239+00:00",
+      "visible_until": "2026-08-01T14:32:36.197239+00:00",
+      "href": "/story.html?sid=story_f24b7238b1b0f3d3"
+    },
+    {
+      "story_id": "story_dfa37d98a5130d11",
+      "title": "Indian Education Minister Resigns Amid Youth Protests Over Exam Scandal",
+      "summary": "Dharmendra Pradhan has resigned as India's education minister following widespread protests by youth over exam paper leaks. The protests, led by a movement referred to as 'Cockroach,' culminated in celebrations among demonstrators after Pradhan's resignation was announced. The movement's leaders indicated that the government had accepted their demands, leading to the decision to end the protests.",
+      "occurred_at": "2026-07-25",
+      "source_count": 3,
+      "category": "Politics",
+      "primary_category": "Politics",
+      "secondary_categories": [],
+      "topic_label": "Youth Protests",
+      "canonical_topic_label": "Youth Protests",
+      "event_id": "event_indian-education-minister-resigns-amid-youth_64cf760eee",
+      "event_title": "Youth Protests",
+      "story_context": {
+        "available": true,
+        "event_title": "Youth Protests",
+        "display_title": "Youth Protests",
+        "stage": "developing_event",
+        "stage_label": "Developing event",
+        "development_count": 2,
+        "timeline_url": "/timeline.html?event=event_indian-education-minister-resigns-amid-youth_64cf760eee"
+      },
+      "tracked_coverage": {
+        "available": true,
+        "stage": "developing_event",
+        "stage_label": "Developing event"
+      },
+      "image": {
+        "url": "/Current_news/generated/ai-daily/2026-07-25/demo_cluster_002.jpg",
+        "thumbnail_url": "/Current_news/generated/ai-daily/2026-07-25/demo_cluster_002.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "edition_date": "2026-07-25",
+      "edition_generated_at": "2026-07-25T14:32:36.197239+00:00",
+      "visible_until": "2026-08-01T14:32:36.197239+00:00",
+      "href": "/story.html?sid=story_dfa37d98a5130d11"
+    },
+    {
+      "story_id": "story_d588f28fac015993",
+      "title": "Paramount Delays Warner Bros. Buyout Amid Legal Challenge",
+      "summary": "Paramount has announced a delay in finalizing its $81 billion acquisition of Warner Bros. Discovery. The merger will be postponed until a court ruling on a lawsuit filed by twelve states or until June 1, 2027. The states argue that the merger would create a significant media monopoly detrimental to the entertainment industry.",
+      "occurred_at": null,
+      "source_count": 4,
+      "category": "Science",
+      "primary_category": "Science & Environment",
+      "secondary_categories": [],
+      "topic_label": "Media Mergers",
+      "canonical_topic_label": "Media Mergers",
+      "event_id": "event_paramount-delays-warner-bros-merger-amid-leg_be95e2ccda",
+      "event_title": "Media Mergers",
+      "story_context": {
+        "available": false,
+        "event_title": "Media Mergers",
+        "display_title": "Media Mergers",
+        "stage": "developing_event",
+        "stage_label": "Developing event",
+        "development_count": 1,
+        "timeline_url": "/timeline.html?event=event_paramount-delays-warner-bros-merger-amid-leg_be95e2ccda"
+      },
+      "tracked_coverage": {
+        "available": false,
+        "stage": "developing_event",
+        "stage_label": "Developing event"
+      },
+      "image": {
+        "url": "/Current_news/generated/ai-daily/2026-07-25/demo_cluster_010.jpg",
+        "thumbnail_url": "/Current_news/generated/ai-daily/2026-07-25/demo_cluster_010.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "edition_date": "2026-07-25",
+      "edition_generated_at": "2026-07-25T14:32:36.197239+00:00",
+      "visible_until": "2026-08-01T14:32:36.197239+00:00",
+      "href": "/story.html?sid=story_d588f28fac015993"
+    }
+  ]
+}

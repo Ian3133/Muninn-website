@@ -1,0 +1,355 @@
+{
+  "schema_version": 1,
+  "resource_type": "event",
+  "event_id": "event_houthis-declare-maritime-embargo-against-sau_3cc7dd1ca6",
+  "publication": {
+    "status": "published",
+    "permalink": "/timeline.html?event=event_houthis-declare-maritime-embargo-against-sau_3cc7dd1ca6",
+    "share_expires_at": null
+  },
+  "event": {
+    "event_id": "event_houthis-declare-maritime-embargo-against-sau_3cc7dd1ca6",
+    "title": "Houthis Declare Maritime Embargo Against Saudi Arabia Amid Ongoing Conflict",
+    "canonical_title": "Houthis Declare Maritime Embargo Against Saudi Arabia Amid Ongoing Conflict",
+    "topic_label": "Yemen Conflict",
+    "summary": "Yemen's Iranian-backed Houthi rebels have announced a maritime embargo against Saudi Arabia, effective immediately. This decision is described as retaliation for a blockade on Yemen and a recent attack on Sanaa International Airport. A military spokesman emphasized that the embargo is based on the principle of 'an eye for an eye'.",
+    "status": "active",
+    "first_seen_at": "2026-07-20",
+    "last_seen_at": "2026-07-21",
+    "timeline": [
+      {
+        "development_id": "story_453428317eb818d2",
+        "daily_story_id": "story_453428317eb818d2",
+        "date": "2026-07-20",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Houthis Declare Maritime Embargo Against Saudi Arabia Amid Ongoing Conflict",
+        "summary": "Yemen's Iranian-backed Houthi rebels have announced a maritime embargo against Saudi Arabia, effective immediately. This decision is described as retaliation for a blockade on Yemen and a recent attack on Sanaa International Airport. A military spokesman emphasized that the embargo is based on the principle of 'an eye for an eye'.",
+        "development_type": "military_action",
+        "key_facts": [
+          "Houthis announced a maritime embargo against Saudi Arabia.",
+          "The embargo is in retaliation for a blockade on Yemen.",
+          "The decision follows an attack on Sanaa International Airport."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Channel NewsAsia",
+          "PBS News"
+        ],
+        "source_urls": [
+          "https://www.pbs.org/newshour/world/yemens-iranian-backed-houthis-announce-a-maritime-embargo-against-saudi-arabia",
+          "https://www.channelnewsasia.com/world/yemen-saudi-arabia-houthis-maritime-blockade-6265876"
+        ],
+        "source_details": [
+          {
+            "title": "Yemen's Iranian-backed Houthis announce a maritime embargo against Saudi Arabia",
+            "source": "PBS News",
+            "link": "https://www.pbs.org/newshour/world/yemens-iranian-backed-houthis-announce-a-maritime-embargo-against-saudi-arabia",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Yemen's Iran-backed Houthis announce maritime blockade of Saudi Arabia",
+            "source": "Channel NewsAsia",
+            "link": "https://www.channelnewsasia.com/world/yemen-saudi-arabia-houthis-maritime-blockade-6265876",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 1.0,
+        "match_evidence": {
+          "score": 1.0,
+          "method": "new_event",
+          "shared_tokens": [],
+          "shared_entities": []
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-07-20",
+        "last_seen_at": "2026-07-20",
+        "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_dec05a9598d59b42",
+        "daily_story_id": "story_dec05a9598d59b42",
+        "date": "2026-07-21",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Houthis Impose Maritime Embargo on Saudi Arabia in Response to Blockade",
+        "summary": "The Houthis have announced an immediate maritime embargo on Saudi Arabia, citing it as a reaction to the Saudi blockade of Yemeni ports and airports. In response, the Saudi-led coalition has threatened to use force against any ships affected by the embargo, indicating a potential escalation in the ongoing conflict.",
+        "development_type": "development",
+        "key_facts": [
+          "Houthis declare maritime embargo on Saudi Arabia.",
+          "Embargo is a response to Saudi blockade of Yemeni ports and airports.",
+          "Saudi-led coalition threatens to respond with force."
+        ],
+        "source_count": 2,
+        "sources": [
+          "BBC",
+          "SBS News"
+        ],
+        "source_urls": [
+          "https://www.bbc.co.uk/news/articles/cm2gmddx1ldo?at_medium=RSS&at_campaign=rss",
+          "https://www.sbs.com.au/news/article/houthi-blockade-of-saudi-arabia-us-iran-war/ii1v861my"
+        ],
+        "source_details": [
+          {
+            "title": "Yemen's Houthis announce 'maritime embargo' on Saudi Arabia",
+            "source": "BBC",
+            "link": "https://www.bbc.co.uk/news/articles/cm2gmddx1ldo?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          },
+          {
+            "title": "Yemen's Houthis declare Saudi maritime blockade, threatening new front in US-Iran war",
+            "source": "SBS News",
+            "link": "https://www.sbs.com.au/news/article/houthi-blockade-of-saudi-arabia-us-iran-war/ii1v861my",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.4,
+        "match_evidence": {
+          "score": 0.4,
+          "matched_development_id": "story_453428317eb818d2",
+          "shared_tokens": [
+            "airport",
+            "announced",
+            "arabia",
+            "blockade",
+            "conflict",
+            "declare",
+            "embargo",
+            "houthi",
+            "maritime",
+            "ongoing",
+            "saudi"
+          ],
+          "shared_entities": [
+            "maritime_embargo",
+            "saudi_arabia",
+            "saudi_arabia."
+          ],
+          "source_url_match": false,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-07-21",
+        "last_seen_at": "2026-07-21",
+        "integrity_status": "trusted"
+      }
+    ],
+    "integrity": {
+      "public_development_count": 2,
+      "questionable_development_count": 0,
+      "review_required": false
+    },
+    "latest_title": "Houthis Impose Maritime Embargo on Saudi Arabia in Response to Blockade",
+    "latest_summary": "The Houthis have announced an immediate maritime embargo on Saudi Arabia, citing it as a reaction to the Saudi blockade of Yemeni ports and airports. In response, the Saudi-led coalition has threatened to use force against any ships affected by the embargo, indicating a potential escalation in the ongoing conflict.",
+    "presentation": {
+      "has_context": true,
+      "has_full_timeline": false,
+      "stage": "developing_event",
+      "stage_label": "Developing event",
+      "base_title": "Yemen Conflict",
+      "display_title": "Yemen Conflict",
+      "milestone_development_ids": [
+        "story_453428317eb818d2",
+        "story_dec05a9598d59b42"
+      ],
+      "summary_available": true,
+      "summary_label": "Read the story so far",
+      "summary_updated_at": "2026-07-21",
+      "development_count": 2,
+      "coverage_packet_count": 2,
+      "date_count": 2,
+      "source_count": 4,
+      "independent_source_count": 4,
+      "first_date": "2026-07-20",
+      "latest_date": "2026-07-21",
+      "latest_update_title": "Houthis Impose Maritime Embargo on Saudi Arabia in Response to Blockade",
+      "coverage_score": 0.397,
+      "recency_score": 0.412,
+      "rank_score": 0.405,
+      "context_summary": "Muninn first tracked this thread on 2026-07-20: Houthis Declare Maritime Embargo Against Saudi Arabia Amid Ongoing Conflict. The latest development is Houthis Impose Maritime Embargo on Saudi Arabia in Response to Blockade.",
+      "cta_label": ""
+    },
+    "event_summary": {
+      "available": true,
+      "summary": "Yemen's Iranian-backed Houthi rebels have announced a maritime embargo against Saudi Arabia, effective immediately. Most recently, the Houthis have announced an immediate maritime embargo on Saudi Arabia, citing it as a reaction to the Saudi blockade of Yemeni ports and airports.",
+      "key_developments": [
+        {
+          "development_id": "story_453428317eb818d2",
+          "date": "2026-07-20",
+          "title": "Houthis Declare Maritime Embargo Against Saudi Arabia Amid Ongoing Conflict"
+        },
+        {
+          "development_id": "story_dec05a9598d59b42",
+          "date": "2026-07-21",
+          "title": "Houthis Impose Maritime Embargo on Saudi Arabia in Response to Blockade"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Yemen's Iranian-backed Houthis announce a maritime embargo against Saudi Arabia",
+          "source": "PBS News",
+          "link": "https://www.pbs.org/newshour/world/yemens-iranian-backed-houthis-announce-a-maritime-embargo-against-saudi-arabia",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Yemen's Iran-backed Houthis announce maritime blockade of Saudi Arabia",
+          "source": "Channel NewsAsia",
+          "link": "https://www.channelnewsasia.com/world/yemen-saudi-arabia-houthis-maritime-blockade-6265876",
+          "source_bias": "center"
+        },
+        {
+          "title": "Yemen's Houthis announce 'maritime embargo' on Saudi Arabia",
+          "source": "BBC",
+          "link": "https://www.bbc.co.uk/news/articles/cm2gmddx1ldo?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
+        },
+        {
+          "title": "Yemen's Houthis declare Saudi maritime blockade, threatening new front in US-Iran war",
+          "source": "SBS News",
+          "link": "https://www.sbs.com.au/news/article/houthi-blockade-of-saudi-arabia-us-iran-war/ii1v861my",
+          "source_bias": "lean-left"
+        }
+      ],
+      "updated_at": "2026-07-21",
+      "provenance": "source_grounded_event_memory"
+    },
+    "event_stage": "developing_event",
+    "related_events": [
+      {
+        "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+        "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
+        "relationship": "related_topic",
+        "confidence": 0.733,
+        "shared_entities": [
+          "saudi",
+          "saudi_arabia"
+        ]
+      }
+    ],
+    "hero_image": {
+      "url": "/Current_news/generated/events/event_houthis-declare-maritime-embargo-against-sau_3cc7dd1ca6.jpg",
+      "thumbnail_url": "/Current_news/generated/events/event_houthis-declare-maritime-embargo-against-sau_3cc7dd1ca6.jpg",
+      "source": "Muninn AI illustration",
+      "author": "OpenAI GPT Image 2",
+      "license": "AI-generated content",
+      "image_role": "illustrative",
+      "image_role_label": "AI illustration",
+      "is_ai_generated": true,
+      "generation_model": "gpt-image-2",
+      "generation_quality": "low",
+      "safe_to_crop": true,
+      "allows_crop": true,
+      "focal_x": 0.5,
+      "focal_y": 0.48,
+      "focal_wide_x": 0.5,
+      "focal_wide_y": 0.48,
+      "focal_tall_x": 0.5,
+      "focal_tall_y": 0.48
+    },
+    "search_tokens": [
+      "affected",
+      "airport",
+      "announced",
+      "arabia",
+      "attack",
+      "based",
+      "blockade",
+      "citing",
+      "coalition",
+      "conflict",
+      "decision",
+      "declare",
+      "described",
+      "effective",
+      "embargo",
+      "emphasized",
+      "escalation",
+      "force",
+      "houthi",
+      "immediate",
+      "immediately",
+      "impose",
+      "indicating",
+      "international",
+      "iranian-backed",
+      "maritime",
+      "military",
+      "ongoing",
+      "ports",
+      "potential",
+      "principle",
+      "reaction",
+      "rebel",
+      "recent",
+      "response",
+      "retaliation",
+      "sanaa",
+      "saudi",
+      "saudi-led",
+      "ships",
+      "spokesman",
+      "threatened",
+      "yemen",
+      "yemeni"
+    ],
+    "entities": [
+      "blockade",
+      "declare_maritime",
+      "houthi_declare",
+      "houthi_impose",
+      "impose_maritime",
+      "international_airport.",
+      "iranian-backed_houthi",
+      "maritime_embargo",
+      "response",
+      "sanaa_international",
+      "saudi",
+      "saudi_arabia",
+      "yemen_iranian-backed"
+    ],
+    "search_text": "affected airport announced arabia attack based blockade citing coalition conflict decision declare declare_maritime described effective embargo emphasized escalation force houthi houthi_declare houthi_impose immediate immediately impose impose_maritime indicating international international_airport. iranian-backed iranian-backed_houthi maritime maritime_embargo military ongoing ports potential principle reaction rebel recent response retaliation sanaa sanaa_international saudi saudi-led saudi_arabia ships spokesman threatened yemen yemen_iranian-backed yemeni"
+  },
+  "related_events": [
+    {
+      "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+      "title": "Iran War",
+      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is US Conducts Strikes on Iranian Targets Following Foiled Missile Attack.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-22",
+      "last_seen_at": "2026-07-30",
+      "development_count": 13,
+      "latest_title": "US Conducts Strikes on Iranian Targets Following Foiled Missile Attack",
+      "topic_label": "Iran War",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
+    }
+  ]
+}
