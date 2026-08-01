@@ -4,6 +4,14 @@
 		<title>Muninn - Event</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<script>
+			(function () {
+				var eventId = new URLSearchParams(window.location.search).get('event');
+				if (!eventId) return;
+				var target = new URLSearchParams({ view: 'event', event: eventId });
+				window.location.replace('/?' + target.toString());
+			})();
+		</script>
 		<meta name="theme-color" content="#17252d" />
 		<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 		<link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />

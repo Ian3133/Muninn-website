@@ -4,6 +4,20 @@ import './WeeklyNewsletterPreview.css';
 const WEEKLY_URL = '/Current_news/weekly_newsletter.json';
 const PREVIEW_URL = '/Current_news/weekly_newsletter-preview.json';
 
+function readerHref(value = '') {
+  if (!/^\/(?:story|timeline)\.html/i.test(value)) return value;
+  const url = new URL(value, window.location.origin);
+  const params = new URLSearchParams();
+  if (/\/story\.html$/i.test(url.pathname)) {
+    params.set('view', 'story');
+    if (url.searchParams.get('sid')) params.set('sid', url.searchParams.get('sid'));
+  } else {
+    params.set('view', 'event');
+    if (url.searchParams.get('event')) params.set('event', url.searchParams.get('event'));
+  }
+  return `/?${params.toString()}`;
+}
+
 function formatDate(value) {
   if (!value) return '';
   const date = new Date(`${value}T12:00:00Z`);
@@ -25,7 +39,7 @@ function Paragraph({ paragraph, linkInternal = true }) {
           const external = /^https?:\/\//i.test(segment.href);
           return (
             <a
-              href={segment.href}
+              href={readerHref(segment.href)}
               key={key}
               {...(external ? { target: '_blank', rel: 'noreferrer' } : {})}
             >
@@ -70,7 +84,7 @@ function RelatedCoverage({ section }) {
         ) return;
         seen.add(segment.href);
         links.push({
-          href: segment.href,
+          href: readerHref(segment.href),
           label: segment.text.trim(),
           kind: segment.kind === 'event' ? 'Timeline' : 'Story',
         });
@@ -167,7 +181,7 @@ export function WeeklyIssue({ issue, embedded = false, preview = false }) {
           Generated from {issue.coverage_health?.edition_count || 0} daily editions and
           validated before publication.
         </p>
-        {!embedded ? <a href="/?category=your-newsletter">Read this edition in Letter</a> : null}
+        {!embedded ? <a href="/?view=weekly">Read this edition in Letter</a> : null}
       </footer>
     </article>
   );

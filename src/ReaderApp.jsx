@@ -5,6 +5,7 @@ import './ReaderApp.css';
 const DIGEST_URLS = ['/Current_news/digest.json', '/current_news/digest.json'];
 const EVENT_URLS = ['/Current_news/event_timelines.json', '/current_news/event_timelines.json'];
 const RECENT_URLS = ['/Current_news/recent_news.json', '/current_news/recent_news.json'];
+const COVERAGE_URLS = ['/Current_news/coverage_collections.json', '/current_news/coverage_collections.json'];
 
 const VIEW_LABELS = {
   today: 'Today',
@@ -194,12 +195,20 @@ function scopedStories(payload, scope) {
   }));
 }
 
+const EVENT_TITLE_OVERRIDES = new Map([
+  ['event_multiple-women-accuse-jared-leto-of-sexual-m_0c6248adc4', 'Jared Leto Misconduct Allegations'],
+  ['event_sen-lindsey-graham-honored-at-funeral-servic_a603ee973f', 'Lindsey Graham Memorial'],
+  ['event_trump-directs-signage-at-smithsonian-to-addr_10c62992ab', 'Smithsonian History Dispute'],
+  ['event_search-underway-for-missing-north-carolina-w_91c1cb162b', 'North Carolina Traveler Missing in Grenada'],
+]);
+
 function eventTitle(event) {
-  return event?.presentation?.base_title
+  const rawTitle = event?.presentation?.base_title
     || event?.topic_label
     || event?.canonical_title
     || event?.title
     || 'Tracked event';
+  return EVENT_TITLE_OVERRIDES.get(event?.event_id) || rawTitle;
 }
 
 function eventCategory(event, relatedStory) {
@@ -208,18 +217,112 @@ function eventCategory(event, relatedStory) {
     || event?.primary_category
     || event?.category
     || event?.presentation?.primary_category
-    || 'Ongoing coverage';
+    || '';
 }
 
 function eventDevelopmentCount(event) {
   return event?.presentation?.development_count || event?.timeline?.length || 0;
 }
 
-function splitSentences(value = '') {
-  const protectedText = String(value).replace(
-    /\b(?:Mr|Mrs|Ms|Dr|Sen|Rep|Gov|Gen|Prof|St|U\.S)\./g,
-    (abbreviation) => abbreviation.replaceAll('.', '∯'),
+function eventLatestDate(event) {
+  return event?.presentation?.latest_date
+    || event?.last_seen_at
+    || event?.timeline?.at(-1)?.date
+    || '';
+}
+
+function eventLatestTitle(event) {
+  return event?.presentation?.latest_update_title
+    || event?.latest_title
+    || event?.timeline?.at(-1)?.title
+    || 'A new development is available';
+}
+
+function eventSituation(event) {
+  return conciseSummary(
+    event?.event_overview?.summary
+      || event?.event_summary?.summary
+      || event?.summary
+      || event?.presentation?.context_summary
+      || '',
+    1,
   );
+}
+
+function eventLatestSummary(event, relatedStory) {
+  return conciseSummary(
+    relatedStory?.summary
+      || event?.latest_summary
+      || event?.timeline?.at(-1)?.summary
+      || eventLatestTitle(event),
+    1,
+  );
+}
+
+function dateDistanceInDays(laterValue, earlierValue) {
+  const later = new Date(`${String(laterValue || '').slice(0, 10)}T12:00:00`);
+  const earlier = new Date(`${String(earlierValue || '').slice(0, 10)}T12:00:00`);
+  if (Number.isNaN(later.getTime()) || Number.isNaN(earlier.getTime())) return 0;
+  return Math.max(0, Math.floor((later.getTime() - earlier.getTime()) / 86400000));
+}
+
+function eventBriefingScore(event, latestAvailableDate, hasRelatedStory, isStoryline) {
+  const age = dateDistanceInDays(latestAvailableDate, eventLatestDate(event));
+  const editorialRank = Number(event?.presentation?.rank_score || 0);
+  const developments = Math.min(12, eventDevelopmentCount(event));
+  const independentSources = Math.min(
+    20,
+    Number(event?.presentation?.independent_source_count || event?.presentation?.source_count || 0),
+  );
+  return (editorialRank * 60)
+    + (developments * 3)
+    + (independentSources * 1.5)
+    + (Math.max(0, 7 - age) * 2)
+    + (hasRelatedStory ? 4 : 0)
+    + (isStoryline ? 12 : 0);
+}
+
+const EVENT_TITLE_NOISE = new Set([
+  'a', 'an', 'and', 'event', 'events', 'the', 'of', 'in', 'for',
+  'war', 'conflict', 'crisis', 'emergency', '2026',
+]);
+
+function comparableEventTokens(event) {
+  return new Set(
+    eventTitle(event)
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, ' ')
+      .trim()
+      .split(/\s+/)
+      .map((token) => (token.length > 4 && token.endsWith('s') ? token.slice(0, -1) : token))
+      .filter((token) => token && !EVENT_TITLE_NOISE.has(token)),
+  );
+}
+
+function eventsShareSubject(left, right) {
+  const leftTitle = eventTitle(left).trim().toLowerCase();
+  const rightTitle = eventTitle(right).trim().toLowerCase();
+  if (leftTitle === rightTitle) return true;
+  const leftTokens = comparableEventTokens(left);
+  const rightTokens = comparableEventTokens(right);
+  if (!leftTokens.size || !rightTokens.size) return false;
+  const shared = [...leftTokens].filter((token) => rightTokens.has(token)).length;
+  return shared / Math.min(leftTokens.size, rightTokens.size) >= .66;
+}
+
+function deduplicateEvents(events) {
+  return events.reduce((kept, event) => (
+    kept.some((candidate) => eventsShareSubject(candidate, event)) ? kept : [...kept, event]
+  ), []);
+}
+
+function splitSentences(value = '') {
+  const protectedText = String(value)
+    .replace(/(\d)\.(\d)/g, '$1∯$2')
+    .replace(
+      /\b(?:Mr|Mrs|Ms|Dr|Sen|Rep|Gov|Gen|Prof|St|U\.S)\./g,
+      (abbreviation) => abbreviation.replaceAll('.', '∯'),
+    );
   return (protectedText.match(/[^.!?]+[.!?]+|[^.!?]+$/g) || [])
     .map((sentence) => sentence.replaceAll('∯', '.').trim());
 }
@@ -954,8 +1057,8 @@ function EventView({ event, currentStoryId, otherEvents, onNavigate }) {
   const latestTitle = presentation.latest_update_title || event.timeline?.at(-1)?.title;
   return (
     <main id="main" className="page-shell event-page">
-      <AppLink view="today" onNavigate={onNavigate} className="back-link">
-        <span aria-hidden="true">←</span> Back to Today
+      <AppLink view="events" onNavigate={onNavigate} className="back-link">
+        <span aria-hidden="true">←</span> Back to Events
       </AppLink>
 
       <header className="event-hero">
@@ -970,7 +1073,7 @@ function EventView({ event, currentStoryId, otherEvents, onNavigate }) {
             <p className="event-latest-line"><span>Latest</span>{latestTitle}</p>
           ) : null}
           <div className="event-stats">
-            <div><strong>{presentation.development_count || event.timeline?.length || 0}</strong><span>developments</span></div>
+            <div><strong>{presentation.development_count || event.timeline?.length || 0}</strong><span>updates</span></div>
             <div><strong>{presentation.date_count || '—'}</strong><span>days tracked</span></div>
             <div><strong>{presentation.independent_source_count || presentation.source_count || '—'}</strong><span>independent sources</span></div>
           </div>
@@ -1011,7 +1114,7 @@ function EventView({ event, currentStoryId, otherEvents, onNavigate }) {
               >
                 <span>{item.presentation?.stage_label || 'Event'}</span>
                 <strong>{item.presentation?.base_title || item.topic_label || item.canonical_title}</strong>
-                <small>{item.presentation?.development_count || item.timeline?.length || 0} developments</small>
+                <small>{item.presentation?.development_count || item.timeline?.length || 0} updates</small>
                 <b aria-hidden="true">→</b>
               </AppLink>
             ))}
@@ -1061,134 +1164,624 @@ function PageIntroduction({ eyebrow, title, description, aside }) {
   );
 }
 
-function eventIsOngoing(event) {
-  const stage = event?.presentation?.stage || event?.event_stage || '';
-  return stage === 'storyline' || stage === 'timeline' || eventDevelopmentCount(event) >= 4;
+function EventArtwork({ event, relatedStory, className = '', role = 'support', showLabel = false }) {
+  const stableImage = eventImage(event);
+  const fallbackImage = storyImage(relatedStory);
+  const image = stableImage || fallbackImage;
+  const imageData = stableImage ? event?.hero_image : relatedStory?.image;
+  return (
+    <div className={`${className}${image ? '' : ' is-empty'}`.trim()}>
+      {image ? <img src={image} alt="" style={imagePresentation(imageData, role)} /> : null}
+      {showLabel ? <EventImageDisclosure label={imageData?.image_role_label} className="event-artwork-label" /> : null}
+      {!image ? (
+        <span className="event-artwork-placeholder" aria-hidden="true">
+          <img src="/brand/muninn-mark.svg" alt="" />
+          <b>Event file</b>
+        </span>
+      ) : null}
+    </div>
+  );
 }
 
-function EventRailCard({
+function EventImageDisclosure({ label, className = 'event-art-label' }) {
+  if (!label) return null;
+  const shortLabel = /^ai\s+illustration$/i.test(label) ? 'AI' : label;
+  return <span className={className} aria-label={label} title={label}>{shortLabel}</span>;
+}
+
+function EventMeta({ event, showHelp = false }) {
+  const latestDate = eventLatestDate(event);
+  const publisherCount = Number(event?.presentation?.independent_source_count || 0);
+  const sourceLinkCount = Number(event?.presentation?.source_count || 0);
+  return (
+    <div className="catchup-event-meta">
+      {latestDate ? <span>Updated {formatDate(latestDate, { short: true, year: false })}</span> : null}
+      <span title="Distinct trusted updates in this Event timeline">{eventDevelopmentCount(event)} updates</span>
+      {publisherCount ? (
+        <span title="Distinct publisher names represented across the Event timeline">{publisherCount} publishers</span>
+      ) : sourceLinkCount ? (
+        <span title="Distinct source links represented across the Event timeline">{sourceLinkCount} source links</span>
+      ) : null}
+      {showHelp ? (
+        <details className="event-meta-help">
+          <summary aria-label="How Event counts are calculated">?</summary>
+          <span className="event-meta-help-popover">
+            <b>Updates</b> are distinct trusted changes in this Event timeline.
+            <b>Publishers</b> are distinct publisher names represented across those updates.
+          </span>
+        </details>
+      ) : null}
+    </div>
+  );
+}
+
+function EventParentLabel({ storyline, event, relatedStory }) {
+  const label = storyline
+    ? storyline.legacy_event_id === event?.event_id ? 'Storyline' : storyline.title
+    : eventCategory(event, relatedStory);
+  if (!label) return null;
+  return (
+    <span className="catchup-event-parent">
+      {label}
+    </span>
+  );
+}
+
+function eventPreviewParentLabel(storyline, event, relatedStory) {
+  if (storyline) {
+    return storyline.legacy_event_id === event?.event_id ? 'Storyline' : storyline.title;
+  }
+  return eventCategory(event, relatedStory) || 'Continuing story';
+}
+
+function floatingEventPreviewStyle(target) {
+  if (!target || typeof window === 'undefined') return undefined;
+  const rect = target.getBoundingClientRect();
+  const viewportWidth = window.innerWidth;
+  const viewportHeight = window.innerHeight;
+  const margin = 12;
+  const gap = 0;
+  const headerBottom = document.querySelector('.site-header')?.getBoundingClientRect().bottom || margin;
+  const topInset = Math.max(margin, Math.ceil(headerBottom + 4));
+  const width = Math.min(544, viewportWidth - (margin * 2));
+  const left = Math.max(
+    margin,
+    Math.min(viewportWidth - width - margin, rect.left + (rect.width / 2) - (width / 2)),
+  );
+  const roomBelow = Math.max(0, viewportHeight - rect.bottom - gap - margin);
+  const roomAbove = Math.max(0, rect.top - gap - topInset);
+  const useViewportOverlay = Math.max(roomAbove, roomBelow) < 360;
+  const placeAbove = !useViewportOverlay && roomBelow < 320 && roomAbove > roomBelow;
+  const availableHeight = useViewportOverlay
+    ? Math.max(0, viewportHeight - topInset - margin)
+    : placeAbove ? roomAbove : roomBelow;
+  const maxHeight = Math.max(140, Math.min(512, availableHeight));
+  return {
+    position: 'fixed',
+    left: `${Math.round(left)}px`,
+    top: placeAbove
+      ? 'auto'
+      : `${Math.round(useViewportOverlay ? topInset : rect.bottom + gap)}px`,
+    right: 'auto',
+    bottom: placeAbove ? `${Math.round(viewportHeight - rect.top + gap)}px` : 'auto',
+    width: `${Math.round(width)}px`,
+    maxHeight: `${Math.round(maxHeight)}px`,
+    '--event-preview-origin': useViewportOverlay
+      ? 'center center'
+      : placeAbove ? 'bottom center' : 'top center',
+  };
+}
+
+function useEventHoverPreview() {
+  const [previewStyle, setPreviewStyle] = useState(undefined);
+  const closeTimer = useRef(undefined);
+  const lastKeyboardTrigger = useRef(undefined);
+  const keepPreviewOpen = () => {
+    if (closeTimer.current) window.clearTimeout(closeTimer.current);
+  };
+  const openPreview = (interaction) => {
+    keepPreviewOpen();
+    if (interaction.type === 'focus' || interaction.type === 'click') {
+      lastKeyboardTrigger.current = interaction.currentTarget;
+    }
+    const anchor = interaction.currentTarget.closest('.event-preview-trigger')
+      || interaction.currentTarget;
+    setPreviewStyle(floatingEventPreviewStyle(anchor));
+  };
+  const requestPreviewClose = () => {
+    keepPreviewOpen();
+    closeTimer.current = window.setTimeout(() => setPreviewStyle(undefined), 140);
+  };
+  const closePreview = () => {
+    keepPreviewOpen();
+    setPreviewStyle(undefined);
+  };
+  const dismissPreview = () => {
+    closePreview();
+    window.requestAnimationFrame(() => lastKeyboardTrigger.current?.focus?.());
+  };
+  const togglePreview = (interaction) => {
+    if (previewStyle) closePreview();
+    else openPreview(interaction);
+  };
+  useEffect(() => () => {
+    if (closeTimer.current) window.clearTimeout(closeTimer.current);
+  }, []);
+  useEffect(() => {
+    if (!previewStyle) return undefined;
+    const handleEscape = (event) => {
+      if (event.key !== 'Escape') return;
+      event.preventDefault();
+      dismissPreview();
+    };
+    window.addEventListener('keydown', handleEscape);
+    return () => window.removeEventListener('keydown', handleEscape);
+  }, [previewStyle]);
+  return {
+    previewStyle,
+    openPreview,
+    keepPreviewOpen,
+    requestPreviewClose,
+    closePreview,
+    dismissPreview,
+    togglePreview,
+  };
+}
+
+function EventHoverPreview({
   event,
   relatedStory,
+  storyline,
+  style,
+  onMouseEnter,
+  onMouseLeave,
   onNavigate,
-  showType = false,
-  kind = 'event',
+  onClose,
 }) {
-  const isUpdate = kind === 'update' && relatedStory;
-  const image = isUpdate ? storyImage(relatedStory) || eventImage(event) : eventImage(event);
-  const imageData = isUpdate && storyImage(relatedStory) ? relatedStory.image : event.hero_image;
-  const latestEntry = event?.timeline?.at(-1) || {};
-  const latest = event?.presentation?.latest_update_title || latestEntry.title;
-  const cardTitle = isUpdate ? relatedStory.title : eventTitle(event);
-  const cardSummary = isUpdate
-    ? conciseSummary(relatedStory.summary, 1)
-    : latest || 'Latest development available';
+  const title = eventTitle(event);
+  const latestMovement = conciseSummary(
+    event?.latest_summary
+      || event?.timeline?.at(-1)?.summary
+      || relatedStory?.summary
+      || eventLatestTitle(event),
+    2,
+  );
   return (
-    <article className={`event-rail-card is-${kind}`}>
+    <div
+      className={`event-movement-preview${style ? ' is-positioned' : ''}`}
+      style={style}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+      onFocus={onMouseEnter}
+      onBlur={onMouseLeave}
+      role="dialog"
+      aria-label={`Quick view: ${title}`}
+    >
+      <button type="button" className="event-preview-close" onClick={onClose} aria-label="Close quick view">Close</button>
+      <EventArtwork event={event} relatedStory={relatedStory} className="event-movement-preview-art" role="wide" />
+      <div className="event-movement-preview-copy">
+        <div className="event-movement-preview-heading">
+          <div>
+            <span className="event-movement-preview-parent">
+              {eventPreviewParentLabel(storyline, event, relatedStory)}
+            </span>
+            <h3>{title}</h3>
+          </div>
+          <AppLink
+            view="event"
+            eventId={event.event_id}
+            onNavigate={onNavigate}
+            className="event-movement-preview-title-action"
+          >
+            Read more <span aria-hidden="true">→</span>
+          </AppLink>
+        </div>
+        <div className="event-movement-preview-brief">
+          <p><span>What changed</span>{latestMovement}</p>
+        </div>
+        <EventMeta event={event} showHelp />
+      </div>
+    </div>
+  );
+}
+
+function CatchupLeadEvent({ event, relatedStory, storyline, onNavigate }) {
+  return (
+    <article className="catchup-lead-event">
       <AppLink
-        view={isUpdate ? 'story' : 'event'}
-        sid={isUpdate ? storyRouteId(relatedStory) : undefined}
-        eventId={isUpdate ? undefined : event.event_id}
+        view="event"
+        eventId={event.event_id}
         onNavigate={onNavigate}
-        aria-label={`Open ${cardTitle}`}
+        className="catchup-lead-link"
+        aria-label={`Catch up on ${eventTitle(event)}`}
       >
-        <div className={`event-rail-media${image ? '' : ' is-empty'}`}>
-          {image ? (
-            <img src={image} alt="" style={imagePresentation(imageData, 'support')} />
-          ) : null}
-          <div className="event-rail-scrim" aria-hidden="true" />
-          <div className="event-rail-title">
-            {isUpdate ? <span>{eventTitle(event)}</span> : null}
-            {!isUpdate && showType ? <span>Ongoing story</span> : null}
-            <h3>{cardTitle}</h3>
+        <EventArtwork event={event} relatedStory={relatedStory} className="catchup-lead-art" role="wide" />
+        <div className="catchup-lead-shade" aria-hidden="true" />
+        <div className="catchup-lead-copy">
+          <EventParentLabel storyline={storyline} event={event} relatedStory={relatedStory} />
+          <h2>{eventTitle(event)}</h2>
+          <div className="catchup-lead-brief">
+            <p><span>The situation</span>{eventSituation(event)}</p>
+            <p><span>What changed</span>{eventLatestSummary(event, relatedStory)}</p>
+          </div>
+          <EventMeta event={event} />
+          <strong className="catchup-open">Catch up on the full Event <span aria-hidden="true">→</span></strong>
+        </div>
+      </AppLink>
+      {relatedStory ? (
+        <AppLink
+          view="story"
+          sid={storyRouteId(relatedStory)}
+          onNavigate={onNavigate}
+          className="catchup-latest-report"
+        >
+          Read latest report <span aria-hidden="true">→</span>
+        </AppLink>
+      ) : null}
+    </article>
+  );
+}
+
+function CatchupSupportEvent({ event, relatedStory, storyline, onNavigate }) {
+  return (
+    <article className="catchup-support-event">
+      <AppLink
+        view="event"
+        eventId={event.event_id}
+        onNavigate={onNavigate}
+        className="catchup-support-link"
+        aria-label={`Catch up on ${eventTitle(event)}`}
+      >
+        <div className="catchup-support-copy">
+          <EventParentLabel storyline={storyline} event={event} relatedStory={relatedStory} />
+          <h3>{eventTitle(event)}</h3>
+          <p><span>What changed</span>{eventLatestSummary(event, relatedStory)}</p>
+          <EventMeta event={event} />
+        </div>
+        <EventArtwork event={event} relatedStory={relatedStory} className="catchup-support-art" role="support" />
+      </AppLink>
+    </article>
+  );
+}
+
+function DevelopingEventCard({ event, relatedStory, storyline, onNavigate }) {
+  return (
+    <article className="developing-event-card">
+      <AppLink
+        view="event"
+        eventId={event.event_id}
+        onNavigate={onNavigate}
+        aria-label={`Open ${eventTitle(event)}`}
+      >
+        <div className="developing-event-copy">
+          <EventParentLabel storyline={storyline} event={event} relatedStory={relatedStory} />
+          <h3>{eventTitle(event)}</h3>
+          <p>{eventLatestTitle(event)}</p>
+          <EventMeta event={event} />
+        </div>
+        <EventArtwork event={event} relatedStory={relatedStory} className="developing-event-art" role="support" showLabel />
+      </AppLink>
+    </article>
+  );
+}
+
+function EventRailCard({ event, relatedStory, storyline, onNavigate }) {
+  const title = eventTitle(event);
+  const latestDate = eventLatestDate(event);
+  const formattedDate = formatDate(latestDate, { short: true, year: false });
+  const {
+    previewStyle,
+    openPreview,
+    keepPreviewOpen,
+    requestPreviewClose,
+    dismissPreview,
+    togglePreview,
+  } = useEventHoverPreview();
+  return (
+    <article className={`event-catchup-card event-preview-trigger${previewStyle ? ' is-preview-open' : ''}`}>
+      <AppLink
+        view="event"
+        eventId={event.event_id}
+        onNavigate={onNavigate}
+        className="event-rail-card-link"
+        aria-label={`Open Event: ${title}${latestDate ? `, updated ${formattedDate}` : ''}`}
+        onFocus={openPreview}
+        onBlur={requestPreviewClose}
+      >
+        <div className="event-rail-tile">
+          <EventArtwork event={event} relatedStory={relatedStory} className="event-rail-art" role="support" />
+          <span className="event-rail-shade" aria-hidden="true" />
+          <div className="event-rail-tile-copy">
+            <h3
+              className="event-preview-title-trigger"
+              onMouseEnter={openPreview}
+              onMouseLeave={requestPreviewClose}
+            >
+              {title}
+            </h3>
+            <p className="event-tile-update"><span>Latest</span>{' '}{eventLatestTitle(event)}</p>
+            <div className="event-tile-glance">
+              <span className="event-tile-topic">{eventCategory(event, relatedStory)}</span>
+              <span className="event-tile-glance-stats">
+                {latestDate ? <time dateTime={latestDate}>Updated {formattedDate}</time> : null}
+                <span>{eventDevelopmentCount(event)} updates</span>
+              </span>
+            </div>
           </div>
         </div>
-        <div className="event-rail-footer">
-          <small>
-            {isUpdate ? 'Latest update' : 'Ongoing coverage'}
-            {latestEntry.date ? ` · ${formatDate(latestEntry.date, { short: true, year: false })}` : ''}
-          </small>
-          <strong>{cardSummary}</strong>
-          <div>
-            <span>{eventDevelopmentCount(event)} developments</span>
-            <span>
-              {isUpdate
-                ? sourceCount(relatedStory)
-                : event.presentation?.independent_source_count || event.presentation?.source_count || '—'} sources
-            </span>
+      </AppLink>
+      <button
+        type="button"
+        className="event-quick-view-button"
+        onClick={togglePreview}
+        aria-expanded={Boolean(previewStyle)}
+        aria-label={`Quick view: ${title}`}
+      >
+        Quick view
+      </button>
+      <EventHoverPreview
+        event={event}
+        relatedStory={relatedStory}
+        storyline={storyline}
+        style={previewStyle}
+        onMouseEnter={keepPreviewOpen}
+        onMouseLeave={requestPreviewClose}
+        onNavigate={onNavigate}
+        onClose={dismissPreview}
+      />
+    </article>
+  );
+}
+
+function EventMovementRow({ event, relatedStory, storyline, onNavigate }) {
+  const title = eventTitle(event);
+  const latestDate = eventLatestDate(event);
+  const formattedDate = formatDate(latestDate, { short: true, year: false });
+  const {
+    previewStyle,
+    openPreview,
+    keepPreviewOpen,
+    requestPreviewClose,
+    dismissPreview,
+    togglePreview,
+  } = useEventHoverPreview();
+  return (
+    <article className={`event-movement-row event-preview-trigger${previewStyle ? ' is-preview-open' : ''}`}>
+      <AppLink
+        view="event"
+        eventId={event.event_id}
+        onNavigate={onNavigate}
+        className="event-movement-link"
+        aria-label={`Open Event: ${title}${latestDate ? `, updated ${formattedDate}` : ''}`}
+        onFocus={openPreview}
+        onBlur={requestPreviewClose}
+      >
+        <div className="event-movement-tile">
+          <EventArtwork event={event} relatedStory={relatedStory} className="event-movement-art" role="support" />
+          <span className="event-movement-shade" aria-hidden="true" />
+          <div className="event-movement-tile-copy">
+            <h3
+              className="event-preview-title-trigger"
+              onMouseEnter={openPreview}
+              onMouseLeave={requestPreviewClose}
+            >
+              {title}
+            </h3>
+            <p className="event-tile-update"><span>Changed</span>{' '}{eventLatestTitle(event)}</p>
+            <div className="event-tile-glance">
+              <span className="event-tile-topic">{eventCategory(event, relatedStory)}</span>
+              <span className="event-tile-glance-stats">
+                {latestDate ? <time dateTime={latestDate}>Updated {formattedDate}</time> : null}
+                <span>{eventDevelopmentCount(event)} updates</span>
+              </span>
+            </div>
           </div>
+        </div>
+      </AppLink>
+      <button
+        type="button"
+        className="event-quick-view-button"
+        onClick={togglePreview}
+        aria-expanded={Boolean(previewStyle)}
+        aria-label={`Quick view: ${title}`}
+      >
+        Quick view
+      </button>
+      <EventHoverPreview
+        event={event}
+        relatedStory={relatedStory}
+        storyline={storyline}
+        style={previewStyle}
+        onMouseEnter={keepPreviewOpen}
+        onMouseLeave={requestPreviewClose}
+        onNavigate={onNavigate}
+        onClose={dismissPreview}
+      />
+    </article>
+  );
+}
+
+function StorylineCard({ storyline, rootEvent, onNavigate }) {
+  const childEvents = Array.isArray(storyline?.child_events) ? storyline.child_events : [];
+  const activeCount = childEvents.filter((item) => item.state !== 'earlier_phase').length;
+  return (
+    <article className="storyline-overview-card">
+      <AppLink
+        view="event"
+        eventId={storyline.legacy_event_id}
+        onNavigate={onNavigate}
+        aria-label={`Open the ${storyline.title} storyline`}
+      >
+        <EventArtwork event={rootEvent} className="storyline-overview-art" role="wide" />
+        <div className="storyline-overview-copy">
+          <span className="catchup-event-parent">Storyline</span>
+          <h3>{storyline.title}</h3>
+          <p>{conciseSummary(storyline.overview || storyline.current_status, 1)}</p>
+          {storyline.current_status ? (
+            <div className="storyline-latest">
+              <span>Where it stands</span>
+              <strong>{conciseSummary(storyline.current_status, 1)}</strong>
+            </div>
+          ) : null}
+          <div className="storyline-overview-meta">
+            <span>{childEvents.length} connected Events</span>
+            {activeCount ? <span>{activeCount} currently developing</span> : null}
+            {storyline.current_status_as_of ? (
+              <span>Updated {formatDate(storyline.current_status_as_of, { short: true, year: false })}</span>
+            ) : null}
+          </div>
+          <b>See the bigger picture <span aria-hidden="true">→</span></b>
         </div>
       </AppLink>
     </article>
   );
 }
 
-function EventSwipeSection({
-  title,
-  items,
-  relatedStories,
-  showType = false,
-  kind = 'event',
-  onSeeAll,
-  onNavigate,
-}) {
-  const railRef = useRef(null);
-  const scroll = (direction) => {
+function GlobalCoverageSearch({ stories, events, storylines, onNavigate }) {
+  const [query, setQuery] = useState('');
+  const normalized = query.trim().toLowerCase();
+  const resultGroups = useMemo(() => {
+    if (normalized.length < 2) return { storylines: [], events: [], stories: [], best: null };
+    const score = (title, haystack) => {
+      const cleanTitle = String(title || '').toLowerCase();
+      if (cleanTitle === normalized) return 100;
+      if (cleanTitle.startsWith(normalized)) return 80;
+      if (cleanTitle.includes(normalized)) return 60;
+      return String(haystack || '').toLowerCase().includes(normalized) ? 30 : 0;
+    };
+    const storylineResults = storylines.map((item) => ({
+      key: item.coverage_id,
+      kind: 'Storyline',
+      title: item.title,
+      summary: conciseSummary(item.overview || item.current_status, 1),
+      view: 'event',
+      eventId: item.legacy_event_id,
+      score: score(item.title, `${item.overview || ''} ${item.current_status || ''}`),
+    })).filter((item) => item.score).sort((left, right) => right.score - left.score);
+    const storylineRootIds = new Set(storylines.map((item) => item.legacy_event_id).filter(Boolean));
+    const eventResults = events.filter((item) => !storylineRootIds.has(item.event_id)).map((item) => ({
+      key: item.event_id,
+      kind: 'Event',
+      title: eventTitle(item),
+      summary: eventLatestTitle(item),
+      view: 'event',
+      eventId: item.event_id,
+      score: score(eventTitle(item), `${item.search_text || ''} ${item.summary || ''} ${eventLatestTitle(item)}`),
+    })).filter((item) => item.score).sort((left, right) => right.score - left.score);
+    const storyResults = stories.map((item) => ({
+      key: storyRouteId(item),
+      kind: 'Story',
+      title: item.title,
+      summary: conciseSummary(item.summary, 1),
+      view: 'story',
+      sid: storyRouteId(item),
+      date: storyDate(item),
+      score: score(item.title, `${storyTopic(item)} ${item.summary || ''}`),
+    })).filter((item) => item.score).sort((left, right) => right.score - left.score);
+    const best = [...storylineResults, ...eventResults, ...storyResults]
+      .sort((left, right) => right.score - left.score)[0] || null;
+    const withoutBest = (items) => items.filter(
+      (item) => !best || item.kind !== best.kind || item.key !== best.key,
+    );
+    return {
+      storylines: withoutBest(storylineResults).slice(0, 3),
+      events: withoutBest(eventResults).slice(0, 4),
+      stories: withoutBest(storyResults).slice(0, 4),
+      best,
+    };
+  }, [events, normalized, stories, storylines]);
+  const renderResult = (item, featured = false) => (
+    <AppLink
+      view={item.view}
+      eventId={item.eventId}
+      sid={item.sid}
+      onNavigate={onNavigate}
+      className={`global-search-result${featured ? ' is-best' : ''}`}
+      key={`${item.kind}:${item.key}`}
+    >
+      <span>{featured ? 'Best match' : item.kind}{item.date ? ` · ${formatDate(item.date, { short: true, year: false })}` : ''}</span>
+      <strong>{item.title}</strong>
+      {item.summary ? <small>{item.summary}</small> : null}
+      <b aria-hidden="true">→</b>
+    </AppLink>
+  );
+  return (
+    <section className={`global-coverage-search${normalized.length >= 2 ? ' is-open' : ''}`} aria-label="Search all Muninn coverage">
+      <label>
+        <span className="global-search-icon" aria-hidden="true" />
+        <span className="global-search-label">Search coverage</span>
+        <input
+          type="search"
+          value={query}
+          onChange={(event) => setQuery(event.target.value)}
+          placeholder="Stories, Events, and Storylines"
+        />
+      </label>
+      {query ? <button type="button" onClick={() => setQuery('')}>Clear</button> : null}
+      {normalized.length >= 2 ? (
+        <div className="global-search-panel">
+          {resultGroups.best ? (
+            <>
+              {renderResult(resultGroups.best, true)}
+              <div className="global-search-groups">
+                {[
+                  ['Storylines', resultGroups.storylines],
+                  ['Events', resultGroups.events],
+                  ['Stories', resultGroups.stories],
+                ].map(([label, items]) => items.length ? (
+                  <section aria-label={`${label} search results`} key={label}>
+                    <h2>{label}</h2>
+                    <div>{items.map((item) => renderResult(item))}</div>
+                  </section>
+                ) : null)}
+              </div>
+            </>
+          ) : (
+            <div className="global-search-empty">
+              <strong>No matching coverage</strong>
+              <span>Try a person, place, subject, or Event name.</span>
+            </div>
+          )}
+        </div>
+      ) : null}
+    </section>
+  );
+}
+
+function EventRailControls({ railRef, label }) {
+  const move = (direction) => {
     const rail = railRef.current;
     if (!rail) return;
-    rail.scrollBy({
-      left: direction * Math.max(280, Math.round(rail.clientWidth * .88)),
-      behavior: 'smooth',
-    });
+    rail.scrollBy({ left: direction * rail.clientWidth * .82, behavior: 'smooth' });
   };
-  if (!items.length) return null;
   return (
-    <section className="event-swipe-section" aria-label={title}>
-      <header className="event-swipe-heading">
-        <h2>{title}</h2>
-        <div>
-          <button type="button" className="event-see-all" onClick={onSeeAll}>See all →</button>
-          <span className="event-swipe-controls">
-            <button type="button" onClick={() => scroll(-1)} aria-label={`Previous ${title}`}>←</button>
-            <button type="button" onClick={() => scroll(1)} aria-label={`More ${title}`}>→</button>
-          </span>
-        </div>
-      </header>
-      <div className="event-swipe-rail" ref={railRef} tabIndex={0}>
-        {items.map((event) => (
-          <EventRailCard
-            event={event}
-            relatedStory={relatedStories.get(event.event_id)}
-            onNavigate={onNavigate}
-            showType={showType}
-            kind={kind}
-            key={event.event_id}
-          />
-        ))}
-      </div>
-    </section>
+    <div className="event-rail-controls" aria-label={`${label} navigation`}>
+      <button type="button" onClick={() => move(-1)} aria-label={`Previous ${label}`}>←</button>
+      <button type="button" onClick={() => move(1)} aria-label={`Next ${label}`}>→</button>
+    </div>
   );
 }
 
 function EventsDirectoryView({
   events,
   stories,
+  storylines,
   initialMode,
   initialTopic,
   onNavigate,
 }) {
+  const primaryRailRef = useRef(null);
+  const movementRailRef = useRef(null);
   const [query, setQuery] = useState('');
-  const [mode, setMode] = useState(
-    ['all', 'latest', 'developing', 'ongoing'].includes(initialMode) ? initialMode : 'all',
-  );
+  const [directoryOpen, setDirectoryOpen] = useState(initialMode !== 'all');
+  const [status, setStatus] = useState(initialMode === 'latest' ? 'recent' : 'all');
   const [topic, setTopic] = useState(initialTopic || 'all');
-  const ordered = useMemo(
-    () => [...events].sort((left, right) => (
-      (right.presentation?.rank_score || 0) - (left.presentation?.rank_score || 0)
-      || String(right.last_seen_at || '').localeCompare(String(left.last_seen_at || ''))
-    )),
-    [events],
-  );
-  const ongoing = ordered.filter(eventIsOngoing);
+
+  useEffect(() => {
+    setDirectoryOpen(initialMode !== 'all');
+    if (initialMode === 'latest') setStatus('recent');
+  }, [initialMode]);
+
   const relatedStories = useMemo(() => {
     const map = new Map();
     stories.forEach((story) => {
@@ -1196,8 +1789,55 @@ function EventsDirectoryView({
     });
     return map;
   }, [stories]);
+  const storylineChildIds = useMemo(
+    () => new Set(storylines.flatMap((item) => (
+      item.child_events || []
+    )).map((item) => item.event_id).filter(Boolean)),
+    [storylines],
+  );
+  const storylineByEventId = useMemo(() => {
+    const map = new Map();
+    storylines.forEach((storyline) => {
+      if (storyline.legacy_event_id) map.set(storyline.legacy_event_id, storyline);
+      (storyline.child_events || []).forEach((child) => {
+        if (child.event_id) map.set(child.event_id, storyline);
+      });
+    });
+    return map;
+  }, [storylines]);
+  const latestAvailableDate = useMemo(
+    () => [...events].map(eventLatestDate).filter(Boolean).sort().at(-1) || '',
+    [events],
+  );
+  const ordered = useMemo(
+    () => deduplicateEvents(events
+      .filter((event) => eventDevelopmentCount(event) >= 2 && !storylineChildIds.has(event.event_id))
+      .sort((left, right) => {
+        const leftStoryline = storylineByEventId.get(left.event_id);
+        const rightStoryline = storylineByEventId.get(right.event_id);
+        const leftScore = eventBriefingScore(
+          left,
+          latestAvailableDate,
+          relatedStories.has(left.event_id),
+          leftStoryline?.legacy_event_id === left.event_id,
+        );
+        const rightScore = eventBriefingScore(
+          right,
+          latestAvailableDate,
+          relatedStories.has(right.event_id),
+          rightStoryline?.legacy_event_id === right.event_id,
+        );
+        return rightScore - leftScore || String(eventLatestDate(right)).localeCompare(String(eventLatestDate(left)));
+      })),
+    [events, latestAvailableDate, relatedStories, storylineByEventId, storylineChildIds],
+  );
+  const currentEvents = ordered.filter(
+    (event) => eventDevelopmentCount(event) >= 3
+      && dateDistanceInDays(latestAvailableDate, eventLatestDate(event)) <= 7,
+  );
+  const featuredEvents = currentEvents.slice(0, 5);
+  const moreDevelopingEvents = currentEvents.slice(5, 10);
   const categoryFor = (event) => eventCategory(event, relatedStories.get(event.event_id));
-  const latestUpdates = ordered.filter((event) => relatedStories.has(event.event_id));
   const topics = useMemo(() => {
     const counts = new Map();
     ordered.forEach((event) => {
@@ -1215,134 +1855,186 @@ function EventsDirectoryView({
       event.topic_label,
       categoryFor(event),
       event.summary,
-      event.presentation?.latest_update_title,
+      eventLatestTitle(event),
     ].filter(Boolean).join(' ').toLowerCase();
-    const isOngoing = eventIsOngoing(event);
-    const matchesMode = mode === 'all'
-      || (mode === 'latest' && relatedStories.has(event.event_id))
-      || (mode === 'ongoing' && isOngoing)
-      || (mode === 'developing' && !isOngoing);
+    const age = dateDistanceInDays(latestAvailableDate, eventLatestDate(event));
+    const matchesStatus = status === 'all'
+      || (status === 'recent' && age <= 3)
+      || (status === 'quiet' && age > 3);
     const matchesTopic = topic === 'all' || categoryFor(event) === topic;
-    return matchesMode
+    return matchesStatus
       && matchesTopic
       && (!query.trim() || haystack.includes(query.trim().toLowerCase()));
   });
-  const browsing = Boolean(query.trim() || mode !== 'all' || topic !== 'all');
   const resetFilters = () => {
     setQuery('');
-    setMode('all');
+    setStatus('all');
     setTopic('all');
   };
-  return (
-    <main id="main" className="page-shell events-directory-page">
-      <PageIntroduction
-        eyebrow="Living coverage"
-        title="Events"
-        description="Follow the stories that outlast a single headline, with the latest change first and the full record close at hand."
-        aside={`${events.length} tracked events`}
-      />
+  const openDirectory = () => {
+    setDirectoryOpen(true);
+    onNavigate('events', { mode: 'browse' });
+  };
+  const closeDirectory = () => {
+    setDirectoryOpen(false);
+    resetFilters();
+    onNavigate('events');
+  };
 
-      <section className="event-search-bar" aria-label="Search events">
-        <label>
-          <span>Search coverage</span>
-          <input
-            type="search"
-            value={query}
-            onChange={(event) => setQuery(event.target.value)}
-            placeholder="Search a topic or event"
-          />
-        </label>
-        {browsing ? <button type="button" onClick={resetFilters}>Clear</button> : null}
-      </section>
-
-      {!browsing ? (
-        <div className="events-landing-rails">
-          <EventSwipeSection
-            title="Latest updates"
-            items={latestUpdates.slice(0, 12)}
-            relatedStories={relatedStories}
-            kind="update"
-            onSeeAll={() => setMode('latest')}
-            onNavigate={onNavigate}
-          />
-          <EventSwipeSection
-            title="Ongoing stories"
-            items={ongoing.slice(0, 12)}
-            relatedStories={relatedStories}
-            showType
-            kind="ongoing"
-            onSeeAll={() => setMode('ongoing')}
-            onNavigate={onNavigate}
-          />
-          <section className="event-explore" aria-labelledby="event-explore-title">
-            <header>
-              <h2 id="event-explore-title">Explore</h2>
-              <p>Follow a subject or return to long-running coverage.</p>
-            </header>
-            <div className="event-ongoing-links">
-              {ongoing.slice(0, 4).map((event) => (
-                <AppLink
-                  view="event"
-                  eventId={event.event_id}
-                  onNavigate={onNavigate}
-                  key={event.event_id}
-                >
-                  <span>Ongoing coverage</span>
-                  <strong>{eventTitle(event)}</strong>
-                  <b aria-hidden="true">→</b>
-                </AppLink>
-              ))}
+  if (directoryOpen) {
+    return (
+      <main id="main" className="page-shell events-directory-page event-browse-page">
+        <button type="button" className="event-directory-back" onClick={closeDirectory}>
+          <span aria-hidden="true">←</span> Events briefing
+        </button>
+        <PageIntroduction
+          eyebrow="Complete directory"
+          title="Browse all Events"
+          description="Search and filter the complete record of continuing stories."
+          aside={`${ordered.length} Events`}
+        />
+        <section className="event-directory-tools" aria-label="Filter the Event directory">
+          <label>
+            <span>Filter Events</span>
+            <input
+              type="search"
+              value={query}
+              onChange={(event) => setQuery(event.target.value)}
+              placeholder="Filter by Event name or subject"
+            />
+          </label>
+          <div className="event-directory-status" aria-label="Filter by activity">
+            {[
+              ['all', 'All Events'],
+              ['recent', 'Updated recently'],
+              ['quiet', 'Recently quiet'],
+            ].map(([value, label]) => (
+              <button
+                type="button"
+                className={status === value ? 'is-active' : ''}
+                onClick={() => setStatus(value)}
+                key={value}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+          <div className="event-directory-topics" aria-label="Filter by topic">
+            <button type="button" className={topic === 'all' ? 'is-active' : ''} onClick={() => setTopic('all')}>All topics</button>
+            {topics.map(([label, count]) => (
+              <button
+                type="button"
+                className={topic === label ? 'is-active' : ''}
+                onClick={() => setTopic(label)}
+                key={label}
+              >
+                {label} <small>{count}</small>
+              </button>
+            ))}
+          </div>
+        </section>
+        <section className="event-directory-results" aria-labelledby="event-directory-results-title">
+          <header className="event-briefing-section-heading">
+            <div>
+              <p className="eyebrow">Directory</p>
+              <h2 id="event-directory-results-title">{topic !== 'all' ? topic : 'All Events'}</h2>
             </div>
-            <div className="event-topic-list" aria-label="Browse event topics">
-              <span>Topics</span>
-              {topics.map(([label, count]) => (
-                <button type="button" onClick={() => setTopic(label)} key={label}>
-                  {label} <small>{count}</small>
-                </button>
-              ))}
-            </div>
-          </section>
-        </div>
-      ) : null}
-
-      {browsing && filtered.length ? (
-        <section className="event-results" aria-labelledby="event-results-title">
-          <header className="event-swipe-heading">
-            <h2 id="event-results-title">
-              {topic !== 'all'
-                ? topic
-                : mode === 'ongoing'
-                  ? 'Ongoing coverage'
-                  : mode === 'developing'
-                    ? 'Developing events'
-                    : mode === 'latest'
-                      ? 'Latest updates'
-                      : 'Search results'}
-            </h2>
             <p>{filtered.length} results</p>
           </header>
-          <div className="event-results-grid">
-            {filtered.map((event) => (
+          {filtered.length ? (
+            <div className="event-directory-result-grid">
+              {filtered.map((event) => (
+                <DevelopingEventCard
+                  event={event}
+                  relatedStory={relatedStories.get(event.event_id)}
+                  storyline={storylineByEventId.get(event.event_id)}
+                  onNavigate={onNavigate}
+                  key={event.event_id}
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="event-directory-no-results">
+              <h2>No matching Events</h2>
+              <p>Try a broader subject or clear the directory filters.</p>
+              <button type="button" onClick={resetFilters}>Clear filters</button>
+            </div>
+          )}
+        </section>
+      </main>
+    );
+  }
+
+  return (
+    <main id="main" className="page-shell events-directory-page events-briefing-page">
+      <header className="events-home-intro">
+        <div className="events-home-title-group">
+          <h1>Events</h1>
+          <GlobalCoverageSearch
+            stories={stories}
+            events={ordered}
+            storylines={storylines}
+            onNavigate={onNavigate}
+          />
+        </div>
+        <div className="events-home-status" aria-label={`${currentEvents.length} active Events`}>
+          <strong>{currentEvents.length}</strong>
+          <span>updated within 7 days</span>
+        </div>
+      </header>
+
+      {featuredEvents.length ? (
+        <section className="event-catchup-rail-section" aria-labelledby="worth-catching-up-title">
+          <header className="event-rail-heading">
+            <div>
+              <h2 id="worth-catching-up-title">Lead ongoing Events</h2>
+            </div>
+            <EventRailControls railRef={primaryRailRef} label="ongoing Events" />
+          </header>
+          <div ref={primaryRailRef} className="event-catchup-rail" tabIndex="0" aria-label="Horizontally scroll through important Events">
+            {featuredEvents.map((event) => (
               <EventRailCard
                 event={event}
                 relatedStory={relatedStories.get(event.event_id)}
+                storyline={storylineByEventId.get(event.event_id)}
                 onNavigate={onNavigate}
-                showType
-                kind={mode === 'latest' ? 'update' : mode === 'ongoing' ? 'ongoing' : 'event'}
                 key={event.event_id}
               />
             ))}
           </div>
         </section>
       ) : null}
-      {!filtered.length ? (
-        <section className="directory-empty">
-          <p className="eyebrow">No results</p>
-          <h2>No tracked event matches that search.</h2>
-          <p>Try a broader topic or return to all coverage.</p>
-          <button type="button" onClick={resetFilters}>Clear filters</button>
+
+      {moreDevelopingEvents.length ? (
+        <section className="event-movement-section" aria-labelledby="more-developing-events-title">
+          <header className="event-rail-heading">
+            <div>
+              <h2 id="more-developing-events-title">Other recent changes</h2>
+            </div>
+            <EventRailControls railRef={movementRailRef} label="latest changes" />
+          </header>
+          <div ref={movementRailRef} className="event-movement-list">
+            {moreDevelopingEvents.map((event) => (
+              <EventMovementRow
+                event={event}
+                relatedStory={relatedStories.get(event.event_id)}
+                storyline={storylineByEventId.get(event.event_id)}
+                onNavigate={onNavigate}
+                key={event.event_id}
+              />
+            ))}
+          </div>
         </section>
       ) : null}
+
+      <section className="browse-events-callout" aria-labelledby="browse-events-title">
+        <div>
+          <p className="eyebrow">Event index</p>
+          <h2 id="browse-events-title">Explore the full Event index</h2>
+          <p>Find developing and recently quiet Events by subject, activity, or name.</p>
+        </div>
+        <button type="button" onClick={openDirectory}>Browse all Events <span aria-hidden="true">→</span></button>
+      </section>
     </main>
   );
 }
@@ -1426,6 +2118,7 @@ export default function ReaderApp() {
     digest: null,
     events: null,
     recent: null,
+    coverage: null,
     error: '',
   });
 
@@ -1434,11 +2127,13 @@ export default function ReaderApp() {
       fetchFirst(DIGEST_URLS),
       fetchFirst(EVENT_URLS),
       fetchOptional(RECENT_URLS),
+      fetchOptional(COVERAGE_URLS),
     ])
-      .then(([digest, events, recent]) => setData({
+      .then(([digest, events, recent, coverage]) => setData({
         digest,
         events,
         recent,
+        coverage,
         error: '',
       }))
       .catch((error) => setData((current) => ({
@@ -1467,6 +2162,10 @@ export default function ReaderApp() {
     () => (Array.isArray(data.recent?.days) ? data.recent.days : [])
       .flatMap((day) => scopedStories(day, `archive-${day.date}`)),
     [data.recent],
+  );
+  const storylines = useMemo(
+    () => (Array.isArray(data.coverage?.collections) ? data.coverage.collections : []),
+    [data.coverage],
   );
   const allStories = useMemo(
     () => [
@@ -1505,9 +2204,14 @@ export default function ReaderApp() {
     || defaultEvent;
   const storyEvent = events.find((event) => event.event_id === selectedStory?.event_id);
   const relatedStories = stories.filter((story) => storyRouteId(story) !== storyRouteId(selectedStory));
-  const otherEvents = events
-    .filter((event) => event.event_id !== selectedEvent?.event_id && event.presentation?.has_full_timeline)
-    .sort((a, b) => (b.presentation?.rank_score || 0) - (a.presentation?.rank_score || 0));
+  const storylineChildIds = new Set(
+    storylines.flatMap((item) => item.child_events || []).map((item) => item.event_id).filter(Boolean),
+  );
+  const otherEvents = deduplicateEvents(events
+    .filter((event) => event.event_id !== selectedEvent?.event_id
+      && event.presentation?.has_full_timeline
+      && !storylineChildIds.has(event.event_id))
+    .sort((a, b) => (b.presentation?.rank_score || 0) - (a.presentation?.rank_score || 0)));
   return (
     <div className={`reader-app resolved-reader${route.view === 'event' ? ' event-layout-c' : ''}`}>
       <a className="skip-link" href="#main">Skip to content</a>
@@ -1518,7 +2222,8 @@ export default function ReaderApp() {
       {route.view === 'events' ? (
         <EventsDirectoryView
           events={events}
-          stories={stories}
+          stories={allStories}
+          storylines={storylines}
           initialMode={route.mode}
           initialTopic={route.topic}
           onNavigate={navigate}

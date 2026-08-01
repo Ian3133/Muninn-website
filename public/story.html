@@ -4,6 +4,15 @@
 		<title>Muninn - Story</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<script>
+			(function () {
+				var source = new URLSearchParams(window.location.search);
+				var storyId = source.get('sid') || source.get('id');
+				if (!storyId) return;
+				var target = new URLSearchParams({ view: 'story', sid: storyId });
+				window.location.replace('/?' + target.toString());
+			})();
+		</script>
 		<meta name="theme-color" content="#17252d" />
 		<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 		<link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
