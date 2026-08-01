@@ -15,7 +15,7 @@
     "summary": "The ongoing Ebola outbreak in the Democratic Republic of Congo has resulted in nearly 1,000 fatalities since mid-May. The current death toll stands at 999 in Congo, with an additional two deaths reported in Uganda, attributed to the Bundibugyo strain of the virus. This outbreak has a significantly higher fatality rate compared to previous incidents, and there are currently no available vaccines or treatments for this strain.",
     "status": "active",
     "first_seen_at": "2026-07-22",
-    "last_seen_at": "2026-07-30",
+    "last_seen_at": "2026-08-01",
     "timeline": [
       {
         "development_id": "story_1e2af4cb802ea53a",
@@ -260,47 +260,120 @@
         "first_seen_at": "2026-07-30",
         "last_seen_at": "2026-07-30",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_82f07e414ad368e5",
+        "daily_story_id": "story_82f07e414ad368e5",
+        "date": "2026-08-01",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Ebola Outbreak in DR Congo Becomes Worst in History",
+        "summary": "The ongoing Ebola outbreak in the Democratic Republic of Congo has become the deadliest in the country's history, claiming 1,587 lives and surpassing 3,500 reported cases. This outbreak, caused by the Bundibugyo strain, is now recognized as the world's second-largest ever, with no approved vaccine or treatment available.",
+        "topic_label": "Ebola Outbreak",
+        "development_type": "development",
+        "key_facts": [
+          "1,587 deaths reported",
+          "Over 3,500 cases confirmed",
+          "Bundibugyo strain with no approved vaccine or treatment"
+        ],
+        "source_count": 2,
+        "sources": [
+          "BBC",
+          "DW"
+        ],
+        "source_urls": [
+          "https://www.bbc.co.uk/news/articles/cy07qe0knvzo?at_medium=RSS&at_campaign=rss",
+          "https://www.dw.com/en/dr-congo-ebola-outbreak-becomes-world-s-second-largest-ever/a-78196627?maca=en-rss-en-all-1573-rdf"
+        ],
+        "source_details": [
+          {
+            "title": "Current Ebola outbreak worst ever in DR Congo, WHO says",
+            "source": "BBC",
+            "link": "https://www.bbc.co.uk/news/articles/cy07qe0knvzo?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          },
+          {
+            "title": "DR Congo Ebola outbreak becomes world's second-largest ever",
+            "source": "DW",
+            "link": "https://www.dw.com/en/dr-congo-ebola-outbreak-becomes-world-s-second-largest-ever/a-78196627?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_f5c21aea2c963aca",
+          "shared_tokens": [
+            "cases",
+            "confirmed",
+            "congo",
+            "democratic",
+            "ebola",
+            "history",
+            "outbreak",
+            "reported",
+            "republic",
+            "treatment"
+          ],
+          "shared_entities": [
+            "democratic_republic",
+            "dr",
+            "ebola_outbreak"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-01",
+        "last_seen_at": "2026-08-01",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 3,
+      "public_development_count": 4,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Uganda Declares Itself Ebola-Free Amid Ongoing Outbreak in Congo",
-    "latest_summary": "Uganda has officially declared itself free of Ebola after the last patient was discharged in mid-June, marking 42 days without new cases. This announcement comes as the neighboring Democratic Republic of Congo continues to face challenges with its ongoing Ebola outbreak.",
+    "latest_title": "Ebola Outbreak in DR Congo Becomes Worst in History",
+    "latest_summary": "The ongoing Ebola outbreak in the Democratic Republic of Congo has become the deadliest in the country's history, claiming 1,587 lives and surpassing 3,500 reported cases. This outbreak, caused by the Bundibugyo strain, is now recognized as the world's second-largest ever, with no approved vaccine or treatment available.",
     "presentation": {
       "has_context": true,
-      "has_full_timeline": false,
-      "stage": "developing_event",
-      "stage_label": "Developing event",
+      "has_full_timeline": true,
+      "stage": "timeline",
+      "stage_label": "Timeline",
       "base_title": "Congo Ebola Outbreak",
-      "display_title": "Congo Ebola Outbreak",
+      "display_title": "Congo Ebola Outbreak Timeline",
       "milestone_development_ids": [
         "story_1e2af4cb802ea53a",
         "story_f5c21aea2c963aca",
-        "story_6397dd3fe63fada2"
+        "story_6397dd3fe63fada2",
+        "story_82f07e414ad368e5"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-07-30",
-      "development_count": 3,
-      "coverage_packet_count": 4,
-      "date_count": 3,
-      "source_count": 9,
-      "independent_source_count": 7,
+      "summary_updated_at": "2026-08-01",
+      "development_count": 4,
+      "coverage_packet_count": 5,
+      "date_count": 4,
+      "source_count": 11,
+      "independent_source_count": 9,
       "first_date": "2026-07-22",
-      "latest_date": "2026-07-30",
-      "latest_update_title": "Uganda Declares Itself Ebola-Free Amid Ongoing Outbreak in Congo",
-      "coverage_score": 0.67,
-      "recency_score": 0.875,
-      "rank_score": 0.789,
-      "context_summary": "Muninn first tracked this thread on 2026-07-22: Ebola Outbreak in DR Congo Exceeds 1,000 Deaths. The latest development is Uganda Declares Itself Ebola-Free Amid Ongoing Outbreak in Congo.",
-      "cta_label": ""
+      "latest_date": "2026-08-01",
+      "latest_update_title": "Ebola Outbreak in DR Congo Becomes Worst in History",
+      "coverage_score": 0.831,
+      "recency_score": 1.0,
+      "rank_score": 0.929,
+      "context_summary": "Muninn first tracked this thread on 2026-07-22: Ebola Outbreak in DR Congo Exceeds 1,000 Deaths. The latest development is Ebola Outbreak in DR Congo Becomes Worst in History.",
+      "cta_label": "Explore 4 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "The ongoing Ebola outbreak in the Democratic Republic of Congo has resulted in over 1,000 confirmed deaths, according to official government data. A later development was Ebola Outbreak in DR Congo Exceeds 3,000 Cases Amid Health Worker Strike. Most recently, uganda has officially declared itself free of Ebola after the last patient was discharged in mid-June, marking 42 days without new cases.",
+      "summary": "The ongoing Ebola outbreak in the Democratic Republic of Congo has resulted in over 1,000 confirmed deaths, according to official government data. A later development was Uganda Declares Itself Ebola-Free Amid Ongoing Outbreak in Congo. Most recently, the ongoing Ebola outbreak in the Democratic Republic of Congo has become the deadliest in the country's history, claiming 1,587 lives and surpassing 3,500 reported cases.",
       "key_developments": [
         {
           "development_id": "story_1e2af4cb802ea53a",
@@ -316,6 +389,11 @@
           "development_id": "story_6397dd3fe63fada2",
           "date": "2026-07-30",
           "title": "Uganda Declares Itself Ebola-Free Amid Ongoing Outbreak in Congo"
+        },
+        {
+          "development_id": "story_82f07e414ad368e5",
+          "date": "2026-08-01",
+          "title": "Ebola Outbreak in DR Congo Becomes Worst in History"
         }
       ],
       "sources": [
@@ -372,18 +450,30 @@
           "source": "Africanews",
           "link": "http://www.africanews.com/2026/07/29/uganda-officially-ebola-free-42-days-after-last-patient-discharged",
           "source_bias": "center"
+        },
+        {
+          "title": "Current Ebola outbreak worst ever in DR Congo, WHO says",
+          "source": "BBC",
+          "link": "https://www.bbc.co.uk/news/articles/cy07qe0knvzo?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
+        },
+        {
+          "title": "DR Congo Ebola outbreak becomes world's second-largest ever",
+          "source": "DW",
+          "link": "https://www.dw.com/en/dr-congo-ebola-outbreak-becomes-world-s-second-largest-ever/a-78196627?maca=en-rss-en-all-1573-rdf",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-07-30",
+      "updated_at": "2026-08-01",
       "provenance": "source_grounded_event_memory"
     },
-    "event_stage": "developing_event",
+    "event_stage": "timeline",
     "related_events": [
       {
         "event_id": "event_ebola-outbreak-in-congo-claims-over-930-live_6c7b679293",
         "title": "Ebola Outbreak in Congo Claims Over 930 Lives",
         "relationship": "related_topic",
-        "confidence": 0.711,
+        "confidence": 0.717,
         "shared_entities": [
           "congo",
           "ebola_outbreak"
@@ -393,7 +483,7 @@
         "event_id": "event_canada-implements-temporary-travel-ban-due-t_64f58a7547",
         "title": "Canada Implements Temporary Travel Ban Due to Ebola Concerns",
         "relationship": "related_topic",
-        "confidence": 0.701,
+        "confidence": 0.7,
         "shared_entities": [
           "democratic",
           "democratic_republic",
@@ -424,19 +514,28 @@
     "search_tokens": [
       "000",
       "100",
+      "500",
+      "587",
       "actual",
       "announcement",
+      "approved",
       "approximately",
+      "available",
+      "become",
+      "bundibugyo",
       "bunia",
       "cases",
+      "caused",
       "center",
       "challenge",
+      "claiming",
       "coincide",
       "comes",
       "confirmed",
       "congo",
       "continue",
       "data",
+      "deadliest",
       "death",
       "declare",
       "declared",
@@ -445,6 +544,7 @@
       "ebola",
       "ebola-free",
       "epicenter",
+      "ever",
       "exceed",
       "face",
       "fastest-growing",
@@ -457,6 +557,7 @@
       "indicated",
       "itself",
       "last",
+      "lives",
       "marking",
       "mid-june",
       "neighboring",
@@ -467,16 +568,22 @@
       "outbreak",
       "patient",
       "potentially",
+      "recognized",
       "reported",
       "republic",
       "resulted",
+      "second-largest",
       "significantly",
+      "strain",
       "strike",
+      "surpassing",
       "times",
       "treatment",
       "uganda",
+      "vaccine",
       "without",
-      "worker"
+      "worker",
+      "worst"
     ],
     "entities": [
       "bunia",
@@ -493,12 +600,13 @@
       "exceed_cases",
       "health_organization",
       "health_worker",
+      "history",
       "itself_ebola-free",
       "mid-june",
       "ongoing_outbreak",
       "uganda_declare"
     ],
-    "search_text": "000 100 actual announcement approximately bunia cases center challenge coincide comes confirmed congo congo_exceed congo_uganda continue data death declare declare_itself declared democratic democratic_republic discharged dr ebola ebola-free ebola_outbreak epicenter exceed exceed_cases face fastest-growing figure four free health health_organization health_worker higher history indicated itself itself_ebola-free last marking mid-june neighboring number officially ongoing ongoing_outbreak organization outbreak patient potentially reported republic resulted significantly strike times treatment uganda uganda_declare without worker"
+    "search_text": "000 100 500 587 actual announcement approved approximately available become bundibugyo bunia cases caused center challenge claiming coincide comes confirmed congo congo_exceed congo_uganda continue data deadliest death declare declare_itself declared democratic democratic_republic discharged dr ebola ebola-free ebola_outbreak epicenter ever exceed exceed_cases face fastest-growing figure four free health health_organization health_worker higher history indicated itself itself_ebola-free last lives marking mid-june neighboring number officially ongoing ongoing_outbreak organization outbreak patient potentially recognized reported republic resulted second-largest significantly strain strike surpassing times treatment uganda uganda_declare vaccine without worker worst"
   },
   "related_events": []
 }

@@ -15,7 +15,7 @@
     "summary": "A Russian missile strike on an arms exhibition near Kyiv resulted in at least 10 fatalities and around 100 injuries. The attack occurred during the day and targeted an event attended by key figures from the Ukrainian defense industry. Rescue operations are ongoing as officials assess the situation.",
     "status": "active",
     "first_seen_at": "2026-07-25",
-    "last_seen_at": "2026-07-31",
+    "last_seen_at": "2026-08-01",
     "timeline": [
       {
         "development_id": "story_05c2e09681d12edb",
@@ -490,15 +490,99 @@
         "first_seen_at": "2026-07-31",
         "last_seen_at": "2026-07-31",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_0e2a3a0a1405cc8e",
+        "daily_story_id": "story_0e2a3a0a1405cc8e",
+        "date": "2026-08-01",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Russian Missile Strikes Kill Nine in Kyiv; Ukraine Sinks Russian Ship",
+        "summary": "Early this morning, Russian missile and drone strikes on Kyiv resulted in at least nine fatalities and numerous injuries. The attacks affected multiple districts of the capital, causing significant damage to residential buildings and infrastructure. Concurrently, Ukrainian forces successfully sank a large Russian container ship in the Black Sea.",
+        "topic_label": "Ukraine Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "Nine people killed in missile strikes on Kyiv.",
+          "Ukrainian drones sank a Russian container ship.",
+          "Damage reported in several districts of Kyiv."
+        ],
+        "source_count": 3,
+        "sources": [
+          "Al Jazeera English",
+          "BBC - World",
+          "RTE News"
+        ],
+        "source_urls": [
+          "https://www.rte.ie/news/2026/0801/1586086-russian-strikes",
+          "https://www.bbc.co.uk/news/articles/ce973yvk7pko?at_medium=RSS&at_campaign=rss",
+          "https://www.aljazeera.com/video/newsfeed/2026/8/1/at-least-9-people-killed-in-russian-missile-attacks-on-kyiv?traffic_source=rss"
+        ],
+        "source_details": [
+          {
+            "title": "Air strikes hit Kyiv, Ukraine sinks Russian ship",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/2026/0801/1586086-russian-strikes",
+            "source_bias": "center"
+          },
+          {
+            "title": "Nine killed in strikes on Kyiv, as Ukraine sinks Russian container ship",
+            "source": "BBC - World",
+            "link": "https://www.bbc.co.uk/news/articles/ce973yvk7pko?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          },
+          {
+            "title": "At least 9 people killed in Russian missile attacks on Kyiv",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/video/newsfeed/2026/8/1/at-least-9-people-killed-in-russian-missile-attacks-on-kyiv?traffic_source=rss",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_05c2e09681d12edb",
+          "shared_tokens": [
+            "attack",
+            "conflict",
+            "fatalitie",
+            "injurie",
+            "killed",
+            "kyiv",
+            "least",
+            "missile",
+            "resulted",
+            "russia",
+            "strike",
+            "ukraine"
+          ],
+          "shared_entities": [
+            "kyiv",
+            "kyiv_ukraine",
+            "russia",
+            "russia_missile",
+            "ukraine"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-01",
+        "last_seen_at": "2026-08-01",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 6,
+      "public_development_count": 7,
       "questionable_development_count": 1,
       "review_required": true
     },
-    "latest_title": "Russian Drone and Missile Attack Claims Lives in Ukraine",
-    "latest_summary": "A recent attack involving Russian drones and missiles resulted in the deaths of at least 10 individuals in Ukraine. Among the casualties were six members of the same family, including a six-year-old girl and two boys aged 11 and 17, who were killed in a village near Kryvyi Rih.",
+    "latest_title": "Russian Missile Strikes Kill Nine in Kyiv; Ukraine Sinks Russian Ship",
+    "latest_summary": "Early this morning, Russian missile and drone strikes on Kyiv resulted in at least nine fatalities and numerous injuries. The attacks affected multiple districts of the capital, causing significant damage to residential buildings and infrastructure. Concurrently, Ukrainian forces successfully sank a large Russian container ship in the Black Sea.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -508,32 +592,30 @@
       "display_title": "Ukraine Conflict Timeline",
       "milestone_development_ids": [
         "story_05c2e09681d12edb",
-        "story_8d8884ba26454ce6",
         "story_6f4eec3739621a65",
-        "story_44857f3951dcaff5",
         "story_4d9f8f18128abc6d",
-        "story_b998a9504402bbe6"
+        "story_0e2a3a0a1405cc8e"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-07-31",
-      "development_count": 6,
-      "coverage_packet_count": 6,
-      "date_count": 5,
-      "source_count": 19,
+      "summary_updated_at": "2026-08-01",
+      "development_count": 7,
+      "coverage_packet_count": 7,
+      "date_count": 6,
+      "source_count": 22,
       "independent_source_count": 14,
       "first_date": "2026-07-25",
-      "latest_date": "2026-07-31",
-      "latest_update_title": "Russian Drone and Missile Attack Claims Lives in Ukraine",
+      "latest_date": "2026-08-01",
+      "latest_update_title": "Russian Missile Strikes Kill Nine in Kyiv; Ukraine Sinks Russian Ship",
       "coverage_score": 1.0,
       "recency_score": 1.0,
       "rank_score": 1.0,
-      "context_summary": "Muninn first tracked this thread on 2026-07-25: Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv. The latest development is Russian Drone and Missile Attack Claims Lives in Ukraine.",
-      "cta_label": "Explore 6 developments"
+      "context_summary": "Muninn first tracked this thread on 2026-07-25: Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv. The latest development is Russian Missile Strikes Kill Nine in Kyiv; Ukraine Sinks Russian Ship.",
+      "cta_label": "Explore 7 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "A Russian missile strike on an arms exhibition near Kyiv resulted in at least 10 fatalities and around 100 injuries. A later development was Russian Missile Allegedly Breaches Polish Airspace Amid Ukraine Attacks. Most recently, a recent attack involving Russian drones and missiles resulted in the deaths of at least 10 individuals in Ukraine.",
+      "summary": "A Russian missile strike on an arms exhibition near Kyiv resulted in at least 10 fatalities and around 100 injuries. A later development was Russian Missile Allegedly Breaches Polish Airspace Amid Ukraine Attacks. Most recently, early this morning, Russian missile and drone strikes on Kyiv resulted in at least nine fatalities and numerous injuries.",
       "key_developments": [
         {
           "development_id": "story_05c2e09681d12edb",
@@ -541,19 +623,9 @@
           "title": "Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv"
         },
         {
-          "development_id": "story_8d8884ba26454ce6",
-          "date": "2026-07-26",
-          "title": "Strikes in Kyiv Region Result in Multiple Casualties Amid Ongoing Conflict"
-        },
-        {
           "development_id": "story_6f4eec3739621a65",
           "date": "2026-07-28",
           "title": "Zelenskyy Visits US to Discuss Military Support Amid Ongoing Strikes on Russia"
-        },
-        {
-          "development_id": "story_44857f3951dcaff5",
-          "date": "2026-07-30",
-          "title": "Russian Missile Allegedly Breaches Polish Airspace Amid Ukraine Attacks"
         },
         {
           "development_id": "story_4d9f8f18128abc6d",
@@ -561,9 +633,9 @@
           "title": "Russian Strikes Across Ukraine Result in Multiple Casualties"
         },
         {
-          "development_id": "story_b998a9504402bbe6",
-          "date": "2026-07-31",
-          "title": "Russian Drone and Missile Attack Claims Lives in Ukraine"
+          "development_id": "story_0e2a3a0a1405cc8e",
+          "date": "2026-08-01",
+          "title": "Russian Missile Strikes Kill Nine in Kyiv; Ukraine Sinks Russian Ship"
         }
       ],
       "sources": [
@@ -680,9 +752,27 @@
           "source": "BBC",
           "link": "https://www.bbc.co.uk/news/articles/cy8mk59l5jzo?at_medium=RSS&at_campaign=rss",
           "source_bias": "center"
+        },
+        {
+          "title": "Air strikes hit Kyiv, Ukraine sinks Russian ship",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/2026/0801/1586086-russian-strikes",
+          "source_bias": "center"
+        },
+        {
+          "title": "Nine killed in strikes on Kyiv, as Ukraine sinks Russian container ship",
+          "source": "BBC - World",
+          "link": "https://www.bbc.co.uk/news/articles/ce973yvk7pko?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
+        },
+        {
+          "title": "At least 9 people killed in Russian missile attacks on Kyiv",
+          "source": "Al Jazeera English",
+          "link": "https://www.aljazeera.com/video/newsfeed/2026/8/1/at-least-9-people-killed-in-russian-missile-attacks-on-kyiv?traffic_source=rss",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-07-31",
+      "updated_at": "2026-08-01",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -691,7 +781,7 @@
         "event_id": "event_russia-launches-major-ballistic-missile-atta_e12d127249",
         "title": "Russia Launches Major Ballistic Missile Attack on Ukrainian Cities, Causing Casualties",
         "relationship": "related_topic",
-        "confidence": 0.806,
+        "confidence": 0.828,
         "shared_entities": [
           "casualtie_russia",
           "kyiv",
@@ -703,7 +793,7 @@
         "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
         "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
         "relationship": "related_topic",
-        "confidence": 0.732,
+        "confidence": 0.73,
         "shared_entities": [
           "discuss",
           "ukraine",
@@ -725,7 +815,7 @@
         "event_id": "event_zelenskyy-dismisses-military-chief-amid-prot_8bf8977d0c",
         "title": "Zelenskyy Dismisses Military Chief Amid Protests in Ukraine",
         "relationship": "related_topic",
-        "confidence": 0.719,
+        "confidence": 0.718,
         "shared_entities": [
           "kyiv",
           "ukraine",
@@ -737,102 +827,95 @@
       "available": true,
       "title": "About Ukraine Conflict",
       "subject": "Ukraine Conflict",
-      "summary": "The Ukraine conflict is an armed conflict that began with Russia’s 2014 seizure of Crimea and fighting in eastern Ukraine, then expanded into a full-scale Russian armed attack across Ukraine on 24 February 2022. It includes frontline combat, long-range missile and drone strikes, attacks affecting civilian infrastructure, displacement, and international legal and diplomatic efforts to end the war and establish accountability.",
+      "summary": "The Ukraine conflict is the ongoing interstate war centered on Russia’s military actions against Ukraine, including the full-scale invasion launched on February 24, 2022, against a backdrop of Russia’s actions in and against Ukraine since 2014. It has involved sustained combat, long-range missile and drone attacks, humanitarian disruption, and international diplomatic, legal, and sanctions responses.",
       "facts": [
         {
           "label": "Conflict timeline",
-          "value": "The UN Human Rights Monitoring Mission in Ukraine has operated since 2014; it identifies 24 February 2022 as the start of the Russian Federation’s full-scale armed attack, after which it focused on the international armed conflict’s human-rights impact.",
+          "value": "Russia’s full-scale invasion began on February 24, 2022; international institutions also treat the wider situation as encompassing events in Ukraine from 2013-14 onward.",
           "source_ids": [
             "o1",
             "o2"
           ]
         },
         {
-          "label": "Geographic scope",
-          "value": "The war affects territory across Ukraine, including areas near the frontline, cities far from it, and territory occupied by the Russian Federation; Kyiv is among the urban centres affected by long-range attacks.",
+          "label": "Location and parties",
+          "value": "The conflict is fought primarily on and over Ukraine’s internationally recognized territory, involving Russia and Ukraine; the UN General Assembly has repeatedly reaffirmed Ukraine’s sovereignty, independence, unity and territorial integrity within those borders.",
           "source_ids": [
             "o3",
             "o4"
           ]
         },
         {
-          "label": "Civilian-harm pattern",
-          "value": "UN monitors reported that long-range weapons, including missiles and drones, were the leading cause of civilian casualties in June 2026, with many casualties occurring in urban areas far from the frontline; short-range drones were a major danger in frontline areas.",
+          "label": "International legal position",
+          "value": "The UN General Assembly’s March 2, 2022 resolution characterized Russia’s actions as aggression against Ukraine and demanded that Russia end its use of force and withdraw its military forces.",
           "source_ids": [
-            "o3"
+            "o4",
+            "o5"
           ]
         },
         {
-          "label": "International position",
-          "value": "On 2 March 2022, the UN General Assembly adopted resolution ES-11/1, deploring Russia’s aggression against Ukraine and demanding that Russia end its use of force and withdraw its military forces.",
+          "label": "International criminal investigation",
+          "value": "The International Criminal Court opened its Ukraine investigation on March 2, 2022. Its stated scope covers alleged war crimes, crimes against humanity and genocide committed by any person on any part of Ukraine’s territory from November 21, 2013 onward.",
           "source_ids": [
-            "o5",
+            "o2"
+          ]
+        },
+        {
+          "label": "Humanitarian dimension",
+          "value": "The war has produced a major humanitarian and displacement emergency; UNHCR describes the February 2022 escalation as one of the fastest-growing displacement emergencies in recent history.",
+          "source_ids": [
             "o6"
-          ]
-        },
-        {
-          "label": "International Court of Justice proceedin",
-          "value": "In provisional measures ordered on 16 March 2022 in Ukraine v. Russian Federation, the International Court of Justice directed Russia to suspend the military operations it commenced on 24 February 2022, while stating that the order did not decide jurisdiction or the merits of the case.",
-          "source_ids": [
-            "o7"
           ]
         }
       ],
-      "scope_note": "This Muninn timeline follows selected conflict developments, including the specified strike near Kyiv, rather than providing a complete record of military operations, civilian harm, diplomacy, or legal proceedings.",
+      "scope_note": "The selected Muninn timeline follows major late-July and early-August 2026 military, diplomatic and cross-border developments connected to the war; it does not attempt to provide a complete account of the conflict’s battlefield, humanitarian, political or legal history.",
       "sources": [
         {
-          "title": "Ohchr",
-          "publisher": "Ohchr",
-          "url": "https://ukraine.ohchr.org/en/aboutus/ourwork",
+          "title": "Europa",
+          "publisher": "Europa",
+          "url": "https://www.consilium.europa.eu/en/policies/eu-solidarity-ukraine/timeline-russia-military-aggression-against-ukraine/",
           "source_type": "reporting",
           "id": "o1"
         },
         {
-          "title": "Ohchr",
-          "publisher": "Ohchr",
-          "url": "https://ukraine.ohchr.org/en",
-          "source_type": "reporting",
+          "title": "Icc Cpi",
+          "publisher": "Icc Cpi",
+          "url": "https://www.icc-cpi.int/situations/ukraine",
+          "source_type": "primary",
           "id": "o2"
-        },
-        {
-          "title": "Ohchr",
-          "publisher": "Ohchr",
-          "url": "https://ukraine.ohchr.org/en/Protection-of-Civilians-in-Armed-Conflict-June-2026",
-          "source_type": "reporting",
-          "id": "o3"
-        },
-        {
-          "title": "Ohchr",
-          "publisher": "Ohchr",
-          "url": "https://ukraine.ohchr.org/en/Civilian-Casualties-Soar-in-Ukraine-in-the-First-Half-of-2026-Amid-Escalating-Attacks-and-Intensifying-Use-of-Deadly-Weapons-UN-Human-Rights-Monitors-Say",
-          "source_type": "reporting",
-          "id": "o4"
         },
         {
           "title": "UN",
           "publisher": "UN",
-          "url": "https://documents.un.org/access.nsf/get?DS=A%2FRES%2FES-11%2F1&Lang=E&OpenAgent=",
+          "url": "https://digitallibrary.un.org/record/3966630/files/A_RES_ES-11_2-EN.pdf",
           "source_type": "reporting",
-          "id": "o5"
+          "id": "o3"
         },
         {
           "title": "UN",
           "publisher": "UN",
           "url": "https://press.un.org/en/2022/ga12407.doc.htm",
           "source_type": "reporting",
-          "id": "o6"
+          "id": "o4"
         },
         {
-          "title": "Icj Cij",
-          "publisher": "Icj Cij",
-          "url": "https://www.icj-cij.org/node/106135",
+          "title": "UN",
+          "publisher": "UN",
+          "url": "https://digitallibrary.un.org/record/3965290?ln=en%3B",
           "source_type": "reporting",
-          "id": "o7"
+          "id": "o5"
+        },
+        {
+          "title": "Unhcr",
+          "publisher": "Unhcr",
+          "url": "https://data.unhcr.org/en/country/ukr/751",
+          "source_type": "reporting",
+          "id": "o6"
         }
       ],
-      "publisher_count": 3,
-      "generated_at": "2026-07-25T14:32:36.891955+00:00",
-      "expires_at": "2026-08-01T14:32:36.891955+00:00",
+      "publisher_count": 4,
+      "generated_at": "2026-08-01T22:14:57.468557+00:00",
+      "expires_at": "2026-08-08T22:14:57.468557+00:00",
       "model": "gpt-5.6-terra",
       "provenance": "openai_web_search_source_grounded_event_overview_v1"
     },
@@ -861,6 +944,7 @@
       "280",
       "across",
       "advocate",
+      "affected",
       "aged",
       "airspace",
       "allegedly",
@@ -875,31 +959,39 @@
       "attended",
       "authoritie",
       "ballistic",
+      "black",
       "both",
       "boys",
       "breache",
       "breached",
+      "building",
       "called",
       "calls",
       "capital",
       "casualtie",
+      "causing",
       "children",
       "claim",
       "claimed",
       "collectively",
       "comes",
+      "concurrently",
       "confirmed",
       "conflict",
+      "container",
       "continue",
       "cooperation",
       "crater",
       "creating",
+      "damage",
       "death",
       "defense",
       "diplomatic",
       "discuss",
+      "district",
       "dozen",
       "drone",
+      "early",
       "eight",
       "enhanced",
       "escalate",
@@ -921,26 +1013,32 @@
       "indicating",
       "individual",
       "industry",
+      "infrastructure",
       "injured",
       "injurie",
       "intensified",
       "involved",
       "involving",
       "jets",
+      "kill",
       "killed",
       "kills",
       "kryvyi",
       "kyiv",
       "landing",
+      "large",
       "least",
       "lives",
       "long-range",
       "member",
       "military",
       "missile",
+      "morning",
       "multiple",
       "near",
       "negotiation",
+      "nine",
+      "numerou",
       "occurred",
       "ongoing",
       "operation",
@@ -956,19 +1054,24 @@
       "renewed",
       "reportedly",
       "rescue",
+      "residential",
       "resolution",
       "response",
       "result",
       "resulted",
       "russia",
       "same",
+      "sank",
       "scramble",
+      "ship",
       "sight",
       "significant",
+      "sinks",
       "situation",
       "six-year-old",
       "stalled",
       "strike",
+      "successfully",
       "summer",
       "support",
       "target",
@@ -992,15 +1095,19 @@
       "allegedly_breache",
       "arms",
       "arms_exhibition",
+      "black",
+      "black_sea.",
       "breache_polish",
       "casualtie_russia",
       "claim_lives",
+      "concurrently_ukraine",
       "discuss",
       "exhibition_near",
       "kryvyi",
       "kryvyi_rih.",
       "kyiv",
       "kyiv_region",
+      "kyiv_ukraine",
       "military_support",
       "missile_allegedly",
       "multiple",
@@ -1008,21 +1115,26 @@
       "near_kyiv",
       "polish_airspace",
       "region_result",
+      "rih._russia",
       "russia",
       "russia._russia",
       "russia_drone",
       "russia_missile",
+      "russia_ship",
       "russia_ukraine",
+      "ship_early",
+      "sinks_russia",
       "ukraine",
       "ukraine.",
       "ukraine._among",
       "ukraine_result",
+      "ukraine_sinks",
       "us",
       "volodymyr_zelensky",
       "volodymyr_zelenskyy",
       "zelenskyy_visit"
     ],
-    "search_text": "100 280 across across_ukraine advocate aged airspace allegedly allegedly_breache allie among anti-ballistic arms arms_exhibition around assault assess attack attended authoritie ballistic both boys breache breache_polish breached called calls capital casualtie casualtie_russia children claim claim_lives claimed collectively comes confirmed conflict continue cooperation crater creating death defense diplomatic discuss dozen drone eight enhanced escalate escalating event exhibition exhibition_near family fatalitie fifth fighter figure follow force girl impacting incident including increased indicating individual industry injured injurie intensified involved involving jets killed kills kryvyi kryvyi_rih. kyiv kyiv_region landing least lives long-range member military military_support missile missile_allegedly multiple multiple_casualtie near near_kyiv negotiation occurred ongoing operation overnight particularly peace polish polish_airspace poltava prompted prompting recent region region_result renewed reportedly rescue resolution response result resulted russia russia._russia russia_drone russia_missile russia_ukraine same scramble sight significant situation six-year-old stalled strike summer support target targeted tension territory ukraine ukraine. ukraine._among ukraine_result united us variou village visit visiting volodymyr volodymyr_zelensky volodymyr_zelenskyy which within zelensky zelenskyy zelenskyy_visit"
+    "search_text": "100 280 across across_ukraine advocate affected aged airspace allegedly allegedly_breache allie among anti-ballistic arms arms_exhibition around assault assess attack attended authoritie ballistic black black_sea. both boys breache breache_polish breached building called calls capital casualtie casualtie_russia causing children claim claim_lives claimed collectively comes concurrently concurrently_ukraine confirmed conflict container continue cooperation crater creating damage death defense diplomatic discuss district dozen drone early eight enhanced escalate escalating event exhibition exhibition_near family fatalitie fifth fighter figure follow force girl impacting incident including increased indicating individual industry infrastructure injured injurie intensified involved involving jets kill killed kills kryvyi kryvyi_rih. kyiv kyiv_region kyiv_ukraine landing large least lives long-range member military military_support missile missile_allegedly morning multiple multiple_casualtie near near_kyiv negotiation nine numerou occurred ongoing operation overnight particularly peace polish polish_airspace poltava prompted prompting recent region region_result renewed reportedly rescue residential resolution response result resulted rih._russia russia russia._russia russia_drone russia_missile russia_ship russia_ukraine same sank scramble ship ship_early sight significant sinks sinks_russia situation six-year-old stalled strike successfully summer support target targeted tension territory ukraine ukraine. ukraine._among ukraine_result ukraine_sinks united us variou village visit visiting volodymyr volodymyr_zelensky volodymyr_zelenskyy which within zelensky zelenskyy zelenskyy_visit"
   },
   "related_events": [
     {
