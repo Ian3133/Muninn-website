@@ -15,7 +15,7 @@
     "summary": "President Trump has announced a deal for Hamas to completely disarm, which includes the gradual withdrawal of Israeli forces from Gaza. Hamas confirmed its agreement to the plan, stating it would hand over its weapons to a Palestinian governing committee. However, the implementation of this deal is contingent upon Israel fulfilling its commitments from a previous agreement.",
     "status": "active",
     "first_seen_at": "2026-07-31",
-    "last_seen_at": "2026-08-01",
+    "last_seen_at": "2026-08-02",
     "timeline": [
       {
         "development_id": "story_c0c042a2fb04bd8a",
@@ -122,14 +122,14 @@
         "date": "2026-08-01",
         "occurred_at": null,
         "date_basis": "first_reported_by_muninn",
-        "title": "Hamas Agrees to Disarmament in US-Brokered Peace Plan with Israel",
-        "summary": "Hamas has agreed to a deal announced by US President Donald Trump, which includes the group's complete disarmament and a gradual withdrawal of Israeli forces from Gaza. The agreement is seen as a significant step towards ending the ongoing conflict. However, Israeli Prime Minister Benjamin Netanyahu has not publicly endorsed the deal, and Israeli sources indicate that a genuine disarmament is required before any withdrawal occurs.",
+        "title": "Hamas Agrees to Disarmament and Israeli Withdrawal Plan",
+        "summary": "Hamas has announced its agreement to a deal proposed by US President Donald Trump, which includes the complete disarmament of the group and a gradual withdrawal of Israeli forces from Gaza. The agreement stipulates that Hamas will hand over its weapons to a Palestinian governing committee as part of the peace initiative.",
         "topic_label": "Gaza Conflict",
         "development_type": "development",
         "key_facts": [
-          "Hamas agreed to disarm as part of a US-brokered peace plan.",
+          "Hamas agreed to disarm as part of a deal.",
           "The plan includes a gradual withdrawal of Israeli forces from Gaza.",
-          "Israeli Prime Minister Netanyahu has not publicly endorsed the agreement."
+          "The agreement was announced by US President Donald Trump."
         ],
         "source_count": 2,
         "sources": [
@@ -192,17 +192,107 @@
           "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
         },
         "first_seen_at": "2026-08-01",
-        "last_seen_at": "2026-08-01",
+        "last_seen_at": "2026-08-02",
+        "integrity_status": "trusted",
+        "revisions": [
+          {
+            "daily_story_id": "story_df6062700a10a8e6",
+            "reported_at": "2026-08-02",
+            "update_kind": "factual_update",
+            "title": "Hamas Agrees to Disarmament and Israeli Withdrawal Plan",
+            "summary": "Hamas has announced its agreement to a deal proposed by US President Donald Trump, which includes the complete disarmament of the group and a gradual withdrawal of Israeli forces from Gaza. The agreement stipulates that Hamas will hand over its weapons to a Palestinian governing committee as part of the peace initiative.",
+            "topic_label": "Middle East Conflict",
+            "key_facts": [
+              "Hamas agreed to disarm as part of a deal.",
+              "The plan includes a gradual withdrawal of Israeli forces from Gaza.",
+              "The agreement was announced by US President Donald Trump."
+            ],
+            "source_urls": [
+              "http://www.africanews.com/2026/07/31/hamas-agrees-to-completely-disarm-in-plan-including-israeli-withdrawal"
+            ]
+          }
+        ],
+        "last_updated_at": "2026-08-02",
+        "merged_development_ids": [
+          "story_df6062700a10a8e6"
+        ],
+        "revision_count": 1
+      },
+      {
+        "development_id": "story_a131e0840de24507",
+        "daily_story_id": "story_a131e0840de24507",
+        "date": "2026-08-02",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Israeli Strikes in Gaza Result in Multiple Casualties",
+        "summary": "Israeli airstrikes on residential buildings in Gaza have resulted in at least nine fatalities, according to local authorities. The strikes occurred overnight and followed earlier attacks that killed seven people on Saturday. The violence comes amid reports that Hamas had agreed to a new deal aimed at ending the ongoing conflict.",
+        "topic_label": "Gaza Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "Israeli strikes killed at least nine people in Gaza.",
+          "Seven people were killed in strikes on Saturday.",
+          "Strikes targeted residential buildings and damaged medical supplies."
+        ],
+        "source_count": 2,
+        "sources": [
+          "France 24 - English",
+          "RTE News"
+        ],
+        "source_urls": [
+          "https://www.france24.com/en/middle-east/20260801-israeli-strikes-kill-eight-overnight-despite-hopes-for-a-deal",
+          "https://www.rte.ie/news/middle-east/2026/0802/1586144-gaza-israel-middle-east"
+        ],
+        "source_details": [
+          {
+            "title": "Israeli strikes on residential buildings kill at least nine in Gaza",
+            "source": "France 24 - English",
+            "link": "https://www.france24.com/en/middle-east/20260801-israeli-strikes-kill-eight-overnight-despite-hopes-for-a-deal",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Eight killed following overnight Israeli strikes on Gaza",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/middle-east/2026/0802/1586144-gaza-israel-middle-east",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_747725d0b3eecc92",
+          "shared_tokens": [
+            "agreed",
+            "conflict",
+            "deal",
+            "gaza",
+            "hamas",
+            "israel"
+          ],
+          "shared_entities": [
+            "gaza.",
+            "israel"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-02",
+        "last_seen_at": "2026-08-02",
         "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 2,
+      "public_development_count": 3,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Hamas Agrees to Disarmament in US-Brokered Peace Plan with Israel",
-    "latest_summary": "Hamas has agreed to a deal announced by US President Donald Trump, which includes the group's complete disarmament and a gradual withdrawal of Israeli forces from Gaza. The agreement is seen as a significant step towards ending the ongoing conflict. However, Israeli Prime Minister Benjamin Netanyahu has not publicly endorsed the deal, and Israeli sources indicate that a genuine disarmament is required before any withdrawal occurs.",
+    "latest_title": "Israeli Strikes in Gaza Result in Multiple Casualties",
+    "latest_summary": "Israeli airstrikes on residential buildings in Gaza have resulted in at least nine fatalities, according to local authorities. The strikes occurred overnight and followed earlier attacks that killed seven people on Saturday. The violence comes amid reports that Hamas had agreed to a new deal aimed at ending the ongoing conflict.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": false,
@@ -212,28 +302,29 @@
       "display_title": "Gaza Peace Deal",
       "milestone_development_ids": [
         "story_c0c042a2fb04bd8a",
-        "story_747725d0b3eecc92"
+        "story_747725d0b3eecc92",
+        "story_a131e0840de24507"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-01",
-      "development_count": 2,
-      "coverage_packet_count": 2,
-      "date_count": 2,
-      "source_count": 9,
+      "summary_updated_at": "2026-08-02",
+      "development_count": 3,
+      "coverage_packet_count": 4,
+      "date_count": 3,
+      "source_count": 11,
       "independent_source_count": 7,
       "first_date": "2026-07-31",
-      "latest_date": "2026-08-01",
-      "latest_update_title": "Hamas Agrees to Disarmament in US-Brokered Peace Plan with Israel",
-      "coverage_score": 0.572,
+      "latest_date": "2026-08-02",
+      "latest_update_title": "Israeli Strikes in Gaza Result in Multiple Casualties",
+      "coverage_score": 0.695,
       "recency_score": 1.0,
-      "rank_score": 0.82,
-      "context_summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Hamas Agrees to Disarmament in US-Brokered Peace Plan with Israel.",
+      "rank_score": 0.872,
+      "context_summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Israeli Strikes in Gaza Result in Multiple Casualties.",
       "cta_label": ""
     },
     "event_summary": {
       "available": true,
-      "summary": "President Trump has announced a deal for Hamas to completely disarm, which includes the gradual withdrawal of Israeli forces from Gaza. Most recently, hamas has agreed to a deal announced by US President Donald Trump, which includes the group's complete disarmament and a gradual withdrawal of Israeli forces from Gaza.",
+      "summary": "President Trump has announced a deal for Hamas to completely disarm, which includes the gradual withdrawal of Israeli forces from Gaza. A later development was Hamas Agrees to Disarmament and Israeli Withdrawal Plan. Most recently, israeli airstrikes on residential buildings in Gaza have resulted in at least nine fatalities, according to local authorities.",
       "key_developments": [
         {
           "development_id": "story_c0c042a2fb04bd8a",
@@ -243,7 +334,12 @@
         {
           "development_id": "story_747725d0b3eecc92",
           "date": "2026-08-01",
-          "title": "Hamas Agrees to Disarmament in US-Brokered Peace Plan with Israel"
+          "title": "Hamas Agrees to Disarmament and Israeli Withdrawal Plan"
+        },
+        {
+          "development_id": "story_a131e0840de24507",
+          "date": "2026-08-02",
+          "title": "Israeli Strikes in Gaza Result in Multiple Casualties"
         }
       ],
       "sources": [
@@ -300,9 +396,21 @@
           "source": "France 24 - English",
           "link": "https://www.france24.com/en/donald-trump-presses-israel-to-accept-deal-with-hamas",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Israeli strikes on residential buildings kill at least nine in Gaza",
+          "source": "France 24 - English",
+          "link": "https://www.france24.com/en/middle-east/20260801-israeli-strikes-kill-eight-overnight-despite-hopes-for-a-deal",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Eight killed following overnight Israeli strikes on Gaza",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/middle-east/2026/0802/1586144-gaza-israel-middle-east",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-08-01",
+      "updated_at": "2026-08-02",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "developing_event",
@@ -311,7 +419,7 @@
         "event_id": "event_trump-announces-agreement-for-hamas-disarmam_3c03bb0c0f",
         "title": "Trump Announces Agreement for Hamas Disarmament Amid Israeli Skepticism",
         "relationship": "related_topic",
-        "confidence": 0.819,
+        "confidence": 0.817,
         "shared_entities": [
           "donald_trump",
           "hamas_disarmament",
@@ -320,119 +428,39 @@
         ]
       },
       {
-        "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
-        "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
+        "event_id": "event_israeli-strikes-in-gaza-result-in-seven-deat_837b156199",
+        "title": "Israeli Strikes in Gaza Result in Seven Deaths and Destruction of Medical Warehouses",
         "relationship": "related_topic",
-        "confidence": 0.798,
+        "confidence": 0.752,
         "shared_entities": [
-          "benjamin_netanyahu",
-          "donald_trump",
-          "israel",
-          "israel_prime",
+          "gaza",
+          "gaza_result",
+          "israel"
+        ]
+      },
+      {
+        "event_id": "event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd",
+        "title": "Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv",
+        "relationship": "related_topic",
+        "confidence": 0.734,
+        "shared_entities": [
+          "multiple",
+          "multiple_casualtie",
           "us"
         ]
       },
       {
-        "event_id": "event_trump-hosts-separate-meetings-with-zelenskyy_49e7e2befb",
-        "title": "Trump Hosts Separate Meetings with Zelenskyy and Netanyahu at the White House",
+        "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+        "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
         "relationship": "related_topic",
-        "confidence": 0.733,
+        "confidence": 0.734,
         "shared_entities": [
-          "benjamin_netanyahu",
+          "donald_trump",
           "israel",
-          "israel_prime"
-        ]
-      },
-      {
-        "event_id": "event_new-york-mayor-calls-for-federal-action-agai_68aca8b5ab",
-        "title": "New York Mayor Calls for Federal Action Against Netanyahu Amid Arrest Warrant",
-        "relationship": "related_topic",
-        "confidence": 0.73,
-        "shared_entities": [
-          "benjamin_netanyahu",
-          "israel",
-          "israel_prime",
           "us"
         ]
       }
     ],
-    "search_tokens": [
-      "agree",
-      "agreed",
-      "agreement",
-      "announce",
-      "announced",
-      "benjamin",
-      "commitment",
-      "committee",
-      "complete",
-      "completely",
-      "confirmed",
-      "conflict",
-      "contingent",
-      "deal",
-      "disarm",
-      "disarmament",
-      "donald",
-      "ending",
-      "endorsed",
-      "force",
-      "fulfilling",
-      "gaza",
-      "genuine",
-      "governing",
-      "gradual",
-      "group",
-      "hamas",
-      "hand",
-      "however",
-      "implementation",
-      "include",
-      "indicate",
-      "israel",
-      "netanyahu",
-      "occur",
-      "ongoing",
-      "palestinian",
-      "peace",
-      "plan",
-      "previou",
-      "prime",
-      "publicly",
-      "required",
-      "seen",
-      "significant",
-      "stating",
-      "step",
-      "toward",
-      "trump",
-      "upon",
-      "us-brokered",
-      "weapon",
-      "which",
-      "withdrawal",
-      "would"
-    ],
-    "entities": [
-      "benjamin_netanyahu",
-      "disarmament",
-      "donald_trump",
-      "gaza",
-      "gaza.",
-      "gaza._hamas",
-      "hamas_agree",
-      "hamas_disarmament",
-      "however_israel",
-      "israel",
-      "israel_hamas",
-      "israel_prime",
-      "israel_withdrawal",
-      "palestinian",
-      "us",
-      "us-brokered",
-      "us-brokered_peace"
-    ],
-    "search_text": "agree agreed agreement announce announced benjamin benjamin_netanyahu commitment committee complete completely confirmed conflict contingent deal disarm disarmament donald donald_trump ending endorsed force fulfilling gaza gaza. gaza._hamas genuine governing gradual group hamas hamas_agree hamas_disarmament hand however however_israel implementation include indicate israel israel_hamas israel_prime israel_withdrawal netanyahu occur ongoing palestinian peace plan previou prime publicly required seen significant stating step toward trump upon us us-brokered us-brokered_peace weapon which withdrawal would",
     "hero_image": {
       "url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
       "thumbnail_url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
@@ -452,20 +480,143 @@
       "focal_wide_y": 0.48,
       "focal_tall_x": 0.5,
       "focal_tall_y": 0.48
-    }
+    },
+    "search_tokens": [
+      "agree",
+      "agreed",
+      "agreement",
+      "aimed",
+      "airstrike",
+      "announce",
+      "announced",
+      "attack",
+      "authoritie",
+      "building",
+      "casualtie",
+      "comes",
+      "commitment",
+      "committee",
+      "complete",
+      "completely",
+      "confirmed",
+      "conflict",
+      "contingent",
+      "deal",
+      "disarm",
+      "disarmament",
+      "donald",
+      "earlier",
+      "ending",
+      "fatalitie",
+      "followed",
+      "force",
+      "fulfilling",
+      "gaza",
+      "governing",
+      "gradual",
+      "group",
+      "hamas",
+      "hand",
+      "however",
+      "implementation",
+      "include",
+      "initiative",
+      "israel",
+      "killed",
+      "least",
+      "local",
+      "multiple",
+      "nine",
+      "occurred",
+      "ongoing",
+      "overnight",
+      "palestinian",
+      "part",
+      "peace",
+      "plan",
+      "previou",
+      "proposed",
+      "residential",
+      "result",
+      "resulted",
+      "saturday",
+      "seven",
+      "stating",
+      "stipulate",
+      "strike",
+      "trump",
+      "upon",
+      "violence",
+      "weapon",
+      "which",
+      "withdrawal",
+      "would"
+    ],
+    "entities": [
+      "casualtie_israel",
+      "disarmament",
+      "donald_trump",
+      "gaza",
+      "gaza.",
+      "gaza._hamas",
+      "gaza_result",
+      "hamas_agree",
+      "hamas_disarmament",
+      "israel",
+      "israel_withdrawal",
+      "multiple",
+      "multiple_casualtie",
+      "palestinian",
+      "us"
+    ],
+    "search_text": "agree agreed agreement aimed airstrike announce announced attack authoritie building casualtie casualtie_israel comes commitment committee complete completely confirmed conflict contingent deal disarm disarmament donald donald_trump earlier ending fatalitie followed force fulfilling gaza gaza. gaza._hamas gaza_result governing gradual group hamas hamas_agree hamas_disarmament hand however implementation include initiative israel israel_withdrawal killed least local multiple multiple_casualtie nine occurred ongoing overnight palestinian part peace plan previou proposed residential result resulted saturday seven stating stipulate strike trump upon us violence weapon which withdrawal would"
   },
   "related_events": [
     {
+      "event_id": "event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd",
+      "title": "Ukraine Conflict",
+      "summary": "Muninn first tracked this thread on 2026-07-25: Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv. The latest development is Russian Missile Strikes Kill Nine in Kyiv; Ukraine Sinks Russian Ship.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-25",
+      "last_seen_at": "2026-08-01",
+      "development_count": 7,
+      "latest_title": "Russian Missile Strikes Kill Nine in Kyiv; Ukraine Sinks Russian Ship",
+      "topic_label": "Ukraine Conflict",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd"
+    },
+    {
       "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
       "title": "Iran War",
-      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is US Conducts Strikes on Iranian Targets Following Foiled Missile Attack.",
+      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is US Pauses Attacks on Iran Pending Deal, Trump Announces.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-07-22",
-      "last_seen_at": "2026-07-30",
-      "development_count": 13,
-      "latest_title": "US Conducts Strikes on Iranian Targets Following Foiled Missile Attack",
+      "last_seen_at": "2026-08-02",
+      "development_count": 15,
+      "latest_title": "US Pauses Attacks on Iran Pending Deal, Trump Announces",
       "topic_label": "Iran War",
       "hero_image": {
         "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
@@ -488,40 +639,6 @@
         "focal_tall_y": 0.48
       },
       "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
-    },
-    {
-      "event_id": "event_new-york-mayor-calls-for-federal-action-agai_68aca8b5ab",
-      "title": "Netanyahu Arrest Warrant",
-      "summary": "Muninn first tracked this thread on 2026-07-22: New York Mayor Calls for Federal Action Against Netanyahu Amid Arrest Warrant. The latest development is New York Mayor Declares City Lacks Authority to Arrest Netanyahu on ICC Warrant.",
-      "activity_status": "active",
-      "stage": "developing_event",
-      "stage_label": "Developing event",
-      "first_seen_at": "2026-07-22",
-      "last_seen_at": "2026-07-23",
-      "development_count": 2,
-      "latest_title": "New York Mayor Declares City Lacks Authority to Arrest Netanyahu on ICC Warrant",
-      "topic_label": "Netanyahu Arrest Warrant",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_new-york-mayor-calls-for-federal-action-agai_68aca8b5ab.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_new-york-mayor-calls-for-federal-action-agai_68aca8b5ab.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_new-york-mayor-calls-for-federal-action-agai_68aca8b5ab"
     }
   ]
 }
