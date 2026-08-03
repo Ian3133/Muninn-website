@@ -15,7 +15,7 @@
     "summary": "A Russian missile strike on an arms exhibition near Kyiv resulted in at least 10 fatalities and around 100 injuries. The attack occurred during the day and targeted an event attended by key figures from the Ukrainian defense industry. Rescue operations are ongoing as officials assess the situation.",
     "status": "active",
     "first_seen_at": "2026-07-25",
-    "last_seen_at": "2026-08-01",
+    "last_seen_at": "2026-08-03",
     "timeline": [
       {
         "development_id": "story_05c2e09681d12edb",
@@ -574,15 +574,154 @@
         "first_seen_at": "2026-08-01",
         "last_seen_at": "2026-08-01",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_3349b4798d03fb35",
+        "daily_story_id": "story_3349b4798d03fb35",
+        "date": "2026-08-03",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Ukraine and Russia Report Casualties from Recent Strikes",
+        "summary": "Recent exchanges of strikes between Ukraine and Russia have resulted in at least 14 fatalities. Ukrainian drone attacks on Russian territory reportedly killed eight people, while Russian strikes on Ukraine led to at least five deaths, according to officials from both nations. Additionally, Russia claimed to have intercepted a significant number of Ukrainian drones during the assaults.",
+        "topic_label": "Ukraine Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "At least 14 people have died from strikes exchanged between Ukraine and Russia.",
+          "Ukrainian attacks on Russia resulted in at least eight deaths.",
+          "Russian strikes on Ukraine led to at least five fatalities.",
+          "Russia claimed to have downed 635 Ukrainian drones during the attacks."
+        ],
+        "source_count": 2,
+        "sources": [
+          "DW - English",
+          "RTE News"
+        ],
+        "source_urls": [
+          "https://www.rte.ie/news/2026/0802/1586210-ukraine-russia-strikes",
+          "https://www.dw.com/en/ukraine-hits-targets-deep-inside-russia-killing-eight/a-78208850?maca=en-rss-en-all-1573-rdf"
+        ],
+        "source_details": [
+          {
+            "title": "At least 14 dead as Ukraine, Russia exchange strikes",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/2026/0802/1586210-ukraine-russia-strikes",
+            "source_bias": "center"
+          },
+          {
+            "title": "Ukraine hits targets deep inside Russia, killing eight",
+            "source": "DW - English",
+            "link": "https://www.dw.com/en/ukraine-hits-targets-deep-inside-russia-killing-eight/a-78208850?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_05c2e09681d12edb",
+          "shared_tokens": [
+            "attack",
+            "conflict",
+            "fatalitie",
+            "killed",
+            "least",
+            "resulted",
+            "russia",
+            "strike",
+            "ukraine"
+          ],
+          "shared_entities": [
+            "russia",
+            "ukraine"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-03",
+        "last_seen_at": "2026-08-03",
+        "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_3851fdbc114146e7",
+        "daily_story_id": "story_3851fdbc114146e7",
+        "date": "2026-08-03",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Ukraine Launches Drone Strike on Wildberries Warehouse Amid Russian Attacks in Kharkiv",
+        "summary": "Ukraine has conducted a drone strike targeting a warehouse operated by the Russian e-commerce company Wildberries, located east of Moscow. This attack is part of Ukraine's ongoing campaign against the retailer. Concurrently, Russian forces have targeted a publishing house in Kharkiv, resulting in the destruction of eight million books over the weekend.",
+        "topic_label": "Ukraine Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "Ukrainian drone strike targeted Wildberries warehouse.",
+          "The strike is part of Ukraine's intensified campaign against Wildberries.",
+          "Russian strikes in Kharkiv destroyed eight million books."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Al Jazeera English",
+          "France 24 - English"
+        ],
+        "source_urls": [
+          "https://www.france24.com/en/europe/20260803-russia-online-retailer-wildberries-says-warehouse-on-fire-after-ukrainian-drone-attack",
+          "https://www.aljazeera.com/video/newsfeed/2026/8/3/08-03-2026-ukraine-strikes-wildberies-russia?traffic_source=rss"
+        ],
+        "source_details": [
+          {
+            "title": "Ukraine targets Wildberries again as Russia hits Kharkiv publishing house",
+            "source": "France 24 - English",
+            "link": "https://www.france24.com/en/europe/20260803-russia-online-retailer-wildberries-says-warehouse-on-fire-after-ukrainian-drone-attack",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Ukraine strikes Russia’s biggest retailer again",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/video/newsfeed/2026/8/3/08-03-2026-ukraine-strikes-wildberies-russia?traffic_source=rss",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_05c2e09681d12edb",
+          "shared_tokens": [
+            "attack",
+            "conflict",
+            "ongoing",
+            "russia",
+            "strike",
+            "targeted",
+            "ukraine"
+          ],
+          "shared_entities": [
+            "russia",
+            "ukraine"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-03",
+        "last_seen_at": "2026-08-03",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 7,
+      "public_development_count": 9,
       "questionable_development_count": 1,
       "review_required": true
     },
-    "latest_title": "Russian Missile Strikes Kill Nine in Kyiv; Ukraine Sinks Russian Ship",
-    "latest_summary": "Early this morning, Russian missile and drone strikes on Kyiv resulted in at least nine fatalities and numerous injuries. The attacks affected multiple districts of the capital, causing significant damage to residential buildings and infrastructure. Concurrently, Ukrainian forces successfully sank a large Russian container ship in the Black Sea.",
+    "latest_title": "Ukraine Launches Drone Strike on Wildberries Warehouse Amid Russian Attacks in Kharkiv",
+    "latest_summary": "Ukraine has conducted a drone strike targeting a warehouse operated by the Russian e-commerce company Wildberries, located east of Moscow. This attack is part of Ukraine's ongoing campaign against the retailer. Concurrently, Russian forces have targeted a publishing house in Kharkiv, resulting in the destruction of eight million books over the weekend.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -592,30 +731,30 @@
       "display_title": "Ukraine Conflict Timeline",
       "milestone_development_ids": [
         "story_05c2e09681d12edb",
-        "story_6f4eec3739621a65",
-        "story_4d9f8f18128abc6d",
-        "story_0e2a3a0a1405cc8e"
+        "story_44857f3951dcaff5",
+        "story_b998a9504402bbe6",
+        "story_3851fdbc114146e7"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-01",
-      "development_count": 7,
-      "coverage_packet_count": 7,
-      "date_count": 6,
-      "source_count": 22,
-      "independent_source_count": 14,
+      "summary_updated_at": "2026-08-03",
+      "development_count": 9,
+      "coverage_packet_count": 9,
+      "date_count": 7,
+      "source_count": 26,
+      "independent_source_count": 15,
       "first_date": "2026-07-25",
-      "latest_date": "2026-08-01",
-      "latest_update_title": "Russian Missile Strikes Kill Nine in Kyiv; Ukraine Sinks Russian Ship",
+      "latest_date": "2026-08-03",
+      "latest_update_title": "Ukraine Launches Drone Strike on Wildberries Warehouse Amid Russian Attacks in Kharkiv",
       "coverage_score": 1.0,
-      "recency_score": 0.875,
-      "rank_score": 0.927,
-      "context_summary": "Muninn first tracked this thread on 2026-07-25: Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv. The latest development is Russian Missile Strikes Kill Nine in Kyiv; Ukraine Sinks Russian Ship.",
-      "cta_label": "Explore 7 developments"
+      "recency_score": 1.0,
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-07-25: Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv. The latest development is Ukraine Launches Drone Strike on Wildberries Warehouse Amid Russian Attacks in Kharkiv.",
+      "cta_label": "Explore 9 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "A Russian missile strike on an arms exhibition near Kyiv resulted in at least 10 fatalities and around 100 injuries. A later development was Russian Missile Allegedly Breaches Polish Airspace Amid Ukraine Attacks. Most recently, early this morning, Russian missile and drone strikes on Kyiv resulted in at least nine fatalities and numerous injuries.",
+      "summary": "A Russian missile strike on an arms exhibition near Kyiv resulted in at least 10 fatalities and around 100 injuries. A later development was Russian Strikes Across Ukraine Result in Multiple Casualties. Most recently, ukraine has conducted a drone strike targeting a warehouse operated by the Russian e-commerce company Wildberries, located east of Moscow.",
       "key_developments": [
         {
           "development_id": "story_05c2e09681d12edb",
@@ -623,19 +762,19 @@
           "title": "Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv"
         },
         {
-          "development_id": "story_6f4eec3739621a65",
-          "date": "2026-07-28",
-          "title": "Zelenskyy Visits US to Discuss Military Support Amid Ongoing Strikes on Russia"
-        },
-        {
-          "development_id": "story_4d9f8f18128abc6d",
+          "development_id": "story_44857f3951dcaff5",
           "date": "2026-07-30",
-          "title": "Russian Strikes Across Ukraine Result in Multiple Casualties"
+          "title": "Russian Missile Allegedly Breaches Polish Airspace Amid Ukraine Attacks"
         },
         {
-          "development_id": "story_0e2a3a0a1405cc8e",
-          "date": "2026-08-01",
-          "title": "Russian Missile Strikes Kill Nine in Kyiv; Ukraine Sinks Russian Ship"
+          "development_id": "story_b998a9504402bbe6",
+          "date": "2026-07-31",
+          "title": "Russian Drone and Missile Attack Claims Lives in Ukraine"
+        },
+        {
+          "development_id": "story_3851fdbc114146e7",
+          "date": "2026-08-03",
+          "title": "Ukraine Launches Drone Strike on Wildberries Warehouse Amid Russian Attacks in Kharkiv"
         }
       ],
       "sources": [
@@ -770,9 +909,33 @@
           "source": "Al Jazeera English",
           "link": "https://www.aljazeera.com/video/newsfeed/2026/8/1/at-least-9-people-killed-in-russian-missile-attacks-on-kyiv?traffic_source=rss",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "At least 14 dead as Ukraine, Russia exchange strikes",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/2026/0802/1586210-ukraine-russia-strikes",
+          "source_bias": "center"
+        },
+        {
+          "title": "Ukraine hits targets deep inside Russia, killing eight",
+          "source": "DW - English",
+          "link": "https://www.dw.com/en/ukraine-hits-targets-deep-inside-russia-killing-eight/a-78208850?maca=en-rss-en-all-1573-rdf",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Ukraine targets Wildberries again as Russia hits Kharkiv publishing house",
+          "source": "France 24 - English",
+          "link": "https://www.france24.com/en/europe/20260803-russia-online-retailer-wildberries-says-warehouse-on-fire-after-ukrainian-drone-attack",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Ukraine strikes Russia’s biggest retailer again",
+          "source": "Al Jazeera English",
+          "link": "https://www.aljazeera.com/video/newsfeed/2026/8/3/08-03-2026-ukraine-strikes-wildberies-russia?traffic_source=rss",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-08-01",
+      "updated_at": "2026-08-03",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -781,7 +944,7 @@
         "event_id": "event_russia-launches-major-ballistic-missile-atta_e12d127249",
         "title": "Russia Launches Major Ballistic Missile Attack on Ukrainian Cities, Causing Casualties",
         "relationship": "related_topic",
-        "confidence": 0.828,
+        "confidence": 0.849,
         "shared_entities": [
           "casualtie_russia",
           "kyiv",
@@ -790,10 +953,21 @@
         ]
       },
       {
+        "event_id": "event_ukrainian-drone-strikes-target-wildberries-w_744388bb72",
+        "title": "Ukrainian Drone Strikes Target Wildberries Warehouses Again",
+        "relationship": "related_topic",
+        "confidence": 0.773,
+        "shared_entities": [
+          "russia",
+          "ukraine",
+          "wildberrie_warehouse"
+        ]
+      },
+      {
         "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
         "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
         "relationship": "related_topic",
-        "confidence": 0.734,
+        "confidence": 0.736,
         "shared_entities": [
           "multiple",
           "multiple_casualtie",
@@ -801,24 +975,12 @@
         ]
       },
       {
-        "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
-        "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
+        "event_id": "event_ukrainian-drones-strike-russian-targets-resu_d4dae47237",
+        "title": "Ukrainian Drones Strike Russian Targets, Resulting in Casualties",
         "relationship": "related_topic",
-        "confidence": 0.731,
-        "shared_entities": [
-          "discuss",
-          "ukraine",
-          "us"
-        ]
-      },
-      {
-        "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
-        "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
-        "relationship": "related_topic",
-        "confidence": 0.723,
+        "confidence": 0.735,
         "shared_entities": [
           "russia",
-          "russia_missile",
           "ukraine"
         ]
       }
@@ -943,6 +1105,7 @@
       "100",
       "280",
       "across",
+      "additionally",
       "advocate",
       "affected",
       "aged",
@@ -960,6 +1123,7 @@
       "authoritie",
       "ballistic",
       "black",
+      "books",
       "both",
       "boys",
       "breache",
@@ -967,6 +1131,7 @@
       "building",
       "called",
       "calls",
+      "campaign",
       "capital",
       "casualtie",
       "causing",
@@ -975,7 +1140,9 @@
       "claimed",
       "collectively",
       "comes",
+      "company",
       "concurrently",
+      "conducted",
       "confirmed",
       "conflict",
       "container",
@@ -986,26 +1153,32 @@
       "damage",
       "death",
       "defense",
+      "destruction",
       "diplomatic",
       "discuss",
       "district",
       "dozen",
       "drone",
+      "e-commerce",
       "early",
+      "east",
       "eight",
       "enhanced",
       "escalate",
       "escalating",
       "event",
+      "exchange",
       "exhibition",
       "family",
       "fatalitie",
       "fifth",
       "fighter",
       "figure",
+      "five",
       "follow",
       "force",
       "girl",
+      "house",
       "impacting",
       "incident",
       "including",
@@ -1017,9 +1190,11 @@
       "injured",
       "injurie",
       "intensified",
+      "intercepted",
       "involved",
       "involving",
       "jets",
+      "kharkiv",
       "kill",
       "killed",
       "kills",
@@ -1027,28 +1202,37 @@
       "kyiv",
       "landing",
       "large",
+      "launche",
       "least",
       "lives",
+      "located",
       "long-range",
       "member",
       "military",
+      "million",
       "missile",
       "morning",
+      "moscow",
       "multiple",
+      "nation",
       "near",
       "negotiation",
       "nine",
+      "number",
       "numerou",
       "occurred",
       "ongoing",
+      "operated",
       "operation",
       "overnight",
+      "part",
       "particularly",
       "peace",
       "polish",
       "poltava",
       "prompted",
       "prompting",
+      "publishing",
       "recent",
       "region",
       "renewed",
@@ -1059,6 +1243,8 @@
       "response",
       "result",
       "resulted",
+      "resulting",
+      "retailer",
       "russia",
       "same",
       "sank",
@@ -1076,6 +1262,7 @@
       "support",
       "target",
       "targeted",
+      "targeting",
       "tension",
       "territory",
       "ukraine",
@@ -1085,13 +1272,18 @@
       "visit",
       "visiting",
       "volodymyr",
+      "warehouse",
+      "weekend",
       "which",
+      "while",
+      "wildberrie",
       "within",
       "zelensky",
       "zelenskyy"
     ],
     "entities": [
       "across_ukraine",
+      "additionally_russia",
       "allegedly_breache",
       "arms",
       "arms_exhibition",
@@ -1100,20 +1292,25 @@
       "breache_polish",
       "casualtie_russia",
       "claim_lives",
+      "concurrently_russia",
       "concurrently_ukraine",
       "discuss",
       "exhibition_near",
+      "kharkiv",
+      "kharkiv_ukraine",
       "kryvyi",
       "kryvyi_rih.",
       "kyiv",
       "kyiv_region",
       "kyiv_ukraine",
+      "launche_drone",
       "military_support",
       "missile_allegedly",
       "multiple",
       "multiple_casualtie",
       "near_kyiv",
       "polish_airspace",
+      "recent",
       "region_result",
       "rih._russia",
       "russia",
@@ -1122,19 +1319,22 @@
       "russia_missile",
       "russia_ship",
       "russia_ukraine",
+      "sea._ukraine",
       "ship_early",
       "sinks_russia",
       "ukraine",
       "ukraine.",
       "ukraine._among",
+      "ukraine_launche",
       "ukraine_result",
       "ukraine_sinks",
       "us",
       "volodymyr_zelensky",
       "volodymyr_zelenskyy",
+      "wildberrie_warehouse",
       "zelenskyy_visit"
     ],
-    "search_text": "100 280 across across_ukraine advocate affected aged airspace allegedly allegedly_breache allie among anti-ballistic arms arms_exhibition around assault assess attack attended authoritie ballistic black black_sea. both boys breache breache_polish breached building called calls capital casualtie casualtie_russia causing children claim claim_lives claimed collectively comes concurrently concurrently_ukraine confirmed conflict container continue cooperation crater creating damage death defense diplomatic discuss district dozen drone early eight enhanced escalate escalating event exhibition exhibition_near family fatalitie fifth fighter figure follow force girl impacting incident including increased indicating individual industry infrastructure injured injurie intensified involved involving jets kill killed kills kryvyi kryvyi_rih. kyiv kyiv_region kyiv_ukraine landing large least lives long-range member military military_support missile missile_allegedly morning multiple multiple_casualtie near near_kyiv negotiation nine numerou occurred ongoing operation overnight particularly peace polish polish_airspace poltava prompted prompting recent region region_result renewed reportedly rescue residential resolution response result resulted rih._russia russia russia._russia russia_drone russia_missile russia_ship russia_ukraine same sank scramble ship ship_early sight significant sinks sinks_russia situation six-year-old stalled strike successfully summer support target targeted tension territory ukraine ukraine. ukraine._among ukraine_result ukraine_sinks united us variou village visit visiting volodymyr volodymyr_zelensky volodymyr_zelenskyy which within zelensky zelenskyy zelenskyy_visit"
+    "search_text": "100 280 across across_ukraine additionally additionally_russia advocate affected aged airspace allegedly allegedly_breache allie among anti-ballistic arms arms_exhibition around assault assess attack attended authoritie ballistic black black_sea. books both boys breache breache_polish breached building called calls campaign capital casualtie casualtie_russia causing children claim claim_lives claimed collectively comes company concurrently concurrently_russia concurrently_ukraine conducted confirmed conflict container continue cooperation crater creating damage death defense destruction diplomatic discuss district dozen drone e-commerce early east eight enhanced escalate escalating event exchange exhibition exhibition_near family fatalitie fifth fighter figure five follow force girl house impacting incident including increased indicating individual industry infrastructure injured injurie intensified intercepted involved involving jets kharkiv kharkiv_ukraine kill killed kills kryvyi kryvyi_rih. kyiv kyiv_region kyiv_ukraine landing large launche launche_drone least lives located long-range member military military_support million missile missile_allegedly morning moscow multiple multiple_casualtie nation near near_kyiv negotiation nine number numerou occurred ongoing operated operation overnight part particularly peace polish polish_airspace poltava prompted prompting publishing recent region region_result renewed reportedly rescue residential resolution response result resulted resulting retailer rih._russia russia russia._russia russia_drone russia_missile russia_ship russia_ukraine same sank scramble sea._ukraine ship ship_early sight significant sinks sinks_russia situation six-year-old stalled strike successfully summer support target targeted targeting tension territory ukraine ukraine. ukraine._among ukraine_launche ukraine_result ukraine_sinks united us variou village visit visiting volodymyr volodymyr_zelensky volodymyr_zelenskyy warehouse weekend which while wildberrie wildberrie_warehouse within zelensky zelenskyy zelenskyy_visit"
   },
   "related_events": [
     {
@@ -1204,74 +1404,6 @@
         "focal_tall_y": 0.48
       },
       "href": "/timeline.html?event=event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b"
-    },
-    {
-      "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
-      "title": "Iran War",
-      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is US Pauses Attacks on Iran Pending Deal, Trump Announces.",
-      "activity_status": "active",
-      "stage": "timeline",
-      "stage_label": "Timeline",
-      "first_seen_at": "2026-07-22",
-      "last_seen_at": "2026-08-02",
-      "development_count": 15,
-      "latest_title": "US Pauses Attacks on Iran Pending Deal, Trump Announces",
-      "topic_label": "Iran War",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
-    },
-    {
-      "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
-      "title": "Russia-Ukraine War",
-      "summary": "Muninn first tracked this thread on 2026-07-25: Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse. The latest development is Polish PM Reports Possible Russian Missile Downed in Eastern Poland.",
-      "activity_status": "active",
-      "stage": "developing_event",
-      "stage_label": "Developing event",
-      "first_seen_at": "2026-07-25",
-      "last_seen_at": "2026-07-30",
-      "development_count": 2,
-      "latest_title": "Polish PM Reports Possible Russian Missile Downed in Eastern Poland",
-      "topic_label": "Russia-Ukraine War",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea"
     }
   ]
 }
