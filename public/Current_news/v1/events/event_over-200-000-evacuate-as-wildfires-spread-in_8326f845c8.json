@@ -15,7 +15,7 @@
     "summary": "Wildfires fueled by strong winds and drought conditions have led to the evacuation of over 200,000 people in France and Spain. Firefighters are actively battling the flames, which have consumed large areas. Authorities in Spain have accused a tractor driver of igniting one of the wildfires.",
     "status": "active",
     "first_seen_at": "2026-07-25",
-    "last_seen_at": "2026-07-31",
+    "last_seen_at": "2026-08-03",
     "timeline": [
       {
         "development_id": "story_f765f351d0d52866",
@@ -702,15 +702,109 @@
         "first_seen_at": "2026-07-31",
         "last_seen_at": "2026-07-31",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_83a4422af8bf20d8",
+        "daily_story_id": "story_83a4422af8bf20d8",
+        "date": "2026-08-03",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Two Dead in Helicopter Collision Amid Wildfire Efforts in Greece",
+        "summary": "Two crew members were killed in a mid-air collision between firefighting helicopters west of Athens while battling major wildfires. The deceased included one Danish and one Greek national, while a British pilot and another Greek crew member survived the incident. The crash occurred during efforts to control wildfires exacerbated by gale-force winds.",
+        "topic_label": "Greece Wildfires",
+        "development_type": "impact",
+        "key_facts": [
+          "Two firefighting helicopters collided west of Athens.",
+          "Two crew members died: one Danish and one Greek.",
+          "A British pilot and another Greek crew member survived.",
+          "The incident occurred during efforts to combat significant wildfires."
+        ],
+        "source_count": 5,
+        "sources": [
+          "BBC - World",
+          "CBC - Top Stories",
+          "PBS News - Headlines",
+          "RTE News",
+          "The Guardian - World"
+        ],
+        "source_urls": [
+          "https://www.rte.ie/news/2026/0802/1586194-firefighter-helicopters-greece",
+          "https://www.bbc.co.uk/news/articles/c1417713ve6o?at_medium=RSS&at_campaign=rss",
+          "https://www.theguardian.com/world/2026/aug/02/western-europe-wildfire-crisis-retreats-greece-evacuates-hundreds-athens",
+          "https://www.cbc.ca/news/world/greece-wildfires-europe-heat-9.7294796?cmp=rss",
+          "https://www.pbs.org/newshour/world/2-killed-when-firefighting-helicopters-collide-near-athens-as-europes-wildfire-emergency-rages"
+        ],
+        "source_details": [
+          {
+            "title": "Two dead after firefighting helicopters crash in Greece",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/2026/0802/1586194-firefighter-helicopters-greece",
+            "source_bias": "center"
+          },
+          {
+            "title": "Two crew killed after firefighting helicopters collide in Greece, as British pilot survives",
+            "source": "BBC - World",
+            "link": "https://www.bbc.co.uk/news/articles/c1417713ve6o?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          },
+          {
+            "title": "Two helicopters collide outside Athens as Greece battles to control wildfires",
+            "source": "The Guardian - World",
+            "link": "https://www.theguardian.com/world/2026/aug/02/western-europe-wildfire-crisis-retreats-greece-evacuates-hundreds-athens",
+            "source_bias": "left"
+          },
+          {
+            "title": "Water-dropping aircraft battle major wildfire in Greece after crash kills 2",
+            "source": "CBC - Top Stories",
+            "link": "https://www.cbc.ca/news/world/greece-wildfires-europe-heat-9.7294796?cmp=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "2 killed when firefighting helicopters collide near Athens as Europe's wildfire emergency rages",
+            "source": "PBS News - Headlines",
+            "link": "https://www.pbs.org/newshour/world/2-killed-when-firefighting-helicopters-collide-near-athens-as-europes-wildfire-emergency-rages",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_2e920ae5c4064986",
+          "shared_tokens": [
+            "another",
+            "died",
+            "exacerbated",
+            "greece",
+            "greek",
+            "while",
+            "wildfire",
+            "winds"
+          ],
+          "shared_entities": [
+            "greece",
+            "greece_wildfire"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-03",
+        "last_seen_at": "2026-08-03",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 6,
+      "public_development_count": 7,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Evacuations in Crete as Wildfires Threaten Lives and Property",
-    "latest_summary": "Wildfires on the Greek island of Crete have prompted the evacuation of thousands of residents and tourists, particularly in the Rethymno region. The situation has escalated with strong winds exacerbating the flames, leading to the tragic deaths of three firefighters as Greece faces severe summer wildfires.",
+    "latest_title": "Two Dead in Helicopter Collision Amid Wildfire Efforts in Greece",
+    "latest_summary": "Two crew members were killed in a mid-air collision between firefighting helicopters west of Athens while battling major wildfires. The deceased included one Danish and one Greek national, while a British pilot and another Greek crew member survived the incident. The crash occurred during efforts to control wildfires exacerbated by gale-force winds.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -720,32 +814,30 @@
       "display_title": "Wildfires Timeline",
       "milestone_development_ids": [
         "story_f765f351d0d52866",
-        "story_5b6c3859702edef8",
         "story_bddc473df6dd6d69",
-        "story_1dcf5424bc120301",
         "story_2e920ae5c4064986",
-        "story_65251a7252bc0194"
+        "story_83a4422af8bf20d8"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-07-31",
-      "development_count": 6,
-      "coverage_packet_count": 11,
-      "date_count": 6,
-      "source_count": 32,
-      "independent_source_count": 18,
+      "summary_updated_at": "2026-08-03",
+      "development_count": 7,
+      "coverage_packet_count": 12,
+      "date_count": 7,
+      "source_count": 37,
+      "independent_source_count": 22,
       "first_date": "2026-07-25",
-      "latest_date": "2026-07-31",
-      "latest_update_title": "Evacuations in Crete as Wildfires Threaten Lives and Property",
+      "latest_date": "2026-08-03",
+      "latest_update_title": "Two Dead in Helicopter Collision Amid Wildfire Efforts in Greece",
       "coverage_score": 1.0,
-      "recency_score": 0.778,
-      "rank_score": 0.871,
-      "context_summary": "Muninn first tracked this thread on 2026-07-25: Severe Wildfires Force Mass Evacuations in France and Spain. The latest development is Evacuations in Crete as Wildfires Threaten Lives and Property.",
-      "cta_label": "Explore 6 developments"
+      "recency_score": 1.0,
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-07-25: Severe Wildfires Force Mass Evacuations in France and Spain. The latest development is Two Dead in Helicopter Collision Amid Wildfire Efforts in Greece.",
+      "cta_label": "Explore 7 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Over 300,000 people have been evacuated from their homes in France and Spain due to severe wildfires that have been raging for several days. A later development was Massive Wildfires in France and Spain Prompt Evacuations Ahead of Heatwave. Most recently, wildfires on the Greek island of Crete have prompted the evacuation of thousands of residents and tourists, particularly in the Rethymno region.",
+      "summary": "Over 300,000 people have been evacuated from their homes in France and Spain due to severe wildfires that have been raging for several days. A later development was Massive Wildfires in France and Spain Prompt Evacuations Ahead of Heatwave. Most recently, two crew members were killed in a mid-air collision between firefighting helicopters west of Athens while battling major wildfires.",
       "key_developments": [
         {
           "development_id": "story_f765f351d0d52866",
@@ -753,19 +845,9 @@
           "title": "Severe Wildfires Force Mass Evacuations in France and Spain"
         },
         {
-          "development_id": "story_5b6c3859702edef8",
-          "date": "2026-07-26",
-          "title": "Over 300,000 Displaced in France and Spain Due to Wildfires"
-        },
-        {
           "development_id": "story_bddc473df6dd6d69",
           "date": "2026-07-27",
           "title": "Macron Holds Crisis Meeting as Wildfires Threaten Bordeaux"
-        },
-        {
-          "development_id": "story_1dcf5424bc120301",
-          "date": "2026-07-28",
-          "title": "Massive Wildfires in France and Spain Prompt Evacuations Ahead of Heatwave"
         },
         {
           "development_id": "story_2e920ae5c4064986",
@@ -773,9 +855,9 @@
           "title": "Wildfires in Greece Lead to Evacuations and Multiple Firefighter Deaths"
         },
         {
-          "development_id": "story_65251a7252bc0194",
-          "date": "2026-07-31",
-          "title": "Evacuations in Crete as Wildfires Threaten Lives and Property"
+          "development_id": "story_83a4422af8bf20d8",
+          "date": "2026-08-03",
+          "title": "Two Dead in Helicopter Collision Amid Wildfire Efforts in Greece"
         }
       ],
       "sources": [
@@ -970,9 +1052,39 @@
           "source": "BBC",
           "link": "https://www.bbc.co.uk/news/articles/c9w01781981o?at_medium=RSS&at_campaign=rss",
           "source_bias": "center"
+        },
+        {
+          "title": "Two dead after firefighting helicopters crash in Greece",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/2026/0802/1586194-firefighter-helicopters-greece",
+          "source_bias": "center"
+        },
+        {
+          "title": "Two crew killed after firefighting helicopters collide in Greece, as British pilot survives",
+          "source": "BBC - World",
+          "link": "https://www.bbc.co.uk/news/articles/c1417713ve6o?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
+        },
+        {
+          "title": "Two helicopters collide outside Athens as Greece battles to control wildfires",
+          "source": "The Guardian - World",
+          "link": "https://www.theguardian.com/world/2026/aug/02/western-europe-wildfire-crisis-retreats-greece-evacuates-hundreds-athens",
+          "source_bias": "left"
+        },
+        {
+          "title": "Water-dropping aircraft battle major wildfire in Greece after crash kills 2",
+          "source": "CBC - Top Stories",
+          "link": "https://www.cbc.ca/news/world/greece-wildfires-europe-heat-9.7294796?cmp=rss",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "2 killed when firefighting helicopters collide near Athens as Europe's wildfire emergency rages",
+          "source": "PBS News - Headlines",
+          "link": "https://www.pbs.org/newshour/world/2-killed-when-firefighting-helicopters-collide-near-athens-as-europes-wildfire-emergency-rages",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-07-31",
+      "updated_at": "2026-08-03",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -981,7 +1093,7 @@
         "event_id": "event_wildfire-forces-evacuation-of-nearly-12-000_839c1db808",
         "title": "Wildfire Forces Evacuation of Nearly 12,000 Tourists in Southwest France",
         "relationship": "related_topic",
-        "confidence": 0.79,
+        "confidence": 0.791,
         "shared_entities": [
           "france",
           "massive_wildfire",
@@ -993,7 +1105,7 @@
         "event_id": "event_wildfire-threat-escalates-in-greece-amid-ong_c2f7e90524",
         "title": "Wildfire Threat Escalates in Greece Amid Ongoing Evacuations in France",
         "relationship": "related_topic",
-        "confidence": 0.718,
+        "confidence": 0.717,
         "shared_entities": [
           "france",
           "greece"
@@ -1003,7 +1115,7 @@
         "event_id": "event_france-evacuates-20-000-amid-wildfires-in-so_9afdbe2ab0",
         "title": "France Evacuates 20,000 Amid Wildfires in Southwestern Region",
         "relationship": "related_topic",
-        "confidence": 0.706,
+        "confidence": 0.705,
         "shared_entities": [
           "france",
           "wildfire_force"
@@ -1013,7 +1125,7 @@
         "event_id": "event_france-and-spain-s-longstanding-partnership_abd955c8db",
         "title": "France and Spain's Longstanding Partnership in Football and Politics",
         "relationship": "related_topic",
-        "confidence": 0.655,
+        "confidence": 0.654,
         "shared_entities": [
           "france",
           "spain"
@@ -1165,14 +1277,17 @@
       "ahead",
       "another",
       "approximately",
+      "athen",
       "authoritie",
       "battling",
       "blaze",
       "bordeaux",
+      "britain",
       "broader",
       "cabinet",
       "caused",
       "cloud",
+      "collision",
       "combating",
       "coming",
       "concern",
@@ -1181,12 +1296,17 @@
       "continue",
       "control",
       "convened",
+      "crash",
       "crete",
+      "crew",
       "crews",
       "crisi",
       "critical",
       "current",
+      "danish",
+      "dead",
       "death",
+      "deceased",
       "died",
       "displaced",
       "drought",
@@ -1216,16 +1336,21 @@
       "france",
       "fueled",
       "further",
+      "gale-force",
       "greece",
       "greek",
       "heatwave",
       "heightened",
+      "helicopter",
       "holds",
       "homes",
       "impending",
+      "incident",
+      "included",
       "including",
       "indicated",
       "island",
+      "killed",
       "large",
       "lead",
       "leading",
@@ -1235,11 +1360,16 @@
       "mass",
       "massive",
       "meeting",
+      "member",
+      "mid-air",
       "multiple",
+      "national",
+      "occurred",
       "ongoing",
       "outbreak",
       "part",
       "particularly",
+      "pilot",
       "prompt",
       "prompted",
       "property",
@@ -1264,6 +1394,7 @@
       "struggling",
       "successive",
       "summer",
+      "survived",
       "temperature",
       "thousand",
       "threaten",
@@ -1273,6 +1404,7 @@
       "tourist",
       "tragic",
       "unpredictable",
+      "west",
       "which",
       "while",
       "wildfire",
@@ -1280,6 +1412,7 @@
     ],
     "entities": [
       "bordeaux_emmanuel",
+      "britain",
       "crete",
       "crisi_meeting",
       "emmanuel_macron",
@@ -1290,6 +1423,7 @@
       "greece",
       "greece_lead",
       "heatwave_firefighter",
+      "helicopter",
       "holds_crisi",
       "macron_holds",
       "mass_evacuation",
@@ -1305,11 +1439,12 @@
       "threaten_bordeaux",
       "threaten_lives",
       "wildfire",
+      "wildfire_effort",
       "wildfire_force",
       "wildfire_threaten",
       "wildfire_wildfire"
     ],
-    "search_text": "000 300 330 360 across addition affecting ahead another approximately authoritie battling blaze bordeaux bordeaux_emmanuel broader cabinet caused cloud combating coming concern condition contain continue control convened crete crews crisi crisi_meeting critical current death died displaced drought effort emergence emmanuel emmanuel_macron escalated europe evacuate evacuated evacuation evacuation_ahead exacerbate exacerbated exacerbating expected faces fatalitie fire fire-generated firefighter firefighting fires flame force force_mass forced forecasted france fueled further greece greece_lead greek heatwave heatwave_firefighter heightened holds holds_crisi homes impending including indicated island large lead leading lives macron macron_holds mainland mass mass_evacuation massive massive_wildfire meeting multiple multiple_firefighter ongoing outbreak part particularly prompt prompt_evacuation prompted property property_wildfire racing raging region resident resulted rethymno rise separate several severe severe_wildfire significantly situation spain spain_due spain_prompt spread stable storm strong struggle struggling successive summer temperature thousand threaten threaten_bordeaux threaten_lives threatening three time tourist tragic unpredictable which while wildfire wildfire_force wildfire_threaten wildfire_wildfire winds"
+    "search_text": "000 300 330 360 across addition affecting ahead another approximately athen authoritie battling blaze bordeaux bordeaux_emmanuel britain broader cabinet caused cloud collision combating coming concern condition contain continue control convened crash crete crew crews crisi crisi_meeting critical current danish dead death deceased died displaced drought effort emergence emmanuel emmanuel_macron escalated europe evacuate evacuated evacuation evacuation_ahead exacerbate exacerbated exacerbating expected faces fatalitie fire fire-generated firefighter firefighting fires flame force force_mass forced forecasted france fueled further gale-force greece greece_lead greek heatwave heatwave_firefighter heightened helicopter holds holds_crisi homes impending incident included including indicated island killed large lead leading lives macron macron_holds mainland mass mass_evacuation massive massive_wildfire meeting member mid-air multiple multiple_firefighter national occurred ongoing outbreak part particularly pilot prompt prompt_evacuation prompted property property_wildfire racing raging region resident resulted rethymno rise separate several severe severe_wildfire significantly situation spain spain_due spain_prompt spread stable storm strong struggle struggling successive summer survived temperature thousand threaten threaten_bordeaux threaten_lives threatening three time tourist tragic unpredictable west which while wildfire wildfire_effort wildfire_force wildfire_threaten wildfire_wildfire winds"
   },
   "related_events": [
     {

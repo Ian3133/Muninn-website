@@ -15,7 +15,7 @@
     "summary": "An explosion occurred at a restaurant in central Moscow, killing three people and injuring at least 15 others. Security officials reported that a woman attempted to enter the restaurant with explosives but was stopped by a security guard before the device detonated. Investigators and emergency services are currently at the scene.",
     "status": "active",
     "first_seen_at": "2026-08-01",
-    "last_seen_at": "2026-08-02",
+    "last_seen_at": "2026-08-03",
     "timeline": [
       {
         "development_id": "story_88c03c1aee7e7609",
@@ -182,15 +182,105 @@
         "first_seen_at": "2026-08-02",
         "last_seen_at": "2026-08-02",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_14f3b2c79ef0f9c2",
+        "daily_story_id": "story_14f3b2c79ef0f9c2",
+        "date": "2026-08-03",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Bombing at Moscow Restaurant Kills Three and Injures Many",
+        "summary": "A bombing at an upscale Italian restaurant in central Moscow resulted in the deaths of three people and injuries to at least 21 others. The explosion occurred on Saturday evening, reportedly caused by a homemade bomb carried by a woman. Russian authorities have suggested that the attack may be linked to the ongoing conflict with Ukraine, with some speculation that a senior military figure was the intended target.",
+        "topic_label": "",
+        "development_type": "military_action",
+        "key_facts": [
+          "Three people killed and at least 21 injured in a bombing at a restaurant in Moscow.",
+          "The explosion occurred near an upscale Italian restaurant on Kudrinskaya Square.",
+          "Authorities indicated the bomb was homemade and carried by a woman."
+        ],
+        "source_count": 3,
+        "sources": [
+          "BBC",
+          "RTE News",
+          "The Guardian"
+        ],
+        "source_urls": [
+          "https://www.rte.ie/news/world/2026/0802/1586141-russia-bomb-world",
+          "https://www.theguardian.com/world/2026/08/02/moscow-restaurant-bombing-kills-three-people-as-device-carried-by-woman-explodes",
+          "https://www.bbc.co.uk/news/videos/c1719pk0xq8o?at_medium=RSS&at_campaign=rss"
+        ],
+        "source_details": [
+          {
+            "title": "Three killed after bomb attack near Moscow restaurant",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/world/2026/0802/1586141-russia-bomb-world",
+            "source_bias": "center"
+          },
+          {
+            "title": "Moscow bomb kills at least three as device carried by woman explodes",
+            "source": "The Guardian",
+            "link": "https://www.theguardian.com/world/2026/08/02/moscow-restaurant-bombing-kills-three-people-as-device-carried-by-woman-explodes",
+            "source_bias": "left"
+          },
+          {
+            "title": "At the scene of deadly Moscow bomb blast",
+            "source": "BBC",
+            "link": "https://www.bbc.co.uk/news/videos/c1719pk0xq8o?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 1.0,
+        "match_evidence": {
+          "score": 1.0,
+          "matched_development_id": "story_a15e55fff0b377ae",
+          "shared_tokens": [
+            "authoritie",
+            "bomb",
+            "bombing",
+            "central",
+            "death",
+            "explosion",
+            "homemade",
+            "injure",
+            "injured",
+            "injurie",
+            "killed",
+            "kills",
+            "least",
+            "moscow",
+            "near",
+            "occurred",
+            "other",
+            "restaurant",
+            "resulted",
+            "three",
+            "upscale",
+            "woman"
+          ],
+          "shared_entities": [
+            "moscow",
+            "moscow_restaurant"
+          ],
+          "source_url_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-03",
+        "last_seen_at": "2026-08-03",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 2,
+      "public_development_count": 3,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Explosion at Moscow Restaurant Kills Three and Injures Over Twenty",
-    "latest_summary": "A bombing near an upscale restaurant in central Moscow resulted in the deaths of three people and injuries to at least 21 others. Authorities reported that a woman attempted to enter the restaurant with a homemade bomb but was stopped by a security guard before the device detonated. The incident has been labeled a 'terrorist act' by the city's mayor.",
+    "latest_title": "Bombing at Moscow Restaurant Kills Three and Injures Many",
+    "latest_summary": "A bombing at an upscale Italian restaurant in central Moscow resulted in the deaths of three people and injuries to at least 21 others. The explosion occurred on Saturday evening, reportedly caused by a homemade bomb carried by a woman. Russian authorities have suggested that the attack may be linked to the ongoing conflict with Ukraine, with some speculation that a senior military figure was the intended target.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": false,
@@ -200,28 +290,29 @@
       "display_title": "Terrorism",
       "milestone_development_ids": [
         "story_88c03c1aee7e7609",
-        "story_a15e55fff0b377ae"
+        "story_a15e55fff0b377ae",
+        "story_14f3b2c79ef0f9c2"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-02",
-      "development_count": 2,
-      "coverage_packet_count": 2,
-      "date_count": 2,
-      "source_count": 7,
-      "independent_source_count": 7,
+      "summary_updated_at": "2026-08-03",
+      "development_count": 3,
+      "coverage_packet_count": 3,
+      "date_count": 3,
+      "source_count": 9,
+      "independent_source_count": 8,
       "first_date": "2026-08-01",
-      "latest_date": "2026-08-02",
-      "latest_update_title": "Explosion at Moscow Restaurant Kills Three and Injures Over Twenty",
-      "coverage_score": 0.547,
+      "latest_date": "2026-08-03",
+      "latest_update_title": "Bombing at Moscow Restaurant Kills Three and Injures Many",
+      "coverage_score": 0.708,
       "recency_score": 1.0,
-      "rank_score": 0.81,
-      "context_summary": "Muninn first tracked this thread on 2026-08-01: Explosion at Moscow restaurant results in three fatalities and multiple injuries. The latest development is Explosion at Moscow Restaurant Kills Three and Injures Over Twenty.",
+      "rank_score": 0.877,
+      "context_summary": "Muninn first tracked this thread on 2026-08-01: Explosion at Moscow restaurant results in three fatalities and multiple injuries. The latest development is Bombing at Moscow Restaurant Kills Three and Injures Many.",
       "cta_label": ""
     },
     "event_summary": {
       "available": true,
-      "summary": "An explosion occurred at a restaurant in central Moscow, killing three people and injuring at least 15 others. Most recently, a bombing near an upscale restaurant in central Moscow resulted in the deaths of three people and injuries to at least 21 others.",
+      "summary": "An explosion occurred at a restaurant in central Moscow, killing three people and injuring at least 15 others. A later development was Explosion at Moscow Restaurant Kills Three and Injures Over Twenty. Most recently, a bombing at an upscale Italian restaurant in central Moscow resulted in the deaths of three people and injuries to at least 21 others.",
       "key_developments": [
         {
           "development_id": "story_88c03c1aee7e7609",
@@ -232,6 +323,11 @@
           "development_id": "story_a15e55fff0b377ae",
           "date": "2026-08-02",
           "title": "Explosion at Moscow Restaurant Kills Three and Injures Over Twenty"
+        },
+        {
+          "development_id": "story_14f3b2c79ef0f9c2",
+          "date": "2026-08-03",
+          "title": "Bombing at Moscow Restaurant Kills Three and Injures Many"
         }
       ],
       "sources": [
@@ -276,64 +372,66 @@
           "source": "DW",
           "link": "https://www.dw.com/en/moscow-restaurant-blast-a-brutal-terror-attack-mayor-says/a-78205684",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Moscow bomb kills at least three as device carried by woman explodes",
+          "source": "The Guardian",
+          "link": "https://www.theguardian.com/world/2026/08/02/moscow-restaurant-bombing-kills-three-people-as-device-carried-by-woman-explodes",
+          "source_bias": "left"
+        },
+        {
+          "title": "At the scene of deadly Moscow bomb blast",
+          "source": "BBC",
+          "link": "https://www.bbc.co.uk/news/videos/c1719pk0xq8o?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-08-02",
+      "updated_at": "2026-08-03",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "developing_event",
-    "related_events": [],
-    "search_tokens": [
-      "attempted",
-      "authoritie",
-      "bomb",
-      "bombing",
-      "central",
-      "currently",
-      "death",
-      "detonated",
-      "device",
-      "emergency",
-      "enter",
-      "explosion",
-      "explosive",
-      "fatalitie",
-      "guard",
-      "homemade",
-      "incident",
-      "injure",
-      "injurie",
-      "injuring",
-      "investigator",
-      "killing",
-      "kills",
-      "labeled",
-      "least",
-      "mayor",
-      "moscow",
-      "multiple",
-      "near",
-      "occurred",
-      "other",
-      "reported",
-      "restaurant",
-      "result",
-      "resulted",
-      "scene",
-      "security",
-      "service",
-      "stopped",
-      "terrorist",
-      "three",
-      "twenty",
-      "upscale",
-      "woman"
+    "related_events": [
+      {
+        "event_id": "event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd",
+        "title": "Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv",
+        "relationship": "related_topic",
+        "confidence": 0.697,
+        "shared_entities": [
+          "russia",
+          "ukraine"
+        ]
+      },
+      {
+        "event_id": "event_russia-launches-major-ballistic-missile-atta_e12d127249",
+        "title": "Russia Launches Major Ballistic Missile Attack on Ukrainian Cities, Causing Casualties",
+        "relationship": "related_topic",
+        "confidence": 0.679,
+        "shared_entities": [
+          "russia",
+          "ukraine"
+        ]
+      },
+      {
+        "event_id": "event_ukrainian-drones-strike-russian-targets-resu_d4dae47237",
+        "title": "Ukrainian Drones Strike Russian Targets, Resulting in Casualties",
+        "relationship": "related_topic",
+        "confidence": 0.675,
+        "shared_entities": [
+          "russia",
+          "ukraine"
+        ]
+      },
+      {
+        "event_id": "event_ukrainian-drone-strikes-target-wildberries-w_744388bb72",
+        "title": "Ukrainian Drone Strikes Target Wildberries Warehouses Again",
+        "relationship": "related_topic",
+        "confidence": 0.671,
+        "shared_entities": [
+          "russia",
+          "ukraine"
+        ]
+      }
     ],
-    "entities": [
-      "moscow",
-      "moscow_restaurant"
-    ],
-    "search_text": "attempted authoritie bomb bombing central currently death detonated device emergency enter explosion explosive fatalitie guard homemade incident injure injurie injuring investigator killing kills labeled least mayor moscow moscow_restaurant multiple near occurred other reported restaurant result resulted scene security service stopped terrorist three twenty upscale woman",
     "hero_image": {
       "url": "/Current_news/generated/events/event_explosion-at-moscow-restaurant-results-in-th_388a335a31.jpg",
       "thumbnail_url": "/Current_news/generated/events/event_explosion-at-moscow-restaurant-results-in-th_388a335a31.jpg",
@@ -353,7 +451,234 @@
       "focal_wide_y": 0.48,
       "focal_tall_x": 0.5,
       "focal_tall_y": 0.48
+    },
+    "search_tokens": [
+      "attack",
+      "attempted",
+      "authoritie",
+      "bomb",
+      "bombing",
+      "carried",
+      "caused",
+      "central",
+      "conflict",
+      "currently",
+      "death",
+      "detonated",
+      "device",
+      "emergency",
+      "enter",
+      "evening",
+      "explosion",
+      "explosive",
+      "fatalitie",
+      "figure",
+      "guard",
+      "homemade",
+      "incident",
+      "injure",
+      "injurie",
+      "injuring",
+      "intended",
+      "investigator",
+      "italian",
+      "killing",
+      "kills",
+      "labeled",
+      "least",
+      "linked",
+      "many",
+      "mayor",
+      "military",
+      "moscow",
+      "multiple",
+      "near",
+      "occurred",
+      "ongoing",
+      "other",
+      "reported",
+      "reportedly",
+      "restaurant",
+      "result",
+      "resulted",
+      "russia",
+      "saturday",
+      "scene",
+      "security",
+      "senior",
+      "service",
+      "some",
+      "speculation",
+      "stopped",
+      "suggested",
+      "target",
+      "terrorist",
+      "three",
+      "twenty",
+      "ukraine",
+      "upscale",
+      "woman"
+    ],
+    "entities": [
+      "injure_many",
+      "moscow",
+      "moscow_restaurant",
+      "russia",
+      "ukraine"
+    ],
+    "search_text": "attack attempted authoritie bomb bombing carried caused central conflict currently death detonated device emergency enter evening explosion explosive fatalitie figure guard homemade incident injure injure_many injurie injuring intended investigator italian killing kills labeled least linked many mayor military moscow moscow_restaurant multiple near occurred ongoing other reported reportedly restaurant result resulted russia saturday scene security senior service some speculation stopped suggested target terrorist three twenty ukraine upscale woman",
+    "event_overview": {
+      "available": true,
+      "title": "About Terrorism",
+      "subject": "Terrorism",
+      "summary": "The event is a bombing at Balzi Rossi, an Italian restaurant in central Moscow, on August 1, 2026. Early official and media accounts reported three deaths, including the alleged bomber, and more than 20 injuries; later reporting indicated that the casualty count was being revised as authorities assessed the attack and its aftermath.",
+      "facts": [
+        {
+          "label": "Date and location",
+          "value": "The blast occurred on the evening of August 1, 2026, at the Balzi Rossi restaurant in central Moscow.",
+          "source_ids": [
+            "o1",
+            "o2"
+          ]
+        },
+        {
+          "label": "Initial casualties",
+          "value": "Russian officials initially reported at least three deaths, including the woman described in reporting as the bomber, and at least 21 people wounded.",
+          "source_ids": [
+            "o1",
+            "o2"
+          ]
+        },
+        {
+          "label": "Method reported",
+          "value": "Reporting cited Russian accounts that an explosive device was detonated at the restaurant; one account said a suspicious package carried by a woman posing as a delivery worker was remotely activated.",
+          "source_ids": [
+            "o1",
+            "o3"
+          ]
+        },
+        {
+          "label": "Official characterization",
+          "value": "Moscow's mayor described the incident as a terrorist act. Russian authorities and officials subsequently made allegations about responsibility, but those claims had not been independently established in the reporting consulted.",
+          "source_ids": [
+            "o2",
+            "o4"
+          ]
+        },
+        {
+          "label": "Casualty-count uncertainty",
+          "value": "By August 3, reporting said the death toll had risen to five and noted that the National Anti-Terrorism Committee had initially issued a lower figure, underscoring that casualty reporting was still evolving.",
+          "source_ids": [
+            "o4"
+          ]
+        }
+      ],
+      "scope_note": "The selected Muninn timeline covers the initial August 1-3 reporting on the blast and changing casualty accounts, not any later investigation, prosecution, attribution finding, or broader history of attacks in Moscow.",
+      "sources": [
+        {
+          "title": "AP News",
+          "publisher": "AP News",
+          "url": "https://apnews.com/article/98b7fe61ce6a81f679126844ea182445",
+          "source_type": "reporting",
+          "id": "o1"
+        },
+        {
+          "title": "AP News",
+          "publisher": "AP News",
+          "url": "https://apnews.com/article/27c6ca232a189daa718a4d1596326a87",
+          "source_type": "reporting",
+          "id": "o2"
+        },
+        {
+          "title": "Elpais",
+          "publisher": "Elpais",
+          "url": "https://elpais.com/internacional/2026-08-01/varios-muertos-en-un-ataque-con-bomba-en-centrico-restaurante-de-moscu.html",
+          "source_type": "reporting",
+          "id": "o3"
+        },
+        {
+          "title": "AP News",
+          "publisher": "AP News",
+          "url": "https://apnews.com/article/831d5b7d4cb1eff85966c6cc226066ec",
+          "source_type": "reporting",
+          "id": "o4"
+        }
+      ],
+      "publisher_count": 2,
+      "generated_at": "2026-08-03T14:32:59.503941+00:00",
+      "expires_at": "2026-08-10T14:32:59.503941+00:00",
+      "model": "gpt-5.6-terra",
+      "provenance": "openai_web_search_source_grounded_event_overview_v1"
     }
   },
-  "related_events": []
+  "related_events": [
+    {
+      "event_id": "event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd",
+      "title": "Ukraine Conflict",
+      "summary": "Muninn first tracked this thread on 2026-07-25: Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv. The latest development is Ukraine Launches Drone Strike on Wildberries Warehouse Amid Russian Attacks in Kharkiv.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-25",
+      "last_seen_at": "2026-08-03",
+      "development_count": 9,
+      "latest_title": "Ukraine Launches Drone Strike on Wildberries Warehouse Amid Russian Attacks in Kharkiv",
+      "topic_label": "Ukraine Conflict",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd"
+    },
+    {
+      "event_id": "event_russia-launches-major-ballistic-missile-atta_e12d127249",
+      "title": "Ukraine Conflict",
+      "summary": "Muninn first tracked this thread on 2026-07-19: Russia Launches Major Ballistic Missile Attack on Ukrainian Cities, Causing Casualties. The latest development is Russia Launches Major Missile Assault on Ukrainian Cities Amid Escalating Conflict.",
+      "activity_status": "active",
+      "stage": "developing_event",
+      "stage_label": "Developing event",
+      "first_seen_at": "2026-07-19",
+      "last_seen_at": "2026-07-20",
+      "development_count": 2,
+      "latest_title": "Russia Launches Major Missile Assault on Ukrainian Cities Amid Escalating Conflict",
+      "topic_label": "Ukraine Conflict",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_russia-launches-major-ballistic-missile-atta_e12d127249.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_russia-launches-major-ballistic-missile-atta_e12d127249.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_russia-launches-major-ballistic-missile-atta_e12d127249"
+    }
+  ]
 }

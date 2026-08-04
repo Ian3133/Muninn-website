@@ -1,0 +1,511 @@
+{
+  "schema_version": 1,
+  "resource_type": "event",
+  "event_id": "event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a",
+  "publication": {
+    "status": "published",
+    "permalink": "/timeline.html?event=event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a",
+    "share_expires_at": null
+  },
+  "event": {
+    "event_id": "event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a",
+    "title": "Trump Delays Iran Strikes to Pursue Diplomatic Deal",
+    "canonical_title": "Trump Delays Iran Strikes to Pursue Diplomatic Deal",
+    "topic_label": "Iran Relations",
+    "summary": "Trump announced that the US will refrain from launching new strikes against Iran in hopes of reaching a diplomatic agreement. This decision comes after Iran issued a warning against any 'adventurous action,' stating it would respond decisively to potential attacks on its territory.",
+    "status": "active",
+    "first_seen_at": "2026-08-02",
+    "last_seen_at": "2026-08-03",
+    "timeline": [
+      {
+        "development_id": "story_eeac5a41d1e28e7e",
+        "daily_story_id": "story_eeac5a41d1e28e7e",
+        "date": "2026-08-02",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Trump Delays Iran Strikes to Pursue Diplomatic Deal",
+        "summary": "Trump announced that the US will refrain from launching new strikes against Iran in hopes of reaching a diplomatic agreement. This decision comes after Iran issued a warning against any 'adventurous action,' stating it would respond decisively to potential attacks on its territory.",
+        "topic_label": "Iran Relations",
+        "development_type": "military_action",
+        "key_facts": [
+          "Trump announced a delay in US strikes on Iran.",
+          "The US aims to pursue a diplomatic deal with Iran.",
+          "Iran warned of decisive retaliation against US actions."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Channel NewsAsia",
+          "NewsNation"
+        ],
+        "source_urls": [
+          "https://www.newsnationnow.com/politics/trump-hold-off-latest-iran-strikes",
+          "https://www.channelnewsasia.com/world/trump-iran-hold-attack-quick-deal-6293236"
+        ],
+        "source_details": [
+          {
+            "title": "Trump: US to hold off strikes on Iran in hopes of reaching deal",
+            "source": "NewsNation",
+            "link": "https://www.newsnationnow.com/politics/trump-hold-off-latest-iran-strikes",
+            "source_bias": "center"
+          },
+          {
+            "title": "Trump says he will hold off on fresh Iran attack in hope of quick deal",
+            "source": "Channel NewsAsia",
+            "link": "https://www.channelnewsasia.com/world/trump-iran-hold-attack-quick-deal-6293236",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 1.0,
+        "match_evidence": {
+          "score": 1.0,
+          "method": "new_event",
+          "shared_tokens": [],
+          "shared_entities": []
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-02",
+        "last_seen_at": "2026-08-02",
+        "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_47c28cc2b2f5edc7",
+        "daily_story_id": "story_47c28cc2b2f5edc7",
+        "date": "2026-08-03",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Iran Denies Ongoing Talks with US Amid Trump's Claims of Progress",
+        "summary": "Iran has stated that there are no current negotiations or plans for meetings with the United States, contradicting President Trump's assertion of progress in talks that he cited as a reason for canceling planned military strikes. Trump had indicated that discussions regarding the Strait of Hormuz and Iran's nuclear program were set to occur on the same day he called off the attacks.",
+        "topic_label": "Iran Relations",
+        "development_type": "military_action",
+        "key_facts": [
+          "Iran denies any current talks with the US",
+          "Trump claimed talks were scheduled for the same day he canceled attacks.",
+          "The discussions were reportedly related to the Strait of Hormuz and Iran's nuclear program."
+        ],
+        "source_count": 3,
+        "sources": [
+          "CBC",
+          "NBC News",
+          "New York Times"
+        ],
+        "source_urls": [
+          "https://www.nytimes.com/2026/08/03/world/middleeast/iran-talks-us-oman-strait-hormuz-trump.html",
+          "https://www.cbc.ca/news/world/iran-talks-trump-attacks-9.7294798?cmp=rss",
+          "https://www.nbcnews.com/world/iran/trump-iran-talks-attacks-canceled-hormuz-nuclear-rcna590535"
+        ],
+        "source_details": [
+          {
+            "title": "Iran Says No Current Talks With US After Trump Cites Progress on the Strait of Hormuz",
+            "source": "New York Times",
+            "link": "https://www.nytimes.com/2026/08/03/world/middleeast/iran-talks-us-oman-strait-hormuz-trump.html",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Iran says no talks underway or meeting plans with US after Trump calls off attacks on Tehran",
+            "source": "CBC",
+            "link": "https://www.cbc.ca/news/world/iran-talks-trump-attacks-9.7294798?cmp=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Iran denies Trump claim that new talks will start Monday after he called off attacks",
+            "source": "NBC News",
+            "link": "https://www.nbcnews.com/world/iran/trump-iran-talks-attacks-canceled-hormuz-nuclear-rcna590535",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_eeac5a41d1e28e7e",
+          "shared_tokens": [
+            "attack",
+            "iran",
+            "relation",
+            "strike",
+            "trump"
+          ],
+          "shared_entities": [
+            "iran",
+            "iran_relation",
+            "us"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-03",
+        "last_seen_at": "2026-08-03",
+        "integrity_status": "trusted"
+      }
+    ],
+    "integrity": {
+      "public_development_count": 2,
+      "questionable_development_count": 0,
+      "review_required": false
+    },
+    "latest_title": "Iran Denies Ongoing Talks with US Amid Trump's Claims of Progress",
+    "latest_summary": "Iran has stated that there are no current negotiations or plans for meetings with the United States, contradicting President Trump's assertion of progress in talks that he cited as a reason for canceling planned military strikes. Trump had indicated that discussions regarding the Strait of Hormuz and Iran's nuclear program were set to occur on the same day he called off the attacks.",
+    "presentation": {
+      "has_context": true,
+      "has_full_timeline": false,
+      "stage": "developing_event",
+      "stage_label": "Developing event",
+      "base_title": "Iran Relations",
+      "display_title": "Iran Relations",
+      "milestone_development_ids": [
+        "story_eeac5a41d1e28e7e",
+        "story_47c28cc2b2f5edc7"
+      ],
+      "summary_available": true,
+      "summary_label": "Read the story so far",
+      "summary_updated_at": "2026-08-03",
+      "development_count": 2,
+      "coverage_packet_count": 2,
+      "date_count": 2,
+      "source_count": 5,
+      "independent_source_count": 5,
+      "first_date": "2026-08-02",
+      "latest_date": "2026-08-03",
+      "latest_update_title": "Iran Denies Ongoing Talks with US Amid Trump's Claims of Progress",
+      "coverage_score": 0.447,
+      "recency_score": 1.0,
+      "rank_score": 0.768,
+      "context_summary": "Muninn first tracked this thread on 2026-08-02: Trump Delays Iran Strikes to Pursue Diplomatic Deal. The latest development is Iran Denies Ongoing Talks with US Amid Trump's Claims of Progress.",
+      "cta_label": ""
+    },
+    "event_summary": {
+      "available": true,
+      "summary": "Trump announced that the US will refrain from launching new strikes against Iran in hopes of reaching a diplomatic agreement. Most recently, iran has stated that there are no current negotiations or plans for meetings with the United States, contradicting President Trump's assertion of progress in talks that he cited as a reason for canceling planned military strikes.",
+      "key_developments": [
+        {
+          "development_id": "story_eeac5a41d1e28e7e",
+          "date": "2026-08-02",
+          "title": "Trump Delays Iran Strikes to Pursue Diplomatic Deal"
+        },
+        {
+          "development_id": "story_47c28cc2b2f5edc7",
+          "date": "2026-08-03",
+          "title": "Iran Denies Ongoing Talks with US Amid Trump's Claims of Progress"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Trump: US to hold off strikes on Iran in hopes of reaching deal",
+          "source": "NewsNation",
+          "link": "https://www.newsnationnow.com/politics/trump-hold-off-latest-iran-strikes",
+          "source_bias": "center"
+        },
+        {
+          "title": "Trump says he will hold off on fresh Iran attack in hope of quick deal",
+          "source": "Channel NewsAsia",
+          "link": "https://www.channelnewsasia.com/world/trump-iran-hold-attack-quick-deal-6293236",
+          "source_bias": "center"
+        },
+        {
+          "title": "Iran Says No Current Talks With US After Trump Cites Progress on the Strait of Hormuz",
+          "source": "New York Times",
+          "link": "https://www.nytimes.com/2026/08/03/world/middleeast/iran-talks-us-oman-strait-hormuz-trump.html",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Iran says no talks underway or meeting plans with US after Trump calls off attacks on Tehran",
+          "source": "CBC",
+          "link": "https://www.cbc.ca/news/world/iran-talks-trump-attacks-9.7294798?cmp=rss",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Iran denies Trump claim that new talks will start Monday after he called off attacks",
+          "source": "NBC News",
+          "link": "https://www.nbcnews.com/world/iran/trump-iran-talks-attacks-canceled-hormuz-nuclear-rcna590535",
+          "source_bias": "lean-left"
+        }
+      ],
+      "updated_at": "2026-08-03",
+      "provenance": "source_grounded_event_memory"
+    },
+    "event_stage": "developing_event",
+    "related_events": [
+      {
+        "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+        "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
+        "relationship": "related_topic",
+        "confidence": 0.83,
+        "shared_entities": [
+          "deal_trump",
+          "iran",
+          "pursue",
+          "us"
+        ]
+      },
+      {
+        "event_id": "event_iran-claims-attacks-on-us-bases-in-bahrain-j_2ed1fdd27a",
+        "title": "Iran Claims Attacks on US Bases in Bahrain, Jordan, and Kuwait Amid Escalating Conflict",
+        "relationship": "related_topic",
+        "confidence": 0.675,
+        "shared_entities": [
+          "iran",
+          "us"
+        ]
+      },
+      {
+        "event_id": "event_us-continues-strikes-on-iran-amid-traffic-st_41c26ce1d9",
+        "title": "US Continues Strikes on Iran Amid Traffic Standstill in Strait of Hormuz",
+        "relationship": "related_topic",
+        "confidence": 0.674,
+        "shared_entities": [
+          "iran",
+          "us"
+        ]
+      },
+      {
+        "event_id": "event_houthi-attacks-on-saudi-tankers-raise-oil-pr_2ec7634023",
+        "title": "Houthi Attacks on Saudi Tankers Raise Oil Price Concerns",
+        "relationship": "related_topic",
+        "confidence": 0.665,
+        "shared_entities": [
+          "iran",
+          "us"
+        ]
+      }
+    ],
+    "search_tokens": [
+      "action",
+      "adventurou",
+      "agreement",
+      "announced",
+      "assertion",
+      "attack",
+      "called",
+      "canceling",
+      "cited",
+      "claim",
+      "comes",
+      "contradicting",
+      "current",
+      "deal",
+      "decision",
+      "decisively",
+      "delay",
+      "denie",
+      "diplomatic",
+      "discussion",
+      "hopes",
+      "hormuz",
+      "indicated",
+      "iran",
+      "issued",
+      "launching",
+      "meeting",
+      "military",
+      "negotiation",
+      "nuclear",
+      "occur",
+      "ongoing",
+      "planned",
+      "plans",
+      "potential",
+      "program",
+      "progress",
+      "pursue",
+      "reaching",
+      "reason",
+      "refrain",
+      "regarding",
+      "respond",
+      "same",
+      "stated",
+      "stating",
+      "strait",
+      "strike",
+      "talks",
+      "territory",
+      "there",
+      "trump",
+      "united",
+      "warning",
+      "would"
+    ],
+    "entities": [
+      "deal_trump",
+      "delay_iran",
+      "denie_ongoing",
+      "diplomatic_deal",
+      "iran",
+      "iran_denie",
+      "ongoing_talks",
+      "progress_iran",
+      "pursue",
+      "pursue_diplomatic",
+      "trump_claim",
+      "trump_delay",
+      "us"
+    ],
+    "search_text": "action adventurou agreement announced assertion attack called canceling cited claim comes contradicting current deal deal_trump decision decisively delay delay_iran denie denie_ongoing diplomatic diplomatic_deal discussion hopes hormuz indicated iran iran_denie issued launching meeting military negotiation nuclear occur ongoing ongoing_talks planned plans potential program progress progress_iran pursue pursue_diplomatic reaching reason refrain regarding respond same stated stating strait strike talks territory there trump trump_claim trump_delay united us warning would",
+    "hero_image": {
+      "url": "/Current_news/generated/events/event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a.jpg",
+      "thumbnail_url": "/Current_news/generated/events/event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a.jpg",
+      "source": "Muninn AI illustration",
+      "author": "OpenAI GPT Image 2",
+      "license": "AI-generated content",
+      "image_role": "illustrative",
+      "image_role_label": "AI illustration",
+      "is_ai_generated": true,
+      "generation_model": "gpt-image-2",
+      "generation_quality": "low",
+      "safe_to_crop": true,
+      "allows_crop": true,
+      "focal_x": 0.5,
+      "focal_y": 0.48,
+      "focal_wide_x": 0.5,
+      "focal_wide_y": 0.48,
+      "focal_tall_x": 0.5,
+      "focal_tall_y": 0.48
+    }
+  },
+  "related_events": [
+    {
+      "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+      "title": "Iran War",
+      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Trump Halts Strikes on Iran to Pursue New Negotiations.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-22",
+      "last_seen_at": "2026-08-03",
+      "development_count": 16,
+      "latest_title": "Trump Halts Strikes on Iran to Pursue New Negotiations",
+      "topic_label": "Iran War",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
+    },
+    {
+      "event_id": "event_iran-claims-attacks-on-us-bases-in-bahrain-j_2ed1fdd27a",
+      "title": "Iran Conflict",
+      "summary": "Muninn first tracked this thread on 2026-07-25: US Military Engages Merchant Vessel Breaching Iranian Port Blockade. The latest development is Iran Conducts Attacks on US Bases and Ships Amid Trump-Netanyahu Meeting.",
+      "activity_status": "active",
+      "stage": "developing_event",
+      "stage_label": "Developing event",
+      "first_seen_at": "2026-07-25",
+      "last_seen_at": "2026-07-29",
+      "development_count": 3,
+      "latest_title": "Iran Conducts Attacks on US Bases and Ships Amid Trump-Netanyahu Meeting",
+      "topic_label": "Iran Conflict",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_iran-claims-attacks-on-us-bases-in-bahrain-j_2ed1fdd27a.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_iran-claims-attacks-on-us-bases-in-bahrain-j_2ed1fdd27a.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_iran-claims-attacks-on-us-bases-in-bahrain-j_2ed1fdd27a"
+    },
+    {
+      "event_id": "event_us-continues-strikes-on-iran-amid-traffic-st_41c26ce1d9",
+      "title": "Iran War",
+      "summary": "Muninn first tracked this thread on 2026-07-18: US Continues Strikes on Iran Amid Traffic Standstill in Strait of Hormuz. The latest development is US Intensifies Airstrikes on Iran Following Deaths of Service Members.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-18",
+      "last_seen_at": "2026-07-21",
+      "development_count": 5,
+      "latest_title": "US Intensifies Airstrikes on Iran Following Deaths of Service Members",
+      "topic_label": "Iran War",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_us-continues-strikes-on-iran-amid-traffic-st_41c26ce1d9.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_us-continues-strikes-on-iran-amid-traffic-st_41c26ce1d9.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_us-continues-strikes-on-iran-amid-traffic-st_41c26ce1d9"
+    },
+    {
+      "event_id": "event_houthi-attacks-on-saudi-tankers-raise-oil-pr_2ec7634023",
+      "title": "Middle East Conflict",
+      "summary": "Muninn first tracked this thread on 2026-07-23: Houthi Attacks on Saudi Tankers Raise Oil Price Concerns. The latest development is Ongoing US-Iran Talks Amid Escalating Strikes and Regional Tensions.",
+      "activity_status": "active",
+      "stage": "developing_event",
+      "stage_label": "Developing event",
+      "first_seen_at": "2026-07-23",
+      "last_seen_at": "2026-07-31",
+      "development_count": 2,
+      "latest_title": "Ongoing US-Iran Talks Amid Escalating Strikes and Regional Tensions",
+      "topic_label": "Middle East Conflict",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_houthi-attacks-on-saudi-tankers-raise-oil-pr_2ec7634023.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_houthi-attacks-on-saudi-tankers-raise-oil-pr_2ec7634023.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_houthi-attacks-on-saudi-tankers-raise-oil-pr_2ec7634023"
+    }
+  ]
+}
