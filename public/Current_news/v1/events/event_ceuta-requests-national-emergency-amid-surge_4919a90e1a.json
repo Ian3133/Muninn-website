@@ -15,7 +15,7 @@
     "summary": "Authorities in Ceuta have requested Spain to declare a national emergency due to a significant influx of migrants swimming from Morocco. The local government is seeking military assistance as border security is overwhelmed by the number of individuals attempting to enter the territory.",
     "status": "active",
     "first_seen_at": "2026-07-30",
-    "last_seen_at": "2026-08-03",
+    "last_seen_at": "2026-08-04",
     "timeline": [
       {
         "development_id": "story_dff81ceff84cab9d",
@@ -629,15 +629,103 @@
         "first_seen_at": "2026-08-03",
         "last_seen_at": "2026-08-03",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_5c5c83fb1a194f9f",
+        "daily_story_id": "story_5c5c83fb1a194f9f",
+        "date": "2026-08-04",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Ceuta Migrant Crisis Highlights European Divisions and Death Toll Discrepancies",
+        "summary": "A significant migrant crisis unfolded at the Spanish enclave of Ceuta, where over 50,000 individuals crossed from Morocco last week. Reports indicate a death toll of at least 72 according to Spain, while Morocco's interior ministry claims only 11 fatalities. Most of the migrants have since returned to Morocco, but the incident has sparked political tensions within Spain and criticism from other EU nations.",
+        "topic_label": "Ceuta Migrant Crisis",
+        "development_type": "development",
+        "key_facts": [
+          "Over 50,000 migrants crossed from Morocco to Ceuta.",
+          "Spain reports at least 72 deaths, while Morocco states 11.",
+          "Most migrants have returned to Morocco."
+        ],
+        "source_count": 3,
+        "sources": [
+          "Africanews",
+          "DW - English",
+          "The Guardian"
+        ],
+        "source_urls": [
+          "https://www.theguardian.com/news/audio/2026/aug/03/how-ceuta-migrant-crisis-exposes-divisions-within-europe-the-latest",
+          "http://www.africanews.com/2026/08/03/morocco-says-11-died-in-ceuta-crossing-attempt-while-spain-puts-it-at-72",
+          "https://www.dw.com/en/ceuta-most-who-breached-border-have-left-spain-says/live-78191601?maca=en-rss-en-all-1573-rdf"
+        ],
+        "source_details": [
+          {
+            "title": "How Ceuta migrant crisis exposes divisions within Europe - The Latest",
+            "source": "The Guardian",
+            "link": "https://www.theguardian.com/news/audio/2026/aug/03/how-ceuta-migrant-crisis-exposes-divisions-within-europe-the-latest",
+            "source_bias": "left"
+          },
+          {
+            "title": "Morocco says 11 died in Ceuta crossing attempt, while Spain puts it at 72",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/08/03/morocco-says-11-died-in-ceuta-crossing-attempt-while-spain-puts-it-at-72",
+            "source_bias": "center"
+          },
+          {
+            "title": "Ceuta: Most who breached border have left, Spain says",
+            "source": "DW - English",
+            "link": "https://www.dw.com/en/ceuta-most-who-breached-border-have-left-spain-says/live-78191601?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 1.0,
+        "match_evidence": {
+          "score": 1.0,
+          "matched_development_id": "story_b0eecfe46709df7b",
+          "shared_tokens": [
+            "000",
+            "ceuta",
+            "claim",
+            "crisi",
+            "crossed",
+            "death",
+            "enclave",
+            "fatalitie",
+            "interior",
+            "least",
+            "migrant",
+            "ministry",
+            "morocco",
+            "only",
+            "returned",
+            "spain",
+            "toll",
+            "while"
+          ],
+          "shared_entities": [
+            "ceuta._spain",
+            "migrant_crisi",
+            "morocco",
+            "spain"
+          ],
+          "source_url_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-04",
+        "last_seen_at": "2026-08-04",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 7,
+      "public_development_count": 8,
       "questionable_development_count": 3,
       "review_required": true
     },
-    "latest_title": "Ceuta Migration Surge Results in High Death Toll and Voluntary Returns",
-    "latest_summary": "Following a massive influx of nearly 60,000 migrants into Ceuta from Morocco, Spanish authorities reported at least 72 deaths as of August 2. While many migrants have since returned to Morocco voluntarily, some remain in Spanish territory. The situation has prompted calls for solidarity as Spain addresses the aftermath of this significant border crossing.",
+    "latest_title": "Ceuta Migrant Crisis Highlights European Divisions and Death Toll Discrepancies",
+    "latest_summary": "A significant migrant crisis unfolded at the Spanish enclave of Ceuta, where over 50,000 individuals crossed from Morocco last week. Reports indicate a death toll of at least 72 according to Spain, while Morocco's interior ministry claims only 11 fatalities. Most of the migrants have since returned to Morocco, but the incident has sparked political tensions within Spain and criticism from other EU nations.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -648,29 +736,29 @@
       "milestone_development_ids": [
         "story_dff81ceff84cab9d",
         "story_5894515e666aace7",
-        "story_af1ea58d74818916",
-        "story_3dcc6dd6c6a0ceb2"
+        "story_ec157a35b19375b0",
+        "story_5c5c83fb1a194f9f"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-03",
-      "development_count": 7,
-      "coverage_packet_count": 8,
-      "date_count": 5,
-      "source_count": 23,
+      "summary_updated_at": "2026-08-04",
+      "development_count": 8,
+      "coverage_packet_count": 9,
+      "date_count": 6,
+      "source_count": 25,
       "independent_source_count": 14,
       "first_date": "2026-07-30",
-      "latest_date": "2026-08-03",
-      "latest_update_title": "Ceuta Migration Surge Results in High Death Toll and Voluntary Returns",
+      "latest_date": "2026-08-04",
+      "latest_update_title": "Ceuta Migrant Crisis Highlights European Divisions and Death Toll Discrepancies",
       "coverage_score": 1.0,
       "recency_score": 1.0,
       "rank_score": 1.0,
-      "context_summary": "Muninn first tracked this thread on 2026-07-30: Ceuta Requests National Emergency Amid Surge of Migrants from Morocco. The latest development is Ceuta Migration Surge Results in High Death Toll and Voluntary Returns.",
-      "cta_label": "Explore 7 developments"
+      "context_summary": "Muninn first tracked this thread on 2026-07-30: Ceuta Requests National Emergency Amid Surge of Migrants from Morocco. The latest development is Ceuta Migrant Crisis Highlights European Divisions and Death Toll Discrepancies.",
+      "cta_label": "Explore 8 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Authorities in Ceuta have requested Spain to declare a national emergency due to a significant influx of migrants swimming from Morocco. A later development was Migrants Cross into Spain's Ceuta Territory from Morocco. Most recently, following a massive influx of nearly 60,000 migrants into Ceuta from Morocco, Spanish authorities reported at least 72 deaths as of August 2.",
+      "summary": "Authorities in Ceuta have requested Spain to declare a national emergency due to a significant influx of migrants swimming from Morocco. A later development was Ceuta Recovers After Migrant Surge and Return to Morocco. Most recently, a significant migrant crisis unfolded at the Spanish enclave of Ceuta, where over 50,000 individuals crossed from Morocco last week.",
       "key_developments": [
         {
           "development_id": "story_dff81ceff84cab9d",
@@ -683,14 +771,14 @@
           "title": "Spain Halts Migrant Crossings into Ceuta Amid Rising Death Toll"
         },
         {
-          "development_id": "story_af1ea58d74818916",
+          "development_id": "story_ec157a35b19375b0",
           "date": "2026-08-02",
-          "title": "Ceuta Recovers After Migrant Surge and Return to Morocco"
+          "title": "Massive Migrant Influx into Ceuta Leads to Deaths and Emergency Measures"
         },
         {
-          "development_id": "story_3dcc6dd6c6a0ceb2",
-          "date": "2026-08-03",
-          "title": "Ceuta Migration Surge Results in High Death Toll and Voluntary Returns"
+          "development_id": "story_5c5c83fb1a194f9f",
+          "date": "2026-08-04",
+          "title": "Ceuta Migrant Crisis Highlights European Divisions and Death Toll Discrepancies"
         }
       ],
       "sources": [
@@ -831,9 +919,21 @@
           "source": "France 24",
           "link": "https://www.france24.com/en/video/20260803-spain-expects-solidarity-as-it-grapples-with-aftermath-of-ceuta-migration-surge",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "How Ceuta migrant crisis exposes divisions within Europe - The Latest",
+          "source": "The Guardian",
+          "link": "https://www.theguardian.com/news/audio/2026/aug/03/how-ceuta-migrant-crisis-exposes-divisions-within-europe-the-latest",
+          "source_bias": "left"
+        },
+        {
+          "title": "Morocco says 11 died in Ceuta crossing attempt, while Spain puts it at 72",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/08/03/morocco-says-11-died-in-ceuta-crossing-attempt-while-spain-puts-it-at-72",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-08-03",
+      "updated_at": "2026-08-04",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -842,7 +942,7 @@
         "event_id": "event_spain-and-morocco-strengthen-border-controls_84fe96c498",
         "title": "Spain and Morocco Strengthen Border Controls Following Migrant Surge into Ceuta",
         "relationship": "related_topic",
-        "confidence": 0.798,
+        "confidence": 0.809,
         "shared_entities": [
           "ceuta",
           "migrant_surge",
@@ -992,18 +1092,23 @@
       "claim",
       "comes",
       "conflicting",
+      "crisi",
+      "criticism",
       "cross",
       "crossed",
       "crossing",
       "death",
       "declare",
       "died",
+      "discrepancie",
       "discussion",
+      "division",
       "drowning",
       "emergency",
       "enclave",
       "enter",
       "europe",
+      "european",
       "event",
       "fatalitie",
       "floating",
@@ -1011,16 +1116,21 @@
       "gradually",
       "halts",
       "high",
+      "highlight",
       "however",
       "humanitarian",
       "immigration",
+      "incident",
       "include",
       "including",
+      "indicate",
       "indicating",
       "individual",
       "influx",
       "installation",
       "installing",
+      "interior",
+      "last",
       "leads",
       "least",
       "life",
@@ -1032,8 +1142,10 @@
       "migrant",
       "migration",
       "military",
+      "ministry",
       "morocco",
       "most",
+      "nation",
       "national",
       "nearly",
       "normal",
@@ -1042,8 +1154,10 @@
       "occurred",
       "ongoing",
       "only",
+      "other",
       "overwhelmed",
       "policie",
+      "political",
       "prompted",
       "recover",
       "reignited",
@@ -1074,39 +1188,51 @@
       "solidarity",
       "some",
       "spain",
+      "sparked",
       "stampede",
       "surge",
       "swimming",
       "tens",
+      "tension",
       "territory",
       "these",
       "thousand",
       "toll",
       "tragically",
+      "unfolded",
       "unprecedented",
       "voluntarily",
       "voluntary",
+      "week",
+      "where",
       "which",
-      "while"
+      "while",
+      "within"
     ],
     "entities": [
       "august_while",
       "ceuta",
       "ceuta_leads",
+      "ceuta_migrant",
       "ceuta_migration",
       "ceuta_recover",
       "ceuta_request",
       "ceuta_result",
       "ceuta_territory",
+      "crisi_highlight",
       "death",
       "emergency_measure",
+      "eu",
       "europe.",
       "europe._spain",
+      "european_division",
       "halts_migrant",
       "high",
+      "highlight_european",
       "massive_influx",
       "massive_migrant",
       "measure_tens",
+      "migrant_crisi",
       "migrant_cross",
       "migrant_crossing",
       "migrant_influx",
@@ -1126,10 +1252,11 @@
       "spain_ceuta",
       "spain_halts",
       "surge_result",
+      "toll_discrepancie",
       "toll_spain",
       "voluntary_return"
     ],
-    "search_text": "000 500-meter addresse african aftermath along approximately around assistance attempt attempting august august_while authoritie barrier beginning begun border cafes calls ceased ceuta ceuta_leads ceuta_migration ceuta_recover ceuta_request ceuta_result ceuta_territory challenge chaotic claim comes conflicting cross crossed crossing death declare died discussion drowning emergency emergency_measure enclave enter europe europe. europe._spain event fatalitie floating future gradually halts halts_migrant high however humanitarian immigration include including indicating individual influx installation installing leads least life local manage many massive massive_influx massive_migrant measure measure_tens migrant migrant_cross migrant_crossing migrant_influx migrant_surge migration migration_surge military morocco morocco. morocco._ceuta morocco_authoritie morocco_ceuta morocco_spain most national national_emergency nearly normal north north_african number occurred ongoing only overwhelmed policie prompted recover reignited remain reopen reported reporting request request_national requested resident response result resulted resume return returned returning rising security seeking shops shortly significant since situation small social solidarity some spain spain_ceuta spain_halts stampede surge surge_result swimming tens territory these thousand toll toll_spain tragically unprecedented voluntarily voluntary voluntary_return which while"
+    "search_text": "000 500-meter addresse african aftermath along approximately around assistance attempt attempting august august_while authoritie barrier beginning begun border cafes calls ceased ceuta ceuta_leads ceuta_migrant ceuta_migration ceuta_recover ceuta_request ceuta_result ceuta_territory challenge chaotic claim comes conflicting crisi crisi_highlight criticism cross crossed crossing death declare died discrepancie discussion division drowning emergency emergency_measure enclave enter eu europe europe. europe._spain european european_division event fatalitie floating future gradually halts halts_migrant high highlight highlight_european however humanitarian immigration incident include including indicate indicating individual influx installation installing interior last leads least life local manage many massive massive_influx massive_migrant measure measure_tens migrant migrant_crisi migrant_cross migrant_crossing migrant_influx migrant_surge migration migration_surge military ministry morocco morocco. morocco._ceuta morocco_authoritie morocco_ceuta morocco_spain most nation national national_emergency nearly normal north north_african number occurred ongoing only other overwhelmed policie political prompted recover reignited remain reopen reported reporting request request_national requested resident response result resulted resume return returned returning rising security seeking shops shortly significant since situation small social solidarity some spain spain_ceuta spain_halts sparked stampede surge surge_result swimming tens tension territory these thousand toll toll_discrepancie toll_spain tragically unfolded unprecedented voluntarily voluntary voluntary_return week where which while within"
   },
   "related_events": [
     {
