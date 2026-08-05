@@ -15,7 +15,7 @@
     "summary": "The ongoing Ebola outbreak in the Democratic Republic of Congo has resulted in nearly 1,000 fatalities since mid-May. The current death toll stands at 999 in Congo, with an additional two deaths reported in Uganda, attributed to the Bundibugyo strain of the virus. This outbreak has a significantly higher fatality rate compared to previous incidents, and there are currently no available vaccines or treatments for this strain.",
     "status": "active",
     "first_seen_at": "2026-07-22",
-    "last_seen_at": "2026-08-01",
+    "last_seen_at": "2026-08-05",
     "timeline": [
       {
         "development_id": "story_1e2af4cb802ea53a",
@@ -332,48 +332,123 @@
         "first_seen_at": "2026-08-01",
         "last_seen_at": "2026-08-01",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_bc9371293c5e7af9",
+        "daily_story_id": "story_bc9371293c5e7af9",
+        "date": "2026-08-05",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "New Ebola Treatment Center Opens in Bunia, DR Congo Amid Outbreak",
+        "summary": "The Democratic Republic of the Congo is set to open its largest Ebola treatment center in Bunia this week. This development comes as the World Health Organization reports an intensifying outbreak, with 3,605 confirmed cases and 1,587 deaths as of July 30. Health authorities aim to enhance response efforts and patient care with the expanded treatment capacity.",
+        "topic_label": "Ebola Outbreak",
+        "development_type": "development",
+        "key_facts": [
+          "Largest Ebola treatment center in DR Congo opening in Bunia.",
+          "WHO reports 3,605 confirmed cases and 1,587 deaths as of July 30.",
+          "Outbreak described as spreading at an 'exceptional' pace."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Africanews",
+          "France 24 - English"
+        ],
+        "source_urls": [
+          "http://www.africanews.com/2026/08/04/dr-congos-largest-ebola-treatment-centre-set-to-open-in-bunia",
+          "https://www.france24.com/en/video/20260805-dr-congo-is-set-to-open-its-largest-ever-ebola-treatment-facility"
+        ],
+        "source_details": [
+          {
+            "title": "DR Congo's largest Ebola treatment centre set to open in Bunia",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/08/04/dr-congos-largest-ebola-treatment-centre-set-to-open-in-bunia",
+            "source_bias": "center"
+          },
+          {
+            "title": "DR Congo is set to open its largest ever Ebola treatment facility",
+            "source": "France 24 - English",
+            "link": "https://www.france24.com/en/video/20260805-dr-congo-is-set-to-open-its-largest-ever-ebola-treatment-facility",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_f5c21aea2c963aca",
+          "shared_tokens": [
+            "bunia",
+            "cases",
+            "center",
+            "confirmed",
+            "congo",
+            "democratic",
+            "ebola",
+            "health",
+            "outbreak",
+            "republic",
+            "treatment"
+          ],
+          "shared_entities": [
+            "bunia",
+            "democratic_republic",
+            "dr",
+            "ebola_outbreak"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-05",
+        "last_seen_at": "2026-08-05",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 4,
-      "questionable_development_count": 0,
-      "review_required": false
+      "public_development_count": 5,
+      "questionable_development_count": 1,
+      "review_required": true
     },
-    "latest_title": "Ebola Outbreak in DR Congo Becomes Worst in History",
-    "latest_summary": "The ongoing Ebola outbreak in the Democratic Republic of Congo has become the deadliest in the country's history, claiming 1,587 lives and surpassing 3,500 reported cases. This outbreak, caused by the Bundibugyo strain, is now recognized as the world's second-largest ever, with no approved vaccine or treatment available.",
+    "latest_title": "New Ebola Treatment Center Opens in Bunia, DR Congo Amid Outbreak",
+    "latest_summary": "The Democratic Republic of the Congo is set to open its largest Ebola treatment center in Bunia this week. This development comes as the World Health Organization reports an intensifying outbreak, with 3,605 confirmed cases and 1,587 deaths as of July 30. Health authorities aim to enhance response efforts and patient care with the expanded treatment capacity.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
       "stage": "timeline",
       "stage_label": "Timeline",
-      "base_title": "Congo Ebola Outbreak",
-      "display_title": "Congo Ebola Outbreak Timeline",
+      "base_title": "Ebola Outbreak in DR Congo Exceeds 1,000 Deaths",
+      "display_title": "Ebola Outbreak in DR Congo Exceeds 1,000 Deaths Timeline",
       "milestone_development_ids": [
         "story_1e2af4cb802ea53a",
         "story_f5c21aea2c963aca",
         "story_6397dd3fe63fada2",
-        "story_82f07e414ad368e5"
+        "story_82f07e414ad368e5",
+        "story_bc9371293c5e7af9"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-01",
-      "development_count": 4,
-      "coverage_packet_count": 5,
-      "date_count": 4,
-      "source_count": 11,
-      "independent_source_count": 9,
+      "summary_updated_at": "2026-08-05",
+      "development_count": 5,
+      "coverage_packet_count": 6,
+      "date_count": 5,
+      "source_count": 13,
+      "independent_source_count": 10,
       "first_date": "2026-07-22",
-      "latest_date": "2026-08-01",
-      "latest_update_title": "Ebola Outbreak in DR Congo Becomes Worst in History",
-      "coverage_score": 0.831,
-      "recency_score": 0.7,
-      "rank_score": 0.755,
-      "context_summary": "Muninn first tracked this thread on 2026-07-22: Ebola Outbreak in DR Congo Exceeds 1,000 Deaths. The latest development is Ebola Outbreak in DR Congo Becomes Worst in History.",
-      "cta_label": "Explore 4 developments"
+      "latest_date": "2026-08-05",
+      "latest_update_title": "New Ebola Treatment Center Opens in Bunia, DR Congo Amid Outbreak",
+      "coverage_score": 0.942,
+      "recency_score": 1.0,
+      "rank_score": 0.976,
+      "context_summary": "Muninn first tracked this thread on 2026-07-22: Ebola Outbreak in DR Congo Exceeds 1,000 Deaths. The latest development is New Ebola Treatment Center Opens in Bunia, DR Congo Amid Outbreak.",
+      "cta_label": "Explore 5 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "The ongoing Ebola outbreak in the Democratic Republic of Congo has resulted in over 1,000 confirmed deaths, according to official government data. A later development was Uganda Declares Itself Ebola-Free Amid Ongoing Outbreak in Congo. Most recently, the ongoing Ebola outbreak in the Democratic Republic of Congo has become the deadliest in the country's history, claiming 1,587 lives and surpassing 3,500 reported cases.",
+      "summary": "The ongoing Ebola outbreak in the Democratic Republic of Congo has resulted in over 1,000 confirmed deaths, according to official government data. A later development was Uganda Declares Itself Ebola-Free Amid Ongoing Outbreak in Congo. Most recently, the Democratic Republic of the Congo is set to open its largest Ebola treatment center in Bunia this week.",
       "key_developments": [
         {
           "development_id": "story_1e2af4cb802ea53a",
@@ -394,6 +469,11 @@
           "development_id": "story_82f07e414ad368e5",
           "date": "2026-08-01",
           "title": "Ebola Outbreak in DR Congo Becomes Worst in History"
+        },
+        {
+          "development_id": "story_bc9371293c5e7af9",
+          "date": "2026-08-05",
+          "title": "New Ebola Treatment Center Opens in Bunia, DR Congo Amid Outbreak"
         }
       ],
       "sources": [
@@ -462,9 +542,21 @@
           "source": "DW",
           "link": "https://www.dw.com/en/dr-congo-ebola-outbreak-becomes-world-s-second-largest-ever/a-78196627?maca=en-rss-en-all-1573-rdf",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "DR Congo's largest Ebola treatment centre set to open in Bunia",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/08/04/dr-congos-largest-ebola-treatment-centre-set-to-open-in-bunia",
+          "source_bias": "center"
+        },
+        {
+          "title": "DR Congo is set to open its largest ever Ebola treatment facility",
+          "source": "France 24 - English",
+          "link": "https://www.france24.com/en/video/20260805-dr-congo-is-set-to-open-its-largest-ever-ebola-treatment-facility",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-08-01",
+      "updated_at": "2026-08-05",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -473,7 +565,7 @@
         "event_id": "event_ebola-outbreak-in-congo-claims-over-930-live_6c7b679293",
         "title": "Ebola Outbreak in Congo Claims Over 930 Lives",
         "relationship": "related_topic",
-        "confidence": 0.717,
+        "confidence": 0.715,
         "shared_entities": [
           "congo",
           "ebola_outbreak"
@@ -483,7 +575,7 @@
         "event_id": "event_canada-implements-temporary-travel-ban-due-t_64f58a7547",
         "title": "Canada Implements Temporary Travel Ban Due to Ebola Concerns",
         "relationship": "related_topic",
-        "confidence": 0.7,
+        "confidence": 0.707,
         "shared_entities": [
           "democratic",
           "democratic_republic",
@@ -516,14 +608,18 @@
       "100",
       "500",
       "587",
+      "605",
       "actual",
       "announcement",
       "approved",
       "approximately",
+      "authoritie",
       "available",
       "become",
       "bundibugyo",
       "bunia",
+      "capacity",
+      "care",
       "cases",
       "caused",
       "center",
@@ -540,12 +636,16 @@
       "declare",
       "declared",
       "democratic",
+      "development",
       "discharged",
       "ebola",
       "ebola-free",
+      "effort",
+      "enhance",
       "epicenter",
       "ever",
       "exceed",
+      "expanded",
       "face",
       "fastest-growing",
       "figure",
@@ -555,7 +655,10 @@
       "higher",
       "history",
       "indicated",
+      "intensifying",
       "itself",
+      "july",
+      "largest",
       "last",
       "lives",
       "marking",
@@ -564,6 +667,8 @@
       "number",
       "officially",
       "ongoing",
+      "open",
+      "opens",
       "organization",
       "outbreak",
       "patient",
@@ -571,6 +676,7 @@
       "recognized",
       "reported",
       "republic",
+      "response",
       "resulted",
       "second-largest",
       "significantly",
@@ -581,6 +687,7 @@
       "treatment",
       "uganda",
       "vaccine",
+      "week",
       "without",
       "worker",
       "worst"
@@ -597,16 +704,18 @@
       "ebola",
       "ebola-free",
       "ebola_outbreak",
+      "ebola_treatment",
       "exceed_cases",
       "health_organization",
       "health_worker",
       "history",
       "itself_ebola-free",
+      "july_health",
       "mid-june",
       "ongoing_outbreak",
       "uganda_declare"
     ],
-    "search_text": "000 100 500 587 actual announcement approved approximately available become bundibugyo bunia cases caused center challenge claiming coincide comes confirmed congo congo_exceed congo_uganda continue data deadliest death declare declare_itself declared democratic democratic_republic discharged dr ebola ebola-free ebola_outbreak epicenter ever exceed exceed_cases face fastest-growing figure four free health health_organization health_worker higher history indicated itself itself_ebola-free last lives marking mid-june neighboring number officially ongoing ongoing_outbreak organization outbreak patient potentially recognized reported republic resulted second-largest significantly strain strike surpassing times treatment uganda uganda_declare vaccine without worker worst"
+    "search_text": "000 100 500 587 605 actual announcement approved approximately authoritie available become bundibugyo bunia capacity care cases caused center challenge claiming coincide comes confirmed congo congo_exceed congo_uganda continue data deadliest death declare declare_itself declared democratic democratic_republic development discharged dr ebola ebola-free ebola_outbreak ebola_treatment effort enhance epicenter ever exceed exceed_cases expanded face fastest-growing figure four free health health_organization health_worker higher history indicated intensifying itself itself_ebola-free july july_health largest last lives marking mid-june neighboring number officially ongoing ongoing_outbreak open opens organization outbreak patient potentially recognized reported republic response resulted second-largest significantly strain strike surpassing times treatment uganda uganda_declare vaccine week without worker worst"
   },
   "related_events": []
 }

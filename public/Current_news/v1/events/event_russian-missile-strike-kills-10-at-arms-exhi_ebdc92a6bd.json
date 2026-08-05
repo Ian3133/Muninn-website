@@ -15,7 +15,7 @@
     "summary": "A Russian missile strike on an arms exhibition near Kyiv resulted in at least 10 fatalities and around 100 injuries. The attack occurred during the day and targeted an event attended by key figures from the Ukrainian defense industry. Rescue operations are ongoing as officials assess the situation.",
     "status": "active",
     "first_seen_at": "2026-07-25",
-    "last_seen_at": "2026-08-04",
+    "last_seen_at": "2026-08-05",
     "timeline": [
       {
         "development_id": "story_05c2e09681d12edb",
@@ -791,48 +791,130 @@
         "first_seen_at": "2026-08-04",
         "last_seen_at": "2026-08-04",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_3feb5e7b07396db9",
+        "daily_story_id": "story_3feb5e7b07396db9",
+        "date": "2026-08-05",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Russian Strikes on Kyiv Result in 17 Deaths Amid Air Defense Challenges",
+        "summary": "Overnight Russian missile and drone strikes on Kyiv have resulted in at least 17 fatalities and numerous injuries. Ukrainian officials reported that the attacks exploited the country's depleted air defenses, with no ballistic missiles successfully intercepted. President Zelenskyy has called for increased support from allies to bolster Ukraine's defense capabilities as the frequency and intensity of such assaults continue to rise.",
+        "topic_label": "Ukraine Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "At least 17 people killed in overnight Russian strikes on Kyiv.",
+          "Ukrainian air defenses failed to intercept any ballistic missiles during the attack.",
+          "The assault involved 29 missiles and 115 drones, according to Ukrainian officials."
+        ],
+        "source_count": 3,
+        "sources": [
+          "Al Jazeera English",
+          "New York Times",
+          "The Guardian"
+        ],
+        "source_urls": [
+          "https://www.nytimes.com/2026/08/05/world/europe/ukraine-war-kyiv-russia-missile-attack.html",
+          "https://www.aljazeera.com/news/2026/8/5/russian-attacks-kill-17-exploiting-ukraines-lack-of-missile-interceptors?traffic_source=rss",
+          "https://www.theguardian.com/world/2026/aug/05/russia-kyiv-attack-kills-at-least-14-people-ukraine-authorities"
+        ],
+        "source_details": [
+          {
+            "title": "Russia’s Deadly Missile Attack on Kyiv Exploits Ukraine’s Depleted Air Defenses",
+            "source": "New York Times",
+            "link": "https://www.nytimes.com/2026/08/05/world/europe/ukraine-war-kyiv-russia-missile-attack.html",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Russian attacks kill 17, exploiting Ukraine’s lack of missile interceptors",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/news/2026/8/5/russian-attacks-kill-17-exploiting-ukraines-lack-of-missile-interceptors?traffic_source=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Zelenskyy calls for more air defences as Russian attack on Kyiv kills at least 17",
+            "source": "The Guardian",
+            "link": "https://www.theguardian.com/world/2026/aug/05/russia-kyiv-attack-kills-at-least-14-people-ukraine-authorities",
+            "source_bias": "left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_05c2e09681d12edb",
+          "shared_tokens": [
+            "attack",
+            "conflict",
+            "defense",
+            "fatalitie",
+            "injurie",
+            "killed",
+            "kyiv",
+            "least",
+            "missile",
+            "resulted",
+            "russia",
+            "strike",
+            "ukraine"
+          ],
+          "shared_entities": [
+            "russia",
+            "ukraine"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-05",
+        "last_seen_at": "2026-08-05",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 10,
+      "public_development_count": 11,
       "questionable_development_count": 1,
       "review_required": true
     },
-    "latest_title": "Ukrainian Strikes in Crimea Result in 11 Deaths Amid Ongoing Conflict",
-    "latest_summary": "Ukrainian strikes on a holiday resort in Crimea have reportedly killed 11 people and injured dozens, according to Russian officials. The attacks are part of a broader escalation in hostilities between Ukraine and Russia, with both sides blaming each other for recent violence, including a drone strike on a beach in Gelendzhik that resulted in additional casualties.",
+    "latest_title": "Russian Strikes on Kyiv Result in 17 Deaths Amid Air Defense Challenges",
+    "latest_summary": "Overnight Russian missile and drone strikes on Kyiv have resulted in at least 17 fatalities and numerous injuries. Ukrainian officials reported that the attacks exploited the country's depleted air defenses, with no ballistic missiles successfully intercepted. President Zelenskyy has called for increased support from allies to bolster Ukraine's defense capabilities as the frequency and intensity of such assaults continue to rise.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
       "stage": "timeline",
       "stage_label": "Timeline",
-      "base_title": "Ukraine Conflict",
-      "display_title": "Ukraine Conflict Timeline",
+      "base_title": "Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv",
+      "display_title": "Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv Timeline",
       "milestone_development_ids": [
         "story_05c2e09681d12edb",
         "story_44857f3951dcaff5",
-        "story_0e2a3a0a1405cc8e",
-        "story_a013098735cc607c"
+        "story_3349b4798d03fb35",
+        "story_3feb5e7b07396db9"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-04",
-      "development_count": 10,
-      "coverage_packet_count": 10,
-      "date_count": 8,
-      "source_count": 29,
-      "independent_source_count": 16,
+      "summary_updated_at": "2026-08-05",
+      "development_count": 11,
+      "coverage_packet_count": 11,
+      "date_count": 9,
+      "source_count": 32,
+      "independent_source_count": 18,
       "first_date": "2026-07-25",
-      "latest_date": "2026-08-04",
-      "latest_update_title": "Ukrainian Strikes in Crimea Result in 11 Deaths Amid Ongoing Conflict",
+      "latest_date": "2026-08-05",
+      "latest_update_title": "Russian Strikes on Kyiv Result in 17 Deaths Amid Air Defense Challenges",
       "coverage_score": 1.0,
       "recency_score": 1.0,
       "rank_score": 1.0,
-      "context_summary": "Muninn first tracked this thread on 2026-07-25: Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv. The latest development is Ukrainian Strikes in Crimea Result in 11 Deaths Amid Ongoing Conflict.",
-      "cta_label": "Explore 10 developments"
+      "context_summary": "Muninn first tracked this thread on 2026-07-25: Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv. The latest development is Russian Strikes on Kyiv Result in 17 Deaths Amid Air Defense Challenges.",
+      "cta_label": "Explore 11 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "A Russian missile strike on an arms exhibition near Kyiv resulted in at least 10 fatalities and around 100 injuries. A later development was Russian Drone and Missile Attack Claims Lives in Ukraine. Most recently, ukrainian strikes on a holiday resort in Crimea have reportedly killed 11 people and injured dozens, according to Russian officials.",
+      "summary": "A Russian missile strike on an arms exhibition near Kyiv resulted in at least 10 fatalities and around 100 injuries. A later development was Russian Drone and Missile Attack Claims Lives in Ukraine. Most recently, overnight Russian missile and drone strikes on Kyiv have resulted in at least 17 fatalities and numerous injuries.",
       "key_developments": [
         {
           "development_id": "story_05c2e09681d12edb",
@@ -845,14 +927,14 @@
           "title": "Russian Missile Allegedly Breaches Polish Airspace Amid Ukraine Attacks"
         },
         {
-          "development_id": "story_0e2a3a0a1405cc8e",
-          "date": "2026-08-01",
-          "title": "Russian Missile Strikes Kill Nine in Kyiv; Ukraine Sinks Russian Ship"
+          "development_id": "story_3349b4798d03fb35",
+          "date": "2026-08-03",
+          "title": "Ukraine and Russia Report Casualties from Recent Strikes"
         },
         {
-          "development_id": "story_a013098735cc607c",
-          "date": "2026-08-04",
-          "title": "Ukrainian Strikes in Crimea Result in 11 Deaths Amid Ongoing Conflict"
+          "development_id": "story_3feb5e7b07396db9",
+          "date": "2026-08-05",
+          "title": "Russian Strikes on Kyiv Result in 17 Deaths Amid Air Defense Challenges"
         }
       ],
       "sources": [
@@ -1029,9 +1111,27 @@
           "source": "France 24",
           "link": "https://www.france24.com/en/europe/20260804-at-least-9-russian-civilians-killed-as-ukraine-war-takes-its-toll-on-black-sea-shores",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Russia’s Deadly Missile Attack on Kyiv Exploits Ukraine’s Depleted Air Defenses",
+          "source": "New York Times",
+          "link": "https://www.nytimes.com/2026/08/05/world/europe/ukraine-war-kyiv-russia-missile-attack.html",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Russian attacks kill 17, exploiting Ukraine’s lack of missile interceptors",
+          "source": "Al Jazeera English",
+          "link": "https://www.aljazeera.com/news/2026/8/5/russian-attacks-kill-17-exploiting-ukraines-lack-of-missile-interceptors?traffic_source=rss",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Zelenskyy calls for more air defences as Russian attack on Kyiv kills at least 17",
+          "source": "The Guardian",
+          "link": "https://www.theguardian.com/world/2026/aug/05/russia-kyiv-attack-kills-at-least-14-people-ukraine-authorities",
+          "source_bias": "left"
         }
       ],
-      "updated_at": "2026-08-04",
+      "updated_at": "2026-08-05",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -1040,7 +1140,7 @@
         "event_id": "event_russia-launches-major-ballistic-missile-atta_e12d127249",
         "title": "Russia Launches Major Ballistic Missile Attack on Ukrainian Cities, Causing Casualties",
         "relationship": "related_topic",
-        "confidence": 0.856,
+        "confidence": 0.859,
         "shared_entities": [
           "casualtie_russia",
           "kyiv",
@@ -1070,14 +1170,14 @@
         ]
       },
       {
-        "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
-        "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
+        "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
+        "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
         "relationship": "related_topic",
-        "confidence": 0.738,
+        "confidence": 0.735,
         "shared_entities": [
-          "multiple",
-          "multiple_casualtie",
-          "us"
+          "russia",
+          "russia_missile",
+          "ukraine"
         ]
       }
     ],
@@ -1222,6 +1322,7 @@
       "beach",
       "black",
       "blaming",
+      "bolster",
       "books",
       "both",
       "boys",
@@ -1232,9 +1333,11 @@
       "called",
       "calls",
       "campaign",
+      "capabilitie",
       "capital",
       "casualtie",
       "causing",
+      "challenge",
       "children",
       "claim",
       "claimed",
@@ -1254,6 +1357,7 @@
       "damage",
       "death",
       "defense",
+      "depleted",
       "destruction",
       "diplomatic",
       "discuss",
@@ -1272,6 +1376,7 @@
       "event",
       "exchange",
       "exhibition",
+      "exploited",
       "family",
       "fatalitie",
       "fifth",
@@ -1280,6 +1385,7 @@
       "five",
       "follow",
       "force",
+      "frequency",
       "gelendzhik",
       "girl",
       "holiday",
@@ -1296,6 +1402,7 @@
       "injured",
       "injurie",
       "intensified",
+      "intensity",
       "intercepted",
       "involved",
       "involving",
@@ -1343,6 +1450,7 @@
       "recent",
       "region",
       "renewed",
+      "reported",
       "reportedly",
       "rescue",
       "residential",
@@ -1353,6 +1461,7 @@
       "resulted",
       "resulting",
       "retailer",
+      "rise",
       "russia",
       "same",
       "sank",
@@ -1367,6 +1476,7 @@
       "stalled",
       "strike",
       "successfully",
+      "such",
       "summer",
       "support",
       "target",
@@ -1394,6 +1504,7 @@
     "entities": [
       "across_ukraine",
       "additionally_russia",
+      "air_defense",
       "allegedly_breache",
       "arms",
       "arms_exhibition",
@@ -1401,11 +1512,13 @@
       "black_sea.",
       "breache_polish",
       "casualtie_russia",
+      "challenge_overnight",
       "claim_lives",
       "concurrently_russia",
       "concurrently_ukraine",
       "crimea",
       "crimea_result",
+      "defense_challenge",
       "discuss",
       "exhibition_near",
       "gelendzhik",
@@ -1415,6 +1528,7 @@
       "kryvyi_rih.",
       "kyiv",
       "kyiv_region",
+      "kyiv_result",
       "kyiv_ukraine",
       "launche_drone",
       "military_support",
@@ -1422,6 +1536,7 @@
       "multiple",
       "multiple_casualtie",
       "near_kyiv",
+      "overnight_russia",
       "polish_airspace",
       "recent",
       "region_result",
@@ -1447,12 +1562,12 @@
       "wildberrie_warehouse",
       "zelenskyy_visit"
     ],
-    "search_text": "100 280 across across_ukraine additional additionally additionally_russia advocate affected aged airspace allegedly allegedly_breache allie among anti-ballistic arms arms_exhibition around assault assess attack attended authoritie ballistic beach black black_sea. blaming books both boys breache breache_polish breached broader building called calls campaign capital casualtie casualtie_russia causing children claim claim_lives claimed collectively comes company concurrently concurrently_russia concurrently_ukraine conducted confirmed conflict container continue cooperation crater creating crimea crimea_result damage death defense destruction diplomatic discuss district dozen drone e-commerce each early east eight enhanced escalate escalating escalation event exchange exhibition exhibition_near family fatalitie fifth fighter figure five follow force gelendzhik girl holiday hostilitie house impacting incident including increased indicating individual industry infrastructure injured injurie intensified intercepted involved involving jets kharkiv kharkiv_ukraine kill killed kills kryvyi kryvyi_rih. kyiv kyiv_region kyiv_ukraine landing large launche launche_drone least lives located long-range member military military_support million missile missile_allegedly morning moscow multiple multiple_casualtie nation near near_kyiv negotiation nine number numerou occurred ongoing operated operation other overnight part particularly peace polish polish_airspace poltava prompted prompting publishing recent region region_result renewed reportedly rescue residential resolution resort response result resulted resulting retailer rih._russia russia russia._russia russia_drone russia_missile russia_ship russia_ukraine same sank scramble sea._ukraine ship ship_early sides sight significant sinks sinks_russia situation six-year-old stalled strike successfully summer support target targeted targeting tension territory ukraine ukraine. ukraine._among ukraine_launche ukraine_result ukraine_sinks united us variou village violence visit visiting volodymyr volodymyr_zelensky volodymyr_zelenskyy warehouse weekend which while wildberrie wildberrie_warehouse within zelensky zelenskyy zelenskyy_visit"
+    "search_text": "100 280 across across_ukraine additional additionally additionally_russia advocate affected aged air_defense airspace allegedly allegedly_breache allie among anti-ballistic arms arms_exhibition around assault assess attack attended authoritie ballistic beach black black_sea. blaming bolster books both boys breache breache_polish breached broader building called calls campaign capabilitie capital casualtie casualtie_russia causing challenge challenge_overnight children claim claim_lives claimed collectively comes company concurrently concurrently_russia concurrently_ukraine conducted confirmed conflict container continue cooperation crater creating crimea crimea_result damage death defense defense_challenge depleted destruction diplomatic discuss district dozen drone e-commerce each early east eight enhanced escalate escalating escalation event exchange exhibition exhibition_near exploited family fatalitie fifth fighter figure five follow force frequency gelendzhik girl holiday hostilitie house impacting incident including increased indicating individual industry infrastructure injured injurie intensified intensity intercepted involved involving jets kharkiv kharkiv_ukraine kill killed kills kryvyi kryvyi_rih. kyiv kyiv_region kyiv_result kyiv_ukraine landing large launche launche_drone least lives located long-range member military military_support million missile missile_allegedly morning moscow multiple multiple_casualtie nation near near_kyiv negotiation nine number numerou occurred ongoing operated operation other overnight overnight_russia part particularly peace polish polish_airspace poltava prompted prompting publishing recent region region_result renewed reported reportedly rescue residential resolution resort response result resulted resulting retailer rih._russia rise russia russia._russia russia_drone russia_missile russia_ship russia_ukraine same sank scramble sea._ukraine ship ship_early sides sight significant sinks sinks_russia situation six-year-old stalled strike successfully such summer support target targeted targeting tension territory ukraine ukraine. ukraine._among ukraine_launche ukraine_result ukraine_sinks united us variou village violence visit visiting volodymyr volodymyr_zelensky volodymyr_zelenskyy warehouse weekend which while wildberrie wildberrie_warehouse within zelensky zelenskyy zelenskyy_visit"
   },
   "related_events": [
     {
       "event_id": "event_russia-launches-major-ballistic-missile-atta_e12d127249",
-      "title": "Ukraine Conflict",
+      "title": "Russia Launches Major Ballistic Missile Attack on Ukrainian Cities, Causing Casualties",
       "summary": "Muninn first tracked this thread on 2026-07-19: Russia Launches Major Ballistic Missile Attack on Ukrainian Cities, Causing Casualties. The latest development is Russia Launches Major Missile Assault on Ukrainian Cities Amid Escalating Conflict.",
       "activity_status": "active",
       "stage": "developing_event",
@@ -1485,20 +1600,20 @@
       "href": "/timeline.html?event=event_russia-launches-major-ballistic-missile-atta_e12d127249"
     },
     {
-      "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
-      "title": "Gaza Peace Deal",
-      "summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Israeli Strikes in Gaza Result in Multiple Casualties.",
+      "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
+      "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
+      "summary": "Muninn first tracked this thread on 2026-07-25: Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse. The latest development is Polish PM Reports Possible Russian Missile Downed in Eastern Poland.",
       "activity_status": "active",
       "stage": "developing_event",
       "stage_label": "Developing event",
-      "first_seen_at": "2026-07-31",
-      "last_seen_at": "2026-08-02",
-      "development_count": 3,
-      "latest_title": "Israeli Strikes in Gaza Result in Multiple Casualties",
-      "topic_label": "Gaza Peace Deal",
+      "first_seen_at": "2026-07-25",
+      "last_seen_at": "2026-07-30",
+      "development_count": 2,
+      "latest_title": "Polish PM Reports Possible Russian Missile Downed in Eastern Poland",
+      "topic_label": "Russia-Ukraine War",
       "hero_image": {
-        "url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
+        "url": "/Current_news/generated/events/event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea.jpg",
         "source": "Muninn AI illustration",
         "author": "OpenAI GPT Image 2",
         "license": "AI-generated content",
@@ -1516,7 +1631,7 @@
         "focal_tall_x": 0.5,
         "focal_tall_y": 0.48
       },
-      "href": "/timeline.html?event=event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b"
+      "href": "/timeline.html?event=event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea"
     }
   ]
 }
