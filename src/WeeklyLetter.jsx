@@ -4,17 +4,19 @@ import './WeeklyNewsletterPreview.css';
 const WEEKLY_URL = '/Current_news/weekly_newsletter.json';
 const PREVIEW_URL = '/Current_news/weekly_newsletter-preview.json';
 
-function readerHref(value = '') {
+function readerHref(value = '', edition = '') {
   if (!/^\/(?:story|timeline)\.html/i.test(value)) return value;
   const url = new URL(value, window.location.origin);
   const params = new URLSearchParams();
   if (/\/story\.html$/i.test(url.pathname)) {
     params.set('view', 'story');
     if (url.searchParams.get('sid')) params.set('sid', url.searchParams.get('sid'));
+    if (url.searchParams.get('archiveDate')) params.set('archiveDate', url.searchParams.get('archiveDate'));
   } else {
     params.set('view', 'event');
     if (url.searchParams.get('event')) params.set('event', url.searchParams.get('event'));
   }
+  if (edition) params.set('edition', edition);
   return `/?${params.toString()}`;
 }
 
@@ -29,7 +31,7 @@ function formatDate(value) {
   }).format(date);
 }
 
-function Paragraph({ paragraph, linkInternal = true }) {
+function Paragraph({ paragraph, linkInternal = true, edition = '' }) {
   return (
     <p>
       {(paragraph?.segments || []).map((segment, index) => {
@@ -39,7 +41,7 @@ function Paragraph({ paragraph, linkInternal = true }) {
           const external = /^https?:\/\//i.test(segment.href);
           return (
             <a
-              href={readerHref(segment.href)}
+              href={readerHref(segment.href, edition)}
               key={key}
               {...(external ? { target: '_blank', rel: 'noreferrer' } : {})}
             >
@@ -71,7 +73,7 @@ function SectionImage({ image }) {
   );
 }
 
-function RelatedCoverage({ section }) {
+function RelatedCoverage({ section, edition = '' }) {
   const unique = useMemo(() => {
     const seen = new Set();
     const links = [];
@@ -84,14 +86,14 @@ function RelatedCoverage({ section }) {
         ) return;
         seen.add(segment.href);
         links.push({
-          href: readerHref(segment.href),
+          href: readerHref(segment.href, edition),
           label: segment.text.trim(),
           kind: segment.kind === 'event' ? 'Timeline' : 'Story',
         });
       });
     });
     return links;
-  }, [section]);
+  }, [edition, section]);
 
   if (!unique.length) return null;
   return (
@@ -125,6 +127,7 @@ function WeeklyCover({ cover }) {
 
 export function WeeklyIssue({ issue, embedded = false, preview = false }) {
   const coverageWindow = issue.coverage_window || {};
+  const edition = issue.edition_id || coverageWindow.end_date || '';
   const article = (
     <article className={`weekly-preview-issue${embedded ? ' weekly-letter-embedded' : ''}`}>
       <header className="weekly-preview-masthead">
@@ -140,7 +143,7 @@ export function WeeklyIssue({ issue, embedded = false, preview = false }) {
             <p className="weekly-preview-dek">{issue.dek}</p>
             <div className="weekly-preview-intro">
               {(issue.introduction || []).map((paragraph, index) => (
-                <Paragraph paragraph={paragraph} key={`intro-${index}`} />
+                <Paragraph paragraph={paragraph} edition={edition} key={`intro-${index}`} />
               ))}
             </div>
           </div>
@@ -167,11 +170,12 @@ export function WeeklyIssue({ issue, embedded = false, preview = false }) {
                 <Paragraph
                   paragraph={paragraph}
                   linkInternal={false}
+                  edition={edition}
                   key={`${section.title}-paragraph-${paragraphIndex}`}
                 />
               ))}
             </div>
-            <RelatedCoverage section={section} />
+            <RelatedCoverage section={section} edition={edition} />
           </div>
         </section>
       ))}
@@ -199,13 +203,13 @@ export function WeeklyIssue({ issue, embedded = false, preview = false }) {
   );
 }
 
-export default function WeeklyLetter({ embedded = true, preview = false }) {
+export default function WeeklyLetter({ embedded = true, preview = false, sourceUrl = '' }) {
   const [issue, setIssue] = useState(null);
   const [error, setError] = useState('');
 
   useEffect(() => {
     let active = true;
-    fetch(preview ? PREVIEW_URL : WEEKLY_URL, { cache: 'no-store' })
+    fetch(sourceUrl || (preview ? PREVIEW_URL : WEEKLY_URL), { cache: 'no-store' })
       .then((response) => {
         if (!response.ok) throw new Error(`Weekly edition returned ${response.status}`);
         return response.json();
@@ -219,7 +223,7 @@ export default function WeeklyLetter({ embedded = true, preview = false }) {
     return () => {
       active = false;
     };
-  }, [preview]);
+  }, [preview, sourceUrl]);
 
   if (error) {
     return (

@@ -6,9 +6,14 @@ const DIGEST_URLS = ['/Current_news/digest.json', '/current_news/digest.json'];
 const EVENT_URLS = ['/Current_news/event_timelines.json', '/current_news/event_timelines.json'];
 const RECENT_URLS = ['/Current_news/recent_news.json', '/current_news/recent_news.json'];
 const COVERAGE_URLS = ['/Current_news/coverage_collections.json', '/current_news/coverage_collections.json'];
+const WEEKLY_INDEX_URLS = [
+  '/Current_news/weekly_newsletters/index.json',
+  '/current_news/weekly_newsletters/index.json',
+];
 
 const VIEW_LABELS = {
   today: 'Today',
+  digest: 'Digest',
   events: 'Events',
   story: 'Story',
   event: 'Event',
@@ -101,6 +106,12 @@ const SOURCE_NAME_ALIASES = {
   'fox news': 'Fox News',
   'france 24': 'France 24',
   'google news': 'Google News',
+  investing: 'Investing.com',
+  'investing.com': 'Investing.com',
+  icrc: 'International Committee of the Red Cross',
+  aljazeera: 'Al Jazeera',
+  acleddata: 'ACLED',
+  criticalthreats: 'Critical Threats Project',
   npr: 'NPR',
   'pbs news': 'PBS News',
   rte: 'RTÉ News',
@@ -157,6 +168,10 @@ const SOURCE_DOMAIN_IDENTITIES = [
   ['gob.pe', { name: 'Government of Peru', mark: 'PE', kind: 'institution' }],
   ['tse.jus.br', { name: 'Brazilian Superior Electoral Court', mark: 'BR', kind: 'institution' }],
   ['openai.com', { name: 'OpenAI', mark: 'AI', kind: 'institution' }],
+  ['icrc.org', { name: 'International Committee of the Red Cross', mark: 'ICRC', kind: 'institution' }],
+  ['investing.com', { name: 'Investing.com', logo: 'investing-com', mark: 'IN' }],
+  ['acleddata.com', { name: 'ACLED', mark: 'ACLED', kind: 'institution' }],
+  ['criticalthreats.org', { name: 'Critical Threats Project', mark: 'CTP', kind: 'institution' }],
   ['apnews.com', { name: 'AP News', logo: 'ap' }],
   ['reutersconnect.com', { name: 'Reuters', logo: 'reuters' }],
   ['reuters.com', { name: 'Reuters', logo: 'reuters' }],
@@ -226,6 +241,8 @@ function readRoute() {
     eventId: params.get('event') || '',
     mode: params.get('mode') || params.get('type') || 'all',
     topic: params.get('topic') || legacy?.topic || 'all',
+    edition: params.get('edition') || '',
+    archiveDate: params.get('archiveDate') || '',
   };
 }
 
@@ -236,6 +253,8 @@ function routeHref(view, extras = {}) {
   if (extras.eventId) params.set('event', extras.eventId);
   if (extras.mode && extras.mode !== 'all') params.set('mode', extras.mode);
   if (extras.topic && extras.topic !== 'all') params.set('topic', extras.topic);
+  if (extras.edition) params.set('edition', extras.edition);
+  if (extras.archiveDate) params.set('archiveDate', extras.archiveDate);
   const query = params.toString();
   return `/${query ? `?${query}` : ''}`;
 }
@@ -488,6 +507,67 @@ function conciseSummary(value = '', sentenceLimit = 2) {
   return sentences.slice(0, sentenceLimit).join(' ').trim() || value;
 }
 
+function weeklySnapshotStory(story, edition) {
+  const sources = Array.isArray(story?.sources) ? story.sources : [];
+  return {
+    ...story,
+    cluster_id: story.story_id,
+    occurred_at: story.edition_date,
+    primary_category: story.category,
+    canonical_topic_label: story.topic_label,
+    items: sources.map((source) => ({
+      title: source.title,
+      source: source.publisher,
+      link: source.url,
+    })),
+    sources: sources.map((source) => source.publisher).filter(Boolean),
+    story_report: {
+      summary: story.summary,
+      source_urls: sources.map((source) => source.url).filter(Boolean),
+    },
+    __route_id: story.story_id,
+    __scope: `weekly-${edition}`,
+  };
+}
+
+function weeklySnapshotEvent(event, edition) {
+  const timeline = [...(event?.prior_context || []), ...(event?.week_developments || [])]
+    .map((entry) => ({
+      ...entry,
+      daily_story_id: entry.development_id,
+      source_details: (entry.sources || []).map((source) => ({
+        title: source.title,
+        source: source.publisher,
+        link: source.url,
+      })),
+    }));
+  return {
+    ...event,
+    topic_label: event.title,
+    canonical_title: event.title,
+    timeline,
+    latest_summary: timeline.at(-1)?.summary || event.summary,
+    presentation: {
+      base_title: event.title,
+      has_full_timeline: true,
+      rank_score: event.rank_score || 0,
+      source_count: event.source_count || 0,
+    },
+    __scope: `weekly-${edition}`,
+  };
+}
+
+function weeklyReaderSnapshot(issue) {
+  const snapshot = issue?.reader_snapshot || {};
+  const edition = issue?.edition_id || '';
+  return {
+    stories: (Array.isArray(snapshot.stories) ? snapshot.stories : [])
+      .map((story) => weeklySnapshotStory(story, edition)),
+    events: (Array.isArray(snapshot.events) ? snapshot.events : [])
+      .map((event) => weeklySnapshotEvent(event, edition)),
+  };
+}
+
 function adaptiveSummaryParagraphs(value = '') {
   const text = String(value || '').trim();
   const sentences = splitSentences(text);
@@ -537,6 +617,8 @@ function AppLink({
   eventId,
   mode,
   topic,
+  edition,
+  archiveDate,
   onNavigate,
   children,
   className = '',
@@ -547,6 +629,8 @@ function AppLink({
     eventId,
     mode,
     topic,
+    edition,
+    archiveDate,
   });
   return (
     <a
@@ -567,6 +651,8 @@ function AppLink({
           eventId,
           mode,
           topic,
+          edition,
+          archiveDate,
         });
       }}
       {...props}
@@ -622,8 +708,148 @@ function StoryImage({
   );
 }
 
+function QuickReadIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M5.5 4.5h9l4 4v11h-13z" />
+      <path d="M14.5 4.5v4h4M8.5 12h7M8.5 15.5h5" />
+    </svg>
+  );
+}
+
+function useFloatingPreview({
+  anchorSelector,
+  popupSelector,
+  preferredWidth = 520,
+  closeDelay = 140,
+}) {
+  const [previewStyle, setPreviewStyle] = useState(undefined);
+  const closeTimer = useRef(undefined);
+  const triggerRef = useRef(undefined);
+  const suppressNextFocusOpen = useRef(false);
+  const keepPreviewOpen = () => {
+    if (closeTimer.current) window.clearTimeout(closeTimer.current);
+  };
+  const openPreview = (interaction) => {
+    if (interaction.type === 'focus' && suppressNextFocusOpen.current) {
+      suppressNextFocusOpen.current = false;
+      return;
+    }
+    keepPreviewOpen();
+    if (interaction.type === 'focus' || interaction.type === 'click') {
+      triggerRef.current = interaction.currentTarget;
+    }
+    const anchor = interaction.currentTarget.closest(anchorSelector) || interaction.currentTarget;
+    setPreviewStyle(floatingEventPreviewStyle(anchor, preferredWidth));
+  };
+  const requestPreviewClose = () => {
+    keepPreviewOpen();
+    closeTimer.current = window.setTimeout(() => setPreviewStyle(undefined), closeDelay);
+  };
+  const closePreview = ({ restoreFocus = false } = {}) => {
+    keepPreviewOpen();
+    setPreviewStyle(undefined);
+    if (restoreFocus) {
+      suppressNextFocusOpen.current = true;
+      window.requestAnimationFrame(() => triggerRef.current?.focus?.());
+    }
+  };
+  const dismissPreview = () => closePreview({ restoreFocus: true });
+
+  useEffect(() => () => {
+    if (closeTimer.current) window.clearTimeout(closeTimer.current);
+  }, []);
+  useEffect(() => {
+    if (!previewStyle) return undefined;
+    const handleKey = (event) => {
+      if (event.key !== 'Escape') return;
+      event.preventDefault();
+      dismissPreview();
+    };
+    const handlePointer = (event) => {
+      if (event.target.closest?.(`${popupSelector}, ${anchorSelector}`)) return;
+      closePreview();
+    };
+    const handleScroll = (event) => {
+      if (event.target?.closest?.(popupSelector)) return;
+      closePreview();
+    };
+    const handleResize = () => closePreview();
+    window.addEventListener('keydown', handleKey);
+    window.addEventListener('pointerdown', handlePointer);
+    window.addEventListener('scroll', handleScroll, true);
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('keydown', handleKey);
+      window.removeEventListener('pointerdown', handlePointer);
+      window.removeEventListener('scroll', handleScroll, true);
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [previewStyle]);
+
+  return {
+    previewStyle,
+    openPreview,
+    keepPreviewOpen,
+    requestPreviewClose,
+    closePreview,
+    dismissPreview,
+  };
+}
+
+function StoryQuickRead({ story }) {
+  const {
+    previewStyle,
+    openPreview,
+    keepPreviewOpen,
+    requestPreviewClose,
+    dismissPreview,
+  } = useFloatingPreview({
+    anchorSelector: '.story-quick-read',
+    popupSelector: '.story-quick-read-popover',
+    preferredWidth: 440,
+    closeDelay: 120,
+  });
+  return (
+    <div className={`story-quick-read${previewStyle ? ' is-open' : ''}`}>
+      <button
+        type="button"
+        className="story-quick-read-button"
+        aria-expanded={Boolean(previewStyle)}
+        aria-label={`Quick read: ${story.title}`}
+        title="Quick read"
+        onClick={openPreview}
+        onMouseEnter={openPreview}
+        onMouseLeave={requestPreviewClose}
+        onFocus={openPreview}
+        onBlur={requestPreviewClose}
+      >
+        <QuickReadIcon />
+      </button>
+      {previewStyle ? (
+        <div
+          className="story-quick-read-popover"
+          style={previewStyle}
+          role="dialog"
+          aria-label={`Quick read: ${story.title}`}
+          onMouseEnter={keepPreviewOpen}
+          onMouseLeave={requestPreviewClose}
+          onFocus={keepPreviewOpen}
+          onBlur={requestPreviewClose}
+        >
+          <button type="button" className="story-quick-read-close" onClick={dismissPreview} aria-label="Close quick read" title="Close">×</button>
+          <span>{storyTopic(story)}</span>
+          <h3>{story.title}</h3>
+          <p>{conciseSummary(story.summary || story.story_report?.summary, 2)}</p>
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
 function Header({ view, onNavigate }) {
   const todayActive = view === 'today' || view === 'story' || view === 'archive';
+  const digestActive = view === 'digest';
   const eventsActive = view === 'events' || view === 'event';
   return (
     <header className="site-header">
@@ -643,6 +869,14 @@ function Header({ view, onNavigate }) {
             aria-current={todayActive ? 'page' : undefined}
           >
             Today
+          </AppLink>
+          <AppLink
+            view="digest"
+            onNavigate={onNavigate}
+            className={digestActive ? 'is-active' : ''}
+            aria-current={digestActive ? 'page' : undefined}
+          >
+            Digest
           </AppLink>
           <AppLink
             view="events"
@@ -698,6 +932,7 @@ function LeadStory({ story, onNavigate }) {
           </div>
         </div>
       </AppLink>
+      <StoryQuickRead story={story} />
     </article>
   );
 }
@@ -732,6 +967,7 @@ function SupportingStory({ story, onNavigate }) {
         </div>
         <StoryImage story={story} className="support-story-image" role="support" />
       </AppLink>
+      <StoryQuickRead story={story} />
     </article>
   );
 }
@@ -757,6 +993,7 @@ function VisualStory({ story, onNavigate }) {
         </div>
         <StoryImage story={story} className="today-visual-image" role="standard" showRole={false} />
       </AppLink>
+      <StoryQuickRead story={story} />
     </article>
   );
 }
@@ -990,6 +1227,226 @@ function QuestionSourceLine({ sources }) {
   );
 }
 
+function digestUpdateTime(value, timezone = 'America/New_York') {
+  if (!value) return '';
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return '';
+  try {
+    return new Intl.DateTimeFormat('en-US', {
+      hour: 'numeric',
+      minute: '2-digit',
+      timeZone: timezone,
+      timeZoneName: 'short',
+    }).format(date);
+  } catch {
+    return '';
+  }
+}
+
+function digestStoryArchiveDate(item, briefing) {
+  const editionDate = item?.edition_date || '';
+  const currentDate = briefing?.coverage_window?.end_date || '';
+  return editionDate && currentDate && editionDate !== currentDate ? editionDate : '';
+}
+
+function DigestParagraph({ paragraph, itemByStoryId, briefing, onNavigate }) {
+  return (
+    <p>
+      {(paragraph?.segments || []).map((segment, index) => {
+        const key = `${segment.kind || 'text'}-${segment.story_id || segment.event_id || index}-${index}`;
+        if (segment.kind === 'story' && segment.story_id) {
+          const item = itemByStoryId.get(segment.story_id);
+          return (
+            <AppLink
+              view="story"
+              sid={segment.story_id}
+              archiveDate={digestStoryArchiveDate(item, briefing)}
+              onNavigate={onNavigate}
+              key={key}
+            >
+              {segment.text}
+            </AppLink>
+          );
+        }
+        if (segment.kind === 'event' && segment.event_id) {
+          return (
+            <AppLink view="event" eventId={segment.event_id} onNavigate={onNavigate} key={key}>
+              {segment.text}
+            </AppLink>
+          );
+        }
+        if (/^https?:\/\//i.test(segment.href || '')) {
+          return <a href={segment.href} target="_blank" rel="noreferrer" key={key}>{segment.text}</a>;
+        }
+        return <React.Fragment key={key}>{segment.text}</React.Fragment>;
+      })}
+    </p>
+  );
+}
+
+function DigestImage({ story, item, briefing, onNavigate, supporting = false }) {
+  const src = storyImage(story);
+  if (!src) return null;
+  const image = story.image || {};
+  const credit = [...new Set([image.source, image.author].filter(Boolean))].join(' · ');
+  const alt = image.is_ai_generated
+    ? `Editorial illustration for ${story.title}`
+    : (image.alt || story.title || '');
+  return (
+    <figure className={`digest-image${supporting ? ' is-supporting' : ' is-lead'}`}>
+      <AppLink
+        view="story"
+        sid={item?.story_id || story.story_id || story.cluster_id}
+        archiveDate={digestStoryArchiveDate(item, briefing)}
+        onNavigate={onNavigate}
+        aria-label={`Read ${story.title}`}
+      >
+        <img
+          src={src}
+          alt={alt}
+          loading={supporting ? 'lazy' : 'eager'}
+          style={imagePresentation(image, supporting ? 'support' : 'lead')}
+        />
+      </AppLink>
+      <figcaption>
+        {supporting ? <strong>{story.title}</strong> : null}
+        {credit ? <span>{credit}</span> : null}
+      </figcaption>
+    </figure>
+  );
+}
+
+function DigestView({ digest, stories, onNavigate }) {
+  const briefing = digest?.briefing && typeof digest.briefing === 'object'
+    ? digest.briefing
+    : null;
+  const edition = editionTimestamp(briefing?.as_of || digest?.generated_at);
+  const timezone = briefing?.coverage_window?.timezone || 'America/New_York';
+  const updateTime = digestUpdateTime(briefing?.as_of || digest?.generated_at, timezone);
+  const items = Array.isArray(briefing?.items) ? briefing.items : [];
+  const itemByStoryId = new Map(items.map((item) => [item.story_id, item]));
+  const storyById = new Map();
+  (stories || []).forEach((story) => {
+    if (story?.story_id) storyById.set(story.story_id, story);
+    if (story?.cluster_id) storyById.set(story.cluster_id, story);
+  });
+  const selected = items
+    .map((item) => ({ item, story: storyById.get(item.story_id) }))
+    .filter(({ story }) => story);
+  const visualStories = selected.filter(({ story }) => storyImage(story));
+  const leadVisual = visualStories[0] || null;
+  const supportingVisual = visualStories.find(
+    ({ item }) => item.story_id !== leadVisual?.item?.story_id,
+  ) || null;
+  const paragraphs = Array.isArray(briefing?.paragraphs) && briefing.paragraphs.length
+    ? briefing.paragraphs
+    : items.slice(0, 6).map((item) => ({
+      segments: [{ text: item.text || item.title, kind: 'story', story_id: item.story_id }],
+    }));
+
+  return (
+    <main id="main" className="page-shell digest-page">
+      <header className="digest-heading">
+        <div>
+          <p className="eyebrow">Daily news, connected</p>
+          <h1>The Digest</h1>
+          <p>A concise account of what matters today and how it connects to the preceding days.</p>
+        </div>
+        <div className="digest-edition">
+          <strong>{edition.weekday}, {edition.date}</strong>
+          {updateTime ? <span>Updated {updateTime}</span> : null}
+        </div>
+      </header>
+
+      {briefing ? (
+        <article className="digest-issue">
+          <section className={`digest-lead${leadVisual ? ' has-image' : ''}`}>
+            <div className="digest-lead-copy">
+              <p className="eyebrow">What matters now</p>
+              <h2>{briefing.headline || 'What matters today'}</h2>
+              {briefing.summary ? <p className="digest-dek">{briefing.summary}</p> : null}
+            </div>
+            {leadVisual ? (
+              <DigestImage
+                story={leadVisual.story}
+                item={leadVisual.item}
+                briefing={briefing}
+                onNavigate={onNavigate}
+              />
+            ) : null}
+          </section>
+
+          <section className={`digest-body${supportingVisual ? ' has-supporting-image' : ''}`}>
+            <div className="digest-prose">
+              {paragraphs.map((paragraph, index) => (
+                <DigestParagraph
+                  paragraph={paragraph}
+                  itemByStoryId={itemByStoryId}
+                  briefing={briefing}
+                  onNavigate={onNavigate}
+                  key={`digest-paragraph-${index}`}
+                />
+              ))}
+            </div>
+            {supportingVisual ? (
+              <DigestImage
+                story={supportingVisual.story}
+                item={supportingVisual.item}
+                briefing={briefing}
+                onNavigate={onNavigate}
+                supporting
+              />
+            ) : null}
+          </section>
+
+          {selected.length ? (
+            <section className="digest-related" aria-labelledby="digest-related-title">
+              <div className="digest-related-heading">
+                <div>
+                  <p className="eyebrow">Go deeper</p>
+                  <h2 id="digest-related-title">Stories in this Digest</h2>
+                </div>
+                <AppLink view="today" onNavigate={onNavigate}>View all of Today →</AppLink>
+              </div>
+              <div className="digest-related-list">
+                {selected.map(({ item, story }, index) => (
+                  <AppLink
+                    view="story"
+                    sid={item.story_id}
+                    archiveDate={digestStoryArchiveDate(item, briefing)}
+                    onNavigate={onNavigate}
+                    key={item.story_id}
+                  >
+                    <span>{String(index + 1).padStart(2, '0')}</span>
+                    <div>
+                      <small>
+                        {item.recency_role === 'earlier_context' ? 'Earlier context' : storyTopic(story)}
+                      </small>
+                      <strong>{story.title || item.title}</strong>
+                    </div>
+                    <b aria-hidden="true">→</b>
+                  </AppLink>
+                ))}
+              </div>
+            </section>
+          ) : null}
+
+          <footer className="digest-note">
+            <img src="/brand/muninn-mark.svg" alt="" />
+            <p>The Digest is assembled from Muninn’s source-grounded Stories and continuing Event history.</p>
+          </footer>
+        </article>
+      ) : (
+        <section className="digest-unavailable">
+          <h2>Today’s Digest is still being assembled.</h2>
+          <p>The ranked news edition remains available while the connected write-up is prepared.</p>
+          <AppLink view="today" onNavigate={onNavigate}>Read Today’s news →</AppLink>
+        </section>
+      )}
+    </main>
+  );
+}
+
 function StoryQuestionTabs({ questions, uncertaintyNotes, openItemId, setOpenItemId }) {
   const railRef = useRef(null);
   const selectedTabRef = useRef(null);
@@ -1164,16 +1621,22 @@ function storySourceRecords(story) {
 
 function sourceCardTitle(source, identity) {
   const rawTitle = String(source.title || '').trim();
-  const canonicalTitle = cleanSourceName(rawTitle);
-  const repeatsPublisher = !rawTitle
+  const publisherLabels = [identity.name, source.publisher]
+    .map((value) => String(value || '').trim())
+    .filter(Boolean);
+  const strippedTitle = publisherLabels.reduce((title, publisher) => {
+    const escaped = publisher.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return title.replace(new RegExp(`\\s*(?:[-–—|:]\\s*)${escaped}\\s*$`, 'i'), '').trim();
+  }, rawTitle);
+  const canonicalTitle = cleanSourceName(strippedTitle, source.url);
+  const repeatsPublisher = !strippedTitle
     || canonicalTitle.toLowerCase() === identity.name.toLowerCase()
-    || rawTitle.toLowerCase() === String(source.publisher || '').toLowerCase();
-  if (!repeatsPublisher) return rawTitle;
+    || strippedTitle.toLowerCase() === String(source.publisher || '').toLowerCase();
+  if (!repeatsPublisher) return strippedTitle;
   if (/travel-advisories/i.test(source.url)) return 'Travel advisory';
   if (/congress\.gov\/crs-product/i.test(source.url)) return 'Congressional Research Service brief';
   if (/\.pdf(?:\?|$)/i.test(source.url)) return 'Fact sheet';
-  if (identity.kind === 'institution') return 'Official release';
-  return identity.name;
+  return '';
 }
 
 function SourceCard({ source }) {
@@ -1188,8 +1651,8 @@ function SourceCard({ source }) {
           : identity.mark}
       </span>
       <span>
-        <small>{identity.name}</small>
-        <strong>{title}</strong>
+        {title ? <small>{identity.name}</small> : null}
+        <strong>{title || identity.name}</strong>
       </span>
       <b aria-hidden="true">↗</b>
     </a>
@@ -1295,7 +1758,7 @@ function StoryEventBridge({ story, event, onNavigate }) {
 }
 
 function StoryView({ story, event, relatedStories, onNavigate }) {
-  if (!story) return <MissingState message="That story is not in the current edition." />;
+  if (!story) return <MissingState message="That story is not available in this edition." />;
   const displayDate = formatDate(storyDate(story));
   const sameEventStories = event
     ? relatedStories.filter((item) => item.event_id === event.event_id).slice(0, 3)
@@ -1398,7 +1861,6 @@ function EventTimeline({ event, storyline, currentStoryId, stories, onNavigate, 
       if (!storyById.has(id)) storyById.set(id, story);
     });
   });
-  const milestones = new Set(event.presentation?.milestone_development_ids || []);
   const entryId = (entry) => entry.daily_story_id || entry.development_id;
   const currentIndex = entries.findIndex((entry) => entryId(entry) === currentStoryId);
   const visibleLimit = Math.max(6, currentIndex >= 0 ? currentIndex + 1 : 0);
@@ -1438,8 +1900,8 @@ function EventTimeline({ event, storyline, currentStoryId, stories, onNavigate, 
       {visibleEntries.map((entry, index) => {
         const id = entryId(entry);
         const current = id === currentStoryId;
-        const milestone = milestones.has(entry.development_id);
         const latest = index === 0;
+        const startsNewDate = index === 0 || visibleEntries[index - 1]?.date !== entry.date;
         const expanded = openId === id;
         const threadLabel = storyline?.update_event_labels?.[entry.development_id];
         const visibleSources = (entry.sources || []).slice(0, 2).map(
@@ -1449,13 +1911,13 @@ function EventTimeline({ event, storyline, currentStoryId, stories, onNavigate, 
         const panelId = `timeline-update-${entry.development_id || index}`;
         return (
           <article
-            className={`${milestone ? 'is-milestone' : ''}${current ? ' is-current' : ''}${expanded ? ' is-open' : ''}`}
+            className={`${startsNewDate ? 'is-new-day' : 'is-same-day'}${current ? ' is-current' : ''}${expanded ? ' is-open' : ''}`}
             id={`timeline-entry-${id}`}
             key={entry.development_id || `${entry.date}-${entry.title}`}
           >
             <div className="timeline-date">
-              <time dateTime={entry.date}>{formatDate(entry.date, { short: true })}</time>
-              {latest ? <span>Latest</span> : milestone ? <span>Milestone</span> : null}
+              {startsNewDate ? <time dateTime={entry.date}>{formatDate(entry.date, { short: true })}</time> : null}
+              {latest ? <span>Latest</span> : null}
             </div>
             <div className="timeline-node" aria-hidden="true"><i /></div>
             <div className="timeline-copy">
@@ -1862,7 +2324,7 @@ function EventSourceIndex({ sources, developmentCount }) {
 
 function EventView({ event, storyline, parentStoryline, currentStoryId, events, stories, otherEvents, onNavigate }) {
   const [timelineRequest, setTimelineRequest] = useState(null);
-  if (!event) return <MissingState message="That event is not available in the current timeline data." />;
+  if (!event) return <MissingState message="That event is not available in this edition." />;
   const presentation = event.presentation || {};
   const parentThread = parentStoryline?.child_events?.find(
     (thread) => thread.event_id === event.event_id,
@@ -1896,8 +2358,8 @@ function EventView({ event, storyline, parentStoryline, currentStoryId, events, 
   };
   return (
     <main id="main" className={`page-shell event-page${isStoryline ? ' is-storyline' : ' is-event'}`}>
-      <AppLink view="events" onNavigate={onNavigate} className="back-link">
-        <span aria-hidden="true">←</span> Back to Events
+      <AppLink view="events" onNavigate={onNavigate} className="back-link event-back-link">
+        <span aria-hidden="true">←</span> Events
       </AppLink>
 
       <header className="event-hero">
@@ -2053,11 +2515,20 @@ function PageIntroduction({ eyebrow, title, description, aside }) {
   );
 }
 
-function EventArtwork({ event, relatedStory, className = '', role = 'support', showLabel = false }) {
+function EventArtwork({
+  event,
+  relatedStory,
+  className = '',
+  role = 'support',
+  showLabel = false,
+  preferStory = false,
+}) {
   const stableImage = eventImage(event);
   const fallbackImage = storyImage(relatedStory);
-  const image = stableImage || fallbackImage;
-  const imageData = stableImage ? event?.hero_image : relatedStory?.image;
+  const image = preferStory ? (fallbackImage || stableImage) : (stableImage || fallbackImage);
+  const imageData = preferStory && fallbackImage
+    ? relatedStory?.image
+    : stableImage ? event?.hero_image : relatedStory?.image;
   return (
     <div className={`${className}${image ? '' : ' is-empty'}`.trim()}>
       {image ? <img src={image} alt="" style={imagePresentation(imageData, role)} /> : null}
@@ -2109,7 +2580,7 @@ function eventPreviewParentLabel(storyline, event, relatedStory) {
   return eventCategory(event, relatedStory) || 'Continuing story';
 }
 
-function floatingEventPreviewStyle(target) {
+function floatingEventPreviewStyle(target, preferredWidth = 544) {
   if (!target || typeof window === 'undefined') return undefined;
   const rect = target.getBoundingClientRect();
   const viewportWidth = window.innerWidth;
@@ -2118,7 +2589,7 @@ function floatingEventPreviewStyle(target) {
   const gap = 0;
   const headerBottom = document.querySelector('.site-header')?.getBoundingClientRect().bottom || margin;
   const topInset = Math.max(margin, Math.ceil(headerBottom + 4));
-  const width = Math.min(544, viewportWidth - (margin * 2));
+  const width = Math.min(preferredWidth, viewportWidth - (margin * 2));
   const left = Math.max(
     margin,
     Math.min(viewportWidth - width - margin, rect.left + (rect.width / 2) - (width / 2)),
@@ -2148,59 +2619,10 @@ function floatingEventPreviewStyle(target) {
 }
 
 function useEventHoverPreview() {
-  const [previewStyle, setPreviewStyle] = useState(undefined);
-  const closeTimer = useRef(undefined);
-  const lastKeyboardTrigger = useRef(undefined);
-  const keepPreviewOpen = () => {
-    if (closeTimer.current) window.clearTimeout(closeTimer.current);
-  };
-  const openPreview = (interaction) => {
-    keepPreviewOpen();
-    if (interaction.type === 'focus' || interaction.type === 'click') {
-      lastKeyboardTrigger.current = interaction.currentTarget;
-    }
-    const anchor = interaction.currentTarget.closest('.event-preview-trigger')
-      || interaction.currentTarget;
-    setPreviewStyle(floatingEventPreviewStyle(anchor));
-  };
-  const requestPreviewClose = () => {
-    keepPreviewOpen();
-    closeTimer.current = window.setTimeout(() => setPreviewStyle(undefined), 140);
-  };
-  const closePreview = () => {
-    keepPreviewOpen();
-    setPreviewStyle(undefined);
-  };
-  const dismissPreview = () => {
-    closePreview();
-    window.requestAnimationFrame(() => lastKeyboardTrigger.current?.focus?.());
-  };
-  const togglePreview = (interaction) => {
-    if (previewStyle) closePreview();
-    else openPreview(interaction);
-  };
-  useEffect(() => () => {
-    if (closeTimer.current) window.clearTimeout(closeTimer.current);
-  }, []);
-  useEffect(() => {
-    if (!previewStyle) return undefined;
-    const handleEscape = (event) => {
-      if (event.key !== 'Escape') return;
-      event.preventDefault();
-      dismissPreview();
-    };
-    window.addEventListener('keydown', handleEscape);
-    return () => window.removeEventListener('keydown', handleEscape);
-  }, [previewStyle]);
-  return {
-    previewStyle,
-    openPreview,
-    keepPreviewOpen,
-    requestPreviewClose,
-    closePreview,
-    dismissPreview,
-    togglePreview,
-  };
+  return useFloatingPreview({
+    anchorSelector: '.event-preview-trigger',
+    popupSelector: '.event-movement-preview',
+  });
 }
 
 function EventHoverPreview({
@@ -2340,7 +2762,7 @@ function DevelopingEventCard({ event, relatedStory, storyline, onNavigate }) {
   );
 }
 
-function EventRailCard({ event, relatedStory, storyline, onNavigate }) {
+function EventPreviewCard({ event, relatedStory, storyline, onNavigate, variant = 'rail' }) {
   const title = eventTitle(event);
   const latestDate = eventLatestDate(event);
   const formattedDate = formatDate(latestDate, { short: true, year: false });
@@ -2350,118 +2772,56 @@ function EventRailCard({ event, relatedStory, storyline, onNavigate }) {
     keepPreviewOpen,
     requestPreviewClose,
     dismissPreview,
-    togglePreview,
   } = useEventHoverPreview();
+  const readingView = relatedStory ? 'story' : 'event';
+  const readingId = relatedStory ? storyRouteId(relatedStory) : undefined;
+  const movement = variant === 'movement';
+  const cardTitle = movement ? eventLatestTitle(event) : title;
+  const articleClass = movement ? 'event-movement-row' : 'event-catchup-card';
+  const artworkClass = movement ? 'event-movement-art' : 'event-rail-art';
+  const copyClass = movement ? 'event-movement-tile-copy' : 'event-rail-tile-copy';
   return (
-    <article className={`event-catchup-card event-preview-trigger${previewStyle ? ' is-preview-open' : ''}`}>
-      <AppLink
-        view="event"
-        eventId={event.event_id}
-        onNavigate={onNavigate}
-        className="event-rail-card-link"
-        aria-label={`Open Event: ${title}${latestDate ? `, updated ${formattedDate}` : ''}`}
-        onFocus={openPreview}
-        onBlur={requestPreviewClose}
-      >
-        <div className="event-rail-tile">
-          <EventArtwork event={event} relatedStory={relatedStory} className="event-rail-art" role="support" />
-          <span className="event-rail-shade" aria-hidden="true" />
-          <div className="event-rail-tile-copy">
-            <h3
-              className="event-preview-title-trigger"
-              onMouseEnter={openPreview}
-              onMouseLeave={requestPreviewClose}
-            >
-              {title}
-            </h3>
-            <p className="event-tile-update"><span>Latest</span>{' '}{eventLatestTitle(event)}</p>
-            <div className="event-tile-glance">
-              <span className="event-tile-topic">{eventCategory(event, relatedStory)}</span>
-              <span className="event-tile-glance-stats">
-                {latestDate ? <time dateTime={latestDate}>Updated {formattedDate}</time> : null}
-                <span>{eventDevelopmentCount(event)} updates</span>
-              </span>
-            </div>
-          </div>
-        </div>
-      </AppLink>
+    <article className={`${articleClass} event-preview-trigger${previewStyle ? ' is-preview-open' : ''}`}>
       <button
         type="button"
-        className="event-quick-view-button"
-        onClick={togglePreview}
+        className="event-image-preview-button"
         aria-expanded={Boolean(previewStyle)}
         aria-label={`Quick view: ${title}`}
+        title="Quick view"
+        onClick={openPreview}
       >
-        Quick view
+        <EventArtwork
+          event={event}
+          relatedStory={relatedStory}
+          className={artworkClass}
+          role="support"
+          preferStory={movement}
+        />
+        <span className="event-preview-icon"><QuickReadIcon /></span>
       </button>
-      <EventHoverPreview
-        event={event}
-        relatedStory={relatedStory}
-        storyline={storyline}
-        style={previewStyle}
-        onMouseEnter={keepPreviewOpen}
-        onMouseLeave={requestPreviewClose}
-        onNavigate={onNavigate}
-        onClose={dismissPreview}
-      />
-    </article>
-  );
-}
-
-function EventMovementRow({ event, relatedStory, storyline, onNavigate }) {
-  const title = eventTitle(event);
-  const latestDate = eventLatestDate(event);
-  const formattedDate = formatDate(latestDate, { short: true, year: false });
-  const {
-    previewStyle,
-    openPreview,
-    keepPreviewOpen,
-    requestPreviewClose,
-    dismissPreview,
-    togglePreview,
-  } = useEventHoverPreview();
-  return (
-    <article className={`event-movement-row event-preview-trigger${previewStyle ? ' is-preview-open' : ''}`}>
-      <AppLink
-        view="event"
-        eventId={event.event_id}
-        onNavigate={onNavigate}
-        className="event-movement-link"
-        aria-label={`Open Event: ${title}${latestDate ? `, updated ${formattedDate}` : ''}`}
-        onFocus={openPreview}
-        onBlur={requestPreviewClose}
-      >
-        <div className="event-movement-tile">
-          <EventArtwork event={event} relatedStory={relatedStory} className="event-movement-art" role="support" />
-          <span className="event-movement-shade" aria-hidden="true" />
-          <div className="event-movement-tile-copy">
-            <h3
-              className="event-preview-title-trigger"
-              onMouseEnter={openPreview}
-              onMouseLeave={requestPreviewClose}
-            >
-              {title}
-            </h3>
-            <p className="event-tile-update"><span>Changed</span>{' '}{eventLatestTitle(event)}</p>
-            <div className="event-tile-glance">
-              <span className="event-tile-topic">{eventCategory(event, relatedStory)}</span>
-              <span className="event-tile-glance-stats">
-                {latestDate ? <time dateTime={latestDate}>Updated {formattedDate}</time> : null}
-                <span>{eventDevelopmentCount(event)} updates</span>
-              </span>
-            </div>
-          </div>
-        </div>
-      </AppLink>
-      <button
-        type="button"
-        className="event-quick-view-button"
-        onClick={togglePreview}
-        aria-expanded={Boolean(previewStyle)}
-        aria-label={`Quick view: ${title}`}
-      >
-        Quick view
-      </button>
+      <div className={copyClass}>
+        <AppLink
+          view={readingView}
+          sid={readingId}
+          eventId={relatedStory ? undefined : event.event_id}
+          onNavigate={onNavigate}
+          className="event-card-reading-link"
+          aria-label={`${movement ? 'Read update' : 'Read'} ${cardTitle}`}
+        >
+          <h3>{cardTitle}</h3>
+        </AppLink>
+        <AppLink
+          view={readingView}
+          sid={readingId}
+          eventId={relatedStory ? undefined : event.event_id}
+          onNavigate={onNavigate}
+          className="event-card-detail-link"
+        >
+          <span>{movement ? 'Recent development' : `${eventDevelopmentCount(event)} updates`}</span>
+          {latestDate ? <time dateTime={latestDate}>Updated {formattedDate}</time> : null}
+          <b>{movement && relatedStory ? 'Read update →' : relatedStory ? 'Read report →' : 'Open event →'}</b>
+        </AppLink>
+      </div>
       <EventHoverPreview
         event={event}
         relatedStory={relatedStory}
@@ -2706,12 +3066,25 @@ function EventsDirectoryView({
       })),
     [events, latestAvailableDate, relatedStories, storylineByEventId, storylineChildIds],
   );
-  const currentEvents = ordered.filter(
-    (event) => eventDevelopmentCount(event) >= 3
-      && dateDistanceInDays(latestAvailableDate, eventLatestDate(event)) <= 7,
-  );
-  const featuredEvents = currentEvents.slice(0, 5);
-  const moreDevelopingEvents = currentEvents.slice(5, 10);
+  const recentlyUpdatedEvents = [...ordered]
+    .filter((event) => dateDistanceInDays(latestAvailableDate, eventLatestDate(event)) <= 7)
+    .sort((left, right) => (
+      String(eventLatestDate(right)).localeCompare(String(eventLatestDate(left)))
+      || eventDevelopmentCount(right) - eventDevelopmentCount(left)
+    ))
+    .slice(0, 5);
+  const recentlyUpdatedEventIds = new Set(recentlyUpdatedEvents.map((event) => event.event_id));
+  const ongoingEvents = ordered
+    .filter((event) => (
+      eventDevelopmentCount(event) >= 4
+      && dateDistanceInDays(latestAvailableDate, eventLatestDate(event)) <= 30
+      && !recentlyUpdatedEventIds.has(event.event_id)
+    ))
+    .slice(0, 5);
+  const activeEventCount = ordered.filter((event) => (
+    eventDevelopmentCount(event) >= 3
+    && dateDistanceInDays(latestAvailableDate, eventLatestDate(event)) <= 7
+  )).length;
   const categoryFor = (event) => eventCategory(event, relatedStories.get(event.event_id));
   const topics = useMemo(() => {
     const counts = new Map();
@@ -2856,45 +3229,46 @@ function EventsDirectoryView({
             onNavigate={onNavigate}
           />
         </div>
-        <div className="events-home-status" aria-label={`${currentEvents.length} active Events`}>
-          <strong>{currentEvents.length}</strong>
+        <div className="events-home-status" aria-label={`${activeEventCount} active Events`}>
+          <strong>{activeEventCount}</strong>
           <span>active stories<small>updated within 7 days</small></span>
         </div>
       </header>
 
-      {featuredEvents.length ? (
-        <section className="event-catchup-rail-section" aria-labelledby="worth-catching-up-title">
+      {recentlyUpdatedEvents.length ? (
+        <section className="event-movement-section" aria-labelledby="recently-updated-events-title">
           <header className="event-rail-heading">
             <div>
-              <h2 id="worth-catching-up-title">Ongoing storylines</h2>
+              <h2 id="recently-updated-events-title">Recently updated</h2>
             </div>
-            <EventRailControls railRef={primaryRailRef} label="ongoing Events" />
+            <EventRailControls railRef={movementRailRef} label="recently updated Events" />
           </header>
-          <div ref={primaryRailRef} className="event-catchup-rail" tabIndex="0" aria-label="Horizontally scroll through important Events">
-            {featuredEvents.map((event) => (
-              <EventRailCard
+          <div ref={movementRailRef} className="event-movement-list" tabIndex="0" aria-label="Horizontally scroll through recent updates">
+            {recentlyUpdatedEvents.map((event) => (
+              <EventPreviewCard
                 event={event}
                 relatedStory={relatedStories.get(event.event_id)}
                 storyline={storylineByEventId.get(event.event_id)}
                 onNavigate={onNavigate}
                 key={event.event_id}
+                variant="movement"
               />
             ))}
           </div>
         </section>
       ) : null}
 
-      {moreDevelopingEvents.length ? (
-        <section className="event-movement-section" aria-labelledby="more-developing-events-title">
+      {ongoingEvents.length ? (
+        <section className="event-catchup-rail-section" aria-labelledby="ongoing-events-title">
           <header className="event-rail-heading">
             <div>
-              <h2 id="more-developing-events-title">Recently updated</h2>
+              <h2 id="ongoing-events-title">Ongoing stories</h2>
             </div>
-            <EventRailControls railRef={movementRailRef} label="latest changes" />
+            <EventRailControls railRef={primaryRailRef} label="ongoing Events" />
           </header>
-          <div ref={movementRailRef} className="event-movement-list">
-            {moreDevelopingEvents.map((event) => (
-              <EventMovementRow
+          <div ref={primaryRailRef} className="event-catchup-rail" tabIndex="0" aria-label="Horizontally scroll through ongoing stories">
+            {ongoingEvents.map((event) => (
+              <EventPreviewCard
                 event={event}
                 relatedStory={relatedStories.get(event.event_id)}
                 storyline={storylineByEventId.get(event.event_id)}
@@ -2961,12 +3335,137 @@ function ArchiveView({ recent, onNavigate }) {
   );
 }
 
-function WeeklyView() {
+function weeklyIssueMetadata(issue) {
+  return {
+    edition_id: issue?.edition_id || '',
+    publication: issue?.publication || 'Muninn Weekly',
+    headline: issue?.headline || 'Weekly edition',
+    dek: issue?.dek || '',
+    coverage_window: issue?.coverage_window || {},
+    reading_time_minutes: issue?.reading_time_minutes || 5,
+    cover_image: issue?.cover_image || null,
+    categories: [...new Set((issue?.sections || []).map((section) => section.kicker).filter(Boolean))].slice(0, 4),
+  };
+}
+
+function WeeklyView({ edition, onNavigate }) {
+  const [issues, setIssues] = useState([]);
+  const [error, setError] = useState('');
+
+  useEffect(() => {
+    if (edition) return undefined;
+    let active = true;
+    Promise.all([
+      fetchFirst(['/Current_news/weekly_newsletter.json', '/current_news/weekly_newsletter.json']),
+      fetchOptional(WEEKLY_INDEX_URLS),
+    ]).then(([latest, index]) => {
+      if (!active) return;
+      const latestMetadata = weeklyIssueMetadata(latest);
+      const archived = Array.isArray(index?.issues) ? index.issues : [];
+      setIssues([
+        latestMetadata,
+        ...archived.filter((item) => item.edition_id !== latestMetadata.edition_id),
+      ]);
+      setError('');
+    }).catch(() => {
+      if (active) setError('The weekly archive could not be loaded.');
+    });
+    return () => { active = false; };
+  }, [edition]);
+
+  if (edition) {
+    return (
+      <main id="main" className="page-shell weekly-page weekly-issue-page">
+        <AppLink view="weekly" onNavigate={onNavigate} className="back-link weekly-back-link">
+          <span aria-hidden="true">←</span> Weekly archive
+        </AppLink>
+        <div className="weekly-reader-frame">
+          <WeeklyLetter sourceUrl={`/Current_news/weekly_newsletters/${encodeURIComponent(edition)}.json`} />
+        </div>
+      </main>
+    );
+  }
+
+  if (error) return <MissingState message={error} />;
+  if (!issues.length) return <LoadingState />;
+  const [latest, ...archive] = issues;
+  const latestWindow = latest.coverage_window || {};
   return (
-    <main id="main" className="page-shell weekly-page">
-      <div className="weekly-reader-frame">
-        <WeeklyLetter />
-      </div>
+    <main id="main" className="page-shell weekly-page weekly-index-page">
+      <header className="weekly-index-heading">
+        <div>
+          <p className="eyebrow">Seven days in context</p>
+          <h1>Muninn Weekly</h1>
+          <p>A considered guide to the week’s defining developments and the Events connecting them.</p>
+        </div>
+        <span>Published Saturdays</span>
+      </header>
+
+      <section className="weekly-latest-card" aria-labelledby="latest-weekly-title">
+        <div className="weekly-latest-copy">
+          <p className="eyebrow">Latest edition</p>
+          <p className="weekly-card-date">
+            {formatDate(latestWindow.start_date, { short: true })}–{formatDate(latestWindow.end_date, { short: true })}
+            <span> · {latest.reading_time_minutes} min read</span>
+          </p>
+          <h2 id="latest-weekly-title">
+            <AppLink view="weekly" edition={latest.edition_id} onNavigate={onNavigate} className="weekly-latest-title-link">
+              {latest.headline}
+            </AppLink>
+          </h2>
+          <p>{latest.dek}</p>
+          {latest.categories?.length ? (
+            <div className="weekly-category-list" aria-label="Topics in this edition">
+              {latest.categories.map((category) => <span key={category}>{category}</span>)}
+            </div>
+          ) : null}
+          <AppLink view="weekly" edition={latest.edition_id} onNavigate={onNavigate} className="weekly-read-link">
+            Read the latest edition <span aria-hidden="true">→</span>
+          </AppLink>
+        </div>
+        {latest.cover_image?.url ? (
+          <AppLink view="weekly" edition={latest.edition_id} onNavigate={onNavigate} className="weekly-latest-cover" aria-label={`Read ${latest.headline}`}>
+            <img src={latest.cover_image.url} alt={latest.cover_image.alt || ''} />
+          </AppLink>
+        ) : null}
+      </section>
+
+      <section className="weekly-archive" aria-labelledby="weekly-archive-title">
+        <header>
+          <div>
+            <p className="eyebrow">Previous journals</p>
+            <h2 id="weekly-archive-title">Earlier editions</h2>
+          </div>
+          <p>{archive.length} {archive.length === 1 ? 'edition' : 'editions'}</p>
+        </header>
+        {archive.length ? (
+          <div className="weekly-archive-list">
+            {archive.map((issue) => {
+              const coverage = issue.coverage_window || {};
+              return (
+                <article key={issue.edition_id}>
+                  <AppLink view="weekly" edition={issue.edition_id} onNavigate={onNavigate}>
+                    <div>
+                      <time dateTime={issue.edition_id}>{formatDate(coverage.end_date || issue.edition_id)}</time>
+                      <h3>{issue.headline}</h3>
+                      <p>{issue.dek}</p>
+                      {issue.categories?.length ? (
+                        <div className="weekly-category-list">
+                          {issue.categories.map((category) => <span key={category}>{category}</span>)}
+                        </div>
+                      ) : null}
+                    </div>
+                    <span>{formatDate(coverage.start_date, { short: true, year: false })}–{formatDate(coverage.end_date, { short: true, year: false })}</span>
+                    <b aria-hidden="true">→</b>
+                  </AppLink>
+                </article>
+              );
+            })}
+          </div>
+        ) : (
+          <p className="weekly-archive-empty">Earlier editions will appear here as each new Saturday journal is published.</p>
+        )}
+      </section>
     </main>
   );
 }
@@ -2993,6 +3492,12 @@ function LoadingState() {
 
 export default function ReaderApp() {
   const [route, setRoute] = useState(readRoute);
+  const [archiveContext, setArchiveContext] = useState({
+    edition: '',
+    status: 'idle',
+    stories: [],
+    events: [],
+  });
   const [data, setData] = useState({
     digest: null,
     events: null,
@@ -3029,6 +3534,31 @@ export default function ReaderApp() {
     return () => window.removeEventListener('popstate', syncRoute);
   }, []);
 
+  useEffect(() => {
+    if (!route.edition || !['story', 'event'].includes(route.view)) {
+      setArchiveContext({ edition: '', status: 'idle', stories: [], events: [] });
+      return undefined;
+    }
+    let active = true;
+    setArchiveContext({ edition: route.edition, status: 'loading', stories: [], events: [] });
+    fetch(`/Current_news/weekly_newsletters/${encodeURIComponent(route.edition)}.json`, { cache: 'no-store' })
+      .then((response) => {
+        if (!response.ok) throw new Error(`Weekly edition returned ${response.status}`);
+        return response.json();
+      })
+      .then((issue) => {
+        if (!active) return;
+        const snapshot = weeklyReaderSnapshot(issue);
+        setArchiveContext({ edition: route.edition, status: 'ready', ...snapshot });
+      })
+      .catch(() => {
+        if (active) {
+          setArchiveContext({ edition: route.edition, status: 'unavailable', stories: [], events: [] });
+        }
+      });
+    return () => { active = false; };
+  }, [route.edition, route.view]);
+
   const stories = useMemo(
     () => (Array.isArray(data.digest?.clusters) ? data.digest.clusters : []),
     [data.digest],
@@ -3050,8 +3580,13 @@ export default function ReaderApp() {
     () => [
       ...stories,
       ...archiveStories,
+      ...archiveContext.stories,
     ],
-    [stories, archiveStories],
+    [stories, archiveStories, archiveContext.stories],
+  );
+  const allEvents = useMemo(
+    () => deduplicateEvents([...archiveContext.events, ...events]),
+    [archiveContext.events, events],
   );
 
   const defaultStory = stories[1] || stories[0];
@@ -3062,7 +3597,10 @@ export default function ReaderApp() {
       || events[0];
   }, [defaultStory, events]);
   const navigate = (view, extras = {}) => {
-    const href = routeHref(view, extras);
+    const contextualExtras = route.edition && ['story', 'event'].includes(view)
+      ? { edition: route.edition, ...extras }
+      : extras;
+    const href = routeHref(view, contextualExtras);
     window.history.pushState({}, '', href);
     setRoute(readRoute());
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -3070,17 +3608,19 @@ export default function ReaderApp() {
 
   if (data.error) return <MissingState message={data.error} />;
   if (!data.digest || !data.events) return <LoadingState />;
+  if (archiveContext.status === 'loading') return <LoadingState />;
 
-  const selectedStory = allStories.find(
+  const matchedStory = allStories.find(
     (story) => storyRouteId(story) === route.sid
       || story.story_id === route.sid
       || story.cluster_id === route.sid,
   )
-    || (/^\d+$/.test(route.sid) ? stories[Number(route.sid)] : null)
-    || defaultStory;
-  const selectedEvent = events.find((event) => event.event_id === route.eventId)
-    || events.find((event) => event.event_id === selectedStory?.event_id)
-    || defaultEvent;
+    || (/^\d+$/.test(route.sid) ? stories[Number(route.sid)] : null);
+  const selectedStory = route.sid ? matchedStory : defaultStory;
+  const matchedEvent = allEvents.find((event) => event.event_id === route.eventId);
+  const selectedEvent = route.eventId
+    ? matchedEvent
+    : allEvents.find((event) => event.event_id === selectedStory?.event_id) || defaultEvent;
   const selectedStoryline = storylines.find(
     (storyline) => storyline.legacy_event_id === selectedEvent?.event_id,
   );
@@ -3089,7 +3629,7 @@ export default function ReaderApp() {
       (child) => child.event_id === selectedEvent?.event_id,
     ),
   );
-  const storyEvent = events.find((event) => event.event_id === selectedStory?.event_id);
+  const storyEvent = allEvents.find((event) => event.event_id === selectedStory?.event_id);
   const relatedStories = stories.filter((story) => storyRouteId(story) !== storyRouteId(selectedStory));
   const storylineChildIds = new Set(
     storylines.flatMap((item) => item.child_events || []).map((item) => item.event_id).filter(Boolean),
@@ -3105,6 +3645,9 @@ export default function ReaderApp() {
       <Header view={route.view} onNavigate={navigate} />
       {route.view === 'today' ? (
         <TodayView digest={data.digest} onNavigate={navigate} />
+      ) : null}
+      {route.view === 'digest' ? (
+        <DigestView digest={data.digest} stories={allStories} onNavigate={navigate} />
       ) : null}
       {route.view === 'events' ? (
         <EventsDirectoryView
@@ -3124,7 +3667,9 @@ export default function ReaderApp() {
           onNavigate={navigate}
         />
       ) : null}
-      {route.view === 'weekly' ? <WeeklyView /> : null}
+      {route.view === 'weekly' ? (
+        <WeeklyView edition={route.edition} onNavigate={navigate} />
+      ) : null}
       {route.view === 'archive' ? (
         <ArchiveView recent={data.recent} onNavigate={navigate} />
       ) : null}
