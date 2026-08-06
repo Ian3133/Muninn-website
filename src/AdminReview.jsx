@@ -1,4 +1,11 @@
 import { useEffect, useMemo, useState } from 'react';
+import {
+  betaIssueScreenshotUrl,
+  listBetaIssues,
+  loadBetaIssueEvidence,
+  parseJsonField,
+  updateBetaIssueStatus,
+} from './betaReports';
 
 const DATA_PATHS = {
   queue: ['/Current_news/event_review_queue.json', '/current_news/event_review_queue.json'],
@@ -206,9 +213,115 @@ function QualityIssueCard({ tone, label, count, description, examples }) {
   );
 }
 
+function BetaIssueCard({ issue, localPreview, onStatusChange }) {
+  const [evidence, setEvidence] = useState(null);
+  const [screenshotUrl, setScreenshotUrl] = useState('');
+  const [loadingEvidence, setLoadingEvidence] = useState(false);
+  const [evidenceError, setEvidenceError] = useState('');
+  const [updating, setUpdating] = useState(false);
+  const preview = parseJsonField(issue.evidencePreview, {});
+  const diagnostics = parseJsonField(issue.diagnosticsSummary, preview?.diagnostics || {});
+
+  const loadEvidence = async () => {
+    if (evidence || loadingEvidence) return;
+    setLoadingEvidence(true);
+    setEvidenceError('');
+    try {
+      const [evidenceResult, screenshotResult] = await Promise.allSettled([
+        loadBetaIssueEvidence(issue),
+        betaIssueScreenshotUrl(issue),
+      ]);
+      if (evidenceResult.status === 'fulfilled') setEvidence(evidenceResult.value);
+      if (screenshotResult.status === 'fulfilled') setScreenshotUrl(screenshotResult.value);
+      const failed = [evidenceResult, screenshotResult].filter((result) => result.status === 'rejected');
+      if (failed.length) {
+        setEvidenceError(failed.map((result) => result.reason?.message || 'Saved evidence could not be opened.').join(' '));
+      }
+    } finally {
+      setLoadingEvidence(false);
+    }
+  };
+
+  const changeStatus = async (event) => {
+    const nextStatus = event.target.value;
+    setUpdating(true);
+    try {
+      await updateBetaIssueStatus(issue.id, nextStatus, { localPreview });
+      onStatusChange(issue.id, nextStatus);
+    } catch (error) {
+      setEvidenceError(error?.message || 'The report status could not be updated.');
+    } finally {
+      setUpdating(false);
+    }
+  };
+
+  const downloadEvidence = () => {
+    if (!evidence) return;
+    const url = URL.createObjectURL(new Blob([JSON.stringify(evidence, null, 2)], { type: 'application/json' }));
+    const anchor = document.createElement('a');
+    anchor.href = url;
+    anchor.download = `muninn-beta-report-${issue.id}.json`;
+    document.body.appendChild(anchor);
+    anchor.click();
+    anchor.remove();
+    window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+  };
+
+  return (
+    <details className="beta-issue-card" onToggle={(event) => { if (event.currentTarget.open) loadEvidence(); }}>
+      <summary>
+        <div className="beta-issue-summary-copy">
+          <div className="card-kickers">
+            <span className={`badge beta-status-${String(issue.status || 'OPEN').toLowerCase()}`}>{humanize(issue.status || 'OPEN')}</span>
+            <span className="badge beta-category-badge">{humanize(issue.category)}</span>
+            <span className="gap-label">{formatDate(issue.occurredAt, true)}</span>
+          </div>
+          <h2>{issue.description}</h2>
+          <p>{issue.pageTitle || issue.pagePath || 'Page unavailable'}</p>
+        </div>
+        <div className="beta-issue-number"><span>Report</span><code>{issue.id.slice(0, 8)}</code></div>
+      </summary>
+      <div className="beta-issue-body">
+        <div className="beta-issue-toolbar">
+          <label><span>Status</span><select value={issue.status || 'OPEN'} disabled={updating} onChange={changeStatus}><option value="OPEN">Open</option><option value="REVIEWING">Reviewing</option><option value="RESOLVED">Resolved</option></select></label>
+          <a href={issue.pageUrl || '/'} target="_blank" rel="noopener noreferrer">Open current page ↗</a>
+          {evidence ? <button type="button" onClick={downloadEvidence}>Download evidence JSON</button> : null}
+        </div>
+
+        <div className="beta-issue-facts">
+          <div><span>Page</span><strong>{issue.pagePath || 'Unavailable'}</strong></div>
+          <div><span>Marked area</span><strong>{issue.selectedElement || 'None'}</strong></div>
+          <div><span>Release</span><strong>{issue.release || issue.appVersion || 'Unset'}</strong></div>
+          <div><span>Viewport</span><strong>{issue.viewport || 'Unavailable'}</strong></div>
+          <div><span>Errors captured</span><strong>{diagnostics?.errorCount ?? 0}</strong></div>
+          <div><span>Failed requests</span><strong>{diagnostics?.failedRequestCount ?? 0}</strong></div>
+        </div>
+
+        {loadingEvidence ? <div className="beta-evidence-loading">Opening saved evidence…</div> : null}
+        {evidenceError ? <div className="error-state beta-evidence-error">{evidenceError}</div> : null}
+        {!loadingEvidence && !evidence && !evidenceError ? <div className="beta-evidence-missing">No external evidence file is attached. The summary above was saved with the report.</div> : null}
+        {evidence ? (
+          <div className="beta-evidence-grid">
+            {screenshotUrl ? <figure><img src={screenshotUrl} alt={`Captured page for report ${issue.id}`} /><figcaption>Screen captured when the report was submitted</figcaption></figure> : null}
+            <div className="beta-evidence-details">
+              <section><h3>Captured page</h3><p>{evidence.page?.title}</p><code>{evidence.page?.path}</code></section>
+              <section><h3>Saved news data</h3><p>{evidence.contentResponses?.length || 0} content response{evidence.contentResponses?.length === 1 ? '' : 's'} captured.</p>{evidence.contentResponses?.map((item) => <code key={item.url}>{item.url}</code>)}</section>
+              <section><h3>Recent technical signals</h3><p>{evidence.errors?.length || 0} errors · {evidence.requests?.filter((request) => !request.ok).length || 0} failed requests · {evidence.interactions?.length || 0} recent actions</p></section>
+              <details className="beta-page-text"><summary>View captured page text</summary><pre>{evidence.page?.text || 'No page text was captured.'}</pre></details>
+            </div>
+          </div>
+        ) : null}
+      </div>
+    </details>
+  );
+}
+
 export default function AdminReview({ accountLabel, onSignOut, localPreview = false }) {
   const [activeTab, setActiveTab] = useState('overview');
   const [payloads, setPayloads] = useState({ queue: null, timelines: null, digest: null });
+  const [betaIssues, setBetaIssues] = useState([]);
+  const [betaIssueError, setBetaIssueError] = useState('');
+  const [betaIssueLoading, setBetaIssueLoading] = useState(true);
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState('');
@@ -238,10 +351,30 @@ export default function AdminReview({ accountLabel, onSignOut, localPreview = fa
     return () => { mounted = false; };
   }, []);
 
+  useEffect(() => {
+    let mounted = true;
+    listBetaIssues({ localPreview }).then((items) => {
+      if (mounted) setBetaIssues(items);
+    }).catch((error) => {
+      if (mounted) setBetaIssueError(error?.message || 'Beta reports could not be loaded.');
+    }).finally(() => {
+      if (mounted) setBetaIssueLoading(false);
+    });
+    return () => { mounted = false; };
+  }, [localPreview]);
+
   const queueItems = Array.isArray(payloads.queue?.items) ? payloads.queue.items : [];
   const timelineItems = Array.isArray(payloads.timelines?.events) ? payloads.timelines.events : [];
   const clusterItems = Array.isArray(payloads.digest?.clusters) ? payloads.digest.clusters : [];
-  const activeItems = activeTab === 'queue' ? queueItems : activeTab === 'timelines' ? timelineItems : activeTab === 'clusters' ? clusterItems : [];
+  const activeItems = activeTab === 'queue'
+    ? queueItems
+    : activeTab === 'timelines'
+      ? timelineItems
+      : activeTab === 'clusters'
+        ? clusterItems
+        : activeTab === 'reports'
+          ? betaIssues
+          : [];
 
   const qualityIssues = useMemo(() => {
     const duplicatePairs = [];
@@ -271,6 +404,10 @@ export default function AdminReview({ accountLabel, onSignOut, localPreview = fa
       const itemRelation = item.classification?.relation;
       const text = JSON.stringify({
         title: item.event_title || item.canonical_title || item.title,
+        description: item.description,
+        page: item.pageTitle || item.pagePath,
+        category: item.category,
+        owner: item.owner,
         proposed: item.classification?.proposed_development,
         sources: item.citations || item.sources,
         latest: item.latest_title,
@@ -290,9 +427,16 @@ export default function AdminReview({ accountLabel, onSignOut, localPreview = fa
 
   const labels = {
     overview: { title: 'Quality overview', empty: 'No reader-facing quality issues detected' },
+    reports: { title: 'Beta reports', empty: 'No beta reports match this search' },
     queue: { title: 'Review queue', empty: 'No evidence matches these filters' },
     timelines: { title: 'Published timelines', empty: 'No published timelines match this search' },
     clusters: { title: "Today's clusters", empty: 'No current clusters match this search' },
+  };
+
+  const updateIssueInList = (id, nextStatus) => {
+    setBetaIssues((current) => current.map((item) => (
+      item.id === id ? { ...item, status: nextStatus, updatedAt: new Date().toISOString() } : item
+    )));
   };
 
   return (
@@ -310,13 +454,14 @@ export default function AdminReview({ accountLabel, onSignOut, localPreview = fa
       <main className="page-shell">
         <section className="page-heading">
           <div><p className="eyebrow">Reader quality control</p><h1>Story desk</h1><p className="heading-copy">Fix what readers may notice first, then inspect the evidence behind it.</p></div>
-          <div className="heading-status"><span className="read-only-pill">Read-only</span><span>{localPreview ? 'Local authenticated-layout preview' : accountLabel}</span></div>
+          <div className="heading-status"><span className="read-only-pill">Admin workspace</span><span>{localPreview ? 'Local authenticated-layout preview' : accountLabel}</span></div>
         </section>
 
         {payloads.queue?.mode === 'demo' ? <div className="notice demo-notice"><strong>Demo evidence.</strong> The review tab is showing a sample packet until the search workflow publishes a real queue.</div> : null}
         <nav className="admin-tabs" aria-label="Admin data views">
           {[
             ['overview', 'Needs attention', qualityIssueCount],
+            ['reports', 'Beta reports', betaIssues.length],
             ['queue', 'Review queue', queueItems.length],
             ['timelines', 'Published timelines', timelineItems.length],
             ['clusters', "Today's clusters", clusterItems.length],
@@ -349,7 +494,7 @@ export default function AdminReview({ accountLabel, onSignOut, localPreview = fa
         ) : null}
 
         {activeTab !== 'overview' ? <section className={`toolbar ${activeTab !== 'queue' ? 'catalog-toolbar' : ''}`} aria-label="Admin filters">
-          <label className="search-field"><span>Search {labels[activeTab].title.toLowerCase()}</span><input type="search" value={search} onChange={(event) => setSearch(event.target.value)} placeholder={activeTab === 'queue' ? 'Event, source, or proposed development' : 'Title, source, or event'} /></label>
+          <label className="search-field"><span>Search {labels[activeTab].title.toLowerCase()}</span><input type="search" value={search} onChange={(event) => setSearch(event.target.value)} placeholder={activeTab === 'queue' ? 'Event, source, or proposed development' : activeTab === 'reports' ? 'Description, page, or report details' : 'Title, source, or event'} /></label>
           {activeTab === 'queue' ? <>
             <label><span>Relationship</span><select value={relation} onChange={(event) => setRelation(event.target.value)}><option value="all">All relationships</option><option value="same_event">Same event</option><option value="related_topic">Related topic</option><option value="unrelated">Unrelated</option></select></label>
             <label><span>Review status</span><select value={status} onChange={(event) => setStatus(event.target.value)}><option value="all">All statuses</option><option value="pending">Pending</option><option value="approved">Approved</option><option value="rejected">Rejected</option></select></label>
@@ -357,9 +502,10 @@ export default function AdminReview({ accountLabel, onSignOut, localPreview = fa
           <button type="button" onClick={() => { setSearch(''); setRelation('all'); setStatus('all'); }}>Clear filters</button>
         </section> : null}
 
-        {activeTab !== 'overview' ? <div className="queue-summary"><strong>{filteredItems.length} {activeTab === 'queue' ? 'candidate' : activeTab === 'timelines' ? 'timeline' : 'cluster'}{filteredItems.length === 1 ? '' : 's'}</strong><span>{labels[activeTab].title}</span></div> : null}
-        {activeTab === 'overview' ? null : loading ? <div className="loading-state">Loading admin data…</div> : errors[activeTab] ? <div className="error-state"><h2>Unable to load {labels[activeTab].title.toLowerCase()}</h2><p>{errors[activeTab]}</p></div> : filteredItems.length ? (
-          <section className={activeTab === 'queue' ? 'review-list' : 'catalog-grid'}>
+        {activeTab !== 'overview' ? <div className="queue-summary"><strong>{filteredItems.length} {activeTab === 'queue' ? 'candidate' : activeTab === 'timelines' ? 'timeline' : activeTab === 'reports' ? 'report' : 'cluster'}{filteredItems.length === 1 ? '' : 's'}</strong><span>{labels[activeTab].title}</span></div> : null}
+        {activeTab === 'overview' ? null : (activeTab === 'reports' ? betaIssueLoading : loading) ? <div className="loading-state">Loading admin data…</div> : (activeTab === 'reports' ? betaIssueError : errors[activeTab]) ? <div className="error-state"><h2>Unable to load {labels[activeTab].title.toLowerCase()}</h2><p>{activeTab === 'reports' ? betaIssueError : errors[activeTab]}</p></div> : filteredItems.length ? (
+          <section className={activeTab === 'queue' || activeTab === 'reports' ? 'review-list' : 'catalog-grid'}>
+            {activeTab === 'reports' ? filteredItems.map((issue) => <BetaIssueCard issue={issue} localPreview={localPreview} onStatusChange={updateIssueInList} key={issue.id} />) : null}
             {activeTab === 'queue' ? filteredItems.map((item, index) => <ReviewCard item={item} initiallyOpen={index === 0} key={item.packet_id || index} />) : null}
             {activeTab === 'timelines' ? filteredItems.map((event) => <TimelineCard event={event} key={event.event_id} />) : null}
             {activeTab === 'clusters' ? filteredItems.map((cluster, index) => <ClusterCard cluster={cluster} key={cluster.cluster_id || index} />) : null}

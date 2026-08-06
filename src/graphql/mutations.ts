@@ -8,6 +8,70 @@ type GeneratedMutation<InputType, OutputType> = string & {
   __generatedMutationOutput: OutputType;
 };
 
+export const updateBetaIssue = /* GraphQL */ `mutation UpdateBetaIssue(
+  $input: UpdateBetaIssueInput!
+  $condition: ModelBetaIssueConditionInput
+) {
+  updateBetaIssue(input: $input, condition: $condition) {
+    id
+    status
+    category
+    description
+    occurredAt
+    pageUrl
+    pagePath
+    pageTitle
+    selectedElement
+    appVersion
+    release
+    viewport
+    userAgent
+    evidenceKey
+    screenshotKey
+    diagnosticsSummary
+    evidencePreview
+    createdAt
+    updatedAt
+    owner
+    __typename
+  }
+}
+` as GeneratedMutation<
+  APITypes.UpdateBetaIssueMutationVariables,
+  APITypes.UpdateBetaIssueMutation
+>;
+export const deleteBetaIssue = /* GraphQL */ `mutation DeleteBetaIssue(
+  $input: DeleteBetaIssueInput!
+  $condition: ModelBetaIssueConditionInput
+) {
+  deleteBetaIssue(input: $input, condition: $condition) {
+    id
+    status
+    category
+    description
+    occurredAt
+    pageUrl
+    pagePath
+    pageTitle
+    selectedElement
+    appVersion
+    release
+    viewport
+    userAgent
+    evidenceKey
+    screenshotKey
+    diagnosticsSummary
+    evidencePreview
+    createdAt
+    updatedAt
+    owner
+    __typename
+  }
+}
+` as GeneratedMutation<
+  APITypes.DeleteBetaIssueMutationVariables,
+  APITypes.DeleteBetaIssueMutation
+>;
 export const createUserState = /* GraphQL */ `mutation CreateUserState(
   $input: CreateUserStateInput!
   $condition: ModelUserStateConditionInput
@@ -76,4 +140,36 @@ export const deleteUserState = /* GraphQL */ `mutation DeleteUserState(
 ` as GeneratedMutation<
   APITypes.DeleteUserStateMutationVariables,
   APITypes.DeleteUserStateMutation
+>;
+export const createBetaIssue = /* GraphQL */ `mutation CreateBetaIssue(
+  $input: CreateBetaIssueInput!
+  $condition: ModelBetaIssueConditionInput
+) {
+  createBetaIssue(input: $input, condition: $condition) {
+    id
+    status
+    category
+    description
+    occurredAt
+    pageUrl
+    pagePath
+    pageTitle
+    selectedElement
+    appVersion
+    release
+    viewport
+    userAgent
+    evidenceKey
+    screenshotKey
+    diagnosticsSummary
+    evidencePreview
+    createdAt
+    updatedAt
+    owner
+    __typename
+  }
+}
+` as GeneratedMutation<
+  APITypes.CreateBetaIssueMutationVariables,
+  APITypes.CreateBetaIssueMutation
 >;

@@ -2,8 +2,7 @@ type UserState
   @model
   @auth(rules: [
     { allow: owner },
-    { allow: private, provider: iam },
-    { allow: public, provider: apiKey }
+    { allow: private, provider: iam }
   ]) {
   id: ID!
   noteText: String
@@ -14,4 +13,43 @@ type UserState
   checkbox3: Boolean
   selectedState: String
   updatedAt: AWSDateTime
+}
+
+enum BetaIssueStatus {
+  OPEN
+  REVIEWING
+  RESOLVED
+}
+
+enum BetaIssueCategory {
+  DISPLAY
+  CONTENT
+  FUNCTION
+  OTHER
+}
+
+type BetaIssue
+  @model
+  @auth(rules: [
+    { allow: owner, operations: [create, read] },
+    { allow: public, provider: identityPool, operations: [create] },
+    { allow: groups, groups: ["Admins"], operations: [read, update, delete] }
+  ]) {
+  id: ID!
+  status: BetaIssueStatus!
+  category: BetaIssueCategory!
+  description: String!
+  occurredAt: AWSDateTime!
+  pageUrl: AWSURL
+  pagePath: String
+  pageTitle: String
+  selectedElement: String
+  appVersion: String
+  release: String
+  viewport: String
+  userAgent: String
+  evidenceKey: String
+  screenshotKey: String
+  diagnosticsSummary: AWSJSON
+  evidencePreview: AWSJSON
 }

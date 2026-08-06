@@ -5,9 +5,11 @@ import { Authenticator } from '@aws-amplify/ui-react';
 import { fetchAuthSession } from 'aws-amplify/auth';
 import { useEffect, useState } from 'react';
 import AdminReview, { AdminAccessDenied } from './AdminReview';
+import BetaReporter from './BetaReporter';
 import ReaderApp from './ReaderApp';
 
 const ENABLE_AUTH = import.meta.env.VITE_ENABLE_AUTH === 'true';
+const ENABLE_BETA_REPORTER = import.meta.env.VITE_ENABLE_BETA_REPORTER !== 'false';
 const ADMIN_VIEW = new URLSearchParams(window.location.search).get('view') === 'admin';
 const ADMIN_GROUPS = (import.meta.env.VITE_ADMIN_GROUPS || 'Admins').split(',').map((item) => item.trim()).filter(Boolean);
 const ADMIN_EMAILS = (import.meta.env.VITE_ADMIN_EMAILS || '').split(',').map((item) => item.trim().toLowerCase()).filter(Boolean);
@@ -22,8 +24,21 @@ function getUserLabel(user) {
 }
 
 export default function App() {
+  if (ADMIN_VIEW) {
+    return (
+      <Authenticator>
+        {({ signOut, user }) => <AuthenticatedApp signOut={signOut} user={user} />}
+      </Authenticator>
+    );
+  }
+
   if (!ENABLE_AUTH) {
-    return ADMIN_VIEW ? <AdminReview localPreview /> : <ReaderApp />;
+    return (
+      <>
+        <ReaderApp />
+        {ENABLE_BETA_REPORTER ? <BetaReporter cloudEnabled guestMode /> : null}
+      </>
+    );
   }
 
   return (
@@ -64,6 +79,7 @@ function AuthenticatedApp({ signOut, user }) {
         </button>
       </div>
       <ReaderApp />
+      {ENABLE_BETA_REPORTER ? <BetaReporter cloudEnabled /> : null}
     </>
   );
 }

@@ -8,6 +8,102 @@ type GeneratedSubscription<InputType, OutputType> = string & {
   __generatedSubscriptionOutput: OutputType;
 };
 
+export const onCreateBetaIssue = /* GraphQL */ `subscription OnCreateBetaIssue(
+  $filter: ModelSubscriptionBetaIssueFilterInput
+  $owner: String
+) {
+  onCreateBetaIssue(filter: $filter, owner: $owner) {
+    id
+    status
+    category
+    description
+    occurredAt
+    pageUrl
+    pagePath
+    pageTitle
+    selectedElement
+    appVersion
+    release
+    viewport
+    userAgent
+    evidenceKey
+    screenshotKey
+    diagnosticsSummary
+    evidencePreview
+    createdAt
+    updatedAt
+    owner
+    __typename
+  }
+}
+` as GeneratedSubscription<
+  APITypes.OnCreateBetaIssueSubscriptionVariables,
+  APITypes.OnCreateBetaIssueSubscription
+>;
+export const onUpdateBetaIssue = /* GraphQL */ `subscription OnUpdateBetaIssue(
+  $filter: ModelSubscriptionBetaIssueFilterInput
+  $owner: String
+) {
+  onUpdateBetaIssue(filter: $filter, owner: $owner) {
+    id
+    status
+    category
+    description
+    occurredAt
+    pageUrl
+    pagePath
+    pageTitle
+    selectedElement
+    appVersion
+    release
+    viewport
+    userAgent
+    evidenceKey
+    screenshotKey
+    diagnosticsSummary
+    evidencePreview
+    createdAt
+    updatedAt
+    owner
+    __typename
+  }
+}
+` as GeneratedSubscription<
+  APITypes.OnUpdateBetaIssueSubscriptionVariables,
+  APITypes.OnUpdateBetaIssueSubscription
+>;
+export const onDeleteBetaIssue = /* GraphQL */ `subscription OnDeleteBetaIssue(
+  $filter: ModelSubscriptionBetaIssueFilterInput
+  $owner: String
+) {
+  onDeleteBetaIssue(filter: $filter, owner: $owner) {
+    id
+    status
+    category
+    description
+    occurredAt
+    pageUrl
+    pagePath
+    pageTitle
+    selectedElement
+    appVersion
+    release
+    viewport
+    userAgent
+    evidenceKey
+    screenshotKey
+    diagnosticsSummary
+    evidencePreview
+    createdAt
+    updatedAt
+    owner
+    __typename
+  }
+}
+` as GeneratedSubscription<
+  APITypes.OnDeleteBetaIssueSubscriptionVariables,
+  APITypes.OnDeleteBetaIssueSubscription
+>;
 export const onCreateUserState = /* GraphQL */ `subscription OnCreateUserState(
   $filter: ModelSubscriptionUserStateFilterInput
   $owner: String

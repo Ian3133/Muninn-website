@@ -3,6 +3,14 @@ import './WeeklyNewsletterPreview.css';
 
 const WEEKLY_URL = '/Current_news/weekly_newsletter.json';
 const PREVIEW_URL = '/Current_news/weekly_newsletter-preview.json';
+const RELATED_COVERAGE_LIMIT = 3;
+
+function compactLabel(value = '', limit = 108) {
+  const label = value.replace(/\s+/g, ' ').trim();
+  if (label.length <= limit) return label;
+  const breakpoint = label.lastIndexOf(' ', limit);
+  return `${label.slice(0, breakpoint > limit * 0.65 ? breakpoint : limit).trim()}\u2026`;
+}
 
 function readerHref(value = '', edition = '') {
   if (!/^\/(?:story|timeline)\.html/i.test(value)) return value;
@@ -87,28 +95,34 @@ function RelatedCoverage({ section, edition = '' }) {
         seen.add(segment.href);
         links.push({
           href: readerHref(segment.href, edition),
-          label: segment.text.trim(),
+          fullLabel: segment.text.replace(/\s+/g, ' ').trim(),
+          label: compactLabel(segment.text),
           kind: segment.kind === 'event' ? 'Timeline' : 'Story',
         });
       });
     });
-    return links;
+    return links.slice(0, RELATED_COVERAGE_LIMIT);
   }, [edition, section]);
 
   if (!unique.length) return null;
   return (
     <nav className="weekly-preview-related" aria-label={`Muninn coverage for ${section.title}`}>
-      <p>Related Muninn coverage</p>
-      <ul>
-        {unique.map((link) => (
-          <li key={link.href}>
-            <a href={link.href}>
-              <span>{link.kind}</span>
-              {link.label}
-            </a>
-          </li>
-        ))}
-      </ul>
+      <details>
+        <summary>
+          <span>Sources</span>
+          <b>{unique.length} {unique.length === 1 ? 'link' : 'links'}</b>
+        </summary>
+        <ul>
+          {unique.map((link) => (
+            <li key={link.href}>
+              <a href={link.href} aria-label={`${link.kind}: ${link.fullLabel}`}>
+                <span>{link.kind}</span>
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </details>
     </nav>
   );
 }
@@ -128,6 +142,7 @@ function WeeklyCover({ cover }) {
 export function WeeklyIssue({ issue, embedded = false, preview = false }) {
   const coverageWindow = issue.coverage_window || {};
   const edition = issue.edition_id || coverageWindow.end_date || '';
+  const sections = issue.sections || [];
   const article = (
     <article className={`weekly-preview-issue${embedded ? ' weekly-letter-embedded' : ''}`}>
       <header className="weekly-preview-masthead">
@@ -151,9 +166,26 @@ export function WeeklyIssue({ issue, embedded = false, preview = false }) {
         </div>
       </header>
 
-      {(issue.sections || []).map((section, index) => (
+      {sections.length ? (
+        <nav className="weekly-preview-contents" aria-label="In this edition">
+          <p>In this edition</p>
+          <ol>
+            {sections.map((section, index) => (
+              <li key={`${section.title}-contents-${index}`}>
+                <a href={`#weekly-section-${index + 1}`}>
+                  <span>{String(index + 1).padStart(2, '0')}</span>
+                  {section.contents_label || section.kicker || section.title}
+                </a>
+              </li>
+            ))}
+          </ol>
+        </nav>
+      ) : null}
+
+      {sections.map((section, index) => (
         <section
           className={`weekly-preview-section${section.image ? ' has-image' : ''}${index === 0 ? ' is-lead' : ''}`}
+          id={`weekly-section-${index + 1}`}
           key={`${section.title}-${index}`}
         >
           <div className="weekly-preview-section-rule" aria-hidden="true">

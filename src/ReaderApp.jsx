@@ -15,6 +15,7 @@ const VIEW_LABELS = {
   today: 'Today',
   digest: 'Digest',
   events: 'Events',
+  'my-news': 'My News',
   story: 'Story',
   event: 'Event',
   weekly: 'Weekly',
@@ -256,7 +257,10 @@ function routeHref(view, extras = {}) {
   if (extras.edition) params.set('edition', extras.edition);
   if (extras.archiveDate) params.set('archiveDate', extras.archiveDate);
   const query = params.toString();
-  return `/${query ? `?${query}` : ''}`;
+  const hash = extras.hash
+    ? `#${String(extras.hash).replace(/^#/, '')}`
+    : '';
+  return `/${query ? `?${query}` : ''}${hash}`;
 }
 
 function formatDate(value, options = {}) {
@@ -375,11 +379,12 @@ const EVENT_TITLE_OVERRIDES = new Map([
   ['event_sen-lindsey-graham-honored-at-funeral-servic_a603ee973f', 'Lindsey Graham Memorial'],
   ['event_trump-directs-signage-at-smithsonian-to-addr_10c62992ab', 'Smithsonian History Dispute'],
   ['event_search-underway-for-missing-north-carolina-w_91c1cb162b', 'North Carolina Traveler Missing in Grenada'],
+  ['event_avalanche-on-broad-peak-leaves-renowned-clim_7fab36fdc8', 'Broad Peak Avalanche and Recovery'],
 ]);
 
 function eventTitle(event) {
-  const rawTitle = event?.presentation?.base_title
-    || event?.topic_label
+  const rawTitle = event?.topic_label
+    || event?.presentation?.base_title
     || event?.canonical_title
     || event?.title
     || 'Tracked event';
@@ -619,6 +624,7 @@ function AppLink({
   topic,
   edition,
   archiveDate,
+  hash,
   onNavigate,
   children,
   className = '',
@@ -631,6 +637,7 @@ function AppLink({
     topic,
     edition,
     archiveDate,
+    hash,
   });
   return (
     <a
@@ -653,6 +660,7 @@ function AppLink({
           topic,
           edition,
           archiveDate,
+          hash,
         });
       }}
       {...props}
@@ -894,6 +902,15 @@ function Header({ view, onNavigate }) {
           >
             Weekly
           </AppLink>
+          <AppLink
+            view="my-news"
+            onNavigate={onNavigate}
+            className={`nav-my-news${view === 'my-news' ? ' is-active' : ''}`}
+            aria-current={view === 'my-news' ? 'page' : undefined}
+          >
+            <span>My News</span>
+            <small>Preview</small>
+          </AppLink>
         </nav>
       </div>
     </header>
@@ -1103,7 +1120,7 @@ function TimelineMarker({ event, currentStory, onNavigate }) {
         onNavigate={onNavigate}
         className="event-marker-title"
       >
-        <span>Part of an ongoing story</span>
+        <span>Part of an ongoing Event</span>
         <strong>{displayTitle}</strong>
         <b aria-hidden="true">View event →</b>
       </AppLink>
@@ -1348,9 +1365,7 @@ function DigestView({ digest, stories, onNavigate }) {
     <main id="main" className="page-shell digest-page">
       <header className="digest-heading">
         <div>
-          <p className="eyebrow">Daily news, connected</p>
-          <h1>The Digest</h1>
-          <p>A concise account of what matters today and how it connects to the preceding days.</p>
+          <h1>Daily Digest</h1>
         </div>
         <div className="digest-edition">
           <strong>{edition.weekday}, {edition.date}</strong>
@@ -1365,6 +1380,26 @@ function DigestView({ digest, stories, onNavigate }) {
               <p className="eyebrow">What matters now</p>
               <h2>{briefing.headline || 'What matters today'}</h2>
               {briefing.summary ? <p className="digest-dek">{briefing.summary}</p> : null}
+              {selected.length ? (
+                <nav className="digest-lead-stories" aria-label="Stories in this Digest">
+                  <p>In this Digest</p>
+                  <ol>
+                    {selected.slice(0, 3).map(({ item, story }, index) => (
+                      <li key={`digest-lead-story-${item.story_id}`}>
+                        <AppLink
+                          view="story"
+                          sid={item.story_id}
+                          archiveDate={digestStoryArchiveDate(item, briefing)}
+                          onNavigate={onNavigate}
+                        >
+                          <span>{String(index + 1).padStart(2, '0')}</span>
+                          <strong>{story.title || item.title}</strong>
+                        </AppLink>
+                      </li>
+                    ))}
+                  </ol>
+                </nav>
+              ) : null}
             </div>
             {leadVisual ? (
               <DigestImage
@@ -2214,7 +2249,7 @@ function StorylineThreads({ storyline, events, fallbackEvent, onNavigate, onTime
   return (
     <section className="storyline-threads" id="storyline-threads" aria-labelledby="storyline-threads-title">
       <header className="event-section-heading is-single-title">
-        <h2 id="storyline-threads-title">The story's main threads</h2>
+        <h2 id="storyline-threads-title">Events in this Situation</h2>
       </header>
       <div className="storyline-thread-grid">
         {threadRows.map((row, rowIndex) => {
@@ -2368,7 +2403,7 @@ function EventView({ event, storyline, parentStoryline, currentStoryId, events, 
             <i aria-hidden="true" />
             <span>
               {isStoryline
-                ? 'Ongoing storyline'
+                ? 'Ongoing Situation'
                 : event.status === 'active' ? 'Active event' : event.status || 'Tracked event'}
             </span>
           </div>
@@ -2379,7 +2414,7 @@ function EventView({ event, storyline, parentStoryline, currentStoryId, events, 
               onNavigate={onNavigate}
               className="event-parent-link"
             >
-              Part of the {parentStoryline.title} storyline <span aria-hidden="true">→</span>
+              Part of the {parentStoryline.title} Situation <span aria-hidden="true">→</span>
             </AppLink>
           ) : null}
           <h1>{title}</h1>
@@ -2403,7 +2438,7 @@ function EventView({ event, storyline, parentStoryline, currentStoryId, events, 
             {isStoryline ? (
               <a href="#storyline-threads">
                 <strong>{storyline.child_events?.length || 0}</strong>
-                <span>connected threads</span>
+                <span>connected Events</span>
               </a>
             ) : (
               <a href="#event-timeline"><strong>{presentation.date_count || '—'}</strong><span>days covered</span></a>
@@ -2452,7 +2487,7 @@ function EventView({ event, storyline, parentStoryline, currentStoryId, events, 
           <header className="section-heading compact">
             <div>
               <p className="eyebrow">Explore coverage</p>
-              <h2 id="other-events-title">Other ongoing stories</h2>
+              <h2 id="other-events-title">Other active Events</h2>
             </div>
           </header>
           <div>
@@ -2563,7 +2598,7 @@ function EventMeta({ event }) {
 
 function EventParentLabel({ storyline, event, relatedStory }) {
   const label = storyline
-    ? storyline.legacy_event_id === event?.event_id ? 'Storyline' : storyline.title
+    ? storyline.legacy_event_id === event?.event_id ? 'Situation' : storyline.title
     : eventCategory(event, relatedStory);
   if (!label) return null;
   return (
@@ -2575,9 +2610,9 @@ function EventParentLabel({ storyline, event, relatedStory }) {
 
 function eventPreviewParentLabel(storyline, event, relatedStory) {
   if (storyline) {
-    return storyline.legacy_event_id === event?.event_id ? 'Storyline' : storyline.title;
+    return storyline.legacy_event_id === event?.event_id ? 'Situation' : storyline.title;
   }
-  return eventCategory(event, relatedStory) || 'Continuing story';
+  return eventCategory(event, relatedStory) || 'Continuing Event';
 }
 
 function floatingEventPreviewStyle(target, preferredWidth = 544) {
@@ -2629,6 +2664,7 @@ function EventHoverPreview({
   event,
   relatedStory,
   storyline,
+  variant = 'event',
   style,
   onMouseEnter,
   onMouseLeave,
@@ -2636,6 +2672,9 @@ function EventHoverPreview({
   onClose,
 }) {
   const title = eventTitle(event);
+  const development = variant === 'development';
+  const previewTitle = development ? eventLatestTitle(event) : title;
+  const readingView = development && relatedStory ? 'story' : 'event';
   const latestMovement = conciseSummary(
     event?.latest_summary
       || event?.timeline?.at(-1)?.summary
@@ -2655,26 +2694,35 @@ function EventHoverPreview({
       aria-label={`Quick view: ${title}`}
     >
       <button type="button" className="event-preview-close" onClick={onClose} aria-label="Close quick view">Close</button>
-      <EventArtwork event={event} relatedStory={relatedStory} className="event-movement-preview-art" role="wide" />
+      <EventArtwork
+        event={event}
+        relatedStory={relatedStory}
+        className="event-movement-preview-art"
+        role="wide"
+        preferStory={development}
+      />
       <div className="event-movement-preview-copy">
         <div className="event-movement-preview-heading">
           <div>
             <span className="event-movement-preview-parent">
-              {eventPreviewParentLabel(storyline, event, relatedStory)}
+              {development
+                ? developmentParentLabel(event, storyline)
+                : eventPreviewParentLabel(storyline, event, relatedStory)}
             </span>
-            <h3>{title}</h3>
+            <h3>{previewTitle}</h3>
           </div>
           <AppLink
-            view="event"
-            eventId={event.event_id}
+            view={readingView}
+            sid={development && relatedStory ? storyRouteId(relatedStory) : undefined}
+            eventId={readingView === 'event' ? event.event_id : undefined}
             onNavigate={onNavigate}
             className="event-movement-preview-title-action"
           >
-            Open event <span aria-hidden="true">→</span>
+            {development && relatedStory ? 'Read update' : 'Open event'} <span aria-hidden="true">→</span>
           </AppLink>
         </div>
         <div className="event-movement-preview-brief">
-          <p><span>Current situation</span>{latestMovement}</p>
+          <p><span>{development ? 'What changed' : 'Current situation'}</span>{latestMovement}</p>
         </div>
         <EventMeta event={event} />
       </div>
@@ -2741,23 +2789,61 @@ function CatchupSupportEvent({ event, relatedStory, storyline, onNavigate }) {
   );
 }
 
-function DevelopingEventCard({ event, relatedStory, storyline, onNavigate }) {
+function DevelopingEventCard({ event, relatedStory, storyline, onNavigate, quiet = false }) {
+  const {
+    previewStyle,
+    openPreview,
+    keepPreviewOpen,
+    requestPreviewClose,
+    dismissPreview,
+  } = useEventHoverPreview();
   return (
-    <article className="developing-event-card">
-      <AppLink
-        view="event"
-        eventId={event.event_id}
-        onNavigate={onNavigate}
-        aria-label={`Open ${eventTitle(event)}`}
-      >
+    <article
+      className={`developing-event-card event-preview-trigger${quiet ? ' is-quiet' : ''}${previewStyle ? ' is-preview-open' : ''}`}
+    >
+      <div className="developing-event-card-inner">
         <div className="developing-event-copy">
           <EventParentLabel storyline={storyline} event={event} relatedStory={relatedStory} />
-          <h3>{eventTitle(event)}</h3>
-          <p>{eventLatestTitle(event)}</p>
+          <AppLink
+            view="event"
+            eventId={event.event_id}
+            onNavigate={onNavigate}
+            className="developing-event-title-link"
+            aria-label={`Open ${eventTitle(event)}`}
+          >
+            <h3>{eventTitle(event)}</h3>
+          </AppLink>
+          {!quiet ? <p>{eventLatestTitle(event)}</p> : null}
           <EventMeta event={event} />
         </div>
-        <EventArtwork event={event} relatedStory={relatedStory} className="developing-event-art" role="support" />
-      </AppLink>
+        <div className="developing-event-media">
+          <EventArtwork
+            event={event}
+            relatedStory={relatedStory}
+            className="developing-event-art"
+            role={quiet ? 'wide' : 'support'}
+          />
+          <button
+            type="button"
+            className="event-summary-preview-button"
+            aria-expanded={Boolean(previewStyle)}
+            aria-label={`Quick view: ${eventTitle(event)}`}
+            onClick={openPreview}
+          >
+            <QuickReadIcon />
+          </button>
+        </div>
+      </div>
+      <EventHoverPreview
+        event={event}
+        relatedStory={relatedStory}
+        storyline={storyline}
+        style={previewStyle}
+        onMouseEnter={keepPreviewOpen}
+        onMouseLeave={requestPreviewClose}
+        onNavigate={onNavigate}
+        onClose={dismissPreview}
+      />
     </article>
   );
 }
@@ -2800,6 +2886,9 @@ function EventPreviewCard({ event, relatedStory, storyline, onNavigate, variant 
         <span className="event-preview-icon"><QuickReadIcon /></span>
       </button>
       <div className={copyClass}>
+        {movement ? (
+          <EventParentLabel storyline={storyline} event={event} relatedStory={relatedStory} />
+        ) : null}
         <AppLink
           view={readingView}
           sid={readingId}
@@ -2836,36 +2925,281 @@ function EventPreviewCard({ event, relatedStory, storyline, onNavigate, variant 
   );
 }
 
-function StorylineCard({ storyline, rootEvent, onNavigate }) {
-  const childEvents = Array.isArray(storyline?.child_events) ? storyline.child_events : [];
+function developmentParentLabel(event, situation) {
+  if (situation?.legacy_event_id === event?.event_id) return `${situation.title} Situation`;
+  return eventTitle(event);
+}
+
+function DevelopmentLedgerRow({ event, relatedStory, situation, onNavigate }) {
+  const {
+    previewStyle,
+    openPreview,
+    keepPreviewOpen,
+    requestPreviewClose,
+    dismissPreview,
+  } = useEventHoverPreview();
+  const latestDate = eventLatestDate(event);
+  const readingView = relatedStory ? 'story' : 'event';
+  return (
+    <li
+      className={`development-ledger-row event-preview-trigger${previewStyle ? ' is-preview-open' : ''}`}
+    >
+      <div className="development-ledger-media">
+        <EventArtwork
+          event={event}
+          relatedStory={relatedStory}
+          className="development-ledger-art"
+          role="support"
+          preferStory
+        />
+        <button
+          type="button"
+          className="event-summary-preview-button"
+          aria-expanded={Boolean(previewStyle)}
+          aria-label={`Quick view: ${eventLatestTitle(event)}`}
+          onClick={openPreview}
+        >
+          <QuickReadIcon />
+        </button>
+      </div>
+      <div className="development-ledger-copy">
+        <div className="development-ledger-context">
+          <span className="catchup-event-parent">{developmentParentLabel(event, situation)}</span>
+        </div>
+        <AppLink
+          view={readingView}
+          sid={relatedStory ? storyRouteId(relatedStory) : undefined}
+          eventId={relatedStory ? undefined : event.event_id}
+          onNavigate={onNavigate}
+          className="development-ledger-reading-link"
+        >
+          <h3>{eventLatestTitle(event)}</h3>
+        </AppLink>
+        {latestDate ? (
+          <time className="development-ledger-date" dateTime={latestDate}>
+            Updated {formatDate(latestDate, { short: true, year: false })}
+          </time>
+        ) : null}
+      </div>
+      <EventHoverPreview
+        event={event}
+        relatedStory={relatedStory}
+        storyline={situation}
+        variant="development"
+        style={previewStyle}
+        onMouseEnter={keepPreviewOpen}
+        onMouseLeave={requestPreviewClose}
+        onNavigate={onNavigate}
+        onClose={dismissPreview}
+      />
+    </li>
+  );
+}
+
+function HalfStepCarousel({ className, ariaLabel, itemCount, children }) {
+  const railRef = useRef(null);
+  const [position, setPosition] = useState(0);
+  const columnCount = React.Children.count(children);
+  const maxPosition = Math.max(0, columnCount - 2);
+
+  useEffect(() => {
+    setPosition((current) => Math.min(current, maxPosition));
+  }, [maxPosition]);
+
+  const stepSize = () => {
+    const rail = railRef.current;
+    const firstColumn = rail?.firstElementChild;
+    if (!rail || !firstColumn) return 0;
+    const styles = window.getComputedStyle(rail);
+    const gap = Number.parseFloat(styles.columnGap || styles.gap || '0') || 0;
+    return firstColumn.getBoundingClientRect().width + gap;
+  };
+  const syncPosition = () => {
+    const rail = railRef.current;
+    const step = stepSize();
+    if (!rail || !step) return;
+    setPosition(Math.min(maxPosition, Math.max(0, Math.round(rail.scrollLeft / step))));
+  };
+  const move = (direction) => {
+    const rail = railRef.current;
+    const step = stepSize();
+    if (!rail || !step) return;
+    rail.scrollTo({ left: (position + direction) * step, behavior: 'smooth' });
+  };
+  const visibleStart = itemCount ? Math.min(position * 2 + 1, itemCount) : 0;
+  const visibleEnd = itemCount ? Math.min(visibleStart + 3, itemCount) : 0;
+
+  return (
+    <div className="event-carousel-shell">
+      <div ref={railRef} className={className} aria-label={ariaLabel} onScroll={syncPosition}>
+        {children}
+      </div>
+      {maxPosition > 0 ? (
+        <div className="event-carousel-controls" aria-label={`${ariaLabel} controls`}>
+          <span aria-live="polite">{visibleStart}–{visibleEnd} of {itemCount}</span>
+          <button
+            type="button"
+            aria-label={`Previous ${ariaLabel}`}
+            disabled={position === 0}
+            onClick={() => move(-1)}
+          >
+            <span aria-hidden="true">←</span>
+          </button>
+          <button
+            type="button"
+            aria-label={`Next ${ariaLabel}`}
+            disabled={position === maxPosition}
+            onClick={() => move(1)}
+          >
+            <span aria-hidden="true">→</span>
+          </button>
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
+function DevelopmentTimeline({ events, referenceDate, relatedStories, situationByEventId, onNavigate }) {
+  const groups = [
+    ['today', 'Today', (age) => age === 0],
+    ['yesterday', 'Yesterday', (age) => age === 1],
+    ['earlier', 'Earlier this week', (age) => age >= 2],
+  ].map(([key, label, matches]) => ({
+    key,
+    label,
+    events: events.filter((event) => matches(dateDistanceInDays(referenceDate, eventLatestDate(event)))),
+  })).filter((group) => group.events.length);
+
+  return (
+    <div className="development-timeline" aria-label="Latest developments by day">
+      {groups.map((group) => (
+        <section className="development-timeline-group" aria-labelledby={`development-group-${group.key}`} key={group.key}>
+          <header>
+            <h3 id={`development-group-${group.key}`}>{group.label}</h3>
+            <span>{group.events.length} {group.events.length === 1 ? 'change' : 'changes'}</span>
+          </header>
+          <ol className="development-timeline-list">
+            {group.events.map((event) => (
+              <DevelopmentLedgerRow
+                event={event}
+                relatedStory={relatedStories.get(event.event_id)}
+                situation={situationByEventId.get(event.event_id)}
+                onNavigate={onNavigate}
+                key={event.event_id}
+              />
+            ))}
+          </ol>
+        </section>
+      ))}
+    </div>
+  );
+}
+
+function LatestDevelopmentLead({ event, relatedStory, situation, onNavigate }) {
+  if (!event) return null;
+  const readingView = relatedStory ? 'story' : 'event';
+  const latestDate = eventLatestDate(event);
+  return (
+    <article className="latest-development-lead">
+      <AppLink
+        view={readingView}
+        sid={relatedStory ? storyRouteId(relatedStory) : undefined}
+        eventId={relatedStory ? undefined : event.event_id}
+        onNavigate={onNavigate}
+        aria-label={`Read ${eventLatestTitle(event)}`}
+      >
+        <EventArtwork
+          event={event}
+          relatedStory={relatedStory}
+          className="latest-development-art"
+          role="wide"
+          preferStory
+        />
+        <div className="latest-development-copy">
+          <span className="catchup-event-parent">{developmentParentLabel(event, situation)}</span>
+          <h3>{eventLatestTitle(event)}</h3>
+          <p>{eventLatestSummary(event, relatedStory)}</p>
+          <div className="latest-development-meta">
+            {latestDate ? <time dateTime={latestDate}>{formatDate(latestDate, { short: true, year: false })}</time> : null}
+            <span>Latest Development</span>
+            <b>{relatedStory ? 'Read Report' : 'Open Event'} <span aria-hidden="true">→</span></b>
+          </div>
+        </div>
+      </AppLink>
+    </article>
+  );
+}
+
+function DevelopmentList({ events, relatedStories, situationByEventId, onNavigate }) {
+  return (
+    <ol className="latest-development-list">
+      {events.map((event, index) => {
+        const relatedStory = relatedStories.get(event.event_id);
+        const latestDate = eventLatestDate(event);
+        return (
+          <li key={event.event_id}>
+            <AppLink
+              view={relatedStory ? 'story' : 'event'}
+              sid={relatedStory ? storyRouteId(relatedStory) : undefined}
+              eventId={relatedStory ? undefined : event.event_id}
+              onNavigate={onNavigate}
+            >
+              <span className="development-list-number">{String(index + 2).padStart(2, '0')}</span>
+              <div>
+                <span className="catchup-event-parent">
+                  {developmentParentLabel(event, situationByEventId.get(event.event_id))}
+                </span>
+                <h3>{eventLatestTitle(event)}</h3>
+              </div>
+              {latestDate ? <time dateTime={latestDate}>{formatDate(latestDate, { short: true, year: false })}</time> : null}
+              <b aria-hidden="true">→</b>
+            </AppLink>
+          </li>
+        );
+      })}
+    </ol>
+  );
+}
+
+function SituationCard({ situation, rootEvent, onNavigate, compact = false }) {
+  const childEvents = Array.isArray(situation?.child_events) ? situation.child_events : [];
   const activeCount = childEvents.filter((item) => item.state !== 'earlier_phase').length;
   return (
-    <article className="storyline-overview-card">
+    <article className={`storyline-overview-card situation-overview-card${compact ? ' is-compact' : ''}`}>
       <AppLink
         view="event"
-        eventId={storyline.legacy_event_id}
+        eventId={situation.legacy_event_id}
         onNavigate={onNavigate}
-        aria-label={`Open the ${storyline.title} storyline`}
+        aria-label={`Open the ${situation.title} situation`}
       >
         <EventArtwork event={rootEvent} className="storyline-overview-art" role="wide" />
         <div className="storyline-overview-copy">
-          <span className="catchup-event-parent">Storyline</span>
-          <h3>{storyline.title}</h3>
-          <p>{conciseSummary(storyline.overview || storyline.current_status, 1)}</p>
-          {storyline.current_status ? (
+          <span className="catchup-event-parent">Current situation</span>
+          <h3>{situation.title}</h3>
+          <p>{conciseSummary(situation.overview || situation.current_status, compact ? 1 : 2)}</p>
+          {situation.current_status ? (
             <div className="storyline-latest">
               <span>Where it stands</span>
-              <strong>{conciseSummary(storyline.current_status, 1)}</strong>
+              <strong>{conciseSummary(situation.current_status, compact ? 1 : 2)}</strong>
             </div>
           ) : null}
+          {childEvents.length ? (
+            <ul className="situation-event-list" aria-label={`Events within ${situation.title}`}>
+              {childEvents.slice(0, compact ? 3 : 4).map((event, index) => (
+                <li key={event.event_id || `${situation.storyline_id || situation.title}-${index}`}>
+                  {event.title}
+                </li>
+              ))}
+            </ul>
+          ) : null}
           <div className="storyline-overview-meta">
-            <span>{childEvents.length} connected Events</span>
-            {activeCount ? <span>{activeCount} currently developing</span> : null}
-            {storyline.current_status_as_of ? (
-              <span>Updated {formatDate(storyline.current_status_as_of, { short: true, year: false })}</span>
+            <span>{childEvents.length} connected {childEvents.length === 1 ? 'Event' : 'Events'}</span>
+            {activeCount ? <span>{activeCount} active</span> : null}
+            {situation.current_status_as_of ? (
+              <span>Updated {formatDate(situation.current_status_as_of, { short: true, year: false })}</span>
             ) : null}
           </div>
-          <b>See the bigger picture <span aria-hidden="true">→</span></b>
+          <b>Understand the Situation <span aria-hidden="true">→</span></b>
         </div>
       </AppLink>
     </article>
@@ -2886,7 +3220,7 @@ function GlobalCoverageSearch({ stories, events, storylines, onNavigate }) {
     };
     const storylineResults = storylines.map((item) => ({
       key: item.coverage_id,
-      kind: 'Storyline',
+      kind: 'Situation',
       title: item.title,
       summary: conciseSummary(item.overview || item.current_status, 1),
       view: 'event',
@@ -2949,7 +3283,7 @@ function GlobalCoverageSearch({ stories, events, storylines, onNavigate }) {
           type="search"
           value={query}
           onChange={(event) => setQuery(event.target.value)}
-          placeholder="Stories, Events, and Storylines"
+          placeholder="People, places, and ongoing coverage"
         />
       </label>
       {query ? <button type="button" onClick={() => setQuery('')}>Clear</button> : null}
@@ -2960,9 +3294,9 @@ function GlobalCoverageSearch({ stories, events, storylines, onNavigate }) {
               {renderResult(resultGroups.best, true)}
               <div className="global-search-groups">
                 {[
-                  ['Storylines', resultGroups.storylines],
+                  ['Situations', resultGroups.storylines],
                   ['Events', resultGroups.events],
-                  ['Stories', resultGroups.stories],
+                  ['Reports', resultGroups.stories],
                 ].map(([label, items]) => items.length ? (
                   <section aria-label={`${label} search results`} key={label}>
                     <h2>{label}</h2>
@@ -2983,20 +3317,6 @@ function GlobalCoverageSearch({ stories, events, storylines, onNavigate }) {
   );
 }
 
-function EventRailControls({ railRef, label }) {
-  const move = (direction) => {
-    const rail = railRef.current;
-    if (!rail) return;
-    rail.scrollBy({ left: direction * rail.clientWidth * .82, behavior: 'smooth' });
-  };
-  return (
-    <div className="event-rail-controls" aria-label={`${label} navigation`}>
-      <button type="button" onClick={() => move(-1)} aria-label={`Previous ${label}`}>←</button>
-      <button type="button" onClick={() => move(1)} aria-label={`Next ${label}`}>→</button>
-    </div>
-  );
-}
-
 function EventsDirectoryView({
   events,
   stories,
@@ -3005,17 +3325,23 @@ function EventsDirectoryView({
   initialTopic,
   onNavigate,
 }) {
-  const primaryRailRef = useRef(null);
-  const movementRailRef = useRef(null);
+  const hasSituationDirectory = storylines.length >= 2;
   const [query, setQuery] = useState('');
-  const [directoryOpen, setDirectoryOpen] = useState(initialMode !== 'all');
+  const [directoryOpen, setDirectoryOpen] = useState(['browse', 'latest'].includes(initialMode));
+  const [homeMode, setHomeMode] = useState(
+    initialMode === 'situations' && hasSituationDirectory ? 'situations' : 'activity',
+  );
   const [status, setStatus] = useState(initialMode === 'latest' ? 'recent' : 'all');
   const [topic, setTopic] = useState(initialTopic || 'all');
 
   useEffect(() => {
-    setDirectoryOpen(initialMode !== 'all');
+    setDirectoryOpen(['browse', 'latest'].includes(initialMode));
+    if (initialMode === 'situations') {
+      setHomeMode(hasSituationDirectory ? 'situations' : 'activity');
+    }
+    if (initialMode === 'all') setHomeMode('activity');
     if (initialMode === 'latest') setStatus('recent');
-  }, [initialMode]);
+  }, [hasSituationDirectory, initialMode]);
 
   const relatedStories = useMemo(() => {
     const map = new Map();
@@ -3024,10 +3350,8 @@ function EventsDirectoryView({
     });
     return map;
   }, [stories]);
-  const storylineChildIds = useMemo(
-    () => new Set(storylines.flatMap((item) => (
-      item.child_events || []
-    )).map((item) => item.event_id).filter(Boolean)),
+  const situationRootIds = useMemo(
+    () => new Set(storylines.map((item) => item.legacy_event_id).filter(Boolean)),
     [storylines],
   );
   const storylineByEventId = useMemo(() => {
@@ -3046,7 +3370,7 @@ function EventsDirectoryView({
   );
   const ordered = useMemo(
     () => deduplicateEvents(events
-      .filter((event) => eventDevelopmentCount(event) >= 2 && !storylineChildIds.has(event.event_id))
+      .filter((event) => eventDevelopmentCount(event) >= 2 && !situationRootIds.has(event.event_id))
       .sort((left, right) => {
         const leftStoryline = storylineByEventId.get(left.event_id);
         const rightStoryline = storylineByEventId.get(right.event_id);
@@ -3064,9 +3388,10 @@ function EventsDirectoryView({
         );
         return rightScore - leftScore || String(eventLatestDate(right)).localeCompare(String(eventLatestDate(left)));
       })),
-    [events, latestAvailableDate, relatedStories, storylineByEventId, storylineChildIds],
+    [events, latestAvailableDate, relatedStories, storylineByEventId, situationRootIds],
   );
-  const recentlyUpdatedEvents = [...ordered]
+  const recentlyUpdatedEvents = deduplicateEvents(events
+    .filter((event) => eventDevelopmentCount(event) >= 2))
     .filter((event) => dateDistanceInDays(latestAvailableDate, eventLatestDate(event)) <= 7)
     .sort((left, right) => (
       String(eventLatestDate(right)).localeCompare(String(eventLatestDate(left)))
@@ -3074,13 +3399,17 @@ function EventsDirectoryView({
     ))
     .slice(0, 5);
   const recentlyUpdatedEventIds = new Set(recentlyUpdatedEvents.map((event) => event.event_id));
-  const ongoingEvents = ordered
+  const activeEvents = ordered
     .filter((event) => (
-      eventDevelopmentCount(event) >= 4
+      eventDevelopmentCount(event) >= 3
       && dateDistanceInDays(latestAvailableDate, eventLatestDate(event)) <= 30
       && !recentlyUpdatedEventIds.has(event.event_id)
     ))
-    .slice(0, 5);
+    .slice(0, 6);
+  const orderedSituations = [...storylines].sort((left, right) => (
+    String(right.current_status_as_of || '').localeCompare(String(left.current_status_as_of || ''))
+    || (right.child_events?.length || 0) - (left.child_events?.length || 0)
+  ));
   const activeEventCount = ordered.filter((event) => (
     eventDevelopmentCount(event) >= 3
     && dateDistanceInDays(latestAvailableDate, eventLatestDate(event)) <= 7
@@ -3126,7 +3455,13 @@ function EventsDirectoryView({
   const closeDirectory = () => {
     setDirectoryOpen(false);
     resetFilters();
-    onNavigate('events');
+    onNavigate('events', hasSituationDirectory && homeMode === 'situations' ? { mode: 'situations' } : {});
+  };
+  const showHomeMode = (nextMode) => {
+    const availableMode = nextMode === 'situations' && !hasSituationDirectory ? 'activity' : nextMode;
+    setDirectoryOpen(false);
+    setHomeMode(availableMode);
+    onNavigate('events', availableMode === 'situations' ? { mode: 'situations' } : {});
   };
 
   if (directoryOpen) {
@@ -3136,9 +3471,7 @@ function EventsDirectoryView({
           <span aria-hidden="true">←</span> Events briefing
         </button>
         <PageIntroduction
-          eyebrow="Complete directory"
-          title="Browse all Events"
-          description="Search and filter the complete record of continuing stories."
+          title="Browse Events"
           aside={`${ordered.length} Events`}
         />
         <section className="event-directory-tools" aria-label="Filter the Event directory">
@@ -3217,77 +3550,162 @@ function EventsDirectoryView({
     <main id="main" className="page-shell events-directory-page events-briefing-page">
       <header className="events-home-intro">
         <div className="events-home-title-group">
-          <div className="events-home-heading">
-            <p className="eyebrow">Ongoing coverage</p>
-            <h1>Events</h1>
-            <p>Follow continuing stories, see what changed, and catch up on the fuller picture.</p>
+          <div className="events-home-title-row">
+            <div className="events-home-heading">
+              <h1>Events</h1>
+            </div>
+            <GlobalCoverageSearch
+              stories={stories}
+              events={ordered}
+              storylines={storylines}
+              onNavigate={onNavigate}
+            />
+            <div className="events-home-status" aria-label={`${activeEventCount} tracked Events with recent activity`}>
+              <strong>{activeEventCount}</strong>
+              <span>Tracked<small>events</small></span>
+            </div>
           </div>
-          <GlobalCoverageSearch
-            stories={stories}
-            events={ordered}
-            storylines={storylines}
-            onNavigate={onNavigate}
-          />
-        </div>
-        <div className="events-home-status" aria-label={`${activeEventCount} active Events`}>
-          <strong>{activeEventCount}</strong>
-          <span>active stories<small>updated within 7 days</small></span>
         </div>
       </header>
 
-      {recentlyUpdatedEvents.length ? (
-        <section className="event-movement-section" aria-labelledby="recently-updated-events-title">
-          <header className="event-rail-heading">
-            <div>
-              <h2 id="recently-updated-events-title">Recently updated</h2>
-            </div>
-            <EventRailControls railRef={movementRailRef} label="recently updated Events" />
-          </header>
-          <div ref={movementRailRef} className="event-movement-list" tabIndex="0" aria-label="Horizontally scroll through recent updates">
-            {recentlyUpdatedEvents.map((event) => (
-              <EventPreviewCard
-                event={event}
-                relatedStory={relatedStories.get(event.event_id)}
-                storyline={storylineByEventId.get(event.event_id)}
-                onNavigate={onNavigate}
-                key={event.event_id}
-                variant="movement"
-              />
-            ))}
-          </div>
-        </section>
-      ) : null}
+      <nav className="events-view-tabs" aria-label="Choose an Events view">
+        <button
+          type="button"
+          className={homeMode === 'activity' ? 'is-active' : ''}
+          aria-current={homeMode === 'activity' ? 'page' : undefined}
+          onClick={() => showHomeMode('activity')}
+        >
+          <span>Latest</span>
+        </button>
+        {hasSituationDirectory ? (
+          <button
+            type="button"
+            className={homeMode === 'situations' ? 'is-active' : ''}
+            aria-current={homeMode === 'situations' ? 'page' : undefined}
+            onClick={() => showHomeMode('situations')}
+          >
+            <span>Situations</span>
+            <small>{orderedSituations.length}</small>
+          </button>
+        ) : null}
+        <button type="button" onClick={openDirectory}>
+          <span>Browse</span>
+        </button>
+        {orderedSituations.length === 1 ? (
+          <AppLink
+            view="event"
+            eventId={orderedSituations[0].legacy_event_id}
+            onNavigate={onNavigate}
+            className="events-single-situation-link"
+            aria-label={`Open the ${orderedSituations[0].title} Situation`}
+          >
+            <span>{orderedSituations[0].title} Situation</span>
+          </AppLink>
+        ) : null}
+      </nav>
 
-      {ongoingEvents.length ? (
-        <section className="event-catchup-rail-section" aria-labelledby="ongoing-events-title">
-          <header className="event-rail-heading">
-            <div>
-              <h2 id="ongoing-events-title">Ongoing stories</h2>
-            </div>
-            <EventRailControls railRef={primaryRailRef} label="ongoing Events" />
-          </header>
-          <div ref={primaryRailRef} className="event-catchup-rail" tabIndex="0" aria-label="Horizontally scroll through ongoing stories">
-            {ongoingEvents.map((event) => (
-              <EventPreviewCard
-                event={event}
-                relatedStory={relatedStories.get(event.event_id)}
-                storyline={storylineByEventId.get(event.event_id)}
+      {homeMode === 'activity' ? (
+        <div className="events-activity-view">
+          {recentlyUpdatedEvents.length ? (
+            <section className="event-movement-section event-latest-developments" aria-labelledby="latest-developments-title">
+              <header className="event-rail-heading">
+                <div>
+                  <p className="eyebrow">What changed</p>
+                  <h2 id="latest-developments-title">Latest developments</h2>
+                </div>
+              </header>
+              <DevelopmentTimeline
+                events={recentlyUpdatedEvents}
+                referenceDate={latestAvailableDate}
+                relatedStories={relatedStories}
+                situationByEventId={storylineByEventId}
                 onNavigate={onNavigate}
-                key={event.event_id}
               />
-            ))}
-          </div>
-        </section>
-      ) : null}
+            </section>
+          ) : null}
 
-      <section className="browse-events-callout" aria-labelledby="browse-events-title">
-        <div>
-          <p className="eyebrow">Complete directory</p>
-          <h2 id="browse-events-title">Browse every Event</h2>
-          <p>Find active and recently quiet coverage by subject, activity, or name.</p>
+          {orderedSituations.length > 1 ? (
+            <section className="current-situation-feature" aria-labelledby="current-situation-feature-title">
+              <header className="event-briefing-section-heading">
+                <div>
+                  <p className="eyebrow">The larger picture</p>
+                  <h2 id="current-situation-feature-title">Current Situation</h2>
+                </div>
+                {orderedSituations.length > 1 ? (
+                  <button type="button" onClick={() => showHomeMode('situations')}>
+                    View all {orderedSituations.length} Situations <span aria-hidden="true">→</span>
+                  </button>
+                ) : null}
+              </header>
+              <SituationCard
+                situation={orderedSituations[0]}
+                rootEvent={events.find((event) => event.event_id === orderedSituations[0].legacy_event_id)}
+                onNavigate={onNavigate}
+                compact
+              />
+            </section>
+          ) : null}
+
+          {activeEvents.length ? (
+            <section className="event-active-section" aria-labelledby="active-events-title">
+              <header className="event-briefing-section-heading">
+                <div>
+                  <p className="eyebrow">Still unfolding</p>
+                  <h2 id="active-events-title">Active Events</h2>
+                </div>
+              </header>
+              <HalfStepCarousel
+                className="active-event-carousel"
+                ariaLabel="Active Events"
+                itemCount={activeEvents.length}
+              >
+                {Array.from({ length: Math.ceil(activeEvents.length / 2) }, (_, columnIndex) => (
+                  <div className="developing-event-grid active-event-column" key={`active-event-column-${columnIndex + 1}`}>
+                    {activeEvents.slice(columnIndex * 2, columnIndex * 2 + 2).map((event) => (
+                      <DevelopingEventCard
+                        event={event}
+                        relatedStory={relatedStories.get(event.event_id)}
+                        storyline={storylineByEventId.get(event.event_id)}
+                        onNavigate={onNavigate}
+                        quiet
+                        key={event.event_id}
+                      />
+                    ))}
+                  </div>
+                ))}
+              </HalfStepCarousel>
+            </section>
+          ) : null}
         </div>
-        <button type="button" onClick={openDirectory}>Browse all Events <span aria-hidden="true">→</span></button>
-      </section>
+      ) : (
+        <section className="situations-home-section" aria-labelledby="current-situations-title">
+          <header className="event-briefing-section-heading">
+            <div>
+              <p className="eyebrow">The larger picture</p>
+              <h2 id="current-situations-title">Current situations</h2>
+            </div>
+            <p>Specific evolving contexts formed by multiple connected Events.</p>
+          </header>
+          {orderedSituations.length ? (
+            <div className="storyline-overview-grid situation-overview-grid">
+              {orderedSituations.map((situation) => (
+                <SituationCard
+                  situation={situation}
+                  rootEvent={events.find((event) => event.event_id === situation.legacy_event_id)}
+                  onNavigate={onNavigate}
+                  key={situation.coverage_id || situation.storyline_id || situation.title}
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="situations-empty-state">
+              <h3>No multi-Event Situations yet</h3>
+              <p>A Situation will appear here when several distinct Events form one larger, bounded context.</p>
+            </div>
+          )}
+        </section>
+      )}
+
     </main>
   );
 }
@@ -3300,9 +3718,7 @@ function ArchiveView({ recent, onNavigate }) {
         <span aria-hidden="true">←</span> Back to Today
       </AppLink>
       <PageIntroduction
-        eyebrow="Recent editions"
         title="Archive"
-        description="A short record of the daily briefings that came before today."
         aside={`${days.length} recent ${days.length === 1 ? 'edition' : 'editions'}`}
       />
       {days.map((day) => {
@@ -3336,6 +3752,14 @@ function ArchiveView({ recent, onNavigate }) {
 }
 
 function weeklyIssueMetadata(issue) {
+  const topics = [];
+  const seenTopics = new Set();
+  (issue?.sections || []).forEach((section, sectionIndex) => {
+    const label = section.kicker || section.contents_label || section.title;
+    if (!label || seenTopics.has(label)) return;
+    seenTopics.add(label);
+    topics.push({ label, sectionIndex });
+  });
   return {
     edition_id: issue?.edition_id || '',
     publication: issue?.publication || 'Muninn Weekly',
@@ -3344,7 +3768,8 @@ function weeklyIssueMetadata(issue) {
     coverage_window: issue?.coverage_window || {},
     reading_time_minutes: issue?.reading_time_minutes || 5,
     cover_image: issue?.cover_image || null,
-    categories: [...new Set((issue?.sections || []).map((section) => section.kicker).filter(Boolean))].slice(0, 4),
+    categories: topics.map((topic) => topic.label),
+    topics,
   };
 }
 
@@ -3394,9 +3819,7 @@ function WeeklyView({ edition, onNavigate }) {
     <main id="main" className="page-shell weekly-page weekly-index-page">
       <header className="weekly-index-heading">
         <div>
-          <p className="eyebrow">Seven days in context</p>
           <h1>Muninn Weekly</h1>
-          <p>A considered guide to the week’s defining developments and the Events connecting them.</p>
         </div>
         <span>Published Saturdays</span>
       </header>
@@ -3414,9 +3837,19 @@ function WeeklyView({ edition, onNavigate }) {
             </AppLink>
           </h2>
           <p>{latest.dek}</p>
-          {latest.categories?.length ? (
+          {latest.topics?.length ? (
             <div className="weekly-category-list" aria-label="Topics in this edition">
-              {latest.categories.map((category) => <span key={category}>{category}</span>)}
+              {latest.topics.map((topic) => (
+                <AppLink
+                  view="weekly"
+                  edition={latest.edition_id}
+                  hash={`weekly-section-${topic.sectionIndex + 1}`}
+                  onNavigate={onNavigate}
+                  key={topic.label}
+                >
+                  {topic.label}
+                </AppLink>
+              ))}
             </div>
           ) : null}
           <AppLink view="weekly" edition={latest.edition_id} onNavigate={onNavigate} className="weekly-read-link">
@@ -3430,15 +3863,15 @@ function WeeklyView({ edition, onNavigate }) {
         ) : null}
       </section>
 
-      <section className="weekly-archive" aria-labelledby="weekly-archive-title">
-        <header>
-          <div>
-            <p className="eyebrow">Previous journals</p>
-            <h2 id="weekly-archive-title">Earlier editions</h2>
-          </div>
-          <p>{archive.length} {archive.length === 1 ? 'edition' : 'editions'}</p>
-        </header>
-        {archive.length ? (
+      {archive.length ? (
+        <section className="weekly-archive" aria-labelledby="weekly-archive-title">
+          <header>
+            <div>
+              <p className="eyebrow">Previous journals</p>
+              <h2 id="weekly-archive-title">Earlier editions</h2>
+            </div>
+            <p>{archive.length} {archive.length === 1 ? 'edition' : 'editions'}</p>
+          </header>
           <div className="weekly-archive-list">
             {archive.map((issue) => {
               const coverage = issue.coverage_window || {};
@@ -3462,10 +3895,175 @@ function WeeklyView({ edition, onNavigate }) {
               );
             })}
           </div>
-        ) : (
-          <p className="weekly-archive-empty">Earlier editions will appear here as each new Saturday journal is published.</p>
-        )}
+        </section>
+      ) : (
+        <p className="weekly-archive-empty">The archive begins with the next Saturday edition.</p>
+      )}
+    </main>
+  );
+}
+
+function MyNewsIcon({ name }) {
+  const paths = {
+    compass: (
+      <>
+        <circle cx="12" cy="12" r="8.5" />
+        <path d="m15.7 8.3-2.1 5.3-5.3 2.1 2.1-5.3 5.3-2.1Z" />
+      </>
+    ),
+    place: (
+      <>
+        <path d="M12 21s6-5.1 6-11a6 6 0 1 0-12 0c0 5.9 6 11 6 11Z" />
+        <circle cx="12" cy="10" r="2.2" />
+      </>
+    ),
+    focus: (
+      <>
+        <circle cx="12" cy="12" r="7.5" />
+        <circle cx="12" cy="12" r="3" />
+        <path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22" />
+      </>
+    ),
+    follow: (
+      <>
+        <path d="M5 6.5h14v10H8l-3 3v-13Z" />
+        <path d="M8.5 10h7M8.5 13h4.5" />
+      </>
+    ),
+    bookmark: (
+      <path d="M7 4.5h10v15l-5-3.2-5 3.2v-15Z" />
+    ),
+    mail: (
+      <>
+        <rect x="3.5" y="5.5" width="17" height="13" rx="1.5" />
+        <path d="m4.5 7 7.5 6 7.5-6" />
+      </>
+    ),
+  };
+  return (
+    <svg className="mn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      {paths[name] || paths.compass}
+    </svg>
+  );
+}
+
+function MyNewsPreview() {
+  return (
+    <main id="main" className="page-shell my-news-page">
+      <header className="mn-hero">
+        <div className="mn-hero-copy">
+          <div className="mn-preview-label"><span>Preview</span> What comes next</div>
+          <h1>You choose what Muninn follows.</h1>
+          <p>Choose interests and places, track stories, and subscribe to newsletters.</p>
+        </div>
+
+        <aside className="mn-profile-card" aria-label="The three choices in My News">
+          <header>
+            <span><i /> What you will control</span>
+            <strong>Make Muninn yours.</strong>
+          </header>
+          <ol className="mn-control-list">
+            <li><b>01</b><span><strong>Choose your focus</strong></span></li>
+            <li><b>02</b><span><strong>Track stories</strong></span></li>
+            <li><b>03</b><span><strong>Choose newsletters</strong></span></li>
+          </ol>
+          <p>Coming after the beta.</p>
+        </aside>
+      </header>
+
+      <div className="mn-concept-note" role="note">
+        <strong>Preview only</strong>
+        <span>These features are not active yet.</span>
+      </div>
+
+      <section className="mn-future-section" aria-labelledby="mn-future-title">
+        <header className="mn-section-heading">
+          <div>
+            <p className="eyebrow">The choices</p>
+            <h2 id="mn-future-title">Three ways to make Muninn yours</h2>
+          </div>
+        </header>
+
+        <div className="mn-dashboard" aria-label="The three future choices in My News">
+          <div className="mn-dashboard-bar">
+            <div><img src="/brand/muninn-mark.svg" alt="" /><strong>My News</strong></div>
+            <span>Your choices</span>
+          </div>
+
+          <div className="mn-dashboard-intro">
+            <div>
+              <small>Future controls</small>
+              <h3>What you will choose</h3>
+            </div>
+          </div>
+
+          <div className="mn-dashboard-grid">
+            <article className="mn-essential-card">
+              <div className="mn-card-index">01</div>
+              <div className="mn-card-icon"><MyNewsIcon name="focus" /></div>
+              <p className="mn-card-kicker">Choose your focus</p>
+              <h3>Choose the interests and places you care about.</h3>
+              <div className="mn-focus-preview">
+                <div>
+                  <span>Places</span>
+                  <strong>Connecticut + Boston</strong>
+                </div>
+                <div>
+                  <span>Interest</span>
+                  <strong>Rowing</strong>
+                </div>
+                <div>
+                  <span>Fields</span>
+                  <strong>AI · Science · Business</strong>
+                </div>
+              </div>
+            </article>
+
+            <article className="mn-focus-card">
+              <div className="mn-card-index">02</div>
+              <div className="mn-card-icon"><MyNewsIcon name="follow" /></div>
+              <p className="mn-card-kicker">Track stories</p>
+              <h3>Follow a Story, Event, or topic.</h3>
+              <div className="mn-follow-preview">
+                <div><i /><span><small>Tracked Event</small><strong>New developments gathered together</strong></span><b>2 new</b></div>
+                <div><i /><span><small>Tracked topic</small><strong>Coverage appears when the subject moves</strong></span><b>Today</b></div>
+              </div>
+            </article>
+
+            <article className="mn-follow-card">
+              <div className="mn-card-index">03</div>
+              <div className="mn-card-icon"><MyNewsIcon name="mail" /></div>
+              <p className="mn-card-kicker">Choose newsletters</p>
+              <h3>Subscribe to the editions you want.</h3>
+              <div className="mn-newsletter-list">
+                <div><span><strong>Muninn Weekly</strong><small>The big picture, every Saturday</small></span><b>Coming soon</b></div>
+                <div><span><strong>More editions</strong><small>New choices as Muninn grows</small></span><b>Coming</b></div>
+              </div>
+              <p className="mn-alert-note">Static preview · No email is collected on this page.</p>
+            </article>
+          </div>
+        </div>
       </section>
+
+      <section className="mn-library-section" aria-label="What stays broad and an example reader mix">
+        <article className="mn-saved-card">
+          <div className="mn-feature-heading">
+            <span><MyNewsIcon name="compass" /></span>
+            <div><p className="eyebrow">Still included</p><h2>Important news stays visible.</h2></div>
+          </div>
+          <p>Your choices change emphasis, not access.</p>
+          <ul className="mn-promise-list">
+            <li>Essential headlines</li>
+            <li>Source-grounded reporting</li>
+            <li>All Muninn coverage</li>
+          </ul>
+        </article>
+      </section>
+
+      <footer className="mn-preview-footer">
+        <img src="/brand/muninn-mark.svg" alt="" />
+        <div><strong>My News is coming next.</strong><span>Choose what Muninn should emphasize, track, and deliver.</span></div>
+      </footer>
     </main>
   );
 }
@@ -3603,12 +4201,27 @@ export default function ReaderApp() {
     const href = routeHref(view, contextualExtras);
     window.history.pushState({}, '', href);
     setRoute(readRoute());
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (contextualExtras.hash) {
+      const targetId = String(contextualExtras.hash).replace(/^#/, '');
+      let attempts = 0;
+      const scrollToTarget = () => {
+        const target = document.getElementById(targetId);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          return;
+        }
+        attempts += 1;
+        if (attempts < 40) window.setTimeout(scrollToTarget, 75);
+      };
+      window.setTimeout(scrollToTarget, 0);
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
 
-  if (data.error) return <MissingState message={data.error} />;
-  if (!data.digest || !data.events) return <LoadingState />;
-  if (archiveContext.status === 'loading') return <LoadingState />;
+  if (route.view !== 'my-news' && data.error) return <MissingState message={data.error} />;
+  if (route.view !== 'my-news' && (!data.digest || !data.events)) return <LoadingState />;
+  if (route.view !== 'my-news' && archiveContext.status === 'loading') return <LoadingState />;
 
   const matchedStory = allStories.find(
     (story) => storyRouteId(story) === route.sid
@@ -3669,6 +4282,9 @@ export default function ReaderApp() {
       ) : null}
       {route.view === 'weekly' ? (
         <WeeklyView edition={route.edition} onNavigate={navigate} />
+      ) : null}
+      {route.view === 'my-news' ? (
+        <MyNewsPreview />
       ) : null}
       {route.view === 'archive' ? (
         <ArchiveView recent={data.recent} onNavigate={navigate} />

@@ -8,6 +8,72 @@ type GeneratedQuery<InputType, OutputType> = string & {
   __generatedQueryOutput: OutputType;
 };
 
+export const getBetaIssue = /* GraphQL */ `query GetBetaIssue($id: ID!) {
+  getBetaIssue(id: $id) {
+    id
+    status
+    category
+    description
+    occurredAt
+    pageUrl
+    pagePath
+    pageTitle
+    selectedElement
+    appVersion
+    release
+    viewport
+    userAgent
+    evidenceKey
+    screenshotKey
+    diagnosticsSummary
+    evidencePreview
+    createdAt
+    updatedAt
+    owner
+    __typename
+  }
+}
+` as GeneratedQuery<
+  APITypes.GetBetaIssueQueryVariables,
+  APITypes.GetBetaIssueQuery
+>;
+export const listBetaIssues = /* GraphQL */ `query ListBetaIssues(
+  $filter: ModelBetaIssueFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listBetaIssues(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      status
+      category
+      description
+      occurredAt
+      pageUrl
+      pagePath
+      pageTitle
+      selectedElement
+      appVersion
+      release
+      viewport
+      userAgent
+      evidenceKey
+      screenshotKey
+      diagnosticsSummary
+      evidencePreview
+      createdAt
+      updatedAt
+      owner
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+` as GeneratedQuery<
+  APITypes.ListBetaIssuesQueryVariables,
+  APITypes.ListBetaIssuesQuery
+>;
 export const getUserState = /* GraphQL */ `query GetUserState($id: ID!) {
   getUserState(id: $id) {
     id
