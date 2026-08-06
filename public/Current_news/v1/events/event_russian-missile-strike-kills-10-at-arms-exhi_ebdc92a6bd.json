@@ -15,7 +15,7 @@
     "summary": "A Russian missile strike on an arms exhibition near Kyiv resulted in at least 10 fatalities and around 100 injuries. The attack occurred during the day and targeted an event attended by key figures from the Ukrainian defense industry. Rescue operations are ongoing as officials assess the situation.",
     "status": "active",
     "first_seen_at": "2026-07-25",
-    "last_seen_at": "2026-08-05",
+    "last_seen_at": "2026-08-06",
     "timeline": [
       {
         "development_id": "story_05c2e09681d12edb",
@@ -873,15 +873,183 @@
         "first_seen_at": "2026-08-05",
         "last_seen_at": "2026-08-05",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_2df8cfe256ad5b6e",
+        "daily_story_id": "story_2df8cfe256ad5b6e",
+        "date": "2026-08-06",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Ukraine Launches Strikes on Russian Oil Refineries Amid Ongoing Conflict",
+        "summary": "Ukraine conducted overnight strikes on two oil refineries located deep within Russian territory, according to President Volodymyr Zelensky. The attacks are intended to disrupt revenue sources that Russia uses to finance its military operations. In response, Russia targeted a train station and a commercial ship in Ukraine.",
+        "topic_label": "Ukraine Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "Ukraine struck two oil refineries in Russia.",
+          "The strikes were aimed at limiting Russian military financing.",
+          "Russia retaliated by attacking a train station and a ship in Ukraine."
+        ],
+        "source_count": 2,
+        "sources": [
+          "BBC",
+          "RTE News"
+        ],
+        "source_urls": [
+          "https://www.bbc.co.uk/news/articles/cwymv212xrxo?at_medium=RSS&at_campaign=rss",
+          "https://www.rte.ie/news/world/2026/0806/1586728-ukraine-russia"
+        ],
+        "source_details": [
+          {
+            "title": "Ukraine hits two oil refineries deep in Russian territory",
+            "source": "BBC",
+            "link": "https://www.bbc.co.uk/news/articles/cwymv212xrxo?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          },
+          {
+            "title": "Ukraine hits refineries, Russia strikes station and ship",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/world/2026/0806/1586728-ukraine-russia",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_05c2e09681d12edb",
+          "shared_tokens": [
+            "attack",
+            "conflict",
+            "ongoing",
+            "operation",
+            "russia",
+            "strike",
+            "targeted",
+            "ukraine"
+          ],
+          "shared_entities": [
+            "russia",
+            "ukraine"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-06",
+        "last_seen_at": "2026-08-06",
+        "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_4f7431040c04db96",
+        "daily_story_id": "story_4f7431040c04db96",
+        "date": "2026-08-06",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Russian Attacks on Kyiv Highlight Ukraine's Air Defense Shortages",
+        "summary": "Recent Russian missile and drone strikes on Kyiv resulted in at least 17 fatalities and numerous injuries, exposing significant gaps in Ukraine's air defense capabilities. Despite intercepting many drones, Ukraine's air force reported that none of the incoming missiles were stopped, underscoring the urgent need for additional interceptor systems. The attacks have intensified, with the situation described as critical for civilian safety.",
+        "topic_label": "Ukraine Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "At least 17 people killed and dozens injured in recent attacks.",
+          "Ukraine's air defenses failed to intercept any missiles.",
+          "Ukraine's air force is calling for more interceptor systems."
+        ],
+        "source_count": 5,
+        "sources": [
+          "BBC",
+          "Euronews",
+          "PBS News",
+          "SBS News"
+        ],
+        "source_urls": [
+          "https://www.bbc.co.uk/news/articles/cyvlgq2gp2eo?at_medium=RSS&at_campaign=rss",
+          "https://www.sbs.com.au/news/article/ukraine-pleads-for-interceptors-after-russian-missile-attack-kills-at-least-17/41v6vs4cn",
+          "https://www.pbs.org/newshour/world/russian-barrage-in-ukraines-capital-region-kills-17-as-air-defenses-fall-short",
+          "http://www.euronews.com/video/2026/08/05/fires-rage-after-russian-missile-and-drone-attack-on-kyiv",
+          "https://www.pbs.org/newshour/show/russian-missile-attacks-on-kyiv-expose-weakness-in-ukraines-air-defense"
+        ],
+        "source_details": [
+          {
+            "title": "After deadly Kyiv strike, Ukraine warns interceptor shortage is costing lives",
+            "source": "BBC",
+            "link": "https://www.bbc.co.uk/news/articles/cyvlgq2gp2eo?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          },
+          {
+            "title": "Ukraine pleads for interceptors after Russian missile attack kills at least 17",
+            "source": "SBS News",
+            "link": "https://www.sbs.com.au/news/article/ukraine-pleads-for-interceptors-after-russian-missile-attack-kills-at-least-17/41v6vs4cn",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Russian barrage in Ukraine's capital region kills 17 as air defenses fall short",
+            "source": "PBS News",
+            "link": "https://www.pbs.org/newshour/world/russian-barrage-in-ukraines-capital-region-kills-17-as-air-defenses-fall-short",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Fires rage after Russian missile and drone attack on Kyiv",
+            "source": "Euronews",
+            "link": "http://www.euronews.com/video/2026/08/05/fires-rage-after-russian-missile-and-drone-attack-on-kyiv",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Russian missile attacks on Kyiv expose weakness in Ukraine's air defense",
+            "source": "PBS News",
+            "link": "https://www.pbs.org/newshour/show/russian-missile-attacks-on-kyiv-expose-weakness-in-ukraines-air-defense",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_05c2e09681d12edb",
+          "shared_tokens": [
+            "attack",
+            "conflict",
+            "defense",
+            "fatalitie",
+            "injured",
+            "injurie",
+            "killed",
+            "kyiv",
+            "least",
+            "missile",
+            "resulted",
+            "russia",
+            "situation",
+            "strike",
+            "ukraine"
+          ],
+          "shared_entities": [
+            "russia",
+            "ukraine"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-06",
+        "last_seen_at": "2026-08-06",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 11,
-      "questionable_development_count": 1,
+      "public_development_count": 13,
+      "questionable_development_count": 2,
       "review_required": true
     },
-    "latest_title": "Russian Strikes on Kyiv Result in 17 Deaths Amid Air Defense Challenges",
-    "latest_summary": "Overnight Russian missile and drone strikes on Kyiv have resulted in at least 17 fatalities and numerous injuries. Ukrainian officials reported that the attacks exploited the country's depleted air defenses, with no ballistic missiles successfully intercepted. President Zelenskyy has called for increased support from allies to bolster Ukraine's defense capabilities as the frequency and intensity of such assaults continue to rise.",
+    "latest_title": "Russian Attacks on Kyiv Highlight Ukraine's Air Defense Shortages",
+    "latest_summary": "Recent Russian missile and drone strikes on Kyiv resulted in at least 17 fatalities and numerous injuries, exposing significant gaps in Ukraine's air defense capabilities. Despite intercepting many drones, Ukraine's air force reported that none of the incoming missiles were stopped, underscoring the urgent need for additional interceptor systems. The attacks have intensified, with the situation described as critical for civilian safety.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -891,30 +1059,30 @@
       "display_title": "Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv Timeline",
       "milestone_development_ids": [
         "story_05c2e09681d12edb",
-        "story_44857f3951dcaff5",
-        "story_3349b4798d03fb35",
-        "story_3feb5e7b07396db9"
+        "story_4d9f8f18128abc6d",
+        "story_3851fdbc114146e7",
+        "story_4f7431040c04db96"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-05",
-      "development_count": 11,
-      "coverage_packet_count": 11,
-      "date_count": 9,
-      "source_count": 32,
-      "independent_source_count": 18,
+      "summary_updated_at": "2026-08-06",
+      "development_count": 13,
+      "coverage_packet_count": 13,
+      "date_count": 10,
+      "source_count": 39,
+      "independent_source_count": 19,
       "first_date": "2026-07-25",
-      "latest_date": "2026-08-05",
-      "latest_update_title": "Russian Strikes on Kyiv Result in 17 Deaths Amid Air Defense Challenges",
+      "latest_date": "2026-08-06",
+      "latest_update_title": "Russian Attacks on Kyiv Highlight Ukraine's Air Defense Shortages",
       "coverage_score": 1.0,
       "recency_score": 1.0,
       "rank_score": 1.0,
-      "context_summary": "Muninn first tracked this thread on 2026-07-25: Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv. The latest development is Russian Strikes on Kyiv Result in 17 Deaths Amid Air Defense Challenges.",
-      "cta_label": "Explore 11 developments"
+      "context_summary": "Muninn first tracked this thread on 2026-07-25: Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv. The latest development is Russian Attacks on Kyiv Highlight Ukraine's Air Defense Shortages.",
+      "cta_label": "Explore 13 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "A Russian missile strike on an arms exhibition near Kyiv resulted in at least 10 fatalities and around 100 injuries. A later development was Russian Drone and Missile Attack Claims Lives in Ukraine. Most recently, overnight Russian missile and drone strikes on Kyiv have resulted in at least 17 fatalities and numerous injuries.",
+      "summary": "A Russian missile strike on an arms exhibition near Kyiv resulted in at least 10 fatalities and around 100 injuries. A later development was Russian Missile Strikes Kill Nine in Kyiv; Ukraine Sinks Russian Ship. Most recently, recent Russian missile and drone strikes on Kyiv resulted in at least 17 fatalities and numerous injuries, exposing significant gaps in Ukraine's air defense capabilities.",
       "key_developments": [
         {
           "development_id": "story_05c2e09681d12edb",
@@ -922,19 +1090,19 @@
           "title": "Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv"
         },
         {
-          "development_id": "story_44857f3951dcaff5",
+          "development_id": "story_4d9f8f18128abc6d",
           "date": "2026-07-30",
-          "title": "Russian Missile Allegedly Breaches Polish Airspace Amid Ukraine Attacks"
+          "title": "Russian Strikes Across Ukraine Result in Multiple Casualties"
         },
         {
-          "development_id": "story_3349b4798d03fb35",
+          "development_id": "story_3851fdbc114146e7",
           "date": "2026-08-03",
-          "title": "Ukraine and Russia Report Casualties from Recent Strikes"
+          "title": "Ukraine Launches Drone Strike on Wildberries Warehouse Amid Russian Attacks in Kharkiv"
         },
         {
-          "development_id": "story_3feb5e7b07396db9",
-          "date": "2026-08-05",
-          "title": "Russian Strikes on Kyiv Result in 17 Deaths Amid Air Defense Challenges"
+          "development_id": "story_4f7431040c04db96",
+          "date": "2026-08-06",
+          "title": "Russian Attacks on Kyiv Highlight Ukraine's Air Defense Shortages"
         }
       ],
       "sources": [
@@ -1129,9 +1297,51 @@
           "source": "The Guardian",
           "link": "https://www.theguardian.com/world/2026/aug/05/russia-kyiv-attack-kills-at-least-14-people-ukraine-authorities",
           "source_bias": "left"
+        },
+        {
+          "title": "Ukraine hits two oil refineries deep in Russian territory",
+          "source": "BBC",
+          "link": "https://www.bbc.co.uk/news/articles/cwymv212xrxo?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
+        },
+        {
+          "title": "Ukraine hits refineries, Russia strikes station and ship",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/world/2026/0806/1586728-ukraine-russia",
+          "source_bias": "center"
+        },
+        {
+          "title": "After deadly Kyiv strike, Ukraine warns interceptor shortage is costing lives",
+          "source": "BBC",
+          "link": "https://www.bbc.co.uk/news/articles/cyvlgq2gp2eo?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
+        },
+        {
+          "title": "Ukraine pleads for interceptors after Russian missile attack kills at least 17",
+          "source": "SBS News",
+          "link": "https://www.sbs.com.au/news/article/ukraine-pleads-for-interceptors-after-russian-missile-attack-kills-at-least-17/41v6vs4cn",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Russian barrage in Ukraine's capital region kills 17 as air defenses fall short",
+          "source": "PBS News",
+          "link": "https://www.pbs.org/newshour/world/russian-barrage-in-ukraines-capital-region-kills-17-as-air-defenses-fall-short",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Fires rage after Russian missile and drone attack on Kyiv",
+          "source": "Euronews",
+          "link": "http://www.euronews.com/video/2026/08/05/fires-rage-after-russian-missile-and-drone-attack-on-kyiv",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Russian missile attacks on Kyiv expose weakness in Ukraine's air defense",
+          "source": "PBS News",
+          "link": "https://www.pbs.org/newshour/show/russian-missile-attacks-on-kyiv-expose-weakness-in-ukraines-air-defense",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-08-05",
+      "updated_at": "2026-08-06",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -1140,7 +1350,7 @@
         "event_id": "event_russia-launches-major-ballistic-missile-atta_e12d127249",
         "title": "Russia Launches Major Ballistic Missile Attack on Ukrainian Cities, Causing Casualties",
         "relationship": "related_topic",
-        "confidence": 0.859,
+        "confidence": 0.861,
         "shared_entities": [
           "casualtie_russia",
           "kyiv",
@@ -1152,7 +1362,7 @@
         "event_id": "event_ukrainian-drone-strikes-target-wildberries-w_744388bb72",
         "title": "Ukrainian Drone Strikes Target Wildberries Warehouses Again",
         "relationship": "related_topic",
-        "confidence": 0.772,
+        "confidence": 0.771,
         "shared_entities": [
           "russia",
           "ukraine",
@@ -1163,7 +1373,7 @@
         "event_id": "event_ukrainian-drones-strike-russian-targets-resu_d4dae47237",
         "title": "Ukrainian Drones Strike Russian Targets, Resulting in Casualties",
         "relationship": "related_topic",
-        "confidence": 0.745,
+        "confidence": 0.749,
         "shared_entities": [
           "russia",
           "ukraine"
@@ -1173,7 +1383,7 @@
         "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
         "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
         "relationship": "related_topic",
-        "confidence": 0.735,
+        "confidence": 0.734,
         "shared_entities": [
           "russia",
           "russia_missile",
@@ -1339,10 +1549,12 @@
       "causing",
       "challenge",
       "children",
+      "civilian",
       "claim",
       "claimed",
       "collectively",
       "comes",
+      "commercial",
       "company",
       "concurrently",
       "conducted",
@@ -1354,13 +1566,18 @@
       "crater",
       "creating",
       "crimea",
+      "critical",
       "damage",
       "death",
+      "deep",
       "defense",
       "depleted",
+      "described",
+      "despite",
       "destruction",
       "diplomatic",
       "discuss",
+      "disrupt",
       "district",
       "dozen",
       "drone",
@@ -1377,23 +1594,28 @@
       "exchange",
       "exhibition",
       "exploited",
+      "exposing",
       "family",
       "fatalitie",
       "fifth",
       "fighter",
       "figure",
+      "finance",
       "five",
       "follow",
       "force",
       "frequency",
+      "gaps",
       "gelendzhik",
       "girl",
+      "highlight",
       "holiday",
       "hostilitie",
       "house",
       "impacting",
       "incident",
       "including",
+      "incoming",
       "increased",
       "indicating",
       "individual",
@@ -1401,9 +1623,12 @@
       "infrastructure",
       "injured",
       "injurie",
+      "intended",
       "intensified",
       "intensity",
       "intercepted",
+      "intercepting",
+      "interceptor",
       "involved",
       "involving",
       "jets",
@@ -1420,6 +1645,7 @@
       "lives",
       "located",
       "long-range",
+      "many",
       "member",
       "military",
       "million",
@@ -1429,11 +1655,14 @@
       "multiple",
       "nation",
       "near",
+      "need",
       "negotiation",
       "nine",
+      "none",
       "number",
       "numerou",
       "occurred",
+      "oil",
       "ongoing",
       "operated",
       "operation",
@@ -1448,6 +1677,7 @@
       "prompting",
       "publishing",
       "recent",
+      "refinerie",
       "region",
       "renewed",
       "reported",
@@ -1461,12 +1691,15 @@
       "resulted",
       "resulting",
       "retailer",
+      "revenue",
       "rise",
       "russia",
+      "safety",
       "same",
       "sank",
       "scramble",
       "ship",
+      "shortage",
       "sides",
       "sight",
       "significant",
@@ -1474,18 +1707,25 @@
       "situation",
       "six-year-old",
       "stalled",
+      "station",
+      "stopped",
       "strike",
       "successfully",
       "such",
       "summer",
       "support",
+      "system",
       "target",
       "targeted",
       "targeting",
       "tension",
       "territory",
+      "train",
       "ukraine",
+      "underscoring",
       "united",
+      "urgent",
+      "uses",
       "variou",
       "village",
       "violence",
@@ -1519,14 +1759,17 @@
       "crimea",
       "crimea_result",
       "defense_challenge",
+      "defense_shortage",
       "discuss",
       "exhibition_near",
       "gelendzhik",
+      "highlight_ukraine",
       "kharkiv",
       "kharkiv_ukraine",
       "kryvyi",
       "kryvyi_rih.",
       "kyiv",
+      "kyiv_highlight",
       "kyiv_region",
       "kyiv_result",
       "kyiv_ukraine",
@@ -1538,7 +1781,9 @@
       "near_kyiv",
       "overnight_russia",
       "polish_airspace",
+      "president",
       "recent",
+      "recent_russia",
       "region_result",
       "rih._russia",
       "russia",
@@ -1549,20 +1794,24 @@
       "russia_ukraine",
       "sea._ukraine",
       "ship_early",
+      "shortage_recent",
       "sinks_russia",
       "ukraine",
       "ukraine.",
       "ukraine._among",
+      "ukraine._russia",
+      "ukraine_air",
       "ukraine_launche",
       "ukraine_result",
       "ukraine_sinks",
       "us",
       "volodymyr_zelensky",
+      "volodymyr_zelensky.",
       "volodymyr_zelenskyy",
       "wildberrie_warehouse",
       "zelenskyy_visit"
     ],
-    "search_text": "100 280 across across_ukraine additional additionally additionally_russia advocate affected aged air_defense airspace allegedly allegedly_breache allie among anti-ballistic arms arms_exhibition around assault assess attack attended authoritie ballistic beach black black_sea. blaming bolster books both boys breache breache_polish breached broader building called calls campaign capabilitie capital casualtie casualtie_russia causing challenge challenge_overnight children claim claim_lives claimed collectively comes company concurrently concurrently_russia concurrently_ukraine conducted confirmed conflict container continue cooperation crater creating crimea crimea_result damage death defense defense_challenge depleted destruction diplomatic discuss district dozen drone e-commerce each early east eight enhanced escalate escalating escalation event exchange exhibition exhibition_near exploited family fatalitie fifth fighter figure five follow force frequency gelendzhik girl holiday hostilitie house impacting incident including increased indicating individual industry infrastructure injured injurie intensified intensity intercepted involved involving jets kharkiv kharkiv_ukraine kill killed kills kryvyi kryvyi_rih. kyiv kyiv_region kyiv_result kyiv_ukraine landing large launche launche_drone least lives located long-range member military military_support million missile missile_allegedly morning moscow multiple multiple_casualtie nation near near_kyiv negotiation nine number numerou occurred ongoing operated operation other overnight overnight_russia part particularly peace polish polish_airspace poltava prompted prompting publishing recent region region_result renewed reported reportedly rescue residential resolution resort response result resulted resulting retailer rih._russia rise russia russia._russia russia_drone russia_missile russia_ship russia_ukraine same sank scramble sea._ukraine ship ship_early sides sight significant sinks sinks_russia situation six-year-old stalled strike successfully such summer support target targeted targeting tension territory ukraine ukraine. ukraine._among ukraine_launche ukraine_result ukraine_sinks united us variou village violence visit visiting volodymyr volodymyr_zelensky volodymyr_zelenskyy warehouse weekend which while wildberrie wildberrie_warehouse within zelensky zelenskyy zelenskyy_visit"
+    "search_text": "100 280 across across_ukraine additional additionally additionally_russia advocate affected aged air_defense airspace allegedly allegedly_breache allie among anti-ballistic arms arms_exhibition around assault assess attack attended authoritie ballistic beach black black_sea. blaming bolster books both boys breache breache_polish breached broader building called calls campaign capabilitie capital casualtie casualtie_russia causing challenge challenge_overnight children civilian claim claim_lives claimed collectively comes commercial company concurrently concurrently_russia concurrently_ukraine conducted confirmed conflict container continue cooperation crater creating crimea crimea_result critical damage death deep defense defense_challenge defense_shortage depleted described despite destruction diplomatic discuss disrupt district dozen drone e-commerce each early east eight enhanced escalate escalating escalation event exchange exhibition exhibition_near exploited exposing family fatalitie fifth fighter figure finance five follow force frequency gaps gelendzhik girl highlight highlight_ukraine holiday hostilitie house impacting incident including incoming increased indicating individual industry infrastructure injured injurie intended intensified intensity intercepted intercepting interceptor involved involving jets kharkiv kharkiv_ukraine kill killed kills kryvyi kryvyi_rih. kyiv kyiv_highlight kyiv_region kyiv_result kyiv_ukraine landing large launche launche_drone least lives located long-range many member military military_support million missile missile_allegedly morning moscow multiple multiple_casualtie nation near near_kyiv need negotiation nine none number numerou occurred oil ongoing operated operation other overnight overnight_russia part particularly peace polish polish_airspace poltava president prompted prompting publishing recent recent_russia refinerie region region_result renewed reported reportedly rescue residential resolution resort response result resulted resulting retailer revenue rih._russia rise russia russia._russia russia_drone russia_missile russia_ship russia_ukraine safety same sank scramble sea._ukraine ship ship_early shortage shortage_recent sides sight significant sinks sinks_russia situation six-year-old stalled station stopped strike successfully such summer support system target targeted targeting tension territory train ukraine ukraine. ukraine._among ukraine._russia ukraine_air ukraine_launche ukraine_result ukraine_sinks underscoring united urgent us uses variou village violence visit visiting volodymyr volodymyr_zelensky volodymyr_zelensky. volodymyr_zelenskyy warehouse weekend which while wildberrie wildberrie_warehouse within zelensky zelenskyy zelenskyy_visit"
   },
   "related_events": [
     {
