@@ -15,7 +15,7 @@
     "summary": "A Ukrainian drone strike ignited a significant fire at a Wildberries warehouse near Saint Petersburg on July 24. The blaze produced thick smoke that spread across the city and led to temporary disruptions at Pulkovo Airport, as reported by Russian authorities.",
     "status": "active",
     "first_seen_at": "2026-07-25",
-    "last_seen_at": "2026-07-30",
+    "last_seen_at": "2026-08-08",
     "timeline": [
       {
         "development_id": "story_b77a481c5a1a5ef9",
@@ -136,15 +136,95 @@
         "first_seen_at": "2026-07-30",
         "last_seen_at": "2026-07-30",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_df65ca9e3c2ea8e5",
+        "daily_story_id": "story_df65ca9e3c2ea8e5",
+        "date": "2026-08-08",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Russian Strikes Near Kyiv Result in Four Fatalities During Zelensky's Visit to Serbia",
+        "summary": "Russian missile strikes in the Kyiv region have killed four people, including a child, as local authorities reported multiple casualties. The attacks occurred shortly after Ukrainian President Volodymyr Zelensky's arrival in Serbia for a significant visit. The strikes have raised concerns about Ukraine's air defense capabilities amidst ongoing military tensions.",
+        "topic_label": "Russia-Ukraine War",
+        "development_type": "military_action",
+        "key_facts": [
+          "Four people killed, including a child, in Russian missile strikes near Kyiv.",
+          "The attacks coincided with President Zelensky's visit to Serbia.",
+          "Local authorities reported multiple casualties and damage from falling debris."
+        ],
+        "source_count": 3,
+        "sources": [
+          "ABC News - Top Stories",
+          "CBS News - Latest",
+          "France 24 - English"
+        ],
+        "source_urls": [
+          "https://www.france24.com/en/europe/20260808-russian-missile-strikes-near-kyiv-kill-three-including-a-child",
+          "https://www.cbsnews.com/news/ukraine-russia-strike-child-killed",
+          "https://abcnews.com/International/wireStory/russian-attacks-kill-4-kyiv-surrounding-region-air-135478347"
+        ],
+        "source_details": [
+          {
+            "title": "Live: Russian strikes kill four near Kyiv as Zelensky makes landmark visit to Serbia",
+            "source": "France 24 - English",
+            "link": "https://www.france24.com/en/europe/20260808-russian-missile-strikes-near-kyiv-kill-three-including-a-child",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Child among 4 people killed in Russian attacks on Ukraine",
+            "source": "CBS News - Latest",
+            "link": "https://www.cbsnews.com/news/ukraine-russia-strike-child-killed",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Russian attacks kill 4 in Kyiv and surrounding region as air defenses fall short",
+            "source": "ABC News - Top Stories",
+            "link": "https://abcnews.com/International/wireStory/russian-attacks-kill-4-kyiv-surrounding-region-air-135478347",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_b77a481c5a1a5ef9",
+          "shared_tokens": [
+            "authoritie",
+            "near",
+            "reported",
+            "russia",
+            "russia-ukraine",
+            "significant",
+            "strike",
+            "ukraine",
+            "war"
+          ],
+          "shared_entities": [
+            "russia",
+            "russia-ukraine",
+            "russia-ukraine_war",
+            "ukraine"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-08",
+        "last_seen_at": "2026-08-08",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 2,
+      "public_development_count": 3,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Polish PM Reports Possible Russian Missile Downed in Eastern Poland",
-    "latest_summary": "Polish Prime Minister Donald Tusk stated that a missile that fell in eastern Poland overnight appears to be Russian. Authorities discovered a crater and debris in a field following reports of an explosion.",
+    "latest_title": "Russian Strikes Near Kyiv Result in Four Fatalities During Zelensky's Visit to Serbia",
+    "latest_summary": "Russian missile strikes in the Kyiv region have killed four people, including a child, as local authorities reported multiple casualties. The attacks occurred shortly after Ukrainian President Volodymyr Zelensky's arrival in Serbia for a significant visit. The strikes have raised concerns about Ukraine's air defense capabilities amidst ongoing military tensions.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": false,
@@ -154,28 +234,29 @@
       "display_title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
       "milestone_development_ids": [
         "story_b77a481c5a1a5ef9",
-        "story_0473fe869e92cb65"
+        "story_0473fe869e92cb65",
+        "story_df65ca9e3c2ea8e5"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-07-30",
-      "development_count": 2,
-      "coverage_packet_count": 2,
-      "date_count": 2,
-      "source_count": 4,
-      "independent_source_count": 4,
+      "summary_updated_at": "2026-08-08",
+      "development_count": 3,
+      "coverage_packet_count": 3,
+      "date_count": 3,
+      "source_count": 7,
+      "independent_source_count": 7,
       "first_date": "2026-07-25",
-      "latest_date": "2026-07-30",
-      "latest_update_title": "Polish PM Reports Possible Russian Missile Downed in Eastern Poland",
-      "coverage_score": 0.397,
-      "recency_score": 0.467,
-      "rank_score": 0.437,
-      "context_summary": "Muninn first tracked this thread on 2026-07-25: Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse. The latest development is Polish PM Reports Possible Russian Missile Downed in Eastern Poland.",
+      "latest_date": "2026-08-08",
+      "latest_update_title": "Russian Strikes Near Kyiv Result in Four Fatalities During Zelensky's Visit to Serbia",
+      "coverage_score": 0.645,
+      "recency_score": 1.0,
+      "rank_score": 0.851,
+      "context_summary": "Muninn first tracked this thread on 2026-07-25: Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse. The latest development is Russian Strikes Near Kyiv Result in Four Fatalities During Zelensky's Visit to Serbia.",
       "cta_label": ""
     },
     "event_summary": {
       "available": true,
-      "summary": "A Ukrainian drone strike ignited a significant fire at a Wildberries warehouse near Saint Petersburg on July 24. Most recently, polish Prime Minister Donald Tusk stated that a missile that fell in eastern Poland overnight appears to be Russian.",
+      "summary": "A Ukrainian drone strike ignited a significant fire at a Wildberries warehouse near Saint Petersburg on July 24. A later development was Polish PM Reports Possible Russian Missile Downed in Eastern Poland. Most recently, russian missile strikes in the Kyiv region have killed four people, including a child, as local authorities reported multiple casualties.",
       "key_developments": [
         {
           "development_id": "story_b77a481c5a1a5ef9",
@@ -186,6 +267,11 @@
           "development_id": "story_0473fe869e92cb65",
           "date": "2026-07-30",
           "title": "Polish PM Reports Possible Russian Missile Downed in Eastern Poland"
+        },
+        {
+          "development_id": "story_df65ca9e3c2ea8e5",
+          "date": "2026-08-08",
+          "title": "Russian Strikes Near Kyiv Result in Four Fatalities During Zelensky's Visit to Serbia"
         }
       ],
       "sources": [
@@ -212,18 +298,52 @@
           "source": "RTE News",
           "link": "https://www.rte.ie/news/world/2026/0730/1585730-russia-ukraine-strike",
           "source_bias": "center"
+        },
+        {
+          "title": "Live: Russian strikes kill four near Kyiv as Zelensky makes landmark visit to Serbia",
+          "source": "France 24 - English",
+          "link": "https://www.france24.com/en/europe/20260808-russian-missile-strikes-near-kyiv-kill-three-including-a-child",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Child among 4 people killed in Russian attacks on Ukraine",
+          "source": "CBS News - Latest",
+          "link": "https://www.cbsnews.com/news/ukraine-russia-strike-child-killed",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Russian attacks kill 4 in Kyiv and surrounding region as air defenses fall short",
+          "source": "ABC News - Top Stories",
+          "link": "https://abcnews.com/International/wireStory/russian-attacks-kill-4-kyiv-surrounding-region-air-135478347",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-07-30",
+      "updated_at": "2026-08-08",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "developing_event",
     "related_events": [
       {
+        "event_id": "event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd",
+        "title": "Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv",
+        "relationship": "related_topic",
+        "confidence": 0.95,
+        "shared_entities": [
+          "kyiv",
+          "kyiv_result",
+          "near_kyiv",
+          "russia",
+          "russia_missile",
+          "serbia",
+          "ukraine",
+          "volodymyr_zelensky"
+        ]
+      },
+      {
         "event_id": "event_ukrainian-drone-strikes-target-wildberries-w_744388bb72",
         "title": "Ukrainian Drone Strikes Target Wildberries Warehouses Again",
         "relationship": "related_topic",
-        "confidence": 0.76,
+        "confidence": 0.779,
         "shared_entities": [
           "russia",
           "ukraine",
@@ -232,21 +352,10 @@
         ]
       },
       {
-        "event_id": "event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd",
-        "title": "Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv",
-        "relationship": "related_topic",
-        "confidence": 0.734,
-        "shared_entities": [
-          "russia",
-          "russia_missile",
-          "ukraine"
-        ]
-      },
-      {
         "event_id": "event_ukrainian-drones-strike-russian-targets-resu_d4dae47237",
         "title": "Ukrainian Drones Strike Russian Targets, Resulting in Casualties",
         "relationship": "related_topic",
-        "confidence": 0.711,
+        "confidence": 0.732,
         "shared_entities": [
           "russia",
           "ukraine",
@@ -257,8 +366,9 @@
         "event_id": "event_russia-launches-major-ballistic-missile-atta_e12d127249",
         "title": "Russia Launches Major Ballistic Missile Attack on Ukrainian Cities, Causing Casualties",
         "relationship": "related_topic",
-        "confidence": 0.669,
+        "confidence": 0.727,
         "shared_entities": [
+          "kyiv",
           "russia",
           "ukraine"
         ]
@@ -287,12 +397,20 @@
     "search_tokens": [
       "across",
       "airport",
+      "amidst",
       "appear",
+      "arrival",
+      "attack",
       "authoritie",
       "blaze",
+      "capabilitie",
+      "casualtie",
       "cause",
+      "child",
+      "concern",
       "crater",
       "debri",
+      "defense",
       "discovered",
       "disruption",
       "donald",
@@ -300,13 +418,23 @@
       "drone",
       "eastern",
       "explosion",
+      "fatalitie",
       "fell",
       "field",
       "fire",
+      "four",
       "ignited",
+      "including",
       "july",
+      "killed",
+      "kyiv",
+      "local",
+      "military",
       "missile",
+      "multiple",
       "near",
+      "occurred",
+      "ongoing",
       "overnight",
       "petersburg",
       "poland",
@@ -315,26 +443,39 @@
       "prime",
       "produced",
       "pulkovo",
+      "raised",
+      "region",
       "reported",
+      "result",
       "russia",
       "saint",
+      "serbia",
+      "shortly",
       "significant",
       "smoke",
       "spread",
       "stated",
       "strike",
       "temporary",
+      "tension",
       "thick",
       "tusk",
       "ukraine",
+      "visit",
+      "volodymyr",
       "warehouse",
-      "wildberrie"
+      "wildberrie",
+      "zelensky"
     ],
     "entities": [
       "donald_tusk",
       "eastern",
       "eastern_poland",
+      "four",
+      "kyiv",
+      "kyiv_result",
       "missile_downed",
+      "near_kyiv",
       "petersburg_warehouse",
       "pm",
       "poland_polish",
@@ -347,24 +488,28 @@
       "russian._authoritie",
       "saint",
       "saint_petersburg",
+      "serbia",
+      "serbia_russia",
       "ukraine",
       "ukraine_drone",
-      "wildberrie"
+      "volodymyr_zelensky",
+      "wildberrie",
+      "zelensky_visit"
     ],
-    "search_text": "across airport appear authoritie blaze cause crater debri discovered disruption donald donald_tusk downed drone eastern eastern_poland explosion fell field fire ignited july missile missile_downed near overnight petersburg petersburg_warehouse pm poland poland_polish polish polish_prime possible possible_russia prime produced pulkovo pulkovo_airport reported russia russia_missile russian._authoritie saint saint_petersburg significant smoke spread stated strike temporary thick tusk ukraine ukraine_drone warehouse wildberrie"
+    "search_text": "across airport amidst appear arrival attack authoritie blaze capabilitie casualtie cause child concern crater debri defense discovered disruption donald donald_tusk downed drone eastern eastern_poland explosion fatalitie fell field fire four ignited including july killed kyiv kyiv_result local military missile missile_downed multiple near near_kyiv occurred ongoing overnight petersburg petersburg_warehouse pm poland poland_polish polish polish_prime possible possible_russia prime produced pulkovo pulkovo_airport raised region reported result russia russia_missile russian._authoritie saint saint_petersburg serbia serbia_russia shortly significant smoke spread stated strike temporary tension thick tusk ukraine ukraine_drone visit volodymyr volodymyr_zelensky warehouse wildberrie zelensky zelensky_visit"
   },
   "related_events": [
     {
       "event_id": "event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd",
       "title": "Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv",
-      "summary": "Muninn first tracked this thread on 2026-07-25: Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv. The latest development is Zelenskyy Visits Serbia Amid Ties to Russia.",
+      "summary": "Muninn first tracked this thread on 2026-07-25: Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv. The latest development is Ukraine Intensifies Drone Strikes on Wildberries Warehouses.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-07-25",
-      "last_seen_at": "2026-08-07",
-      "development_count": 14,
-      "latest_title": "Zelenskyy Visits Serbia Amid Ties to Russia",
+      "last_seen_at": "2026-08-08",
+      "development_count": 15,
+      "latest_title": "Ukraine Intensifies Drone Strikes on Wildberries Warehouses",
       "topic_label": "Ukraine Conflict",
       "hero_image": {
         "url": "/Current_news/generated/events/event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd.jpg",
