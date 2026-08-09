@@ -1031,6 +1031,7 @@ function HeadlineStory({ story, onNavigate }) {
         </span>
         <h3>{story.title}</h3>
       </AppLink>
+      <StoryQuickRead story={story} />
     </article>
   );
 }
@@ -1333,6 +1334,42 @@ function DigestImage({ story, item, briefing, onNavigate, supporting = false }) 
   );
 }
 
+const DIGEST_CHANGE_STATUSES = new Set(['narrowed', 'escalated', 'continued', 'new', 'eased']);
+
+function digestChangeFallbackStatus(item, story) {
+  const copy = `${story?.title || item?.title || ''} ${item?.text || story?.summary || ''}`.toLowerCase();
+  if (/reject|declin|impasse|stall|block|halt/.test(copy)) return 'narrowed';
+  if (item?.recency_role === 'continuing_today') return 'continued';
+  if (/escalat|evacuat|surge|rise|rises|wildfire|state of emergency/.test(copy)) return 'escalated';
+  return item?.recency_role === 'new_today' ? 'new' : 'continued';
+}
+
+function digestChangeFallbackText(item, story) {
+  const copy = String(item?.text || story?.summary || '').split(/\s+Earlier context:/i)[0].trim();
+  const sentence = copy.match(/^.*?[.!?](?:\s|$)/)?.[0]?.trim() || copy;
+  return sentence.length > 220 ? `${sentence.slice(0, 217).trimEnd()}…` : sentence;
+}
+
+function digestLeadChanges(briefing, selected) {
+  const selectedById = new Map(selected.map((entry) => [entry.item.story_id, entry]));
+  const supplied = Array.isArray(briefing?.changes) ? briefing.changes : [];
+  const changes = supplied.slice(0, 3).map((change) => {
+    const entry = selectedById.get(change?.story_id);
+    const status = String(change?.status || '').toLowerCase();
+    if (!entry || !DIGEST_CHANGE_STATUSES.has(status) || !change?.topic || !change?.text) return null;
+    return { ...entry, status, topic: change.topic, text: change.text };
+  }).filter(Boolean);
+  if (changes.length === 3) return changes;
+
+  return selected.slice(0, 3).map(({ item, story }) => ({
+    item,
+    story,
+    status: digestChangeFallbackStatus(item, story),
+    topic: story.topic_label || story.canonical_topic_label || story.title || item.title,
+    text: digestChangeFallbackText(item, story),
+  }));
+}
+
 function DigestView({ digest, stories, onNavigate }) {
   const briefing = digest?.briefing && typeof digest.briefing === 'object'
     ? digest.briefing
@@ -1355,6 +1392,7 @@ function DigestView({ digest, stories, onNavigate }) {
   const supportingVisual = visualStories.find(
     ({ item }) => item.story_id !== leadVisual?.item?.story_id,
   ) || null;
+  const leadChanges = digestLeadChanges(briefing, selected);
   const paragraphs = Array.isArray(briefing?.paragraphs) && briefing.paragraphs.length
     ? briefing.paragraphs
     : items.slice(0, 6).map((item) => ({
@@ -1380,24 +1418,29 @@ function DigestView({ digest, stories, onNavigate }) {
               <p className="eyebrow">What matters now</p>
               <h2>{briefing.headline || 'What matters today'}</h2>
               {briefing.summary ? <p className="digest-dek">{briefing.summary}</p> : null}
-              {selected.length ? (
-                <nav className="digest-lead-stories" aria-label="Stories in this Digest">
-                  <p>In this Digest</p>
-                  <ol>
-                    {selected.slice(0, 3).map(({ item, story }, index) => (
-                      <li key={`digest-lead-story-${item.story_id}`}>
+              {leadChanges.length ? (
+                <nav className="digest-lead-changes" aria-label="How the news picture changed">
+                  <div className="digest-lead-changes-heading">
+                    <p>How the picture changed</p>
+                    <span>Since recent digests</span>
+                  </div>
+                  <ul>
+                    {leadChanges.map(({ item, topic, text }) => (
+                      <li key={`digest-lead-change-${item.story_id}`}>
                         <AppLink
                           view="story"
                           sid={item.story_id}
                           archiveDate={digestStoryArchiveDate(item, briefing)}
                           onNavigate={onNavigate}
                         >
-                          <span>{String(index + 1).padStart(2, '0')}</span>
-                          <strong>{story.title || item.title}</strong>
+                          <span className="digest-change-copy">
+                            <strong>{topic}</strong>
+                            <span>{text}</span>
+                          </span>
                         </AppLink>
                       </li>
                     ))}
-                  </ol>
+                  </ul>
                 </nav>
               ) : null}
             </div>
@@ -1663,7 +1706,7 @@ function sourceCardTitle(source, identity) {
     const escaped = publisher.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     return title.replace(new RegExp(`\\s*(?:[-–—|:]\\s*)${escaped}\\s*$`, 'i'), '').trim();
   }, rawTitle);
-  const canonicalTitle = cleanSourceName(strippedTitle, source.url);
+  const canonicalTitle = cleanSourceName(strippedTitle);
   const repeatsPublisher = !strippedTitle
     || canonicalTitle.toLowerCase() === identity.name.toLowerCase()
     || strippedTitle.toLowerCase() === String(source.publisher || '').toLowerCase();
@@ -2289,40 +2332,76 @@ function StorylineThreads({ storyline, events, fallbackEvent, onNavigate, onTime
 }
 
 function eventReportingSources(event) {
-  const sourceUpdates = new Map();
+  const sourceRecords = new Map();
   (event?.timeline || []).forEach((entry) => {
-    const namesInUpdate = new Set(
-      (entry.sources || [])
-        .map((source) => cleanSourceName(source))
-        .filter((name) => name && name !== 'Google News'),
-    );
+    const namesInUpdate = new Set();
+    (entry.source_details || []).forEach((detail) => {
+      const url = detail?.link || detail?.url || '';
+      const name = cleanSourceName(detail?.source || detail?.publisher || '', url);
+      if (!name || name === 'Google News') return;
+      const existing = sourceRecords.get(name) || {
+        name,
+        updateCount: 0,
+        title: '',
+        url: '',
+      };
+      const title = String(detail?.title || '').trim();
+      sourceRecords.set(name, {
+        ...existing,
+        title: title || existing.title,
+        url: url || existing.url,
+      });
+      namesInUpdate.add(name);
+    });
+    (entry.sources || []).forEach((source) => {
+      const name = cleanSourceName(source);
+      if (!name || name === 'Google News') return;
+      if (!sourceRecords.has(name)) {
+        sourceRecords.set(name, { name, updateCount: 0, title: '', url: '' });
+      }
+      namesInUpdate.add(name);
+    });
     namesInUpdate.forEach((name) => {
-      sourceUpdates.set(name, (sourceUpdates.get(name) || 0) + 1);
+      const existing = sourceRecords.get(name);
+      sourceRecords.set(name, { ...existing, updateCount: existing.updateCount + 1 });
     });
   });
-  return [...sourceUpdates.entries()]
-    .map(([name, updateCount]) => ({
-      name,
-      updateCount,
-      logo: sourceLogoPath(name),
-      mark: sourceIdentity(name).mark,
+  return [...sourceRecords.values()]
+    .map((source) => ({
+      ...source,
+      logo: sourceLogoPath(source.name, source.url),
+      mark: sourceIdentity(source.name, source.url).mark,
     }))
     .sort((left, right) => right.updateCount - left.updateCount || left.name.localeCompare(right.name));
 }
 
 function EventSourceItem({ source }) {
+  const identity = sourceIdentity(source.name, source.url);
+  const articleTitle = sourceCardTitle({
+    title: source.title,
+    publisher: source.name,
+    url: source.url,
+  }, identity);
+  const Wrapper = source.url ? 'a' : 'div';
   return (
-    <div className="event-source-item">
+    <Wrapper
+      className={`event-source-item${source.url ? ' has-link' : ''}`}
+      href={source.url || undefined}
+      target={source.url ? '_blank' : undefined}
+      rel={source.url ? 'noreferrer' : undefined}
+    >
       <span className="event-source-mark" aria-hidden="true">
         {source.logo ? <img src={source.logo} alt="" /> : <span>{source.mark}</span>}
       </span>
-      <span>
-        <strong>{source.name}</strong>
-        <small>
+      <span className="event-source-copy">
+        {articleTitle ? <small>{source.name}</small> : null}
+        <strong>{articleTitle || source.name}</strong>
+        <em>
           {source.updateCount} {source.updateCount === 1 ? 'development' : 'developments'}
-        </small>
+        </em>
       </span>
-    </div>
+      {source.url ? <b aria-hidden="true">↗</b> : null}
+    </Wrapper>
   );
 }
 
@@ -2557,6 +2636,7 @@ function EventArtwork({
   role = 'support',
   showLabel = false,
   preferStory = false,
+  preserveFull = false,
 }) {
   const stableImage = eventImage(event);
   const fallbackImage = storyImage(relatedStory);
@@ -2565,7 +2645,7 @@ function EventArtwork({
     ? relatedStory?.image
     : stableImage ? event?.hero_image : relatedStory?.image;
   return (
-    <div className={`${className}${image ? '' : ' is-empty'}`.trim()}>
+    <div className={`${className}${image ? '' : ' is-empty'}${preserveFull && image ? ' preserve-full-event-art' : ''}`.trim()}>
       {image ? <img src={image} alt="" style={imagePresentation(imageData, role)} /> : null}
       {showLabel ? <EventImageDisclosure label={imageData?.image_role_label} className="event-artwork-label" /> : null}
       {!image ? (
@@ -2586,7 +2666,7 @@ function EventImageDisclosure({ label, className = 'event-art-label' }) {
 
 function EventMeta({ event }) {
   const latestDate = eventLatestDate(event);
-  const reportingSourceCount = eventReportingSources(event).length;
+  const reportingSourceCount = eventReportingSourceCount(event);
   return (
     <div className="catchup-event-meta">
       {latestDate ? <span>Updated {formatDate(latestDate, { short: true, year: false })}</span> : null}
@@ -2930,7 +3010,7 @@ function developmentParentLabel(event, situation) {
   return eventTitle(event);
 }
 
-function DevelopmentLedgerRow({ event, relatedStory, situation, onNavigate }) {
+function DevelopmentLedgerRow({ event, relatedStory, situation, dayLabel, onNavigate }) {
   const {
     previewStyle,
     openPreview,
@@ -2939,6 +3019,7 @@ function DevelopmentLedgerRow({ event, relatedStory, situation, onNavigate }) {
     dismissPreview,
   } = useEventHoverPreview();
   const latestDate = eventLatestDate(event);
+  const reportingSourceCount = eventReportingSourceCount(event);
   const readingView = relatedStory ? 'story' : 'event';
   return (
     <li
@@ -2949,21 +3030,14 @@ function DevelopmentLedgerRow({ event, relatedStory, situation, onNavigate }) {
           event={event}
           relatedStory={relatedStory}
           className="development-ledger-art"
-          role="support"
+          role="wide"
           preferStory
+          preserveFull
         />
-        <button
-          type="button"
-          className="event-summary-preview-button"
-          aria-expanded={Boolean(previewStyle)}
-          aria-label={`Quick view: ${eventLatestTitle(event)}`}
-          onClick={openPreview}
-        >
-          <QuickReadIcon />
-        </button>
       </div>
       <div className="development-ledger-copy">
         <div className="development-ledger-context">
+          {dayLabel ? <span className="development-ledger-day">{dayLabel}</span> : null}
           <span className="catchup-event-parent">{developmentParentLabel(event, situation)}</span>
         </div>
         <AppLink
@@ -2975,11 +3049,29 @@ function DevelopmentLedgerRow({ event, relatedStory, situation, onNavigate }) {
         >
           <h3>{eventLatestTitle(event)}</h3>
         </AppLink>
-        {latestDate ? (
-          <time className="development-ledger-date" dateTime={latestDate}>
-            Updated {formatDate(latestDate, { short: true, year: false })}
-          </time>
-        ) : null}
+        <div className="development-ledger-footer">
+          {latestDate ? (
+            <div className="development-ledger-meta">
+              <time className="development-ledger-date" dateTime={latestDate}>
+                {formatDate(latestDate, { short: true, year: false })}
+              </time>
+              {reportingSourceCount ? (
+                <span>{reportingSourceCount} {reportingSourceCount === 1 ? 'source' : 'sources'}</span>
+              ) : null}
+            </div>
+          ) : null}
+          <button
+            type="button"
+            className="development-context-button"
+            aria-expanded={Boolean(previewStyle)}
+            aria-label={`Quick context: ${eventLatestTitle(event)}`}
+            onClick={openPreview}
+          >
+            <QuickReadIcon />
+            <span>Quick context</span>
+            <b aria-hidden="true">→</b>
+          </button>
+        </div>
       </div>
       <EventHoverPreview
         event={event}
@@ -2996,11 +3088,34 @@ function DevelopmentLedgerRow({ event, relatedStory, situation, onNavigate }) {
   );
 }
 
-function HalfStepCarousel({ className, ariaLabel, itemCount, children }) {
+function HalfStepCarousel({
+  className,
+  ariaLabel,
+  itemCount,
+  children,
+  itemsPerColumn = 2,
+  singleColumnOnMobile = false,
+  header = null,
+}) {
   const railRef = useRef(null);
   const [position, setPosition] = useState(0);
+  const [isNarrow, setIsNarrow] = useState(() => (
+    singleColumnOnMobile && typeof window !== 'undefined'
+      ? window.matchMedia('(max-width: 760px)').matches
+      : false
+  ));
   const columnCount = React.Children.count(children);
-  const maxPosition = Math.max(0, columnCount - 2);
+  const visibleColumns = singleColumnOnMobile && isNarrow ? 1 : 2;
+  const maxPosition = Math.max(0, columnCount - visibleColumns);
+
+  useEffect(() => {
+    if (!singleColumnOnMobile || typeof window === 'undefined') return undefined;
+    const media = window.matchMedia('(max-width: 760px)');
+    const sync = () => setIsNarrow(media.matches);
+    sync();
+    media.addEventListener('change', sync);
+    return () => media.removeEventListener('change', sync);
+  }, [singleColumnOnMobile]);
 
   useEffect(() => {
     setPosition((current) => Math.min(current, maxPosition));
@@ -3018,6 +3133,7 @@ function HalfStepCarousel({ className, ariaLabel, itemCount, children }) {
     const rail = railRef.current;
     const step = stepSize();
     if (!rail || !step) return;
+    if (rail.scrollTop) rail.scrollTop = 0;
     setPosition(Math.min(maxPosition, Math.max(0, Math.round(rail.scrollLeft / step))));
   };
   const move = (direction) => {
@@ -3026,73 +3142,104 @@ function HalfStepCarousel({ className, ariaLabel, itemCount, children }) {
     if (!rail || !step) return;
     rail.scrollTo({ left: (position + direction) * step, behavior: 'smooth' });
   };
-  const visibleStart = itemCount ? Math.min(position * 2 + 1, itemCount) : 0;
-  const visibleEnd = itemCount ? Math.min(visibleStart + 3, itemCount) : 0;
+  const visibleStart = itemCount ? Math.min(position * itemsPerColumn + 1, itemCount) : 0;
+  const visibleEnd = itemCount
+    ? Math.min(visibleStart + (visibleColumns * itemsPerColumn) - 1, itemCount)
+    : 0;
+  const controls = maxPosition > 0 ? (
+    <div className="event-carousel-controls" aria-label={`${ariaLabel} controls`}>
+      <span aria-live="polite">{visibleStart}–{visibleEnd} of {itemCount}</span>
+      <button
+        type="button"
+        aria-label={`Previous ${ariaLabel}`}
+        disabled={position === 0}
+        onClick={() => move(-1)}
+      >
+        <span aria-hidden="true">←</span>
+      </button>
+      <button
+        type="button"
+        aria-label={`Next ${ariaLabel}`}
+        disabled={position === maxPosition}
+        onClick={() => move(1)}
+      >
+        <span aria-hidden="true">→</span>
+      </button>
+    </div>
+  ) : null;
 
   return (
-    <div className="event-carousel-shell">
+    <div className={`event-carousel-shell${header ? ' has-integrated-header' : ''}`}>
+      {header ? (
+        <div className="event-carousel-integrated-header">
+          {header}
+          {controls}
+        </div>
+      ) : null}
       <div ref={railRef} className={className} aria-label={ariaLabel} onScroll={syncPosition}>
         {children}
       </div>
-      {maxPosition > 0 ? (
-        <div className="event-carousel-controls" aria-label={`${ariaLabel} controls`}>
-          <span aria-live="polite">{visibleStart}–{visibleEnd} of {itemCount}</span>
-          <button
-            type="button"
-            aria-label={`Previous ${ariaLabel}`}
-            disabled={position === 0}
-            onClick={() => move(-1)}
-          >
-            <span aria-hidden="true">←</span>
-          </button>
-          <button
-            type="button"
-            aria-label={`Next ${ariaLabel}`}
-            disabled={position === maxPosition}
-            onClick={() => move(1)}
-          >
-            <span aria-hidden="true">→</span>
-          </button>
-        </div>
-      ) : null}
+      {!header ? controls : null}
     </div>
   );
 }
 
 function DevelopmentTimeline({ events, referenceDate, relatedStories, situationByEventId, onNavigate }) {
   const groups = [
-    ['today', 'Today', (age) => age === 0],
-    ['yesterday', 'Yesterday', (age) => age === 1],
-    ['earlier', 'Earlier this week', (age) => age >= 2],
+    ['latest', '', (age) => age === 0],
+    ['previous', 'Previous day', (age) => age === 1],
+    ['earlier', 'Earlier', (age) => age >= 2],
   ].map(([key, label, matches]) => ({
     key,
     label,
     events: events.filter((event) => matches(dateDistanceInDays(referenceDate, eventLatestDate(event)))),
   })).filter((group) => group.events.length);
+  const developments = groups.flatMap((group) => group.events.map((event) => ({
+    event,
+    dayLabel: group.label,
+  })));
 
   return (
     <div className="development-timeline" aria-label="Latest developments by day">
-      {groups.map((group) => (
-        <section className="development-timeline-group" aria-labelledby={`development-group-${group.key}`} key={group.key}>
-          <header>
-            <h3 id={`development-group-${group.key}`}>{group.label}</h3>
-            <span>{group.events.length} {group.events.length === 1 ? 'change' : 'changes'}</span>
+      <HalfStepCarousel
+        className="development-ledger latest-development-carousel"
+        ariaLabel="Latest developments"
+        itemCount={developments.length}
+        singleColumnOnMobile
+        header={(
+          <header className="event-rail-heading">
+            <div>
+              <p className="eyebrow">What changed</p>
+              <h2 id="latest-developments-title">Latest developments</h2>
+            </div>
+            {referenceDate ? (
+              <p>Coverage current through {formatDate(referenceDate, { short: true, year: false })} · Sources shown on every update</p>
+            ) : null}
           </header>
-          <ol className="development-timeline-list">
-            {group.events.map((event) => (
+        )}
+      >
+        {Array.from({ length: Math.ceil(developments.length / 2) }, (_, columnIndex) => (
+          <ol className="development-ledger-page" key={`development-column-${columnIndex + 1}`}>
+            {developments.slice(columnIndex * 2, columnIndex * 2 + 2).map(({ event, dayLabel }) => (
               <DevelopmentLedgerRow
                 event={event}
                 relatedStory={relatedStories.get(event.event_id)}
                 situation={situationByEventId.get(event.event_id)}
+                dayLabel={dayLabel}
                 onNavigate={onNavigate}
                 key={event.event_id}
               />
             ))}
           </ol>
-        </section>
-      ))}
+        ))}
+      </HalfStepCarousel>
     </div>
   );
+}
+
+function eventReportingSourceCount(event) {
+  return eventReportingSources(event).length
+    || Number(event?.presentation?.independent_source_count || event?.presentation?.source_count || 0);
 }
 
 function LatestDevelopmentLead({ event, relatedStory, situation, onNavigate }) {
@@ -3390,15 +3537,17 @@ function EventsDirectoryView({
       })),
     [events, latestAvailableDate, relatedStories, storylineByEventId, situationRootIds],
   );
-  const recentlyUpdatedEvents = deduplicateEvents(events
+  const recentDevelopmentCandidates = deduplicateEvents(events
     .filter((event) => eventDevelopmentCount(event) >= 2))
     .filter((event) => dateDistanceInDays(latestAvailableDate, eventLatestDate(event)) <= 7)
     .sort((left, right) => (
       String(eventLatestDate(right)).localeCompare(String(eventLatestDate(left)))
       || eventDevelopmentCount(right) - eventDevelopmentCount(left)
-    ))
-    .slice(0, 5);
-  const recentlyUpdatedEventIds = new Set(recentlyUpdatedEvents.map((event) => event.event_id));
+    ));
+  const recentlyUpdatedEvents = recentDevelopmentCandidates.slice(0, 8);
+  const recentlyUpdatedEventIds = new Set(
+    recentDevelopmentCandidates.slice(0, 5).map((event) => event.event_id),
+  );
   const activeEvents = ordered
     .filter((event) => (
       eventDevelopmentCount(event) >= 3
@@ -3560,9 +3709,9 @@ function EventsDirectoryView({
               storylines={storylines}
               onNavigate={onNavigate}
             />
-            <div className="events-home-status" aria-label={`${activeEventCount} tracked Events with recent activity`}>
+            <div className="events-home-status" aria-label={`${activeEventCount} Events updated this week`}>
               <strong>{activeEventCount}</strong>
-              <span>Tracked<small>events</small></span>
+              <span>Updated<small>this week</small></span>
             </div>
           </div>
         </div>
@@ -3575,7 +3724,7 @@ function EventsDirectoryView({
           aria-current={homeMode === 'activity' ? 'page' : undefined}
           onClick={() => showHomeMode('activity')}
         >
-          <span>Latest</span>
+          <span>Latest changes</span>
         </button>
         {hasSituationDirectory ? (
           <button
@@ -3589,9 +3738,13 @@ function EventsDirectoryView({
           </button>
         ) : null}
         <button type="button" onClick={openDirectory}>
-          <span>Browse</span>
+          <span>All Events</span>
         </button>
-        {orderedSituations.length === 1 ? (
+      </nav>
+
+      {orderedSituations.length === 1 ? (
+        <aside className="events-featured-situation" aria-label="Featured Situation">
+          <span>Featured Situation</span>
           <AppLink
             view="event"
             eventId={orderedSituations[0].legacy_event_id}
@@ -3599,21 +3752,17 @@ function EventsDirectoryView({
             className="events-single-situation-link"
             aria-label={`Open the ${orderedSituations[0].title} Situation`}
           >
-            <span>{orderedSituations[0].title} Situation</span>
+            <strong>{orderedSituations[0].title}</strong>
+            <small>See the connected coverage</small>
+            <b aria-hidden="true">→</b>
           </AppLink>
-        ) : null}
-      </nav>
+        </aside>
+      ) : null}
 
       {homeMode === 'activity' ? (
         <div className="events-activity-view">
           {recentlyUpdatedEvents.length ? (
             <section className="event-movement-section event-latest-developments" aria-labelledby="latest-developments-title">
-              <header className="event-rail-heading">
-                <div>
-                  <p className="eyebrow">What changed</p>
-                  <h2 id="latest-developments-title">Latest developments</h2>
-                </div>
-              </header>
               <DevelopmentTimeline
                 events={recentlyUpdatedEvents}
                 referenceDate={latestAvailableDate}
@@ -3658,19 +3807,18 @@ function EventsDirectoryView({
                 className="active-event-carousel"
                 ariaLabel="Active Events"
                 itemCount={activeEvents.length}
+                itemsPerColumn={1}
+                singleColumnOnMobile
               >
-                {Array.from({ length: Math.ceil(activeEvents.length / 2) }, (_, columnIndex) => (
-                  <div className="developing-event-grid active-event-column" key={`active-event-column-${columnIndex + 1}`}>
-                    {activeEvents.slice(columnIndex * 2, columnIndex * 2 + 2).map((event) => (
-                      <DevelopingEventCard
-                        event={event}
-                        relatedStory={relatedStories.get(event.event_id)}
-                        storyline={storylineByEventId.get(event.event_id)}
-                        onNavigate={onNavigate}
-                        quiet
-                        key={event.event_id}
-                      />
-                    ))}
+                {activeEvents.map((event) => (
+                  <div className="developing-event-grid active-event-column" key={`active-event-column-${event.event_id}`}>
+                    <DevelopingEventCard
+                      event={event}
+                      relatedStory={relatedStories.get(event.event_id)}
+                      storyline={storylineByEventId.get(event.event_id)}
+                      onNavigate={onNavigate}
+                      quiet
+                    />
                   </div>
                 ))}
               </HalfStepCarousel>

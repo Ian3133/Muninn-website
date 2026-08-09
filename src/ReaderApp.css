@@ -5320,18 +5320,26 @@ img {
 
 .reader-app.event-layout-c .event-source-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   column-gap: clamp(.8rem, 1.6vw, 1.35rem);
 }
 
 .reader-app.event-layout-c .event-source-item {
+  position: relative;
   display: grid;
   min-width: 0;
-  grid-template-columns: 2rem minmax(0, 1fr);
+  grid-template-columns: 2.15rem minmax(0, 1fr) auto;
   gap: .65rem;
   align-items: center;
-  padding: .6rem 0;
+  padding: .72rem .15rem;
   border-bottom: 1px solid var(--border);
+  color: inherit;
+  text-decoration: none;
+}
+
+.reader-app.event-layout-c a.event-source-item:hover,
+.reader-app.event-layout-c a.event-source-item:focus-visible {
+  background: color-mix(in srgb, var(--teal) 4%, transparent);
 }
 
 .reader-app.event-layout-c .event-source-mark {
@@ -5355,26 +5363,44 @@ img {
   object-fit: contain;
 }
 
-.reader-app.event-layout-c .event-source-item > span:last-child {
+.reader-app.event-layout-c .event-source-copy {
   display: grid;
   min-width: 0;
-  gap: .08rem;
+  gap: .1rem;
 }
 
 .reader-app.event-layout-c .event-source-item strong {
+  display: -webkit-box;
   overflow: hidden;
-  color: var(--ink-soft);
-  font-size: .72rem;
-  font-weight: 800;
-  line-height: 1.25;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: .85rem;
+  font-weight: 620;
+  line-height: 1.18;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .reader-app.event-layout-c .event-source-item small {
+  color: var(--teal);
+  font-size: .58rem;
+  font-weight: 850;
+  letter-spacing: .055em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.reader-app.event-layout-c .event-source-item em {
   color: var(--muted);
-  font-size: .72rem;
+  font-size: .62rem;
+  font-style: normal;
   line-height: 1.25;
+}
+
+.reader-app.event-layout-c .event-source-item > b {
+  align-self: start;
+  color: var(--teal);
+  font-size: .7rem;
 }
 
 .reader-app.event-layout-c .event-source-more {
@@ -9299,7 +9325,8 @@ img {
 
 .reader-app .today-page .lead-story,
 .reader-app .today-page .support-story,
-.reader-app .today-page .today-visual-story {
+.reader-app .today-page .today-visual-story,
+.reader-app .today-page .today-headline-story {
   position: relative;
 }
 
@@ -9354,9 +9381,11 @@ img {
 #main.today-page .lead-story:hover .story-quick-read-button,
 #main.today-page .support-story:hover .story-quick-read-button,
 #main.today-page .today-visual-story:hover .story-quick-read-button,
+#main.today-page .today-headline-story:hover .story-quick-read-button,
 #main.today-page .lead-story:focus-within .story-quick-read-button,
 #main.today-page .support-story:focus-within .story-quick-read-button,
 #main.today-page .today-visual-story:focus-within .story-quick-read-button,
+#main.today-page .today-headline-story:focus-within .story-quick-read-button,
 #main .story-quick-read.is-open .story-quick-read-button {
   opacity: 1;
   pointer-events: auto;
@@ -9365,7 +9394,8 @@ img {
 
 .reader-app .today-page .lead-story:has(.story-quick-read.is-open),
 .reader-app .today-page .support-story:has(.story-quick-read.is-open),
-.reader-app .today-visual-story:has(.story-quick-read.is-open) {
+.reader-app .today-visual-story:has(.story-quick-read.is-open),
+.reader-app .today-headline-story:has(.story-quick-read.is-open) {
   transform: none !important;
 }
 
@@ -10699,14 +10729,22 @@ img {
 }
 
 /* Title-only mastheads and useful lead navigation. */
-.digest-lead-stories {
+.digest-lead-changes {
   margin-top: 1rem;
   padding-top: .75rem;
   border-top: 1px solid var(--border);
 }
 
-.digest-lead-stories > p {
-  margin: 0 0 .25rem;
+.digest-lead-changes-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: .3rem;
+}
+
+.digest-lead-changes-heading p {
+  margin: 0;
   color: var(--muted);
   font-size: .62rem;
   font-weight: 800;
@@ -10714,38 +10752,57 @@ img {
   text-transform: uppercase;
 }
 
-.digest-lead-stories ol {
+.digest-lead-changes-heading span {
+  color: color-mix(in srgb, var(--muted) 84%, transparent);
+  font-size: .58rem;
+  font-style: italic;
+}
+
+.digest-lead-changes ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.digest-lead-stories li + li {
+.digest-lead-changes li + li {
   border-top: 1px solid color-mix(in srgb, var(--border) 72%, transparent);
 }
 
-.digest-lead-stories a {
+.digest-lead-changes a {
   display: grid;
-  grid-template-columns: 1.65rem minmax(0, 1fr);
-  gap: .55rem;
-  align-items: baseline;
-  padding: .42rem 0;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+  padding: .48rem 0 .52rem;
   color: var(--ink);
   text-decoration: none;
 }
 
-.digest-lead-stories a > span {
-  color: var(--teal);
-  font-size: .6rem;
-  font-weight: 850;
-  letter-spacing: .08em;
+.digest-change-copy {
+  display: grid;
+  gap: .12rem;
+  min-width: 0;
 }
 
-.digest-lead-stories a > strong {
-  font-family: var(--serif);
-  font-size: .86rem;
-  font-weight: 550;
+.digest-change-copy > strong {
+  color: var(--teal);
+  font-family: var(--sans);
+  font-size: .65rem;
+  font-weight: 800;
+  letter-spacing: .035em;
   line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.digest-change-copy > span {
+  font-family: var(--serif);
+  font-size: .78rem;
+  line-height: 1.3;
+}
+
+.digest-lead-changes a:hover .digest-change-copy > strong,
+.digest-lead-changes a:focus-visible .digest-change-copy > strong {
+  text-decoration: underline;
+  text-underline-offset: .14em;
 }
 
 .reader-app #main.events-briefing-page > .events-home-intro {
@@ -10770,26 +10827,37 @@ img {
 }
 
 .weekly-category-list a {
+  display: inline-flex;
+  align-items: center;
+  gap: .38rem;
+  min-height: 1.85rem;
+  padding: .32rem .5rem;
+  border: 1px solid color-mix(in srgb, var(--teal) 25%, var(--border));
+  border-radius: .24rem;
+  background: transparent;
   color: var(--teal);
-  font-size: .57rem;
+  box-shadow: none;
+  font-size: .55rem;
   font-weight: 850;
-  letter-spacing: .07em;
+  letter-spacing: .06em;
   text-decoration: none;
   text-transform: uppercase;
+  transition: border-color 140ms ease, background-color 140ms ease, color 140ms ease, transform 140ms ease;
 }
 
-.weekly-category-list a:not(:last-child)::after {
-  margin-left: .4rem;
-  color: var(--border-dark);
-  content: "\00b7";
+.weekly-category-list a::after {
+  margin-left: 0;
+  color: currentColor;
+  content: "\2192";
 }
 
 .weekly-category-list a:hover,
 .weekly-category-list a:focus-visible {
-  color: var(--ink);
-  text-decoration: underline;
-  text-decoration-color: var(--editorial-underline);
-  text-underline-offset: .12em;
+  border-color: color-mix(in srgb, var(--teal) 60%, var(--border));
+  background: color-mix(in srgb, var(--teal) 3%, transparent);
+  color: var(--teal-deep);
+  text-decoration: none;
+  transform: none;
 }
 
 @media (max-width: 760px) {
@@ -11322,8 +11390,10 @@ img {
 .reader-app .development-ledger {
   --development-column-gap: clamp(.8rem, 1.6vw, 1.25rem);
   display: flex;
+  align-items: flex-start;
   gap: var(--development-column-gap);
   overflow-x: auto;
+  overflow-y: hidden;
   margin: .65rem 0 0;
   padding: 0 0 .6rem;
   border-top: 1px solid var(--border-dark);
@@ -11331,6 +11401,7 @@ img {
   scroll-snap-type: x mandatory;
   scrollbar-color: var(--teal) transparent;
   scrollbar-width: thin;
+  touch-action: pan-x;
 }
 
 .reader-app .development-ledger::-webkit-scrollbar {
@@ -11580,14 +11651,17 @@ img {
 .reader-app .active-event-carousel {
   --active-event-column-gap: clamp(.75rem, 1.4vw, 1.2rem);
   display: flex;
+  align-items: stretch;
   gap: var(--active-event-column-gap);
   overflow-x: auto;
+  overflow-y: hidden;
   overscroll-behavior-inline: contain;
   padding: 0 0 .35rem;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   scrollbar-color: color-mix(in srgb, var(--teal) 72%, transparent) transparent;
   scrollbar-width: thin;
+  touch-action: pan-x;
 }
 
 .reader-app .active-event-carousel::-webkit-scrollbar {
@@ -11606,8 +11680,8 @@ img {
 .reader-app .event-active-section .active-event-carousel > .developing-event-grid {
   flex: 0 0 calc((100% - var(--active-event-column-gap)) / 2);
   grid-template-columns: minmax(0, 1fr);
-  grid-template-rows: repeat(2, minmax(6.6rem, auto));
-  gap: .65rem;
+  grid-template-rows: minmax(0, auto);
+  gap: 0;
   margin: 0;
   scroll-snap-align: start;
   scroll-snap-stop: always;
@@ -12083,11 +12157,12 @@ img {
 
 .reader-app .development-ledger-row,
 .reader-app .event-active-section .developing-event-card {
-  border: 1px solid color-mix(in srgb, var(--border-dark) 48%, transparent);
+  border: 1px solid transparent;
   border-radius: .42rem;
-  background: color-mix(in srgb, var(--paper) 34%, transparent);
+  background: transparent;
   box-shadow: none;
-  transition: border-color 150ms ease, background-color 150ms ease;
+  transform: translateY(0);
+  transition: border-color 150ms ease, background-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
 }
 
 .reader-app .development-ledger-row {
@@ -12096,11 +12171,18 @@ img {
 }
 
 .reader-app .development-timeline {
-  display: grid;
-  gap: 1rem;
+  display: block;
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.reader-app .development-timeline .event-carousel-shell {
   margin-top: .65rem;
-  padding-top: .85rem;
-  border-top: 1px solid var(--border-dark);
+}
+
+.reader-app .development-timeline .development-ledger {
+  padding-top: .65rem;
 }
 
 .reader-app .development-timeline-group {
@@ -12157,6 +12239,29 @@ img {
   aspect-ratio: 16 / 9;
 }
 
+.reader-app .development-ledger-art.preserve-full-event-art {
+  background: color-mix(in srgb, var(--canvas) 86%, var(--paper));
+}
+
+.reader-app .development-ledger-art.preserve-full-event-art > img {
+  object-fit: contain;
+  transform: none !important;
+}
+
+.reader-app .development-ledger-day {
+  flex: 0 0 auto;
+  padding: .16rem .34rem;
+  border: 1px solid color-mix(in srgb, var(--teal) 38%, var(--border));
+  border-radius: .24rem;
+  background: color-mix(in srgb, var(--teal) 5%, var(--paper));
+  color: var(--teal-deep);
+  font-size: .5rem;
+  font-weight: 850;
+  letter-spacing: .055em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
 .reader-app .development-timeline .development-ledger-reading-link h3 {
   max-width: 52ch;
   font-size: clamp(1.12rem, 1.75vw, 1.45rem);
@@ -12164,8 +12269,10 @@ img {
 
 .reader-app :is(.development-ledger-row, .event-active-section .developing-event-card):hover,
 .reader-app :is(.development-ledger-row, .event-active-section .developing-event-card):focus-within {
-  border-color: color-mix(in srgb, var(--teal) 44%, var(--border));
-  background: color-mix(in srgb, var(--paper) 62%, transparent);
+  border-color: color-mix(in srgb, var(--teal) 48%, var(--border));
+  background: color-mix(in srgb, var(--paper) 78%, transparent);
+  box-shadow: 0 .45rem 1.35rem rgba(8, 62, 59, .09);
+  transform: translateY(-1px);
 }
 
 @media (max-width: 760px) {
@@ -13334,5 +13441,591 @@ img {
     padding: 1rem 0 0;
     border-top: 1px solid rgba(143, 79, 31, .2);
     border-left: 0;
+  }
+}
+
+/* Events comprehension pass: explain the model, expose context, and keep phone cards readable. */
+.reader-app .events-home-title-row {
+  grid-template-columns: minmax(17rem, 1fr) minmax(18rem, 30rem) auto;
+}
+
+.reader-app .events-home-heading > p:last-child {
+  max-width: 31rem;
+  margin-top: .5rem;
+  font-size: .78rem;
+  line-height: 1.42;
+}
+
+.reader-app #main.events-briefing-page > .events-featured-situation {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: .75rem;
+  padding: .6rem 0;
+  border-top: 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.reader-app .events-featured-situation > span {
+  color: var(--muted);
+  font-size: .53rem;
+  font-weight: 850;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.reader-app .events-featured-situation > a {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  align-items: baseline;
+  gap: .12rem .65rem;
+  min-width: min(100%, 18rem);
+  padding: .48rem .62rem;
+  border: 1px solid color-mix(in srgb, var(--teal) 42%, var(--border));
+  border-radius: .36rem;
+  background: color-mix(in srgb, var(--paper) 86%, transparent);
+  color: inherit;
+  text-decoration: none;
+}
+
+.reader-app .events-featured-situation > a strong {
+  font-family: var(--serif);
+  font-size: .88rem;
+  line-height: 1;
+}
+
+.reader-app .events-featured-situation > a small {
+  grid-column: 1;
+  color: var(--muted);
+  font-size: .54rem;
+}
+
+.reader-app .events-featured-situation > a b {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+  color: var(--teal);
+}
+
+.reader-app .events-featured-situation > a:hover,
+.reader-app .events-featured-situation > a:focus-visible {
+  border-color: var(--teal);
+  background: color-mix(in srgb, var(--teal) 7%, var(--paper));
+}
+
+.reader-app .development-ledger-copy {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: .48rem .65rem;
+}
+
+.reader-app .development-ledger-context,
+.reader-app .development-ledger-reading-link {
+  grid-column: 1 / -1;
+}
+
+.reader-app .development-ledger-footer {
+  display: flex;
+  grid-column: 1 / -1;
+  min-width: 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: .65rem;
+}
+
+.reader-app .development-ledger-reading-link h3 {
+  margin-top: 0;
+}
+
+.reader-app .development-ledger-meta {
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+  min-width: 0;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: .56rem;
+  font-weight: 700;
+}
+
+.reader-app .development-ledger-meta > * + *::before {
+  margin-right: .45rem;
+  color: var(--border-dark);
+  content: "\00b7";
+}
+
+.reader-app .development-ledger-date {
+  margin-top: 0;
+}
+
+#main .development-context-button {
+  display: inline-flex;
+  width: auto;
+  min-width: 0;
+  min-height: 1.9rem;
+  align-items: center;
+  justify-content: center;
+  gap: .35rem;
+  margin: 0;
+  padding: .35rem .5rem;
+  border: 1px solid color-mix(in srgb, var(--teal) 46%, var(--border));
+  border-radius: .3rem;
+  background: color-mix(in srgb, var(--paper) 92%, transparent);
+  box-shadow: none;
+  color: var(--teal-deep);
+  font-family: var(--sans);
+  font-size: .54rem;
+  font-weight: 850;
+  letter-spacing: .025em;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(.12rem);
+  text-transform: none;
+  transition: opacity 140ms ease, transform 140ms ease, border-color 140ms ease, background-color 140ms ease;
+}
+
+#main .development-context-button svg {
+  width: .82rem;
+  height: .82rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+}
+
+#main .development-context-button b {
+  display: none;
+}
+
+.reader-app .development-ledger-row:hover .development-context-button,
+.reader-app .development-ledger-row:focus-within .development-context-button,
+.reader-app .development-ledger-row.is-preview-open .development-context-button {
+  opacity: 1;
+  pointer-events: auto;
+  transform: none;
+}
+
+#main .development-context-button:hover,
+#main .development-context-button:focus-visible,
+.reader-app .development-ledger-row.is-preview-open .development-context-button {
+  border-color: var(--teal);
+  background: var(--teal);
+  color: #fff;
+}
+
+@media (max-width: 650px) {
+  .reader-app .site-header-inner {
+    grid-template-columns: 1fr;
+    gap: 0;
+    min-height: 0;
+    padding-top: .4rem;
+  }
+
+  .reader-app .wordmark {
+    min-height: 2.2rem;
+  }
+
+  .reader-app .primary-nav {
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
+    min-width: 0;
+    justify-content: space-between;
+    gap: .25rem;
+    border-top: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+  }
+
+  .reader-app .primary-nav a {
+    min-width: 0;
+    min-height: 2.25rem;
+    padding-inline: .18rem;
+    font-size: .6rem;
+    letter-spacing: .06em;
+  }
+
+  .reader-app .primary-nav .nav-my-news small {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .reader-app .events-home-title-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: .65rem 1rem;
+  }
+
+  .reader-app .events-home-heading > p:last-child {
+    max-width: 27rem;
+    font-size: .72rem;
+    line-height: 1.38;
+  }
+
+  .reader-app .events-home-status {
+    min-width: 6.4rem;
+    padding-left: .7rem;
+  }
+
+  .reader-app .events-home-status strong {
+    font-size: 1.9rem;
+  }
+
+  .reader-app .events-view-tabs {
+    gap: 1.5rem;
+  }
+
+  .reader-app .events-view-tabs span {
+    font-size: .69rem;
+  }
+
+  .reader-app #main.events-briefing-page > .events-featured-situation {
+    align-items: stretch;
+    flex-direction: column;
+    gap: .35rem;
+    padding: .65rem 0;
+  }
+
+  .reader-app .events-featured-situation > a {
+    width: 100%;
+  }
+
+  .reader-app .event-latest-developments .event-rail-heading > p {
+    display: block;
+    max-width: 24rem;
+    margin: 0;
+    font-size: .63rem;
+    line-height: 1.35;
+    text-align: left;
+  }
+
+  .reader-app .event-latest-developments .event-rail-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .45rem;
+  }
+
+  .reader-app .latest-development-carousel .development-ledger-page {
+    flex-basis: 100%;
+    grid-template-rows: repeat(2, minmax(9.25rem, auto));
+    gap: .6rem;
+  }
+
+  .reader-app .development-timeline .development-ledger-row {
+    grid-template-columns: minmax(0, 1fr) clamp(6.7rem, 31vw, 7.5rem);
+    min-height: 9.25rem;
+    align-items: center;
+    gap: .7rem;
+    padding: .7rem;
+  }
+
+  .reader-app .development-timeline .development-ledger-art {
+    aspect-ratio: 16 / 9;
+  }
+
+  .reader-app .development-timeline .development-ledger-context {
+    align-items: center;
+  }
+
+  .reader-app .development-timeline .development-ledger-context .catchup-event-parent {
+    overflow: visible;
+    max-width: none;
+    text-overflow: clip;
+    white-space: normal;
+  }
+
+  .reader-app .development-timeline .development-ledger-reading-link h3 {
+    display: block;
+    overflow: visible;
+    font-size: clamp(1.02rem, 4.8vw, 1.18rem);
+    line-height: 1.04;
+    -webkit-line-clamp: unset;
+  }
+
+  .reader-app .development-ledger-copy {
+    gap: .55rem .5rem;
+  }
+
+  .reader-app .development-ledger-meta {
+    font-size: .59rem;
+  }
+
+  #main .development-context-button {
+    min-height: 2rem;
+    gap: .25rem;
+    padding: .38rem 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: var(--teal);
+    font-size: .58rem;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+  }
+
+  #main .development-context-button svg {
+    display: none;
+  }
+
+  #main .development-context-button b {
+    display: inline;
+    font-size: .7rem;
+  }
+
+  #main .development-context-button:hover,
+  #main .development-context-button:focus-visible,
+  .reader-app .development-ledger-row.is-preview-open .development-context-button {
+    border-color: transparent;
+    background: transparent;
+    color: var(--ink);
+    text-decoration: underline;
+    text-decoration-color: var(--editorial-underline);
+    text-underline-offset: .14em;
+  }
+
+  .reader-app .event-latest-developments .event-carousel-controls {
+    padding-right: 0;
+  }
+}
+
+/* Events carousel refinement: controls live in the heading; Active cards use their space deliberately. */
+.reader-app .development-timeline .event-carousel-shell.has-integrated-header {
+  margin-top: 0;
+}
+
+.reader-app .event-carousel-integrated-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.reader-app .event-carousel-integrated-header > .event-rail-heading {
+  min-width: 0;
+  margin: 0;
+}
+
+.reader-app .event-carousel-integrated-header > .event-carousel-controls {
+  min-height: 2rem;
+  margin: 0 0 .08rem;
+  padding: 0;
+  border-top: 0;
+}
+
+.reader-app .event-carousel-integrated-header > .event-carousel-controls > span {
+  margin-right: .2rem;
+}
+
+.reader-app .event-active-section .developing-event-card-inner {
+  grid-template-columns: minmax(0, 1fr) clamp(8.5rem, 13vw, 10.5rem);
+  min-height: 6.8rem;
+  gap: clamp(.7rem, 1.4vw, 1rem);
+  padding: .55rem;
+}
+
+.reader-app .event-active-section .developing-event-copy {
+  display: flex;
+  min-width: 0;
+  min-height: 100%;
+  flex-direction: column;
+}
+
+.reader-app .event-active-section .developing-event-copy h3 {
+  margin-top: .28rem;
+  margin-bottom: .25rem;
+  font-size: clamp(1.16rem, 1.7vw, 1.5rem);
+  line-height: .98;
+}
+
+.reader-app .event-active-section .catchup-event-meta {
+  margin-top: auto;
+  padding-top: .7rem;
+  font-size: .58rem;
+}
+
+.reader-app .event-active-section .developing-event-media {
+  height: 100%;
+  min-height: 5.7rem;
+  align-self: stretch;
+  aspect-ratio: auto;
+}
+
+.reader-app .event-active-section .developing-event-art {
+  height: 100%;
+  min-height: 5.7rem;
+  aspect-ratio: auto;
+}
+
+@media (max-width: 760px) {
+  .reader-app .event-carousel-integrated-header {
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: .35rem;
+  }
+
+  .reader-app .event-carousel-integrated-header > .event-carousel-controls {
+    align-self: auto;
+    justify-self: end;
+    margin-bottom: .05rem;
+  }
+
+  .reader-app .event-active-section .developing-event-card-inner {
+    grid-template-columns: minmax(0, 1fr) clamp(4.65rem, 20vw, 5.25rem);
+    min-height: 7.25rem;
+    gap: .5rem;
+    padding: .55rem;
+  }
+
+  .reader-app .event-active-section .active-event-carousel > .developing-event-grid {
+    flex-basis: 100%;
+    grid-template-rows: minmax(0, auto);
+  }
+
+  .reader-app .event-active-section .developing-event-copy h3 {
+    margin-top: .22rem;
+    margin-bottom: .35rem;
+    font-size: clamp(.96rem, 4.2vw, 1.08rem);
+    line-height: 1.02;
+  }
+
+  .reader-app .event-active-section .catchup-event-meta {
+    padding-top: .35rem;
+    font-size: .55rem;
+  }
+
+  .reader-app .event-active-section .developing-event-media {
+    height: auto;
+    min-height: 0;
+    align-self: center;
+    aspect-ratio: 3 / 2;
+  }
+
+  .reader-app .event-active-section .developing-event-art {
+    height: 100%;
+    min-height: 0;
+    aspect-ratio: 3 / 2;
+  }
+}
+
+@media (min-width: 761px) {
+  .reader-app .latest-development-carousel {
+    max-height: 18.1rem;
+  }
+
+  .reader-app .active-event-carousel {
+    max-height: 9rem;
+  }
+
+  .reader-app .latest-development-carousel .development-ledger-page {
+    grid-template-rows: repeat(2, 8.9rem);
+    gap: 0;
+  }
+
+  .reader-app .development-timeline .development-ledger-row {
+    grid-template-columns: minmax(0, 1fr) clamp(7.5rem, 11vw, 9rem);
+    min-height: 0;
+    height: 8.9rem;
+    gap: clamp(.7rem, 1.35vw, 1rem);
+    padding: .58rem 0;
+  }
+
+  .reader-app .development-timeline .development-ledger-reading-link h3 {
+    font-size: clamp(1.02rem, 1.45vw, 1.28rem);
+    line-height: 1.03;
+  }
+}
+
+/* Today-style hairline grid and strictly horizontal event rails. */
+.reader-app :is(.development-ledger, .active-event-carousel) {
+  overflow-y: hidden;
+  overscroll-behavior-block: none;
+  touch-action: pan-x;
+}
+
+.reader-app .development-ledger-page {
+  align-self: flex-start;
+}
+
+.reader-app .latest-development-carousel .development-ledger-row,
+.reader-app .event-active-section .developing-event-card {
+  border: 0;
+  border-bottom: 1px solid var(--border-dark);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.reader-app .latest-development-carousel .development-ledger-row:hover,
+.reader-app .latest-development-carousel .development-ledger-row:focus-within,
+.reader-app .event-active-section .developing-event-card:hover,
+.reader-app .event-active-section .developing-event-card:focus-within {
+  border-bottom-color: var(--teal);
+  background: transparent;
+  box-shadow: none;
+  transform: none;
+}
+
+.reader-app .event-active-section .developing-event-card-inner {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.reader-app .latest-development-carousel .development-ledger-copy {
+  height: auto;
+  align-self: stretch;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  align-items: start;
+}
+
+.reader-app .latest-development-carousel .development-ledger-context {
+  grid-row: 1;
+}
+
+.reader-app .latest-development-carousel .development-ledger-reading-link {
+  grid-row: 2;
+  align-self: start;
+  border-bottom: 0;
+}
+
+.reader-app .latest-development-carousel .development-ledger-footer {
+  position: relative;
+  grid-row: 3;
+  align-self: end;
+}
+
+.reader-app .event-active-section .active-event-column {
+  position: relative;
+}
+
+.reader-app .latest-development-carousel .development-ledger-page:not(:last-child) .development-ledger-row::after,
+.reader-app .event-active-section .active-event-column:not(:last-child)::after {
+  position: absolute;
+  top: .55rem;
+  right: -.6rem;
+  bottom: .55rem;
+  width: 1px;
+  background: color-mix(in srgb, var(--border-dark) 42%, transparent);
+  content: "";
+  pointer-events: none;
+}
+
+@media (min-width: 761px) {
+  #main .latest-development-carousel .development-context-button {
+    position: absolute;
+    right: 0;
+    bottom: -.42rem;
+  }
+}
+
+@media (min-width: 901px) {
+  .reader-app .today-page .supporting-stories .support-story h2 {
+    display: -webkit-box;
+    overflow: hidden;
+    margin: .2rem 0 .3rem;
+    font-size: clamp(17px, 1.35vw, 20px);
+    line-height: 1.05;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
   }
 }

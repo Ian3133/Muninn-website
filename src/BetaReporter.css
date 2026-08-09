@@ -474,9 +474,16 @@ html[data-theme="dark"] .beta-mark-summary.has-mark {
   .beta-report-bubble {
     right: max(.65rem, env(safe-area-inset-right));
     bottom: max(.65rem, env(safe-area-inset-bottom));
-    width: 2.8rem;
+    width: 2.35rem;
+    height: 2.35rem;
     justify-content: center;
     padding: 0;
+    opacity: .78;
+  }
+
+  .beta-report-bubble:hover,
+  .beta-report-bubble:focus-visible {
+    opacity: 1;
   }
 
   .beta-report-bubble span {

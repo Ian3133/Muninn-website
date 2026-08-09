@@ -6122,7 +6122,30 @@
       "category_scores": {
         "Public Safety": 5
       },
-      "canonical_topic_label": "Thailand School Shooting"
+      "canonical_topic_label": "Thailand School Shooting",
+      "image": {
+        "url": "/Current_news/generated/ai-daily/2026-08-09/demo_cluster_008.jpg",
+        "thumbnail_url": "/Current_news/generated/ai-daily/2026-08-09/demo_cluster_008.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "OpenAI built-in image generation",
+        "generation_quality": "editorial",
+        "composition_role": "event_overlay",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48,
+        "generation_prompt_tier": "non_graphic_object",
+        "generation_fallback_reason": "manual_repair_after_moderation_block"
+      }
     },
     {
       "cluster_id": "demo_cluster_010",
@@ -12008,6 +12031,26 @@
     },
     "headline": "Gaza impasse, disasters and security crises lead Sunday developments",
     "summary": "Sunday’s briefing centers on Israel’s rejection of a U.S. Gaza proposal, severe wildfires in British Columbia, and continuing violence and disruption across several regions.",
+    "changes": [
+      {
+        "story_id": "story_3e58a49d6da47870",
+        "status": "narrowed",
+        "topic": "Gaza diplomacy",
+        "text": "The diplomatic path tightened as Israel rejected the U.S. disarmament proposal and conditioned withdrawal on Hamas disarming."
+      },
+      {
+        "story_id": "story_78dc1cec2479b441",
+        "status": "escalated",
+        "topic": "British Columbia wildfires",
+        "text": "A fast-moving wildfire forced more than 20,000 people to evacuate and pushed the province into a state of emergency."
+      },
+      {
+        "story_id": "story_4ebd8ea601437e3d",
+        "status": "continued",
+        "topic": "Ukraine and Russia",
+        "text": "Cross-border strikes persisted, adding civilian deaths as Ukraine also moved to strengthen its long-range defenses."
+      }
+    ],
     "day_characterization": {
       "label": "mixed",
       "confidence": 0.86,
@@ -12277,10 +12320,12 @@
   "ai_image_experiment": {
     "model": "gpt-image-2",
     "quality": "low",
-    "story_count": 19,
+    "story_count": 20,
     "requested_story_count": 20,
-    "skipped_story_count": 1,
-    "partial": true,
+    "skipped_story_count": 0,
+    "fallback_story_count": 1,
+    "bundled_fallback_story_count": 0,
+    "partial": false,
     "presentation": "AI illustration"
   }
 }
