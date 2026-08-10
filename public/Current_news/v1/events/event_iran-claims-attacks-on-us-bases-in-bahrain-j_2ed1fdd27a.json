@@ -15,7 +15,7 @@
     "summary": "Iran's military announced it targeted US military bases in Bahrain, Jordan, and Kuwait in retaliation for recent US strikes on Iran. The Iranian Revolutionary Guards reportedly aimed at a data center in Bahrain linked to Amazon. This escalation follows a vow from the US for 'major military punishment' against Tehran and its allies.",
     "status": "active",
     "first_seen_at": "2026-07-25",
-    "last_seen_at": "2026-07-29",
+    "last_seen_at": "2026-08-10",
     "timeline": [
       {
         "development_id": "story_7273a4a66a62e342",
@@ -211,47 +211,112 @@
         "first_seen_at": "2026-07-29",
         "last_seen_at": "2026-07-29",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_e8725817570932b7",
+        "daily_story_id": "story_e8725817570932b7",
+        "date": "2026-08-10",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Iran Demands US Compliance Before Reopening Strait of Hormuz",
+        "summary": "Iran's Revolutionary Guards announced that the Strait of Hormuz will remain closed until the United States meets their demands, which include compensation for war damages and an end to sanctions. This blockade has caused market instability and rising energy prices.",
+        "topic_label": "Iran Conflict",
+        "development_type": "policy",
+        "key_facts": [
+          "Iran's Revolutionary Guards insist on keeping the Strait of Hormuz closed.",
+          "Demands include US compensation for war damage and lifting of sanctions.",
+          "The closure has affected energy markets and prices."
+        ],
+        "source_count": 2,
+        "sources": [
+          "CBS News - Latest",
+          "France 24 - English"
+        ],
+        "source_urls": [
+          "https://www.france24.com/en/middle-east/20260809-iran-vows-to-keep-strait-of-hormuz-closed-until-us-meets-demands",
+          "https://www.cbsnews.com/video/iranian-leaders-demand-us-pay-war-damage-keep-strait-of-hormuz-closed"
+        ],
+        "source_details": [
+          {
+            "title": "Iran vows to keep Strait of Hormuz closed until US meets demands",
+            "source": "France 24 - English",
+            "link": "https://www.france24.com/en/middle-east/20260809-iran-vows-to-keep-strait-of-hormuz-closed-until-us-meets-demands",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Iranian leaders demand US pay for war damage or will keep Strait of Hormuz closed",
+            "source": "CBS News - Latest",
+            "link": "https://www.cbsnews.com/video/iranian-leaders-demand-us-pay-war-damage-keep-strait-of-hormuz-closed",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_7273a4a66a62e342",
+          "shared_tokens": [
+            "blockade",
+            "conflict",
+            "iran"
+          ],
+          "shared_entities": [
+            "iran",
+            "us"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-10",
+        "last_seen_at": "2026-08-10",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 3,
+      "public_development_count": 4,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Iran Conducts Attacks on US Bases and Ships Amid Trump-Netanyahu Meeting",
-    "latest_summary": "Iran has launched attacks on US military bases in the Middle East, marking a significant escalation in hostilities. This includes the reported 600th attack on US forces in Iraq. Additionally, Iran's Revolutionary Guard has targeted three oil tankers in the Strait of Hormuz, claiming they ignored warnings. These events coincide with a meeting between Trump and Netanyahu.",
+    "latest_title": "Iran Demands US Compliance Before Reopening Strait of Hormuz",
+    "latest_summary": "Iran's Revolutionary Guards announced that the Strait of Hormuz will remain closed until the United States meets their demands, which include compensation for war damages and an end to sanctions. This blockade has caused market instability and rising energy prices.",
     "presentation": {
       "has_context": true,
-      "has_full_timeline": false,
-      "stage": "developing_event",
-      "stage_label": "Developing event",
+      "has_full_timeline": true,
+      "stage": "timeline",
+      "stage_label": "Timeline",
       "base_title": "Iran Claims Attacks on US Bases in Bahrain, Jordan, and Kuwait Amid Escalating Conflict",
-      "display_title": "Iran Claims Attacks on US Bases in Bahrain, Jordan, and Kuwait Amid Escalating Conflict",
+      "display_title": "Iran Claims Attacks on US Bases in Bahrain, Jordan, and Kuwait Amid Escalating Conflict Timeline",
       "milestone_development_ids": [
         "story_7273a4a66a62e342",
         "story_75254f3a1409fce7",
-        "story_7aa749814ced133c"
+        "story_7aa749814ced133c",
+        "story_e8725817570932b7"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-07-29",
-      "development_count": 3,
-      "coverage_packet_count": 3,
-      "date_count": 2,
-      "source_count": 7,
-      "independent_source_count": 7,
+      "summary_updated_at": "2026-08-10",
+      "development_count": 4,
+      "coverage_packet_count": 4,
+      "date_count": 3,
+      "source_count": 9,
+      "independent_source_count": 9,
       "first_date": "2026-07-25",
-      "latest_date": "2026-07-29",
-      "latest_update_title": "Iran Conducts Attacks on US Bases and Ships Amid Trump-Netanyahu Meeting",
-      "coverage_score": 0.605,
-      "recency_score": 0.389,
-      "rank_score": 0.48,
-      "context_summary": "Muninn first tracked this thread on 2026-07-25: US Military Engages Merchant Vessel Breaching Iranian Port Blockade. The latest development is Iran Conducts Attacks on US Bases and Ships Amid Trump-Netanyahu Meeting.",
-      "cta_label": ""
+      "latest_date": "2026-08-10",
+      "latest_update_title": "Iran Demands US Compliance Before Reopening Strait of Hormuz",
+      "coverage_score": 0.766,
+      "recency_score": 1.0,
+      "rank_score": 0.902,
+      "context_summary": "Muninn first tracked this thread on 2026-07-25: US Military Engages Merchant Vessel Breaching Iranian Port Blockade. The latest development is Iran Demands US Compliance Before Reopening Strait of Hormuz.",
+      "cta_label": "Explore 4 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "The US military reported that it fired upon a merchant vessel attempting to breach its blockade of Iranian ports. A later development was Iran Claims Attacks on US Bases in Bahrain, Jordan, and Kuwait Amid Escalating Conflict. Most recently, iran has launched attacks on US military bases in the Middle East, marking a significant escalation in hostilities.",
+      "summary": "The US military reported that it fired upon a merchant vessel attempting to breach its blockade of Iranian ports. A later development was Iran Conducts Attacks on US Bases and Ships Amid Trump-Netanyahu Meeting. Most recently, iran's Revolutionary Guards announced that the Strait of Hormuz will remain closed until the United States meets their demands, which include compensation for war damages and an end to sanctions.",
       "key_developments": [
         {
           "development_id": "story_7273a4a66a62e342",
@@ -267,6 +332,11 @@
           "development_id": "story_7aa749814ced133c",
           "date": "2026-07-29",
           "title": "Iran Conducts Attacks on US Bases and Ships Amid Trump-Netanyahu Meeting"
+        },
+        {
+          "development_id": "story_e8725817570932b7",
+          "date": "2026-08-10",
+          "title": "Iran Demands US Compliance Before Reopening Strait of Hormuz"
         }
       ],
       "sources": [
@@ -311,18 +381,30 @@
           "source": "NewsNation - Latest",
           "link": "https://www.newsnationnow.com/world/iran-us-war-strait-of-hormuz-trump",
           "source_bias": "center"
+        },
+        {
+          "title": "Iran vows to keep Strait of Hormuz closed until US meets demands",
+          "source": "France 24 - English",
+          "link": "https://www.france24.com/en/middle-east/20260809-iran-vows-to-keep-strait-of-hormuz-closed-until-us-meets-demands",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Iranian leaders demand US pay for war damage or will keep Strait of Hormuz closed",
+          "source": "CBS News - Latest",
+          "link": "https://www.cbsnews.com/video/iranian-leaders-demand-us-pay-war-damage-keep-strait-of-hormuz-closed",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-07-29",
+      "updated_at": "2026-08-10",
       "provenance": "source_grounded_event_memory"
     },
-    "event_stage": "developing_event",
+    "event_stage": "timeline",
     "related_events": [
       {
         "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
         "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
         "relationship": "related_topic",
-        "confidence": 0.944,
+        "confidence": 0.938,
         "shared_entities": [
           "america",
           "iran",
@@ -334,22 +416,10 @@
         ]
       },
       {
-        "event_id": "event_us-continues-strikes-on-iran-amid-traffic-st_41c26ce1d9",
-        "title": "US Continues Strikes on Iran Amid Traffic Standstill in Strait of Hormuz",
-        "relationship": "related_topic",
-        "confidence": 0.781,
-        "shared_entities": [
-          "america",
-          "iran",
-          "strait",
-          "us"
-        ]
-      },
-      {
         "event_id": "event_iranian-missiles-target-aqaba-airport-amid-r_c7e08248c6",
         "title": "Iranian Missiles Target Aqaba Airport Amid Regional Escalation",
         "relationship": "related_topic",
-        "confidence": 0.778,
+        "confidence": 0.777,
         "shared_entities": [
           "america",
           "bahrain",
@@ -358,10 +428,22 @@
         ]
       },
       {
+        "event_id": "event_us-continues-strikes-on-iran-amid-traffic-st_41c26ce1d9",
+        "title": "US Continues Strikes on Iran Amid Traffic Standstill in Strait of Hormuz",
+        "relationship": "related_topic",
+        "confidence": 0.773,
+        "shared_entities": [
+          "america",
+          "iran",
+          "strait",
+          "us"
+        ]
+      },
+      {
         "event_id": "event_trump-to-attend-dignified-transfer-of-four-u_c92dd717ef",
         "title": "Trump to Attend Dignified Transfer of Four US Service Members Killed in Middle East",
         "relationship": "related_topic",
-        "confidence": 0.74,
+        "confidence": 0.739,
         "shared_entities": [
           "middle",
           "middle_east",
@@ -510,15 +592,22 @@
       "blockade",
       "breach",
       "breaching",
+      "caused",
       "center",
       "claim",
       "claiming",
+      "closed",
       "coincide",
+      "compensation",
+      "compliance",
       "conduct",
       "conflict",
       "continued",
+      "damage",
       "data",
+      "demand",
       "east",
+      "energy",
       "engage",
       "escalating",
       "escalation",
@@ -533,14 +622,17 @@
       "ignored",
       "incident",
       "include",
+      "instability",
       "iran",
       "iraq",
       "jordan",
       "kuwait",
       "launched",
       "linked",
+      "market",
       "marking",
       "meeting",
+      "meets",
       "merchant",
       "middle",
       "military",
@@ -553,13 +645,18 @@
       "port",
       "ports",
       "position",
+      "price",
       "punishment",
       "recent",
       "reflect",
+      "remain",
+      "reopening",
       "reported",
       "reportedly",
       "retaliation",
       "revolutionary",
+      "rising",
+      "sanction",
       "ships",
       "significant",
       "situation",
@@ -575,9 +672,13 @@
       "three",
       "trump",
       "trump-netanyahu",
+      "united",
+      "until",
       "upon",
       "vessel",
-      "warning"
+      "war",
+      "warning",
+      "which"
     ],
     "entities": [
       "additionally_iran",
@@ -587,9 +688,11 @@
       "bahrain_jordan",
       "breaching_iran",
       "engage_merchant",
+      "hormuz_iran",
       "iran",
       "iran_claim",
       "iran_conduct",
+      "iran_demand",
       "iran_port",
       "iran_revolutionary",
       "iraq.",
@@ -599,9 +702,11 @@
       "middle",
       "middle_east",
       "military_engage",
+      "netanyahu._iran",
       "persian",
       "persian_gulf.",
       "port_blockade",
+      "reopening_strait",
       "revolutionary_guard",
       "strait",
       "trump-netanyahu",
@@ -609,7 +714,7 @@
       "us",
       "vessel_breaching"
     ],
-    "search_text": "600th additionally additionally_iran aimed allie also amazon amazon. america announced attack attempting bahrain bahrain_jordan bases blockade breach breaching breaching_iran center claim claiming coincide conduct conflict continued data east engage engage_merchant escalating escalation event fired follow force guard gulf hormuz hostilitie ignored incident include iran iran_claim iran_conduct iran_port iran_revolutionary iraq iraq. iraq._additionally jordan kuwait launched linked marking meeting meeting_iran merchant merchant_vessel middle middle_east military military_engage nation netanyahu occurred oil ongoing persian persian_gulf. port port_blockade ports position punishment recent reflect reported reportedly retaliation revolutionary revolutionary_guard ships significant situation strait strike tanker targeted targeting tehran tension these they three trump trump-netanyahu trump-netanyahu_meeting upon us vessel vessel_breaching warning"
+    "search_text": "600th additionally additionally_iran aimed allie also amazon amazon. america announced attack attempting bahrain bahrain_jordan bases blockade breach breaching breaching_iran caused center claim claiming closed coincide compensation compliance conduct conflict continued damage data demand east energy engage engage_merchant escalating escalation event fired follow force guard gulf hormuz hormuz_iran hostilitie ignored incident include instability iran iran_claim iran_conduct iran_demand iran_port iran_revolutionary iraq iraq. iraq._additionally jordan kuwait launched linked market marking meeting meeting_iran meets merchant merchant_vessel middle middle_east military military_engage nation netanyahu netanyahu._iran occurred oil ongoing persian persian_gulf. port port_blockade ports position price punishment recent reflect remain reopening reopening_strait reported reportedly retaliation revolutionary revolutionary_guard rising sanction ships significant situation strait strike tanker targeted targeting tehran tension these they three trump trump-netanyahu trump-netanyahu_meeting united until upon us vessel vessel_breaching war warning which"
   },
   "related_events": [
     {

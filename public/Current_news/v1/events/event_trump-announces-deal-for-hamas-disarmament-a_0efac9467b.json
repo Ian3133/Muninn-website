@@ -15,7 +15,7 @@
     "summary": "President Trump has announced a deal for Hamas to completely disarm, which includes the gradual withdrawal of Israeli forces from Gaza. Hamas confirmed its agreement to the plan, stating it would hand over its weapons to a Palestinian governing committee. However, the implementation of this deal is contingent upon Israel fulfilling its commitments from a previous agreement.",
     "status": "active",
     "first_seen_at": "2026-07-31",
-    "last_seen_at": "2026-08-09",
+    "last_seen_at": "2026-08-10",
     "timeline": [
       {
         "development_id": "story_c0c042a2fb04bd8a",
@@ -455,15 +455,113 @@
         "first_seen_at": "2026-08-09",
         "last_seen_at": "2026-08-09",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_fa2d600af4d12fb5",
+        "daily_story_id": "story_fa2d600af4d12fb5",
+        "date": "2026-08-10",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Israel Rejects Trump's Gaza Peace Plan, Demands Hamas Disarmament",
+        "summary": "Israeli Prime Minister Benjamin Netanyahu has announced the rejection of a 15-point peace plan proposed by former US President Donald Trump, stating that Israel will not withdraw from Gaza until Hamas is fully disarmed. Netanyahu emphasized that the current proposal is unacceptable in its present form.",
+        "topic_label": "Middle East Conflict",
+        "development_type": "development",
+        "key_facts": [
+          "Netanyahu rejects Trump's 15-point Gaza peace plan.",
+          "Israel will not withdraw from Gaza until Hamas is fully disarmed."
+        ],
+        "source_count": 4,
+        "sources": [
+          "BBC - World",
+          "DW - English",
+          "RTE News",
+          "TIME"
+        ],
+        "source_urls": [
+          "https://www.rte.ie/news/2026/0809/1587148-israel-gaza",
+          "https://www.dw.com/en/middle-east-netanyahu-says-israel-rejects-trump-s-gaza-plan/live-78289364?maca=en-rss-en-all-1573-rdf",
+          "https://www.bbc.co.uk/news/articles/c5yw4lpe0yeo?at_medium=RSS&at_campaign=rss",
+          "https://time.com/article/2026/08/09/netanyahu-says-israel-to-reject-trumps-plan-for-gaza"
+        ],
+        "source_details": [
+          {
+            "title": "Israel rejects 15-point plan for Gaza, Netanyahu says",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/2026/0809/1587148-israel-gaza",
+            "source_bias": "center"
+          },
+          {
+            "title": "Middle East: Netanyahu says Israel rejects Trump's Gaza plan",
+            "source": "DW - English",
+            "link": "https://www.dw.com/en/middle-east-netanyahu-says-israel-rejects-trump-s-gaza-plan/live-78289364?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Israel rejects Trump's 15-point plan for Gaza, Netanyahu says",
+            "source": "BBC - World",
+            "link": "https://www.bbc.co.uk/news/articles/c5yw4lpe0yeo?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          },
+          {
+            "title": "Netanyahu Rejects Trump’s 15-Point Peace Plan for Gaza",
+            "source": "TIME",
+            "link": "https://time.com/article/2026/08/09/netanyahu-says-israel-to-reject-trumps-plan-for-gaza",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 1.0,
+        "match_evidence": {
+          "score": 1.0,
+          "matched_development_id": "story_3e58a49d6da47870",
+          "shared_tokens": [
+            "15-point",
+            "benjamin",
+            "disarmament",
+            "disarmed",
+            "donald",
+            "east",
+            "emphasized",
+            "fully",
+            "gaza",
+            "hamas",
+            "israel",
+            "middle",
+            "netanyahu",
+            "peace",
+            "plan",
+            "prime",
+            "trump",
+            "until",
+            "withdraw"
+          ],
+          "shared_entities": [
+            "benjamin_netanyahu",
+            "disarmament_middle",
+            "donald_trump",
+            "israel",
+            "israel_prime",
+            "middle_east"
+          ],
+          "source_url_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-10",
+        "last_seen_at": "2026-08-10",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 5,
+      "public_development_count": 6,
       "questionable_development_count": 1,
       "review_required": true
     },
-    "latest_title": "Israel Declines Trump's 15-Point Plan for Gaza Disarmament",
-    "latest_summary": "Israeli Prime Minister Benjamin Netanyahu has officially rejected President Donald Trump's 15-point plan aimed at disarming Hamas and facilitating an Israeli withdrawal from Gaza. Netanyahu emphasized that Israel will not withdraw its military forces until Hamas is fully disarmed.",
+    "latest_title": "Israel Rejects Trump's Gaza Peace Plan, Demands Hamas Disarmament",
+    "latest_summary": "Israeli Prime Minister Benjamin Netanyahu has announced the rejection of a 15-point peace plan proposed by former US President Donald Trump, stating that Israel will not withdraw from Gaza until Hamas is fully disarmed. Netanyahu emphasized that the current proposal is unacceptable in its present form.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -476,28 +574,29 @@
         "story_747725d0b3eecc92",
         "story_a131e0840de24507",
         "story_994bc928c23f3e5d",
-        "story_3e58a49d6da47870"
+        "story_3e58a49d6da47870",
+        "story_fa2d600af4d12fb5"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-09",
-      "development_count": 5,
-      "coverage_packet_count": 6,
-      "date_count": 5,
-      "source_count": 17,
-      "independent_source_count": 11,
+      "summary_updated_at": "2026-08-10",
+      "development_count": 6,
+      "coverage_packet_count": 7,
+      "date_count": 6,
+      "source_count": 20,
+      "independent_source_count": 14,
       "first_date": "2026-07-31",
-      "latest_date": "2026-08-09",
-      "latest_update_title": "Israel Declines Trump's 15-Point Plan for Gaza Disarmament",
-      "coverage_score": 0.942,
+      "latest_date": "2026-08-10",
+      "latest_update_title": "Israel Rejects Trump's Gaza Peace Plan, Demands Hamas Disarmament",
+      "coverage_score": 1.0,
       "recency_score": 1.0,
-      "rank_score": 0.976,
-      "context_summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Israel Declines Trump's 15-Point Plan for Gaza Disarmament.",
-      "cta_label": "Explore 5 developments"
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Israel Rejects Trump's Gaza Peace Plan, Demands Hamas Disarmament.",
+      "cta_label": "Explore 6 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "President Trump has announced a deal for Hamas to completely disarm, which includes the gradual withdrawal of Israeli forces from Gaza. A later development was Israeli Strikes in Gaza Result in Multiple Casualties. Most recently, israeli Prime Minister Benjamin Netanyahu has officially rejected President Donald Trump's 15-point plan aimed at disarming Hamas and facilitating an Israeli withdrawal from Gaza.",
+      "summary": "President Trump has announced a deal for Hamas to completely disarm, which includes the gradual withdrawal of Israeli forces from Gaza. A later development was Israeli Military Actions Challenge Trump's Gaza Peace Proposal. Most recently, israeli Prime Minister Benjamin Netanyahu has announced the rejection of a 15-point peace plan proposed by former US President Donald Trump, stating that Israel will not withdraw from Gaza until Hamas is fully disarmed.",
       "key_developments": [
         {
           "development_id": "story_c0c042a2fb04bd8a",
@@ -523,6 +622,11 @@
           "development_id": "story_3e58a49d6da47870",
           "date": "2026-08-09",
           "title": "Israel Declines Trump's 15-Point Plan for Gaza Disarmament"
+        },
+        {
+          "development_id": "story_fa2d600af4d12fb5",
+          "date": "2026-08-10",
+          "title": "Israel Rejects Trump's Gaza Peace Plan, Demands Hamas Disarmament"
         }
       ],
       "sources": [
@@ -627,9 +731,27 @@
           "source": "RTE News",
           "link": "https://www.rte.ie/news/2026/0809/1587148-israel-gaza",
           "source_bias": "center"
+        },
+        {
+          "title": "Middle East: Netanyahu says Israel rejects Trump's Gaza plan",
+          "source": "DW - English",
+          "link": "https://www.dw.com/en/middle-east-netanyahu-says-israel-rejects-trump-s-gaza-plan/live-78289364?maca=en-rss-en-all-1573-rdf",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Israel rejects Trump's 15-point plan for Gaza, Netanyahu says",
+          "source": "BBC - World",
+          "link": "https://www.bbc.co.uk/news/articles/c5yw4lpe0yeo?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
+        },
+        {
+          "title": "Netanyahu Rejects Trump’s 15-Point Peace Plan for Gaza",
+          "source": "TIME",
+          "link": "https://time.com/article/2026/08/09/netanyahu-says-israel-to-reject-trumps-plan-for-gaza",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-08-09",
+      "updated_at": "2026-08-10",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -638,7 +760,7 @@
         "event_id": "event_israeli-strikes-in-gaza-result-in-seven-deat_837b156199",
         "title": "Israeli Strikes in Gaza Result in Seven Deaths and Destruction of Medical Warehouses",
         "relationship": "related_topic",
-        "confidence": 0.914,
+        "confidence": 0.913,
         "shared_entities": [
           "benjamin_netanyahu",
           "gaza",
@@ -653,7 +775,7 @@
         "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
         "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
         "relationship": "related_topic",
-        "confidence": 0.856,
+        "confidence": 0.852,
         "shared_entities": [
           "benjamin_netanyahu",
           "donald_trump",
@@ -667,7 +789,7 @@
         "event_id": "event_trump-announces-agreement-for-hamas-disarmam_3c03bb0c0f",
         "title": "Trump Announces Agreement for Hamas Disarmament Amid Israeli Skepticism",
         "relationship": "related_topic",
-        "confidence": 0.831,
+        "confidence": 0.83,
         "shared_entities": [
           "donald_trump",
           "hamas_disarmament",
@@ -737,8 +859,10 @@
       "conflict",
       "contingent",
       "contradicting",
+      "current",
       "deal",
       "decline",
+      "demand",
       "disappointed",
       "disarm",
       "disarmament",
@@ -753,6 +877,7 @@
       "fatalitie",
       "followed",
       "force",
+      "form",
       "fulfilling",
       "fully",
       "gaza",
@@ -784,12 +909,15 @@
       "peace",
       "plan",
       "position",
+      "present",
       "previou",
       "prime",
       "proposal",
       "proposed",
       "recent",
+      "reject",
       "rejected",
+      "rejection",
       "residential",
       "result",
       "resulted",
@@ -802,6 +930,7 @@
       "strike",
       "terms",
       "trump",
+      "unacceptable",
       "until",
       "upon",
       "violence",
@@ -817,6 +946,7 @@
       "casualtie_israel",
       "challenge_trump",
       "decline_trump",
+      "demand_hamas",
       "disarmament",
       "disarmament_israel",
       "donald_trump",
@@ -844,7 +974,7 @@
       "trump_point",
       "us"
     ],
-    "search_text": "15-point accept action action_challenge agree agreed agreement aimed airstrike announce announced army attack authoritie benjamin benjamin_netanyahu building calls casualtie casualtie_israel ceasefire challenge challenge_trump comes commitment committee complete completely confirmed conflict contingent contradicting deal decline decline_trump disappointed disarm disarmament disarmament_israel disarmed disarming does donald donald_trump earlier emphasized ending facilitating fatalitie followed force fulfilling fully gaza gaza. gaza._hamas gaza._netanyahu gaza_disarmament gaza_peace gaza_result governing gradual group hamas hamas_agree hamas_disarmament hand however implementation include indicate initiative israel israel_decline israel_military israel_prime israel_withdrawal killed least local meanwhile military military_action multiple multiple_casualtie netanyahu nine occurred officially ongoing overnight palestinian part peace peace_proposal plan position previou prime proposal proposal_israel proposed recent rejected residential result resulted retreat saturday seven stated stating stipulate strike terms trump trump_gaza trump_point until upon us violence weapon which withdraw withdrawal would"
+    "search_text": "15-point accept action action_challenge agree agreed agreement aimed airstrike announce announced army attack authoritie benjamin benjamin_netanyahu building calls casualtie casualtie_israel ceasefire challenge challenge_trump comes commitment committee complete completely confirmed conflict contingent contradicting current deal decline decline_trump demand demand_hamas disappointed disarm disarmament disarmament_israel disarmed disarming does donald donald_trump earlier emphasized ending facilitating fatalitie followed force form fulfilling fully gaza gaza. gaza._hamas gaza._netanyahu gaza_disarmament gaza_peace gaza_result governing gradual group hamas hamas_agree hamas_disarmament hand however implementation include indicate initiative israel israel_decline israel_military israel_prime israel_withdrawal killed least local meanwhile military military_action multiple multiple_casualtie netanyahu nine occurred officially ongoing overnight palestinian part peace peace_proposal plan position present previou prime proposal proposal_israel proposed recent reject rejected rejection residential result resulted retreat saturday seven stated stating stipulate strike terms trump trump_gaza trump_point unacceptable until upon us violence weapon which withdraw withdrawal would"
   },
   "related_events": [
     {
