@@ -15,7 +15,7 @@
     "summary": "A 14-year-old boy in Thailand killed his grandparents before opening fire at Debsirin Nonthaburi School, resulting in at least eight deaths, including his own. The attack, which occurred just outside Bangkok, left more than 30 others injured. Authorities reported that the boy used a firearm belonging to his grandfather and fired a total of 26 rounds during the incident. The motive for the shooting remains unclear.",
     "status": "active",
     "first_seen_at": "2026-08-07",
-    "last_seen_at": "2026-08-09",
+    "last_seen_at": "2026-08-11",
     "timeline": [
       {
         "development_id": "story_1bec88f8be31f04c",
@@ -273,47 +273,113 @@
         "first_seen_at": "2026-08-09",
         "last_seen_at": "2026-08-09",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_1aef22ea3c3bda61",
+        "daily_story_id": "story_1aef22ea3c3bda61",
+        "date": "2026-08-11",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Thai Prime Minister Suspends Firearm Licences Following School Shooting",
+        "summary": "In response to a recent school shooting, Thailand's Prime Minister Anutin Charnvirakul has suspended all firearms licences. This decision comes as the bodies of the teenage shooter and his grandparents, whom he killed, were cremated. The Prime Minister also emphasized the need for stricter controls and harsher penalties for firearms-related offenses.",
+        "topic_label": "Thailand School Shooting",
+        "development_type": "impact",
+        "key_facts": [
+          "Thai PM suspended firearms licences after a school shooting.",
+          "The shooter and his grandparents were cremated.",
+          "Calls for tighter controls and penalties on firearms offences."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Channel NewsAsia - Latest",
+          "RTE News"
+        ],
+        "source_urls": [
+          "https://www.rte.ie/news/asia/2026/0811/1587427-thailand-school-shooting",
+          "https://www.channelnewsasia.com/asia/thailand-gun-licence-suspended-shooting-anutin-6311946"
+        ],
+        "source_details": [
+          {
+            "title": "Thai PM suspends gun licences after school shooting",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/asia/2026/0811/1587427-thailand-school-shooting",
+            "source_bias": "center"
+          },
+          {
+            "title": "Thai PM suspends gun licences as teen shooter, grandparents cremated",
+            "source": "Channel NewsAsia - Latest",
+            "link": "https://www.channelnewsasia.com/asia/thailand-gun-licence-suspended-shooting-anutin-6311946",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_1bec88f8be31f04c",
+          "shared_tokens": [
+            "firearm",
+            "grandparent",
+            "killed",
+            "school",
+            "shooter",
+            "shooting",
+            "thailand"
+          ],
+          "shared_entities": [],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-11",
+        "last_seen_at": "2026-08-11",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 3,
+      "public_development_count": 4,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Death Toll Rises to Nine in Thailand School Shooting as 12-Year-Old Girl Dies",
-    "latest_summary": "A 12-year-old girl has died from critical injuries sustained during a school shooting in Nonthaburi province, Thailand, raising the death toll to at least nine. The shooting, which occurred on Friday, involved a 14-year-old assailant who also reportedly killed his grandparents before opening fire at Debsirin Nonthaburi School. The shooter is believed to have taken his own life following the attack.",
+    "latest_title": "Thai Prime Minister Suspends Firearm Licences Following School Shooting",
+    "latest_summary": "In response to a recent school shooting, Thailand's Prime Minister Anutin Charnvirakul has suspended all firearms licences. This decision comes as the bodies of the teenage shooter and his grandparents, whom he killed, were cremated. The Prime Minister also emphasized the need for stricter controls and harsher penalties for firearms-related offenses.",
     "presentation": {
       "has_context": true,
-      "has_full_timeline": false,
-      "stage": "developing_event",
-      "stage_label": "Developing event",
+      "has_full_timeline": true,
+      "stage": "timeline",
+      "stage_label": "Timeline",
       "base_title": "Teenager Commits Deadly Shooting at School After Killing Grandparents in Thailand",
-      "display_title": "Teenager Commits Deadly Shooting at School After Killing Grandparents in Thailand",
+      "display_title": "Teenager Commits Deadly Shooting at School After Killing Grandparents in Thailand Timeline",
       "milestone_development_ids": [
         "story_1bec88f8be31f04c",
         "story_384dbbcc542e10ad",
-        "story_6791e7904d79894f"
+        "story_6791e7904d79894f",
+        "story_1aef22ea3c3bda61"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-09",
-      "development_count": 3,
-      "coverage_packet_count": 3,
-      "date_count": 3,
-      "source_count": 10,
-      "independent_source_count": 9,
+      "summary_updated_at": "2026-08-11",
+      "development_count": 4,
+      "coverage_packet_count": 4,
+      "date_count": 4,
+      "source_count": 12,
+      "independent_source_count": 10,
       "first_date": "2026-08-07",
-      "latest_date": "2026-08-09",
-      "latest_update_title": "Death Toll Rises to Nine in Thailand School Shooting as 12-Year-Old Girl Dies",
-      "coverage_score": 0.72,
-      "recency_score": 0.875,
-      "rank_score": 0.81,
-      "context_summary": "Muninn first tracked this thread on 2026-08-07: Teenager Commits Deadly Shooting at School After Killing Grandparents in Thailand. The latest development is Death Toll Rises to Nine in Thailand School Shooting as 12-Year-Old Girl Dies.",
-      "cta_label": ""
+      "latest_date": "2026-08-11",
+      "latest_update_title": "Thai Prime Minister Suspends Firearm Licences Following School Shooting",
+      "coverage_score": 0.843,
+      "recency_score": 1.0,
+      "rank_score": 0.934,
+      "context_summary": "Muninn first tracked this thread on 2026-08-07: Teenager Commits Deadly Shooting at School After Killing Grandparents in Thailand. The latest development is Thai Prime Minister Suspends Firearm Licences Following School Shooting.",
+      "cta_label": "Explore 4 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "A 14-year-old boy in Thailand killed his grandparents before opening fire at Debsirin Nonthaburi School, resulting in at least eight deaths, including his own. A later development was Deadly School Shooting in Thailand Leaves Multiple Victims. Most recently, a 12-year-old girl has died from critical injuries sustained during a school shooting in Nonthaburi province, Thailand, raising the death toll to at least nine.",
+      "summary": "A 14-year-old boy in Thailand killed his grandparents before opening fire at Debsirin Nonthaburi School, resulting in at least eight deaths, including his own. A later development was Death Toll Rises to Nine in Thailand School Shooting as 12-Year-Old Girl Dies. Most recently, in response to a recent school shooting, Thailand's Prime Minister Anutin Charnvirakul has suspended all firearms licences.",
       "key_developments": [
         {
           "development_id": "story_1bec88f8be31f04c",
@@ -329,6 +395,11 @@
           "development_id": "story_6791e7904d79894f",
           "date": "2026-08-09",
           "title": "Death Toll Rises to Nine in Thailand School Shooting as 12-Year-Old Girl Dies"
+        },
+        {
+          "development_id": "story_1aef22ea3c3bda61",
+          "date": "2026-08-11",
+          "title": "Thai Prime Minister Suspends Firearm Licences Following School Shooting"
         }
       ],
       "sources": [
@@ -391,43 +462,65 @@
           "source": "PBS News",
           "link": "https://www.pbs.org/newshour/world/12-year-old-girl-dies-after-thailand-school-shooting-bringing-death-toll-to-at-least-8",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Thai PM suspends gun licences after school shooting",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/asia/2026/0811/1587427-thailand-school-shooting",
+          "source_bias": "center"
+        },
+        {
+          "title": "Thai PM suspends gun licences as teen shooter, grandparents cremated",
+          "source": "Channel NewsAsia - Latest",
+          "link": "https://www.channelnewsasia.com/asia/thailand-gun-licence-suspended-shooting-anutin-6311946",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-08-09",
+      "updated_at": "2026-08-11",
       "provenance": "source_grounded_event_memory"
     },
-    "event_stage": "developing_event",
+    "event_stage": "timeline",
     "related_events": [],
     "search_tokens": [
       "12-year-old",
       "14-year-old",
       "also",
+      "anutin",
       "assailant",
       "attack",
       "authoritie",
       "bangkok",
       "believed",
       "belonging",
+      "bodie",
       "calls",
+      "charnvirakul",
+      "comes",
       "commit",
       "concern",
+      "control",
+      "cremated",
       "critical",
       "deadly",
       "death",
       "debsirin",
+      "decision",
       "died",
       "dies",
       "eight",
+      "emphasized",
       "event",
       "fatally",
       "fire",
       "firearm",
+      "firearms-related",
       "fired",
       "five",
       "friday",
       "girl",
       "grandfather",
       "grandparent",
+      "harsher",
       "incident",
       "including",
       "injured",
@@ -440,25 +533,32 @@
       "least",
       "leave",
       "left",
+      "licence",
       "life",
       "member",
       "motive",
       "multiple",
       "near",
+      "need",
       "nine",
       "nonthaburi",
       "occurred",
+      "offense",
       "opening",
       "other",
       "outside",
+      "penaltie",
       "previously",
+      "prime",
       "prompting",
       "province",
       "raised",
       "raising",
+      "recent",
       "remain",
       "reported",
       "reportedly",
+      "response",
       "resulting",
       "rises",
       "round",
@@ -469,10 +569,14 @@
       "shot",
       "staff",
       "stricter",
+      "suspend",
+      "suspended",
       "sustained",
       "taken",
       "taking",
+      "teenage",
       "teenager",
+      "thai",
       "thailand",
       "than",
       "toll",
@@ -484,13 +588,16 @@
       "violence",
       "where",
       "which",
+      "whom",
       "wounded"
     ],
     "entities": [
+      "anutin_charnvirakul",
       "bangkok",
       "commit_deadly",
       "debsirin",
       "debsirin_nonthaburi",
+      "firearm_licence",
       "girl_dies",
       "killing_grandparent",
       "multiple_victim",
@@ -499,12 +606,34 @@
       "nonthaburi_school.",
       "school",
       "teenager_commit",
+      "thai_prime",
       "thailand",
+      "thailand_prime",
       "toll_rises",
       "year-old",
       "year-old_girl"
     ],
-    "search_text": "12-year-old 14-year-old also assailant attack authoritie bangkok believed belonging calls commit commit_deadly concern critical deadly death debsirin debsirin_nonthaburi died dies eight event fatally fire firearm fired five friday girl girl_dies grandfather grandparent incident including injured injurie involved just killed killing killing_grandparent laws least leave left life member motive multiple multiple_victim near nine nonthaburi nonthaburi_school. occurred opening other outside previously prompting province raised raising remain reported reportedly resulting rises round school seven shooter shooting shot staff stricter sustained taken taking teenager teenager_commit thailand than toll toll_rises total tragic unclear used victim violence where which wounded year-old year-old_girl"
+    "search_text": "12-year-old 14-year-old also anutin anutin_charnvirakul assailant attack authoritie bangkok believed belonging bodie calls charnvirakul comes commit commit_deadly concern control cremated critical deadly death debsirin debsirin_nonthaburi decision died dies eight emphasized event fatally fire firearm firearm_licence firearms-related fired five friday girl girl_dies grandfather grandparent harsher incident including injured injurie involved just killed killing killing_grandparent laws least leave left licence life member motive multiple multiple_victim near need nine nonthaburi nonthaburi_school. occurred offense opening other outside penaltie previously prime prompting province raised raising recent remain reported reportedly response resulting rises round school seven shooter shooting shot staff stricter suspend suspended sustained taken taking teenage teenager teenager_commit thai thai_prime thailand thailand_prime than toll toll_rises total tragic unclear used victim violence where which whom wounded year-old year-old_girl",
+    "hero_image": {
+      "url": "/Current_news/generated/events/event_teenager-commits-deadly-shooting-at-school-a_d617397bd1.jpg",
+      "thumbnail_url": "/Current_news/generated/events/event_teenager-commits-deadly-shooting-at-school-a_d617397bd1.jpg",
+      "source": "Muninn AI illustration",
+      "author": "OpenAI GPT Image 2",
+      "license": "AI-generated content",
+      "image_role": "illustrative",
+      "image_role_label": "AI illustration",
+      "is_ai_generated": true,
+      "generation_model": "gpt-image-2",
+      "generation_quality": "low",
+      "safe_to_crop": true,
+      "allows_crop": true,
+      "focal_x": 0.5,
+      "focal_y": 0.48,
+      "focal_wide_x": 0.5,
+      "focal_wide_y": 0.48,
+      "focal_tall_x": 0.5,
+      "focal_tall_y": 0.48
+    }
   },
   "related_events": []
 }

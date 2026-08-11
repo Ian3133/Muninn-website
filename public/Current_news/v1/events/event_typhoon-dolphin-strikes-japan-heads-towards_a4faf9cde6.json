@@ -302,8 +302,8 @@
       "latest_date": "2026-08-10",
       "latest_update_title": "Typhoon Dolphin Hits China, Causing Evacuations and Flight Cancellations",
       "coverage_score": 0.72,
-      "recency_score": 1.0,
-      "rank_score": 0.882,
+      "recency_score": 0.875,
+      "rank_score": 0.81,
       "context_summary": "Muninn first tracked this thread on 2026-08-08: Typhoon Dolphin Strikes Japan, Heads Towards China with Preparations Underway. The latest development is Typhoon Dolphin Hits China, Causing Evacuations and Flight Cancellations.",
       "cta_label": ""
     },
@@ -404,6 +404,16 @@
           "china",
           "flight_cancellation"
         ]
+      },
+      {
+        "event_id": "event_tropical-storm-dolphin-leads-to-flight-cance_47ae420b49",
+        "title": "Tropical Storm Dolphin Leads to Flight Cancellations and Flooding in Eastern China",
+        "relationship": "related_topic",
+        "confidence": 0.698,
+        "shared_entities": [
+          "china",
+          "flight_cancellation"
+        ]
       }
     ],
     "hero_image": {
@@ -425,6 +435,63 @@
       "focal_wide_y": 0.48,
       "focal_tall_x": 0.5,
       "focal_tall_y": 0.48
+    },
+    "event_overview": {
+      "available": true,
+      "title": "About Typhoon Dolphin",
+      "subject": "Typhoon Dolphin",
+      "summary": "Typhoon Dolphin was the 13th named tropical cyclone of the 2026 western North Pacific season, forming in late July and later tracking westward across the region. It affected Japan’s Okinawa area before making landfall in Zhejiang province on China’s east coast; by August 10 it had weakened to a tropical storm inland.",
+      "facts": [
+        {
+          "label": "Formation and designation",
+          "value": "China’s National Meteorological Center designated Dolphin as 2026’s No. 13 typhoon; official reporting said it formed over the northwestern Pacific on July 27, 2026.",
+          "source_ids": [
+            "o1",
+            "o2"
+          ]
+        },
+        {
+          "label": "China landfall and weakening",
+          "value": "Dolphin made landfall near Taizhou, Zhejiang, on the evening of August 9 with reported winds of 151 kph; on August 10, China’s National Meteorological Center listed it as a tropical storm over Dexing, Jiangxi, and forecast further weakening.",
+          "source_ids": []
+        },
+        {
+          "label": "Naming system",
+          "value": "“Dolphin” is a name contributed by Hong Kong, China, under the ESCAP/WMO Typhoon Committee naming list; it refers to the Chinese white dolphin and a Hong Kong mascot.",
+          "source_ids": [
+            "o2"
+          ]
+        }
+      ],
+      "scope_note": "The selected Muninn timeline covers the August 8-10 Japan-to-China impact period and preparedness or disruption measures, not Dolphin’s full late-July development, its complete inland dissipation, or all effects elsewhere in the region.",
+      "sources": [
+        {
+          "title": "Com",
+          "publisher": "Com",
+          "url": "https://e.weather.com.cn/news/2026/07/4735905.shtml",
+          "source_type": "reporting",
+          "id": "o1"
+        },
+        {
+          "title": "Nmc",
+          "publisher": "Nmc",
+          "url": "https://www.nmc.cn/f/p-428",
+          "source_type": "reporting",
+          "id": "o2"
+        },
+        {
+          "title": "Go",
+          "publisher": "Go",
+          "url": "https://www.jma.go.jp/jma/jma-eng/jma-center/rsmc-hp-pub-eg/tyname.html",
+          "source_type": "reporting",
+          "id": "o3"
+        }
+      ],
+      "publisher_count": 3,
+      "generated_at": "2026-08-10T13:01:13.545915+00:00",
+      "expires_at": "2026-08-17T13:01:13.545915+00:00",
+      "model": "gpt-5.6-terra",
+      "provenance": "openai_web_search_source_grounded_event_overview_v1"
     },
     "search_tokens": [
       "000",
@@ -519,64 +586,7 @@
       "underway_typhoon",
       "winds_typhoon"
     ],
-    "search_text": "000 162 216 600 affecting anticipation approache arrival becoming bringing building cancellation cancellation_typhoon caused causing causing_evacuation china china_causing china_eastern china_typhoon closed coast continue cyclone dolphin dolphin_hits east eastern eastern_coast elderly evacuation expected falls five flight flight_cancellation gusts heads heads_toward high high_winds hits hits_china impact individual injurie japan japan_heads japan_okinawa landfall made maximum million monday numerou okinawa outage particularly ports power preparation preparation_underway prepare primarily prior prompted province reaching region resident southern storm strike strong strongest sustained than toward toward_china tropical typhoon typhoon_dolphin underway underway_typhoon winds winds_typhoon year",
-    "event_overview": {
-      "available": true,
-      "title": "About Typhoon Dolphin",
-      "subject": "Typhoon Dolphin",
-      "summary": "Typhoon Dolphin was the 13th named tropical cyclone of the 2026 western North Pacific season, forming in late July and later tracking westward across the region. It affected Japan’s Okinawa area before making landfall in Zhejiang province on China’s east coast; by August 10 it had weakened to a tropical storm inland.",
-      "facts": [
-        {
-          "label": "Formation and designation",
-          "value": "China’s National Meteorological Center designated Dolphin as 2026’s No. 13 typhoon; official reporting said it formed over the northwestern Pacific on July 27, 2026.",
-          "source_ids": [
-            "o1",
-            "o2"
-          ]
-        },
-        {
-          "label": "China landfall and weakening",
-          "value": "Dolphin made landfall near Taizhou, Zhejiang, on the evening of August 9 with reported winds of 151 kph; on August 10, China’s National Meteorological Center listed it as a tropical storm over Dexing, Jiangxi, and forecast further weakening.",
-          "source_ids": []
-        },
-        {
-          "label": "Naming system",
-          "value": "“Dolphin” is a name contributed by Hong Kong, China, under the ESCAP/WMO Typhoon Committee naming list; it refers to the Chinese white dolphin and a Hong Kong mascot.",
-          "source_ids": [
-            "o2"
-          ]
-        }
-      ],
-      "scope_note": "The selected Muninn timeline covers the August 8-10 Japan-to-China impact period and preparedness or disruption measures, not Dolphin’s full late-July development, its complete inland dissipation, or all effects elsewhere in the region.",
-      "sources": [
-        {
-          "title": "Com",
-          "publisher": "Com",
-          "url": "https://e.weather.com.cn/news/2026/07/4735905.shtml",
-          "source_type": "reporting",
-          "id": "o1"
-        },
-        {
-          "title": "Nmc",
-          "publisher": "Nmc",
-          "url": "https://www.nmc.cn/f/p-428",
-          "source_type": "reporting",
-          "id": "o2"
-        },
-        {
-          "title": "Go",
-          "publisher": "Go",
-          "url": "https://www.jma.go.jp/jma/jma-eng/jma-center/rsmc-hp-pub-eg/tyname.html",
-          "source_type": "reporting",
-          "id": "o3"
-        }
-      ],
-      "publisher_count": 3,
-      "generated_at": "2026-08-10T13:01:13.545915+00:00",
-      "expires_at": "2026-08-17T13:01:13.545915+00:00",
-      "model": "gpt-5.6-terra",
-      "provenance": "openai_web_search_source_grounded_event_overview_v1"
-    }
+    "search_text": "000 162 216 600 affecting anticipation approache arrival becoming bringing building cancellation cancellation_typhoon caused causing causing_evacuation china china_causing china_eastern china_typhoon closed coast continue cyclone dolphin dolphin_hits east eastern eastern_coast elderly evacuation expected falls five flight flight_cancellation gusts heads heads_toward high high_winds hits hits_china impact individual injurie japan japan_heads japan_okinawa landfall made maximum million monday numerou okinawa outage particularly ports power preparation preparation_underway prepare primarily prior prompted province reaching region resident southern storm strike strong strongest sustained than toward toward_china tropical typhoon typhoon_dolphin underway underway_typhoon winds winds_typhoon year"
   },
   "related_events": []
 }

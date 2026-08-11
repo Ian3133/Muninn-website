@@ -15,7 +15,7 @@
     "summary": "Trump announced that the US will refrain from launching new strikes against Iran in hopes of reaching a diplomatic agreement. This decision comes after Iran issued a warning against any 'adventurous action,' stating it would respond decisively to potential attacks on its territory.",
     "status": "active",
     "first_seen_at": "2026-08-02",
-    "last_seen_at": "2026-08-03",
+    "last_seen_at": "2026-08-11",
     "timeline": [
       {
         "development_id": "story_eeac5a41d1e28e7e",
@@ -144,15 +144,89 @@
         "first_seen_at": "2026-08-03",
         "last_seen_at": "2026-08-03",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_587a3eb59eb54f2b",
+        "daily_story_id": "story_587a3eb59eb54f2b",
+        "date": "2026-08-11",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Iran Sets Six Conditions for US to Reopen Strait of Hormuz",
+        "summary": "Iran has outlined six demands that the US must meet to cease attacks on commercial ships in the Strait of Hormuz. In response, President Trump has instructed his representatives to seek reparations from Iran, complicating negotiations further. The exchange of demands has led to rising oil prices and US bond yields, indicating increased market tension.",
+        "topic_label": "Iran Relations",
+        "development_type": "military_action",
+        "key_facts": [
+          "Iran demands six conditions from the US to stop attacks on commercial ships.",
+          "Trump has instructed representatives to demand reparations from Iran.",
+          "Oil prices and US bond yields have risen amid the negotiations."
+        ],
+        "source_count": 3,
+        "sources": [
+          "Euronews",
+          "NBC News",
+          "TIME"
+        ],
+        "source_urls": [
+          "https://time.com/article/2026/08/10/iran-us-strait-of-hormuz-conditions-trump-negotiations",
+          "https://www.nbcnews.com/nightly-news/video/trump-responds-to-iran-s-new-demands-268070469841",
+          "http://www.euronews.com/business/2026/08/11/oil-prices-and-us-bond-yields-rise-as-trump-and-iran-trade-reparations-demands"
+        ],
+        "source_details": [
+          {
+            "title": "Trump Responds as Iran Says US Must Meet These Six Demands If Strait of Hormuz Is to Reopen",
+            "source": "TIME",
+            "link": "https://time.com/article/2026/08/10/iran-us-strait-of-hormuz-conditions-trump-negotiations",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Trump responds to Iran’s new demands",
+            "source": "NBC News",
+            "link": "https://www.nbcnews.com/nightly-news/video/trump-responds-to-iran-s-new-demands-268070469841",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Oil prices and US bond yields rise as Trump and Iran trade reparations demands",
+            "source": "Euronews",
+            "link": "http://www.euronews.com/business/2026/08/11/oil-prices-and-us-bond-yields-rise-as-trump-and-iran-trade-reparations-demands",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_eeac5a41d1e28e7e",
+          "shared_tokens": [
+            "attack",
+            "iran",
+            "relation",
+            "trump"
+          ],
+          "shared_entities": [
+            "iran",
+            "iran_relation",
+            "us"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-11",
+        "last_seen_at": "2026-08-11",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 2,
+      "public_development_count": 3,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Iran Denies Ongoing Talks with US Amid Trump's Claims of Progress",
-    "latest_summary": "Iran has stated that there are no current negotiations or plans for meetings with the United States, contradicting President Trump's assertion of progress in talks that he cited as a reason for canceling planned military strikes. Trump had indicated that discussions regarding the Strait of Hormuz and Iran's nuclear program were set to occur on the same day he called off the attacks.",
+    "latest_title": "Iran Sets Six Conditions for US to Reopen Strait of Hormuz",
+    "latest_summary": "Iran has outlined six demands that the US must meet to cease attacks on commercial ships in the Strait of Hormuz. In response, President Trump has instructed his representatives to seek reparations from Iran, complicating negotiations further. The exchange of demands has led to rising oil prices and US bond yields, indicating increased market tension.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": false,
@@ -162,28 +236,29 @@
       "display_title": "Trump Delays Iran Strikes to Pursue Diplomatic Deal",
       "milestone_development_ids": [
         "story_eeac5a41d1e28e7e",
-        "story_47c28cc2b2f5edc7"
+        "story_47c28cc2b2f5edc7",
+        "story_587a3eb59eb54f2b"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-03",
-      "development_count": 2,
-      "coverage_packet_count": 2,
-      "date_count": 2,
-      "source_count": 5,
-      "independent_source_count": 5,
+      "summary_updated_at": "2026-08-11",
+      "development_count": 3,
+      "coverage_packet_count": 3,
+      "date_count": 3,
+      "source_count": 8,
+      "independent_source_count": 7,
       "first_date": "2026-08-02",
-      "latest_date": "2026-08-03",
-      "latest_update_title": "Iran Denies Ongoing Talks with US Amid Trump's Claims of Progress",
-      "coverage_score": 0.447,
-      "recency_score": 0.5,
-      "rank_score": 0.478,
-      "context_summary": "Muninn first tracked this thread on 2026-08-02: Trump Delays Iran Strikes to Pursue Diplomatic Deal. The latest development is Iran Denies Ongoing Talks with US Amid Trump's Claims of Progress.",
+      "latest_date": "2026-08-11",
+      "latest_update_title": "Iran Sets Six Conditions for US to Reopen Strait of Hormuz",
+      "coverage_score": 0.657,
+      "recency_score": 1.0,
+      "rank_score": 0.856,
+      "context_summary": "Muninn first tracked this thread on 2026-08-02: Trump Delays Iran Strikes to Pursue Diplomatic Deal. The latest development is Iran Sets Six Conditions for US to Reopen Strait of Hormuz.",
       "cta_label": ""
     },
     "event_summary": {
       "available": true,
-      "summary": "Trump announced that the US will refrain from launching new strikes against Iran in hopes of reaching a diplomatic agreement. Most recently, iran has stated that there are no current negotiations or plans for meetings with the United States, contradicting President Trump's assertion of progress in talks that he cited as a reason for canceling planned military strikes.",
+      "summary": "Trump announced that the US will refrain from launching new strikes against Iran in hopes of reaching a diplomatic agreement. A later development was Iran Denies Ongoing Talks with US Amid Trump's Claims of Progress. Most recently, iran has outlined six demands that the US must meet to cease attacks on commercial ships in the Strait of Hormuz.",
       "key_developments": [
         {
           "development_id": "story_eeac5a41d1e28e7e",
@@ -194,6 +269,11 @@
           "development_id": "story_47c28cc2b2f5edc7",
           "date": "2026-08-03",
           "title": "Iran Denies Ongoing Talks with US Amid Trump's Claims of Progress"
+        },
+        {
+          "development_id": "story_587a3eb59eb54f2b",
+          "date": "2026-08-11",
+          "title": "Iran Sets Six Conditions for US to Reopen Strait of Hormuz"
         }
       ],
       "sources": [
@@ -226,9 +306,27 @@
           "source": "NBC News",
           "link": "https://www.nbcnews.com/world/iran/trump-iran-talks-attacks-canceled-hormuz-nuclear-rcna590535",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Trump Responds as Iran Says US Must Meet These Six Demands If Strait of Hormuz Is to Reopen",
+          "source": "TIME",
+          "link": "https://time.com/article/2026/08/10/iran-us-strait-of-hormuz-conditions-trump-negotiations",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Trump responds to Iran’s new demands",
+          "source": "NBC News",
+          "link": "https://www.nbcnews.com/nightly-news/video/trump-responds-to-iran-s-new-demands-268070469841",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Oil prices and US bond yields rise as Trump and Iran trade reparations demands",
+          "source": "Euronews",
+          "link": "http://www.euronews.com/business/2026/08/11/oil-prices-and-us-bond-yields-rise-as-trump-and-iran-trade-reparations-demands",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-08-03",
+      "updated_at": "2026-08-11",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "developing_event",
@@ -237,31 +335,12 @@
         "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
         "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
         "relationship": "related_topic",
-        "confidence": 0.83,
+        "confidence": 0.865,
         "shared_entities": [
           "deal_trump",
           "iran",
           "pursue",
-          "us"
-        ]
-      },
-      {
-        "event_id": "event_iran-and-oman-near-agreement-on-strait-of-ho_af01d76b94",
-        "title": "Iran and Oman Near Agreement on Strait of Hormuz, Excluding US Involvement",
-        "relationship": "related_topic",
-        "confidence": 0.702,
-        "shared_entities": [
-          "iran",
-          "us"
-        ]
-      },
-      {
-        "event_id": "event_iran-advances-talks-on-strait-of-hormuz-reop_ae45e907f0",
-        "title": "Iran Advances Talks on Strait of Hormuz Reopening Amid Conditions",
-        "relationship": "related_topic",
-        "confidence": 0.693,
-        "shared_entities": [
-          "iran",
+          "strait",
           "us"
         ]
       },
@@ -269,7 +348,31 @@
         "event_id": "event_progress-reported-on-iran-oman-deal-to-reope_9ab874c7b5",
         "title": "Progress Reported on Iran-Oman Deal to Reopen Strait of Hormuz",
         "relationship": "related_topic",
-        "confidence": 0.686,
+        "confidence": 0.775,
+        "shared_entities": [
+          "iran",
+          "reopen",
+          "reopen_strait",
+          "us"
+        ]
+      },
+      {
+        "event_id": "event_iran-claims-attacks-on-us-bases-in-bahrain-j_2ed1fdd27a",
+        "title": "Iran Claims Attacks on US Bases in Bahrain, Jordan, and Kuwait Amid Escalating Conflict",
+        "relationship": "related_topic",
+        "confidence": 0.762,
+        "shared_entities": [
+          "hormuz_iran",
+          "iran",
+          "strait",
+          "us"
+        ]
+      },
+      {
+        "event_id": "event_iran-advances-talks-on-strait-of-hormuz-reop_ae45e907f0",
+        "title": "Iran Advances Talks on Strait of Hormuz Reopening Amid Conditions",
+        "relationship": "related_topic",
+        "confidence": 0.719,
         "shared_entities": [
           "iran",
           "us"
@@ -303,35 +406,52 @@
       "announced",
       "assertion",
       "attack",
+      "bond",
       "called",
       "canceling",
+      "cease",
       "cited",
       "claim",
       "comes",
+      "commercial",
+      "complicating",
+      "condition",
       "contradicting",
       "current",
       "deal",
       "decision",
       "decisively",
       "delay",
+      "demand",
       "denie",
       "diplomatic",
       "discussion",
+      "exchange",
+      "further",
       "hopes",
       "hormuz",
+      "increased",
       "indicated",
+      "indicating",
+      "instructed",
       "iran",
       "issued",
       "launching",
+      "market",
+      "meet",
       "meeting",
       "military",
+      "must",
       "negotiation",
       "nuclear",
       "occur",
+      "oil",
       "ongoing",
+      "outlined",
       "planned",
       "plans",
       "potential",
+      "price",
       "program",
       "progress",
       "pursue",
@@ -339,49 +459,166 @@
       "reason",
       "refrain",
       "regarding",
+      "reopen",
+      "reparation",
+      "representative",
       "respond",
+      "response",
+      "rising",
       "same",
+      "seek",
+      "sets",
+      "ships",
       "stated",
       "stating",
       "strait",
       "strike",
       "talks",
+      "tension",
       "territory",
       "there",
       "trump",
       "united",
       "warning",
-      "would"
+      "would",
+      "yield"
     ],
     "entities": [
       "deal_trump",
       "delay_iran",
       "denie_ongoing",
       "diplomatic_deal",
+      "hormuz_iran",
       "iran",
       "iran_denie",
+      "iran_sets",
       "ongoing_talks",
       "progress_iran",
       "pursue",
       "pursue_diplomatic",
+      "reopen",
+      "reopen_strait",
+      "strait",
       "trump_claim",
       "trump_delay",
       "us"
     ],
-    "search_text": "action adventurou agreement announced assertion attack called canceling cited claim comes contradicting current deal deal_trump decision decisively delay delay_iran denie denie_ongoing diplomatic diplomatic_deal discussion hopes hormuz indicated iran iran_denie issued launching meeting military negotiation nuclear occur ongoing ongoing_talks planned plans potential program progress progress_iran pursue pursue_diplomatic reaching reason refrain regarding respond same stated stating strait strike talks territory there trump trump_claim trump_delay united us warning would"
+    "search_text": "action adventurou agreement announced assertion attack bond called canceling cease cited claim comes commercial complicating condition contradicting current deal deal_trump decision decisively delay delay_iran demand denie denie_ongoing diplomatic diplomatic_deal discussion exchange further hopes hormuz hormuz_iran increased indicated indicating instructed iran iran_denie iran_sets issued launching market meet meeting military must negotiation nuclear occur oil ongoing ongoing_talks outlined planned plans potential price program progress progress_iran pursue pursue_diplomatic reaching reason refrain regarding reopen reopen_strait reparation representative respond response rising same seek sets ships stated stating strait strike talks tension territory there trump trump_claim trump_delay united us warning would yield",
+    "event_overview": {
+      "available": true,
+      "title": "About Iran Relations",
+      "subject": "Iran Relations",
+      "summary": "Iran relations in this timeline concern the long-running, largely adversarial relationship between the United States and the Islamic Republic of Iran, shaped by the absence of formal diplomatic ties, sanctions, nuclear-policy disputes, and security issues in the Persian Gulf. The immediate context also includes the Strait of Hormuz, a strategic waterway between Iran and Oman whose security affects international energy shipments.",
+      "facts": [
+        {
+          "label": "Diplomatic status",
+          "value": "The United States severed diplomatic relations with Iran on April 7, 1980; Switzerland serves as the protecting power for U.S. interests in Iran.",
+          "source_ids": [
+            "o1"
+          ]
+        },
+        {
+          "label": "Nuclear diplomacy framework",
+          "value": "Iran, China, France, Germany, Russia, the United Kingdom, the United States, and the European Union concluded the Joint Comprehensive Plan of Action (JCPOA) on July 14, 2015. The UN Security Council unanimously endorsed it through Resolution 2231 on July 20, 2015.",
+          "source_ids": [
+            "o2",
+            "o3"
+          ]
+        },
+        {
+          "label": "International nuclear verification",
+          "value": "Iran's safeguards agreement with the International Atomic Energy Agency (IAEA), connected to the Nuclear Non-Proliferation Treaty, entered into force on May 15, 1974; the IAEA is the international body responsible for applying those safeguards.",
+          "source_ids": [
+            "o4",
+            "o5"
+          ]
+        },
+        {
+          "label": "U.S. economic measures",
+          "value": "U.S. Iran sanctions are administered and enforced by the Treasury Department's Office of Foreign Assets Control under multiple statutes, executive orders, regulations, and, where applicable, UN Security Council measures.",
+          "source_ids": [
+            "o6"
+          ]
+        },
+        {
+          "label": "Strait of Hormuz",
+          "value": "The Strait of Hormuz lies between Iran and Oman and connects the Persian Gulf with the Gulf of Oman and Arabian Sea, making it a major oil-transit chokepoint.",
+          "source_ids": [
+            "o7"
+          ]
+        }
+      ],
+      "scope_note": "The selected Muninn timeline covers specific developments from August 2 through August 11, 2026 involving reported U.S.-Iran diplomacy, military pressure, and Strait of Hormuz access; it does not attempt to cover the full history of U.S.-Iran relations, all nuclear negotiations, sanctions actions, or regional security events.",
+      "sources": [
+        {
+          "title": "State",
+          "publisher": "State",
+          "url": "https://history.state.gov/countries/iran",
+          "source_type": "primary",
+          "id": "o1"
+        },
+        {
+          "title": "UN",
+          "publisher": "UN",
+          "url": "https://main.un.org/securitycouncil/en/content/2231/background",
+          "source_type": "reporting",
+          "id": "o2"
+        },
+        {
+          "title": "UN",
+          "publisher": "UN",
+          "url": "https://digitallibrary.un.org/record/797839/?ln=en&v=%5B%27pdf%27%5D",
+          "source_type": "reporting",
+          "id": "o3"
+        },
+        {
+          "title": "Iaea",
+          "publisher": "Iaea",
+          "url": "https://ola.iaea.org/Applications/FactSheets/Country/Detail?code=IR",
+          "source_type": "reporting",
+          "id": "o4"
+        },
+        {
+          "title": "Iaea",
+          "publisher": "Iaea",
+          "url": "https://www.iaea.org/sites/default/files/publications/documents/infcircs/1974/infcirc214.pdf",
+          "source_type": "reporting",
+          "id": "o5"
+        },
+        {
+          "title": "Treasury",
+          "publisher": "Treasury",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/iran-sanctions",
+          "source_type": "primary",
+          "id": "o6"
+        },
+        {
+          "title": "Eia",
+          "publisher": "Eia",
+          "url": "https://www.eia.gov/todayinenergy/detail.php?embed=true&id=65504",
+          "source_type": "primary",
+          "id": "o7"
+        }
+      ],
+      "publisher_count": 5,
+      "generated_at": "2026-08-11T12:56:54.918468+00:00",
+      "expires_at": "2026-08-18T12:56:54.918468+00:00",
+      "model": "gpt-5.6-terra",
+      "provenance": "openai_web_search_source_grounded_event_overview_v1"
+    }
   },
   "related_events": [
     {
       "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
       "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
-      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Trump Warns Iran Over Strait of Hormuz Deal Deadline.",
+      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Trump Demands Compensation from Iran Amid Strait of Hormuz Stalemate.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-07-22",
-      "last_seen_at": "2026-08-05",
-      "development_count": 17,
-      "latest_title": "Trump Warns Iran Over Strait of Hormuz Deal Deadline",
+      "last_seen_at": "2026-08-11",
+      "development_count": 18,
+      "latest_title": "Trump Demands Compensation from Iran Amid Strait of Hormuz Stalemate",
       "topic_label": "Iran War",
       "hero_image": {
         "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
@@ -404,6 +641,40 @@
         "focal_tall_y": 0.48
       },
       "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
+    },
+    {
+      "event_id": "event_iran-claims-attacks-on-us-bases-in-bahrain-j_2ed1fdd27a",
+      "title": "Iran Claims Attacks on US Bases in Bahrain, Jordan, and Kuwait Amid Escalating Conflict",
+      "summary": "Muninn first tracked this thread on 2026-07-25: US Military Engages Merchant Vessel Breaching Iranian Port Blockade. The latest development is Iran Demands US Compliance Before Reopening Strait of Hormuz.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-25",
+      "last_seen_at": "2026-08-10",
+      "development_count": 4,
+      "latest_title": "Iran Demands US Compliance Before Reopening Strait of Hormuz",
+      "topic_label": "Iran Conflict",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_iran-claims-attacks-on-us-bases-in-bahrain-j_2ed1fdd27a.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_iran-claims-attacks-on-us-bases-in-bahrain-j_2ed1fdd27a.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_iran-claims-attacks-on-us-bases-in-bahrain-j_2ed1fdd27a"
     },
     {
       "event_id": "event_iran-advances-talks-on-strait-of-hormuz-reop_ae45e907f0",
