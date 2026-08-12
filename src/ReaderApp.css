@@ -7,6 +7,8 @@
   --canvas: #f4f1e8;
   --paper: #fbfaf5;
   --paper-bright: #fffefa;
+  --surface-raised: var(--paper);
+  --surface-inline: var(--paper);
   --ink: #17201e;
   --ink-soft: #4f5c57;
   --muted: #59645f;
@@ -80,6 +82,8 @@ img {
   --canvas: #f4f1e8;
   --paper: #fbfaf5;
   --paper-bright: #fffefa;
+  --surface-raised: var(--paper);
+  --surface-inline: var(--paper);
   --ink: #17201e;
   --ink-soft: #4f5c57;
   --muted: #59645f;
@@ -1406,18 +1410,19 @@ img {
   gap: clamp(.8rem, 2vw, 1.5rem) clamp(1.5rem, 3vw, 3rem);
 }
 
-.source-list > a {
+.source-publisher-card {
   display: grid;
-  grid-template-columns: 2.65rem minmax(0, 1fr) auto;
-  align-items: center;
-  gap: .85rem;
-  min-height: 5.8rem;
+  align-content: start;
+  gap: .55rem;
+  min-height: 6.2rem;
   padding: .7rem 0;
-  text-decoration: none;
 }
 
-.source-list > a:hover strong {
-  color: var(--teal);
+.source-publisher-card > header {
+  display: grid;
+  grid-template-columns: 2.65rem minmax(0, 1fr);
+  align-items: center;
+  gap: .85rem;
 }
 
 .source-list-logo {
@@ -1438,7 +1443,7 @@ img {
   object-fit: contain;
 }
 
-.source-list > a > span:nth-child(2) {
+.source-publisher-card > header > span:nth-child(2) {
   display: grid;
   min-width: 0;
   gap: .25rem;
@@ -1476,6 +1481,27 @@ img {
 
 .source-list b {
   color: var(--amber);
+}
+
+.source-document-list {
+  display: grid;
+  gap: .2rem;
+  padding-left: 3.5rem;
+}
+
+.source-document-list a {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: .5rem;
+  color: var(--ink-soft);
+  font-size: .7rem;
+  line-height: 1.3;
+  text-decoration: none;
+}
+
+.source-document-list a:hover,
+.source-document-list a:focus-visible {
+  color: var(--teal);
 }
 
 .research-sources {
@@ -2538,8 +2564,12 @@ img {
     margin-left: 2.6rem;
   }
 
-  .source-list > a {
-    grid-template-columns: 2.4rem minmax(0, 1fr) auto;
+  .source-publisher-card > header {
+    grid-template-columns: 2.4rem minmax(0, 1fr);
+  }
+
+  .source-document-list {
+    padding-left: 3.25rem;
   }
 
   .source-list em {
@@ -9405,7 +9435,7 @@ img {
   padding: 1.05rem 1.15rem 1.15rem;
   border: 1px solid color-mix(in srgb, var(--teal) 46%, var(--border));
   border-radius: .45rem;
-  background: var(--paper);
+  background: var(--surface-raised);
   box-shadow: 0 16px 36px rgba(23, 37, 45, .18);
   color: var(--ink);
   transform-origin: var(--event-preview-origin, top center);
@@ -13483,7 +13513,7 @@ img {
   padding: .48rem .62rem;
   border: 1px solid color-mix(in srgb, var(--teal) 42%, var(--border));
   border-radius: .36rem;
-  background: color-mix(in srgb, var(--paper) 86%, transparent);
+  background: var(--surface-inline);
   color: inherit;
   text-decoration: none;
 }
@@ -13647,6 +13677,115 @@ img {
 
   .reader-app .primary-nav .nav-my-news small {
     display: none;
+  }
+}
+
+/* Phase 2 editorial grouping and progressive Event discovery. */
+.reader-app .today-development-count {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: .3rem;
+  margin: .12rem 0 .3rem;
+  color: var(--teal);
+  font-family: var(--sans);
+  font-size: .62rem;
+  font-weight: 820;
+  letter-spacing: .055em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.reader-app .today-development-count::before {
+  width: .38rem;
+  height: .38rem;
+  border-radius: 50%;
+  background: currentColor;
+  content: "";
+}
+
+.reader-app .lead-story .today-development-count {
+  color: rgba(255, 255, 255, .84);
+}
+
+.reader-app .event-active-section .active-event-latest {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: .38rem;
+  align-items: baseline;
+  margin: .32rem 0 0;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: .65rem;
+  line-height: 1.25;
+}
+
+.reader-app .event-active-section .active-event-latest > span {
+  color: var(--teal);
+  font-size: .56rem;
+  font-weight: 850;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.reader-app .event-active-section .active-event-latest > strong {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  color: color-mix(in srgb, var(--ink-soft) 82%, var(--ink));
+  font-weight: 650;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.reader-app .event-directory-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0 0;
+  padding: 1.1rem 0 0;
+  border-top: 1px solid var(--border);
+}
+
+.reader-app .event-directory-more > p {
+  margin: 0;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: .72rem;
+  font-weight: 700;
+}
+
+#main .event-directory-more > button {
+  width: auto;
+  min-height: 2.75rem;
+  padding: .65rem 1rem;
+  border: 1px solid var(--teal);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--teal-deep);
+  font-size: .72rem;
+  font-weight: 820;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+#main .event-directory-more > button:hover,
+#main .event-directory-more > button:focus-visible {
+  background: var(--teal);
+  color: #fff;
+}
+
+@media (max-width: 650px) {
+  .reader-app .event-directory-more {
+    align-items: stretch;
+    flex-direction: column;
+    gap: .65rem;
+  }
+
+  .reader-app .event-directory-more > p {
+    text-align: center;
   }
 }
 
@@ -14027,5 +14166,70 @@ img {
     line-height: 1.05;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
+  }
+}
+
+/* Phase 1 usability and Event identity corrections. */
+.reader-app .event-background-semantic-title {
+  margin: 0;
+  font: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+}
+
+.reader-app.event-layout-c .event-current-development-title {
+  max-width: 38ch;
+  margin: 0 0 .32rem;
+  font-family: var(--serif);
+  font-size: clamp(1.12rem, 1.65vw, 1.5rem);
+  font-weight: 625;
+  letter-spacing: -.025em;
+  line-height: 1.05;
+  text-transform: none;
+  text-wrap: balance;
+}
+
+.reader-app .development-ledger-meta,
+.reader-app .event-active-section .catchup-event-meta,
+.reader-app .event-movement-preview-copy .catchup-event-meta,
+.reader-app .event-carousel-controls > span {
+  font-size: clamp(.72rem, .76vw, .78rem);
+  line-height: 1.25;
+}
+
+#main .event-preview-close {
+  min-height: 2.5rem;
+  padding: .52rem .72rem;
+  font-size: .67rem;
+}
+
+#main .story-quick-read-button,
+#main .event-carousel-controls > button {
+  position: relative;
+  overflow: visible;
+}
+
+#main .event-summary-preview-button,
+#main .development-context-button {
+  overflow: visible;
+}
+
+#main .story-quick-read-button::before,
+#main .event-summary-preview-button::before,
+#main .event-carousel-controls > button::before,
+#main .development-context-button::before {
+  position: absolute;
+  inset: -.42rem;
+  border-radius: inherit;
+  content: "";
+}
+
+@media (max-width: 650px) {
+  .reader-app.event-layout-c .event-current-development-title {
+    font-size: 1.08rem;
+  }
+
+  #main .development-context-button {
+    position: relative;
   }
 }

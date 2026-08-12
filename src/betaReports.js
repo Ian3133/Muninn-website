@@ -76,6 +76,7 @@ function jsonField(value) {
 function issueInput(issueId, report, evidence, uploads, uploadError) {
   const annotation = evidence.annotation || null;
   const preview = {
+    origin: report.origin === 'SYNTHETIC' ? 'SYNTHETIC' : 'USER',
     annotation,
     contentUrls: (evidence.contentResponses || []).map((item) => ({
       url: item.url,

@@ -17,6 +17,13 @@ function humanize(value) {
   return String(value || '').replace(/_/g, ' ').replace(/\b\w/g, (letter) => letter.toUpperCase());
 }
 
+function betaIssueOrigin(issue) {
+  const preview = parseJsonField(issue?.evidencePreview, {});
+  if (preview?.origin === 'SYNTHETIC') return 'SYNTHETIC';
+  if (/^automated\b/i.test(String(issue?.description || ''))) return 'SYNTHETIC';
+  return 'USER';
+}
+
 function formatDate(value, includeTime = false) {
   if (!value) return 'Date unavailable';
   const parsed = new Date(String(value).length === 10 ? `${value}T12:00:00Z` : value);
@@ -274,6 +281,7 @@ function BetaIssueCard({ issue, localPreview, onStatusChange }) {
           <div className="card-kickers">
             <span className={`badge beta-status-${String(issue.status || 'OPEN').toLowerCase()}`}>{humanize(issue.status || 'OPEN')}</span>
             <span className="badge beta-category-badge">{humanize(issue.category)}</span>
+            <span className="badge">{betaIssueOrigin(issue) === 'SYNTHETIC' ? 'Automated check' : 'Reader report'}</span>
             <span className="gap-label">{formatDate(issue.occurredAt, true)}</span>
           </div>
           <h2>{issue.description}</h2>
@@ -327,6 +335,7 @@ export default function AdminReview({ accountLabel, onSignOut, localPreview = fa
   const [search, setSearch] = useState('');
   const [relation, setRelation] = useState('all');
   const [status, setStatus] = useState('all');
+  const [showSyntheticReports, setShowSyntheticReports] = useState(false);
 
   useEffect(() => {
     let mounted = true;
@@ -373,7 +382,7 @@ export default function AdminReview({ accountLabel, onSignOut, localPreview = fa
       : activeTab === 'clusters'
         ? clusterItems
         : activeTab === 'reports'
-          ? betaIssues
+          ? betaIssues.filter((issue) => showSyntheticReports || betaIssueOrigin(issue) !== 'SYNTHETIC')
           : [];
 
   const qualityIssues = useMemo(() => {
@@ -384,14 +393,17 @@ export default function AdminReview({ accountLabel, onSignOut, localPreview = fa
       });
     });
     const weakSources = clusterItems.filter((cluster) => Number(cluster.source_count || cluster.sources?.length || 0) < 2);
-    const categoryIssues = clusterItems.filter((cluster) => !cluster.category || String(cluster.category).toLowerCase() === 'top story');
+    const categoryIssues = clusterItems.filter((cluster) => (
+      !cluster.primary_category
+      || ['other', 'top story'].includes(String(cluster.primary_category || cluster.category).toLowerCase())
+    ));
     const suspiciousMatches = clusterItems.filter((cluster) => cluster.event_id
       && Array.isArray(cluster.timeline_highlights) && cluster.timeline_highlights.length > 1
       && sharedTokenCount(cluster.title, String(cluster.event_id).replace(/^event_/, '')) < 2);
     return [
       { tone: 'warning', label: 'Possible duplicate coverage', count: duplicatePairs.length, description: 'Headlines that may belong to one reader-facing story.', examples: duplicatePairs },
       { tone: 'danger', label: 'Weakly sourced stories', count: weakSources.length, description: 'Published stories supported by only one source.', examples: weakSources.map((item) => item.title) },
-      { tone: 'warning', label: 'Category cleanup', count: categoryIssues.length, description: 'Stories using a generic or missing category.', examples: categoryIssues.map((item) => item.title) },
+      { tone: 'warning', label: 'Category review', count: categoryIssues.length, description: 'Stories using the internal Other fallback or missing a controlled category.', examples: categoryIssues.map((item) => item.title) },
       { tone: 'danger', label: 'Suspicious timeline matches', count: suspiciousMatches.length, description: 'The story title and stored event identifier appear misaligned.', examples: suspiciousMatches.map((item) => item.title) },
     ];
   }, [clusterItems]);
@@ -461,7 +473,7 @@ export default function AdminReview({ accountLabel, onSignOut, localPreview = fa
         <nav className="admin-tabs" aria-label="Admin data views">
           {[
             ['overview', 'Needs attention', qualityIssueCount],
-            ['reports', 'Beta reports', betaIssues.length],
+            ['reports', 'Beta reports', betaIssues.filter((issue) => betaIssueOrigin(issue) !== 'SYNTHETIC').length],
             ['queue', 'Review queue', queueItems.length],
             ['timelines', 'Published timelines', timelineItems.length],
             ['clusters', "Today's clusters", clusterItems.length],
@@ -499,6 +511,15 @@ export default function AdminReview({ accountLabel, onSignOut, localPreview = fa
             <label><span>Relationship</span><select value={relation} onChange={(event) => setRelation(event.target.value)}><option value="all">All relationships</option><option value="same_event">Same event</option><option value="related_topic">Related topic</option><option value="unrelated">Unrelated</option></select></label>
             <label><span>Review status</span><select value={status} onChange={(event) => setStatus(event.target.value)}><option value="all">All statuses</option><option value="pending">Pending</option><option value="approved">Approved</option><option value="rejected">Rejected</option></select></label>
           </> : null}
+          {activeTab === 'reports' ? (
+            <label>
+              <span>Report origin</span>
+              <select value={showSyntheticReports ? 'all' : 'user'} onChange={(event) => setShowSyntheticReports(event.target.value === 'all')}>
+                <option value="user">Reader reports</option>
+                <option value="all">Include automated checks</option>
+              </select>
+            </label>
+          ) : null}
           <button type="button" onClick={() => { setSearch(''); setRelation('all'); setStatus('all'); }}>Clear filters</button>
         </section> : null}
 

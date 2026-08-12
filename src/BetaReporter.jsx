@@ -184,6 +184,7 @@ export default function BetaReporter({ cloudEnabled = false, guestMode = false }
     }
 
     const report = {
+      origin: 'USER',
       category,
       description: description.trim(),
       diagnosticsSummary: diagnosticsSummary(),
