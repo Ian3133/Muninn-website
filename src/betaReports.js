@@ -1,5 +1,7 @@
 import { generateClient } from 'aws-amplify/api';
+import { fetchAuthSession } from 'aws-amplify/auth';
 import { downloadData, getUrl, uploadData } from 'aws-amplify/storage';
+import { betaIssueAuthMode } from './betaReportAuth';
 
 const LOCAL_REPORT_KEY = 'muninn-beta-reports-v1';
 
@@ -36,6 +38,19 @@ const updateBetaIssueMutation = /* GraphQL */ `
 
 function getClient() {
   return generateClient();
+}
+
+async function submissionAuthMode(guestMode) {
+  if (!guestMode) return undefined;
+  try {
+    const session = await fetchAuthSession();
+    return betaIssueAuthMode({
+      guestMode,
+      hasUserPoolTokens: Boolean(session.tokens?.accessToken),
+    });
+  } catch (_error) {
+    return betaIssueAuthMode({ guestMode, hasUserPoolTokens: false });
+  }
 }
 
 function readLocalReports() {
@@ -168,10 +183,11 @@ export async function submitBetaIssue({ issueId, report, evidence, screenshotBlo
     uploadError = String(error?.message || error).slice(0, 800);
   }
 
+  const authMode = await submissionAuthMode(guestMode);
   const response = await getClient().graphql({
     query: createBetaIssueMutation,
     variables: { input: issueInput(issueId, report, evidence, uploads, uploadError) },
-    ...(guestMode ? { authMode: 'iam' } : {}),
+    ...(authMode ? { authMode } : {}),
   });
   const issue = response.data?.createBetaIssue;
   if (!issue) throw new Error('The report service did not return a saved issue.');

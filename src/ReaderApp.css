@@ -11431,7 +11431,7 @@ img {
   scroll-snap-type: x mandatory;
   scrollbar-color: var(--teal) transparent;
   scrollbar-width: thin;
-  touch-action: pan-x;
+  touch-action: auto;
 }
 
 .reader-app .development-ledger::-webkit-scrollbar {
@@ -11691,7 +11691,7 @@ img {
   scroll-snap-type: x mandatory;
   scrollbar-color: color-mix(in srgb, var(--teal) 72%, transparent) transparent;
   scrollbar-width: thin;
-  touch-action: pan-x;
+  touch-action: auto;
 }
 
 .reader-app .active-event-carousel::-webkit-scrollbar {
@@ -14075,11 +14075,11 @@ img {
   }
 }
 
-/* Today-style hairline grid and strictly horizontal event rails. */
+/* Keep horizontal rails available without trapping vertical page gestures. */
 .reader-app :is(.development-ledger, .active-event-carousel) {
   overflow-y: hidden;
-  overscroll-behavior-block: none;
-  touch-action: pan-x;
+  overscroll-behavior-block: auto;
+  touch-action: auto;
 }
 
 .reader-app .development-ledger-page {

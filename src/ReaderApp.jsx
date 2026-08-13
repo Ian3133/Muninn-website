@@ -1,5 +1,6 @@
 import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import WeeklyLetter from './WeeklyLetter';
+import { selectCatchupEvents } from './timelineCatchup';
 import './ReaderApp.css';
 
 const DIGEST_URLS = ['/Current_news/digest.json', '/current_news/digest.json'];
@@ -13,8 +14,8 @@ const WEEKLY_INDEX_URLS = [
 
 const VIEW_LABELS = {
   today: 'Today',
-  digest: 'Digest',
-  events: 'Events',
+  // digest: 'Digest', // Temporarily hidden; keep the view implementation for a future return.
+  events: 'Timelines',
   'my-news': 'My News',
   story: 'Story',
   event: 'Event',
@@ -947,7 +948,7 @@ function StoryQuickRead({ story }) {
 
 function Header({ view, onNavigate }) {
   const todayActive = view === 'today' || view === 'story' || view === 'archive';
-  const digestActive = view === 'digest';
+  // const digestActive = view === 'digest'; // Digest navigation is temporarily disabled.
   const eventsActive = view === 'events' || view === 'event';
   return (
     <header className="site-header">
@@ -968,6 +969,7 @@ function Header({ view, onNavigate }) {
           >
             Today
           </AppLink>
+          {/*
           <AppLink
             view="digest"
             onNavigate={onNavigate}
@@ -976,13 +978,14 @@ function Header({ view, onNavigate }) {
           >
             Digest
           </AppLink>
+          */}
           <AppLink
             view="events"
             onNavigate={onNavigate}
             className={eventsActive ? 'is-active' : ''}
             aria-current={eventsActive ? 'page' : undefined}
           >
-            Events
+            Timelines
           </AppLink>
           <AppLink
             view="weekly"
@@ -1227,7 +1230,7 @@ function TodayView({ digest, onNavigate }) {
         <img src="/brand/muninn-mark.svg" alt="" />
         <div>
           <h2>You’re caught up</h2>
-          <p>Follow developing stories in Events or browse previous weekly newsletters. These stories—and others—will be brought together in the next weekly edition, published Saturday.</p>
+          <p>Follow developing stories in Timelines or browse previous weekly newsletters. These stories—and others—will be brought together in the next weekly edition, published Saturday.</p>
           <AppLink view="archive" onNavigate={onNavigate}>Browse previous editions →</AppLink>
         </div>
       </section>
@@ -1251,7 +1254,7 @@ function TimelineMarker({ event, currentStory, onNavigate }) {
         onNavigate={onNavigate}
         className="event-marker-title"
       >
-        <span>Part of an ongoing Event</span>
+        <span>Part of an ongoing timeline</span>
         <strong>{displayTitle}</strong>
         <b aria-hidden="true">View event →</b>
       </AppLink>
@@ -2647,7 +2650,7 @@ function EventView({ event, storyline, parentStoryline, currentStoryId, events, 
   return (
     <main id="main" className={`page-shell event-page${isStoryline ? ' is-storyline' : ' is-event'}`}>
       <AppLink view="events" onNavigate={onNavigate} className="back-link event-back-link">
-        <span aria-hidden="true">←</span> Events
+        <span aria-hidden="true">←</span> Timelines
       </AppLink>
 
       <header className="event-hero">
@@ -2745,7 +2748,7 @@ function EventView({ event, storyline, parentStoryline, currentStoryId, events, 
           <header className="section-heading compact">
             <div>
               <p className="eyebrow">Explore coverage</p>
-              <h2 id="other-events-title">Other active Events</h2>
+              <h2 id="other-events-title">Other active timelines</h2>
             </div>
           </header>
           <div>
@@ -2851,9 +2854,9 @@ function EventMeta({ event, updateStory = null }) {
   return (
     <div className="catchup-event-meta">
       {latestDate ? <span>Updated {formatDate(latestDate, { short: true, year: false })}</span> : null}
-      <span title="Distinct trusted updates in this Event timeline">{eventDevelopmentCount(event)} updates</span>
+      <span title="Distinct trusted updates in this timeline">{eventDevelopmentCount(event)} updates</span>
       {reportingSourceCount ? (
-        <span>{reportingSourceCount} {updateStory ? 'update sources' : 'event sources'}</span>
+        <span>{reportingSourceCount} {updateStory ? 'update sources' : 'timeline sources'}</span>
       ) : null}
     </div>
   );
@@ -2875,7 +2878,7 @@ function eventPreviewParentLabel(storyline, event, relatedStory) {
   if (storyline) {
     return storyline.legacy_event_id === event?.event_id ? 'Situation' : storyline.title;
   }
-  return eventCategory(event, relatedStory) || 'Continuing Event';
+  return eventCategory(event, relatedStory) || 'Continuing timeline';
 }
 
 function floatingEventPreviewStyle(target, preferredWidth = 544) {
@@ -3013,7 +3016,7 @@ function CatchupLeadEvent({ event, relatedStory, storyline, onNavigate }) {
             <p><span>What changed</span>{eventLatestSummary(event, relatedStory)}</p>
           </div>
           <EventMeta event={event} />
-          <strong className="catchup-open">Catch up on the full Event <span aria-hidden="true">→</span></strong>
+          <strong className="catchup-open">Open the full timeline <span aria-hidden="true">→</span></strong>
         </div>
       </AppLink>
       {relatedStory ? (
@@ -3053,17 +3056,8 @@ function CatchupSupportEvent({ event, relatedStory, storyline, onNavigate }) {
 }
 
 function DevelopingEventCard({ event, relatedStory, storyline, onNavigate, quiet = false }) {
-  const {
-    previewStyle,
-    openPreview,
-    keepPreviewOpen,
-    requestPreviewClose,
-    dismissPreview,
-  } = useEventHoverPreview();
   return (
-    <article
-      className={`developing-event-card event-preview-trigger${quiet ? ' is-quiet' : ''}${previewStyle ? ' is-preview-open' : ''}`}
-    >
+    <article className={`developing-event-card${quiet ? ' is-quiet' : ''}`}>
       <div className="developing-event-card-inner">
         <div className="developing-event-copy">
           <EventParentLabel storyline={storyline} event={event} relatedStory={relatedStory} />
@@ -3091,29 +3085,8 @@ function DevelopingEventCard({ event, relatedStory, storyline, onNavigate, quiet
             className="developing-event-art"
             role={quiet ? 'wide' : 'support'}
           />
-          <button
-            type="button"
-            className="event-summary-preview-button"
-            aria-expanded={Boolean(previewStyle)}
-            aria-label={`Quick view: ${eventTitle(event)}`}
-            onClick={openPreview}
-          >
-            <QuickReadIcon />
-          </button>
         </div>
       </div>
-      {previewStyle ? (
-        <EventHoverPreview
-          event={event}
-          relatedStory={relatedStory}
-          storyline={storyline}
-          style={previewStyle}
-          onMouseEnter={keepPreviewOpen}
-          onMouseLeave={requestPreviewClose}
-          onNavigate={onNavigate}
-          onClose={dismissPreview}
-        />
-      ) : null}
     </article>
   );
 }
@@ -3203,20 +3176,11 @@ function developmentParentLabel(event, situation) {
 }
 
 function DevelopmentLedgerRow({ event, relatedStory, situation, dayLabel, onNavigate }) {
-  const {
-    previewStyle,
-    openPreview,
-    keepPreviewOpen,
-    requestPreviewClose,
-    dismissPreview,
-  } = useEventHoverPreview();
   const latestDate = eventLatestDate(event);
   const reportingSourceCount = developmentSourceCount(event, relatedStory);
   const readingView = relatedStory ? 'story' : 'event';
   return (
-    <li
-      className={`development-ledger-row event-preview-trigger${previewStyle ? ' is-preview-open' : ''}`}
-    >
+    <li className="development-ledger-row">
       <div className="development-ledger-media">
         <EventArtwork
           event={event}
@@ -3252,32 +3216,8 @@ function DevelopmentLedgerRow({ event, relatedStory, situation, dayLabel, onNavi
               ) : null}
             </div>
           ) : null}
-          <button
-            type="button"
-            className="development-context-button"
-            aria-expanded={Boolean(previewStyle)}
-            aria-label={`Quick context: ${eventLatestTitle(event)}`}
-            onClick={openPreview}
-          >
-            <QuickReadIcon />
-            <span>Quick context</span>
-            <b aria-hidden="true">→</b>
-          </button>
         </div>
       </div>
-      {previewStyle ? (
-        <EventHoverPreview
-          event={event}
-          relatedStory={relatedStory}
-          storyline={situation}
-          variant="development"
-          style={previewStyle}
-          onMouseEnter={keepPreviewOpen}
-          onMouseLeave={requestPreviewClose}
-          onNavigate={onNavigate}
-          onClose={dismissPreview}
-        />
-      ) : null}
     </li>
   );
 }
@@ -3327,7 +3267,6 @@ function HalfStepCarousel({
     const rail = railRef.current;
     const step = stepSize();
     if (!rail || !step) return;
-    if (rail.scrollTop) rail.scrollTop = 0;
     setPosition(Math.min(maxPosition, Math.max(0, Math.round(rail.scrollLeft / step))));
   };
   const move = (direction) => {
@@ -3571,7 +3510,7 @@ function GlobalCoverageSearch({ stories, events, storylines, onNavigate }) {
     const storylineRootIds = new Set(storylines.map((item) => item.legacy_event_id).filter(Boolean));
     const eventResults = events.filter((item) => !storylineRootIds.has(item.event_id)).map((item) => ({
       key: item.event_id,
-      kind: 'Event',
+      kind: 'Timeline',
       title: eventTitle(item),
       summary: eventLatestTitle(item),
       view: 'event',
@@ -3636,7 +3575,7 @@ function GlobalCoverageSearch({ stories, events, storylines, onNavigate }) {
               <div className="global-search-groups">
                 {[
                   ['Situations', resultGroups.storylines],
-                  ['Events', resultGroups.events],
+                  ['Timelines', resultGroups.events],
                   ['Reports', resultGroups.stories],
                 ].map(([label, items]) => items.length ? (
                   <section aria-label={`${label} search results`} key={label}>
@@ -3649,7 +3588,7 @@ function GlobalCoverageSearch({ stories, events, storylines, onNavigate }) {
           ) : (
             <div className="global-search-empty">
               <strong>No matching coverage</strong>
-              <span>Try a person, place, subject, or Event name.</span>
+              <span>Try a person, place, subject, or timeline name.</span>
             </div>
           )}
         </div>
@@ -3745,9 +3684,24 @@ function EventsDirectoryView({
       String(eventLatestDate(right)).localeCompare(String(eventLatestDate(left)))
       || eventDevelopmentCount(right) - eventDevelopmentCount(left)
     ));
-  const recentlyUpdatedEvents = recentDevelopmentCandidates.slice(0, 8);
+  const catchupEvents = selectCatchupEvents(recentDevelopmentCandidates, {
+    referenceDate: latestAvailableDate,
+    getDate: eventLatestDate,
+    getScore: (event) => {
+      const storyline = storylineByEventId.get(event.event_id);
+      return eventBriefingScore(
+        event,
+        latestAvailableDate,
+        relatedStories.has(event.event_id),
+        storyline?.legacy_event_id === event.event_id,
+      );
+    },
+  });
   const recentlyUpdatedEventIds = new Set(
-    recentDevelopmentCandidates.slice(0, 5).map((event) => event.event_id),
+    [
+      ...recentDevelopmentCandidates.slice(0, 5),
+      ...catchupEvents,
+    ].map((event) => event.event_id),
   );
   const activeEvents = ordered
     .filter((event) => (
@@ -3820,25 +3774,25 @@ function EventsDirectoryView({
     return (
       <main id="main" className="page-shell events-directory-page event-browse-page">
         <button type="button" className="event-directory-back" onClick={closeDirectory}>
-          <span aria-hidden="true">←</span> Events briefing
+          <span aria-hidden="true">←</span> Timelines
         </button>
         <PageIntroduction
-          title="Browse Events"
-          aside={`${ordered.length} Events`}
+          title="Browse timelines"
+          aside={`${ordered.length} timelines`}
         />
-        <section className="event-directory-tools" aria-label="Filter the Event directory">
+        <section className="event-directory-tools" aria-label="Filter the timeline directory">
           <label>
-            <span>Filter Events</span>
+            <span>Filter timelines</span>
             <input
               type="search"
               value={query}
               onChange={(event) => setQuery(event.target.value)}
-              placeholder="Filter by Event name or subject"
+              placeholder="Filter by timeline name or subject"
             />
           </label>
           <div className="event-directory-status" aria-label="Filter by activity">
             {[
-              ['all', 'All Events'],
+              ['all', 'All timelines'],
               ['recent', 'Updated recently'],
               ['quiet', 'Recently quiet'],
             ].map(([value, label]) => (
@@ -3870,7 +3824,7 @@ function EventsDirectoryView({
           <header className="event-briefing-section-heading">
             <div>
               <p className="eyebrow">Directory</p>
-              <h2 id="event-directory-results-title">{topic !== 'all' ? topic : 'All Events'}</h2>
+              <h2 id="event-directory-results-title">{topic !== 'all' ? topic : 'All timelines'}</h2>
             </div>
             <p>{filtered.length} {filtered.length === 1 ? 'result' : 'results'}</p>
           </header>
@@ -3889,7 +3843,7 @@ function EventsDirectoryView({
               </div>
               {remainingEventCount ? (
                 <div className="event-directory-more">
-                  <p>Showing {visibleEvents.length} of {filtered.length} Events</p>
+                  <p>Showing {visibleEvents.length} of {filtered.length} timelines</p>
                   <button
                     type="button"
                     onClick={() => setVisibleLimit((current) => current + EVENT_DIRECTORY_PAGE_SIZE)}
@@ -3901,7 +3855,7 @@ function EventsDirectoryView({
             </>
           ) : (
             <div className="event-directory-no-results">
-              <h2>No matching Events</h2>
+              <h2>No matching timelines</h2>
               <p>Try a broader subject or clear the directory filters.</p>
               <button type="button" onClick={resetFilters}>Clear filters</button>
             </div>
@@ -3917,7 +3871,7 @@ function EventsDirectoryView({
         <div className="events-home-title-group">
           <div className="events-home-title-row">
             <div className="events-home-heading">
-              <h1>Events</h1>
+              <h1>Timelines</h1>
             </div>
             <GlobalCoverageSearch
               stories={stories}
@@ -3925,7 +3879,7 @@ function EventsDirectoryView({
               storylines={storylines}
               onNavigate={onNavigate}
             />
-            <div className="events-home-status" aria-label={`${activeEventCount} Events updated this week`}>
+            <div className="events-home-status" aria-label={`${activeEventCount} timelines updated this week`}>
               <strong>{activeEventCount}</strong>
               <span>Updated<small>this week</small></span>
             </div>
@@ -3933,14 +3887,14 @@ function EventsDirectoryView({
         </div>
       </header>
 
-      <nav className="events-view-tabs" aria-label="Choose an Events view">
+      <nav className="events-view-tabs" aria-label="Choose a Timelines view">
         <button
           type="button"
           className={homeMode === 'activity' ? 'is-active' : ''}
           aria-current={homeMode === 'activity' ? 'page' : undefined}
           onClick={() => showHomeMode('activity')}
         >
-          <span>Latest changes</span>
+          <span>Catch-up</span>
         </button>
         {hasSituationDirectory ? (
           <button
@@ -3954,11 +3908,12 @@ function EventsDirectoryView({
           </button>
         ) : null}
         <button type="button" onClick={openDirectory}>
-          <span>All Events</span>
+          <span>All timelines</span>
         </button>
       </nav>
 
-      {orderedSituations.length === 1 ? (
+      {orderedSituations.length === 1
+        && orderedSituations[0].legacy_event_id !== catchupEvents[0]?.event_id ? (
         <aside className="events-featured-situation" aria-label="Featured Situation">
           <span>Featured Situation</span>
           <AppLink
@@ -3977,15 +3932,34 @@ function EventsDirectoryView({
 
       {homeMode === 'activity' ? (
         <div className="events-activity-view">
-          {recentlyUpdatedEvents.length ? (
-            <section className="event-movement-section event-latest-developments" aria-labelledby="latest-developments-title">
-              <DevelopmentTimeline
-                events={recentlyUpdatedEvents}
-                referenceDate={latestAvailableDate}
-                relatedStories={relatedStories}
-                situationByEventId={storylineByEventId}
-                onNavigate={onNavigate}
-              />
+          {catchupEvents.length ? (
+            <section className="events-catchup-section" aria-labelledby="catchup-title">
+              <header className="event-briefing-section-heading">
+                <div>
+                  <p className="eyebrow">The past four days</p>
+                  <h2 id="catchup-title">Catch-up</h2>
+                </div>
+                <p>The top story and the updates that matter most, with an older timeline included only when it is unusually significant.</p>
+              </header>
+              <div className="catchup-opening-grid">
+                <CatchupLeadEvent
+                  event={catchupEvents[0]}
+                  relatedStory={relatedStories.get(catchupEvents[0].event_id)}
+                  storyline={storylineByEventId.get(catchupEvents[0].event_id)}
+                  onNavigate={onNavigate}
+                />
+                <div className="catchup-supporting-events">
+                  {catchupEvents.slice(1).map((event) => (
+                    <CatchupSupportEvent
+                      event={event}
+                      relatedStory={relatedStories.get(event.event_id)}
+                      storyline={storylineByEventId.get(event.event_id)}
+                      onNavigate={onNavigate}
+                      key={event.event_id}
+                    />
+                  ))}
+                </div>
+              </div>
             </section>
           ) : null}
 
@@ -4016,12 +3990,12 @@ function EventsDirectoryView({
               <header className="event-briefing-section-heading">
                 <div>
                   <p className="eyebrow">Still unfolding</p>
-                  <h2 id="active-events-title">Active Events</h2>
+                  <h2 id="active-events-title">Active timelines</h2>
                 </div>
               </header>
               <HalfStepCarousel
                 className="active-event-carousel"
-                ariaLabel="Active Events"
+                ariaLabel="Active timelines"
                 itemCount={activeEvents.length}
                 itemsPerColumn={1}
                 singleColumnOnMobile
@@ -4617,8 +4591,8 @@ export default function ReaderApp() {
       today: 'Today',
       digest: 'Daily Digest',
       events: route.mode === 'browse'
-        ? 'Browse Events'
-        : route.mode === 'situations' ? 'Situations' : 'Events',
+        ? 'Browse Timelines'
+        : route.mode === 'situations' ? 'Situations' : 'Timelines',
       story: routeStory?.title || 'Story',
       event: routeStoryline?.title || eventTitle(routeEvent),
       weekly: 'Weekly',
@@ -4680,9 +4654,11 @@ export default function ReaderApp() {
       {route.view === 'today' ? (
         <TodayView digest={data.digest} onNavigate={navigate} />
       ) : null}
+      {/*
       {route.view === 'digest' ? (
         <DigestView digest={data.digest} stories={allStories} onNavigate={navigate} />
       ) : null}
+      */}
       {route.view === 'events' ? (
         <EventsDirectoryView
           events={events}
