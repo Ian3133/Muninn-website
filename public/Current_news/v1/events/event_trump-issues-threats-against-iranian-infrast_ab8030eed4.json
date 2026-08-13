@@ -15,7 +15,7 @@
     "summary": "US President Donald Trump has threatened to target Iranian bridges and power plants in retaliation for any attacks on ships in the Strait of Hormuz. He stated that for each ship fired upon by Iranian forces, the US would respond by destroying a corresponding piece of Iranian infrastructure. This escalation comes amid ongoing tensions in the region and rising oil prices.",
     "status": "active",
     "first_seen_at": "2026-07-22",
-    "last_seen_at": "2026-08-12",
+    "last_seen_at": "2026-08-13",
     "timeline": [
       {
         "development_id": "story_627e2a10f3d02720",
@@ -1540,15 +1540,81 @@
         "first_seen_at": "2026-08-12",
         "last_seen_at": "2026-08-12",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_608d413642b89e8a",
+        "daily_story_id": "story_608d413642b89e8a",
+        "date": "2026-08-13",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Attacks on Grain Export Terminals Escalate in Black Sea Region",
+        "summary": "Recent attacks on grain export terminals in the Black Sea have significantly impacted grain exports from both Russia and Ukraine. This escalation is part of an ongoing maritime conflict between the two nations, which threatens global grain supplies and reflects broader tensions over key shipping routes.",
+        "topic_label": "Ukraine Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "Grain exports from Russia and Ukraine are declining due to attacks.",
+          "The strikes are part of a maritime battle between the two countries."
+        ],
+        "source_count": 2,
+        "sources": [
+          "BBC",
+          "New York Times"
+        ],
+        "source_urls": [
+          "https://www.bbc.co.uk/news/articles/c5y49xp2wrno?at_medium=RSS&at_campaign=rss",
+          "https://www.nytimes.com/2026/08/13/world/europe/russia-ukraine-ports-odesa-cargo-ship-attacks.html"
+        ],
+        "source_details": [
+          {
+            "title": "Major Russian grain export terminals hit in Ukraine Black Sea port attack",
+            "source": "BBC",
+            "link": "https://www.bbc.co.uk/news/articles/c5y49xp2wrno?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          },
+          {
+            "title": "Russian Blockade of Major Ukrainian Ports Threatens Global Grain Supplies",
+            "source": "New York Times",
+            "link": "https://www.nytimes.com/2026/08/13/world/europe/russia-ukraine-ports-odesa-cargo-ship-attacks.html",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "attack"
+          ],
+          "shared_incident_anchors": [
+            "sea"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "attack"
+          ],
+          "shared_entities": [
+            "sea"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_18e16e71aa65e1d4",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-13",
+        "last_seen_at": "2026-08-13",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 19,
+      "public_development_count": 20,
       "questionable_development_count": 4,
       "review_required": true
     },
-    "latest_title": "Houthi Attack in Red Sea Results in Six Deaths, Including Three Pakistanis",
-    "latest_summary": "An attack by Iranian-backed Houthi rebels on a vessel in the Bab el-Mandeb strait has resulted in the deaths of six individuals, including three Pakistani nationals. This incident marks the first fatalities in the Red Sea related to such attacks in over a year. In response, US forces engaged a ship they claimed was attempting to breach a blockade of Iranian ports.",
+    "latest_title": "Attacks on Grain Export Terminals Escalate in Black Sea Region",
+    "latest_summary": "Recent attacks on grain export terminals in the Black Sea have significantly impacted grain exports from both Russia and Ukraine. This escalation is part of an ongoing maritime conflict between the two nations, which threatens global grain supplies and reflects broader tensions over key shipping routes.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -1559,29 +1625,29 @@
       "milestone_development_ids": [
         "story_627e2a10f3d02720",
         "story_2128b67a10987fc7",
-        "story_b82ef72b3e9f7343",
-        "story_18e16e71aa65e1d4"
+        "story_18e63ff903f57c92",
+        "story_608d413642b89e8a"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-12",
-      "development_count": 19,
-      "coverage_packet_count": 20,
-      "date_count": 13,
-      "source_count": 63,
-      "independent_source_count": 26,
+      "summary_updated_at": "2026-08-13",
+      "development_count": 20,
+      "coverage_packet_count": 21,
+      "date_count": 14,
+      "source_count": 65,
+      "independent_source_count": 27,
       "first_date": "2026-07-22",
-      "latest_date": "2026-08-12",
-      "latest_update_title": "Houthi Attack in Red Sea Results in Six Deaths, Including Three Pakistanis",
+      "latest_date": "2026-08-13",
+      "latest_update_title": "Attacks on Grain Export Terminals Escalate in Black Sea Region",
       "coverage_score": 1.0,
       "recency_score": 1.0,
       "rank_score": 1.0,
-      "context_summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Houthi Attack in Red Sea Results in Six Deaths, Including Three Pakistanis.",
-      "cta_label": "Explore 19 developments"
+      "context_summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Attacks on Grain Export Terminals Escalate in Black Sea Region.",
+      "cta_label": "Explore 20 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "US President Donald Trump has threatened to target Iranian bridges and power plants in retaliation for any attacks on ships in the Strait of Hormuz. A later development was Trump and Netanyahu to Discuss Iran Tensions Amid Ongoing Conflict. Most recently, an attack by Iranian-backed Houthi rebels on a vessel in the Bab el-Mandeb strait has resulted in the deaths of six individuals, including three Pakistani nationals.",
+      "summary": "US President Donald Trump has threatened to target Iranian bridges and power plants in retaliation for any attacks on ships in the Strait of Hormuz. A later development was Escalation in Middle East as US and Saudi Forces Target Iranian Militias Amid Missile Attacks. Most recently, recent attacks on grain export terminals in the Black Sea have significantly impacted grain exports from both Russia and Ukraine.",
       "key_developments": [
         {
           "development_id": "story_627e2a10f3d02720",
@@ -1594,14 +1660,14 @@
           "title": "Houthis Launch Missile Attack on Saudi Arabia Amid Ongoing Yemen Conflict"
         },
         {
-          "development_id": "story_b82ef72b3e9f7343",
-          "date": "2026-07-30",
-          "title": "US Conducts Strikes on Iranian Targets Following Foiled Missile Attack"
+          "development_id": "story_18e63ff903f57c92",
+          "date": "2026-08-02",
+          "title": "Trump Cancels Planned Strikes on Iran Amid Deal Negotiations"
         },
         {
-          "development_id": "story_18e16e71aa65e1d4",
-          "date": "2026-08-12",
-          "title": "Houthi Attack in Red Sea Results in Six Deaths, Including Three Pakistanis"
+          "development_id": "story_608d413642b89e8a",
+          "date": "2026-08-13",
+          "title": "Attacks on Grain Export Terminals Escalate in Black Sea Region"
         }
       ],
       "sources": [
@@ -1982,9 +2048,21 @@
           "source": "PBS News",
           "link": "https://www.pbs.org/newshour/world/iranian-backed-houthis-kill-6-in-attack-on-vessel-and-other-developments-in-the-mideast",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Major Russian grain export terminals hit in Ukraine Black Sea port attack",
+          "source": "BBC",
+          "link": "https://www.bbc.co.uk/news/articles/c5y49xp2wrno?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
+        },
+        {
+          "title": "Russian Blockade of Major Ukrainian Ports Threatens Global Grain Supplies",
+          "source": "New York Times",
+          "link": "https://www.nytimes.com/2026/08/13/world/europe/russia-ukraine-ports-odesa-cargo-ship-attacks.html",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-08-12",
+      "updated_at": "2026-08-13",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -2019,29 +2097,28 @@
         ]
       },
       {
+        "event_id": "event_ongoing-u-s-iran-hostilities-complicate-dipl_e5f18057ed",
+        "title": "Ongoing U.S.-Iran Hostilities Complicate Diplomatic Efforts in the Red Sea Region",
+        "relationship": "related_topic",
+        "confidence": 0.875,
+        "shared_entities": [
+          "diplomatic_effort",
+          "iran",
+          "red",
+          "red_sea",
+          "sea_region"
+        ]
+      },
+      {
         "event_id": "event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a",
         "title": "Trump Delays Iran Strikes to Pursue Diplomatic Deal",
         "relationship": "related_topic",
-        "confidence": 0.865,
+        "confidence": 0.864,
         "shared_entities": [
           "deal_trump",
           "iran",
           "pursue",
           "strait",
-          "us"
-        ]
-      },
-      {
-        "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
-        "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
-        "relationship": "related_topic",
-        "confidence": 0.859,
-        "shared_entities": [
-          "benjamin_netanyahu",
-          "donald_trump",
-          "israel",
-          "israel_prime",
-          "military_action",
           "us"
         ]
       }
@@ -2206,11 +2283,13 @@
       "behind",
       "benjamin",
       "bipartisan",
+      "black",
       "blockade",
       "both",
       "breach",
       "bridge",
       "brief",
+      "broader",
       "calm",
       "cancel",
       "cancellation",
@@ -2275,6 +2354,7 @@
       "exceed",
       "exchange",
       "exercised",
+      "export",
       "expressed",
       "extend",
       "extension",
@@ -2299,6 +2379,7 @@
       "further",
       "global",
       "graham",
+      "grain",
       "halt",
       "halted",
       "halts",
@@ -2309,6 +2390,7 @@
       "hostilitie",
       "house",
       "houthi",
+      "impacted",
       "impose",
       "incident",
       "including",
@@ -2367,6 +2449,7 @@
       "opting",
       "other",
       "pakistani",
+      "part",
       "particularly",
       "pause",
       "paused",
@@ -2427,6 +2510,8 @@
       "rise",
       "rising",
       "rough",
+      "route",
+      "russia",
       "saudi",
       "scheduled",
       "second",
@@ -2436,9 +2521,11 @@
       "severe",
       "shift",
       "ship",
+      "shipping",
       "ships",
       "sides",
       "significant",
+      "significantly",
       "since",
       "situation",
       "soldier",
@@ -2467,9 +2554,11 @@
       "targeting",
       "tehran",
       "tension",
+      "terminal",
       "these",
       "they",
       "threat",
+      "threaten",
       "threatened",
       "three",
       "thursday",
@@ -2510,6 +2599,8 @@
       "bab",
       "began_israel",
       "benjamin_netanyahu",
+      "black",
+      "black_sea",
       "cancel_planned",
       "ceasefire_negotiation",
       "central_command",
@@ -2526,11 +2617,13 @@
       "el-mandeb",
       "escalating_iran",
       "escalating_tension",
+      "export_terminal",
       "extend_pause",
       "february_trump",
       "first_time",
       "foiled_missile",
       "force_target",
+      "grain_export",
       "hormuz._trump",
       "hormuz_deal",
       "hormuz_stalemate",
@@ -2572,15 +2665,19 @@
       "red_sea",
       "red_sea.",
       "regarding_iran",
+      "region_recent",
+      "russia",
       "saudi",
       "saudi_arabia",
       "saudi_force",
       "sea._meanwhile",
+      "sea_region",
       "sea_result",
       "since_iran",
       "six",
       "strait",
       "target_iran",
+      "terminal_escalate",
       "time_since",
       "trump_cancel",
       "trump_demand",
@@ -2603,7 +2700,7 @@
       "yemen.",
       "zelenskyy._escalation"
     ],
-    "search_text": "100 2025 action administration agreed agreement aimed airstrike alongside also ambition america announce announced announcing another arabia asserting attack attempted attempting attend bab barrel becoming began began_israel behind benjamin benjamin_netanyahu bipartisan blockade both breach bridge brief calm cancel cancel_planned cancellation ceasefire ceasefire_negotiation central central_command citing civilian claim claim_missile claimed come comes command compensation concern conduct conflict consecutive consequence considering contingent continue control corresponding create crossing curbing d.c. deadline deadline_donald deal deal_deadline deal_negotiation deal_trump death decision decline deepening demand demand_compensation demanded democrat destroying development diplomatic diplomatic_effort direct discuss discussion disruption donald donald_trump doubt each earlier early east eastern effort eighth el-mandeb election emphasized engaged escalate escalated escalating escalating_iran escalating_tension escalation established event exceed exchange exercised expressed extend extend_pause extension face facilitie fade fail fatalitie february february_trump fell fire fired firing first first_time five foiled foiled_missile follow force force_target four framework funeral further global graham halt halted halts handling heightened hopes hormuz hormuz._trump hormuz_deal hormuz_stalemate hormuz_tension hostilitie house house_votes houthi houthi_claim impose incident including increase increased indicated indicating individual infrastructure initiate instead intended intensified intercepted interim iran iran-backed iran-backed_houthi iran. iran._houthi iran_extend iran_infrastructure iran_militia iran_pause iran_pending iran_target iran_tension iran_war iranian-backed iranian-backed_houthi iraq iraq. israel israel_prime issue issue_threat jizan jizan. joining jordanian late launch launched leader limit limit_trump lindsey lindsey_graham loaded locked made maritime mark marking marks meanwhile meet meeting middle middle_east middle_eastern military military_action militia missile monday month move nation national negotiation netanyahu nuclear office oil ongoing ongoing_yemen opting other pakistani particularly pause paused peace pending pending_deal perimeter period piece planned plant political ports potential power power_regarding previously price price_decline price_exceed prime progress prospect punishment pursue pursuing raised rapid reach reached reason rebel rebuke received recent red red_sea red_sea. reduced reflect refrain regarding regarding_iran region related remain renewed reopen reopening reported representative republican requested resolution resolving respond response responsibility restrict result resulted resume resumed retaliation returned rise rising rough saudi saudi_arabia saudi_force scheduled sea._meanwhile sea_result second seeks serie seriou severe shift ship ships sides significant since since_iran situation six soldier solution sought space stalemate stalled start stated stating strait strategic strategy strike successfully such supplie support surged surprise talks tanker target target_iran targeted targeting tehran tension these they threat threatened three thursday thwarting time time_since tolls trump trump_cancel trump_demand trump_halts trump_issue trump_meet trump_war trump_warns trump_weigh ukraine unclear underway united upcoming upon us us. vessel violating volodymyr volodymyr_zelenskyy. vote voted votes war war_began war_power warned warns warns_iran washington washington_d.c. waterway wednesday week weigh weigh_military where which while would year yemen yemen. zelenskyy zelenskyy._escalation"
+    "search_text": "100 2025 action administration agreed agreement aimed airstrike alongside also ambition america announce announced announcing another arabia asserting attack attempted attempting attend bab barrel becoming began began_israel behind benjamin benjamin_netanyahu bipartisan black black_sea blockade both breach bridge brief broader calm cancel cancel_planned cancellation ceasefire ceasefire_negotiation central central_command citing civilian claim claim_missile claimed come comes command compensation concern conduct conflict consecutive consequence considering contingent continue control corresponding create crossing curbing d.c. deadline deadline_donald deal deal_deadline deal_negotiation deal_trump death decision decline deepening demand demand_compensation demanded democrat destroying development diplomatic diplomatic_effort direct discuss discussion disruption donald donald_trump doubt each earlier early east eastern effort eighth el-mandeb election emphasized engaged escalate escalated escalating escalating_iran escalating_tension escalation established event exceed exchange exercised export export_terminal expressed extend extend_pause extension face facilitie fade fail fatalitie february february_trump fell fire fired firing first first_time five foiled foiled_missile follow force force_target four framework funeral further global graham grain grain_export halt halted halts handling heightened hopes hormuz hormuz._trump hormuz_deal hormuz_stalemate hormuz_tension hostilitie house house_votes houthi houthi_claim impacted impose incident including increase increased indicated indicating individual infrastructure initiate instead intended intensified intercepted interim iran iran-backed iran-backed_houthi iran. iran._houthi iran_extend iran_infrastructure iran_militia iran_pause iran_pending iran_target iran_tension iran_war iranian-backed iranian-backed_houthi iraq iraq. israel israel_prime issue issue_threat jizan jizan. joining jordanian late launch launched leader limit limit_trump lindsey lindsey_graham loaded locked made maritime mark marking marks meanwhile meet meeting middle middle_east middle_eastern military military_action militia missile monday month move nation national negotiation netanyahu nuclear office oil ongoing ongoing_yemen opting other pakistani part particularly pause paused peace pending pending_deal perimeter period piece planned plant political ports potential power power_regarding previously price price_decline price_exceed prime progress prospect punishment pursue pursuing raised rapid reach reached reason rebel rebuke received recent red red_sea red_sea. reduced reflect refrain regarding regarding_iran region region_recent related remain renewed reopen reopening reported representative republican requested resolution resolving respond response responsibility restrict result resulted resume resumed retaliation returned rise rising rough route russia saudi saudi_arabia saudi_force scheduled sea._meanwhile sea_region sea_result second seeks serie seriou severe shift ship shipping ships sides significant significantly since since_iran situation six soldier solution sought space stalemate stalled start stated stating strait strategic strategy strike successfully such supplie support surged surprise talks tanker target target_iran targeted targeting tehran tension terminal terminal_escalate these they threat threaten threatened three thursday thwarting time time_since tolls trump trump_cancel trump_demand trump_halts trump_issue trump_meet trump_war trump_warns trump_weigh ukraine unclear underway united upcoming upon us us. vessel violating volodymyr volodymyr_zelenskyy. vote voted votes war war_began war_power warned warns warns_iran washington washington_d.c. waterway wednesday week weigh weigh_military where which while would year yemen yemen. zelenskyy zelenskyy._escalation"
   },
   "related_events": [
     {
@@ -2673,40 +2770,6 @@
         "focal_tall_y": 0.48
       },
       "href": "/timeline.html?event=event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a"
-    },
-    {
-      "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
-      "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
-      "summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Israel Rejects Trump's Gaza Peace Plan, Demands Hamas Disarmament.",
-      "activity_status": "active",
-      "stage": "timeline",
-      "stage_label": "Timeline",
-      "first_seen_at": "2026-07-31",
-      "last_seen_at": "2026-08-10",
-      "development_count": 6,
-      "latest_title": "Israel Rejects Trump's Gaza Peace Plan, Demands Hamas Disarmament",
-      "topic_label": "Gaza Peace Deal",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b"
     }
   ]
 }

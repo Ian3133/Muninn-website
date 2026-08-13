@@ -78,7 +78,7 @@
     "story_id": "story_cec67107c3dc47d8",
     "development_id": "story_cec67107c3dc47d8",
     "event_id": "event_ebola-outbreak-in-congo-approaches-1-000-dea_10c383b98f",
-    "event_match_confidence": 0.72,
+    "event_match_confidence": 0.9,
     "update_kind": "new_development",
     "novelty_score": 0.9,
     "new_facts": [
@@ -202,7 +202,7 @@
         "date_basis": "first_reported_by_muninn",
         "title": "Ebola Workers in DR Congo Threaten Strikes Over Unpaid Salaries Amid Outbreak",
         "summary": "Frontline health workers in the Democratic Republic of Congo, particularly in Ituri province, are threatening to strike due to unpaid salaries while battling a significant Ebola outbreak. The World Health Organization has noted that the outbreak is advancing faster than the response efforts, raising concerns about healthcare access and the potential for staff shortages to hinder containment efforts.",
-        "topic_label": "Ebola Outbreak",
+        "topic_label": "Congo Ebola Outbreak",
         "development_type": "military_action",
         "key_facts": [
           "Frontline health workers in DR Congo are at risk of quitting due to unpaid salaries.",
@@ -232,28 +232,45 @@
             "source_bias": "lean-left"
           }
         ],
-        "confidence": 0.72,
+        "confidence": 0.9,
         "match_evidence": {
-          "score": 0.72,
-          "matched_development_id": "story_f5c21aea2c963aca",
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "outbreak"
+          ],
+          "shared_incident_anchors": [
+            "congo",
+            "democratic_republic",
+            "dr",
+            "ebola",
+            "ebola_outbreak",
+            "health_organization",
+            "who"
+          ],
+          "shared_incident_numbers": [],
           "shared_tokens": [
             "congo",
             "democratic",
             "ebola",
+            "effort",
             "health",
+            "organization",
             "outbreak",
             "republic",
-            "strike",
-            "worker"
+            "response"
           ],
           "shared_entities": [
+            "congo",
             "democratic_republic",
             "dr",
-            "ebola_outbreak"
+            "ebola",
+            "ebola_outbreak",
+            "health_organization",
+            "who"
           ],
           "source_url_match": false,
-          "topic_label_match": true,
-          "method": "deterministic_event_match_v2",
+          "matched_development_id": "story_bc9371293c5e7af9",
           "threshold": 0.38
         },
         "verification": {
@@ -272,7 +289,7 @@
         "date_basis": "first_reported_by_muninn",
         "title": "DR Congo Faces Rapid Resurgence of Ebola Epidemic",
         "summary": "The Democratic Republic of the Congo is grappling with a significant resurgence of Ebola, having recorded nearly 4,000 confirmed cases and over 1,800 deaths. This outbreak, attributed to the Bundibugyo virus, is now the second-largest Ebola outbreak in history and the fastest-spreading in the country's records.",
-        "topic_label": "Ebola Outbreak",
+        "topic_label": "Congo Ebola Outbreak",
         "development_type": "development",
         "key_facts": [
           "Nearly 4,000 confirmed cases of Ebola in DR Congo",
@@ -304,30 +321,42 @@
             "source_bias": "center"
           }
         ],
-        "confidence": 0.72,
+        "confidence": 0.9,
         "match_evidence": {
-          "score": 0.72,
-          "matched_development_id": "story_f5c21aea2c963aca",
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "outbreak"
+          ],
+          "shared_incident_anchors": [
+            "congo",
+            "democratic_republic",
+            "dr",
+            "ebola",
+            "ebola_outbreak"
+          ],
+          "shared_incident_numbers": [
+            "1"
+          ],
           "shared_tokens": [
-            "000",
             "cases",
             "confirmed",
             "congo",
+            "death",
             "democratic",
             "ebola",
-            "history",
             "outbreak",
-            "reported",
             "republic"
           ],
           "shared_entities": [
+            "congo",
             "democratic_republic",
             "dr",
+            "ebola",
             "ebola_outbreak"
           ],
           "source_url_match": false,
-          "topic_label_match": true,
-          "method": "deterministic_event_match_v2",
+          "matched_development_id": "story_bc9371293c5e7af9",
           "threshold": 0.38
         },
         "verification": {
@@ -346,7 +375,7 @@
         "date_basis": "first_reported_by_muninn",
         "title": "Ebola Outbreak in Congo Claims Over 2,000 Lives, Marked as Fastest Growing on Record",
         "summary": "The Democratic Republic of the Congo reports that at least 2,000 people have died in its ongoing Ebola outbreak, which is now recognized as the fastest growing on record. As of the latest updates, there have been 4,381 confirmed cases across five provinces. The outbreak reportedly began months before it was officially declared in May, complicating response efforts due to factors such as rebel conflict and infrastructure challenges.",
-        "topic_label": "Ebola Outbreak",
+        "topic_label": "Congo Ebola Outbreak",
         "development_type": "development",
         "key_facts": [
           "At least 2,000 deaths reported in the Ebola outbreak.",
@@ -387,21 +416,23 @@
         "confidence": 0.72,
         "match_evidence": {
           "score": 0.72,
-          "matched_development_id": "story_f5c21aea2c963aca",
+          "matched_development_id": "story_1e2af4cb802ea53a",
           "shared_tokens": [
             "000",
             "cases",
             "confirmed",
             "congo",
+            "death",
             "democratic",
             "ebola",
+            "ongoing",
             "outbreak",
             "reported",
             "republic"
           ],
           "shared_entities": [
+            "congo_ebola",
             "democratic_republic",
-            "ebola",
             "ebola_outbreak"
           ],
           "source_url_match": false,
@@ -538,7 +569,7 @@
           "date_basis": "first_reported_by_muninn",
           "title": "Ebola Workers in DR Congo Threaten Strikes Over Unpaid Salaries Amid Outbreak",
           "summary": "Frontline health workers in the Democratic Republic of Congo, particularly in Ituri province, are threatening to strike due to unpaid salaries while battling a significant Ebola outbreak. The World Health Organization has noted that the outbreak is advancing faster than the response efforts, raising concerns about healthcare access and the potential for staff shortages to hinder containment efforts.",
-          "topic_label": "Ebola Outbreak",
+          "topic_label": "Congo Ebola Outbreak",
           "development_type": "military_action",
           "key_facts": [
             "Frontline health workers in DR Congo are at risk of quitting due to unpaid salaries.",
@@ -568,28 +599,45 @@
               "source_bias": "lean-left"
             }
           ],
-          "confidence": 0.72,
+          "confidence": 0.9,
           "match_evidence": {
-            "score": 0.72,
-            "matched_development_id": "story_f5c21aea2c963aca",
+            "score": 0.9,
+            "method": "bounded_incident_fingerprint_v1",
+            "incident_types": [
+              "outbreak"
+            ],
+            "shared_incident_anchors": [
+              "congo",
+              "democratic_republic",
+              "dr",
+              "ebola",
+              "ebola_outbreak",
+              "health_organization",
+              "who"
+            ],
+            "shared_incident_numbers": [],
             "shared_tokens": [
               "congo",
               "democratic",
               "ebola",
+              "effort",
               "health",
+              "organization",
               "outbreak",
               "republic",
-              "strike",
-              "worker"
+              "response"
             ],
             "shared_entities": [
+              "congo",
               "democratic_republic",
               "dr",
-              "ebola_outbreak"
+              "ebola",
+              "ebola_outbreak",
+              "health_organization",
+              "who"
             ],
             "source_url_match": false,
-            "topic_label_match": true,
-            "method": "deterministic_event_match_v2",
+            "matched_development_id": "story_bc9371293c5e7af9",
             "threshold": 0.38
           },
           "verification": {
@@ -608,7 +656,7 @@
           "date_basis": "first_reported_by_muninn",
           "title": "DR Congo Faces Rapid Resurgence of Ebola Epidemic",
           "summary": "The Democratic Republic of the Congo is grappling with a significant resurgence of Ebola, having recorded nearly 4,000 confirmed cases and over 1,800 deaths. This outbreak, attributed to the Bundibugyo virus, is now the second-largest Ebola outbreak in history and the fastest-spreading in the country's records.",
-          "topic_label": "Ebola Outbreak",
+          "topic_label": "Congo Ebola Outbreak",
           "development_type": "development",
           "key_facts": [
             "Nearly 4,000 confirmed cases of Ebola in DR Congo",
@@ -640,30 +688,42 @@
               "source_bias": "center"
             }
           ],
-          "confidence": 0.72,
+          "confidence": 0.9,
           "match_evidence": {
-            "score": 0.72,
-            "matched_development_id": "story_f5c21aea2c963aca",
+            "score": 0.9,
+            "method": "bounded_incident_fingerprint_v1",
+            "incident_types": [
+              "outbreak"
+            ],
+            "shared_incident_anchors": [
+              "congo",
+              "democratic_republic",
+              "dr",
+              "ebola",
+              "ebola_outbreak"
+            ],
+            "shared_incident_numbers": [
+              "1"
+            ],
             "shared_tokens": [
-              "000",
               "cases",
               "confirmed",
               "congo",
+              "death",
               "democratic",
               "ebola",
-              "history",
               "outbreak",
-              "reported",
               "republic"
             ],
             "shared_entities": [
+              "congo",
               "democratic_republic",
               "dr",
+              "ebola",
               "ebola_outbreak"
             ],
             "source_url_match": false,
-            "topic_label_match": true,
-            "method": "deterministic_event_match_v2",
+            "matched_development_id": "story_bc9371293c5e7af9",
             "threshold": 0.38
           },
           "verification": {
@@ -682,7 +742,7 @@
           "date_basis": "first_reported_by_muninn",
           "title": "Ebola Outbreak in Congo Claims Over 2,000 Lives, Marked as Fastest Growing on Record",
           "summary": "The Democratic Republic of the Congo reports that at least 2,000 people have died in its ongoing Ebola outbreak, which is now recognized as the fastest growing on record. As of the latest updates, there have been 4,381 confirmed cases across five provinces. The outbreak reportedly began months before it was officially declared in May, complicating response efforts due to factors such as rebel conflict and infrastructure challenges.",
-          "topic_label": "Ebola Outbreak",
+          "topic_label": "Congo Ebola Outbreak",
           "development_type": "development",
           "key_facts": [
             "At least 2,000 deaths reported in the Ebola outbreak.",
@@ -723,21 +783,23 @@
           "confidence": 0.72,
           "match_evidence": {
             "score": 0.72,
-            "matched_development_id": "story_f5c21aea2c963aca",
+            "matched_development_id": "story_1e2af4cb802ea53a",
             "shared_tokens": [
               "000",
               "cases",
               "confirmed",
               "congo",
+              "death",
               "democratic",
               "ebola",
+              "ongoing",
               "outbreak",
               "reported",
               "republic"
             ],
             "shared_entities": [
+              "congo_ebola",
               "democratic_republic",
-              "ebola",
               "ebola_outbreak"
             ],
             "source_url_match": false,
@@ -947,7 +1009,7 @@
       ]
     },
     "original_daily_position": 17,
-    "today_rank_score": 0.492,
+    "today_rank_score": 0.396,
     "today_rank": 17,
     "primary_category": "Health",
     "secondary_categories": [],
@@ -990,23 +1052,23 @@
       "category": "Health",
       "primary_category": "Health",
       "secondary_categories": [],
-      "topic_label": "",
+      "topic_label": "Colombia Earthquake",
       "canonical_topic_label": null,
-      "event_id": "event_cali-hospital-partially-collapses-following_967dc70d46",
-      "event_title": "Cali Hospital Partially Collapses Following 7.4 Magnitude Earthquake in Colombia",
+      "event_id": "event_deadly-earthquake-strikes-colombia-causing-w_59ea670b21",
+      "event_title": "Colombia Earthquake",
       "story_context": {
-        "available": false,
-        "event_title": "Cali Hospital Partially Collapses Following 7.4 Magnitude Earthquake in Colombia",
-        "display_title": "Cali Hospital Partially Collapses Following 7.4 Magnitude Earthquake in Colombia",
-        "stage": "standalone_candidate",
-        "stage_label": "Standalone story",
-        "development_count": 1,
-        "timeline_url": "/timeline.html?event=event_cali-hospital-partially-collapses-following_967dc70d46"
+        "available": true,
+        "event_title": "Colombia Earthquake",
+        "display_title": "Colombia Earthquake",
+        "stage": "developing_event",
+        "stage_label": "Developing event",
+        "development_count": 4,
+        "timeline_url": "/timeline.html?event=event_deadly-earthquake-strikes-colombia-causing-w_59ea670b21"
       },
       "tracked_coverage": {
-        "available": false,
-        "stage": "standalone_candidate",
-        "stage_label": "Standalone story"
+        "available": true,
+        "stage": "developing_event",
+        "stage_label": "Developing event"
       },
       "image": {
         "url": "/Current_news/generated/ai-daily/2026-08-12/demo_cluster_048.jpg",

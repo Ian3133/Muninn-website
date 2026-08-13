@@ -15,7 +15,7 @@
     "summary": "The ongoing Ebola outbreak in the Democratic Republic of Congo has resulted in nearly 1,000 fatalities since mid-May. The current death toll stands at 999 in Congo, with an additional two deaths reported in Uganda, attributed to the Bundibugyo strain of the virus. This outbreak has a significantly higher fatality rate compared to previous incidents, and there are currently no available vaccines or treatments for this strain.",
     "status": "active",
     "first_seen_at": "2026-07-22",
-    "last_seen_at": "2026-08-12",
+    "last_seen_at": "2026-08-13",
     "timeline": [
       {
         "development_id": "story_1e2af4cb802ea53a",
@@ -702,15 +702,98 @@
         "first_seen_at": "2026-08-12",
         "last_seen_at": "2026-08-12",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_6878bbbd20eccd38",
+        "daily_story_id": "story_6878bbbd20eccd38",
+        "date": "2026-08-13",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Congo's Ebola Outbreak Could Become Deadliest in History, WHO Warns",
+        "summary": "The World Health Organization (WHO) has warned that the ongoing Ebola outbreak in Congo, declared on May 15, has already resulted in over 2,000 deaths and thousands of additional reported cases. WHO chief Tedros Adhanom Ghebreyesus indicated that if the current trend continues, this outbreak could surpass the deadliest Ebola outbreak recorded during the West African epidemic from 2014 to 2016.",
+        "topic_label": "Ebola Outbreak",
+        "development_type": "development",
+        "key_facts": [
+          "Ebola outbreak declared on May 15, 2026",
+          "Over 2,000 deaths reported",
+          "Thousands of additional cases reported",
+          "Potential to surpass the 2014-2016 West African outbreak"
+        ],
+        "source_count": 2,
+        "sources": [
+          "BBC - World",
+          "Euronews"
+        ],
+        "source_urls": [
+          "http://www.euronews.com/2026/08/13/congos-ebola-outbreak-on-track-to-surpass-deadliest-in-history-who-chief-says",
+          "https://www.bbc.co.uk/news/articles/cgk4pex4mn8o?at_medium=RSS&at_campaign=rss"
+        ],
+        "source_details": [
+          {
+            "title": "Congo’s Ebola outbreak on track to surpass deadliest in history, WHO chief says",
+            "source": "Euronews",
+            "link": "http://www.euronews.com/2026/08/13/congos-ebola-outbreak-on-track-to-surpass-deadliest-in-history-who-chief-says",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Ebola outbreak on track to be deadliest ever, WHO chief says",
+            "source": "BBC - World",
+            "link": "https://www.bbc.co.uk/news/articles/cgk4pex4mn8o?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "outbreak"
+          ],
+          "shared_incident_anchors": [
+            "congo",
+            "ebola",
+            "ebola_outbreak"
+          ],
+          "shared_incident_numbers": [
+            "000",
+            "2"
+          ],
+          "shared_tokens": [
+            "000",
+            "cases",
+            "congo",
+            "death",
+            "declared",
+            "ebola",
+            "ongoing",
+            "outbreak",
+            "reported"
+          ],
+          "shared_entities": [
+            "congo",
+            "ebola",
+            "ebola_outbreak"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_62d4bfd737cddbfa",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-13",
+        "last_seen_at": "2026-08-13",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 9,
+      "public_development_count": 10,
       "questionable_development_count": 1,
       "review_required": true
     },
-    "latest_title": "Ebola Outbreak in Congo Claims Over 2,000 Lives Amid Containment Challenges",
-    "latest_summary": "The Democratic Republic of Congo is experiencing a severe Ebola outbreak, which has resulted in more than 2,000 deaths. This outbreak is noted as the fastest-growing in history, with only 30 percent of confirmed cases seeking medical assistance, complicating containment efforts.",
+    "latest_title": "Congo's Ebola Outbreak Could Become Deadliest in History, WHO Warns",
+    "latest_summary": "The World Health Organization (WHO) has warned that the ongoing Ebola outbreak in Congo, declared on May 15, has already resulted in over 2,000 deaths and thousands of additional reported cases. WHO chief Tedros Adhanom Ghebreyesus indicated that if the current trend continues, this outbreak could surpass the deadliest Ebola outbreak recorded during the West African epidemic from 2014 to 2016.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -721,29 +804,29 @@
       "milestone_development_ids": [
         "story_1e2af4cb802ea53a",
         "story_82f07e414ad368e5",
-        "story_6ce2d452ed96eedd",
-        "story_cec67107c3dc47d8"
+        "story_b4011d2c5baa0f20",
+        "story_6878bbbd20eccd38"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-12",
-      "development_count": 9,
-      "coverage_packet_count": 10,
-      "date_count": 8,
-      "source_count": 22,
-      "independent_source_count": 13,
+      "summary_updated_at": "2026-08-13",
+      "development_count": 10,
+      "coverage_packet_count": 11,
+      "date_count": 9,
+      "source_count": 24,
+      "independent_source_count": 14,
       "first_date": "2026-07-22",
-      "latest_date": "2026-08-12",
-      "latest_update_title": "Ebola Outbreak in Congo Claims Over 2,000 Lives Amid Containment Challenges",
+      "latest_date": "2026-08-13",
+      "latest_update_title": "Congo's Ebola Outbreak Could Become Deadliest in History, WHO Warns",
       "coverage_score": 1.0,
       "recency_score": 1.0,
       "rank_score": 1.0,
-      "context_summary": "Muninn first tracked this thread on 2026-07-22: Ebola Outbreak in DR Congo Exceeds 1,000 Deaths. The latest development is Ebola Outbreak in Congo Claims Over 2,000 Lives Amid Containment Challenges.",
-      "cta_label": "Explore 9 developments"
+      "context_summary": "Muninn first tracked this thread on 2026-07-22: Ebola Outbreak in DR Congo Exceeds 1,000 Deaths. The latest development is Congo's Ebola Outbreak Could Become Deadliest in History, WHO Warns.",
+      "cta_label": "Explore 10 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "The ongoing Ebola outbreak in the Democratic Republic of Congo has resulted in over 1,000 confirmed deaths, according to official government data. A later development was New Ebola Treatment Center Opens in Bunia, DR Congo Amid Outbreak. Most recently, the Democratic Republic of Congo is experiencing a severe Ebola outbreak, which has resulted in more than 2,000 deaths.",
+      "summary": "The ongoing Ebola outbreak in the Democratic Republic of Congo has resulted in over 1,000 confirmed deaths, according to official government data. A later development was Ebola Workers in DR Congo Threaten Strikes Over Unpaid Salaries Amid Outbreak. Most recently, the World Health Organization (WHO) has warned that the ongoing Ebola outbreak in Congo, declared on May 15, has already resulted in over 2,000 deaths and thousands of additional reported cases.",
       "key_developments": [
         {
           "development_id": "story_1e2af4cb802ea53a",
@@ -756,14 +839,14 @@
           "title": "Ebola Outbreak in DR Congo Becomes Worst in History"
         },
         {
-          "development_id": "story_6ce2d452ed96eedd",
+          "development_id": "story_b4011d2c5baa0f20",
           "date": "2026-08-06",
-          "title": "Ebola Workers in DR Congo Threaten Strikes Over Unpaid Salaries Amid Outbreak"
+          "title": "DR Congo Faces Rapid Resurgence of Ebola Epidemic"
         },
         {
-          "development_id": "story_cec67107c3dc47d8",
-          "date": "2026-08-12",
-          "title": "Ebola Outbreak in Congo Claims Over 2,000 Lives Amid Containment Challenges"
+          "development_id": "story_6878bbbd20eccd38",
+          "date": "2026-08-13",
+          "title": "Congo's Ebola Outbreak Could Become Deadliest in History, WHO Warns"
         }
       ],
       "sources": [
@@ -898,9 +981,21 @@
           "source": "AP",
           "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOSF9yUjNXX2h4OXJYMjN4LUdDRS03dGd6MmwzWXM4azBtY2FPMW0zcGsyRXNoRHBoZEhERXNUOTFfd3RYOEhvVEF0WEZuLVp1X0JtdUFFZWlVNlVyeXgtR05sUkc5c19CWW85WmZYRWRCNG9YSHVJVU4xUDZCWjEydDNpSHY1WGs?oc=5",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Congo’s Ebola outbreak on track to surpass deadliest in history, WHO chief says",
+          "source": "Euronews",
+          "link": "http://www.euronews.com/2026/08/13/congos-ebola-outbreak-on-track-to-surpass-deadliest-in-history-who-chief-says",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Ebola outbreak on track to be deadliest ever, WHO chief says",
+          "source": "BBC - World",
+          "link": "https://www.bbc.co.uk/news/articles/cgk4pex4mn8o?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-08-12",
+      "updated_at": "2026-08-13",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -909,7 +1004,7 @@
         "event_id": "event_ebola-outbreak-in-congo-claims-over-930-live_6c7b679293",
         "title": "Ebola Outbreak in Congo Claims Over 930 Lives",
         "relationship": "related_topic",
-        "confidence": 0.79,
+        "confidence": 0.789,
         "shared_entities": [
           "congo",
           "congo_claim",
@@ -1056,6 +1151,8 @@
     "search_tokens": [
       "000",
       "100",
+      "2014",
+      "2016",
       "381",
       "500",
       "587",
@@ -1064,7 +1161,11 @@
       "access",
       "across",
       "actual",
+      "additional",
+      "adhanom",
       "advancing",
+      "african",
+      "already",
       "announcement",
       "approved",
       "approximately",
@@ -1083,6 +1184,7 @@
       "caused",
       "center",
       "challenge",
+      "chief",
       "claim",
       "claiming",
       "coincide",
@@ -1094,6 +1196,7 @@
       "congo",
       "containment",
       "continue",
+      "current",
       "data",
       "deadliest",
       "death",
@@ -1125,6 +1228,7 @@
       "four",
       "free",
       "frontline",
+      "ghebreyesu",
       "grappling",
       "growing",
       "health",
@@ -1187,18 +1291,25 @@
       "strain",
       "strike",
       "such",
+      "surpass",
       "surpassing",
+      "tedro",
       "than",
       "there",
+      "thousand",
       "threaten",
       "threatening",
       "times",
       "treatment",
+      "trend",
       "uganda",
       "unpaid",
       "vaccine",
       "virus",
+      "warned",
+      "warns",
       "week",
+      "west",
       "which",
       "while",
       "without",
@@ -1206,10 +1317,12 @@
       "worst"
     ],
     "entities": [
+      "adhanom_ghebreyesu",
       "bundibugyo",
       "bunia",
       "congo",
       "congo_claim",
+      "congo_ebola",
       "congo_exceed",
       "congo_faces",
       "congo_threaten",
@@ -1231,6 +1344,7 @@
       "health_organization",
       "health_worker",
       "history",
+      "history_who",
       "itself_ebola-free",
       "ituri",
       "july_health",
@@ -1238,12 +1352,17 @@
       "may",
       "mid-june",
       "ongoing_outbreak",
+      "organization_who",
       "outbreak_frontline",
       "rapid_resurgence",
+      "tedro_adhanom",
       "uganda_declare",
-      "unpaid_salarie"
+      "unpaid_salarie",
+      "west_african",
+      "who",
+      "who_warns"
     ],
-    "search_text": "000 100 381 500 587 605 800 access across actual advancing announcement approved approximately assistance attributed authoritie available battling become began bundibugyo bunia capacity care cases caused center challenge claim claiming coincide comes complicating concern confirmed conflict congo congo_claim congo_exceed congo_faces congo_threaten congo_uganda containment containment_challenge continue data deadliest death declare declare_itself declared democratic democratic_republic development died discharged dr ebola ebola-free ebola_epidemic ebola_outbreak ebola_treatment ebola_worker effort enhance epicenter epidemic ever exceed exceed_cases expanded experiencing face faces faces_rapid factor faster fastest fastest-growing fastest-spreading fastest_growing figure five four free frontline grappling growing health health_organization health_worker healthcare higher hinder history indicated infrastructure intensifying itself itself_ebola-free ituri july july_health largest last least lives lives_marked marked marking may medical mid-june month nearly neighboring noted number officially ongoing ongoing_outbreak only open opens organization outbreak outbreak_frontline particularly patient percent potential potentially province raising rapid rapid_resurgence rebel recognized record recorded reported reportedly republic response resulted resurgence salarie second-largest seeking severe shortage significant significantly staff strain strike such surpassing than there threaten threatening times treatment uganda uganda_declare unpaid unpaid_salarie vaccine virus week which while without worker worst"
+    "search_text": "000 100 2014 2016 381 500 587 605 800 access across actual additional adhanom adhanom_ghebreyesu advancing african already announcement approved approximately assistance attributed authoritie available battling become began bundibugyo bunia capacity care cases caused center challenge chief claim claiming coincide comes complicating concern confirmed conflict congo congo_claim congo_ebola congo_exceed congo_faces congo_threaten congo_uganda containment containment_challenge continue current data deadliest death declare declare_itself declared democratic democratic_republic development died discharged dr ebola ebola-free ebola_epidemic ebola_outbreak ebola_treatment ebola_worker effort enhance epicenter epidemic ever exceed exceed_cases expanded experiencing face faces faces_rapid factor faster fastest fastest-growing fastest-spreading fastest_growing figure five four free frontline ghebreyesu grappling growing health health_organization health_worker healthcare higher hinder history history_who indicated infrastructure intensifying itself itself_ebola-free ituri july july_health largest last least lives lives_marked marked marking may medical mid-june month nearly neighboring noted number officially ongoing ongoing_outbreak only open opens organization organization_who outbreak outbreak_frontline particularly patient percent potential potentially province raising rapid rapid_resurgence rebel recognized record recorded reported reportedly republic response resulted resurgence salarie second-largest seeking severe shortage significant significantly staff strain strike such surpass surpassing tedro tedro_adhanom than there thousand threaten threatening times treatment trend uganda uganda_declare unpaid unpaid_salarie vaccine virus warned warns week west west_african which while who who_warns without worker worst"
   },
   "related_events": []
 }
