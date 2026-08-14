@@ -15,7 +15,7 @@
     "summary": "A 32-year-old woman was rescued alive after being trapped for 36 hours under the rubble of a collapsed building in Pereira, Colombia, following a 7.4-magnitude earthquake. Rescuers located her 10 hours before successfully reaching her, as they continue to search for more survivors amid the devastation.",
     "status": "active",
     "first_seen_at": "2026-08-12",
-    "last_seen_at": "2026-08-13",
+    "last_seen_at": "2026-08-14",
     "timeline": [
       {
         "development_id": "story_2166ff2507baf2b2",
@@ -317,47 +317,206 @@
           "story_4659922cd180ced0"
         ],
         "revision_count": 1
+      },
+      {
+        "development_id": "story_06ce513cf5c86ba2",
+        "daily_story_id": "story_06ce513cf5c86ba2",
+        "date": "2026-08-14",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Support Station Offers Comfort in Earthquake-Affected Cali",
+        "summary": "In the aftermath of a recent earthquake in Cali, residents are finding solace at a 'hugs here' station. Led by Andres Solomon and a team of volunteers, the station provides emotional support as rescue efforts continue to clear debris from the disaster.",
+        "topic_label": "",
+        "development_type": "development",
+        "key_facts": [
+          "Cali residents are using a 'hugs here' station for comfort.",
+          "Andres Solomon and volunteers are providing support.",
+          "Rescue operations are ongoing in the area."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Africanews",
+          "Euronews"
+        ],
+        "source_urls": [
+          "http://www.euronews.com/video/2026/08/14/in-quake-hit-cali-hugs-here-station-brings-comfort-amid-rubble",
+          "http://www.africanews.com/2026/08/14/in-quake-hit-cali-hugs-here-station-brings-comfort-amid-rubble"
+        ],
+        "source_details": [
+          {
+            "title": "In quake-hit Cali, ‘hugs here’ station brings comfort amid rubble",
+            "source": "Euronews",
+            "link": "http://www.euronews.com/video/2026/08/14/in-quake-hit-cali-hugs-here-station-brings-comfort-amid-rubble",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "In quake-hit Cali, ‘hugs here’ station brings comfort amid rubble",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/08/14/in-quake-hit-cali-hugs-here-station-brings-comfort-amid-rubble",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "earthquake"
+          ],
+          "shared_incident_anchors": [
+            "cali"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "cali",
+            "continue",
+            "earthquake",
+            "effort",
+            "finding",
+            "ongoing",
+            "operation",
+            "rescue"
+          ],
+          "shared_entities": [
+            "cali"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_df1de6c1d021977b",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-14",
+        "last_seen_at": "2026-08-14",
+        "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_df1de6c1d021977b",
+        "daily_story_id": "story_df1de6c1d021977b",
+        "date": "2026-08-14",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Rescue Efforts Continue in Colombia Earthquake as Dog is Saved",
+        "summary": "In Cali, Colombia, rescuers successfully pulled a dog alive from the rubble of an earthquake on Thursday. Emergency teams are making a final effort to locate survivors as the critical 72-hour window for rescue operations approaches its end.",
+        "topic_label": "",
+        "development_type": "development",
+        "key_facts": [
+          "A dog was rescued alive from earthquake rubble in Cali, Colombia.",
+          "Rescue efforts are ongoing as the 72-hour window for finding survivors is closing."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Africanews",
+          "Euronews"
+        ],
+        "source_urls": [
+          "http://www.africanews.com/2026/08/14/colombia-earthquake-dog-rescued-alive-as-72-hour-window-closes",
+          "http://www.euronews.com/video/2026/08/14/colombia-earthquake-dog-rescued-alive-as-72-hour-window-closes"
+        ],
+        "source_details": [
+          {
+            "title": "Colombia earthquake: Dog rescued alive as 72-hour window closes",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/08/14/colombia-earthquake-dog-rescued-alive-as-72-hour-window-closes",
+            "source_bias": "center"
+          },
+          {
+            "title": "Colombia earthquake: Dog rescued alive as 72-hour window closes",
+            "source": "Euronews",
+            "link": "http://www.euronews.com/video/2026/08/14/colombia-earthquake-dog-rescued-alive-as-72-hour-window-closes",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "earthquake"
+          ],
+          "shared_incident_anchors": [
+            "colombia",
+            "colombia_earthquake",
+            "effort_continue",
+            "rescue_effort"
+          ],
+          "shared_incident_numbers": [
+            "72"
+          ],
+          "shared_tokens": [
+            "72-hour",
+            "colombia",
+            "continue",
+            "critical",
+            "earthquake",
+            "effort",
+            "ongoing",
+            "rescue",
+            "rescuer",
+            "window"
+          ],
+          "shared_entities": [
+            "colombia",
+            "colombia_earthquake",
+            "effort_continue",
+            "rescue_effort"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_6d83644798c9d67d",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-14",
+        "last_seen_at": "2026-08-14",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 3,
+      "public_development_count": 5,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Colombia's Earthquake Rescue Operations Near Critical Conclusion",
-    "latest_summary": "Rescue operations in Colombia are entering their final phase following a magnitude 7.4 earthquake that has resulted in at least 265 fatalities and left hundreds missing. As the critical 72-hour window for finding survivors approaches its end, rescuers are intensifying their efforts in collapsed buildings across western Colombia. The earthquake has displaced tens of thousands and caused significant destruction to infrastructure.",
+    "latest_title": "Rescue Efforts Continue in Colombia Earthquake as Dog is Saved",
+    "latest_summary": "In Cali, Colombia, rescuers successfully pulled a dog alive from the rubble of an earthquake on Thursday. Emergency teams are making a final effort to locate survivors as the critical 72-hour window for rescue operations approaches its end.",
     "presentation": {
       "has_context": true,
-      "has_full_timeline": false,
-      "stage": "developing_event",
-      "stage_label": "Developing event",
+      "has_full_timeline": true,
+      "stage": "timeline",
+      "stage_label": "Timeline",
       "base_title": "Rescue Teams Save Woman After 36 Hours Trapped in Colombia Earthquake Rubble",
-      "display_title": "Rescue Teams Save Woman After 36 Hours Trapped in Colombia Earthquake Rubble",
+      "display_title": "Rescue Teams Save Woman After 36 Hours Trapped in Colombia Earthquake Rubble Timeline",
       "milestone_development_ids": [
         "story_2166ff2507baf2b2",
         "story_6d83644798c9d67d",
-        "story_92e4592537f2b8c1"
+        "story_92e4592537f2b8c1",
+        "story_06ce513cf5c86ba2",
+        "story_df1de6c1d021977b"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-13",
-      "development_count": 3,
-      "coverage_packet_count": 4,
-      "date_count": 2,
-      "source_count": 11,
+      "summary_updated_at": "2026-08-14",
+      "development_count": 5,
+      "coverage_packet_count": 6,
+      "date_count": 3,
+      "source_count": 15,
       "independent_source_count": 9,
       "first_date": "2026-08-12",
-      "latest_date": "2026-08-13",
-      "latest_update_title": "Colombia's Earthquake Rescue Operations Near Critical Conclusion",
-      "coverage_score": 0.692,
+      "latest_date": "2026-08-14",
+      "latest_update_title": "Rescue Efforts Continue in Colombia Earthquake as Dog is Saved",
+      "coverage_score": 0.862,
       "recency_score": 1.0,
-      "rank_score": 0.871,
-      "context_summary": "Muninn first tracked this thread on 2026-08-12: Rescue Teams Save Woman After 36 Hours Trapped in Colombia Earthquake Rubble. The latest development is Colombia's Earthquake Rescue Operations Near Critical Conclusion.",
-      "cta_label": ""
+      "rank_score": 0.942,
+      "context_summary": "Muninn first tracked this thread on 2026-08-12: Rescue Teams Save Woman After 36 Hours Trapped in Colombia Earthquake Rubble. The latest development is Rescue Efforts Continue in Colombia Earthquake as Dog is Saved.",
+      "cta_label": "Explore 5 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "A 32-year-old woman was rescued alive after being trapped for 36 hours under the rubble of a collapsed building in Pereira, Colombia, following a 7.4-magnitude earthquake. A later development was Death Toll Rises in Pereira Earthquake as Rescue Efforts Continue. Most recently, rescue operations in Colombia are entering their final phase following a magnitude 7.4 earthquake that has resulted in at least 265 fatalities and left hundreds missing.",
+      "summary": "A 32-year-old woman was rescued alive after being trapped for 36 hours under the rubble of a collapsed building in Pereira, Colombia, following a 7.4-magnitude earthquake. A later development was Colombia's Earthquake Rescue Operations Near Critical Conclusion. Most recently, in Cali, Colombia, rescuers successfully pulled a dog alive from the rubble of an earthquake on Thursday.",
       "key_developments": [
         {
           "development_id": "story_2166ff2507baf2b2",
@@ -373,6 +532,16 @@
           "development_id": "story_92e4592537f2b8c1",
           "date": "2026-08-13",
           "title": "Colombia's Earthquake Rescue Operations Near Critical Conclusion"
+        },
+        {
+          "development_id": "story_06ce513cf5c86ba2",
+          "date": "2026-08-14",
+          "title": "Support Station Offers Comfort in Earthquake-Affected Cali"
+        },
+        {
+          "development_id": "story_df1de6c1d021977b",
+          "date": "2026-08-14",
+          "title": "Rescue Efforts Continue in Colombia Earthquake as Dog is Saved"
         }
       ],
       "sources": [
@@ -441,18 +610,42 @@
           "source": "RTE News",
           "link": "https://www.rte.ie/news/world/2026/0813/1587673-colombia-earthquake",
           "source_bias": "center"
+        },
+        {
+          "title": "In quake-hit Cali, ‘hugs here’ station brings comfort amid rubble",
+          "source": "Euronews",
+          "link": "http://www.euronews.com/video/2026/08/14/in-quake-hit-cali-hugs-here-station-brings-comfort-amid-rubble",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "In quake-hit Cali, ‘hugs here’ station brings comfort amid rubble",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/08/14/in-quake-hit-cali-hugs-here-station-brings-comfort-amid-rubble",
+          "source_bias": "center"
+        },
+        {
+          "title": "Colombia earthquake: Dog rescued alive as 72-hour window closes",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/08/14/colombia-earthquake-dog-rescued-alive-as-72-hour-window-closes",
+          "source_bias": "center"
+        },
+        {
+          "title": "Colombia earthquake: Dog rescued alive as 72-hour window closes",
+          "source": "Euronews",
+          "link": "http://www.euronews.com/video/2026/08/14/colombia-earthquake-dog-rescued-alive-as-72-hour-window-closes",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-08-13",
+      "updated_at": "2026-08-14",
       "provenance": "source_grounded_event_memory"
     },
-    "event_stage": "developing_event",
+    "event_stage": "timeline",
     "related_events": [
       {
         "event_id": "event_death-toll-rises-to-220-following-7-4-magnit_31d9d7c887",
         "title": "Death Toll Rises to 220 Following 7.4 Magnitude Earthquake in Colombia",
         "relationship": "related_topic",
-        "confidence": 0.712,
+        "confidence": 0.714,
         "shared_entities": [
           "colombia",
           "rescue_operation"
@@ -462,7 +655,7 @@
         "event_id": "event_rescue-efforts-continue-after-boat-sinks-in_b98f9d7e42",
         "title": "Rescue Efforts Continue After Boat Sinks in Indonesia, 18 People Still Missing",
         "relationship": "related_topic",
-        "confidence": 0.696,
+        "confidence": 0.701,
         "shared_entities": [
           "effort_continue",
           "rescue_effort"
@@ -477,105 +670,18 @@
           "rescue_effort",
           "toll_rises"
         ]
+      },
+      {
+        "event_id": "event_car-bomb-in-colombia-injures-11-ahead-of-pre_ed5e957a91",
+        "title": "Car Bomb in Colombia Injures 11 Ahead of Presidential Inauguration",
+        "relationship": "related_topic",
+        "confidence": 0.66,
+        "shared_entities": [
+          "cali",
+          "colombia"
+        ]
       }
     ],
-    "search_tokens": [
-      "2026",
-      "265",
-      "32-year-old",
-      "4-magnitude",
-      "500",
-      "72-hour",
-      "across",
-      "alive",
-      "approache",
-      "august",
-      "building",
-      "caused",
-      "collapsed",
-      "colombia",
-      "conclusion",
-      "continue",
-      "critical",
-      "death",
-      "described",
-      "destruction",
-      "devastation",
-      "displaced",
-      "earthquake",
-      "effort",
-      "entering",
-      "fatalitie",
-      "final",
-      "finding",
-      "horror",
-      "hours",
-      "hundred",
-      "individual",
-      "infrastructure",
-      "intensifying",
-      "least",
-      "left",
-      "located",
-      "magnitude",
-      "missing",
-      "near",
-      "nearly",
-      "operation",
-      "pereira",
-      "phase",
-      "reached",
-      "reaching",
-      "rescue",
-      "rescued",
-      "rescuer",
-      "resulted",
-      "rises",
-      "rubble",
-      "save",
-      "scene",
-      "search",
-      "significant",
-      "situation",
-      "still",
-      "successfully",
-      "survival",
-      "survivor",
-      "teams",
-      "tens",
-      "they",
-      "thousand",
-      "toll",
-      "trapped",
-      "unaccounted",
-      "under",
-      "western",
-      "window",
-      "woman",
-      "work"
-    ],
-    "entities": [
-      "colombia",
-      "colombia_earthquake",
-      "conclusion_rescue",
-      "critical_conclusion",
-      "earthquake_rescue",
-      "earthquake_rubble",
-      "effort_continue",
-      "hours_trapped",
-      "near_critical",
-      "operation_near",
-      "pereira",
-      "pereira_colombia",
-      "pereira_earthquake",
-      "rescue_effort",
-      "rescue_operation",
-      "rescue_teams",
-      "save_woman",
-      "teams_save",
-      "toll_rises"
-    ],
-    "search_text": "2026 265 32-year-old 4-magnitude 500 72-hour across alive approache august building caused collapsed colombia colombia_earthquake conclusion conclusion_rescue continue critical critical_conclusion death described destruction devastation displaced earthquake earthquake_rescue earthquake_rubble effort effort_continue entering fatalitie final finding horror hours hours_trapped hundred individual infrastructure intensifying least left located magnitude missing near near_critical nearly operation operation_near pereira pereira_colombia pereira_earthquake phase reached reaching rescue rescue_effort rescue_operation rescue_teams rescued rescuer resulted rises rubble save save_woman scene search significant situation still successfully survival survivor teams teams_save tens they thousand toll toll_rises trapped unaccounted under western window woman work",
     "event_overview": {
       "available": true,
       "title": "About Colombia Earthquake",
@@ -706,7 +812,140 @@
       "focal_wide_y": 0.48,
       "focal_tall_x": 0.5,
       "focal_tall_y": 0.48
-    }
+    },
+    "search_tokens": [
+      "2026",
+      "265",
+      "32-year-old",
+      "4-magnitude",
+      "500",
+      "72-hour",
+      "across",
+      "aftermath",
+      "alive",
+      "andre",
+      "approache",
+      "august",
+      "building",
+      "cali",
+      "caused",
+      "clear",
+      "collapsed",
+      "colombia",
+      "comfort",
+      "conclusion",
+      "continue",
+      "critical",
+      "death",
+      "debri",
+      "described",
+      "destruction",
+      "devastation",
+      "disaster",
+      "displaced",
+      "earthquake",
+      "earthquake-affected",
+      "effort",
+      "emergency",
+      "emotional",
+      "entering",
+      "fatalitie",
+      "final",
+      "finding",
+      "here",
+      "horror",
+      "hours",
+      "hugs",
+      "hundred",
+      "individual",
+      "infrastructure",
+      "intensifying",
+      "least",
+      "left",
+      "locate",
+      "located",
+      "magnitude",
+      "making",
+      "missing",
+      "near",
+      "nearly",
+      "offer",
+      "operation",
+      "pereira",
+      "phase",
+      "provide",
+      "pulled",
+      "reached",
+      "reaching",
+      "recent",
+      "rescue",
+      "rescued",
+      "rescuer",
+      "resident",
+      "resulted",
+      "rises",
+      "rubble",
+      "save",
+      "saved",
+      "scene",
+      "search",
+      "significant",
+      "situation",
+      "solace",
+      "solomon",
+      "station",
+      "still",
+      "successfully",
+      "support",
+      "survival",
+      "survivor",
+      "team",
+      "teams",
+      "tens",
+      "they",
+      "thousand",
+      "thursday",
+      "toll",
+      "trapped",
+      "unaccounted",
+      "under",
+      "volunteer",
+      "western",
+      "window",
+      "woman",
+      "work"
+    ],
+    "entities": [
+      "andre_solomon",
+      "cali",
+      "cali_colombia",
+      "colombia",
+      "colombia_earthquake",
+      "conclusion_rescue",
+      "critical_conclusion",
+      "earthquake-affected",
+      "earthquake-affected_cali",
+      "earthquake_rescue",
+      "earthquake_rubble",
+      "effort_continue",
+      "hours_trapped",
+      "near_critical",
+      "offer_comfort",
+      "operation_near",
+      "pereira",
+      "pereira_colombia",
+      "pereira_earthquake",
+      "rescue_effort",
+      "rescue_operation",
+      "rescue_teams",
+      "save_woman",
+      "station_offer",
+      "support_station",
+      "teams_save",
+      "thursday._emergency",
+      "toll_rises"
+    ],
+    "search_text": "2026 265 32-year-old 4-magnitude 500 72-hour across aftermath alive andre andre_solomon approache august building cali cali_colombia caused clear collapsed colombia colombia_earthquake comfort conclusion conclusion_rescue continue critical critical_conclusion death debri described destruction devastation disaster displaced earthquake earthquake-affected earthquake-affected_cali earthquake_rescue earthquake_rubble effort effort_continue emergency emotional entering fatalitie final finding here horror hours hours_trapped hugs hundred individual infrastructure intensifying least left locate located magnitude making missing near near_critical nearly offer offer_comfort operation operation_near pereira pereira_colombia pereira_earthquake phase provide pulled reached reaching recent rescue rescue_effort rescue_operation rescue_teams rescued rescuer resident resulted rises rubble save save_woman saved scene search significant situation solace solomon station station_offer still successfully support support_station survival survivor team teams teams_save tens they thousand thursday thursday._emergency toll toll_rises trapped unaccounted under volunteer western window woman work"
   },
   "related_events": [
     {
@@ -776,6 +1015,40 @@
         "focal_tall_y": 0.48
       },
       "href": "/timeline.html?event=event_rescue-efforts-intensify-after-deadly-japan_e07cd49607"
+    },
+    {
+      "event_id": "event_car-bomb-in-colombia-injures-11-ahead-of-pre_ed5e957a91",
+      "title": "Car Bomb in Colombia Injures 11 Ahead of Presidential Inauguration",
+      "summary": "Muninn first tracked this thread on 2026-08-01: Car Bomb in Colombia Injures 11 Ahead of Presidential Inauguration. The latest development is Bombing Attacks Injure Two Amid De la Espriella's Tough Stance on Violence.",
+      "activity_status": "active",
+      "stage": "developing_event",
+      "stage_label": "Developing event",
+      "first_seen_at": "2026-08-01",
+      "last_seen_at": "2026-08-09",
+      "development_count": 2,
+      "latest_title": "Bombing Attacks Injure Two Amid De la Espriella's Tough Stance on Violence",
+      "topic_label": "Colombia Violence",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_car-bomb-in-colombia-injures-11-ahead-of-pre_ed5e957a91.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_car-bomb-in-colombia-injures-11-ahead-of-pre_ed5e957a91.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_car-bomb-in-colombia-injures-11-ahead-of-pre_ed5e957a91"
     }
   ]
 }

@@ -15,7 +15,7 @@
     "summary": "Wildfires fueled by strong winds and drought conditions have led to the evacuation of over 200,000 people in France and Spain. Firefighters are actively battling the flames, which have consumed large areas. Authorities in Spain have accused a tractor driver of igniting one of the wildfires.",
     "status": "active",
     "first_seen_at": "2026-07-25",
-    "last_seen_at": "2026-08-11",
+    "last_seen_at": "2026-08-14",
     "timeline": [
       {
         "development_id": "story_f765f351d0d52866",
@@ -930,15 +930,247 @@
         "first_seen_at": "2026-08-11",
         "last_seen_at": "2026-08-11",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_22fb2064df92b3b1",
+        "daily_story_id": "story_22fb2064df92b3b1",
+        "date": "2026-08-14",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Severe Weather Events Lead to Fatalities and Disruptions Across Japan and Europe",
+        "summary": "At least eight people have died in eastern Japan due to record-breaking heavy rains that caused significant flooding, stranding thousands and disrupting transportation. Meanwhile, Europe is facing its fifth heatwave this summer, with firefighters battling wildfires across several countries.",
+        "topic_label": "Extreme Weather",
+        "development_type": "development",
+        "key_facts": [
+          "At least eight fatalities reported in Japan due to heavy rains.",
+          "Thousands stranded and transportation disrupted in eastern Japan.",
+          "Europe experiencing its fifth heatwave this summer with ongoing wildfires."
+        ],
+        "source_count": 2,
+        "sources": [
+          "NPR",
+          "RTE News"
+        ],
+        "source_urls": [
+          "https://www.npr.org/2026/08/14/g-s1-138727/europe-asia-floods-heatwaves-world-weather",
+          "https://www.rte.ie/news/world/2026/0814/1587827-japan-weather"
+        ],
+        "source_details": [
+          {
+            "title": "From Europe to Asia, floods to heatwaves, world experiences weather shocks",
+            "source": "NPR",
+            "link": "https://www.npr.org/2026/08/14/g-s1-138727/europe-asia-floods-heatwaves-world-weather",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "At least eight dead as heavy rains hit Japan",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/world/2026/0814/1587827-japan-weather",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "wildfire"
+          ],
+          "shared_incident_anchors": [
+            "europe"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "europe",
+            "event",
+            "severe",
+            "significant",
+            "wildfire"
+          ],
+          "shared_entities": [
+            "europe"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_f0220b770e0d668f",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-14",
+        "last_seen_at": "2026-08-14",
+        "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_cc922246f7b24041",
+        "daily_story_id": "story_cc922246f7b24041",
+        "date": "2026-08-14",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Wildfire in France Forces Evacuation of 525 Residents in Landes Region",
+        "summary": "A wildfire in the Landes region of southwestern France has led to the evacuation of 525 people from the village of Luglon. The fire has burned approximately 1,100 hectares of drought-affected pine forest and is advancing towards the village center. This incident is part of an unprecedented wildfire season in the area.",
+        "topic_label": "Wildfires",
+        "development_type": "development",
+        "key_facts": [
+          "525 people evacuated from Luglon village",
+          "Wildfire burned 1,100 hectares",
+          "Incident occurred on August 13, 2026"
+        ],
+        "source_count": 3,
+        "sources": [
+          "Africanews",
+          "France 24 - English",
+          "RTE News"
+        ],
+        "source_urls": [
+          "http://www.africanews.com/2026/08/14/france-wildfire-forces-525-people-to-flee-as-landes-forest-burns",
+          "https://www.france24.com/en/france/20260814-france-evacuates-hundreds-new-wildfire-threatens-southwestern-landes-region",
+          "https://www.rte.ie/news/europe/2026/0814/1587858-europe-wildfires"
+        ],
+        "source_details": [
+          {
+            "title": "France wildfire forces 525 people to flee as Landes forest burns",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/08/14/france-wildfire-forces-525-people-to-flee-as-landes-forest-burns",
+            "source_bias": "center"
+          },
+          {
+            "title": "France evacuates hundreds as new wildfire threatens southwestern Landes region",
+            "source": "France 24 - English",
+            "link": "https://www.france24.com/en/france/20260814-france-evacuates-hundreds-new-wildfire-threatens-southwestern-landes-region",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "New wildfire forces evacuation of 500 people in France",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/europe/2026/0814/1587858-europe-wildfires",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "wildfire"
+          ],
+          "shared_incident_anchors": [
+            "evacuation",
+            "force_evacuation"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "approximately",
+            "burned",
+            "evacuated",
+            "evacuation",
+            "force",
+            "hectare",
+            "incident",
+            "resident",
+            "wildfire"
+          ],
+          "shared_entities": [
+            "evacuation",
+            "force_evacuation"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_f0220b770e0d668f",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-14",
+        "last_seen_at": "2026-08-14",
+        "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_fc18b3ebffd217ad",
+        "daily_story_id": "story_fc18b3ebffd217ad",
+        "date": "2026-08-14",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Wildfire in Croatia Forces Evacuation of 1,000 Residents and Tourists",
+        "summary": "A wildfire in Lokva Rogoznica, Croatia, has prompted the evacuation of approximately 1,000 residents and tourists. The fire has spread through vegetation and homes, leading to urgent safety measures.",
+        "topic_label": "",
+        "development_type": "development",
+        "key_facts": [
+          "Wildfire in Lokva Rogoznica, Croatia",
+          "Evacuation of about 1,000 residents and tourists",
+          "Fire spread through vegetation and homes"
+        ],
+        "source_count": 2,
+        "sources": [
+          "Africanews",
+          "Euronews"
+        ],
+        "source_urls": [
+          "http://www.africanews.com/2026/08/14/wildfire-forces-evacuation-of-1000-as-flames-sweep-croatias-coast",
+          "http://www.euronews.com/video/2026/08/14/wildfire-forces-evacuation-of-1000-as-flames-sweep-croatias-coast"
+        ],
+        "source_details": [
+          {
+            "title": "Wildfire forces evacuation of 1,000 as flames sweep Croatia’s coast",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/08/14/wildfire-forces-evacuation-of-1000-as-flames-sweep-croatias-coast",
+            "source_bias": "center"
+          },
+          {
+            "title": "Wildfire forces evacuation of 1,000 as flames sweep Croatia’s coast",
+            "source": "Euronews",
+            "link": "http://www.euronews.com/video/2026/08/14/wildfire-forces-evacuation-of-1000-as-flames-sweep-croatias-coast",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "wildfire"
+          ],
+          "shared_incident_anchors": [
+            "evacuation",
+            "force_evacuation"
+          ],
+          "shared_incident_numbers": [
+            "000"
+          ],
+          "shared_tokens": [
+            "000",
+            "approximately",
+            "evacuation",
+            "force",
+            "resident",
+            "wildfire"
+          ],
+          "shared_entities": [
+            "evacuation",
+            "force_evacuation"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_f0220b770e0d668f",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-14",
+        "last_seen_at": "2026-08-14",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 9,
+      "public_development_count": 12,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Wildfire in Huelva, Spain Forces Evacuations Amid Drought",
-    "latest_summary": "A significant wildfire in Huelva province, Spain, has led to the evacuation of 800 residents and has consumed approximately 20,000 hectares of land. This incident occurs during a period of severe drought affecting Europe.",
+    "latest_title": "Wildfire in Croatia Forces Evacuation of 1,000 Residents and Tourists",
+    "latest_summary": "A wildfire in Lokva Rogoznica, Croatia, has prompted the evacuation of approximately 1,000 residents and tourists. The fire has spread through vegetation and homes, leading to urgent safety measures.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -948,30 +1180,30 @@
       "display_title": "Mass Evacuations in France and Spain Due to Widespread Wildfires Timeline",
       "milestone_development_ids": [
         "story_f765f351d0d52866",
-        "story_1dcf5424bc120301",
-        "story_65251a7252bc0194",
-        "story_f0220b770e0d668f"
+        "story_2e920ae5c4064986",
+        "story_da9b48d93e5112ef",
+        "story_fc18b3ebffd217ad"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-11",
-      "development_count": 9,
-      "coverage_packet_count": 14,
-      "date_count": 9,
-      "source_count": 41,
+      "summary_updated_at": "2026-08-14",
+      "development_count": 12,
+      "coverage_packet_count": 17,
+      "date_count": 10,
+      "source_count": 48,
       "independent_source_count": 24,
       "first_date": "2026-07-25",
-      "latest_date": "2026-08-11",
-      "latest_update_title": "Wildfire in Huelva, Spain Forces Evacuations Amid Drought",
+      "latest_date": "2026-08-14",
+      "latest_update_title": "Wildfire in Croatia Forces Evacuation of 1,000 Residents and Tourists",
       "coverage_score": 1.0,
-      "recency_score": 0.778,
-      "rank_score": 0.871,
-      "context_summary": "Muninn first tracked this thread on 2026-07-25: Severe Wildfires Force Mass Evacuations in France and Spain. The latest development is Wildfire in Huelva, Spain Forces Evacuations Amid Drought.",
-      "cta_label": "Explore 9 developments"
+      "recency_score": 1.0,
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-07-25: Severe Wildfires Force Mass Evacuations in France and Spain. The latest development is Wildfire in Croatia Forces Evacuation of 1,000 Residents and Tourists.",
+      "cta_label": "Explore 12 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Over 300,000 people have been evacuated from their homes in France and Spain due to severe wildfires that have been raging for several days. A later development was Wildfires in Greece Lead to Evacuations and Multiple Firefighter Deaths. Most recently, a significant wildfire in Huelva province, Spain, has led to the evacuation of 800 residents and has consumed approximately 20,000 hectares of land.",
+      "summary": "Over 300,000 people have been evacuated from their homes in France and Spain due to severe wildfires that have been raging for several days. A later development was Two Dead in Helicopter Collision Amid Wildfire Efforts in Greece. Most recently, a wildfire in Lokva Rogoznica, Croatia, has prompted the evacuation of approximately 1,000 residents and tourists.",
       "key_developments": [
         {
           "development_id": "story_f765f351d0d52866",
@@ -979,19 +1211,19 @@
           "title": "Severe Wildfires Force Mass Evacuations in France and Spain"
         },
         {
-          "development_id": "story_1dcf5424bc120301",
-          "date": "2026-07-28",
-          "title": "Massive Wildfires in France and Spain Prompt Evacuations Ahead of Heatwave"
+          "development_id": "story_2e920ae5c4064986",
+          "date": "2026-07-30",
+          "title": "Wildfires in Greece Lead to Evacuations and Multiple Firefighter Deaths"
         },
         {
-          "development_id": "story_65251a7252bc0194",
-          "date": "2026-07-31",
-          "title": "Evacuations in Crete as Wildfires Threaten Lives and Property"
+          "development_id": "story_da9b48d93e5112ef",
+          "date": "2026-08-07",
+          "title": "Three Charged with Arson Over Wildfire Near Athens, Including Mayor"
         },
         {
-          "development_id": "story_f0220b770e0d668f",
-          "date": "2026-08-11",
-          "title": "Wildfire in Huelva, Spain Forces Evacuations Amid Drought"
+          "development_id": "story_fc18b3ebffd217ad",
+          "date": "2026-08-14",
+          "title": "Wildfire in Croatia Forces Evacuation of 1,000 Residents and Tourists"
         }
       ],
       "sources": [
@@ -1240,9 +1472,51 @@
           "source": "Africanews",
           "link": "http://www.africanews.com/2026/08/11/spains-huelva-blaze-threatens-homes-800-evacuated-amid-severe-drought",
           "source_bias": "center"
+        },
+        {
+          "title": "From Europe to Asia, floods to heatwaves, world experiences weather shocks",
+          "source": "NPR",
+          "link": "https://www.npr.org/2026/08/14/g-s1-138727/europe-asia-floods-heatwaves-world-weather",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "At least eight dead as heavy rains hit Japan",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/world/2026/0814/1587827-japan-weather",
+          "source_bias": "center"
+        },
+        {
+          "title": "France wildfire forces 525 people to flee as Landes forest burns",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/08/14/france-wildfire-forces-525-people-to-flee-as-landes-forest-burns",
+          "source_bias": "center"
+        },
+        {
+          "title": "France evacuates hundreds as new wildfire threatens southwestern Landes region",
+          "source": "France 24 - English",
+          "link": "https://www.france24.com/en/france/20260814-france-evacuates-hundreds-new-wildfire-threatens-southwestern-landes-region",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "New wildfire forces evacuation of 500 people in France",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/europe/2026/0814/1587858-europe-wildfires",
+          "source_bias": "center"
+        },
+        {
+          "title": "Wildfire forces evacuation of 1,000 as flames sweep Croatia’s coast",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/08/14/wildfire-forces-evacuation-of-1000-as-flames-sweep-croatias-coast",
+          "source_bias": "center"
+        },
+        {
+          "title": "Wildfire forces evacuation of 1,000 as flames sweep Croatia’s coast",
+          "source": "Euronews",
+          "link": "http://www.euronews.com/video/2026/08/14/wildfire-forces-evacuation-of-1000-as-flames-sweep-croatias-coast",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-08-11",
+      "updated_at": "2026-08-14",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -1251,7 +1525,7 @@
         "event_id": "event_wildfire-forces-evacuation-of-nearly-12-000_839c1db808",
         "title": "Wildfire Forces Evacuation of Nearly 12,000 Tourists in Southwest France",
         "relationship": "related_topic",
-        "confidence": 0.869,
+        "confidence": 0.871,
         "shared_entities": [
           "force_evacuation",
           "france",
@@ -1265,7 +1539,7 @@
         "event_id": "event_france-evacuates-20-000-amid-wildfires-in-so_9afdbe2ab0",
         "title": "France Evacuates 20,000 Amid Wildfires in Southwestern Region",
         "relationship": "related_topic",
-        "confidence": 0.751,
+        "confidence": 0.76,
         "shared_entities": [
           "force_evacuation",
           "france",
@@ -1276,20 +1550,20 @@
         "event_id": "event_spain-declares-national-emergency-as-wildfir_75ab9d7053",
         "title": "Wildfires Near Madrid Prompt Evacuations of Over 10,000 Residents",
         "relationship": "related_topic",
-        "confidence": 0.733,
+        "confidence": 0.731,
         "shared_entities": [
           "prompt_evacuation",
           "wildfire_near"
         ]
       },
       {
-        "event_id": "event_over-20-000-evacuated-as-wildfires-rage-in-b_ca761d3fbc",
-        "title": "Over 20,000 Evacuated as Wildfires Rage in British Columbia",
+        "event_id": "event_wildfire-threat-escalates-in-greece-amid-ong_c2f7e90524",
+        "title": "Wildfire Threat Escalates in Greece Amid Ongoing Evacuations in France",
         "relationship": "related_topic",
-        "confidence": 0.721,
+        "confidence": 0.729,
         "shared_entities": [
-          "britain",
-          "evacuation"
+          "france",
+          "greece"
         ]
       }
     ],
@@ -1435,17 +1709,21 @@
     },
     "search_tokens": [
       "000",
+      "100",
       "300",
       "330",
       "360",
+      "525",
       "800",
       "across",
       "addition",
+      "advancing",
       "affected",
       "affecting",
       "ahead",
       "another",
       "approximately",
+      "area",
       "areas",
       "arson",
       "associated",
@@ -1457,10 +1735,12 @@
       "bordeaux",
       "britain",
       "broader",
+      "burned",
       "business",
       "cabinet",
       "cable",
       "caused",
+      "center",
       "charged",
       "cloud",
       "collision",
@@ -1474,12 +1754,14 @@
       "continue",
       "control",
       "convened",
+      "countrie",
       "crash",
       "crete",
       "crew",
       "crews",
       "crisi",
       "critical",
+      "croatia",
       "current",
       "danish",
       "dead",
@@ -1487,8 +1769,13 @@
       "deceased",
       "died",
       "displaced",
+      "disrupting",
+      "disruption",
       "drought",
+      "drought-affected",
+      "eastern",
       "effort",
+      "eight",
       "electrical",
       "emergence",
       "emmanuel",
@@ -1497,22 +1784,27 @@
       "evacuate",
       "evacuated",
       "evacuation",
+      "event",
       "exacerbate",
       "exacerbated",
       "exacerbating",
       "expected",
       "faces",
+      "facing",
       "farm",
       "fatalitie",
+      "fifth",
       "fire",
       "fire-generated",
       "firefighter",
       "firefighting",
       "fires",
       "flame",
+      "flooding",
       "force",
       "forced",
       "forecasted",
+      "forest",
       "france",
       "fueled",
       "further",
@@ -1520,6 +1812,7 @@
       "greece",
       "greek",
       "heatwave",
+      "heavy",
       "hectare",
       "heightened",
       "helicopter",
@@ -1533,19 +1826,26 @@
       "indicated",
       "investigator",
       "island",
+      "japan",
       "killed",
       "land",
+      "lande",
       "large",
       "last",
       "lead",
       "leading",
+      "least",
       "linked",
       "lives",
+      "lokva",
+      "luglon",
       "macron",
       "mainland",
       "mass",
       "massive",
       "mayor",
+      "meanwhile",
+      "measure",
       "meeting",
       "member",
       "mid-air",
@@ -1562,6 +1862,7 @@
       "particularly",
       "period",
       "pilot",
+      "pine",
       "power",
       "prompt",
       "prompted",
@@ -1569,23 +1870,30 @@
       "province",
       "racing",
       "raging",
+      "rains",
+      "record-breaking",
       "region",
       "related",
       "resident",
       "resulted",
       "rethymno",
       "rise",
+      "rogoznica",
+      "safety",
+      "season",
       "separate",
       "several",
       "severe",
       "significant",
       "significantly",
       "situation",
+      "southwestern",
       "spain",
       "sparked",
       "spread",
       "stable",
       "storm",
+      "stranding",
       "strong",
       "struggle",
       "struggling",
@@ -1597,11 +1905,19 @@
       "threaten",
       "threatening",
       "three",
+      "through",
       "time",
       "tourist",
+      "toward",
       "town",
       "tragic",
+      "transportation",
+      "unprecedented",
       "unpredictable",
+      "urgent",
+      "vegetation",
+      "village",
+      "weather",
       "week",
       "west",
       "which",
@@ -1611,18 +1927,26 @@
       "winds"
     ],
     "entities": [
+      "across_japan",
       "athen",
       "athen_including",
       "bordeaux_emmanuel",
       "britain",
       "crete",
       "crisi_meeting",
+      "croatia",
+      "croatia_force",
+      "disruption_across",
       "emmanuel_macron",
+      "europe._severe",
       "evacuation",
       "evacuation_ahead",
+      "event_lead",
+      "fatalitie",
       "force_evacuation",
       "force_mass",
       "france",
+      "france_force",
       "greece",
       "greece_lead",
       "heatwave_firefighter",
@@ -1631,15 +1955,23 @@
       "huelva",
       "huelva_spain",
       "including_mayor",
+      "japan",
+      "lande",
+      "lande_region",
+      "lokva",
+      "lokva_rogoznica",
       "macron_holds",
       "mass_evacuation",
       "massive_wildfire",
       "mayor_greek",
+      "meanwhile_europe",
       "multiple_firefighter",
       "near_athen",
       "prompt_evacuation",
       "property_wildfire",
       "rethymno",
+      "rogoznica_croatia",
+      "severe_weather",
       "severe_wildfire",
       "spain",
       "spain_due",
@@ -1647,6 +1979,7 @@
       "spain_prompt",
       "threaten_bordeaux",
       "threaten_lives",
+      "weather_event",
       "wildfire",
       "wildfire_effort",
       "wildfire_force",
@@ -1654,7 +1987,7 @@
       "wildfire_threaten",
       "wildfire_wildfire"
     ],
-    "search_text": "000 300 330 360 800 across addition affected affecting ahead another approximately areas arson associated athen athen_including authoritie battling believed blaze bordeaux bordeaux_emmanuel britain broader business cabinet cable caused charged cloud collision combating coming company concern condition consumed contain continue control convened crash crete crew crews crisi crisi_meeting critical current danish dead death deceased died displaced drought effort electrical emergence emmanuel emmanuel_macron escalated europe evacuate evacuated evacuation evacuation_ahead exacerbate exacerbated exacerbating expected faces farm fatalitie fire fire-generated firefighter firefighting fires flame force force_evacuation force_mass forced forecasted france fueled further gale-force greece greece_lead greek heatwave heatwave_firefighter hectare heightened helicopter holds holds_crisi homes huelva huelva_spain impending incident included including including_mayor indicated investigator island killed land large last lead leading linked lives macron macron_holds mainland mass mass_evacuation massive massive_wildfire mayor mayor_greek meeting member mid-air multiple multiple_firefighter national near near_athen occur occurred ongoing other outbreak owns part particularly period pilot power prompt prompt_evacuation prompted property property_wildfire province racing raging region related resident resulted rethymno rise separate several severe severe_wildfire significant significantly situation spain spain_due spain_force spain_prompt sparked spread stable storm strong struggle struggling successive summer survived temperature thousand threaten threaten_bordeaux threaten_lives threatening three time tourist town tragic unpredictable week west which while wildfire wildfire_effort wildfire_force wildfire_near wildfire_threaten wildfire_wildfire wind winds"
+    "search_text": "000 100 300 330 360 525 800 across across_japan addition advancing affected affecting ahead another approximately area areas arson associated athen athen_including authoritie battling believed blaze bordeaux bordeaux_emmanuel britain broader burned business cabinet cable caused center charged cloud collision combating coming company concern condition consumed contain continue control convened countrie crash crete crew crews crisi crisi_meeting critical croatia croatia_force current danish dead death deceased died displaced disrupting disruption disruption_across drought drought-affected eastern effort eight electrical emergence emmanuel emmanuel_macron escalated europe europe._severe evacuate evacuated evacuation evacuation_ahead event event_lead exacerbate exacerbated exacerbating expected faces facing farm fatalitie fifth fire fire-generated firefighter firefighting fires flame flooding force force_evacuation force_mass forced forecasted forest france france_force fueled further gale-force greece greece_lead greek heatwave heatwave_firefighter heavy hectare heightened helicopter holds holds_crisi homes huelva huelva_spain impending incident included including including_mayor indicated investigator island japan killed land lande lande_region large last lead leading least linked lives lokva lokva_rogoznica luglon macron macron_holds mainland mass mass_evacuation massive massive_wildfire mayor mayor_greek meanwhile meanwhile_europe measure meeting member mid-air multiple multiple_firefighter national near near_athen occur occurred ongoing other outbreak owns part particularly period pilot pine power prompt prompt_evacuation prompted property property_wildfire province racing raging rains record-breaking region related resident resulted rethymno rise rogoznica rogoznica_croatia safety season separate several severe severe_weather severe_wildfire significant significantly situation southwestern spain spain_due spain_force spain_prompt sparked spread stable storm stranding strong struggle struggling successive summer survived temperature thousand threaten threaten_bordeaux threaten_lives threatening three through time tourist toward town tragic transportation unprecedented unpredictable urgent vegetation village weather weather_event week west which while wildfire wildfire_effort wildfire_force wildfire_near wildfire_threaten wildfire_wildfire wind winds"
   },
   "related_events": [
     {
@@ -1758,40 +2091,6 @@
         "focal_tall_y": 0.48
       },
       "href": "/timeline.html?event=event_spain-declares-national-emergency-as-wildfir_75ab9d7053"
-    },
-    {
-      "event_id": "event_over-20-000-evacuated-as-wildfires-rage-in-b_ca761d3fbc",
-      "title": "Over 20,000 Evacuated as Wildfires Rage in British Columbia",
-      "summary": "Muninn first tracked this thread on 2026-08-09: Over 20,000 Evacuated as Wildfires Rage in British Columbia. The latest development is Wildfires in Western Canada Lead to Evacuations and One Fatality.",
-      "activity_status": "active",
-      "stage": "developing_event",
-      "stage_label": "Developing event",
-      "first_seen_at": "2026-08-09",
-      "last_seen_at": "2026-08-10",
-      "development_count": 3,
-      "latest_title": "Wildfires in Western Canada Lead to Evacuations and One Fatality",
-      "topic_label": "Wildfires",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_over-20-000-evacuated-as-wildfires-rage-in-b_ca761d3fbc.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_over-20-000-evacuated-as-wildfires-rage-in-b_ca761d3fbc.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_over-20-000-evacuated-as-wildfires-rage-in-b_ca761d3fbc"
     }
   ]
 }

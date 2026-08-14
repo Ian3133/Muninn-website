@@ -15,7 +15,7 @@
     "summary": "A deadly confrontation in the West Bank resulted in the deaths of four Palestinians and two Israeli soldiers. The incident occurred near a Palestinian village, with conflicting accounts regarding the circumstances. Palestinians allege that settlers attacked the village, while the Israeli military claims a Palestinian stole a weapon and opened fire on hikers. The situation has escalated tensions in the region, prompting Israel to prepare for a significant military operation.",
     "status": "active",
     "first_seen_at": "2026-07-25",
-    "last_seen_at": "2026-08-13",
+    "last_seen_at": "2026-08-14",
     "timeline": [
       {
         "development_id": "story_5a5ff9eab7adc01d",
@@ -546,15 +546,99 @@
         "first_seen_at": "2026-08-13",
         "last_seen_at": "2026-08-13",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_6cb5bc107be798fa",
+        "daily_story_id": "story_6cb5bc107be798fa",
+        "date": "2026-08-14",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Activists Attempt to Deliver Supplies to Besieged Families in Qusra",
+        "summary": "Activists attempted to deliver supplies to Palestinian families besieged by Israeli settlers in the village of Qusra, where three homes have been under siege for nearly a week. The Israeli military was deployed to the area, preventing the activists' efforts. Reports indicate that about 15 Palestinians, including children, are trapped in these homes, while Israeli troops have reportedly instructed families to evacuate their residences.",
+        "topic_label": "West Bank Siege",
+        "development_type": "military_action",
+        "key_facts": [
+          "Three homes in Qusra have been under siege for almost a week.",
+          "Activists attempted to deliver supplies but were prevented by Israeli forces.",
+          "Approximately 15 Palestinians, including two children, are trapped in the besieged homes."
+        ],
+        "source_count": 3,
+        "sources": [
+          "Africanews",
+          "Al Jazeera English",
+          "BBC - World"
+        ],
+        "source_urls": [
+          "http://www.africanews.com/2026/08/14/activists-attempt-to-deliver-supplies-to-besieged-palestinian-families",
+          "https://www.aljazeera.com/news/2026/8/14/israeli-forces-block-activists-from-reaching-besieged-qusra-families?traffic_source=rss",
+          "https://www.bbc.co.uk/news/articles/cj4kppdk2qwo?at_medium=RSS&at_campaign=rss"
+        ],
+        "source_details": [
+          {
+            "title": "Activists attempt to deliver supplies to besieged Palestinian families",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/08/14/activists-attempt-to-deliver-supplies-to-besieged-palestinian-families",
+            "source_bias": "center"
+          },
+          {
+            "title": "Israeli forces block activists from reaching besieged Qusra families",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/news/2026/8/14/israeli-forces-block-activists-from-reaching-besieged-qusra-families?traffic_source=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Palestinians told to leave homes in village where Israeli settlers besieged houses",
+            "source": "BBC - World",
+            "link": "https://www.bbc.co.uk/news/articles/cj4kppdk2qwo?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 1.0,
+        "match_evidence": {
+          "score": 1.0,
+          "matched_development_id": "story_36d77c82c6ad0f51",
+          "shared_tokens": [
+            "area",
+            "bank",
+            "besieged",
+            "familie",
+            "force",
+            "homes",
+            "israel",
+            "palestinian",
+            "qusra",
+            "reportedly",
+            "settler",
+            "supplie",
+            "trapped",
+            "village",
+            "west"
+          ],
+          "shared_entities": [
+            "israel",
+            "qusra",
+            "qusra_west"
+          ],
+          "source_url_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-14",
+        "last_seen_at": "2026-08-14",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 6,
+      "public_development_count": 7,
       "questionable_development_count": 1,
       "review_required": true
     },
-    "latest_title": "Israeli Settlers Besiege Palestinian Families in Qusra, West Bank",
-    "latest_summary": "In the West Bank village of Qusra, two Palestinian families have been besieged by Israeli settlers since Sunday, with reports indicating that they are cut off from water, electricity, and medical care. Israeli security forces have reportedly withdrawn from the area, leaving a group of settlers blocking access to the families' homes. The situation has drawn international condemnation, with a US diplomat labeling the actions of the settlers as an 'act of terror.'",
+    "latest_title": "Activists Attempt to Deliver Supplies to Besieged Families in Qusra",
+    "latest_summary": "Activists attempted to deliver supplies to Palestinian families besieged by Israeli settlers in the village of Qusra, where three homes have been under siege for nearly a week. The Israeli military was deployed to the area, preventing the activists' efforts. Reports indicate that about 15 Palestinians, including children, are trapped in these homes, while Israeli troops have reportedly instructed families to evacuate their residences.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -564,32 +648,30 @@
       "display_title": "Fatal Confrontation in West Bank Leaves Four Palestinians and Two Israelis Dead Timeline",
       "milestone_development_ids": [
         "story_5a5ff9eab7adc01d",
-        "story_646f8cea46342942",
         "story_0b5d02d644892543",
-        "story_bf7f788433cebebd",
         "story_3f59dc7e39b44bb5",
-        "story_36d77c82c6ad0f51"
+        "story_6cb5bc107be798fa"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-13",
-      "development_count": 6,
-      "coverage_packet_count": 7,
-      "date_count": 6,
-      "source_count": 17,
-      "independent_source_count": 10,
+      "summary_updated_at": "2026-08-14",
+      "development_count": 7,
+      "coverage_packet_count": 8,
+      "date_count": 7,
+      "source_count": 19,
+      "independent_source_count": 11,
       "first_date": "2026-07-25",
-      "latest_date": "2026-08-13",
-      "latest_update_title": "Israeli Settlers Besiege Palestinian Families in Qusra, West Bank",
+      "latest_date": "2026-08-14",
+      "latest_update_title": "Activists Attempt to Deliver Supplies to Besieged Families in Qusra",
       "coverage_score": 1.0,
       "recency_score": 1.0,
       "rank_score": 1.0,
-      "context_summary": "Muninn first tracked this thread on 2026-07-25: Funerals Held for Four Palestinians Killed in West Bank Clash with Israeli Settlers. The latest development is Israeli Settlers Besiege Palestinian Families in Qusra, West Bank.",
-      "cta_label": "Explore 6 developments"
+      "context_summary": "Muninn first tracked this thread on 2026-07-25: Funerals Held for Four Palestinians Killed in West Bank Clash with Israeli Settlers. The latest development is Activists Attempt to Deliver Supplies to Besieged Families in Qusra.",
+      "cta_label": "Explore 7 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Four Palestinian men were buried following their deaths during a clash with Israeli settlers in the occupied West Bank. A later development was Israeli Settler Charged in Killing of Palestinian Activist Awdah Hathaleen. Most recently, in the West Bank village of Qusra, two Palestinian families have been besieged by Israeli settlers since Sunday, with reports indicating that they are cut off from water, electricity, and medical care.",
+      "summary": "Four Palestinian men were buried following their deaths during a clash with Israeli settlers in the occupied West Bank. A later development was Israeli Settler Charged in Killing of Palestinian Activist Awdah Hathaleen. Most recently, activists attempted to deliver supplies to Palestinian families besieged by Israeli settlers in the village of Qusra, where three homes have been under siege for nearly a week.",
       "key_developments": [
         {
           "development_id": "story_5a5ff9eab7adc01d",
@@ -597,19 +679,9 @@
           "title": "Funerals Held for Four Palestinians Killed in West Bank Clash with Israeli Settlers"
         },
         {
-          "development_id": "story_646f8cea46342942",
-          "date": "2026-07-26",
-          "title": "Israel Detains Over 70 Suspects After Deadly West Bank Violence"
-        },
-        {
           "development_id": "story_0b5d02d644892543",
           "date": "2026-07-27",
           "title": "Two Mosques Set on Fire Amid Rising Violence in West Bank"
-        },
-        {
-          "development_id": "story_bf7f788433cebebd",
-          "date": "2026-08-06",
-          "title": "Israeli Settler Charged in Killing of Palestinian Activist Awdah Hathaleen"
         },
         {
           "development_id": "story_3f59dc7e39b44bb5",
@@ -617,9 +689,9 @@
           "title": "Israeli Settlers Demolish Homes in Jericho, Government Accused of Complicity"
         },
         {
-          "development_id": "story_36d77c82c6ad0f51",
-          "date": "2026-08-13",
-          "title": "Israeli Settlers Besiege Palestinian Families in Qusra, West Bank"
+          "development_id": "story_6cb5bc107be798fa",
+          "date": "2026-08-14",
+          "title": "Activists Attempt to Deliver Supplies to Besieged Families in Qusra"
         }
       ],
       "sources": [
@@ -724,9 +796,21 @@
           "source": "The Guardian",
           "link": "https://www.theguardian.com/world/2026/aug/12/israeli-militants-besiege-two-palestinian-families-in-their-west-bank-homes",
           "source_bias": "left"
+        },
+        {
+          "title": "Activists attempt to deliver supplies to besieged Palestinian families",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/08/14/activists-attempt-to-deliver-supplies-to-besieged-palestinian-families",
+          "source_bias": "center"
+        },
+        {
+          "title": "Israeli forces block activists from reaching besieged Qusra families",
+          "source": "Al Jazeera English",
+          "link": "https://www.aljazeera.com/news/2026/8/14/israeli-forces-block-activists-from-reaching-besieged-qusra-families?traffic_source=rss",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-08-13",
+      "updated_at": "2026-08-14",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -735,7 +819,7 @@
         "event_id": "event_us-ambassador-denounces-settler-siege-of-pal_283b86d186",
         "title": "US Ambassador Denounces Settler Siege of Palestinian Homes as 'Horrific Act of Terror'",
         "relationship": "related_topic",
-        "confidence": 0.755,
+        "confidence": 0.769,
         "shared_entities": [
           "israel",
           "us",
@@ -743,30 +827,31 @@
         ]
       },
       {
+        "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
+        "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
+        "relationship": "related_topic",
+        "confidence": 0.699,
+        "shared_entities": [
+          "israel",
+          "palestinian",
+          "us"
+        ]
+      },
+      {
         "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
         "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
         "relationship": "related_topic",
-        "confidence": 0.679,
+        "confidence": 0.682,
         "shared_entities": [
           "israel",
           "us"
         ]
       },
       {
-        "event_id": "event_netanyahu-s-high-stakes-visit-to-trump-amid_6bb1d5dbdf",
-        "title": "Netanyahu's High-Stakes Visit to Trump Amid Tensions and Upcoming Elections",
+        "event_id": "event_lebanon-s-joseph-aoun-meets-trump-amid-regio_5cb2ed4c38",
+        "title": "Lebanon's Joseph Aoun Meets Trump Amid Regional Tensions",
         "relationship": "related_topic",
-        "confidence": 0.673,
-        "shared_entities": [
-          "israel",
-          "us"
-        ]
-      },
-      {
-        "event_id": "event_iranian-missiles-target-aqaba-airport-amid-r_c7e08248c6",
-        "title": "Iranian Missiles Target Aqaba Airport Amid Regional Escalation",
-        "relationship": "related_topic",
-        "confidence": 0.669,
+        "confidence": 0.675,
         "shared_entities": [
           "israel",
           "us"
@@ -903,6 +988,8 @@
       "arrest",
       "attack",
       "attacked",
+      "attempt",
+      "attempted",
       "attributed",
       "authoritie",
       "awdah",
@@ -914,6 +1001,7 @@
       "burning",
       "care",
       "charged",
+      "children",
       "circumstance",
       "clash",
       "clashe",
@@ -926,16 +1014,20 @@
       "court",
       "deadly",
       "death",
+      "deliver",
       "demolish",
       "demolished",
+      "deployed",
       "detain",
       "detained",
       "diplomat",
       "displacing",
       "district",
       "drawn",
+      "effort",
       "electricity",
       "escalated",
+      "evacuate",
       "event",
       "extensive",
       "familie",
@@ -959,6 +1051,7 @@
       "indicate",
       "indicating",
       "indictment",
+      "instructed",
       "international",
       "involving",
       "israel",
@@ -976,6 +1069,7 @@
       "mosque",
       "nablu",
       "near",
+      "nearly",
       "occupied",
       "occurred",
       "october",
@@ -983,31 +1077,40 @@
       "onset",
       "other",
       "palestinian",
+      "preventing",
       "prosecutor",
       "qusra",
       "raids",
       "regarding",
       "region",
       "reportedly",
+      "residence",
       "resulted",
       "rising",
       "searche",
       "security",
       "settler",
       "shooting",
+      "siege",
       "significant",
       "since",
       "situation",
       "soldier",
       "stemmed",
       "sunday",
+      "supplie",
       "surge",
       "suspect",
       "terror",
       "them",
       "there",
+      "these",
       "they",
+      "three",
       "time",
+      "trapped",
+      "troop",
+      "under",
       "unrest",
       "village",
       "villager",
@@ -1015,17 +1118,24 @@
       "violent",
       "war",
       "water",
+      "week",
       "west",
       "where",
+      "while",
       "withdrawn",
       "yinon"
     ],
     "entities": [
+      "activist_attempt",
       "activist_awdah",
       "awdah_hathaleen",
       "besiege_palestinian",
+      "besieged",
+      "besieged_familie",
       "complicity_israel",
       "deadly_west",
+      "deliver",
+      "deliver_supplie",
       "demolish_homes",
       "funeral_held",
       "hathaleen_israel",
@@ -1036,9 +1146,11 @@
       "killing",
       "mosque_set",
       "nablu",
+      "palestinian",
       "palestinian_activist",
       "palestinian_familie",
       "qusra",
+      "qusra_activist",
       "qusra_west",
       "rising_violence",
       "settler_besiege",
@@ -1051,9 +1163,77 @@
       "west_bank.",
       "yinon_levi"
     ],
-    "search_text": "2023 access account accused action activist activist_awdah aftermath allowing also area arrest attack attacked attributed authoritie awdah awdah_hathaleen bank besiege besiege_palestinian besieged blocking buried burning care charged circumstance clash clashe complicity complicity_israel condemnation conducted conflicting confrontation connection court deadly deadly_west death demolish demolish_homes demolished detain detained diplomat displacing district drawn electricity escalated event extensive familie fear filed fire first force four funeral funeral_held further gaza group grove hathaleen hathaleen_israel held homes incident including increase indicate indicating indictment international involving israel israel_detain israel_settler jericho killed killing known labeling leaving levi local marks medical military mosque mosque_set nablu near occupied occurred october olive onset other palestinian palestinian_activist palestinian_familie prosecutor qusra qusra_west raids regarding region reportedly resulted rising rising_violence searche security settler settler_besiege settler_charged settler_demolish shooting significant since situation soldier stemmed sunday sunday._israel surge suspect terror them there they time unrest us village villager violence violence_israel violent war water west west_bank. where withdrawn yinon yinon_levi"
+    "search_text": "2023 access account accused action activist activist_attempt activist_awdah aftermath allowing also area arrest attack attacked attempt attempted attributed authoritie awdah awdah_hathaleen bank besiege besiege_palestinian besieged besieged_familie blocking buried burning care charged children circumstance clash clashe complicity complicity_israel condemnation conducted conflicting confrontation connection court deadly deadly_west death deliver deliver_supplie demolish demolish_homes demolished deployed detain detained diplomat displacing district drawn effort electricity escalated evacuate event extensive familie fear filed fire first force four funeral funeral_held further gaza group grove hathaleen hathaleen_israel held homes incident including increase indicate indicating indictment instructed international involving israel israel_detain israel_settler jericho killed killing known labeling leaving levi local marks medical military mosque mosque_set nablu near nearly occupied occurred october olive onset other palestinian palestinian_activist palestinian_familie preventing prosecutor qusra qusra_activist qusra_west raids regarding region reportedly residence resulted rising rising_violence searche security settler settler_besiege settler_charged settler_demolish shooting siege significant since situation soldier stemmed sunday sunday._israel supplie surge suspect terror them there these they three time trapped troop under unrest us village villager violence violence_israel violent war water week west west_bank. where while withdrawn yinon yinon_levi"
   },
   "related_events": [
+    {
+      "event_id": "event_us-ambassador-denounces-settler-siege-of-pal_283b86d186",
+      "title": "US Ambassador Denounces Settler Siege of Palestinian Homes as 'Horrific Act of Terror'",
+      "summary": "Muninn first tracked this thread on 2026-08-13: US Ambassador Denounces Settler Siege of Palestinian Homes as 'Horrific Act of Terror'. The latest development is Israeli Military Responds to Settler Siege of Homes in West Bank.",
+      "activity_status": "active",
+      "stage": "developing_event",
+      "stage_label": "Developing event",
+      "first_seen_at": "2026-08-13",
+      "last_seen_at": "2026-08-14",
+      "development_count": 2,
+      "latest_title": "Israeli Military Responds to Settler Siege of Homes in West Bank",
+      "topic_label": "West Bank Conflict",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_us-ambassador-denounces-settler-siege-of-pal_283b86d186.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_us-ambassador-denounces-settler-siege-of-pal_283b86d186.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_us-ambassador-denounces-settler-siege-of-pal_283b86d186"
+    },
+    {
+      "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
+      "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
+      "summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Israel Rejects Trump's Gaza Peace Plan, Demands Hamas Disarmament.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-31",
+      "last_seen_at": "2026-08-10",
+      "development_count": 6,
+      "latest_title": "Israel Rejects Trump's Gaza Peace Plan, Demands Hamas Disarmament",
+      "topic_label": "Gaza Peace Deal",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b"
+    },
     {
       "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
       "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",

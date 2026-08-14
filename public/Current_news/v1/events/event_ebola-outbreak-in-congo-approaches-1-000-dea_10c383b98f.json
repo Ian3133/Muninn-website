@@ -15,7 +15,7 @@
     "summary": "The ongoing Ebola outbreak in the Democratic Republic of Congo has resulted in nearly 1,000 fatalities since mid-May. The current death toll stands at 999 in Congo, with an additional two deaths reported in Uganda, attributed to the Bundibugyo strain of the virus. This outbreak has a significantly higher fatality rate compared to previous incidents, and there are currently no available vaccines or treatments for this strain.",
     "status": "active",
     "first_seen_at": "2026-07-22",
-    "last_seen_at": "2026-08-13",
+    "last_seen_at": "2026-08-14",
     "timeline": [
       {
         "development_id": "story_1e2af4cb802ea53a",
@@ -785,15 +785,101 @@
         "first_seen_at": "2026-08-13",
         "last_seen_at": "2026-08-13",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_ca26101dfa4de696",
+        "daily_story_id": "story_ca26101dfa4de696",
+        "date": "2026-08-14",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Ebola Outbreak in DRC Expands to Sixth Province Amid Rising Death Toll",
+        "summary": "The Ebola outbreak in the Democratic Republic of the Congo has now spread to a sixth province, Bas-Uele, following the death of a man who traveled from Haut-Uele. The World Health Organization has indicated that this outbreak is on track to become the deadliest in history, surpassing the previous record of over 11,000 fatalities from a decade ago. Currently, more than 2,100 deaths have been reported out of over 4,500 cases.",
+        "topic_label": "Ebola Outbreak",
+        "development_type": "development",
+        "key_facts": [
+          "Ebola outbreak has spread to Bas-Uele province.",
+          "Current outbreak has resulted in over 2,100 deaths.",
+          "More than 4,500 cases reported.",
+          "WHO states outbreak may surpass previous deadliest outbreak."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Africanews",
+          "The Guardian"
+        ],
+        "source_urls": [
+          "https://www.theguardian.com/world/2026/aug/13/ebola-drc-democratic-republic-congo-sixth-province",
+          "http://www.africanews.com/2026/08/14/dr-congos-fastest-growing-ebola-outbreak-spreads-to-sixth-province"
+        ],
+        "source_details": [
+          {
+            "title": "DRC’s fast-growing Ebola outbreak spreads to sixth province",
+            "source": "The Guardian",
+            "link": "https://www.theguardian.com/world/2026/aug/13/ebola-drc-democratic-republic-congo-sixth-province",
+            "source_bias": "left"
+          },
+          {
+            "title": "DR Congo's fastest-growing ebola outbreak spreads to sixth province",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/08/14/dr-congos-fastest-growing-ebola-outbreak-spreads-to-sixth-province",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "outbreak"
+          ],
+          "shared_incident_anchors": [
+            "democratic_republic",
+            "ebola",
+            "ebola_outbreak"
+          ],
+          "shared_incident_numbers": [
+            "000",
+            "2",
+            "4"
+          ],
+          "shared_tokens": [
+            "000",
+            "cases",
+            "congo",
+            "death",
+            "democratic",
+            "ebola",
+            "outbreak",
+            "province",
+            "record",
+            "reported",
+            "republic"
+          ],
+          "shared_entities": [
+            "democratic_republic",
+            "ebola",
+            "ebola_outbreak"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_62d4bfd737cddbfa",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-14",
+        "last_seen_at": "2026-08-14",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 10,
+      "public_development_count": 11,
       "questionable_development_count": 1,
       "review_required": true
     },
-    "latest_title": "Congo's Ebola Outbreak Could Become Deadliest in History, WHO Warns",
-    "latest_summary": "The World Health Organization (WHO) has warned that the ongoing Ebola outbreak in Congo, declared on May 15, has already resulted in over 2,000 deaths and thousands of additional reported cases. WHO chief Tedros Adhanom Ghebreyesus indicated that if the current trend continues, this outbreak could surpass the deadliest Ebola outbreak recorded during the West African epidemic from 2014 to 2016.",
+    "latest_title": "Ebola Outbreak in DRC Expands to Sixth Province Amid Rising Death Toll",
+    "latest_summary": "The Ebola outbreak in the Democratic Republic of the Congo has now spread to a sixth province, Bas-Uele, following the death of a man who traveled from Haut-Uele. The World Health Organization has indicated that this outbreak is on track to become the deadliest in history, surpassing the previous record of over 11,000 fatalities from a decade ago. Currently, more than 2,100 deaths have been reported out of over 4,500 cases.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -804,29 +890,29 @@
       "milestone_development_ids": [
         "story_1e2af4cb802ea53a",
         "story_82f07e414ad368e5",
-        "story_b4011d2c5baa0f20",
-        "story_6878bbbd20eccd38"
+        "story_62d4bfd737cddbfa",
+        "story_ca26101dfa4de696"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-13",
-      "development_count": 10,
-      "coverage_packet_count": 11,
-      "date_count": 9,
-      "source_count": 24,
-      "independent_source_count": 14,
+      "summary_updated_at": "2026-08-14",
+      "development_count": 11,
+      "coverage_packet_count": 12,
+      "date_count": 10,
+      "source_count": 26,
+      "independent_source_count": 15,
       "first_date": "2026-07-22",
-      "latest_date": "2026-08-13",
-      "latest_update_title": "Congo's Ebola Outbreak Could Become Deadliest in History, WHO Warns",
+      "latest_date": "2026-08-14",
+      "latest_update_title": "Ebola Outbreak in DRC Expands to Sixth Province Amid Rising Death Toll",
       "coverage_score": 1.0,
       "recency_score": 1.0,
       "rank_score": 1.0,
-      "context_summary": "Muninn first tracked this thread on 2026-07-22: Ebola Outbreak in DR Congo Exceeds 1,000 Deaths. The latest development is Congo's Ebola Outbreak Could Become Deadliest in History, WHO Warns.",
-      "cta_label": "Explore 10 developments"
+      "context_summary": "Muninn first tracked this thread on 2026-07-22: Ebola Outbreak in DR Congo Exceeds 1,000 Deaths. The latest development is Ebola Outbreak in DRC Expands to Sixth Province Amid Rising Death Toll.",
+      "cta_label": "Explore 11 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "The ongoing Ebola outbreak in the Democratic Republic of Congo has resulted in over 1,000 confirmed deaths, according to official government data. A later development was Ebola Workers in DR Congo Threaten Strikes Over Unpaid Salaries Amid Outbreak. Most recently, the World Health Organization (WHO) has warned that the ongoing Ebola outbreak in Congo, declared on May 15, has already resulted in over 2,000 deaths and thousands of additional reported cases.",
+      "summary": "The ongoing Ebola outbreak in the Democratic Republic of Congo has resulted in over 1,000 confirmed deaths, according to official government data. A later development was Ebola Workers in DR Congo Threaten Strikes Over Unpaid Salaries Amid Outbreak. Most recently, the Ebola outbreak in the Democratic Republic of the Congo has now spread to a sixth province, Bas-Uele, following the death of a man who traveled from Haut-Uele.",
       "key_developments": [
         {
           "development_id": "story_1e2af4cb802ea53a",
@@ -839,14 +925,14 @@
           "title": "Ebola Outbreak in DR Congo Becomes Worst in History"
         },
         {
-          "development_id": "story_b4011d2c5baa0f20",
-          "date": "2026-08-06",
-          "title": "DR Congo Faces Rapid Resurgence of Ebola Epidemic"
+          "development_id": "story_62d4bfd737cddbfa",
+          "date": "2026-08-11",
+          "title": "Ebola Outbreak in Congo Claims Over 2,000 Lives, Marked as Fastest Growing on Record"
         },
         {
-          "development_id": "story_6878bbbd20eccd38",
-          "date": "2026-08-13",
-          "title": "Congo's Ebola Outbreak Could Become Deadliest in History, WHO Warns"
+          "development_id": "story_ca26101dfa4de696",
+          "date": "2026-08-14",
+          "title": "Ebola Outbreak in DRC Expands to Sixth Province Amid Rising Death Toll"
         }
       ],
       "sources": [
@@ -993,9 +1079,21 @@
           "source": "BBC - World",
           "link": "https://www.bbc.co.uk/news/articles/cgk4pex4mn8o?at_medium=RSS&at_campaign=rss",
           "source_bias": "center"
+        },
+        {
+          "title": "DRC’s fast-growing Ebola outbreak spreads to sixth province",
+          "source": "The Guardian",
+          "link": "https://www.theguardian.com/world/2026/aug/13/ebola-drc-democratic-republic-congo-sixth-province",
+          "source_bias": "left"
+        },
+        {
+          "title": "DR Congo's fastest-growing ebola outbreak spreads to sixth province",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/08/14/dr-congos-fastest-growing-ebola-outbreak-spreads-to-sixth-province",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-08-13",
+      "updated_at": "2026-08-14",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -1004,7 +1102,7 @@
         "event_id": "event_ebola-outbreak-in-congo-claims-over-930-live_6c7b679293",
         "title": "Ebola Outbreak in Congo Claims Over 930 Lives",
         "relationship": "related_topic",
-        "confidence": 0.789,
+        "confidence": 0.796,
         "shared_entities": [
           "congo",
           "congo_claim",
@@ -1015,7 +1113,7 @@
         "event_id": "event_canada-implements-temporary-travel-ban-due-t_64f58a7547",
         "title": "Canada Implements Temporary Travel Ban Due to Ebola Concerns",
         "relationship": "related_topic",
-        "confidence": 0.713,
+        "confidence": 0.72,
         "shared_entities": [
           "democratic",
           "democratic_republic",
@@ -1173,6 +1271,7 @@
       "attributed",
       "authoritie",
       "available",
+      "bas-uele",
       "battling",
       "become",
       "began",
@@ -1197,9 +1296,11 @@
       "containment",
       "continue",
       "current",
+      "currently",
       "data",
       "deadliest",
       "death",
+      "decade",
       "declare",
       "declared",
       "democratic",
@@ -1214,6 +1315,7 @@
       "epidemic",
       "ever",
       "exceed",
+      "expand",
       "expanded",
       "experiencing",
       "face",
@@ -1223,6 +1325,7 @@
       "fastest",
       "fastest-growing",
       "fastest-spreading",
+      "fatalitie",
       "figure",
       "five",
       "four",
@@ -1231,6 +1334,7 @@
       "ghebreyesu",
       "grappling",
       "growing",
+      "haut-uele",
       "health",
       "healthcare",
       "higher",
@@ -1267,6 +1371,7 @@
       "percent",
       "potential",
       "potentially",
+      "previou",
       "province",
       "raising",
       "rapid",
@@ -1280,6 +1385,7 @@
       "response",
       "resulted",
       "resurgence",
+      "rising",
       "salarie",
       "second-largest",
       "seeking",
@@ -1287,6 +1393,8 @@
       "shortage",
       "significant",
       "significantly",
+      "sixth",
+      "spread",
       "staff",
       "strain",
       "strike",
@@ -1300,6 +1408,9 @@
       "threaten",
       "threatening",
       "times",
+      "toll",
+      "track",
+      "traveled",
       "treatment",
       "trend",
       "uganda",
@@ -1318,6 +1429,7 @@
     ],
     "entities": [
       "adhanom_ghebreyesu",
+      "bas-uele",
       "bundibugyo",
       "bunia",
       "congo",
@@ -1332,6 +1444,8 @@
       "democratic",
       "democratic_republic",
       "dr",
+      "drc",
+      "drc_expand",
       "ebola",
       "ebola-free",
       "ebola_epidemic",
@@ -1341,6 +1455,7 @@
       "exceed_cases",
       "faces_rapid",
       "fastest_growing",
+      "haut-uele.",
       "health_organization",
       "health_worker",
       "history",
@@ -1355,6 +1470,8 @@
       "organization_who",
       "outbreak_frontline",
       "rapid_resurgence",
+      "sixth",
+      "sixth_province",
       "tedro_adhanom",
       "uganda_declare",
       "unpaid_salarie",
@@ -1362,7 +1479,7 @@
       "who",
       "who_warns"
     ],
-    "search_text": "000 100 2014 2016 381 500 587 605 800 access across actual additional adhanom adhanom_ghebreyesu advancing african already announcement approved approximately assistance attributed authoritie available battling become began bundibugyo bunia capacity care cases caused center challenge chief claim claiming coincide comes complicating concern confirmed conflict congo congo_claim congo_ebola congo_exceed congo_faces congo_threaten congo_uganda containment containment_challenge continue current data deadliest death declare declare_itself declared democratic democratic_republic development died discharged dr ebola ebola-free ebola_epidemic ebola_outbreak ebola_treatment ebola_worker effort enhance epicenter epidemic ever exceed exceed_cases expanded experiencing face faces faces_rapid factor faster fastest fastest-growing fastest-spreading fastest_growing figure five four free frontline ghebreyesu grappling growing health health_organization health_worker healthcare higher hinder history history_who indicated infrastructure intensifying itself itself_ebola-free ituri july july_health largest last least lives lives_marked marked marking may medical mid-june month nearly neighboring noted number officially ongoing ongoing_outbreak only open opens organization organization_who outbreak outbreak_frontline particularly patient percent potential potentially province raising rapid rapid_resurgence rebel recognized record recorded reported reportedly republic response resulted resurgence salarie second-largest seeking severe shortage significant significantly staff strain strike such surpass surpassing tedro tedro_adhanom than there thousand threaten threatening times treatment trend uganda uganda_declare unpaid unpaid_salarie vaccine virus warned warns week west west_african which while who who_warns without worker worst"
+    "search_text": "000 100 2014 2016 381 500 587 605 800 access across actual additional adhanom adhanom_ghebreyesu advancing african already announcement approved approximately assistance attributed authoritie available bas-uele battling become began bundibugyo bunia capacity care cases caused center challenge chief claim claiming coincide comes complicating concern confirmed conflict congo congo_claim congo_ebola congo_exceed congo_faces congo_threaten congo_uganda containment containment_challenge continue current currently data deadliest death decade declare declare_itself declared democratic democratic_republic development died discharged dr drc drc_expand ebola ebola-free ebola_epidemic ebola_outbreak ebola_treatment ebola_worker effort enhance epicenter epidemic ever exceed exceed_cases expand expanded experiencing face faces faces_rapid factor faster fastest fastest-growing fastest-spreading fastest_growing fatalitie figure five four free frontline ghebreyesu grappling growing haut-uele haut-uele. health health_organization health_worker healthcare higher hinder history history_who indicated infrastructure intensifying itself itself_ebola-free ituri july july_health largest last least lives lives_marked marked marking may medical mid-june month nearly neighboring noted number officially ongoing ongoing_outbreak only open opens organization organization_who outbreak outbreak_frontline particularly patient percent potential potentially previou province raising rapid rapid_resurgence rebel recognized record recorded reported reportedly republic response resulted resurgence rising salarie second-largest seeking severe shortage significant significantly sixth sixth_province spread staff strain strike such surpass surpassing tedro tedro_adhanom than there thousand threaten threatening times toll track traveled treatment trend uganda uganda_declare unpaid unpaid_salarie vaccine virus warned warns week west west_african which while who who_warns without worker worst"
   },
   "related_events": []
 }
