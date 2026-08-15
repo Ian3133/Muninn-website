@@ -1,11 +1,19 @@
 import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import WeeklyLetter from './WeeklyLetter';
-import { selectCatchupEvents } from './timelineCatchup';
+import { carrySourceTitle, sourceDocumentTitle } from './sourceDocumentTitle';
+import {
+  buildCatchupBriefing,
+  CATCHUP_DEFAULT_DAYS,
+  CATCHUP_MAX_DAYS,
+  CATCHUP_MIN_DAYS,
+  clampCatchupDays,
+} from './catchupRanking';
 import './ReaderApp.css';
 
 const DIGEST_URLS = ['/Current_news/digest.json', '/current_news/digest.json'];
 const EVENT_URLS = ['/Current_news/event_timelines.json', '/current_news/event_timelines.json'];
 const RECENT_URLS = ['/Current_news/recent_news.json', '/current_news/recent_news.json'];
+const CATCHUP_URLS = ['/Current_news/catchup.json', '/current_news/catchup.json'];
 const COVERAGE_URLS = ['/Current_news/coverage_collections.json', '/current_news/coverage_collections.json'];
 const WEEKLY_INDEX_URLS = [
   '/Current_news/weekly_newsletters/index.json',
@@ -13,7 +21,8 @@ const WEEKLY_INDEX_URLS = [
 ];
 
 const VIEW_LABELS = {
-  today: 'Today',
+  today: 'Digests',
+  'catch-up': 'Catch-Up',
   // digest: 'Digest', // Temporarily hidden; keep the view implementation for a future return.
   events: 'Timelines',
   'my-news': 'My News',
@@ -250,6 +259,8 @@ function readRoute() {
     topic: params.get('topic') || legacy?.topic || 'all',
     edition: params.get('edition') || '',
     archiveDate: params.get('archiveDate') || '',
+    days: clampCatchupDays(params.get('days')),
+    from: params.get('from') || '',
   };
 }
 
@@ -262,6 +273,10 @@ function routeHref(view, extras = {}) {
   if (extras.topic && extras.topic !== 'all') params.set('topic', extras.topic);
   if (extras.edition) params.set('edition', extras.edition);
   if (extras.archiveDate) params.set('archiveDate', extras.archiveDate);
+  if (extras.from) params.set('from', extras.from);
+  if (extras.days && clampCatchupDays(extras.days) !== CATCHUP_DEFAULT_DAYS) {
+    params.set('days', clampCatchupDays(extras.days));
+  }
   const query = params.toString();
   const hash = extras.hash
     ? `#${String(extras.hash).replace(/^#/, '')}`
@@ -715,6 +730,8 @@ function AppLink({
   topic,
   edition,
   archiveDate,
+  days,
+  from,
   hash,
   onNavigate,
   children,
@@ -728,6 +745,8 @@ function AppLink({
     topic,
     edition,
     archiveDate,
+    days,
+    from,
     hash,
   });
   return (
@@ -751,6 +770,8 @@ function AppLink({
           topic,
           edition,
           archiveDate,
+          days,
+          from,
           hash,
         });
       }}
@@ -946,14 +967,15 @@ function StoryQuickRead({ story }) {
   );
 }
 
-function Header({ view, onNavigate }) {
-  const todayActive = view === 'today' || view === 'story' || view === 'archive';
+function Header({ view, from, onNavigate }) {
+  const returningToCatchup = from === 'catch-up' && (view === 'story' || view === 'event');
+  const todayActive = view === 'today' || view === 'catch-up' || view === 'story' || view === 'archive' || returningToCatchup;
   // const digestActive = view === 'digest'; // Digest navigation is temporarily disabled.
-  const eventsActive = view === 'events' || view === 'event';
+  const eventsActive = view === 'events' || (view === 'event' && !returningToCatchup);
   return (
     <header className="site-header">
       <div className="site-header-inner">
-        <AppLink view="today" onNavigate={onNavigate} className="wordmark" aria-label="Muninn Today">
+        <AppLink view="today" onNavigate={onNavigate} className="wordmark" aria-label="Muninn Digests">
           <img src="/brand/muninn-mark.svg" alt="" />
           <span>
             <strong>Muninn</strong>
@@ -967,7 +989,7 @@ function Header({ view, onNavigate }) {
             className={todayActive ? 'is-active' : ''}
             aria-current={todayActive ? 'page' : undefined}
           >
-            Today
+            Digests
           </AppLink>
           {/*
           <AppLink
@@ -1010,16 +1032,19 @@ function Header({ view, onNavigate }) {
   );
 }
 
-function LeadStory({ story, onNavigate }) {
+function LeadStory({ story, onNavigate, briefingMode = 'latest', briefingDays }) {
+  const isCatchup = briefingMode === 'catch-up';
   const update = storyUpdateLabel(story);
+  const destination = isCatchup
+    ? catchupDestination(story, briefingDays)
+    : { view: 'story', sid: storyRouteId(story) };
   return (
     <article className={`lead-story${update ? ' is-update' : ''}`}>
       <AppLink
-        view="story"
-        sid={storyRouteId(story)}
+        {...destination}
         onNavigate={onNavigate}
         className="lead-story-link"
-        aria-label={`Read ${story.title}`}
+        aria-label={`${isCatchup ? 'Catch up on' : 'Read'} ${story.title}`}
       >
         <div className="lead-story-media">
           <StoryImage
@@ -1055,16 +1080,19 @@ function storyUpdateLabel(story) {
   return eventLabel && eventLabel.length <= 48 ? eventLabel : storyTopic(story);
 }
 
-function SupportingStory({ story, onNavigate }) {
+function SupportingStory({ story, onNavigate, briefingMode = 'latest', briefingDays }) {
+  const isCatchup = briefingMode === 'catch-up';
   const update = storyUpdateLabel(story);
+  const destination = isCatchup
+    ? catchupDestination(story, briefingDays)
+    : { view: 'story', sid: storyRouteId(story) };
   return (
     <article className={`support-story${update ? ' is-update' : ''}`}>
       <AppLink
-        view="story"
-        sid={storyRouteId(story)}
+        {...destination}
         onNavigate={onNavigate}
         className="support-story-link"
-        aria-label={`Read ${story.title}`}
+        aria-label={`${isCatchup ? 'Catch up on' : 'Read'} ${story.title}`}
       >
           <div className="support-story-copy">
             <div className={`story-kicker-row${update ? ' is-update' : ''}`}>
@@ -1084,16 +1112,19 @@ function SupportingStory({ story, onNavigate }) {
   );
 }
 
-function VisualStory({ story, onNavigate }) {
+function VisualStory({ story, onNavigate, briefingMode = 'latest', briefingDays }) {
+  const isCatchup = briefingMode === 'catch-up';
   const update = storyUpdateLabel(story);
+  const destination = isCatchup
+    ? catchupDestination(story, briefingDays)
+    : { view: 'story', sid: storyRouteId(story) };
   return (
     <article className={`today-visual-story${update ? ' is-update' : ''}`}>
       <AppLink
-        view="story"
-        sid={storyRouteId(story)}
+        {...destination}
         onNavigate={onNavigate}
         className="today-visual-story-link"
-        aria-label={`Read ${story.title}`}
+        aria-label={`${isCatchup ? 'Catch up on' : 'Read'} ${story.title}`}
       >
         <div className="today-visual-copy">
           <span className={`today-story-label${update ? ' is-update' : ''}`}>
@@ -1111,15 +1142,18 @@ function VisualStory({ story, onNavigate }) {
   );
 }
 
-function HeadlineStory({ story, onNavigate }) {
+function HeadlineStory({ story, onNavigate, briefingMode = 'latest', briefingDays }) {
+  const isCatchup = briefingMode === 'catch-up';
   const update = storyUpdateLabel(story);
+  const destination = isCatchup
+    ? catchupDestination(story, briefingDays)
+    : { view: 'story', sid: storyRouteId(story) };
   return (
     <article className={`today-headline-story${update ? ' is-update' : ''}`}>
       <AppLink
-        view="story"
-        sid={storyRouteId(story)}
+        {...destination}
         onNavigate={onNavigate}
-        aria-label={`Read ${story.title}`}
+        aria-label={`${isCatchup ? 'Catch up on' : 'Read'} ${story.title}`}
       >
         <span className={`today-story-label${update ? ' is-update' : ''}`}>
           {update ? <span className="today-update-dot" aria-label="Updated" data-tooltip="Updated" /> : null}
@@ -1159,19 +1193,78 @@ function groupTodayStories(stories) {
 }
 
 function TodayDevelopmentCount({ story }) {
-  const count = Number(story?.__today_development_count || 0);
+  const count = Number(story?.__today_development_count || story?.__catchup_development_count || 0);
   if (count < 2) return null;
   return (
     <span className="today-development-count">
-      {count} developments today
+      {count} developments{story?.__catchup_development_count ? '' : ' today'}
     </span>
   );
 }
 
-function TodayView({ digest, onNavigate }) {
-  const rawStories = Array.isArray(digest?.clusters) ? digest.clusters : [];
-  const stories = groupTodayStories(rawStories);
-  const edition = editionTimestamp(digest?.briefing?.as_of || digest?.generated_at);
+function TodayModeNavigation({
+  mode,
+  days = CATCHUP_DEFAULT_DAYS,
+  contextLabel = '',
+  onNavigate,
+}) {
+  const selectedDays = clampCatchupDays(days);
+  const tabs = mode === 'catch-up'
+    ? [
+      { key: 'catch-up', view: 'catch-up', label: 'Catch-Up' },
+      { key: 'latest', view: 'today', label: 'Latest News' },
+    ]
+    : [
+      { key: 'latest', view: 'today', label: 'Latest News' },
+      { key: 'catch-up', view: 'catch-up', label: 'Catch-Up' },
+    ];
+  return (
+    <section className="today-mode-navigation" aria-label="Choose a digest">
+      <nav className="today-mode-tabs" aria-label="Digest views">
+        {tabs.map((tab) => (
+          <AppLink
+            view={tab.view}
+            onNavigate={onNavigate}
+            className={mode === tab.key ? 'is-active' : ''}
+            aria-current={mode === tab.key ? 'page' : undefined}
+            data-hint={mode === tab.key ? 'Current view' : `Switch to ${tab.label}`}
+            key={tab.key}
+          >
+            {mode === tab.key ? <h1>{tab.label}</h1> : <span>{tab.label}</span>}
+          </AppLink>
+        ))}
+      </nav>
+      <div className="today-mode-context">
+        {mode === 'catch-up' ? (
+          <div className="today-mode-days" aria-label="Days of missed news">
+            <label htmlFor="catchup-days">
+              <span>Catch up on</span>
+              <strong>{selectedDays} days</strong>
+            </label>
+            <div className="catchup-days-slider">
+              <span>2</span>
+              <input
+                id="catchup-days"
+                type="range"
+                min={CATCHUP_MIN_DAYS}
+                max={CATCHUP_MAX_DAYS}
+                step="1"
+                value={selectedDays}
+                aria-valuetext={`${selectedDays} days of news`}
+                onChange={(event) => onNavigate('catch-up', { days: Number(event.target.value), replace: true })}
+              />
+              <span>5</span>
+            </div>
+            {contextLabel ? <p>{contextLabel}</p> : null}
+          </div>
+        ) : null}
+        {mode !== 'catch-up' && contextLabel ? <p>{contextLabel}</p> : null}
+      </div>
+    </section>
+  );
+}
+
+function TodayStoryFeed({ stories, onNavigate, briefingMode = 'latest', briefingDays }) {
   const opening = stories.slice(0, 4);
   const visualStories = stories.slice(4, 10);
   const headlineStories = stories.slice(10);
@@ -1179,23 +1272,18 @@ function TodayView({ digest, onNavigate }) {
     ? headlineStories.slice(0, -1)
     : headlineStories;
   return (
-    <main id="main" className="page-shell today-page">
-      <section className="briefing-heading">
-        <div className="briefing-heading-copy">
-          <h1>Latest News</h1>
-        </div>
-        <p className="edition-date">{edition.weekday}, {edition.date}</p>
-      </section>
-
+    <>
       {opening.length ? (
         <section className="opening-stories" aria-label="Top stories">
-          <LeadStory story={opening[0]} onNavigate={onNavigate} />
+          <LeadStory story={opening[0]} onNavigate={onNavigate} briefingMode={briefingMode} briefingDays={briefingDays} />
           <div className="supporting-stories">
             {opening.slice(1).map((story) => (
               <SupportingStory
                 key={storyRouteId(story)}
                 story={story}
                 onNavigate={onNavigate}
+                briefingMode={briefingMode}
+                briefingDays={briefingDays}
               />
             ))}
           </div>
@@ -1209,6 +1297,8 @@ function TodayView({ digest, onNavigate }) {
               key={storyRouteId(story)}
               story={story}
               onNavigate={onNavigate}
+              briefingMode={briefingMode}
+              briefingDays={briefingDays}
             />
           ))}
         </section>
@@ -1221,6 +1311,8 @@ function TodayView({ digest, onNavigate }) {
               key={storyRouteId(story)}
               story={story}
               onNavigate={onNavigate}
+              briefingMode={briefingMode}
+              briefingDays={briefingDays}
             />
           ))}
         </section>
@@ -1234,6 +1326,85 @@ function TodayView({ digest, onNavigate }) {
           <AppLink view="archive" onNavigate={onNavigate}>Browse previous editions →</AppLink>
         </div>
       </section>
+    </>
+  );
+}
+
+function TodayView({ digest, onNavigate }) {
+  const rawStories = Array.isArray(digest?.clusters) ? digest.clusters : [];
+  const stories = groupTodayStories(rawStories);
+  const edition = editionTimestamp(digest?.briefing?.as_of || digest?.generated_at);
+  return (
+    <main id="main" className="page-shell today-page">
+      <TodayModeNavigation
+        mode="latest"
+        contextLabel={`${edition.weekday}, ${edition.date}`}
+        onNavigate={onNavigate}
+      />
+      <TodayStoryFeed stories={stories} onNavigate={onNavigate} />
+    </main>
+  );
+}
+
+function catchupEditions(catchup) {
+  return (Array.isArray(catchup?.days) ? catchup.days : []).map((edition) => ({
+    date: edition.date,
+    stories: scopedStories(edition, `catchup-${edition.date}`),
+  }));
+}
+
+function catchupRangeLabel(referenceDate, days) {
+  if (!referenceDate) return `the last ${days} days`;
+  const end = new Date(`${referenceDate}T12:00:00Z`);
+  if (Number.isNaN(end.getTime())) return `the last ${days} days`;
+  const start = new Date(end);
+  start.setUTCDate(start.getUTCDate() - (days - 1));
+  const startValue = start.toISOString().slice(0, 10);
+  return `${formatDate(startValue, { short: true, year: false })}–${formatDate(referenceDate, { short: true, year: false })}`;
+}
+
+function catchupDestination(group, days) {
+  return {
+    view: 'story',
+    sid: storyRouteId(group),
+    from: 'catch-up',
+    days: clampCatchupDays(days),
+  };
+}
+
+function CatchupView({ catchup, days, onNavigate }) {
+  const editions = useMemo(() => catchupEditions(catchup), [catchup]);
+  const briefing = useMemo(() => buildCatchupBriefing(editions, { days }), [days, editions]);
+  const { availableDays, referenceDate, days: selectedDays } = briefing;
+  const rangeLabel = catchupRangeLabel(referenceDate, selectedDays);
+
+  return (
+    <main id="main" className="page-shell today-page catchup-page">
+      <TodayModeNavigation
+        mode="catch-up"
+        days={selectedDays}
+        contextLabel={rangeLabel}
+        onNavigate={onNavigate}
+      />
+      {availableDays < selectedDays ? (
+        <p className="catchup-availability-note" role="status">
+          {availableDays} daily {availableDays === 1 ? 'edition is' : 'editions are'} currently available in this preview.
+        </p>
+      ) : null}
+
+      {briefing.groups.length ? (
+        <TodayStoryFeed
+          stories={briefing.groups}
+          briefingMode="catch-up"
+          briefingDays={selectedDays}
+          onNavigate={onNavigate}
+        />
+      ) : (
+        <section className="catchup-empty">
+          <h2>No daily editions are available yet.</h2>
+          <p>Try Today, or return when the next archive update is published.</p>
+        </section>
+      )}
     </main>
   );
 }
@@ -1810,7 +1981,7 @@ function storySourceRecords(story) {
     if (!url) return;
     recordsByUrl.set(url, {
       url,
-      title: item.title || cleanSourceName(item.source, url),
+      title: carrySourceTitle('', item.title),
       publisher: cleanSourceName(item.source, url),
       sourceType: 'reporting',
       isReport: true,
@@ -1822,7 +1993,7 @@ function storySourceRecords(story) {
     const existing = recordsByUrl.get(source.url);
     recordsByUrl.set(source.url, {
       url: source.url,
-      title: existing?.title || source.title || source.publisher,
+      title: carrySourceTitle(existing?.title, source.title),
       publisher: existing?.publisher || cleanSourceName(source.publisher || source.title, source.url),
       sourceType: source.source_type || existing?.sourceType || 'reporting',
       isReport: Boolean(existing?.isReport),
@@ -1865,28 +2036,6 @@ function storySourceGroups(story) {
     .sort((left, right) => right.score - left.score || left.order - right.order);
 }
 
-function sourceCardTitle(source, identity) {
-  const rawTitle = String(source.title || '').trim();
-  const publisherLabels = [identity.name, source.publisher]
-    .map((value) => String(value || '').trim())
-    .filter(Boolean);
-  const strippedTitle = publisherLabels.reduce((title, publisher) => {
-    const escaped = publisher.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    return title.replace(new RegExp(`\\s*(?:[-–—|:]\\s*)${escaped}\\s*$`, 'i'), '').trim();
-  }, rawTitle);
-  const canonicalTitle = cleanSourceName(strippedTitle, source.url);
-  const repeatsPublisher = !strippedTitle
-    || canonicalTitle.toLowerCase() === identity.name.toLowerCase()
-    || strippedTitle.toLowerCase() === String(source.publisher || '').toLowerCase();
-  if (!repeatsPublisher) return strippedTitle;
-  if (/travel-advisories/i.test(source.url)) return 'Travel advisory';
-  if (/congress\.gov\/crs-product/i.test(source.url)) return 'Congressional Research Service brief';
-  if (/current-wildfire-information/i.test(source.url)) return 'Current wildfire information';
-  if (/seasonal-outlook/i.test(source.url)) return 'Seasonal wildfire outlook';
-  if (/\.pdf(?:\?|$)/i.test(source.url)) return 'Fact sheet';
-  return '';
-}
-
 function SourceCard({ group }) {
   const { identity, documents } = group;
   const primary = documents[0];
@@ -1905,7 +2054,7 @@ function SourceCard({ group }) {
       <div className="source-document-list">
         {documents.map((source, index) => (
           <a href={source.url} target="_blank" rel="noreferrer" key={source.url}>
-            <span>{sourceCardTitle(source, identity) || `${identity.name} report ${index + 1}`}</span>
+            <span>{sourceDocumentTitle(source, [identity.name, source.publisher]) || `${identity.name} report ${index + 1}`}</span>
             <b aria-hidden="true">↗</b>
           </a>
         ))}
@@ -1976,7 +2125,7 @@ function selectRelatedStories(story, candidates) {
   };
 }
 
-function StoryEventBridge({ story, event, onNavigate }) {
+function StoryEventBridge({ story, event, returnContext, onNavigate }) {
   if (!event) return null;
   const timeline = Array.isArray(event.timeline) ? event.timeline : [];
   const latest = timeline.at(-1);
@@ -1991,6 +2140,7 @@ function StoryEventBridge({ story, event, onNavigate }) {
         view="event"
         eventId={event.event_id}
         sid={story.story_id || story.development_id || storyRouteId(story)}
+        {...returnContext}
         onNavigate={onNavigate}
         className="story-event-bridge-link"
       >
@@ -2013,19 +2163,30 @@ function StoryEventBridge({ story, event, onNavigate }) {
   );
 }
 
-function StoryView({ story, event, relatedStories, onNavigate }) {
+function StoryView({ story, event, relatedStories, returnContext, onNavigate }) {
   if (!story) return <MissingState message="That story is not available in this edition." />;
+  const isCatchup = returnContext?.from === 'catch-up';
+  const catchupDays = clampCatchupDays(returnContext?.days);
   const displayDate = formatDate(storyDate(story));
   const sameEventStories = event
     ? relatedStories.filter((item) => item.event_id === event.event_id).slice(0, 3)
     : [];
-  const related = sameEventStories.length
+  const selectedRelated = sameEventStories.length
     ? { heading: `More from the ${eventTitle(event)}`, stories: sameEventStories }
     : selectRelatedStories(story, relatedStories);
+  const related = isCatchup
+    ? { ...selectedRelated, heading: `More from your ${catchupDays}-day Catch-Up` }
+    : selectedRelated;
   return (
     <main id="main" className="page-shell story-page">
-      <AppLink view="today" onNavigate={onNavigate} className="back-link">
-        <span aria-hidden="true">←</span> Back to Today
+      <AppLink
+        view={isCatchup ? 'catch-up' : 'today'}
+        days={isCatchup ? catchupDays : undefined}
+        onNavigate={onNavigate}
+        className="back-link"
+      >
+        <span aria-hidden="true">←</span>{' '}
+        {isCatchup ? `Back to ${catchupDays}-day Catch-Up` : 'Back to Today'}
       </AppLink>
 
       <article className="story-article">
@@ -2043,7 +2204,7 @@ function StoryView({ story, event, relatedStories, onNavigate }) {
               {sourceCount(story) === 1 ? 'news report' : 'news reports'}
             </span>
           </div>
-          <StoryEventBridge story={story} event={event} onNavigate={onNavigate} />
+          <StoryEventBridge story={story} event={event} returnContext={returnContext} onNavigate={onNavigate} />
           <EditorialFeatureReport key={storyRouteId(story)} story={story} />
         </header>
 
@@ -2060,6 +2221,8 @@ function StoryView({ story, event, relatedStories, onNavigate }) {
               <SupportingStory
                 key={storyRouteId(item)}
                 story={item}
+                briefingMode={isCatchup ? 'catch-up' : 'latest'}
+                briefingDays={isCatchup ? catchupDays : undefined}
                 onNavigate={onNavigate}
               />
             ))}
@@ -2555,11 +2718,11 @@ function eventReportingSources(event) {
 
 function EventSourceItem({ source }) {
   const identity = sourceIdentity(source.name, source.url);
-  const articleTitle = sourceCardTitle({
+  const articleTitle = sourceDocumentTitle({
     title: source.title,
     publisher: source.name,
     url: source.url,
-  }, identity);
+  }, [identity.name, source.name]);
   const Wrapper = source.url ? 'a' : 'div';
   return (
     <Wrapper
@@ -2614,7 +2777,7 @@ function EventSourceIndex({ sources, developmentCount }) {
   );
 }
 
-function EventView({ event, storyline, parentStoryline, currentStoryId, events, stories, otherEvents, onNavigate }) {
+function EventView({ event, storyline, parentStoryline, currentStoryId, events, stories, otherEvents, returnContext, onNavigate }) {
   const [timelineRequest, setTimelineRequest] = useState(null);
   if (!event) return <MissingState message="That event is not available in this edition." />;
   const presentation = event.presentation || {};
@@ -2647,10 +2810,18 @@ function EventView({ event, storyline, parentStoryline, currentStoryId, events, 
   const requestTimelineFocus = (id) => {
     setTimelineRequest((current) => ({ id, request: (current?.request || 0) + 1 }));
   };
+  const isCatchup = returnContext?.from === 'catch-up';
+  const catchupDays = clampCatchupDays(returnContext?.days);
   return (
     <main id="main" className={`page-shell event-page${isStoryline ? ' is-storyline' : ' is-event'}`}>
-      <AppLink view="events" onNavigate={onNavigate} className="back-link event-back-link">
-        <span aria-hidden="true">←</span> Timelines
+      <AppLink
+        view={isCatchup ? 'catch-up' : 'events'}
+        days={isCatchup ? catchupDays : undefined}
+        onNavigate={onNavigate}
+        className="back-link event-back-link"
+      >
+        <span aria-hidden="true">←</span>{' '}
+        {isCatchup ? `Back to ${catchupDays}-day Catch-Up` : 'Timelines'}
       </AppLink>
 
       <header className="event-hero">
@@ -2993,65 +3164,6 @@ function EventHoverPreview({
         <EventMeta event={event} updateStory={development ? relatedStory : null} />
       </div>
     </div>
-  );
-}
-
-function CatchupLeadEvent({ event, relatedStory, storyline, onNavigate }) {
-  return (
-    <article className="catchup-lead-event">
-      <AppLink
-        view="event"
-        eventId={event.event_id}
-        onNavigate={onNavigate}
-        className="catchup-lead-link"
-        aria-label={`Catch up on ${eventTitle(event)}`}
-      >
-        <EventArtwork event={event} relatedStory={relatedStory} className="catchup-lead-art" role="wide" />
-        <div className="catchup-lead-shade" aria-hidden="true" />
-        <div className="catchup-lead-copy">
-          <EventParentLabel storyline={storyline} event={event} relatedStory={relatedStory} />
-          <h2>{eventTitle(event)}</h2>
-          <div className="catchup-lead-brief">
-            <p><span>The situation</span>{eventSituation(event)}</p>
-            <p><span>What changed</span>{eventLatestSummary(event, relatedStory)}</p>
-          </div>
-          <EventMeta event={event} />
-          <strong className="catchup-open">Open the full timeline <span aria-hidden="true">→</span></strong>
-        </div>
-      </AppLink>
-      {relatedStory ? (
-        <AppLink
-          view="story"
-          sid={storyRouteId(relatedStory)}
-          onNavigate={onNavigate}
-          className="catchup-latest-report"
-        >
-          Read latest report <span aria-hidden="true">→</span>
-        </AppLink>
-      ) : null}
-    </article>
-  );
-}
-
-function CatchupSupportEvent({ event, relatedStory, storyline, onNavigate }) {
-  return (
-    <article className="catchup-support-event">
-      <AppLink
-        view="event"
-        eventId={event.event_id}
-        onNavigate={onNavigate}
-        className="catchup-support-link"
-        aria-label={`Catch up on ${eventTitle(event)}`}
-      >
-        <div className="catchup-support-copy">
-          <EventParentLabel storyline={storyline} event={event} relatedStory={relatedStory} />
-          <h3>{eventTitle(event)}</h3>
-          <p><span>What changed</span>{eventLatestSummary(event, relatedStory)}</p>
-          <EventMeta event={event} />
-        </div>
-        <EventArtwork event={event} relatedStory={relatedStory} className="catchup-support-art" role="support" />
-      </AppLink>
-    </article>
   );
 }
 
@@ -3684,24 +3796,9 @@ function EventsDirectoryView({
       String(eventLatestDate(right)).localeCompare(String(eventLatestDate(left)))
       || eventDevelopmentCount(right) - eventDevelopmentCount(left)
     ));
-  const catchupEvents = selectCatchupEvents(recentDevelopmentCandidates, {
-    referenceDate: latestAvailableDate,
-    getDate: eventLatestDate,
-    getScore: (event) => {
-      const storyline = storylineByEventId.get(event.event_id);
-      return eventBriefingScore(
-        event,
-        latestAvailableDate,
-        relatedStories.has(event.event_id),
-        storyline?.legacy_event_id === event.event_id,
-      );
-    },
-  });
+  const recentlyUpdatedEvents = recentDevelopmentCandidates.slice(0, 8);
   const recentlyUpdatedEventIds = new Set(
-    [
-      ...recentDevelopmentCandidates.slice(0, 5),
-      ...catchupEvents,
-    ].map((event) => event.event_id),
+    recentDevelopmentCandidates.slice(0, 5).map((event) => event.event_id),
   );
   const activeEvents = ordered
     .filter((event) => (
@@ -3894,7 +3991,7 @@ function EventsDirectoryView({
           aria-current={homeMode === 'activity' ? 'page' : undefined}
           onClick={() => showHomeMode('activity')}
         >
-          <span>Catch-up</span>
+          <span>Latest changes</span>
         </button>
         {hasSituationDirectory ? (
           <button
@@ -3912,8 +4009,7 @@ function EventsDirectoryView({
         </button>
       </nav>
 
-      {orderedSituations.length === 1
-        && orderedSituations[0].legacy_event_id !== catchupEvents[0]?.event_id ? (
+      {orderedSituations.length === 1 ? (
         <aside className="events-featured-situation" aria-label="Featured Situation">
           <span>Featured Situation</span>
           <AppLink
@@ -3932,34 +4028,15 @@ function EventsDirectoryView({
 
       {homeMode === 'activity' ? (
         <div className="events-activity-view">
-          {catchupEvents.length ? (
-            <section className="events-catchup-section" aria-labelledby="catchup-title">
-              <header className="event-briefing-section-heading">
-                <div>
-                  <p className="eyebrow">The past four days</p>
-                  <h2 id="catchup-title">Catch-up</h2>
-                </div>
-                <p>The top story and the updates that matter most, with an older timeline included only when it is unusually significant.</p>
-              </header>
-              <div className="catchup-opening-grid">
-                <CatchupLeadEvent
-                  event={catchupEvents[0]}
-                  relatedStory={relatedStories.get(catchupEvents[0].event_id)}
-                  storyline={storylineByEventId.get(catchupEvents[0].event_id)}
-                  onNavigate={onNavigate}
-                />
-                <div className="catchup-supporting-events">
-                  {catchupEvents.slice(1).map((event) => (
-                    <CatchupSupportEvent
-                      event={event}
-                      relatedStory={relatedStories.get(event.event_id)}
-                      storyline={storylineByEventId.get(event.event_id)}
-                      onNavigate={onNavigate}
-                      key={event.event_id}
-                    />
-                  ))}
-                </div>
-              </div>
+          {recentlyUpdatedEvents.length ? (
+            <section className="event-movement-section event-latest-developments" aria-labelledby="latest-developments-title">
+              <DevelopmentTimeline
+                events={recentlyUpdatedEvents}
+                referenceDate={latestAvailableDate}
+                relatedStories={relatedStories}
+                situationByEventId={storylineByEventId}
+                onNavigate={onNavigate}
+              />
             </section>
           ) : null}
 
@@ -4438,7 +4515,10 @@ export default function ReaderApp() {
     digest: null,
     events: null,
     recent: null,
+    catchup: null,
     coverage: null,
+    recentStatus: 'idle',
+    catchupStatus: 'idle',
     error: '',
   });
 
@@ -4446,16 +4526,15 @@ export default function ReaderApp() {
     Promise.all([
       fetchFirst(DIGEST_URLS),
       fetchFirst(EVENT_URLS),
-      fetchOptional(RECENT_URLS),
       fetchOptional(COVERAGE_URLS),
     ])
-      .then(([digest, events, recent, coverage]) => setData({
+      .then(([digest, events, coverage]) => setData((current) => ({
+        ...current,
         digest,
         events,
-        recent,
         coverage,
         error: '',
-      }))
+      })))
       .catch((error) => setData((current) => ({
         ...current,
         digest: null,
@@ -4463,6 +4542,30 @@ export default function ReaderApp() {
         error: error.message,
       })));
   }, []);
+
+  const needsRecent = ['events', 'event', 'archive'].includes(route.view)
+    || (route.view === 'story' && route.sid.startsWith('archive-'));
+  const needsCatchup = route.view === 'catch-up'
+    || route.from === 'catch-up'
+    || (route.view === 'story' && route.sid.startsWith('catchup-'));
+
+  useEffect(() => {
+    if (!needsRecent || data.recentStatus !== 'idle') return undefined;
+    setData((current) => ({ ...current, recentStatus: 'loading' }));
+    fetchOptional(RECENT_URLS).then((recent) => {
+      setData((current) => ({ ...current, recent, recentStatus: 'ready' }));
+    });
+    return undefined;
+  }, [data.recentStatus, needsRecent]);
+
+  useEffect(() => {
+    if (!needsCatchup || data.catchupStatus !== 'idle') return undefined;
+    setData((current) => ({ ...current, catchupStatus: 'loading' }));
+    fetchOptional(CATCHUP_URLS).then((catchup) => {
+      setData((current) => ({ ...current, catchup, catchupStatus: 'ready' }));
+    });
+    return undefined;
+  }, [data.catchupStatus, needsCatchup]);
 
   useEffect(() => {
     const syncRoute = () => setRoute(readRoute());
@@ -4511,6 +4614,8 @@ export default function ReaderApp() {
     route.topic,
     route.edition,
     route.archiveDate,
+    route.days,
+    route.from,
   ]);
 
   useEffect(() => {
@@ -4551,6 +4656,15 @@ export default function ReaderApp() {
       .flatMap((day) => scopedStories(day, `archive-${day.date}`)),
     [data.recent],
   );
+  const catchupStories = useMemo(
+    () => (Array.isArray(data.catchup?.days) ? data.catchup.days : [])
+      .flatMap((day) => scopedStories(day, `catchup-${day.date}`)),
+    [data.catchup],
+  );
+  const catchupGroups = useMemo(() => {
+    if (!data.catchup) return [];
+    return buildCatchupBriefing(catchupEditions(data.catchup), { days: route.days }).groups;
+  }, [data.catchup, route.days]);
   const storylines = useMemo(
     () => (Array.isArray(data.coverage?.collections) ? data.coverage.collections : []),
     [data.coverage],
@@ -4559,9 +4673,10 @@ export default function ReaderApp() {
     () => [
       ...stories,
       ...archiveStories,
+      ...catchupStories,
       ...archiveContext.stories,
     ],
-    [stories, archiveStories, archiveContext.stories],
+    [stories, archiveStories, catchupStories, archiveContext.stories],
   );
   const allEvents = useMemo(
     () => deduplicateEvents([...archiveContext.events, ...events]),
@@ -4588,7 +4703,8 @@ export default function ReaderApp() {
       (storyline) => storyline.legacy_event_id === routeEvent?.event_id,
     );
     const labels = {
-      today: 'Today',
+      today: 'Digests',
+      'catch-up': `Catch-Up · ${route.days} days`,
       digest: 'Daily Digest',
       events: route.mode === 'browse'
         ? 'Browse Timelines'
@@ -4603,19 +4719,29 @@ export default function ReaderApp() {
   }, [allEvents, allStories, route, stories, storylines]);
 
   const navigate = (view, extras = {}) => {
-    const contextualExtras = route.edition && ['story', 'event'].includes(view)
-      ? { edition: route.edition, ...extras }
-      : extras;
+    let contextualExtras = extras;
+    if (route.edition && ['story', 'event'].includes(view)) {
+      contextualExtras = { edition: route.edition, ...contextualExtras };
+    }
+    if (route.from === 'catch-up' && ['story', 'event'].includes(view)) {
+      contextualExtras = {
+        from: 'catch-up',
+        days: route.days,
+        ...contextualExtras,
+      };
+    }
     const href = routeHref(view, contextualExtras);
     // Reset before React swaps views; otherwise the destination briefly paints
     // halfway down the page while a smooth scroll animation catches up.
-    resetPageScroll();
-    window.history.pushState({}, '', href);
+    if (!extras.replace) resetPageScroll();
+    window.history[extras.replace ? 'replaceState' : 'pushState']({}, '', href);
     setRoute(readRoute());
   };
 
   if (route.view !== 'my-news' && data.error) return <MissingState message={data.error} />;
   if (route.view !== 'my-news' && (!data.digest || !data.events)) return <LoadingState />;
+  if (needsRecent && data.recentStatus !== 'ready') return <LoadingState />;
+  if (needsCatchup && data.catchupStatus !== 'ready') return <LoadingState />;
   if (route.view !== 'my-news' && archiveContext.status === 'loading') return <LoadingState />;
 
   const matchedStory = allStories.find(
@@ -4638,7 +4764,12 @@ export default function ReaderApp() {
     ),
   );
   const storyEvent = allEvents.find((event) => event.event_id === selectedStory?.event_id);
-  const relatedStories = stories.filter((story) => storyRouteId(story) !== storyRouteId(selectedStory));
+  const relatedStories = (route.from === 'catch-up' ? catchupGroups : stories)
+    .filter((story) => storyRouteId(story) !== storyRouteId(selectedStory)
+      && (route.from !== 'catch-up' || !selectedStory?.event_id || story.event_id !== selectedStory.event_id));
+  const returnContext = route.from === 'catch-up'
+    ? { from: 'catch-up', days: route.days }
+    : undefined;
   const storylineChildIds = new Set(
     storylines.flatMap((item) => item.child_events || []).map((item) => item.event_id).filter(Boolean),
   );
@@ -4650,9 +4781,16 @@ export default function ReaderApp() {
   return (
     <div className={`reader-app resolved-reader${route.view === 'event' ? ' event-layout-c' : ''}`}>
       <a className="skip-link" href="#main">Skip to content</a>
-      <Header view={route.view} onNavigate={navigate} />
+      <Header view={route.view} from={route.from} onNavigate={navigate} />
       {route.view === 'today' ? (
         <TodayView digest={data.digest} onNavigate={navigate} />
+      ) : null}
+      {route.view === 'catch-up' ? (
+        <CatchupView
+          catchup={data.catchup}
+          days={route.days}
+          onNavigate={navigate}
+        />
       ) : null}
       {/*
       {route.view === 'digest' ? (
@@ -4674,6 +4812,7 @@ export default function ReaderApp() {
           story={selectedStory}
           event={storyEvent}
           relatedStories={relatedStories}
+          returnContext={returnContext}
           onNavigate={navigate}
         />
       ) : null}
@@ -4695,6 +4834,7 @@ export default function ReaderApp() {
           events={events}
           stories={allStories}
           otherEvents={otherEvents}
+          returnContext={returnContext}
           onNavigate={navigate}
         />
       ) : null}
