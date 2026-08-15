@@ -15,7 +15,7 @@
     "summary": "A federal appeals court has blocked President Trump's $400 million ballroom construction project at the White House, ruling that he cannot proceed without congressional approval. The court's decision affirms a lower court ruling and allows only below-ground construction to continue. Trump has announced his intention to appeal the ruling to the Supreme Court, calling it unjust.",
     "status": "active",
     "first_seen_at": "2026-08-07",
-    "last_seen_at": "2026-08-09",
+    "last_seen_at": "2026-08-15",
     "timeline": [
       {
         "development_id": "story_e9506569ec7e71f9",
@@ -252,15 +252,109 @@
         "first_seen_at": "2026-08-09",
         "last_seen_at": "2026-08-09",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_a27458a50c0e898a",
+        "daily_story_id": "story_a27458a50c0e898a",
+        "date": "2026-08-15",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Trump Seeks Supreme Court Approval for White House Ballroom Construction",
+        "summary": "The Trump administration has requested the US Supreme Court to allow the continuation of construction for a new 90,000-square-foot ballroom at the White House, which is estimated to cost $400 million. This request follows a ruling from an appeals court stating that the project did not have the necessary congressional approval. Administration officials argue that the ballroom is a security necessity and that the project is 'beyond the point of no return.'",
+        "topic_label": "",
+        "development_type": "policy",
+        "key_facts": [
+          "Trump administration requests Supreme Court intervention for ballroom construction",
+          "Project estimated to cost $400 million",
+          "Construction follows an appeals court ruling against the project"
+        ],
+        "source_count": 4,
+        "sources": [
+          "ABC News - Top Stories",
+          "CBS News - Latest",
+          "DW - English",
+          "RTE News"
+        ],
+        "source_urls": [
+          "https://www.dw.com/en/trump-asks-supreme-court-to-let-white-house-ballroom-construction-continue/a-78377695?maca=en-rss-en-all-1573-rdf",
+          "https://www.cbsnews.com/video/trump-asks-supreme-court-to-intervene-in-white-house-ballroom-fight",
+          "https://abcnews.com/Politics/trump-appeals-supreme-court-white-house-ballroom-construction/story?id=135642539",
+          "https://www.rte.ie/news/world/2026/0814/1587922-us-court-ballroom"
+        ],
+        "source_details": [
+          {
+            "title": "Trump asks Supreme Court to let White House ballroom construction continue",
+            "source": "DW - English",
+            "link": "https://www.dw.com/en/trump-asks-supreme-court-to-let-white-house-ballroom-construction-continue/a-78377695?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Trump asks Supreme Court to intervene in White House ballroom fight",
+            "source": "CBS News - Latest",
+            "link": "https://www.cbsnews.com/video/trump-asks-supreme-court-to-intervene-in-white-house-ballroom-fight",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Trump admin says WH ballroom 'beyond the point of no return' in Supreme Court appeal",
+            "source": "ABC News - Top Stories",
+            "link": "https://abcnews.com/Politics/trump-appeals-supreme-court-white-house-ballroom-construction/story?id=135642539",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Trump asks Supreme Court to allow ballroom construction",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/world/2026/0814/1587922-us-court-ballroom",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.54,
+        "match_evidence": {
+          "score": 0.54,
+          "matched_development_id": "story_e9506569ec7e71f9",
+          "shared_tokens": [
+            "400",
+            "appeal",
+            "approval",
+            "ballroom",
+            "congressional",
+            "construction",
+            "court",
+            "follow",
+            "house",
+            "million",
+            "project",
+            "ruling",
+            "stating",
+            "supreme",
+            "trump",
+            "white"
+          ],
+          "shared_entities": [
+            "ballroom_construction",
+            "house_ballroom",
+            "white",
+            "white_house"
+          ],
+          "source_url_match": false,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-15",
+        "last_seen_at": "2026-08-15",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 2,
+      "public_development_count": 3,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Court Halts Trump's White House Ballroom Construction Pending Congressional Approval",
-    "latest_summary": "A federal appeals court has ruled that construction of President Trump's $400 million ballroom at the White House must be halted until Congress grants explicit approval. The court agreed with a lower court's decision that such a significant renovation requires congressional consent.",
+    "latest_title": "Trump Seeks Supreme Court Approval for White House Ballroom Construction",
+    "latest_summary": "The Trump administration has requested the US Supreme Court to allow the continuation of construction for a new 90,000-square-foot ballroom at the White House, which is estimated to cost $400 million. This request follows a ruling from an appeals court stating that the project did not have the necessary congressional approval. Administration officials argue that the ballroom is a security necessity and that the project is 'beyond the point of no return.'",
     "presentation": {
       "has_context": true,
       "has_full_timeline": false,
@@ -270,28 +364,29 @@
       "display_title": "Court Halts Trump's White House Ballroom Construction, Appeals Expected",
       "milestone_development_ids": [
         "story_e9506569ec7e71f9",
-        "story_f53039029627a4e8"
+        "story_f53039029627a4e8",
+        "story_a27458a50c0e898a"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-09",
-      "development_count": 2,
-      "coverage_packet_count": 3,
-      "date_count": 2,
-      "source_count": 12,
+      "summary_updated_at": "2026-08-15",
+      "development_count": 3,
+      "coverage_packet_count": 4,
+      "date_count": 3,
+      "source_count": 16,
       "independent_source_count": 13,
       "first_date": "2026-08-07",
-      "latest_date": "2026-08-09",
-      "latest_update_title": "Court Halts Trump's White House Ballroom Construction Pending Congressional Approval",
-      "coverage_score": 0.647,
-      "recency_score": 0.583,
-      "rank_score": 0.61,
-      "context_summary": "Muninn first tracked this thread on 2026-08-07: Court Halts Trump's White House Ballroom Construction, Appeals Expected. The latest development is Court Halts Trump's White House Ballroom Construction Pending Congressional Approval.",
+      "latest_date": "2026-08-15",
+      "latest_update_title": "Trump Seeks Supreme Court Approval for White House Ballroom Construction",
+      "coverage_score": 0.745,
+      "recency_score": 1.0,
+      "rank_score": 0.893,
+      "context_summary": "Muninn first tracked this thread on 2026-08-07: Court Halts Trump's White House Ballroom Construction, Appeals Expected. The latest development is Trump Seeks Supreme Court Approval for White House Ballroom Construction.",
       "cta_label": ""
     },
     "event_summary": {
       "available": true,
-      "summary": "A federal appeals court has ordered the halt of construction on Donald Trump's planned $400 million ballroom at the White House, stating that such a significant alteration requires congressional approval. Most recently, a federal appeals court has ruled that construction of President Trump's $400 million ballroom at the White House must be halted until Congress grants explicit approval.",
+      "summary": "A federal appeals court has ordered the halt of construction on Donald Trump's planned $400 million ballroom at the White House, stating that such a significant alteration requires congressional approval. A later development was Court Halts Trump's White House Ballroom Construction Pending Congressional Approval. Most recently, the Trump administration has requested the US Supreme Court to allow the continuation of construction for a new 90,000-square-foot ballroom at the White House, which is estimated to cost $400 million.",
       "key_developments": [
         {
           "development_id": "story_e9506569ec7e71f9",
@@ -302,6 +397,11 @@
           "development_id": "story_f53039029627a4e8",
           "date": "2026-08-09",
           "title": "Court Halts Trump's White House Ballroom Construction Pending Congressional Approval"
+        },
+        {
+          "development_id": "story_a27458a50c0e898a",
+          "date": "2026-08-15",
+          "title": "Trump Seeks Supreme Court Approval for White House Ballroom Construction"
         }
       ],
       "sources": [
@@ -376,9 +476,33 @@
           "source": "PBS News - Headlines",
           "link": "https://www.pbs.org/newshour/show/news-wrap-court-rules-trump-needs-congress-to-approve-white-house-ballroom",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Trump asks Supreme Court to let White House ballroom construction continue",
+          "source": "DW - English",
+          "link": "https://www.dw.com/en/trump-asks-supreme-court-to-let-white-house-ballroom-construction-continue/a-78377695?maca=en-rss-en-all-1573-rdf",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Trump asks Supreme Court to intervene in White House ballroom fight",
+          "source": "CBS News - Latest",
+          "link": "https://www.cbsnews.com/video/trump-asks-supreme-court-to-intervene-in-white-house-ballroom-fight",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Trump admin says WH ballroom 'beyond the point of no return' in Supreme Court appeal",
+          "source": "ABC News - Top Stories",
+          "link": "https://abcnews.com/Politics/trump-appeals-supreme-court-white-house-ballroom-construction/story?id=135642539",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Trump asks Supreme Court to allow ballroom construction",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/world/2026/0814/1587922-us-court-ballroom",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-08-09",
+      "updated_at": "2026-08-15",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "developing_event",
@@ -387,9 +511,10 @@
         "event_id": "event_direct-flights-to-lebanon-resume-after-40-ye_cc0ba74127",
         "title": "Direct Flights to Lebanon Resume After 40 Years Following Trump Meeting",
         "relationship": "related_topic",
-        "confidence": 0.703,
+        "confidence": 0.742,
         "shared_entities": [
           "donald_trump",
+          "us",
           "white",
           "white_house"
         ]
@@ -398,30 +523,31 @@
         "event_id": "event_jeanine-pirro-meets-trump-amid-future-uncert_a41b2c52fe",
         "title": "Jeanine Pirro Meets Trump Amid Future Uncertainty",
         "relationship": "related_topic",
-        "confidence": 0.669,
+        "confidence": 0.708,
         "shared_entities": [
+          "us",
           "white",
           "white_house"
         ]
       },
       {
-        "event_id": "event_trump-directs-signage-at-smithsonian-to-addr_10c62992ab",
-        "title": "Trump Directs Signage at Smithsonian to Address 'Inaccurate Information'",
+        "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+        "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
         "relationship": "related_topic",
-        "confidence": 0.667,
+        "confidence": 0.693,
         "shared_entities": [
           "donald_trump",
-          "white_house"
+          "us"
         ]
       },
       {
-        "event_id": "event_sen-lindsey-graham-honored-at-funeral-servic_a603ee973f",
-        "title": "Funeral Services for Lindsey Graham Held in Washington, D.C.",
+        "event_id": "event_fifa-president-infantino-defends-world-cup-a_4ee53283ef",
+        "title": "FIFA President Infantino Defends World Cup Amid Criticism",
         "relationship": "related_topic",
-        "confidence": 0.655,
+        "confidence": 0.672,
         "shared_entities": [
           "donald_trump",
-          "national"
+          "us"
         ]
       }
     ],
@@ -446,21 +572,29 @@
       "focal_tall_y": 0.48
     },
     "search_tokens": [
+      "000-square-foot",
       "400",
+      "administration",
       "agreed",
+      "allow",
       "alteration",
       "announced",
       "appeal",
       "approval",
+      "argue",
       "ballroom",
+      "beyond",
       "challenge",
       "congress",
       "congressional",
       "consent",
       "construction",
+      "continuation",
+      "cost",
       "court",
       "decision",
       "donald",
+      "estimated",
       "expected",
       "explicit",
       "federal",
@@ -475,17 +609,26 @@
       "million",
       "must",
       "national",
+      "necessary",
+      "necessity",
       "ordered",
       "pending",
       "planned",
       "plans",
+      "point",
       "power",
       "preservation",
       "presidential",
+      "project",
       "renovation",
+      "request",
+      "requested",
       "require",
+      "return",
       "ruled",
       "ruling",
+      "security",
+      "seeks",
       "seen",
       "significant",
       "stating",
@@ -495,6 +638,7 @@
       "trump",
       "trust",
       "until",
+      "which",
       "white"
     ],
     "entities": [
@@ -511,11 +655,110 @@
       "national_trust",
       "pending_congressional",
       "supreme",
+      "trump_seeks",
       "trump_white",
+      "us",
       "white",
       "white_house"
     ],
-    "search_text": "400 agreed alteration announced appeal appeal_expected approval ballroom ballroom_construction challenge congress congressional congressional_approval consent construction construction_appeal construction_pending court decision donald donald_trump expected explicit federal follow grant halt halted halts halts_trump historic historic_preservation house house_ballroom lower million must national national_trust ordered pending pending_congressional planned plans power preservation presidential renovation require ruled ruling seen significant stating such supreme test trump trump_white trust until white white_house"
+    "search_text": "000-square-foot 400 administration agreed allow alteration announced appeal appeal_expected approval argue ballroom ballroom_construction beyond challenge congress congressional congressional_approval consent construction construction_appeal construction_pending continuation cost court decision donald donald_trump estimated expected explicit federal follow grant halt halted halts halts_trump historic historic_preservation house house_ballroom lower million must national national_trust necessary necessity ordered pending pending_congressional planned plans point power preservation presidential project renovation request requested require return ruled ruling security seeks seen significant stating such supreme test trump trump_seeks trump_white trust until us which white white_house",
+    "event_overview": {
+      "available": true,
+      "title": "About Presidential Authority",
+      "subject": "Presidential Authority",
+      "summary": "This event concerns a proposed permanent ballroom and East Wing modernization project at the White House, and the resulting dispute over whether the president may proceed without specific authorization from Congress. The administration describes the project as a privately funded, secure event space for official state functions; federal litigation has focused on the legal limits of presidential authority over a major alteration to the Executive Residence.",
+      "facts": [
+        {
+          "label": "Project and location",
+          "value": "The project, formally reviewed as the East Wing Modernization Project, is at the White House complex at 1600 Pennsylvania Avenue NW, Washington, D.C.; the applicant is the Executive Residence at the White House.",
+          "source_ids": [
+            "o1",
+            "o2"
+          ]
+        },
+        {
+          "label": "Stated purpose",
+          "value": "The National Capital Planning Commission described the proposal as a permanent, secure event space within the White House grounds intended to increase capacity for official state functions.",
+          "source_ids": [
+            "o2"
+          ]
+        },
+        {
+          "label": "Original announced design and schedule",
+          "value": "In its July 31, 2025 announcement, the White House said the planned ballroom would be about 90,000 square feet, seat 650 people, occupy the East Wing site, and begin construction in September 2025.",
+          "source_ids": [
+            "o3"
+          ]
+        },
+        {
+          "label": "Planning review",
+          "value": "The National Capital Planning Commission, the federal planning agency for the National Capital Region, approved the project's preliminary and final site and building plans on April 2, 2026. That planning approval is separate from the dispute over statutory authority to construct the project.",
+          "source_ids": [
+            "o2",
+            "o1"
+          ]
+        },
+        {
+          "label": "Legal issue",
+          "value": "The core case is In re: Donald Trump, et al., No. 25-5452, in the U.S. Court of Appeals for the D.C. Circuit. The administration has argued that privately financed White House work falls within presidential authority, while the court proceedings have addressed whether Congress must authorize this scale of construction; 3 U.S.C. § 105 authorizes appropriations for care, maintenance, repair, alteration, and improvement",
+          "source_ids": [
+            "o4",
+            "o5",
+            "o6"
+          ]
+        }
+      ],
+      "scope_note": "The selected Muninn timeline covers the August 2026 court rulings and the administration's effort to continue construction during further review; it does not provide a complete history of the project, its design-review process, funding, or all related litigation.",
+      "sources": [
+        {
+          "title": "Ncpc",
+          "publisher": "Ncpc",
+          "url": "https://www.ncpc.gov/projects/8733/",
+          "source_type": "primary",
+          "id": "o1"
+        },
+        {
+          "title": "Ncpc",
+          "publisher": "Ncpc",
+          "url": "https://www.ncpc.gov/review/project/8733/",
+          "source_type": "primary",
+          "id": "o2"
+        },
+        {
+          "title": "Whitehouse",
+          "publisher": "Whitehouse",
+          "url": "https://www.whitehouse.gov/briefings-statements/2025/07/the-white-house-announces-white-house-ballroom-construction-to-begin/?query-11-page=3",
+          "source_type": "primary",
+          "id": "o3"
+        },
+        {
+          "title": "Govinfo",
+          "publisher": "Govinfo",
+          "url": "https://www.govinfo.gov/app/details/USCOURTS-caDC-25-05452/USCOURTS-caDC-25-05452-0",
+          "source_type": "primary",
+          "id": "o4"
+        },
+        {
+          "title": "Cornell",
+          "publisher": "Cornell",
+          "url": "https://www.law.cornell.edu/uscode/text/3/105",
+          "source_type": "reporting",
+          "id": "o5"
+        },
+        {
+          "title": "AP News",
+          "publisher": "AP News",
+          "url": "https://apnews.com/article/1528247275ec6103da892d271d4ee883",
+          "source_type": "reporting",
+          "id": "o6"
+        }
+      ],
+      "publisher_count": 5,
+      "generated_at": "2026-08-15T12:30:07.298917+00:00",
+      "expires_at": "2026-08-22T12:30:07.298917+00:00",
+      "model": "gpt-5.6-terra",
+      "provenance": "openai_web_search_source_grounded_event_overview_v1"
+    }
   },
   "related_events": [
     {
@@ -553,20 +796,20 @@
       "href": "/timeline.html?event=event_direct-flights-to-lebanon-resume-after-40-ye_cc0ba74127"
     },
     {
-      "event_id": "event_trump-directs-signage-at-smithsonian-to-addr_10c62992ab",
-      "title": "Trump Directs Signage at Smithsonian to Address 'Inaccurate Information'",
-      "summary": "Muninn first tracked this thread on 2026-07-25: Trump Directs Signage at Smithsonian to Address 'Inaccurate Information'. The latest development is Trump Issues Order for Disclaimers at Smithsonian Museum.",
+      "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+      "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
+      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Trump Comments on USS Lincoln's Deployment Duration Amid Concerns.",
       "activity_status": "active",
-      "stage": "developing_event",
-      "stage_label": "Developing event",
-      "first_seen_at": "2026-07-25",
-      "last_seen_at": "2026-07-26",
-      "development_count": 2,
-      "latest_title": "Trump Issues Order for Disclaimers at Smithsonian Museum",
-      "topic_label": "US History",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-22",
+      "last_seen_at": "2026-08-15",
+      "development_count": 22,
+      "latest_title": "Trump Comments on USS Lincoln's Deployment Duration Amid Concerns",
+      "topic_label": "Iran War",
       "hero_image": {
-        "url": "/Current_news/generated/events/event_trump-directs-signage-at-smithsonian-to-addr_10c62992ab.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_trump-directs-signage-at-smithsonian-to-addr_10c62992ab.jpg",
+        "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
         "source": "Muninn AI illustration",
         "author": "OpenAI GPT Image 2",
         "license": "AI-generated content",
@@ -584,23 +827,23 @@
         "focal_tall_x": 0.5,
         "focal_tall_y": 0.48
       },
-      "href": "/timeline.html?event=event_trump-directs-signage-at-smithsonian-to-addr_10c62992ab"
+      "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
     },
     {
-      "event_id": "event_sen-lindsey-graham-honored-at-funeral-servic_a603ee973f",
-      "title": "Funeral Services for Lindsey Graham Held in Washington, D.C.",
-      "summary": "Muninn first tracked this thread on 2026-07-28: Funeral Services for Lindsey Graham Held in Washington, D.C.. The latest development is Trump Honors Lindsey Graham at National Cathedral Memorial Service.",
+      "event_id": "event_fifa-president-infantino-defends-world-cup-a_4ee53283ef",
+      "title": "FIFA President Infantino Defends World Cup Amid Criticism",
+      "summary": "Muninn first tracked this thread on 2026-07-27: FIFA President Infantino Defends World Cup Amid Criticism. The latest development is Trump Supports Infantino Amid Accusations from Soccer Federations.",
       "activity_status": "active",
-      "stage": "developing_event",
-      "stage_label": "Developing event",
-      "first_seen_at": "2026-07-28",
-      "last_seen_at": "2026-07-29",
-      "development_count": 2,
-      "latest_title": "Trump Honors Lindsey Graham at National Cathedral Memorial Service",
-      "topic_label": "",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-27",
+      "last_seen_at": "2026-08-11",
+      "development_count": 19,
+      "latest_title": "Trump Supports Infantino Amid Accusations from Soccer Federations",
+      "topic_label": "FIFA World Cup",
       "hero_image": {
-        "url": "/Current_news/generated/events/event_sen-lindsey-graham-honored-at-funeral-servic_a603ee973f.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_sen-lindsey-graham-honored-at-funeral-servic_a603ee973f.jpg",
+        "url": "/Current_news/generated/events/event_fifa-president-infantino-defends-world-cup-a_4ee53283ef.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_fifa-president-infantino-defends-world-cup-a_4ee53283ef.jpg",
         "source": "Muninn AI illustration",
         "author": "OpenAI GPT Image 2",
         "license": "AI-generated content",
@@ -618,7 +861,7 @@
         "focal_tall_x": 0.5,
         "focal_tall_y": 0.48
       },
-      "href": "/timeline.html?event=event_sen-lindsey-graham-honored-at-funeral-servic_a603ee973f"
+      "href": "/timeline.html?event=event_fifa-president-infantino-defends-world-cup-a_4ee53283ef"
     }
   ]
 }

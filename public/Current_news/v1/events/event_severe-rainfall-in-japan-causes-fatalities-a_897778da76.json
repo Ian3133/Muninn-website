@@ -15,7 +15,7 @@
     "summary": "Unprecedented rainfall in Japan's Chiba prefecture has resulted in at least four fatalities and left approximately 7,000 passengers stranded at Tokyo's Narita airport. Authorities issued the highest-level rain warning for the first time, prompting evacuation orders for around 400,000 residents due to flooding risks and landslide alerts. Power outages affected over 20,000 households as the torrential rains continued to impact the region.",
     "status": "active",
     "first_seen_at": "2026-08-14",
-    "last_seen_at": "2026-08-14",
+    "last_seen_at": "2026-08-15",
     "timeline": [
       {
         "development_id": "story_5f679e2015fc72c5",
@@ -119,15 +119,99 @@
           "story_daa613b7fbd95149"
         ],
         "revision_count": 1
+      },
+      {
+        "development_id": "story_b0c79bf96b939973",
+        "daily_story_id": "story_b0c79bf96b939973",
+        "date": "2026-08-15",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Severe Rainfall in Japan Causes Flooding and Fatalities in Chiba Prefecture",
+        "summary": "Unprecedented rainfall in Chiba prefecture, east of Tokyo, has resulted in at least four confirmed deaths and significant flooding. Authorities issued the highest-level rain warning for the region for the first time, prompting evacuation orders for over 400,000 residents. The heavy rains also led to landslide warnings and power outages, stranding nearly 7,000 people at Narita airport.",
+        "topic_label": "",
+        "development_type": "policy",
+        "key_facts": [
+          "At least four people dead due to unprecedented rainfall in Chiba prefecture.",
+          "Evacuation orders issued for over 400,000 residents.",
+          "Nearly 7,000 people stranded at Narita airport.",
+          "First-time issuance of the highest-level rain warning for the region."
+        ],
+        "source_count": 3,
+        "sources": [
+          "Africanews",
+          "Euronews",
+          "The Guardian"
+        ],
+        "source_urls": [
+          "http://www.africanews.com/2026/08/14/unprecedented-rainfall-in-japan-leaves-at-least-four-dead-in-chiba-prefecture",
+          "https://www.theguardian.com/world/2026/08/14/japan-deadly-rain-evacuation-thousands-stranded-tokyo-airport-weather",
+          "http://www.euronews.com/video/2026/08/14/unprecedented-rainfall-in-japan-leaves-at-least-four-dead-in-chiba-prefecture"
+        ],
+        "source_details": [
+          {
+            "title": "Unprecedented rainfall in Japan leaves at least four dead in Chiba prefecture",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/08/14/unprecedented-rainfall-in-japan-leaves-at-least-four-dead-in-chiba-prefecture",
+            "source_bias": "center"
+          },
+          {
+            "title": "‘Unprecedented’ rain kills five in Japan as thousands stranded at airport",
+            "source": "The Guardian",
+            "link": "https://www.theguardian.com/world/2026/08/14/japan-deadly-rain-evacuation-thousands-stranded-tokyo-airport-weather",
+            "source_bias": "left"
+          },
+          {
+            "title": "Unprecedented rainfall in Japan leaves at least four dead in Chiba prefecture",
+            "source": "Euronews",
+            "link": "http://www.euronews.com/video/2026/08/14/unprecedented-rainfall-in-japan-leaves-at-least-four-dead-in-chiba-prefecture",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 1.0,
+        "match_evidence": {
+          "score": 1.0,
+          "matched_development_id": "story_5f679e2015fc72c5",
+          "shared_tokens": [
+            "000",
+            "airport",
+            "cause",
+            "death",
+            "fatalitie",
+            "flooding",
+            "japan",
+            "least",
+            "narita",
+            "outage",
+            "power",
+            "rainfall",
+            "severe",
+            "stranded",
+            "tokyo"
+          ],
+          "shared_entities": [
+            "japan",
+            "narita"
+          ],
+          "source_url_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-15",
+        "last_seen_at": "2026-08-15",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 1,
+      "public_development_count": 2,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Severe Flooding in Japan Due to Record Rainfall Causes Deaths and Disruptions",
-    "latest_summary": "Japan has experienced record-breaking rainfall leading to severe flooding, resulting in at least eight fatalities and one person missing. Thousands of travelers were stranded at Tokyo's Narita airport, and the flooding disrupted transportation and caused power outages affecting 20,000 homes.",
+    "latest_title": "Severe Rainfall in Japan Causes Flooding and Fatalities in Chiba Prefecture",
+    "latest_summary": "Unprecedented rainfall in Chiba prefecture, east of Tokyo, has resulted in at least four confirmed deaths and significant flooding. Authorities issued the highest-level rain warning for the region for the first time, prompting evacuation orders for over 400,000 residents. The heavy rains also led to landslide warnings and power outages, stranding nearly 7,000 people at Narita airport.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": false,
@@ -136,33 +220,39 @@
       "base_title": "Severe Flooding in Japan Due to Record Rainfall Causes Deaths and Disruptions",
       "display_title": "Severe Flooding in Japan Due to Record Rainfall Causes Deaths and Disruptions",
       "milestone_development_ids": [
-        "story_5f679e2015fc72c5"
+        "story_5f679e2015fc72c5",
+        "story_b0c79bf96b939973"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-14",
-      "development_count": 1,
-      "coverage_packet_count": 2,
-      "date_count": 1,
-      "source_count": 5,
-      "independent_source_count": 5,
+      "summary_updated_at": "2026-08-15",
+      "development_count": 2,
+      "coverage_packet_count": 3,
+      "date_count": 2,
+      "source_count": 7,
+      "independent_source_count": 7,
       "first_date": "2026-08-14",
-      "latest_date": "2026-08-14",
-      "latest_update_title": "Severe Flooding in Japan Due to Record Rainfall Causes Deaths and Disruptions",
-      "coverage_score": 0.348,
+      "latest_date": "2026-08-15",
+      "latest_update_title": "Severe Rainfall in Japan Causes Flooding and Fatalities in Chiba Prefecture",
+      "coverage_score": 0.547,
       "recency_score": 1.0,
-      "rank_score": 0.726,
-      "context_summary": "Japan has experienced record-breaking rainfall leading to severe flooding, resulting in at least eight fatalities and one person missing. Thousands of travelers were stranded at Tokyo's Narita airport, and the flooding disrupted transportation and caused power outages affecting 20,000 homes.",
+      "rank_score": 0.81,
+      "context_summary": "Muninn first tracked this thread on 2026-08-14: Severe Flooding in Japan Due to Record Rainfall Causes Deaths and Disruptions. The latest development is Severe Rainfall in Japan Causes Flooding and Fatalities in Chiba Prefecture.",
       "cta_label": ""
     },
     "event_summary": {
       "available": true,
-      "summary": "Japan has experienced record-breaking rainfall leading to severe flooding, resulting in at least eight fatalities and one person missing.",
+      "summary": "Japan has experienced record-breaking rainfall leading to severe flooding, resulting in at least eight fatalities and one person missing. Most recently, unprecedented rainfall in Chiba prefecture, east of Tokyo, has resulted in at least four confirmed deaths and significant flooding.",
       "key_developments": [
         {
           "development_id": "story_5f679e2015fc72c5",
           "date": "2026-08-14",
           "title": "Severe Flooding in Japan Due to Record Rainfall Causes Deaths and Disruptions"
+        },
+        {
+          "development_id": "story_b0c79bf96b939973",
+          "date": "2026-08-15",
+          "title": "Severe Rainfall in Japan Causes Flooding and Fatalities in Chiba Prefecture"
         }
       ],
       "sources": [
@@ -195,57 +285,24 @@
           "source": "Al Jazeera English",
           "link": "https://www.aljazeera.com/video/newsfeed/2026/8/14/14-08-sv-japan-floods-chiba-jp?traffic_source=rss",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "‘Unprecedented’ rain kills five in Japan as thousands stranded at airport",
+          "source": "The Guardian",
+          "link": "https://www.theguardian.com/world/2026/08/14/japan-deadly-rain-evacuation-thousands-stranded-tokyo-airport-weather",
+          "source_bias": "left"
+        },
+        {
+          "title": "Unprecedented rainfall in Japan leaves at least four dead in Chiba prefecture",
+          "source": "Euronews",
+          "link": "http://www.euronews.com/video/2026/08/14/unprecedented-rainfall-in-japan-leaves-at-least-four-dead-in-chiba-prefecture",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-08-14",
+      "updated_at": "2026-08-15",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "developing_event",
-    "search_tokens": [
-      "000",
-      "affecting",
-      "airport",
-      "cause",
-      "caused",
-      "death",
-      "disrupted",
-      "disruption",
-      "eight",
-      "experienced",
-      "fatalitie",
-      "flooding",
-      "homes",
-      "japan",
-      "leading",
-      "least",
-      "missing",
-      "narita",
-      "outage",
-      "person",
-      "power",
-      "rainfall",
-      "record",
-      "record-breaking",
-      "resulting",
-      "severe",
-      "stranded",
-      "thousand",
-      "tokyo",
-      "transportation",
-      "traveler"
-    ],
-    "entities": [
-      "disruption_japan",
-      "japan",
-      "japan_due",
-      "rainfall_cause",
-      "record",
-      "record_rainfall",
-      "severe_flooding",
-      "tokyo",
-      "tokyo_narita"
-    ],
-    "search_text": "000 affecting airport cause caused death disrupted disruption disruption_japan eight experienced fatalitie flooding homes japan japan_due leading least missing narita outage person power rainfall rainfall_cause record record-breaking record_rainfall resulting severe severe_flooding stranded thousand tokyo tokyo_narita transportation traveler",
     "related_events": [],
     "hero_image": {
       "url": "/Current_news/generated/events/event_severe-rainfall-in-japan-causes-fatalities-a_897778da76.jpg",
@@ -266,7 +323,86 @@
       "focal_wide_y": 0.48,
       "focal_tall_x": 0.5,
       "focal_tall_y": 0.48
-    }
+    },
+    "search_tokens": [
+      "000",
+      "400",
+      "affecting",
+      "airport",
+      "also",
+      "authoritie",
+      "cause",
+      "caused",
+      "chiba",
+      "confirmed",
+      "death",
+      "disrupted",
+      "disruption",
+      "east",
+      "eight",
+      "evacuation",
+      "experienced",
+      "fatalitie",
+      "first",
+      "flooding",
+      "four",
+      "heavy",
+      "highest-level",
+      "homes",
+      "issued",
+      "japan",
+      "landslide",
+      "leading",
+      "least",
+      "missing",
+      "narita",
+      "nearly",
+      "order",
+      "outage",
+      "person",
+      "power",
+      "prefecture",
+      "prompting",
+      "rain",
+      "rainfall",
+      "rains",
+      "record",
+      "record-breaking",
+      "region",
+      "resident",
+      "resulted",
+      "resulting",
+      "severe",
+      "significant",
+      "stranded",
+      "stranding",
+      "thousand",
+      "time",
+      "tokyo",
+      "transportation",
+      "traveler",
+      "unprecedented",
+      "warning"
+    ],
+    "entities": [
+      "cause_flooding",
+      "chiba",
+      "chiba_prefecture",
+      "disruption_japan",
+      "japan",
+      "japan_cause",
+      "japan_due",
+      "narita",
+      "prefecture_unprecedented",
+      "rainfall_cause",
+      "record",
+      "record_rainfall",
+      "severe_flooding",
+      "severe_rainfall",
+      "tokyo",
+      "tokyo_narita"
+    ],
+    "search_text": "000 400 affecting airport also authoritie cause cause_flooding caused chiba chiba_prefecture confirmed death disrupted disruption disruption_japan east eight evacuation experienced fatalitie first flooding four heavy highest-level homes issued japan japan_cause japan_due landslide leading least missing narita nearly order outage person power prefecture prefecture_unprecedented prompting rain rainfall rainfall_cause rains record record-breaking record_rainfall region resident resulted resulting severe severe_flooding severe_rainfall significant stranded stranding thousand time tokyo tokyo_narita transportation traveler unprecedented warning"
   },
   "related_events": []
 }
