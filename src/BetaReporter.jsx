@@ -86,7 +86,7 @@ function annotationFor(element) {
 export default function BetaReporter({ cloudEnabled = false, guestMode = false }) {
   const [open, setOpen] = useState(false);
   const [marking, setMarking] = useState(false);
-  const [category, setCategory] = useState('FUNCTION');
+  const [category, setCategory] = useState('OTHER');
   const [description, setDescription] = useState('');
   const [annotation, setAnnotation] = useState(null);
   const [includeScreenshot, setIncludeScreenshot] = useState(true);
@@ -130,7 +130,7 @@ export default function BetaReporter({ cloudEnabled = false, guestMode = false }
   }, [marking]);
 
   const reset = () => {
-    setCategory('FUNCTION');
+    setCategory('OTHER');
     setDescription('');
     setAnnotation(null);
     setIncludeScreenshot(true);
@@ -153,6 +153,10 @@ export default function BetaReporter({ cloudEnabled = false, guestMode = false }
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    if (!category) {
+      setError('Please choose what kind of problem this is.');
+      return;
+    }
     if (!description.trim()) {
       setError('Please briefly describe what happened.');
       textareaRef.current?.focus();
@@ -260,7 +264,7 @@ export default function BetaReporter({ cloudEnabled = false, guestMode = false }
                       type="button"
                       className={category === value ? 'active' : ''}
                       aria-pressed={category === value}
-                      onClick={() => setCategory(value)}
+                      onClick={() => { setCategory(value); setError(''); }}
                       key={value}
                     >
                       {label}
