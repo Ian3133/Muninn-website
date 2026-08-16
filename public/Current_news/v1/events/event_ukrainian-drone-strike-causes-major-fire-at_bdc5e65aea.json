@@ -15,7 +15,7 @@
     "summary": "A Ukrainian drone strike ignited a significant fire at a Wildberries warehouse near Saint Petersburg on July 24. The blaze produced thick smoke that spread across the city and led to temporary disruptions at Pulkovo Airport, as reported by Russian authorities.",
     "status": "active",
     "first_seen_at": "2026-07-25",
-    "last_seen_at": "2026-08-15",
+    "last_seen_at": "2026-08-16",
     "timeline": [
       {
         "development_id": "story_b77a481c5a1a5ef9",
@@ -1000,15 +1000,118 @@
         "first_seen_at": "2026-08-15",
         "last_seen_at": "2026-08-15",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_4aa2188a44af6b1d",
+        "daily_story_id": "story_4aa2188a44af6b1d",
+        "date": "2026-08-16",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Ukraine Conducts Major Drone Attack on Moscow Amid Ongoing Conflict",
+        "summary": "Ukraine launched a significant drone attack on Moscow, deploying hundreds of drones and reportedly killing at least six people. Russian authorities claimed to have shot down at least 201 drones during the assault. The attack is described as one of the largest aerial offensives by Ukraine since the beginning of the conflict, with fires reported at a logistics hub near the capital. Concurrently, Russian strikes on Ukraine resulted in additional casualties.",
+        "topic_label": "Ukraine Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "Ukraine launched hundreds of drones targeting Moscow.",
+          "At least six fatalities reported in Russia due to the drone attack.",
+          "Russian air defenses claimed to have downed at least 201 drones.",
+          "The attack is among the largest aerial assaults by Ukraine in the conflict."
+        ],
+        "source_count": 5,
+        "sources": [
+          "ABC News",
+          "Al Jazeera",
+          "DW",
+          "NPR",
+          "The Guardian"
+        ],
+        "source_urls": [
+          "https://www.aljazeera.com/news/2026/8/16/russian-strikes-kill-ukrainian-woman-as-nato-jet-downs-drone-over-romania?traffic_source=rss",
+          "https://abcnews.com/International/ukraine-launches-600-drones-moscow-major-barrage-mayor/story?id=135684267",
+          "https://www.npr.org/2026/08/16/nx-s1-5933006/ukraine-aerial-attack-6-dead-russia",
+          "https://www.dw.com/en/ukraine-launches-one-of-its-largest-attacks-of-war/a-78386779?maca=en-rss-en-all-1573-rdf",
+          "https://www.theguardian.com/world/2026/aug/16/ukrainian-drone-attack-on-russia-wildberries-warehouse-fire"
+        ],
+        "source_details": [
+          {
+            "title": "Ukraine targets Moscow in mass drone attack as Russia bombards Kyiv",
+            "source": "Al Jazeera",
+            "link": "https://www.aljazeera.com/news/2026/8/16/russian-strikes-kill-ukrainian-woman-as-nato-jet-downs-drone-over-romania?traffic_source=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Major Ukrainian strike on Moscow sets Wildberries hub ablaze, grounds flights",
+            "source": "ABC News",
+            "link": "https://abcnews.com/International/ukraine-launches-600-drones-moscow-major-barrage-mayor/story?id=135684267",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Ukraine launches one of its largest aerial attacks of the war, killing at least 6 people in Russia",
+            "source": "NPR",
+            "link": "https://www.npr.org/2026/08/16/nx-s1-5933006/ukraine-aerial-attack-6-dead-russia",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Ukraine launches one of its largest attacks of war",
+            "source": "DW",
+            "link": "https://www.dw.com/en/ukraine-launches-one-of-its-largest-attacks-of-war/a-78386779?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "‘Massive’ Ukrainian drone attack on Russia kills at least six, says Moscow",
+            "source": "The Guardian",
+            "link": "https://www.theguardian.com/world/2026/aug/16/ukrainian-drone-attack-on-russia-wildberries-warehouse-fire",
+            "source_bias": "left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "attack",
+            "strike"
+          ],
+          "shared_incident_anchors": [
+            "drone",
+            "russia",
+            "ukraine"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "attack",
+            "drone",
+            "fatalitie",
+            "resulted",
+            "russia",
+            "strike",
+            "ukraine"
+          ],
+          "shared_entities": [
+            "drone",
+            "russia",
+            "ukraine"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_bff18433653c48e7",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-16",
+        "last_seen_at": "2026-08-16",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 13,
+      "public_development_count": 14,
       "questionable_development_count": 1,
       "review_required": true
     },
-    "latest_title": "Civilian Casualties in Ukraine Reach Highest Monthly Level Since 2022",
-    "latest_summary": "UN monitors report that civilian casualties in Ukraine have surged to their highest monthly level since the onset of Russia's full-scale invasion. Recent attacks, including a drone strike, have contributed to this alarming trend, resulting in multiple fatalities, including a woman and her 9-year-old son. July has been noted as the deadliest month for Ukrainian civilians since the early days of the conflict.",
+    "latest_title": "Ukraine Conducts Major Drone Attack on Moscow Amid Ongoing Conflict",
+    "latest_summary": "Ukraine launched a significant drone attack on Moscow, deploying hundreds of drones and reportedly killing at least six people. Russian authorities claimed to have shot down at least 201 drones during the assault. The attack is described as one of the largest aerial offensives by Ukraine since the beginning of the conflict, with fires reported at a logistics hub near the capital. Concurrently, Russian strikes on Ukraine resulted in additional casualties.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -1019,29 +1122,29 @@
       "milestone_development_ids": [
         "story_b77a481c5a1a5ef9",
         "story_3035221c5a28a172",
-        "story_0b5b97783aac8f21",
-        "story_ae8cefb920450cfe"
+        "story_ac7a5d31978a717e",
+        "story_4aa2188a44af6b1d"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-15",
-      "development_count": 13,
-      "coverage_packet_count": 13,
-      "date_count": 10,
-      "source_count": 32,
-      "independent_source_count": 18,
+      "summary_updated_at": "2026-08-16",
+      "development_count": 14,
+      "coverage_packet_count": 14,
+      "date_count": 11,
+      "source_count": 37,
+      "independent_source_count": 22,
       "first_date": "2026-07-25",
-      "latest_date": "2026-08-15",
-      "latest_update_title": "Civilian Casualties in Ukraine Reach Highest Monthly Level Since 2022",
+      "latest_date": "2026-08-16",
+      "latest_update_title": "Ukraine Conducts Major Drone Attack on Moscow Amid Ongoing Conflict",
       "coverage_score": 1.0,
       "recency_score": 1.0,
       "rank_score": 1.0,
-      "context_summary": "Muninn first tracked this thread on 2026-07-25: Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse. The latest development is Civilian Casualties in Ukraine Reach Highest Monthly Level Since 2022.",
-      "cta_label": "Explore 13 developments"
+      "context_summary": "Muninn first tracked this thread on 2026-07-25: Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse. The latest development is Ukraine Conducts Major Drone Attack on Moscow Amid Ongoing Conflict.",
+      "cta_label": "Explore 14 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "A Ukrainian drone strike ignited a significant fire at a Wildberries warehouse near Saint Petersburg on July 24. A later development was UN Reports Over 16,000 Civilians Still Detained by Russia in Ukraine. Most recently, uN monitors report that civilian casualties in Ukraine have surged to their highest monthly level since the onset of Russia's full-scale invasion.",
+      "summary": "A Ukrainian drone strike ignited a significant fire at a Wildberries warehouse near Saint Petersburg on July 24. A later development was Zelenskyy Reports Russian Attack with North Korean Missiles Kills Six in Zaporizhzhia. Most recently, ukraine launched a significant drone attack on Moscow, deploying hundreds of drones and reportedly killing at least six people.",
       "key_developments": [
         {
           "development_id": "story_b77a481c5a1a5ef9",
@@ -1054,14 +1157,14 @@
           "title": "Deadly Ukrainian Drone Attack in Russia Claims 13 Lives"
         },
         {
-          "development_id": "story_0b5b97783aac8f21",
+          "development_id": "story_ac7a5d31978a717e",
           "date": "2026-08-13",
-          "title": "Pentagon Report Confirms 153 Civilian Deaths from US Strikes on Houthis in Yemen"
+          "title": "UN Reports Highest Civilian Deaths in Ukraine Since May 2022"
         },
         {
-          "development_id": "story_ae8cefb920450cfe",
-          "date": "2026-08-15",
-          "title": "Civilian Casualties in Ukraine Reach Highest Monthly Level Since 2022"
+          "development_id": "story_4aa2188a44af6b1d",
+          "date": "2026-08-16",
+          "title": "Ukraine Conducts Major Drone Attack on Moscow Amid Ongoing Conflict"
         }
       ],
       "sources": [
@@ -1256,9 +1359,39 @@
           "source": "PBS News - Headlines",
           "link": "https://www.pbs.org/newshour/world/russian-drones-kill-a-woman-and-9-year-old-son-at-home-as-ukrainian-civilian-casualties-surge",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Ukraine targets Moscow in mass drone attack as Russia bombards Kyiv",
+          "source": "Al Jazeera",
+          "link": "https://www.aljazeera.com/news/2026/8/16/russian-strikes-kill-ukrainian-woman-as-nato-jet-downs-drone-over-romania?traffic_source=rss",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Major Ukrainian strike on Moscow sets Wildberries hub ablaze, grounds flights",
+          "source": "ABC News",
+          "link": "https://abcnews.com/International/ukraine-launches-600-drones-moscow-major-barrage-mayor/story?id=135684267",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Ukraine launches one of its largest aerial attacks of the war, killing at least 6 people in Russia",
+          "source": "NPR",
+          "link": "https://www.npr.org/2026/08/16/nx-s1-5933006/ukraine-aerial-attack-6-dead-russia",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Ukraine launches one of its largest attacks of war",
+          "source": "DW",
+          "link": "https://www.dw.com/en/ukraine-launches-one-of-its-largest-attacks-of-war/a-78386779?maca=en-rss-en-all-1573-rdf",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "‘Massive’ Ukrainian drone attack on Russia kills at least six, says Moscow",
+          "source": "The Guardian",
+          "link": "https://www.theguardian.com/world/2026/aug/16/ukrainian-drone-attack-on-russia-wildberries-warehouse-fire",
+          "source_bias": "left"
         }
       ],
-      "updated_at": "2026-08-15",
+      "updated_at": "2026-08-16",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -1270,6 +1403,7 @@
         "confidence": 0.95,
         "shared_entities": [
           "claim_lives",
+          "concurrently_russia",
           "concurrently_ukraine",
           "kyiv",
           "kyiv_result",
@@ -1284,21 +1418,10 @@
         ]
       },
       {
-        "event_id": "event_ukrainian-drones-strike-russian-targets-resu_d4dae47237",
-        "title": "Ukrainian Drones Strike Russian Targets, Resulting in Casualties",
-        "relationship": "related_topic",
-        "confidence": 0.804,
-        "shared_entities": [
-          "russia",
-          "ukraine",
-          "ukraine_drone"
-        ]
-      },
-      {
         "event_id": "event_ukrainian-drone-strikes-target-wildberries-w_744388bb72",
         "title": "Ukrainian Drone Strikes Target Wildberries Warehouses Again",
         "relationship": "related_topic",
-        "confidence": 0.792,
+        "confidence": 0.811,
         "shared_entities": [
           "russia",
           "ukraine",
@@ -1307,10 +1430,21 @@
         ]
       },
       {
+        "event_id": "event_ukrainian-drones-strike-russian-targets-resu_d4dae47237",
+        "title": "Ukrainian Drones Strike Russian Targets, Resulting in Casualties",
+        "relationship": "related_topic",
+        "confidence": 0.809,
+        "shared_entities": [
+          "russia",
+          "ukraine",
+          "ukraine_drone"
+        ]
+      },
+      {
         "event_id": "event_russia-launches-major-ballistic-missile-atta_e12d127249",
         "title": "Russia Launches Major Ballistic Missile Attack on Ukrainian Cities, Causing Casualties",
         "relationship": "related_topic",
-        "confidence": 0.779,
+        "confidence": 0.793,
         "shared_entities": [
           "kyiv",
           "russia",
@@ -1430,6 +1564,7 @@
     "search_tokens": [
       "000",
       "153",
+      "201",
       "2022",
       "2025",
       "2026",
@@ -1441,6 +1576,8 @@
       "accounted",
       "across",
       "action",
+      "additional",
+      "aerial",
       "airport",
       "airstrike",
       "alarming",
@@ -1455,6 +1592,7 @@
       "attack",
       "august",
       "authoritie",
+      "beginning",
       "belgorod",
       "berezivka",
       "blaze",
@@ -1463,12 +1601,14 @@
       "broader",
       "campaign",
       "capabilitie",
+      "capital",
       "casualtie",
       "cause",
       "child",
       "children",
       "civilian",
       "claim",
+      "claimed",
       "coincided",
       "collaboration",
       "comply",
@@ -1476,6 +1616,7 @@
       "concluded",
       "concurrently",
       "condolence",
+      "conduct",
       "confirm",
       "confirming",
       "conflict",
@@ -1493,13 +1634,16 @@
       "decision",
       "deep",
       "defense",
+      "deploying",
       "deprived",
+      "described",
       "detained",
       "development",
       "discovered",
       "disruption",
       "district",
       "donald",
+      "down",
       "downed",
       "driver",
       "drone",
@@ -1518,6 +1662,7 @@
       "finalized",
       "fire",
       "fired",
+      "fires",
       "five",
       "four",
       "frontline",
@@ -1528,6 +1673,7 @@
       "highlighted",
       "houthi",
       "human",
+      "hundred",
       "ignited",
       "igniting",
       "ill-treatment",
@@ -1548,15 +1694,19 @@
       "involving",
       "july",
       "killed",
+      "killing",
       "kills",
       "korean",
       "kyiv",
+      "largest",
+      "launched",
       "least",
       "leave",
       "level",
       "liberty",
       "lives",
       "local",
+      "logistic",
       "long-range",
       "many",
       "marks",
@@ -1580,6 +1730,7 @@
       "occur",
       "occurred",
       "odesa",
+      "offensive",
       "oil",
       "ongoing",
       "onset",
@@ -1625,6 +1776,7 @@
       "serbia",
       "shahed",
       "shortly",
+      "shot",
       "side",
       "significant",
       "since",
@@ -1683,6 +1835,7 @@
       "civilian_casualtie",
       "civilian_still",
       "claim_lives",
+      "concurrently_russia",
       "concurrently_ukraine",
       "confirm_civilian",
       "deadly_ukraine",
@@ -1738,6 +1891,7 @@
       "tatarstan",
       "turkey",
       "ukraine",
+      "ukraine_conduct",
       "ukraine_drone",
       "ukraine_infrastructure",
       "ukraine_odesa",
@@ -1753,7 +1907,7 @@
       "zaporizhzhia_ukraine",
       "zelensky_visit"
     ],
-    "search_text": "000 153 2022 2025 2026 243 340 437 610 9-year-old accounted across action airport airstrike alarming although amidst appear april arrival assault assistant atacm attack august authoritie belgorod berezivka blaze bolster both broader campaign capabilitie casualtie cause child children civilian civilian_casualtie civilian_still claim claim_lives coincided collaboration comply concern concluded concurrently concurrently_ukraine condolence confirm confirm_civilian confirming conflict continue contributed crater critical data deadliest deadly deadly_ukraine deal deals deals_recent death debri decision deep defense deprived detained development discovered disruption district donald donald_tusk downed driver drone early eastern eastern_poland engage escalating evacuated experiencing explosion facilitie facility fatalitie fell field finalized fire fired five four frontline full-scale held highest highest_civilian highest_monthly highlight highlighted houthi human human_right ignited igniting ill-treatment incident including increase increasing indicate indicating individual industrial infrastructure injured injurie inside international invasion involving july july. killed kills korean korean_missile kyiv kyiv_result least leave level level_since liberty lives local long-range many marks military military_deals missile missile_downed mission mission._drone monitor monitoring monitoring_mission. month monthly monthly_level moscow multiple nation near near_kyiv nine nizhnekamsk nizhnekamsk_russia north north_korean noted number numerou occur occurred odesa odesa_region oil ongoing onset other overnight part passenger passenger_train payment pentagon petersburg petersburg_warehouse pm poland poland_polish polish polish_prime port position possible possible_russia prime produced provided pulkovo pulkovo_airport purchase pyongyang railway raised ras_isa reach reach_highest reached reason recent refinery refinery_claim region region_result reported reportedly resource response result resulted resulting revealed review right right_monitoring russia russia_claim russia_missile russia_shahed russian._authoritie saint saint_petersburg separate serbia serbia_russia shahed shortly side significant since since_may sites smoke specific spread stated still still_detained strike struck surge surged surrounding system taneco target targeted tatarstan temporary tension territory than these thick three torture train trend turkey tusk ukraine ukraine_drone ukraine_infrastructure ukraine_odesa ukraine_reach ukraine_since un united united_nation us variou victim visit volodymyr volodymyr_zelensky war warehouse warranted ways which while wildberrie woman yemen zaporizhzhia zaporizhzhia_ukraine zelensky zelensky_visit zelenskyy"
+    "search_text": "000 153 201 2022 2025 2026 243 340 437 610 9-year-old accounted across action additional aerial airport airstrike alarming although amidst appear april arrival assault assistant atacm attack august authoritie beginning belgorod berezivka blaze bolster both broader campaign capabilitie capital casualtie cause child children civilian civilian_casualtie civilian_still claim claim_lives claimed coincided collaboration comply concern concluded concurrently concurrently_russia concurrently_ukraine condolence conduct confirm confirm_civilian confirming conflict continue contributed crater critical data deadliest deadly deadly_ukraine deal deals deals_recent death debri decision deep defense deploying deprived described detained development discovered disruption district donald donald_tusk down downed driver drone early eastern eastern_poland engage escalating evacuated experiencing explosion facilitie facility fatalitie fell field finalized fire fired fires five four frontline full-scale held highest highest_civilian highest_monthly highlight highlighted houthi human human_right hundred ignited igniting ill-treatment incident including increase increasing indicate indicating individual industrial infrastructure injured injurie inside international invasion involving july july. killed killing kills korean korean_missile kyiv kyiv_result largest launched least leave level level_since liberty lives local logistic long-range many marks military military_deals missile missile_downed mission mission._drone monitor monitoring monitoring_mission. month monthly monthly_level moscow multiple nation near near_kyiv nine nizhnekamsk nizhnekamsk_russia north north_korean noted number numerou occur occurred odesa odesa_region offensive oil ongoing onset other overnight part passenger passenger_train payment pentagon petersburg petersburg_warehouse pm poland poland_polish polish polish_prime port position possible possible_russia prime produced provided pulkovo pulkovo_airport purchase pyongyang railway raised ras_isa reach reach_highest reached reason recent refinery refinery_claim region region_result reported reportedly resource response result resulted resulting revealed review right right_monitoring russia russia_claim russia_missile russia_shahed russian._authoritie saint saint_petersburg separate serbia serbia_russia shahed shortly shot side significant since since_may sites smoke specific spread stated still still_detained strike struck surge surged surrounding system taneco target targeted tatarstan temporary tension territory than these thick three torture train trend turkey tusk ukraine ukraine_conduct ukraine_drone ukraine_infrastructure ukraine_odesa ukraine_reach ukraine_since un united united_nation us variou victim visit volodymyr volodymyr_zelensky war warehouse warranted ways which while wildberrie woman yemen zaporizhzhia zaporizhzhia_ukraine zelensky zelensky_visit zelenskyy"
   },
   "related_events": [
     {

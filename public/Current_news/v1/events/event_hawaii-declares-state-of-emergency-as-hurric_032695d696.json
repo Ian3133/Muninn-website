@@ -15,7 +15,7 @@
     "summary": "Hawaii has declared a state of emergency as Hurricane Lala is forecast to impact the Big Island this weekend. If it makes landfall, it would be the first hurricane to strike the island since 1871. The storm is expected to bring heavy rain, high winds, and dangerous surf conditions.",
     "status": "active",
     "first_seen_at": "2026-08-15",
-    "last_seen_at": "2026-08-15",
+    "last_seen_at": "2026-08-16",
     "timeline": [
       {
         "development_id": "story_50b99daf412a23ed",
@@ -151,6 +151,98 @@
           "story_a3dfef85dbde366f"
         ],
         "revision_count": 1
+      },
+      {
+        "development_id": "story_73199d3de9531a3d",
+        "daily_story_id": "story_73199d3de9531a3d",
+        "date": "2026-08-16",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Hurricane Lala Affects Hawaii with Heavy Rain and Winds, Causing Flooding and Power Outages",
+        "summary": "Hurricane Lala has brought heavy rain and strong winds to Hawaii's Big Island, causing significant flooding and power outages. The storm, which did not make landfall, has left over 89,000 households without power. At least one fatality has been reported due to a car accident in the affected area. The hurricane is expected to weaken gradually as it moves away from the island.",
+        "topic_label": "Hurricane Lala",
+        "development_type": "development",
+        "key_facts": [
+          "Hurricane Lala caused heavy rain and strong winds in Hawaii's Big Island.",
+          "Over 89,000 households are without power.",
+          "At least one person died in a car accident during the storm.",
+          "The storm did not make landfall but caused significant flooding."
+        ],
+        "source_count": 5,
+        "sources": [
+          "AP",
+          "BBC",
+          "CBC",
+          "NewsNation",
+          "Sky News"
+        ],
+        "source_urls": [
+          "https://www.bbc.co.uk/news/articles/crmrr7kjy9vo?at_medium=RSS&at_campaign=rss",
+          "https://www.newsnationnow.com/us-news/west/ap-hawaiis-big-island-lashed-by-rain-and-wind-as-tropical-storm-lala-closes-in",
+          "https://www.cbc.ca/news/world/hurricane-lala-hawaii-9.7308966?cmp=rss",
+          "https://news.google.com/rss/articles/CBMinAFBVV95cUxQTEs4Si04Q3pSUDJJcUZ2dlk0QVdvREI0UnlFRTkwT1U3eFFyRjF3YVMyVHF1NWRfdDlaNTZ1SkdLR2FMMG1EcEhYdDNVM2pVLVROSHZLc0FvclZYTmEtWWNocHZCLUFUeTBOb3JkUnVyMVNfRFNoTUVickZuVzVRZU5iNm82ODJwbHNMSXBIV3BUX3ZucUQ1YUx5RDE?oc=5",
+          "https://news.sky.com/story/hurricane-lala-hits-hawaii-with-89000-losing-power-13573607"
+        ],
+        "source_details": [
+          {
+            "title": "Hurricane Lala lashes Hawaii with strong winds and torrential rain",
+            "source": "BBC",
+            "link": "https://www.bbc.co.uk/news/articles/crmrr7kjy9vo?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          },
+          {
+            "title": "Hurricane Lala skirts Hawaii's Big Island without making landfall",
+            "source": "NewsNation",
+            "link": "https://www.newsnationnow.com/us-news/west/ap-hawaiis-big-island-lashed-by-rain-and-wind-as-tropical-storm-lala-closes-in",
+            "source_bias": "center"
+          },
+          {
+            "title": "Hurricane Lala lashes Hawaii's Big Island with heavy rain, strong winds",
+            "source": "CBC",
+            "link": "https://www.cbc.ca/news/world/hurricane-lala-hawaii-9.7308966?cmp=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Hurricane Lala skirts Hawaii's Big Island without making landfall as heavy wind, rain lash region",
+            "source": "AP",
+            "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQTEs4Si04Q3pSUDJJcUZ2dlk0QVdvREI0UnlFRTkwT1U3eFFyRjF3YVMyVHF1NWRfdDlaNTZ1SkdLR2FMMG1EcEhYdDNVM2pVLVROSHZLc0FvclZYTmEtWWNocHZCLUFUeTBOb3JkUnVyMVNfRFNoTUVickZuVzVRZU5iNm82ODJwbHNMSXBIV3BUX3ZucUQ1YUx5RDE?oc=5",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Hurricane Lala lashes Hawaii with 'enormous storm'",
+            "source": "Sky News",
+            "link": "https://news.sky.com/story/hurricane-lala-hits-hawaii-with-89000-losing-power-13573607",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 1.0,
+        "match_evidence": {
+          "score": 1.0,
+          "matched_development_id": "story_50b99daf412a23ed",
+          "shared_tokens": [
+            "expected",
+            "hawaii",
+            "hurricane",
+            "island",
+            "lala",
+            "storm"
+          ],
+          "shared_entities": [
+            "big_island",
+            "big_island.",
+            "hawaii_big"
+          ],
+          "source_url_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-16",
+        "last_seen_at": "2026-08-16",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -176,12 +268,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 1,
+      "public_development_count": 2,
       "questionable_development_count": 1,
       "review_required": true
     },
-    "latest_title": "Tropical Storm Lala Approaches Hawaii, Expected to Strengthen into Hurricane",
-    "latest_summary": "Tropical Storm Lala is currently moving through the central Pacific Ocean and is forecast to strengthen into a hurricane as it approaches Hawaii's Big Island. The storm is expected to bring dangerous conditions to the region this weekend, prompting preparations among residents and officials.",
+    "latest_title": "Hurricane Lala Affects Hawaii with Heavy Rain and Winds, Causing Flooding and Power Outages",
+    "latest_summary": "Hurricane Lala has brought heavy rain and strong winds to Hawaii's Big Island, causing significant flooding and power outages. The storm, which did not make landfall, has left over 89,000 households without power. At least one fatality has been reported due to a car accident in the affected area. The hurricane is expected to weaken gradually as it moves away from the island.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": false,
@@ -190,33 +282,39 @@
       "base_title": "Approache Hurricane Storm",
       "display_title": "Approache Hurricane Storm",
       "milestone_development_ids": [
-        "story_50b99daf412a23ed"
+        "story_50b99daf412a23ed",
+        "story_73199d3de9531a3d"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-15",
-      "development_count": 1,
-      "coverage_packet_count": 2,
-      "date_count": 1,
-      "source_count": 5,
-      "independent_source_count": 5,
+      "summary_updated_at": "2026-08-16",
+      "development_count": 2,
+      "coverage_packet_count": 3,
+      "date_count": 2,
+      "source_count": 9,
+      "independent_source_count": 8,
       "first_date": "2026-08-15",
-      "latest_date": "2026-08-15",
-      "latest_update_title": "Tropical Storm Lala Approaches Hawaii, Expected to Strengthen into Hurricane",
-      "coverage_score": 0.348,
+      "latest_date": "2026-08-16",
+      "latest_update_title": "Hurricane Lala Affects Hawaii with Heavy Rain and Winds, Causing Flooding and Power Outages",
+      "coverage_score": 0.609,
       "recency_score": 1.0,
-      "rank_score": 0.726,
-      "context_summary": "Tropical Storm Lala is currently moving through the central Pacific Ocean and is forecast to strengthen into a hurricane as it approaches Hawaii's Big Island. The storm is expected to bring dangerous conditions to the region this weekend, prompting preparations among residents and officials.",
+      "rank_score": 0.836,
+      "context_summary": "Muninn first tracked this thread on 2026-08-15: Tropical Storm Lala Approaches Hawaii, Expected to Strengthen into Hurricane. The latest development is Hurricane Lala Affects Hawaii with Heavy Rain and Winds, Causing Flooding and Power Outages.",
       "cta_label": ""
     },
     "event_summary": {
       "available": true,
-      "summary": "Tropical Storm Lala is currently moving through the central Pacific Ocean and is forecast to strengthen into a hurricane as it approaches Hawaii's Big Island.",
+      "summary": "Tropical Storm Lala is currently moving through the central Pacific Ocean and is forecast to strengthen into a hurricane as it approaches Hawaii's Big Island. Most recently, hurricane Lala has brought heavy rain and strong winds to Hawaii's Big Island, causing significant flooding and power outages.",
       "key_developments": [
         {
           "development_id": "story_50b99daf412a23ed",
           "date": "2026-08-15",
           "title": "Tropical Storm Lala Approaches Hawaii, Expected to Strengthen into Hurricane"
+        },
+        {
+          "development_id": "story_73199d3de9531a3d",
+          "date": "2026-08-16",
+          "title": "Hurricane Lala Affects Hawaii with Heavy Rain and Winds, Causing Flooding and Power Outages"
         }
       ],
       "sources": [
@@ -249,9 +347,33 @@
           "source": "CBS News",
           "link": "https://www.cbsnews.com/news/tropical-storm-lala-big-island-hawaii-hurricane-track",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Hurricane Lala lashes Hawaii with strong winds and torrential rain",
+          "source": "BBC",
+          "link": "https://www.bbc.co.uk/news/articles/crmrr7kjy9vo?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
+        },
+        {
+          "title": "Hurricane Lala lashes Hawaii's Big Island with heavy rain, strong winds",
+          "source": "CBC",
+          "link": "https://www.cbc.ca/news/world/hurricane-lala-hawaii-9.7308966?cmp=rss",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Hurricane Lala skirts Hawaii's Big Island without making landfall as heavy wind, rain lash region",
+          "source": "AP",
+          "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQTEs4Si04Q3pSUDJJcUZ2dlk0QVdvREI0UnlFRTkwT1U3eFFyRjF3YVMyVHF1NWRfdDlaNTZ1SkdLR2FMMG1EcEhYdDNVM2pVLVROSHZLc0FvclZYTmEtWWNocHZCLUFUeTBOb3JkUnVyMVNfRFNoTUVickZuVzVRZU5iNm82ODJwbHNMSXBIV3BUX3ZucUQ1YUx5RDE?oc=5",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Hurricane Lala lashes Hawaii with 'enormous storm'",
+          "source": "Sky News",
+          "link": "https://news.sky.com/story/hurricane-lala-hits-hawaii-with-89000-losing-power-13573607",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-08-15",
+      "updated_at": "2026-08-16",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "developing_event",
@@ -260,53 +382,13 @@
         "event_id": "event_tropical-storm-bertha-approaches-gulf-coast_136f84f48e",
         "title": "Tropical Storm Bertha Approaches Gulf Coast as Hurricane Fausto Develops in Eastern Pacific",
         "relationship": "related_topic",
-        "confidence": 0.709,
+        "confidence": 0.707,
         "shared_entities": [
           "pacific_ocean",
           "tropical_storm"
         ]
       }
     ],
-    "search_tokens": [
-      "among",
-      "approache",
-      "bring",
-      "central",
-      "condition",
-      "currently",
-      "dangerou",
-      "expected",
-      "forecast",
-      "hawaii",
-      "hurricane",
-      "island",
-      "lala",
-      "moving",
-      "ocean",
-      "pacific",
-      "preparation",
-      "prompting",
-      "region",
-      "resident",
-      "storm",
-      "strengthen",
-      "through",
-      "tropical",
-      "weekend"
-    ],
-    "entities": [
-      "approache_hawaii",
-      "big_island.",
-      "hawaii_big",
-      "hawaii_expected",
-      "hurricane_tropical",
-      "lala_approache",
-      "pacific_ocean",
-      "storm_lala",
-      "strengthen",
-      "tropical_storm"
-    ],
-    "search_text": "among approache approache_hawaii big_island. bring central condition currently dangerou expected forecast hawaii hawaii_big hawaii_expected hurricane hurricane_tropical island lala lala_approache moving ocean pacific pacific_ocean preparation prompting region resident storm storm_lala strengthen through tropical tropical_storm weekend",
     "hero_image": {
       "url": "/Current_news/generated/events/event_hawaii-declares-state-of-emergency-as-hurric_032695d696.jpg",
       "thumbnail_url": "/Current_news/generated/events/event_hawaii-declares-state-of-emergency-as-hurric_032695d696.jpg",
@@ -326,6 +408,165 @@
       "focal_wide_y": 0.48,
       "focal_tall_x": 0.5,
       "focal_tall_y": 0.48
+    },
+    "search_tokens": [
+      "000",
+      "accident",
+      "affect",
+      "affected",
+      "among",
+      "approache",
+      "area",
+      "away",
+      "bring",
+      "brought",
+      "causing",
+      "central",
+      "condition",
+      "currently",
+      "dangerou",
+      "expected",
+      "fatality",
+      "flooding",
+      "forecast",
+      "gradually",
+      "hawaii",
+      "heavy",
+      "household",
+      "hurricane",
+      "island",
+      "lala",
+      "landfall",
+      "least",
+      "left",
+      "make",
+      "moves",
+      "moving",
+      "ocean",
+      "outage",
+      "pacific",
+      "power",
+      "preparation",
+      "prompting",
+      "rain",
+      "region",
+      "reported",
+      "resident",
+      "significant",
+      "storm",
+      "strengthen",
+      "strong",
+      "through",
+      "tropical",
+      "weaken",
+      "weekend",
+      "which",
+      "winds",
+      "without"
+    ],
+    "entities": [
+      "affect_hawaii",
+      "approache_hawaii",
+      "big_island",
+      "big_island.",
+      "causing_flooding",
+      "hawaii",
+      "hawaii_big",
+      "hawaii_expected",
+      "heavy_rain",
+      "hurricane_lala",
+      "hurricane_tropical",
+      "lala_affect",
+      "lala_approache",
+      "outage_hurricane",
+      "pacific_ocean",
+      "power_outage",
+      "storm_lala",
+      "strengthen",
+      "tropical_storm",
+      "winds_causing"
+    ],
+    "search_text": "000 accident affect affect_hawaii affected among approache approache_hawaii area away big_island big_island. bring brought causing causing_flooding central condition currently dangerou expected fatality flooding forecast gradually hawaii hawaii_big hawaii_expected heavy heavy_rain household hurricane hurricane_lala hurricane_tropical island lala lala_affect lala_approache landfall least left make moves moving ocean outage outage_hurricane pacific pacific_ocean power power_outage preparation prompting rain region reported resident significant storm storm_lala strengthen strong through tropical tropical_storm weaken weekend which winds winds_causing without",
+    "event_overview": {
+      "available": true,
+      "title": "About Approache Hurricane Storm",
+      "subject": "Approache Hurricane Storm",
+      "summary": "Hurricane Lala was a Central Pacific tropical cyclone that developed in mid-August 2026 and threatened Hawaiʻi, particularly the Island of Hawaiʻi. The storm strengthened from a tropical storm into a Category 1 hurricane while producing hazardous wind, rain and surf conditions near the state.",
+      "facts": [
+        {
+          "label": "Dates",
+          "value": "Lala formed as a tropical storm on August 13, 2026, and strengthened into a hurricane on August 15; the event was still unfolding as of August 16, 2026.",
+          "source_ids": [
+            "o1",
+            "o2"
+          ]
+        },
+        {
+          "label": "Location",
+          "value": "The storm approached and passed near Hawaiʻi, with the Island of Hawaiʻi (the Big Island) facing the principal immediate threat; reporting on August 15 said its center skirted the island rather than making landfall.",
+          "source_ids": [
+            "o2"
+          ]
+        },
+        {
+          "label": "Intensity",
+          "value": "Lala reached Category 1 hurricane strength, with maximum sustained winds reported at 75 mph (120 km/h) on August 15.",
+          "source_ids": [
+            "o2"
+          ]
+        },
+        {
+          "label": "Forecast authority",
+          "value": "Tropical-cyclone outlooks and advisories for the Central Pacific, including the area around Hawaiʻi, are issued by the National Weather Service’s Central Pacific Hurricane Center in Honolulu in coordination with the National Hurricane Center.",
+          "source_ids": [
+            "o3"
+          ]
+        },
+        {
+          "label": "Naming and season",
+          "value": "Lala was listed as the first name in the 2026 Central Pacific tropical-cyclone naming sequence; the Central Pacific hurricane season runs from June 1 through November 30.",
+          "source_ids": [
+            "o3",
+            "o4"
+          ]
+        }
+      ],
+      "scope_note": "This timeline covers Lala’s approach to and effects on Hawaiʻi during August 15–16, 2026, not every advisory, local damage report, response action, or later stage of the storm.",
+      "sources": [
+        {
+          "title": "AP News",
+          "publisher": "AP News",
+          "url": "https://apnews.com/article/0b0e5bdd17a068acd797e20c0e2c4f9d",
+          "source_type": "reporting",
+          "id": "o1"
+        },
+        {
+          "title": "AP News",
+          "publisher": "AP News",
+          "url": "https://apnews.com/article/0c3d63c8a87943cdf8d57c530a7ed9d0",
+          "source_type": "reporting",
+          "id": "o2"
+        },
+        {
+          "title": "Noaa",
+          "publisher": "Noaa",
+          "url": "https://www.nhc.noaa.gov/archive/xgtwo/gtwo_archive.php?basin=cpac&current_issuance=202606011200&fdays=7",
+          "source_type": "primary",
+          "id": "o3"
+        },
+        {
+          "title": "Noaa",
+          "publisher": "Noaa",
+          "url": "https://www.nhc.noaa.gov/pdf/aboutnames_pronounce_cpac.pdf",
+          "source_type": "primary",
+          "id": "o4"
+        }
+      ],
+      "publisher_count": 2,
+      "generated_at": "2026-08-16T12:32:29.948324+00:00",
+      "expires_at": "2026-08-23T12:32:29.948324+00:00",
+      "model": "gpt-5.6-terra",
+      "provenance": "openai_web_search_source_grounded_event_overview_v1"
     }
   },
   "related_events": [

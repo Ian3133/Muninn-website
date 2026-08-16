@@ -262,8 +262,8 @@
       "latest_date": "2026-08-15",
       "latest_update_title": "Severe Rainfall in Japan Causes Flooding and Multiple Fatalities in Chiba Prefecture",
       "coverage_score": 0.547,
-      "recency_score": 1.0,
-      "rank_score": 0.81,
+      "recency_score": 0.875,
+      "rank_score": 0.737,
       "context_summary": "Muninn first tracked this thread on 2026-08-14: Severe Flooding in Japan Due to Record Rainfall Causes Deaths and Disruptions. The latest development is Severe Rainfall in Japan Causes Flooding and Multiple Fatalities in Chiba Prefecture.",
       "cta_label": ""
     },
@@ -351,6 +351,81 @@
       "focal_tall_x": 0.5,
       "focal_tall_y": 0.48
     },
+    "event_overview": {
+      "available": true,
+      "title": "About Japan Flooding",
+      "subject": "Japan Flooding",
+      "summary": "Japan Flooding refers to the heavy-rain emergency that began affecting eastern Japan on August 13, 2026, with the most severe reported impacts centered on Chiba Prefecture, east of Tokyo. Intense short-duration rainfall flooded roads and homes, disrupted transport and power service, and prompted warnings for both inundation and landslides; casualty figures remained subject to official confirmation as response operations continued.",
+      "facts": [
+        {
+          "label": "Dates",
+          "value": "The event was reported as beginning on August 13, 2026; the selected timeline follows developments reported through August 15, 2026, rather than establishing a final end date.",
+          "source_ids": [
+            "o1",
+            "o2"
+          ]
+        },
+        {
+          "label": "Primary area affected",
+          "value": "The acute flooding emergency was concentrated in Chiba Prefecture in eastern Japan, near Tokyo, although the broader weather system affected eastern Japan.",
+          "source_ids": [
+            "o1",
+            "o2"
+          ]
+        },
+        {
+          "label": "Meteorological hazard",
+          "value": "The rainfall was characterized as record-breaking in parts of Chiba, with forecasts and reports of more than 100 millimeters of rain in an hour in Chiba City and nearby municipalities; the associated risks included urban flooding and landslides.",
+          "source_ids": [
+            "o1"
+          ]
+        },
+        {
+          "label": "Warnings and public-warning system",
+          "value": "The Japan Meteorological Agency issued its highest-level heavy-rain warning for 14 Chiba municipalities during the event. In Chiba, JMA weather warnings and advisories have been issued on a municipality-by-municipality basis since 2010.",
+          "source_ids": [
+            "o1",
+            "o3"
+          ]
+        },
+        {
+          "label": "Reported human impact",
+          "value": "By August 14, reporting cited at least five deaths in Chiba after the rainfall and flooding. This was an early reported toll and may be revised as authorities verify cases.",
+          "source_ids": [
+            "o2"
+          ]
+        }
+      ],
+      "scope_note": "The selected Muninn timeline covers the immediate August 14-15, 2026 flooding and fatality reports, not a complete accounting of all weather impacts, response measures, damage assessments, or later revisions to casualties.",
+      "sources": [
+        {
+          "title": "AP News",
+          "publisher": "AP News",
+          "url": "https://apnews.com/article/00b3ce16f648f9c3885bf547edad1696",
+          "source_type": "reporting",
+          "id": "o1"
+        },
+        {
+          "title": "AP News",
+          "publisher": "AP News",
+          "url": "https://apnews.com/article/d37730f09557f9cce4948754fcef673c",
+          "source_type": "reporting",
+          "id": "o2"
+        },
+        {
+          "title": "Go",
+          "publisher": "Go",
+          "url": "https://www.jma-net.go.jp/choshi/shosai/doc/gaikyo/warning.html",
+          "source_type": "reporting",
+          "id": "o3"
+        }
+      ],
+      "publisher_count": 2,
+      "generated_at": "2026-08-15T16:46:57.748475+00:00",
+      "expires_at": "2026-08-22T16:46:57.748475+00:00",
+      "model": "gpt-5.6-terra",
+      "provenance": "openai_web_search_source_grounded_event_overview_v1"
+    },
     "search_tokens": [
       "000",
       "400",
@@ -431,82 +506,7 @@
       "tokyo",
       "tokyo_narita"
     ],
-    "search_text": "000 400 affecting airport also authoritie cause cause_flooding caused chiba chiba_prefecture confirmed death disrupted disruption disruption_japan east eight evacuation experienced fatalitie first flooding four highest-level homes issued japan japan_cause japan_due landslide leading least missing multiple multiple_fatalitie narita nearly order outage person power prefecture prefecture_unprecedented prompting rain rainfall rainfall_cause rains record record-breaking record_rainfall region resident resulted resulting severe severe_flooding severe_rainfall significant stranded stranding thousand time tokyo tokyo_narita torrential transportation traveler unprecedented warning",
-    "event_overview": {
-      "available": true,
-      "title": "About Japan Flooding",
-      "subject": "Japan Flooding",
-      "summary": "Japan Flooding refers to the heavy-rain emergency that began affecting eastern Japan on August 13, 2026, with the most severe reported impacts centered on Chiba Prefecture, east of Tokyo. Intense short-duration rainfall flooded roads and homes, disrupted transport and power service, and prompted warnings for both inundation and landslides; casualty figures remained subject to official confirmation as response operations continued.",
-      "facts": [
-        {
-          "label": "Dates",
-          "value": "The event was reported as beginning on August 13, 2026; the selected timeline follows developments reported through August 15, 2026, rather than establishing a final end date.",
-          "source_ids": [
-            "o1",
-            "o2"
-          ]
-        },
-        {
-          "label": "Primary area affected",
-          "value": "The acute flooding emergency was concentrated in Chiba Prefecture in eastern Japan, near Tokyo, although the broader weather system affected eastern Japan.",
-          "source_ids": [
-            "o1",
-            "o2"
-          ]
-        },
-        {
-          "label": "Meteorological hazard",
-          "value": "The rainfall was characterized as record-breaking in parts of Chiba, with forecasts and reports of more than 100 millimeters of rain in an hour in Chiba City and nearby municipalities; the associated risks included urban flooding and landslides.",
-          "source_ids": [
-            "o1"
-          ]
-        },
-        {
-          "label": "Warnings and public-warning system",
-          "value": "The Japan Meteorological Agency issued its highest-level heavy-rain warning for 14 Chiba municipalities during the event. In Chiba, JMA weather warnings and advisories have been issued on a municipality-by-municipality basis since 2010.",
-          "source_ids": [
-            "o1",
-            "o3"
-          ]
-        },
-        {
-          "label": "Reported human impact",
-          "value": "By August 14, reporting cited at least five deaths in Chiba after the rainfall and flooding. This was an early reported toll and may be revised as authorities verify cases.",
-          "source_ids": [
-            "o2"
-          ]
-        }
-      ],
-      "scope_note": "The selected Muninn timeline covers the immediate August 14-15, 2026 flooding and fatality reports, not a complete accounting of all weather impacts, response measures, damage assessments, or later revisions to casualties.",
-      "sources": [
-        {
-          "title": "AP News",
-          "publisher": "AP News",
-          "url": "https://apnews.com/article/00b3ce16f648f9c3885bf547edad1696",
-          "source_type": "reporting",
-          "id": "o1"
-        },
-        {
-          "title": "AP News",
-          "publisher": "AP News",
-          "url": "https://apnews.com/article/d37730f09557f9cce4948754fcef673c",
-          "source_type": "reporting",
-          "id": "o2"
-        },
-        {
-          "title": "Go",
-          "publisher": "Go",
-          "url": "https://www.jma-net.go.jp/choshi/shosai/doc/gaikyo/warning.html",
-          "source_type": "reporting",
-          "id": "o3"
-        }
-      ],
-      "publisher_count": 2,
-      "generated_at": "2026-08-15T16:46:57.748475+00:00",
-      "expires_at": "2026-08-22T16:46:57.748475+00:00",
-      "model": "gpt-5.6-terra",
-      "provenance": "openai_web_search_source_grounded_event_overview_v1"
-    }
+    "search_text": "000 400 affecting airport also authoritie cause cause_flooding caused chiba chiba_prefecture confirmed death disrupted disruption disruption_japan east eight evacuation experienced fatalitie first flooding four highest-level homes issued japan japan_cause japan_due landslide leading least missing multiple multiple_fatalitie narita nearly order outage person power prefecture prefecture_unprecedented prompting rain rainfall rainfall_cause rains record record-breaking record_rainfall region resident resulted resulting severe severe_flooding severe_rainfall significant stranded stranding thousand time tokyo tokyo_narita torrential transportation traveler unprecedented warning"
   },
   "related_events": []
 }

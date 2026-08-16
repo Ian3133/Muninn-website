@@ -15,7 +15,7 @@
     "summary": "Luigi Mangione is anticipated to plead guilty in federal court to charges related to the stalking and killing of UnitedHealthcare CEO Brian Thompson. The hearing is set for today, and discussions about a potential plea deal are ongoing. Mangione faces significant penalties, including life imprisonment, if he is found guilty on federal charges, which may also impact his state murder charges due to double jeopardy concerns.",
     "status": "active",
     "first_seen_at": "2026-08-14",
-    "last_seen_at": "2026-08-15",
+    "last_seen_at": "2026-08-16",
     "timeline": [
       {
         "development_id": "story_e2b14221a45d21a7",
@@ -304,47 +304,156 @@
         "first_seen_at": "2026-08-15",
         "last_seen_at": "2026-08-15",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_75c6823db66bb5cb",
+        "daily_story_id": "story_75c6823db66bb5cb",
+        "date": "2026-08-16",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Luigi Mangione Admits to Shooting UnitedHealthcare CEO Brian Thompson in Guilty Plea",
+        "summary": "Luigi Mangione pleaded guilty in federal court to the fatal shooting of UnitedHealthcare CEO Brian Thompson, which occurred in 2024. He admitted to stalking and shooting Thompson outside a Hilton hotel in Manhattan, using a 3-D printed gun with a silencer. Mangione faces potential life imprisonment and still has state murder charges pending against him.",
+        "topic_label": "",
+        "development_type": "development",
+        "key_facts": [
+          "Luigi Mangione pleaded guilty to federal charges.",
+          "He admitted to fatally shooting Brian Thompson in 2024.",
+          "The shooting took place outside a Hilton hotel in Manhattan.",
+          "Mangione used a 3-D printed gun and a silencer.",
+          "He faces potential life imprisonment and has pending state charges."
+        ],
+        "source_count": 4,
+        "sources": [
+          "CBS News",
+          "Euronews",
+          "PBS News",
+          "TIME"
+        ],
+        "source_urls": [
+          "https://time.com/article/2026/08/14/luigi-mangione-guilty-plea-federal-case-unitedhealthcare-brian-thompson",
+          "https://www.pbs.org/newshour/show/luigi-mangione-reveals-motive-for-ceos-killing-after-pleading-guilty-in-federal-case",
+          "http://www.euronews.com/2026/08/14/luigi-mangione-admits-shooting-healthcare-ceo-brian-thompson-in-new-york-court",
+          "https://www.cbsnews.com/news/luigi-mangione-says-he-will-plead-guilty-in-federal-case"
+        ],
+        "source_details": [
+          {
+            "title": "Luigi Mangione Pleads Guilty to Federal Charges in UnitedHealthcare CEO's Fatal Shooting",
+            "source": "TIME",
+            "link": "https://time.com/article/2026/08/14/luigi-mangione-guilty-plea-federal-case-unitedhealthcare-brian-thompson",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Luigi Mangione reveals motive for CEO's killing after pleading guilty in federal case",
+            "source": "PBS News",
+            "link": "https://www.pbs.org/newshour/show/luigi-mangione-reveals-motive-for-ceos-killing-after-pleading-guilty-in-federal-case",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Luigi Mangione admits shooting healthcare CEO Brian Thompson in New York court",
+            "source": "Euronews",
+            "link": "http://www.euronews.com/2026/08/14/luigi-mangione-admits-shooting-healthcare-ceo-brian-thompson-in-new-york-court",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Luigi Mangione pleads guilty in federal case, admits to shooting Brian Thompson",
+            "source": "CBS News",
+            "link": "https://www.cbsnews.com/news/luigi-mangione-says-he-will-plead-guilty-in-federal-case",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 1.0,
+        "match_evidence": {
+          "score": 1.0,
+          "matched_development_id": "story_087ea1e6f4249b7d",
+          "shared_tokens": [
+            "2024",
+            "3-d",
+            "admit",
+            "admitted",
+            "brian",
+            "charge",
+            "faces",
+            "fatally",
+            "federal",
+            "guilty",
+            "life",
+            "luigi",
+            "mangione",
+            "murder",
+            "occurred",
+            "pleaded",
+            "potential",
+            "printed",
+            "shooting",
+            "silencer",
+            "stalking",
+            "thompson",
+            "unitedhealthcare",
+            "used",
+            "which"
+          ],
+          "shared_entities": [
+            "brian_thompson",
+            "ceo",
+            "ceo_brian",
+            "luigi_mangione",
+            "mangione_admit",
+            "unitedhealthcare",
+            "unitedhealthcare_ceo"
+          ],
+          "source_url_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-16",
+        "last_seen_at": "2026-08-16",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 3,
+      "public_development_count": 4,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Luigi Mangione pleads guilty to shooting healthcare CEO Brian Thompson in court",
-    "latest_summary": "Luigi Mangione admitted to shooting healthcare CEO Brian Thompson during a federal court hearing in Manhattan. This plea resolves one of two cases against him related to Thompson's death.",
+    "latest_title": "Luigi Mangione Admits to Shooting UnitedHealthcare CEO Brian Thompson in Guilty Plea",
+    "latest_summary": "Luigi Mangione pleaded guilty in federal court to the fatal shooting of UnitedHealthcare CEO Brian Thompson, which occurred in 2024. He admitted to stalking and shooting Thompson outside a Hilton hotel in Manhattan, using a 3-D printed gun with a silencer. Mangione faces potential life imprisonment and still has state murder charges pending against him.",
     "presentation": {
       "has_context": true,
-      "has_full_timeline": false,
-      "stage": "developing_event",
-      "stage_label": "Developing event",
+      "has_full_timeline": true,
+      "stage": "timeline",
+      "stage_label": "Timeline",
       "base_title": "Luigi Mangione Expected to Plead Guilty in Case Involving CEO's Death",
-      "display_title": "Luigi Mangione Expected to Plead Guilty in Case Involving CEO's Death",
+      "display_title": "Luigi Mangione Expected to Plead Guilty in Case Involving CEO's Death Timeline",
       "milestone_development_ids": [
         "story_e2b14221a45d21a7",
         "story_087ea1e6f4249b7d",
-        "story_566a33710ed49dff"
+        "story_566a33710ed49dff",
+        "story_75c6823db66bb5cb"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-15",
-      "development_count": 3,
-      "coverage_packet_count": 4,
-      "date_count": 2,
+      "summary_updated_at": "2026-08-16",
+      "development_count": 4,
+      "coverage_packet_count": 5,
+      "date_count": 3,
       "source_count": 10,
       "independent_source_count": 12,
       "first_date": "2026-08-14",
-      "latest_date": "2026-08-15",
-      "latest_update_title": "Luigi Mangione pleads guilty to shooting healthcare CEO Brian Thompson in court",
-      "coverage_score": 0.68,
+      "latest_date": "2026-08-16",
+      "latest_update_title": "Luigi Mangione Admits to Shooting UnitedHealthcare CEO Brian Thompson in Guilty Plea",
+      "coverage_score": 0.778,
       "recency_score": 1.0,
-      "rank_score": 0.866,
-      "context_summary": "Muninn first tracked this thread on 2026-08-14: Luigi Mangione Expected to Plead Guilty in Case Involving CEO's Death. The latest development is Luigi Mangione pleads guilty to shooting healthcare CEO Brian Thompson in court.",
-      "cta_label": ""
+      "rank_score": 0.907,
+      "context_summary": "Muninn first tracked this thread on 2026-08-14: Luigi Mangione Expected to Plead Guilty in Case Involving CEO's Death. The latest development is Luigi Mangione Admits to Shooting UnitedHealthcare CEO Brian Thompson in Guilty Plea.",
+      "cta_label": "Explore 4 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Luigi Mangione is anticipated to plead guilty in federal court to charges related to the stalking and killing of UnitedHealthcare CEO Brian Thompson. A later development was Luigi Mangione Admits Guilt in Killing of UnitedHealthcare CEO. Most recently, luigi Mangione admitted to shooting healthcare CEO Brian Thompson during a federal court hearing in Manhattan.",
+      "summary": "Luigi Mangione is anticipated to plead guilty in federal court to charges related to the stalking and killing of UnitedHealthcare CEO Brian Thompson. A later development was Luigi Mangione pleads guilty to shooting healthcare CEO Brian Thompson in court. Most recently, luigi Mangione pleaded guilty in federal court to the fatal shooting of UnitedHealthcare CEO Brian Thompson, which occurred in 2024.",
       "key_developments": [
         {
           "development_id": "story_e2b14221a45d21a7",
@@ -360,6 +469,11 @@
           "development_id": "story_566a33710ed49dff",
           "date": "2026-08-15",
           "title": "Luigi Mangione pleads guilty to shooting healthcare CEO Brian Thompson in court"
+        },
+        {
+          "development_id": "story_75c6823db66bb5cb",
+          "date": "2026-08-16",
+          "title": "Luigi Mangione Admits to Shooting UnitedHealthcare CEO Brian Thompson in Guilty Plea"
         }
       ],
       "sources": [
@@ -424,10 +538,10 @@
           "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-08-15",
+      "updated_at": "2026-08-16",
       "provenance": "source_grounded_event_memory"
     },
-    "event_stage": "developing_event",
+    "event_stage": "timeline",
     "related_events": [],
     "event_overview": {
       "available": true,
@@ -522,6 +636,7 @@
       "double",
       "expected",
       "faces",
+      "fatal",
       "fatally",
       "federal",
       "found",
@@ -529,6 +644,8 @@
       "guilty",
       "healthcare",
       "hearing",
+      "hilton",
+      "hotel",
       "impact",
       "imprisonment",
       "including",
@@ -541,8 +658,11 @@
       "mangione",
       "manhattan",
       "murder",
+      "occurred",
       "ongoing",
+      "outside",
       "penaltie",
+      "pending",
       "plea",
       "plead",
       "pleaded",
@@ -559,10 +679,12 @@
       "significant",
       "silencer",
       "stalking",
+      "still",
       "thompson",
       "unitedhealthcare",
       "upcoming",
       "used",
+      "using",
       "which",
       "york"
     ],
@@ -578,19 +700,24 @@
       "december",
       "december.",
       "december_mangione",
+      "guilty",
+      "guilty_plea",
       "involving_ceo",
       "killing",
       "luigi_mangione",
       "mangione_admit",
       "mangione_expected",
+      "manhattan",
       "manhattan.",
+      "plea_luigi",
       "plead",
       "plead_guilty",
+      "shooting",
       "thompson",
       "unitedhealthcare",
       "unitedhealthcare_ceo"
     ],
-    "search_text": "2024 3-d admit admit_guilt admitted admitting also anticipated based brian brian_thompson brian_thompson. case case_involving cases ceo ceo_brian ceo_luigi charge concern contending court deal death december december. december_mangione discussion dismiss double expected faces fatally federal found guilt guilty healthcare hearing impact imprisonment including involving involving_ceo jeopardy killing lawyer life luigi luigi_mangione mangione mangione_admit mangione_expected manhattan manhattan. murder ongoing penaltie plea plead plead_guilty pleaded potential printed protection related resolve seeking sentence sentencing separate shooting significant silencer stalking thompson unitedhealthcare unitedhealthcare_ceo upcoming used which york"
+    "search_text": "2024 3-d admit admit_guilt admitted admitting also anticipated based brian brian_thompson brian_thompson. case case_involving cases ceo ceo_brian ceo_luigi charge concern contending court deal death december december. december_mangione discussion dismiss double expected faces fatal fatally federal found guilt guilty guilty_plea healthcare hearing hilton hotel impact imprisonment including involving involving_ceo jeopardy killing lawyer life luigi luigi_mangione mangione mangione_admit mangione_expected manhattan manhattan. murder occurred ongoing outside penaltie pending plea plea_luigi plead plead_guilty pleaded potential printed protection related resolve seeking sentence sentencing separate shooting significant silencer stalking still thompson unitedhealthcare unitedhealthcare_ceo upcoming used using which york"
   },
   "related_events": []
 }

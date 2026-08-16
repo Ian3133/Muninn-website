@@ -15,7 +15,7 @@
     "summary": "A 7.4 magnitude earthquake struck Colombia, causing the partial collapse of the Hospital Universitario del Valle in Cali. Patients were evacuated as rescue teams began searching for hundreds of individuals who may be trapped in the debris.",
     "status": "active",
     "first_seen_at": "2026-08-12",
-    "last_seen_at": "2026-08-15",
+    "last_seen_at": "2026-08-16",
     "timeline": [
       {
         "development_id": "story_30d003e8e2b37ae7",
@@ -185,46 +185,230 @@
         "first_seen_at": "2026-08-15",
         "last_seen_at": "2026-08-15",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_804ebd1bcb53f503",
+        "daily_story_id": "story_804ebd1bcb53f503",
+        "date": "2026-08-16",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Death toll rises to 51 following Indonesia earthquake as rescue efforts continue",
+        "summary": "A powerful earthquake struck Indonesia, resulting in at least 51 fatalities and injuring over 100 individuals. Thousands of evacuees are awaiting aid on the island of Flores, where hundreds of homes and public buildings have been severely damaged. Rescue teams are actively searching through debris and collapsed structures for survivors.",
+        "topic_label": "Indonesia Earthquake",
+        "development_type": "impact",
+        "key_facts": [
+          "Magnitude 7.7 earthquake hit Indonesia",
+          "At least 51 people confirmed dead",
+          "Over 100 people injured",
+          "Thousands displaced and awaiting aid",
+          "Significant damage to homes and public buildings"
+        ],
+        "source_count": 3,
+        "sources": [
+          "BBC - World",
+          "RTE News",
+          "The Guardian"
+        ],
+        "source_urls": [
+          "https://www.rte.ie/news/2026/0816/1588061-indonesia-earthquake",
+          "https://www.theguardian.com/world/2026/aug/16/rescue-teams-search-for-survivors-in-indonesia-after-powerful-earthquake",
+          "https://www.bbc.co.uk/news/articles/c3v00w5ylw9o?at_medium=RSS&at_campaign=rss"
+        ],
+        "source_details": [
+          {
+            "title": "Thousands await aid after deadly Indonesian earthquake",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/2026/0816/1588061-indonesia-earthquake",
+            "source_bias": "center"
+          },
+          {
+            "title": "Rescue teams search for survivors in Indonesia after powerful earthquake",
+            "source": "The Guardian",
+            "link": "https://www.theguardian.com/world/2026/aug/16/rescue-teams-search-for-survivors-in-indonesia-after-powerful-earthquake",
+            "source_bias": "left"
+          },
+          {
+            "title": "Thousands displaced by deadly Indonesia earthquake as rescue efforts continue",
+            "source": "BBC - World",
+            "link": "https://www.bbc.co.uk/news/articles/c3v00w5ylw9o?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.86,
+        "match_evidence": {
+          "score": 0.86,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "earthquake"
+          ],
+          "shared_incident_anchors": [
+            "indonesia",
+            "indonesia_earthquake"
+          ],
+          "shared_incident_numbers": [
+            "7.7"
+          ],
+          "shared_tokens": [
+            "confirmed",
+            "dead",
+            "earthquake",
+            "effort",
+            "fatalitie",
+            "flore",
+            "indonesia",
+            "injuring",
+            "least",
+            "magnitude",
+            "powerful",
+            "rescue",
+            "resulting",
+            "significant",
+            "struck"
+          ],
+          "shared_entities": [
+            "indonesia",
+            "indonesia_earthquake"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_6c368b73fa4d55b1",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-16",
+        "last_seen_at": "2026-08-16",
+        "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_d553b03eb8088ed2",
+        "daily_story_id": "story_d553b03eb8088ed2",
+        "date": "2026-08-16",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Deadly Earthquake Strikes Eastern Indonesia, Causing Casualties and Damage",
+        "summary": "A powerful 7.7-magnitude earthquake hit the Flores region of eastern Indonesia, resulting in at least 47 fatalities and widespread destruction. The quake prompted thousands to evacuate to higher ground due to tsunami fears. Rescue efforts are hampered by landslides blocking roads and disrupted communications, particularly in Nagekeo, the area nearest to the epicenter.",
+        "topic_label": "Earthquake Indonesia",
+        "development_type": "military_action",
+        "key_facts": [
+          "7.7-magnitude earthquake struck eastern Indonesia",
+          "At least 47 people have died",
+          "Thousands evacuated due to tsunami fears",
+          "Rescue efforts hindered by landslides and communication issues"
+        ],
+        "source_count": 2,
+        "sources": [
+          "SBS News",
+          "The Guardian"
+        ],
+        "source_urls": [
+          "https://www.theguardian.com/world/2026/aug/15/indonesia-earthquake",
+          "https://www.sbs.com.au/news/article/rescuers-search-for-survivors-as-indonesian-quake-kills-at-least-48-people/2i5jhbif4"
+        ],
+        "source_details": [
+          {
+            "title": "Powerful earthquake kills dozens in eastern Indonesia",
+            "source": "The Guardian",
+            "link": "https://www.theguardian.com/world/2026/aug/15/indonesia-earthquake",
+            "source_bias": "left"
+          },
+          {
+            "title": "Rescuers search desperately for survivors as Indonesian quake kills dozens of people",
+            "source": "SBS News",
+            "link": "https://www.sbs.com.au/news/article/rescuers-search-for-survivors-as-indonesian-quake-kills-at-least-48-people/2i5jhbif4",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.86,
+        "match_evidence": {
+          "score": 0.86,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "earthquake",
+            "strike"
+          ],
+          "shared_incident_anchors": [
+            "indonesia"
+          ],
+          "shared_incident_numbers": [
+            "7.7"
+          ],
+          "shared_tokens": [
+            "7-magnitude",
+            "casualtie",
+            "causing",
+            "deadly",
+            "earthquake",
+            "effort",
+            "fatalitie",
+            "flore",
+            "indonesia",
+            "least",
+            "powerful",
+            "region",
+            "rescue",
+            "resulting",
+            "strike",
+            "struck",
+            "tsunami"
+          ],
+          "shared_entities": [
+            "indonesia"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_6c368b73fa4d55b1",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-16",
+        "last_seen_at": "2026-08-16",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 2,
+      "public_development_count": 4,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Deadly 7.7 Magnitude Earthquake Strikes Off Indonesia's Coast, Causing Significant Casualties",
-    "latest_summary": "A powerful 7.7-magnitude earthquake struck off the coast of Indonesia's Flores region, resulting in at least 38 fatalities and injuring several others. The earthquake triggered a tsunami warning, which has since been lifted. Rescue operations are ongoing as aftershocks and power outages complicate efforts to reach those affected.",
+    "latest_title": "Deadly Earthquake Strikes Eastern Indonesia, Causing Casualties and Damage",
+    "latest_summary": "A powerful 7.7-magnitude earthquake hit the Flores region of eastern Indonesia, resulting in at least 47 fatalities and widespread destruction. The quake prompted thousands to evacuate to higher ground due to tsunami fears. Rescue efforts are hampered by landslides blocking roads and disrupted communications, particularly in Nagekeo, the area nearest to the epicenter.",
     "presentation": {
       "has_context": true,
-      "has_full_timeline": false,
-      "stage": "developing_event",
-      "stage_label": "Developing event",
+      "has_full_timeline": true,
+      "stage": "timeline",
+      "stage_label": "Timeline",
       "base_title": "Cali Hospital Partially Collapses Following 7.4 Magnitude Earthquake in Colombia",
-      "display_title": "Cali Hospital Partially Collapses Following 7.4 Magnitude Earthquake in Colombia",
+      "display_title": "Cali Hospital Partially Collapses Following 7.4 Magnitude Earthquake in Colombia Timeline",
       "milestone_development_ids": [
         "story_30d003e8e2b37ae7",
-        "story_6c368b73fa4d55b1"
+        "story_6c368b73fa4d55b1",
+        "story_804ebd1bcb53f503",
+        "story_d553b03eb8088ed2"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-15",
-      "development_count": 2,
-      "coverage_packet_count": 2,
-      "date_count": 2,
-      "source_count": 9,
-      "independent_source_count": 9,
+      "summary_updated_at": "2026-08-16",
+      "development_count": 4,
+      "coverage_packet_count": 4,
+      "date_count": 3,
+      "source_count": 14,
+      "independent_source_count": 12,
       "first_date": "2026-08-12",
-      "latest_date": "2026-08-15",
-      "latest_update_title": "Deadly 7.7 Magnitude Earthquake Strikes Off Indonesia's Coast, Causing Significant Casualties",
-      "coverage_score": 0.609,
+      "latest_date": "2026-08-16",
+      "latest_update_title": "Deadly Earthquake Strikes Eastern Indonesia, Causing Casualties and Damage",
+      "coverage_score": 0.803,
       "recency_score": 1.0,
-      "rank_score": 0.836,
-      "context_summary": "Muninn first tracked this thread on 2026-08-12: Cali Hospital Partially Collapses Following 7.4 Magnitude Earthquake in Colombia. The latest development is Deadly 7.7 Magnitude Earthquake Strikes Off Indonesia's Coast, Causing Significant Casualties.",
-      "cta_label": ""
+      "rank_score": 0.917,
+      "context_summary": "Muninn first tracked this thread on 2026-08-12: Cali Hospital Partially Collapses Following 7.4 Magnitude Earthquake in Colombia. The latest development is Deadly Earthquake Strikes Eastern Indonesia, Causing Casualties and Damage.",
+      "cta_label": "Explore 4 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "A 7.4 magnitude earthquake struck Colombia, causing the partial collapse of the Hospital Universitario del Valle in Cali. Most recently, a powerful 7.7-magnitude earthquake struck off the coast of Indonesia's Flores region, resulting in at least 38 fatalities and injuring several others.",
+      "summary": "A 7.4 magnitude earthquake struck Colombia, causing the partial collapse of the Hospital Universitario del Valle in Cali. A later development was Death toll rises to 51 following Indonesia earthquake as rescue efforts continue. Most recently, a powerful 7.7-magnitude earthquake hit the Flores region of eastern Indonesia, resulting in at least 47 fatalities and widespread destruction.",
       "key_developments": [
         {
           "development_id": "story_30d003e8e2b37ae7",
@@ -235,6 +419,16 @@
           "development_id": "story_6c368b73fa4d55b1",
           "date": "2026-08-15",
           "title": "Deadly 7.7 Magnitude Earthquake Strikes Off Indonesia's Coast, Causing Significant Casualties"
+        },
+        {
+          "development_id": "story_804ebd1bcb53f503",
+          "date": "2026-08-16",
+          "title": "Death toll rises to 51 following Indonesia earthquake as rescue efforts continue"
+        },
+        {
+          "development_id": "story_d553b03eb8088ed2",
+          "date": "2026-08-16",
+          "title": "Deadly Earthquake Strikes Eastern Indonesia, Causing Casualties and Damage"
         }
       ],
       "sources": [
@@ -291,18 +485,60 @@
           "source": "NBC News",
           "link": "https://www.nbcnews.com/world/indonesia/earthquake-indonesia-rcna592638",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Thousands await aid after deadly Indonesian earthquake",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/2026/0816/1588061-indonesia-earthquake",
+          "source_bias": "center"
+        },
+        {
+          "title": "Rescue teams search for survivors in Indonesia after powerful earthquake",
+          "source": "The Guardian",
+          "link": "https://www.theguardian.com/world/2026/aug/16/rescue-teams-search-for-survivors-in-indonesia-after-powerful-earthquake",
+          "source_bias": "left"
+        },
+        {
+          "title": "Thousands displaced by deadly Indonesia earthquake as rescue efforts continue",
+          "source": "BBC - World",
+          "link": "https://www.bbc.co.uk/news/articles/c3v00w5ylw9o?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
+        },
+        {
+          "title": "Powerful earthquake kills dozens in eastern Indonesia",
+          "source": "The Guardian",
+          "link": "https://www.theguardian.com/world/2026/aug/15/indonesia-earthquake",
+          "source_bias": "left"
+        },
+        {
+          "title": "Rescuers search desperately for survivors as Indonesian quake kills dozens of people",
+          "source": "SBS News",
+          "link": "https://www.sbs.com.au/news/article/rescuers-search-for-survivors-as-indonesian-quake-kills-at-least-48-people/2i5jhbif4",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-08-15",
+      "updated_at": "2026-08-16",
       "provenance": "source_grounded_event_memory"
     },
-    "event_stage": "developing_event",
+    "event_stage": "timeline",
     "related_events": [
+      {
+        "event_id": "event_death-toll-rises-to-220-following-7-4-magnit_31d9d7c887",
+        "title": "Death Toll Rises to 220 Following 7.4 Magnitude Earthquake in Colombia",
+        "relationship": "related_topic",
+        "confidence": 0.817,
+        "shared_entities": [
+          "colombia",
+          "deadly_earthquake",
+          "deadly_magnitude",
+          "magnitude_earthquake"
+        ]
+      },
       {
         "event_id": "event_7-4-magnitude-earthquake-strikes-manizales-c_33e2fb734b",
         "title": "7.4-Magnitude Earthquake Strikes Manizales, Colombia, Causing Significant Damage",
         "relationship": "related_topic",
-        "confidence": 0.748,
+        "confidence": 0.77,
         "shared_entities": [
           "causing_significant",
           "colombia",
@@ -310,14 +546,23 @@
         ]
       },
       {
-        "event_id": "event_death-toll-rises-to-220-following-7-4-magnit_31d9d7c887",
-        "title": "Death Toll Rises to 220 Following 7.4 Magnitude Earthquake in Colombia",
+        "event_id": "event_rescue-efforts-intensify-after-deadly-japan_e07cd49607",
+        "title": "Rescue Efforts Intensify After Deadly Japan Earthquake and Over 100 Aftershocks",
         "relationship": "related_topic",
-        "confidence": 0.74,
+        "confidence": 0.732,
+        "shared_entities": [
+          "causing_casualtie",
+          "magnitude_earthquake"
+        ]
+      },
+      {
+        "event_id": "event_deadly-earthquake-devastates-towns-in-wester_397bf44453",
+        "title": "Deadly Earthquake Devastates Towns in Western Colombia",
+        "relationship": "related_topic",
+        "confidence": 0.722,
         "shared_entities": [
           "colombia",
-          "deadly_magnitude",
-          "magnitude_earthquake"
+          "deadly_earthquake"
         ]
       }
     ],
@@ -446,79 +691,126 @@
       "focal_tall_y": 0.48
     },
     "search_tokens": [
+      "100",
       "7-magnitude",
+      "actively",
       "affected",
       "aftershock",
+      "aid",
+      "area",
+      "awaiting",
       "began",
+      "blocking",
+      "building",
       "cali",
       "casualtie",
       "causing",
       "coast",
       "collapse",
+      "collapsed",
       "colombia",
+      "communication",
       "complicate",
+      "continue",
+      "damage",
+      "damaged",
       "deadly",
+      "death",
       "debri",
+      "destruction",
+      "disrupted",
       "earthquake",
+      "eastern",
       "effort",
+      "epicenter",
+      "evacuate",
       "evacuated",
+      "evacuee",
       "fatalitie",
+      "fears",
       "flore",
+      "ground",
+      "hampered",
+      "higher",
+      "homes",
       "hospital",
       "hundred",
       "individual",
       "indonesia",
       "injuring",
+      "island",
+      "landslide",
       "least",
       "lifted",
       "magnitude",
+      "nagekeo",
+      "nearest",
       "ongoing",
       "operation",
       "other",
       "outage",
       "partial",
       "partially",
+      "particularly",
       "patient",
       "power",
       "powerful",
+      "prompted",
+      "public",
+      "quake",
       "reach",
       "region",
       "rescue",
       "resulting",
+      "rises",
+      "roads",
       "searching",
       "several",
+      "severely",
       "significant",
       "since",
       "strike",
       "struck",
+      "structure",
+      "survivor",
       "teams",
       "those",
+      "thousand",
+      "through",
+      "toll",
       "trapped",
       "triggered",
       "tsunami",
       "universitario",
       "valle",
       "warning",
-      "which"
+      "where",
+      "which",
+      "widespread"
     ],
     "entities": [
       "cali.",
       "cali._patient",
       "cali_hospital",
+      "causing_casualtie",
       "causing_significant",
       "coast_causing",
       "colombia",
+      "deadly_earthquake",
       "deadly_magnitude",
+      "eastern_indonesia",
       "hospital_partially",
       "hospital_universitario",
+      "indonesia_causing",
       "indonesia_coast",
       "indonesia_flore",
       "magnitude_earthquake",
+      "nagekeo",
       "off_indonesia",
       "partially_collapse",
       "significant_casualtie"
     ],
-    "search_text": "7-magnitude affected aftershock began cali cali. cali._patient cali_hospital casualtie causing causing_significant coast coast_causing collapse colombia complicate deadly deadly_magnitude debri earthquake effort evacuated fatalitie flore hospital hospital_partially hospital_universitario hundred individual indonesia indonesia_coast indonesia_flore injuring least lifted magnitude magnitude_earthquake off_indonesia ongoing operation other outage partial partially partially_collapse patient power powerful reach region rescue resulting searching several significant significant_casualtie since strike struck teams those trapped triggered tsunami universitario valle warning which"
+    "search_text": "100 7-magnitude actively affected aftershock aid area awaiting began blocking building cali cali. cali._patient cali_hospital casualtie causing causing_casualtie causing_significant coast coast_causing collapse collapsed colombia communication complicate continue damage damaged deadly deadly_earthquake deadly_magnitude death debri destruction disrupted earthquake eastern eastern_indonesia effort epicenter evacuate evacuated evacuee fatalitie fears flore ground hampered higher homes hospital hospital_partially hospital_universitario hundred individual indonesia indonesia_causing indonesia_coast indonesia_flore injuring island landslide least lifted magnitude magnitude_earthquake nagekeo nearest off_indonesia ongoing operation other outage partial partially partially_collapse particularly patient power powerful prompted public quake reach region rescue resulting rises roads searching several severely significant significant_casualtie since strike struck structure survivor teams those thousand through toll trapped triggered tsunami universitario valle warning where which widespread"
   },
   "related_events": [
     {
@@ -554,6 +846,40 @@
         "focal_tall_y": 0.48
       },
       "href": "/timeline.html?event=event_death-toll-rises-to-220-following-7-4-magnit_31d9d7c887"
+    },
+    {
+      "event_id": "event_rescue-efforts-intensify-after-deadly-japan_e07cd49607",
+      "title": "Rescue Efforts Intensify After Deadly Japan Earthquake and Over 100 Aftershocks",
+      "summary": "Muninn first tracked this thread on 2026-07-29: Magnitude 7.1 Earthquake Strikes Kumamoto, Japan, Causing Casualties and Damage. The latest development is Death Toll Rises After Powerful Earthquake Hits Japan, Over 100 Aftershocks Recorded.",
+      "activity_status": "active",
+      "stage": "developing_event",
+      "stage_label": "Developing event",
+      "first_seen_at": "2026-07-29",
+      "last_seen_at": "2026-07-30",
+      "development_count": 4,
+      "latest_title": "Death Toll Rises After Powerful Earthquake Hits Japan, Over 100 Aftershocks Recorded",
+      "topic_label": "Japan Earthquake",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_rescue-efforts-intensify-after-deadly-japan_e07cd49607.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_rescue-efforts-intensify-after-deadly-japan_e07cd49607.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_rescue-efforts-intensify-after-deadly-japan_e07cd49607"
     }
   ]
 }

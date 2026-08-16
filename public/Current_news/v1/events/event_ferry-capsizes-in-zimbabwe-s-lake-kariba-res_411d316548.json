@@ -1,0 +1,308 @@
+{
+  "schema_version": 1,
+  "resource_type": "event",
+  "event_id": "event_ferry-capsizes-in-zimbabwe-s-lake-kariba-res_411d316548",
+  "publication": {
+    "status": "published",
+    "permalink": "/timeline.html?event=event_ferry-capsizes-in-zimbabwe-s-lake-kariba-res_411d316548",
+    "share_expires_at": null
+  },
+  "event": {
+    "event_id": "event_ferry-capsizes-in-zimbabwe-s-lake-kariba-res_411d316548",
+    "title": "Ferry Capsizes in Zimbabwe's Lake Kariba, Resulting in Multiple Fatalities and Missing Persons",
+    "canonical_title": "Ferry Capsizes in Zimbabwe's Lake Kariba, Resulting in Multiple Fatalities and Missing Persons",
+    "topic_label": "",
+    "summary": "A ferry capsized on Lake Kariba in Zimbabwe, leading to at least 15 confirmed deaths and 27 individuals reported missing. Search and rescue operations are ongoing, with 77 people successfully rescued and taken to a nearby island. Authorities are coordinating efforts to bring the survivors back to safety.",
+    "status": "active",
+    "first_seen_at": "2026-08-12",
+    "last_seen_at": "2026-08-16",
+    "timeline": [
+      {
+        "development_id": "story_d791ca1a201a77b0",
+        "daily_story_id": "story_d791ca1a201a77b0",
+        "date": "2026-08-12",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Ferry Capsizes in Zimbabwe's Lake Kariba, Resulting in Multiple Fatalities and Missing Persons",
+        "summary": "A ferry capsized on Lake Kariba in Zimbabwe, leading to at least 15 confirmed deaths and 27 individuals reported missing. Search and rescue operations are ongoing, with 77 people successfully rescued and taken to a nearby island. Authorities are coordinating efforts to bring the survivors back to safety.",
+        "topic_label": "",
+        "development_type": "development",
+        "key_facts": [
+          "Ferry capsized in bad weather",
+          "At least 15 confirmed dead",
+          "27 people reported missing",
+          "77 people rescued"
+        ],
+        "source_count": 2,
+        "sources": [
+          "Africanews",
+          "PBS News - Headlines"
+        ],
+        "source_urls": [
+          "http://www.africanews.com/2026/08/12/at-least-15-people-dead-after-ferry-overturns-in-zimbabwes-lake-kariba",
+          "https://www.pbs.org/newshour/world/a-ferry-capsizes-on-zimbabwes-lake-kariba-leaving-at-least-15-people-dead-and-27-missing"
+        ],
+        "source_details": [
+          {
+            "title": "At least 15 people dead after ferry overturns in Zimbabwe's Lake Kariba",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/08/12/at-least-15-people-dead-after-ferry-overturns-in-zimbabwes-lake-kariba",
+            "source_bias": "center"
+          },
+          {
+            "title": "A ferry capsizes on Zimbabwe's Lake Kariba, leaving at least 15 people dead and 27 missing",
+            "source": "PBS News - Headlines",
+            "link": "https://www.pbs.org/newshour/world/a-ferry-capsizes-on-zimbabwes-lake-kariba-leaving-at-least-15-people-dead-and-27-missing",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 1.0,
+        "match_evidence": {
+          "score": 1.0,
+          "method": "new_event",
+          "shared_tokens": [],
+          "shared_entities": []
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-12",
+        "last_seen_at": "2026-08-12",
+        "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_917f8fc09e00705a",
+        "daily_story_id": "story_917f8fc09e00705a",
+        "date": "2026-08-16",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Death Toll in Zimbabwe Ferry Capsizing Reaches 72",
+        "summary": "The death toll from the ferry capsizing on Lake Kariba in Zimbabwe has risen to 72, according to police reports. Authorities have recovered 25 bodies as the search for additional victims continues following the tragic incident earlier this week.",
+        "topic_label": "",
+        "development_type": "development",
+        "key_facts": [
+          "Ferry capsized on Lake Kariba",
+          "Death toll now at 72",
+          "25 bodies recovered by authorities"
+        ],
+        "source_count": 2,
+        "sources": [
+          "Africanews",
+          "RTE News"
+        ],
+        "source_urls": [
+          "https://www.rte.ie/news/2026/0815/1588049-zimbabwe-ferry",
+          "http://www.africanews.com/2026/08/16/zimbabwe-ferry-death-toll-rises-to-68-after-lake-kariba-capsizing"
+        ],
+        "source_details": [
+          {
+            "title": "Death toll in Zimbabwe ferry capsizing rises to 72",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/2026/0815/1588049-zimbabwe-ferry",
+            "source_bias": "center"
+          },
+          {
+            "title": "Zimbabwe ferry death toll rises to 68 after Lake Kariba capsizing",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/08/16/zimbabwe-ferry-death-toll-rises-to-68-after-lake-kariba-capsizing",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.403,
+        "match_evidence": {
+          "score": 0.403,
+          "matched_development_id": "story_d791ca1a201a77b0",
+          "shared_tokens": [
+            "authoritie",
+            "capsized",
+            "death",
+            "ferry",
+            "kariba",
+            "lake",
+            "search",
+            "zimbabwe"
+          ],
+          "shared_entities": [
+            "lake_kariba",
+            "zimbabwe"
+          ],
+          "source_url_match": false,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-16",
+        "last_seen_at": "2026-08-16",
+        "integrity_status": "trusted"
+      }
+    ],
+    "integrity": {
+      "public_development_count": 2,
+      "questionable_development_count": 0,
+      "review_required": false
+    },
+    "latest_title": "Death Toll in Zimbabwe Ferry Capsizing Reaches 72",
+    "latest_summary": "The death toll from the ferry capsizing on Lake Kariba in Zimbabwe has risen to 72, according to police reports. Authorities have recovered 25 bodies as the search for additional victims continues following the tragic incident earlier this week.",
+    "presentation": {
+      "has_context": true,
+      "has_full_timeline": false,
+      "stage": "developing_event",
+      "stage_label": "Developing event",
+      "base_title": "Ferry Capsizes in Zimbabwe's Lake Kariba, Resulting in Multiple Fatalities and Missing Persons",
+      "display_title": "Ferry Capsizes in Zimbabwe's Lake Kariba, Resulting in Multiple Fatalities and Missing Persons",
+      "milestone_development_ids": [
+        "story_d791ca1a201a77b0",
+        "story_917f8fc09e00705a"
+      ],
+      "summary_available": true,
+      "summary_label": "Read the story so far",
+      "summary_updated_at": "2026-08-16",
+      "development_count": 2,
+      "coverage_packet_count": 2,
+      "date_count": 2,
+      "source_count": 4,
+      "independent_source_count": 3,
+      "first_date": "2026-08-12",
+      "latest_date": "2026-08-16",
+      "latest_update_title": "Death Toll in Zimbabwe Ferry Capsizing Reaches 72",
+      "coverage_score": 0.359,
+      "recency_score": 1.0,
+      "rank_score": 0.731,
+      "context_summary": "Muninn first tracked this thread on 2026-08-12: Ferry Capsizes in Zimbabwe's Lake Kariba, Resulting in Multiple Fatalities and Missing Persons. The latest development is Death Toll in Zimbabwe Ferry Capsizing Reaches 72.",
+      "cta_label": ""
+    },
+    "event_summary": {
+      "available": true,
+      "summary": "A ferry capsized on Lake Kariba in Zimbabwe, leading to at least 15 confirmed deaths and 27 individuals reported missing. Most recently, the death toll from the ferry capsizing on Lake Kariba in Zimbabwe has risen to 72, according to police reports.",
+      "key_developments": [
+        {
+          "development_id": "story_d791ca1a201a77b0",
+          "date": "2026-08-12",
+          "title": "Ferry Capsizes in Zimbabwe's Lake Kariba, Resulting in Multiple Fatalities and Missing Persons"
+        },
+        {
+          "development_id": "story_917f8fc09e00705a",
+          "date": "2026-08-16",
+          "title": "Death Toll in Zimbabwe Ferry Capsizing Reaches 72"
+        }
+      ],
+      "sources": [
+        {
+          "title": "At least 15 people dead after ferry overturns in Zimbabwe's Lake Kariba",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/08/12/at-least-15-people-dead-after-ferry-overturns-in-zimbabwes-lake-kariba",
+          "source_bias": "center"
+        },
+        {
+          "title": "A ferry capsizes on Zimbabwe's Lake Kariba, leaving at least 15 people dead and 27 missing",
+          "source": "PBS News - Headlines",
+          "link": "https://www.pbs.org/newshour/world/a-ferry-capsizes-on-zimbabwes-lake-kariba-leaving-at-least-15-people-dead-and-27-missing",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Death toll in Zimbabwe ferry capsizing rises to 72",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/2026/0815/1588049-zimbabwe-ferry",
+          "source_bias": "center"
+        },
+        {
+          "title": "Zimbabwe ferry death toll rises to 68 after Lake Kariba capsizing",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/08/16/zimbabwe-ferry-death-toll-rises-to-68-after-lake-kariba-capsizing",
+          "source_bias": "center"
+        }
+      ],
+      "updated_at": "2026-08-16",
+      "provenance": "source_grounded_event_memory"
+    },
+    "event_stage": "developing_event",
+    "related_events": [],
+    "search_tokens": [
+      "additional",
+      "authoritie",
+      "back",
+      "bodie",
+      "bring",
+      "capsize",
+      "capsized",
+      "capsizing",
+      "confirmed",
+      "continue",
+      "coordinating",
+      "death",
+      "earlier",
+      "effort",
+      "fatalitie",
+      "ferry",
+      "incident",
+      "individual",
+      "island",
+      "kariba",
+      "lake",
+      "leading",
+      "least",
+      "missing",
+      "multiple",
+      "nearby",
+      "ongoing",
+      "operation",
+      "person",
+      "reache",
+      "recovered",
+      "reported",
+      "rescue",
+      "rescued",
+      "resulting",
+      "risen",
+      "safety",
+      "search",
+      "successfully",
+      "survivor",
+      "taken",
+      "toll",
+      "tragic",
+      "victim",
+      "week",
+      "zimbabwe"
+    ],
+    "entities": [
+      "capsizing_reache",
+      "ferry_capsize",
+      "ferry_capsizing",
+      "kariba_resulting",
+      "lake_kariba",
+      "missing_person",
+      "multiple",
+      "multiple_fatalitie",
+      "zimbabwe",
+      "zimbabwe_ferry",
+      "zimbabwe_lake"
+    ],
+    "search_text": "additional authoritie back bodie bring capsize capsized capsizing capsizing_reache confirmed continue coordinating death earlier effort fatalitie ferry ferry_capsize ferry_capsizing incident individual island kariba kariba_resulting lake lake_kariba leading least missing missing_person multiple multiple_fatalitie nearby ongoing operation person reache recovered reported rescue rescued resulting risen safety search successfully survivor taken toll tragic victim week zimbabwe zimbabwe_ferry zimbabwe_lake",
+    "hero_image": {
+      "url": "/Current_news/generated/events/event_ferry-capsizes-in-zimbabwe-s-lake-kariba-res_411d316548.jpg",
+      "thumbnail_url": "/Current_news/generated/events/event_ferry-capsizes-in-zimbabwe-s-lake-kariba-res_411d316548.jpg",
+      "source": "Muninn AI illustration",
+      "author": "OpenAI GPT Image 2",
+      "license": "AI-generated content",
+      "image_role": "illustrative",
+      "image_role_label": "AI illustration",
+      "is_ai_generated": true,
+      "generation_model": "gpt-image-2",
+      "generation_quality": "low",
+      "safe_to_crop": true,
+      "allows_crop": true,
+      "focal_x": 0.5,
+      "focal_y": 0.48,
+      "focal_wide_x": 0.5,
+      "focal_wide_y": 0.48,
+      "focal_tall_x": 0.5,
+      "focal_tall_y": 0.48
+    }
+  },
+  "related_events": []
+}
