@@ -15,7 +15,7 @@
     "summary": "Hawaii has declared a state of emergency as Hurricane Lala is forecast to impact the Big Island this weekend. If it makes landfall, it would be the first hurricane to strike the island since 1871. The storm is expected to bring heavy rain, high winds, and dangerous surf conditions.",
     "status": "active",
     "first_seen_at": "2026-08-15",
-    "last_seen_at": "2026-08-16",
+    "last_seen_at": "2026-08-17",
     "timeline": [
       {
         "development_id": "story_50b99daf412a23ed",
@@ -243,6 +243,72 @@
         "first_seen_at": "2026-08-16",
         "last_seen_at": "2026-08-16",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_56176ea265b961ea",
+        "daily_story_id": "story_56176ea265b961ea",
+        "date": "2026-08-17",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Hurricane Lala Causes Flooding and Fatalities in Hawaii",
+        "summary": "Hurricane Lala, a Category 1 storm, passed near Hawaii's Big Island, causing heavy rain and strong winds. Although it did not make landfall, the storm led to significant flooding on roads and rivers. Tragically, at least one person died in a car accident in the South Point area of the Big Island during the storm's impact.",
+        "topic_label": "Hurricane Lala",
+        "development_type": "development",
+        "key_facts": [
+          "Hurricane Lala is a Category 1 storm.",
+          "The storm passed over Hawaii's Big Island without making landfall.",
+          "Heavy rain and strong winds caused flooding.",
+          "At least one fatality occurred due to a car accident."
+        ],
+        "source_count": 2,
+        "sources": [
+          "DW - English",
+          "NewsNation - Latest"
+        ],
+        "source_urls": [
+          "https://www.dw.com/en/us-hurricane-lala-brings-hawaii-heavy-rain-strong-winds/a-78386551?maca=en-rss-en-all-1573-rdf",
+          "https://www.newsnationnow.com/us-news/west/ap-hawaiis-big-island-lashed-by-rain-and-wind-as-tropical-storm-lala-closes-in"
+        ],
+        "source_details": [
+          {
+            "title": "US: Hurricane Lala brings Hawaii heavy rain, strong winds",
+            "source": "DW - English",
+            "link": "https://www.dw.com/en/us-hurricane-lala-brings-hawaii-heavy-rain-strong-winds/a-78386551?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Hurricane Lala skirts Hawaii's Big Island without making landfall",
+            "source": "NewsNation - Latest",
+            "link": "https://www.newsnationnow.com/us-news/west/ap-hawaiis-big-island-lashed-by-rain-and-wind-as-tropical-storm-lala-closes-in",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 1.0,
+        "match_evidence": {
+          "score": 1.0,
+          "matched_development_id": "story_50b99daf412a23ed",
+          "shared_tokens": [
+            "hawaii",
+            "hurricane",
+            "island",
+            "lala",
+            "storm"
+          ],
+          "shared_entities": [
+            "big_island",
+            "hawaii_big"
+          ],
+          "source_url_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-17",
+        "last_seen_at": "2026-08-17",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -268,12 +334,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 2,
+      "public_development_count": 3,
       "questionable_development_count": 1,
       "review_required": true
     },
-    "latest_title": "Hurricane Lala Affects Hawaii with Heavy Rain and Winds, Causing Flooding and Power Outages",
-    "latest_summary": "Hurricane Lala has brought heavy rain and strong winds to Hawaii's Big Island, causing significant flooding and power outages. The storm, which did not make landfall, has left over 89,000 households without power. At least one fatality has been reported due to a car accident in the affected area. The hurricane is expected to weaken gradually as it moves away from the island.",
+    "latest_title": "Hurricane Lala Causes Flooding and Fatalities in Hawaii",
+    "latest_summary": "Hurricane Lala, a Category 1 storm, passed near Hawaii's Big Island, causing heavy rain and strong winds. Although it did not make landfall, the storm led to significant flooding on roads and rivers. Tragically, at least one person died in a car accident in the South Point area of the Big Island during the storm's impact.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": false,
@@ -283,28 +349,29 @@
       "display_title": "Approache Hurricane Storm",
       "milestone_development_ids": [
         "story_50b99daf412a23ed",
-        "story_73199d3de9531a3d"
+        "story_73199d3de9531a3d",
+        "story_56176ea265b961ea"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-16",
-      "development_count": 2,
-      "coverage_packet_count": 3,
-      "date_count": 2,
-      "source_count": 9,
-      "independent_source_count": 8,
+      "summary_updated_at": "2026-08-17",
+      "development_count": 3,
+      "coverage_packet_count": 4,
+      "date_count": 3,
+      "source_count": 10,
+      "independent_source_count": 10,
       "first_date": "2026-08-15",
-      "latest_date": "2026-08-16",
-      "latest_update_title": "Hurricane Lala Affects Hawaii with Heavy Rain and Winds, Causing Flooding and Power Outages",
-      "coverage_score": 0.609,
+      "latest_date": "2026-08-17",
+      "latest_update_title": "Hurricane Lala Causes Flooding and Fatalities in Hawaii",
+      "coverage_score": 0.72,
       "recency_score": 1.0,
-      "rank_score": 0.836,
-      "context_summary": "Muninn first tracked this thread on 2026-08-15: Tropical Storm Lala Approaches Hawaii, Expected to Strengthen into Hurricane. The latest development is Hurricane Lala Affects Hawaii with Heavy Rain and Winds, Causing Flooding and Power Outages.",
+      "rank_score": 0.882,
+      "context_summary": "Muninn first tracked this thread on 2026-08-15: Tropical Storm Lala Approaches Hawaii, Expected to Strengthen into Hurricane. The latest development is Hurricane Lala Causes Flooding and Fatalities in Hawaii.",
       "cta_label": ""
     },
     "event_summary": {
       "available": true,
-      "summary": "Tropical Storm Lala is currently moving through the central Pacific Ocean and is forecast to strengthen into a hurricane as it approaches Hawaii's Big Island. Most recently, hurricane Lala has brought heavy rain and strong winds to Hawaii's Big Island, causing significant flooding and power outages.",
+      "summary": "Tropical Storm Lala is currently moving through the central Pacific Ocean and is forecast to strengthen into a hurricane as it approaches Hawaii's Big Island. A later development was Hurricane Lala Affects Hawaii with Heavy Rain and Winds, Causing Flooding and Power Outages. Most recently, hurricane Lala, a Category 1 storm, passed near Hawaii's Big Island, causing heavy rain and strong winds.",
       "key_developments": [
         {
           "development_id": "story_50b99daf412a23ed",
@@ -315,6 +382,11 @@
           "development_id": "story_73199d3de9531a3d",
           "date": "2026-08-16",
           "title": "Hurricane Lala Affects Hawaii with Heavy Rain and Winds, Causing Flooding and Power Outages"
+        },
+        {
+          "development_id": "story_56176ea265b961ea",
+          "date": "2026-08-17",
+          "title": "Hurricane Lala Causes Flooding and Fatalities in Hawaii"
         }
       ],
       "sources": [
@@ -371,9 +443,15 @@
           "source": "Sky News",
           "link": "https://news.sky.com/story/hurricane-lala-hits-hawaii-with-89000-losing-power-13573607",
           "source_bias": "center"
+        },
+        {
+          "title": "US: Hurricane Lala brings Hawaii heavy rain, strong winds",
+          "source": "DW - English",
+          "link": "https://www.dw.com/en/us-hurricane-lala-brings-hawaii-heavy-rain-strong-winds/a-78386551?maca=en-rss-en-all-1573-rdf",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-08-16",
+      "updated_at": "2026-08-17",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "developing_event",
@@ -382,7 +460,7 @@
         "event_id": "event_tropical-storm-bertha-approaches-gulf-coast_136f84f48e",
         "title": "Tropical Storm Bertha Approaches Gulf Coast as Hurricane Fausto Develops in Eastern Pacific",
         "relationship": "related_topic",
-        "confidence": 0.707,
+        "confidence": 0.696,
         "shared_entities": [
           "pacific_ocean",
           "tropical_storm"
@@ -409,84 +487,6 @@
       "focal_tall_x": 0.5,
       "focal_tall_y": 0.48
     },
-    "search_tokens": [
-      "000",
-      "accident",
-      "affect",
-      "affected",
-      "among",
-      "approache",
-      "area",
-      "away",
-      "bring",
-      "brought",
-      "causing",
-      "central",
-      "condition",
-      "currently",
-      "dangerou",
-      "expected",
-      "fatality",
-      "flooding",
-      "forecast",
-      "gradually",
-      "hawaii",
-      "heavy",
-      "household",
-      "hurricane",
-      "island",
-      "lala",
-      "landfall",
-      "least",
-      "left",
-      "make",
-      "moves",
-      "moving",
-      "ocean",
-      "outage",
-      "pacific",
-      "power",
-      "preparation",
-      "prompting",
-      "rain",
-      "region",
-      "reported",
-      "resident",
-      "significant",
-      "storm",
-      "strengthen",
-      "strong",
-      "through",
-      "tropical",
-      "weaken",
-      "weekend",
-      "which",
-      "winds",
-      "without"
-    ],
-    "entities": [
-      "affect_hawaii",
-      "approache_hawaii",
-      "big_island",
-      "big_island.",
-      "causing_flooding",
-      "hawaii",
-      "hawaii_big",
-      "hawaii_expected",
-      "heavy_rain",
-      "hurricane_lala",
-      "hurricane_tropical",
-      "lala_affect",
-      "lala_approache",
-      "outage_hurricane",
-      "pacific_ocean",
-      "power_outage",
-      "storm_lala",
-      "strengthen",
-      "tropical_storm",
-      "winds_causing"
-    ],
-    "search_text": "000 accident affect affect_hawaii affected among approache approache_hawaii area away big_island big_island. bring brought causing causing_flooding central condition currently dangerou expected fatality flooding forecast gradually hawaii hawaii_big hawaii_expected heavy heavy_rain household hurricane hurricane_lala hurricane_tropical island lala lala_affect lala_approache landfall least left make moves moving ocean outage outage_hurricane pacific pacific_ocean power power_outage preparation prompting rain region reported resident significant storm storm_lala strengthen strong through tropical tropical_storm weaken weekend which winds winds_causing without",
     "event_overview": {
       "available": true,
       "title": "About Approache Hurricane Storm",
@@ -567,7 +567,104 @@
       "expires_at": "2026-08-23T12:32:29.948324+00:00",
       "model": "gpt-5.6-terra",
       "provenance": "openai_web_search_source_grounded_event_overview_v1"
-    }
+    },
+    "search_tokens": [
+      "000",
+      "accident",
+      "affect",
+      "affected",
+      "although",
+      "among",
+      "approache",
+      "area",
+      "away",
+      "bring",
+      "brought",
+      "category",
+      "cause",
+      "causing",
+      "central",
+      "condition",
+      "currently",
+      "dangerou",
+      "died",
+      "expected",
+      "fatalitie",
+      "fatality",
+      "flooding",
+      "forecast",
+      "gradually",
+      "hawaii",
+      "heavy",
+      "household",
+      "hurricane",
+      "impact",
+      "island",
+      "lala",
+      "landfall",
+      "least",
+      "left",
+      "make",
+      "moves",
+      "moving",
+      "near",
+      "ocean",
+      "outage",
+      "pacific",
+      "passed",
+      "person",
+      "point",
+      "power",
+      "preparation",
+      "prompting",
+      "rain",
+      "region",
+      "reported",
+      "resident",
+      "river",
+      "roads",
+      "significant",
+      "south",
+      "storm",
+      "strengthen",
+      "strong",
+      "through",
+      "tragically",
+      "tropical",
+      "weaken",
+      "weekend",
+      "which",
+      "winds",
+      "without"
+    ],
+    "entities": [
+      "affect_hawaii",
+      "approache_hawaii",
+      "big_island",
+      "big_island.",
+      "cause_flooding",
+      "causing_flooding",
+      "hawaii",
+      "hawaii_big",
+      "hawaii_expected",
+      "hawaii_hurricane",
+      "heavy_rain",
+      "hurricane_lala",
+      "hurricane_tropical",
+      "lala_affect",
+      "lala_approache",
+      "lala_cause",
+      "outage_hurricane",
+      "pacific_ocean",
+      "power_outage",
+      "south",
+      "south_point",
+      "storm_lala",
+      "strengthen",
+      "tropical_storm",
+      "winds_causing"
+    ],
+    "search_text": "000 accident affect affect_hawaii affected although among approache approache_hawaii area away big_island big_island. bring brought category cause cause_flooding causing causing_flooding central condition currently dangerou died expected fatalitie fatality flooding forecast gradually hawaii hawaii_big hawaii_expected hawaii_hurricane heavy heavy_rain household hurricane hurricane_lala hurricane_tropical impact island lala lala_affect lala_approache lala_cause landfall least left make moves moving near ocean outage outage_hurricane pacific pacific_ocean passed person point power power_outage preparation prompting rain region reported resident river roads significant south south_point storm storm_lala strengthen strong through tragically tropical tropical_storm weaken weekend which winds winds_causing without"
   },
   "related_events": [
     {

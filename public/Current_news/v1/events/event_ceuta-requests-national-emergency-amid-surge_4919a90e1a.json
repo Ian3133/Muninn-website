@@ -15,7 +15,7 @@
     "summary": "Authorities in Ceuta have requested Spain to declare a national emergency due to a significant influx of migrants swimming from Morocco. The local government is seeking military assistance as border security is overwhelmed by the number of individuals attempting to enter the territory.",
     "status": "active",
     "first_seen_at": "2026-07-30",
-    "last_seen_at": "2026-08-15",
+    "last_seen_at": "2026-08-17",
     "timeline": [
       {
         "development_id": "story_dff81ceff84cab9d",
@@ -1362,15 +1362,82 @@
           "story_5fe8345607f808d9"
         ],
         "revision_count": 1
+      },
+      {
+        "development_id": "story_5d7d0f98e1565054",
+        "daily_story_id": "story_5d7d0f98e1565054",
+        "date": "2026-08-17",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Nearly 300 Migrants Arrested by Moroccan Security Forces Near Ceuta",
+        "summary": "Moroccan security forces have arrested nearly 300 migrants attempting to reach Spain's Ceuta. This incident follows a recent surge in migration attempts, with tens of thousands of individuals previously trying to cross in one of the region's deadliest migration crises, driven by poverty and misinformation.",
+        "topic_label": "Ceuta Border Surge",
+        "development_type": "investigation",
+        "key_facts": [
+          "Nearly 300 migrants were arrested by Moroccan security forces.",
+          "The arrests occurred near Spain's Ceuta.",
+          "This follows a recent wave of migration attempts, including a previous incident involving tens of thousands of migrants."
+        ],
+        "source_count": 2,
+        "sources": [
+          "AP",
+          "PBS News"
+        ],
+        "source_urls": [
+          "https://www.pbs.org/newshour/world/moroccan-security-forces-arrest-nearly-300-migrants-trying-to-reach-spains-ceuta",
+          "https://news.google.com/rss/articles/CBMikwFBVV95cUxOXzhLb0FxLUxYQUdGNFpoSzNPQWE0WE41SDJPX0tidkxadm9nQmQ1eXA4MkNFOS1qVWdOYVo2RzRPMEo3ZXg5emt0QWpWMV9kVjJ2eUZ0cjNkQnp4VklBYjZKVTZDTVNOaHlFdEQyOExtb1hkUEp2ZUJsMFBtQ2c3R3cxSkp3bklDeEw2enZsMU1YYkE?oc=5"
+        ],
+        "source_details": [
+          {
+            "title": "Moroccan security forces arrest nearly 300 migrants trying to reach Spain's Ceuta",
+            "source": "PBS News",
+            "link": "https://www.pbs.org/newshour/world/moroccan-security-forces-arrest-nearly-300-migrants-trying-to-reach-spains-ceuta",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Moroccan security forces arrest nearly 300 migrants trying to reach Spain’s Ceuta - AP News",
+            "source": "AP",
+            "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOXzhLb0FxLUxYQUdGNFpoSzNPQWE0WE41SDJPX0tidkxadm9nQmQ1eXA4MkNFOS1qVWdOYVo2RzRPMEo3ZXg5emt0QWpWMV9kVjJ2eUZ0cjNkQnp4VklBYjZKVTZDTVNOaHlFdEQyOExtb1hkUEp2ZUJsMFBtQ2c3R3cxSkp3bklDeEw2enZsMU1YYkE?oc=5",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "matched_development_id": "story_af1ea58d74818916",
+          "shared_tokens": [
+            "border",
+            "ceuta",
+            "migrant",
+            "occurred",
+            "surge"
+          ],
+          "shared_entities": [
+            "border_surge",
+            "ceuta_border"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "canonical_bounded_event_identity_v1",
+          "event_identity_key": "ceuta-border-surge",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-17",
+        "last_seen_at": "2026-08-17",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 15,
+      "public_development_count": 16,
       "questionable_development_count": 5,
       "review_required": true
     },
-    "latest_title": "Morocco and Spain Enhance Security in Ceuta Amid Migrant Influx and Misinformation",
-    "latest_summary": "Moroccan authorities have implemented new security measures in Ceuta to address a potential surge in migrants, spurred by false social media claims about the border opening for Spain's Assumption holiday. Both Moroccan and Spanish officials are responding to the situation, with Morocco warning that those spreading misinformation could face legal consequences.",
+    "latest_title": "Nearly 300 Migrants Arrested by Moroccan Security Forces Near Ceuta",
+    "latest_summary": "Moroccan security forces have arrested nearly 300 migrants attempting to reach Spain's Ceuta. This incident follows a recent surge in migration attempts, with tens of thousands of individuals previously trying to cross in one of the region's deadliest migration crises, driven by poverty and misinformation.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -1381,29 +1448,29 @@
       "milestone_development_ids": [
         "story_dff81ceff84cab9d",
         "story_af1ea58d74818916",
-        "story_00f4faca0821b9e2",
-        "story_bf8eacd3559847dd"
+        "story_c3bf39eb2443ffa8",
+        "story_5d7d0f98e1565054"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-15",
-      "development_count": 15,
-      "coverage_packet_count": 18,
-      "date_count": 11,
-      "source_count": 45,
+      "summary_updated_at": "2026-08-17",
+      "development_count": 16,
+      "coverage_packet_count": 19,
+      "date_count": 12,
+      "source_count": 47,
       "independent_source_count": 22,
       "first_date": "2026-07-30",
-      "latest_date": "2026-08-15",
-      "latest_update_title": "Morocco and Spain Enhance Security in Ceuta Amid Migrant Influx and Misinformation",
+      "latest_date": "2026-08-17",
+      "latest_update_title": "Nearly 300 Migrants Arrested by Moroccan Security Forces Near Ceuta",
       "coverage_score": 1.0,
-      "recency_score": 0.875,
-      "rank_score": 0.927,
-      "context_summary": "Muninn first tracked this thread on 2026-07-30: Ceuta Requests National Emergency Amid Surge of Migrants from Morocco. The latest development is Morocco and Spain Enhance Security in Ceuta Amid Migrant Influx and Misinformation.",
-      "cta_label": "Explore 15 developments"
+      "recency_score": 1.0,
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-07-30: Ceuta Requests National Emergency Amid Surge of Migrants from Morocco. The latest development is Nearly 300 Migrants Arrested by Moroccan Security Forces Near Ceuta.",
+      "cta_label": "Explore 16 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Authorities in Ceuta have requested Spain to declare a national emergency due to a significant influx of migrants swimming from Morocco. A later development was Mass Migration of Moroccans to Ceuta Sparks Return and Local Tensions. Most recently, moroccan authorities have implemented new security measures in Ceuta to address a potential surge in migrants, spurred by false social media claims about the border opening for Spain's Assumption holiday.",
+      "summary": "Authorities in Ceuta have requested Spain to declare a national emergency due to a significant influx of migrants swimming from Morocco. A later development was Ceuta Migrant Crisis Highlights European Divisions and Death Toll Discrepancies. Most recently, moroccan security forces have arrested nearly 300 migrants attempting to reach Spain's Ceuta.",
       "key_developments": [
         {
           "development_id": "story_dff81ceff84cab9d",
@@ -1416,14 +1483,14 @@
           "title": "Ceuta Recovers After Migrant Surge and Return to Morocco"
         },
         {
-          "development_id": "story_00f4faca0821b9e2",
-          "date": "2026-08-05",
-          "title": "Ceuta Faces Aftermath of Deadly Migrant Crossings from Morocco"
+          "development_id": "story_c3bf39eb2443ffa8",
+          "date": "2026-08-07",
+          "title": "Ceuta Faces Migrant Crisis with Thousands Still Present After Surge"
         },
         {
-          "development_id": "story_bf8eacd3559847dd",
-          "date": "2026-08-15",
-          "title": "Morocco and Spain Enhance Security in Ceuta Amid Migrant Influx and Misinformation"
+          "development_id": "story_5d7d0f98e1565054",
+          "date": "2026-08-17",
+          "title": "Nearly 300 Migrants Arrested by Moroccan Security Forces Near Ceuta"
         }
       ],
       "sources": [
@@ -1696,9 +1763,21 @@
           "source": "France 24 - English",
           "link": "https://www.france24.com/en/ceuta-false-social-media-posts-fuel-migration-tensions",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Moroccan security forces arrest nearly 300 migrants trying to reach Spain's Ceuta",
+          "source": "PBS News",
+          "link": "https://www.pbs.org/newshour/world/moroccan-security-forces-arrest-nearly-300-migrants-trying-to-reach-spains-ceuta",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Moroccan security forces arrest nearly 300 migrants trying to reach Spain’s Ceuta - AP News",
+          "source": "AP",
+          "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOXzhLb0FxLUxYQUdGNFpoSzNPQWE0WE41SDJPX0tidkxadm9nQmQ1eXA4MkNFOS1qVWdOYVo2RzRPMEo3ZXg5emt0QWpWMV9kVjJ2eUZ0cjNkQnp4VklBYjZKVTZDTVNOaHlFdEQyOExtb1hkUEp2ZUJsMFBtQ2c3R3cxSkp3bklDeEw2enZsMU1YYkE?oc=5",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-08-15",
+      "updated_at": "2026-08-17",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -1833,6 +1912,7 @@
       "000",
       "100",
       "24-hour",
+      "300",
       "500-meter",
       "action",
       "address",
@@ -1844,6 +1924,7 @@
       "announced",
       "approximately",
       "around",
+      "arrested",
       "arrival",
       "arriving",
       "assist",
@@ -1873,11 +1954,13 @@
       "conflicting",
       "consequence",
       "control",
+      "crise",
       "crisi",
       "criticism",
       "cross",
       "crossed",
       "crossing",
+      "deadliest",
       "deadly",
       "death",
       "decision",
@@ -1890,6 +1973,7 @@
       "discussion",
       "dispute",
       "division",
+      "driven",
       "drowning",
       "effective",
       "emergency",
@@ -1913,6 +1997,7 @@
       "floating",
       "follow",
       "food",
+      "force",
       "future",
       "gradually",
       "halts",
@@ -1974,6 +2059,8 @@
       "most",
       "nation",
       "national",
+      "near",
+      "nearly",
       "normal",
       "north",
       "number",
@@ -1990,12 +2077,16 @@
       "policie",
       "political",
       "potential",
+      "poverty",
       "present",
+      "previously",
       "prompting",
       "rare",
+      "reach",
       "recent",
       "recover",
       "refused",
+      "region",
       "reignited",
       "reinforce",
       "reinforcement",
@@ -2054,6 +2145,7 @@
       "tragically",
       "travel",
       "traveler",
+      "trying",
       "unaccounted",
       "unfolded",
       "unprecedented",
@@ -2079,6 +2171,7 @@
       "ceuta_faces",
       "ceuta_leads",
       "ceuta_migrant",
+      "ceuta_moroccan",
       "ceuta_recover",
       "ceuta_request",
       "ceuta_result",
@@ -2098,6 +2191,7 @@
       "european_division",
       "faces_aftermath",
       "faces_migrant",
+      "force_near",
       "halts_migrant",
       "highlight_european",
       "implement_border",
@@ -2112,6 +2206,7 @@
       "massive_influx",
       "massive_migrant",
       "measure_tens",
+      "migrant_arrested",
       "migrant_crisi",
       "migrant_cross",
       "migrant_crossing",
@@ -2119,6 +2214,7 @@
       "migrant_influx",
       "migrant_surge",
       "misinformation_moroccan",
+      "moroccan_security",
       "morocco",
       "morocco.",
       "morocco._ceuta",
@@ -2128,12 +2224,16 @@
       "morocco_ceuta",
       "morocco_strengthen",
       "national_emergency",
+      "near_ceuta",
+      "nearly_migrant",
       "north_african",
       "request_national",
       "return",
+      "security_force",
       "spain",
       "spain_assumption",
       "spain_ceuta",
+      "spain_ceuta.",
       "spain_enhance",
       "spain_halts",
       "spain_implement",
@@ -2147,7 +2247,7 @@
       "toll_discrepancie",
       "toll_spain"
     ],
-    "search_text": "000 100 24-hour 500-meter action address african aftermath along amidst among announced approximately around arrival arriving assist assistance assumption attempt attempting authoritie barrier began beginning begun border border_check border_control both both_moroccan cafes calm caused ceased ceuta ceuta. ceuta._massive ceuta_faces ceuta_leads ceuta_migrant ceuta_recover ceuta_request ceuta_result ceuta_spain ceuta_spark ceuta_territory challenge chaotic check citing claim comes concern conflicting consequence control crisi crisi_highlight crisi_italy criticism cross crossed crossing deadly deadly_migrant death decision declare demand despite died diplomatic discrepancie discussion dispute dispute_spain division drowning effective emergency emergency_measure enclave enhance enhance_security enter entered escalated escalating escalation establishment eu europe europe. europe._spain european european_division event exclave face faces faces_aftermath faces_migrant false familie fatalitie floating follow food future gradually halts halts_migrant highlight highlight_european holiday however humanitarian illegal immigration implement implement_border implement_temporary implementation implemented impose imposition incident include including indicate indicated indicating individual influx initial installation installing interior introduced introduction italian italian_traveler italy italy. italy_maintain lack last leads least legal life lift local local_tension loved maintain maintain_border majority manage management many marks mass mass_migration massive massive_influx massive_migrant measure measure_tens media midnight migrant migrant_crisi migrant_cross migrant_crossing migrant_dispute migrant_influx migrant_surge migration military ministry misinformation misinformation_moroccan missing moroccan morocco morocco. morocco._ceuta morocco._local morocco_authoritie morocco_calm morocco_ceuta morocco_strengthen most nation national national_emergency normal north north_african number occurred office ones ongoing only opening other overwhelmed period person policie political potential present prompting rare recent recover refused reignited reinforce reinforcement remain reopen reported reportedly reporting request request_national requested resident responding response result resulted resume retaliation return returned returning rising saturday searching security seeking seen shelter shops short shortly significant similar since situation small social spain spain_assumption spain_ceuta spain_enhance spain_halts spain_implement spain_retaliation spark spark_return sparked spat spreading spurred stampede still still_present strengthen strengthen_border surge swimming temporary temporary_border tens tension tension_thousand territory these those thousand thousand_still toll toll_discrepancie toll_spain tragically travel traveler unaccounted unfolded unprecedented unrest voluntarily warning week where which while within work would young"
+    "search_text": "000 100 24-hour 300 500-meter action address african aftermath along amidst among announced approximately around arrested arrival arriving assist assistance assumption attempt attempting authoritie barrier began beginning begun border border_check border_control both both_moroccan cafes calm caused ceased ceuta ceuta. ceuta._massive ceuta_faces ceuta_leads ceuta_migrant ceuta_moroccan ceuta_recover ceuta_request ceuta_result ceuta_spain ceuta_spark ceuta_territory challenge chaotic check citing claim comes concern conflicting consequence control crise crisi crisi_highlight crisi_italy criticism cross crossed crossing deadliest deadly deadly_migrant death decision declare demand despite died diplomatic discrepancie discussion dispute dispute_spain division driven drowning effective emergency emergency_measure enclave enhance enhance_security enter entered escalated escalating escalation establishment eu europe europe. europe._spain european european_division event exclave face faces faces_aftermath faces_migrant false familie fatalitie floating follow food force force_near future gradually halts halts_migrant highlight highlight_european holiday however humanitarian illegal immigration implement implement_border implement_temporary implementation implemented impose imposition incident include including indicate indicated indicating individual influx initial installation installing interior introduced introduction italian italian_traveler italy italy. italy_maintain lack last leads least legal life lift local local_tension loved maintain maintain_border majority manage management many marks mass mass_migration massive massive_influx massive_migrant measure measure_tens media midnight migrant migrant_arrested migrant_crisi migrant_cross migrant_crossing migrant_dispute migrant_influx migrant_surge migration military ministry misinformation misinformation_moroccan missing moroccan moroccan_security morocco morocco. morocco._ceuta morocco._local morocco_authoritie morocco_calm morocco_ceuta morocco_strengthen most nation national national_emergency near near_ceuta nearly nearly_migrant normal north north_african number occurred office ones ongoing only opening other overwhelmed period person policie political potential poverty present previously prompting rare reach recent recover refused region reignited reinforce reinforcement remain reopen reported reportedly reporting request request_national requested resident responding response result resulted resume retaliation return returned returning rising saturday searching security security_force seeking seen shelter shops short shortly significant similar since situation small social spain spain_assumption spain_ceuta spain_ceuta. spain_enhance spain_halts spain_implement spain_retaliation spark spark_return sparked spat spreading spurred stampede still still_present strengthen strengthen_border surge swimming temporary temporary_border tens tension tension_thousand territory these those thousand thousand_still toll toll_discrepancie toll_spain tragically travel traveler trying unaccounted unfolded unprecedented unrest voluntarily warning week where which while within work would young"
   },
   "related_events": []
 }
