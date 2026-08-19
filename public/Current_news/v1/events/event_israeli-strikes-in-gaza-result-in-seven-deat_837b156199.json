@@ -15,7 +15,7 @@
     "summary": "Israeli military strikes in Gaza have resulted in the deaths of seven individuals and the destruction of medical supply warehouses. The Gaza Health Ministry condemned the attacks, which occurred amid ongoing uncertainty regarding a disarmament deal with Hamas. Reports indicate that the strikes targeted warehouses near a hospital, which were believed to be storing medical supplies.",
     "status": "active",
     "first_seen_at": "2026-08-01",
-    "last_seen_at": "2026-08-04",
+    "last_seen_at": "2026-08-19",
     "timeline": [
       {
         "development_id": "story_8bc317b8bc17260f",
@@ -267,47 +267,121 @@
         "first_seen_at": "2026-08-04",
         "last_seen_at": "2026-08-04",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_fb625c155f6839af",
+        "daily_story_id": "story_fb625c155f6839af",
+        "date": "2026-08-19",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Israel Launches Criminal Investigations into Killings of Hind Rajab and Gaza Rescue Workers",
+        "summary": "Israel's military announced it will conduct criminal investigations into two significant incidents involving the deaths of Palestinians. The probes will focus on the killing of 5-year-old Hind Rajab and her family in January 2024, as well as the deaths of 15 Palestinian paramedics in March 2025. This decision follows a review of 150 incidents related to the actions of Israeli troops during the conflict.",
+        "topic_label": "Gaza Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "Israel's military to investigate the killing of Hind Rajab and her family.",
+          "Investigations also include the deaths of 15 Palestinian paramedics.",
+          "Decision follows a review of 150 incidents involving Israeli troops."
+        ],
+        "source_count": 3,
+        "sources": [
+          "BBC",
+          "DW",
+          "France 24"
+        ],
+        "source_urls": [
+          "https://www.france24.com/en/middle-east/20260819-middle-east-live-turkey-rejects-israeli-claims-after-strike-on-syria-air-base",
+          "https://www.dw.com/en/israeli-military-to-open-criminal-probes-into-2-gaza-attacks/a-78429726?maca=en-rss-en-all-1573-rdf",
+          "https://www.bbc.co.uk/news/articles/crl7yjlpx2po?at_medium=RSS&at_campaign=rss"
+        ],
+        "source_details": [
+          {
+            "title": "Middle East live: Israel opens criminal probes into killings of Hind Rajab, Gaza rescue workers",
+            "source": "France 24",
+            "link": "https://www.france24.com/en/middle-east/20260819-middle-east-live-turkey-rejects-israeli-claims-after-strike-on-syria-air-base",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Israeli military to open criminal probes into 2 Gaza attacks",
+            "source": "DW",
+            "link": "https://www.dw.com/en/israeli-military-to-open-criminal-probes-into-2-gaza-attacks/a-78429726?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Israeli army orders criminal investigation into killing of Palestinian girl Hind Rajab in Gaza",
+            "source": "BBC",
+            "link": "https://www.bbc.co.uk/news/articles/crl7yjlpx2po?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_8bc317b8bc17260f",
+          "shared_tokens": [
+            "conflict",
+            "death",
+            "gaza",
+            "israel",
+            "military"
+          ],
+          "shared_entities": [
+            "israel"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-19",
+        "last_seen_at": "2026-08-19",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 3,
+      "public_development_count": 4,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Peace Envoy Discusses Gaza Disarmament with Netanyahu, Urges Ceasefire",
-    "latest_summary": "The Board of Peace envoy, Nikolay Mladenov, met with Israeli Prime Minister Benjamin Netanyahu to discuss a new disarmament deal with Hamas. The talks were described as constructive, with an emphasis on halting strikes. Additionally, it was communicated that Israel's withdrawal from Gaza would only commence following Hamas's complete disarmament.",
+    "latest_title": "Israel Launches Criminal Investigations into Killings of Hind Rajab and Gaza Rescue Workers",
+    "latest_summary": "Israel's military announced it will conduct criminal investigations into two significant incidents involving the deaths of Palestinians. The probes will focus on the killing of 5-year-old Hind Rajab and her family in January 2024, as well as the deaths of 15 Palestinian paramedics in March 2025. This decision follows a review of 150 incidents related to the actions of Israeli troops during the conflict.",
     "presentation": {
       "has_context": true,
-      "has_full_timeline": false,
-      "stage": "developing_event",
-      "stage_label": "Developing event",
+      "has_full_timeline": true,
+      "stage": "timeline",
+      "stage_label": "Timeline",
       "base_title": "Israeli Strikes in Gaza Result in Seven Deaths and Destruction of Medical Warehouses",
-      "display_title": "Israeli Strikes in Gaza Result in Seven Deaths and Destruction of Medical Warehouses",
+      "display_title": "Israeli Strikes in Gaza Result in Seven Deaths and Destruction of Medical Warehouses Timeline",
       "milestone_development_ids": [
         "story_8bc317b8bc17260f",
         "story_3f7042e7cdf089b3",
-        "story_1ca97d26c2220eff"
+        "story_1ca97d26c2220eff",
+        "story_fb625c155f6839af"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-04",
-      "development_count": 3,
-      "coverage_packet_count": 4,
-      "date_count": 3,
-      "source_count": 9,
-      "independent_source_count": 6,
+      "summary_updated_at": "2026-08-19",
+      "development_count": 4,
+      "coverage_packet_count": 5,
+      "date_count": 4,
+      "source_count": 12,
+      "independent_source_count": 8,
       "first_date": "2026-08-01",
-      "latest_date": "2026-08-04",
-      "latest_update_title": "Peace Envoy Discusses Gaza Disarmament with Netanyahu, Urges Ceasefire",
-      "coverage_score": 0.633,
-      "recency_score": 0.333,
-      "rank_score": 0.459,
-      "context_summary": "Muninn first tracked this thread on 2026-08-01: Israeli Strikes in Gaza Result in Seven Deaths and Destruction of Medical Warehouses. The latest development is Peace Envoy Discusses Gaza Disarmament with Netanyahu, Urges Ceasefire.",
-      "cta_label": ""
+      "latest_date": "2026-08-19",
+      "latest_update_title": "Israel Launches Criminal Investigations into Killings of Hind Rajab and Gaza Rescue Workers",
+      "coverage_score": 0.843,
+      "recency_score": 1.0,
+      "rank_score": 0.934,
+      "context_summary": "Muninn first tracked this thread on 2026-08-01: Israeli Strikes in Gaza Result in Seven Deaths and Destruction of Medical Warehouses. The latest development is Israel Launches Criminal Investigations into Killings of Hind Rajab and Gaza Rescue Workers.",
+      "cta_label": "Explore 4 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Israeli military strikes in Gaza have resulted in the deaths of seven individuals and the destruction of medical supply warehouses. A later development was Israel Voices Concerns Over Hamas Disarmament Deal Amid Ongoing Strikes in Gaza. Most recently, the Board of Peace envoy, Nikolay Mladenov, met with Israeli Prime Minister Benjamin Netanyahu to discuss a new disarmament deal with Hamas.",
+      "summary": "Israeli military strikes in Gaza have resulted in the deaths of seven individuals and the destruction of medical supply warehouses. A later development was Peace Envoy Discusses Gaza Disarmament with Netanyahu, Urges Ceasefire. Most recently, israel's military announced it will conduct criminal investigations into two significant incidents involving the deaths of Palestinians.",
       "key_developments": [
         {
           "development_id": "story_8bc317b8bc17260f",
@@ -323,6 +397,11 @@
           "development_id": "story_1ca97d26c2220eff",
           "date": "2026-08-04",
           "title": "Peace Envoy Discusses Gaza Disarmament with Netanyahu, Urges Ceasefire"
+        },
+        {
+          "development_id": "story_fb625c155f6839af",
+          "date": "2026-08-19",
+          "title": "Israel Launches Criminal Investigations into Killings of Hind Rajab and Gaza Rescue Workers"
         }
       ],
       "sources": [
@@ -379,18 +458,36 @@
           "source": "PBS News",
           "link": "https://www.pbs.org/newshour/world/board-of-peace-envoy-meets-with-netanyahu-on-gaza-disarmament-deal-urges-halt-to-strikes",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Middle East live: Israel opens criminal probes into killings of Hind Rajab, Gaza rescue workers",
+          "source": "France 24",
+          "link": "https://www.france24.com/en/middle-east/20260819-middle-east-live-turkey-rejects-israeli-claims-after-strike-on-syria-air-base",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Israeli military to open criminal probes into 2 Gaza attacks",
+          "source": "DW",
+          "link": "https://www.dw.com/en/israeli-military-to-open-criminal-probes-into-2-gaza-attacks/a-78429726?maca=en-rss-en-all-1573-rdf",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Israeli army orders criminal investigation into killing of Palestinian girl Hind Rajab in Gaza",
+          "source": "BBC",
+          "link": "https://www.bbc.co.uk/news/articles/crl7yjlpx2po?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-08-04",
+      "updated_at": "2026-08-19",
       "provenance": "source_grounded_event_memory"
     },
-    "event_stage": "developing_event",
+    "event_stage": "timeline",
     "related_events": [
       {
         "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
         "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
         "relationship": "related_topic",
-        "confidence": 0.932,
+        "confidence": 0.921,
         "shared_entities": [
           "benjamin_netanyahu",
           "gaza",
@@ -405,7 +502,7 @@
         "event_id": "event_netanyahu-s-high-stakes-visit-to-trump-amid_6bb1d5dbdf",
         "title": "Netanyahu's High-Stakes Visit to Trump Amid Tensions and Upcoming Elections",
         "relationship": "related_topic",
-        "confidence": 0.755,
+        "confidence": 0.754,
         "shared_entities": [
           "benjamin_netanyahu",
           "donald_trump.",
@@ -417,7 +514,7 @@
         "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
         "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
         "relationship": "related_topic",
-        "confidence": 0.75,
+        "confidence": 0.746,
         "shared_entities": [
           "benjamin_netanyahu",
           "israel",
@@ -428,7 +525,7 @@
         "event_id": "event_trump-hosts-separate-meetings-with-zelenskyy_49e7e2befb",
         "title": "Trump Hosts Separate Meetings with Zelenskyy and Netanyahu at the White House",
         "relationship": "related_topic",
-        "confidence": 0.732,
+        "confidence": 0.739,
         "shared_entities": [
           "benjamin_netanyahu",
           "israel",
@@ -457,7 +554,13 @@
       "focal_tall_y": 0.48
     },
     "search_tokens": [
+      "150",
+      "2024",
+      "2025",
+      "5-year-old",
+      "action",
       "additionally",
+      "announced",
       "announcement",
       "attack",
       "believed",
@@ -470,10 +573,14 @@
       "complete",
       "concern",
       "condemned",
+      "conduct",
+      "conflict",
       "constructive",
       "continue",
+      "criminal",
       "deal",
       "death",
+      "decision",
       "described",
       "destruction",
       "disarmament",
@@ -483,14 +590,25 @@
       "emphasi",
       "envoy",
       "expressed",
+      "family",
+      "focus",
+      "follow",
       "gaza",
       "halting",
       "hamas",
       "health",
+      "hind",
       "hospital",
+      "incident",
       "indicate",
       "individual",
+      "investigation",
+      "involving",
       "israel",
+      "january",
+      "killing",
+      "launche",
+      "march",
       "medical",
       "military",
       "ministry",
@@ -501,14 +619,22 @@
       "occurred",
       "ongoing",
       "only",
+      "palestinian",
+      "paramedic",
       "peace",
       "prime",
+      "probe",
       "promoted",
       "proposed",
+      "rajab",
       "regarding",
+      "related",
+      "rescue",
       "result",
       "resulted",
+      "review",
       "seven",
+      "significant",
       "storing",
       "strike",
       "strip",
@@ -516,18 +642,22 @@
       "supply",
       "talks",
       "targeted",
+      "troop",
       "trump",
       "uncertainty",
       "united",
       "urges",
       "voice",
       "warehouse",
+      "well",
       "which",
       "withdrawal",
+      "worker",
       "would"
     ],
     "entities": [
       "benjamin_netanyahu",
+      "criminal_investigation",
       "disarmament_deal",
       "discusse_gaza",
       "donald_trump.",
@@ -536,38 +666,143 @@
       "gaza_disarmament",
       "gaza_health",
       "gaza_israel",
+      "gaza_rescue",
       "gaza_result",
       "gaza_strip.",
       "hamas_disarmament",
       "health_ministry",
+      "hind_rajab",
       "israel",
+      "israel_launche",
       "israel_prime",
       "israel_voice",
+      "january",
+      "launche_criminal",
+      "march",
       "medical_warehouse",
       "netanyahu_urges",
       "nikolay_mladenov",
       "peace_envoy",
+      "rescue_worker",
       "seven",
       "strip._peace",
       "united",
       "urges_ceasefire",
       "voice_concern",
-      "warehouse_israel"
+      "warehouse_israel",
+      "worker_israel"
     ],
-    "search_text": "additionally announcement attack believed benjamin benjamin_netanyahu board ceasefire comes commence communicated complete concern condemned constructive continue deal death described destruction disarmament disarmament_deal discuss discusse discusse_gaza donald donald_trump. emphasi envoy envoy_discusse expressed gaza gaza_disarmament gaza_health gaza_israel gaza_result gaza_strip. halting hamas hamas_disarmament health health_ministry hospital indicate individual israel israel_prime israel_voice medical medical_warehouse military ministry mladenov near netanyahu netanyahu_urges nikolay nikolay_mladenov occurred ongoing only peace peace_envoy prime promoted proposed regarding result resulted seven storing strike strip strip._peace supplie supply talks targeted trump uncertainty united urges urges_ceasefire voice voice_concern warehouse warehouse_israel which withdrawal would"
+    "search_text": "150 2024 2025 5-year-old action additionally announced announcement attack believed benjamin benjamin_netanyahu board ceasefire comes commence communicated complete concern condemned conduct conflict constructive continue criminal criminal_investigation deal death decision described destruction disarmament disarmament_deal discuss discusse discusse_gaza donald donald_trump. emphasi envoy envoy_discusse expressed family focus follow gaza gaza_disarmament gaza_health gaza_israel gaza_rescue gaza_result gaza_strip. halting hamas hamas_disarmament health health_ministry hind hind_rajab hospital incident indicate individual investigation involving israel israel_launche israel_prime israel_voice january killing launche launche_criminal march medical medical_warehouse military ministry mladenov near netanyahu netanyahu_urges nikolay nikolay_mladenov occurred ongoing only palestinian paramedic peace peace_envoy prime probe promoted proposed rajab regarding related rescue rescue_worker result resulted review seven significant storing strike strip strip._peace supplie supply talks targeted troop trump uncertainty united urges urges_ceasefire voice voice_concern warehouse warehouse_israel well which withdrawal worker worker_israel would",
+    "event_overview": {
+      "available": true,
+      "title": "About Gaza Conflict",
+      "subject": "Gaza Conflict",
+      "summary": "The Gaza conflict refers to the war centered on the Gaza Strip that followed Hamas-led attacks in Israel on October 7, 2023, and Israel’s subsequent military campaign against Hamas and other Palestinian armed groups. It combines active hostilities, hostage and detainee issues, humanitarian access and civilian protection concerns, ceasefire diplomacy, and international legal and accountability processes.",
+      "facts": [
+        {
+          "label": "Start and setting",
+          "value": "The current phase began on October 7, 2023, when Palestinian armed groups from Gaza carried out attacks in Israel; the ensuing Israeli military campaign has been focused principally on the Gaza Strip.",
+          "source_ids": [
+            "o1",
+            "o2"
+          ]
+        },
+        {
+          "label": "Principal parties",
+          "value": "The conflict principally involves Israel and Hamas, alongside other Palestinian armed groups; civilians in Gaza and Israel have been affected by the hostilities.",
+          "source_ids": [
+            "o1",
+            "o3"
+          ]
+        },
+        {
+          "label": "Humanitarian dimension",
+          "value": "UN humanitarian reporting describes continuing military activity, displacement, damage to civilian infrastructure, and constraints on access to health care, water, sanitation, shelter, and essential supplies in Gaza.",
+          "source_ids": [
+            "o2",
+            "o4"
+          ]
+        },
+        {
+          "label": "Ceasefire and hostage diplomacy",
+          "value": "A UN Security Council resolution adopted on June 10, 2024 endorsed a proposed three-phase framework linking a ceasefire, releases of hostages and Palestinian prisoners, Israeli force withdrawals, humanitarian aid, and reconstruction; implementation has depended on agreement by the parties.",
+          "source_ids": [
+            "o3"
+          ]
+        },
+        {
+          "label": "International legal process",
+          "value": "The International Court of Justice is hearing South Africa’s case against Israel under the Genocide Convention and has issued orders on provisional measures; those measures are interim directions and do not determine the case’s final merits.",
+          "source_ids": [
+            "o5",
+            "o6"
+          ]
+        }
+      ],
+      "scope_note": "The selected Muninn timeline follows selected August 2026 developments involving strikes, ceasefire and disarmament diplomacy, and investigations into particular killings; it does not provide a comprehensive record of the war, all casualties, or every diplomatic and legal development.",
+      "sources": [
+        {
+          "title": "UN",
+          "publisher": "UN",
+          "url": "https://www.un.org/unispal/document/un-experts-statement-gaza-israel-12oct2023/",
+          "source_type": "reporting",
+          "id": "o1"
+        },
+        {
+          "title": "Ochaopt",
+          "publisher": "Ochaopt",
+          "url": "https://www.ochaopt.org/content/humanitarian-situation-report-31-july-2026",
+          "source_type": "reporting",
+          "id": "o2"
+        },
+        {
+          "title": "UN",
+          "publisher": "UN",
+          "url": "https://www.un.org/unispal/document/sres2735-2024-10jun24/",
+          "source_type": "reporting",
+          "id": "o3"
+        },
+        {
+          "title": "Ochaopt",
+          "publisher": "Ochaopt",
+          "url": "https://www.ochaopt.org/content/humanitarian-situation-report-10-july-2026",
+          "source_type": "reporting",
+          "id": "o4"
+        },
+        {
+          "title": "Icj Cij",
+          "publisher": "Icj Cij",
+          "url": "https://api.icj-cij.org/case/192",
+          "source_type": "reporting",
+          "id": "o5"
+        },
+        {
+          "title": "Icj Cij",
+          "publisher": "Icj Cij",
+          "url": "https://api.icj-cij.org/sites/default/files/case-related/192/192-20240524-ord-01-00-en.pdf",
+          "source_type": "reporting",
+          "id": "o6"
+        }
+      ],
+      "publisher_count": 3,
+      "generated_at": "2026-08-19T12:40:13.217747+00:00",
+      "expires_at": "2026-08-26T12:40:13.217747+00:00",
+      "model": "gpt-5.6-terra",
+      "provenance": "openai_web_search_source_grounded_event_overview_v1"
+    }
   },
   "related_events": [
     {
       "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
       "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
-      "summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Trial Opens for Tupac Shakur's Murder Nearly 30 Years Later.",
+      "summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Israel Conducts Airstrikes on Syrian Base to Halt Turkish Deployment.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-07-31",
-      "last_seen_at": "2026-08-18",
-      "development_count": 14,
-      "latest_title": "Trial Opens for Tupac Shakur's Murder Nearly 30 Years Later",
+      "last_seen_at": "2026-08-19",
+      "development_count": 15,
+      "latest_title": "Israel Conducts Airstrikes on Syrian Base to Halt Turkish Deployment",
       "topic_label": "Gaza Peace Deal",
       "hero_image": {
         "url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
