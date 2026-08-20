@@ -15,7 +15,7 @@
     "summary": "President Trump has announced a deal for Hamas to completely disarm, which includes the gradual withdrawal of Israeli forces from Gaza. Hamas confirmed its agreement to the plan, stating it would hand over its weapons to a Palestinian governing committee. However, the implementation of this deal is contingent upon Israel fulfilling its commitments from a previous agreement.",
     "status": "active",
     "first_seen_at": "2026-07-31",
-    "last_seen_at": "2026-08-19",
+    "last_seen_at": "2026-08-20",
     "timeline": [
       {
         "development_id": "story_c0c042a2fb04bd8a",
@@ -1496,15 +1496,120 @@
         "first_seen_at": "2026-08-19",
         "last_seen_at": "2026-08-19",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_322fd5863a393d91",
+        "daily_story_id": "story_322fd5863a393d91",
+        "date": "2026-08-20",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Intense Russian Bombardment in Kyiv Results in Multiple Casualties",
+        "summary": "A significant Russian missile and drone attack on Kyiv has resulted in at least 12 to 16 fatalities and numerous injuries. The bombardment, described as one of the heaviest since the war began, targeted residential areas, including a children's hospital and schools. The strikes caused extensive damage to buildings and disrupted power supply in parts of the city.",
+        "topic_label": "Ukraine Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "{'casualties': {'deaths': 12, 'injuries': 40}, 'targeted_areas': ['residential buildings', \"children's hospital\", 'schools'], 'attack_type': 'missile and drone strikes'}"
+        ],
+        "source_count": 4,
+        "sources": [
+          "ABC News",
+          "BBC",
+          "France 24 - English",
+          "The Guardian"
+        ],
+        "source_urls": [
+          "https://www.theguardian.com/world/2026/aug/20/ukraine-kyiv-deaths-russian-missile-attack",
+          "https://www.france24.com/en/video/20260820-russian-strikes-kill-at-least-12-in-kyiv-surrounding-region",
+          "https://abcnews.com/International/massive-russian-missile-strike-kyiv-kills-12-people/story?id=135797221",
+          "https://www.bbc.co.uk/news/articles/c98vzmden5yo?at_medium=RSS&at_campaign=rss"
+        ],
+        "source_details": [
+          {
+            "title": "More than a dozen killed as Kyiv comes under intense Russian bombardment",
+            "source": "The Guardian",
+            "link": "https://www.theguardian.com/world/2026/aug/20/ukraine-kyiv-deaths-russian-missile-attack",
+            "source_bias": "left"
+          },
+          {
+            "title": "Russian strikes kill at least 12 in Kyiv, surrounding region",
+            "source": "France 24 - English",
+            "link": "https://www.france24.com/en/video/20260820-russian-strikes-kill-at-least-12-in-kyiv-surrounding-region",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "'Massive' Russian missile strike on Kyiv kills at least 15 people, Zelenskyy says",
+            "source": "ABC News",
+            "link": "https://abcnews.com/International/massive-russian-missile-strike-kyiv-kills-12-people/story?id=135797221",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "At least 15 killed in Kyiv as Ukraine grapples with air defence shortages",
+            "source": "BBC",
+            "link": "https://www.bbc.co.uk/news/articles/c98vzmden5yo?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "attack",
+            "strike"
+          ],
+          "shared_incident_anchors": [
+            "casualtie_ukraine",
+            "multiple",
+            "multiple_casualtie",
+            "russia",
+            "ukraine"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "areas",
+            "attack",
+            "casualtie",
+            "death",
+            "drone",
+            "fatalitie",
+            "least",
+            "missile",
+            "multiple",
+            "resulted",
+            "russia",
+            "significant",
+            "strike",
+            "targeted",
+            "ukraine",
+            "war"
+          ],
+          "shared_entities": [
+            "casualtie_ukraine",
+            "multiple",
+            "multiple_casualtie",
+            "russia",
+            "ukraine"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_ce5142af71feeb85",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-20",
+        "last_seen_at": "2026-08-20",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 15,
+      "public_development_count": 16,
       "questionable_development_count": 1,
       "review_required": true
     },
-    "latest_title": "Israel Conducts Airstrikes on Syrian Base to Halt Turkish Deployment",
-    "latest_summary": "Israel launched airstrikes on the Abu al-Duhur airbase in northwest Syria, claiming the action was necessary to prevent Turkish troops from deploying there. The strikes, which reportedly damaged the runway and storage facilities, drew condemnation from both Turkey and Syria, with Turkey labeling Israel's claims as 'untenable.' A US envoy criticized the attack as an 'unnecessary escalation' in the region.",
+    "latest_title": "Intense Russian Bombardment in Kyiv Results in Multiple Casualties",
+    "latest_summary": "A significant Russian missile and drone attack on Kyiv has resulted in at least 12 to 16 fatalities and numerous injuries. The bombardment, described as one of the heaviest since the war began, targeted residential areas, including a children's hospital and schools. The strikes caused extensive damage to buildings and disrupted power supply in parts of the city.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -1515,29 +1620,29 @@
       "milestone_development_ids": [
         "story_c0c042a2fb04bd8a",
         "story_fa2d600af4d12fb5",
-        "story_2a433045a1785e1c",
-        "story_1fcd7341ffa1bbdb"
+        "story_ce5142af71feeb85",
+        "story_322fd5863a393d91"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-19",
-      "development_count": 15,
-      "coverage_packet_count": 19,
-      "date_count": 11,
-      "source_count": 55,
+      "summary_updated_at": "2026-08-20",
+      "development_count": 16,
+      "coverage_packet_count": 20,
+      "date_count": 12,
+      "source_count": 59,
       "independent_source_count": 24,
       "first_date": "2026-07-31",
-      "latest_date": "2026-08-19",
-      "latest_update_title": "Israel Conducts Airstrikes on Syrian Base to Halt Turkish Deployment",
+      "latest_date": "2026-08-20",
+      "latest_update_title": "Intense Russian Bombardment in Kyiv Results in Multiple Casualties",
       "coverage_score": 1.0,
       "recency_score": 1.0,
       "rank_score": 1.0,
-      "context_summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Israel Conducts Airstrikes on Syrian Base to Halt Turkish Deployment.",
-      "cta_label": "Explore 15 developments"
+      "context_summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Intense Russian Bombardment in Kyiv Results in Multiple Casualties.",
+      "cta_label": "Explore 16 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "President Trump has announced a deal for Hamas to completely disarm, which includes the gradual withdrawal of Israeli forces from Gaza. A later development was Israeli Strikes in Southern Lebanon Result in 11 Deaths Amid Rising Tensions. Most recently, israel launched airstrikes on the Abu al-Duhur airbase in northwest Syria, claiming the action was necessary to prevent Turkish troops from deploying there.",
+      "summary": "President Trump has announced a deal for Hamas to completely disarm, which includes the gradual withdrawal of Israeli forces from Gaza. A later development was Israeli Airstrikes in Southern Lebanon Result in 11 Deaths, Including Children. Most recently, a significant Russian missile and drone attack on Kyiv has resulted in at least 12 to 16 fatalities and numerous injuries.",
       "key_developments": [
         {
           "development_id": "story_c0c042a2fb04bd8a",
@@ -1550,14 +1655,14 @@
           "title": "Israel Rejects Trump's Gaza Peace Plan, Demands Hamas Disarmament"
         },
         {
-          "development_id": "story_2a433045a1785e1c",
+          "development_id": "story_ce5142af71feeb85",
           "date": "2026-08-17",
-          "title": "Kushner Meets Hamas Leader to Discuss Gaza Road Map"
+          "title": "Ukraine Conducts Major Drone Attack on Russia, Resulting in Multiple Casualties"
         },
         {
-          "development_id": "story_1fcd7341ffa1bbdb",
-          "date": "2026-08-19",
-          "title": "Israel Conducts Airstrikes on Syrian Base to Halt Turkish Deployment"
+          "development_id": "story_322fd5863a393d91",
+          "date": "2026-08-20",
+          "title": "Intense Russian Bombardment in Kyiv Results in Multiple Casualties"
         }
       ],
       "sources": [
@@ -1890,30 +1995,37 @@
           "source": "Euronews",
           "link": "http://www.euronews.com/2026/08/19/us-criticises-israel-over-unnecessary-escalation-after-strikes-on-syrian-airbase",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "More than a dozen killed as Kyiv comes under intense Russian bombardment",
+          "source": "The Guardian",
+          "link": "https://www.theguardian.com/world/2026/aug/20/ukraine-kyiv-deaths-russian-missile-attack",
+          "source_bias": "left"
+        },
+        {
+          "title": "Russian strikes kill at least 12 in Kyiv, surrounding region",
+          "source": "France 24 - English",
+          "link": "https://www.france24.com/en/video/20260820-russian-strikes-kill-at-least-12-in-kyiv-surrounding-region",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "'Massive' Russian missile strike on Kyiv kills at least 15 people, Zelenskyy says",
+          "source": "ABC News",
+          "link": "https://abcnews.com/International/massive-russian-missile-strike-kyiv-kills-12-people/story?id=135797221",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "At least 15 killed in Kyiv as Ukraine grapples with air defence shortages",
+          "source": "BBC",
+          "link": "https://www.bbc.co.uk/news/articles/c98vzmden5yo?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-08-19",
+      "updated_at": "2026-08-20",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
     "related_events": [
-      {
-        "event_id": "event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd",
-        "title": "Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv",
-        "relationship": "related_topic",
-        "confidence": 0.95,
-        "shared_entities": [
-          "discuss",
-          "kharkiv",
-          "kharkiv_ukraine",
-          "multiple",
-          "multiple_casualtie",
-          "russia",
-          "russia_missile",
-          "ukraine",
-          "us"
-        ]
-      },
       {
         "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
         "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
@@ -1934,10 +2046,45 @@
         ]
       },
       {
+        "event_id": "event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd",
+        "title": "Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv",
+        "relationship": "related_topic",
+        "confidence": 0.95,
+        "shared_entities": [
+          "discuss",
+          "kharkiv",
+          "kharkiv_ukraine",
+          "kyiv",
+          "kyiv_result",
+          "multiple",
+          "multiple_casualtie",
+          "russia",
+          "russia_missile",
+          "ukraine",
+          "us"
+        ]
+      },
+      {
+        "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
+        "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
+        "relationship": "related_topic",
+        "confidence": 0.935,
+        "shared_entities": [
+          "kyiv",
+          "kyiv_result",
+          "russia",
+          "russia_missile",
+          "turkey",
+          "ukraine",
+          "ukraine_conduct",
+          "us"
+        ]
+      },
+      {
         "event_id": "event_israeli-strikes-in-gaza-result-in-seven-deat_837b156199",
         "title": "Israeli Strikes in Gaza Result in Seven Deaths and Destruction of Medical Warehouses",
         "relationship": "related_topic",
-        "confidence": 0.921,
+        "confidence": 0.923,
         "shared_entities": [
           "benjamin_netanyahu",
           "gaza",
@@ -1946,20 +2093,6 @@
           "hamas_disarmament",
           "israel",
           "israel_prime"
-        ]
-      },
-      {
-        "event_id": "event_trump-hosts-separate-meetings-with-zelenskyy_49e7e2befb",
-        "title": "Trump Hosts Separate Meetings with Zelenskyy and Netanyahu at the White House",
-        "relationship": "related_topic",
-        "confidence": 0.897,
-        "shared_entities": [
-          "benjamin_netanyahu",
-          "israel",
-          "israel_prime",
-          "middle",
-          "middle_east",
-          "ukraine"
         ]
       }
     ],
@@ -2101,6 +2234,7 @@
       "begin",
       "benjamin",
       "bodie",
+      "bombardment",
       "both",
       "brokered",
       "building",
@@ -2109,6 +2243,7 @@
       "case",
       "casualtie",
       "casualty",
+      "caused",
       "ceasefire",
       "challenge",
       "children",
@@ -2132,6 +2267,7 @@
       "contradicting",
       "criticized",
       "current",
+      "damage",
       "damaged",
       "davis",
       "deadliest",
@@ -2152,6 +2288,7 @@
       "disarmed",
       "disarming",
       "discuss",
+      "disrupted",
       "divergence",
       "does",
       "donald",
@@ -2169,6 +2306,7 @@
       "escalation",
       "established",
       "extension",
+      "extensive",
       "facilitating",
       "facilitie",
       "fatalitie",
@@ -2185,10 +2323,12 @@
       "halt",
       "hamas",
       "hand",
+      "heaviest",
       "held",
       "hezbollah",
       "highest",
       "hip-hop",
+      "hospital",
       "however",
       "implementation",
       "incident",
@@ -2202,6 +2342,8 @@
       "infrastructure",
       "initiative",
       "injured",
+      "injurie",
+      "intense",
       "israel",
       "jared",
       "jeopardize",
@@ -2209,6 +2351,7 @@
       "kharkiv",
       "killed",
       "kushner",
+      "kyiv",
       "labeling",
       "largest",
       "later",
@@ -2241,6 +2384,7 @@
       "netanyahu",
       "nine",
       "northwest",
+      "numerou",
       "occurred",
       "officially",
       "ongoing",
@@ -2253,10 +2397,12 @@
       "overnight",
       "palestinian",
       "part",
+      "parts",
       "peace",
       "plan",
       "position",
       "potentially",
+      "power",
       "present",
       "prevent",
       "previou",
@@ -2289,6 +2435,7 @@
       "russia",
       "saturday",
       "scheduled",
+      "school",
       "search",
       "seven",
       "several",
@@ -2305,6 +2452,7 @@
       "stipulate",
       "storage",
       "strike",
+      "supply",
       "survivor",
       "syria",
       "syrian",
@@ -2337,6 +2485,7 @@
       "us-backed",
       "village",
       "violence",
+      "war",
       "warehouse",
       "warning",
       "weapon",
@@ -2383,6 +2532,7 @@
       "hamas_disarmament",
       "hamas_leader",
       "including_children",
+      "intense_russia",
       "israel",
       "israel_airstrike",
       "israel_conduct",
@@ -2399,6 +2549,8 @@
       "kharkiv_ukraine",
       "kushner_engage",
       "kushner_meets",
+      "kyiv",
+      "kyiv_result",
       "later_opening",
       "lebanon_result",
       "map_jared",
@@ -2420,6 +2572,7 @@
       "rising_tension",
       "road_map",
       "russia",
+      "russia_bombardment",
       "russia_missile",
       "russia_resulting",
       "shakur_murder",
@@ -2442,43 +2595,9 @@
       "us-backed",
       "years_later"
     ],
-    "search_text": "15-point 1996 2023 600 accept accused across action action_challenge additional administration affected aftermath agree agreed agreement aimed airbase airstrike al-duhur al-zahrani also announce announced ansar approach areas army artist assault attack authoritie backed base began begin benjamin benjamin_netanyahu bodie both brokered building calls capital case casualtie casualtie_israel casualtie_ukraine casualty ceasefire challenge challenge_trump children children_israel civilian claim claiming combined comes commenced commitment committee complete completely concurrently condemnation condemned conduct conduct_airstrike confirmed conflict contingent contradicting criticized current damaged davis deadliest deal death decade decline decline_trump deir demand demand_hamas deploying deployment deployment_israel described despite diplomatic disappointed disarm disarmament disarmament_israel disarmed disarming discuss divergence does donald donald_trump drew drive-by drone duane duane_davis earlier east east_talks effort emphasized ending engage envoy escalation established extension facilitating facilitie fatalitie follow followed force form fulfilling fully gaza gaza. gaza._hamas gaza._netanyahu gaza_disarmament gaza_peace gaza_result gaza_road governing gradual group halt halt_turkish hamas hamas_agree hamas_disarmament hamas_leader hand held hezbollah highest hip-hop however implementation incident include including including_children indicate indicated indicating indicted individual infrastructure initiative injured israel israel_airstrike israel_conduct israel_decline israel_military israel_prime israel_resistance israel_withdrawal jared jared_kushner jeopardize june june. june._israel june._rescue kharkiv kharkiv_ukraine killed kushner kushner_engage kushner_meets labeling largest later later_opening launched leader least lebanese lebanon lebanon_result linked local map_jared marking marks meanwhile meet meeting meets meets_hamas middle middle_east military military_action missile mission moment month moscow moscow._kushner multiple multiple_casualtie murder murder_nearly nearby nearly nearly_years necessary negotiation netanyahu nine northwest occurred officially ongoing online opening opens operation orchestrating other overnight palestinian part peace peace_proposal plan position potentially present prevent previou prime progress proposal proposal_israel proposed rare recent region reject rejected rejection remained reportedly represent rescue residential resistance resistance_jared response result resulted resulting retailer retreat revive revive_gaza rising rising_tension road road_map runway russia russia_missile russia_resulting saturday scheduled search seven several shakur shakur_murder shooting significant since soldier southern stalled stated statement stating stipulate storage strike survivor syria syrian syrian_base talks targeted targeting tension tension_israel terms territory there they three toll total toward trial trial_opens troop truce trump trump_gaza trump_point tupac tupac_shakur tupac_shakur. turkey turkish turkish_deployment u.s.-backed ukraine ukraine_conduct unacceptable unnecessary unsolved untenable until upon us us-backed village violence warehouse warning weapon weekend weeks what which withdraw withdrawal within would years years_later"
+    "search_text": "15-point 1996 2023 600 accept accused across action action_challenge additional administration affected aftermath agree agreed agreement aimed airbase airstrike al-duhur al-zahrani also announce announced ansar approach areas army artist assault attack authoritie backed base began begin benjamin benjamin_netanyahu bodie bombardment both brokered building calls capital case casualtie casualtie_israel casualtie_ukraine casualty caused ceasefire challenge challenge_trump children children_israel civilian claim claiming combined comes commenced commitment committee complete completely concurrently condemnation condemned conduct conduct_airstrike confirmed conflict contingent contradicting criticized current damage damaged davis deadliest deal death decade decline decline_trump deir demand demand_hamas deploying deployment deployment_israel described despite diplomatic disappointed disarm disarmament disarmament_israel disarmed disarming discuss disrupted divergence does donald donald_trump drew drive-by drone duane duane_davis earlier east east_talks effort emphasized ending engage envoy escalation established extension extensive facilitating facilitie fatalitie follow followed force form fulfilling fully gaza gaza. gaza._hamas gaza._netanyahu gaza_disarmament gaza_peace gaza_result gaza_road governing gradual group halt halt_turkish hamas hamas_agree hamas_disarmament hamas_leader hand heaviest held hezbollah highest hip-hop hospital however implementation incident include including including_children indicate indicated indicating indicted individual infrastructure initiative injured injurie intense intense_russia israel israel_airstrike israel_conduct israel_decline israel_military israel_prime israel_resistance israel_withdrawal jared jared_kushner jeopardize june june. june._israel june._rescue kharkiv kharkiv_ukraine killed kushner kushner_engage kushner_meets kyiv kyiv_result labeling largest later later_opening launched leader least lebanese lebanon lebanon_result linked local map_jared marking marks meanwhile meet meeting meets meets_hamas middle middle_east military military_action missile mission moment month moscow moscow._kushner multiple multiple_casualtie murder murder_nearly nearby nearly nearly_years necessary negotiation netanyahu nine northwest numerou occurred officially ongoing online opening opens operation orchestrating other overnight palestinian part parts peace peace_proposal plan position potentially power present prevent previou prime progress proposal proposal_israel proposed rare recent region reject rejected rejection remained reportedly represent rescue residential resistance resistance_jared response result resulted resulting retailer retreat revive revive_gaza rising rising_tension road road_map runway russia russia_bombardment russia_missile russia_resulting saturday scheduled school search seven several shakur shakur_murder shooting significant since soldier southern stalled stated statement stating stipulate storage strike supply survivor syria syrian syrian_base talks targeted targeting tension tension_israel terms territory there they three toll total toward trial trial_opens troop truce trump trump_gaza trump_point tupac tupac_shakur tupac_shakur. turkey turkish turkish_deployment u.s.-backed ukraine ukraine_conduct unacceptable unnecessary unsolved untenable until upon us us-backed village violence war warehouse warning weapon weekend weeks what which withdraw withdrawal within would years years_later"
   },
   "related_events": [
-    {
-      "event_id": "event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd",
-      "title": "Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv",
-      "summary": "Muninn first tracked this thread on 2026-07-25: Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv. The latest development is Russian Airstrike in Kramatorsk Results in Casualties.",
-      "activity_status": "active",
-      "stage": "timeline",
-      "stage_label": "Timeline",
-      "first_seen_at": "2026-07-25",
-      "last_seen_at": "2026-08-15",
-      "development_count": 16,
-      "latest_title": "Russian Airstrike in Kramatorsk Results in Casualties",
-      "topic_label": "Ukraine Conflict",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd"
-    },
     {
       "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
       "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
@@ -2514,16 +2633,84 @@
       "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
     },
     {
+      "event_id": "event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd",
+      "title": "Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv",
+      "summary": "Muninn first tracked this thread on 2026-07-25: Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv. The latest development is Russian Airstrike in Kramatorsk Results in Casualties.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-25",
+      "last_seen_at": "2026-08-15",
+      "development_count": 16,
+      "latest_title": "Russian Airstrike in Kramatorsk Results in Casualties",
+      "topic_label": "Ukraine Conflict",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd"
+    },
+    {
+      "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
+      "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
+      "summary": "Muninn first tracked this thread on 2026-07-25: Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse. The latest development is Ukraine Conducts Major Drone Attack on Moscow Amid Ongoing Conflict.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-25",
+      "last_seen_at": "2026-08-16",
+      "development_count": 14,
+      "latest_title": "Ukraine Conducts Major Drone Attack on Moscow Amid Ongoing Conflict",
+      "topic_label": "Russia-Ukraine War",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea"
+    },
+    {
       "event_id": "event_israeli-strikes-in-gaza-result-in-seven-deat_837b156199",
       "title": "Israeli Strikes in Gaza Result in Seven Deaths and Destruction of Medical Warehouses",
-      "summary": "Muninn first tracked this thread on 2026-08-01: Israeli Strikes in Gaza Result in Seven Deaths and Destruction of Medical Warehouses. The latest development is Israel Launches Criminal Investigations into Killings of Hind Rajab and Gaza Rescue Workers.",
+      "summary": "Muninn first tracked this thread on 2026-08-01: Israeli Strikes in Gaza Result in Seven Deaths and Destruction of Medical Warehouses. The latest development is Israel Launches Investigation into Killing of 5-Year-Old Hind Rajab and Family.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-08-01",
-      "last_seen_at": "2026-08-19",
-      "development_count": 4,
-      "latest_title": "Israel Launches Criminal Investigations into Killings of Hind Rajab and Gaza Rescue Workers",
+      "last_seen_at": "2026-08-20",
+      "development_count": 5,
+      "latest_title": "Israel Launches Investigation into Killing of 5-Year-Old Hind Rajab and Family",
       "topic_label": "Gaza Conflict",
       "hero_image": {
         "url": "/Current_news/generated/events/event_israeli-strikes-in-gaza-result-in-seven-deat_837b156199.jpg",
