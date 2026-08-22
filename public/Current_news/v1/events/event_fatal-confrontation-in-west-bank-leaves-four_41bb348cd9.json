@@ -15,7 +15,7 @@
     "summary": "A deadly confrontation in the West Bank resulted in the deaths of four Palestinians and two Israeli soldiers. The incident occurred near a Palestinian village, with conflicting accounts regarding the circumstances. Palestinians allege that settlers attacked the village, while the Israeli military claims a Palestinian stole a weapon and opened fire on hikers. The situation has escalated tensions in the region, prompting Israel to prepare for a significant military operation.",
     "status": "active",
     "first_seen_at": "2026-07-25",
-    "last_seen_at": "2026-08-18",
+    "last_seen_at": "2026-08-22",
     "timeline": [
       {
         "development_id": "story_5a5ff9eab7adc01d",
@@ -848,15 +848,86 @@
         "first_seen_at": "2026-08-18",
         "last_seen_at": "2026-08-18",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_6dee4e8adf262494",
+        "daily_story_id": "story_6dee4e8adf262494",
+        "date": "2026-08-22",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Escalating Violence in West Bank Amid Settler Blockades and Attacks",
+        "summary": "Violence in the occupied West Bank is intensifying, particularly in areas designated for a future Palestinian state. A Palestinian-American has returned to his village of Qusra to protect it from increasing settler attacks, which have surged amid ongoing settlement expansion. Reports indicate that violent incidents involving Israeli settlers in Palestinian-controlled areas have nearly doubled since 2025, as settlers pursue aggressive expansion efforts.",
+        "topic_label": "Israeli-Palestinian Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "A Palestinian-American returned to Qusra to protect it from settlers.",
+          "Violent settler attacks have surged in Palestinian-controlled areas.",
+          "Settler violence has almost doubled since 2025."
+        ],
+        "source_count": 2,
+        "sources": [
+          "CBC",
+          "The Guardian"
+        ],
+        "source_urls": [
+          "https://www.cbc.ca/news/world/israeli-siege-occupied-west-bank-qusra-9.7315801?cmp=rss",
+          "https://www.theguardian.com/world/2026/aug/21/israeli-settler-attacks-shift-to-heart-of-territory-earmarked-for-palestinian-state"
+        ],
+        "source_details": [
+          {
+            "title": "Israeli settler blockades part of escalating violence against Palestinians in the occupied West Bank",
+            "source": "CBC",
+            "link": "https://www.cbc.ca/news/world/israeli-siege-occupied-west-bank-qusra-9.7315801?cmp=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Israeli settler attacks shift focus to West Bank areas under direct Palestinian rule",
+            "source": "The Guardian",
+            "link": "https://www.theguardian.com/world/2026/aug/21/israeli-settler-attacks-shift-to-heart-of-territory-earmarked-for-palestinian-state",
+            "source_bias": "left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_0b5d02d644892543",
+          "shared_tokens": [
+            "bank",
+            "conflict",
+            "incident",
+            "israel",
+            "israeli-palestinian",
+            "settler",
+            "since",
+            "violence",
+            "west"
+          ],
+          "shared_entities": [
+            "israel",
+            "israeli-palestinian",
+            "west"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-22",
+        "last_seen_at": "2026-08-22",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 9,
-      "questionable_development_count": 1,
+      "public_development_count": 10,
+      "questionable_development_count": 2,
       "review_required": true
     },
-    "latest_title": "Palestinian American Returns to Besieged West Bank Home",
-    "latest_summary": "A Palestinian American has returned to his home in the occupied West Bank, which is currently under siege by Israeli settlers. He joined family members who are defending the property against the settlers' actions.",
+    "latest_title": "Escalating Violence in West Bank Amid Settler Blockades and Attacks",
+    "latest_summary": "Violence in the occupied West Bank is intensifying, particularly in areas designated for a future Palestinian state. A Palestinian-American has returned to his village of Qusra to protect it from increasing settler attacks, which have surged amid ongoing settlement expansion. Reports indicate that violent incidents involving Israeli settlers in Palestinian-controlled areas have nearly doubled since 2025, as settlers pursue aggressive expansion efforts.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -867,29 +938,29 @@
       "milestone_development_ids": [
         "story_5a5ff9eab7adc01d",
         "story_bf7f788433cebebd",
-        "story_36d77c82c6ad0f51",
-        "story_1e858ac53b02b869"
+        "story_6cb5bc107be798fa",
+        "story_6dee4e8adf262494"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-18",
-      "development_count": 9,
-      "coverage_packet_count": 11,
-      "date_count": 9,
-      "source_count": 25,
-      "independent_source_count": 14,
+      "summary_updated_at": "2026-08-22",
+      "development_count": 10,
+      "coverage_packet_count": 12,
+      "date_count": 10,
+      "source_count": 27,
+      "independent_source_count": 15,
       "first_date": "2026-07-25",
-      "latest_date": "2026-08-18",
-      "latest_update_title": "Palestinian American Returns to Besieged West Bank Home",
+      "latest_date": "2026-08-22",
+      "latest_update_title": "Escalating Violence in West Bank Amid Settler Blockades and Attacks",
       "coverage_score": 1.0,
-      "recency_score": 0.7,
-      "rank_score": 0.826,
-      "context_summary": "Muninn first tracked this thread on 2026-07-25: Funerals Held for Four Palestinians Killed in West Bank Clash with Israeli Settlers. The latest development is Palestinian American Returns to Besieged West Bank Home.",
-      "cta_label": "Explore 9 developments"
+      "recency_score": 1.0,
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-07-25: Funerals Held for Four Palestinians Killed in West Bank Clash with Israeli Settlers. The latest development is Escalating Violence in West Bank Amid Settler Blockades and Attacks.",
+      "cta_label": "Explore 10 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Four Palestinian men were buried following their deaths during a clash with Israeli settlers in the occupied West Bank. A later development was Israeli Settlers Demolish Homes in Jericho, Government Accused of Complicity. Most recently, a Palestinian American has returned to his home in the occupied West Bank, which is currently under siege by Israeli settlers.",
+      "summary": "Four Palestinian men were buried following their deaths during a clash with Israeli settlers in the occupied West Bank. A later development was Israeli Settlers Besiege Palestinian Families in Qusra, West Bank. Most recently, violence in the occupied West Bank is intensifying, particularly in areas designated for a future Palestinian state.",
       "key_developments": [
         {
           "development_id": "story_5a5ff9eab7adc01d",
@@ -902,14 +973,14 @@
           "title": "Israeli Settler Charged in Killing of Palestinian Activist Awdah Hathaleen"
         },
         {
-          "development_id": "story_36d77c82c6ad0f51",
-          "date": "2026-08-13",
-          "title": "Israeli Settlers Besiege Palestinian Families in Qusra, West Bank"
+          "development_id": "story_6cb5bc107be798fa",
+          "date": "2026-08-14",
+          "title": "Activists Attempt to Deliver Aid to Besieged Palestinian Families in Qusra"
         },
         {
-          "development_id": "story_1e858ac53b02b869",
-          "date": "2026-08-18",
-          "title": "Palestinian American Returns to Besieged West Bank Home"
+          "development_id": "story_6dee4e8adf262494",
+          "date": "2026-08-22",
+          "title": "Escalating Violence in West Bank Amid Settler Blockades and Attacks"
         }
       ],
       "sources": [
@@ -1062,9 +1133,21 @@
           "source": "AP",
           "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNWlZTbzV4R3BNYUhaSzZEMzRXdlhvQkVQZ3pXcWZhbGZXRXV0WFBNODNfN1BWcW9BS3kwOWtOXzB3OTI2a0ZuSHhPOEV0aGRTeHd3Tm83a0U3NEl3YlozMC1MVUZKdjhyOXRiM0U4ZlozQXVJRnF4eXozQm80UTdSMVlWOVVyX09FcjBpMmtCaHdhWEdjaXd1amdSYk1NSllfb09uT0ZQc0RjYWk5cDBBdjRMdDQ?oc=5",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Israeli settler blockades part of escalating violence against Palestinians in the occupied West Bank",
+          "source": "CBC",
+          "link": "https://www.cbc.ca/news/world/israeli-siege-occupied-west-bank-qusra-9.7315801?cmp=rss",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Israeli settler attacks shift focus to West Bank areas under direct Palestinian rule",
+          "source": "The Guardian",
+          "link": "https://www.theguardian.com/world/2026/aug/21/israeli-settler-attacks-shift-to-heart-of-territory-earmarked-for-palestinian-state",
+          "source_bias": "left"
         }
       ],
-      "updated_at": "2026-08-18",
+      "updated_at": "2026-08-22",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -1073,7 +1156,7 @@
         "event_id": "event_us-ambassador-denounces-settler-siege-of-pal_283b86d186",
         "title": "US Ambassador Denounces Settler Siege of Palestinian Homes as 'Horrific Act of Terror'",
         "relationship": "related_topic",
-        "confidence": 0.853,
+        "confidence": 0.857,
         "shared_entities": [
           "america",
           "israel",
@@ -1086,7 +1169,7 @@
         "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
         "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
         "relationship": "related_topic",
-        "confidence": 0.726,
+        "confidence": 0.729,
         "shared_entities": [
           "america",
           "israel",
@@ -1097,7 +1180,7 @@
         "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
         "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
         "relationship": "related_topic",
-        "confidence": 0.725,
+        "confidence": 0.726,
         "shared_entities": [
           "israel",
           "palestinian",
@@ -1108,7 +1191,7 @@
         "event_id": "event_israel-advances-e1-west-bank-settlement-amid_5399161819",
         "title": "Israel Advances E1 West Bank Settlement Amid International Backlash",
         "relationship": "related_topic",
-        "confidence": 0.701,
+        "confidence": 0.71,
         "shared_entities": [
           "israel",
           "west"
@@ -1233,17 +1316,20 @@
     },
     "search_tokens": [
       "2023",
+      "2025",
       "access",
       "account",
       "accused",
       "action",
       "activist",
       "aftermath",
+      "aggressive",
       "aid",
       "allowing",
       "also",
       "america",
       "area",
+      "areas",
       "arrest",
       "assist",
       "attack",
@@ -1256,6 +1342,7 @@
       "bank",
       "besiege",
       "besieged",
+      "blockade",
       "blocking",
       "buried",
       "burning",
@@ -1280,16 +1367,21 @@
       "deliver",
       "demolish",
       "demolished",
+      "designated",
       "detain",
       "detained",
       "diplomat",
       "displacing",
       "district",
+      "doubled",
       "drawn",
       "dwindling",
+      "effort",
       "electricity",
       "escalated",
+      "escalating",
       "event",
+      "expansion",
       "extensive",
       "facing",
       "familie",
@@ -1304,6 +1396,7 @@
       "four",
       "funeral",
       "further",
+      "future",
       "gaza",
       "group",
       "grove",
@@ -1314,10 +1407,12 @@
       "incident",
       "including",
       "increase",
+      "increasing",
       "indicate",
       "indicating",
       "indictment",
       "inside",
+      "intensifying",
       "international",
       "involving",
       "israel",
@@ -1344,12 +1439,18 @@
       "occurred",
       "october",
       "olive",
+      "ongoing",
       "onset",
       "other",
       "palestinian",
+      "palestinian-american",
+      "palestinian-controlled",
+      "particularly",
       "potential",
       "property",
       "prosecutor",
+      "protect",
+      "pursue",
       "qusra",
       "raids",
       "raising",
@@ -1366,6 +1467,7 @@
       "security",
       "seize",
       "seizure",
+      "settlement",
       "settler",
       "shooting",
       "siege",
@@ -1378,6 +1480,7 @@
       "sunday",
       "supplie",
       "surge",
+      "surged",
       "suspect",
       "terror",
       "them",
@@ -1419,6 +1522,7 @@
       "deliver",
       "deliver_aid",
       "demolish_homes",
+      "escalating_violence",
       "funeral_held",
       "hathaleen_israel",
       "israel",
@@ -1429,6 +1533,8 @@
       "mosque_set",
       "nablu",
       "palestinian",
+      "palestinian-american",
+      "palestinian-controlled",
       "palestinian_activist",
       "palestinian_america",
       "palestinian_familie",
@@ -1437,6 +1543,7 @@
       "qusra_west",
       "rising_violence",
       "settler_besiege",
+      "settler_blockade",
       "settler_charged",
       "settler_demolish",
       "sunday._israel",
@@ -1446,7 +1553,7 @@
       "west_bank.",
       "yinon_levi"
     ],
-    "search_text": "2023 access account accused action activist activist_attempt activist_awdah aftermath aid allowing also america america_return area arrest assist attack attacked attempt attempted attributed authoritie awdah awdah_hathaleen bank besiege besiege_palestinian besieged besieged_familie besieged_palestinian besieged_west blocking buried burning care charged circumstance clash clashe complicity complicity_israel concern condemnation conducted conflicting confrontation connection continue court currently deadly deadly_west death defending deliver deliver_aid demolish demolish_homes demolished detain detained diplomat displacing district drawn dwindling electricity escalated event extensive facing familie family fear fears filed fire first food force four funeral funeral_held further gaza group grove hathaleen hathaleen_israel held home homes incident including increase indicate indicating indictment inside international involving israel israel_detain israel_settler jericho joined killed killing known labeling leaving levi local located marched marks medical member military mosque mosque_set nablu near nearly occupied occurred october olive onset other palestinian palestinian_activist palestinian_america palestinian_familie potential property prosecutor qusra qusra_activist qusra_west raids raising regarding region reportedly resource resulted return returned rising rising_violence safety searche security seize seizure settler settler_besiege settler_charged settler_demolish shooting siege significant since situation soldier standoff stemmed sunday sunday._israel supplie surge suspect terror them there they three time toward trapped under unrest us village villager violence violence_israel violent war water week well-being west west_bank. where which withdrawn yinon yinon_levi"
+    "search_text": "2023 2025 access account accused action activist activist_attempt activist_awdah aftermath aggressive aid allowing also america america_return area areas arrest assist attack attacked attempt attempted attributed authoritie awdah awdah_hathaleen bank besiege besiege_palestinian besieged besieged_familie besieged_palestinian besieged_west blockade blocking buried burning care charged circumstance clash clashe complicity complicity_israel concern condemnation conducted conflicting confrontation connection continue court currently deadly deadly_west death defending deliver deliver_aid demolish demolish_homes demolished designated detain detained diplomat displacing district doubled drawn dwindling effort electricity escalated escalating escalating_violence event expansion extensive facing familie family fear fears filed fire first food force four funeral funeral_held further future gaza group grove hathaleen hathaleen_israel held home homes incident including increase increasing indicate indicating indictment inside intensifying international involving israel israel_detain israel_settler jericho joined killed killing known labeling leaving levi local located marched marks medical member military mosque mosque_set nablu near nearly occupied occurred october olive ongoing onset other palestinian palestinian-american palestinian-controlled palestinian_activist palestinian_america palestinian_familie particularly potential property prosecutor protect pursue qusra qusra_activist qusra_west raids raising regarding region reportedly resource resulted return returned rising rising_violence safety searche security seize seizure settlement settler settler_besiege settler_blockade settler_charged settler_demolish shooting siege significant since situation soldier standoff stemmed sunday sunday._israel supplie surge surged suspect terror them there they three time toward trapped under unrest us village villager violence violence_israel violent war water week well-being west west_bank. where which withdrawn yinon yinon_levi"
   },
   "related_events": [
     {
@@ -1486,14 +1593,14 @@
     {
       "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
       "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
-      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Iran Threatens Strong Retaliation Against Upcoming US Sanctions.",
+      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Iran Claims Victory Amid US Economic Warfare Declaration.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-07-22",
-      "last_seen_at": "2026-08-21",
-      "development_count": 26,
-      "latest_title": "Iran Threatens Strong Retaliation Against Upcoming US Sanctions",
+      "last_seen_at": "2026-08-22",
+      "development_count": 27,
+      "latest_title": "Iran Claims Victory Amid US Economic Warfare Declaration",
       "topic_label": "Iran War",
       "hero_image": {
         "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
@@ -1520,14 +1627,14 @@
     {
       "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
       "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
-      "summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Kyiv Residents Assess Damage After Deadly Russian Missile Barrage.",
+      "summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Trial Begins for Tupac Shakur's Murder, Accused Claims Nephew Fired Fatal Shots.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-07-31",
-      "last_seen_at": "2026-08-21",
-      "development_count": 17,
-      "latest_title": "Kyiv Residents Assess Damage After Deadly Russian Missile Barrage",
+      "last_seen_at": "2026-08-22",
+      "development_count": 19,
+      "latest_title": "Trial Begins for Tupac Shakur's Murder, Accused Claims Nephew Fired Fatal Shots",
       "topic_label": "Gaza Peace Deal",
       "hero_image": {
         "url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
