@@ -15,7 +15,7 @@
     "summary": "In the wake of Trump's criticism of Canada's leadership, Carney characterized the ongoing US-Canada trade negotiations as 'nasty.' He emphasized that Canada remains committed to the talks, framing them as essential for protecting Canadian workers and businesses.",
     "status": "active",
     "first_seen_at": "2026-08-07",
-    "last_seen_at": "2026-08-22",
+    "last_seen_at": "2026-08-23",
     "timeline": [
       {
         "development_id": "story_a658d567c3cde417",
@@ -167,15 +167,115 @@
         "first_seen_at": "2026-08-22",
         "last_seen_at": "2026-08-22",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_75ccaaf1e4fa93d0",
+        "daily_story_id": "story_75ccaaf1e4fa93d0",
+        "date": "2026-08-23",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Trade War Erupts as US-Canada Talks Fail and Tariffs Are Imposed",
+        "summary": "Following the collapse of trade negotiations, US President Donald Trump criticized Canada for imposing retaliatory tariffs. He claimed that Canada seeks the advantages of being a US state without actually being one. In response, Canadian Prime Minister Mark Carney announced the tariffs, stating that the US initiated the trade conflict.",
+        "topic_label": "US-Canada Trade War",
+        "development_type": "diplomacy",
+        "key_facts": [
+          "US-Canada trade negotiations collapsed.",
+          "Donald Trump accused Canada of wanting benefits without statehood.",
+          "Canada announced retaliatory tariffs against the US."
+        ],
+        "source_count": 5,
+        "sources": [
+          "BBC",
+          "Channel NewsAsia",
+          "DW",
+          "RTE News",
+          "The Guardian"
+        ],
+        "source_urls": [
+          "https://www.theguardian.com/us-news/2026/aug/23/donald-trump-lashes-out-after-us-canada-talks-devolve-into-trade-war",
+          "https://www.rte.ie/news/world/2026/0823/1588887-canada-us-trade-deal",
+          "https://www.channelnewsasia.com/world/canada-us-trade-war-mark-carney-donald-trump-6335786",
+          "https://www.bbc.co.uk/news/articles/cx272np7vgyo?at_medium=RSS&at_campaign=rss",
+          "https://www.dw.com/en/trump-hits-out-at-canada-over-retaliatory-tariffs/a-78471618?maca=en-rss-en-all-1573-rdf"
+        ],
+        "source_details": [
+          {
+            "title": "‘No more!!!’: Trump lashes out after US-Canada talks devolve into trade war",
+            "source": "The Guardian",
+            "link": "https://www.theguardian.com/us-news/2026/aug/23/donald-trump-lashes-out-after-us-canada-talks-devolve-into-trade-war",
+            "source_bias": "left"
+          },
+          {
+            "title": "Trump hits back at Canada over retaliatory tariffs",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/world/2026/0823/1588887-canada-us-trade-deal",
+            "source_bias": "center"
+          },
+          {
+            "title": "Canada retaliates as trade war with US escalates",
+            "source": "Channel NewsAsia",
+            "link": "https://www.channelnewsasia.com/world/canada-us-trade-war-mark-carney-donald-trump-6335786",
+            "source_bias": "center"
+          },
+          {
+            "title": "Trump says Canada wants 'benefits' of being US state after trade talks collapse",
+            "source": "BBC",
+            "link": "https://www.bbc.co.uk/news/articles/cx272np7vgyo?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          },
+          {
+            "title": "Trump hits out at Canada over retaliatory tariffs",
+            "source": "DW",
+            "link": "https://www.dw.com/en/trump-hits-out-at-canada-over-retaliatory-tariffs/a-78471618?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.45,
+        "match_evidence": {
+          "score": 0.45,
+          "matched_development_id": "story_cba97fef9ba92848",
+          "shared_tokens": [
+            "announced",
+            "canada",
+            "canadian",
+            "carney",
+            "imposed",
+            "mark",
+            "prime",
+            "response",
+            "talks",
+            "tariff",
+            "trade",
+            "us-canada"
+          ],
+          "shared_entities": [
+            "canada",
+            "canadian_prime",
+            "mark_carney",
+            "us",
+            "us-canada",
+            "us-canada_trade"
+          ],
+          "source_url_match": false,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-23",
+        "last_seen_at": "2026-08-23",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 2,
-      "questionable_development_count": 0,
-      "review_required": false
+      "public_development_count": 3,
+      "questionable_development_count": 1,
+      "review_required": true
     },
-    "latest_title": "Canada to Retaliate with Equal Tariffs Following US Trade Dispute",
-    "latest_summary": "After failing to reach a trade agreement, the United States has imposed 50% tariffs on a range of Canadian goods. In response, Canadian Prime Minister Mark Carney announced that Canada will match these tariffs 'dollar for dollar' to protect its workers and businesses. The trade tensions mark a significant escalation in relations between the two countries.",
+    "latest_title": "Trade War Erupts as US-Canada Talks Fail and Tariffs Are Imposed",
+    "latest_summary": "Following the collapse of trade negotiations, US President Donald Trump criticized Canada for imposing retaliatory tariffs. He claimed that Canada seeks the advantages of being a US state without actually being one. In response, Canadian Prime Minister Mark Carney announced the tariffs, stating that the US initiated the trade conflict.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": false,
@@ -185,28 +285,29 @@
       "display_title": "Trade Talks Between US and Canada Described as 'Nasty' Amid Leadership Criticism",
       "milestone_development_ids": [
         "story_a658d567c3cde417",
-        "story_cba97fef9ba92848"
+        "story_cba97fef9ba92848",
+        "story_75ccaaf1e4fa93d0"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-22",
-      "development_count": 2,
-      "coverage_packet_count": 2,
-      "date_count": 2,
-      "source_count": 7,
-      "independent_source_count": 7,
+      "summary_updated_at": "2026-08-23",
+      "development_count": 3,
+      "coverage_packet_count": 3,
+      "date_count": 3,
+      "source_count": 12,
+      "independent_source_count": 9,
       "first_date": "2026-08-07",
-      "latest_date": "2026-08-22",
-      "latest_update_title": "Canada to Retaliate with Equal Tariffs Following US Trade Dispute",
-      "coverage_score": 0.547,
+      "latest_date": "2026-08-23",
+      "latest_update_title": "Trade War Erupts as US-Canada Talks Fail and Tariffs Are Imposed",
+      "coverage_score": 0.745,
       "recency_score": 1.0,
-      "rank_score": 0.81,
-      "context_summary": "Muninn first tracked this thread on 2026-08-07: Trade Talks Between US and Canada Described as 'Nasty' Amid Leadership Criticism. The latest development is Canada to Retaliate with Equal Tariffs Following US Trade Dispute.",
+      "rank_score": 0.893,
+      "context_summary": "Muninn first tracked this thread on 2026-08-07: Trade Talks Between US and Canada Described as 'Nasty' Amid Leadership Criticism. The latest development is Trade War Erupts as US-Canada Talks Fail and Tariffs Are Imposed.",
       "cta_label": ""
     },
     "event_summary": {
       "available": true,
-      "summary": "In the wake of Trump's criticism of Canada's leadership, Carney characterized the ongoing US-Canada trade negotiations as 'nasty.' He emphasized that Canada remains committed to the talks, framing them as essential for protecting Canadian workers and businesses. Most recently, after failing to reach a trade agreement, the United States has imposed 50% tariffs on a range of Canadian goods.",
+      "summary": "In the wake of Trump's criticism of Canada's leadership, Carney characterized the ongoing US-Canada trade negotiations as 'nasty.' He emphasized that Canada remains committed to the talks, framing them as essential for protecting Canadian workers and businesses. A later development was Canada to Retaliate with Equal Tariffs Following US Trade Dispute. Most recently, following the collapse of trade negotiations, US President Donald Trump criticized Canada for imposing retaliatory tariffs.",
       "key_developments": [
         {
           "development_id": "story_a658d567c3cde417",
@@ -217,6 +318,11 @@
           "development_id": "story_cba97fef9ba92848",
           "date": "2026-08-22",
           "title": "Canada to Retaliate with Equal Tariffs Following US Trade Dispute"
+        },
+        {
+          "development_id": "story_75ccaaf1e4fa93d0",
+          "date": "2026-08-23",
+          "title": "Trade War Erupts as US-Canada Talks Fail and Tariffs Are Imposed"
         }
       ],
       "sources": [
@@ -261,9 +367,39 @@
           "source": "RTE News",
           "link": "https://www.rte.ie/news/2026/0822/1588822-canada-us-trade-deal",
           "source_bias": "center"
+        },
+        {
+          "title": "‘No more!!!’: Trump lashes out after US-Canada talks devolve into trade war",
+          "source": "The Guardian",
+          "link": "https://www.theguardian.com/us-news/2026/aug/23/donald-trump-lashes-out-after-us-canada-talks-devolve-into-trade-war",
+          "source_bias": "left"
+        },
+        {
+          "title": "Trump hits back at Canada over retaliatory tariffs",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/world/2026/0823/1588887-canada-us-trade-deal",
+          "source_bias": "center"
+        },
+        {
+          "title": "Canada retaliates as trade war with US escalates",
+          "source": "Channel NewsAsia",
+          "link": "https://www.channelnewsasia.com/world/canada-us-trade-war-mark-carney-donald-trump-6335786",
+          "source_bias": "center"
+        },
+        {
+          "title": "Trump says Canada wants 'benefits' of being US state after trade talks collapse",
+          "source": "BBC",
+          "link": "https://www.bbc.co.uk/news/articles/cx272np7vgyo?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
+        },
+        {
+          "title": "Trump hits out at Canada over retaliatory tariffs",
+          "source": "DW",
+          "link": "https://www.dw.com/en/trump-hits-out-at-canada-over-retaliatory-tariffs/a-78471618?maca=en-rss-en-all-1573-rdf",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-08-22",
+      "updated_at": "2026-08-23",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "developing_event",
@@ -272,7 +408,7 @@
         "event_id": "event_trump-delays-new-tariffs-on-canada-amid-ongo_59097c2a0b",
         "title": "Trump Delays New Tariffs on Canada Amid Ongoing Negotiations",
         "relationship": "related_topic",
-        "confidence": 0.76,
+        "confidence": 0.758,
         "shared_entities": [
           "canada",
           "canadian_prime",
@@ -280,80 +416,37 @@
         ]
       },
       {
-        "event_id": "event_trump-delays-50-tariffs-on-canadian-goods-fo_fab2cd958d",
-        "title": "Trump Delays 50% Tariffs on Canadian Goods for Three Days",
+        "event_id": "event_us-and-canada-escalate-trade-war-with-new-ta_4b2acb426a",
+        "title": "US and Canada Escalate Trade War with New Tariffs Amid Failed Negotiations",
         "relationship": "related_topic",
-        "confidence": 0.672,
+        "confidence": 0.747,
         "shared_entities": [
           "canada",
+          "trade_war",
+          "us"
+        ]
+      },
+      {
+        "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+        "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
+        "relationship": "related_topic",
+        "confidence": 0.705,
+        "shared_entities": [
+          "donald_trump",
+          "us"
+        ]
+      },
+      {
+        "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
+        "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
+        "relationship": "related_topic",
+        "confidence": 0.683,
+        "shared_entities": [
+          "donald_trump",
           "us"
         ]
       }
     ],
-    "search_tokens": [
-      "agreement",
-      "announced",
-      "businesse",
-      "canada",
-      "canadian",
-      "carney",
-      "characterized",
-      "committed",
-      "countrie",
-      "criticism",
-      "described",
-      "dispute",
-      "dollar",
-      "emphasized",
-      "equal",
-      "escalation",
-      "essential",
-      "failing",
-      "framing",
-      "goods",
-      "imposed",
-      "leadership",
-      "mark",
-      "match",
-      "nasty",
-      "negotiation",
-      "ongoing",
-      "prime",
-      "protect",
-      "protecting",
-      "range",
-      "reach",
-      "relation",
-      "remain",
-      "response",
-      "retaliate",
-      "significant",
-      "talks",
-      "tariff",
-      "tension",
-      "them",
-      "these",
-      "trade",
-      "trump",
-      "united",
-      "us-canada",
-      "wake",
-      "worker"
-    ],
-    "entities": [
-      "canada",
-      "canada_described",
-      "canadian_prime",
-      "equal_tariff",
-      "leadership_criticism",
-      "mark_carney",
-      "retaliate",
-      "trade_dispute",
-      "trade_talks",
-      "us",
-      "us-canada"
-    ],
-    "search_text": "agreement announced businesse canada canada_described canadian canadian_prime carney characterized committed countrie criticism described dispute dollar emphasized equal equal_tariff escalation essential failing framing goods imposed leadership leadership_criticism mark mark_carney match nasty negotiation ongoing prime protect protecting range reach relation remain response retaliate significant talks tariff tension them these trade trade_dispute trade_talks trump united us us-canada wake worker",
     "event_overview": {
       "available": true,
       "title": "About US-Canada Trade Relations",
@@ -461,7 +554,161 @@
       "focal_wide_y": 0.48,
       "focal_tall_x": 0.5,
       "focal_tall_y": 0.48
-    }
+    },
+    "search_tokens": [
+      "actually",
+      "advantage",
+      "agreement",
+      "announced",
+      "businesse",
+      "canada",
+      "canadian",
+      "carney",
+      "characterized",
+      "claimed",
+      "collapse",
+      "committed",
+      "conflict",
+      "countrie",
+      "criticism",
+      "criticized",
+      "described",
+      "dispute",
+      "dollar",
+      "donald",
+      "emphasized",
+      "equal",
+      "erupt",
+      "escalation",
+      "essential",
+      "fail",
+      "failing",
+      "framing",
+      "goods",
+      "imposed",
+      "imposing",
+      "initiated",
+      "leadership",
+      "mark",
+      "match",
+      "nasty",
+      "negotiation",
+      "ongoing",
+      "prime",
+      "protect",
+      "protecting",
+      "range",
+      "reach",
+      "relation",
+      "remain",
+      "response",
+      "retaliate",
+      "retaliatory",
+      "seeks",
+      "significant",
+      "stating",
+      "talks",
+      "tariff",
+      "tension",
+      "them",
+      "these",
+      "trade",
+      "trump",
+      "united",
+      "us-canada",
+      "wake",
+      "war",
+      "without",
+      "worker"
+    ],
+    "entities": [
+      "canada",
+      "canada_described",
+      "canadian_prime",
+      "donald_trump",
+      "equal_tariff",
+      "leadership_criticism",
+      "mark_carney",
+      "retaliate",
+      "talks_fail",
+      "trade_dispute",
+      "trade_talks",
+      "trade_war",
+      "us",
+      "us-canada",
+      "us-canada_talks",
+      "war_erupt"
+    ],
+    "search_text": "actually advantage agreement announced businesse canada canada_described canadian canadian_prime carney characterized claimed collapse committed conflict countrie criticism criticized described dispute dollar donald donald_trump emphasized equal equal_tariff erupt escalation essential fail failing framing goods imposed imposing initiated leadership leadership_criticism mark mark_carney match nasty negotiation ongoing prime protect protecting range reach relation remain response retaliate retaliatory seeks significant stating talks talks_fail tariff tension them these trade trade_dispute trade_talks trade_war trump united us us-canada us-canada_talks wake war war_erupt without worker"
   },
-  "related_events": []
+  "related_events": [
+    {
+      "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+      "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
+      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Iran Claims Victory Amid US Economic Warfare Declaration.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-22",
+      "last_seen_at": "2026-08-22",
+      "development_count": 27,
+      "latest_title": "Iran Claims Victory Amid US Economic Warfare Declaration",
+      "topic_label": "Iran War",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
+    },
+    {
+      "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
+      "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
+      "summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Casualties Rise After Russian Strike on Ukrainian Mall.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-31",
+      "last_seen_at": "2026-08-23",
+      "development_count": 20,
+      "latest_title": "Casualties Rise After Russian Strike on Ukrainian Mall",
+      "topic_label": "Gaza Peace Deal",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b"
+    }
+  ]
 }
