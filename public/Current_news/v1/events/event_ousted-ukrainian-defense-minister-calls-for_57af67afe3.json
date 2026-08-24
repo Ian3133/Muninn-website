@@ -15,7 +15,7 @@
     "summary": "Mykhailo Fedorov, Ukraine's recently dismissed Defense Minister, has called for presidential elections to be held despite the ongoing war with Russia. In a significant challenge to President Volodymyr Zelensky, Fedorov argued that the country is experiencing a crisis of governance. His remarks come as Ukraine remains under martial law, which prohibits elections during wartime.",
     "status": "active",
     "first_seen_at": "2026-08-19",
-    "last_seen_at": "2026-08-23",
+    "last_seen_at": "2026-08-24",
     "timeline": [
       {
         "development_id": "story_dda839454ef6c2c3",
@@ -160,15 +160,101 @@
         "first_seen_at": "2026-08-23",
         "last_seen_at": "2026-08-23",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_9d5dee001efc5e28",
+        "daily_story_id": "story_9d5dee001efc5e28",
+        "date": "2026-08-24",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Zelensky Opposes Wartime Elections, Citing Risks for Ukraine",
+        "summary": "Ukrainian President Volodymyr Zelensky has rejected calls for wartime elections, stating that such a move would be highly dangerous and could split the country. His comments follow a proposal from former defense minister Mykhailo Fedorov, who was recently dismissed. A recent poll indicated that only 15% of Ukrainians support holding elections during the ongoing conflict.",
+        "topic_label": "Ukraine Elections",
+        "development_type": "election",
+        "key_facts": [
+          "Zelensky rejected calls for wartime elections.",
+          "He cited the risk of splitting the country as a concern.",
+          "The call for elections came from former defense minister Mykhailo Fedorov.",
+          "A poll showed only 15% support for elections at this time."
+        ],
+        "source_count": 4,
+        "sources": [
+          "France 24",
+          "RTE News",
+          "TIME"
+        ],
+        "source_urls": [
+          "https://time.com/article/2026/08/24/volodymyr-zelensky-elections-ukraine-wartime-mykhailo-fedorov",
+          "https://www.france24.com/en/zelensky-rejects-rival-s-call-for-elections-says-would-be-huge-risk-for-ukraine",
+          "https://www.rte.ie/news/ukraine/2026/0823/1588900-ukraine-russia",
+          "https://www.france24.com/en/zelensky-rejects-wartime-elections-saying-vote-would-split-ukraine"
+        ],
+        "source_details": [
+          {
+            "title": "A ‘Tsunami’ for Ukraine: Zelensky Rejects Wartime Elections",
+            "source": "TIME",
+            "link": "https://time.com/article/2026/08/24/volodymyr-zelensky-elections-ukraine-wartime-mykhailo-fedorov",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Zelensky rejects rival's call for elections, says would be 'huge risk' for Ukraine",
+            "source": "France 24",
+            "link": "https://www.france24.com/en/zelensky-rejects-rival-s-call-for-elections-says-would-be-huge-risk-for-ukraine",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Wartime elections would 'split' Ukraine, warns Zelensky",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/ukraine/2026/0823/1588900-ukraine-russia",
+            "source_bias": "center"
+          },
+          {
+            "title": "Zelensky rejects wartime elections, saying vote would 'split' Ukraine",
+            "source": "France 24",
+            "link": "https://www.france24.com/en/zelensky-rejects-wartime-elections-saying-vote-would-split-ukraine",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 1.0,
+        "match_evidence": {
+          "score": 1.0,
+          "matched_development_id": "story_635ef8322b380b02",
+          "shared_tokens": [
+            "calls",
+            "concern",
+            "dangerou",
+            "election",
+            "holding",
+            "stating",
+            "ukraine",
+            "wartime",
+            "would",
+            "zelensky"
+          ],
+          "shared_entities": [
+            "election_ukraine",
+            "ukraine"
+          ],
+          "source_url_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-24",
+        "last_seen_at": "2026-08-24",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 2,
+      "public_development_count": 3,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Zelensky Faces Corruption Questions Amid Calls for Elections",
-    "latest_summary": "Former Defence Minister of Ukraine has raised concerns about corruption within President Zelensky's government, stating that Zelensky has 'questions to answer.' The former minister also advocated for holding elections in Ukraine. In response, Zelensky expressed that conducting elections during wartime would be too dangerous and could further divide the country.",
+    "latest_title": "Zelensky Opposes Wartime Elections, Citing Risks for Ukraine",
+    "latest_summary": "Ukrainian President Volodymyr Zelensky has rejected calls for wartime elections, stating that such a move would be highly dangerous and could split the country. His comments follow a proposal from former defense minister Mykhailo Fedorov, who was recently dismissed. A recent poll indicated that only 15% of Ukrainians support holding elections during the ongoing conflict.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": false,
@@ -178,28 +264,29 @@
       "display_title": "Ousted Ukrainian Defense Minister Calls for Wartime Elections Amid Ongoing Conflict",
       "milestone_development_ids": [
         "story_dda839454ef6c2c3",
-        "story_635ef8322b380b02"
+        "story_635ef8322b380b02",
+        "story_9d5dee001efc5e28"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-23",
-      "development_count": 2,
-      "coverage_packet_count": 2,
-      "date_count": 2,
-      "source_count": 7,
-      "independent_source_count": 6,
+      "summary_updated_at": "2026-08-24",
+      "development_count": 3,
+      "coverage_packet_count": 3,
+      "date_count": 3,
+      "source_count": 10,
+      "independent_source_count": 8,
       "first_date": "2026-08-19",
-      "latest_date": "2026-08-23",
-      "latest_update_title": "Zelensky Faces Corruption Questions Amid Calls for Elections",
-      "coverage_score": 0.509,
+      "latest_date": "2026-08-24",
+      "latest_update_title": "Zelensky Opposes Wartime Elections, Citing Risks for Ukraine",
+      "coverage_score": 0.72,
       "recency_score": 1.0,
-      "rank_score": 0.794,
-      "context_summary": "Muninn first tracked this thread on 2026-08-19: Ousted Ukrainian Defense Minister Calls for Wartime Elections Amid Ongoing Conflict. The latest development is Zelensky Faces Corruption Questions Amid Calls for Elections.",
+      "rank_score": 0.882,
+      "context_summary": "Muninn first tracked this thread on 2026-08-19: Ousted Ukrainian Defense Minister Calls for Wartime Elections Amid Ongoing Conflict. The latest development is Zelensky Opposes Wartime Elections, Citing Risks for Ukraine.",
       "cta_label": ""
     },
     "event_summary": {
       "available": true,
-      "summary": "Mykhailo Fedorov, Ukraine's recently dismissed Defense Minister, has called for presidential elections to be held despite the ongoing war with Russia. Most recently, former Defence Minister of Ukraine has raised concerns about corruption within President Zelensky's government, stating that Zelensky has 'questions to answer.' The former minister also advocated for holding elections in Ukraine.",
+      "summary": "Mykhailo Fedorov, Ukraine's recently dismissed Defense Minister, has called for presidential elections to be held despite the ongoing war with Russia. A later development was Zelensky Faces Corruption Questions Amid Calls for Elections. Most recently, ukrainian President Volodymyr Zelensky has rejected calls for wartime elections, stating that such a move would be highly dangerous and could split the country.",
       "key_developments": [
         {
           "development_id": "story_dda839454ef6c2c3",
@@ -210,6 +297,11 @@
           "development_id": "story_635ef8322b380b02",
           "date": "2026-08-23",
           "title": "Zelensky Faces Corruption Questions Amid Calls for Elections"
+        },
+        {
+          "development_id": "story_9d5dee001efc5e28",
+          "date": "2026-08-24",
+          "title": "Zelensky Opposes Wartime Elections, Citing Risks for Ukraine"
         }
       ],
       "sources": [
@@ -254,18 +346,49 @@
           "source": "RTE News",
           "link": "https://www.rte.ie/news/ukraine/2026/0823/1588900-ukraine-russia",
           "source_bias": "center"
+        },
+        {
+          "title": "A ‘Tsunami’ for Ukraine: Zelensky Rejects Wartime Elections",
+          "source": "TIME",
+          "link": "https://time.com/article/2026/08/24/volodymyr-zelensky-elections-ukraine-wartime-mykhailo-fedorov",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Zelensky rejects rival's call for elections, says would be 'huge risk' for Ukraine",
+          "source": "France 24",
+          "link": "https://www.france24.com/en/zelensky-rejects-rival-s-call-for-elections-says-would-be-huge-risk-for-ukraine",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Zelensky rejects wartime elections, saying vote would 'split' Ukraine",
+          "source": "France 24",
+          "link": "https://www.france24.com/en/zelensky-rejects-wartime-elections-saying-vote-would-split-ukraine",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-08-23",
+      "updated_at": "2026-08-24",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "developing_event",
     "related_events": [
       {
+        "event_id": "event_pressure-mounts-on-zelenskyy-to-hold-electio_9d3365cc1e",
+        "title": "Pressure Mounts on Zelenskyy to Hold Elections Amid Ongoing Martial Law",
+        "relationship": "related_topic",
+        "confidence": 0.861,
+        "shared_entities": [
+          "citing_risks",
+          "election_citing",
+          "oppose_wartime",
+          "ukraine",
+          "wartime_election"
+        ]
+      },
+      {
         "event_id": "event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd",
         "title": "Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv",
         "relationship": "related_topic",
-        "confidence": 0.764,
+        "confidence": 0.763,
         "shared_entities": [
           "president",
           "ukraine",
@@ -274,96 +397,26 @@
         ]
       },
       {
-        "event_id": "event_pressure-mounts-on-zelenskyy-to-hold-electio_9d3365cc1e",
-        "title": "Pressure Mounts on Zelenskyy to Hold Elections Amid Ongoing Martial Law",
-        "relationship": "related_topic",
-        "confidence": 0.711,
-        "shared_entities": [
-          "ukraine",
-          "wartime_election"
-        ]
-      },
-      {
         "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
         "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
         "relationship": "related_topic",
-        "confidence": 0.684,
+        "confidence": 0.675,
+        "shared_entities": [
+          "ukraine",
+          "volodymyr_zelensky"
+        ]
+      },
+      {
+        "event_id": "event_uk-prime-minister-burnham-to-welcome-ukraini_a5284fea7c",
+        "title": "UK Prime Minister Burnham to Welcome Ukrainian President Zelensky",
+        "relationship": "related_topic",
+        "confidence": 0.66,
         "shared_entities": [
           "ukraine",
           "volodymyr_zelensky"
         ]
       }
     ],
-    "search_tokens": [
-      "advocated",
-      "also",
-      "answer",
-      "argued",
-      "called",
-      "calls",
-      "challenge",
-      "come",
-      "concern",
-      "conducting",
-      "conflict",
-      "corruption",
-      "crisi",
-      "dangerou",
-      "defence",
-      "defense",
-      "despite",
-      "dismissed",
-      "divide",
-      "election",
-      "experiencing",
-      "expressed",
-      "faces",
-      "fedorov",
-      "further",
-      "governance",
-      "held",
-      "holding",
-      "martial",
-      "mykhailo",
-      "ongoing",
-      "ousted",
-      "presidential",
-      "prohibit",
-      "question",
-      "raised",
-      "recently",
-      "remain",
-      "remark",
-      "response",
-      "russia",
-      "significant",
-      "stating",
-      "ukraine",
-      "under",
-      "volodymyr",
-      "war",
-      "wartime",
-      "which",
-      "within",
-      "would",
-      "zelensky"
-    ],
-    "entities": [
-      "corruption_question",
-      "faces_corruption",
-      "fedorov_ukraine",
-      "mykhailo_fedorov",
-      "ousted_ukraine",
-      "president",
-      "ukraine",
-      "ukraine.",
-      "ukraine_defense",
-      "volodymyr_zelensky",
-      "wartime_election",
-      "zelensky_faces",
-      "zelensky_fedorov"
-    ],
-    "search_text": "advocated also answer argued called calls challenge come concern conducting conflict corruption corruption_question crisi dangerou defence defense despite dismissed divide election experiencing expressed faces faces_corruption fedorov fedorov_ukraine further governance held holding martial mykhailo mykhailo_fedorov ongoing ousted ousted_ukraine president presidential prohibit question raised recently remain remark response russia significant stating ukraine ukraine. ukraine_defense under volodymyr volodymyr_zelensky war wartime wartime_election which within would zelensky zelensky_faces zelensky_fedorov",
     "hero_image": {
       "url": "/Current_news/generated/events/event_ousted-ukrainian-defense-minister-calls-for_57af67afe3.jpg",
       "thumbnail_url": "/Current_news/generated/events/event_ousted-ukrainian-defense-minister-calls-for_57af67afe3.jpg",
@@ -383,9 +436,223 @@
       "focal_wide_y": 0.48,
       "focal_tall_x": 0.5,
       "focal_tall_y": 0.48
+    },
+    "search_tokens": [
+      "advocated",
+      "also",
+      "answer",
+      "argued",
+      "called",
+      "calls",
+      "challenge",
+      "citing",
+      "come",
+      "comment",
+      "concern",
+      "conducting",
+      "conflict",
+      "corruption",
+      "crisi",
+      "dangerou",
+      "defence",
+      "defense",
+      "despite",
+      "dismissed",
+      "divide",
+      "election",
+      "experiencing",
+      "expressed",
+      "faces",
+      "fedorov",
+      "follow",
+      "further",
+      "governance",
+      "held",
+      "highly",
+      "holding",
+      "indicated",
+      "martial",
+      "move",
+      "mykhailo",
+      "ongoing",
+      "only",
+      "oppose",
+      "ousted",
+      "poll",
+      "presidential",
+      "prohibit",
+      "proposal",
+      "question",
+      "raised",
+      "recent",
+      "recently",
+      "rejected",
+      "remain",
+      "remark",
+      "response",
+      "risks",
+      "russia",
+      "significant",
+      "split",
+      "stating",
+      "such",
+      "support",
+      "ukraine",
+      "under",
+      "volodymyr",
+      "war",
+      "wartime",
+      "which",
+      "within",
+      "would",
+      "zelensky"
+    ],
+    "entities": [
+      "citing_risks",
+      "corruption_question",
+      "election_citing",
+      "faces_corruption",
+      "fedorov_ukraine",
+      "mykhailo_fedorov",
+      "oppose_wartime",
+      "ousted_ukraine",
+      "president",
+      "ukraine",
+      "ukraine.",
+      "ukraine_defense",
+      "ukraine_ukraine",
+      "volodymyr_zelensky",
+      "wartime_election",
+      "zelensky_faces",
+      "zelensky_fedorov",
+      "zelensky_oppose"
+    ],
+    "search_text": "advocated also answer argued called calls challenge citing citing_risks come comment concern conducting conflict corruption corruption_question crisi dangerou defence defense despite dismissed divide election election_citing experiencing expressed faces faces_corruption fedorov fedorov_ukraine follow further governance held highly holding indicated martial move mykhailo mykhailo_fedorov ongoing only oppose oppose_wartime ousted ousted_ukraine poll president presidential prohibit proposal question raised recent recently rejected remain remark response risks russia significant split stating such support ukraine ukraine. ukraine_defense ukraine_ukraine under volodymyr volodymyr_zelensky war wartime wartime_election which within would zelensky zelensky_faces zelensky_fedorov zelensky_oppose",
+    "event_overview": {
+      "available": true,
+      "title": "About Ukraine Politics",
+      "subject": "Ukraine Politics",
+      "summary": "This event concerns Ukraine’s debate over whether to hold presidential, parliamentary or local elections while the country remains under martial law during Russia’s full-scale invasion. The issue combines legal restrictions on voting with practical questions about security, occupied territory, military service and the ability of displaced citizens to participate.",
+      "facts": [
+        {
+          "label": "Martial-law start",
+          "value": "Ukraine imposed martial law nationwide beginning at 5:30 a.m. on February 24, 2022, citing Russia’s military aggression; the Verkhovna Rada approved the presidential decree.",
+          "source_ids": [
+            "o1"
+          ]
+        },
+        {
+          "label": "Legal restriction on elections",
+          "value": "Ukraine’s Law on the Legal Regime of Martial Law bars presidential, parliamentary and local elections, as well as national and local referendums, during martial law.",
+          "source_ids": [
+            "o2",
+            "o3"
+          ]
+        },
+        {
+          "label": "Constitutional continuity",
+          "value": "If the Verkhovna Rada’s term expires during martial law, its authority continues until the first sitting of a newly elected parliament after martial law is lifted; the legal framework also provides continuity for the presidency until a successor takes office.",
+          "source_ids": [
+            "o4",
+            "o3"
+          ]
+        },
+        {
+          "label": "Election administration",
+          "value": "Ukraine’s Central Election Commission suspended electoral processes after martial law was introduced on February 24, 2022; post-martial-law election planning must address the resumption and scheduling of elections.",
+          "source_ids": [
+            "o5",
+            "o3"
+          ]
+        },
+        {
+          "label": "Core practical constraints",
+          "value": "Official post-war election analysis identifies security conditions, occupied or recently liberated areas, population displacement, voter registration and election-administration capacity as major issues for any eventual nationwide vote.",
+          "source_ids": [
+            "o3"
+          ]
+        }
+      ],
+      "scope_note": "The selected Muninn timeline covers the August 19–24, 2026 political debate over wartime elections and related scrutiny of Ukraine’s leadership, not the full history of Ukraine’s electoral system, martial law, corruption cases or the war.",
+      "sources": [
+        {
+          "title": "Gov",
+          "publisher": "Gov",
+          "url": "https://www.president.gov.ua/en/news/prezident-pidpisav-ukaz-pro-zaprovadzhennya-voyennogo-stanu-73109",
+          "source_type": "reporting",
+          "id": "o1"
+        },
+        {
+          "title": "Gov",
+          "publisher": "Gov",
+          "url": "https://zakon.rada.gov.ua/laws/anot/1647-14?lang=en",
+          "source_type": "reporting",
+          "id": "o2"
+        },
+        {
+          "title": "Coe",
+          "publisher": "Coe",
+          "url": "https://rm.coe.int/en-organisation-and-holding-of-elections-in-post-war-ukraine/1680aedbaf",
+          "source_type": "primary",
+          "id": "o3"
+        },
+        {
+          "title": "Gov",
+          "publisher": "Gov",
+          "url": "https://zakon.rada.gov.ua/laws/show/en/254%D0%BA/96-%D0%B2%D1%80",
+          "source_type": "reporting",
+          "id": "o4"
+        },
+        {
+          "title": "Gov",
+          "publisher": "Gov",
+          "url": "https://www.cvk.gov.ua/wp-content/uploads/2024/05/Report-of-the-CEC-2022.pdf",
+          "source_type": "reporting",
+          "id": "o5"
+        }
+      ],
+      "publisher_count": 2,
+      "generated_at": "2026-08-24T12:43:22.077298+00:00",
+      "expires_at": "2026-08-31T12:43:22.077298+00:00",
+      "model": "gpt-5.6-terra",
+      "provenance": "openai_web_search_source_grounded_event_overview_v1"
     }
   },
   "related_events": [
+    {
+      "event_id": "event_pressure-mounts-on-zelenskyy-to-hold-electio_9d3365cc1e",
+      "title": "Pressure Mounts on Zelenskyy to Hold Elections Amid Ongoing Martial Law",
+      "summary": "Muninn first tracked this thread on 2026-08-20: Pressure Mounts on Zelenskyy to Hold Elections Amid Ongoing Martial Law. The latest development is Zelenskyy Opposes Wartime Elections, Citing Risks to National Unity.",
+      "activity_status": "active",
+      "stage": "developing_event",
+      "stage_label": "Developing event",
+      "first_seen_at": "2026-08-20",
+      "last_seen_at": "2026-08-24",
+      "development_count": 2,
+      "latest_title": "Zelenskyy Opposes Wartime Elections, Citing Risks to National Unity",
+      "topic_label": "Ukraine Elections",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_pressure-mounts-on-zelenskyy-to-hold-electio_9d3365cc1e.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_pressure-mounts-on-zelenskyy-to-hold-electio_9d3365cc1e.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_pressure-mounts-on-zelenskyy-to-hold-electio_9d3365cc1e"
+    },
     {
       "event_id": "event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd",
       "title": "Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv",
@@ -419,40 +686,6 @@
         "focal_tall_y": 0.48
       },
       "href": "/timeline.html?event=event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd"
-    },
-    {
-      "event_id": "event_pressure-mounts-on-zelenskyy-to-hold-electio_9d3365cc1e",
-      "title": "Pressure Mounts on Zelenskyy to Hold Elections Amid Ongoing Martial Law",
-      "summary": "Muninn first tracked this thread on 2026-08-20: Pressure Mounts on Zelenskyy to Hold Elections Amid Ongoing Martial Law. The latest development is Zelenskyy Opposes Wartime Elections, Citing Risks to National Unity.",
-      "activity_status": "active",
-      "stage": "developing_event",
-      "stage_label": "Developing event",
-      "first_seen_at": "2026-08-20",
-      "last_seen_at": "2026-08-23",
-      "development_count": 2,
-      "latest_title": "Zelenskyy Opposes Wartime Elections, Citing Risks to National Unity",
-      "topic_label": "Ukraine Elections",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_pressure-mounts-on-zelenskyy-to-hold-electio_9d3365cc1e.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_pressure-mounts-on-zelenskyy-to-hold-electio_9d3365cc1e.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_pressure-mounts-on-zelenskyy-to-hold-electio_9d3365cc1e"
     },
     {
       "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
