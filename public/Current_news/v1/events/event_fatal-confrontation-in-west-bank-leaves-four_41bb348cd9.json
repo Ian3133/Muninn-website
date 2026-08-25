@@ -15,7 +15,7 @@
     "summary": "A deadly confrontation in the West Bank resulted in the deaths of four Palestinians and two Israeli soldiers. The incident occurred near a Palestinian village, with conflicting accounts regarding the circumstances. Palestinians allege that settlers attacked the village, while the Israeli military claims a Palestinian stole a weapon and opened fire on hikers. The situation has escalated tensions in the region, prompting Israel to prepare for a significant military operation.",
     "status": "active",
     "first_seen_at": "2026-07-25",
-    "last_seen_at": "2026-08-23",
+    "last_seen_at": "2026-08-25",
     "timeline": [
       {
         "development_id": "story_5a5ff9eab7adc01d",
@@ -942,15 +942,87 @@
           "story_d4a1f6390f7cbb3f"
         ],
         "revision_count": 1
+      },
+      {
+        "development_id": "story_47f7fe01f8b4334e",
+        "daily_story_id": "story_47f7fe01f8b4334e",
+        "date": "2026-08-25",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Dozens Killed in Gang Violence Near Port-au-Prince, Haiti",
+        "summary": "At least 40 to 47 people were killed in a violent gang attack in Kenscoff, a neighborhood near Port-au-Prince. The assault, described as a 'night of terror' by local officials, also left 22 others injured. The UN has expressed concern over the ongoing gang violence and the lack of protection for residents.",
+        "topic_label": "Haiti Violence",
+        "development_type": "military_action",
+        "key_facts": [
+          "At least 40 to 47 people killed in gang violence",
+          "22 others injured during the attack",
+          "Incident occurred in Kenscoff, near Port-au-Prince",
+          "Local officials described the event as a 'night of terror'"
+        ],
+        "source_count": 2,
+        "sources": [
+          "CBC - Top Stories",
+          "DW - English"
+        ],
+        "source_urls": [
+          "https://www.dw.com/en/haiti-gang-members-kill-dozens-near-port-au-prince/a-78491117?maca=en-rss-en-all-1573-rdf",
+          "https://www.cbc.ca/news/world/haiti-deadly-attacks-9.7318377?cmp=rss"
+        ],
+        "source_details": [
+          {
+            "title": "Haiti: Gang members kill dozens near Port-au-Prince",
+            "source": "DW - English",
+            "link": "https://www.dw.com/en/haiti-gang-members-kill-dozens-near-port-au-prince/a-78491117?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "At least 47 people killed in violent weekend attacks in Haiti, UN says",
+            "source": "CBC - Top Stories",
+            "link": "https://www.cbc.ca/news/world/haiti-deadly-attacks-9.7318377?cmp=rss",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "attack"
+          ],
+          "shared_incident_anchors": [
+            "violence"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "attack",
+            "incident",
+            "ongoing",
+            "violence",
+            "violent"
+          ],
+          "shared_entities": [
+            "violence"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_6dee4e8adf262494",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-25",
+        "last_seen_at": "2026-08-25",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 10,
+      "public_development_count": 11,
       "questionable_development_count": 2,
       "review_required": true
     },
-    "latest_title": "Escalating Violence in West Bank Amid Settler Blockades and Attacks",
-    "latest_summary": "Violence in the occupied West Bank is intensifying, particularly in areas designated for a future Palestinian state. A Palestinian-American has returned to his village of Qusra to protect it from increasing settler attacks, which have surged amid ongoing settlement expansion. Reports indicate that violent incidents involving Israeli settlers in Palestinian-controlled areas have nearly doubled since 2025, as settlers pursue aggressive expansion efforts.",
+    "latest_title": "Dozens Killed in Gang Violence Near Port-au-Prince, Haiti",
+    "latest_summary": "At least 40 to 47 people were killed in a violent gang attack in Kenscoff, a neighborhood near Port-au-Prince. The assault, described as a 'night of terror' by local officials, also left 22 others injured. The UN has expressed concern over the ongoing gang violence and the lack of protection for residents.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -961,29 +1033,29 @@
       "milestone_development_ids": [
         "story_5a5ff9eab7adc01d",
         "story_bf7f788433cebebd",
-        "story_6cb5bc107be798fa",
-        "story_6dee4e8adf262494"
+        "story_13fed5916081d8f6",
+        "story_47f7fe01f8b4334e"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-22",
-      "development_count": 10,
-      "coverage_packet_count": 13,
-      "date_count": 10,
-      "source_count": 27,
+      "summary_updated_at": "2026-08-25",
+      "development_count": 11,
+      "coverage_packet_count": 14,
+      "date_count": 11,
+      "source_count": 29,
       "independent_source_count": 15,
       "first_date": "2026-07-25",
-      "latest_date": "2026-08-22",
-      "latest_update_title": "Escalating Violence in West Bank Amid Settler Blockades and Attacks",
+      "latest_date": "2026-08-25",
+      "latest_update_title": "Dozens Killed in Gang Violence Near Port-au-Prince, Haiti",
       "coverage_score": 1.0,
-      "recency_score": 0.778,
-      "rank_score": 0.871,
-      "context_summary": "Muninn first tracked this thread on 2026-07-25: Funerals Held for Four Palestinians Killed in West Bank Clash with Israeli Settlers. The latest development is Escalating Violence in West Bank Amid Settler Blockades and Attacks.",
-      "cta_label": "Explore 10 developments"
+      "recency_score": 1.0,
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-07-25: Funerals Held for Four Palestinians Killed in West Bank Clash with Israeli Settlers. The latest development is Dozens Killed in Gang Violence Near Port-au-Prince, Haiti.",
+      "cta_label": "Explore 11 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Four Palestinian men were buried following their deaths during a clash with Israeli settlers in the occupied West Bank. A later development was Israeli Settlers Besiege Palestinian Families in Qusra, West Bank. Most recently, violence in the occupied West Bank is intensifying, particularly in areas designated for a future Palestinian state.",
+      "summary": "Four Palestinian men were buried following their deaths during a clash with Israeli settlers in the occupied West Bank. A later development was Israeli Settlers Besiege Palestinian Families in Qusra, West Bank. Most recently, at least 40 to 47 people were killed in a violent gang attack in Kenscoff, a neighborhood near Port-au-Prince.",
       "key_developments": [
         {
           "development_id": "story_5a5ff9eab7adc01d",
@@ -996,14 +1068,14 @@
           "title": "Israeli Settler Charged in Killing of Palestinian Activist Awdah Hathaleen"
         },
         {
-          "development_id": "story_6cb5bc107be798fa",
-          "date": "2026-08-14",
-          "title": "Activists Attempt to Deliver Aid to Besieged Palestinian Families in Qusra"
+          "development_id": "story_13fed5916081d8f6",
+          "date": "2026-08-15",
+          "title": "Activists Attempt to Deliver Aid to Besieged Families in West Bank Village"
         },
         {
-          "development_id": "story_6dee4e8adf262494",
-          "date": "2026-08-22",
-          "title": "Escalating Violence in West Bank Amid Settler Blockades and Attacks"
+          "development_id": "story_47f7fe01f8b4334e",
+          "date": "2026-08-25",
+          "title": "Dozens Killed in Gang Violence Near Port-au-Prince, Haiti"
         }
       ],
       "sources": [
@@ -1168,9 +1240,21 @@
           "source": "The Guardian",
           "link": "https://www.theguardian.com/world/2026/aug/21/israeli-settler-attacks-shift-to-heart-of-territory-earmarked-for-palestinian-state",
           "source_bias": "left"
+        },
+        {
+          "title": "Haiti: Gang members kill dozens near Port-au-Prince",
+          "source": "DW - English",
+          "link": "https://www.dw.com/en/haiti-gang-members-kill-dozens-near-port-au-prince/a-78491117?maca=en-rss-en-all-1573-rdf",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "At least 47 people killed in violent weekend attacks in Haiti, UN says",
+          "source": "CBC - Top Stories",
+          "link": "https://www.cbc.ca/news/world/haiti-deadly-attacks-9.7318377?cmp=rss",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-08-22",
+      "updated_at": "2026-08-25",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -1179,7 +1263,7 @@
         "event_id": "event_us-ambassador-denounces-settler-siege-of-pal_283b86d186",
         "title": "US Ambassador Denounces Settler Siege of Palestinian Homes as 'Horrific Act of Terror'",
         "relationship": "related_topic",
-        "confidence": 0.857,
+        "confidence": 0.856,
         "shared_entities": [
           "america",
           "israel",
@@ -1189,21 +1273,10 @@
         ]
       },
       {
-        "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
-        "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
-        "relationship": "related_topic",
-        "confidence": 0.73,
-        "shared_entities": [
-          "america",
-          "israel",
-          "us"
-        ]
-      },
-      {
         "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
         "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
         "relationship": "related_topic",
-        "confidence": 0.727,
+        "confidence": 0.728,
         "shared_entities": [
           "israel",
           "palestinian",
@@ -1211,10 +1284,21 @@
         ]
       },
       {
+        "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+        "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
+        "relationship": "related_topic",
+        "confidence": 0.727,
+        "shared_entities": [
+          "america",
+          "israel",
+          "us"
+        ]
+      },
+      {
         "event_id": "event_israel-advances-e1-west-bank-settlement-amid_5399161819",
         "title": "Israel Advances E1 West Bank Settlement Amid International Backlash",
         "relationship": "related_topic",
-        "confidence": 0.71,
+        "confidence": 0.715,
         "shared_entities": [
           "israel",
           "west"
@@ -1354,6 +1438,7 @@
       "area",
       "areas",
       "arrest",
+      "assault",
       "assist",
       "attack",
       "attacked",
@@ -1390,6 +1475,7 @@
       "deliver",
       "demolish",
       "demolished",
+      "described",
       "designated",
       "detain",
       "detained",
@@ -1397,6 +1483,7 @@
       "displacing",
       "district",
       "doubled",
+      "dozen",
       "drawn",
       "dwindling",
       "effort",
@@ -1405,6 +1492,7 @@
       "escalating",
       "event",
       "expansion",
+      "expressed",
       "extensive",
       "facing",
       "familie",
@@ -1420,9 +1508,11 @@
       "funeral",
       "further",
       "future",
+      "gang",
       "gaza",
       "group",
       "grove",
+      "haiti",
       "hathaleen",
       "held",
       "home",
@@ -1434,6 +1524,7 @@
       "indicate",
       "indicating",
       "indictment",
+      "injured",
       "inside",
       "intensifying",
       "international",
@@ -1441,11 +1532,15 @@
       "israel",
       "jericho",
       "joined",
+      "kenscoff",
       "killed",
       "killing",
       "known",
       "labeling",
+      "lack",
+      "least",
       "leaving",
+      "left",
       "levi",
       "local",
       "located",
@@ -1458,6 +1553,8 @@
       "nablu",
       "near",
       "nearly",
+      "neighborhood",
+      "night",
       "occupied",
       "occurred",
       "october",
@@ -1469,10 +1566,12 @@
       "palestinian-american",
       "palestinian-controlled",
       "particularly",
+      "port-au-prince",
       "potential",
       "property",
       "prosecutor",
       "protect",
+      "protection",
       "pursue",
       "qusra",
       "raids",
@@ -1480,6 +1579,7 @@
       "regarding",
       "region",
       "reportedly",
+      "resident",
       "resource",
       "resulted",
       "return",
@@ -1547,20 +1647,27 @@
       "demolish_homes",
       "escalating_violence",
       "funeral_held",
+      "gang",
+      "gang_violence",
       "hathaleen_israel",
       "israel",
       "israel_detain",
       "israel_settler",
       "jericho",
+      "kenscoff",
       "killing",
       "mosque_set",
       "nablu",
+      "near_port-au-prince",
       "palestinian",
       "palestinian-american",
       "palestinian-controlled",
       "palestinian_activist",
       "palestinian_america",
       "palestinian_familie",
+      "port-au-prince",
+      "port-au-prince.",
+      "port-au-prince_haiti",
       "qusra",
       "qusra_activist",
       "qusra_west",
@@ -1570,13 +1677,15 @@
       "settler_charged",
       "settler_demolish",
       "sunday._israel",
+      "un",
       "us",
       "violence_israel",
+      "violence_near",
       "west",
       "west_bank.",
       "yinon_levi"
     ],
-    "search_text": "2023 2025 access account accused action activist activist_attempt activist_awdah aftermath aggressive aid allowing also america america_return area areas arrest assist attack attacked attempt attempted attributed authoritie awdah awdah_hathaleen bank besiege besiege_palestinian besieged besieged_familie besieged_palestinian besieged_west blockade blocking buried burning care charged circumstance clash clashe complicity complicity_israel concern condemnation conducted conflicting confrontation connection continue court currently deadly deadly_west death defending deliver deliver_aid demolish demolish_homes demolished designated detain detained diplomat displacing district doubled drawn dwindling effort electricity escalated escalating escalating_violence event expansion extensive facing familie family fear fears filed fire first food force four funeral funeral_held further future gaza group grove hathaleen hathaleen_israel held home homes incident including increase increasing indicate indicating indictment inside intensifying international involving israel israel_detain israel_settler jericho joined killed killing known labeling leaving levi local located marched marks medical member military mosque mosque_set nablu near nearly occupied occurred october olive ongoing onset other palestinian palestinian-american palestinian-controlled palestinian_activist palestinian_america palestinian_familie particularly potential property prosecutor protect pursue qusra qusra_activist qusra_west raids raising regarding region reportedly resource resulted return returned rising rising_violence safety searche security seize seizure settlement settler settler_besiege settler_blockade settler_charged settler_demolish shooting siege significant since situation soldier standoff stemmed sunday sunday._israel supplie surge surged suspect terror them there they three time toward trapped under unrest us village villager violence violence_israel violent war water week well-being west west_bank. where which withdrawn yinon yinon_levi"
+    "search_text": "2023 2025 access account accused action activist activist_attempt activist_awdah aftermath aggressive aid allowing also america america_return area areas arrest assault assist attack attacked attempt attempted attributed authoritie awdah awdah_hathaleen bank besiege besiege_palestinian besieged besieged_familie besieged_palestinian besieged_west blockade blocking buried burning care charged circumstance clash clashe complicity complicity_israel concern condemnation conducted conflicting confrontation connection continue court currently deadly deadly_west death defending deliver deliver_aid demolish demolish_homes demolished described designated detain detained diplomat displacing district doubled dozen drawn dwindling effort electricity escalated escalating escalating_violence event expansion expressed extensive facing familie family fear fears filed fire first food force four funeral funeral_held further future gang gang_violence gaza group grove haiti hathaleen hathaleen_israel held home homes incident including increase increasing indicate indicating indictment injured inside intensifying international involving israel israel_detain israel_settler jericho joined kenscoff killed killing known labeling lack least leaving left levi local located marched marks medical member military mosque mosque_set nablu near near_port-au-prince nearly neighborhood night occupied occurred october olive ongoing onset other palestinian palestinian-american palestinian-controlled palestinian_activist palestinian_america palestinian_familie particularly port-au-prince port-au-prince. port-au-prince_haiti potential property prosecutor protect protection pursue qusra qusra_activist qusra_west raids raising regarding region reportedly resident resource resulted return returned rising rising_violence safety searche security seize seizure settlement settler settler_besiege settler_blockade settler_charged settler_demolish shooting siege significant since situation soldier standoff stemmed sunday sunday._israel supplie surge surged suspect terror them there they three time toward trapped un under unrest us village villager violence violence_israel violence_near violent war water week well-being west west_bank. where which withdrawn yinon yinon_levi"
   },
   "related_events": [
     {
@@ -1614,50 +1723,16 @@
       "href": "/timeline.html?event=event_us-ambassador-denounces-settler-siege-of-pal_283b86d186"
     },
     {
-      "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
-      "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
-      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is US Marines Cancel Joint Drills with South Korea Due to Iran War Constraints.",
-      "activity_status": "active",
-      "stage": "timeline",
-      "stage_label": "Timeline",
-      "first_seen_at": "2026-07-22",
-      "last_seen_at": "2026-08-24",
-      "development_count": 28,
-      "latest_title": "US Marines Cancel Joint Drills with South Korea Due to Iran War Constraints",
-      "topic_label": "Iran War",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
-    },
-    {
       "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
       "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
-      "summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Zelenskyy Asserts Ukraine's Stance on Peace Amid Independence Day Remarks.",
+      "summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Kremlin Adviser Warns of Potential Attacks on UK Drone Factories.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-07-31",
-      "last_seen_at": "2026-08-24",
-      "development_count": 21,
-      "latest_title": "Zelenskyy Asserts Ukraine's Stance on Peace Amid Independence Day Remarks",
+      "last_seen_at": "2026-08-25",
+      "development_count": 22,
+      "latest_title": "Kremlin Adviser Warns of Potential Attacks on UK Drone Factories",
       "topic_label": "Gaza Peace Deal",
       "hero_image": {
         "url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
@@ -1680,6 +1755,40 @@
         "focal_tall_y": 0.48
       },
       "href": "/timeline.html?event=event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b"
+    },
+    {
+      "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+      "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
+      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Iran Promises Retaliation Following Expanded US Sanctions.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-22",
+      "last_seen_at": "2026-08-25",
+      "development_count": 29,
+      "latest_title": "Iran Promises Retaliation Following Expanded US Sanctions",
+      "topic_label": "Iran War",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
     }
   ]
 }
