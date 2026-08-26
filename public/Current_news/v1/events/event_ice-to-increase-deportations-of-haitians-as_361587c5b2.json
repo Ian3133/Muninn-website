@@ -334,8 +334,8 @@
       "latest_date": "2026-08-25",
       "latest_update_title": "Trump Administration Plans to Revoke Visas of Up to 200,000 Asylum Seekers",
       "coverage_score": 0.843,
-      "recency_score": 1.0,
-      "rank_score": 0.934,
+      "recency_score": 0.875,
+      "rank_score": 0.862,
       "context_summary": "Muninn first tracked this thread on 2026-07-27: ICE to Increase Deportations of Haitians as Protections Expire. The latest development is Trump Administration Plans to Revoke Visas of Up to 200,000 Asylum Seekers.",
       "cta_label": "Explore 4 developments"
     },
@@ -468,6 +468,17 @@
         ]
       },
       {
+        "event_id": "event_fatal-confrontation-in-west-bank-leaves-four_41bb348cd9",
+        "title": "Fatal Confrontation in West Bank Leaves Four Palestinians and Two Israelis Dead",
+        "relationship": "related_topic",
+        "confidence": 0.717,
+        "shared_entities": [
+          "haiti",
+          "us",
+          "west"
+        ]
+      },
+      {
         "event_id": "event_ice-to-control-release-of-body-camera-footag_c397aa39d2",
         "title": "ICE to Control Release of Body Camera Footage Based on Agency's Interests",
         "relationship": "related_topic",
@@ -476,17 +487,6 @@
           "custom_enforcement",
           "enforcement_ice",
           "ice"
-        ]
-      },
-      {
-        "event_id": "event_tiktok-to-pay-400-million-in-landmark-childr_ab358f8a15",
-        "title": "TikTok to Pay $400 Million in Landmark Children's Privacy Settlement",
-        "relationship": "related_topic",
-        "confidence": 0.7,
-        "shared_entities": [
-          "united",
-          "united_states.",
-          "us"
         ]
       }
     ],
@@ -509,6 +509,111 @@
       "focal_wide_y": 0.48,
       "focal_tall_x": 0.5,
       "focal_tall_y": 0.48
+    },
+    "event_overview": {
+      "available": true,
+      "title": "About Immigration Policy",
+      "subject": "Immigration Policy",
+      "summary": "This event concerns U.S. immigration policy affecting noncitizens’ permission to remain, work, seek protection, or be removed from the United States. It centers on actions by the Department of Homeland Security and its components, immigration-court processes administered by the Justice Department, and litigation that can determine whether particular policies take effect.",
+      "facts": [
+        {
+          "label": "Governing framework",
+          "value": "The Immigration and Nationality Act authorizes the Secretary of Homeland Security to designate countries for Temporary Protected Status (TPS) when statutory country-condition criteria are met; TPS is a temporary benefit, not a path by itself to lawful permanent residence.",
+          "source_ids": [
+            "o1"
+          ]
+        },
+        {
+          "label": "Haiti TPS history and 2026 status",
+          "value": "Haiti was first designated for TPS on January 21, 2010. DHS announced a termination effective February 3, 2026; after court litigation, the U.S. Supreme Court reversed the lower-court stay on June 25, 2026, and the District Court acknowledged on August 5 that the stay was no longer in effect.",
+          "source_ids": [
+            "o1",
+            "o2"
+          ]
+        },
+        {
+          "label": "Effect on individual immigration status",
+          "value": "A TPS termination does not by itself resolve every person’s immigration position: the federal notice says beneficiaries may return to a prior or other independently obtained valid status, if any, while separate removal or protection proceedings can also apply.",
+          "source_ids": [
+            "o1",
+            "o3"
+          ]
+        },
+        {
+          "label": "Enforcement and adjudication roles",
+          "value": "ICE Enforcement and Removal Operations handles identification, arrest, detention, case management, and removals. Formal removal proceedings begin when DHS files a Notice to Appear with an immigration court; immigration judges determine removability and may decide applications for relief.",
+          "source_ids": [
+            "o4",
+            "o5",
+            "o6"
+          ]
+        },
+        {
+          "label": "Protection claims and visas",
+          "value": "Asylum is relief from removal for qualifying people who meet the refugee definition, whereas visas are travel documents and categories defined by immigration law and the purpose of travel. These are distinct legal mechanisms from TPS, though an individual’s case can involve more than one form of immigration status or protection.",
+          "source_ids": [
+            "o3",
+            "o7"
+          ]
+        }
+      ],
+      "scope_note": "The selected Muninn timeline highlights major U.S. enforcement, detention, deportation, TPS, asylum, and visa-policy developments through August 25, 2026; it does not provide a complete account of every policy change, lawsuit, or individual immigration case.",
+      "sources": [
+        {
+          "title": "Federalregister",
+          "publisher": "Federalregister",
+          "url": "https://public-inspection.federalregister.gov/2025-21379.pdf",
+          "source_type": "primary",
+          "id": "o1"
+        },
+        {
+          "title": "Govdelivery",
+          "publisher": "Govdelivery",
+          "url": "https://content.govdelivery.com/accounts/USDHSCISEVERIFY/bulletins/421fdae",
+          "source_type": "reporting",
+          "id": "o2"
+        },
+        {
+          "title": "Justice",
+          "publisher": "Justice",
+          "url": "https://www.justice.gov/eoir/asylum-withholding-removal-convention-against-torture",
+          "source_type": "primary",
+          "id": "o3"
+        },
+        {
+          "title": "Ice",
+          "publisher": "Ice",
+          "url": "https://www.ice.gov/detain",
+          "source_type": "primary",
+          "id": "o4"
+        },
+        {
+          "title": "Justice",
+          "publisher": "Justice",
+          "url": "https://www.justice.gov/eoir/policy-manual-eoir/part-II/icpm/chapter-3-2",
+          "source_type": "primary",
+          "id": "o5"
+        },
+        {
+          "title": "Justice",
+          "publisher": "Justice",
+          "url": "https://www.justice.gov/eoir/learn-about-immigration-court",
+          "source_type": "primary",
+          "id": "o6"
+        },
+        {
+          "title": "State",
+          "publisher": "State",
+          "url": "https://travel.state.gov/content/travel/en/us-visas.html/en/immigrate/",
+          "source_type": "primary",
+          "id": "o7"
+        }
+      ],
+      "publisher_count": 5,
+      "generated_at": "2026-08-25T12:41:48.606364+00:00",
+      "expires_at": "2026-09-01T12:41:48.606364+00:00",
+      "model": "gpt-5.6-terra",
+      "provenance": "openai_web_search_source_grounded_event_overview_v1"
     },
     "search_tokens": [
       "000",
@@ -634,112 +739,7 @@
       "west",
       "west_african"
     ],
-    "search_text": "000 200 300 action active-duty administration african agenda agreement agreement_twenty applied arrangement arresting arrive arrived asylum asylum_seeker back broader business crackdown crise currently custom custom_enforcement deportation deportee deportee_arrive detained detention effort enforcement enforcement_ice entered expediting expire facing familie first first_group foreigner group haiti haitian history ice immigration immigration_crackdown include increase increase_deportation individual initiated investigation largest legal liberia liberia_under lose marking mass migrant military military_spouse nation ohio parent parent_detained part personnel plans policie preparing program protected protected_statu protection protection_expire pursue reportedly represent revealed revocation revoke revoke_visas roll seeker seeking sent significant spouse statu statu_tps strategy such target targeting temporary temporary_protected tourist tps trump trump_administration twenty under united united_states. us variou visa visas west west_african which",
-    "event_overview": {
-      "available": true,
-      "title": "About Immigration Policy",
-      "subject": "Immigration Policy",
-      "summary": "This event concerns U.S. immigration policy affecting noncitizens’ permission to remain, work, seek protection, or be removed from the United States. It centers on actions by the Department of Homeland Security and its components, immigration-court processes administered by the Justice Department, and litigation that can determine whether particular policies take effect.",
-      "facts": [
-        {
-          "label": "Governing framework",
-          "value": "The Immigration and Nationality Act authorizes the Secretary of Homeland Security to designate countries for Temporary Protected Status (TPS) when statutory country-condition criteria are met; TPS is a temporary benefit, not a path by itself to lawful permanent residence.",
-          "source_ids": [
-            "o1"
-          ]
-        },
-        {
-          "label": "Haiti TPS history and 2026 status",
-          "value": "Haiti was first designated for TPS on January 21, 2010. DHS announced a termination effective February 3, 2026; after court litigation, the U.S. Supreme Court reversed the lower-court stay on June 25, 2026, and the District Court acknowledged on August 5 that the stay was no longer in effect.",
-          "source_ids": [
-            "o1",
-            "o2"
-          ]
-        },
-        {
-          "label": "Effect on individual immigration status",
-          "value": "A TPS termination does not by itself resolve every person’s immigration position: the federal notice says beneficiaries may return to a prior or other independently obtained valid status, if any, while separate removal or protection proceedings can also apply.",
-          "source_ids": [
-            "o1",
-            "o3"
-          ]
-        },
-        {
-          "label": "Enforcement and adjudication roles",
-          "value": "ICE Enforcement and Removal Operations handles identification, arrest, detention, case management, and removals. Formal removal proceedings begin when DHS files a Notice to Appear with an immigration court; immigration judges determine removability and may decide applications for relief.",
-          "source_ids": [
-            "o4",
-            "o5",
-            "o6"
-          ]
-        },
-        {
-          "label": "Protection claims and visas",
-          "value": "Asylum is relief from removal for qualifying people who meet the refugee definition, whereas visas are travel documents and categories defined by immigration law and the purpose of travel. These are distinct legal mechanisms from TPS, though an individual’s case can involve more than one form of immigration status or protection.",
-          "source_ids": [
-            "o3",
-            "o7"
-          ]
-        }
-      ],
-      "scope_note": "The selected Muninn timeline highlights major U.S. enforcement, detention, deportation, TPS, asylum, and visa-policy developments through August 25, 2026; it does not provide a complete account of every policy change, lawsuit, or individual immigration case.",
-      "sources": [
-        {
-          "title": "Federalregister",
-          "publisher": "Federalregister",
-          "url": "https://public-inspection.federalregister.gov/2025-21379.pdf",
-          "source_type": "primary",
-          "id": "o1"
-        },
-        {
-          "title": "Govdelivery",
-          "publisher": "Govdelivery",
-          "url": "https://content.govdelivery.com/accounts/USDHSCISEVERIFY/bulletins/421fdae",
-          "source_type": "reporting",
-          "id": "o2"
-        },
-        {
-          "title": "Justice",
-          "publisher": "Justice",
-          "url": "https://www.justice.gov/eoir/asylum-withholding-removal-convention-against-torture",
-          "source_type": "primary",
-          "id": "o3"
-        },
-        {
-          "title": "Ice",
-          "publisher": "Ice",
-          "url": "https://www.ice.gov/detain",
-          "source_type": "primary",
-          "id": "o4"
-        },
-        {
-          "title": "Justice",
-          "publisher": "Justice",
-          "url": "https://www.justice.gov/eoir/policy-manual-eoir/part-II/icpm/chapter-3-2",
-          "source_type": "primary",
-          "id": "o5"
-        },
-        {
-          "title": "Justice",
-          "publisher": "Justice",
-          "url": "https://www.justice.gov/eoir/learn-about-immigration-court",
-          "source_type": "primary",
-          "id": "o6"
-        },
-        {
-          "title": "State",
-          "publisher": "State",
-          "url": "https://travel.state.gov/content/travel/en/us-visas.html/en/immigrate/",
-          "source_type": "primary",
-          "id": "o7"
-        }
-      ],
-      "publisher_count": 5,
-      "generated_at": "2026-08-25T12:41:48.606364+00:00",
-      "expires_at": "2026-09-01T12:41:48.606364+00:00",
-      "model": "gpt-5.6-terra",
-      "provenance": "openai_web_search_source_grounded_event_overview_v1"
-    }
+    "search_text": "000 200 300 action active-duty administration african agenda agreement agreement_twenty applied arrangement arresting arrive arrived asylum asylum_seeker back broader business crackdown crise currently custom custom_enforcement deportation deportee deportee_arrive detained detention effort enforcement enforcement_ice entered expediting expire facing familie first first_group foreigner group haiti haitian history ice immigration immigration_crackdown include increase increase_deportation individual initiated investigation largest legal liberia liberia_under lose marking mass migrant military military_spouse nation ohio parent parent_detained part personnel plans policie preparing program protected protected_statu protection protection_expire pursue reportedly represent revealed revocation revoke revoke_visas roll seeker seeking sent significant spouse statu statu_tps strategy such target targeting temporary temporary_protected tourist tps trump trump_administration twenty under united united_states. us variou visa visas west west_african which"
   },
   "related_events": [
     {
@@ -777,20 +777,20 @@
       "href": "/timeline.html?event=event_liberia-to-accept-1-200-us-deportees-under-m_90b8cedac4"
     },
     {
-      "event_id": "event_tiktok-to-pay-400-million-in-landmark-childr_ab358f8a15",
-      "title": "TikTok to Pay $400 Million in Landmark Children's Privacy Settlement",
-      "summary": "Muninn first tracked this thread on 2026-08-22: TikTok to Pay $400 Million in Landmark Children's Privacy Settlement. The latest development is TikTok Settles $400 Million Lawsuit Over Children's Privacy Violations.",
+      "event_id": "event_fatal-confrontation-in-west-bank-leaves-four_41bb348cd9",
+      "title": "Fatal Confrontation in West Bank Leaves Four Palestinians and Two Israelis Dead",
+      "summary": "Muninn first tracked this thread on 2026-07-25: Funerals Held for Four Palestinians Killed in West Bank Clash with Israeli Settlers. The latest development is Gang Attack in Haiti Leaves 47 Dead and Over 50 Kidnapped.",
       "activity_status": "active",
-      "stage": "developing_event",
-      "stage_label": "Developing event",
-      "first_seen_at": "2026-08-22",
-      "last_seen_at": "2026-08-23",
-      "development_count": 2,
-      "latest_title": "TikTok Settles $400 Million Lawsuit Over Children's Privacy Violations",
-      "topic_label": "Children's Privacy Lawsuit",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-25",
+      "last_seen_at": "2026-08-26",
+      "development_count": 12,
+      "latest_title": "Gang Attack in Haiti Leaves 47 Dead and Over 50 Kidnapped",
+      "topic_label": "Israeli-Palestinian Conflict",
       "hero_image": {
-        "url": "/Current_news/generated/events/event_tiktok-to-pay-400-million-in-landmark-childr_ab358f8a15.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_tiktok-to-pay-400-million-in-landmark-childr_ab358f8a15.jpg",
+        "url": "/Current_news/generated/events/event_fatal-confrontation-in-west-bank-leaves-four_41bb348cd9.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_fatal-confrontation-in-west-bank-leaves-four_41bb348cd9.jpg",
         "source": "Muninn AI illustration",
         "author": "OpenAI GPT Image 2",
         "license": "AI-generated content",
@@ -808,7 +808,7 @@
         "focal_tall_x": 0.5,
         "focal_tall_y": 0.48
       },
-      "href": "/timeline.html?event=event_tiktok-to-pay-400-million-in-landmark-childr_ab358f8a15"
+      "href": "/timeline.html?event=event_fatal-confrontation-in-west-bank-leaves-four_41bb348cd9"
     }
   ]
 }

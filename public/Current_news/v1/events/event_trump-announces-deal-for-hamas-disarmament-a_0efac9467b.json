@@ -15,7 +15,7 @@
     "summary": "President Trump has announced a deal for Hamas to completely disarm, which includes the gradual withdrawal of Israeli forces from Gaza. Hamas confirmed its agreement to the plan, stating it would hand over its weapons to a Palestinian governing committee. However, the implementation of this deal is contingent upon Israel fulfilling its commitments from a previous agreement.",
     "status": "active",
     "first_seen_at": "2026-07-31",
-    "last_seen_at": "2026-08-25",
+    "last_seen_at": "2026-08-26",
     "timeline": [
       {
         "development_id": "story_c0c042a2fb04bd8a",
@@ -2086,15 +2086,90 @@
         "first_seen_at": "2026-08-25",
         "last_seen_at": "2026-08-25",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_1ce2414a68c4dab8",
+        "daily_story_id": "story_1ce2414a68c4dab8",
+        "date": "2026-08-26",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Ukrainian Drone Strikes Disrupt Grain Exports from Black Sea Ports",
+        "summary": "Ukrainian drone attacks on Russian infrastructure in the Black Sea are causing significant disruptions to grain and oil exports, particularly from the port of Novorossiysk. In response to these attacks, Russian President Vladimir Putin has issued a decree allowing the state to temporarily seize control of infrastructure that is damaged if private owners do not adequately protect or repair it.",
+        "topic_label": "Ukraine Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "Ukrainian drone strikes are targeting Russian infrastructure in the Black Sea.",
+          "Grain and oil exports from Novorossiysk are being disrupted.",
+          "Putin's decree allows state control over damaged infrastructure."
+        ],
+        "source_count": 2,
+        "sources": [
+          "DW - English",
+          "PBS News - Headlines"
+        ],
+        "source_urls": [
+          "https://www.dw.com/en/grain-exports-stall-as-ukraine-steps-up-attacks-on-russia-s-black-sea-ports/a-78499629?maca=en-rss-en-all-1573-rdf",
+          "https://www.pbs.org/newshour/world/putin-decree-lets-russia-take-control-of-infrastructure-damaged-in-ukrainian-drone-attacks"
+        ],
+        "source_details": [
+          {
+            "title": "Grain exports stall as Ukraine steps up attacks on Russia's Black Sea ports",
+            "source": "DW - English",
+            "link": "https://www.dw.com/en/grain-exports-stall-as-ukraine-steps-up-attacks-on-russia-s-black-sea-ports/a-78499629?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Putin decree lets Russia take control of infrastructure damaged in Ukrainian drone attacks",
+            "source": "PBS News - Headlines",
+            "link": "https://www.pbs.org/newshour/world/putin-decree-lets-russia-take-control-of-infrastructure-damaged-in-ukrainian-drone-attacks",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "attack"
+          ],
+          "shared_incident_anchors": [
+            "drone",
+            "russia",
+            "ukraine"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "attack",
+            "conflict",
+            "drone",
+            "russia",
+            "ukraine"
+          ],
+          "shared_entities": [
+            "drone",
+            "russia",
+            "ukraine"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_038250ae1723c6f9",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-26",
+        "last_seen_at": "2026-08-26",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 22,
+      "public_development_count": 23,
       "questionable_development_count": 1,
       "review_required": true
     },
-    "latest_title": "Kremlin Adviser Warns of Potential Attacks on UK Drone Factories",
-    "latest_summary": "A Kremlin adviser has indicated that UK drone factories could be targeted by 'unknown sources' following the UK's decision to share missile blueprints with Ukraine. This move is perceived by Russia as a sign of direct military involvement in the ongoing conflict.",
+    "latest_title": "Ukrainian Drone Strikes Disrupt Grain Exports from Black Sea Ports",
+    "latest_summary": "Ukrainian drone attacks on Russian infrastructure in the Black Sea are causing significant disruptions to grain and oil exports, particularly from the port of Novorossiysk. In response to these attacks, Russian President Vladimir Putin has issued a decree allowing the state to temporarily seize control of infrastructure that is damaged if private owners do not adequately protect or repair it.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -2105,29 +2180,29 @@
       "milestone_development_ids": [
         "story_c0c042a2fb04bd8a",
         "story_dcbc7799d66c52a5",
-        "story_1fcd7341ffa1bbdb",
-        "story_038250ae1723c6f9"
+        "story_322fd5863a393d91",
+        "story_1ce2414a68c4dab8"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-25",
-      "development_count": 22,
-      "coverage_packet_count": 26,
-      "date_count": 17,
-      "source_count": 74,
-      "independent_source_count": 26,
+      "summary_updated_at": "2026-08-26",
+      "development_count": 23,
+      "coverage_packet_count": 27,
+      "date_count": 18,
+      "source_count": 76,
+      "independent_source_count": 27,
       "first_date": "2026-07-31",
-      "latest_date": "2026-08-25",
-      "latest_update_title": "Kremlin Adviser Warns of Potential Attacks on UK Drone Factories",
+      "latest_date": "2026-08-26",
+      "latest_update_title": "Ukrainian Drone Strikes Disrupt Grain Exports from Black Sea Ports",
       "coverage_score": 1.0,
       "recency_score": 1.0,
       "rank_score": 1.0,
-      "context_summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Kremlin Adviser Warns of Potential Attacks on UK Drone Factories.",
-      "cta_label": "Explore 22 developments"
+      "context_summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Ukrainian Drone Strikes Disrupt Grain Exports from Black Sea Ports.",
+      "cta_label": "Explore 23 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "President Trump has announced a deal for Hamas to completely disarm, which includes the gradual withdrawal of Israeli forces from Gaza. A later development was Ukraine Strikes Moscow with Drones Amid Russian Missile Attack in Kharkiv. Most recently, a Kremlin adviser has indicated that UK drone factories could be targeted by 'unknown sources' following the UK's decision to share missile blueprints with Ukraine.",
+      "summary": "President Trump has announced a deal for Hamas to completely disarm, which includes the gradual withdrawal of Israeli forces from Gaza. A later development was Ukraine Strikes Moscow with Drones Amid Russian Missile Attack in Kharkiv. Most recently, ukrainian drone attacks on Russian infrastructure in the Black Sea are causing significant disruptions to grain and oil exports, particularly from the port of Novorossiysk.",
       "key_developments": [
         {
           "development_id": "story_c0c042a2fb04bd8a",
@@ -2140,14 +2215,14 @@
           "title": "Israeli Strikes in Southern Lebanon Result in 11 Deaths Amid Rising Tensions"
         },
         {
-          "development_id": "story_1fcd7341ffa1bbdb",
-          "date": "2026-08-19",
-          "title": "Israel Conducts Airstrikes on Syrian Base to Halt Turkish Deployment"
+          "development_id": "story_322fd5863a393d91",
+          "date": "2026-08-20",
+          "title": "Intense Russian Bombardment in Kyiv Results in Multiple Casualties"
         },
         {
-          "development_id": "story_038250ae1723c6f9",
-          "date": "2026-08-25",
-          "title": "Kremlin Adviser Warns of Potential Attacks on UK Drone Factories"
+          "development_id": "story_1ce2414a68c4dab8",
+          "date": "2026-08-26",
+          "title": "Ukrainian Drone Strikes Disrupt Grain Exports from Black Sea Ports"
         }
       ],
       "sources": [
@@ -2594,53 +2669,32 @@
           "source": "BBC - World",
           "link": "https://www.bbc.co.uk/news/articles/cg598m3meeyo?at_medium=RSS&at_campaign=rss",
           "source_bias": "center"
+        },
+        {
+          "title": "Grain exports stall as Ukraine steps up attacks on Russia's Black Sea ports",
+          "source": "DW - English",
+          "link": "https://www.dw.com/en/grain-exports-stall-as-ukraine-steps-up-attacks-on-russia-s-black-sea-ports/a-78499629?maca=en-rss-en-all-1573-rdf",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Putin decree lets Russia take control of infrastructure damaged in Ukrainian drone attacks",
+          "source": "PBS News - Headlines",
+          "link": "https://www.pbs.org/newshour/world/putin-decree-lets-russia-take-control-of-infrastructure-damaged-in-ukrainian-drone-attacks",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-08-25",
+      "updated_at": "2026-08-26",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
     "related_events": [
-      {
-        "event_id": "event_trump-hosts-separate-meetings-with-zelenskyy_49e7e2befb",
-        "title": "Trump Hosts Separate Meetings with Zelenskyy and Netanyahu at the White House",
-        "relationship": "related_topic",
-        "confidence": 0.95,
-        "shared_entities": [
-          "benjamin_netanyahu",
-          "israel",
-          "israel_prime",
-          "middle",
-          "middle_east",
-          "ukraine",
-          "volodymyr_zelenskyy"
-        ]
-      },
-      {
-        "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
-        "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
-        "relationship": "related_topic",
-        "confidence": 0.95,
-        "shared_entities": [
-          "benjamin_netanyahu",
-          "discuss",
-          "donald_trump",
-          "israel",
-          "israel_prime",
-          "middle",
-          "middle_east",
-          "military_action",
-          "russia",
-          "ukraine",
-          "us"
-        ]
-      },
       {
         "event_id": "event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd",
         "title": "Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv",
         "relationship": "related_topic",
         "confidence": 0.95,
         "shared_entities": [
+          "black",
           "discuss",
           "kharkiv",
           "kharkiv_ukraine",
@@ -2655,6 +2709,45 @@
           "ukraine",
           "us",
           "volodymyr_zelenskyy"
+        ]
+      },
+      {
+        "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+        "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
+        "relationship": "related_topic",
+        "confidence": 0.95,
+        "shared_entities": [
+          "benjamin_netanyahu",
+          "black",
+          "black_sea",
+          "discuss",
+          "donald_trump",
+          "grain_export",
+          "israel",
+          "israel_prime",
+          "middle",
+          "middle_east",
+          "military_action",
+          "russia",
+          "ukraine",
+          "us"
+        ]
+      },
+      {
+        "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
+        "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
+        "relationship": "related_topic",
+        "confidence": 0.95,
+        "shared_entities": [
+          "kyiv",
+          "kyiv_result",
+          "russia",
+          "russia_missile",
+          "turkey",
+          "ukraine",
+          "ukraine_conduct",
+          "ukraine_drone",
+          "us"
         ]
       },
       {
@@ -2775,6 +2868,7 @@
       "action",
       "actively",
       "additional",
+      "adequately",
       "administration",
       "adviser",
       "affected",
@@ -2787,6 +2881,7 @@
       "airstrike",
       "al-duhur",
       "al-zahrani",
+      "allowing",
       "also",
       "anderson",
       "announce",
@@ -2812,6 +2907,7 @@
       "began",
       "begin",
       "benjamin",
+      "black",
       "blueprint",
       "bodie",
       "bombardment",
@@ -2825,6 +2921,7 @@
       "casualtie",
       "casualty",
       "caused",
+      "causing",
       "ceasefire",
       "challenge",
       "children",
@@ -2846,6 +2943,7 @@
       "conflict",
       "contingent",
       "contradicting",
+      "control",
       "criticized",
       "cruise",
       "current",
@@ -2859,6 +2957,7 @@
       "decade",
       "decision",
       "decline",
+      "decree",
       "deir",
       "demand",
       "deploying",
@@ -2876,7 +2975,9 @@
       "disarmed",
       "disarming",
       "discuss",
+      "disrupt",
       "disrupted",
+      "disruption",
       "district",
       "divergence",
       "does",
@@ -2896,6 +2997,7 @@
       "envoy",
       "escalation",
       "established",
+      "export",
       "extension",
       "extensive",
       "extinguish",
@@ -2919,6 +3021,7 @@
       "gaza",
       "governing",
       "gradual",
+      "grain",
       "group",
       "halt",
       "hamas",
@@ -2953,6 +3056,7 @@
       "involved",
       "involvement",
       "israel",
+      "issued",
       "jared",
       "jeopardize",
       "june",
@@ -2999,9 +3103,11 @@
       "netanyahu",
       "nine",
       "northwest",
+      "novorossiysk",
       "numerou",
       "occurred",
       "officially",
+      "oil",
       "ongoing",
       "online",
       "opening",
@@ -3011,12 +3117,16 @@
       "orlando",
       "other",
       "overnight",
+      "owner",
       "palestinian",
       "part",
+      "particularly",
       "parts",
       "peace",
       "perceived",
       "plan",
+      "port",
+      "ports",
       "position",
       "potential",
       "potentially",
@@ -3025,9 +3135,12 @@
       "prevent",
       "previou",
       "prime",
+      "private",
       "progress",
       "proposal",
       "proposed",
+      "protect",
+      "putin",
       "rapper",
       "rare",
       "recent",
@@ -3040,6 +3153,7 @@
       "rejection",
       "remained",
       "remark",
+      "repair",
       "reported",
       "reportedly",
       "represent",
@@ -3066,6 +3180,7 @@
       "school",
       "search",
       "second",
+      "seize",
       "seven",
       "several",
       "shakur",
@@ -3098,10 +3213,12 @@
       "talks",
       "targeted",
       "targeting",
+      "temporarily",
       "tension",
       "terms",
       "territory",
       "there",
+      "these",
       "they",
       "three",
       "toll",
@@ -3127,6 +3244,7 @@
       "vegas",
       "village",
       "violence",
+      "vladimir",
       "volodymyr",
       "war",
       "warehouse",
@@ -3159,6 +3277,8 @@
       "assess_damage",
       "barrage_resident",
       "benjamin_netanyahu",
+      "black",
+      "black_sea",
       "casualtie_israel",
       "casualtie_rise",
       "casualtie_ukraine",
@@ -3173,6 +3293,7 @@
       "disarmament",
       "disarmament_israel",
       "discuss",
+      "disrupt_grain",
       "donald_trump",
       "drone_factorie",
       "duane_davis",
@@ -3187,6 +3308,7 @@
       "gaza_peace",
       "gaza_result",
       "gaza_road",
+      "grain_export",
       "halt",
       "halt_turkish",
       "hamas_agree",
@@ -3237,6 +3359,7 @@
       "orlando_anderson",
       "palestinian",
       "peace_proposal",
+      "ports_ukraine",
       "proposal_israel",
       "resident_assess",
       "resistance_jared",
@@ -3251,6 +3374,7 @@
       "russia_drone",
       "russia_missile",
       "russia_resulting",
+      "sea_ports",
       "shakur_murder",
       "shopping_mall",
       "southern",
@@ -3270,17 +3394,53 @@
       "uk",
       "ukraine",
       "ukraine_conduct",
+      "ukraine_drone",
       "ukraine_mall",
       "ukraine_stance",
       "us",
       "us-backed",
+      "vladimir_putin",
       "volodymyr_zelenskyy",
       "years_later",
       "zelenskyy_assert"
     ],
-    "search_text": "130 15-point 1996 2008 2023 600 accept accused accused_claim across action action_challenge actively additional administration adviser adviser_warns affected aftermath agree agreed agreement aimed airbase airstrike al-duhur al-zahrani also anderson announce announced ansar approach approache area areas army artist assault assert assert_ukraine assess assess_damage assessing attack authoritie backed ballistic barbarism barrage barrage_resident base began begin benjamin benjamin_netanyahu blueprint bodie bombardment both brokered building calls capital capitulate case casualtie casualtie_israel casualtie_rise casualtie_ukraine casualty caused ceasefire challenge challenge_trump children children_israel civilian claim claim_nephew claiming combined comes commenced commitment committee complete completely concurrently condemnation condemned conduct conduct_airstrike confirmed conflict contingent contradicting criticized cruise current damage damaged davis deadliest deadly deadly_russia deal death decade decision decline decline_trump deir demand demand_hamas deploying deployment deployment_israel described desire despicable despite destruction diplomatic direct disappointed disarm disarmament disarmament_israel disarmed disarming discuss disrupted district divergence does donald donald_trump double-tap drew drive-by drone drone_factorie duane duane_davis earlier east east_talks effort emergency emphasized ending engage envoy escalation established extension extensive extinguish face facilitating facilitie factorie fatal fatal_shots fatalitie fifth fired fired_fatal firefighter fires follow followed force form four fulfilling fully gaza gaza. gaza._hamas gaza._netanyahu gaza_disarmament gaza_peace gaza_result gaza_road governing gradual group halt halt_turkish hamas hamas_agree hamas_disarmament hamas_leader hand heaviest held hezbollah highest highlighting hip-hop hometown hospital however implementation incident include including including_children independence indicate indicated indicating indicted individual infrastructure initial initiative injured injurie injuring intense intense_russia interview involved involvement israel israel_airstrike israel_conduct israel_decline israel_military israel_prime israel_resistance israel_withdrawal jared jared_kushner jeopardize june june. june._israel june._rescue kharkiv kharkiv_ukraine kill killed kremlin kremlin_adviser kryvyi kryvyi_rih kushner kushner_engage kushner_meets kyiv kyiv_resident kyiv_result kyiv_solomianskyi labeling largest las las_vegas later later_opening launched leader least lebanese lebanon lebanon_result linked local mall map_jared marking marks meanwhile meet meeting meets meets_hamas middle middle_east military military_action missile missile_barrage missing mission moment month moscow moscow._kushner move multiple multiple_casualtie murder murder_accused murder_nearly nearby nearly nearly_years necessary negotiation nephew nephew_fired netanyahu nine northwest numerou occurred officially ongoing online opening opens operation orchestrating orlando orlando_anderson other overnight palestinian part parts peace peace_proposal perceived plan position potential potentially power present prevent previou prime progress proposal proposal_israel proposed rapper rare recent recorded reflect regarding region reject rejected rejection remained remark reported reportedly represent rescue resident resident_assess residential resilience resistance resistance_jared responder response result resulted resulting retailer retreat revive revive_gaza rise rising rising_tension road road_map runway russia russia. russia._his russia_bombardment russia_drone russia_missile russia_resulting saturday scheduled school search second seven several shakur shakur_murder share shooting shopping shopping_mall shortly shots sign significant since soldier solomianskyi southern sovereignty stalled stance star stated statement stating still stipulate storage strike supply survivor syria syrian syrian_base talks targeted targeting tension tension_israel terms territory there they three toll total toward trial trial_begin trial_opens troop truce trump trump_gaza trump_point tupac tupac_shakur tupac_shakur. turkey turkish turkish_deployment u.s.-backed uk ukraine ukraine_conduct ukraine_mall ukraine_stance unacceptable unknown unnecessary unsolved untenable until upon us us-backed vegas village violence volodymyr volodymyr_zelenskyy war warehouse warning warns wave weapon weekend weeks what where which withdraw withdrawal within working would year years years_later zelensky zelenskyy zelenskyy_assert"
+    "search_text": "130 15-point 1996 2008 2023 600 accept accused accused_claim across action action_challenge actively additional adequately administration adviser adviser_warns affected aftermath agree agreed agreement aimed airbase airstrike al-duhur al-zahrani allowing also anderson announce announced ansar approach approache area areas army artist assault assert assert_ukraine assess assess_damage assessing attack authoritie backed ballistic barbarism barrage barrage_resident base began begin benjamin benjamin_netanyahu black black_sea blueprint bodie bombardment both brokered building calls capital capitulate case casualtie casualtie_israel casualtie_rise casualtie_ukraine casualty caused causing ceasefire challenge challenge_trump children children_israel civilian claim claim_nephew claiming combined comes commenced commitment committee complete completely concurrently condemnation condemned conduct conduct_airstrike confirmed conflict contingent contradicting control criticized cruise current damage damaged davis deadliest deadly deadly_russia deal death decade decision decline decline_trump decree deir demand demand_hamas deploying deployment deployment_israel described desire despicable despite destruction diplomatic direct disappointed disarm disarmament disarmament_israel disarmed disarming discuss disrupt disrupt_grain disrupted disruption district divergence does donald donald_trump double-tap drew drive-by drone drone_factorie duane duane_davis earlier east east_talks effort emergency emphasized ending engage envoy escalation established export extension extensive extinguish face facilitating facilitie factorie fatal fatal_shots fatalitie fifth fired fired_fatal firefighter fires follow followed force form four fulfilling fully gaza gaza. gaza._hamas gaza._netanyahu gaza_disarmament gaza_peace gaza_result gaza_road governing gradual grain grain_export group halt halt_turkish hamas hamas_agree hamas_disarmament hamas_leader hand heaviest held hezbollah highest highlighting hip-hop hometown hospital however implementation incident include including including_children independence indicate indicated indicating indicted individual infrastructure initial initiative injured injurie injuring intense intense_russia interview involved involvement israel israel_airstrike israel_conduct israel_decline israel_military israel_prime israel_resistance israel_withdrawal issued jared jared_kushner jeopardize june june. june._israel june._rescue kharkiv kharkiv_ukraine kill killed kremlin kremlin_adviser kryvyi kryvyi_rih kushner kushner_engage kushner_meets kyiv kyiv_resident kyiv_result kyiv_solomianskyi labeling largest las las_vegas later later_opening launched leader least lebanese lebanon lebanon_result linked local mall map_jared marking marks meanwhile meet meeting meets meets_hamas middle middle_east military military_action missile missile_barrage missing mission moment month moscow moscow._kushner move multiple multiple_casualtie murder murder_accused murder_nearly nearby nearly nearly_years necessary negotiation nephew nephew_fired netanyahu nine northwest novorossiysk numerou occurred officially oil ongoing online opening opens operation orchestrating orlando orlando_anderson other overnight owner palestinian part particularly parts peace peace_proposal perceived plan port ports ports_ukraine position potential potentially power present prevent previou prime private progress proposal proposal_israel proposed protect putin rapper rare recent recorded reflect regarding region reject rejected rejection remained remark repair reported reportedly represent rescue resident resident_assess residential resilience resistance resistance_jared responder response result resulted resulting retailer retreat revive revive_gaza rise rising rising_tension road road_map runway russia russia. russia._his russia_bombardment russia_drone russia_missile russia_resulting saturday scheduled school sea_ports search second seize seven several shakur shakur_murder share shooting shopping shopping_mall shortly shots sign significant since soldier solomianskyi southern sovereignty stalled stance star stated statement stating still stipulate storage strike supply survivor syria syrian syrian_base talks targeted targeting temporarily tension tension_israel terms territory there these they three toll total toward trial trial_begin trial_opens troop truce trump trump_gaza trump_point tupac tupac_shakur tupac_shakur. turkey turkish turkish_deployment u.s.-backed uk ukraine ukraine_conduct ukraine_drone ukraine_mall ukraine_stance unacceptable unknown unnecessary unsolved untenable until upon us us-backed vegas village violence vladimir vladimir_putin volodymyr volodymyr_zelenskyy war warehouse warning warns wave weapon weekend weeks what where which withdraw withdrawal within working would year years years_later zelensky zelenskyy zelenskyy_assert"
   },
   "related_events": [
+    {
+      "event_id": "event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd",
+      "title": "Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv",
+      "summary": "Muninn first tracked this thread on 2026-07-25: Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv. The latest development is Russian Airstrike in Kramatorsk Results in Casualties.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-25",
+      "last_seen_at": "2026-08-15",
+      "development_count": 16,
+      "latest_title": "Russian Airstrike in Kramatorsk Results in Casualties",
+      "topic_label": "Ukraine Conflict",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd"
+    },
     {
       "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
       "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
@@ -3316,20 +3476,20 @@
       "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
     },
     {
-      "event_id": "event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd",
-      "title": "Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv",
-      "summary": "Muninn first tracked this thread on 2026-07-25: Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv. The latest development is Russian Airstrike in Kramatorsk Results in Casualties.",
+      "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
+      "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
+      "summary": "Muninn first tracked this thread on 2026-07-25: Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse. The latest development is Ukraine Conducts Major Drone Attack on Moscow Amid Ongoing Conflict.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-07-25",
-      "last_seen_at": "2026-08-15",
-      "development_count": 16,
-      "latest_title": "Russian Airstrike in Kramatorsk Results in Casualties",
-      "topic_label": "Ukraine Conflict",
+      "last_seen_at": "2026-08-16",
+      "development_count": 14,
+      "latest_title": "Ukraine Conducts Major Drone Attack on Moscow Amid Ongoing Conflict",
+      "topic_label": "Russia-Ukraine War",
       "hero_image": {
-        "url": "/Current_news/generated/events/event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd.jpg",
+        "url": "/Current_news/generated/events/event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea.jpg",
         "source": "Muninn AI illustration",
         "author": "OpenAI GPT Image 2",
         "license": "AI-generated content",
@@ -3347,7 +3507,7 @@
         "focal_tall_x": 0.5,
         "focal_tall_y": 0.48
       },
-      "href": "/timeline.html?event=event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd"
+      "href": "/timeline.html?event=event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea"
     },
     {
       "event_id": "event_trial-begins-for-man-accused-of-orchestratin_a2ad54450a",
