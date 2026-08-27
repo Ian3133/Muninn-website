@@ -1,0 +1,342 @@
+{
+  "schema_version": 1,
+  "resource_type": "event",
+  "event_id": "event_tropical-storm-dolly-named-coincidentally-am_54408072a6",
+  "publication": {
+    "status": "published",
+    "permalink": "/timeline.html?event=event_tropical-storm-dolly-named-coincidentally-am_54408072a6",
+    "share_expires_at": null
+  },
+  "event": {
+    "event_id": "event_tropical-storm-dolly-named-coincidentally-am_54408072a6",
+    "title": "Death Storm",
+    "canonical_title": "Death Storm",
+    "topic_label": "Death Storm",
+    "summary": "The upcoming Atlantic tropical storm will be named Dolly, but this is purely coincidental and not related to the recent death of Dolly Parton. The naming follows established procedures by the World Meteorological Organization, which reuses storm names every six years.",
+    "status": "active",
+    "first_seen_at": "2026-08-26",
+    "last_seen_at": "2026-08-27",
+    "timeline": [
+      {
+        "development_id": "story_639bf3715dc9d41f",
+        "daily_story_id": "story_639bf3715dc9d41f",
+        "date": "2026-08-26",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Tropical Storm Dolly Named Coincidentally Amid Parton's Death",
+        "summary": "The upcoming Atlantic tropical storm will be named Dolly, but this is purely coincidental and not related to the recent death of Dolly Parton. The naming follows established procedures by the World Meteorological Organization, which reuses storm names every six years.",
+        "topic_label": "",
+        "development_type": "development",
+        "key_facts": [
+          "The next Atlantic tropical storm will be named Dolly.",
+          "The naming is coincidental and unrelated to Dolly Parton's death.",
+          "Storm names are reused every six years according to World Meteorological Organization procedures."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Africanews",
+          "Euronews"
+        ],
+        "source_urls": [
+          "http://www.africanews.com/2026/08/26/atlantic-storm-dolly-not-linked-to-dolly-partons-death",
+          "http://www.euronews.com/2026/08/26/next-atlantic-tropical-storm-will-be-named-dolly-but-no-connection-to-partons-death"
+        ],
+        "source_details": [
+          {
+            "title": "Atlantic storm Dolly not Linked to Dolly Parton's death",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/08/26/atlantic-storm-dolly-not-linked-to-dolly-partons-death",
+            "source_bias": "center"
+          },
+          {
+            "title": "Next Atlantic tropical storm will be named Dolly but no connection to Parton's death",
+            "source": "Euronews",
+            "link": "http://www.euronews.com/2026/08/26/next-atlantic-tropical-storm-will-be-named-dolly-but-no-connection-to-partons-death",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 1.0,
+        "match_evidence": {
+          "score": 1.0,
+          "method": "new_event",
+          "shared_tokens": [],
+          "shared_entities": []
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-26",
+        "last_seen_at": "2026-08-26",
+        "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_1445013d872af773",
+        "daily_story_id": "story_1445013d872af773",
+        "date": "2026-08-27",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Tropical Storm Dolly Emerges in the Atlantic Ocean",
+        "summary": "Tropical Storm Dolly has formed in the Atlantic Ocean, marking it as the fourth named storm of the 2026 hurricane season. The storm developed on Thursday, contributing to the ongoing weather activity in the region.",
+        "topic_label": "Atlantic Hurricane Season",
+        "development_type": "development",
+        "key_facts": [
+          "Tropical Storm Dolly is the fourth named storm of the 2026 Atlantic hurricane season.",
+          "Dolly formed on Thursday."
+        ],
+        "source_count": 3,
+        "sources": [
+          "ABC News",
+          "CBS News",
+          "PBS News"
+        ],
+        "source_urls": [
+          "https://www.cbsnews.com/news/tropical-storm-dolly-forms-atlantic-ocean",
+          "https://abcnews.com/US/tropical-storm-dolly-forms-atlantic/story?id=136006179",
+          "https://www.pbs.org/newshour/nation/tropical-storm-dolly-forms-in-the-atlantic"
+        ],
+        "source_details": [
+          {
+            "title": "Tropical Storm Dolly forms in the Atlantic Ocean",
+            "source": "CBS News",
+            "link": "https://www.cbsnews.com/news/tropical-storm-dolly-forms-atlantic-ocean",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Tropical Storm Dolly forms in the Atlantic",
+            "source": "ABC News",
+            "link": "https://abcnews.com/US/tropical-storm-dolly-forms-atlantic/story?id=136006179",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Tropical Storm Dolly forms in the Atlantic",
+            "source": "PBS News",
+            "link": "https://www.pbs.org/newshour/nation/tropical-storm-dolly-forms-in-the-atlantic",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "storm"
+          ],
+          "shared_incident_anchors": [
+            "dolly",
+            "storm_dolly",
+            "tropical",
+            "tropical_storm"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "atlantic",
+            "dolly",
+            "named",
+            "storm",
+            "tropical"
+          ],
+          "shared_entities": [
+            "dolly",
+            "storm_dolly",
+            "tropical",
+            "tropical_storm"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_639bf3715dc9d41f",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-27",
+        "last_seen_at": "2026-08-27",
+        "integrity_status": "trusted"
+      }
+    ],
+    "incident_fingerprint": {
+      "types": [
+        "storm"
+      ],
+      "anchors": [
+        "death",
+        "dolly",
+        "dolly_named",
+        "dolly_parton",
+        "dolly_parton.",
+        "meteorological_organization",
+        "named",
+        "named_coincidentally",
+        "parton",
+        "storm_dolly",
+        "tropical",
+        "tropical_storm"
+      ],
+      "countries": [],
+      "method": "bounded_incident_fingerprint_v1"
+    },
+    "integrity": {
+      "public_development_count": 2,
+      "questionable_development_count": 0,
+      "review_required": false
+    },
+    "latest_title": "Tropical Storm Dolly Emerges in the Atlantic Ocean",
+    "latest_summary": "Tropical Storm Dolly has formed in the Atlantic Ocean, marking it as the fourth named storm of the 2026 hurricane season. The storm developed on Thursday, contributing to the ongoing weather activity in the region.",
+    "presentation": {
+      "has_context": true,
+      "has_full_timeline": false,
+      "stage": "developing_event",
+      "stage_label": "Developing event",
+      "base_title": "Death Storm",
+      "display_title": "Death Storm",
+      "milestone_development_ids": [
+        "story_639bf3715dc9d41f",
+        "story_1445013d872af773"
+      ],
+      "summary_available": true,
+      "summary_label": "Read the story so far",
+      "summary_updated_at": "2026-08-27",
+      "development_count": 2,
+      "coverage_packet_count": 2,
+      "date_count": 2,
+      "source_count": 5,
+      "independent_source_count": 5,
+      "first_date": "2026-08-26",
+      "latest_date": "2026-08-27",
+      "latest_update_title": "Tropical Storm Dolly Emerges in the Atlantic Ocean",
+      "coverage_score": 0.447,
+      "recency_score": 1.0,
+      "rank_score": 0.768,
+      "context_summary": "Muninn first tracked this thread on 2026-08-26: Tropical Storm Dolly Named Coincidentally Amid Parton's Death. The latest development is Tropical Storm Dolly Emerges in the Atlantic Ocean.",
+      "cta_label": ""
+    },
+    "event_summary": {
+      "available": true,
+      "summary": "The upcoming Atlantic tropical storm will be named Dolly, but this is purely coincidental and not related to the recent death of Dolly Parton. Most recently, tropical Storm Dolly has formed in the Atlantic Ocean, marking it as the fourth named storm of the 2026 hurricane season.",
+      "key_developments": [
+        {
+          "development_id": "story_639bf3715dc9d41f",
+          "date": "2026-08-26",
+          "title": "Tropical Storm Dolly Named Coincidentally Amid Parton's Death"
+        },
+        {
+          "development_id": "story_1445013d872af773",
+          "date": "2026-08-27",
+          "title": "Tropical Storm Dolly Emerges in the Atlantic Ocean"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Atlantic storm Dolly not Linked to Dolly Parton's death",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/08/26/atlantic-storm-dolly-not-linked-to-dolly-partons-death",
+          "source_bias": "center"
+        },
+        {
+          "title": "Next Atlantic tropical storm will be named Dolly but no connection to Parton's death",
+          "source": "Euronews",
+          "link": "http://www.euronews.com/2026/08/26/next-atlantic-tropical-storm-will-be-named-dolly-but-no-connection-to-partons-death",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Tropical Storm Dolly forms in the Atlantic Ocean",
+          "source": "CBS News",
+          "link": "https://www.cbsnews.com/news/tropical-storm-dolly-forms-atlantic-ocean",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Tropical Storm Dolly forms in the Atlantic",
+          "source": "ABC News",
+          "link": "https://abcnews.com/US/tropical-storm-dolly-forms-atlantic/story?id=136006179",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Tropical Storm Dolly forms in the Atlantic",
+          "source": "PBS News",
+          "link": "https://www.pbs.org/newshour/nation/tropical-storm-dolly-forms-in-the-atlantic",
+          "source_bias": "lean-left"
+        }
+      ],
+      "updated_at": "2026-08-27",
+      "provenance": "source_grounded_event_memory"
+    },
+    "event_stage": "developing_event",
+    "related_events": [],
+    "search_tokens": [
+      "2026",
+      "activity",
+      "atlantic",
+      "coincidental",
+      "coincidentally",
+      "contributing",
+      "death",
+      "developed",
+      "dolly",
+      "emerge",
+      "established",
+      "every",
+      "follow",
+      "formed",
+      "fourth",
+      "hurricane",
+      "marking",
+      "meteorological",
+      "named",
+      "names",
+      "naming",
+      "ocean",
+      "ongoing",
+      "organization",
+      "parton",
+      "procedure",
+      "purely",
+      "recent",
+      "region",
+      "related",
+      "reuse",
+      "season",
+      "storm",
+      "thursday",
+      "tropical",
+      "upcoming",
+      "weather",
+      "which",
+      "years"
+    ],
+    "entities": [
+      "atlantic",
+      "atlantic_ocean",
+      "dolly_emerge",
+      "dolly_named",
+      "dolly_parton.",
+      "meteorological_organization",
+      "named_coincidentally",
+      "ocean_tropical",
+      "storm_dolly",
+      "tropical_storm"
+    ],
+    "search_text": "2026 activity atlantic atlantic_ocean coincidental coincidentally contributing death developed dolly dolly_emerge dolly_named dolly_parton. emerge established every follow formed fourth hurricane marking meteorological meteorological_organization named named_coincidentally names naming ocean ocean_tropical ongoing organization parton procedure purely recent region related reuse season storm storm_dolly thursday tropical tropical_storm upcoming weather which years",
+    "hero_image": {
+      "url": "/Current_news/generated/events/event_tropical-storm-dolly-named-coincidentally-am_54408072a6.jpg",
+      "thumbnail_url": "/Current_news/generated/events/event_tropical-storm-dolly-named-coincidentally-am_54408072a6.jpg",
+      "source": "Muninn AI illustration",
+      "author": "OpenAI GPT Image 2",
+      "license": "AI-generated content",
+      "image_role": "illustrative",
+      "image_role_label": "AI illustration",
+      "is_ai_generated": true,
+      "generation_model": "gpt-image-2",
+      "generation_quality": "low",
+      "safe_to_crop": true,
+      "allows_crop": true,
+      "focal_x": 0.5,
+      "focal_y": 0.48,
+      "focal_wide_x": 0.5,
+      "focal_wide_y": 0.48,
+      "focal_tall_x": 0.5,
+      "focal_tall_y": 0.48
+    }
+  },
+  "related_events": []
+}
