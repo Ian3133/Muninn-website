@@ -15,7 +15,7 @@
     "summary": "Authorities in Ceuta have requested Spain to declare a national emergency due to a significant influx of migrants swimming from Morocco. The local government is seeking military assistance as border security is overwhelmed by the number of individuals attempting to enter the territory.",
     "status": "active",
     "first_seen_at": "2026-07-30",
-    "last_seen_at": "2026-08-21",
+    "last_seen_at": "2026-08-28",
     "timeline": [
       {
         "development_id": "story_dff81ceff84cab9d",
@@ -1497,15 +1497,95 @@
         "first_seen_at": "2026-08-21",
         "last_seen_at": "2026-08-21",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_2cd022de1792a67f",
+        "daily_story_id": "story_2cd022de1792a67f",
+        "date": "2026-08-28",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Clashes Erupt in Ceuta Amid Anti-Migrant Protests",
+        "summary": "On August 27, clashes occurred between police and anti-migrant protesters in Ceuta, Spain, following a recent influx of migrants from Morocco. The protests were fueled by local residents' concerns over the growing number of migrants in the North African enclave. In response to the unrest, Spain's interior minister called for calm, emphasizing the need for security in the region.",
+        "topic_label": "Ceuta Border Surge",
+        "development_type": "development",
+        "key_facts": [
+          "Clashes occurred on August 27, 2026.",
+          "Protests were against the presence of thousands of migrants.",
+          "The unrest followed a mass influx of migrants from Morocco."
+        ],
+        "source_count": 3,
+        "sources": [
+          "Euronews",
+          "France 24 - English",
+          "RTE News"
+        ],
+        "source_urls": [
+          "http://www.euronews.com/video/2026/08/28/spain-clashes-erupt-in-ceuta-as-anti-migrant-protesters-confront-police",
+          "https://www.rte.ie/news/world/2026/0828/1589585-cueta-protests",
+          "https://www.france24.com/en/europe/20260828-spanish-government-urges-calm-anti-migrant-protesters-clash-police-ceuta"
+        ],
+        "source_details": [
+          {
+            "title": "Spain: Clashes erupt in Ceuta as anti-migrant protesters confront police",
+            "source": "Euronews",
+            "link": "http://www.euronews.com/video/2026/08/28/spain-clashes-erupt-in-ceuta-as-anti-migrant-protesters-confront-police",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Anti-migrant protesters clash with police in Ceuta",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/world/2026/0828/1589585-cueta-protests",
+            "source_bias": "center"
+          },
+          {
+            "title": "Spanish government urges calm after Ceuta anti-migrant protesters clash with police",
+            "source": "France 24 - English",
+            "link": "https://www.france24.com/en/europe/20260828-spanish-government-urges-calm-anti-migrant-protesters-clash-police-ceuta",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "matched_development_id": "story_ec157a35b19375b0",
+          "shared_tokens": [
+            "border",
+            "ceuta",
+            "influx",
+            "migrant",
+            "morocco",
+            "response",
+            "spain",
+            "surge",
+            "thousand"
+          ],
+          "shared_entities": [
+            "border_surge",
+            "ceuta_border",
+            "spain"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "canonical_bounded_event_identity_v1",
+          "event_identity_key": "ceuta-border-surge",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-28",
+        "last_seen_at": "2026-08-28",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 17,
+      "public_development_count": 18,
       "questionable_development_count": 5,
       "review_required": true
     },
-    "latest_title": "Spain Relocates Migrants from Ceuta Beach to Shelters Amid Ongoing Crisis",
-    "latest_summary": "Spain has begun relocating hundreds of migrants from a makeshift camp on Ceuta's El Trampolín beach to temporary shelters. This action comes nearly three weeks after a mass border surge resulted in thousands of migrants living without adequate shelter in the North African enclave.",
+    "latest_title": "Clashes Erupt in Ceuta Amid Anti-Migrant Protests",
+    "latest_summary": "On August 27, clashes occurred between police and anti-migrant protesters in Ceuta, Spain, following a recent influx of migrants from Morocco. The protests were fueled by local residents' concerns over the growing number of migrants in the North African enclave. In response to the unrest, Spain's interior minister called for calm, emphasizing the need for security in the region.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -1515,30 +1595,30 @@
       "display_title": "Ceuta Border Surge Timeline",
       "milestone_development_ids": [
         "story_dff81ceff84cab9d",
-        "story_af1ea58d74818916",
+        "story_ec157a35b19375b0",
         "story_c9ab450624a11125",
-        "story_fb234e23c589ddb8"
+        "story_2cd022de1792a67f"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-21",
-      "development_count": 17,
-      "coverage_packet_count": 20,
-      "date_count": 13,
-      "source_count": 49,
+      "summary_updated_at": "2026-08-28",
+      "development_count": 18,
+      "coverage_packet_count": 21,
+      "date_count": 14,
+      "source_count": 52,
       "independent_source_count": 23,
       "first_date": "2026-07-30",
-      "latest_date": "2026-08-21",
-      "latest_update_title": "Spain Relocates Migrants from Ceuta Beach to Shelters Amid Ongoing Crisis",
+      "latest_date": "2026-08-28",
+      "latest_update_title": "Clashes Erupt in Ceuta Amid Anti-Migrant Protests",
       "coverage_score": 1.0,
-      "recency_score": 0.538,
-      "rank_score": 0.732,
-      "context_summary": "Muninn first tracked this thread on 2026-07-30: Ceuta Requests National Emergency Amid Surge of Migrants from Morocco. The latest development is Spain Relocates Migrants from Ceuta Beach to Shelters Amid Ongoing Crisis.",
-      "cta_label": "Explore 17 developments"
+      "recency_score": 1.0,
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-07-30: Ceuta Requests National Emergency Amid Surge of Migrants from Morocco. The latest development is Clashes Erupt in Ceuta Amid Anti-Migrant Protests.",
+      "cta_label": "Explore 18 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Authorities in Ceuta have requested Spain to declare a national emergency due to a significant influx of migrants swimming from Morocco. A later development was Ceuta Migrant Crisis Highlights European Divisions and Death Toll Discrepancies. Most recently, spain has begun relocating hundreds of migrants from a makeshift camp on Ceuta's El Trampolín beach to temporary shelters.",
+      "summary": "Authorities in Ceuta have requested Spain to declare a national emergency due to a significant influx of migrants swimming from Morocco. A later development was Ceuta Faces Aftermath of Deadly Migrant Crossings from Morocco. Most recently, on August 27, clashes occurred between police and anti-migrant protesters in Ceuta, Spain, following a recent influx of migrants from Morocco.",
       "key_developments": [
         {
           "development_id": "story_dff81ceff84cab9d",
@@ -1546,9 +1626,9 @@
           "title": "Ceuta Requests National Emergency Amid Surge of Migrants from Morocco"
         },
         {
-          "development_id": "story_af1ea58d74818916",
+          "development_id": "story_ec157a35b19375b0",
           "date": "2026-08-02",
-          "title": "Ceuta Recovers After Migrant Surge and Return to Morocco"
+          "title": "Massive Migrant Influx into Ceuta Leads to Deaths and Emergency Measures"
         },
         {
           "development_id": "story_c9ab450624a11125",
@@ -1556,9 +1636,9 @@
           "title": "Italy Maintains Border Controls Amid Spain's Retaliation Over Ceuta Migrant Crisis"
         },
         {
-          "development_id": "story_fb234e23c589ddb8",
-          "date": "2026-08-21",
-          "title": "Spain Relocates Migrants from Ceuta Beach to Shelters Amid Ongoing Crisis"
+          "development_id": "story_2cd022de1792a67f",
+          "date": "2026-08-28",
+          "title": "Clashes Erupt in Ceuta Amid Anti-Migrant Protests"
         }
       ],
       "sources": [
@@ -1855,9 +1935,27 @@
           "source": "Africanews",
           "link": "http://www.africanews.com/2026/08/21/spain-moves-hundreds-of-migrants-from-ceuta-beach-to-temporary-shelters",
           "source_bias": "center"
+        },
+        {
+          "title": "Spain: Clashes erupt in Ceuta as anti-migrant protesters confront police",
+          "source": "Euronews",
+          "link": "http://www.euronews.com/video/2026/08/28/spain-clashes-erupt-in-ceuta-as-anti-migrant-protesters-confront-police",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Anti-migrant protesters clash with police in Ceuta",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/world/2026/0828/1589585-cueta-protests",
+          "source_bias": "center"
+        },
+        {
+          "title": "Spanish government urges calm after Ceuta anti-migrant protesters clash with police",
+          "source": "France 24 - English",
+          "link": "https://www.france24.com/en/europe/20260828-spanish-government-urges-calm-anti-migrant-protesters-clash-police-ceuta",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-08-21",
+      "updated_at": "2026-08-28",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -1866,51 +1964,50 @@
       "available": true,
       "title": "About Ceuta Border Surge",
       "subject": "Ceuta Border Surge",
-      "summary": "The Ceuta Border Surge refers to a large-scale episode of irregular entries into Ceuta, Spain’s autonomous city on the Moroccan border, beginning on July 30, 2026. It prompted a joint Spanish-Moroccan border response, returns of people who entered irregularly, and emergency measures at the Tarajal breakwater; it also unfolded amid a court-related change in how Spain could apply its border-rejection regime to people arriving by swimming.",
+      "summary": "The Ceuta Border Surge refers to a mass irregular crossing from Morocco into Ceuta, a Spanish territory on North Africa’s Mediterranean coast, in late July and early August 2026. European Union institutions described an estimated 50,000 to 60,000 people crossing, with dozens of deaths reported; Spanish and Moroccan authorities subsequently carried out or facilitated large-scale returns and increased border-management efforts.",
       "facts": [
         {
-          "label": "Location and status",
-          "value": "Ceuta is an autonomous Spanish city; its land boundary with Morocco is an external border of the Schengen area.",
+          "label": "Period",
+          "value": "The surge emerged in late July 2026; EU home-affairs ministers held an emergency video conference on August 4, 2026, to assess the situation at Ceuta’s external border.",
           "source_ids": [
-            "o1",
+            "o1"
+          ]
+        },
+        {
+          "label": "Location and border status",
+          "value": "Ceuta is a Spanish enclave bordering Morocco. Its border with Morocco is an external border of the Schengen area, although special rules apply to travel from Ceuta to mainland Spain and other Schengen countries.",
+          "source_ids": [
             "o2"
           ]
         },
         {
-          "label": "Event start",
-          "value": "Spain’s Interior Ministry identified July 30, 2026, as the day the migration crisis affected Ceuta and said Spain and Morocco had agreed to reinforce coordination and seek the rapid handover of people who entered illegally.",
+          "label": "Scale and humanitarian impact",
+          "value": "The European Parliament’s audiovisual service estimated that 50,000 to 60,000 migrants crossed from Morocco into Ceuta and reported dozens of deaths; it said the vast majority later returned or were guided back across the border.",
           "source_ids": [
             "o3"
           ]
         },
         {
-          "label": "Border-management authority",
-          "value": "External-border control is principally the responsibility of Spain as the EU member state concerned, under the Schengen Borders Code; the European Commission has described Ceuta and Melilla’s Moroccan borders as Schengen external borders.",
+          "label": "Government and EU response",
+          "value": "EU ministers said Spanish authorities, the European Commission and the European External Action Service assessed the events; the Council reported that the large majority of people who crossed irregularly had been returned and that there had been no onward movement to mainland Spain or other member states at that point.",
           "source_ids": [
-            "o2"
+            "o1"
           ]
         },
         {
-          "label": "Spanish legal framework",
-          "value": "Spain’s Aliens Act provides a special Ceuta-and-Melilla regime allowing rejection at the border for people detected while overcoming border-containment elements, while requiring compliance with international human-rights and international-protection rules and providing for asylum applications at designated border-crossing locations.",
+          "label": "Protection and asylum context",
+          "value": "People arriving at the land borders of Ceuta and Melilla may apply for asylum in Spain. UNHCR states that applicants at those borders are entitled to an interpreter and legal assistance, and that their claims are handled under a border procedure.",
           "source_ids": [
             "o4"
           ]
-        },
-        {
-          "label": "Immediate operational context",
-          "value": "On August 1, Spain’s Interior Ministry said it was installing a pneumatic barrier and containment buoys at the Tarajal breakwater after a July 8 Supreme Court ruling that the statutory rejection-at-the-border provision could not be applied to people who reached Ceuta by swimming where no physical containment element prevented access.",
-          "source_ids": [
-            "o5"
-          ]
         }
       ],
-      "scope_note": "The selected Muninn timeline covers the acute surge and official response from July 30 through August 3, 2026; it does not attempt to document all later legal, humanitarian, diplomatic, or migration developments involving Ceuta and Morocco.",
+      "scope_note": "The selected Muninn timeline covers the initial late-July to early-August 2026 surge, returns, deaths, and immediate border measures; it does not aim to cover all later investigations, asylum cases, diplomatic discussions, or longer-term migration policy changes.",
       "sources": [
         {
-          "title": "Ceuta",
-          "publisher": "Ceuta",
-          "url": "https://www.ceuta.es/ceuta/45-paginas/paginas/estatuto-de-autonomia/6-titulo-preliminar",
+          "title": "Europa",
+          "publisher": "Europa",
+          "url": "https://www.consilium.europa.eu/en/meetings/jha/2026/08/04/",
           "source_type": "reporting",
           "id": "o1"
         },
@@ -1922,30 +2019,23 @@
           "id": "o2"
         },
         {
-          "title": "Gob",
-          "publisher": "Gob",
-          "url": "https://www.interior.gob.es/opencms/eu/detalle/articulo/Comunicado-sobre-la-situacion-en-la-ciudad-autonoma-de-Ceuta/",
+          "title": "Europa",
+          "publisher": "Europa",
+          "url": "https://acceptance.audiovisual.ec.europa.eu/en/media/video/I-293315",
           "source_type": "reporting",
           "id": "o3"
         },
         {
-          "title": "Boe",
-          "publisher": "Boe",
-          "url": "https://boe.es/buscar/act.php?id=BOE-A-2000-544&p=20250319&tn=0",
+          "title": "Unhcr",
+          "publisher": "Unhcr",
+          "url": "https://help.unhcr.org/spain/en/solicitar-asilo-en-espana/solicitud-de-asilo-en-puestos-fronterizos-y-en-centros-de-internamiento-de-extranjeros-cies/",
           "source_type": "reporting",
           "id": "o4"
-        },
-        {
-          "title": "Gob",
-          "publisher": "Gob",
-          "url": "https://www.interior.gob.es/opencms/es/detalle/articulo/Interior-instala-una-barrera-neumatica-en-el-espigon-que-separa-Ceuta-de-Marruecos/",
-          "source_type": "reporting",
-          "id": "o5"
         }
       ],
-      "publisher_count": 4,
-      "generated_at": "2026-08-21T12:40:33.983641+00:00",
-      "expires_at": "2026-08-28T12:40:33.983641+00:00",
+      "publisher_count": 2,
+      "generated_at": "2026-08-28T21:44:49.738880+00:00",
+      "expires_at": "2026-09-04T21:44:49.738880+00:00",
       "model": "gpt-5.6-terra",
       "provenance": "openai_web_search_source_grounded_event_overview_v1"
     },
@@ -1995,6 +2085,7 @@
       "amidst",
       "among",
       "announced",
+      "anti-migrant",
       "approximately",
       "around",
       "arrested",
@@ -2005,6 +2096,7 @@
       "assumption",
       "attempt",
       "attempting",
+      "august",
       "authoritie",
       "barrier",
       "beach",
@@ -2014,6 +2106,7 @@
       "border",
       "both",
       "cafes",
+      "called",
       "calm",
       "camp",
       "caused",
@@ -2024,6 +2117,7 @@
       "check",
       "citing",
       "claim",
+      "clashe",
       "comes",
       "concern",
       "conflicting",
@@ -2052,10 +2146,12 @@
       "drowning",
       "effective",
       "emergency",
+      "emphasizing",
       "enclave",
       "enhance",
       "enter",
       "entered",
+      "erupt",
       "escalated",
       "escalating",
       "escalation",
@@ -2073,8 +2169,10 @@
       "follow",
       "food",
       "force",
+      "fueled",
       "future",
       "gradually",
+      "growing",
       "halts",
       "highlight",
       "holiday",
@@ -2139,6 +2237,7 @@
       "national",
       "near",
       "nearly",
+      "need",
       "normal",
       "north",
       "number",
@@ -2159,6 +2258,8 @@
       "present",
       "previously",
       "prompting",
+      "protest",
+      "protester",
       "rare",
       "reach",
       "recent",
@@ -2246,6 +2347,8 @@
       "young"
     ],
     "entities": [
+      "anti-migrant",
+      "anti-migrant_protest",
       "border_check",
       "border_control",
       "both_moroccan",
@@ -2263,6 +2366,7 @@
       "ceuta_spain",
       "ceuta_spark",
       "ceuta_territory",
+      "clashe_erupt",
       "crisi_highlight",
       "crisi_italy",
       "crisi_spain",
@@ -2338,7 +2442,7 @@
       "toll_discrepancie",
       "toll_spain"
     ],
-    "search_text": "000 100 24-hour 300 500-meter action address adequate african aftermath along amidst among announced approximately around arrested arrival arriving assist assistance assumption attempt attempting authoritie barrier beach began beginning begun border border_check border_control both both_moroccan cafes calm camp caused ceased ceuta ceuta. ceuta._massive ceuta_beach ceuta_faces ceuta_leads ceuta_migrant ceuta_moroccan ceuta_recover ceuta_request ceuta_result ceuta_spain ceuta_spark ceuta_territory challenge chaotic check citing claim comes concern conflicting consequence control crise crisi crisi_highlight crisi_italy crisi_spain criticism cross crossed crossing deadliest deadly deadly_migrant death decision declare demand despite died diplomatic discrepancie discussion dispute dispute_spain division driven drowning effective emergency emergency_measure enclave enhance enhance_security enter entered escalated escalating escalation establishment eu europe europe. europe._spain european european_division event exclave face faces faces_aftermath faces_migrant false familie fatalitie floating follow food force force_near future gradually halts halts_migrant highlight highlight_european holiday however humanitarian hundred illegal immigration implement implement_border implement_temporary implementation implemented impose imposition incident include including indicate indicated indicating individual influx initial installation installing interior introduced introduction italian italian_traveler italy italy. italy_maintain lack last leads least legal life lift living local local_tension loved maintain maintain_border majority makeshift manage management many marks mass mass_migration massive massive_influx massive_migrant measure measure_tens media midnight migrant migrant_arrested migrant_crisi migrant_cross migrant_crossing migrant_dispute migrant_influx migrant_surge migration military ministry misinformation misinformation_moroccan missing moroccan moroccan_security morocco morocco. morocco._ceuta morocco._local morocco_authoritie morocco_calm morocco_ceuta morocco_strengthen most nation national national_emergency near near_ceuta nearly nearly_migrant normal north north_african number occurred office ones ongoing ongoing_crisi only opening other overwhelmed period person policie political potential poverty present previously prompting rare reach recent recover refused region reignited reinforce reinforcement relocate relocate_migrant relocating remain reopen reported reportedly reporting request request_national requested resident responding response result resulted resume retaliation return returned returning rising saturday searching security security_force seeking seen shelter shops short shortly significant similar since situation small social spain spain_assumption spain_ceuta spain_ceuta. spain_enhance spain_halts spain_implement spain_relocate spain_retaliation spark spark_return sparked spat spreading spurred stampede still still_present strengthen strengthen_border surge swimming temporary temporary_border tens tension tension_thousand territory these those thousand thousand_still three toll toll_discrepancie toll_spain tragically trampol travel traveler trying unaccounted unfolded unprecedented unrest voluntarily warning week weeks where which while within without work would young"
+    "search_text": "000 100 24-hour 300 500-meter action address adequate african aftermath along amidst among announced anti-migrant anti-migrant_protest approximately around arrested arrival arriving assist assistance assumption attempt attempting august authoritie barrier beach began beginning begun border border_check border_control both both_moroccan cafes called calm camp caused ceased ceuta ceuta. ceuta._massive ceuta_beach ceuta_faces ceuta_leads ceuta_migrant ceuta_moroccan ceuta_recover ceuta_request ceuta_result ceuta_spain ceuta_spark ceuta_territory challenge chaotic check citing claim clashe clashe_erupt comes concern conflicting consequence control crise crisi crisi_highlight crisi_italy crisi_spain criticism cross crossed crossing deadliest deadly deadly_migrant death decision declare demand despite died diplomatic discrepancie discussion dispute dispute_spain division driven drowning effective emergency emergency_measure emphasizing enclave enhance enhance_security enter entered erupt escalated escalating escalation establishment eu europe europe. europe._spain european european_division event exclave face faces faces_aftermath faces_migrant false familie fatalitie floating follow food force force_near fueled future gradually growing halts halts_migrant highlight highlight_european holiday however humanitarian hundred illegal immigration implement implement_border implement_temporary implementation implemented impose imposition incident include including indicate indicated indicating individual influx initial installation installing interior introduced introduction italian italian_traveler italy italy. italy_maintain lack last leads least legal life lift living local local_tension loved maintain maintain_border majority makeshift manage management many marks mass mass_migration massive massive_influx massive_migrant measure measure_tens media midnight migrant migrant_arrested migrant_crisi migrant_cross migrant_crossing migrant_dispute migrant_influx migrant_surge migration military ministry misinformation misinformation_moroccan missing moroccan moroccan_security morocco morocco. morocco._ceuta morocco._local morocco_authoritie morocco_calm morocco_ceuta morocco_strengthen most nation national national_emergency near near_ceuta nearly nearly_migrant need normal north north_african number occurred office ones ongoing ongoing_crisi only opening other overwhelmed period person policie political potential poverty present previously prompting protest protester rare reach recent recover refused region reignited reinforce reinforcement relocate relocate_migrant relocating remain reopen reported reportedly reporting request request_national requested resident responding response result resulted resume retaliation return returned returning rising saturday searching security security_force seeking seen shelter shops short shortly significant similar since situation small social spain spain_assumption spain_ceuta spain_ceuta. spain_enhance spain_halts spain_implement spain_relocate spain_retaliation spark spark_return sparked spat spreading spurred stampede still still_present strengthen strengthen_border surge swimming temporary temporary_border tens tension tension_thousand territory these those thousand thousand_still three toll toll_discrepancie toll_spain tragically trampol travel traveler trying unaccounted unfolded unprecedented unrest voluntarily warning week weeks where which while within without work would young"
   },
   "related_events": []
 }

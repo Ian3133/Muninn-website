@@ -15,7 +15,7 @@
     "summary": "Israeli military strikes in Gaza have resulted in the deaths of seven individuals and the destruction of medical supply warehouses. The Gaza Health Ministry condemned the attacks, which occurred amid ongoing uncertainty regarding a disarmament deal with Hamas. Reports indicate that the strikes targeted warehouses near a hospital, which were believed to be storing medical supplies.",
     "status": "active",
     "first_seen_at": "2026-08-01",
-    "last_seen_at": "2026-08-21",
+    "last_seen_at": "2026-08-28",
     "timeline": [
       {
         "development_id": "story_8bc317b8bc17260f",
@@ -416,15 +416,153 @@
           "story_539fec0e201b89ca"
         ],
         "revision_count": 2
+      },
+      {
+        "development_id": "story_7d1eebe9ce281eb5",
+        "daily_story_id": "story_7d1eebe9ce281eb5",
+        "date": "2026-08-28",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Israeli Airstrikes in Gaza Kill Four and Worsen Camp Conditions",
+        "summary": "Israeli airstrikes in Gaza resulted in the deaths of at least four individuals after targeting a tent shelter. The strikes have exacerbated the already dire conditions in overcrowded camps, which are suffering from pest infestations and inadequate sanitation.",
+        "topic_label": "Gaza Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "Israeli strikes killed at least four people in Gaza.",
+          "The strikes hit a tent shelter.",
+          "Conditions in overcrowded camps are deteriorating due to pests and poor sanitation."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Africanews",
+          "Euronews"
+        ],
+        "source_urls": [
+          "http://www.euronews.com/video/2026/08/28/israeli-strikes-hit-gaza-shelters-killing-four-amid-deteriorating-camp-conditions",
+          "http://www.africanews.com/2026/08/28/israeli-strikes-hit-gaza-shelters-killing-four-amid-deteriorating-camp-conditions"
+        ],
+        "source_details": [
+          {
+            "title": "Israeli strikes hit Gaza shelters, killing four amid deteriorating camp conditions",
+            "source": "Euronews",
+            "link": "http://www.euronews.com/video/2026/08/28/israeli-strikes-hit-gaza-shelters-killing-four-amid-deteriorating-camp-conditions",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Israeli strikes hit Gaza shelters, killing four amid deteriorating camp conditions",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/08/28/israeli-strikes-hit-gaza-shelters-killing-four-amid-deteriorating-camp-conditions",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_8bc317b8bc17260f",
+          "shared_tokens": [
+            "conflict",
+            "death",
+            "gaza",
+            "individual",
+            "israel",
+            "killed",
+            "resulted",
+            "strike",
+            "which"
+          ],
+          "shared_entities": [
+            "gaza",
+            "gaza.",
+            "israel"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-28",
+        "last_seen_at": "2026-08-28",
+        "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_f61d5fffef6c1504",
+        "daily_story_id": "story_f61d5fffef6c1504",
+        "date": "2026-08-28",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Protests Erupt Outside EU Offices in Jerusalem Over Gaza Conflict",
+        "summary": "On August 28, a group of around a dozen Israeli activists protested outside the European Union representative offices in east Jerusalem. They urged the EU to adopt a stronger stance regarding the ongoing war in Gaza.",
+        "topic_label": "Gaza Conflict",
+        "development_type": "development",
+        "key_facts": [
+          "Date of protest: August 28, 2026",
+          "Location: EU offices in east Jerusalem",
+          "Number of activists: Around a dozen",
+          "Call for stronger EU position on Gaza war"
+        ],
+        "source_count": 2,
+        "sources": [
+          "Africanews",
+          "Euronews"
+        ],
+        "source_urls": [
+          "http://www.euronews.com/video/2026/08/28/israeli-activists-urge-eu-in-jerusalem-protest-silence-is-complicity-on-gaza",
+          "http://www.africanews.com/2026/08/28/israeli-activists-urge-eu-in-jerusalem-protest-silence-is-complicity-on-gaza"
+        ],
+        "source_details": [
+          {
+            "title": "Israeli activists protest outside EU offices in Jerusalem over Gaza war",
+            "source": "Euronews",
+            "link": "http://www.euronews.com/video/2026/08/28/israeli-activists-urge-eu-in-jerusalem-protest-silence-is-complicity-on-gaza",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Israeli activists protest outside EU offices in Jerusalem over Gaza war",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/08/28/israeli-activists-urge-eu-in-jerusalem-protest-silence-is-complicity-on-gaza",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_8bc317b8bc17260f",
+          "shared_tokens": [
+            "conflict",
+            "gaza",
+            "israel",
+            "ongoing",
+            "regarding"
+          ],
+          "shared_entities": [
+            "gaza.",
+            "israel"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-28",
+        "last_seen_at": "2026-08-28",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 4,
+      "public_development_count": 6,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Israel Launches Criminal Investigation into Killing of Hind Rajab and Family",
-    "latest_summary": "Israel's military has confirmed that its troops fired on a car carrying five-year-old Hind Rajab and six family members in Gaza in 2024. Following this admission, a criminal investigation has been initiated into the incident, which is part of a broader pattern of civilian casualties during the early months of the Gaza conflict.",
+    "latest_title": "Protests Erupt Outside EU Offices in Jerusalem Over Gaza Conflict",
+    "latest_summary": "On August 28, a group of around a dozen Israeli activists protested outside the European Union representative offices in east Jerusalem. They urged the EU to adopt a stronger stance regarding the ongoing war in Gaza.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -436,28 +574,30 @@
         "story_8bc317b8bc17260f",
         "story_3f7042e7cdf089b3",
         "story_1ca97d26c2220eff",
-        "story_fb625c155f6839af"
+        "story_fb625c155f6839af",
+        "story_7d1eebe9ce281eb5",
+        "story_f61d5fffef6c1504"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-19",
-      "development_count": 4,
-      "coverage_packet_count": 7,
-      "date_count": 4,
-      "source_count": 16,
-      "independent_source_count": 11,
+      "summary_updated_at": "2026-08-28",
+      "development_count": 6,
+      "coverage_packet_count": 9,
+      "date_count": 5,
+      "source_count": 20,
+      "independent_source_count": 13,
       "first_date": "2026-08-01",
-      "latest_date": "2026-08-19",
-      "latest_update_title": "Israel Launches Criminal Investigation into Killing of Hind Rajab and Family",
-      "coverage_score": 0.843,
-      "recency_score": 0.467,
-      "rank_score": 0.625,
-      "context_summary": "Muninn first tracked this thread on 2026-08-01: Israeli Strikes in Gaza Result in Seven Deaths and Destruction of Medical Warehouses. The latest development is Israel Launches Criminal Investigation into Killing of Hind Rajab and Family.",
-      "cta_label": "Explore 4 developments"
+      "latest_date": "2026-08-28",
+      "latest_update_title": "Protests Erupt Outside EU Offices in Jerusalem Over Gaza Conflict",
+      "coverage_score": 1.0,
+      "recency_score": 1.0,
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-08-01: Israeli Strikes in Gaza Result in Seven Deaths and Destruction of Medical Warehouses. The latest development is Protests Erupt Outside EU Offices in Jerusalem Over Gaza Conflict.",
+      "cta_label": "Explore 6 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Israeli military strikes in Gaza have resulted in the deaths of seven individuals and the destruction of medical supply warehouses. A later development was Peace Envoy Discusses Gaza Disarmament with Netanyahu, Urges Ceasefire. Most recently, israel's military has confirmed that its troops fired on a car carrying five-year-old Hind Rajab and six family members in Gaza in 2024.",
+      "summary": "Israeli military strikes in Gaza have resulted in the deaths of seven individuals and the destruction of medical supply warehouses. A later development was Israel Launches Criminal Investigation into Killing of Hind Rajab and Family. Most recently, on August 28, a group of around a dozen Israeli activists protested outside the European Union representative offices in east Jerusalem.",
       "key_developments": [
         {
           "development_id": "story_8bc317b8bc17260f",
@@ -478,6 +618,16 @@
           "development_id": "story_fb625c155f6839af",
           "date": "2026-08-19",
           "title": "Israel Launches Criminal Investigation into Killing of Hind Rajab and Family"
+        },
+        {
+          "development_id": "story_7d1eebe9ce281eb5",
+          "date": "2026-08-28",
+          "title": "Israeli Airstrikes in Gaza Kill Four and Worsen Camp Conditions"
+        },
+        {
+          "development_id": "story_f61d5fffef6c1504",
+          "date": "2026-08-28",
+          "title": "Protests Erupt Outside EU Offices in Jerusalem Over Gaza Conflict"
         }
       ],
       "sources": [
@@ -576,9 +726,33 @@
           "source": "TIME",
           "link": "https://time.com/article/2026/08/19/israel-gaza-idf-hind-rajab-death-criminal-investigation",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Israeli strikes hit Gaza shelters, killing four amid deteriorating camp conditions",
+          "source": "Euronews",
+          "link": "http://www.euronews.com/video/2026/08/28/israeli-strikes-hit-gaza-shelters-killing-four-amid-deteriorating-camp-conditions",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Israeli strikes hit Gaza shelters, killing four amid deteriorating camp conditions",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/08/28/israeli-strikes-hit-gaza-shelters-killing-four-amid-deteriorating-camp-conditions",
+          "source_bias": "center"
+        },
+        {
+          "title": "Israeli activists protest outside EU offices in Jerusalem over Gaza war",
+          "source": "Euronews",
+          "link": "http://www.euronews.com/video/2026/08/28/israeli-activists-urge-eu-in-jerusalem-protest-silence-is-complicity-on-gaza",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Israeli activists protest outside EU offices in Jerusalem over Gaza war",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/08/28/israeli-activists-urge-eu-in-jerusalem-protest-silence-is-complicity-on-gaza",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-08-19",
+      "updated_at": "2026-08-28",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -587,37 +761,16 @@
         "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
         "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
         "relationship": "related_topic",
-        "confidence": 0.93,
+        "confidence": 0.95,
         "shared_entities": [
           "benjamin_netanyahu",
           "gaza",
+          "gaza.",
           "gaza_disarmament",
           "gaza_result",
           "hamas_disarmament",
           "israel",
-          "israel_prime"
-        ]
-      },
-      {
-        "event_id": "event_netanyahu-s-high-stakes-visit-to-trump-amid_6bb1d5dbdf",
-        "title": "Netanyahu's High-Stakes Visit to Trump Amid Tensions and Upcoming Elections",
-        "relationship": "related_topic",
-        "confidence": 0.759,
-        "shared_entities": [
-          "benjamin_netanyahu",
-          "donald_trump.",
-          "israel",
-          "united"
-        ]
-      },
-      {
-        "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
-        "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
-        "relationship": "related_topic",
-        "confidence": 0.751,
-        "shared_entities": [
-          "benjamin_netanyahu",
-          "israel",
+          "israel_airstrike",
           "israel_prime"
         ]
       },
@@ -625,11 +778,32 @@
         "event_id": "event_trump-hosts-separate-meetings-with-zelenskyy_49e7e2befb",
         "title": "Trump Hosts Separate Meetings with Zelenskyy and Netanyahu at the White House",
         "relationship": "related_topic",
-        "confidence": 0.739,
+        "confidence": 0.746,
         "shared_entities": [
           "benjamin_netanyahu",
           "israel",
           "israel_prime"
+        ]
+      },
+      {
+        "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+        "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
+        "relationship": "related_topic",
+        "confidence": 0.742,
+        "shared_entities": [
+          "benjamin_netanyahu",
+          "israel",
+          "israel_prime"
+        ]
+      },
+      {
+        "event_id": "event_australia-protests-israel-s-decision-on-aid_97a5c2826e",
+        "title": "Australia Protests Israel's Decision on Aid Worker Killing Investigation",
+        "relationship": "related_topic",
+        "confidence": 0.713,
+        "shared_entities": [
+          "gaza.",
+          "israel"
         ]
       }
     ],
@@ -657,96 +831,104 @@
       "available": true,
       "title": "About Gaza Conflict",
       "subject": "Gaza Conflict",
-      "summary": "The Gaza conflict refers to the war centered on the Gaza Strip that followed Hamas-led attacks in Israel on October 7, 2023, and Israel’s subsequent military campaign against Hamas and other Palestinian armed groups. It combines active hostilities, hostage and detainee issues, humanitarian access and civilian protection concerns, ceasefire diplomacy, and international legal and accountability processes.",
+      "summary": "The Gaza conflict refers here to the war that began after Hamas and other Palestinian armed groups attacked Israel on 7 October 2023, followed by Israel’s declaration of war and large-scale air and ground operations in the Gaza Strip. It is both an armed conflict involving Israel and Palestinian armed groups and a continuing humanitarian and diplomatic crisis, with ceasefire, hostage-release, aid-access, and postwar-governance issues central to international efforts.",
       "facts": [
         {
-          "label": "Start and setting",
-          "value": "The current phase began on October 7, 2023, when Palestinian armed groups from Gaza carried out attacks in Israel; the ensuing Israeli military campaign has been focused principally on the Gaza Strip.",
+          "label": "Start and parties",
+          "value": "The current war began on 7 October 2023, when Palestinian armed groups attacked Israel; Israel declared war on 8 October and began intensive strikes in Gaza. Hamas has exercised de facto control in Gaza since June 2007.",
           "source_ids": [
             "o1",
             "o2"
           ]
         },
         {
-          "label": "Principal parties",
-          "value": "The conflict principally involves Israel and Hamas, alongside other Palestinian armed groups; civilians in Gaza and Israel have been affected by the hostilities.",
+          "label": "Geographic setting",
+          "value": "The principal battlefield is the Gaza Strip, a densely populated Palestinian coastal territory; the conflict has also involved attacks and security operations in Israel and along Gaza’s borders.",
           "source_ids": [
             "o1",
-            "o3"
+            "o2"
           ]
         },
         {
-          "label": "Humanitarian dimension",
-          "value": "UN humanitarian reporting describes continuing military activity, displacement, damage to civilian infrastructure, and constraints on access to health care, water, sanitation, shelter, and essential supplies in Gaza.",
+          "label": "Humanitarian context",
+          "value": "Gaza entered the war after years of severe movement and access restrictions imposed following Hamas’s 2007 takeover; the United Nations has described those restrictions, recurrent hostilities, and chronic infrastructure and energy problems as compounding humanitarian vulnerability.",
           "source_ids": [
             "o2",
-            "o4"
-          ]
-        },
-        {
-          "label": "Ceasefire and hostage diplomacy",
-          "value": "A UN Security Council resolution adopted on June 10, 2024 endorsed a proposed three-phase framework linking a ceasefire, releases of hostages and Palestinian prisoners, Israeli force withdrawals, humanitarian aid, and reconstruction; implementation has depended on agreement by the parties.",
-          "source_ids": [
             "o3"
           ]
         },
         {
-          "label": "International legal process",
-          "value": "The International Court of Justice is hearing South Africa’s case against Israel under the Genocide Convention and has issued orders on provisional measures; those measures are interim directions and do not determine the case’s final merits.",
+          "label": "Ceasefire diplomacy",
+          "value": "UN Security Council Resolution 2735, adopted on 10 June 2024, backed a three-phase framework linking an immediate ceasefire, hostage releases and prisoner exchanges, Israeli withdrawal from populated Gaza areas, humanitarian aid delivery, and reconstruction and longer-term arrangements.",
           "source_ids": [
-            "o5",
-            "o6"
+            "o4",
+            "o5"
+          ]
+        },
+        {
+          "label": "International legal proceedings",
+          "value": "South Africa instituted proceedings against Israel at the International Court of Justice on 29 December 2023 under the Genocide Convention. The Court issued binding provisional measures in 2024; these orders addressed preservation of rights and humanitarian assistance and did not decide the merits of the allegations.",
+          "source_ids": [
+            "o6",
+            "o7"
           ]
         }
       ],
-      "scope_note": "The selected Muninn timeline follows selected August 2026 developments involving strikes, ceasefire and disarmament diplomacy, and investigations into particular killings; it does not provide a comprehensive record of the war, all casualties, or every diplomatic and legal development.",
+      "scope_note": "The selected Muninn timeline covers a limited set of late-August 2026 conflict developments, including strikes, diplomacy, investigations and protests; it does not provide a complete account of the war’s military operations, casualties, negotiations, or legal proceedings.",
       "sources": [
         {
           "title": "UN",
           "publisher": "UN",
-          "url": "https://www.un.org/unispal/document/un-experts-statement-gaza-israel-12oct2023/",
+          "url": "https://www.un.org/unispal/document/statement-by-the-humanitarian-coordinator-for-the-occupied-palestinian-territory-lynn-hastings-on-the-hostilities-between-palestinian-armed-groups-in-the-gaza-strip-and-israel/",
           "source_type": "reporting",
           "id": "o1"
         },
         {
           "title": "Ochaopt",
           "publisher": "Ochaopt",
-          "url": "https://www.ochaopt.org/content/humanitarian-situation-report-31-july-2026",
+          "url": "https://www.ochaopt.org/content/gaza-strip-humanitarian-impact-15-years-blockade-june-2022",
           "source_type": "reporting",
           "id": "o2"
+        },
+        {
+          "title": "Ochaopt",
+          "publisher": "Ochaopt",
+          "url": "https://www.ochaopt.org/content/gaza-strip-humanitarian-fact-sheet-december-2007",
+          "source_type": "reporting",
+          "id": "o3"
         },
         {
           "title": "UN",
           "publisher": "UN",
           "url": "https://www.un.org/unispal/document/sres2735-2024-10jun24/",
           "source_type": "reporting",
-          "id": "o3"
-        },
-        {
-          "title": "Ochaopt",
-          "publisher": "Ochaopt",
-          "url": "https://www.ochaopt.org/content/humanitarian-situation-report-10-july-2026",
-          "source_type": "reporting",
           "id": "o4"
         },
         {
-          "title": "Icj Cij",
-          "publisher": "Icj Cij",
-          "url": "https://api.icj-cij.org/case/192",
+          "title": "UN",
+          "publisher": "UN",
+          "url": "https://digitallibrary.un.org/record/4051310?ln=en&v=pdf",
           "source_type": "reporting",
           "id": "o5"
         },
         {
           "title": "Icj Cij",
           "publisher": "Icj Cij",
-          "url": "https://api.icj-cij.org/sites/default/files/case-related/192/192-20240524-ord-01-00-en.pdf",
+          "url": "https://www.icj-cij.org/index.php/node/203453",
           "source_type": "reporting",
           "id": "o6"
+        },
+        {
+          "title": "Icj Cij",
+          "publisher": "Icj Cij",
+          "url": "https://www.icj-cij.org/index.php/case/192",
+          "source_type": "reporting",
+          "id": "o7"
         }
       ],
       "publisher_count": 3,
-      "generated_at": "2026-08-19T12:40:13.217747+00:00",
-      "expires_at": "2026-08-26T12:40:13.217747+00:00",
+      "generated_at": "2026-08-28T21:44:49.738880+00:00",
+      "expires_at": "2026-09-04T21:44:49.738880+00:00",
       "model": "gpt-5.6-terra",
       "provenance": "openai_web_search_source_grounded_event_overview_v1"
     },
@@ -756,14 +938,22 @@
     },
     "search_tokens": [
       "2024",
+      "activist",
       "additionally",
       "admission",
+      "adopt",
+      "airstrike",
+      "already",
       "announcement",
+      "around",
       "attack",
+      "august",
       "believed",
       "benjamin",
       "board",
       "broader",
+      "camp",
+      "camps",
       "carrying",
       "casualtie",
       "ceasefire",
@@ -774,6 +964,7 @@
       "complete",
       "concern",
       "condemned",
+      "condition",
       "confirmed",
       "conflict",
       "constructive",
@@ -783,31 +974,44 @@
       "death",
       "described",
       "destruction",
+      "dire",
       "disarmament",
       "discuss",
       "discusse",
       "donald",
+      "dozen",
       "early",
+      "east",
       "emphasi",
       "envoy",
+      "erupt",
+      "european",
+      "exacerbated",
       "expressed",
       "family",
       "fired",
       "five-year-old",
+      "four",
       "gaza",
+      "group",
       "halting",
       "hamas",
       "health",
       "hind",
       "hospital",
+      "inadequate",
       "incident",
       "indicate",
       "individual",
+      "infestation",
       "initiated",
       "investigation",
       "israel",
+      "jerusalem",
+      "kill",
       "killing",
       "launche",
+      "least",
       "medical",
       "member",
       "military",
@@ -818,46 +1022,71 @@
       "netanyahu",
       "nikolay",
       "occurred",
+      "office",
       "ongoing",
       "only",
+      "outside",
+      "overcrowded",
       "part",
       "pattern",
       "peace",
+      "pest",
       "prime",
       "promoted",
       "proposed",
+      "protest",
+      "protested",
       "rajab",
       "regarding",
+      "representative",
       "result",
       "resulted",
+      "sanitation",
       "seven",
+      "shelter",
+      "stance",
       "storing",
       "strike",
       "strip",
+      "stronger",
+      "suffering",
       "supplie",
       "supply",
       "talks",
       "targeted",
+      "targeting",
+      "tent",
+      "they",
       "troop",
       "trump",
       "uncertainty",
+      "union",
       "united",
+      "urged",
       "urges",
       "voice",
+      "war",
       "warehouse",
       "which",
       "withdrawal",
+      "worsen",
       "would"
     ],
     "entities": [
       "benjamin_netanyahu",
+      "camp_condition",
+      "condition_israel",
       "criminal_investigation",
       "disarmament_deal",
       "discusse_gaza",
       "donald_trump.",
       "envoy_discusse",
+      "erupt_outside",
+      "eu",
+      "european_union",
       "family_israel",
       "gaza",
+      "gaza.",
       "gaza_disarmament",
       "gaza_health",
       "gaza_israel",
@@ -867,35 +1096,40 @@
       "health_ministry",
       "hind_rajab",
       "israel",
+      "israel_airstrike",
       "israel_launche",
       "israel_prime",
       "israel_voice",
+      "jerusalem",
+      "jerusalem._they",
       "launche_criminal",
       "medical_warehouse",
       "netanyahu_urges",
       "nikolay_mladenov",
       "peace_envoy",
+      "protest_erupt",
       "seven",
       "strip._peace",
       "united",
       "urges_ceasefire",
       "voice_concern",
-      "warehouse_israel"
+      "warehouse_israel",
+      "worsen_camp"
     ],
-    "search_text": "2024 additionally admission announcement attack believed benjamin benjamin_netanyahu board broader carrying casualtie ceasefire civilian comes commence communicated complete concern condemned confirmed conflict constructive continue criminal criminal_investigation deal death described destruction disarmament disarmament_deal discuss discusse discusse_gaza donald donald_trump. early emphasi envoy envoy_discusse expressed family family_israel fired five-year-old gaza gaza_disarmament gaza_health gaza_israel gaza_result gaza_strip. halting hamas hamas_disarmament health health_ministry hind hind_rajab hospital incident indicate individual initiated investigation israel israel_launche israel_prime israel_voice killing launche launche_criminal medical medical_warehouse member military ministry mladenov month near netanyahu netanyahu_urges nikolay nikolay_mladenov occurred ongoing only part pattern peace peace_envoy prime promoted proposed rajab regarding result resulted seven storing strike strip strip._peace supplie supply talks targeted troop trump uncertainty united urges urges_ceasefire voice voice_concern warehouse warehouse_israel which withdrawal would"
+    "search_text": "2024 activist additionally admission adopt airstrike already announcement around attack august believed benjamin benjamin_netanyahu board broader camp camp_condition camps carrying casualtie ceasefire civilian comes commence communicated complete concern condemned condition condition_israel confirmed conflict constructive continue criminal criminal_investigation deal death described destruction dire disarmament disarmament_deal discuss discusse discusse_gaza donald donald_trump. dozen early east emphasi envoy envoy_discusse erupt erupt_outside eu european european_union exacerbated expressed family family_israel fired five-year-old four gaza gaza. gaza_disarmament gaza_health gaza_israel gaza_result gaza_strip. group halting hamas hamas_disarmament health health_ministry hind hind_rajab hospital inadequate incident indicate individual infestation initiated investigation israel israel_airstrike israel_launche israel_prime israel_voice jerusalem jerusalem._they kill killing launche launche_criminal least medical medical_warehouse member military ministry mladenov month near netanyahu netanyahu_urges nikolay nikolay_mladenov occurred office ongoing only outside overcrowded part pattern peace peace_envoy pest prime promoted proposed protest protest_erupt protested rajab regarding representative result resulted sanitation seven shelter stance storing strike strip strip._peace stronger suffering supplie supply talks targeted targeting tent they troop trump uncertainty union united urged urges urges_ceasefire voice voice_concern war warehouse warehouse_israel which withdrawal worsen worsen_camp would"
   },
   "related_events": [
     {
       "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
       "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
-      "summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Russian Drone Strikes Hit Multiple Ukrainian Cities, Causing Casualties and Fires.",
+      "summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Russian Drone Strikes Cause Casualties and Fires in Ukraine.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-07-31",
-      "last_seen_at": "2026-08-27",
+      "last_seen_at": "2026-08-28",
       "development_count": 24,
-      "latest_title": "Russian Drone Strikes Hit Multiple Ukrainian Cities, Causing Casualties and Fires",
+      "latest_title": "Russian Drone Strikes Cause Casualties and Fires in Ukraine",
       "topic_label": "Gaza Peace Deal",
       "hero_image": {
         "url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
