@@ -15,7 +15,7 @@
     "summary": "Israeli military strikes in Gaza have resulted in the deaths of seven individuals and the destruction of medical supply warehouses. The Gaza Health Ministry condemned the attacks, which occurred amid ongoing uncertainty regarding a disarmament deal with Hamas. Reports indicate that the strikes targeted warehouses near a hospital, which were believed to be storing medical supplies.",
     "status": "active",
     "first_seen_at": "2026-08-01",
-    "last_seen_at": "2026-08-29",
+    "last_seen_at": "2026-08-31",
     "timeline": [
       {
         "development_id": "story_8bc317b8bc17260f",
@@ -601,15 +601,94 @@
           "story_f2382782fa5442cc"
         ],
         "revision_count": 1
+      },
+      {
+        "development_id": "story_a48f361e765fcde1",
+        "daily_story_id": "story_a48f361e765fcde1",
+        "date": "2026-08-31",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Israeli Airstrikes Result in Five Palestinian Deaths in Gaza City",
+        "summary": "Israeli airstrikes in Gaza City have resulted in the deaths of at least five Palestinians, according to reports from medics and rescuers. The Israeli army stated that the strikes targeted Hamas military operatives in the area.",
+        "topic_label": "Gaza Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "At least five Palestinians killed in Israeli airstrikes.",
+          "Strikes occurred west of Gaza City.",
+          "Israeli army claims to have targeted Hamas operatives."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Al Jazeera English",
+          "RTE News"
+        ],
+        "source_urls": [
+          "https://www.aljazeera.com/video/newsfeed/2026/8/31/israeli-strikes-kill-at-least-five-palestinians-in-gaza-city?traffic_source=rss",
+          "https://www.rte.ie/news/middle-east/2026/0831/1589837-gaza-israel"
+        ],
+        "source_details": [
+          {
+            "title": "Israeli strikes kill at least five Palestinians in Gaza City",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/video/newsfeed/2026/8/31/israeli-strikes-kill-at-least-five-palestinians-in-gaza-city?traffic_source=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Medics in Gaza report five killed in Israeli airstrikes",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/middle-east/2026/0831/1589837-gaza-israel",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "strike"
+          ],
+          "shared_incident_anchors": [
+            "gaza",
+            "israel",
+            "israel_airstrike"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "airstrike",
+            "conflict",
+            "death",
+            "gaza",
+            "israel",
+            "killed",
+            "least",
+            "resulted",
+            "strike"
+          ],
+          "shared_entities": [
+            "gaza",
+            "israel",
+            "israel_airstrike"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_7d1eebe9ce281eb5",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-31",
+        "last_seen_at": "2026-08-31",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 6,
+      "public_development_count": 7,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Protests Erupt Outside EU Offices in Jerusalem Over Gaza Conflict",
-    "latest_summary": "On August 28, a group of around a dozen Israeli activists protested outside the European Union representative offices in east Jerusalem. They urged the EU to adopt a stronger stance regarding the ongoing war in Gaza.",
+    "latest_title": "Israeli Airstrikes Result in Five Palestinian Deaths in Gaza City",
+    "latest_summary": "Israeli airstrikes in Gaza City have resulted in the deaths of at least five Palestinians, according to reports from medics and rescuers. The Israeli army stated that the strikes targeted Hamas military operatives in the area.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -619,32 +698,30 @@
       "display_title": "Israeli Strikes in Gaza Result in Seven Deaths and Destruction of Medical Warehouses Timeline",
       "milestone_development_ids": [
         "story_8bc317b8bc17260f",
-        "story_3f7042e7cdf089b3",
         "story_1ca97d26c2220eff",
-        "story_fb625c155f6839af",
         "story_7d1eebe9ce281eb5",
-        "story_f61d5fffef6c1504"
+        "story_a48f361e765fcde1"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-28",
-      "development_count": 6,
-      "coverage_packet_count": 11,
-      "date_count": 5,
-      "source_count": 20,
+      "summary_updated_at": "2026-08-31",
+      "development_count": 7,
+      "coverage_packet_count": 12,
+      "date_count": 6,
+      "source_count": 22,
       "independent_source_count": 13,
       "first_date": "2026-08-01",
-      "latest_date": "2026-08-28",
-      "latest_update_title": "Protests Erupt Outside EU Offices in Jerusalem Over Gaza Conflict",
+      "latest_date": "2026-08-31",
+      "latest_update_title": "Israeli Airstrikes Result in Five Palestinian Deaths in Gaza City",
       "coverage_score": 1.0,
-      "recency_score": 0.778,
-      "rank_score": 0.871,
-      "context_summary": "Muninn first tracked this thread on 2026-08-01: Israeli Strikes in Gaza Result in Seven Deaths and Destruction of Medical Warehouses. The latest development is Protests Erupt Outside EU Offices in Jerusalem Over Gaza Conflict.",
-      "cta_label": "Explore 6 developments"
+      "recency_score": 1.0,
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-08-01: Israeli Strikes in Gaza Result in Seven Deaths and Destruction of Medical Warehouses. The latest development is Israeli Airstrikes Result in Five Palestinian Deaths in Gaza City.",
+      "cta_label": "Explore 7 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Israeli military strikes in Gaza have resulted in the deaths of seven individuals and the destruction of medical supply warehouses. A later development was Israel Launches Criminal Investigation into Killing of Hind Rajab and Family. Most recently, on August 28, a group of around a dozen Israeli activists protested outside the European Union representative offices in east Jerusalem.",
+      "summary": "Israeli military strikes in Gaza have resulted in the deaths of seven individuals and the destruction of medical supply warehouses. A later development was Israel Launches Criminal Investigation into Killing of Hind Rajab and Family. Most recently, israeli airstrikes in Gaza City have resulted in the deaths of at least five Palestinians, according to reports from medics and rescuers.",
       "key_developments": [
         {
           "development_id": "story_8bc317b8bc17260f",
@@ -652,19 +729,9 @@
           "title": "Israeli Strikes in Gaza Result in Seven Deaths and Destruction of Medical Warehouses"
         },
         {
-          "development_id": "story_3f7042e7cdf089b3",
-          "date": "2026-08-03",
-          "title": "Israel Voices Concerns Over Hamas Disarmament Deal Amid Ongoing Strikes in Gaza"
-        },
-        {
           "development_id": "story_1ca97d26c2220eff",
           "date": "2026-08-04",
           "title": "Peace Envoy Discusses Gaza Disarmament with Netanyahu, Urges Ceasefire"
-        },
-        {
-          "development_id": "story_fb625c155f6839af",
-          "date": "2026-08-19",
-          "title": "Israel Launches Criminal Investigation into Killing of Hind Rajab and Family"
         },
         {
           "development_id": "story_7d1eebe9ce281eb5",
@@ -672,9 +739,9 @@
           "title": "Israeli Airstrikes in Gaza Kill Four and Worsen Camp Conditions"
         },
         {
-          "development_id": "story_f61d5fffef6c1504",
-          "date": "2026-08-28",
-          "title": "Protests Erupt Outside EU Offices in Jerusalem Over Gaza Conflict"
+          "development_id": "story_a48f361e765fcde1",
+          "date": "2026-08-31",
+          "title": "Israeli Airstrikes Result in Five Palestinian Deaths in Gaza City"
         }
       ],
       "sources": [
@@ -797,9 +864,21 @@
           "source": "Africanews",
           "link": "http://www.africanews.com/2026/08/28/israeli-activists-urge-eu-in-jerusalem-protest-silence-is-complicity-on-gaza",
           "source_bias": "center"
+        },
+        {
+          "title": "Israeli strikes kill at least five Palestinians in Gaza City",
+          "source": "Al Jazeera English",
+          "link": "https://www.aljazeera.com/video/newsfeed/2026/8/31/israeli-strikes-kill-at-least-five-palestinians-in-gaza-city?traffic_source=rss",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Medics in Gaza report five killed in Israeli airstrikes",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/middle-east/2026/0831/1589837-gaza-israel",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-08-28",
+      "updated_at": "2026-08-31",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -825,7 +904,18 @@
         "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
         "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
         "relationship": "related_topic",
-        "confidence": 0.742,
+        "confidence": 0.741,
+        "shared_entities": [
+          "benjamin_netanyahu",
+          "israel",
+          "israel_prime"
+        ]
+      },
+      {
+        "event_id": "event_israel-warns-against-turkish-military-presen_ef039f5de7",
+        "title": "Israel Warns Against Turkish Military Presence in Syria",
+        "relationship": "related_topic",
+        "confidence": 0.713,
         "shared_entities": [
           "benjamin_netanyahu",
           "israel",
@@ -836,21 +926,10 @@
         "event_id": "event_australia-protests-israel-s-decision-on-aid_97a5c2826e",
         "title": "Australia Protests Israel's Decision on Aid Worker Killing Investigation",
         "relationship": "related_topic",
-        "confidence": 0.713,
+        "confidence": 0.712,
         "shared_entities": [
           "gaza.",
           "israel"
-        ]
-      },
-      {
-        "event_id": "event_israel-warns-against-turkish-military-presen_ef039f5de7",
-        "title": "Israel Warns Against Turkish Military Presence in Syria",
-        "relationship": "related_topic",
-        "confidence": 0.707,
-        "shared_entities": [
-          "benjamin_netanyahu",
-          "israel",
-          "israel_prime"
         ]
       }
     ],
@@ -992,6 +1071,8 @@
       "airstrike",
       "already",
       "announcement",
+      "area",
+      "army",
       "around",
       "attack",
       "august",
@@ -1037,6 +1118,7 @@
       "expressed",
       "family",
       "fired",
+      "five",
       "five-year-old",
       "four",
       "gaza",
@@ -1059,6 +1141,7 @@
       "killing",
       "launche",
       "least",
+      "medic",
       "medical",
       "member",
       "military",
@@ -1072,8 +1155,10 @@
       "office",
       "ongoing",
       "only",
+      "operative",
       "outside",
       "overcrowded",
+      "palestinian",
       "part",
       "pattern",
       "peace",
@@ -1086,12 +1171,14 @@
       "rajab",
       "regarding",
       "representative",
+      "rescuer",
       "result",
       "resulted",
       "sanitation",
       "seven",
       "shelter",
       "stance",
+      "stated",
       "storing",
       "strike",
       "strip",
@@ -1120,6 +1207,7 @@
       "would"
     ],
     "entities": [
+      "airstrike_result",
       "benjamin_netanyahu",
       "camp_condition",
       "condition_israel",
@@ -1132,8 +1220,10 @@
       "eu",
       "european_union",
       "family_israel",
+      "five",
       "gaza",
       "gaza.",
+      "gaza._israel",
       "gaza_disarmament",
       "gaza_health",
       "gaza_israel",
@@ -1163,20 +1253,20 @@
       "warehouse_israel",
       "worsen_camp"
     ],
-    "search_text": "2024 activist additionally admission adopt airstrike already announcement around attack august believed benjamin benjamin_netanyahu board broader camp camp_condition camps carrying casualtie ceasefire civilian comes commence communicated complete concern condemned condition condition_israel confirmed conflict constructive continue criminal criminal_investigation deal death described destruction dire disarmament disarmament_deal discuss discusse discusse_gaza donald donald_trump. dozen early east emphasi envoy envoy_discusse erupt erupt_outside eu european european_union exacerbated expressed family family_israel fired five-year-old four gaza gaza. gaza_disarmament gaza_health gaza_israel gaza_result gaza_strip. group halting hamas hamas_disarmament health health_ministry hind hind_rajab hospital inadequate incident indicate individual infestation initiated investigation israel israel_airstrike israel_launche israel_prime israel_voice jerusalem jerusalem._they kill killing launche launche_criminal least medical medical_warehouse member military ministry mladenov month near netanyahu netanyahu_urges nikolay nikolay_mladenov occurred office ongoing only outside overcrowded part pattern peace peace_envoy pest prime promoted proposed protest protest_erupt protested rajab regarding representative result resulted sanitation seven shelter stance storing strike strip strip._peace stronger suffering supplie supply talks targeted targeting tent they troop trump uncertainty union united urged urges urges_ceasefire voice voice_concern war warehouse warehouse_israel which withdrawal worsen worsen_camp would"
+    "search_text": "2024 activist additionally admission adopt airstrike airstrike_result already announcement area army around attack august believed benjamin benjamin_netanyahu board broader camp camp_condition camps carrying casualtie ceasefire civilian comes commence communicated complete concern condemned condition condition_israel confirmed conflict constructive continue criminal criminal_investigation deal death described destruction dire disarmament disarmament_deal discuss discusse discusse_gaza donald donald_trump. dozen early east emphasi envoy envoy_discusse erupt erupt_outside eu european european_union exacerbated expressed family family_israel fired five five-year-old four gaza gaza. gaza._israel gaza_disarmament gaza_health gaza_israel gaza_result gaza_strip. group halting hamas hamas_disarmament health health_ministry hind hind_rajab hospital inadequate incident indicate individual infestation initiated investigation israel israel_airstrike israel_launche israel_prime israel_voice jerusalem jerusalem._they kill killing launche launche_criminal least medic medical medical_warehouse member military ministry mladenov month near netanyahu netanyahu_urges nikolay nikolay_mladenov occurred office ongoing only operative outside overcrowded palestinian part pattern peace peace_envoy pest prime promoted proposed protest protest_erupt protested rajab regarding representative rescuer result resulted sanitation seven shelter stance stated storing strike strip strip._peace stronger suffering supplie supply talks targeted targeting tent they troop trump uncertainty union united urged urges urges_ceasefire voice voice_concern war warehouse warehouse_israel which withdrawal worsen worsen_camp would"
   },
   "related_events": [
     {
       "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
       "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
-      "summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Russian Strike on Warehouse Near Kyiv Results in 37 Casualties.",
+      "summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Intense Russian Drone Strikes Leave Kyiv Supermarkets Empty.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-07-31",
-      "last_seen_at": "2026-08-29",
-      "development_count": 25,
-      "latest_title": "Russian Strike on Warehouse Near Kyiv Results in 37 Casualties",
+      "last_seen_at": "2026-08-31",
+      "development_count": 26,
+      "latest_title": "Intense Russian Drone Strikes Leave Kyiv Supermarkets Empty",
       "topic_label": "Gaza Peace Deal",
       "hero_image": {
         "url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
@@ -1203,14 +1293,14 @@
     {
       "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
       "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
-      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Trial Scheduled for Alleged 9/11 Mastermind Khalid Sheikh Mohammed in 2028.",
+      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is US Strikes Iranian Rocket Launchers in Strait of Hormuz Amid Escalating Tensions.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-07-22",
-      "last_seen_at": "2026-08-27",
-      "development_count": 30,
-      "latest_title": "Trial Scheduled for Alleged 9/11 Mastermind Khalid Sheikh Mohammed in 2028",
+      "last_seen_at": "2026-08-31",
+      "development_count": 31,
+      "latest_title": "US Strikes Iranian Rocket Launchers in Strait of Hormuz Amid Escalating Tensions",
       "topic_label": "Iran War",
       "hero_image": {
         "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",

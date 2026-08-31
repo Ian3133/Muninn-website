@@ -15,7 +15,7 @@
     "summary": "Trump announced that the US will refrain from launching new strikes against Iran in hopes of reaching a diplomatic agreement. This decision comes after Iran issued a warning against any 'adventurous action,' stating it would respond decisively to potential attacks on its territory.",
     "status": "active",
     "first_seen_at": "2026-08-02",
-    "last_seen_at": "2026-08-30",
+    "last_seen_at": "2026-08-31",
     "timeline": [
       {
         "development_id": "story_eeac5a41d1e28e7e",
@@ -412,15 +412,90 @@
         "first_seen_at": "2026-08-30",
         "last_seen_at": "2026-08-30",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_2957253d412b8d51",
+        "daily_story_id": "story_2957253d412b8d51",
+        "date": "2026-08-31",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Vance Supports Trump's AI Video of Kharg Island as a Warning to Iran",
+        "summary": "Vice President JD Vance defended President Trump's recent social media post featuring an AI-generated video depicting a bombing of Kharg Island, asserting that it serves as a message to Iran. Vance commented on the video, which illustrates a stylized attack on the island, crucial for Iran's oil exports, and noted that Trump often likes to 'switch it up' with his posts. The video follows Trump's ongoing threats towards Iran.",
+        "topic_label": "Iran Relations",
+        "development_type": "military_action",
+        "key_facts": [
+          "JD Vance defended Trump's AI video post.",
+          "The video depicts a bombing of Kharg Island.",
+          "Vance stated the video is a message to Iran.",
+          "Kharg Island is significant for Iran's oil exports."
+        ],
+        "source_count": 3,
+        "sources": [
+          "Al Jazeera English",
+          "CBS News",
+          "PBS News"
+        ],
+        "source_urls": [
+          "https://www.cbsnews.com/video/vance-defends-trumps-ai-post-of-kharg-island-bombing-hes-sending-a-message-to-the-iranians",
+          "https://www.pbs.org/newshour/politics/watch-vance-says-trump-likes-to-switch-it-up-by-posting-ai-video-of-kharg-island-bombing",
+          "https://www.aljazeera.com/economy/2026/8/31/vance-says-trump-sending-a-message-to-iran-with-ai-generated-video?traffic_source=rss"
+        ],
+        "source_details": [
+          {
+            "title": "Vance defends Trump's AI post of Kharg Island bombing: 'he's sending a message to the Iranians'",
+            "source": "CBS News",
+            "link": "https://www.cbsnews.com/video/vance-defends-trumps-ai-post-of-kharg-island-bombing-hes-sending-a-message-to-the-iranians",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "WATCH: Vance says Trump likes to 'switch it up' by posting AI video of Kharg Island bombing",
+            "source": "PBS News",
+            "link": "https://www.pbs.org/newshour/politics/watch-vance-says-trump-likes-to-switch-it-up-by-posting-ai-video-of-kharg-island-bombing",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Vance says Trump ‘sending a message’ to Iran with AI-generated video",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/economy/2026/8/31/vance-says-trump-sending-a-message-to-iran-with-ai-generated-video?traffic_source=rss",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_eeac5a41d1e28e7e",
+          "shared_tokens": [
+            "attack",
+            "iran",
+            "relation",
+            "trump",
+            "warning"
+          ],
+          "shared_entities": [
+            "iran",
+            "iran_relation"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-31",
+        "last_seen_at": "2026-08-31",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 6,
+      "public_development_count": 7,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Iran's Supreme Leader Calls for Gulf Unity Against Common Adversaries",
-    "latest_summary": "Iran's Supreme Leader Mojtaba Khamenei has called on Muslim countries, particularly those in the Gulf region, to unite against what he described as their 'real enemy.' He emphasized that divisions among Muslims only serve the interests of their adversaries.",
+    "latest_title": "Vance Supports Trump's AI Video of Kharg Island as a Warning to Iran",
+    "latest_summary": "Vice President JD Vance defended President Trump's recent social media post featuring an AI-generated video depicting a bombing of Kharg Island, asserting that it serves as a message to Iran. Vance commented on the video, which illustrates a stylized attack on the island, crucial for Iran's oil exports, and noted that Trump often likes to 'switch it up' with his posts. The video follows Trump's ongoing threats towards Iran.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -430,32 +505,30 @@
       "display_title": "Trump Delays Iran Strikes to Pursue Diplomatic Deal Timeline",
       "milestone_development_ids": [
         "story_eeac5a41d1e28e7e",
-        "story_47c28cc2b2f5edc7",
         "story_587a3eb59eb54f2b",
-        "story_0f6de3ac0983c106",
         "story_ff19dfb57fbe0194",
-        "story_d09097b2a404da55"
+        "story_2957253d412b8d51"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-30",
-      "development_count": 6,
-      "coverage_packet_count": 6,
-      "date_count": 5,
-      "source_count": 14,
-      "independent_source_count": 9,
+      "summary_updated_at": "2026-08-31",
+      "development_count": 7,
+      "coverage_packet_count": 7,
+      "date_count": 6,
+      "source_count": 17,
+      "independent_source_count": 11,
       "first_date": "2026-08-02",
-      "latest_date": "2026-08-30",
-      "latest_update_title": "Iran's Supreme Leader Calls for Gulf Unity Against Common Adversaries",
+      "latest_date": "2026-08-31",
+      "latest_update_title": "Vance Supports Trump's AI Video of Kharg Island as a Warning to Iran",
       "coverage_score": 1.0,
       "recency_score": 1.0,
       "rank_score": 1.0,
-      "context_summary": "Muninn first tracked this thread on 2026-08-02: Trump Delays Iran Strikes to Pursue Diplomatic Deal. The latest development is Iran's Supreme Leader Calls for Gulf Unity Against Common Adversaries.",
-      "cta_label": "Explore 6 developments"
+      "context_summary": "Muninn first tracked this thread on 2026-08-02: Trump Delays Iran Strikes to Pursue Diplomatic Deal. The latest development is Vance Supports Trump's AI Video of Kharg Island as a Warning to Iran.",
+      "cta_label": "Explore 7 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Trump announced that the US will refrain from launching new strikes against Iran in hopes of reaching a diplomatic agreement. A later development was Trump Threatens Economic Warfare Against Nations Supporting Iran. Most recently, iran's Supreme Leader Mojtaba Khamenei has called on Muslim countries, particularly those in the Gulf region, to unite against what he described as their 'real enemy.' He emphasized that divisions among Muslims only serve the interests of their adversaries.",
+      "summary": "Trump announced that the US will refrain from launching new strikes against Iran in hopes of reaching a diplomatic agreement. A later development was Trump Threatens Economic Warfare Against Nations Supporting Iran. Most recently, vice President JD Vance defended President Trump's recent social media post featuring an AI-generated video depicting a bombing of Kharg Island, asserting that it serves as a message to Iran.",
       "key_developments": [
         {
           "development_id": "story_eeac5a41d1e28e7e",
@@ -463,19 +536,9 @@
           "title": "Trump Delays Iran Strikes to Pursue Diplomatic Deal"
         },
         {
-          "development_id": "story_47c28cc2b2f5edc7",
-          "date": "2026-08-03",
-          "title": "Iran Denies Ongoing Talks with US Amid Trump's Claims of Progress"
-        },
-        {
           "development_id": "story_587a3eb59eb54f2b",
           "date": "2026-08-11",
           "title": "Iran Sets Six Conditions for US to Reopen Strait of Hormuz"
-        },
-        {
-          "development_id": "story_0f6de3ac0983c106",
-          "date": "2026-08-20",
-          "title": "Trump Threatens Economic Warfare Against Nations Supporting Iran"
         },
         {
           "development_id": "story_ff19dfb57fbe0194",
@@ -483,9 +546,9 @@
           "title": "UAE Suspends All Trade and Financial Transactions with Iran"
         },
         {
-          "development_id": "story_d09097b2a404da55",
-          "date": "2026-08-30",
-          "title": "Iran's Supreme Leader Calls for Gulf Unity Against Common Adversaries"
+          "development_id": "story_2957253d412b8d51",
+          "date": "2026-08-31",
+          "title": "Vance Supports Trump's AI Video of Kharg Island as a Warning to Iran"
         }
       ],
       "sources": [
@@ -572,9 +635,27 @@
           "source": "Channel NewsAsia",
           "link": "https://www.channelnewsasia.com/world/iran-khamenei-message-gulf-rulers-confront-real-enemy-6350241",
           "source_bias": "center"
+        },
+        {
+          "title": "Vance defends Trump's AI post of Kharg Island bombing: 'he's sending a message to the Iranians'",
+          "source": "CBS News",
+          "link": "https://www.cbsnews.com/video/vance-defends-trumps-ai-post-of-kharg-island-bombing-hes-sending-a-message-to-the-iranians",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "WATCH: Vance says Trump likes to 'switch it up' by posting AI video of Kharg Island bombing",
+          "source": "PBS News",
+          "link": "https://www.pbs.org/newshour/politics/watch-vance-says-trump-likes-to-switch-it-up-by-posting-ai-video-of-kharg-island-bombing",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Vance says Trump ‘sending a message’ to Iran with AI-generated video",
+          "source": "Al Jazeera English",
+          "link": "https://www.aljazeera.com/economy/2026/8/31/vance-says-trump-sending-a-message-to-iran-with-ai-generated-video?traffic_source=rss",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-08-30",
+      "updated_at": "2026-08-31",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -590,6 +671,8 @@
           "economic_warfare",
           "hormuz_iran",
           "iran",
+          "iran.",
+          "jd",
           "pursue",
           "strait",
           "us"
@@ -599,7 +682,7 @@
         "event_id": "event_progress-reported-on-iran-oman-deal-to-reope_9ab874c7b5",
         "title": "Progress Reported on Iran-Oman Deal to Reopen Strait of Hormuz",
         "relationship": "related_topic",
-        "confidence": 0.787,
+        "confidence": 0.786,
         "shared_entities": [
           "iran",
           "reopen",
@@ -611,7 +694,7 @@
         "event_id": "event_iran-and-oman-near-agreement-on-strait-of-ho_af01d76b94",
         "title": "Iran and Oman Near Agreement on Strait of Hormuz, Excluding US Involvement",
         "relationship": "related_topic",
-        "confidence": 0.77,
+        "confidence": 0.769,
         "shared_entities": [
           "hormuz_iran",
           "iran",
@@ -620,13 +703,14 @@
         ]
       },
       {
-        "event_id": "event_iran-advances-talks-on-strait-of-hormuz-reop_ae45e907f0",
-        "title": "Iran Advances Talks on Strait of Hormuz Reopening Amid Conditions",
+        "event_id": "event_iran-claims-attacks-on-us-bases-in-bahrain-j_2ed1fdd27a",
+        "title": "Iran Claims Attacks on US Bases in Bahrain, Jordan, and Kuwait Amid Escalating Conflict",
         "relationship": "related_topic",
         "confidence": 0.768,
         "shared_entities": [
-          "donald_trump",
+          "hormuz_iran",
           "iran",
+          "strait",
           "us"
         ]
       }
@@ -655,42 +739,50 @@
       "available": true,
       "title": "About Iran Relations",
       "subject": "Iran Relations",
-      "summary": "Iran relations in this timeline refers primarily to the adversarial relationship between the United States and the Islamic Republic of Iran, where military deterrence, diplomatic contacts, nuclear non-proliferation, sanctions, regional security and maritime transit can interact. The selected developments concern a period in which reported efforts to negotiate or pressure Iran are being weighed alongside threats of force and economic measures affecting Iran and third countries.",
+      "summary": "Iran Relations refers here to the U.S.-Iran relationship and its regional consequences, including diplomacy, military deterrence, economic sanctions, Iran's nuclear program, and security of Gulf shipping routes. The relationship has operated without formal U.S.-Iran diplomatic ties since 1980, so communication and crisis management often involve indirect channels, international institutions, and third-country intermediaries.",
       "facts": [
         {
           "label": "Diplomatic status",
-          "value": "The United States and Iran severed diplomatic relations on April 7, 1980, following the November 4, 1979 seizure of the U.S. Embassy in Tehran; the two countries still have no formal diplomatic relationship. Switzerland has served as the U.S. protecting power in Iran since 1980.",
+          "value": "The United States severed diplomatic relations with Iran on April 7, 1980; Switzerland serves as the protecting power for U.S. interests in Iran.",
           "source_ids": [
             "o1",
-            "o2",
-            "o3"
+            "o2"
           ]
         },
         {
-          "label": "Sanctions framework",
-          "value": "U.S. economic restrictions concerning Iran are administered through a combination of statutes, presidential executive orders and Treasury regulations. OFAC describes the program as drawing on authorities including the Iran Sanctions Act, CISADA, CAATSA, IEEPA and regulations in 31 CFR Parts 535, 560, 561 and 562; general licenses can authorize specified activity otherwise prohibited.",
+          "label": "U.S. sanctions framework",
+          "value": "U.S. Iran-related economic restrictions are administered principally by the Treasury Department's Office of Foreign Assets Control under the Iranian Transactions and Sanctions Regulations, 31 C.F.R. Part 560; OFAC provides licensing mechanisms for activity otherwise prohibited.",
           "source_ids": [
-            "o4",
-            "o5"
+            "o3",
+            "o4"
           ]
         },
         {
-          "label": "Nuclear diplomacy",
-          "value": "The Joint Comprehensive Plan of Action (JCPOA) was concluded on July 14, 2015 by Iran, China, France, Germany, Russia, the United Kingdom, the United States and the European Union, and was endorsed by UN Security Council Resolution 2231 on July 20, 2015. The UN states that, effective September 27, 2025, earlier Iran-related Security Council resolutions were re-applied under Resolution 2231's process.",
+          "label": "Nuclear safeguards",
+          "value": "Iran's comprehensive safeguards agreement with the International Atomic Energy Agency in connection with the Nuclear Non-Proliferation Treaty entered into force on May 15, 1974. It provides for IAEA safeguards on nuclear material in Iran's peaceful nuclear activities.",
           "source_ids": [
-            "o6",
-            "o7"
+            "o5",
+            "o6"
           ]
         },
         {
-          "label": "International nuclear safeguards",
-          "value": "Iran's safeguards agreement with the International Atomic Energy Agency in connection with the Nuclear Non-Proliferation Treaty entered into force on May 15, 1974. The IAEA lists an Additional Protocol signed by Iran on December 18, 2003, separately from the safeguards agreement.",
+          "label": "UN nuclear diplomacy",
+          "value": "On July 20, 2015, the UN Security Council unanimously adopted Resolution 2231, endorsing the Joint Comprehensive Plan of Action (JCPOA) and setting out UN measures concerning Iran's nuclear program.",
           "source_ids": [
+            "o7",
             "o8"
+          ]
+        },
+        {
+          "label": "Strait of Hormuz",
+          "value": "The Strait of Hormuz lies between Iran and Oman and connects the Persian Gulf with the Gulf of Oman and Arabian Sea. It is a major global oil-transit chokepoint, making maritime access and security there central to wider Iran-related tensions.",
+          "source_ids": [
+            "o9",
+            "o10"
           ]
         }
       ],
-      "scope_note": "The selected Muninn timeline follows the immediate diplomacy, coercive economic measures and regional trade or maritime pressures associated with this episode; it does not attempt to cover the full history of U.S.-Iran relations, every sanctions action, or all nuclear and regional-security developments.",
+      "scope_note": "The selected Muninn timeline follows specific developments from August 2 through August 31, 2026 involving U.S.-Iran diplomacy, regional economic measures, and Strait of Hormuz-related tensions; it does not aim to be a complete history of U.S.-Iran relations, Iran's domestic politics, or all regional security events.",
       "sources": [
         {
           "title": "State",
@@ -702,56 +794,70 @@
         {
           "title": "State",
           "publisher": "State",
-          "url": "https://travel.state.gov/en/international-travel/travel-advisories/destination.irn.html",
+          "url": "https://2017-2021.state.gov/u-s-relations-with-iran/",
           "source_type": "primary",
           "id": "o2"
-        },
-        {
-          "title": "State",
-          "publisher": "State",
-          "url": "https://2021-2025.state.gov/u-s-relations-with-switzerland-2/",
-          "source_type": "primary",
-          "id": "o3"
         },
         {
           "title": "Treasury",
           "publisher": "Treasury",
           "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/iran-sanctions",
           "source_type": "primary",
-          "id": "o4"
+          "id": "o3"
         },
         {
           "title": "Treasury",
           "publisher": "Treasury",
-          "url": "https://ofac.treasury.gov/faqs/598",
+          "url": "https://ofac.treasury.gov/additional-ofac-resources/ofac-legal-library/code-of-federal-regulations-cfr",
           "source_type": "primary",
+          "id": "o4"
+        },
+        {
+          "title": "Iaea",
+          "publisher": "Iaea",
+          "url": "https://ola.iaea.org/Applications/FactSheets/Country/Detail?code=IR",
+          "source_type": "reporting",
           "id": "o5"
         },
         {
-          "title": "UN",
-          "publisher": "UN",
-          "url": "https://main.un.org/securitycouncil/en/content/2231/background",
+          "title": "Iaea",
+          "publisher": "Iaea",
+          "url": "https://www.iaea.org/sites/default/files/publications/documents/infcircs/1974/infcirc214.pdf",
           "source_type": "reporting",
           "id": "o6"
         },
         {
           "title": "UN",
           "publisher": "UN",
-          "url": "https://documents.un.org/api/symbol/access?l=en&s=S%2FRES%2F2231%282015%29&t=pdf",
+          "url": "https://main.un.org/securitycouncil/en/content/2231/background",
           "source_type": "reporting",
           "id": "o7"
         },
         {
-          "title": "Iaea",
-          "publisher": "Iaea",
-          "url": "https://ola.iaea.org/Applications/FactSheets/Country/Download?code=IR",
+          "title": "UN",
+          "publisher": "UN",
+          "url": "https://digitallibrary.un.org/record/797839/?ln=en&v=%5B%27pdf%27%5D",
           "source_type": "reporting",
           "id": "o8"
+        },
+        {
+          "title": "Eia",
+          "publisher": "Eia",
+          "url": "https://www.eia.gov/todayinenergy/detail.php?id=61002",
+          "source_type": "primary",
+          "id": "o9"
+        },
+        {
+          "title": "Iea",
+          "publisher": "Iea",
+          "url": "https://www.iea.org/about/oil-security-and-emergency-response/strait-of-hormuz",
+          "source_type": "reporting",
+          "id": "o10"
         }
       ],
-      "publisher_count": 4,
-      "generated_at": "2026-08-20T12:41:51.283890+00:00",
-      "expires_at": "2026-08-27T12:41:51.283890+00:00",
+      "publisher_count": 6,
+      "generated_at": "2026-08-31T18:41:58.461963+00:00",
+      "expires_at": "2026-09-07T18:41:58.461963+00:00",
       "model": "gpt-5.6-terra",
       "provenance": "openai_web_search_source_grounded_event_overview_v1"
     },
@@ -760,14 +866,17 @@
       "adventurou",
       "adversarie",
       "agreement",
+      "ai-generated",
       "also",
       "among",
       "announced",
       "arab",
+      "asserting",
       "assertion",
       "assist",
       "attack",
       "ballistic",
+      "bombing",
       "bond",
       "business",
       "called",
@@ -777,6 +886,7 @@
       "cited",
       "claim",
       "comes",
+      "commented",
       "commercial",
       "common",
       "complete",
@@ -786,6 +896,7 @@
       "consequence",
       "contradicting",
       "countrie",
+      "crucial",
       "crude",
       "current",
       "d-day",
@@ -794,9 +905,11 @@
       "decision",
       "decisively",
       "decreased",
+      "defended",
       "delay",
       "demand",
       "denie",
+      "depicting",
       "described",
       "diplomatic",
       "discussion",
@@ -807,13 +920,17 @@
       "emphasized",
       "enemy",
       "exchange",
+      "export",
+      "featuring",
       "financial",
       "flow",
+      "follow",
       "further",
       "gulf",
       "halt",
       "hopes",
       "hormuz",
+      "illustrate",
       "important",
       "increased",
       "indicated",
@@ -821,17 +938,22 @@
       "instructed",
       "interest",
       "iran",
+      "island",
       "issued",
       "khamenei",
+      "kharg",
       "launch",
       "launching",
       "leader",
       "less",
       "level",
+      "likes",
       "market",
       "marks",
+      "media",
       "meet",
       "meeting",
+      "message",
       "military",
       "missile",
       "mojtaba",
@@ -840,8 +962,10 @@
       "must",
       "nation",
       "negotiation",
+      "noted",
       "nuclear",
       "occur",
+      "often",
       "oil",
       "ongoing",
       "only",
@@ -850,6 +974,8 @@
       "partner",
       "planned",
       "plans",
+      "post",
+      "posts",
       "potential",
       "pre-war",
       "price",
@@ -860,6 +986,7 @@
       "reaching",
       "real",
       "reason",
+      "recent",
       "refrain",
       "regarding",
       "region",
@@ -880,20 +1007,24 @@
       "shift",
       "ships",
       "significant",
+      "social",
       "stated",
       "stating",
       "strait",
       "strike",
+      "stylized",
       "support",
       "supporting",
       "supreme",
       "suspend",
+      "switch",
       "talks",
       "tension",
       "territory",
       "than",
       "there",
       "those",
+      "threat",
       "threaten",
       "through",
       "toward",
@@ -904,14 +1035,20 @@
       "unite",
       "united",
       "unity",
+      "vance",
+      "vice",
+      "video",
       "warfare",
       "warning",
       "what",
+      "which",
       "would",
       "yield"
     ],
     "entities": [
       "adversarie_iran",
+      "ai",
+      "ai-generated",
       "arab_emirate",
       "common_adversarie",
       "d-day",
@@ -926,8 +1063,13 @@
       "gulf_unity",
       "hormuz_iran",
       "iran",
+      "iran.",
+      "iran._vance",
       "iran_denie",
       "iran_sets",
+      "iran_vice",
+      "jd",
+      "kharg_island",
       "leader_mojtaba",
       "mojtaba_khamenei",
       "nation_supporting",
@@ -938,6 +1080,7 @@
       "reopen",
       "reopen_strait",
       "strait",
+      "support_trump",
       "supporting_iran",
       "threaten_economic",
       "trump_claim",
@@ -946,22 +1089,23 @@
       "uae",
       "uae.",
       "united_arab",
-      "us"
+      "us",
+      "vance_support"
     ],
-    "search_text": "action adventurou adversarie adversarie_iran agreement also among announced arab arab_emirate assertion assist attack ballistic bond business called calls canceling cease cited claim comes commercial common common_adversarie complete complicating condition conduct consequence contradicting countrie crude current d-day deal deal_trump dealing decision decisively decreased delay delay_iran demand denie denie_ongoing described diplomatic diplomatic_deal discussion division donald donald_trump economic economic_warfare emirate emphasized enemy exchange financial financial_transaction flow further gulf gulf_unity halt hopes hormuz hormuz_iran important increased indicated indicating instructed interest iran iran_denie iran_sets issued khamenei launch launching leader leader_mojtaba less level market marks meet meeting military missile mojtaba mojtaba_khamenei most muslim must nation nation_supporting negotiation nuclear occur oil ongoing ongoing_talks only outlined particularly partner planned plans potential pre-war price program progress progress_iran pursue pursue_diplomatic quarter reaching real reason refrain regarding region regional relation reopen reopen_strait reparation reportedly representative respond response rising same seek serve sets severe shift ships significant stated stating strait strike support supporting supporting_iran supreme suspend talks tension territory than there those threaten threaten_economic through toward trade trading transaction trump trump_claim trump_delay trump_threaten uae uae. unite united united_arab unity us warfare warning what would yield"
+    "search_text": "action adventurou adversarie adversarie_iran agreement ai ai-generated also among announced arab arab_emirate asserting assertion assist attack ballistic bombing bond business called calls canceling cease cited claim comes commented commercial common common_adversarie complete complicating condition conduct consequence contradicting countrie crucial crude current d-day deal deal_trump dealing decision decisively decreased defended delay delay_iran demand denie denie_ongoing depicting described diplomatic diplomatic_deal discussion division donald donald_trump economic economic_warfare emirate emphasized enemy exchange export featuring financial financial_transaction flow follow further gulf gulf_unity halt hopes hormuz hormuz_iran illustrate important increased indicated indicating instructed interest iran iran. iran._vance iran_denie iran_sets iran_vice island issued jd khamenei kharg kharg_island launch launching leader leader_mojtaba less level likes market marks media meet meeting message military missile mojtaba mojtaba_khamenei most muslim must nation nation_supporting negotiation noted nuclear occur often oil ongoing ongoing_talks only outlined particularly partner planned plans post posts potential pre-war price program progress progress_iran pursue pursue_diplomatic quarter reaching real reason recent refrain regarding region regional relation reopen reopen_strait reparation reportedly representative respond response rising same seek serve sets severe shift ships significant social stated stating strait strike stylized support support_trump supporting supporting_iran supreme suspend switch talks tension territory than there those threat threaten threaten_economic through toward trade trading transaction trump trump_claim trump_delay trump_threaten uae uae. unite united united_arab unity us vance vance_support vice video warfare warning what which would yield"
   },
   "related_events": [
     {
       "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
       "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
-      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Trial Scheduled for Alleged 9/11 Mastermind Khalid Sheikh Mohammed in 2028.",
+      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is US Strikes Iranian Rocket Launchers in Strait of Hormuz Amid Escalating Tensions.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-07-22",
-      "last_seen_at": "2026-08-27",
-      "development_count": 30,
-      "latest_title": "Trial Scheduled for Alleged 9/11 Mastermind Khalid Sheikh Mohammed in 2028",
+      "last_seen_at": "2026-08-31",
+      "development_count": 31,
+      "latest_title": "US Strikes Iranian Rocket Launchers in Strait of Hormuz Amid Escalating Tensions",
       "topic_label": "Iran War",
       "hero_image": {
         "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
@@ -1020,20 +1164,20 @@
       "href": "/timeline.html?event=event_iran-and-oman-near-agreement-on-strait-of-ho_af01d76b94"
     },
     {
-      "event_id": "event_iran-advances-talks-on-strait-of-hormuz-reop_ae45e907f0",
-      "title": "Iran Advances Talks on Strait of Hormuz Reopening Amid Conditions",
-      "summary": "Muninn first tracked this thread on 2026-08-09: Iran Advances Talks on Strait of Hormuz Reopening Amid Conditions. The latest development is US-Iran Negotiations Amid Rising Tensions and Sanctions.",
+      "event_id": "event_iran-claims-attacks-on-us-bases-in-bahrain-j_2ed1fdd27a",
+      "title": "Iran Claims Attacks on US Bases in Bahrain, Jordan, and Kuwait Amid Escalating Conflict",
+      "summary": "Muninn first tracked this thread on 2026-07-25: US Military Engages Merchant Vessel Breaching Iranian Port Blockade. The latest development is Iran Demands US Compliance Before Reopening Strait of Hormuz.",
       "activity_status": "active",
-      "stage": "developing_event",
-      "stage_label": "Developing event",
-      "first_seen_at": "2026-08-09",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-25",
       "last_seen_at": "2026-08-10",
-      "development_count": 2,
-      "latest_title": "US-Iran Negotiations Amid Rising Tensions and Sanctions",
-      "topic_label": "Iran Negotiations",
+      "development_count": 4,
+      "latest_title": "Iran Demands US Compliance Before Reopening Strait of Hormuz",
+      "topic_label": "Iran Conflict",
       "hero_image": {
-        "url": "/Current_news/generated/events/event_iran-advances-talks-on-strait-of-hormuz-reop_ae45e907f0.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_iran-advances-talks-on-strait-of-hormuz-reop_ae45e907f0.jpg",
+        "url": "/Current_news/generated/events/event_iran-claims-attacks-on-us-bases-in-bahrain-j_2ed1fdd27a.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_iran-claims-attacks-on-us-bases-in-bahrain-j_2ed1fdd27a.jpg",
         "source": "Muninn AI illustration",
         "author": "OpenAI GPT Image 2",
         "license": "AI-generated content",
@@ -1051,7 +1195,7 @@
         "focal_tall_x": 0.5,
         "focal_tall_y": 0.48
       },
-      "href": "/timeline.html?event=event_iran-advances-talks-on-strait-of-hormuz-reop_ae45e907f0"
+      "href": "/timeline.html?event=event_iran-claims-attacks-on-us-bases-in-bahrain-j_2ed1fdd27a"
     }
   ]
 }

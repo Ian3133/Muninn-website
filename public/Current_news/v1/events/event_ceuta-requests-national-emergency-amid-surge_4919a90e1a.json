@@ -15,7 +15,7 @@
     "summary": "Authorities in Ceuta have requested Spain to declare a national emergency due to a significant influx of migrants swimming from Morocco. The local government is seeking military assistance as border security is overwhelmed by the number of individuals attempting to enter the territory.",
     "status": "active",
     "first_seen_at": "2026-07-30",
-    "last_seen_at": "2026-08-29",
+    "last_seen_at": "2026-08-31",
     "timeline": [
       {
         "development_id": "story_dff81ceff84cab9d",
@@ -1661,15 +1661,100 @@
         "first_seen_at": "2026-08-29",
         "last_seen_at": "2026-08-29",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_4b4d3d06ba52f04d",
+        "daily_story_id": "story_4b4d3d06ba52f04d",
+        "date": "2026-08-31",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Spanish PM Dismisses Moroccan Involvement in Ceuta Border Crisis",
+        "summary": "Spanish Prime Minister Pedro Sánchez stated that there is no evidence implicating Morocco in the recent surge of migrants crossing into Ceuta. He accused Israel and Russia of spreading disinformation regarding Spain's migration policies, which he believes contributed to the influx of over 70,000 migrants at the end of July. The incident reportedly resulted in the deaths of approximately 141 individuals attempting the crossing.",
+        "topic_label": "Ceuta Border Surge",
+        "development_type": "investigation",
+        "key_facts": [
+          "Over 70,000 migrants crossed into Ceuta from Morocco at the end of July.",
+          "Pedro Sánchez stated no evidence of Moroccan government involvement.",
+          "Sánchez accused Israel and Russia of spreading disinformation."
+        ],
+        "source_count": 3,
+        "sources": [
+          "Africanews",
+          "France 24",
+          "The Guardian"
+        ],
+        "source_urls": [
+          "https://www.theguardian.com/world/2026/aug/31/morocco-ceuta-border-breach-spanish-pm-migration-pedro-sanchez",
+          "https://www.france24.com/en/spain-blames-israel-russia-for-spreading-disinformation-during-ceuta-crisis",
+          "http://www.africanews.com/2026/08/31/spain-pm-pedro-sanchez-rules-out-moroccan-role-in-ceuta-migrant-surge"
+        ],
+        "source_details": [
+          {
+            "title": "Morocco not to blame for Ceuta border breach, says Spanish PM",
+            "source": "The Guardian",
+            "link": "https://www.theguardian.com/world/2026/aug/31/morocco-ceuta-border-breach-spanish-pm-migration-pedro-sanchez",
+            "source_bias": "left"
+          },
+          {
+            "title": "Spain blames Israel, Russia for spreading disinformation during Ceuta crisis",
+            "source": "France 24",
+            "link": "https://www.france24.com/en/spain-blames-israel-russia-for-spreading-disinformation-during-ceuta-crisis",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Spain PM Pedro Sanchez rules out Moroccan role in Ceuta migrant surge",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/08/31/spain-pm-pedro-sanchez-rules-out-moroccan-role-in-ceuta-migrant-surge",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "matched_development_id": "story_6ec61f0d34f28ef7",
+          "shared_tokens": [
+            "000",
+            "border",
+            "ceuta",
+            "crossed",
+            "influx",
+            "migrant",
+            "migration",
+            "moroccan",
+            "morocco",
+            "reportedly",
+            "spain",
+            "surge"
+          ],
+          "shared_entities": [
+            "border_surge",
+            "ceuta",
+            "ceuta_border",
+            "morocco",
+            "spain"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "canonical_bounded_event_identity_v1",
+          "event_identity_key": "ceuta-border-surge",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-08-31",
+        "last_seen_at": "2026-08-31",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 19,
+      "public_development_count": 20,
       "questionable_development_count": 5,
       "review_required": true
     },
-    "latest_title": "Protests in Ceuta Lead to Clashes with Police Amid Migrant Tensions",
-    "latest_summary": "On August 27, clashes erupted in Ceuta, Spain, between police and anti-migrant protesters. The unrest was fueled by rising tensions regarding the presence of thousands of migrants in the North African enclave.",
+    "latest_title": "Spanish PM Dismisses Moroccan Involvement in Ceuta Border Crisis",
+    "latest_summary": "Spanish Prime Minister Pedro Sánchez stated that there is no evidence implicating Morocco in the recent surge of migrants crossing into Ceuta. He accused Israel and Russia of spreading disinformation regarding Spain's migration policies, which he believes contributed to the influx of over 70,000 migrants at the end of July. The incident reportedly resulted in the deaths of approximately 141 individuals attempting the crossing.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -1680,29 +1765,29 @@
       "milestone_development_ids": [
         "story_dff81ceff84cab9d",
         "story_ec157a35b19375b0",
-        "story_2b7797d155b18eab",
-        "story_08861d27e4c0e2dc"
+        "story_ccf4e769c5d6acf1",
+        "story_4b4d3d06ba52f04d"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-29",
-      "development_count": 19,
-      "coverage_packet_count": 22,
-      "date_count": 15,
-      "source_count": 53,
+      "summary_updated_at": "2026-08-31",
+      "development_count": 20,
+      "coverage_packet_count": 23,
+      "date_count": 16,
+      "source_count": 56,
       "independent_source_count": 23,
       "first_date": "2026-07-30",
-      "latest_date": "2026-08-29",
-      "latest_update_title": "Protests in Ceuta Lead to Clashes with Police Amid Migrant Tensions",
+      "latest_date": "2026-08-31",
+      "latest_update_title": "Spanish PM Dismisses Moroccan Involvement in Ceuta Border Crisis",
       "coverage_score": 1.0,
-      "recency_score": 0.875,
-      "rank_score": 0.927,
-      "context_summary": "Muninn first tracked this thread on 2026-07-30: Ceuta Requests National Emergency Amid Surge of Migrants from Morocco. The latest development is Protests in Ceuta Lead to Clashes with Police Amid Migrant Tensions.",
-      "cta_label": "Explore 19 developments"
+      "recency_score": 1.0,
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-07-30: Ceuta Requests National Emergency Amid Surge of Migrants from Morocco. The latest development is Spanish PM Dismisses Moroccan Involvement in Ceuta Border Crisis.",
+      "cta_label": "Explore 20 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Authorities in Ceuta have requested Spain to declare a national emergency due to a significant influx of migrants swimming from Morocco. A later development was Ceuta Faces Aftermath of Deadly Migrant Crossings from Morocco. Most recently, on August 27, clashes erupted in Ceuta, Spain, between police and anti-migrant protesters.",
+      "summary": "Authorities in Ceuta have requested Spain to declare a national emergency due to a significant influx of migrants swimming from Morocco. A later development was Ceuta Faces Migrant Crisis with Thousands Still Present After Surge. Most recently, spanish Prime Minister Pedro Sánchez stated that there is no evidence implicating Morocco in the recent surge of migrants crossing into Ceuta.",
       "key_developments": [
         {
           "development_id": "story_dff81ceff84cab9d",
@@ -1715,14 +1800,14 @@
           "title": "Massive Migrant Influx into Ceuta Leads to Deaths and Emergency Measures"
         },
         {
-          "development_id": "story_2b7797d155b18eab",
-          "date": "2026-08-08",
-          "title": "Spain Implements Border Checks on Italy Amid Migrant Dispute"
+          "development_id": "story_ccf4e769c5d6acf1",
+          "date": "2026-08-09",
+          "title": "Spain Implements Temporary Border Checks for Italian Travelers Amid Migrant Dispute"
         },
         {
-          "development_id": "story_08861d27e4c0e2dc",
-          "date": "2026-08-29",
-          "title": "Protests in Ceuta Lead to Clashes with Police Amid Migrant Tensions"
+          "development_id": "story_4b4d3d06ba52f04d",
+          "date": "2026-08-31",
+          "title": "Spanish PM Dismisses Moroccan Involvement in Ceuta Border Crisis"
         }
       ],
       "sources": [
@@ -2043,18 +2128,66 @@
           "source": "Africanews",
           "link": "http://www.africanews.com/2026/08/28/spain-clashes-erupt-in-ceuta-as-anti-migrant-protesters-confront-police",
           "source_bias": "center"
+        },
+        {
+          "title": "Morocco not to blame for Ceuta border breach, says Spanish PM",
+          "source": "The Guardian",
+          "link": "https://www.theguardian.com/world/2026/aug/31/morocco-ceuta-border-breach-spanish-pm-migration-pedro-sanchez",
+          "source_bias": "left"
+        },
+        {
+          "title": "Spain blames Israel, Russia for spreading disinformation during Ceuta crisis",
+          "source": "France 24",
+          "link": "https://www.france24.com/en/spain-blames-israel-russia-for-spreading-disinformation-during-ceuta-crisis",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Spain PM Pedro Sanchez rules out Moroccan role in Ceuta migrant surge",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/08/31/spain-pm-pedro-sanchez-rules-out-moroccan-role-in-ceuta-migrant-surge",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-08-29",
+      "updated_at": "2026-08-31",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
     "related_events": [
       {
+        "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+        "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
+        "relationship": "related_topic",
+        "confidence": 0.694,
+        "shared_entities": [
+          "israel",
+          "russia"
+        ]
+      },
+      {
+        "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
+        "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
+        "relationship": "related_topic",
+        "confidence": 0.69,
+        "shared_entities": [
+          "israel",
+          "russia"
+        ]
+      },
+      {
+        "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
+        "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
+        "relationship": "related_topic",
+        "confidence": 0.679,
+        "shared_entities": [
+          "pm",
+          "russia"
+        ]
+      },
+      {
         "event_id": "event_iceland-votes-on-resuming-eu-membership-nego_9c08a8deef",
         "title": "Iceland Votes on Resuming EU Membership Negotiations in Referendum",
         "relationship": "related_topic",
-        "confidence": 0.67,
+        "confidence": 0.678,
         "shared_entities": [
           "eu",
           "north"
@@ -2174,9 +2307,11 @@
     "search_tokens": [
       "000",
       "100",
+      "141",
       "24-hour",
       "300",
       "500-meter",
+      "accused",
       "action",
       "address",
       "adequate",
@@ -2204,6 +2339,7 @@
       "began",
       "beginning",
       "begun",
+      "believe",
       "border",
       "both",
       "cafes",
@@ -2223,6 +2359,7 @@
       "concern",
       "conflicting",
       "consequence",
+      "contributed",
       "control",
       "crise",
       "crisi",
@@ -2241,6 +2378,8 @@
       "diplomatic",
       "discrepancie",
       "discussion",
+      "disinformation",
+      "dismisse",
       "dispute",
       "division",
       "driven",
@@ -2261,6 +2400,7 @@
       "europe",
       "european",
       "event",
+      "evidence",
       "exclave",
       "face",
       "faces",
@@ -2286,6 +2426,7 @@
       "implement",
       "implementation",
       "implemented",
+      "implicating",
       "impose",
       "imposition",
       "incident",
@@ -2302,8 +2443,11 @@
       "interior",
       "introduced",
       "introduction",
+      "involvement",
+      "israel",
       "italian",
       "italy",
+      "july",
       "lack",
       "last",
       "lead",
@@ -2338,6 +2482,7 @@
       "most",
       "nation",
       "national",
+      "nchez",
       "near",
       "nearly",
       "need",
@@ -2352,6 +2497,7 @@
       "opening",
       "other",
       "overwhelmed",
+      "pedro",
       "period",
       "person",
       "policie",
@@ -2361,6 +2507,7 @@
       "presence",
       "present",
       "previously",
+      "prime",
       "prompting",
       "protest",
       "protester",
@@ -2394,6 +2541,7 @@
       "returned",
       "returning",
       "rising",
+      "russia",
       "saturday",
       "searching",
       "security",
@@ -2416,6 +2564,7 @@
       "spreading",
       "spurred",
       "stampede",
+      "stated",
       "still",
       "strengthen",
       "surge",
@@ -2424,6 +2573,7 @@
       "tens",
       "tension",
       "territory",
+      "there",
       "these",
       "those",
       "thousand",
@@ -2456,11 +2606,13 @@
       "anti-migrant_protest",
       "border_check",
       "border_control",
+      "border_crisi",
       "both_moroccan",
       "ceuta",
       "ceuta.",
       "ceuta._massive",
       "ceuta_beach",
+      "ceuta_border",
       "ceuta_faces",
       "ceuta_lead",
       "ceuta_leads",
@@ -2479,6 +2631,7 @@
       "crisi_spain",
       "deadly_migrant",
       "death",
+      "dismisse_moroccan",
       "dispute_spain",
       "emergency_measure",
       "enhance_security",
@@ -2493,6 +2646,7 @@
       "highlight_european",
       "implement_border",
       "implement_temporary",
+      "israel",
       "italian_traveler",
       "italy",
       "italy.",
@@ -2512,6 +2666,7 @@
       "migrant_surge",
       "migrant_tension",
       "misinformation_moroccan",
+      "moroccan_involvement",
       "moroccan_security",
       "morocco",
       "morocco.",
@@ -2527,9 +2682,11 @@
       "north",
       "north_african",
       "ongoing_crisi",
+      "pm",
       "relocate_migrant",
       "request_national",
       "return",
+      "russia",
       "security_force",
       "shelter",
       "spain",
@@ -2539,6 +2696,7 @@
       "spain_enhance",
       "spain_halts",
       "spain_implement",
+      "spain_prime",
       "spain_relocate",
       "spain_retaliation",
       "spark_return",
@@ -2550,20 +2708,122 @@
       "toll_discrepancie",
       "toll_spain"
     ],
-    "search_text": "000 100 24-hour 300 500-meter action address adequate african aftermath along amidst among announced anti-migrant anti-migrant_protest approximately around arrested arrival arriving assist assistance assumption attempt attempting august authoritie barrier beach began beginning begun border border_check border_control both both_moroccan cafes called calm camp caused ceased ceuta ceuta. ceuta._massive ceuta_beach ceuta_faces ceuta_lead ceuta_leads ceuta_migrant ceuta_moroccan ceuta_recover ceuta_request ceuta_result ceuta_spain ceuta_spark ceuta_territory challenge chaotic check citing claim clashe clashe_erupt comes concern conflicting consequence control crise crisi crisi_highlight crisi_italy crisi_spain criticism cross crossed crossing deadliest deadly deadly_migrant death decision declare demand despite died diplomatic discrepancie discussion dispute dispute_spain division driven drowning effective emergency emergency_measure emphasizing enclave enhance enhance_security enter entered erupt erupted escalated escalating escalation establishment eu europe europe. europe._spain european european_division event exclave face faces faces_aftermath faces_migrant false familie fatalitie floating follow food force force_near fueled future gradually growing halts halts_migrant highlight highlight_european holiday however humanitarian hundred illegal immigration implement implement_border implement_temporary implementation implemented impose imposition incident include including indicate indicated indicating individual influx initial installation installing interior introduced introduction italian italian_traveler italy italy. italy_maintain lack last lead leads least legal life lift living local local_tension loved maintain maintain_border majority makeshift manage management many marks mass mass_migration massive massive_influx massive_migrant measure measure_tens media midnight migrant migrant_arrested migrant_crisi migrant_cross migrant_crossing migrant_dispute migrant_influx migrant_surge migrant_tension migration military ministry misinformation misinformation_moroccan missing moroccan moroccan_security morocco morocco. morocco._ceuta morocco._local morocco_authoritie morocco_calm morocco_ceuta morocco_strengthen most nation national national_emergency near near_ceuta nearly nearly_migrant need normal north north_african number occurred office ones ongoing ongoing_crisi only opening other overwhelmed period person policie political potential poverty presence present previously prompting protest protester rare reach recent recover refused regarding region reignited reinforce reinforcement relocate relocate_migrant relocating remain reopen reported reportedly reporting request request_national requested resident responding response result resulted resume retaliation return returned returning rising saturday searching security security_force seeking seen shelter shops short shortly significant similar since situation small social spain spain_assumption spain_ceuta spain_ceuta. spain_enhance spain_halts spain_implement spain_relocate spain_retaliation spark spark_return sparked spat spreading spurred stampede still still_present strengthen strengthen_border surge swimming temporary temporary_border tens tension tension_thousand territory these those thousand thousand_still three toll toll_discrepancie toll_spain tragically trampol travel traveler trying unaccounted unfolded unprecedented unrest voluntarily warning week weeks where which while within without work would young"
+    "search_text": "000 100 141 24-hour 300 500-meter accused action address adequate african aftermath along amidst among announced anti-migrant anti-migrant_protest approximately around arrested arrival arriving assist assistance assumption attempt attempting august authoritie barrier beach began beginning begun believe border border_check border_control border_crisi both both_moroccan cafes called calm camp caused ceased ceuta ceuta. ceuta._massive ceuta_beach ceuta_border ceuta_faces ceuta_lead ceuta_leads ceuta_migrant ceuta_moroccan ceuta_recover ceuta_request ceuta_result ceuta_spain ceuta_spark ceuta_territory challenge chaotic check citing claim clashe clashe_erupt comes concern conflicting consequence contributed control crise crisi crisi_highlight crisi_italy crisi_spain criticism cross crossed crossing deadliest deadly deadly_migrant death decision declare demand despite died diplomatic discrepancie discussion disinformation dismisse dismisse_moroccan dispute dispute_spain division driven drowning effective emergency emergency_measure emphasizing enclave enhance enhance_security enter entered erupt erupted escalated escalating escalation establishment eu europe europe. europe._spain european european_division event evidence exclave face faces faces_aftermath faces_migrant false familie fatalitie floating follow food force force_near fueled future gradually growing halts halts_migrant highlight highlight_european holiday however humanitarian hundred illegal immigration implement implement_border implement_temporary implementation implemented implicating impose imposition incident include including indicate indicated indicating individual influx initial installation installing interior introduced introduction involvement israel italian italian_traveler italy italy. italy_maintain july lack last lead leads least legal life lift living local local_tension loved maintain maintain_border majority makeshift manage management many marks mass mass_migration massive massive_influx massive_migrant measure measure_tens media midnight migrant migrant_arrested migrant_crisi migrant_cross migrant_crossing migrant_dispute migrant_influx migrant_surge migrant_tension migration military ministry misinformation misinformation_moroccan missing moroccan moroccan_involvement moroccan_security morocco morocco. morocco._ceuta morocco._local morocco_authoritie morocco_calm morocco_ceuta morocco_strengthen most nation national national_emergency nchez near near_ceuta nearly nearly_migrant need normal north north_african number occurred office ones ongoing ongoing_crisi only opening other overwhelmed pedro period person pm policie political potential poverty presence present previously prime prompting protest protester rare reach recent recover refused regarding region reignited reinforce reinforcement relocate relocate_migrant relocating remain reopen reported reportedly reporting request request_national requested resident responding response result resulted resume retaliation return returned returning rising russia saturday searching security security_force seeking seen shelter shops short shortly significant similar since situation small social spain spain_assumption spain_ceuta spain_ceuta. spain_enhance spain_halts spain_implement spain_prime spain_relocate spain_retaliation spark spark_return sparked spat spreading spurred stampede stated still still_present strengthen strengthen_border surge swimming temporary temporary_border tens tension tension_thousand territory there these those thousand thousand_still three toll toll_discrepancie toll_spain tragically trampol travel traveler trying unaccounted unfolded unprecedented unrest voluntarily warning week weeks where which while within without work would young"
   },
   "related_events": [
     {
+      "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+      "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
+      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is US Strikes Iranian Rocket Launchers in Strait of Hormuz Amid Escalating Tensions.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-22",
+      "last_seen_at": "2026-08-31",
+      "development_count": 31,
+      "latest_title": "US Strikes Iranian Rocket Launchers in Strait of Hormuz Amid Escalating Tensions",
+      "topic_label": "Iran War",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
+    },
+    {
+      "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
+      "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
+      "summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Intense Russian Drone Strikes Leave Kyiv Supermarkets Empty.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-31",
+      "last_seen_at": "2026-08-31",
+      "development_count": 26,
+      "latest_title": "Intense Russian Drone Strikes Leave Kyiv Supermarkets Empty",
+      "topic_label": "Gaza Peace Deal",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b"
+    },
+    {
+      "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
+      "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
+      "summary": "Muninn first tracked this thread on 2026-07-25: Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse. The latest development is Ukraine Conducts Major Drone Attack on Moscow Amid Ongoing Conflict.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-25",
+      "last_seen_at": "2026-08-16",
+      "development_count": 14,
+      "latest_title": "Ukraine Conducts Major Drone Attack on Moscow Amid Ongoing Conflict",
+      "topic_label": "Russia-Ukraine War",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea"
+    },
+    {
       "event_id": "event_iceland-votes-on-resuming-eu-membership-nego_9c08a8deef",
       "title": "Iceland Votes on Resuming EU Membership Negotiations in Referendum",
-      "summary": "Muninn first tracked this thread on 2026-08-29: Iceland Votes on Resuming EU Membership Negotiations in Referendum. The latest development is Iceland Rejects Proposal to Restart EU Accession Talks in Referendum.",
+      "summary": "Muninn first tracked this thread on 2026-08-29: Iceland Votes on Resuming EU Membership Negotiations in Referendum. The latest development is Icelandic Voters Reject EU Accession Talks in Referendum.",
       "activity_status": "active",
       "stage": "developing_event",
       "stage_label": "Developing event",
       "first_seen_at": "2026-08-29",
-      "last_seen_at": "2026-08-30",
-      "development_count": 2,
-      "latest_title": "Iceland Rejects Proposal to Restart EU Accession Talks in Referendum",
+      "last_seen_at": "2026-08-31",
+      "development_count": 3,
+      "latest_title": "Icelandic Voters Reject EU Accession Talks in Referendum",
       "topic_label": "EU Membership",
       "hero_image": {
         "url": "/Current_news/generated/events/event_iceland-votes-on-resuming-eu-membership-nego_9c08a8deef.jpg",
