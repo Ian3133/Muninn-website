@@ -15,7 +15,7 @@
     "summary": "At least 22 bodies have been recovered following devastating flash floods that struck the border areas of Nepal and Tibet, with 384 individuals reported missing. The floods, triggered by an avalanche of ice and rock, have caused significant destruction to villages, infrastructure, and power projects. Among the missing are 291 foreign nationals, including many from India.",
     "status": "active",
     "first_seen_at": "2026-08-26",
-    "last_seen_at": "2026-08-31",
+    "last_seen_at": "2026-09-01",
     "timeline": [
       {
         "development_id": "story_47f1a414d370909a",
@@ -974,15 +974,164 @@
         "first_seen_at": "2026-08-31",
         "last_seen_at": "2026-08-31",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_139a4ba5f5fa27d6",
+        "daily_story_id": "story_139a4ba5f5fa27d6",
+        "date": "2026-09-01",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Nepal Floods Result in Over 1,000 Deaths Amid Ongoing Rescue Efforts",
+        "summary": "Nepalese authorities report that the death toll from recent catastrophic floods has surpassed 1,000, with 4,000 individuals still unaccounted for. Rescue teams are actively searching through mud, rocks, and debris in hopes of finding survivors, although the situation is grim as the smell of death permeates the affected areas.",
+        "topic_label": "Nepal Floods",
+        "development_type": "development",
+        "key_facts": [
+          "Death toll exceeds 1,000",
+          "4,000 people remain unaccounted for",
+          "Rescue teams are searching through debris"
+        ],
+        "source_count": 2,
+        "sources": [
+          "DW - English",
+          "NBC News - Top Stories"
+        ],
+        "source_urls": [
+          "https://www.dw.com/en/nepal-flood-death-toll-tops-1-000-as-rescue-continues/a-78589460?maca=en-rss-en-all-1573-rdf",
+          "https://www.nbcnews.com/world/asia/nepal-floods-deaths-pass-1000-death-smell-rcna595469"
+        ],
+        "source_details": [
+          {
+            "title": "Nepal flood: Death toll tops 1,000 as rescue continues",
+            "source": "DW - English",
+            "link": "https://www.dw.com/en/nepal-flood-death-toll-tops-1-000-as-rescue-continues/a-78589460?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Nepal flood deaths pass 1,000 as hope fades in the search for survivors",
+            "source": "NBC News - Top Stories",
+            "link": "https://www.nbcnews.com/world/asia/nepal-floods-deaths-pass-1000-death-smell-rcna595469",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_29eba2b160b6618f",
+          "shared_tokens": [
+            "death",
+            "flood",
+            "individual",
+            "nepal"
+          ],
+          "shared_entities": [
+            "nepal_flood"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-01",
+        "last_seen_at": "2026-09-01",
+        "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_311c00b267e0ae03",
+        "daily_story_id": "story_311c00b267e0ae03",
+        "date": "2026-09-01",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Flash Floods on Nepal-Tibet Border Result in Over 1,000 Deaths",
+        "summary": "Devastating flash floods along the China-Nepal border have resulted in at least 1,050 confirmed deaths in Nepal, with nearly 4,000 individuals reported missing. Rescue operations are ongoing as authorities continue to search for survivors in the affected areas.",
+        "topic_label": "Nepal Floods",
+        "development_type": "development",
+        "key_facts": [
+          "Death toll in Nepal exceeds 1,050.",
+          "Approximately 4,000 people are missing.",
+          "Rescue efforts are underway in both Nepal and Tibet."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Euronews",
+          "RTE News"
+        ],
+        "source_urls": [
+          "https://www.rte.ie/news/world/2026/0901/1589902-nepal-tibet",
+          "http://www.euronews.com/video/2026/08/31/nepal-flood-death-toll-passes-900-as-search-for-survivors-continues"
+        ],
+        "source_details": [
+          {
+            "title": "Death toll from Nepal-Tibet flash floods passes 1,000",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/world/2026/0901/1589902-nepal-tibet",
+            "source_bias": "center"
+          },
+          {
+            "title": "Nepal flood death toll passes 900 as search for survivors continues",
+            "source": "Euronews",
+            "link": "http://www.euronews.com/video/2026/08/31/nepal-flood-death-toll-passes-900-as-search-for-survivors-continues",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 1.0,
+        "match_evidence": {
+          "score": 1.0,
+          "matched_development_id": "story_a2a308d7efb0b211",
+          "shared_tokens": [
+            "000",
+            "along",
+            "areas",
+            "authoritie",
+            "border",
+            "confirmed",
+            "continue",
+            "death",
+            "effort",
+            "exceed",
+            "flash",
+            "flood",
+            "individual",
+            "least",
+            "missing",
+            "nepal",
+            "nepal-tibet",
+            "ongoing",
+            "operation",
+            "reported",
+            "rescue",
+            "resulted",
+            "search",
+            "toll"
+          ],
+          "shared_entities": [
+            "flash_flood",
+            "nepal-tibet",
+            "nepal_flood"
+          ],
+          "source_url_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-01",
+        "last_seen_at": "2026-09-01",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 11,
+      "public_development_count": 13,
       "questionable_development_count": 1,
       "review_required": true
     },
-    "latest_title": "Severe Flooding in Nepal and Tibet Leaves Nearly 1,000 Dead and Thousands Missing",
-    "latest_summary": "Severe flooding along the Nepal-China border has resulted in nearly 1,000 confirmed deaths, with over 4,000 individuals reported missing. The disaster has caused significant despair among families affected by the floods. Relief efforts are being severely hampered by heavy rain, which has turned roads into mud, complicating rescue operations.",
+    "latest_title": "Flash Floods on Nepal-Tibet Border Result in Over 1,000 Deaths",
+    "latest_summary": "Devastating flash floods along the China-Nepal border have resulted in at least 1,050 confirmed deaths in Nepal, with nearly 4,000 individuals reported missing. Rescue operations are ongoing as authorities continue to search for survivors in the affected areas.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -992,30 +1141,30 @@
       "display_title": "Flash Floods in Nepal and Tibet Leave Hundreds Missing, Including Tourists Timeline",
       "milestone_development_ids": [
         "story_47f1a414d370909a",
-        "story_7dade90890e8be50",
-        "story_3072b8671797fce0",
-        "story_d29a396639d25fd4"
+        "story_225eb36c6aa4258a",
+        "story_a2a308d7efb0b211",
+        "story_311c00b267e0ae03"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-31",
-      "development_count": 11,
-      "coverage_packet_count": 13,
-      "date_count": 6,
-      "source_count": 34,
-      "independent_source_count": 22,
+      "summary_updated_at": "2026-09-01",
+      "development_count": 13,
+      "coverage_packet_count": 15,
+      "date_count": 7,
+      "source_count": 37,
+      "independent_source_count": 23,
       "first_date": "2026-08-26",
-      "latest_date": "2026-08-31",
-      "latest_update_title": "Severe Flooding in Nepal and Tibet Leaves Nearly 1,000 Dead and Thousands Missing",
+      "latest_date": "2026-09-01",
+      "latest_update_title": "Flash Floods on Nepal-Tibet Border Result in Over 1,000 Deaths",
       "coverage_score": 1.0,
       "recency_score": 1.0,
       "rank_score": 1.0,
-      "context_summary": "Muninn first tracked this thread on 2026-08-26: Flash Floods in Nepal and Tibet Leave Hundreds Dead and Thousands Missing. The latest development is Severe Flooding in Nepal and Tibet Leaves Nearly 1,000 Dead and Thousands Missing.",
-      "cta_label": "Explore 11 developments"
+      "context_summary": "Muninn first tracked this thread on 2026-08-26: Flash Floods in Nepal and Tibet Leave Hundreds Dead and Thousands Missing. The latest development is Flash Floods on Nepal-Tibet Border Result in Over 1,000 Deaths.",
+      "cta_label": "Explore 13 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Devastating flash floods triggered by a glacier collapse have affected the Nepal-Tibet border, resulting in nearly 600 deaths and leaving approximately 1,900 people missing. A later development was Nepal Flood Death Toll Exceeds 600, Thousands Still Missing. Most recently, severe flooding along the Nepal-China border has resulted in nearly 1,000 confirmed deaths, with over 4,000 individuals reported missing.",
+      "summary": "Devastating flash floods triggered by a glacier collapse have affected the Nepal-Tibet border, resulting in nearly 600 deaths and leaving approximately 1,900 people missing. A later development was Death Toll from Nepal-Tibet Floods Approaches 800 with Thousands Missing. Most recently, devastating flash floods along the China-Nepal border have resulted in at least 1,050 confirmed deaths in Nepal, with nearly 4,000 individuals reported missing.",
       "key_developments": [
         {
           "development_id": "story_47f1a414d370909a",
@@ -1023,19 +1172,19 @@
           "title": "Flash Floods in Nepal and Tibet Leave Hundreds Dead and Thousands Missing"
         },
         {
-          "development_id": "story_7dade90890e8be50",
-          "date": "2026-08-28",
-          "title": "Severe Flooding in Nepal-Tibet Region Leaves Hundreds Dead and Thousands Missing"
+          "development_id": "story_225eb36c6aa4258a",
+          "date": "2026-08-29",
+          "title": "Rescue Efforts Continue as Nepal-China Flood Death Toll Exceeds 670 with Nearly 3,000 Missing"
         },
         {
-          "development_id": "story_3072b8671797fce0",
+          "development_id": "story_a2a308d7efb0b211",
           "date": "2026-08-31",
-          "title": "Rescue Efforts Intensify for Hundreds Trapped in Nepal's Hydropower Tunnels After Floods"
+          "title": "Death Toll from Nepal-Tibet Flash Floods Exceeds 900 as Rescue Efforts Continue"
         },
         {
-          "development_id": "story_d29a396639d25fd4",
-          "date": "2026-08-31",
-          "title": "Severe Flooding in Nepal and Tibet Leaves Nearly 1,000 Dead and Thousands Missing"
+          "development_id": "story_311c00b267e0ae03",
+          "date": "2026-09-01",
+          "title": "Flash Floods on Nepal-Tibet Border Result in Over 1,000 Deaths"
         }
       ],
       "sources": [
@@ -1242,9 +1391,27 @@
           "source": "BBC - World",
           "link": "https://www.bbc.co.uk/news/videos/c5ydwy004v0o?at_medium=RSS&at_campaign=rss",
           "source_bias": "center"
+        },
+        {
+          "title": "Nepal flood: Death toll tops 1,000 as rescue continues",
+          "source": "DW - English",
+          "link": "https://www.dw.com/en/nepal-flood-death-toll-tops-1-000-as-rescue-continues/a-78589460?maca=en-rss-en-all-1573-rdf",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Nepal flood deaths pass 1,000 as hope fades in the search for survivors",
+          "source": "NBC News - Top Stories",
+          "link": "https://www.nbcnews.com/world/asia/nepal-floods-deaths-pass-1000-death-smell-rcna595469",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Death toll from Nepal-Tibet flash floods passes 1,000",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/world/2026/0901/1589902-nepal-tibet",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-08-31",
+      "updated_at": "2026-09-01",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -1276,7 +1443,7 @@
         "event_id": "event_tropical-storm-dolphin-leads-to-flight-cance_47ae420b49",
         "title": "Tropical Storm Dolphin Leads to Flight Cancellations and Flooding in Eastern China",
         "relationship": "related_topic",
-        "confidence": 0.731,
+        "confidence": 0.74,
         "shared_entities": [
           "nepal",
           "nepal-china"
@@ -1286,7 +1453,7 @@
         "event_id": "event_rescue-teams-save-woman-after-36-hours-trapp_6d1f4e5550",
         "title": "Rescue Teams Save Woman After 36 Hours Trapped in Colombia Earthquake Rubble",
         "relationship": "related_topic",
-        "confidence": 0.687,
+        "confidence": 0.694,
         "shared_entities": [
           "effort_continue",
           "rescue_effort"
@@ -1378,6 +1545,7 @@
     },
     "search_tokens": [
       "000",
+      "050",
       "157",
       "389",
       "400",
@@ -1390,12 +1558,14 @@
       "900",
       "939",
       "action",
+      "actively",
       "additional",
       "adverse",
       "affected",
       "aftermath",
       "aid",
       "along",
+      "although",
       "america",
       "among",
       "anxiously",
@@ -1417,6 +1587,7 @@
       "caused",
       "causing",
       "challenge",
+      "china-nepal",
       "claim",
       "collapse",
       "complicating",
@@ -1432,6 +1603,7 @@
       "dawadi",
       "dead",
       "death",
+      "debri",
       "delivered",
       "despair",
       "destruction",
@@ -1451,6 +1623,7 @@
       "familie",
       "feared",
       "find",
+      "finding",
       "flash",
       "flood",
       "flooding",
@@ -1460,6 +1633,7 @@
       "formed",
       "further",
       "glacier",
+      "grim",
       "halt",
       "hampered",
       "hampering",
@@ -1467,6 +1641,7 @@
       "heavy",
       "helicopter",
       "hindered",
+      "hopes",
       "hundred",
       "hydropower",
       "including",
@@ -1497,11 +1672,13 @@
       "nepal",
       "nepal-china",
       "nepal-tibet",
+      "nepalese",
       "numerou",
       "occur",
       "ones",
       "ongoing",
       "operation",
+      "permeate",
       "potential",
       "principal",
       "project",
@@ -1512,12 +1689,14 @@
       "rasuwa",
       "reaching",
       "receiving",
+      "recent",
       "region",
       "relief",
       "remain",
       "reported",
       "rescue",
       "response",
+      "result",
       "resulted",
       "resulting",
       "rise",
@@ -1526,14 +1705,18 @@
       "risk",
       "river",
       "roads",
+      "rocks",
       "rush",
       "saves",
       "saving",
       "school",
       "search",
+      "searching",
       "severe",
       "severely",
       "significant",
+      "situation",
+      "smell",
       "still",
       "struck",
       "student",
@@ -1546,6 +1729,7 @@
       "than",
       "there",
       "thousand",
+      "through",
       "tibet",
       "toll",
       "tourist",
@@ -1574,8 +1758,10 @@
       "bhotekoshi",
       "bhotekoshi_river",
       "border_causing",
+      "border_result",
       "britain",
       "causing_hundred",
+      "china-nepal",
       "claim_lives",
       "continue_flash",
       "devastating_flash",
@@ -1583,6 +1769,7 @@
       "district_claim",
       "effort_continue",
       "effort_intensify",
+      "effort_nepalese",
       "exceed_thousand",
       "flash_flood",
       "flood_approache",
@@ -1590,6 +1777,7 @@
       "flood_hit",
       "flood_rajendra",
       "flood_rescue",
+      "flood_result",
       "hit_nepal-tibet",
       "hundred_trapped",
       "hydropower_tunnel",
@@ -1609,6 +1797,7 @@
       "nepal_flood",
       "nepal_hydropower",
       "nepal_rasuwa",
+      "ongoing_rescue",
       "principal_quick",
       "quick_action",
       "rajendra_dawadi",
@@ -1623,7 +1812,7 @@
       "tibet._heavy",
       "toll_exceed"
     ],
-    "search_text": "000 157 389 400 502 546 600 669 670 800 900 939 action action_saves additional adverse affected aftermath aid along america americans._rescue among anxiously approache approaching approximately areas authoritie authority awaiting away believed bhotekoshi bhotekoshi_river border border_causing britain capture catastrophe catastrophic caused causing causing_hundred challenge claim claim_lives collapse complicating compounding concern condition confirmed continue continue_flash countrie crisi crucial currently dawadi dead death delivered despair destruction devastating devastating_flash disaster displacement displacement_flash district district_claim dramatic effort effort_continue effort_intensify evacuated exacerbated exceed exceed_thousand expert extensive extent facing familie feared find flash flash_flood flood flood_approache flood_exceed flood_hit flood_rajendra flood_rescue flooding floodwater footage foreign formed further glacier halt hampered hampering heat heavy helicopter hindered hit_nepal-tibet hundred hundred_trapped hydropower hydropower_tunnel including individual intensify isolated lake landslide large-scale lead leading least leave leaving less level lives locate loved management many minute missing missing_devastating missing_flash missing_rescue missing_severe mission mudslide national nearly nearly_missing nepal nepal-china nepal-china_flood nepal-tibet nepal-tibet_border nepal-tibet_flash nepal-tibet_flood nepal-tibet_region nepal_flood nepal_hydropower nepal_rasuwa numerou occur ones ongoing operation potential principal principal_quick project prompting quick quick_action rain rajendra rajendra_dawadi rasuwa rasuwa_district reaching receiving region relief remain reported rescue rescue_effort response resulted resulting rise risen rising risk river roads rush saves saves_student saving school search severe severe_flooding severely significant still still_missing struck student successfully surpassed survivor swift teams temporary than there thousand thousand_missing thousand_still tibet tibet. tibet._heavy toll toll_exceed tourist trapped triggered tunnel turned ultimately unaccounted underground underway unusual warned warning washed water weather which worker working year"
+    "search_text": "000 050 157 389 400 502 546 600 669 670 800 900 939 action action_saves actively additional adverse affected aftermath aid along although america americans._rescue among anxiously approache approaching approximately areas authoritie authority awaiting away believed bhotekoshi bhotekoshi_river border border_causing border_result britain capture catastrophe catastrophic caused causing causing_hundred challenge china-nepal claim claim_lives collapse complicating compounding concern condition confirmed continue continue_flash countrie crisi crucial currently dawadi dead death debri delivered despair destruction devastating devastating_flash disaster displacement displacement_flash district district_claim dramatic effort effort_continue effort_intensify effort_nepalese evacuated exacerbated exceed exceed_thousand expert extensive extent facing familie feared find finding flash flash_flood flood flood_approache flood_exceed flood_hit flood_rajendra flood_rescue flood_result flooding floodwater footage foreign formed further glacier grim halt hampered hampering heat heavy helicopter hindered hit_nepal-tibet hopes hundred hundred_trapped hydropower hydropower_tunnel including individual intensify isolated lake landslide large-scale lead leading least leave leaving less level lives locate loved management many minute missing missing_devastating missing_flash missing_rescue missing_severe mission mudslide national nearly nearly_missing nepal nepal-china nepal-china_flood nepal-tibet nepal-tibet_border nepal-tibet_flash nepal-tibet_flood nepal-tibet_region nepal_flood nepal_hydropower nepal_rasuwa nepalese numerou occur ones ongoing ongoing_rescue operation permeate potential principal principal_quick project prompting quick quick_action rain rajendra rajendra_dawadi rasuwa rasuwa_district reaching receiving recent region relief remain reported rescue rescue_effort response result resulted resulting rise risen rising risk river roads rocks rush saves saves_student saving school search searching severe severe_flooding severely significant situation smell still still_missing struck student successfully surpassed survivor swift teams temporary than there thousand thousand_missing thousand_still through tibet tibet. tibet._heavy toll toll_exceed tourist trapped triggered tunnel turned ultimately unaccounted underground underway unusual warned warning washed water weather which worker working year"
   },
   "related_events": [
     {

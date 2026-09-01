@@ -15,7 +15,7 @@
     "summary": "A deadly confrontation in the West Bank resulted in the deaths of four Palestinians and two Israeli soldiers. The incident occurred near a Palestinian village, with conflicting accounts regarding the circumstances. Palestinians allege that settlers attacked the village, while the Israeli military claims a Palestinian stole a weapon and opened fire on hikers. The situation has escalated tensions in the region, prompting Israel to prepare for a significant military operation.",
     "status": "active",
     "first_seen_at": "2026-07-25",
-    "last_seen_at": "2026-08-26",
+    "last_seen_at": "2026-09-01",
     "timeline": [
       {
         "development_id": "story_5a5ff9eab7adc01d",
@@ -1133,15 +1133,84 @@
         "first_seen_at": "2026-08-26",
         "last_seen_at": "2026-08-26",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_65097d14a051d5cb",
+        "daily_story_id": "story_65097d14a051d5cb",
+        "date": "2026-09-01",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Haiti Holds Funeral for Victims of Kenscoff Gang Attack Amid Rising Fear",
+        "summary": "Hundreds of mourners gathered at a church near Haiti's capital to bury victims of a gang attack that resulted in at least 47 fatalities and over 50 others kidnapped. This incident has heightened fears regarding the deteriorating security situation in the region.",
+        "topic_label": "Haiti Violence",
+        "development_type": "military_action",
+        "key_facts": [
+          "At least 47 fatalities in gang attack",
+          "More than 50 others kidnapped",
+          "Funeral held near Haiti's capital"
+        ],
+        "source_count": 2,
+        "sources": [
+          "Africanews",
+          "PBS News - Headlines"
+        ],
+        "source_urls": [
+          "http://www.africanews.com/2026/08/31/haiti-mourns-victims-of-kenscoff-gang-attack-as-fear-grips-community",
+          "https://www.pbs.org/newshour/world/hundreds-attend-funeral-in-haiti-for-4-victims-of-brutal-gang-attack-that-killed-47"
+        ],
+        "source_details": [
+          {
+            "title": "Haiti mourns victims of Kenscoff gang attack as fear grips community",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/08/31/haiti-mourns-victims-of-kenscoff-gang-attack-as-fear-grips-community",
+            "source_bias": "center"
+          },
+          {
+            "title": "Hundreds attend funeral in Haiti for 4 victims of brutal gang attack that killed 47",
+            "source": "PBS News - Headlines",
+            "link": "https://www.pbs.org/newshour/world/hundreds-attend-funeral-in-haiti-for-4-victims-of-brutal-gang-attack-that-killed-47",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_47f7fe01f8b4334e",
+          "shared_tokens": [
+            "attack",
+            "gang",
+            "haiti",
+            "incident",
+            "kenscoff",
+            "least",
+            "near",
+            "other",
+            "violence"
+          ],
+          "shared_entities": [
+            "haiti_violence"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-01",
+        "last_seen_at": "2026-09-01",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 12,
+      "public_development_count": 13,
       "questionable_development_count": 2,
       "review_required": true
     },
-    "latest_title": "Gang Attack in Haiti Leaves 47 Dead and Over 50 Kidnapped",
-    "latest_summary": "A violent gang attack in Kenscoff, near Port-au-Prince, resulted in at least 47 deaths and more than 50 kidnappings. The United Nations reported that this incident is one of the largest mass abductions in recent years. A gang leader has threatened to kill hostages if any gang members are harmed during attempts to secure the area.",
+    "latest_title": "Haiti Holds Funeral for Victims of Kenscoff Gang Attack Amid Rising Fear",
+    "latest_summary": "Hundreds of mourners gathered at a church near Haiti's capital to bury victims of a gang attack that resulted in at least 47 fatalities and over 50 others kidnapped. This incident has heightened fears regarding the deteriorating security situation in the region.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -1152,29 +1221,29 @@
       "milestone_development_ids": [
         "story_5a5ff9eab7adc01d",
         "story_3f59dc7e39b44bb5",
-        "story_13fed5916081d8f6",
-        "story_dca4a7600774be5e"
+        "story_1e858ac53b02b869",
+        "story_65097d14a051d5cb"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-26",
-      "development_count": 12,
-      "coverage_packet_count": 15,
-      "date_count": 12,
-      "source_count": 35,
+      "summary_updated_at": "2026-09-01",
+      "development_count": 13,
+      "coverage_packet_count": 16,
+      "date_count": 13,
+      "source_count": 37,
       "independent_source_count": 17,
       "first_date": "2026-07-25",
-      "latest_date": "2026-08-26",
-      "latest_update_title": "Gang Attack in Haiti Leaves 47 Dead and Over 50 Kidnapped",
+      "latest_date": "2026-09-01",
+      "latest_update_title": "Haiti Holds Funeral for Victims of Kenscoff Gang Attack Amid Rising Fear",
       "coverage_score": 1.0,
-      "recency_score": 0.583,
-      "rank_score": 0.758,
-      "context_summary": "Muninn first tracked this thread on 2026-07-25: Funerals Held for Four Palestinians Killed in West Bank Clash with Israeli Settlers. The latest development is Gang Attack in Haiti Leaves 47 Dead and Over 50 Kidnapped.",
-      "cta_label": "Explore 12 developments"
+      "recency_score": 1.0,
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-07-25: Funerals Held for Four Palestinians Killed in West Bank Clash with Israeli Settlers. The latest development is Haiti Holds Funeral for Victims of Kenscoff Gang Attack Amid Rising Fear.",
+      "cta_label": "Explore 13 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Four Palestinian men were buried following their deaths during a clash with Israeli settlers in the occupied West Bank. A later development was Activists Attempt to Deliver Aid to Besieged Palestinian Families in Qusra. Most recently, a violent gang attack in Kenscoff, near Port-au-Prince, resulted in at least 47 deaths and more than 50 kidnappings.",
+      "summary": "Four Palestinian men were buried following their deaths during a clash with Israeli settlers in the occupied West Bank. A later development was Activists Attempt to Deliver Aid to Besieged Palestinian Families in Qusra. Most recently, hundreds of mourners gathered at a church near Haiti's capital to bury victims of a gang attack that resulted in at least 47 fatalities and over 50 others kidnapped.",
       "key_developments": [
         {
           "development_id": "story_5a5ff9eab7adc01d",
@@ -1187,14 +1256,14 @@
           "title": "Israeli Settlers Demolish Homes in Jericho, Government Accused of Complicity"
         },
         {
-          "development_id": "story_13fed5916081d8f6",
-          "date": "2026-08-15",
-          "title": "Activists Attempt to Deliver Aid to Besieged Families in West Bank Village"
+          "development_id": "story_1e858ac53b02b869",
+          "date": "2026-08-18",
+          "title": "Palestinian American Returns to Besieged West Bank Home"
         },
         {
-          "development_id": "story_dca4a7600774be5e",
-          "date": "2026-08-26",
-          "title": "Gang Attack in Haiti Leaves 47 Dead and Over 50 Kidnapped"
+          "development_id": "story_65097d14a051d5cb",
+          "date": "2026-09-01",
+          "title": "Haiti Holds Funeral for Victims of Kenscoff Gang Attack Amid Rising Fear"
         }
       ],
       "sources": [
@@ -1407,9 +1476,21 @@
           "source": "Africanews",
           "link": "http://www.africanews.com/2026/08/26/police-race-to-respond-after-gangs-storm-kenscoff-kidnapping-dozens",
           "source_bias": "center"
+        },
+        {
+          "title": "Haiti mourns victims of Kenscoff gang attack as fear grips community",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/08/31/haiti-mourns-victims-of-kenscoff-gang-attack-as-fear-grips-community",
+          "source_bias": "center"
+        },
+        {
+          "title": "Hundreds attend funeral in Haiti for 4 victims of brutal gang attack that killed 47",
+          "source": "PBS News - Headlines",
+          "link": "https://www.pbs.org/newshour/world/hundreds-attend-funeral-in-haiti-for-4-victims-of-brutal-gang-attack-that-killed-47",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-08-26",
+      "updated_at": "2026-09-01",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -1418,7 +1499,7 @@
         "event_id": "event_us-ambassador-denounces-settler-siege-of-pal_283b86d186",
         "title": "US Ambassador Denounces Settler Siege of Palestinian Homes as 'Horrific Act of Terror'",
         "relationship": "related_topic",
-        "confidence": 0.856,
+        "confidence": 0.855,
         "shared_entities": [
           "america",
           "israel",
@@ -1431,7 +1512,7 @@
         "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
         "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
         "relationship": "related_topic",
-        "confidence": 0.737,
+        "confidence": 0.74,
         "shared_entities": [
           "israel",
           "palestinian",
@@ -1442,7 +1523,7 @@
         "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
         "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
         "relationship": "related_topic",
-        "confidence": 0.731,
+        "confidence": 0.73,
         "shared_entities": [
           "america",
           "israel",
@@ -1453,7 +1534,7 @@
         "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
         "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
         "relationship": "related_topic",
-        "confidence": 0.722,
+        "confidence": 0.724,
         "shared_entities": [
           "un",
           "united_nation",
@@ -1618,8 +1699,11 @@
       "blocking",
       "buried",
       "burning",
+      "bury",
+      "capital",
       "care",
       "charged",
+      "church",
       "circumstance",
       "clash",
       "clashe",
@@ -1644,6 +1728,7 @@
       "designated",
       "detain",
       "detained",
+      "deteriorating",
       "diplomat",
       "displacing",
       "district",
@@ -1662,6 +1747,7 @@
       "facing",
       "familie",
       "family",
+      "fatalitie",
       "fear",
       "fears",
       "filed",
@@ -1674,16 +1760,20 @@
       "further",
       "future",
       "gang",
+      "gathered",
       "gaza",
       "group",
       "grove",
       "haiti",
       "harmed",
       "hathaleen",
+      "heightened",
       "held",
+      "holds",
       "home",
       "homes",
       "hostage",
+      "hundred",
       "incident",
       "including",
       "increase",
@@ -1724,6 +1814,7 @@
       "member",
       "military",
       "mosque",
+      "mourner",
       "nablu",
       "nation",
       "near",
@@ -1796,6 +1887,7 @@
       "under",
       "united",
       "unrest",
+      "victim",
       "village",
       "villager",
       "violence",
@@ -1828,16 +1920,20 @@
       "deliver_aid",
       "demolish_homes",
       "escalating_violence",
+      "fear_hundred",
       "funeral_held",
       "gang",
       "gang_violence",
       "haiti",
+      "haiti_holds",
       "hathaleen_israel",
+      "holds_funeral",
       "israel",
       "israel_detain",
       "israel_settler",
       "jericho",
       "kenscoff",
+      "kenscoff_gang",
       "killing",
       "mosque_set",
       "nablu",
@@ -1854,6 +1950,7 @@
       "qusra",
       "qusra_activist",
       "qusra_west",
+      "rising_fear",
       "rising_violence",
       "settler_besiege",
       "settler_blockade",
@@ -1869,7 +1966,7 @@
       "west_bank.",
       "yinon_levi"
     ],
-    "search_text": "2023 2025 abduction access account accused action activist activist_attempt activist_awdah aftermath aggressive aid allowing also america america_return area areas arrest assault assist attack attacked attempt attempted attributed authoritie awdah awdah_hathaleen bank besiege besiege_palestinian besieged besieged_familie besieged_palestinian besieged_west blockade blocking buried burning care charged circumstance clash clashe complicity complicity_israel concern condemnation conducted conflicting confrontation connection continue court currently dead deadly deadly_west death defending deliver deliver_aid demolish demolish_homes demolished described designated detain detained diplomat displacing district doubled dozen drawn dwindling effort electricity escalated escalating escalating_violence event expansion expressed extensive facing familie family fear fears filed fire first food force four funeral funeral_held further future gang gang_violence gaza group grove haiti harmed hathaleen hathaleen_israel held home homes hostage incident including increase increasing indicate indicating indictment injured inside intensifying international involving israel israel_detain israel_settler jericho joined kenscoff kidnapped kidnapping kill killed killing known labeling lack largest leader least leave leaving left levi local located marched marks mass medical member military mosque mosque_set nablu nation near near_port-au-prince nearly neighborhood night occupied occurred october olive ongoing onset other palestinian palestinian-american palestinian-controlled palestinian_activist palestinian_america palestinian_familie particularly port-au-prince port-au-prince. port-au-prince_haiti potential property prosecutor protect protection pursue qusra qusra_activist qusra_west raids raising recent regarding region reported reportedly resident resource resulted return returned rising rising_violence safety searche secure security seize seizure settlement settler settler_besiege settler_blockade settler_charged settler_demolish shooting siege significant since situation soldier standoff stemmed sunday sunday._israel supplie surge surged suspect terror than them there they threatened three time toward trapped un under united united_nation unrest us village villager violence violence_israel violence_near violent war water week well-being west west_bank. where which withdrawn years yinon yinon_levi"
+    "search_text": "2023 2025 abduction access account accused action activist activist_attempt activist_awdah aftermath aggressive aid allowing also america america_return area areas arrest assault assist attack attacked attempt attempted attributed authoritie awdah awdah_hathaleen bank besiege besiege_palestinian besieged besieged_familie besieged_palestinian besieged_west blockade blocking buried burning bury capital care charged church circumstance clash clashe complicity complicity_israel concern condemnation conducted conflicting confrontation connection continue court currently dead deadly deadly_west death defending deliver deliver_aid demolish demolish_homes demolished described designated detain detained deteriorating diplomat displacing district doubled dozen drawn dwindling effort electricity escalated escalating escalating_violence event expansion expressed extensive facing familie family fatalitie fear fear_hundred fears filed fire first food force four funeral funeral_held further future gang gang_violence gathered gaza group grove haiti haiti_holds harmed hathaleen hathaleen_israel heightened held holds holds_funeral home homes hostage hundred incident including increase increasing indicate indicating indictment injured inside intensifying international involving israel israel_detain israel_settler jericho joined kenscoff kenscoff_gang kidnapped kidnapping kill killed killing known labeling lack largest leader least leave leaving left levi local located marched marks mass medical member military mosque mosque_set mourner nablu nation near near_port-au-prince nearly neighborhood night occupied occurred october olive ongoing onset other palestinian palestinian-american palestinian-controlled palestinian_activist palestinian_america palestinian_familie particularly port-au-prince port-au-prince. port-au-prince_haiti potential property prosecutor protect protection pursue qusra qusra_activist qusra_west raids raising recent regarding region reported reportedly resident resource resulted return returned rising rising_fear rising_violence safety searche secure security seize seizure settlement settler settler_besiege settler_blockade settler_charged settler_demolish shooting siege significant since situation soldier standoff stemmed sunday sunday._israel supplie surge surged suspect terror than them there they threatened three time toward trapped un under united united_nation unrest us victim village villager violence violence_israel violence_near violent war water week well-being west west_bank. where which withdrawn years yinon yinon_levi"
   },
   "related_events": [
     {
@@ -1909,14 +2006,14 @@
     {
       "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
       "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
-      "summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Intense Russian Drone Strikes Leave Kyiv Supermarkets Empty.",
+      "summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Germany Accuses Russia of Drone Attack Targeting Ukrainian Aircraft at Leipzig Airport.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-07-31",
-      "last_seen_at": "2026-08-31",
-      "development_count": 26,
-      "latest_title": "Intense Russian Drone Strikes Leave Kyiv Supermarkets Empty",
+      "last_seen_at": "2026-09-01",
+      "development_count": 29,
+      "latest_title": "Germany Accuses Russia of Drone Attack Targeting Ukrainian Aircraft at Leipzig Airport",
       "topic_label": "Gaza Peace Deal",
       "hero_image": {
         "url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
