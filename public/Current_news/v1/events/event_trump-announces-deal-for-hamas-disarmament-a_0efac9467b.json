@@ -15,7 +15,7 @@
     "summary": "President Trump has announced a deal for Hamas to completely disarm, which includes the gradual withdrawal of Israeli forces from Gaza. Hamas confirmed its agreement to the plan, stating it would hand over its weapons to a Palestinian governing committee. However, the implementation of this deal is contingent upon Israel fulfilling its commitments from a previous agreement.",
     "status": "active",
     "first_seen_at": "2026-07-31",
-    "last_seen_at": "2026-09-01",
+    "last_seen_at": "2026-09-02",
     "timeline": [
       {
         "development_id": "story_c0c042a2fb04bd8a",
@@ -2807,15 +2807,220 @@
         "first_seen_at": "2026-09-01",
         "last_seen_at": "2026-09-01",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_c5451998f1f1378c",
+        "daily_story_id": "story_c5451998f1f1378c",
+        "date": "2026-09-02",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Germany Blames Russia for Attempted Drone Attack in Leipzig",
+        "summary": "The German government has attributed an attempted drone attack at Leipzig/Halle airport to Russia, stating that the drone was aimed at a Ukrainian cargo aircraft. The incident, which occurred in early August, has prompted the EU to summon Russia's top diplomat in Brussels for discussions. Some officials believe Germany's response to the attack has been insufficient.",
+        "topic_label": "",
+        "development_type": "military_action",
+        "key_facts": [
+          "Attempted drone attack at Leipzig/Halle airport attributed to Russia.",
+          "Drone reportedly targeted a Ukrainian cargo aircraft.",
+          "EU summoned Russia's top diplomat in response to the incident."
+        ],
+        "source_count": 5,
+        "sources": [
+          "AP",
+          "BBC",
+          "DW - English",
+          "RTE News"
+        ],
+        "source_urls": [
+          "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPVGRNWFdXclZxNGQxMGdIWFF3Q2E3UHdFM0lyU29mdnVqVGdKWFN1ZVZxVXFHNEl5dlRtbkxsa2FocHAwMFc4ME1MZndYUm9QSUVWelM4X2hLdWlRRUc2N18wd0FnelNDejNjSnl1bmZraVlDWXFvUWpHMThvZjc3ZU1KeFJVWlY3cTVFaWZ2RFJlN2UzMllBX1BVOEZBZHhqOTducWt3ZXo?oc=5",
+          "https://www.bbc.co.uk/news/articles/ce9e810pg7ko?at_medium=RSS&at_campaign=rss",
+          "https://www.dw.com/en/germany-says-russia-behind-attempted-drone-attack-at-leipzig-airport/a-78584589?maca=en-rss-en-all-1573-rdf",
+          "https://www.dw.com/en/russia-s-hybrid-attacks-on-germany-when-is-it-war/a-78784262?maca=en-rss-en-all-1573-rdf",
+          "https://www.rte.ie/news/2026/0902/1590018-foreign-ministers-meeting"
+        ],
+        "source_details": [
+          {
+            "title": "EU and Nato vow to step up pressure on Russia after 'new escalation' in Germany",
+            "source": "BBC",
+            "link": "https://www.bbc.co.uk/news/articles/ce9e810pg7ko?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          },
+          {
+            "title": "EU struggles to find an effective response after Germany blames Russia for a failed drone attack - AP News",
+            "source": "AP",
+            "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPVGRNWFdXclZxNGQxMGdIWFF3Q2E3UHdFM0lyU29mdnVqVGdKWFN1ZVZxVXFHNEl5dlRtbkxsa2FocHAwMFc4ME1MZndYUm9QSUVWelM4X2hLdWlRRUc2N18wd0FnelNDejNjSnl1bmZraVlDWXFvUWpHMThvZjc3ZU1KeFJVWlY3cTVFaWZ2RFJlN2UzMllBX1BVOEZBZHhqOTducWt3ZXo?oc=5",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Russia's hybrid attacks on Germany: When is it 'war'?",
+            "source": "DW - English",
+            "link": "https://www.dw.com/en/russia-s-hybrid-attacks-on-germany-when-is-it-war/a-78784262?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Russian envoy summoned by EU over Leipzig 'hybrid attack'",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/2026/0902/1590018-foreign-ministers-meeting",
+            "source_bias": "center"
+          },
+          {
+            "title": "Germany says Russia behind attempted drone attack at Leipzig airport",
+            "source": "DW - English",
+            "link": "https://www.dw.com/en/germany-says-russia-behind-attempted-drone-attack-at-leipzig-airport/a-78584589?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "attack"
+          ],
+          "shared_incident_anchors": [
+            "drone",
+            "russia",
+            "russia_drone"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "attack",
+            "concern",
+            "drone",
+            "region",
+            "russia"
+          ],
+          "shared_entities": [
+            "drone",
+            "russia",
+            "russia_drone"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_205829e92dc1ae4d",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-02",
+        "last_seen_at": "2026-09-02",
+        "integrity_status": "trusted",
+        "revisions": [
+          {
+            "daily_story_id": "story_416c0d7e55e8f3df",
+            "reported_at": "2026-09-02",
+            "update_kind": "factual_update",
+            "title": "Germany Blames Russia for Attempted Drone Attack in Leipzig",
+            "summary": "The German government has attributed an attempted drone attack at Leipzig/Halle airport to Russia, stating that the drone was aimed at a Ukrainian cargo aircraft. The incident, which occurred in early August, has prompted the EU to summon Russia's top diplomat in Brussels for discussions. Some officials believe Germany's response to the attack has been insufficient.",
+            "topic_label": "Hybrid Warfare",
+            "key_facts": [
+              "Attempted drone attack at Leipzig/Halle airport attributed to Russia.",
+              "Drone reportedly targeted a Ukrainian cargo aircraft.",
+              "EU summoned Russia's top diplomat in response to the incident."
+            ],
+            "source_urls": [
+              "https://www.dw.com/en/russia-s-hybrid-attacks-on-germany-when-is-it-war/a-78784262?maca=en-rss-en-all-1573-rdf",
+              "https://www.rte.ie/news/2026/0902/1590018-foreign-ministers-meeting",
+              "https://www.dw.com/en/germany-says-russia-behind-attempted-drone-attack-at-leipzig-airport/a-78584589?maca=en-rss-en-all-1573-rdf"
+            ]
+          }
+        ],
+        "last_updated_at": "2026-09-02",
+        "merged_development_ids": [
+          "story_416c0d7e55e8f3df"
+        ],
+        "revision_count": 1
+      },
+      {
+        "development_id": "story_fecd13256b0d0bcc",
+        "daily_story_id": "story_fecd13256b0d0bcc",
+        "date": "2026-09-02",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Ukraine's Drone Operations Prompt Warnings for Airlines Using Russian Airspace",
+        "summary": "Ukrainian officials are advising foreign airlines to avoid Russian airspace due to escalating drone operations. Zelenskyy has issued warnings as tensions rise, with Russia threatening to intensify its attacks on Ukraine. Some airlines, particularly from China and Gulf states, continue to operate in Russian airspace despite these warnings.",
+        "topic_label": "Ukraine Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "Ukrainian officials warn airlines against using Russian airspace.",
+          "Zelenskyy has issued threats regarding drone operations.",
+          "Russia plans to intensify attacks on Ukraine."
+        ],
+        "source_count": 3,
+        "sources": [
+          "Al Jazeera English",
+          "BBC - World"
+        ],
+        "source_urls": [
+          "https://www.aljazeera.com/features/2026/9/2/can-ukraines-drones-shut-russian-airspace-what-that-means-for-airlines?traffic_source=rss",
+          "https://www.aljazeera.com/news/2026/9/2/putin-and-zelenskyy-issue-threats-as-strikes-rock-ukraine-russia?traffic_source=rss",
+          "https://www.bbc.co.uk/news/articles/c9v9yydy2wvo?at_medium=RSS&at_campaign=rss"
+        ],
+        "source_details": [
+          {
+            "title": "Can Ukraine’s drones shut Russian airspace? What that means for airlines",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/features/2026/9/2/can-ukraines-drones-shut-russian-airspace-what-that-means-for-airlines?traffic_source=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Putin and Zelenskyy issue threats as strikes rock Ukraine, Russia",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/news/2026/9/2/putin-and-zelenskyy-issue-threats-as-strikes-rock-ukraine-russia?traffic_source=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Zelensky says airlines should avoid Russian airspace as Ukraine escalates drone operations",
+            "source": "BBC - World",
+            "link": "https://www.bbc.co.uk/news/articles/c9v9yydy2wvo?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "attack"
+          ],
+          "shared_incident_anchors": [
+            "drone",
+            "russia",
+            "ukraine"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "attack",
+            "conflict",
+            "drone",
+            "russia",
+            "ukraine"
+          ],
+          "shared_entities": [
+            "drone",
+            "russia",
+            "ukraine"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_205829e92dc1ae4d",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-02",
+        "last_seen_at": "2026-09-02",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 29,
+      "public_development_count": 31,
       "questionable_development_count": 1,
       "review_required": true
     },
-    "latest_title": "Germany Accuses Russia of Drone Attack Targeting Ukrainian Aircraft at Leipzig Airport",
-    "latest_summary": "German authorities have stated that a drone carrying explosives was discovered at Leipzig/Halle airport on August 4, with indications that it was aimed at Ukrainian cargo planes. Investigators are treating the incident as an attempted attack orchestrated by Russia.",
+    "latest_title": "Ukraine's Drone Operations Prompt Warnings for Airlines Using Russian Airspace",
+    "latest_summary": "Ukrainian officials are advising foreign airlines to avoid Russian airspace due to escalating drone operations. Zelenskyy has issued warnings as tensions rise, with Russia threatening to intensify its attacks on Ukraine. Some airlines, particularly from China and Gulf states, continue to operate in Russian airspace despite these warnings.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -2825,30 +3030,30 @@
       "display_title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza Timeline",
       "milestone_development_ids": [
         "story_c0c042a2fb04bd8a",
-        "story_2a433045a1785e1c",
-        "story_6f56dbebd4efad90",
-        "story_8e495ed6514f899d"
+        "story_ce5142af71feeb85",
+        "story_ad16725468d73e9a",
+        "story_fecd13256b0d0bcc"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-09-01",
-      "development_count": 29,
-      "coverage_packet_count": 35,
-      "date_count": 22,
-      "source_count": 104,
+      "summary_updated_at": "2026-09-02",
+      "development_count": 31,
+      "coverage_packet_count": 38,
+      "date_count": 23,
+      "source_count": 111,
       "independent_source_count": 31,
       "first_date": "2026-07-31",
-      "latest_date": "2026-09-01",
-      "latest_update_title": "Germany Accuses Russia of Drone Attack Targeting Ukrainian Aircraft at Leipzig Airport",
+      "latest_date": "2026-09-02",
+      "latest_update_title": "Ukraine's Drone Operations Prompt Warnings for Airlines Using Russian Airspace",
       "coverage_score": 1.0,
       "recency_score": 1.0,
       "rank_score": 1.0,
-      "context_summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Germany Accuses Russia of Drone Attack Targeting Ukrainian Aircraft at Leipzig Airport.",
-      "cta_label": "Explore 29 developments"
+      "context_summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Ukraine's Drone Operations Prompt Warnings for Airlines Using Russian Airspace.",
+      "cta_label": "Explore 31 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "President Trump has announced a deal for Hamas to completely disarm, which includes the gradual withdrawal of Israeli forces from Gaza. A later development was Israel Conducts Airstrikes on Syrian Base to Halt Turkish Deployment. Most recently, german authorities have stated that a drone carrying explosives was discovered at Leipzig/Halle airport on August 4, with indications that it was aimed at Ukrainian cargo planes.",
+      "summary": "President Trump has announced a deal for Hamas to completely disarm, which includes the gradual withdrawal of Israeli forces from Gaza. A later development was Intense Russian Bombardment in Kyiv Results in Multiple Casualties. Most recently, ukrainian officials are advising foreign airlines to avoid Russian airspace due to escalating drone operations.",
       "key_developments": [
         {
           "development_id": "story_c0c042a2fb04bd8a",
@@ -2856,19 +3061,19 @@
           "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza"
         },
         {
-          "development_id": "story_2a433045a1785e1c",
+          "development_id": "story_ce5142af71feeb85",
           "date": "2026-08-17",
-          "title": "Kushner Meets Hamas Leader to Discuss Gaza Road Map"
+          "title": "Ukraine Conducts Major Drone Attack on Russia, Resulting in Multiple Casualties"
         },
         {
-          "development_id": "story_6f56dbebd4efad90",
-          "date": "2026-08-23",
-          "title": "Casualties Rise After Russian Strike on Ukrainian Mall"
+          "development_id": "story_ad16725468d73e9a",
+          "date": "2026-08-24",
+          "title": "Zelenskyy Asserts Ukraine's Stance on Peace Amid Independence Day Remarks"
         },
         {
-          "development_id": "story_8e495ed6514f899d",
-          "date": "2026-09-01",
-          "title": "Germany Accuses Russia of Drone Attack Targeting Ukrainian Aircraft at Leipzig Airport"
+          "development_id": "story_fecd13256b0d0bcc",
+          "date": "2026-09-02",
+          "title": "Ukraine's Drone Operations Prompt Warnings for Airlines Using Russian Airspace"
         }
       ],
       "sources": [
@@ -3495,13 +3700,73 @@
           "source": "DW",
           "link": "https://www.dw.com/en/germany-says-russia-behind-attempted-drone-attack-at-leipzig-airport/a-78584589?maca=en-rss-en-all-1573-rdf",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "EU and Nato vow to step up pressure on Russia after 'new escalation' in Germany",
+          "source": "BBC",
+          "link": "https://www.bbc.co.uk/news/articles/ce9e810pg7ko?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
+        },
+        {
+          "title": "EU struggles to find an effective response after Germany blames Russia for a failed drone attack - AP News",
+          "source": "AP",
+          "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPVGRNWFdXclZxNGQxMGdIWFF3Q2E3UHdFM0lyU29mdnVqVGdKWFN1ZVZxVXFHNEl5dlRtbkxsa2FocHAwMFc4ME1MZndYUm9QSUVWelM4X2hLdWlRRUc2N18wd0FnelNDejNjSnl1bmZraVlDWXFvUWpHMThvZjc3ZU1KeFJVWlY3cTVFaWZ2RFJlN2UzMllBX1BVOEZBZHhqOTducWt3ZXo?oc=5",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Russia's hybrid attacks on Germany: When is it 'war'?",
+          "source": "DW - English",
+          "link": "https://www.dw.com/en/russia-s-hybrid-attacks-on-germany-when-is-it-war/a-78784262?maca=en-rss-en-all-1573-rdf",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Russian envoy summoned by EU over Leipzig 'hybrid attack'",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/2026/0902/1590018-foreign-ministers-meeting",
+          "source_bias": "center"
+        },
+        {
+          "title": "Can Ukraine’s drones shut Russian airspace? What that means for airlines",
+          "source": "Al Jazeera English",
+          "link": "https://www.aljazeera.com/features/2026/9/2/can-ukraines-drones-shut-russian-airspace-what-that-means-for-airlines?traffic_source=rss",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Putin and Zelenskyy issue threats as strikes rock Ukraine, Russia",
+          "source": "Al Jazeera English",
+          "link": "https://www.aljazeera.com/news/2026/9/2/putin-and-zelenskyy-issue-threats-as-strikes-rock-ukraine-russia?traffic_source=rss",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Zelensky says airlines should avoid Russian airspace as Ukraine escalates drone operations",
+          "source": "BBC - World",
+          "link": "https://www.bbc.co.uk/news/articles/c9v9yydy2wvo?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-09-01",
+      "updated_at": "2026-09-02",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
     "related_events": [
+      {
+        "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
+        "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
+        "relationship": "related_topic",
+        "confidence": 0.95,
+        "shared_entities": [
+          "kyiv",
+          "kyiv_result",
+          "near_kyiv",
+          "russia",
+          "russia_missile",
+          "turkey",
+          "ukraine",
+          "ukraine_conduct",
+          "ukraine_drone",
+          "us"
+        ]
+      },
       {
         "event_id": "event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd",
         "title": "Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv",
@@ -3552,30 +3817,13 @@
         ]
       },
       {
-        "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
-        "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
-        "relationship": "related_topic",
-        "confidence": 0.95,
-        "shared_entities": [
-          "kyiv",
-          "kyiv_result",
-          "near_kyiv",
-          "russia",
-          "russia_missile",
-          "turkey",
-          "ukraine",
-          "ukraine_conduct",
-          "ukraine_drone",
-          "us"
-        ]
-      },
-      {
         "event_id": "event_israeli-strikes-in-gaza-result-in-seven-deat_837b156199",
         "title": "Israeli Strikes in Gaza Result in Seven Deaths and Destruction of Medical Warehouses",
         "relationship": "related_topic",
         "confidence": 0.95,
         "shared_entities": [
           "benjamin_netanyahu",
+          "eu",
           "gaza",
           "gaza.",
           "gaza_disarmament",
@@ -3682,6 +3930,7 @@
       "adequately",
       "administration",
       "adviser",
+      "advising",
       "affected",
       "aftermath",
       "agree",
@@ -3690,7 +3939,9 @@
       "aimed",
       "airbase",
       "aircraft",
+      "airline",
       "airport",
+      "airspace",
       "airstrike",
       "al-duhur",
       "al-zahrani",
@@ -3714,8 +3965,10 @@
       "assessing",
       "attack",
       "attempted",
+      "attributed",
       "august",
       "authoritie",
+      "avoid",
       "backed",
       "bail",
       "ballistic",
@@ -3724,13 +3977,16 @@
       "base",
       "began",
       "begin",
+      "believe",
       "benjamin",
       "black",
+      "blame",
       "blueprint",
       "bodie",
       "bombardment",
       "both",
       "brokered",
+      "brussel",
       "building",
       "calls",
       "capital",
@@ -3746,6 +4002,7 @@
       "ceasefire",
       "challenge",
       "children",
+      "china",
       "citie",
       "civilian",
       "claim",
@@ -3797,6 +4054,7 @@
       "despicable",
       "despite",
       "destruction",
+      "diplomat",
       "diplomatic",
       "direct",
       "disappointed",
@@ -3806,6 +4064,7 @@
       "disarming",
       "discovered",
       "discuss",
+      "discussion",
       "disrupt",
       "disrupted",
       "disruption",
@@ -3819,6 +4078,7 @@
       "drone",
       "duane",
       "earlier",
+      "early",
       "east",
       "effort",
       "emergency",
@@ -3827,6 +4087,7 @@
       "ending",
       "engage",
       "envoy",
+      "escalating",
       "escalation",
       "established",
       "experiencing",
@@ -3851,6 +4112,7 @@
       "follow",
       "followed",
       "force",
+      "foreign",
       "form",
       "found",
       "four",
@@ -3864,6 +4126,7 @@
       "grain",
       "group",
       "guilty",
+      "gulf",
       "halle",
       "halt",
       "hamas",
@@ -3896,7 +4159,9 @@
       "injured",
       "injurie",
       "injuring",
+      "insufficient",
       "intense",
+      "intensify",
       "interview",
       "investigator",
       "involved",
@@ -3974,6 +4239,7 @@
       "online",
       "opening",
       "opens",
+      "operate",
       "operation",
       "orchestrated",
       "orchestrating",
@@ -4003,6 +4269,8 @@
       "prison",
       "private",
       "progress",
+      "prompt",
+      "prompted",
       "proposal",
       "proposed",
       "protect",
@@ -4068,6 +4336,7 @@
       "sixth",
       "soldier",
       "solomianskyi",
+      "some",
       "southern",
       "sovereignty",
       "speculation",
@@ -4082,6 +4351,7 @@
       "storage",
       "storing",
       "strike",
+      "summon",
       "sumy",
       "supermarket",
       "supply",
@@ -4099,6 +4369,7 @@
       "there",
       "these",
       "they",
+      "threatening",
       "three",
       "toll",
       "total",
@@ -4124,6 +4395,7 @@
       "upon",
       "us-backed",
       "used",
+      "using",
       "vegas",
       "verdict",
       "village",
@@ -4157,21 +4429,27 @@
       "accused_claim",
       "action_challenge",
       "adviser_warns",
+      "airline_using",
       "airport_german",
+      "airspace_ukraine",
       "al-duhur",
       "al-zahrani",
       "assert_ukraine",
       "assess_damage",
+      "attempted_drone",
       "barrage_resident",
       "benjamin_netanyahu",
       "black",
       "black_sea",
+      "blame_russia",
+      "brussel",
       "casualtie_israel",
       "casualtie_rise",
       "casualtie_ukraine",
       "cause_casualtie",
       "challenge_trump",
       "children_israel",
+      "china",
       "claim_nephew",
       "conduct_airstrike",
       "davis_convicted",
@@ -4185,10 +4463,12 @@
       "disrupt_grain",
       "donald_trump",
       "drone_factorie",
+      "drone_operation",
       "duane_davis",
       "duane_keith",
       "east_talks",
       "empty_russia",
+      "eu",
       "fatal_shots",
       "fired_fatal",
       "gaza",
@@ -4201,6 +4481,7 @@
       "gaza_road",
       "germany",
       "germany_accuse",
+      "germany_blame",
       "grain_export",
       "halt",
       "halt_turkish",
@@ -4259,10 +4540,12 @@
       "nephew_fired",
       "nevada",
       "october_germany",
+      "operation_prompt",
       "orlando_anderson",
       "palestinian",
       "peace_proposal",
       "ports_ukraine",
+      "prompt_warning",
       "proposal_israel",
       "resident_assess",
       "resistance_jared",
@@ -4272,8 +4555,10 @@
       "road_map",
       "russia",
       "russia.",
+      "russia._germany",
       "russia._his",
       "russia_air",
+      "russia_airspace",
       "russia_bombardment",
       "russia_drone",
       "russia_missile",
@@ -4302,6 +4587,7 @@
       "ukraine",
       "ukraine.",
       "ukraine._russia",
+      "ukraine._some",
       "ukraine._ukraine",
       "ukraine_aircraft",
       "ukraine_conduct",
@@ -4311,15 +4597,50 @@
       "ukraine_stance",
       "us",
       "us-backed",
+      "using_russia",
       "vladimir_putin",
       "volodymyr_zelenskyy",
       "warehouse_near",
       "years_later",
       "zelenskyy_assert"
     ],
-    "search_text": "130 15-point 1996 2008 2023 2026 600 accept accuse accuse_russia accused accused_claim across action action_challenge actively additional adequately administration adviser adviser_warns affected aftermath agree agreed agreement aimed airbase aircraft airport airport_german airstrike al-duhur al-zahrani allowing also ammunition among anderson announce announced ansar approach approache area areas army artist assault assert assert_ukraine assess assess_damage assessing attack attempted august authoritie backed bail ballistic barbarism barrage barrage_resident base began begin benjamin benjamin_netanyahu black black_sea blueprint bodie bombardment both brokered building calls capital capitulate cargo carrying case casualtie casualtie_israel casualtie_rise casualtie_ukraine casualty cause cause_casualtie caused causing ceasefire challenge challenge_trump children children_israel citie civilian claim claim_nephew claiming combined comes commenced commitment committee complete completely concern concurrently condemnation condemned conduct conduct_airstrike confirmed conflict consecutive contingent continue continued contradicting control convicted criticized cruise current currently damage damaged davis davis_convicted deadliest deadly deadly_russia deal death decade decision decline decline_trump decree deir delivered demand demand_hamas deploying deployment deployment_israel depot described desire despicable despite destruction diplomatic direct disappointed disarm disarmament disarmament_israel disarmed disarming discovered discuss disrupt disrupt_grain disrupted disruption district divergence does donald donald_trump double-tap drew drive-by drone drone_factorie duane duane_davis duane_keith earlier east east_talks effort emergency emphasized empty empty_russia ending engage envoy escalation established experiencing explosive export extension extensive extinguish face faces facilitating facilitie factorie fatal fatal_shots fatalitie fifth fire fired fired_fatal firefighter fires first-degree follow followed force form found four fulfilling fully gaza gaza. gaza._hamas gaza._netanyahu gaza_disarmament gaza_peace gaza_result gaza_road german germany germany_accuse governing gradual grain grain_export group guilty halle halt halt_turkish hamas hamas_agree hamas_disarmament hamas_leader hand heaviest held hezbollah highest highlighting hip-hop hometown hospital however igniting implementation incident include included including including_children independence indicate indicated indicating indication indicted individual infrastructure initial initiative injured injurie injuring intense intense_russia interview investigator involved involvement israel israel_airstrike israel_conduct israel_decline israel_military israel_prime israel_resistance israel_withdrawal issued jared jared_kushner jeopardize june june. june._israel june._rescue jury keffe keith keith_davis kharkiv kharkiv_ukraine kill killed known kremlin kremlin_adviser kryvyi kryvyi_rih kushner kushner_engage kushner_meets kyiv kyiv_region kyiv_resident kyiv_result kyiv_solomianskyi kyiv_supermarket labeling largest las las_vegas later later_opening launched leader least leave lebanese lebanon lebanon_result leipzig leipzig_airport leipzig_halle life linked local located mall many map_jared marking marks maximum meanwhile meet meeting meets meets_hamas middle middle_east military military_action missile missile_barrage missing mission moment month moscow moscow._kushner move multiple multiple_casualtie murder murder_accused murder_nearly murdering murdering_tupac near near_kyiv nearby nearly nearly_years necessary negotiation nephew nephew_fired netanyahu nevada nine northwest noted novorossiysk numerou occurred october october_germany odesa officially oil ongoing online opening opens operation orchestrated orchestrating orlando orlando_anderson other overnight owner palestinian parole part particularly parts peace peace_proposal perceived plan plane port ports ports_ukraine position potential potentially power present prevent previou prime prison private progress proposal proposal_israel proposed protect putin railway rapper rare recent recorded reflect regarding region regional reject rejected rejection remained remark repair repeated reported reportedly represent rescue resident resident_assess residential resilience resistance resistance_jared responder response result resulted resulting retailer retreat revive revive_gaza rise rising rising_tension road road_map runway russia russia. russia._his russia_air russia_bombardment russia_drone russia_missile russia_resulting saturday scheduled school sea_ports search second seize sentence sentencing serie seven several shakur shakur_murder share shelve shooting shopping shopping_mall shortly shots sign significant since sixth soldier solomianskyi southern sovereignty speculation speculation_duane stalled stance star stated statement stating still stipulate storage storing strike sumy supermarket supermarket_empty supply surrounding survivor syria syrian syrian_base talks targeted targeting targeting_ukraine temporarily tension tension_israel terms territory there these they three toll total toward treating trial trial_begin trial_opens troop truce trump trump_gaza trump_point tupac tupac_shakur tupac_shakur. turkey turkish turkish_deployment u.s.-backed uk ukraine ukraine. ukraine._russia ukraine._ukraine ukraine_aircraft ukraine_conduct ukraine_drone ukraine_mall ukraine_overnight ukraine_stance unacceptable unknown unnecessary unresolved unsolved untenable until upcoming upon us us-backed used vegas verdict village violence vladimir vladimir_putin volodymyr volodymyr_zelenskyy war warehouse warehouse_near warning warns wave weapon weekend weeks what where which withdraw withdrawal within without working would year years years_later zelensky zelenskyy zelenskyy_assert"
+    "search_text": "130 15-point 1996 2008 2023 2026 600 accept accuse accuse_russia accused accused_claim across action action_challenge actively additional adequately administration adviser adviser_warns advising affected aftermath agree agreed agreement aimed airbase aircraft airline airline_using airport airport_german airspace airspace_ukraine airstrike al-duhur al-zahrani allowing also ammunition among anderson announce announced ansar approach approache area areas army artist assault assert assert_ukraine assess assess_damage assessing attack attempted attempted_drone attributed august authoritie avoid backed bail ballistic barbarism barrage barrage_resident base began begin believe benjamin benjamin_netanyahu black black_sea blame blame_russia blueprint bodie bombardment both brokered brussel building calls capital capitulate cargo carrying case casualtie casualtie_israel casualtie_rise casualtie_ukraine casualty cause cause_casualtie caused causing ceasefire challenge challenge_trump children children_israel china citie civilian claim claim_nephew claiming combined comes commenced commitment committee complete completely concern concurrently condemnation condemned conduct conduct_airstrike confirmed conflict consecutive contingent continue continued contradicting control convicted criticized cruise current currently damage damaged davis davis_convicted deadliest deadly deadly_russia deal death decade decision decline decline_trump decree deir delivered demand demand_hamas deploying deployment deployment_israel depot described desire despicable despite destruction diplomat diplomatic direct disappointed disarm disarmament disarmament_israel disarmed disarming discovered discuss discussion disrupt disrupt_grain disrupted disruption district divergence does donald donald_trump double-tap drew drive-by drone drone_factorie drone_operation duane duane_davis duane_keith earlier early east east_talks effort emergency emphasized empty empty_russia ending engage envoy escalating escalation established eu experiencing explosive export extension extensive extinguish face faces facilitating facilitie factorie fatal fatal_shots fatalitie fifth fire fired fired_fatal firefighter fires first-degree follow followed force foreign form found four fulfilling fully gaza gaza. gaza._hamas gaza._netanyahu gaza_disarmament gaza_peace gaza_result gaza_road german germany germany_accuse germany_blame governing gradual grain grain_export group guilty gulf halle halt halt_turkish hamas hamas_agree hamas_disarmament hamas_leader hand heaviest held hezbollah highest highlighting hip-hop hometown hospital however igniting implementation incident include included including including_children independence indicate indicated indicating indication indicted individual infrastructure initial initiative injured injurie injuring insufficient intense intense_russia intensify interview investigator involved involvement israel israel_airstrike israel_conduct israel_decline israel_military israel_prime israel_resistance israel_withdrawal issued jared jared_kushner jeopardize june june. june._israel june._rescue jury keffe keith keith_davis kharkiv kharkiv_ukraine kill killed known kremlin kremlin_adviser kryvyi kryvyi_rih kushner kushner_engage kushner_meets kyiv kyiv_region kyiv_resident kyiv_result kyiv_solomianskyi kyiv_supermarket labeling largest las las_vegas later later_opening launched leader least leave lebanese lebanon lebanon_result leipzig leipzig_airport leipzig_halle life linked local located mall many map_jared marking marks maximum meanwhile meet meeting meets meets_hamas middle middle_east military military_action missile missile_barrage missing mission moment month moscow moscow._kushner move multiple multiple_casualtie murder murder_accused murder_nearly murdering murdering_tupac near near_kyiv nearby nearly nearly_years necessary negotiation nephew nephew_fired netanyahu nevada nine northwest noted novorossiysk numerou occurred october october_germany odesa officially oil ongoing online opening opens operate operation operation_prompt orchestrated orchestrating orlando orlando_anderson other overnight owner palestinian parole part particularly parts peace peace_proposal perceived plan plane port ports ports_ukraine position potential potentially power present prevent previou prime prison private progress prompt prompt_warning prompted proposal proposal_israel proposed protect putin railway rapper rare recent recorded reflect regarding region regional reject rejected rejection remained remark repair repeated reported reportedly represent rescue resident resident_assess residential resilience resistance resistance_jared responder response result resulted resulting retailer retreat revive revive_gaza rise rising rising_tension road road_map runway russia russia. russia._germany russia._his russia_air russia_airspace russia_bombardment russia_drone russia_missile russia_resulting saturday scheduled school sea_ports search second seize sentence sentencing serie seven several shakur shakur_murder share shelve shooting shopping shopping_mall shortly shots sign significant since sixth soldier solomianskyi some southern sovereignty speculation speculation_duane stalled stance star stated statement stating still stipulate storage storing strike summon sumy supermarket supermarket_empty supply surrounding survivor syria syrian syrian_base talks targeted targeting targeting_ukraine temporarily tension tension_israel terms territory there these they threatening three toll total toward treating trial trial_begin trial_opens troop truce trump trump_gaza trump_point tupac tupac_shakur tupac_shakur. turkey turkish turkish_deployment u.s.-backed uk ukraine ukraine. ukraine._russia ukraine._some ukraine._ukraine ukraine_aircraft ukraine_conduct ukraine_drone ukraine_mall ukraine_overnight ukraine_stance unacceptable unknown unnecessary unresolved unsolved untenable until upcoming upon us us-backed used using using_russia vegas verdict village violence vladimir vladimir_putin volodymyr volodymyr_zelenskyy war warehouse warehouse_near warning warns wave weapon weekend weeks what where which withdraw withdrawal within without working would year years years_later zelensky zelenskyy zelenskyy_assert"
   },
   "related_events": [
+    {
+      "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
+      "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
+      "summary": "Muninn first tracked this thread on 2026-07-25: Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse. The latest development is Ukraine Conducts Major Drone Attack on Moscow Amid Ongoing Conflict.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-25",
+      "last_seen_at": "2026-08-16",
+      "development_count": 14,
+      "latest_title": "Ukraine Conducts Major Drone Attack on Moscow Amid Ongoing Conflict",
+      "topic_label": "Russia-Ukraine War",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea"
+    },
     {
       "event_id": "event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd",
       "title": "Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv",
@@ -4357,14 +4678,14 @@
     {
       "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
       "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
-      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is US Strikes Iranian Rocket Launchers in Strait of Hormuz Amid Escalating Tensions.",
+      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Iran Responds to US Strikes with Attacks on Regional Allies Following Alleged Wedding Bombing.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-07-22",
-      "last_seen_at": "2026-08-31",
-      "development_count": 31,
-      "latest_title": "US Strikes Iranian Rocket Launchers in Strait of Hormuz Amid Escalating Tensions",
+      "last_seen_at": "2026-09-02",
+      "development_count": 32,
+      "latest_title": "Iran Responds to US Strikes with Attacks on Regional Allies Following Alleged Wedding Bombing",
       "topic_label": "Iran War",
       "hero_image": {
         "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
@@ -4387,40 +4708,6 @@
         "focal_tall_y": 0.48
       },
       "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
-    },
-    {
-      "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
-      "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
-      "summary": "Muninn first tracked this thread on 2026-07-25: Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse. The latest development is Ukraine Conducts Major Drone Attack on Moscow Amid Ongoing Conflict.",
-      "activity_status": "active",
-      "stage": "timeline",
-      "stage_label": "Timeline",
-      "first_seen_at": "2026-07-25",
-      "last_seen_at": "2026-08-16",
-      "development_count": 14,
-      "latest_title": "Ukraine Conducts Major Drone Attack on Moscow Amid Ongoing Conflict",
-      "topic_label": "Russia-Ukraine War",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea"
     },
     {
       "event_id": "event_israeli-strikes-in-gaza-result-in-seven-deat_837b156199",

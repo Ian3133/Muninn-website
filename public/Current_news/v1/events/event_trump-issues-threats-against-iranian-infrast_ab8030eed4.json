@@ -15,7 +15,7 @@
     "summary": "US President Donald Trump has threatened to target Iranian bridges and power plants in retaliation for any attacks on ships in the Strait of Hormuz. He stated that for each ship fired upon by Iranian forces, the US would respond by destroying a corresponding piece of Iranian infrastructure. This escalation comes amid ongoing tensions in the region and rising oil prices.",
     "status": "active",
     "first_seen_at": "2026-07-22",
-    "last_seen_at": "2026-08-31",
+    "last_seen_at": "2026-09-02",
     "timeline": [
       {
         "development_id": "story_627e2a10f3d02720",
@@ -2550,15 +2550,113 @@
         "first_seen_at": "2026-08-31",
         "last_seen_at": "2026-08-31",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_0b1360427ecdd412",
+        "daily_story_id": "story_0b1360427ecdd412",
+        "date": "2026-09-02",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Iran Responds to US Strikes with Attacks on Regional Allies Following Alleged Wedding Bombing",
+        "summary": "Iran has launched missile and drone attacks targeting US allies in the Gulf region after the US military conducted airstrikes that Tehran claims killed at least five people at a wedding party. The Iranian government has warned that American allies are now legitimate targets in response to the US actions, which they describe as a 'war crime.' This escalation follows a series of retaliatory strikes between the two nations, raising concerns about a broader conflict in the region.",
+        "topic_label": "Iran Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "US airstrikes reportedly killed five people at a wedding in Iran.",
+          "Iran retaliated with missile and drone attacks on US allies in the Gulf.",
+          "Iranian authorities warned that US allies are now fair game."
+        ],
+        "source_count": 4,
+        "sources": [
+          "BBC",
+          "Euronews",
+          "France 24",
+          "The Guardian"
+        ],
+        "source_urls": [
+          "https://www.france24.com/en/video/20260902-dangerous-consequences-iran-warns-us-after-alleged-strike-on-wedding",
+          "http://www.euronews.com/2026/09/01/us-military-says-it-struck-irgc-targets-in-iran-after-attacks-on-shipping-in-strait-of-hor",
+          "https://www.theguardian.com/world/2026/sep/01/us-iran-airstrikes-launch",
+          "https://www.bbc.co.uk/news/articles/cj06q4ynpmjo?at_medium=RSS&at_campaign=rss"
+        ],
+        "source_details": [
+          {
+            "title": "'Dangerous consequences': Iran warns US after alleged strike on wedding",
+            "source": "France 24",
+            "link": "https://www.france24.com/en/video/20260902-dangerous-consequences-iran-warns-us-after-alleged-strike-on-wedding",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "US launches new strikes in southern Iran, Tehran responds with attacks across region",
+            "source": "Euronews",
+            "link": "http://www.euronews.com/2026/09/01/us-military-says-it-struck-irgc-targets-in-iran-after-attacks-on-shipping-in-strait-of-hor",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "US and Iran exchange more airstrikes, fuelling fears of wider return to hostilities",
+            "source": "The Guardian",
+            "link": "https://www.theguardian.com/world/2026/sep/01/us-iran-airstrikes-launch",
+            "source_bias": "left"
+          },
+          {
+            "title": "Iran says US strike killed four at wedding in 'war crime' as US denies targeting civilians",
+            "source": "BBC",
+            "link": "https://www.bbc.co.uk/news/articles/cj06q4ynpmjo?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "attack",
+            "strike"
+          ],
+          "shared_incident_anchors": [
+            "iran",
+            "us"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "action",
+            "airstrike",
+            "attack",
+            "conducted",
+            "iran",
+            "killed",
+            "military",
+            "reportedly",
+            "response",
+            "retaliatory",
+            "strike",
+            "war",
+            "warned"
+          ],
+          "shared_entities": [
+            "iran",
+            "us"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_bd8e9dea5f5971a1",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-02",
+        "last_seen_at": "2026-09-02",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 31,
-      "questionable_development_count": 4,
+      "public_development_count": 32,
+      "questionable_development_count": 5,
       "review_required": true
     },
-    "latest_title": "US Strikes Iranian Rocket Launchers in Strait of Hormuz Amid Escalating Tensions",
-    "latest_summary": "The United States conducted airstrikes on Iranian rocket launchers located on Larak Island in the Strait of Hormuz, marking the first military action in weeks. The strikes reportedly targeted Iranian forces preparing to deploy sea mines into the strategic waterway. The attack resulted in two fatalities and two injuries. In response, the Iranian Revolutionary Guard Corps warned of a potential retaliatory response.",
+    "latest_title": "Iran Responds to US Strikes with Attacks on Regional Allies Following Alleged Wedding Bombing",
+    "latest_summary": "Iran has launched missile and drone attacks targeting US allies in the Gulf region after the US military conducted airstrikes that Tehran claims killed at least five people at a wedding party. The Iranian government has warned that American allies are now legitimate targets in response to the US actions, which they describe as a 'war crime.' This escalation follows a series of retaliatory strikes between the two nations, raising concerns about a broader conflict in the region.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -2569,29 +2667,29 @@
       "milestone_development_ids": [
         "story_627e2a10f3d02720",
         "story_2929a64ffeb06aa7",
-        "story_1db61a52b419b7b7",
-        "story_bd8e9dea5f5971a1"
+        "story_285ff8b754e07760",
+        "story_0b1360427ecdd412"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-31",
-      "development_count": 31,
-      "coverage_packet_count": 35,
-      "date_count": 24,
-      "source_count": 103,
+      "summary_updated_at": "2026-09-02",
+      "development_count": 32,
+      "coverage_packet_count": 36,
+      "date_count": 25,
+      "source_count": 107,
       "independent_source_count": 30,
       "first_date": "2026-07-22",
-      "latest_date": "2026-08-31",
-      "latest_update_title": "US Strikes Iranian Rocket Launchers in Strait of Hormuz Amid Escalating Tensions",
+      "latest_date": "2026-09-02",
+      "latest_update_title": "Iran Responds to US Strikes with Attacks on Regional Allies Following Alleged Wedding Bombing",
       "coverage_score": 1.0,
-      "recency_score": 0.875,
-      "rank_score": 0.927,
-      "context_summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is US Strikes Iranian Rocket Launchers in Strait of Hormuz Amid Escalating Tensions.",
-      "cta_label": "Explore 31 developments"
+      "recency_score": 1.0,
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Iran Responds to US Strikes with Attacks on Regional Allies Following Alleged Wedding Bombing.",
+      "cta_label": "Explore 32 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "US President Donald Trump has threatened to target Iranian bridges and power plants in retaliation for any attacks on ships in the Strait of Hormuz. A later development was Trump Halts Strikes on Iran to Pursue New Negotiations. Most recently, the United States conducted airstrikes on Iranian rocket launchers located on Larak Island in the Strait of Hormuz, marking the first military action in weeks.",
+      "summary": "US President Donald Trump has threatened to target Iranian bridges and power plants in retaliation for any attacks on ships in the Strait of Hormuz. A later development was Trump Warns Iran Over Strait of Hormuz Deal Deadline. Most recently, iran has launched missile and drone attacks targeting US allies in the Gulf region after the US military conducted airstrikes that Tehran claims killed at least five people at a wedding party.",
       "key_developments": [
         {
           "development_id": "story_627e2a10f3d02720",
@@ -2604,14 +2702,14 @@
           "title": "Escalation in Middle East as US and Saudi Forces Target Iranian Militias Amid Missile Attacks"
         },
         {
-          "development_id": "story_1db61a52b419b7b7",
+          "development_id": "story_285ff8b754e07760",
           "date": "2026-08-15",
-          "title": "Iran Responds to US Claims Over Strait of Hormuz"
+          "title": "Trump Critiques USS Lincoln's Deployment Duration During Iran Operations"
         },
         {
-          "development_id": "story_bd8e9dea5f5971a1",
-          "date": "2026-08-31",
-          "title": "US Strikes Iranian Rocket Launchers in Strait of Hormuz Amid Escalating Tensions"
+          "development_id": "story_0b1360427ecdd412",
+          "date": "2026-09-02",
+          "title": "Iran Responds to US Strikes with Attacks on Regional Allies Following Alleged Wedding Bombing"
         }
       ],
       "sources": [
@@ -3232,50 +3330,37 @@
           "source": "Euronews",
           "link": "http://www.euronews.com/2026/08/30/us-forces-strike-iranian-rocket-launchers-in-strait-of-hormuz-as-irgc-warns-of-retaliatory",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "'Dangerous consequences': Iran warns US after alleged strike on wedding",
+          "source": "France 24",
+          "link": "https://www.france24.com/en/video/20260902-dangerous-consequences-iran-warns-us-after-alleged-strike-on-wedding",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "US launches new strikes in southern Iran, Tehran responds with attacks across region",
+          "source": "Euronews",
+          "link": "http://www.euronews.com/2026/09/01/us-military-says-it-struck-irgc-targets-in-iran-after-attacks-on-shipping-in-strait-of-hor",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "US and Iran exchange more airstrikes, fuelling fears of wider return to hostilities",
+          "source": "The Guardian",
+          "link": "https://www.theguardian.com/world/2026/sep/01/us-iran-airstrikes-launch",
+          "source_bias": "left"
+        },
+        {
+          "title": "Iran says US strike killed four at wedding in 'war crime' as US denies targeting civilians",
+          "source": "BBC",
+          "link": "https://www.bbc.co.uk/news/articles/cj06q4ynpmjo?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-08-31",
+      "updated_at": "2026-09-02",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
     "related_events": [
-      {
-        "event_id": "event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a",
-        "title": "Trump Delays Iran Strikes to Pursue Diplomatic Deal",
-        "relationship": "related_topic",
-        "confidence": 0.95,
-        "shared_entities": [
-          "deal_trump",
-          "donald_trump",
-          "economic_warfare",
-          "hormuz_iran",
-          "iran",
-          "iran.",
-          "jd",
-          "pursue",
-          "strait",
-          "us"
-        ]
-      },
-      {
-        "event_id": "event_iran-claims-attacks-on-us-bases-in-bahrain-j_2ed1fdd27a",
-        "title": "Iran Claims Attacks on US Bases in Bahrain, Jordan, and Kuwait Amid Escalating Conflict",
-        "relationship": "related_topic",
-        "confidence": 0.95,
-        "shared_entities": [
-          "america",
-          "hormuz_iran",
-          "iran",
-          "iran_claim",
-          "iran_revolutionary",
-          "iraq.",
-          "middle",
-          "middle_east",
-          "revolutionary_guard",
-          "strait",
-          "us"
-        ]
-      },
       {
         "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
         "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
@@ -3299,10 +3384,48 @@
         ]
       },
       {
+        "event_id": "event_iran-claims-attacks-on-us-bases-in-bahrain-j_2ed1fdd27a",
+        "title": "Iran Claims Attacks on US Bases in Bahrain, Jordan, and Kuwait Amid Escalating Conflict",
+        "relationship": "related_topic",
+        "confidence": 0.95,
+        "shared_entities": [
+          "america",
+          "hormuz_iran",
+          "iran",
+          "iran_claim",
+          "iran_revolutionary",
+          "iraq.",
+          "middle",
+          "middle_east",
+          "revolutionary_guard",
+          "strait",
+          "us"
+        ]
+      },
+      {
+        "event_id": "event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a",
+        "title": "Trump Delays Iran Strikes to Pursue Diplomatic Deal",
+        "relationship": "related_topic",
+        "confidence": 0.95,
+        "shared_entities": [
+          "deal_trump",
+          "donald_trump",
+          "economic_warfare",
+          "gulf",
+          "hormuz_iran",
+          "iran",
+          "iran.",
+          "jd",
+          "pursue",
+          "strait",
+          "us"
+        ]
+      },
+      {
         "event_id": "event_iran-s-rial-hits-record-low-amid-upcoming-us_4cb9f43899",
         "title": "Iran's Rial Hits Record Low Amid Upcoming US Sanctions",
         "relationship": "related_topic",
-        "confidence": 0.885,
+        "confidence": 0.888,
         "shared_entities": [
           "iran",
           "iran.",
@@ -3450,6 +3573,7 @@
       "alive",
       "allegation",
       "alleged",
+      "allie",
       "alongside",
       "also",
       "ambition",
@@ -3475,6 +3599,7 @@
       "black",
       "blockade",
       "bomb",
+      "bombing",
       "both",
       "breach",
       "bridge",
@@ -3516,6 +3641,7 @@
       "corps",
       "corresponding",
       "create",
+      "crime",
       "critique",
       "crossing",
       "curbing",
@@ -3537,6 +3663,7 @@
       "denied",
       "deploy",
       "deployment",
+      "describe",
       "despite",
       "destroying",
       "devastating",
@@ -3552,6 +3679,7 @@
       "downed",
       "downing",
       "drill",
+      "drone",
       "duration",
       "each",
       "earlier",
@@ -3617,6 +3745,7 @@
       "grain",
       "guantanamo",
       "guard",
+      "gulf",
       "halt",
       "halted",
       "halts",
@@ -3668,6 +3797,7 @@
       "judge",
       "june",
       "khalid",
+      "killed",
       "korea",
       "larak",
       "late",
@@ -3676,6 +3806,8 @@
       "launcher",
       "lead",
       "leader",
+      "least",
+      "legitimate",
       "length",
       "limit",
       "lincoln",
@@ -3733,6 +3865,7 @@
       "pakistani",
       "part",
       "particularly",
+      "party",
       "passe",
       "pause",
       "paused",
@@ -3764,6 +3897,7 @@
       "qatar",
       "qatari",
       "raised",
+      "raising",
       "rapid",
       "reach",
       "reached",
@@ -3783,6 +3917,7 @@
       "regarding",
       "regime",
       "region",
+      "regional",
       "reject",
       "related",
       "remain",
@@ -3917,6 +4052,7 @@
       "warns",
       "washington",
       "waterway",
+      "wedding",
       "wednesday",
       "week",
       "weeks",
@@ -3935,12 +4071,14 @@
       "air_force",
       "al-qaeda",
       "alleged_mastermind",
+      "alleged_wedding",
       "america",
       "bab",
       "began_israel",
       "benjamin_netanyahu",
       "black",
       "black_sea",
+      "bombing_iran",
       "cancel_joint",
       "cancel_planned",
       "ceasefire_negotiation",
@@ -3976,6 +4114,7 @@
       "guantanamo",
       "guantanamo_bay",
       "guard_corps",
+      "gulf",
       "holding_iran",
       "hormuz._trump",
       "hormuz_deal",
@@ -4048,6 +4187,7 @@
       "refute_claim",
       "regarding_iran",
       "region_recent",
+      "regional_allie",
       "revolutionary_guard",
       "rocket_launcher",
       "russia",
@@ -4099,29 +4239,30 @@
       "warns_iran",
       "washington",
       "washington_d.c.",
+      "wedding_bombing",
       "weigh_military",
       "without_agreement",
       "yemen.",
       "zelenskyy._escalation"
     ],
-    "search_text": "100 2001 2003 2006 2025 2028 260 60-day aboard accept achieved action adjustment administration agreed agreement aimed air_force airstrike al-qaeda alive allegation alleged alleged_mastermind alongside also ambition america announce announced announcing another arabia assert asserting attack attempted attempting attend bab barrel becoming began began_israel behind benjamin benjamin_netanyahu bessent bipartisan black black_sea blockade bomb both breach bridge brief broader calm cancel cancel_joint cancel_planned canceled cancellation captured ceasefire ceasefire_negotiation central central_command citing civilian claim claim_missile claim_victory claimed close coinciding come comes command commitment communicated compensation concern concerning condition conduct conducted conflict consecutive consequence considered considering constraint contingent continue control corps corresponding create critique critique_uss crossing curbing d.c. deadline deadline_donald deal deal_deadline deal_negotiation deal_trump death decision declaration declaration_iran declare declared decline deepening defeat deliver delusion demand demand_compensation demanded democrat denied deploy deployment deployment_duration despite destroying devastating development diplomatic diplomatic_effort direct discuss discussion dismissed disruption donald donald_trump doubt downed downed_qatar downing drill duration each earlier early east eastern economic economic_warfare economy effective effort eighth el-mandeb election emphasized engaged enough escalate escalated escalating escalating_iran escalating_tension escalation established event exceed exchange exercise exercised expanded expansion expect expiration expired export export_terminal expressed extend extend_pause extension face faced facilitie fade fail family fatalitie february february_trump fell fighter fighter_jets fire fired firing firmly first first_time five focusing foiled foiled_missile follow force force_target four framework freedom freedom_shield funeral further global graham grain grain_export guantanamo guantanamo_bay guard guard_corps halt halted halts handling heightened held high-ranking history holding holding_iran hopes hormuz hormuz._trump hormuz_deal hormuz_iran hormuz_stalemate hormuz_tension hostilitie house house_votes houthi houthi_claim impact impacted impose imposed incident including increase increased indicated indicating indication individual infrastructure initiate injurie instead intended intensified intercepted interfere interim international iran iran-backed iran-backed_houthi iran. iran._houthi iran._iran iran_claim iran_extend iran_infrastructure iran_militia iran_negotiation iran_operation iran_pause iran_pending iran_pilot iran_promise iran_respond iran_revolutionary iran_rocket iran_target iran_tension iran_threaten iran_war iranian-backed iranian-backed_houthi iraq iraq. island israel israel_prime issue issue_threat jd jets jets_downed jizan jizan. joining joint joint_drill jordanian judge june khalid khalid_sheikh korea korea_due larak larak_island late launch launched launcher lead leader length limit limit_trump lincoln lincoln_deployment lindsey lindsey_graham loaded located locked long loved made management march marine marine_cancel maritime mark marking marks mastermind mastermind_khalid matter meanwhile measure meet meeting member middle middle_east middle_eastern military military_action militia mines missile mohammed monday month most move nation national nearly need negotiate negotiation netanyahu nuclear office officially oil oman ones ongoing ongoing_yemen operation operation_trump opting order ordered other package pakistani part particularly passe passe_without pause paused peace peace_talks pending pending_deal perimeter period piece pilot place planned plant political ports potential power power_regarding preparing pressure previously price price_decline price_exceed prime progress promise promise_retaliation prospect punishment pursue pursuing push qatar qatar_refute qatari raised rapid reach reached reaching reality reason rebel rebuke received recent recognized red red_sea red_sea. reduce reduced reflect refrain refute refute_claim regarding regarding_iran regime region region_recent reject related remain remark renewed reopen reopening reported reportedly representative republican requested resolution resolving respond response responsibility restrict result resulted resume resumed retaliate retaliation retaliatory returned revolutionary revolutionary_guard rise rising rocket rocket_launcher rough route russia sanction saudi saudi_arabia saudi_force scheduled scott scott_bessent sea._meanwhile sea_region sea_result second secretary secretary_scott seeks september serie seriou severe severely sheikh sheikh_mohammed shield shift ship shipping ships should sides significant significantly since since_iran situation six soldier solution sought south south_korea space stage stalemate stalled start stated stating strait strategic strategy strike strong strong_retaliation success successfully such suggestion supplie support surged surprise take taken talks talks_passe tanker target target_iran targeted targeting tehran tension terminal terminal_escalate territory there these they threat threaten threaten_strong threatened three through thursday thwarting time time_since tolls toughest treasury treasury_secretary trial trial_scheduled tribunal trump trump_cancel trump_critique trump_demand trump_halts trump_issue trump_meet trump_war trump_warns trump_weigh u.s. u.s.-iran u.s.-iran_peace ukraine ulchi ulchi_freedom unclear underway united upcoming upon urged us us-iran us. uss uss_lincoln vance vessel vice victory violating volodymyr volodymyr_zelenskyy. vote voted votes vowed war war_began war_constraint war_power warfare warfare_declaration warned warns warns_iran washington washington_d.c. waterway wednesday week weeks weigh weigh_military where which while without without_agreement worried would year yemen yemen. zelenskyy zelenskyy._escalation"
+    "search_text": "100 2001 2003 2006 2025 2028 260 60-day aboard accept achieved action adjustment administration agreed agreement aimed air_force airstrike al-qaeda alive allegation alleged alleged_mastermind alleged_wedding allie alongside also ambition america announce announced announcing another arabia assert asserting attack attempted attempting attend bab barrel becoming began began_israel behind benjamin benjamin_netanyahu bessent bipartisan black black_sea blockade bomb bombing bombing_iran both breach bridge brief broader calm cancel cancel_joint cancel_planned canceled cancellation captured ceasefire ceasefire_negotiation central central_command citing civilian claim claim_missile claim_victory claimed close coinciding come comes command commitment communicated compensation concern concerning condition conduct conducted conflict consecutive consequence considered considering constraint contingent continue control corps corresponding create crime critique critique_uss crossing curbing d.c. deadline deadline_donald deal deal_deadline deal_negotiation deal_trump death decision declaration declaration_iran declare declared decline deepening defeat deliver delusion demand demand_compensation demanded democrat denied deploy deployment deployment_duration describe despite destroying devastating development diplomatic diplomatic_effort direct discuss discussion dismissed disruption donald donald_trump doubt downed downed_qatar downing drill drone duration each earlier early east eastern economic economic_warfare economy effective effort eighth el-mandeb election emphasized engaged enough escalate escalated escalating escalating_iran escalating_tension escalation established event exceed exchange exercise exercised expanded expansion expect expiration expired export export_terminal expressed extend extend_pause extension face faced facilitie fade fail family fatalitie february february_trump fell fighter fighter_jets fire fired firing firmly first first_time five focusing foiled foiled_missile follow force force_target four framework freedom freedom_shield funeral further global graham grain grain_export guantanamo guantanamo_bay guard guard_corps gulf halt halted halts handling heightened held high-ranking history holding holding_iran hopes hormuz hormuz._trump hormuz_deal hormuz_iran hormuz_stalemate hormuz_tension hostilitie house house_votes houthi houthi_claim impact impacted impose imposed incident including increase increased indicated indicating indication individual infrastructure initiate injurie instead intended intensified intercepted interfere interim international iran iran-backed iran-backed_houthi iran. iran._houthi iran._iran iran_claim iran_extend iran_infrastructure iran_militia iran_negotiation iran_operation iran_pause iran_pending iran_pilot iran_promise iran_respond iran_revolutionary iran_rocket iran_target iran_tension iran_threaten iran_war iranian-backed iranian-backed_houthi iraq iraq. island israel israel_prime issue issue_threat jd jets jets_downed jizan jizan. joining joint joint_drill jordanian judge june khalid khalid_sheikh killed korea korea_due larak larak_island late launch launched launcher lead leader least legitimate length limit limit_trump lincoln lincoln_deployment lindsey lindsey_graham loaded located locked long loved made management march marine marine_cancel maritime mark marking marks mastermind mastermind_khalid matter meanwhile measure meet meeting member middle middle_east middle_eastern military military_action militia mines missile mohammed monday month most move nation national nearly need negotiate negotiation netanyahu nuclear office officially oil oman ones ongoing ongoing_yemen operation operation_trump opting order ordered other package pakistani part particularly party passe passe_without pause paused peace peace_talks pending pending_deal perimeter period piece pilot place planned plant political ports potential power power_regarding preparing pressure previously price price_decline price_exceed prime progress promise promise_retaliation prospect punishment pursue pursuing push qatar qatar_refute qatari raised raising rapid reach reached reaching reality reason rebel rebuke received recent recognized red red_sea red_sea. reduce reduced reflect refrain refute refute_claim regarding regarding_iran regime region region_recent regional regional_allie reject related remain remark renewed reopen reopening reported reportedly representative republican requested resolution resolving respond response responsibility restrict result resulted resume resumed retaliate retaliation retaliatory returned revolutionary revolutionary_guard rise rising rocket rocket_launcher rough route russia sanction saudi saudi_arabia saudi_force scheduled scott scott_bessent sea._meanwhile sea_region sea_result second secretary secretary_scott seeks september serie seriou severe severely sheikh sheikh_mohammed shield shift ship shipping ships should sides significant significantly since since_iran situation six soldier solution sought south south_korea space stage stalemate stalled start stated stating strait strategic strategy strike strong strong_retaliation success successfully such suggestion supplie support surged surprise take taken talks talks_passe tanker target target_iran targeted targeting tehran tension terminal terminal_escalate territory there these they threat threaten threaten_strong threatened three through thursday thwarting time time_since tolls toughest treasury treasury_secretary trial trial_scheduled tribunal trump trump_cancel trump_critique trump_demand trump_halts trump_issue trump_meet trump_war trump_warns trump_weigh u.s. u.s.-iran u.s.-iran_peace ukraine ulchi ulchi_freedom unclear underway united upcoming upon urged us us-iran us. uss uss_lincoln vance vessel vice victory violating volodymyr volodymyr_zelenskyy. vote voted votes vowed war war_began war_constraint war_power warfare warfare_declaration warned warns warns_iran washington washington_d.c. waterway wedding wedding_bombing wednesday week weeks weigh weigh_military where which while without without_agreement worried would year yemen yemen. zelenskyy zelenskyy._escalation"
   },
   "related_events": [
     {
-      "event_id": "event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a",
-      "title": "Trump Delays Iran Strikes to Pursue Diplomatic Deal",
-      "summary": "Muninn first tracked this thread on 2026-08-02: Trump Delays Iran Strikes to Pursue Diplomatic Deal. The latest development is Vance Supports Trump's AI Video of Kharg Island as a Warning to Iran.",
+      "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
+      "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
+      "summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Ukraine's Drone Operations Prompt Warnings for Airlines Using Russian Airspace.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
-      "first_seen_at": "2026-08-02",
-      "last_seen_at": "2026-08-31",
-      "development_count": 7,
-      "latest_title": "Vance Supports Trump's AI Video of Kharg Island as a Warning to Iran",
-      "topic_label": "Iran Relations",
+      "first_seen_at": "2026-07-31",
+      "last_seen_at": "2026-09-02",
+      "development_count": 31,
+      "latest_title": "Ukraine's Drone Operations Prompt Warnings for Airlines Using Russian Airspace",
+      "topic_label": "Gaza Peace Deal",
       "hero_image": {
-        "url": "/Current_news/generated/events/event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a.jpg",
+        "url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
         "source": "Muninn AI illustration",
         "author": "OpenAI GPT Image 2",
         "license": "AI-generated content",
@@ -4139,7 +4280,7 @@
         "focal_tall_x": 0.5,
         "focal_tall_y": 0.48
       },
-      "href": "/timeline.html?event=event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a"
+      "href": "/timeline.html?event=event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b"
     },
     {
       "event_id": "event_iran-claims-attacks-on-us-bases-in-bahrain-j_2ed1fdd27a",
@@ -4176,20 +4317,20 @@
       "href": "/timeline.html?event=event_iran-claims-attacks-on-us-bases-in-bahrain-j_2ed1fdd27a"
     },
     {
-      "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
-      "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
-      "summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Germany Accuses Russia of Drone Attack Targeting Ukrainian Aircraft at Leipzig Airport.",
+      "event_id": "event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a",
+      "title": "Trump Delays Iran Strikes to Pursue Diplomatic Deal",
+      "summary": "Muninn first tracked this thread on 2026-08-02: Trump Delays Iran Strikes to Pursue Diplomatic Deal. The latest development is Vance Supports Trump's AI Video of Kharg Island as a Warning to Iran.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
-      "first_seen_at": "2026-07-31",
-      "last_seen_at": "2026-09-01",
-      "development_count": 29,
-      "latest_title": "Germany Accuses Russia of Drone Attack Targeting Ukrainian Aircraft at Leipzig Airport",
-      "topic_label": "Gaza Peace Deal",
+      "first_seen_at": "2026-08-02",
+      "last_seen_at": "2026-08-31",
+      "development_count": 7,
+      "latest_title": "Vance Supports Trump's AI Video of Kharg Island as a Warning to Iran",
+      "topic_label": "Iran Relations",
       "hero_image": {
-        "url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
+        "url": "/Current_news/generated/events/event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a.jpg",
         "source": "Muninn AI illustration",
         "author": "OpenAI GPT Image 2",
         "license": "AI-generated content",
@@ -4207,7 +4348,7 @@
         "focal_tall_x": 0.5,
         "focal_tall_y": 0.48
       },
-      "href": "/timeline.html?event=event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b"
+      "href": "/timeline.html?event=event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a"
     },
     {
       "event_id": "event_iran-s-rial-hits-record-low-amid-upcoming-us_4cb9f43899",
