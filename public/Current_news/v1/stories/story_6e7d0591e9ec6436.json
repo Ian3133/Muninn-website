@@ -1,0 +1,565 @@
+{
+  "schema_version": 1,
+  "resource_type": "story",
+  "story_id": "story_6e7d0591e9ec6436",
+  "edition": {
+    "date": "2026-09-03",
+    "generated_at": "2026-09-03T15:42:16.094598+00:00"
+  },
+  "publication": {
+    "status": "published",
+    "published_at": "2026-09-03T15:42:16.094598+00:00",
+    "permalink": "/story.html?sid=story_6e7d0591e9ec6436",
+    "share_expires_at": null,
+    "placements": [
+      {
+        "surface": "today",
+        "visible_from": "2026-09-03T15:42:16.094598+00:00",
+        "visible_until": "2026-09-04T15:42:16.094598+00:00"
+      },
+      {
+        "surface": "more_news",
+        "visible_from": "2026-09-04T15:42:16.094598+00:00",
+        "visible_until": "2026-09-10T15:42:16.094598+00:00"
+      }
+    ]
+  },
+  "story": {
+    "cluster_id": "demo_cluster_009",
+    "title": "Shooting in Minneapolis Results in Two Deaths and Multiple Injuries",
+    "category": "Public Safety",
+    "topic_label": "",
+    "summary": "A shooting in an apartment building in downtown Minneapolis has left two people dead and several others injured, including three police officers. The incident occurred when a gunman opened fire, prompting an ongoing investigation by local authorities.",
+    "occurred_at": "2026-09-03",
+    "occurrence_precision": "exact_time",
+    "occurrence_basis": "source_stated",
+    "source_count": 2,
+    "sources": [
+      "NBC News - Top Stories",
+      "RTE News"
+    ],
+    "items": [
+      {
+        "title": "Two dead, police among injured in Minneapolis shooting",
+        "description": "",
+        "source": "RTE News",
+        "station": "RTE News",
+        "source_bias": "center",
+        "access_type": null,
+        "published_ts": 1788398277,
+        "link": "https://www.rte.ie/news/us/2026/0903/1590145-minneapolis-shooting/"
+      },
+      {
+        "title": "Mass Shooting in Minneapolis Leaves 2 Dead, Several Injured",
+        "description": "",
+        "source": "NBC News - Top Stories",
+        "station": "NBC News - Top Stories",
+        "source_bias": "lean-left",
+        "access_type": null,
+        "published_ts": 1788434810,
+        "link": "https://www.today.com/video/gunman-opens-fire-in-minneapolis-apartment-building-killing-2-269265477753"
+      }
+    ],
+    "quality_label": "review",
+    "quality_score": 0.59,
+    "key_facts": [
+      "Two people have died.",
+      "Several others were injured, including three police officers.",
+      "The shooting took place in an apartment building in downtown Minneapolis."
+    ],
+    "primary_source": {
+      "title": "Two dead, police among injured in Minneapolis shooting",
+      "source": "RTE News",
+      "source_bias": "center",
+      "access_type": null,
+      "link": "https://www.rte.ie/news/us/2026/0903/1590145-minneapolis-shooting/",
+      "published_ts": 1788398277
+    },
+    "story_id": "story_6e7d0591e9ec6436",
+    "development_id": "story_6e7d0591e9ec6436",
+    "event_id": "event_shooting-in-minneapolis-results-in-two-death_098bc2e060",
+    "event_match_confidence": 1.0,
+    "update_kind": "new_event",
+    "novelty_score": 1.0,
+    "new_facts": [
+      "Two people have died.",
+      "Several others were injured, including three police officers.",
+      "The shooting took place in an apartment building in downtown Minneapolis."
+    ],
+    "today_eligible": true,
+    "development_relation": {
+      "same_development": false,
+      "reason": "first report attached to a new event",
+      "numbers_changed": false
+    },
+    "timeline_highlights": [
+      {
+        "development_id": "story_9f5a479fdc8e22e8",
+        "daily_story_id": "story_9f5a479fdc8e22e8",
+        "date": "2026-09-03",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Suspect in Minneapolis Shooting Identified as Facing Eviction",
+        "summary": "Carlton Neal Johnson II has been identified as the suspect in a mass shooting at a downtown Minneapolis apartment building, which occurred on Wednesday. Reports indicate that he was facing eviction due to a series of incidents, including assault and allegedly brandishing a firearm to management.",
+        "topic_label": "",
+        "development_type": "impact",
+        "key_facts": [
+          "Carlton Neal Johnson II identified as shooting suspect",
+          "Incident occurred at a downtown Minneapolis apartment building",
+          "Two people killed and six others injured",
+          "Suspect was facing eviction due to prior incidents"
+        ],
+        "source_count": 2,
+        "sources": [
+          "CBS News",
+          "Fox News"
+        ],
+        "source_urls": [
+          "https://www.foxnews.com/us/minneapolis-apartment-shooting-suspect-facing-eviction-report",
+          "https://www.cbsnews.com/news/minneapolis-mass-shooting-suspect-background-eviction"
+        ],
+        "source_details": [
+          {
+            "title": "Minneapolis apartment shooting suspect was facing eviction: report",
+            "source": "Fox News",
+            "link": "https://www.foxnews.com/us/minneapolis-apartment-shooting-suspect-facing-eviction-report",
+            "source_bias": "right"
+          },
+          {
+            "title": "Suspect in downtown Minneapolis mass shooting was facing eviction",
+            "source": "CBS News",
+            "link": "https://www.cbsnews.com/news/minneapolis-mass-shooting-suspect-background-eviction",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "shooting"
+          ],
+          "shared_incident_anchors": [
+            "minneapoli"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "apartment",
+            "building",
+            "downtown",
+            "incident",
+            "including",
+            "injured",
+            "minneapoli",
+            "occurred",
+            "other",
+            "shooting"
+          ],
+          "shared_entities": [
+            "minneapoli"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_6e7d0591e9ec6436",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-03",
+        "last_seen_at": "2026-09-03",
+        "integrity_status": "trusted"
+      }
+    ],
+    "event_title": "Shooting in Minneapolis Results in Two Deaths and Multiple Injuries",
+    "timeline_available": false,
+    "story_context": {
+      "available": true,
+      "label": "The story so far",
+      "event_title": "Shooting in Minneapolis Results in Two Deaths and Multiple Injuries",
+      "display_title": "Shooting in Minneapolis Results in Two Deaths and Multiple Injuries",
+      "stage": "developing_event",
+      "stage_label": "Developing event",
+      "summary": "Muninn first tracked this thread on 2026-09-03: Shooting in Minneapolis Results in Two Deaths and Multiple Injuries. The latest development is Suspect in Minneapolis Shooting Identified as Facing Eviction.",
+      "highlights": [
+        {
+          "development_id": "story_9f5a479fdc8e22e8",
+          "daily_story_id": "story_9f5a479fdc8e22e8",
+          "date": "2026-09-03",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Suspect in Minneapolis Shooting Identified as Facing Eviction",
+          "summary": "Carlton Neal Johnson II has been identified as the suspect in a mass shooting at a downtown Minneapolis apartment building, which occurred on Wednesday. Reports indicate that he was facing eviction due to a series of incidents, including assault and allegedly brandishing a firearm to management.",
+          "topic_label": "",
+          "development_type": "impact",
+          "key_facts": [
+            "Carlton Neal Johnson II identified as shooting suspect",
+            "Incident occurred at a downtown Minneapolis apartment building",
+            "Two people killed and six others injured",
+            "Suspect was facing eviction due to prior incidents"
+          ],
+          "source_count": 2,
+          "sources": [
+            "CBS News",
+            "Fox News"
+          ],
+          "source_urls": [
+            "https://www.foxnews.com/us/minneapolis-apartment-shooting-suspect-facing-eviction-report",
+            "https://www.cbsnews.com/news/minneapolis-mass-shooting-suspect-background-eviction"
+          ],
+          "source_details": [
+            {
+              "title": "Minneapolis apartment shooting suspect was facing eviction: report",
+              "source": "Fox News",
+              "link": "https://www.foxnews.com/us/minneapolis-apartment-shooting-suspect-facing-eviction-report",
+              "source_bias": "right"
+            },
+            {
+              "title": "Suspect in downtown Minneapolis mass shooting was facing eviction",
+              "source": "CBS News",
+              "link": "https://www.cbsnews.com/news/minneapolis-mass-shooting-suspect-background-eviction",
+              "source_bias": "lean-left"
+            }
+          ],
+          "confidence": 0.9,
+          "match_evidence": {
+            "score": 0.9,
+            "method": "bounded_incident_fingerprint_v1",
+            "incident_types": [
+              "shooting"
+            ],
+            "shared_incident_anchors": [
+              "minneapoli"
+            ],
+            "shared_incident_numbers": [],
+            "shared_tokens": [
+              "apartment",
+              "building",
+              "downtown",
+              "incident",
+              "including",
+              "injured",
+              "minneapoli",
+              "occurred",
+              "other",
+              "shooting"
+            ],
+            "shared_entities": [
+              "minneapoli"
+            ],
+            "source_url_match": false,
+            "matched_development_id": "story_6e7d0591e9ec6436",
+            "threshold": 0.38
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-09-03",
+          "last_seen_at": "2026-09-03",
+          "integrity_status": "trusted"
+        }
+      ],
+      "development_count": 2,
+      "date_count": 1,
+      "full_timeline_available": false,
+      "timeline_url": "/timeline.html?event=event_shooting-in-minneapolis-results-in-two-death_098bc2e060",
+      "cta_label": "",
+      "event_summary": {
+        "available": true,
+        "summary": "A shooting in an apartment building in downtown Minneapolis has left two people dead and several others injured, including three police officers. Most recently, carlton Neal Johnson II has been identified as the suspect in a mass shooting at a downtown Minneapolis apartment building, which occurred on Wednesday.",
+        "key_developments": [
+          {
+            "development_id": "story_6e7d0591e9ec6436",
+            "date": "2026-09-03",
+            "title": "Shooting in Minneapolis Results in Two Deaths and Multiple Injuries"
+          },
+          {
+            "development_id": "story_9f5a479fdc8e22e8",
+            "date": "2026-09-03",
+            "title": "Suspect in Minneapolis Shooting Identified as Facing Eviction"
+          }
+        ],
+        "sources": [
+          {
+            "title": "Two dead, police among injured in Minneapolis shooting",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/us/2026/0903/1590145-minneapolis-shooting",
+            "source_bias": "center"
+          },
+          {
+            "title": "Mass Shooting in Minneapolis Leaves 2 Dead, Several Injured",
+            "source": "NBC News - Top Stories",
+            "link": "https://www.today.com/video/gunman-opens-fire-in-minneapolis-apartment-building-killing-2-269265477753",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Minneapolis apartment shooting suspect was facing eviction: report",
+            "source": "Fox News",
+            "link": "https://www.foxnews.com/us/minneapolis-apartment-shooting-suspect-facing-eviction-report",
+            "source_bias": "right"
+          },
+          {
+            "title": "Suspect in downtown Minneapolis mass shooting was facing eviction",
+            "source": "CBS News",
+            "link": "https://www.cbsnews.com/news/minneapolis-mass-shooting-suspect-background-eviction",
+            "source_bias": "lean-left"
+          }
+        ],
+        "updated_at": "2026-09-03",
+        "provenance": "source_grounded_event_memory"
+      },
+      "related_events": []
+    },
+    "original_daily_position": 15,
+    "today_rank_score": 0.58,
+    "today_rank": 15,
+    "primary_category": "Public Safety",
+    "secondary_categories": [],
+    "category_method": "controlled_taxonomy_v2",
+    "category_scores": {
+      "Public Safety": 6
+    },
+    "canonical_topic_label": null,
+    "image": {
+      "url": "/Current_news/generated/ai-daily/2026-09-03/demo_cluster_009.jpg",
+      "thumbnail_url": "/Current_news/generated/ai-daily/2026-09-03/demo_cluster_009.jpg",
+      "source": "Muninn AI illustration",
+      "author": "OpenAI GPT Image 2",
+      "license": "AI-generated content",
+      "image_role": "illustrative",
+      "image_role_label": "AI illustration",
+      "is_ai_generated": true,
+      "generation_model": "gpt-image-2",
+      "generation_quality": "low",
+      "composition_role": "event_overlay",
+      "safe_to_crop": true,
+      "allows_crop": true,
+      "focal_x": 0.5,
+      "focal_y": 0.48,
+      "focal_wide_x": 0.5,
+      "focal_wide_y": 0.48,
+      "focal_tall_x": 0.5,
+      "focal_tall_y": 0.48,
+      "generation_prompt_tier": "story_specific"
+    }
+  },
+  "related_stories": [
+    {
+      "story_id": "story_d4fdf693c7c1cf27",
+      "title": "Maltese Tycoon Acquitted in Journalist Murder Case, Activist Expresses Devastation",
+      "summary": "A Maltese tycoon has been acquitted of orchestrating the murder of journalist Daphne Caruana Galizia, who was killed by a car bomb in 2017. Tom Gibson, Deputy Director for the Committee to Protect Journalists, expressed his devastation over the not guilty verdict, highlighting the ongoing struggle for justice in cases involving attacks on journalists.",
+      "occurred_at": null,
+      "source_count": 2,
+      "category": "Public Safety",
+      "primary_category": "Public Safety",
+      "secondary_categories": [],
+      "topic_label": "Charlie Kirk Murder Case",
+      "canonical_topic_label": "Charlie Kirk Murder Case",
+      "event_id": "event_teen-charged-with-murder-for-livestreaming-s_59d0c77b97",
+      "event_title": "Teen Charged with Murder for Livestreaming San Diego Mosque Attack",
+      "story_context": {
+        "available": true,
+        "event_title": "Teen Charged with Murder for Livestreaming San Diego Mosque Attack",
+        "display_title": "Teen Charged with Murder for Livestreaming San Diego Mosque Attack",
+        "stage": "developing_event",
+        "stage_label": "Developing event",
+        "development_count": 3,
+        "timeline_url": "/timeline.html?event=event_teen-charged-with-murder-for-livestreaming-s_59d0c77b97"
+      },
+      "tracked_coverage": {
+        "available": true,
+        "stage": "developing_event",
+        "stage_label": "Developing event"
+      },
+      "image": {
+        "url": "/Current_news/generated/ai-daily/2026-09-03/demo_cluster_020.jpg",
+        "thumbnail_url": "/Current_news/generated/ai-daily/2026-09-03/demo_cluster_020.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "composition_role": "event_overlay",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48,
+        "generation_prompt_tier": "story_specific"
+      },
+      "edition_date": "2026-09-03",
+      "edition_generated_at": "2026-09-03T15:42:16.094598+00:00",
+      "visible_until": "2026-09-10T15:42:16.094598+00:00",
+      "href": "/story.html?sid=story_d4fdf693c7c1cf27"
+    },
+    {
+      "story_id": "story_a48f361e765fcde1",
+      "title": "Israeli Airstrikes in Gaza City Result in Multiple Palestinian Deaths",
+      "summary": "Israeli airstrikes in Gaza City killed at least five Palestinians, according to hospital officials and rescuers. This incident occurred amid ongoing violence in the region.",
+      "occurred_at": "2026-09-01",
+      "source_count": 1,
+      "category": "Public Safety",
+      "primary_category": "Public Safety",
+      "secondary_categories": [],
+      "topic_label": "Gaza Conflict",
+      "canonical_topic_label": "Gaza Conflict",
+      "event_id": "event_israeli-strikes-in-gaza-result-in-seven-deat_837b156199",
+      "event_title": "Israeli Strikes in Gaza Result in Seven Deaths and Destruction of Medical Warehouses",
+      "story_context": {
+        "available": true,
+        "event_title": "Israeli Strikes in Gaza Result in Seven Deaths and Destruction of Medical Warehouses",
+        "display_title": "Israeli Strikes in Gaza Result in Seven Deaths and Destruction of Medical Warehouses Timeline",
+        "stage": "timeline",
+        "stage_label": "Timeline",
+        "development_count": 7,
+        "timeline_url": "/timeline.html?event=event_israeli-strikes-in-gaza-result-in-seven-deat_837b156199"
+      },
+      "tracked_coverage": {
+        "available": true,
+        "stage": "timeline",
+        "stage_label": "Timeline"
+      },
+      "image": {
+        "url": "/Current_news/generated/ai-daily/2026-09-03/demo_cluster_005.jpg",
+        "thumbnail_url": "/Current_news/generated/ai-daily/2026-09-03/demo_cluster_005.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "composition_role": "event_overlay",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48,
+        "generation_prompt_tier": "story_specific"
+      },
+      "edition_date": "2026-09-03",
+      "edition_generated_at": "2026-09-03T15:42:16.094598+00:00",
+      "visible_until": "2026-09-10T15:42:16.094598+00:00",
+      "href": "/story.html?sid=story_a48f361e765fcde1"
+    },
+    {
+      "story_id": "story_98bfb0bd66ef61d2",
+      "title": "Lindsay Clancy Trial Jury Continues Deliberations Amid Mistrial Concerns",
+      "summary": "The jury in the Lindsay Clancy murder trial has returned for a sixth day of deliberations after previously reporting deadlock. The jurors have expressed difficulty in reaching a unanimous verdict, raising the possibility of a mistrial as Judge William Sullivan oversees the proceedings. The trial has garnered significant public attention since it began six weeks ago.",
+      "occurred_at": null,
+      "source_count": 5,
+      "category": "Public Safety",
+      "primary_category": "Public Safety",
+      "secondary_categories": [],
+      "topic_label": "Lindsay Clancy Trial",
+      "canonical_topic_label": "Lindsay Clancy Trial",
+      "event_id": "event_lindsay-clancy-s-trial-to-focus-on-postpartu_1750eb67a4",
+      "event_title": "Lindsay Clancy's Trial to Focus on Postpartum Psychosis Defense",
+      "story_context": {
+        "available": true,
+        "event_title": "Lindsay Clancy's Trial to Focus on Postpartum Psychosis Defense",
+        "display_title": "Lindsay Clancy's Trial to Focus on Postpartum Psychosis Defense Timeline",
+        "stage": "timeline",
+        "stage_label": "Timeline",
+        "development_count": 6,
+        "timeline_url": "/timeline.html?event=event_lindsay-clancy-s-trial-to-focus-on-postpartu_1750eb67a4"
+      },
+      "tracked_coverage": {
+        "available": true,
+        "stage": "timeline",
+        "stage_label": "Timeline"
+      },
+      "image": {
+        "url": "/Current_news/generated/ai-daily/2026-09-03/demo_cluster_002.jpg",
+        "thumbnail_url": "/Current_news/generated/ai-daily/2026-09-03/demo_cluster_002.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "composition_role": "event_overlay",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48,
+        "generation_prompt_tier": "story_specific"
+      },
+      "edition_date": "2026-09-03",
+      "edition_generated_at": "2026-09-03T15:42:16.094598+00:00",
+      "visible_until": "2026-09-10T15:42:16.094598+00:00",
+      "href": "/story.html?sid=story_98bfb0bd66ef61d2"
+    },
+    {
+      "story_id": "story_943474985ba578ab",
+      "title": "Investigation Launched into Low-Flying Jets Over Cape Town Stadium",
+      "summary": "South African aviation authorities are investigating a low-altitude flyover by two Airlink passenger jets over DHL Stadium in Cape Town. The incident occurred before a rugby match between the Springboks and the All Blacks and has raised safety concerns following a viral video showing the jets barely clearing the stadium.",
+      "occurred_at": null,
+      "source_count": 2,
+      "category": "Public Safety",
+      "primary_category": "Public Safety",
+      "secondary_categories": [],
+      "topic_label": "Aviation Safety",
+      "canonical_topic_label": "Aviation Safety",
+      "event_id": "event_investigation-launched-into-low-flying-jets_860ac42bd7",
+      "event_title": "Investigation Launched into Low-Flying Jets Over Cape Town Stadium",
+      "story_context": {
+        "available": false,
+        "event_title": "Investigation Launched into Low-Flying Jets Over Cape Town Stadium",
+        "display_title": "Investigation Launched into Low-Flying Jets Over Cape Town Stadium",
+        "stage": "standalone_candidate",
+        "stage_label": "Standalone story",
+        "development_count": 1,
+        "timeline_url": "/timeline.html?event=event_investigation-launched-into-low-flying-jets_860ac42bd7"
+      },
+      "tracked_coverage": {
+        "available": false,
+        "stage": "standalone_candidate",
+        "stage_label": "Standalone story"
+      },
+      "image": {
+        "url": "/Current_news/generated/ai-daily/2026-09-03/demo_cluster_028.jpg",
+        "thumbnail_url": "/Current_news/generated/ai-daily/2026-09-03/demo_cluster_028.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "composition_role": "standard",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48,
+        "generation_prompt_tier": "story_specific"
+      },
+      "edition_date": "2026-09-03",
+      "edition_generated_at": "2026-09-03T15:42:16.094598+00:00",
+      "visible_until": "2026-09-10T15:42:16.094598+00:00",
+      "href": "/story.html?sid=story_943474985ba578ab"
+    }
+  ]
+}
