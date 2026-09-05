@@ -15,7 +15,7 @@
     "summary": "A Ukrainian drone strike ignited a significant fire at a Wildberries warehouse near Saint Petersburg on July 24. The blaze produced thick smoke that spread across the city and led to temporary disruptions at Pulkovo Airport, as reported by Russian authorities.",
     "status": "active",
     "first_seen_at": "2026-07-25",
-    "last_seen_at": "2026-08-16",
+    "last_seen_at": "2026-09-05",
     "timeline": [
       {
         "development_id": "story_b77a481c5a1a5ef9",
@@ -1103,15 +1103,85 @@
         "first_seen_at": "2026-08-16",
         "last_seen_at": "2026-08-16",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_9d81f5cac6c269a0",
+        "daily_story_id": "story_9d81f5cac6c269a0",
+        "date": "2026-09-05",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Escalating Ground Fighting in Yemen Results in Over 60 Deaths, Including Civilians",
+        "summary": "Clashes between Yemen's Saudi-backed government forces and Houthi rebels have resulted in at least 60 fatalities, including civilians. The fighting, which is among the deadliest in recent years, occurred during a Houthi offensive on the western coast. Additionally, a missile strike by the Houthis near Taiz killed at least four civilians amid ongoing violence and displacement in the region.",
+        "topic_label": "Yemen Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "Over 60 people killed in clashes, including civilians.",
+          "26 government troops and 31 Houthi fighters reported dead.",
+          "Houthi missile strike near Taiz killed at least four civilians."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Al Jazeera English",
+          "The Guardian"
+        ],
+        "source_urls": [
+          "https://www.theguardian.com/world/2026/sep/05/yemen-ground-fighting-escalates-houthi-rebels-government-forces",
+          "https://www.aljazeera.com/news/2026/9/5/at-least-four-killed-in-houthi-missile-strike-near-yemens-taiz?traffic_source=rss"
+        ],
+        "source_details": [
+          {
+            "title": "Civilians among at least 60 killed in Yemen as ground fighting escalates",
+            "source": "The Guardian",
+            "link": "https://www.theguardian.com/world/2026/sep/05/yemen-ground-fighting-escalates-houthi-rebels-government-forces",
+            "source_bias": "left"
+          },
+          {
+            "title": "At least four civilians killed in Houthi missile strike near Yemen’s Taiz",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/news/2026/9/5/at-least-four-killed-in-houthi-missile-strike-near-yemens-taiz?traffic_source=rss",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_0b5b97783aac8f21",
+          "shared_tokens": [
+            "civilian",
+            "conflict",
+            "death",
+            "fatalitie",
+            "houthi",
+            "killed",
+            "reported",
+            "resulted",
+            "strike",
+            "yemen"
+          ],
+          "shared_entities": [
+            "yemen"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-05",
+        "last_seen_at": "2026-09-05",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 14,
+      "public_development_count": 15,
       "questionable_development_count": 1,
       "review_required": true
     },
-    "latest_title": "Ukraine Conducts Major Drone Attack on Moscow Amid Ongoing Conflict",
-    "latest_summary": "Ukraine launched a significant drone attack on Moscow, deploying hundreds of drones and reportedly killing at least six people. Russian authorities claimed to have shot down at least 201 drones during the assault. The attack is described as one of the largest aerial offensives by Ukraine since the beginning of the conflict, with fires reported at a logistics hub near the capital. Concurrently, Russian strikes on Ukraine resulted in additional casualties.",
+    "latest_title": "Escalating Ground Fighting in Yemen Results in Over 60 Deaths, Including Civilians",
+    "latest_summary": "Clashes between Yemen's Saudi-backed government forces and Houthi rebels have resulted in at least 60 fatalities, including civilians. The fighting, which is among the deadliest in recent years, occurred during a Houthi offensive on the western coast. Additionally, a missile strike by the Houthis near Taiz killed at least four civilians amid ongoing violence and displacement in the region.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -1121,30 +1191,30 @@
       "display_title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse Timeline",
       "milestone_development_ids": [
         "story_b77a481c5a1a5ef9",
-        "story_3035221c5a28a172",
+        "story_19aa78c59e6cf97c",
         "story_ac7a5d31978a717e",
-        "story_4aa2188a44af6b1d"
+        "story_9d81f5cac6c269a0"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-16",
-      "development_count": 14,
-      "coverage_packet_count": 14,
-      "date_count": 11,
-      "source_count": 37,
+      "summary_updated_at": "2026-09-05",
+      "development_count": 15,
+      "coverage_packet_count": 15,
+      "date_count": 12,
+      "source_count": 39,
       "independent_source_count": 22,
       "first_date": "2026-07-25",
-      "latest_date": "2026-08-16",
-      "latest_update_title": "Ukraine Conducts Major Drone Attack on Moscow Amid Ongoing Conflict",
+      "latest_date": "2026-09-05",
+      "latest_update_title": "Escalating Ground Fighting in Yemen Results in Over 60 Deaths, Including Civilians",
       "coverage_score": 1.0,
-      "recency_score": 0.269,
-      "rank_score": 0.576,
-      "context_summary": "Muninn first tracked this thread on 2026-07-25: Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse. The latest development is Ukraine Conducts Major Drone Attack on Moscow Amid Ongoing Conflict.",
-      "cta_label": "Explore 14 developments"
+      "recency_score": 1.0,
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-07-25: Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse. The latest development is Escalating Ground Fighting in Yemen Results in Over 60 Deaths, Including Civilians.",
+      "cta_label": "Explore 15 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "A Ukrainian drone strike ignited a significant fire at a Wildberries warehouse near Saint Petersburg on July 24. A later development was Zelenskyy Reports Russian Attack with North Korean Missiles Kills Six in Zaporizhzhia. Most recently, ukraine launched a significant drone attack on Moscow, deploying hundreds of drones and reportedly killing at least six people.",
+      "summary": "A Ukrainian drone strike ignited a significant fire at a Wildberries warehouse near Saint Petersburg on July 24. A later development was Zelenskyy Reports Russian Attack with North Korean Missiles Kills Six in Zaporizhzhia. Most recently, clashes between Yemen's Saudi-backed government forces and Houthi rebels have resulted in at least 60 fatalities, including civilians.",
       "key_developments": [
         {
           "development_id": "story_b77a481c5a1a5ef9",
@@ -1152,9 +1222,9 @@
           "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse"
         },
         {
-          "development_id": "story_3035221c5a28a172",
-          "date": "2026-08-10",
-          "title": "Deadly Ukrainian Drone Attack in Russia Claims 13 Lives"
+          "development_id": "story_19aa78c59e6cf97c",
+          "date": "2026-08-11",
+          "title": "Ukrainian Drone Strike on Russian Oil Refinery Claims 13 Lives"
         },
         {
           "development_id": "story_ac7a5d31978a717e",
@@ -1162,9 +1232,9 @@
           "title": "UN Reports Highest Civilian Deaths in Ukraine Since May 2022"
         },
         {
-          "development_id": "story_4aa2188a44af6b1d",
-          "date": "2026-08-16",
-          "title": "Ukraine Conducts Major Drone Attack on Moscow Amid Ongoing Conflict"
+          "development_id": "story_9d81f5cac6c269a0",
+          "date": "2026-09-05",
+          "title": "Escalating Ground Fighting in Yemen Results in Over 60 Deaths, Including Civilians"
         }
       ],
       "sources": [
@@ -1389,9 +1459,21 @@
           "source": "The Guardian",
           "link": "https://www.theguardian.com/world/2026/aug/16/ukrainian-drone-attack-on-russia-wildberries-warehouse-fire",
           "source_bias": "left"
+        },
+        {
+          "title": "Civilians among at least 60 killed in Yemen as ground fighting escalates",
+          "source": "The Guardian",
+          "link": "https://www.theguardian.com/world/2026/sep/05/yemen-ground-fighting-escalates-houthi-rebels-government-forces",
+          "source_bias": "left"
+        },
+        {
+          "title": "At least four civilians killed in Houthi missile strike near Yemen’s Taiz",
+          "source": "Al Jazeera English",
+          "link": "https://www.aljazeera.com/news/2026/9/5/at-least-four-killed-in-houthi-missile-strike-near-yemens-taiz?traffic_source=rss",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-08-16",
+      "updated_at": "2026-09-05",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -1439,7 +1521,7 @@
         "event_id": "event_european-leaders-gather-in-kyiv-for-ukraine_e8c3093217",
         "title": "European Leaders Gather in Kyiv for Ukraine's Independence Day Amid Ongoing Russian Invasion",
         "relationship": "related_topic",
-        "confidence": 0.755,
+        "confidence": 0.761,
         "shared_entities": [
           "kyiv",
           "russia",
@@ -1450,7 +1532,7 @@
         "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
         "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
         "relationship": "related_topic",
-        "confidence": 0.738,
+        "confidence": 0.739,
         "shared_entities": [
           "russia",
           "ukraine",
@@ -1583,12 +1665,14 @@
       "across",
       "action",
       "additional",
+      "additionally",
       "aerial",
       "airport",
       "airstrike",
       "alarming",
       "although",
       "amidst",
+      "among",
       "appear",
       "april",
       "arrival",
@@ -1615,6 +1699,8 @@
       "civilian",
       "claim",
       "claimed",
+      "clashe",
+      "coast",
       "coincided",
       "collaboration",
       "comply",
@@ -1646,6 +1732,7 @@
       "detained",
       "development",
       "discovered",
+      "displacement",
       "disruption",
       "district",
       "donald",
@@ -1665,14 +1752,17 @@
       "fatalitie",
       "fell",
       "field",
+      "fighting",
       "finalized",
       "fire",
       "fired",
       "fires",
       "five",
+      "force",
       "four",
       "frontline",
       "full-scale",
+      "ground",
       "held",
       "highest",
       "highlight",
@@ -1763,6 +1853,7 @@
       "reach",
       "reached",
       "reason",
+      "rebel",
       "recent",
       "refinery",
       "region",
@@ -1778,6 +1869,7 @@
       "right",
       "russia",
       "saint",
+      "saudi-backed",
       "separate",
       "serbia",
       "shahed",
@@ -1798,6 +1890,7 @@
       "surged",
       "surrounding",
       "system",
+      "taiz",
       "taneco",
       "target",
       "targeted",
@@ -1818,16 +1911,19 @@
       "united",
       "variou",
       "victim",
+      "violence",
       "visit",
       "volodymyr",
       "war",
       "warehouse",
       "warranted",
       "ways",
+      "western",
       "which",
       "while",
       "wildberrie",
       "woman",
+      "years",
       "yemen",
       "zaporizhzhia",
       "zelensky",
@@ -1839,6 +1935,7 @@
       "belgorod",
       "berezivka",
       "civilian_casualtie",
+      "civilian_clashe",
       "civilian_still",
       "claim_lives",
       "concurrently_russia",
@@ -1849,11 +1946,14 @@
       "donald_tusk",
       "eastern",
       "eastern_poland",
+      "escalating_ground",
       "fatalitie",
       "four",
+      "ground_fighting",
       "highest_civilian",
       "highest_monthly",
       "human_right",
+      "including_civilian",
       "july.",
       "korean_missile",
       "kyiv",
@@ -1894,6 +1994,7 @@
       "serbia_russia",
       "since_may",
       "still_detained",
+      "taiz",
       "tatarstan",
       "turkey",
       "ukraine",
@@ -1909,11 +2010,13 @@
       "volodymyr_zelensky",
       "wildberrie",
       "yemen",
+      "yemen_result",
+      "yemen_saudi-backed",
       "zaporizhzhia",
       "zaporizhzhia_ukraine",
       "zelensky_visit"
     ],
-    "search_text": "000 153 201 2022 2025 2026 243 340 437 610 9-year-old accounted across action additional aerial airport airstrike alarming although amidst appear april arrival assault assistant atacm attack august authoritie beginning belgorod berezivka blaze bolster both broader campaign capabilitie capital casualtie cause child children civilian civilian_casualtie civilian_still claim claim_lives claimed coincided collaboration comply concern concluded concurrently concurrently_russia concurrently_ukraine condolence conduct confirm confirm_civilian confirming conflict continue contributed crater critical data deadliest deadly deadly_ukraine deal deals deals_recent death debri decision deep defense deploying deprived described detained development discovered disruption district donald donald_tusk down downed driver drone early eastern eastern_poland engage escalating evacuated experiencing explosion facilitie facility fatalitie fell field finalized fire fired fires five four frontline full-scale held highest highest_civilian highest_monthly highlight highlighted houthi human human_right hundred ignited igniting ill-treatment incident including increase increasing indicate indicating individual industrial infrastructure injured injurie inside international invasion involving july july. killed killing kills korean korean_missile kyiv kyiv_result largest launched least leave level level_since liberty lives local logistic long-range many marks military military_deals missile missile_downed mission mission._drone monitor monitoring monitoring_mission. month monthly monthly_level moscow multiple nation near near_kyiv nine nizhnekamsk nizhnekamsk_russia north north_korean noted number numerou occur occurred odesa odesa_region offensive oil ongoing onset other overnight part passenger passenger_train payment pentagon petersburg petersburg_warehouse pm poland poland_polish polish polish_prime port position possible possible_russia prime produced provided pulkovo pulkovo_airport purchase pyongyang railway raised ras_isa reach reach_highest reached reason recent refinery refinery_claim region region_result reported reportedly resource response result resulted resulting revealed review right right_monitoring russia russia_claim russia_missile russia_shahed russian._authoritie saint saint_petersburg separate serbia serbia_russia shahed shortly shot side significant since since_may sites smoke specific spread stated still still_detained strike struck surge surged surrounding system taneco target targeted tatarstan temporary tension territory than these thick three torture train trend turkey tusk ukraine ukraine_conduct ukraine_drone ukraine_infrastructure ukraine_odesa ukraine_reach ukraine_since un united united_nation us variou victim visit volodymyr volodymyr_zelensky war warehouse warranted ways which while wildberrie woman yemen zaporizhzhia zaporizhzhia_ukraine zelensky zelensky_visit zelenskyy"
+    "search_text": "000 153 201 2022 2025 2026 243 340 437 610 9-year-old accounted across action additional additionally aerial airport airstrike alarming although amidst among appear april arrival assault assistant atacm attack august authoritie beginning belgorod berezivka blaze bolster both broader campaign capabilitie capital casualtie cause child children civilian civilian_casualtie civilian_clashe civilian_still claim claim_lives claimed clashe coast coincided collaboration comply concern concluded concurrently concurrently_russia concurrently_ukraine condolence conduct confirm confirm_civilian confirming conflict continue contributed crater critical data deadliest deadly deadly_ukraine deal deals deals_recent death debri decision deep defense deploying deprived described detained development discovered displacement disruption district donald donald_tusk down downed driver drone early eastern eastern_poland engage escalating escalating_ground evacuated experiencing explosion facilitie facility fatalitie fell field fighting finalized fire fired fires five force four frontline full-scale ground ground_fighting held highest highest_civilian highest_monthly highlight highlighted houthi human human_right hundred ignited igniting ill-treatment incident including including_civilian increase increasing indicate indicating individual industrial infrastructure injured injurie inside international invasion involving july july. killed killing kills korean korean_missile kyiv kyiv_result largest launched least leave level level_since liberty lives local logistic long-range many marks military military_deals missile missile_downed mission mission._drone monitor monitoring monitoring_mission. month monthly monthly_level moscow multiple nation near near_kyiv nine nizhnekamsk nizhnekamsk_russia north north_korean noted number numerou occur occurred odesa odesa_region offensive oil ongoing onset other overnight part passenger passenger_train payment pentagon petersburg petersburg_warehouse pm poland poland_polish polish polish_prime port position possible possible_russia prime produced provided pulkovo pulkovo_airport purchase pyongyang railway raised ras_isa reach reach_highest reached reason rebel recent refinery refinery_claim region region_result reported reportedly resource response result resulted resulting revealed review right right_monitoring russia russia_claim russia_missile russia_shahed russian._authoritie saint saint_petersburg saudi-backed separate serbia serbia_russia shahed shortly shot side significant since since_may sites smoke specific spread stated still still_detained strike struck surge surged surrounding system taiz taneco target targeted tatarstan temporary tension territory than these thick three torture train trend turkey tusk ukraine ukraine_conduct ukraine_drone ukraine_infrastructure ukraine_odesa ukraine_reach ukraine_since un united united_nation us variou victim violence visit volodymyr volodymyr_zelensky war warehouse warranted ways western which while wildberrie woman years yemen yemen_result yemen_saudi-backed zaporizhzhia zaporizhzhia_ukraine zelensky zelensky_visit zelenskyy"
   },
   "related_events": [
     {
@@ -1953,14 +2056,14 @@
     {
       "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
       "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
-      "summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Russian Drone Attack Targets Ukraine's Security Service Headquarters in Kyiv.",
+      "summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is US Envoys Visit Moscow to Revive Peace Talks Amid Ceasefire.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-07-31",
-      "last_seen_at": "2026-09-04",
-      "development_count": 33,
-      "latest_title": "Russian Drone Attack Targets Ukraine's Security Service Headquarters in Kyiv",
+      "last_seen_at": "2026-09-05",
+      "development_count": 34,
+      "latest_title": "US Envoys Visit Moscow to Revive Peace Talks Amid Ceasefire",
       "topic_label": "Gaza Peace Deal",
       "hero_image": {
         "url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
@@ -1987,14 +2090,14 @@
     {
       "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
       "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
-      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Fatal Strike on Iranian Wedding Sparks Mourning and Investigation.",
+      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is US Military Destroys Three Iranian Oil Tankers Following Attacks.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-07-22",
-      "last_seen_at": "2026-09-04",
-      "development_count": 34,
-      "latest_title": "Fatal Strike on Iranian Wedding Sparks Mourning and Investigation",
+      "last_seen_at": "2026-09-05",
+      "development_count": 37,
+      "latest_title": "US Military Destroys Three Iranian Oil Tankers Following Attacks",
       "topic_label": "Iran War",
       "hero_image": {
         "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
