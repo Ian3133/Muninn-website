@@ -15,7 +15,7 @@
     "summary": "Recent violence in southern Lebanon has resulted in the deaths of three individuals, including two Israeli soldiers, marking the first military fatalities for Israel in over a month. The Israeli military confirmed that the soldiers were killed by an explosion, prompting retaliatory strikes in the region. Lebanese authorities reported that one person was killed in these strikes, amidst ongoing US-backed negotiations aimed at reducing hostilities.",
     "status": "active",
     "first_seen_at": "2026-08-06",
-    "last_seen_at": "2026-09-05",
+    "last_seen_at": "2026-09-06",
     "timeline": [
       {
         "development_id": "story_15581ba8f4a3a0d1",
@@ -152,15 +152,121 @@
         "first_seen_at": "2026-09-05",
         "last_seen_at": "2026-09-05",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_f2bf0b15b0114de1",
+        "daily_story_id": "story_f2bf0b15b0114de1",
+        "date": "2026-09-06",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Israeli Strikes on Southern Lebanon Result in Multiple Casualties",
+        "summary": "Israeli air strikes in southern Lebanon have reportedly killed four people, including two women, and injured at least 20 others, according to the Lebanese health ministry. The strikes were described as a response to an alleged drone attack by Hezbollah targeting Israeli troops in the region. The Israeli military stated that the operation aimed to target Hezbollah infrastructure following the attempted attack.",
+        "topic_label": "Middle East Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "Israeli air strikes killed four people in southern Lebanon.",
+          "Two of the deceased were women.",
+          "At least 20 others were reported injured.",
+          "The strikes were in response to an alleged Hezbollah drone attack."
+        ],
+        "source_count": 3,
+        "sources": [
+          "Al Jazeera English",
+          "CBC",
+          "Sky News"
+        ],
+        "source_urls": [
+          "https://www.cbc.ca/news/world/israeli-strikes-southern-lebanon-9.7334203?cmp=rss",
+          "https://news.sky.com/story/four-killed-in-israeli-strikes-on-southern-lebanon-13582240",
+          "https://www.aljazeera.com/news/2026/9/6/israeli-air-attacks-on-lebanon-kill-at-least-four?traffic_source=rss"
+        ],
+        "source_details": [
+          {
+            "title": "Israeli strikes kill 4 in southern Lebanon",
+            "source": "CBC",
+            "link": "https://www.cbc.ca/news/world/israeli-strikes-southern-lebanon-9.7334203?cmp=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Four killed in Israeli strikes on southern Lebanon",
+            "source": "Sky News",
+            "link": "https://news.sky.com/story/four-killed-in-israeli-strikes-on-southern-lebanon-13582240",
+            "source_bias": "center"
+          },
+          {
+            "title": "Israeli air attacks on Lebanon kill at least four",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/news/2026/9/6/israeli-air-attacks-on-lebanon-kill-at-least-four?traffic_source=rss",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "attack",
+            "strike"
+          ],
+          "shared_incident_anchors": [
+            "israel",
+            "lebanese",
+            "lebanon",
+            "lebanon_result",
+            "middle_east"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "attack",
+            "attempted",
+            "conflict",
+            "east",
+            "health",
+            "hezbollah",
+            "infrastructure",
+            "injured",
+            "israel",
+            "killed",
+            "least",
+            "lebanese",
+            "lebanon",
+            "middle",
+            "ministry",
+            "other",
+            "response",
+            "result",
+            "southern",
+            "stated",
+            "strike",
+            "troop"
+          ],
+          "shared_entities": [
+            "israel",
+            "lebanese",
+            "lebanon",
+            "lebanon_result",
+            "middle_east"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_1899b2e2e5a7673f",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-06",
+        "last_seen_at": "2026-09-06",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 2,
+      "public_development_count": 3,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Israeli Strikes in Lebanon Result in Three Deaths and Injuries",
-    "latest_summary": "Israeli airstrikes in southern and eastern Lebanon have resulted in the deaths of at least three individuals and injuries to 23 others, according to the Lebanese health ministry. The Israel Defense Forces stated that the strikes targeted Hezbollah infrastructure in response to an attempted attack on IDF troops.",
+    "latest_title": "Israeli Strikes on Southern Lebanon Result in Multiple Casualties",
+    "latest_summary": "Israeli air strikes in southern Lebanon have reportedly killed four people, including two women, and injured at least 20 others, according to the Lebanese health ministry. The strikes were described as a response to an alleged drone attack by Hezbollah targeting Israeli troops in the region. The Israeli military stated that the operation aimed to target Hezbollah infrastructure following the attempted attack.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": false,
@@ -170,28 +276,29 @@
       "display_title": "Violence in Southern Lebanon Claims Three Lives Amid Ongoing Tensions",
       "milestone_development_ids": [
         "story_15581ba8f4a3a0d1",
-        "story_1899b2e2e5a7673f"
+        "story_1899b2e2e5a7673f",
+        "story_f2bf0b15b0114de1"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-09-05",
-      "development_count": 2,
-      "coverage_packet_count": 2,
-      "date_count": 2,
-      "source_count": 5,
-      "independent_source_count": 4,
+      "summary_updated_at": "2026-09-06",
+      "development_count": 3,
+      "coverage_packet_count": 3,
+      "date_count": 3,
+      "source_count": 8,
+      "independent_source_count": 7,
       "first_date": "2026-08-06",
-      "latest_date": "2026-09-05",
-      "latest_update_title": "Israeli Strikes in Lebanon Result in Three Deaths and Injuries",
-      "coverage_score": 0.409,
+      "latest_date": "2026-09-06",
+      "latest_update_title": "Israeli Strikes on Southern Lebanon Result in Multiple Casualties",
+      "coverage_score": 0.657,
       "recency_score": 1.0,
-      "rank_score": 0.752,
-      "context_summary": "Muninn first tracked this thread on 2026-08-06: Violence in Southern Lebanon Claims Three Lives Amid Ongoing Tensions. The latest development is Israeli Strikes in Lebanon Result in Three Deaths and Injuries.",
+      "rank_score": 0.856,
+      "context_summary": "Muninn first tracked this thread on 2026-08-06: Violence in Southern Lebanon Claims Three Lives Amid Ongoing Tensions. The latest development is Israeli Strikes on Southern Lebanon Result in Multiple Casualties.",
       "cta_label": ""
     },
     "event_summary": {
       "available": true,
-      "summary": "Recent violence in southern Lebanon has resulted in the deaths of three individuals, including two Israeli soldiers, marking the first military fatalities for Israel in over a month. Most recently, israeli airstrikes in southern and eastern Lebanon have resulted in the deaths of at least three individuals and injuries to 23 others, according to the Lebanese health ministry.",
+      "summary": "Recent violence in southern Lebanon has resulted in the deaths of three individuals, including two Israeli soldiers, marking the first military fatalities for Israel in over a month. A later development was Israeli Strikes in Lebanon Result in Three Deaths and Injuries. Most recently, israeli air strikes in southern Lebanon have reportedly killed four people, including two women, and injured at least 20 others, according to the Lebanese health ministry.",
       "key_developments": [
         {
           "development_id": "story_15581ba8f4a3a0d1",
@@ -202,6 +309,11 @@
           "development_id": "story_1899b2e2e5a7673f",
           "date": "2026-09-05",
           "title": "Israeli Strikes in Lebanon Result in Three Deaths and Injuries"
+        },
+        {
+          "development_id": "story_f2bf0b15b0114de1",
+          "date": "2026-09-06",
+          "title": "Israeli Strikes on Southern Lebanon Result in Multiple Casualties"
         }
       ],
       "sources": [
@@ -234,9 +346,27 @@
           "source": "RTE News",
           "link": "https://www.rte.ie/news/middle-east/2026/0905/1590417-middle-east-lebanon-israel",
           "source_bias": "center"
+        },
+        {
+          "title": "Israeli strikes kill 4 in southern Lebanon",
+          "source": "CBC",
+          "link": "https://www.cbc.ca/news/world/israeli-strikes-southern-lebanon-9.7334203?cmp=rss",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Four killed in Israeli strikes on southern Lebanon",
+          "source": "Sky News",
+          "link": "https://news.sky.com/story/four-killed-in-israeli-strikes-on-southern-lebanon-13582240",
+          "source_bias": "center"
+        },
+        {
+          "title": "Israeli air attacks on Lebanon kill at least four",
+          "source": "Al Jazeera English",
+          "link": "https://www.aljazeera.com/news/2026/9/6/israeli-air-attacks-on-lebanon-kill-at-least-four?traffic_source=rss",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-09-05",
+      "updated_at": "2026-09-06",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "developing_event",
@@ -245,100 +375,48 @@
         "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
         "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
         "relationship": "related_topic",
-        "confidence": 0.85,
+        "confidence": 0.95,
         "shared_entities": [
+          "casualtie_israel",
           "israel",
           "lebanon_result",
+          "multiple",
+          "multiple_casualtie",
           "southern",
           "us-backed"
+        ]
+      },
+      {
+        "event_id": "event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd",
+        "title": "Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv",
+        "relationship": "related_topic",
+        "confidence": 0.755,
+        "shared_entities": [
+          "multiple",
+          "multiple_casualtie"
         ]
       },
       {
         "event_id": "event_two-israeli-soldiers-killed-in-lebanon-follo_a2b8e13ad4",
         "title": "Two Israeli Soldiers Killed in Lebanon Following June Truce with Hezbollah",
         "relationship": "related_topic",
-        "confidence": 0.757,
+        "confidence": 0.754,
         "shared_entities": [
           "israel",
           "lebanon"
         ]
+      },
+      {
+        "event_id": "event_israeli-strikes-in-gaza-result-in-seven-deat_837b156199",
+        "title": "Israeli Strikes in Gaza Result in Seven Deaths and Destruction of Medical Warehouses",
+        "relationship": "related_topic",
+        "confidence": 0.705,
+        "shared_entities": [
+          "israel",
+          "multiple"
+        ]
       }
     ],
-    "search_tokens": [
-      "aimed",
-      "airstrike",
-      "amidst",
-      "attack",
-      "attempted",
-      "authoritie",
-      "claim",
-      "confirmed",
-      "death",
-      "defense",
-      "eastern",
-      "explosion",
-      "fatalitie",
-      "first",
-      "force",
-      "health",
-      "hezbollah",
-      "hostilitie",
-      "including",
-      "individual",
-      "infrastructure",
-      "injurie",
-      "israel",
-      "killed",
-      "least",
-      "lebanese",
-      "lebanon",
-      "lives",
-      "marking",
-      "military",
-      "ministry",
-      "month",
-      "negotiation",
-      "ongoing",
-      "other",
-      "person",
-      "prompting",
-      "recent",
-      "reducing",
-      "region",
-      "reported",
-      "response",
-      "result",
-      "resulted",
-      "retaliatory",
-      "soldier",
-      "southern",
-      "stated",
-      "strike",
-      "targeted",
-      "tension",
-      "these",
-      "three",
-      "troop",
-      "us-backed",
-      "violence"
-    ],
-    "entities": [
-      "defense_force",
-      "idf",
-      "injurie_israel",
-      "israel",
-      "israel_defense",
-      "lebanese",
-      "lebanon",
-      "lebanon_claim",
-      "lebanon_result",
-      "ongoing_tension",
-      "southern",
-      "tension_recent",
-      "three",
-      "us-backed"
-    ],
-    "search_text": "aimed airstrike amidst attack attempted authoritie claim confirmed death defense defense_force eastern explosion fatalitie first force health hezbollah hostilitie idf including individual infrastructure injurie injurie_israel israel israel_defense killed least lebanese lebanon lebanon_claim lebanon_result lives marking military ministry month negotiation ongoing ongoing_tension other person prompting recent reducing region reported response result resulted retaliatory soldier southern stated strike targeted tension tension_recent these three troop us-backed violence",
     "hero_image": {
       "url": "/Current_news/generated/events/event_violence-in-southern-lebanon-claims-three-li_bc43d3ac28.jpg",
       "thumbnail_url": "/Current_news/generated/events/event_violence-in-southern-lebanon-claims-three-li_bc43d3ac28.jpg",
@@ -358,6 +436,186 @@
       "focal_wide_y": 0.48,
       "focal_tall_x": 0.5,
       "focal_tall_y": 0.48
+    },
+    "search_tokens": [
+      "aimed",
+      "airstrike",
+      "alleged",
+      "amidst",
+      "attack",
+      "attempted",
+      "authoritie",
+      "casualtie",
+      "claim",
+      "confirmed",
+      "death",
+      "defense",
+      "described",
+      "drone",
+      "eastern",
+      "explosion",
+      "fatalitie",
+      "first",
+      "force",
+      "four",
+      "health",
+      "hezbollah",
+      "hostilitie",
+      "including",
+      "individual",
+      "infrastructure",
+      "injured",
+      "injurie",
+      "israel",
+      "killed",
+      "least",
+      "lebanese",
+      "lebanon",
+      "lives",
+      "marking",
+      "military",
+      "ministry",
+      "month",
+      "multiple",
+      "negotiation",
+      "ongoing",
+      "operation",
+      "other",
+      "person",
+      "prompting",
+      "recent",
+      "reducing",
+      "region",
+      "reported",
+      "reportedly",
+      "response",
+      "result",
+      "resulted",
+      "retaliatory",
+      "soldier",
+      "southern",
+      "stated",
+      "strike",
+      "target",
+      "targeted",
+      "targeting",
+      "tension",
+      "these",
+      "three",
+      "troop",
+      "us-backed",
+      "violence",
+      "women"
+    ],
+    "entities": [
+      "casualtie_israel",
+      "defense_force",
+      "idf",
+      "injurie_israel",
+      "israel",
+      "israel_defense",
+      "lebanese",
+      "lebanon",
+      "lebanon_claim",
+      "lebanon_result",
+      "multiple",
+      "multiple_casualtie",
+      "ongoing_tension",
+      "southern",
+      "tension_recent",
+      "three",
+      "us-backed"
+    ],
+    "search_text": "aimed airstrike alleged amidst attack attempted authoritie casualtie casualtie_israel claim confirmed death defense defense_force described drone eastern explosion fatalitie first force four health hezbollah hostilitie idf including individual infrastructure injured injurie injurie_israel israel israel_defense killed least lebanese lebanon lebanon_claim lebanon_result lives marking military ministry month multiple multiple_casualtie negotiation ongoing ongoing_tension operation other person prompting recent reducing region reported reportedly response result resulted retaliatory soldier southern stated strike target targeted targeting tension tension_recent these three troop us-backed violence women",
+    "event_overview": {
+      "available": true,
+      "title": "About Middle East Conflict",
+      "subject": "Middle East Conflict",
+      "summary": "This event concerns recurring armed violence in southern Lebanon and across the Lebanon-Israel frontier, principally in the context of hostilities involving Israel and Hezbollah. The immediate security framework is United Nations Security Council Resolution 1701, which calls for a cessation of hostilities, supports Lebanese state authority in the south, and assigns monitoring and support roles to the UN Interim Force in Lebanon (UNIFIL).",
+      "facts": [
+        {
+          "label": "Conflict setting",
+          "value": "Cross-border exchanges resumed on 8 October 2023 after a long period of relative calm along the Lebanon-Israel frontier; a cessation-of-hostilities arrangement was announced in November 2024, but the underlying dispute and risks of renewed violence remained.",
+          "source_ids": [
+            "o1",
+            "o2"
+          ]
+        },
+        {
+          "label": "Geographic frame",
+          "value": "The focal area is southern Lebanon around the Blue Line, a roughly 120-kilometre UN-identified line used to verify Israel's 2000 withdrawal from Lebanon. It is not an agreed international border, and land or air crossings of it are treated by UNIFIL as violations of Resolution 1701.",
+          "source_ids": [
+            "o1"
+          ]
+        },
+        {
+          "label": "Legal and political framework",
+          "value": "UN Security Council Resolution 1701 was adopted unanimously on 11 August 2006 following the Israel-Hezbollah war. It calls for a full cessation of hostilities, deployment of Lebanese forces in the south, Israeli withdrawal behind the Blue Line as that deployment occurs, and a long-term solution.",
+          "source_ids": [
+            "o3",
+            "o4"
+          ]
+        },
+        {
+          "label": "Security arrangements south of the Litan",
+          "value": "Resolution 1701 envisages an area between the Blue Line and the Litani River free of armed personnel, assets and weapons other than those of the Lebanese Government and UNIFIL; it also calls on Lebanon to prevent unauthorized arms transfers into the country.",
+          "source_ids": [
+            "o4",
+            "o1"
+          ]
+        },
+        {
+          "label": "International monitoring",
+          "value": "UNIFIL operates in southern Lebanon under a Security Council mandate and supports the Lebanese Armed Forces, monitors the cessation of hostilities, maintains liaison between the parties, and reports observed violations to the Security Council. The November 2024 arrangement was reached outside the UN framework, though UNIFIL supports it within its existing mandate.",
+          "source_ids": [
+            "o1",
+            "o5"
+          ]
+        }
+      ],
+      "scope_note": "The selected Muninn timeline tracks the cited August-September 2026 violence and reported casualties in southern Lebanon; it does not attempt to catalogue the full history of the Israel-Lebanon conflict, every cross-border incident, or all diplomatic activity.",
+      "sources": [
+        {
+          "title": "Unmissions",
+          "publisher": "Unmissions",
+          "url": "https://unifil.unmissions.org/en/node/28372",
+          "source_type": "reporting",
+          "id": "o1"
+        },
+        {
+          "title": "UN",
+          "publisher": "UN",
+          "url": "https://lebanon.un.org/en/311863-un-secretary-generals-speech-and-qas-press-conference-beirut",
+          "source_type": "reporting",
+          "id": "o2"
+        },
+        {
+          "title": "UN",
+          "publisher": "UN",
+          "url": "https://digitallibrary.un.org/record/581053?ln=en",
+          "source_type": "reporting",
+          "id": "o3"
+        },
+        {
+          "title": "UN",
+          "publisher": "UN",
+          "url": "https://documents.un.org/access.nsf/get?Area=UNDOC&DS=S%2FRES%2F1701%2520%282006%29&Lang=E&Open=",
+          "source_type": "reporting",
+          "id": "o4"
+        },
+        {
+          "title": "Unmissions",
+          "publisher": "Unmissions",
+          "url": "https://unifil.unmissions.org/en/news/resolution-1701-for-peace-and-stabilty-in-south-lebanon",
+          "source_type": "reporting",
+          "id": "o5"
+        }
+      ],
+      "publisher_count": 2,
+      "generated_at": "2026-09-06T14:50:36.914714+00:00",
+      "expires_at": "2026-09-13T14:50:36.914714+00:00",
+      "model": "gpt-5.6-terra",
+      "provenance": "openai_web_search_source_grounded_event_overview_v1"
     }
   },
   "related_events": [
@@ -394,6 +652,74 @@
         "focal_tall_y": 0.48
       },
       "href": "/timeline.html?event=event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b"
+    },
+    {
+      "event_id": "event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd",
+      "title": "Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv",
+      "summary": "Muninn first tracked this thread on 2026-07-25: Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv. The latest development is Russian Airstrike in Kramatorsk Results in Casualties.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-25",
+      "last_seen_at": "2026-08-15",
+      "development_count": 16,
+      "latest_title": "Russian Airstrike in Kramatorsk Results in Casualties",
+      "topic_label": "Ukraine Conflict",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd"
+    },
+    {
+      "event_id": "event_israeli-strikes-in-gaza-result-in-seven-deat_837b156199",
+      "title": "Israeli Strikes in Gaza Result in Seven Deaths and Destruction of Medical Warehouses",
+      "summary": "Muninn first tracked this thread on 2026-08-01: Israeli Strikes in Gaza Result in Seven Deaths and Destruction of Medical Warehouses. The latest development is Israeli Airstrikes in Gaza City Result in Multiple Palestinian Deaths.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-08-01",
+      "last_seen_at": "2026-09-03",
+      "development_count": 7,
+      "latest_title": "Israeli Airstrikes in Gaza City Result in Multiple Palestinian Deaths",
+      "topic_label": "Gaza Conflict",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_israeli-strikes-in-gaza-result-in-seven-deat_837b156199.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_israeli-strikes-in-gaza-result-in-seven-deat_837b156199.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_israeli-strikes-in-gaza-result-in-seven-deat_837b156199"
     }
   ]
 }
