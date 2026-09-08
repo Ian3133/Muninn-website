@@ -15,7 +15,7 @@
     "summary": "US President Donald Trump has threatened to target Iranian bridges and power plants in retaliation for any attacks on ships in the Strait of Hormuz. He stated that for each ship fired upon by Iranian forces, the US would respond by destroying a corresponding piece of Iranian infrastructure. This escalation comes amid ongoing tensions in the region and rising oil prices.",
     "status": "active",
     "first_seen_at": "2026-07-22",
-    "last_seen_at": "2026-09-07",
+    "last_seen_at": "2026-09-08",
     "timeline": [
       {
         "development_id": "story_627e2a10f3d02720",
@@ -3317,15 +3317,92 @@
         "first_seen_at": "2026-09-07",
         "last_seen_at": "2026-09-07",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_d87c87b6d9251e8d",
+        "daily_story_id": "story_d87c87b6d9251e8d",
+        "date": "2026-09-08",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Zelensky Indicates Possible Upcoming Negotiations Amid Renewed Attacks on Kyiv",
+        "summary": "Ukrainian President Volodymyr Zelensky announced that Russian, Ukrainian, and US negotiators may meet soon to discuss ending the war. This statement follows a series of missile and drone strikes by Russia on Kyiv, which resumed after a brief pause for US peace talks, resulting in two fatalities and significant damage in the city.",
+        "topic_label": "Ukraine Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "Zelensky stated that negotiations could occur soon.",
+          "Russian strikes on Kyiv resumed, killing two people.",
+          "The attacks ended a temporary halt coinciding with US negotiations."
+        ],
+        "source_count": 3,
+        "sources": [
+          "CBC - Top Stories",
+          "France 24 - English",
+          "RTE News"
+        ],
+        "source_urls": [
+          "https://www.rte.ie/news/ukraine/2026/0908/1590684-ukraine-russia",
+          "https://www.france24.com/en/video/20260908-russia-pounds-kyiv-ending-three-day-halt-for-us-talks",
+          "https://www.cbc.ca/news/world/russia-attack-kyiv-9.7335291?cmp=rss"
+        ],
+        "source_details": [
+          {
+            "title": "Negotiators may meet again soon for talks - Zelensky",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/ukraine/2026/0908/1590684-ukraine-russia",
+            "source_bias": "center"
+          },
+          {
+            "title": "Russia pounds Kyiv, ending three-day halt for US talks",
+            "source": "France 24 - English",
+            "link": "https://www.france24.com/en/video/20260908-russia-pounds-kyiv-ending-three-day-halt-for-us-talks",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Russian drone and missile strikes on Kyiv kill 2, ending pause in attacks",
+            "source": "CBC - Top Stories",
+            "link": "https://www.cbc.ca/news/world/russia-attack-kyiv-9.7335291?cmp=rss",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "attack"
+          ],
+          "shared_incident_anchors": [
+            "us"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "attack",
+            "missile",
+            "war"
+          ],
+          "shared_entities": [
+            "us"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_3bbac821f8656824",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-08",
+        "last_seen_at": "2026-09-08",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 40,
+      "public_development_count": 41,
       "questionable_development_count": 6,
       "review_required": true
     },
-    "latest_title": "Iran Announces Plans for Restricted Zone Around Strait of Hormuz Amid Rising Tensions",
-    "latest_summary": "Iran has announced plans to establish a new 'restricted zone' outside the Strait of Hormuz, aiming to tighten control over tanker traffic in the region. This move comes amid rising oil and gas prices and increasing tensions with the United States, which has denied claims of an attack on a US naval vessel by Iran. The Strait of Hormuz remains a critical flashpoint in ongoing conflicts.",
+    "latest_title": "Zelensky Indicates Possible Upcoming Negotiations Amid Renewed Attacks on Kyiv",
+    "latest_summary": "Ukrainian President Volodymyr Zelensky announced that Russian, Ukrainian, and US negotiators may meet soon to discuss ending the war. This statement follows a series of missile and drone strikes by Russia on Kyiv, which resumed after a brief pause for US peace talks, resulting in two fatalities and significant damage in the city.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -3336,29 +3413,29 @@
       "milestone_development_ids": [
         "story_627e2a10f3d02720",
         "story_18e63ff903f57c92",
-        "story_b8437ee3553e7165",
-        "story_1cdc41a85c034e78"
+        "story_fc2ab1fec2c91dac",
+        "story_d87c87b6d9251e8d"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-09-07",
-      "development_count": 40,
-      "coverage_packet_count": 45,
-      "date_count": 29,
-      "source_count": 130,
-      "independent_source_count": 31,
+      "summary_updated_at": "2026-09-08",
+      "development_count": 41,
+      "coverage_packet_count": 46,
+      "date_count": 30,
+      "source_count": 133,
+      "independent_source_count": 32,
       "first_date": "2026-07-22",
-      "latest_date": "2026-09-07",
-      "latest_update_title": "Iran Announces Plans for Restricted Zone Around Strait of Hormuz Amid Rising Tensions",
+      "latest_date": "2026-09-08",
+      "latest_update_title": "Zelensky Indicates Possible Upcoming Negotiations Amid Renewed Attacks on Kyiv",
       "coverage_score": 1.0,
       "recency_score": 1.0,
       "rank_score": 1.0,
-      "context_summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Iran Announces Plans for Restricted Zone Around Strait of Hormuz Amid Rising Tensions.",
-      "cta_label": "Explore 40 developments"
+      "context_summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Zelensky Indicates Possible Upcoming Negotiations Amid Renewed Attacks on Kyiv.",
+      "cta_label": "Explore 41 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "US President Donald Trump has threatened to target Iranian bridges and power plants in retaliation for any attacks on ships in the Strait of Hormuz. A later development was Iran Responds to US Claims Over Strait of Hormuz. Most recently, iran has announced plans to establish a new 'restricted zone' outside the Strait of Hormuz, aiming to tighten control over tanker traffic in the region.",
+      "summary": "US President Donald Trump has threatened to target Iranian bridges and power plants in retaliation for any attacks on ships in the Strait of Hormuz. A later development was Iran Responds to US Claims Over Strait of Hormuz. Most recently, ukrainian President Volodymyr Zelensky announced that Russian, Ukrainian, and US negotiators may meet soon to discuss ending the war.",
       "key_developments": [
         {
           "development_id": "story_627e2a10f3d02720",
@@ -3371,14 +3448,14 @@
           "title": "Trump Cancels Planned Strikes on Iran Amid Deal Negotiations"
         },
         {
-          "development_id": "story_b8437ee3553e7165",
-          "date": "2026-08-22",
-          "title": "Iran Claims Victory Amid US Economic Warfare Declaration"
+          "development_id": "story_fc2ab1fec2c91dac",
+          "date": "2026-08-24",
+          "title": "US Marines Cancel Joint Drills with South Korea Due to Iran War Constraints"
         },
         {
-          "development_id": "story_1cdc41a85c034e78",
-          "date": "2026-09-07",
-          "title": "Iran Announces Plans for Restricted Zone Around Strait of Hormuz Amid Rising Tensions"
+          "development_id": "story_d87c87b6d9251e8d",
+          "date": "2026-09-08",
+          "title": "Zelensky Indicates Possible Upcoming Negotiations Amid Renewed Attacks on Kyiv"
         }
       ],
       "sources": [
@@ -4161,13 +4238,50 @@
           "source": "CBS News",
           "link": "https://www.cbsnews.com/live-updates/iran-war-us-strait-of-hormuz-oil-gas-price-strikes",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Negotiators may meet again soon for talks - Zelensky",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/ukraine/2026/0908/1590684-ukraine-russia",
+          "source_bias": "center"
+        },
+        {
+          "title": "Russia pounds Kyiv, ending three-day halt for US talks",
+          "source": "France 24 - English",
+          "link": "https://www.france24.com/en/video/20260908-russia-pounds-kyiv-ending-three-day-halt-for-us-talks",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Russian drone and missile strikes on Kyiv kill 2, ending pause in attacks",
+          "source": "CBC - Top Stories",
+          "link": "https://www.cbc.ca/news/world/russia-attack-kyiv-9.7335291?cmp=rss",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-09-07",
+      "updated_at": "2026-09-08",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
     "related_events": [
+      {
+        "event_id": "event_iran-claims-attacks-on-us-bases-in-bahrain-j_2ed1fdd27a",
+        "title": "Iran Claims Attacks on US Bases in Bahrain, Jordan, and Kuwait Amid Escalating Conflict",
+        "relationship": "related_topic",
+        "confidence": 0.95,
+        "shared_entities": [
+          "america",
+          "hormuz_iran",
+          "iran",
+          "iran_claim",
+          "iran_revolutionary",
+          "iraq.",
+          "middle",
+          "middle_east",
+          "revolutionary_guard",
+          "strait",
+          "us"
+        ]
+      },
       {
         "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
         "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
@@ -4195,22 +4309,20 @@
         ]
       },
       {
-        "event_id": "event_iran-claims-attacks-on-us-bases-in-bahrain-j_2ed1fdd27a",
-        "title": "Iran Claims Attacks on US Bases in Bahrain, Jordan, and Kuwait Amid Escalating Conflict",
+        "event_id": "event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd",
+        "title": "Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv",
         "relationship": "related_topic",
         "confidence": 0.95,
         "shared_entities": [
-          "america",
-          "hormuz_iran",
-          "iran",
-          "iran_claim",
-          "iran_revolutionary",
-          "iraq.",
-          "middle",
-          "middle_east",
-          "revolutionary_guard",
-          "strait",
-          "us"
+          "black",
+          "discuss",
+          "kyiv_ukraine",
+          "russia",
+          "russia_ukraine",
+          "ukraine",
+          "ukraine.",
+          "us",
+          "volodymyr_zelensky"
         ]
       },
       {
@@ -4232,73 +4344,60 @@
           "strait",
           "us"
         ]
-      },
-      {
-        "event_id": "event_putin-dismisses-need-for-new-mobilization-am_ebfb88abcf",
-        "title": "Putin Dismisses Need for New Mobilization Amid Peace Talks",
-        "relationship": "related_topic",
-        "confidence": 0.93,
-        "shared_entities": [
-          "peace_talks",
-          "russia",
-          "ukraine",
-          "ukraine.",
-          "us",
-          "vladimir_putin",
-          "volodymyr_zelenskyy."
-        ]
       }
     ],
     "event_overview": {
       "available": true,
       "title": "About Iran War",
       "subject": "Iran War",
-      "summary": "The Iran War refers here to the ongoing international armed conflict involving Iran, the United States and Israel, with military operations and diplomatic efforts centered on Iran and extending to maritime security in the Persian Gulf, Strait of Hormuz and Red Sea. The conflict has also drawn in regional actors and affected commercial shipping and energy markets, while its legal and political basis remains a subject of dispute among the parties and within the United States.",
+      "summary": "“Iran War” is a shorthand for the 2026 armed conflict centered on direct U.S.-Iran hostilities, Iranian attacks and alleged attacks involving states around the Persian Gulf, and disruptions to maritime traffic through the Strait of Hormuz. The United States calls its campaign Operation Epic Fury and says it began to protect U.S. forces, regional partners and navigation; Iran has described the U.S. and Israeli actions as unlawful aggression.",
       "facts": [
         {
-          "label": "Conflict chronology",
-          "value": "A U.S. notification to the UN described Israeli action beginning on June 13, 2025 and reported that U.S. forces struck Iran’s Fordow, Natanz and Isfahan nuclear facilities on June 22, 2025; it characterized these actions as part of an international armed conflict.",
+          "label": "Start of direct U.S. operation",
+          "value": "U.S. Central Command says Operation Epic Fury against Iran began on February 28, 2026, at the President’s direction. In a March 10 letter to the UN Security Council, the United States said it had commenced combat operations on February 28 in cooperation with Israel.",
           "source_ids": [
-            "o1"
-          ]
-        },
-        {
-          "label": "2026 U.S. operations",
-          "value": "In a March 2026 letter to the UN Security Council, the United States said it began combat operations on February 28, 2026, alongside Israel, citing protection of U.S. forces and regional partners and the free flow of maritime commerce through the Strait of Hormuz.",
-          "source_ids": [
+            "o1",
             "o2"
           ]
         },
         {
-          "label": "Geographic and commercial significance",
-          "value": "The Strait of Hormuz lies between Iran and Oman and links the Persian Gulf with the Gulf of Oman and Arabian Sea; it is a major route for petroleum and liquefied-natural-gas exports.",
+          "label": "Parties and regional reach",
+          "value": "The conflict directly involves the United States and Iran, with the United States describing Israel as an ally in its initial operations. UN Security Council resolution 2817 (2026) addressed attacks attributed to Iran against Bahrain, Kuwait, Oman, Qatar, Saudi Arabia, the United Arab Emirates and Jordan.",
           "source_ids": [
-            "o3",
+            "o2",
+            "o3"
+          ]
+        },
+        {
+          "label": "Strategic waterway",
+          "value": "The Strait of Hormuz lies between Iran and Oman and connects the Persian Gulf to the Gulf of Oman and Arabian Sea. It is a major oil and liquefied-natural-gas transit chokepoint, so threats to shipping there can have wider energy-market effects.",
+          "source_ids": [
             "o4"
           ]
         },
         {
-          "label": "Energy-market exposure",
-          "value": "The U.S. Energy Information Administration estimated that petroleum and other liquids transiting Hormuz averaged 4.9 million barrels per day in the second quarter of 2026, down from 21.6 million barrels per day in the fourth quarter of 2025 before the conflict.",
+          "label": "Competing legal positions",
+          "value": "The United States notified the Security Council that it was acting in self-defense under Article 51 of the UN Charter. Iran has told the Council that the U.S. and Israeli campaign constituted aggression and that subsequent Iranian measures were self-defense; these are opposing state positions, not a judicial determination.",
           "source_ids": [
+            "o2",
             "o5"
           ]
         },
         {
-          "label": "U.S. legal and congressional framework",
-          "value": "The War Powers Resolution requires a written report within 48 hours when U.S. forces are introduced into hostilities or certain combat-equipped foreign deployments without a declaration of war; it is the framework under which Congress considers measures concerning U.S. involvement in Iran.",
+          "label": "U.S. constitutional and statutory contex",
+          "value": "Under the War Powers Resolution, U.S. policy is that the collective judgment of Congress and the President should apply to the introduction and continued use of U.S. armed forces in hostilities; the statute identifies a declaration of war, specific statutory authorization, or a national emergency created by attack as bases for introducing forces into hostilities.",
           "source_ids": [
             "o6"
           ]
         }
       ],
-      "scope_note": "The selected Muninn timeline focuses on late-July 2026 escalation, congressional war-powers activity, threats to maritime and energy infrastructure, Houthi-linked attacks and ceasefire diplomacy; it does not provide a complete account of the conflict’s origins, all military operations, humanitarian effects or negotiations.",
+      "scope_note": "The selected Muninn timeline covers a limited set of developments from July 22-27, 2026—military threats, congressional war-powers action, shipping and oil-market pressure, Houthi claims, and ceasefire diplomacy—not the conflict’s full origins, all operations, or its eventual outcome.",
       "sources": [
         {
-          "title": "UN",
-          "publisher": "UN",
-          "url": "https://digitallibrary.un.org/record/4084793/files/S_2025_426-EN.pdf",
-          "source_type": "reporting",
+          "title": "Defense",
+          "publisher": "Defense",
+          "url": "https://media.defense.gov/2026/Mar/16/2003899496/-1/-1/1/OPERATION-EPIC-FURY-FACT-SHEET.PDF",
+          "source_type": "primary",
           "id": "o1"
         },
         {
@@ -4309,37 +4408,37 @@
           "id": "o2"
         },
         {
-          "title": "Eia",
-          "publisher": "Eia",
-          "url": "https://www.eia.gov/todayinenergy/detail.php?id=39932&os=frefapp",
-          "source_type": "primary",
+          "title": "UN",
+          "publisher": "UN",
+          "url": "https://digitallibrary.un.org/record/4105562?ln=en",
+          "source_type": "reporting",
           "id": "o3"
         },
         {
           "title": "Eia",
           "publisher": "Eia",
-          "url": "https://www.eia.gov/beta/international/analysis_includes/special_topics/World_Oil_Transit_Chokepoints/wotc.pdf",
+          "url": "https://www.eia.gov/todayinenergy/detail.php?id=61002",
           "source_type": "primary",
           "id": "o4"
         },
         {
-          "title": "Eia",
-          "publisher": "Eia",
-          "url": "https://www.eia.gov/outlooks/steo/report/global_oil.php?intent_instrument=sso",
-          "source_type": "primary",
+          "title": "UN",
+          "publisher": "UN",
+          "url": "https://transcripts.un.org/en/sc/10189/2",
+          "source_type": "reporting",
           "id": "o5"
         },
         {
           "title": "House",
           "publisher": "House",
-          "url": "https://uscode.house.gov/view.xhtml?edition=prelim&hl=false&num=0&path=%2Fprelim%40title50%2Fchapter33&req=granuleid%3AUSC-prelim-title50-section1543&saved=L3ByZWxpbUB0aXRsZTUwL2NoYXB0ZXIzMw%3D%3D%7CZ3JhbnVsZWlkOlVTQy1wcmVsaW0tdGl0bGU1MC1jaGFwdGVyMzM%3D%7C%7C%7C0%7Cfalse%7Cprelim",
+          "url": "https://uscode.house.gov/view.xhtml?req=%28title%3A50+section%3A1541+edition%3Aprelim%29",
           "source_type": "primary",
           "id": "o6"
         }
       ],
-      "publisher_count": 3,
-      "generated_at": "2026-08-31T18:41:58.461963+00:00",
-      "expires_at": "2026-09-07T18:41:58.461963+00:00",
+      "publisher_count": 4,
+      "generated_at": "2026-09-08T15:54:34.249407+00:00",
+      "expires_at": "2026-09-15T15:54:34.249407+00:00",
       "model": "gpt-5.6-terra",
       "provenance": "openai_web_search_source_grounded_event_overview_v1"
     },
@@ -4478,6 +4577,7 @@
       "crossing",
       "curbing",
       "currently",
+      "damage",
       "deadline",
       "deadly",
       "deal",
@@ -4533,6 +4633,7 @@
       "el-mandeb",
       "election",
       "emphasized",
+      "ending",
       "engage",
       "engaged",
       "enough",
@@ -4624,6 +4725,7 @@
       "increase",
       "increased",
       "increasing",
+      "indicate",
       "indicated",
       "indicating",
       "indication",
@@ -4663,6 +4765,7 @@
       "korea",
       "kremlin",
       "kuhestak",
+      "kyiv",
       "labeling",
       "larak",
       "late",
@@ -4718,6 +4821,7 @@
       "need",
       "negotiate",
       "negotiation",
+      "negotiator",
       "netanyahu",
       "noted",
       "nuclear",
@@ -4755,6 +4859,7 @@
       "plant",
       "political",
       "ports",
+      "possible",
       "potatoe",
       "potential",
       "power",
@@ -4822,6 +4927,7 @@
       "restricted",
       "result",
       "resulted",
+      "resulting",
       "resume",
       "resumed",
       "retaliate",
@@ -4866,6 +4972,7 @@
       "society",
       "soldier",
       "solution",
+      "soon",
       "sought",
       "south",
       "space",
@@ -4876,6 +4983,7 @@
       "stark",
       "start",
       "stated",
+      "statement",
       "stating",
       "strait",
       "strategic",
@@ -4969,6 +5077,7 @@
       "year",
       "years",
       "yemen",
+      "zelensky",
       "zelenskyy",
       "zone"
     ],
@@ -5032,6 +5141,7 @@
       "hormuz_tension",
       "house_votes",
       "houthi_claim",
+      "indicate_possible",
       "iran",
       "iran-backed_houthi",
       "iran.",
@@ -5075,6 +5185,7 @@
       "kremlin",
       "kuhestak",
       "kuhestak_iran",
+      "kyiv_ukraine",
       "larak_island",
       "limit",
       "limit_trump",
@@ -5095,6 +5206,7 @@
       "passe_without",
       "peace_talks",
       "pending_deal",
+      "possible_upcoming",
       "power_regarding",
       "price_decline",
       "price_exceed",
@@ -5119,6 +5231,7 @@
       "rocket_launcher",
       "russia",
       "russia._iran",
+      "russia_ukraine",
       "saudi",
       "saudi_arabia",
       "saudi_force",
@@ -5162,12 +5275,14 @@
       "ukraine.",
       "ukraine_war",
       "ulchi_freedom",
+      "upcoming_negotiation",
       "us",
       "us-iran",
       "us.",
       "uss",
       "uss_lincoln",
       "vladimir_putin",
+      "volodymyr_zelensky",
       "volodymyr_zelenskyy.",
       "war_began",
       "war_constraint",
@@ -5182,46 +5297,13 @@
       "weigh_military",
       "without_agreement",
       "yemen.",
+      "zelensky_indicate",
       "zelenskyy._escalation",
       "zone_around"
     ],
-    "search_text": "100 2001 2003 2006 2025 2028 260 60-day aboard accept achieved action adjustment administration aerial agreed agreement aimed aiming air_force aircraft airstrike al-qaeda alive allegation alleged alleged_mastermind alleged_wedding allie alongside also ambition america anger announce announced announcing another approximately arabia around around_strait assert asserting attack attempted attempting attend attributed average bab ballistic baloch barrel becoming began began_israel behind benjamin benjamin_netanyahu bessent bipartisan black black_sea blockade bomb bombing bombing_iran both breach bridge brief broader calm cancel cancel_joint cancel_planned canceled cancellation captured carrier casualtie caused ceasefire ceasefire_negotiation central central_command characterizing child citing civilian claim claim_missile claim_victory claimed close coinciding come comes command commitment communicated community compensation concern concerning condition conduct conducted conflict consecutive consequence considered considering constraint contingent continue control corps corresponding costs create crescent crescent_society crime critical critique critique_uss crossing curbing currently d.c. deadline deadline_donald deadly deal deal_deadline deal_negotiation deal_trump death decision declaration declaration_iran declare declared decline deepening defeat deliver delusion demand demand_compensation demanded democrat denied deploy deployment deployment_duration describe describe_iran despite destroy destroyed destroyer destroying devastating development diesel diesel_price diplomatic diplomatic_effort direct discuss discussion dismissed disruption donald donald_trump doubt downed downed_qatar downing downy drill drone duration each earlier early east eastern economic economic_warfare economy effective effort eighth el-mandeb election emphasized engage engaged enough enter envoy escalate escalated escalating escalating_iran escalating_tension escalation establish established event exceed exchange exercise exercised expanded expansion expect expiration expired export export_terminal expressed expressing extend extend_pause extension face faced facilitie fade fail failed family fatal fatalitie february february_trump fell fighter fighter_jets fire fired firing firmly first first_time five flashpoint focused focusing foiled foiled_missile follow force force_target four framework freedom freedom_shield fuel funeral further gallon gas global goods graham grain grain_export guantanamo guantanamo_bay guard guard_corps gulf half halt halted halts handling heightened held high high-ranking history holding holding_iran hopes hormuz hormuz._trump hormuz_deal hormuz_iran hormuz_stalemate hormuz_tension hostilitie house house_votes houthi houthi_claim impact impacted impacting impose imposed incident including increase increased increasing indicated indicating indication individual infrastructure initial initiate injurie instead intended intensified intercepted interfere interim international invasion investigating investigation involved iran iran-backed iran-backed_houthi iran. iran._houthi iran._iran iran_claim iran_extend iran_infrastructure iran_militia iran_negotiation iran_operation iran_pause iran_pending iran_pilot iran_promise iran_red iran_respond iran_revolutionary iran_rocket iran_tanker iran_target iran_tension iran_threaten iran_war iran_wedding iranian-backed iranian-backed_houthi iraq iraq. island island_iran israel israel_prime issue issue_threat jd jets jets_downed jizan jizan. joining joint joint_drill jordanian judge june khalid khalid_sheikh kharg kharg_island killed korea korea_due kremlin kuhestak kuhestak_iran labeling larak larak_island late launch launched launcher lead leader least legitimate length limit limit_trump lincoln lincoln_deployment lindsey lindsey_graham loaded located locked long loved made management march marine marine_cancel maritime mark marking marks mastermind mastermind_khalid matter meanwhile measure media meet meeting member middle middle_east middle_eastern military military_action military_destroy militia mines missile mohammed monday month morning most mourning move nation national naval near near_kharg nearly need negotiate negotiation netanyahu noted nuclear occur occurred office officially oil oman ones ongoing ongoing_yemen operation operation_trump opting order ordered other outside package pakistani part particularly party passe passe_without pause paused peace peace_talks pending pending_deal perimeter period piece pilot place planned plans plant political ports potatoe potential power power_regarding predominantly preparing pressure previou previously price price_decline price_exceed price_reach prime progress promise promise_retaliation prospect protecting punishment pursue pursuing push putin putin_engage qatar qatar_refute qatari raised raising rapid reach reach_record reached reaching reality reason rebel rebuke received recent recognized record record_high red red_crescent red_sea red_sea. reduce reduced referred reflect refrain refute refute_claim regarding regarding_iran regime region region_recent regional regional_allie reject related remain remark renewed reopen reopening reported reportedly representative republican requested resident resolution resolving respond response responsibility restrict restricted restricted_zone result resulted resume resumed retaliate retaliation retaliatory returned revolutionary revolutionary_guard rise rising rising_tension rocket rocket_launcher rough route russia russia._iran sanction saturday saudi saudi_arabia saudi_force scheduled scott scott_bessent sea._meanwhile sea_region sea_result second secretary secretary_scott seeks september serie seriou severe severely sheikh sheikh_mohammed shield shift ship shipping ships should shrapnel sides significant significantly since since_iran situation six six-month small small_potatoe society soldier solution sought south south_korea space spark spark_mourning stage stalemate stalled stark start stated stating strait strategic strategy strike striking strong strong_retaliation struck success successfully such suggestion supplie supply support surged surprise take taken talks talks_passe talks_vladimir tanker tanker_near target target_iran targeted targeting tehran tension tension_iran terminal terminal_escalate territory there these they threat threaten threaten_strong threatened three through thursday thwarting tighten time time_since tolls total toughest toward traffic transportation treasury treasury_secretary trial trial_scheduled tribunal trump trump_cancel trump_critique trump_demand trump_describe trump_halts trump_issue trump_meet trump_war trump_warns trump_weigh u.s. u.s.-iran u.s.-iran_peace ukraine ukraine. ukraine_war ulchi ulchi_freedom unclear underway united unmanned upcoming upon urged us us-iran us. uss uss_lincoln vance variou vessel vice victory violating vladimir vladimir_putin volodymyr volodymyr_zelenskyy. vote voted votes vowed war war_began war_constraint war_power war_talks warfare warfare_declaration warned warns warns_iran washington washington_d.c. waterway wedding wedding_bombing wedding_spark wednesday week weeks weigh weigh_military where whether which while without without_agreement worried would year years yemen yemen. zelenskyy zelenskyy._escalation zone zone_around"
+    "search_text": "100 2001 2003 2006 2025 2028 260 60-day aboard accept achieved action adjustment administration aerial agreed agreement aimed aiming air_force aircraft airstrike al-qaeda alive allegation alleged alleged_mastermind alleged_wedding allie alongside also ambition america anger announce announced announcing another approximately arabia around around_strait assert asserting attack attempted attempting attend attributed average bab ballistic baloch barrel becoming began began_israel behind benjamin benjamin_netanyahu bessent bipartisan black black_sea blockade bomb bombing bombing_iran both breach bridge brief broader calm cancel cancel_joint cancel_planned canceled cancellation captured carrier casualtie caused ceasefire ceasefire_negotiation central central_command characterizing child citing civilian claim claim_missile claim_victory claimed close coinciding come comes command commitment communicated community compensation concern concerning condition conduct conducted conflict consecutive consequence considered considering constraint contingent continue control corps corresponding costs create crescent crescent_society crime critical critique critique_uss crossing curbing currently d.c. damage deadline deadline_donald deadly deal deal_deadline deal_negotiation deal_trump death decision declaration declaration_iran declare declared decline deepening defeat deliver delusion demand demand_compensation demanded democrat denied deploy deployment deployment_duration describe describe_iran despite destroy destroyed destroyer destroying devastating development diesel diesel_price diplomatic diplomatic_effort direct discuss discussion dismissed disruption donald donald_trump doubt downed downed_qatar downing downy drill drone duration each earlier early east eastern economic economic_warfare economy effective effort eighth el-mandeb election emphasized ending engage engaged enough enter envoy escalate escalated escalating escalating_iran escalating_tension escalation establish established event exceed exchange exercise exercised expanded expansion expect expiration expired export export_terminal expressed expressing extend extend_pause extension face faced facilitie fade fail failed family fatal fatalitie february february_trump fell fighter fighter_jets fire fired firing firmly first first_time five flashpoint focused focusing foiled foiled_missile follow force force_target four framework freedom freedom_shield fuel funeral further gallon gas global goods graham grain grain_export guantanamo guantanamo_bay guard guard_corps gulf half halt halted halts handling heightened held high high-ranking history holding holding_iran hopes hormuz hormuz._trump hormuz_deal hormuz_iran hormuz_stalemate hormuz_tension hostilitie house house_votes houthi houthi_claim impact impacted impacting impose imposed incident including increase increased increasing indicate indicate_possible indicated indicating indication individual infrastructure initial initiate injurie instead intended intensified intercepted interfere interim international invasion investigating investigation involved iran iran-backed iran-backed_houthi iran. iran._houthi iran._iran iran_claim iran_extend iran_infrastructure iran_militia iran_negotiation iran_operation iran_pause iran_pending iran_pilot iran_promise iran_red iran_respond iran_revolutionary iran_rocket iran_tanker iran_target iran_tension iran_threaten iran_war iran_wedding iranian-backed iranian-backed_houthi iraq iraq. island island_iran israel israel_prime issue issue_threat jd jets jets_downed jizan jizan. joining joint joint_drill jordanian judge june khalid khalid_sheikh kharg kharg_island killed korea korea_due kremlin kuhestak kuhestak_iran kyiv kyiv_ukraine labeling larak larak_island late launch launched launcher lead leader least legitimate length limit limit_trump lincoln lincoln_deployment lindsey lindsey_graham loaded located locked long loved made management march marine marine_cancel maritime mark marking marks mastermind mastermind_khalid matter meanwhile measure media meet meeting member middle middle_east middle_eastern military military_action military_destroy militia mines missile mohammed monday month morning most mourning move nation national naval near near_kharg nearly need negotiate negotiation negotiator netanyahu noted nuclear occur occurred office officially oil oman ones ongoing ongoing_yemen operation operation_trump opting order ordered other outside package pakistani part particularly party passe passe_without pause paused peace peace_talks pending pending_deal perimeter period piece pilot place planned plans plant political ports possible possible_upcoming potatoe potential power power_regarding predominantly preparing pressure previou previously price price_decline price_exceed price_reach prime progress promise promise_retaliation prospect protecting punishment pursue pursuing push putin putin_engage qatar qatar_refute qatari raised raising rapid reach reach_record reached reaching reality reason rebel rebuke received recent recognized record record_high red red_crescent red_sea red_sea. reduce reduced referred reflect refrain refute refute_claim regarding regarding_iran regime region region_recent regional regional_allie reject related remain remark renewed reopen reopening reported reportedly representative republican requested resident resolution resolving respond response responsibility restrict restricted restricted_zone result resulted resulting resume resumed retaliate retaliation retaliatory returned revolutionary revolutionary_guard rise rising rising_tension rocket rocket_launcher rough route russia russia._iran russia_ukraine sanction saturday saudi saudi_arabia saudi_force scheduled scott scott_bessent sea._meanwhile sea_region sea_result second secretary secretary_scott seeks september serie seriou severe severely sheikh sheikh_mohammed shield shift ship shipping ships should shrapnel sides significant significantly since since_iran situation six six-month small small_potatoe society soldier solution soon sought south south_korea space spark spark_mourning stage stalemate stalled stark start stated statement stating strait strategic strategy strike striking strong strong_retaliation struck success successfully such suggestion supplie supply support surged surprise take taken talks talks_passe talks_vladimir tanker tanker_near target target_iran targeted targeting tehran tension tension_iran terminal terminal_escalate territory there these they threat threaten threaten_strong threatened three through thursday thwarting tighten time time_since tolls total toughest toward traffic transportation treasury treasury_secretary trial trial_scheduled tribunal trump trump_cancel trump_critique trump_demand trump_describe trump_halts trump_issue trump_meet trump_war trump_warns trump_weigh u.s. u.s.-iran u.s.-iran_peace ukraine ukraine. ukraine_war ulchi ulchi_freedom unclear underway united unmanned upcoming upcoming_negotiation upon urged us us-iran us. uss uss_lincoln vance variou vessel vice victory violating vladimir vladimir_putin volodymyr volodymyr_zelensky volodymyr_zelenskyy. vote voted votes vowed war war_began war_constraint war_power war_talks warfare warfare_declaration warned warns warns_iran washington washington_d.c. waterway wedding wedding_bombing wedding_spark wednesday week weeks weigh weigh_military where whether which while without without_agreement worried would year years yemen yemen. zelensky zelensky_indicate zelenskyy zelenskyy._escalation zone zone_around"
   },
   "related_events": [
-    {
-      "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
-      "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
-      "summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is US Envoys Visit Kyiv Amid Russia's Pause on Strikes.",
-      "activity_status": "active",
-      "stage": "timeline",
-      "stage_label": "Timeline",
-      "first_seen_at": "2026-07-31",
-      "last_seen_at": "2026-09-07",
-      "development_count": 35,
-      "latest_title": "US Envoys Visit Kyiv Amid Russia's Pause on Strikes",
-      "topic_label": "Gaza Peace Deal",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b"
-    },
     {
       "event_id": "event_iran-claims-attacks-on-us-bases-in-bahrain-j_2ed1fdd27a",
       "title": "Iran Claims Attacks on US Bases in Bahrain, Jordan, and Kuwait Amid Escalating Conflict",
@@ -5257,6 +5339,74 @@
       "href": "/timeline.html?event=event_iran-claims-attacks-on-us-bases-in-bahrain-j_2ed1fdd27a"
     },
     {
+      "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
+      "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
+      "summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is US Envoys Visit Kyiv Amid Russia's Pause on Strikes.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-31",
+      "last_seen_at": "2026-09-07",
+      "development_count": 35,
+      "latest_title": "US Envoys Visit Kyiv Amid Russia's Pause on Strikes",
+      "topic_label": "Gaza Peace Deal",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b"
+    },
+    {
+      "event_id": "event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd",
+      "title": "Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv",
+      "summary": "Muninn first tracked this thread on 2026-07-25: Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv. The latest development is Russian Airstrike in Kramatorsk Results in Casualties.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-25",
+      "last_seen_at": "2026-08-15",
+      "development_count": 16,
+      "latest_title": "Russian Airstrike in Kramatorsk Results in Casualties",
+      "topic_label": "Ukraine Conflict",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd"
+    },
+    {
       "event_id": "event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a",
       "title": "Trump Delays Iran Strikes to Pursue Diplomatic Deal",
       "summary": "Muninn first tracked this thread on 2026-08-02: Trump Delays Iran Strikes to Pursue Diplomatic Deal. The latest development is Vance Supports Trump's AI Video of Kharg Island as a Warning to Iran.",
@@ -5289,40 +5439,6 @@
         "focal_tall_y": 0.48
       },
       "href": "/timeline.html?event=event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a"
-    },
-    {
-      "event_id": "event_putin-dismisses-need-for-new-mobilization-am_ebfb88abcf",
-      "title": "Putin Dismisses Need for New Mobilization Amid Peace Talks",
-      "summary": "Muninn first tracked this thread on 2026-09-03: Putin Dismisses Need for New Mobilization Amid Peace Talks. The latest development is US Envoys Discuss Peace Plans with Putin Before Meeting Zelenskyy in Kyiv.",
-      "activity_status": "active",
-      "stage": "developing_event",
-      "stage_label": "Developing event",
-      "first_seen_at": "2026-09-03",
-      "last_seen_at": "2026-09-06",
-      "development_count": 2,
-      "latest_title": "US Envoys Discuss Peace Plans with Putin Before Meeting Zelenskyy in Kyiv",
-      "topic_label": "Ukraine War",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_putin-dismisses-need-for-new-mobilization-am_ebfb88abcf.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_putin-dismisses-need-for-new-mobilization-am_ebfb88abcf.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_putin-dismisses-need-for-new-mobilization-am_ebfb88abcf"
     }
   ]
 }
