@@ -15,7 +15,7 @@
     "summary": "An Amazon cargo plane crashed at Miami International Airport after overrunning the runway, resulting in five fatalities and five injuries. The incident occurred when the plane, arriving from Puerto Rico, struck several vehicles on the ground. Investigations by the FAA and NTSB are underway to determine the cause of the crash.",
     "status": "active",
     "first_seen_at": "2026-09-07",
-    "last_seen_at": "2026-09-08",
+    "last_seen_at": "2026-09-09",
     "timeline": [
       {
         "development_id": "story_1a1ec0226382b79b",
@@ -220,6 +220,102 @@
         "first_seen_at": "2026-09-08",
         "last_seen_at": "2026-09-08",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_d55f4dcd7f9f6aba",
+        "daily_story_id": "story_d55f4dcd7f9f6aba",
+        "date": "2026-09-09",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Cargo Jet Attempted to Abort Landing Before Fatal Miami Crash",
+        "summary": "Flight data indicates that an Amazon cargo plane attempted to abort an unsteady landing at Miami International Airport before crashing into a van, resulting in the deaths of five individuals inside the vehicle. The victims were identified as employees of a cleaning service contracted by airlines. Two additional people were reported to be in critical condition following the incident.",
+        "topic_label": "",
+        "development_type": "impact",
+        "key_facts": [
+          "An Amazon cargo plane tried to abort an unsteady landing.",
+          "The crash occurred at Miami International Airport.",
+          "Five people in a van were killed in the crash.",
+          "The van was used by a cleaning service for airlines.",
+          "Two individuals remain in critical condition."
+        ],
+        "source_count": 3,
+        "sources": [
+          "NBC News",
+          "NPR",
+          "PBS News"
+        ],
+        "source_urls": [
+          "https://www.npr.org/2026/09/09/g-s1-142482/cargo-plane-crash-miami",
+          "https://www.pbs.org/newshour/nation/all-5-killed-in-miami-airport-cargo-jet-crash-were-in-a-van-used-by-plane-cleaners",
+          "https://www.nbcnews.com/news/us-news/authorities-identify-5-victims-killed-amazon-branded-cargo-plane-overr-rcna596599"
+        ],
+        "source_details": [
+          {
+            "title": "Cargo jet tried to abort unsteady landing before Miami crash, flight data indicates",
+            "source": "NPR",
+            "link": "https://www.npr.org/2026/09/09/g-s1-142482/cargo-plane-crash-miami",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "All 5 killed in Miami airport cargo jet crash were in a van used by plane cleaners",
+            "source": "PBS News",
+            "link": "https://www.pbs.org/newshour/nation/all-5-killed-in-miami-airport-cargo-jet-crash-were-in-a-van-used-by-plane-cleaners",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Authorities identify 5 victims killed when Amazon-branded cargo plane overran runway in Miami",
+            "source": "NBC News",
+            "link": "https://www.nbcnews.com/news/us-news/authorities-identify-5-victims-killed-amazon-branded-cargo-plane-overr-rcna596599",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "crash"
+          ],
+          "shared_incident_anchors": [
+            "cargo",
+            "international_airport",
+            "miami",
+            "miami_international"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "airport",
+            "amazon",
+            "cargo",
+            "crash",
+            "fatal",
+            "five",
+            "incident",
+            "international",
+            "killed",
+            "miami",
+            "occurred",
+            "plane",
+            "resulting",
+            "vehicle"
+          ],
+          "shared_entities": [
+            "cargo",
+            "international_airport",
+            "miami",
+            "miami_international"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_1a1ec0226382b79b",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-09",
+        "last_seen_at": "2026-09-09",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -247,12 +343,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 2,
+      "public_development_count": 3,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Fatal Amazon Cargo Plane Crash in Miami Under Investigation",
-    "latest_summary": "An Amazon cargo plane overran the runway at Miami International Airport, resulting in a crash that killed five people and injured five others. The aircraft struck two vehicles on the ground, including a cleaning crew van and an SUV. Investigators have recovered the flight data and cockpit voice recorders as the FAA and NTSB begin their investigation into the incident.",
+    "latest_title": "Cargo Jet Attempted to Abort Landing Before Fatal Miami Crash",
+    "latest_summary": "Flight data indicates that an Amazon cargo plane attempted to abort an unsteady landing at Miami International Airport before crashing into a van, resulting in the deaths of five individuals inside the vehicle. The victims were identified as employees of a cleaning service contracted by airlines. Two additional people were reported to be in critical condition following the incident.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": false,
@@ -262,28 +358,29 @@
       "display_title": "Fatal Amazon Cargo Plane Crash at Miami International Airport",
       "milestone_development_ids": [
         "story_1a1ec0226382b79b",
-        "story_46d5a509d97a526d"
+        "story_46d5a509d97a526d",
+        "story_d55f4dcd7f9f6aba"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-09-08",
-      "development_count": 2,
-      "coverage_packet_count": 2,
-      "date_count": 2,
-      "source_count": 11,
-      "independent_source_count": 8,
+      "summary_updated_at": "2026-09-09",
+      "development_count": 3,
+      "coverage_packet_count": 3,
+      "date_count": 3,
+      "source_count": 14,
+      "independent_source_count": 10,
       "first_date": "2026-09-07",
-      "latest_date": "2026-09-08",
-      "latest_update_title": "Fatal Amazon Cargo Plane Crash in Miami Under Investigation",
-      "coverage_score": 0.634,
+      "latest_date": "2026-09-09",
+      "latest_update_title": "Cargo Jet Attempted to Abort Landing Before Fatal Miami Crash",
+      "coverage_score": 0.745,
       "recency_score": 1.0,
-      "rank_score": 0.846,
-      "context_summary": "Muninn first tracked this thread on 2026-09-07: Fatal Amazon Cargo Plane Crash at Miami International Airport. The latest development is Fatal Amazon Cargo Plane Crash in Miami Under Investigation.",
+      "rank_score": 0.893,
+      "context_summary": "Muninn first tracked this thread on 2026-09-07: Fatal Amazon Cargo Plane Crash at Miami International Airport. The latest development is Cargo Jet Attempted to Abort Landing Before Fatal Miami Crash.",
       "cta_label": ""
     },
     "event_summary": {
       "available": true,
-      "summary": "An Amazon cargo plane crashed at Miami International Airport after overrunning the runway, resulting in five fatalities and five injuries. Most recently, an Amazon cargo plane overran the runway at Miami International Airport, resulting in a crash that killed five people and injured five others.",
+      "summary": "An Amazon cargo plane crashed at Miami International Airport after overrunning the runway, resulting in five fatalities and five injuries. A later development was Fatal Amazon Cargo Plane Crash in Miami Under Investigation. Most recently, flight data indicates that an Amazon cargo plane attempted to abort an unsteady landing at Miami International Airport before crashing into a van, resulting in the deaths of five individuals inside the vehicle.",
       "key_developments": [
         {
           "development_id": "story_1a1ec0226382b79b",
@@ -294,6 +391,11 @@
           "development_id": "story_46d5a509d97a526d",
           "date": "2026-09-08",
           "title": "Fatal Amazon Cargo Plane Crash in Miami Under Investigation"
+        },
+        {
+          "development_id": "story_d55f4dcd7f9f6aba",
+          "date": "2026-09-09",
+          "title": "Cargo Jet Attempted to Abort Landing Before Fatal Miami Crash"
         }
       ],
       "sources": [
@@ -362,79 +464,31 @@
           "source": "NewsNation",
           "link": "https://www.newsnationnow.com/us-news/southeast/miami-airport-prime-air-flight-runway-overrun",
           "source_bias": "center"
+        },
+        {
+          "title": "Cargo jet tried to abort unsteady landing before Miami crash, flight data indicates",
+          "source": "NPR",
+          "link": "https://www.npr.org/2026/09/09/g-s1-142482/cargo-plane-crash-miami",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "All 5 killed in Miami airport cargo jet crash were in a van used by plane cleaners",
+          "source": "PBS News",
+          "link": "https://www.pbs.org/newshour/nation/all-5-killed-in-miami-airport-cargo-jet-crash-were-in-a-van-used-by-plane-cleaners",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Authorities identify 5 victims killed when Amazon-branded cargo plane overran runway in Miami",
+          "source": "NBC News",
+          "link": "https://www.nbcnews.com/news/us-news/authorities-identify-5-victims-killed-amazon-branded-cargo-plane-overr-rcna596599",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-09-08",
+      "updated_at": "2026-09-09",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "developing_event",
     "related_events": [],
-    "search_tokens": [
-      "aircraft",
-      "airport",
-      "amazon",
-      "arriving",
-      "begin",
-      "cargo",
-      "cause",
-      "cleaning",
-      "cockpit",
-      "crash",
-      "crashed",
-      "crew",
-      "data",
-      "determine",
-      "fatal",
-      "fatalitie",
-      "five",
-      "flight",
-      "ground",
-      "incident",
-      "including",
-      "injured",
-      "injurie",
-      "international",
-      "investigation",
-      "investigator",
-      "killed",
-      "miami",
-      "ntsb",
-      "occurred",
-      "other",
-      "overran",
-      "overrunning",
-      "plane",
-      "puerto",
-      "recorder",
-      "recovered",
-      "resulting",
-      "rico",
-      "runway",
-      "several",
-      "struck",
-      "under",
-      "underway",
-      "vehicle",
-      "voice",
-      "when"
-    ],
-    "entities": [
-      "amazon_cargo",
-      "cargo_plane",
-      "faa",
-      "fatal_amazon",
-      "international_airport",
-      "miami",
-      "miami_international",
-      "miami_under",
-      "ntsb",
-      "puerto",
-      "puerto_rico",
-      "suv.",
-      "suv._investigator",
-      "under_investigation"
-    ],
-    "search_text": "aircraft airport amazon amazon_cargo arriving begin cargo cargo_plane cause cleaning cockpit crash crashed crew data determine faa fatal fatal_amazon fatalitie five flight ground incident including injured injurie international international_airport investigation investigator killed miami miami_international miami_under ntsb occurred other overran overrunning plane puerto puerto_rico recorder recovered resulting rico runway several struck suv. suv._investigator under under_investigation underway vehicle voice when",
     "event_overview": {
       "available": true,
       "title": "About Fatal Amazon Cargo Plane Crash at Miami International Airport",
@@ -527,7 +581,97 @@
       "focal_wide_y": 0.48,
       "focal_tall_x": 0.5,
       "focal_tall_y": 0.48
-    }
+    },
+    "search_tokens": [
+      "abort",
+      "additional",
+      "aircraft",
+      "airline",
+      "airport",
+      "amazon",
+      "arriving",
+      "attempted",
+      "begin",
+      "cargo",
+      "cause",
+      "cleaning",
+      "cockpit",
+      "condition",
+      "contracted",
+      "crash",
+      "crashed",
+      "crashing",
+      "crew",
+      "critical",
+      "data",
+      "death",
+      "determine",
+      "employee",
+      "fatal",
+      "fatalitie",
+      "five",
+      "flight",
+      "ground",
+      "identified",
+      "incident",
+      "including",
+      "indicate",
+      "individual",
+      "injured",
+      "injurie",
+      "inside",
+      "international",
+      "investigation",
+      "investigator",
+      "killed",
+      "landing",
+      "miami",
+      "ntsb",
+      "occurred",
+      "other",
+      "overran",
+      "overrunning",
+      "plane",
+      "puerto",
+      "recorder",
+      "recovered",
+      "reported",
+      "resulting",
+      "rico",
+      "runway",
+      "service",
+      "several",
+      "struck",
+      "under",
+      "underway",
+      "unsteady",
+      "vehicle",
+      "victim",
+      "voice",
+      "when"
+    ],
+    "entities": [
+      "abort",
+      "abort_landing",
+      "amazon_cargo",
+      "cargo_jet",
+      "cargo_plane",
+      "faa",
+      "fatal_amazon",
+      "fatal_miami",
+      "international_airport",
+      "jet_attempted",
+      "miami",
+      "miami_international",
+      "miami_under",
+      "ntsb",
+      "puerto",
+      "puerto_rico",
+      "suv.",
+      "suv._investigator",
+      "under_investigation"
+    ],
+    "search_text": "abort abort_landing additional aircraft airline airport amazon amazon_cargo arriving attempted begin cargo cargo_jet cargo_plane cause cleaning cockpit condition contracted crash crashed crashing crew critical data death determine employee faa fatal fatal_amazon fatal_miami fatalitie five flight ground identified incident including indicate individual injured injurie inside international international_airport investigation investigator jet_attempted killed landing miami miami_international miami_under ntsb occurred other overran overrunning plane puerto puerto_rico recorder recovered reported resulting rico runway service several struck suv. suv._investigator under under_investigation underway unsteady vehicle victim voice when"
   },
   "related_events": []
 }

@@ -15,7 +15,7 @@
     "summary": "King Harald V of Norway has passed away at the age of 89, marking the end of his 35-year reign. His son, Crown Prince Haakon, has ascended to the throne as King Haakon VIII. The royal family faces scrutiny due to past controversies involving Crown Princess Mette-Marit.",
     "status": "active",
     "first_seen_at": "2026-08-28",
-    "last_seen_at": "2026-08-30",
+    "last_seen_at": "2026-09-09",
     "timeline": [
       {
         "development_id": "story_97f3920e08488a7c",
@@ -303,47 +303,115 @@
         "first_seen_at": "2026-08-30",
         "last_seen_at": "2026-08-30",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_ce8802bb6d9b41ee",
+        "daily_story_id": "story_ce8802bb6d9b41ee",
+        "date": "2026-09-09",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "State Funeral Held for Norway's King Harald V",
+        "summary": "Norway's King Harald V was laid to rest in Oslo, with heads of state from around the world attending the ceremony. This event marked the conclusion of 13 days of national mourning following his death at the age of 89.",
+        "topic_label": "",
+        "development_type": "development",
+        "key_facts": [
+          "King Harald V passed away at the age of 89.",
+          "A state funeral was held in Oslo.",
+          "The funeral concluded 13 days of national mourning."
+        ],
+        "source_count": 2,
+        "sources": [
+          "DW - English",
+          "RTE News"
+        ],
+        "source_urls": [
+          "https://www.dw.com/en/norway-s-king-harald-v-laid-to-rest-in-state-funeral/a-79199812?maca=en-rss-en-all-1573-rdf",
+          "https://www.rte.ie/news/europe/2026/0909/1590830-norway-king-harald"
+        ],
+        "source_details": [
+          {
+            "title": "Norway's King Harald V laid to rest in state funeral",
+            "source": "DW - English",
+            "link": "https://www.dw.com/en/norway-s-king-harald-v-laid-to-rest-in-state-funeral/a-79199812?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Oslo falls silent for funeral of Norway's King Harald V",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/europe/2026/0909/1590830-norway-king-harald",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.383,
+        "match_evidence": {
+          "score": 0.383,
+          "matched_development_id": "story_97f3920e08488a7c",
+          "shared_tokens": [
+            "death",
+            "harald",
+            "king",
+            "mourning",
+            "norway",
+            "oslo"
+          ],
+          "shared_entities": [
+            "king_harald",
+            "norway",
+            "oslo."
+          ],
+          "source_url_match": false,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-09",
+        "last_seen_at": "2026-09-09",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 3,
+      "public_development_count": 4,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Norway's New King Haakon VIII Honors Late Father in First Address",
-    "latest_summary": "In his inaugural speech as King Haakon VIII, the new monarch paid an emotional tribute to his late father, Harald V. Haakon expressed his commitment to uphold Norway's democracy and inclusive values while outlining his vision for the monarchy's future.",
+    "latest_title": "State Funeral Held for Norway's King Harald V",
+    "latest_summary": "Norway's King Harald V was laid to rest in Oslo, with heads of state from around the world attending the ceremony. This event marked the conclusion of 13 days of national mourning following his death at the age of 89.",
     "presentation": {
       "has_context": true,
-      "has_full_timeline": false,
-      "stage": "developing_event",
-      "stage_label": "Developing event",
+      "has_full_timeline": true,
+      "stage": "timeline",
+      "stage_label": "Timeline",
       "base_title": "Norway Mourns King Harald V as Crown Prince Haakon Ascends the Throne",
-      "display_title": "Norway Mourns King Harald V as Crown Prince Haakon Ascends the Throne",
+      "display_title": "Norway Mourns King Harald V as Crown Prince Haakon Ascends the Throne Timeline",
       "milestone_development_ids": [
         "story_97f3920e08488a7c",
         "story_52c41082eeb60e65",
-        "story_a6e44273b0a13ab1"
+        "story_a6e44273b0a13ab1",
+        "story_ce8802bb6d9b41ee"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-30",
-      "development_count": 3,
-      "coverage_packet_count": 5,
-      "date_count": 3,
-      "source_count": 12,
-      "independent_source_count": 13,
+      "summary_updated_at": "2026-09-09",
+      "development_count": 4,
+      "coverage_packet_count": 6,
+      "date_count": 4,
+      "source_count": 14,
+      "independent_source_count": 15,
       "first_date": "2026-08-28",
-      "latest_date": "2026-08-30",
-      "latest_update_title": "Norway's New King Haakon VIII Honors Late Father in First Address",
-      "coverage_score": 0.745,
-      "recency_score": 0.438,
-      "rank_score": 0.567,
-      "context_summary": "Muninn first tracked this thread on 2026-08-28: Norway Mourns King Harald V as Crown Prince Haakon Ascends to the Throne. The latest development is Norway's New King Haakon VIII Honors Late Father in First Address.",
-      "cta_label": ""
+      "latest_date": "2026-09-09",
+      "latest_update_title": "State Funeral Held for Norway's King Harald V",
+      "coverage_score": 0.843,
+      "recency_score": 1.0,
+      "rank_score": 0.934,
+      "context_summary": "Muninn first tracked this thread on 2026-08-28: Norway Mourns King Harald V as Crown Prince Haakon Ascends to the Throne. The latest development is State Funeral Held for Norway's King Harald V.",
+      "cta_label": "Explore 4 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Norway is in mourning following the death of King Harald V at the age of 89. A later development was Norwegian King Harald V Passes Away; Haakon VIII Becomes Monarch. Most recently, in his inaugural speech as King Haakon VIII, the new monarch paid an emotional tribute to his late father, Harald V.",
+      "summary": "Norway is in mourning following the death of King Harald V at the age of 89. A later development was Norway's New King Haakon VIII Honors Late Father in First Address. Most recently, norway's King Harald V was laid to rest in Oslo, with heads of state from around the world attending the ceremony.",
       "key_developments": [
         {
           "development_id": "story_97f3920e08488a7c",
@@ -359,6 +427,11 @@
           "development_id": "story_a6e44273b0a13ab1",
           "date": "2026-08-30",
           "title": "Norway's New King Haakon VIII Honors Late Father in First Address"
+        },
+        {
+          "development_id": "story_ce8802bb6d9b41ee",
+          "date": "2026-09-09",
+          "title": "State Funeral Held for Norway's King Harald V"
         }
       ],
       "sources": [
@@ -433,22 +506,45 @@
           "source": "DW",
           "link": "https://www.dw.com/en/norway-s-new-king-haakon-remembers-dear-father-harald-in-first-speech-as-sovereign/a-78560155?maca=en-rss-en-all-1573-rdf",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Norway's King Harald V laid to rest in state funeral",
+          "source": "DW - English",
+          "link": "https://www.dw.com/en/norway-s-king-harald-v-laid-to-rest-in-state-funeral/a-79199812?maca=en-rss-en-all-1573-rdf",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Oslo falls silent for funeral of Norway's King Harald V",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/europe/2026/0909/1590830-norway-king-harald",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-08-30",
+      "updated_at": "2026-09-09",
       "provenance": "source_grounded_event_memory"
     },
-    "event_stage": "developing_event",
+    "event_stage": "timeline",
     "related_events": [
       {
         "event_id": "event_king-harald-s-health-declines-as-family-and_af5707a0b7",
         "title": "King Harald's Health Declines as Family and Public Gather in Support",
         "relationship": "related_topic",
-        "confidence": 0.736,
+        "confidence": 0.775,
         "shared_entities": [
           "king_harald",
           "norway",
+          "oslo",
           "royal_palace"
+        ]
+      },
+      {
+        "event_id": "event_prince-william-to-attend-king-harald-v-s-fun_b443e5486a",
+        "title": "Prince William to Attend King Harald V's Funeral on Behalf of King Charles",
+        "relationship": "related_topic",
+        "confidence": 0.705,
+        "shared_entities": [
+          "king_harald",
+          "oslo"
         ]
       }
     ],
@@ -476,25 +572,33 @@
       "address",
       "along",
       "approach",
+      "around",
       "ascend",
+      "attending",
       "away",
       "become",
       "beginning",
+      "ceremony",
       "citizen",
       "commitment",
+      "conclusion",
       "crown",
       "death",
       "democracy",
       "died",
       "emotional",
+      "event",
       "expressed",
       "father",
       "first",
+      "funeral",
       "future",
       "gahr",
       "gathered",
       "haakon",
       "harald",
+      "heads",
+      "held",
       "honor",
       "inaugural",
       "inclusive",
@@ -502,12 +606,15 @@
       "jonas",
       "king",
       "known",
+      "laid",
       "late",
+      "marked",
       "marking",
       "monarch",
       "monarchy",
       "mourn",
       "mourning",
+      "national",
       "norway",
       "norwegian",
       "oslo",
@@ -520,6 +627,7 @@
       "prince",
       "proclaimed",
       "reformist",
+      "rest",
       "royal",
       "serving",
       "speech",
@@ -537,6 +645,7 @@
       "crown_prince",
       "first",
       "first_address",
+      "funeral_held",
       "haakon_ascend",
       "haakon_viii",
       "honor_late",
@@ -547,8 +656,10 @@
       "monarch_king",
       "mourn_king",
       "norway",
+      "norway_king",
       "norway_mourn",
       "norwegian_king",
+      "oslo",
       "oslo.",
       "oslo._crown",
       "passe_away",
@@ -560,7 +671,7 @@
       "viii",
       "viii_honor"
     ],
-    "search_text": "address along approach ascend away away_haakon become beginning citizen commitment crown crown_prince death democracy died emotional expressed father first first_address future gahr gathered haakon haakon_ascend haakon_viii harald honor honor_late inaugural inclusive inclusivity jonas jonas_gahr king king_haakon king_harald known late late_father marking monarch monarch_king monarchy mourn mourn_king mourning norway norway_mourn norwegian norwegian_king oslo oslo. oslo._crown outlining outside paid palace passe passe_away prime prince prince_haakon proclaimed reformist royal royal_palace serving speech throne throne_norway tribute uphold v. value viii viii_honor vision while years"
+    "search_text": "address along approach around ascend attending away away_haakon become beginning ceremony citizen commitment conclusion crown crown_prince death democracy died emotional event expressed father first first_address funeral funeral_held future gahr gathered haakon haakon_ascend haakon_viii harald heads held honor honor_late inaugural inclusive inclusivity jonas jonas_gahr king king_haakon king_harald known laid late late_father marked marking monarch monarch_king monarchy mourn mourn_king mourning national norway norway_king norway_mourn norwegian norwegian_king oslo oslo. oslo._crown outlining outside paid palace passe passe_away prime prince prince_haakon proclaimed reformist rest royal royal_palace serving speech throne throne_norway tribute uphold v. value viii viii_honor vision while years"
   },
   "related_events": []
 }
