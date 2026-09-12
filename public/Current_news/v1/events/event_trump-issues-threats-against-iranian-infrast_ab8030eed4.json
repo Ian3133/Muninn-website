@@ -15,7 +15,7 @@
     "summary": "US President Donald Trump has threatened to target Iranian bridges and power plants in retaliation for any attacks on ships in the Strait of Hormuz. He stated that for each ship fired upon by Iranian forces, the US would respond by destroying a corresponding piece of Iranian infrastructure. This escalation comes amid ongoing tensions in the region and rising oil prices.",
     "status": "active",
     "first_seen_at": "2026-07-22",
-    "last_seen_at": "2026-09-11",
+    "last_seen_at": "2026-09-12",
     "timeline": [
       {
         "development_id": "story_627e2a10f3d02720",
@@ -4168,15 +4168,205 @@
         "first_seen_at": "2026-09-11",
         "last_seen_at": "2026-09-11",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_32c35e940379751f",
+        "daily_story_id": "story_32c35e940379751f",
+        "date": "2026-09-12",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Houthis Gain Control of Strategic Bab el-Mandeb Strait, Threatening Oil Exports",
+        "summary": "Iran-aligned Houthi rebels have captured Perim Island in the Bab el-Mandeb Strait, a critical shipping lane at the southern entrance to the Red Sea. This takeover follows the withdrawal of Yemeni government forces and poses a significant threat to Saudi oil exports. In response to recent drone attacks, Saudi Arabia has halted oil transfers through a major pipeline as a precautionary measure.",
+        "topic_label": "Iran War",
+        "development_type": "military_action",
+        "key_facts": [
+          "Houthis captured Perim Island in the Bab el-Mandeb Strait.",
+          "The takeover threatens Saudi oil exports.",
+          "Saudi Arabia stopped oil transfers through a major pipeline after drone attacks."
+        ],
+        "source_count": 3,
+        "sources": [
+          "Euronews",
+          "France 24",
+          "NPR"
+        ],
+        "source_urls": [
+          "https://www.france24.com/en/middle-east/20260911-iran-backed-houthis-seize-near-control-of-vital-bab-el-mandeb-shipping-lane",
+          "https://www.euronews.com/2026/09/12/houthis-seize-yemeni-island-in-bab-el-mandeb-taking-control-of-the-strait",
+          "https://www.npr.org/2026/09/12/g-s1-143044/yemens-houthis-capture-red-sea-island"
+        ],
+        "source_details": [
+          {
+            "title": "Iran-backed Houthis seize near control of vital Bab el-Mandeb shipping lane",
+            "source": "France 24",
+            "link": "https://www.france24.com/en/middle-east/20260911-iran-backed-houthis-seize-near-control-of-vital-bab-el-mandeb-shipping-lane",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Houthis seize key Yemeni island in Bab el-Mandeb, taking control of the strait",
+            "source": "Euronews",
+            "link": "https://www.euronews.com/2026/09/12/houthis-seize-yemeni-island-in-bab-el-mandeb-taking-control-of-the-strait",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Yemen's Houthis capture a Red Sea island in threat to shipping",
+            "source": "NPR",
+            "link": "https://www.npr.org/2026/09/12/g-s1-143044/yemens-houthis-capture-red-sea-island",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "attack"
+          ],
+          "shared_incident_anchors": [
+            "iran",
+            "iran_war"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "attack",
+            "iran",
+            "oil",
+            "response",
+            "significant",
+            "war"
+          ],
+          "shared_entities": [
+            "iran",
+            "iran_war"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_30ddcc2cab350e02",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-12",
+        "last_seen_at": "2026-09-12",
+        "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_7ad9d6a5d9493983",
+        "daily_story_id": "story_7ad9d6a5d9493983",
+        "date": "2026-09-12",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Saudi Arabia Shuts Key Pipeline Following Drone Attacks",
+        "summary": "Saudi Arabia has shut down its East–West pipeline after multiple drone attacks from Iraq set the pipeline on fire. This pipeline is vital for transporting oil to the Red Sea, circumventing the Strait of Hormuz, and the incident is expected to impact oil and fuel prices significantly.",
+        "topic_label": "Middle East Tensions",
+        "development_type": "military_action",
+        "key_facts": [
+          "Saudi Arabia shut down the East–West pipeline.",
+          "The pipeline was attacked by drones from Iraq.",
+          "The attack resulted in a fire at the pipeline."
+        ],
+        "source_count": 4,
+        "sources": [
+          "ABC News",
+          "BBC",
+          "Euronews",
+          "NBC News"
+        ],
+        "source_urls": [
+          "https://abcnews.com/International/live-updates/iran-live-updates-tehran-plans-new-restricted-zone?id=136249116",
+          "https://www.bbc.co.uk/news/articles/c62m933465eo?at_medium=RSS&at_campaign=rss",
+          "https://www.euronews.com/2026/09/12/drones-from-iraq-attack-and-set-pipeline-on-fire-in-saudi-arabia",
+          "https://www.nbcnews.com/world/middle-east/saudi-arabia-shutdown-key-pipeline-limits-oil-flow-yemen-houthis-rcna597362"
+        ],
+        "source_details": [
+          {
+            "title": "Saudi shutdown of key pipeline limits oil flow as Yemen hits back against Houthis",
+            "source": "NBC News",
+            "link": "https://www.nbcnews.com/world/middle-east/saudi-arabia-shutdown-key-pipeline-limits-oil-flow-yemen-houthis-rcna597362",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Saudi Arabia shuts key oil pipeline after drone attack launched from Iraq",
+            "source": "BBC",
+            "link": "https://www.bbc.co.uk/news/articles/c62m933465eo?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          },
+          {
+            "title": "Iran live updates: Saudi Arabia shuts down key pipeline after multiple attacks",
+            "source": "ABC News",
+            "link": "https://abcnews.com/International/live-updates/iran-live-updates-tehran-plans-new-restricted-zone?id=136249116",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Drones from Iraq attack and set pipeline on fire in Saudi Arabia",
+            "source": "Euronews",
+            "link": "https://www.euronews.com/2026/09/12/drones-from-iraq-attack-and-set-pipeline-on-fire-in-saudi-arabia",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "attack"
+          ],
+          "shared_incident_anchors": [
+            "drone"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "attack",
+            "drone"
+          ],
+          "shared_entities": [
+            "drone"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_7dff866d0fd6518a",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-12",
+        "last_seen_at": "2026-09-12",
+        "integrity_status": "trusted",
+        "revisions": [
+          {
+            "daily_story_id": "story_92dd7a72ac93aa5a",
+            "reported_at": "2026-09-12",
+            "update_kind": "factual_update",
+            "title": "Saudi Arabia Shuts Key Pipeline Following Drone Attacks",
+            "summary": "Saudi Arabia has shut down its East–West pipeline after multiple drone attacks from Iraq set the pipeline on fire. This pipeline is vital for transporting oil to the Red Sea, circumventing the Strait of Hormuz, and the incident is expected to impact oil and fuel prices significantly.",
+            "topic_label": "Iran Conflict",
+            "key_facts": [
+              "Saudi Arabia shut down the East–West pipeline.",
+              "The pipeline was attacked by drones from Iraq.",
+              "The attack resulted in a fire at the pipeline."
+            ],
+            "source_urls": [
+              "https://abcnews.com/International/live-updates/iran-live-updates-tehran-plans-new-restricted-zone?id=136249116",
+              "https://www.euronews.com/2026/09/12/drones-from-iraq-attack-and-set-pipeline-on-fire-in-saudi-arabia"
+            ]
+          }
+        ],
+        "last_updated_at": "2026-09-12",
+        "merged_development_ids": [
+          "story_92dd7a72ac93aa5a"
+        ],
+        "revision_count": 1
       }
     ],
     "integrity": {
-      "public_development_count": 51,
-      "questionable_development_count": 8,
+      "public_development_count": 53,
+      "questionable_development_count": 9,
       "review_required": true
     },
-    "latest_title": "Zelenskyy Visits Canada for Increased Military Support Amid Russian Attacks",
-    "latest_summary": "Ukrainian leader Volodymyr Zelenskyy is visiting Canada to request additional military support as Russia intensifies its air campaign against Ukraine. The attacks have focused on Ukraine's power grid, aiming to undermine civilian morale ahead of winter. This visit comes as Ukraine's drone operations have led to significant disruptions in Russian air travel.",
+    "latest_title": "Saudi Arabia Shuts Key Pipeline Following Drone Attacks",
+    "latest_summary": "Saudi Arabia has shut down its East–West pipeline after multiple drone attacks from Iraq set the pipeline on fire. This pipeline is vital for transporting oil to the Red Sea, circumventing the Strait of Hormuz, and the incident is expected to impact oil and fuel prices significantly.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -4187,29 +4377,29 @@
       "milestone_development_ids": [
         "story_627e2a10f3d02720",
         "story_3f9c2fa80eb125ad",
-        "story_eb7deec9ed3ad52c",
-        "story_efd65eb6994d75cb"
+        "story_763860b7f3336c11",
+        "story_7ad9d6a5d9493983"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-09-11",
-      "development_count": 51,
-      "coverage_packet_count": 56,
-      "date_count": 32,
-      "source_count": 160,
+      "summary_updated_at": "2026-09-12",
+      "development_count": 53,
+      "coverage_packet_count": 59,
+      "date_count": 33,
+      "source_count": 166,
       "independent_source_count": 33,
       "first_date": "2026-07-22",
-      "latest_date": "2026-09-11",
-      "latest_update_title": "Zelenskyy Visits Canada for Increased Military Support Amid Russian Attacks",
+      "latest_date": "2026-09-12",
+      "latest_update_title": "Saudi Arabia Shuts Key Pipeline Following Drone Attacks",
       "coverage_score": 1.0,
       "recency_score": 1.0,
       "rank_score": 1.0,
-      "context_summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Zelenskyy Visits Canada for Increased Military Support Amid Russian Attacks.",
-      "cta_label": "Explore 51 developments"
+      "context_summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Saudi Arabia Shuts Key Pipeline Following Drone Attacks.",
+      "cta_label": "Explore 53 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "US President Donald Trump has threatened to target Iranian bridges and power plants in retaliation for any attacks on ships in the Strait of Hormuz. A later development was Iran Threatens Strong Retaliation Against Upcoming US Sanctions. Most recently, ukrainian leader Volodymyr Zelenskyy is visiting Canada to request additional military support as Russia intensifies its air campaign against Ukraine.",
+      "summary": "US President Donald Trump has threatened to target Iranian bridges and power plants in retaliation for any attacks on ships in the Strait of Hormuz. A later development was Iran Claims Victory Amid US Economic Warfare Declaration. Most recently, saudi Arabia has shut down its East–West pipeline after multiple drone attacks from Iraq set the pipeline on fire.",
       "key_developments": [
         {
           "development_id": "story_627e2a10f3d02720",
@@ -4222,14 +4412,14 @@
           "title": "Trump Demands Compensation from Iran Amid Strait of Hormuz Stalemate"
         },
         {
-          "development_id": "story_eb7deec9ed3ad52c",
-          "date": "2026-09-04",
-          "title": "Fatal Strike on Iranian Wedding Sparks Mourning and Investigation"
+          "development_id": "story_763860b7f3336c11",
+          "date": "2026-09-05",
+          "title": "Trump Describes Iran Conflict as 'Small Potatoes' for the US"
         },
         {
-          "development_id": "story_efd65eb6994d75cb",
-          "date": "2026-09-11",
-          "title": "Zelenskyy Visits Canada for Increased Military Support Amid Russian Attacks"
+          "development_id": "story_7ad9d6a5d9493983",
+          "date": "2026-09-12",
+          "title": "Saudi Arabia Shuts Key Pipeline Following Drone Attacks"
         }
       ],
       "sources": [
@@ -5192,64 +5382,49 @@
           "source": "Euronews",
           "link": "https://www.euronews.com/2026/09/10/the-days-of-safety-are-over-russian-airports-face-record-closures",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Iran-backed Houthis seize near control of vital Bab el-Mandeb shipping lane",
+          "source": "France 24",
+          "link": "https://www.france24.com/en/middle-east/20260911-iran-backed-houthis-seize-near-control-of-vital-bab-el-mandeb-shipping-lane",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Houthis seize key Yemeni island in Bab el-Mandeb, taking control of the strait",
+          "source": "Euronews",
+          "link": "https://www.euronews.com/2026/09/12/houthis-seize-yemeni-island-in-bab-el-mandeb-taking-control-of-the-strait",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Yemen's Houthis capture a Red Sea island in threat to shipping",
+          "source": "NPR",
+          "link": "https://www.npr.org/2026/09/12/g-s1-143044/yemens-houthis-capture-red-sea-island",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Saudi shutdown of key pipeline limits oil flow as Yemen hits back against Houthis",
+          "source": "NBC News",
+          "link": "https://www.nbcnews.com/world/middle-east/saudi-arabia-shutdown-key-pipeline-limits-oil-flow-yemen-houthis-rcna597362",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Saudi Arabia shuts key oil pipeline after drone attack launched from Iraq",
+          "source": "BBC",
+          "link": "https://www.bbc.co.uk/news/articles/c62m933465eo?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
+        },
+        {
+          "title": "Drones from Iraq attack and set pipeline on fire in Saudi Arabia",
+          "source": "Euronews",
+          "link": "https://www.euronews.com/2026/09/12/drones-from-iraq-attack-and-set-pipeline-on-fire-in-saudi-arabia",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-09-11",
+      "updated_at": "2026-09-12",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
     "related_events": [
-      {
-        "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
-        "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
-        "relationship": "related_topic",
-        "confidence": 0.95,
-        "shared_entities": [
-          "benjamin_netanyahu",
-          "black",
-          "black_sea",
-          "discuss",
-          "donald_trump",
-          "grain_export",
-          "israel",
-          "israel_prime",
-          "kyiv",
-          "middle",
-          "middle_east",
-          "military_action",
-          "peace_talks",
-          "rising_tension",
-          "russia",
-          "ukraine",
-          "ukraine.",
-          "us",
-          "vladimir_putin",
-          "volodymyr_zelenskyy"
-        ]
-      },
-      {
-        "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
-        "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
-        "relationship": "related_topic",
-        "confidence": 0.95,
-        "shared_entities": [
-          "bab",
-          "canada",
-          "capture_strategic",
-          "concurrently_russia",
-          "el-mandeb",
-          "houthi_capture",
-          "kyiv",
-          "russia",
-          "ukraine",
-          "us",
-          "visit_canada",
-          "volodymyr_zelensky",
-          "volodymyr_zelenskyy",
-          "yemen_houthi",
-          "zelenskyy_visit"
-        ]
-      },
       {
         "event_id": "event_putin-dismisses-need-for-new-mobilization-am_ebfb88abcf",
         "title": "Putin Dismisses Need for New Mobilization Amid Peace Talks",
@@ -5286,6 +5461,54 @@
           "volodymyr_zelensky",
           "volodymyr_zelenskyy",
           "zelenskyy_visit"
+        ]
+      },
+      {
+        "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
+        "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
+        "relationship": "related_topic",
+        "confidence": 0.95,
+        "shared_entities": [
+          "benjamin_netanyahu",
+          "black",
+          "black_sea",
+          "discuss",
+          "donald_trump",
+          "grain_export",
+          "israel",
+          "israel_prime",
+          "kyiv",
+          "middle",
+          "middle_east",
+          "military_action",
+          "peace_talks",
+          "rising_tension",
+          "russia",
+          "ukraine",
+          "ukraine.",
+          "us",
+          "vladimir_putin",
+          "volodymyr_zelenskyy"
+        ]
+      },
+      {
+        "event_id": "event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a",
+        "title": "Trump Delays Iran Strikes to Pursue Diplomatic Deal",
+        "relationship": "related_topic",
+        "confidence": 0.95,
+        "shared_entities": [
+          "deal_trump",
+          "donald_trump",
+          "economic_warfare",
+          "gulf",
+          "hormuz_iran",
+          "iran",
+          "iran.",
+          "jd",
+          "kharg_island",
+          "pursue",
+          "strait",
+          "us"
         ]
       }
     ],
@@ -5502,6 +5725,7 @@
       "characterizing",
       "child",
       "chose",
+      "circumventing",
       "citing",
       "civil",
       "civilian",
@@ -5587,6 +5811,7 @@
       "disruption",
       "donald",
       "doubt",
+      "down",
       "downed",
       "downing",
       "downy",
@@ -5631,6 +5856,7 @@
       "expanded",
       "expansion",
       "expect",
+      "expected",
       "experienced",
       "expiration",
       "expired",
@@ -5737,6 +5963,7 @@
       "investigation",
       "involved",
       "iran",
+      "iran-aligned",
       "iran-backed",
       "iranian-backed",
       "iraq",
@@ -5761,6 +5988,7 @@
       "kuhestak",
       "kyiv",
       "labeling",
+      "lane",
       "larak",
       "late",
       "launch",
@@ -5815,6 +6043,7 @@
       "most",
       "mourning",
       "move",
+      "multiple",
       "nation",
       "national",
       "naval",
@@ -5855,11 +6084,13 @@
       "peace",
       "pending",
       "pentagon",
+      "perim",
       "perimeter",
       "period",
       "petrol",
       "piece",
       "pilot",
+      "pipeline",
       "place",
       "planned",
       "plans",
@@ -5873,6 +6104,7 @@
       "potatoe",
       "potential",
       "power",
+      "precautionary",
       "predominantly",
       "preparing",
       "pressure",
@@ -5983,6 +6215,8 @@
       "should",
       "show",
       "shrapnel",
+      "shut",
+      "shuts",
       "sides",
       "significant",
       "significantly",
@@ -6047,6 +6281,7 @@
       "threat",
       "threaten",
       "threatened",
+      "threatening",
       "three",
       "through",
       "thursday",
@@ -6061,7 +6296,9 @@
       "track",
       "traffic",
       "tragic",
+      "transfer",
       "transportation",
+      "transporting",
       "travel",
       "treasury",
       "trial",
@@ -6111,11 +6348,13 @@
       "weekly",
       "weeks",
       "weigh",
+      "west",
       "where",
       "whether",
       "which",
       "while",
       "winter",
+      "withdrawal",
       "without",
       "worldwide",
       "worried",
@@ -6123,6 +6362,7 @@
       "year",
       "years",
       "yemen",
+      "yemeni",
       "york",
       "zelensky",
       "zelenskyy",
@@ -6134,6 +6374,7 @@
       "alleged_mastermind",
       "alleged_wedding",
       "america",
+      "arabia_shuts",
       "around_strait",
       "bab",
       "began_israel",
@@ -6172,10 +6413,12 @@
       "downed_qatar",
       "drone_show",
       "east._additionally",
+      "east_west",
       "economic_warfare",
       "el-mandeb",
       "escalating_iran",
       "escalating_tension",
+      "export_iran-aligned",
       "export_terminal",
       "extend_pause",
       "february_trump",
@@ -6204,6 +6447,7 @@
       "increased_military",
       "indicate_possible",
       "iran",
+      "iran-aligned_houthi",
       "iran-backed_houthi",
       "iran.",
       "iran._houthi",
@@ -6230,6 +6474,7 @@
       "iran_war",
       "iran_wedding",
       "iranian-backed_houthi",
+      "iraq",
       "iraq.",
       "island_escalating",
       "island_iran",
@@ -6242,6 +6487,7 @@
       "joint_drill",
       "jordan",
       "june",
+      "key_pipeline",
       "khalid_sheikh",
       "kharg",
       "kharg_island",
@@ -6278,6 +6524,7 @@
       "pending_deal",
       "pentagon",
       "pentagon_ceremony",
+      "perim_island",
       "petrol_station",
       "possible_upcoming",
       "power_regarding",
@@ -6320,12 +6567,15 @@
       "sheikh_mohammed",
       "shipping_houthi",
       "show_commemorate",
+      "shuts_key",
       "since_iran",
       "six",
       "small_potatoe",
       "south_korea",
       "spark_mourning",
       "strait",
+      "strait_threatening",
+      "strategic_bab",
       "strategic_island",
       "strong_retaliation",
       "supply_concern",
@@ -6394,77 +6644,9 @@
       "zelenskyy_visit",
       "zone_around"
     ],
-    "search_text": "100 2001 2003 2006 2025 2028 25th 260 60-day 977 aboard accept achieved action additional additionally adjustment administration advance aerial affecting agreed agreement ahead aimed aiming air_force aircraft airport airstrike al-qaeda alive allegation alleged alleged_mastermind alleged_wedding allie alongside also alternative ambition america anger anniversary announce announced announcing another approximately arabia around around_strait assault assert asserting attack attacked attempt attempted attempting attend attributed average bab ballistic baloch barrel base becoming began began_israel behind benjamin benjamin_netanyahu bessent bipartisan black black_sea blockade bomb bombing bombing_iran both breach brent brent_crude bridge brief broader calm campaign canada cancel cancel_joint cancel_planned canceled cancellation capture capture_strategic captured carrier casualtie caused ceasefire ceasefire_negotiation central central_command ceremony characterizing child chose citing civil civilian claim claim_missile claim_victory claimed close coastline coastline_impacting coinciding come comes command commemorate commemorate_anniversary commemorate_victim commemoration commitment communicated community compensation completed concern concerning concurrently concurrently_russia condition conduct conducted confirmed conflict consecutive consequence considered considering constraint contingent continue control corps corresponding costs create crescent crescent_society crime critical critique critique_uss crossing crude curbing currently d.c. damage deadline deadline_donald deadly deal deal_deadline deal_negotiation deal_trump death decision declaration declaration_iran declare declared decline deepening defeat deliver delusion demand demand_compensation demanded democrat denied deploy deployment deployment_duration describe describe_iran despite destroy destroyed destroyer destroying destruction devastating development diesel diesel_price diplomatic diplomatic_effort direct discuss discussion dismissed display disruption donald donald_trump doubt downed downed_qatar downing downy drill driven drone drone_show duration each earlier early east east._additionally eastern economic economic_warfare economy effective effort eighth el-mandeb election emphasized ending engage engaged enhance enough enter entrance envoy escalate escalated escalating escalating_iran escalating_tension escalation establish established event ever exceed exceeding exchange exercise exercised expanded expansion expect experienced expiration expired export export_terminal expressed expressing extend extend_pause extension face faced facilitie fade fail failed family fatal fatalitie february february_trump fell fight fighter fighter_jets fire fired firing firmly first first_time five flashpoint fluctuation focused focusing foiled foiled_missile follow force force_target forget four framework freedom freedom_shield front fuel funeral further gain gain_control gallon gas global goods graham grain grain_export grid guantanamo guantanamo_bay guard guard_corps gulf half halt halted halts handling heightened held high high-ranking history holding holding_iran honor honored hopes hormuz hormuz._drone hormuz._trump hormuz_deal hormuz_iran hormuz_stalemate hormuz_tension hostilitie house house_votes houthi houthi_capture houthi_claim houthi_gain impact impacted impacting importance impose imposed incident including increase increased increased_military increasing indicate indicate_possible indicated indicating indication individual industrial inflation infrastructure initial initiate injurie instead intended intensifie intensified intercepted interfere interim international invasion investigating investigation involved iran iran-backed iran-backed_houthi iran. iran._houthi iran._iran iran_claim iran_extend iran_infrastructure iran_launche iran_militia iran_negotiation iran_operation iran_pause iran_pending iran_pilot iran_promise iran_red iran_respond iran_revolutionary iran_rocket iran_tanker iran_target iran_tension iran_threaten iran_war iran_wedding iranian-backed iranian-backed_houthi iraq iraq. island island_escalating island_iran israel israel_prime issue issue_threat jd jet-powered jets jets_downed jizan jizan. joining joint joint_drill jordan jordanian judge july june khalid khalid_sheikh kharg kharg_island killed korea korea_due kremlin kuhestak kuhestak_iran kyiv kyiv_petrol kyiv_ukraine labeling larak larak_island late launch launche launche_retaliatory launche_targeted launched launcher lead leader least legitimate length life limit limit_trump lincoln lincoln_deployment lindsey lindsey_graham loaded located location locked long lost loved made management march marine marine_cancel maritime mark market marking marks mastermind mastermind_khalid matter mayor meanwhile measure media meet meeting member middle middle_east middle_east. middle_eastern military military_action military_destroy military_support militia mines missile mohammed mokha monday month morale morning most mourning move nation national naval near near_kharg nearly need negotiate negotiation negotiator netanyahu never noted nuclear occur occurred office officially oil oman ones ongoing ongoing_yemen operation operation_trump opting order ordered other outside package pakistani part particularly party passe passe_without past pause paused pavlohrad peace peace_talks pending pending_deal pentagon pentagon_ceremony perimeter period petrol petrol_station piece pilot place planned plans plant poignant political ports poses position possible possible_upcoming potatoe potential power power_regarding predominantly preparing pressure previou previously price price_decline price_exceed price_reach price_surge prime progress promise promise_retaliation prompting prospect protecting punishment pursue pursuing push putin putin_engage qatar qatar_refute qatari raised raising rapid reach reach_record reached reaching reaction reality reason rebel rebel-held rebuke received recent recognized record record_high recreated red red_crescent red_sea red_sea. reduce reduced referred reflect refrain refute refute_claim regarding regarding_iran regime region region_recent region_yemen regional regional_allie reject related remain remark remembering renewed reopen reopening reported reportedly representative representing republican request requested resident resolution resolving respond responding response responsibility restrict restricted restricted_zone result resulted resulting resume resumed retaliate retaliation retaliatory returned revolutionary revolutionary_guard rise rising rising_tension rocket rocket_launcher rough route russia russia._iran russia_launche russia_ukraine sanction saturday saudi saudi_arabia saudi_force scheduled scott scott_bessent sea._meanwhile sea_coastline sea_region sea_result second secretary secretary_scott seeks seen september serie seriou serving severe severely sheikh sheikh_mohammed shield shift ship shipping shipping_houthi ships should show show_commemorate shrapnel sides significant significantly since since_iran situation six six-month small small_potatoe society soldier solution soon sought south south_korea southern space spark spark_mourning stability stage stalemate stalled stark start stated statement stating station still strait strategic strategic_island strategy strengthen strike striking strong strong_retaliation struck success successfully such suggestion supplie supply supply_concern support surge surge_past surged surpassed surprise take taken takeover talks talks_passe talks_vladimir tanker tanker_near target target_iran targeted targeted_drone targeting tehran tension tension_iran terminal terminal_escalate territory there these they threat threaten threaten_strong threatened three through thursday thwarting tighten time time_since tolls total toughest toward tower track traffic tragic transportation travel treasury treasury_secretary trial trial_scheduled tribunal tribute trump trump_cancel trump_commemorate trump_critique trump_demand trump_describe trump_halts trump_issue trump_meet trump_war trump_warns trump_weigh twin twin_tower u.s. u.s.-iran u.s.-iran_peace ukraine ukraine. ukraine_war ulchi ulchi_freedom unclear undermine underway united unmanned upcoming upcoming_negotiation upon urged us us-iran us. using uss uss_lincoln vance variou vessel vice victim victim_ahead victory violating violence visit visit_canada visiting vital vladimir vladimir_putin volodymyr volodymyr_zelensky volodymyr_zelenskyy volodymyr_zelenskyy. vote voted votes vowed war war_began war_constraint war_power war_talks warfare warfare_declaration warned warns warns_iran warship washington washington_d.c. waterway wedding wedding_bombing wedding_spark wednesday week weekly weekly_gain weeks weigh weigh_military where whether which while winter without without_agreement worldwide worried would year years yemen yemen. yemen_houthi yemen_red york york._houthi zelensky zelensky_indicate zelenskyy zelenskyy._escalation zelenskyy_visit zone zone_around"
+    "search_text": "100 2001 2003 2006 2025 2028 25th 260 60-day 977 aboard accept achieved action additional additionally adjustment administration advance aerial affecting agreed agreement ahead aimed aiming air_force aircraft airport airstrike al-qaeda alive allegation alleged alleged_mastermind alleged_wedding allie alongside also alternative ambition america anger anniversary announce announced announcing another approximately arabia arabia_shuts around around_strait assault assert asserting attack attacked attempt attempted attempting attend attributed average bab ballistic baloch barrel base becoming began began_israel behind benjamin benjamin_netanyahu bessent bipartisan black black_sea blockade bomb bombing bombing_iran both breach brent brent_crude bridge brief broader calm campaign canada cancel cancel_joint cancel_planned canceled cancellation capture capture_strategic captured carrier casualtie caused ceasefire ceasefire_negotiation central central_command ceremony characterizing child chose circumventing citing civil civilian claim claim_missile claim_victory claimed close coastline coastline_impacting coinciding come comes command commemorate commemorate_anniversary commemorate_victim commemoration commitment communicated community compensation completed concern concerning concurrently concurrently_russia condition conduct conducted confirmed conflict consecutive consequence considered considering constraint contingent continue control corps corresponding costs create crescent crescent_society crime critical critique critique_uss crossing crude curbing currently d.c. damage deadline deadline_donald deadly deal deal_deadline deal_negotiation deal_trump death decision declaration declaration_iran declare declared decline deepening defeat deliver delusion demand demand_compensation demanded democrat denied deploy deployment deployment_duration describe describe_iran despite destroy destroyed destroyer destroying destruction devastating development diesel diesel_price diplomatic diplomatic_effort direct discuss discussion dismissed display disruption donald donald_trump doubt down downed downed_qatar downing downy drill driven drone drone_show duration each earlier early east east._additionally east_west eastern economic economic_warfare economy effective effort eighth el-mandeb election emphasized ending engage engaged enhance enough enter entrance envoy escalate escalated escalating escalating_iran escalating_tension escalation establish established event ever exceed exceeding exchange exercise exercised expanded expansion expect expected experienced expiration expired export export_iran-aligned export_terminal expressed expressing extend extend_pause extension face faced facilitie fade fail failed family fatal fatalitie february february_trump fell fight fighter fighter_jets fire fired firing firmly first first_time five flashpoint fluctuation focused focusing foiled foiled_missile follow force force_target forget four framework freedom freedom_shield front fuel funeral further gain gain_control gallon gas global goods graham grain grain_export grid guantanamo guantanamo_bay guard guard_corps gulf half halt halted halts handling heightened held high high-ranking history holding holding_iran honor honored hopes hormuz hormuz._drone hormuz._trump hormuz_deal hormuz_iran hormuz_stalemate hormuz_tension hostilitie house house_votes houthi houthi_capture houthi_claim houthi_gain impact impacted impacting importance impose imposed incident including increase increased increased_military increasing indicate indicate_possible indicated indicating indication individual industrial inflation infrastructure initial initiate injurie instead intended intensifie intensified intercepted interfere interim international invasion investigating investigation involved iran iran-aligned iran-aligned_houthi iran-backed iran-backed_houthi iran. iran._houthi iran._iran iran_claim iran_extend iran_infrastructure iran_launche iran_militia iran_negotiation iran_operation iran_pause iran_pending iran_pilot iran_promise iran_red iran_respond iran_revolutionary iran_rocket iran_tanker iran_target iran_tension iran_threaten iran_war iran_wedding iranian-backed iranian-backed_houthi iraq iraq. island island_escalating island_iran israel israel_prime issue issue_threat jd jet-powered jets jets_downed jizan jizan. joining joint joint_drill jordan jordanian judge july june key_pipeline khalid khalid_sheikh kharg kharg_island killed korea korea_due kremlin kuhestak kuhestak_iran kyiv kyiv_petrol kyiv_ukraine labeling lane larak larak_island late launch launche launche_retaliatory launche_targeted launched launcher lead leader least legitimate length life limit limit_trump lincoln lincoln_deployment lindsey lindsey_graham loaded located location locked long lost loved made management march marine marine_cancel maritime mark market marking marks mastermind mastermind_khalid matter mayor meanwhile measure media meet meeting member middle middle_east middle_east. middle_eastern military military_action military_destroy military_support militia mines missile mohammed mokha monday month morale morning most mourning move multiple nation national naval near near_kharg nearly need negotiate negotiation negotiator netanyahu never noted nuclear occur occurred office officially oil oman ones ongoing ongoing_yemen operation operation_trump opting order ordered other outside package pakistani part particularly party passe passe_without past pause paused pavlohrad peace peace_talks pending pending_deal pentagon pentagon_ceremony perim perim_island perimeter period petrol petrol_station piece pilot pipeline place planned plans plant poignant political ports poses position possible possible_upcoming potatoe potential power power_regarding precautionary predominantly preparing pressure previou previously price price_decline price_exceed price_reach price_surge prime progress promise promise_retaliation prompting prospect protecting punishment pursue pursuing push putin putin_engage qatar qatar_refute qatari raised raising rapid reach reach_record reached reaching reaction reality reason rebel rebel-held rebuke received recent recognized record record_high recreated red red_crescent red_sea red_sea. reduce reduced referred reflect refrain refute refute_claim regarding regarding_iran regime region region_recent region_yemen regional regional_allie reject related remain remark remembering renewed reopen reopening reported reportedly representative representing republican request requested resident resolution resolving respond responding response responsibility restrict restricted restricted_zone result resulted resulting resume resumed retaliate retaliation retaliatory returned revolutionary revolutionary_guard rise rising rising_tension rocket rocket_launcher rough route russia russia._iran russia_launche russia_ukraine sanction saturday saudi saudi_arabia saudi_force scheduled scott scott_bessent sea._meanwhile sea_coastline sea_region sea_result second secretary secretary_scott seeks seen september serie seriou serving severe severely sheikh sheikh_mohammed shield shift ship shipping shipping_houthi ships should show show_commemorate shrapnel shut shuts shuts_key sides significant significantly since since_iran situation six six-month small small_potatoe society soldier solution soon sought south south_korea southern space spark spark_mourning stability stage stalemate stalled stark start stated statement stating station still strait strait_threatening strategic strategic_bab strategic_island strategy strengthen strike striking strong strong_retaliation struck success successfully such suggestion supplie supply supply_concern support surge surge_past surged surpassed surprise take taken takeover talks talks_passe talks_vladimir tanker tanker_near target target_iran targeted targeted_drone targeting tehran tension tension_iran terminal terminal_escalate territory there these they threat threaten threaten_strong threatened threatening three through thursday thwarting tighten time time_since tolls total toughest toward tower track traffic tragic transfer transportation transporting travel treasury treasury_secretary trial trial_scheduled tribunal tribute trump trump_cancel trump_commemorate trump_critique trump_demand trump_describe trump_halts trump_issue trump_meet trump_war trump_warns trump_weigh twin twin_tower u.s. u.s.-iran u.s.-iran_peace ukraine ukraine. ukraine_war ulchi ulchi_freedom unclear undermine underway united unmanned upcoming upcoming_negotiation upon urged us us-iran us. using uss uss_lincoln vance variou vessel vice victim victim_ahead victory violating violence visit visit_canada visiting vital vladimir vladimir_putin volodymyr volodymyr_zelensky volodymyr_zelenskyy volodymyr_zelenskyy. vote voted votes vowed war war_began war_constraint war_power war_talks warfare warfare_declaration warned warns warns_iran warship washington washington_d.c. waterway wedding wedding_bombing wedding_spark wednesday week weekly weekly_gain weeks weigh weigh_military west where whether which while winter withdrawal without without_agreement worldwide worried would year years yemen yemen. yemen_houthi yemen_red yemeni york york._houthi zelensky zelensky_indicate zelenskyy zelenskyy._escalation zelenskyy_visit zone zone_around"
   },
   "related_events": [
-    {
-      "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
-      "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
-      "summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Russian Drone Strike on Ukraine-Moldova Border Results in Two Deaths.",
-      "activity_status": "active",
-      "stage": "timeline",
-      "stage_label": "Timeline",
-      "first_seen_at": "2026-07-31",
-      "last_seen_at": "2026-09-09",
-      "development_count": 36,
-      "latest_title": "Russian Drone Strike on Ukraine-Moldova Border Results in Two Deaths",
-      "topic_label": "Gaza Peace Deal",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b"
-    },
-    {
-      "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
-      "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
-      "summary": "Muninn first tracked this thread on 2026-07-25: Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse. The latest development is Houthis Capture Strategic Port City in Yemen, Threatening Global Shipping.",
-      "activity_status": "active",
-      "stage": "timeline",
-      "stage_label": "Timeline",
-      "first_seen_at": "2026-07-25",
-      "last_seen_at": "2026-09-10",
-      "development_count": 17,
-      "latest_title": "Houthis Capture Strategic Port City in Yemen, Threatening Global Shipping",
-      "topic_label": "Russia-Ukraine War",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea"
-    },
     {
       "event_id": "event_putin-dismisses-need-for-new-mobilization-am_ebfb88abcf",
       "title": "Putin Dismisses Need for New Mobilization Amid Peace Talks",
@@ -6532,6 +6714,74 @@
         "focal_tall_y": 0.48
       },
       "href": "/timeline.html?event=event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd"
+    },
+    {
+      "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
+      "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
+      "summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Russian Strikes Kill Civilians in Ukraine Following Putin's Warning.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-31",
+      "last_seen_at": "2026-09-12",
+      "development_count": 37,
+      "latest_title": "Russian Strikes Kill Civilians in Ukraine Following Putin's Warning",
+      "topic_label": "Gaza Peace Deal",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b"
+    },
+    {
+      "event_id": "event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a",
+      "title": "Trump Delays Iran Strikes to Pursue Diplomatic Deal",
+      "summary": "Muninn first tracked this thread on 2026-08-02: Trump Delays Iran Strikes to Pursue Diplomatic Deal. The latest development is Vance Supports Trump's AI Video of Kharg Island as a Warning to Iran.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-08-02",
+      "last_seen_at": "2026-08-31",
+      "development_count": 7,
+      "latest_title": "Vance Supports Trump's AI Video of Kharg Island as a Warning to Iran",
+      "topic_label": "Iran Relations",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a"
     }
   ]
 }

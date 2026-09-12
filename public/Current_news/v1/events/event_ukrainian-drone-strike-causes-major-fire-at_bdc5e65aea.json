@@ -15,7 +15,7 @@
     "summary": "A Ukrainian drone strike ignited a significant fire at a Wildberries warehouse near Saint Petersburg on July 24. The blaze produced thick smoke that spread across the city and led to temporary disruptions at Pulkovo Airport, as reported by Russian authorities.",
     "status": "active",
     "first_seen_at": "2026-07-25",
-    "last_seen_at": "2026-09-10",
+    "last_seen_at": "2026-09-12",
     "timeline": [
       {
         "development_id": "story_b77a481c5a1a5ef9",
@@ -1309,15 +1309,92 @@
         "first_seen_at": "2026-09-10",
         "last_seen_at": "2026-09-10",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_8c37973e18fec7be",
+        "daily_story_id": "story_8c37973e18fec7be",
+        "date": "2026-09-12",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Houthis Seize Strategic Perim Island, Strengthening Control Over Red Sea Shipping",
+        "summary": "The Iran-backed Houthi rebels have reportedly captured Perim Island, a key location in the Bab el-Mandeb Strait. This move is seen as an effort to enhance their control over a vital maritime route, impacting shipping in the Red Sea.",
+        "topic_label": "Yemen Conflict",
+        "development_type": "development",
+        "key_facts": [
+          "Houthis have seized Perim Island.",
+          "Perim Island is located in the Bab el-Mandeb Strait.",
+          "The capture aims to tighten control over Red Sea shipping routes."
+        ],
+        "source_count": 2,
+        "sources": [
+          "BBC",
+          "TIME"
+        ],
+        "source_urls": [
+          "https://www.bbc.co.uk/news/articles/c23x72yx2rvo?at_medium=RSS&at_campaign=rss",
+          "https://time.com/article/2026/09/11/yemen-houthi-red-sea-bab-el-mandeb-shipping-iran-war"
+        ],
+        "source_details": [
+          {
+            "title": "Houthis claim major advance in Yemen and tighten grip on Red Sea shipping lane",
+            "source": "BBC",
+            "link": "https://www.bbc.co.uk/news/articles/c23x72yx2rvo?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          },
+          {
+            "title": "Yemen’s Houthis Reach Strategic Island in Key Shipping Route",
+            "source": "TIME",
+            "link": "https://time.com/article/2026/09/11/yemen-houthi-red-sea-bab-el-mandeb-shipping-iran-war",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_a3a93fbe52b6f5c6",
+          "shared_tokens": [
+            "capture",
+            "captured",
+            "conflict",
+            "control",
+            "el-mandeb",
+            "houthi",
+            "located",
+            "rebel",
+            "route",
+            "seized",
+            "shipping",
+            "strait",
+            "strategic",
+            "vital",
+            "yemen"
+          ],
+          "shared_entities": [
+            "bab",
+            "el-mandeb",
+            "shipping_yemen"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-12",
+        "last_seen_at": "2026-09-12",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 17,
+      "public_development_count": 18,
       "questionable_development_count": 2,
       "review_required": true
     },
-    "latest_title": "Houthis Capture Strategic Port City in Yemen, Threatening Global Shipping",
-    "latest_summary": "Yemen's Houthi rebels have seized control of the port city of Mokha, located approximately 80 kilometers from the Bab el-Mandeb Strait. This strategic waterway is crucial for global shipping, with about 12% of the world's oil and goods passing through it. The Houthis' advance poses a significant threat to international energy supplies and shipping routes.",
+    "latest_title": "Houthis Seize Strategic Perim Island, Strengthening Control Over Red Sea Shipping",
+    "latest_summary": "The Iran-backed Houthi rebels have reportedly captured Perim Island, a key location in the Bab el-Mandeb Strait. This move is seen as an effort to enhance their control over a vital maritime route, impacting shipping in the Red Sea.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -1327,30 +1404,30 @@
       "display_title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse Timeline",
       "milestone_development_ids": [
         "story_b77a481c5a1a5ef9",
-        "story_19aa78c59e6cf97c",
+        "story_11a5dfd41f7e4784",
         "story_d402754f03591b92",
-        "story_a3a93fbe52b6f5c6"
+        "story_8c37973e18fec7be"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-09-10",
-      "development_count": 17,
-      "coverage_packet_count": 17,
-      "date_count": 13,
-      "source_count": 44,
-      "independent_source_count": 23,
+      "summary_updated_at": "2026-09-12",
+      "development_count": 18,
+      "coverage_packet_count": 18,
+      "date_count": 14,
+      "source_count": 46,
+      "independent_source_count": 24,
       "first_date": "2026-07-25",
-      "latest_date": "2026-09-10",
-      "latest_update_title": "Houthis Capture Strategic Port City in Yemen, Threatening Global Shipping",
+      "latest_date": "2026-09-12",
+      "latest_update_title": "Houthis Seize Strategic Perim Island, Strengthening Control Over Red Sea Shipping",
       "coverage_score": 1.0,
-      "recency_score": 0.875,
-      "rank_score": 0.927,
-      "context_summary": "Muninn first tracked this thread on 2026-07-25: Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse. The latest development is Houthis Capture Strategic Port City in Yemen, Threatening Global Shipping.",
-      "cta_label": "Explore 17 developments"
+      "recency_score": 1.0,
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-07-25: Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse. The latest development is Houthis Seize Strategic Perim Island, Strengthening Control Over Red Sea Shipping.",
+      "cta_label": "Explore 18 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "A Ukrainian drone strike ignited a significant fire at a Wildberries warehouse near Saint Petersburg on July 24. A later development was Pentagon Report Confirms 153 Civilian Deaths from US Strikes on Houthis in Yemen. Most recently, yemen's Houthi rebels have seized control of the port city of Mokha, located approximately 80 kilometers from the Bab el-Mandeb Strait.",
+      "summary": "A Ukrainian drone strike ignited a significant fire at a Wildberries warehouse near Saint Petersburg on July 24. A later development was UN Reports Highest Civilian Deaths in Ukraine Since May 2022. Most recently, the Iran-backed Houthi rebels have reportedly captured Perim Island, a key location in the Bab el-Mandeb Strait.",
       "key_developments": [
         {
           "development_id": "story_b77a481c5a1a5ef9",
@@ -1358,9 +1435,9 @@
           "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse"
         },
         {
-          "development_id": "story_19aa78c59e6cf97c",
-          "date": "2026-08-11",
-          "title": "Ukrainian Drone Strike on Russian Oil Refinery Claims 13 Lives"
+          "development_id": "story_11a5dfd41f7e4784",
+          "date": "2026-08-12",
+          "title": "UN Reports Over 16,000 Civilians Still Detained by Russia in Ukraine"
         },
         {
           "development_id": "story_d402754f03591b92",
@@ -1368,9 +1445,9 @@
           "title": "Russia Claims Strikes on Ukrainian Infrastructure Amid Drone Attacks"
         },
         {
-          "development_id": "story_a3a93fbe52b6f5c6",
-          "date": "2026-09-10",
-          "title": "Houthis Capture Strategic Port City in Yemen, Threatening Global Shipping"
+          "development_id": "story_8c37973e18fec7be",
+          "date": "2026-09-12",
+          "title": "Houthis Seize Strategic Perim Island, Strengthening Control Over Red Sea Shipping"
         }
       ],
       "sources": [
@@ -1637,36 +1714,25 @@
           "source": "France 24 - English",
           "link": "https://www.france24.com/en/video/20260910-houthis-seize-key-yemeni-red-sea-port-sources-say-threatening-global-energy-flows",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Houthis claim major advance in Yemen and tighten grip on Red Sea shipping lane",
+          "source": "BBC",
+          "link": "https://www.bbc.co.uk/news/articles/c23x72yx2rvo?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
+        },
+        {
+          "title": "Yemen’s Houthis Reach Strategic Island in Key Shipping Route",
+          "source": "TIME",
+          "link": "https://time.com/article/2026/09/11/yemen-houthi-red-sea-bab-el-mandeb-shipping-iran-war",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-09-10",
+      "updated_at": "2026-09-12",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
     "related_events": [
-      {
-        "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
-        "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
-        "relationship": "related_topic",
-        "confidence": 0.95,
-        "shared_entities": [
-          "bab",
-          "canada",
-          "capture_strategic",
-          "concurrently_russia",
-          "el-mandeb",
-          "houthi_capture",
-          "kyiv",
-          "russia",
-          "ukraine",
-          "us",
-          "visit_canada",
-          "volodymyr_zelensky",
-          "volodymyr_zelenskyy",
-          "yemen_houthi",
-          "zelenskyy_visit"
-        ]
-      },
       {
         "event_id": "event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd",
         "title": "Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv",
@@ -1707,6 +1773,34 @@
           "ukraine_drone",
           "us",
           "volodymyr_zelenskyy"
+        ]
+      },
+      {
+        "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+        "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
+        "relationship": "related_topic",
+        "confidence": 0.95,
+        "shared_entities": [
+          "bab",
+          "canada",
+          "capture_strategic",
+          "concurrently_russia",
+          "el-mandeb",
+          "houthi_capture",
+          "iran-backed_houthi",
+          "kyiv",
+          "perim_island",
+          "red",
+          "red_sea",
+          "red_sea.",
+          "russia",
+          "ukraine",
+          "us",
+          "visit_canada",
+          "volodymyr_zelensky",
+          "volodymyr_zelenskyy",
+          "yemen_houthi",
+          "zelenskyy_visit"
         ]
       },
       {
@@ -1901,6 +1995,7 @@
       "capabilitie",
       "capital",
       "capture",
+      "captured",
       "casualtie",
       "cause",
       "child",
@@ -1953,9 +2048,11 @@
       "drone",
       "early",
       "eastern",
+      "effort",
       "el-mandeb",
       "energy",
       "engage",
+      "enhance",
       "enhancing",
       "escalating",
       "evacuated",
@@ -1991,6 +2088,7 @@
       "ignited",
       "igniting",
       "ill-treatment",
+      "impacting",
       "incident",
       "including",
       "increase",
@@ -2006,6 +2104,8 @@
       "international",
       "invasion",
       "involving",
+      "iran-backed",
+      "island",
       "july",
       "killed",
       "killing",
@@ -2022,9 +2122,11 @@
       "lives",
       "local",
       "located",
+      "location",
       "logistic",
       "long-range",
       "many",
+      "maritime",
       "marks",
       "military",
       "missile",
@@ -2035,6 +2137,7 @@
       "month",
       "monthly",
       "moscow",
+      "move",
       "multi-nation",
       "multiple",
       "nation",
@@ -2060,6 +2163,7 @@
       "passing",
       "payment",
       "pentagon",
+      "perim",
       "petersburg",
       "poland",
       "polish",
@@ -2097,6 +2201,8 @@
       "saint",
       "saudi-backed",
       "securing",
+      "seen",
+      "seize",
       "seized",
       "separate",
       "serbia",
@@ -2115,6 +2221,7 @@
       "still",
       "strait",
       "strategic",
+      "strengthening",
       "strike",
       "struck",
       "supplie",
@@ -2152,6 +2259,7 @@
       "violence",
       "visit",
       "visiting",
+      "vital",
       "volodymyr",
       "war",
       "warehouse",
@@ -2201,8 +2309,11 @@
       "highest_civilian",
       "highest_monthly",
       "houthi_capture",
+      "houthi_seize",
       "human_right",
       "including_civilian",
+      "iran-backed_houthi",
+      "island_strengthening",
       "july.",
       "korean_missile",
       "kyiv",
@@ -2220,6 +2331,7 @@
       "odesa",
       "odesa_region",
       "passenger_train",
+      "perim_island",
       "petersburg_warehouse",
       "pm",
       "poland_polish",
@@ -2229,6 +2341,9 @@
       "pulkovo_airport",
       "ras_isa",
       "reach_highest",
+      "red",
+      "red_sea",
+      "red_sea.",
       "refinery_claim",
       "region_result",
       "right_monitoring",
@@ -2239,12 +2354,16 @@
       "russian._authoritie",
       "saint",
       "saint_petersburg",
+      "sea_shipping",
+      "seize_strategic",
       "serbia",
       "serbia_russia",
       "shipping_yemen",
       "since_may",
       "still_detained",
+      "strategic_perim",
       "strategic_port",
+      "strengthening_control",
       "taiz",
       "tatarstan",
       "turkey",
@@ -2272,43 +2391,9 @@
       "zelensky_visit",
       "zelenskyy_visit"
     ],
-    "search_text": "000 153 201 2022 2025 2026 243 340 437 610 9-year-old accounted across action additional additionally advance aerial ahead aimed airport airstrike airstrike_concern alarming although amidst among appear approximately april arrival assault assistant atacm attack august authoritie bab beginning belgorod berezivka blaze bolster both broader campaign canada capabilitie capital capture capture_strategic casualtie cause child children civilian civilian_casualtie civilian_clashe civilian_still claim claim_lives claimed clashe coast coincided collaboration comply concern concern_ukraine concluded concurrently concurrently_russia concurrently_ukraine condolence conduct confirm confirm_civilian confirming conflict continue contributed control crater critical crucial data deadliest deadly deadly_ukraine deal deals deals_recent death debri decision deep defense deploying deprived described detained development discovered displacement disruption district donald donald_tusk down downed driver drone early eastern eastern_poland el-mandeb energy engage enhancing escalating escalating_ground evacuated experiencing explosion faces facilitie facility fatalitie fell field fighting finalized fire fired fires first five force four frontline full-scale global goods ground ground_fighting held highest highest_civilian highest_monthly highlight highlighted houthi houthi_capture human human_right hundred ignited igniting ill-treatment incident including including_civilian increase increasing indicate indicating individual industrial infrastructure injured injurie inside international invasion involving july july. killed killing kills kilometer korean korean_missile kyiv kyiv_result largest launched least leave level level_since liberty lives local located logistic long-range many marks military military_deals missile missile_downed mission mission._drone mokha monitor monitoring monitoring_mission. month monthly monthly_level moscow multi-nation multiple nation near near_kyiv nearly nine nizhnekamsk nizhnekamsk_russia north north_korean noted number numerou occur occurred odesa odesa_region offensive oil ongoing onset other overnight part passenger passenger_train passing payment pentagon petersburg petersburg_warehouse pm poland poland_polish polish polish_prime port poses position possible possible_russia prime produced provided pulkovo pulkovo_airport purchase pyongyang railway raised ras_isa reach reach_highest reached reason rebel recent refinery refinery_claim region region_result reported reportedly resource response result resulted resulting revealed review right right_monitoring route russia russia_claim russia_missile russia_shahed russian._authoritie saint saint_petersburg saudi-backed securing seized separate serbia serbia_russia shahed shipping shipping_yemen shortly shot side significant since since_may sites smoke specific spread stated still still_detained strait strategic strategic_port strike struck supplie support surge surged surrounding system taiz taneco target targeted tatarstan temporary tension territory than these thick threat threatening three through time torture tour train trend turkey tusk ukraine ukraine_conduct ukraine_drone ukraine_infrastructure ukraine_odesa ukraine_reach ukraine_since un united united_nation us variou victim violence visit visit_canada visiting volodymyr volodymyr_zelensky volodymyr_zelenskyy war warehouse warranted waterway ways western which while wildberrie winter woman year years yemen yemen_houthi yemen_result yemen_saudi-backed yemen_threatening zaporizhzhia zaporizhzhia_ukraine zelensky zelensky_visit zelenskyy zelenskyy_visit"
+    "search_text": "000 153 201 2022 2025 2026 243 340 437 610 9-year-old accounted across action additional additionally advance aerial ahead aimed airport airstrike airstrike_concern alarming although amidst among appear approximately april arrival assault assistant atacm attack august authoritie bab beginning belgorod berezivka blaze bolster both broader campaign canada capabilitie capital capture capture_strategic captured casualtie cause child children civilian civilian_casualtie civilian_clashe civilian_still claim claim_lives claimed clashe coast coincided collaboration comply concern concern_ukraine concluded concurrently concurrently_russia concurrently_ukraine condolence conduct confirm confirm_civilian confirming conflict continue contributed control crater critical crucial data deadliest deadly deadly_ukraine deal deals deals_recent death debri decision deep defense deploying deprived described detained development discovered displacement disruption district donald donald_tusk down downed driver drone early eastern eastern_poland effort el-mandeb energy engage enhance enhancing escalating escalating_ground evacuated experiencing explosion faces facilitie facility fatalitie fell field fighting finalized fire fired fires first five force four frontline full-scale global goods ground ground_fighting held highest highest_civilian highest_monthly highlight highlighted houthi houthi_capture houthi_seize human human_right hundred ignited igniting ill-treatment impacting incident including including_civilian increase increasing indicate indicating individual industrial infrastructure injured injurie inside international invasion involving iran-backed iran-backed_houthi island island_strengthening july july. killed killing kills kilometer korean korean_missile kyiv kyiv_result largest launched least leave level level_since liberty lives local located location logistic long-range many maritime marks military military_deals missile missile_downed mission mission._drone mokha monitor monitoring monitoring_mission. month monthly monthly_level moscow move multi-nation multiple nation near near_kyiv nearly nine nizhnekamsk nizhnekamsk_russia north north_korean noted number numerou occur occurred odesa odesa_region offensive oil ongoing onset other overnight part passenger passenger_train passing payment pentagon perim perim_island petersburg petersburg_warehouse pm poland poland_polish polish polish_prime port poses position possible possible_russia prime produced provided pulkovo pulkovo_airport purchase pyongyang railway raised ras_isa reach reach_highest reached reason rebel recent red red_sea red_sea. refinery refinery_claim region region_result reported reportedly resource response result resulted resulting revealed review right right_monitoring route russia russia_claim russia_missile russia_shahed russian._authoritie saint saint_petersburg saudi-backed sea_shipping securing seen seize seize_strategic seized separate serbia serbia_russia shahed shipping shipping_yemen shortly shot side significant since since_may sites smoke specific spread stated still still_detained strait strategic strategic_perim strategic_port strengthening strengthening_control strike struck supplie support surge surged surrounding system taiz taneco target targeted tatarstan temporary tension territory than these thick threat threatening three through time torture tour train trend turkey tusk ukraine ukraine_conduct ukraine_drone ukraine_infrastructure ukraine_odesa ukraine_reach ukraine_since un united united_nation us variou victim violence visit visit_canada visiting vital volodymyr volodymyr_zelensky volodymyr_zelenskyy war warehouse warranted waterway ways western which while wildberrie winter woman year years yemen yemen_houthi yemen_result yemen_saudi-backed yemen_threatening zaporizhzhia zaporizhzhia_ukraine zelensky zelensky_visit zelenskyy zelenskyy_visit"
   },
   "related_events": [
-    {
-      "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
-      "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
-      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Zelenskyy Visits Canada for Increased Military Support Amid Russian Attacks.",
-      "activity_status": "active",
-      "stage": "timeline",
-      "stage_label": "Timeline",
-      "first_seen_at": "2026-07-22",
-      "last_seen_at": "2026-09-11",
-      "development_count": 51,
-      "latest_title": "Zelenskyy Visits Canada for Increased Military Support Amid Russian Attacks",
-      "topic_label": "Iran War",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
-    },
     {
       "event_id": "event_russian-missile-strike-kills-10-at-arms-exhi_ebdc92a6bd",
       "title": "Russian Missile Strike Kills 10 at Arms Exhibition Near Kyiv",
@@ -2346,14 +2431,14 @@
     {
       "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
       "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
-      "summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Russian Drone Strike on Ukraine-Moldova Border Results in Two Deaths.",
+      "summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Russian Strikes Kill Civilians in Ukraine Following Putin's Warning.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-07-31",
-      "last_seen_at": "2026-09-09",
-      "development_count": 36,
-      "latest_title": "Russian Drone Strike on Ukraine-Moldova Border Results in Two Deaths",
+      "last_seen_at": "2026-09-12",
+      "development_count": 37,
+      "latest_title": "Russian Strikes Kill Civilians in Ukraine Following Putin's Warning",
       "topic_label": "Gaza Peace Deal",
       "hero_image": {
         "url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
@@ -2376,6 +2461,40 @@
         "focal_tall_y": 0.48
       },
       "href": "/timeline.html?event=event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b"
+    },
+    {
+      "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+      "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
+      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Saudi Arabia Shuts Key Pipeline Following Drone Attacks.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-22",
+      "last_seen_at": "2026-09-12",
+      "development_count": 53,
+      "latest_title": "Saudi Arabia Shuts Key Pipeline Following Drone Attacks",
+      "topic_label": "Iran War",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
     }
   ]
 }

@@ -15,7 +15,7 @@
     "summary": "An Amazon cargo plane crashed at Miami International Airport after overrunning the runway, resulting in five fatalities and five injuries. The incident occurred when the plane, arriving from Puerto Rico, struck several vehicles on the ground. Investigations by the FAA and NTSB are underway to determine the cause of the crash.",
     "status": "active",
     "first_seen_at": "2026-09-07",
-    "last_seen_at": "2026-09-10",
+    "last_seen_at": "2026-09-12",
     "timeline": [
       {
         "development_id": "story_1a1ec0226382b79b",
@@ -389,6 +389,73 @@
         "first_seen_at": "2026-09-10",
         "last_seen_at": "2026-09-10",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_b0cccefb587cc2bc",
+        "daily_story_id": "story_b0cccefb587cc2bc",
+        "date": "2026-09-12",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Pilot Warned of Excess Speed Before Miami Runway Overshoot",
+        "summary": "An Amazon cargo plane overshot the runway in Miami, resulting in an incident that involved five people. The pilot had warned the co-pilot that they were approaching too fast as they prepared for landing.",
+        "topic_label": "",
+        "development_type": "development",
+        "key_facts": [
+          "Amazon cargo plane overshot runway in Miami",
+          "Five people involved in the incident",
+          "Pilot warned co-pilot about excessive speed before landing"
+        ],
+        "source_count": 2,
+        "sources": [
+          "AP - Top News via Google News",
+          "Africanews"
+        ],
+        "source_urls": [
+          "http://www.africanews.com/2026/09/12/pilot-warned-plane-was-going-too-fast-before-overshooting-miami-runway-killing-5",
+          "https://news.google.com/rss/articles/CBMijwFBVV95cUxOOG9va2w4anRzU013blpNaUdsX043WlFZQ2tidFJ0aEZzbk5KdWVraElKeXRhTzdQOU01UWJTZmE3SWhjX2pJNkh5QmdHS2d0VkRrWXpSZUtrSnlQXzkyZFM0bW1rTnRBYy1BeGhRcERtZmpXWmdWRWNjak15UE5LV2lNZjllZEgwMm4wdTgzQQ?oc=5"
+        ],
+        "source_details": [
+          {
+            "title": "Pilot warned plane was going too fast before overshooting Miami runway, killing 5",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/09/12/pilot-warned-plane-was-going-too-fast-before-overshooting-miami-runway-killing-5",
+            "source_bias": "center"
+          },
+          {
+            "title": "A pilot of the Amazon cargo plane that careened off Miami runway warned it was coming in too fast",
+            "source": "AP - Top News via Google News",
+            "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOOG9va2w4anRzU013blpNaUdsX043WlFZQ2tidFJ0aEZzbk5KdWVraElKeXRhTzdQOU01UWJTZmE3SWhjX2pJNkh5QmdHS2d0VkRrWXpSZUtrSnlQXzkyZFM0bW1rTnRBYy1BeGhRcERtZmpXWmdWRWNjak15UE5LV2lNZjllZEgwMm4wdTgzQQ?oc=5",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 1.0,
+        "match_evidence": {
+          "score": 1.0,
+          "matched_development_id": "story_96661ecd15ea10d9",
+          "shared_tokens": [
+            "amazon",
+            "cargo",
+            "fast",
+            "miami",
+            "pilot",
+            "plane",
+            "runway",
+            "warned"
+          ],
+          "shared_entities": [
+            "miami"
+          ],
+          "source_url_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-12",
+        "last_seen_at": "2026-09-12",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -416,12 +483,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 4,
+      "public_development_count": 5,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "A pilot of the Amazon cargo plane that careened off Miami runway warned it was coming in too fast AP News",
-    "latest_summary": "A pilot of the Amazon cargo plane that careened off Miami runway warned it was coming in too fast AP News. A pilot of the Amazon cargo plane in Miami crash warned it was coming in too fast.",
+    "latest_title": "Pilot Warned of Excess Speed Before Miami Runway Overshoot",
+    "latest_summary": "An Amazon cargo plane overshot the runway in Miami, resulting in an incident that involved five people. The pilot had warned the co-pilot that they were approaching too fast as they prepared for landing.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -433,28 +500,29 @@
         "story_1a1ec0226382b79b",
         "story_46d5a509d97a526d",
         "story_d55f4dcd7f9f6aba",
-        "story_96661ecd15ea10d9"
+        "story_96661ecd15ea10d9",
+        "story_b0cccefb587cc2bc"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-09-10",
-      "development_count": 4,
-      "coverage_packet_count": 4,
-      "date_count": 4,
-      "source_count": 16,
-      "independent_source_count": 12,
+      "summary_updated_at": "2026-09-12",
+      "development_count": 5,
+      "coverage_packet_count": 5,
+      "date_count": 5,
+      "source_count": 17,
+      "independent_source_count": 13,
       "first_date": "2026-09-07",
-      "latest_date": "2026-09-10",
-      "latest_update_title": "A pilot of the Amazon cargo plane that careened off Miami runway warned it was coming in too fast AP News",
-      "coverage_score": 0.843,
-      "recency_score": 0.875,
-      "rank_score": 0.862,
-      "context_summary": "Muninn first tracked this thread on 2026-09-07: Fatal Amazon Cargo Plane Crash at Miami International Airport. The latest development is A pilot of the Amazon cargo plane that careened off Miami runway warned it was coming in too fast AP News.",
-      "cta_label": "Explore 4 developments"
+      "latest_date": "2026-09-12",
+      "latest_update_title": "Pilot Warned of Excess Speed Before Miami Runway Overshoot",
+      "coverage_score": 0.942,
+      "recency_score": 1.0,
+      "rank_score": 0.976,
+      "context_summary": "Muninn first tracked this thread on 2026-09-07: Fatal Amazon Cargo Plane Crash at Miami International Airport. The latest development is Pilot Warned of Excess Speed Before Miami Runway Overshoot.",
+      "cta_label": "Explore 5 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "An Amazon cargo plane crashed at Miami International Airport after overrunning the runway, resulting in five fatalities and five injuries. A later development was Cargo Jet Attempted to Abort Landing Before Fatal Miami Crash. Most recently, a pilot of the Amazon cargo plane that careened off Miami runway warned it was coming in too fast AP News.",
+      "summary": "An Amazon cargo plane crashed at Miami International Airport after overrunning the runway, resulting in five fatalities and five injuries. A later development was Cargo Jet Attempted to Abort Landing Before Fatal Miami Crash. Most recently, an Amazon cargo plane overshot the runway in Miami, resulting in an incident that involved five people.",
       "key_developments": [
         {
           "development_id": "story_1a1ec0226382b79b",
@@ -475,6 +543,11 @@
           "development_id": "story_96661ecd15ea10d9",
           "date": "2026-09-10",
           "title": "A pilot of the Amazon cargo plane that careened off Miami runway warned it was coming in too fast AP News"
+        },
+        {
+          "development_id": "story_b0cccefb587cc2bc",
+          "date": "2026-09-12",
+          "title": "Pilot Warned of Excess Speed Before Miami Runway Overshoot"
         }
       ],
       "sources": [
@@ -573,9 +646,15 @@
           "source": "NPR - News",
           "link": "https://www.npr.org/2026/09/10/g-s1-142664/cargo-plane-miami-crash",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Pilot warned plane was going too fast before overshooting Miami runway, killing 5",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/09/12/pilot-warned-plane-was-going-too-fast-before-overshooting-miami-runway-killing-5",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-09-10",
+      "updated_at": "2026-09-12",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -680,6 +759,7 @@
       "airline",
       "airport",
       "amazon",
+      "approaching",
       "arriving",
       "attempted",
       "begin",
@@ -687,6 +767,7 @@
       "cargo",
       "cause",
       "cleaning",
+      "co-pilot",
       "cockpit",
       "coming",
       "condition",
@@ -700,6 +781,7 @@
       "death",
       "determine",
       "employee",
+      "excess",
       "fast",
       "fatal",
       "fatalitie",
@@ -717,6 +799,7 @@
       "international",
       "investigation",
       "investigator",
+      "involved",
       "killed",
       "landing",
       "miami",
@@ -725,8 +808,11 @@
       "other",
       "overran",
       "overrunning",
+      "overshoot",
+      "overshot",
       "pilot",
       "plane",
+      "prepared",
       "puerto",
       "recorder",
       "recovered",
@@ -736,7 +822,9 @@
       "runway",
       "service",
       "several",
+      "speed",
       "struck",
+      "they",
       "under",
       "underway",
       "unsteady",
@@ -753,6 +841,7 @@
       "ap",
       "cargo_jet",
       "cargo_plane",
+      "excess_speed",
       "faa",
       "fatal_amazon",
       "fatal_miami",
@@ -760,15 +849,18 @@
       "jet_attempted",
       "miami",
       "miami_international",
+      "miami_runway",
       "miami_under",
       "ntsb",
+      "pilot_warned",
       "puerto",
       "puerto_rico",
+      "runway_overshoot",
       "suv.",
       "suv._investigator",
       "under_investigation"
     ],
-    "search_text": "abort abort_landing additional aircraft airline airport amazon amazon_cargo ap arriving attempted begin careened cargo cargo_jet cargo_plane cause cleaning cockpit coming condition contracted crash crashed crashing crew critical data death determine employee faa fast fatal fatal_amazon fatal_miami fatalitie five flight ground identified incident including indicate individual injured injurie inside international international_airport investigation investigator jet_attempted killed landing miami miami_international miami_under ntsb occurred other overran overrunning pilot plane puerto puerto_rico recorder recovered reported resulting rico runway service several struck suv. suv._investigator under under_investigation underway unsteady vehicle victim voice warned when"
+    "search_text": "abort abort_landing additional aircraft airline airport amazon amazon_cargo ap approaching arriving attempted begin careened cargo cargo_jet cargo_plane cause cleaning co-pilot cockpit coming condition contracted crash crashed crashing crew critical data death determine employee excess excess_speed faa fast fatal fatal_amazon fatal_miami fatalitie five flight ground identified incident including indicate individual injured injurie inside international international_airport investigation investigator involved jet_attempted killed landing miami miami_international miami_runway miami_under ntsb occurred other overran overrunning overshoot overshot pilot pilot_warned plane prepared puerto puerto_rico recorder recovered reported resulting rico runway runway_overshoot service several speed struck suv. suv._investigator they under under_investigation underway unsteady vehicle victim voice warned when"
   },
   "related_events": []
 }
