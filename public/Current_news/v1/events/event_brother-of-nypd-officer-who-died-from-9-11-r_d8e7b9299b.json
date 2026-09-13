@@ -15,7 +15,7 @@
     "summary": "As the 25th anniversary of the September 11 attacks approaches, Phil Alvarez, a retired NYPD detective, reflects on his brother Luis's death from cancer linked to toxins at Ground Zero. Alvarez is working to extend the September 11th Victim Compensation Fund to assist others affected by similar health issues. This year, a seventh moment of silence will be observed to honor those who have died from illnesses related to the toxic dust from the attacks.",
     "status": "active",
     "first_seen_at": "2026-09-11",
-    "last_seen_at": "2026-09-12",
+    "last_seen_at": "2026-09-13",
     "timeline": [
       {
         "development_id": "story_839b70c2e2bb6def",
@@ -409,6 +409,86 @@
         "first_seen_at": "2026-09-12",
         "last_seen_at": "2026-09-12",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_8376d517a43afc94",
+        "daily_story_id": "story_8376d517a43afc94",
+        "date": "2026-09-13",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Commemorating 25 Years Since the 9/11 Attacks",
+        "summary": "On the 25th anniversary of the September 11 attacks, ceremonies were held across the United States to honor the lives lost, including many Europeans. Families, survivors, first responders, and dignitaries gathered in New York, at the Pentagon, and in Shanksville, Pennsylvania, reflecting on the profound impact the attacks have had over the past quarter-century. Despite the passage of time, some individuals accused of orchestrating the attacks have yet to face justice.",
+        "topic_label": "9/11 Anniversary",
+        "development_type": "military_action",
+        "key_facts": [
+          "25th anniversary of the 9/11 attacks marked on September 11, 2026.",
+          "Ceremonies held in New York, at the Pentagon, and in Shanksville, Pennsylvania.",
+          "The attacks resulted in the deaths of 2,977 people."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Euronews",
+          "PBS News - Headlines"
+        ],
+        "source_urls": [
+          "https://www.euronews.com/2026/09/11/25-years-on-911-continues-to-cast-a-long-shadow-over-the-us",
+          "https://www.pbs.org/newshour/show/americans-remember-the-lives-lost-in-the-9-11-attacks-25-years-ago"
+        ],
+        "source_details": [
+          {
+            "title": "25 years on, 9/11 continues to cast a long shadow over the US",
+            "source": "Euronews",
+            "link": "https://www.euronews.com/2026/09/11/25-years-on-911-continues-to-cast-a-long-shadow-over-the-us",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Americans remember the lives lost in the 9/11 attacks 25 years ago",
+            "source": "PBS News - Headlines",
+            "link": "https://www.pbs.org/newshour/show/americans-remember-the-lives-lost-in-the-9-11-attacks-25-years-ago",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 1.0,
+        "match_evidence": {
+          "score": 1.0,
+          "matched_development_id": "story_be23eea15b2b4ef5",
+          "shared_tokens": [
+            "25th",
+            "anniversary",
+            "attack",
+            "ceremonie",
+            "familie",
+            "first",
+            "gathered",
+            "held",
+            "honor",
+            "impact",
+            "including",
+            "lives",
+            "lost",
+            "pennsylvania",
+            "pentagon",
+            "responder",
+            "september",
+            "shanksville",
+            "survivor",
+            "york"
+          ],
+          "shared_entities": [
+            "pentagon",
+            "shanksville_pennsylvania"
+          ],
+          "source_url_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-13",
+        "last_seen_at": "2026-09-13",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -442,46 +522,47 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 5,
+      "public_development_count": 6,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "US Commemorates 25th Anniversary of 9/11 Attacks with Remembrance Ceremonies",
-    "latest_summary": "On the 25th anniversary of the September 11 attacks, Americans gathered in solemn remembrance of the nearly 3,000 lives lost. Ceremonies took place at significant sites including Ground Zero in New York, the Pentagon, and Shanksville, Pennsylvania, where families, survivors, and first responders reflected on the impact of that tragic day. A new memorial at the Pentagon aims to honor the 184 victims killed there.",
+    "latest_title": "Commemorating 25 Years Since the 9/11 Attacks",
+    "latest_summary": "On the 25th anniversary of the September 11 attacks, ceremonies were held across the United States to honor the lives lost, including many Europeans. Families, survivors, first responders, and dignitaries gathered in New York, at the Pentagon, and in Shanksville, Pennsylvania, reflecting on the profound impact the attacks have had over the past quarter-century. Despite the passage of time, some individuals accused of orchestrating the attacks have yet to face justice.",
     "presentation": {
       "has_context": true,
-      "has_full_timeline": false,
-      "stage": "developing_event",
-      "stage_label": "Developing event",
+      "has_full_timeline": true,
+      "stage": "timeline",
+      "stage_label": "Timeline",
       "base_title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
-      "display_title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
+      "display_title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims Timeline",
       "milestone_development_ids": [
         "story_839b70c2e2bb6def",
         "story_caf4207a84c79d66",
         "story_2d5577e4b9068314",
         "story_7a8d0ce4f2c47546",
-        "story_be23eea15b2b4ef5"
+        "story_be23eea15b2b4ef5",
+        "story_8376d517a43afc94"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-09-12",
-      "development_count": 5,
-      "coverage_packet_count": 5,
-      "date_count": 2,
-      "source_count": 13,
-      "independent_source_count": 9,
+      "summary_updated_at": "2026-09-13",
+      "development_count": 6,
+      "coverage_packet_count": 6,
+      "date_count": 3,
+      "source_count": 14,
+      "independent_source_count": 10,
       "first_date": "2026-09-11",
-      "latest_date": "2026-09-12",
-      "latest_update_title": "US Commemorates 25th Anniversary of 9/11 Attacks with Remembrance Ceremonies",
-      "coverage_score": 0.822,
+      "latest_date": "2026-09-13",
+      "latest_update_title": "Commemorating 25 Years Since the 9/11 Attacks",
+      "coverage_score": 0.92,
       "recency_score": 1.0,
-      "rank_score": 0.925,
-      "context_summary": "Muninn first tracked this thread on 2026-09-11: Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims. The latest development is US Commemorates 25th Anniversary of 9/11 Attacks with Remembrance Ceremonies.",
-      "cta_label": ""
+      "rank_score": 0.966,
+      "context_summary": "Muninn first tracked this thread on 2026-09-11: Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims. The latest development is Commemorating 25 Years Since the 9/11 Attacks.",
+      "cta_label": "Explore 6 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "As the 25th anniversary of the September 11 attacks approaches, Phil Alvarez, a retired NYPD detective, reflects on his brother Luis's death from cancer linked to toxins at Ground Zero. A later development was Tributes to 9/11 Victims at Republican Convention in Dallas. Most recently, on the 25th anniversary of the September 11 attacks, Americans gathered in solemn remembrance of the nearly 3,000 lives lost.",
+      "summary": "As the 25th anniversary of the September 11 attacks approaches, Phil Alvarez, a retired NYPD detective, reflects on his brother Luis's death from cancer linked to toxins at Ground Zero. A later development was CIA Declassifies Presidential Briefs on Bin Laden and Al-Qaida Before 9/11. Most recently, on the 25th anniversary of the September 11 attacks, ceremonies were held across the United States to honor the lives lost, including many Europeans.",
       "key_developments": [
         {
           "development_id": "story_839b70c2e2bb6def",
@@ -507,6 +588,11 @@
           "development_id": "story_be23eea15b2b4ef5",
           "date": "2026-09-12",
           "title": "US Commemorates 25th Anniversary of 9/11 Attacks with Remembrance Ceremonies"
+        },
+        {
+          "development_id": "story_8376d517a43afc94",
+          "date": "2026-09-13",
+          "title": "Commemorating 25 Years Since the 9/11 Attacks"
         }
       ],
       "sources": [
@@ -587,18 +673,24 @@
           "source": "CBS News",
           "link": "https://www.cbsnews.com/video/fire-chief-who-responded-to-911-pentagon-attack-explains-how-new-memorial-will-educate-visitors",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "25 years on, 9/11 continues to cast a long shadow over the US",
+          "source": "Euronews",
+          "link": "https://www.euronews.com/2026/09/11/25-years-on-911-continues-to-cast-a-long-shadow-over-the-us",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-09-12",
+      "updated_at": "2026-09-13",
       "provenance": "source_grounded_event_memory"
     },
-    "event_stage": "developing_event",
+    "event_stage": "timeline",
     "related_events": [
       {
         "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
         "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
         "relationship": "related_topic",
-        "confidence": 0.863,
+        "confidence": 0.867,
         "shared_entities": [
           "america",
           "commemorate_anniversary",
@@ -609,20 +701,10 @@
         ]
       },
       {
-        "event_id": "event_trump-commemorates-9-11-victims-at-anniversa_db02ff8e3c",
-        "title": "Trump Commemorates 9/11 Victims at Anniversary Events",
-        "relationship": "related_topic",
-        "confidence": 0.732,
-        "shared_entities": [
-          "america",
-          "donald_trump"
-        ]
-      },
-      {
         "event_id": "event_trump-headlines-unique-republican-midterm-co_786da998e4",
         "title": "Republicans Launch First-Ever Midterm Convention in Dallas",
         "relationship": "related_topic",
-        "confidence": 0.728,
+        "confidence": 0.736,
         "shared_entities": [
           "america",
           "dalla",
@@ -630,12 +712,22 @@
         ]
       },
       {
-        "event_id": "event_trump-issues-threat-against-bombardier-s-us_9ba955836e",
-        "title": "Trump Issues Threat Against Bombardier's US Sales Amid Trade Tensions",
+        "event_id": "event_trump-commemorates-9-11-victims-at-anniversa_db02ff8e3c",
+        "title": "Trump Commemorates 9/11 Victims at Anniversary Events",
         "relationship": "related_topic",
-        "confidence": 0.698,
+        "confidence": 0.731,
         "shared_entities": [
-          "donald_trump",
+          "america",
+          "donald_trump"
+        ]
+      },
+      {
+        "event_id": "event_six-nigerians-to-be-extradited-to-the-us-for_e8df7f01e2",
+        "title": "Six Nigerians to be Extradited to the US for Alleged Romance Scams",
+        "relationship": "related_topic",
+        "confidence": 0.705,
+        "shared_entities": [
+          "america",
           "united",
           "us"
         ]
@@ -758,6 +850,7 @@
       "184",
       "2001",
       "25th",
+      "accused",
       "across",
       "advocate",
       "affected",
@@ -787,14 +880,18 @@
       "death",
       "declassifie",
       "deliver",
+      "despite",
       "detailing",
       "detective",
       "died",
+      "dignitarie",
       "document",
       "donald",
       "dozen",
       "dust",
+      "european",
       "extend",
+      "face",
       "familie",
       "first",
       "four",
@@ -808,8 +905,10 @@
       "illnesse",
       "impact",
       "including",
+      "individual",
       "intelligence",
       "issue",
+      "justice",
       "killed",
       "laden",
       "leading",
@@ -817,6 +916,7 @@
       "lives",
       "lost",
       "luis",
+      "many",
       "marked",
       "memorial",
       "midterm",
@@ -828,19 +928,25 @@
       "nypd",
       "observed",
       "officer",
+      "orchestrating",
       "osama",
       "other",
       "paid",
       "participated",
+      "passage",
+      "past",
       "pennsylvania",
       "pentagon",
       "phil",
       "place",
       "potential",
       "presidential",
+      "profound",
+      "quarter-century",
       "read",
       "reflect",
       "reflected",
+      "reflecting",
       "related",
       "released",
       "remembrance",
@@ -857,15 +963,18 @@
       "significant",
       "silence",
       "similar",
+      "since",
       "sites",
       "solemn",
       "somber",
+      "some",
       "speech",
       "survivor",
       "target",
       "there",
       "those",
       "threat",
+      "time",
       "took",
       "toxic",
       "toxin",
@@ -881,6 +990,7 @@
       "while",
       "working",
       "year",
+      "years",
       "york",
       "zero"
     ],
@@ -893,10 +1003,12 @@
       "cia",
       "cia_declassifie",
       "commemorate_anniversary",
+      "commemorating_years",
       "compensation_fund",
       "dalla",
       "declassifie_presidential",
       "donald_trump",
+      "europeans._familie",
       "ground",
       "ground_zero",
       "ground_zero.",
@@ -912,27 +1024,29 @@
       "republican",
       "republican_convention",
       "september_victim",
+      "shanksville",
       "shanksville_pennsylvania",
       "united",
       "us",
       "victim_compensation",
       "who_died",
+      "years_since",
       "zero._alvarez"
     ],
-    "search_text": "000 11-related 11th 184 2001 25th across advocate affected aims al-qaida al-qaida. also alvarez america anniversary approache assist attack attended bin_laden brief brother cancer cancer_advocate ceremonie ceremony cia cia_declassifie commemorate commemorate_anniversary commemorating commemoration compensation compensation_fund concern convention daily dalla death declassifie declassifie_presidential deliver detailing detective died document donald donald_trump dozen dust extend familie first four fund gathered ground ground_zero ground_zero. health held highlight honor illnesse impact including intelligence issue jd killed laden leading linked lives lost luis marked memorial midterm moment mood movement names nearly nypd nypd_officer observed officer officer_who osama other paid participated pennsylvania pentagon phil phil_alvarez place potential presidential presidential_brief read reflect reflected related related_cancer released remembrance remembrance_ceremonie republican republican_convention responder resulted retired reveal same scheduled september september_victim seventh shanksville shanksville_pennsylvania significant silence similar sites solemn somber speech survivor target there those threat took toxic toxin tracking tragic tribute trump united us vance vice victim victim_compensation where while who_died working year york zero zero._alvarez"
+    "search_text": "000 11-related 11th 184 2001 25th accused across advocate affected aims al-qaida al-qaida. also alvarez america anniversary approache assist attack attended bin_laden brief brother cancer cancer_advocate ceremonie ceremony cia cia_declassifie commemorate commemorate_anniversary commemorating commemorating_years commemoration compensation compensation_fund concern convention daily dalla death declassifie declassifie_presidential deliver despite detailing detective died dignitarie document donald donald_trump dozen dust european europeans._familie extend face familie first four fund gathered ground ground_zero ground_zero. health held highlight honor illnesse impact including individual intelligence issue jd justice killed laden leading linked lives lost luis many marked memorial midterm moment mood movement names nearly nypd nypd_officer observed officer officer_who orchestrating osama other paid participated passage past pennsylvania pentagon phil phil_alvarez place potential presidential presidential_brief profound quarter-century read reflect reflected reflecting related related_cancer released remembrance remembrance_ceremonie republican republican_convention responder resulted retired reveal same scheduled september september_victim seventh shanksville shanksville_pennsylvania significant silence similar since sites solemn somber some speech survivor target there those threat time took toxic toxin tracking tragic tribute trump united us vance vice victim victim_compensation where while who_died working year years years_since york zero zero._alvarez"
   },
   "related_events": [
     {
       "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
       "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
-      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Saudi Arabia Shuts Key Pipeline Following Drone Attacks.",
+      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is BRICS Leaders Express Concerns Over Middle East and Sanctions at Summit.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-07-22",
-      "last_seen_at": "2026-09-12",
-      "development_count": 53,
-      "latest_title": "Saudi Arabia Shuts Key Pipeline Following Drone Attacks",
+      "last_seen_at": "2026-09-13",
+      "development_count": 59,
+      "latest_title": "BRICS Leaders Express Concerns Over Middle East and Sanctions at Summit",
       "topic_label": "Iran War",
       "hero_image": {
         "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
@@ -989,6 +1103,40 @@
         "focal_tall_y": 0.48
       },
       "href": "/timeline.html?event=event_trump-headlines-unique-republican-midterm-co_786da998e4"
+    },
+    {
+      "event_id": "event_six-nigerians-to-be-extradited-to-the-us-for_e8df7f01e2",
+      "title": "Six Nigerians to be Extradited to the US for Alleged Romance Scams",
+      "summary": "Muninn first tracked this thread on 2026-09-11: Six Nigerians to be Extradited to the US for Alleged Romance Scams. The latest development is Six Nigerians Extradited to the US for $6 Million Romance Scam.",
+      "activity_status": "active",
+      "stage": "developing_event",
+      "stage_label": "Developing event",
+      "first_seen_at": "2026-09-11",
+      "last_seen_at": "2026-09-13",
+      "development_count": 2,
+      "latest_title": "Six Nigerians Extradited to the US for $6 Million Romance Scam",
+      "topic_label": "Romance Scams",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_six-nigerians-to-be-extradited-to-the-us-for_e8df7f01e2.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_six-nigerians-to-be-extradited-to-the-us-for_e8df7f01e2.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_six-nigerians-to-be-extradited-to-the-us-for_e8df7f01e2"
     }
   ]
 }
