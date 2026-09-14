@@ -15,7 +15,7 @@
     "summary": "North Korea has launched a suspected ballistic missile towards the sea, reportedly falling just outside Japan's special economic zone. This test comes in advance of upcoming military drills between the United States and South Korea.",
     "status": "active",
     "first_seen_at": "2026-08-12",
-    "last_seen_at": "2026-09-12",
+    "last_seen_at": "2026-09-14",
     "timeline": [
       {
         "development_id": "story_2c5e0c0e9deda947",
@@ -256,47 +256,122 @@
         "first_seen_at": "2026-09-12",
         "last_seen_at": "2026-09-12",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_2a060d5336a93dce",
+        "daily_story_id": "story_2a060d5336a93dce",
+        "date": "2026-09-14",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "North Korea Conducts Live-Fire Drill Demonstrating Destructive Power",
+        "summary": "North Korea conducted a coordinated live-fire exercise over the weekend, showcasing multiple weapons systems. The drill was reported to demonstrate 'huge destructive power' and followed recent joint maritime exercises by the US, South Korea, and Japan.",
+        "topic_label": "",
+        "development_type": "development",
+        "key_facts": [
+          "North Korea carried out a live-fire drill involving multiple weapons systems.",
+          "The drill was described as demonstrating 'huge destructive power'.",
+          "It occurred after joint maritime exercises by the US, South Korea, and Japan."
+        ],
+        "source_count": 2,
+        "sources": [
+          "AP - Top News via Google News",
+          "DW - English"
+        ],
+        "source_urls": [
+          "https://www.dw.com/en/north-korea-says-recent-drill-shows-huge-destructive-power/a-79255028?maca=en-rss-en-all-1573-rdf",
+          "https://news.google.com/rss/articles/CBMinAFBVV95cUxNYXdiX2U3cERpWkIxdGliYnRmWWlWbjNaS0xpY1puVDVtUjluODJ6dHBNLXY0dW1RbHVvOXg0SXA2Ykt0bWlvMU1VYXFTVVFnVHppN0IycXJzZ3JpWmZrcF92V2VremZVMFBKT1lOQ0pTLWNJc0ZOTG5vNjV4MjhLR3hITzhUNGZWN3BPekYwLUttRS1uRDk4VFJuckk?oc=5"
+        ],
+        "source_details": [
+          {
+            "title": "North Korea says recent drill shows 'huge destructive power'",
+            "source": "DW - English",
+            "link": "https://www.dw.com/en/north-korea-says-recent-drill-shows-huge-destructive-power/a-79255028?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "North Korea says its recent live-fire drill demonstrated ‘huge destructive power’ - AP News",
+            "source": "AP - Top News via Google News",
+            "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNYXdiX2U3cERpWkIxdGliYnRmWWlWbjNaS0xpY1puVDVtUjluODJ6dHBNLXY0dW1RbHVvOXg0SXA2Ykt0bWlvMU1VYXFTVVFnVHppN0IycXJzZ3JpWmZrcF92V2VremZVMFBKT1lOQ0pTLWNJc0ZOTG5vNjV4MjhLR3hITzhUNGZWN3BPekYwLUttRS1uRDk4VFJuckk?oc=5",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.418,
+        "match_evidence": {
+          "score": 0.418,
+          "matched_development_id": "story_b8681a3d11774ce1",
+          "shared_tokens": [
+            "drill",
+            "exercise",
+            "followed",
+            "involving",
+            "japan",
+            "joint",
+            "korea",
+            "maritime",
+            "multiple",
+            "north",
+            "occurred",
+            "south"
+          ],
+          "shared_entities": [
+            "japan._north",
+            "north_korea",
+            "south_korea",
+            "us"
+          ],
+          "source_url_match": false,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-14",
+        "last_seen_at": "2026-09-14",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 3,
+      "public_development_count": 4,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "North Korea Launches Ballistic Missiles Following Joint Military Drills",
-    "latest_summary": "North Korea fired multiple ballistic missiles into the sea, according to reports from Seoul. This action occurred a day after the conclusion of joint maritime drills involving the United States, South Korea, and Japan, which North Korea had deemed provocative.",
+    "latest_title": "North Korea Conducts Live-Fire Drill Demonstrating Destructive Power",
+    "latest_summary": "North Korea conducted a coordinated live-fire exercise over the weekend, showcasing multiple weapons systems. The drill was reported to demonstrate 'huge destructive power' and followed recent joint maritime exercises by the US, South Korea, and Japan.",
     "presentation": {
       "has_context": true,
-      "has_full_timeline": false,
-      "stage": "developing_event",
-      "stage_label": "Developing event",
+      "has_full_timeline": true,
+      "stage": "timeline",
+      "stage_label": "Timeline",
       "base_title": "North Korea Launches Missile Ahead of US-South Korea Military Exercises",
-      "display_title": "North Korea Launches Missile Ahead of US-South Korea Military Exercises",
+      "display_title": "North Korea Launches Missile Ahead of US-South Korea Military Exercises Timeline",
       "milestone_development_ids": [
         "story_2c5e0c0e9deda947",
         "story_0c94a2ed74c80e7d",
-        "story_b8681a3d11774ce1"
+        "story_b8681a3d11774ce1",
+        "story_2a060d5336a93dce"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-09-12",
-      "development_count": 3,
-      "coverage_packet_count": 3,
-      "date_count": 3,
-      "source_count": 9,
+      "summary_updated_at": "2026-09-14",
+      "development_count": 4,
+      "coverage_packet_count": 4,
+      "date_count": 4,
+      "source_count": 11,
       "independent_source_count": 7,
       "first_date": "2026-08-12",
-      "latest_date": "2026-09-12",
-      "latest_update_title": "North Korea Launches Ballistic Missiles Following Joint Military Drills",
-      "coverage_score": 0.67,
-      "recency_score": 0.875,
-      "rank_score": 0.789,
-      "context_summary": "Muninn first tracked this thread on 2026-08-12: North Korea Launches Missile Ahead of US-South Korea Military Exercises. The latest development is North Korea Launches Ballistic Missiles Following Joint Military Drills.",
-      "cta_label": ""
+      "latest_date": "2026-09-14",
+      "latest_update_title": "North Korea Conducts Live-Fire Drill Demonstrating Destructive Power",
+      "coverage_score": 0.793,
+      "recency_score": 1.0,
+      "rank_score": 0.913,
+      "context_summary": "Muninn first tracked this thread on 2026-08-12: North Korea Launches Missile Ahead of US-South Korea Military Exercises. The latest development is North Korea Conducts Live-Fire Drill Demonstrating Destructive Power.",
+      "cta_label": "Explore 4 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "North Korea has launched a suspected ballistic missile towards the sea, reportedly falling just outside Japan's special economic zone. A later development was North Korea Launches Up to 10 Ballistic Missiles Amid U.S.-South Korea Military Drills. Most recently, north Korea fired multiple ballistic missiles into the sea, according to reports from Seoul.",
+      "summary": "North Korea has launched a suspected ballistic missile towards the sea, reportedly falling just outside Japan's special economic zone. A later development was North Korea Launches Ballistic Missiles Following Joint Military Drills. Most recently, north Korea conducted a coordinated live-fire exercise over the weekend, showcasing multiple weapons systems.",
       "key_developments": [
         {
           "development_id": "story_2c5e0c0e9deda947",
@@ -312,6 +387,11 @@
           "development_id": "story_b8681a3d11774ce1",
           "date": "2026-09-12",
           "title": "North Korea Launches Ballistic Missiles Following Joint Military Drills"
+        },
+        {
+          "development_id": "story_2a060d5336a93dce",
+          "date": "2026-09-14",
+          "title": "North Korea Conducts Live-Fire Drill Demonstrating Destructive Power"
         }
       ],
       "sources": [
@@ -368,18 +448,30 @@
           "source": "DW - English",
           "link": "https://www.dw.com/en/north-korea-fires-multiple-ballistic-missiles-day-after-trilateral-drills-end/a-79242070?maca=en-rss-en-all-1573-rdf",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "North Korea says recent drill shows 'huge destructive power'",
+          "source": "DW - English",
+          "link": "https://www.dw.com/en/north-korea-says-recent-drill-shows-huge-destructive-power/a-79255028?maca=en-rss-en-all-1573-rdf",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "North Korea says its recent live-fire drill demonstrated ‘huge destructive power’ - AP News",
+          "source": "AP - Top News via Google News",
+          "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNYXdiX2U3cERpWkIxdGliYnRmWWlWbjNaS0xpY1puVDVtUjluODJ6dHBNLXY0dW1RbHVvOXg0SXA2Ykt0bWlvMU1VYXFTVVFnVHppN0IycXJzZ3JpWmZrcF92V2VremZVMFBKT1lOQ0pTLWNJc0ZOTG5vNjV4MjhLR3hITzhUNGZWN3BPekYwLUttRS1uRDk4VFJuckk?oc=5",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-09-12",
+      "updated_at": "2026-09-14",
       "provenance": "source_grounded_event_memory"
     },
-    "event_stage": "developing_event",
+    "event_stage": "timeline",
     "related_events": [
       {
         "event_id": "event_trump-directs-military-to-reduce-joint-exerc_a56a57c3c0",
         "title": "Trump Directs Military to Reduce Joint Exercises with South Korea",
         "relationship": "related_topic",
-        "confidence": 0.931,
+        "confidence": 0.918,
         "shared_entities": [
           "korea_military",
           "military_exercise",
@@ -395,7 +487,7 @@
         "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
         "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
         "relationship": "related_topic",
-        "confidence": 0.735,
+        "confidence": 0.724,
         "shared_entities": [
           "south_korea",
           "us"
@@ -405,7 +497,7 @@
         "event_id": "event_south-korea-s-president-proposes-talks-with_5ac916476b",
         "title": "South Korea's President Proposes Talks with North Korea to End Korean War",
         "relationship": "related_topic",
-        "confidence": 0.703,
+        "confidence": 0.702,
         "shared_entities": [
           "north_korea",
           "south_korea",
@@ -413,13 +505,13 @@
         ]
       },
       {
-        "event_id": "event_trump-indicates-willingness-to-meet-kim-jong_1772af2356",
-        "title": "Trump Indicates Willingness to Meet Kim Jong-un, Cites Nuclear Arsenal Size",
+        "event_id": "event_south-korea-conducts-nationwide-civil-defenc_f379555cef",
+        "title": "South Korea Conducts Nationwide Civil Defence Drill Amid Crisis Preparations",
         "relationship": "related_topic",
-        "confidence": 0.666,
+        "confidence": 0.675,
         "shared_entities": [
-          "north_korea",
-          "us"
+          "korea_conduct",
+          "south_korea"
         ]
       }
     ],
@@ -530,13 +622,21 @@
       "comes",
       "conclusion",
       "condemned",
+      "conduct",
+      "conducted",
+      "coordinated",
       "deemed",
+      "demonstrate",
+      "demonstrating",
+      "destructive",
       "drill",
       "economic",
       "exclusive",
       "exercise",
       "falling",
       "fired",
+      "followed",
+      "huge",
       "indicate",
       "involving",
       "japan",
@@ -547,6 +647,7 @@
       "landed",
       "launche",
       "launched",
+      "live-fire",
       "maritime",
       "military",
       "missile",
@@ -557,16 +658,21 @@
       "ongoing",
       "ordered",
       "outside",
+      "power",
       "presidential",
       "provocative",
       "readiness",
+      "recent",
+      "reported",
       "reportedly",
       "scaled-back",
       "seoul",
       "short-range",
+      "showcasing",
       "south",
       "special",
       "suspected",
+      "system",
       "test",
       "than",
       "toward",
@@ -574,24 +680,34 @@
       "united",
       "upcoming",
       "us-south",
+      "weapon",
+      "weekend",
       "which",
       "zone"
     ],
     "entities": [
       "ballistic_missile",
+      "conduct_live-fire",
+      "demonstrating_destructive",
+      "destructive_power",
+      "drill_demonstrating",
       "drill_north",
       "exercise_north",
       "japan",
       "joint_military",
       "korea._north",
+      "korea_conduct",
       "korea_launche",
       "korea_military",
       "launche_ballistic",
       "launche_missile",
+      "live-fire",
+      "live-fire_drill",
       "military_drill",
       "military_exercise",
       "missile_ahead",
       "north_korea",
+      "power_north",
       "seoul.",
       "south_korea",
       "south_korea.",
@@ -602,7 +718,7 @@
       "us-south",
       "us-south_korea"
     ],
-    "search_text": "action advance ahead announcement ballistic ballistic_missile coinciding comes conclusion condemned deemed drill drill_north economic exclusive exercise exercise_north falling fired indicate involving japan joint joint_military just korea korea._north korea_launche korea_military korean landed launche launche_ballistic launche_missile launched maritime military military_drill military_exercise missile missile_ahead multiple north north_korea occurred office ongoing ordered outside presidential provocative readiness reportedly scaled-back seoul seoul. short-range south south_korea south_korea. south_korean special suspected test than toward trump u.s.-south u.s.-south_korea united upcoming us us-south us-south_korea which zone"
+    "search_text": "action advance ahead announcement ballistic ballistic_missile coinciding comes conclusion condemned conduct conduct_live-fire conducted coordinated deemed demonstrate demonstrating demonstrating_destructive destructive destructive_power drill drill_demonstrating drill_north economic exclusive exercise exercise_north falling fired followed huge indicate involving japan joint joint_military just korea korea._north korea_conduct korea_launche korea_military korean landed launche launche_ballistic launche_missile launched live-fire live-fire_drill maritime military military_drill military_exercise missile missile_ahead multiple north north_korea occurred office ongoing ordered outside power power_north presidential provocative readiness recent reported reportedly scaled-back seoul seoul. short-range showcasing south south_korea south_korea. south_korean special suspected system test than toward trump u.s.-south u.s.-south_korea united upcoming us us-south us-south_korea weapon weekend which zone"
   },
   "related_events": [
     {
@@ -642,14 +758,14 @@
     {
       "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
       "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
-      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is BRICS Leaders Express Concerns Over Middle East and Sanctions at Summit.",
+      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Russian Drone Strike Ignites Fire at Ukraine-Poland Border Crossing.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-07-22",
-      "last_seen_at": "2026-09-13",
-      "development_count": 59,
-      "latest_title": "BRICS Leaders Express Concerns Over Middle East and Sanctions at Summit",
+      "last_seen_at": "2026-09-14",
+      "development_count": 61,
+      "latest_title": "Russian Drone Strike Ignites Fire at Ukraine-Poland Border Crossing",
       "topic_label": "Iran War",
       "hero_image": {
         "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
