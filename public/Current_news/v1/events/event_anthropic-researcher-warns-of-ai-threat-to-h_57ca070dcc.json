@@ -15,7 +15,7 @@
     "summary": "A researcher from Anthropic has stated there is more than a 10% chance that artificial intelligence could lead to human extinction within the next decade. This warning follows the resignation of a colleague who expressed similar concerns about the rapid development of superintelligent AI that may surpass human control. Experts emphasize the seriousness of these risks, given their access to unreleased AI systems.",
     "status": "active",
     "first_seen_at": "2026-09-09",
-    "last_seen_at": "2026-09-14",
+    "last_seen_at": "2026-09-15",
     "timeline": [
       {
         "development_id": "story_a0954c956943c541",
@@ -241,47 +241,125 @@
         "first_seen_at": "2026-09-14",
         "last_seen_at": "2026-09-14",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_7e3fb5a340fa2685",
+        "daily_story_id": "story_7e3fb5a340fa2685",
+        "date": "2026-09-15",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Trump Dismisses AI Safety Concerns Amid Industry Warnings",
+        "summary": "President Trump has rejected calls for increased oversight of artificial intelligence, labeling concerns about its risks as part of a 'sick conspiracy.' This response follows warnings from industry leaders, including Anthropic CEO Dario Amodei, who argue that the rapid advancement of AI technology poses significant threats to society. The debate highlights ongoing tensions between technological progress and safety measures.",
+        "topic_label": "Artificial Intelligence",
+        "development_type": "development",
+        "key_facts": [
+          "Trump rejected calls for greater oversight of AI technology.",
+          "Industry leaders warn of existential threats posed by rapid AI advancements.",
+          "Trump referred to concerns over rogue AI as a 'hoax.'"
+        ],
+        "source_count": 2,
+        "sources": [
+          "France 24 - English",
+          "PBS News"
+        ],
+        "source_urls": [
+          "https://www.pbs.org/newshour/show/trump-pushes-back-as-ai-leaders-fuel-calls-to-rein-in-rapidly-advancing-technology",
+          "http://www.france24.com/en/technology/20260915-trump-calls-concerns-over-rogue-ai-a-hoax-promoted-by-a-sick-conspiracy"
+        ],
+        "source_details": [
+          {
+            "title": "Trump pushes back as AI leaders fuel calls to rein in rapidly advancing technology",
+            "source": "PBS News",
+            "link": "https://www.pbs.org/newshour/show/trump-pushes-back-as-ai-leaders-fuel-calls-to-rein-in-rapidly-advancing-technology",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Trump calls concerns over rogue AI a 'hoax' promoted by a ‘sick conspiracy’",
+            "source": "France 24 - English",
+            "link": "http://www.france24.com/en/technology/20260915-trump-calls-concerns-over-rogue-ai-a-hoax-promoted-by-a-sick-conspiracy",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.425,
+        "match_evidence": {
+          "score": 0.425,
+          "matched_development_id": "story_33464fee5dfb5180",
+          "shared_tokens": [
+            "advancement",
+            "amodei",
+            "anthropic",
+            "artificial",
+            "calls",
+            "dario",
+            "greater",
+            "industry",
+            "intelligence",
+            "leader",
+            "measure",
+            "progress",
+            "rapid",
+            "safety"
+          ],
+          "shared_entities": [
+            "ai",
+            "anthropic_ceo",
+            "ceo",
+            "ceo_dario",
+            "dario_amodei"
+          ],
+          "source_url_match": false,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-15",
+        "last_seen_at": "2026-09-15",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 3,
+      "public_development_count": 4,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Trump Criticizes AI Regulation Calls Amid Tech Stock Decline",
-    "latest_summary": "President Trump has condemned recent calls from leaders in the AI industry to impose stricter regulations, labeling them a 'sick conspiracy.' His comments come as tech stocks associated with AI companies, including Anthropic and OpenAI, experienced a downturn following these appeals for a slowdown in AI development. Trump asserted that the only necessary control for AI is strong leadership from the presidency.",
+    "latest_title": "Trump Dismisses AI Safety Concerns Amid Industry Warnings",
+    "latest_summary": "President Trump has rejected calls for increased oversight of artificial intelligence, labeling concerns about its risks as part of a 'sick conspiracy.' This response follows warnings from industry leaders, including Anthropic CEO Dario Amodei, who argue that the rapid advancement of AI technology poses significant threats to society. The debate highlights ongoing tensions between technological progress and safety measures.",
     "presentation": {
       "has_context": true,
-      "has_full_timeline": false,
-      "stage": "developing_event",
-      "stage_label": "Developing event",
+      "has_full_timeline": true,
+      "stage": "timeline",
+      "stage_label": "Timeline",
       "base_title": "Anthropic Researcher Warns of AI Threat to Humanity",
-      "display_title": "Anthropic Researcher Warns of AI Threat to Humanity",
+      "display_title": "Anthropic Researcher Warns of AI Threat to Humanity Timeline",
       "milestone_development_ids": [
         "story_a0954c956943c541",
         "story_33464fee5dfb5180",
-        "story_83fa6e47bd4b3420"
+        "story_83fa6e47bd4b3420",
+        "story_7e3fb5a340fa2685"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-09-14",
-      "development_count": 3,
-      "coverage_packet_count": 3,
-      "date_count": 3,
-      "source_count": 10,
-      "independent_source_count": 9,
+      "summary_updated_at": "2026-09-15",
+      "development_count": 4,
+      "coverage_packet_count": 4,
+      "date_count": 4,
+      "source_count": 12,
+      "independent_source_count": 11,
       "first_date": "2026-09-09",
-      "latest_date": "2026-09-14",
-      "latest_update_title": "Trump Criticizes AI Regulation Calls Amid Tech Stock Decline",
-      "coverage_score": 0.72,
+      "latest_date": "2026-09-15",
+      "latest_update_title": "Trump Dismisses AI Safety Concerns Amid Industry Warnings",
+      "coverage_score": 0.843,
       "recency_score": 1.0,
-      "rank_score": 0.882,
-      "context_summary": "Muninn first tracked this thread on 2026-09-09: Anthropic Researcher Warns of AI Threat to Humanity. The latest development is Trump Criticizes AI Regulation Calls Amid Tech Stock Decline.",
-      "cta_label": ""
+      "rank_score": 0.934,
+      "context_summary": "Muninn first tracked this thread on 2026-09-09: Anthropic Researcher Warns of AI Threat to Humanity. The latest development is Trump Dismisses AI Safety Concerns Amid Industry Warnings.",
+      "cta_label": "Explore 4 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "A researcher from Anthropic has stated there is more than a 10% chance that artificial intelligence could lead to human extinction within the next decade. A later development was Anthropic CEO Dario Amodei Advocates for AI Development Slowdown. Most recently, president Trump has condemned recent calls from leaders in the AI industry to impose stricter regulations, labeling them a 'sick conspiracy.' His comments come as tech stocks associated with AI companies, including Anthropic and OpenAI, experienced a downturn following these appeals for a slowdown in AI development.",
+      "summary": "A researcher from Anthropic has stated there is more than a 10% chance that artificial intelligence could lead to human extinction within the next decade. A later development was Trump Criticizes AI Regulation Calls Amid Tech Stock Decline. Most recently, president Trump has rejected calls for increased oversight of artificial intelligence, labeling concerns about its risks as part of a 'sick conspiracy.' This response follows warnings from industry leaders, including Anthropic CEO Dario Amodei, who argue that the rapid advancement of AI technology poses significant threats to society.",
       "key_developments": [
         {
           "development_id": "story_a0954c956943c541",
@@ -297,6 +375,11 @@
           "development_id": "story_83fa6e47bd4b3420",
           "date": "2026-09-14",
           "title": "Trump Criticizes AI Regulation Calls Amid Tech Stock Decline"
+        },
+        {
+          "development_id": "story_7e3fb5a340fa2685",
+          "date": "2026-09-15",
+          "title": "Trump Dismisses AI Safety Concerns Amid Industry Warnings"
         }
       ],
       "sources": [
@@ -359,12 +442,24 @@
           "source": "The Hindu",
           "link": "https://www.thehindu.com/sci-tech/technology/trump-dismisses-new-ai-guardrails-says-there-is-a-sick-conspiracy-against-ai-and-data-centers/article71466257.ece",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Trump pushes back as AI leaders fuel calls to rein in rapidly advancing technology",
+          "source": "PBS News",
+          "link": "https://www.pbs.org/newshour/show/trump-pushes-back-as-ai-leaders-fuel-calls-to-rein-in-rapidly-advancing-technology",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Trump calls concerns over rogue AI a 'hoax' promoted by a ‘sick conspiracy’",
+          "source": "France 24 - English",
+          "link": "http://www.france24.com/en/technology/20260915-trump-calls-concerns-over-rogue-ai-a-hoax-promoted-by-a-sick-conspiracy",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-09-14",
+      "updated_at": "2026-09-15",
       "provenance": "source_grounded_event_memory"
     },
-    "event_stage": "developing_event",
+    "event_stage": "timeline",
     "related_events": [],
     "event_overview": {
       "available": true,
@@ -500,6 +595,7 @@
       "amodei",
       "anthropic",
       "appeal",
+      "argue",
       "artificial",
       "asserted",
       "associated",
@@ -517,9 +613,11 @@
       "control",
       "criticize",
       "dario",
+      "debate",
       "decade",
       "decline",
       "development",
+      "dismisse",
       "downturn",
       "echoed",
       "elon",
@@ -533,11 +631,13 @@
       "follow",
       "given",
       "greater",
+      "highlight",
       "human",
       "humanity",
       "impose",
       "incident",
       "including",
+      "increased",
       "industry",
       "intelligence",
       "involving",
@@ -551,23 +651,32 @@
       "necessary",
       "need",
       "next",
+      "ongoing",
       "only",
       "openai",
       "other",
+      "oversight",
+      "part",
       "particularly",
+      "poses",
       "presidency",
+      "progress",
       "rapid",
       "recent",
       "regulation",
+      "rejected",
       "researcher",
       "resignation",
+      "response",
       "risks",
       "safety",
       "sentiment",
       "seriousness",
       "sick",
+      "significant",
       "similar",
       "slowdown",
+      "society",
       "stated",
       "stock",
       "stricter",
@@ -576,6 +685,9 @@
       "surpass",
       "system",
       "tech",
+      "technological",
+      "technology",
+      "tension",
       "than",
       "them",
       "there",
@@ -600,15 +712,18 @@
       "development_slowdown",
       "elon_musk",
       "humanity",
+      "industry_warning",
       "openai",
       "openai_sam",
       "researcher_warns",
+      "safety_concern",
       "sam_altman",
       "slowdown_dario",
       "stock_decline",
-      "tech_stock"
+      "tech_stock",
+      "trump_dismisse"
     ],
-    "search_text": "access across advancement advocate agent ai allow altman amodei amodei_advocate amodei_ceo anthropic anthropic_ceo anthropic_researcher appeal artificial asserted associated called calls catch ceo ceo_dario chance colleague come comment companie concern condemned conspiracy control criticize dario dario_amodei decade decline development development_slowdown downturn echoed elon elon_musk emphasize emphasized experienced expert expressed extinction field follow given greater human humanity impose incident including industry intelligence involving labeling lead leader leadership like measure musk necessary need next only openai openai_sam other particularly presidency rapid recent regulation researcher researcher_warns resignation risks safety sam_altman sentiment seriousness sick similar slowdown slowdown_dario stated stock stock_decline stricter strong superintelligent surpass system tech tech_stock than them there these threat trump unreleased warning warns within"
+    "search_text": "access across advancement advocate agent ai allow altman amodei amodei_advocate amodei_ceo anthropic anthropic_ceo anthropic_researcher appeal argue artificial asserted associated called calls catch ceo ceo_dario chance colleague come comment companie concern condemned conspiracy control criticize dario dario_amodei debate decade decline development development_slowdown dismisse downturn echoed elon elon_musk emphasize emphasized experienced expert expressed extinction field follow given greater highlight human humanity impose incident including increased industry industry_warning intelligence involving labeling lead leader leadership like measure musk necessary need next ongoing only openai openai_sam other oversight part particularly poses presidency progress rapid recent regulation rejected researcher researcher_warns resignation response risks safety safety_concern sam_altman sentiment seriousness sick significant similar slowdown slowdown_dario society stated stock stock_decline stricter strong superintelligent surpass system tech tech_stock technological technology tension than them there these threat trump trump_dismisse unreleased warning warns within"
   },
   "related_events": []
 }

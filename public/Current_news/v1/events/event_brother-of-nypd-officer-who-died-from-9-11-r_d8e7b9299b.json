@@ -15,7 +15,7 @@
     "summary": "As the 25th anniversary of the September 11 attacks approaches, Phil Alvarez, a retired NYPD detective, reflects on his brother Luis's death from cancer linked to toxins at Ground Zero. Alvarez is working to extend the September 11th Victim Compensation Fund to assist others affected by similar health issues. This year, a seventh moment of silence will be observed to honor those who have died from illnesses related to the toxic dust from the attacks.",
     "status": "active",
     "first_seen_at": "2026-09-11",
-    "last_seen_at": "2026-09-14",
+    "last_seen_at": "2026-09-15",
     "timeline": [
       {
         "development_id": "story_839b70c2e2bb6def",
@@ -782,6 +782,92 @@
         "first_seen_at": "2026-09-14",
         "last_seen_at": "2026-09-14",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_31e04e6c1cdd10d0",
+        "daily_story_id": "story_31e04e6c1cdd10d0",
+        "date": "2026-09-15",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Trump Claims Russia and Ukraine Agree to Halt Energy Attacks Amid Ongoing Strikes",
+        "summary": "Donald Trump announced that Russia and Ukraine have agreed to stop attacking each other's energy infrastructure. However, Ukraine's President Volodymyr Zelensky stated that Ukraine is prepared to de-escalate only if Russia halts its strikes. Despite Trump's claims, reports indicate that both sides have continued their energy attacks, with Ukraine warning of intensified Russian strikes on its rail network.",
+        "topic_label": "Energy Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "Trump claims Russia and Ukraine agreed to halt energy strikes.",
+          "Zelensky states Ukraine will de-escalate if Russia does the same.",
+          "Reports suggest ongoing energy attacks from both sides."
+        ],
+        "source_count": 4,
+        "sources": [
+          "DW - English",
+          "Euronews",
+          "France 24 - English",
+          "NBC News - Top Stories"
+        ],
+        "source_urls": [
+          "https://www.dw.com/en/trump-seeks-halt-to-energy-attacks-by-both-russia-ukraine/a-79265774?maca=en-rss-en-all-1573-rdf",
+          "http://www.france24.com/en/europe/20260914-zelensky-says-ukraine-ready-to-de-escalate-if-russia-halts-strikes",
+          "https://www.euronews.com/2026/09/14/trump-says-ukraine-and-russia-agree-to-halt-strikes-on-energy-targets",
+          "https://www.nbcnews.com/world/ukraine/russia-ukraine-new-energy-attacks-trumps-ceasefire-claim-rcna597873"
+        ],
+        "source_details": [
+          {
+            "title": "Trump seeks halt to energy attacks by both Russia, Ukraine",
+            "source": "DW - English",
+            "link": "https://www.dw.com/en/trump-seeks-halt-to-energy-attacks-by-both-russia-ukraine/a-79265774?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Zelensky says Ukraine ready to de-escalate if Russia halts strikes",
+            "source": "France 24 - English",
+            "link": "http://www.france24.com/en/europe/20260914-zelensky-says-ukraine-ready-to-de-escalate-if-russia-halts-strikes",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Trump says Ukraine and Russia agree to halt strikes on energy targets",
+            "source": "Euronews",
+            "link": "https://www.euronews.com/2026/09/14/trump-says-ukraine-and-russia-agree-to-halt-strikes-on-energy-targets",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Russia and Ukraine launch new energy attacks despite Trump’s ceasefire claim",
+            "source": "NBC News - Top Stories",
+            "link": "https://www.nbcnews.com/world/ukraine/russia-ukraine-new-energy-attacks-trumps-ceasefire-claim-rcna597873",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "attack"
+          ],
+          "shared_incident_anchors": [
+            "donald_trump"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "attack",
+            "donald",
+            "same",
+            "trump"
+          ],
+          "shared_entities": [
+            "donald_trump"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_2d5577e4b9068314",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-15",
+        "last_seen_at": "2026-09-15",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -815,12 +901,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 10,
-      "questionable_development_count": 1,
+      "public_development_count": 11,
+      "questionable_development_count": 2,
       "review_required": true
     },
-    "latest_title": "Saudi Arabia's East-West Pipeline Remains Closed Following Drone Attack",
-    "latest_summary": "Saudi Arabia's East-West pipeline remains shut after a drone attack attributed to Iranian-backed militias in Iraq. The attack occurred on September 10, 2026, and the pipeline is expected to be out of service for several weeks as repairs are undertaken. This disruption has contributed to rising oil prices globally.",
+    "latest_title": "Trump Claims Russia and Ukraine Agree to Halt Energy Attacks Amid Ongoing Strikes",
+    "latest_summary": "Donald Trump announced that Russia and Ukraine have agreed to stop attacking each other's energy infrastructure. However, Ukraine's President Volodymyr Zelensky stated that Ukraine is prepared to de-escalate only if Russia halts its strikes. Despite Trump's claims, reports indicate that both sides have continued their energy attacks, with Ukraine warning of intensified Russian strikes on its rail network.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -831,29 +917,29 @@
       "milestone_development_ids": [
         "story_839b70c2e2bb6def",
         "story_7a8d0ce4f2c47546",
-        "story_125ebf77ea097322",
-        "story_cb1a75b532a85952"
+        "story_1619ba775d1b3dd7",
+        "story_31e04e6c1cdd10d0"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-09-14",
-      "development_count": 10,
-      "coverage_packet_count": 10,
-      "date_count": 4,
-      "source_count": 23,
-      "independent_source_count": 15,
+      "summary_updated_at": "2026-09-15",
+      "development_count": 11,
+      "coverage_packet_count": 11,
+      "date_count": 5,
+      "source_count": 27,
+      "independent_source_count": 17,
       "first_date": "2026-09-11",
-      "latest_date": "2026-09-14",
-      "latest_update_title": "Saudi Arabia's East-West Pipeline Remains Closed Following Drone Attack",
-      "coverage_score": 0.96,
+      "latest_date": "2026-09-15",
+      "latest_update_title": "Trump Claims Russia and Ukraine Agree to Halt Energy Attacks Amid Ongoing Strikes",
+      "coverage_score": 1.0,
       "recency_score": 1.0,
-      "rank_score": 0.983,
-      "context_summary": "Muninn first tracked this thread on 2026-09-11: Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims. The latest development is Saudi Arabia's East-West Pipeline Remains Closed Following Drone Attack.",
-      "cta_label": "Explore 10 developments"
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-09-11: Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims. The latest development is Trump Claims Russia and Ukraine Agree to Halt Energy Attacks Amid Ongoing Strikes.",
+      "cta_label": "Explore 11 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "As the 25th anniversary of the September 11 attacks approaches, Phil Alvarez, a retired NYPD detective, reflects on his brother Luis's death from cancer linked to toxins at Ground Zero. A later development was Commemorating 25 Years Since the 9/11 Attacks. Most recently, saudi Arabia's East-West pipeline remains shut after a drone attack attributed to Iranian-backed militias in Iraq.",
+      "summary": "As the 25th anniversary of the September 11 attacks approaches, Phil Alvarez, a retired NYPD detective, reflects on his brother Luis's death from cancer linked to toxins at Ground Zero. A later development was Commemorating 25 Years Since the 9/11 Attacks. Most recently, donald Trump announced that Russia and Ukraine have agreed to stop attacking each other's energy infrastructure.",
       "key_developments": [
         {
           "development_id": "story_839b70c2e2bb6def",
@@ -866,14 +952,14 @@
           "title": "CIA Declassifies Presidential Briefs on Bin Laden and Al-Qaida Before 9/11"
         },
         {
-          "development_id": "story_125ebf77ea097322",
+          "development_id": "story_1619ba775d1b3dd7",
           "date": "2026-09-14",
-          "title": "Trump Urges Ukraine to Cease Strikes on Russian Diesel Refineries Amid Global Shortage"
+          "title": "Trump to Consider Releasing More 9/11 Records Following Family Requests"
         },
         {
-          "development_id": "story_cb1a75b532a85952",
-          "date": "2026-09-14",
-          "title": "Saudi Arabia's East-West Pipeline Remains Closed Following Drone Attack"
+          "development_id": "story_31e04e6c1cdd10d0",
+          "date": "2026-09-15",
+          "title": "Trump Claims Russia and Ukraine Agree to Halt Energy Attacks Amid Ongoing Strikes"
         }
       ],
       "sources": [
@@ -1014,9 +1100,33 @@
           "source": "The Hindu",
           "link": "https://www.thehindu.com/news/international/saudi-oil-pipeline-hit-in-strikes-will-be-mostly-out-of-service-for-several-weeks-for-repair/article71466140.ece",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Trump seeks halt to energy attacks by both Russia, Ukraine",
+          "source": "DW - English",
+          "link": "https://www.dw.com/en/trump-seeks-halt-to-energy-attacks-by-both-russia-ukraine/a-79265774?maca=en-rss-en-all-1573-rdf",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Zelensky says Ukraine ready to de-escalate if Russia halts strikes",
+          "source": "France 24 - English",
+          "link": "http://www.france24.com/en/europe/20260914-zelensky-says-ukraine-ready-to-de-escalate-if-russia-halts-strikes",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Trump says Ukraine and Russia agree to halt strikes on energy targets",
+          "source": "Euronews",
+          "link": "https://www.euronews.com/2026/09/14/trump-says-ukraine-and-russia-agree-to-halt-strikes-on-energy-targets",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Russia and Ukraine launch new energy attacks despite Trump’s ceasefire claim",
+          "source": "NBC News - Top Stories",
+          "link": "https://www.nbcnews.com/world/ukraine/russia-ukraine-new-energy-attacks-trumps-ceasefire-claim-rcna597873",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-09-14",
+      "updated_at": "2026-09-15",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -1041,16 +1151,18 @@
           "saudi",
           "saudi_arabia",
           "ukraine",
-          "us"
+          "us",
+          "volodymyr_zelensky"
         ]
       },
       {
         "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
         "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
         "relationship": "related_topic",
-        "confidence": 0.813,
+        "confidence": 0.858,
         "shared_entities": [
           "donald_trump",
+          "halt",
           "rising_tension",
           "russia",
           "ukraine",
@@ -1061,23 +1173,25 @@
         "event_id": "event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a",
         "title": "Trump Delays Iran Strikes to Pursue Diplomatic Deal",
         "relationship": "related_topic",
-        "confidence": 0.754,
+        "confidence": 0.798,
         "shared_entities": [
           "donald_trump",
           "iran",
           "jd",
+          "trump_claim",
           "us"
         ]
       },
       {
-        "event_id": "event_trump-headlines-unique-republican-midterm-co_786da998e4",
-        "title": "Republicans Launch First-Ever Midterm Convention in Dallas",
+        "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
+        "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
         "relationship": "related_topic",
-        "confidence": 0.742,
+        "confidence": 0.766,
         "shared_entities": [
-          "america",
-          "dalla",
-          "republican"
+          "russia",
+          "ukraine",
+          "us",
+          "volodymyr_zelensky"
         ]
       }
     ],
@@ -1205,6 +1319,8 @@
       "additional",
       "advocate",
       "affected",
+      "agree",
+      "agreed",
       "aims",
       "al-qaida",
       "alleged",
@@ -1213,14 +1329,17 @@
       "america",
       "anger",
       "anniversary",
+      "announced",
       "approache",
       "arabia",
       "assist",
       "attack",
+      "attacking",
       "attended",
       "attributed",
       "attributing",
       "backed",
+      "both",
       "brief",
       "broader",
       "brother",
@@ -1230,6 +1349,7 @@
       "cease",
       "ceremonie",
       "ceremony",
+      "claim",
       "closed",
       "comes",
       "commemorate",
@@ -1239,11 +1359,13 @@
       "concern",
       "consider",
       "context",
+      "continued",
       "contributed",
       "convention",
       "crisi",
       "daily",
       "dalla",
+      "de-escalate",
       "death",
       "declassifie",
       "declassify",
@@ -1260,7 +1382,9 @@
       "dozen",
       "drone",
       "dust",
+      "each",
       "east-west",
+      "energy",
       "escalating",
       "european",
       "expected",
@@ -1280,17 +1404,21 @@
       "ground",
       "gulf",
       "halt",
+      "halts",
       "health",
       "held",
       "highlight",
       "hijacker",
       "honor",
       "houthi",
+      "however",
       "illnesse",
       "impact",
       "including",
+      "indicate",
       "individual",
       "influence",
+      "infrastructure",
       "intelligence",
       "intensified",
       "involvement",
@@ -1319,6 +1447,7 @@
       "movement",
       "names",
       "nearly",
+      "network",
       "nypd",
       "observed",
       "occurred",
@@ -1326,6 +1455,7 @@
       "officer",
       "oil",
       "ongoing",
+      "only",
       "orchestrating",
       "osama",
       "other",
@@ -1341,11 +1471,13 @@
       "place",
       "planned",
       "potential",
+      "prepared",
       "presidential",
       "price",
       "profound",
       "prompting",
       "quarter-century",
+      "rail",
       "raised",
       "rather",
       "read",
@@ -1381,6 +1513,7 @@
       "shanksville",
       "shortage",
       "shut",
+      "sides",
       "significant",
       "silence",
       "similar",
@@ -1393,6 +1526,7 @@
       "speech",
       "stability",
       "stated",
+      "stop",
       "strike",
       "supplie",
       "support",
@@ -1422,7 +1556,9 @@
       "vance",
       "vice",
       "victim",
+      "volodymyr",
       "war",
+      "warning",
       "weeks",
       "where",
       "while",
@@ -1430,6 +1566,7 @@
       "year",
       "years",
       "york",
+      "zelensky",
       "zero"
     ],
     "entities": [
@@ -1443,6 +1580,7 @@
       "cease",
       "cia",
       "cia_declassifie",
+      "claim_russia",
       "commemorate_anniversary",
       "commemorating_years",
       "compensation_fund",
@@ -1450,6 +1588,7 @@
       "consider_releasing",
       "dalla",
       "declassifie_presidential",
+      "despite_trump",
       "diesel_refinerie",
       "donald_trump",
       "east-west",
@@ -1459,6 +1598,9 @@
       "ground",
       "ground_zero",
       "ground_zero.",
+      "halt",
+      "halt_energy",
+      "however_ukraine",
       "iran",
       "iranian-backed",
       "iraq.",
@@ -1488,18 +1630,21 @@
       "shanksville_pennsylvania",
       "shortage_trump",
       "tension_persian",
+      "trump_claim",
       "trump_urges",
       "ukraine",
+      "ukraine_agree",
       "united",
       "united_states.",
       "urges_ukraine",
       "us",
       "victim_compensation",
+      "volodymyr_zelensky",
       "who_died",
       "years_since",
       "zero._alvarez"
     ],
-    "search_text": "000 11-related 11th 184 2001 2026 25th accused across action additional advocate affected aims al-qaida al-qaida. alleged also alvarez america anger anniversary approache arabia arabia_east-west assist attack attended attributed attributing backed bin_laden brief broader brother called cancel cancel_meeting cancer cancer_advocate cease ceremonie ceremony cia cia_declassifie closed comes commemorate commemorate_anniversary commemorating commemorating_years commemoration compensation compensation_fund concern consider consider_releasing context contributed convention crisi daily dalla death declassifie declassifie_presidential declassify deliver despite detailing detective died diesel diesel_refinerie dignitarie disruption document donald donald_trump dozen drone dust east-west east-west_pipeline escalating european europeans._familie expected express extend extremist face familie family family_request first four fuel fund gathered global globally ground ground_zero ground_zero. gulf halt health held highlight hijacker honor houthi illnesse impact including individual influence intelligence intensified involvement iran iranian-backed iraq iraq. issue jd justice killed laden leader leading linked lives lost luis many marked meeting memorial midterm military militia moment mood movement names nearly nypd nypd_officer observed occurred offensive officer officer_who oil ongoing orchestrating osama other paid participated passage past pennsylvania pentagon persian persian_gulf phil phil_alvarez pipeline pipeline_remain place planned potential presidential presidential_brief price profound prompting quarter-century raised rather read record refinerie reflect reflected reflecting regarding region related related_cancer released releasing remain remain_closed remembrance remembrance_ceremonie repair republican republican_convention request request_donald responder resulted retired reveal rising rising_tension russia russia_diesel same saudi saudi_arabia saudi_arabia. scheduled seek september september_victim service seventh several shanksville shanksville_pennsylvania shortage shortage_trump shut significant silence similar since sites situation solemn somber some speech stability stated strike supplie support survivor target tehran tension tension_persian than there these those threat time took toward toxic toxin tracking tragic transparency tribute trump trump_urges ukraine undertaken united united_states. urges urges_ukraine us vance vice victim victim_compensation war weeks where while who_died working year years years_since york zero zero._alvarez"
+    "search_text": "000 11-related 11th 184 2001 2026 25th accused across action additional advocate affected agree agreed aims al-qaida al-qaida. alleged also alvarez america anger anniversary announced approache arabia arabia_east-west assist attack attacking attended attributed attributing backed bin_laden both brief broader brother called cancel cancel_meeting cancer cancer_advocate cease ceremonie ceremony cia cia_declassifie claim claim_russia closed comes commemorate commemorate_anniversary commemorating commemorating_years commemoration compensation compensation_fund concern consider consider_releasing context continued contributed convention crisi daily dalla de-escalate death declassifie declassifie_presidential declassify deliver despite despite_trump detailing detective died diesel diesel_refinerie dignitarie disruption document donald donald_trump dozen drone dust each east-west east-west_pipeline energy escalating european europeans._familie expected express extend extremist face familie family family_request first four fuel fund gathered global globally ground ground_zero ground_zero. gulf halt halt_energy halts health held highlight hijacker honor houthi however however_ukraine illnesse impact including indicate individual influence infrastructure intelligence intensified involvement iran iranian-backed iraq iraq. issue jd justice killed laden leader leading linked lives lost luis many marked meeting memorial midterm military militia moment mood movement names nearly network nypd nypd_officer observed occurred offensive officer officer_who oil ongoing only orchestrating osama other paid participated passage past pennsylvania pentagon persian persian_gulf phil phil_alvarez pipeline pipeline_remain place planned potential prepared presidential presidential_brief price profound prompting quarter-century rail raised rather read record refinerie reflect reflected reflecting regarding region related related_cancer released releasing remain remain_closed remembrance remembrance_ceremonie repair republican republican_convention request request_donald responder resulted retired reveal rising rising_tension russia russia_diesel same saudi saudi_arabia saudi_arabia. scheduled seek september september_victim service seventh several shanksville shanksville_pennsylvania shortage shortage_trump shut sides significant silence similar since sites situation solemn somber some speech stability stated stop strike supplie support survivor target tehran tension tension_persian than there these those threat time took toward toxic toxin tracking tragic transparency tribute trump trump_claim trump_urges ukraine ukraine_agree undertaken united united_states. urges urges_ukraine us vance vice victim victim_compensation volodymyr volodymyr_zelensky war warning weeks where while who_died working year years years_since york zelensky zero zero._alvarez"
   },
   "related_events": [
     {
@@ -1605,20 +1750,20 @@
       "href": "/timeline.html?event=event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a"
     },
     {
-      "event_id": "event_trump-headlines-unique-republican-midterm-co_786da998e4",
-      "title": "Republicans Launch First-Ever Midterm Convention in Dallas",
-      "summary": "Muninn first tracked this thread on 2026-09-09: Republicans Launch First-Ever Midterm Convention in Dallas. The latest development is Key Insights from the Republican Midterm Convention.",
+      "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
+      "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
+      "summary": "Muninn first tracked this thread on 2026-07-25: Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse. The latest development is Houthis Expand Control in Yemen, Displacing Thousands Amid Ongoing Conflict.",
       "activity_status": "active",
-      "stage": "developing_event",
-      "stage_label": "Developing event",
-      "first_seen_at": "2026-09-09",
-      "last_seen_at": "2026-09-10",
-      "development_count": 2,
-      "latest_title": "Key Insights from the Republican Midterm Convention",
-      "topic_label": "Republican Convention",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-25",
+      "last_seen_at": "2026-09-14",
+      "development_count": 20,
+      "latest_title": "Houthis Expand Control in Yemen, Displacing Thousands Amid Ongoing Conflict",
+      "topic_label": "Russia-Ukraine War",
       "hero_image": {
-        "url": "/Current_news/generated/events/event_trump-headlines-unique-republican-midterm-co_786da998e4.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_trump-headlines-unique-republican-midterm-co_786da998e4.jpg",
+        "url": "/Current_news/generated/events/event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea.jpg",
         "source": "Muninn AI illustration",
         "author": "OpenAI GPT Image 2",
         "license": "AI-generated content",
@@ -1636,7 +1781,7 @@
         "focal_tall_x": 0.5,
         "focal_tall_y": 0.48
       },
-      "href": "/timeline.html?event=event_trump-headlines-unique-republican-midterm-co_786da998e4"
+      "href": "/timeline.html?event=event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea"
     }
   ]
 }
