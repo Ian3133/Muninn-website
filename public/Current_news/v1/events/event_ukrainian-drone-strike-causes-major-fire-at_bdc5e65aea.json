@@ -15,7 +15,7 @@
     "summary": "A Ukrainian drone strike ignited a significant fire at a Wildberries warehouse near Saint Petersburg on July 24. The blaze produced thick smoke that spread across the city and led to temporary disruptions at Pulkovo Airport, as reported by Russian authorities.",
     "status": "active",
     "first_seen_at": "2026-07-25",
-    "last_seen_at": "2026-09-14",
+    "last_seen_at": "2026-09-16",
     "timeline": [
       {
         "development_id": "story_b77a481c5a1a5ef9",
@@ -1513,15 +1513,92 @@
         "first_seen_at": "2026-09-14",
         "last_seen_at": "2026-09-14",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_6114daff14a871a5",
+        "daily_story_id": "story_6114daff14a871a5",
+        "date": "2026-09-16",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Renewed Violence in Yemen Displaces Thousands Amid Ceasefire Collapse",
+        "summary": "A surge in violence in Yemen has led to the end of a ceasefire and the displacement of approximately 125,000 people in the past two weeks. Many are fleeing to makeshift camps, such as Al Kadha in Taiz, as fighting intensifies in the region. The situation has resulted in overcrowded camps and a humanitarian crisis.",
+        "topic_label": "Yemen Conflict",
+        "development_type": "diplomacy",
+        "key_facts": [
+          "125,000 people displaced in the past two weeks",
+          "Renewed fighting in Taiz governorate",
+          "Many fleeing to makeshift camps"
+        ],
+        "source_count": 3,
+        "sources": [
+          "Africanews",
+          "Al Jazeera English",
+          "Euronews"
+        ],
+        "source_urls": [
+          "http://www.africanews.com/2026/09/16/surge-in-yemen-violence-ends-ceasefire-and-drives-mass-displacement",
+          "https://www.euronews.com/video/2026/09/16/surge-in-yemen-violence-ends-ceasefire-and-drives-mass-displacement",
+          "https://www.aljazeera.com/features/2026/9/16/taiz-camps-overflow-with-yemenis-fleeing-fighting-after-houthi-offensive?traffic_source=rss"
+        ],
+        "source_details": [
+          {
+            "title": "Surge in Yemen violence ends ceasefire and drives mass displacement",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/09/16/surge-in-yemen-violence-ends-ceasefire-and-drives-mass-displacement",
+            "source_bias": "center"
+          },
+          {
+            "title": "Surge in Yemen violence ends ceasefire and drives mass displacement",
+            "source": "Euronews",
+            "link": "https://www.euronews.com/video/2026/09/16/surge-in-yemen-violence-ends-ceasefire-and-drives-mass-displacement",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Taiz camps overflow with Yemenis fleeing fighting after Houthi offensive",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/features/2026/9/16/taiz-camps-overflow-with-yemenis-fleeing-fighting-after-houthi-offensive?traffic_source=rss",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_9d81f5cac6c269a0",
+          "shared_tokens": [
+            "conflict",
+            "displacement",
+            "fighting",
+            "region",
+            "resulted",
+            "taiz",
+            "violence",
+            "yemen"
+          ],
+          "shared_entities": [
+            "taiz",
+            "yemen"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-16",
+        "last_seen_at": "2026-09-16",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 20,
+      "public_development_count": 21,
       "questionable_development_count": 2,
       "review_required": true
     },
-    "latest_title": "Houthis Expand Control in Yemen, Displacing Thousands Amid Ongoing Conflict",
-    "latest_summary": "The Houthis have captured additional islands in the Red Sea, including parts of the Hanish archipelago, following the withdrawal of government-allied forces. This escalation has led to the displacement of over 80,000 people in just two weeks of fighting. In response to the conflict, more than 2,000 Yemenis have fled to Djibouti, fearing a resurgence of civil war.",
+    "latest_title": "Renewed Violence in Yemen Displaces Thousands Amid Ceasefire Collapse",
+    "latest_summary": "A surge in violence in Yemen has led to the end of a ceasefire and the displacement of approximately 125,000 people in the past two weeks. Many are fleeing to makeshift camps, such as Al Kadha in Taiz, as fighting intensifies in the region. The situation has resulted in overcrowded camps and a humanitarian crisis.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -1531,30 +1608,30 @@
       "display_title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse Timeline",
       "milestone_development_ids": [
         "story_b77a481c5a1a5ef9",
-        "story_11a5dfd41f7e4784",
+        "story_abce59c4535e502b",
         "story_4aa2188a44af6b1d",
-        "story_ada06a792d74582b"
+        "story_6114daff14a871a5"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-09-14",
-      "development_count": 20,
-      "coverage_packet_count": 20,
-      "date_count": 16,
-      "source_count": 50,
+      "summary_updated_at": "2026-09-16",
+      "development_count": 21,
+      "coverage_packet_count": 21,
+      "date_count": 17,
+      "source_count": 53,
       "independent_source_count": 24,
       "first_date": "2026-07-25",
-      "latest_date": "2026-09-14",
-      "latest_update_title": "Houthis Expand Control in Yemen, Displacing Thousands Amid Ongoing Conflict",
+      "latest_date": "2026-09-16",
+      "latest_update_title": "Renewed Violence in Yemen Displaces Thousands Amid Ceasefire Collapse",
       "coverage_score": 1.0,
-      "recency_score": 0.875,
-      "rank_score": 0.927,
-      "context_summary": "Muninn first tracked this thread on 2026-07-25: Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse. The latest development is Houthis Expand Control in Yemen, Displacing Thousands Amid Ongoing Conflict.",
-      "cta_label": "Explore 20 developments"
+      "recency_score": 1.0,
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-07-25: Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse. The latest development is Renewed Violence in Yemen Displaces Thousands Amid Ceasefire Collapse.",
+      "cta_label": "Explore 21 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "A Ukrainian drone strike ignited a significant fire at a Wildberries warehouse near Saint Petersburg on July 24. A later development was Drone Strike on Passenger Train in Odesa Region Results in Fatalities. Most recently, the Houthis have captured additional islands in the Red Sea, including parts of the Hanish archipelago, following the withdrawal of government-allied forces.",
+      "summary": "A Ukrainian drone strike ignited a significant fire at a Wildberries warehouse near Saint Petersburg on July 24. A later development was Drone Strike on Passenger Train in Odesa Region Results in Fatalities. Most recently, a surge in violence in Yemen has led to the end of a ceasefire and the displacement of approximately 125,000 people in the past two weeks.",
       "key_developments": [
         {
           "development_id": "story_b77a481c5a1a5ef9",
@@ -1562,9 +1639,9 @@
           "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse"
         },
         {
-          "development_id": "story_11a5dfd41f7e4784",
+          "development_id": "story_abce59c4535e502b",
           "date": "2026-08-12",
-          "title": "UN Reports Over 16,000 Civilians Still Detained by Russia in Ukraine"
+          "title": "Zelenskyy Reports Russian Attack with North Korean Missiles Kills Six in Zaporizhzhia"
         },
         {
           "development_id": "story_4aa2188a44af6b1d",
@@ -1572,9 +1649,9 @@
           "title": "Ukraine Conducts Major Drone Attack on Moscow Amid Ongoing Conflict"
         },
         {
-          "development_id": "story_ada06a792d74582b",
-          "date": "2026-09-14",
-          "title": "Houthis Expand Control in Yemen, Displacing Thousands Amid Ongoing Conflict"
+          "development_id": "story_6114daff14a871a5",
+          "date": "2026-09-16",
+          "title": "Renewed Violence in Yemen Displaces Thousands Amid Ceasefire Collapse"
         }
       ],
       "sources": [
@@ -1877,9 +1954,27 @@
           "source": "Africanews",
           "link": "http://www.africanews.com/2026/09/14/more-than-2000-yemenis-flee-to-djibouti-after-houthi-capture-of-key-port-city",
           "source_bias": "center"
+        },
+        {
+          "title": "Surge in Yemen violence ends ceasefire and drives mass displacement",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/09/16/surge-in-yemen-violence-ends-ceasefire-and-drives-mass-displacement",
+          "source_bias": "center"
+        },
+        {
+          "title": "Surge in Yemen violence ends ceasefire and drives mass displacement",
+          "source": "Euronews",
+          "link": "https://www.euronews.com/video/2026/09/16/surge-in-yemen-violence-ends-ceasefire-and-drives-mass-displacement",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Taiz camps overflow with Yemenis fleeing fighting after Houthi offensive",
+          "source": "Al Jazeera English",
+          "link": "https://www.aljazeera.com/features/2026/9/16/taiz-camps-overflow-with-yemenis-fleeing-fighting-after-houthi-offensive?traffic_source=rss",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-09-14",
+      "updated_at": "2026-09-16",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -1933,6 +2028,21 @@
         ]
       },
       {
+        "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
+        "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
+        "relationship": "related_topic",
+        "confidence": 0.888,
+        "shared_entities": [
+          "red_sea.",
+          "russia",
+          "ukraine",
+          "us",
+          "volodymyr_zelensky",
+          "yemen",
+          "yemen_houthi"
+        ]
+      },
+      {
         "event_id": "event_european-leaders-gather-in-kyiv-for-ukraine_e8c3093217",
         "title": "European Leaders Gather in Kyiv for Ukraine's Independence Day Amid Ongoing Russian Invasion",
         "relationship": "related_topic",
@@ -1942,18 +2052,6 @@
           "russia",
           "ukraine",
           "volodymyr_zelenskyy"
-        ]
-      },
-      {
-        "event_id": "event_putin-dismisses-need-for-new-mobilization-am_ebfb88abcf",
-        "title": "Putin Dismisses Need for New Mobilization Amid Peace Talks",
-        "relationship": "related_topic",
-        "confidence": 0.77,
-        "shared_entities": [
-          "kyiv",
-          "russia",
-          "ukraine",
-          "us"
         ]
       }
     ],
@@ -2089,6 +2187,7 @@
     },
     "search_tokens": [
       "000",
+      "125",
       "153",
       "201",
       "2022",
@@ -2136,6 +2235,7 @@
       "both",
       "broader",
       "campaign",
+      "camps",
       "canada",
       "capabilitie",
       "capital",
@@ -2143,6 +2243,7 @@
       "captured",
       "casualtie",
       "cause",
+      "ceasefire",
       "child",
       "children",
       "civil",
@@ -2153,6 +2254,7 @@
       "coast",
       "coincided",
       "collaboration",
+      "collapse",
       "comply",
       "concern",
       "concluded",
@@ -2185,6 +2287,7 @@
       "detained",
       "development",
       "discovered",
+      "displace",
       "displaced",
       "displacement",
       "displacing",
@@ -2226,6 +2329,7 @@
       "first",
       "five",
       "fled",
+      "fleeing",
       "force",
       "four",
       "frontline",
@@ -2242,6 +2346,7 @@
       "highlighted",
       "houthi",
       "human",
+      "humanitarian",
       "hundred",
       "hysterical",
       "ignited",
@@ -2260,6 +2365,7 @@
       "injured",
       "injurie",
       "inside",
+      "intensifie",
       "international",
       "invasion",
       "involving",
@@ -2267,6 +2373,7 @@
       "island",
       "july",
       "just",
+      "kadha",
       "killed",
       "killing",
       "kills",
@@ -2285,6 +2392,7 @@
       "location",
       "logistic",
       "long-range",
+      "makeshift",
       "many",
       "maritime",
       "marks",
@@ -2317,12 +2425,14 @@
       "ongoing",
       "onset",
       "other",
+      "overcrowded",
       "overnight",
       "panic",
       "part",
       "parts",
       "passenger",
       "passing",
+      "past",
       "payment",
       "pentagon",
       "perim",
@@ -2348,6 +2458,7 @@
       "recent",
       "refinery",
       "region",
+      "renewed",
       "reported",
       "reportedly",
       "resource",
@@ -2377,6 +2488,7 @@
       "significant",
       "since",
       "sites",
+      "situation",
       "smoke",
       "specific",
       "spread",
@@ -2387,6 +2499,7 @@
       "strengthening",
       "strike",
       "struck",
+      "such",
       "supplie",
       "support",
       "surge",
@@ -2458,6 +2571,7 @@
       "berezivka",
       "canada",
       "capture_strategic",
+      "ceasefire_collapse",
       "civilian_casualtie",
       "civilian_clashe",
       "civilian_still",
@@ -2468,6 +2582,7 @@
       "confirm_civilian",
       "deadly_ukraine",
       "deals_recent",
+      "displace_thousand",
       "displacement_crisi",
       "displacing_thousand",
       "djibouti",
@@ -2523,6 +2638,7 @@
       "red_sea.",
       "refinery_claim",
       "region_result",
+      "renewed_violence",
       "right_monitoring",
       "russia",
       "russia_claim",
@@ -2560,6 +2676,7 @@
       "volodymyr_zelenskyy",
       "wildberrie",
       "yemen",
+      "yemen_displace",
       "yemen_displacing",
       "yemen_houthi",
       "yemen_result",
@@ -2571,7 +2688,7 @@
       "zelensky_visit",
       "zelenskyy_visit"
     ],
-    "search_text": "000 153 201 2022 2025 2026 243 340 400 437 610 9-year-old accounted across action additional additionally aden advance aerial affected ahead aimed airport airstrike airstrike_concern alarming although amidst among appear approximately april archipelago arrival assault assistant atacm attack august authoritie bab beginning belgorod berezivka blaze bolster both broader campaign canada capabilitie capital capture capture_strategic captured casualtie cause child children civil civilian civilian_casualtie civilian_clashe civilian_still claim claim_lives claimed clashe coast coincided collaboration comply concern concern_ukraine concluded concurrently concurrently_russia concurrently_ukraine condolence conduct confirm confirm_civilian confirming conflict continue contributed control crater crisi critical crucial data deadliest deadly deadly_ukraine deal deals deals_recent death debri decision deep defense deploying deprived described detained development discovered displaced displacement displacement_crisi displacing displacing_thousand disruption district djibouti donald donald_tusk down downed driver drone early eastern eastern_poland effort el-mandeb energy engage enhance enhancing escalating escalating_ground escalation escaping evacuated expand expand_control experiencing explosion faces facilitie facility fatalitie fearing fell field fighting finalized fire fired fires first five fled force four frontline full-scale global goods government-allied ground ground_fighting gulf hanish held highest highest_civilian highest_monthly highlight highlighted houthi houthi_advance houthi_capture houthi_expand houthi_seize human human_right hundred hysterical ignited igniting ill-treatment impacting incident including including_civilian increase increasing indicate indicating individual industrial infrastructure injured injurie inside international invasion involving iran-backed iran-backed_houthi island island_strengthening july july. just killed killing kills kilometer korean korean_missile kyiv kyiv_result largest launched least leave level level_since liberty lives local located location logistic long-range many maritime marks military military_deals missile missile_downed mission mission._drone mokha monitor monitoring monitoring_mission. month monthly monthly_level moscow move multi-nation multiple nation near near_kyiv nearly nine nizhnekamsk nizhnekamsk_russia north north_korean noted number numerou occur occurred odesa odesa_region offensive oil ongoing onset other overnight panic part parts passenger passenger_train passing payment pentagon perim perim_island petersburg petersburg_warehouse pm poland poland_polish polish polish_prime port poses position possible possible_russia prime produced provided pulkovo pulkovo_airport purchase pyongyang railway raised ras_isa reach reach_highest reached reason rebel recent red red_sea red_sea. refinery refinery_claim region region_result reported reportedly resource response result resulted resulting resurgence revealed review right right_monitoring route russia russia_claim russia_missile russia_shahed russian._authoritie saint saint_petersburg saudi-backed sea._displacement sea_shipping securing seen seize seize_strategic seized separate serbia serbia_russia shahed shipping shipping_yemen shortly shot side significant since since_may sites smoke specific spread stated still still_detained strait strategic strategic_perim strategic_port strengthening strengthening_control strike struck supplie support surge surged surrounding system taiz taneco target targeted tatarstan temporary tens tension territory than these thick those thousand threat threatening three through time torture tour train trend turkey tusk ukraine ukraine_conduct ukraine_drone ukraine_infrastructure ukraine_odesa ukraine_reach ukraine_since un united united_nation us variou victim violence visit visit_canada visiting vital volodymyr volodymyr_zelensky volodymyr_zelenskyy war warehouse warranted waterway ways weeks western what which while wildberrie winter withdrawal woman year years yemen yemen_displacing yemen_houthi yemen_result yemen_saudi-backed yemen_tens yemen_threatening yemeni zaporizhzhia zaporizhzhia_ukraine zelensky zelensky_visit zelenskyy zelenskyy_visit"
+    "search_text": "000 125 153 201 2022 2025 2026 243 340 400 437 610 9-year-old accounted across action additional additionally aden advance aerial affected ahead aimed airport airstrike airstrike_concern alarming although amidst among appear approximately april archipelago arrival assault assistant atacm attack august authoritie bab beginning belgorod berezivka blaze bolster both broader campaign camps canada capabilitie capital capture capture_strategic captured casualtie cause ceasefire ceasefire_collapse child children civil civilian civilian_casualtie civilian_clashe civilian_still claim claim_lives claimed clashe coast coincided collaboration collapse comply concern concern_ukraine concluded concurrently concurrently_russia concurrently_ukraine condolence conduct confirm confirm_civilian confirming conflict continue contributed control crater crisi critical crucial data deadliest deadly deadly_ukraine deal deals deals_recent death debri decision deep defense deploying deprived described detained development discovered displace displace_thousand displaced displacement displacement_crisi displacing displacing_thousand disruption district djibouti donald donald_tusk down downed driver drone early eastern eastern_poland effort el-mandeb energy engage enhance enhancing escalating escalating_ground escalation escaping evacuated expand expand_control experiencing explosion faces facilitie facility fatalitie fearing fell field fighting finalized fire fired fires first five fled fleeing force four frontline full-scale global goods government-allied ground ground_fighting gulf hanish held highest highest_civilian highest_monthly highlight highlighted houthi houthi_advance houthi_capture houthi_expand houthi_seize human human_right humanitarian hundred hysterical ignited igniting ill-treatment impacting incident including including_civilian increase increasing indicate indicating individual industrial infrastructure injured injurie inside intensifie international invasion involving iran-backed iran-backed_houthi island island_strengthening july july. just kadha killed killing kills kilometer korean korean_missile kyiv kyiv_result largest launched least leave level level_since liberty lives local located location logistic long-range makeshift many maritime marks military military_deals missile missile_downed mission mission._drone mokha monitor monitoring monitoring_mission. month monthly monthly_level moscow move multi-nation multiple nation near near_kyiv nearly nine nizhnekamsk nizhnekamsk_russia north north_korean noted number numerou occur occurred odesa odesa_region offensive oil ongoing onset other overcrowded overnight panic part parts passenger passenger_train passing past payment pentagon perim perim_island petersburg petersburg_warehouse pm poland poland_polish polish polish_prime port poses position possible possible_russia prime produced provided pulkovo pulkovo_airport purchase pyongyang railway raised ras_isa reach reach_highest reached reason rebel recent red red_sea red_sea. refinery refinery_claim region region_result renewed renewed_violence reported reportedly resource response result resulted resulting resurgence revealed review right right_monitoring route russia russia_claim russia_missile russia_shahed russian._authoritie saint saint_petersburg saudi-backed sea._displacement sea_shipping securing seen seize seize_strategic seized separate serbia serbia_russia shahed shipping shipping_yemen shortly shot side significant since since_may sites situation smoke specific spread stated still still_detained strait strategic strategic_perim strategic_port strengthening strengthening_control strike struck such supplie support surge surged surrounding system taiz taneco target targeted tatarstan temporary tens tension territory than these thick those thousand threat threatening three through time torture tour train trend turkey tusk ukraine ukraine_conduct ukraine_drone ukraine_infrastructure ukraine_odesa ukraine_reach ukraine_since un united united_nation us variou victim violence visit visit_canada visiting vital volodymyr volodymyr_zelensky volodymyr_zelenskyy war warehouse warranted waterway ways weeks western what which while wildberrie winter withdrawal woman year years yemen yemen_displace yemen_displacing yemen_houthi yemen_result yemen_saudi-backed yemen_tens yemen_threatening yemeni zaporizhzhia zaporizhzhia_ukraine zelensky zelensky_visit zelenskyy zelenskyy_visit"
   },
   "related_events": [
     {
@@ -2643,20 +2760,20 @@
       "href": "/timeline.html?event=event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b"
     },
     {
-      "event_id": "event_putin-dismisses-need-for-new-mobilization-am_ebfb88abcf",
-      "title": "Putin Dismisses Need for New Mobilization Amid Peace Talks",
-      "summary": "Muninn first tracked this thread on 2026-09-03: Putin Dismisses Need for New Mobilization Amid Peace Talks. The latest development is NATO Shoots Down Drone in Lithuania; Russian Frigate Fires Flares at Danish Helicopter.",
+      "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
+      "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
+      "summary": "Muninn first tracked this thread on 2026-09-11: Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims. The latest development is CBO Reports Iran War Costs US Nearly $40 Billion Amid Rising Inflation.",
       "activity_status": "active",
-      "stage": "developing_event",
-      "stage_label": "Developing event",
-      "first_seen_at": "2026-09-03",
-      "last_seen_at": "2026-09-15",
-      "development_count": 3,
-      "latest_title": "NATO Shoots Down Drone in Lithuania; Russian Frigate Fires Flares at Danish Helicopter",
-      "topic_label": "Ukraine War",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-09-11",
+      "last_seen_at": "2026-09-16",
+      "development_count": 14,
+      "latest_title": "CBO Reports Iran War Costs US Nearly $40 Billion Amid Rising Inflation",
+      "topic_label": "9/11 Victim Compensation",
       "hero_image": {
-        "url": "/Current_news/generated/events/event_putin-dismisses-need-for-new-mobilization-am_ebfb88abcf.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_putin-dismisses-need-for-new-mobilization-am_ebfb88abcf.jpg",
+        "url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",
         "source": "Muninn AI illustration",
         "author": "OpenAI GPT Image 2",
         "license": "AI-generated content",
@@ -2674,7 +2791,7 @@
         "focal_tall_x": 0.5,
         "focal_tall_y": 0.48
       },
-      "href": "/timeline.html?event=event_putin-dismisses-need-for-new-mobilization-am_ebfb88abcf"
+      "href": "/timeline.html?event=event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b"
     }
   ]
 }
