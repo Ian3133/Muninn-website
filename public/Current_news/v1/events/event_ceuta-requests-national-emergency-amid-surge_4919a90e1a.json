@@ -15,7 +15,7 @@
     "summary": "Authorities in Ceuta have requested Spain to declare a national emergency due to a significant influx of migrants swimming from Morocco. The local government is seeking military assistance as border security is overwhelmed by the number of individuals attempting to enter the territory.",
     "status": "active",
     "first_seen_at": "2026-07-30",
-    "last_seen_at": "2026-09-17",
+    "last_seen_at": "2026-09-18",
     "timeline": [
       {
         "development_id": "story_dff81ceff84cab9d",
@@ -2085,15 +2085,98 @@
         "first_seen_at": "2026-09-17",
         "last_seen_at": "2026-09-17",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_80255d62ded751a8",
+        "daily_story_id": "story_80255d62ded751a8",
+        "date": "2026-09-18",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Spanish Police Relocate Migrants from Ceuta Beaches to Port Area",
+        "summary": "Spanish police have begun relocating hundreds of migrants from the beaches of Ceuta to a designated tented area at the port. The operation was initiated as police faced challenges managing large crowds of migrants seeking shelter. This move comes in the wake of a significant influx of migrants crossing from Morocco in late July, with several thousand still present in the enclave.",
+        "topic_label": "Ceuta Border Surge",
+        "development_type": "development",
+        "key_facts": [
+          "Spanish police moved hundreds of migrants from Ceuta beaches to a port area.",
+          "Police reportedly fired into the air to manage crowds.",
+          "Thousands of migrants remain in Ceuta following a surge in crossings from Morocco."
+        ],
+        "source_count": 3,
+        "sources": [
+          "BBC - World",
+          "France 24 - English",
+          "RTE News"
+        ],
+        "source_urls": [
+          "https://www.rte.ie/news/world/2026/0918/1592047-ceuta-spain-migrants",
+          "https://www.bbc.co.uk/news/articles/c6vgy80ge1z7o?at_medium=RSS&at_campaign=rss",
+          "https://www.france24.com/en/europe/20260918-police-move-hundreds-of-migrants-still-in-ceuta-off-beaches-in-spanish-enclave"
+        ],
+        "source_details": [
+          {
+            "title": "Police move Ceuta migrants off beaches in Spanish enclave",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/world/2026/0918/1592047-ceuta-spain-migrants",
+            "source_bias": "center"
+          },
+          {
+            "title": "Police begin operation to move migrants from Ceuta beaches",
+            "source": "BBC - World",
+            "link": "https://www.bbc.co.uk/news/articles/c6vgy80ge1z7o?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          },
+          {
+            "title": "Police move hundreds of migrants still in Ceuta off beaches in Spanish enclave",
+            "source": "France 24 - English",
+            "link": "https://www.france24.com/en/europe/20260918-police-move-hundreds-of-migrants-still-in-ceuta-off-beaches-in-spanish-enclave",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "matched_development_id": "story_ccf4e769c5d6acf1",
+          "shared_tokens": [
+            "border",
+            "ceuta",
+            "enclave",
+            "influx",
+            "migrant",
+            "morocco",
+            "significant",
+            "spain",
+            "surge"
+          ],
+          "shared_entities": [
+            "border_surge",
+            "ceuta_border",
+            "morocco",
+            "morocco.",
+            "spain",
+            "surge_spain"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "canonical_bounded_event_identity_v1",
+          "event_identity_key": "ceuta-border-surge",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-18",
+        "last_seen_at": "2026-09-18",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 24,
+      "public_development_count": 25,
       "questionable_development_count": 6,
       "review_required": true
     },
-    "latest_title": "Mbappé Addresses Controversy Over Ceuta Solidarity T-Shirt",
-    "latest_summary": "Kylian Mbappé explained his decision to partially roll up a t-shirt supporting Ceuta residents, stating it was meant to express solidarity with migrants who have lost their lives and those facing difficult conditions. His action has drawn criticism from far-right politicians in Spain and France, who interpreted it as a rejection of Ceuta and its residents.",
+    "latest_title": "Spanish Police Relocate Migrants from Ceuta Beaches to Port Area",
+    "latest_summary": "Spanish police have begun relocating hundreds of migrants from the beaches of Ceuta to a designated tented area at the port. The operation was initiated as police faced challenges managing large crowds of migrants seeking shelter. This move comes in the wake of a significant influx of migrants crossing from Morocco in late July, with several thousand still present in the enclave.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -2104,29 +2187,29 @@
       "milestone_development_ids": [
         "story_dff81ceff84cab9d",
         "story_5c5c83fb1a194f9f",
-        "story_5d7d0f98e1565054",
-        "story_ed8763e0afbaa8a7"
+        "story_fb234e23c589ddb8",
+        "story_80255d62ded751a8"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-09-17",
-      "development_count": 24,
-      "coverage_packet_count": 28,
-      "date_count": 20,
-      "source_count": 62,
+      "summary_updated_at": "2026-09-18",
+      "development_count": 25,
+      "coverage_packet_count": 29,
+      "date_count": 21,
+      "source_count": 65,
       "independent_source_count": 24,
       "first_date": "2026-07-30",
-      "latest_date": "2026-09-17",
-      "latest_update_title": "Mbappé Addresses Controversy Over Ceuta Solidarity T-Shirt",
+      "latest_date": "2026-09-18",
+      "latest_update_title": "Spanish Police Relocate Migrants from Ceuta Beaches to Port Area",
       "coverage_score": 1.0,
       "recency_score": 1.0,
       "rank_score": 1.0,
-      "context_summary": "Muninn first tracked this thread on 2026-07-30: Ceuta Requests National Emergency Amid Surge of Migrants from Morocco. The latest development is Mbappé Addresses Controversy Over Ceuta Solidarity T-Shirt.",
-      "cta_label": "Explore 24 developments"
+      "context_summary": "Muninn first tracked this thread on 2026-07-30: Ceuta Requests National Emergency Amid Surge of Migrants from Morocco. The latest development is Spanish Police Relocate Migrants from Ceuta Beaches to Port Area.",
+      "cta_label": "Explore 25 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Authorities in Ceuta have requested Spain to declare a national emergency due to a significant influx of migrants swimming from Morocco. A later development was Spain Implements Border Checks on Italy Amid Migrant Dispute. Most recently, kylian Mbappé explained his decision to partially roll up a t-shirt supporting Ceuta residents, stating it was meant to express solidarity with migrants who have lost their lives and those facing difficult conditions.",
+      "summary": "Authorities in Ceuta have requested Spain to declare a national emergency due to a significant influx of migrants swimming from Morocco. A later development was Spain Implements Border Checks on Italy Amid Migrant Dispute. Most recently, spanish police have begun relocating hundreds of migrants from the beaches of Ceuta to a designated tented area at the port.",
       "key_developments": [
         {
           "development_id": "story_dff81ceff84cab9d",
@@ -2139,14 +2222,14 @@
           "title": "Ceuta Migrant Crisis Highlights European Divisions and Death Toll Discrepancies"
         },
         {
-          "development_id": "story_5d7d0f98e1565054",
-          "date": "2026-08-17",
-          "title": "Nearly 300 Migrants Arrested by Moroccan Security Forces Near Ceuta"
+          "development_id": "story_fb234e23c589ddb8",
+          "date": "2026-08-21",
+          "title": "Spain Relocates Migrants from Ceuta Beach to Shelters Amid Ongoing Crisis"
         },
         {
-          "development_id": "story_ed8763e0afbaa8a7",
-          "date": "2026-09-17",
-          "title": "Mbappé Addresses Controversy Over Ceuta Solidarity T-Shirt"
+          "development_id": "story_80255d62ded751a8",
+          "date": "2026-09-18",
+          "title": "Spanish Police Relocate Migrants from Ceuta Beaches to Port Area"
         }
       ],
       "sources": [
@@ -2521,9 +2604,27 @@
           "source": "France 24 - English",
           "link": "https://www.france24.com/en/europe/20260917-real-madrid-s-mbapp%C3%A9-draws-criticism-from-far-right-over-ceuta-t-shirt-controversy",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Police move Ceuta migrants off beaches in Spanish enclave",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/world/2026/0918/1592047-ceuta-spain-migrants",
+          "source_bias": "center"
+        },
+        {
+          "title": "Police begin operation to move migrants from Ceuta beaches",
+          "source": "BBC - World",
+          "link": "https://www.bbc.co.uk/news/articles/c6vgy80ge1z7o?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
+        },
+        {
+          "title": "Police move hundreds of migrants still in Ceuta off beaches in Spanish enclave",
+          "source": "France 24 - English",
+          "link": "https://www.france24.com/en/europe/20260918-police-move-hundreds-of-migrants-still-in-ceuta-off-beaches-in-spanish-enclave",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-09-17",
+      "updated_at": "2026-09-18",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -2532,7 +2633,7 @@
         "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
         "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
         "relationship": "related_topic",
-        "confidence": 0.751,
+        "confidence": 0.75,
         "shared_entities": [
           "eu",
           "israel",
@@ -2554,7 +2655,7 @@
         "event_id": "event_wildfire-forces-evacuation-of-nearly-12-000_839c1db808",
         "title": "Wildfire Forces Evacuation of Nearly 12,000 Tourists in Southwest France",
         "relationship": "related_topic",
-        "confidence": 0.729,
+        "confidence": 0.73,
         "shared_entities": [
           "france",
           "madrid",
@@ -2562,13 +2663,13 @@
         ]
       },
       {
-        "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
-        "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
+        "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
+        "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
         "relationship": "related_topic",
-        "confidence": 0.722,
+        "confidence": 0.728,
         "shared_entities": [
-          "july.",
-          "pm",
+          "europe.",
+          "france",
           "russia"
         ]
       }
@@ -2704,6 +2805,7 @@
       "announced",
       "anti-migrant",
       "approximately",
+      "area",
       "around",
       "arrested",
       "arrival",
@@ -2718,6 +2820,7 @@
       "authoritie",
       "barrier",
       "beach",
+      "beache",
       "began",
       "beginning",
       "begun",
@@ -2755,6 +2858,7 @@
       "cross",
       "crossed",
       "crossing",
+      "crowd",
       "deadliest",
       "deadly",
       "death",
@@ -2764,6 +2868,7 @@
       "demand",
       "demonstrator",
       "denie",
+      "designated",
       "despite",
       "died",
       "difficult",
@@ -2799,6 +2904,7 @@
       "explained",
       "express",
       "face",
+      "faced",
       "faces",
       "facing",
       "false",
@@ -2838,6 +2944,7 @@
       "individual",
       "influx",
       "initial",
+      "initiated",
       "installation",
       "installing",
       "interior",
@@ -2851,7 +2958,9 @@
       "july",
       "kylian",
       "lack",
+      "large",
       "last",
+      "late",
       "lead",
       "leads",
       "least",
@@ -2869,6 +2978,7 @@
       "makeshift",
       "manage",
       "management",
+      "managing",
       "many",
       "marching",
       "marks",
@@ -2888,6 +2998,7 @@
       "moroccan",
       "morocco",
       "most",
+      "move",
       "nation",
       "national",
       "nchez",
@@ -2903,6 +3014,7 @@
       "ongoing",
       "only",
       "opening",
+      "operation",
       "orchestrated",
       "other",
       "overwhelmed",
@@ -2913,6 +3025,7 @@
       "person",
       "policie",
       "political",
+      "port",
       "potential",
       "poverty",
       "presence",
@@ -2962,6 +3075,7 @@
       "security",
       "seeking",
       "seen",
+      "several",
       "shelter",
       "shops",
       "short",
@@ -2993,6 +3107,7 @@
       "temporary",
       "tens",
       "tension",
+      "tented",
       "territory",
       "there",
       "these",
@@ -3010,6 +3125,7 @@
       "unprecedented",
       "unrest",
       "voluntarily",
+      "wake",
       "warning",
       "week",
       "weeks",
@@ -3027,6 +3143,7 @@
       "addresse_controversy",
       "anti-migrant",
       "anti-migrant_protest",
+      "area_spain",
       "border_breach",
       "border_check",
       "border_control",
@@ -3039,6 +3156,7 @@
       "ceuta._demonstrator",
       "ceuta._massive",
       "ceuta_beach",
+      "ceuta_beache",
       "ceuta_border",
       "ceuta_faces",
       "ceuta_lead",
@@ -3123,6 +3241,8 @@
       "north_african",
       "ongoing_crisi",
       "pm",
+      "port",
+      "port_area",
       "protest_erupt",
       "relocate_migrant",
       "request_national",
@@ -3152,7 +3272,7 @@
       "toll_discrepancie",
       "toll_spain"
     ],
-    "search_text": "000 100 141 24-hour 300 500-meter accused across across_spain action address addresse addresse_controversy adequate african aftermath along amidst among announced anti-migrant anti-migrant_protest approximately around arrested arrival arriving assist assistance assisted assumption attempt attempting august authoritie barrier beach began beginning begun believe believed border border_breach border_check border_control border_crisi border_incident both both_moroccan breach breach_pedro cafes called calm camp caused ceased ceuta ceuta. ceuta._demonstrator ceuta._massive ceuta_beach ceuta_border ceuta_faces ceuta_lead ceuta_leads ceuta_migrant ceuta_moroccan ceuta_recover ceuta_request ceuta_result ceuta_solidarity ceuta_spain ceuta_spark ceuta_territory challenge chaotic check citing claim clashe clashe_erupt comes concern condition conflicting consequence continue contributed control controversy crise crisi crisi_highlight crisi_italy crisi_spain crisi_tens criticism criticized cross crossed crossing deadliest deadly deadly_migrant death decision declare defend demand demonstrator denie denie_evidence despite died difficult diplomatic discrepancie discussion disinformation dismisse dismisse_moroccan dispute dispute_spain division drawn driven drowning effective emergency emergency_measure emphasizing enclave enhance enhance_security enter entered erupt erupt_across erupted escalated escalating escalation establishment eu europe europe. europe._spain european european_division event evidence exclave exonerate exonerate_morocco explained express face faces faces_aftermath faces_migrant facing false familie far-right fatalitie floating follow food force force_near france fueled future gradually growing halts halts_migrant handling highlight highlight_european holiday however humanitarian hundred illegal immigration implement implement_border implement_temporary implementation implemented implicating impose imposition incident incident_spain include including indicate indicated indicating individual influx initial installation installing interior interpreted introduced introduction involvement israel italian italian_traveler italy italy. italy_maintain july july. july._spain kylian kylian_mbapp lack last lead leads least legal life lift lives living local local_tension lost loved madrid maintain maintain_border majority makeshift manage management many marching marks mass mass_migration mass_protest massive massive_influx massive_migrant mbapp mbapp_addresse meant measure measure_tens media midnight migrant migrant_arrested migrant_crisi migrant_cross migrant_crossing migrant_dispute migrant_influx migrant_surge migrant_tension migration military ministry misinformation misinformation_moroccan missing moroccan moroccan_involvement moroccan_security morocco morocco. morocco._ceuta morocco._local morocco_authoritie morocco_calm morocco_ceuta morocco_strengthen most nation national national_emergency nchez near near_ceuta nearly nearly_migrant need normal north north_african number occurred office ones ongoing ongoing_crisi only opening orchestrated other overwhelmed parliament partially pedro period person pm policie political potential poverty presence present previously prime prompting protest protest_erupt protested protester rare reach recent recover refused regarding region reignited reinforce reinforcement rejection relocate relocate_migrant relocating remain reopen reported reportedly reporting request request_national requested resident responding response result resulted resume retaliation return returned returning rising roll russia saturday scrutiny searching security security_force seeking seen shelter shops short shortly significant similar since situation small social solidarity solidarity_t-shirt spain spain_assumption spain_ceuta spain_ceuta. spain_enhance spain_halts spain_implement spain_prime spain_relocate spain_retaliation spark spark_return sparked spat spreading spurred stampede stated statement stating still still_present strengthen strengthen_border suggesting supporting surge swimming t-shirt t-shirt_kylian temporary temporary_border tens tension tension_thousand territory there these those thousand thousand_still three toll toll_discrepancie toll_spain tragically trampol travel traveler trying unaccounted unfolded unprecedented unrest voluntarily warning week weeks where which while within without work would young"
+    "search_text": "000 100 141 24-hour 300 500-meter accused across across_spain action address addresse addresse_controversy adequate african aftermath along amidst among announced anti-migrant anti-migrant_protest approximately area area_spain around arrested arrival arriving assist assistance assisted assumption attempt attempting august authoritie barrier beach beache began beginning begun believe believed border border_breach border_check border_control border_crisi border_incident both both_moroccan breach breach_pedro cafes called calm camp caused ceased ceuta ceuta. ceuta._demonstrator ceuta._massive ceuta_beach ceuta_beache ceuta_border ceuta_faces ceuta_lead ceuta_leads ceuta_migrant ceuta_moroccan ceuta_recover ceuta_request ceuta_result ceuta_solidarity ceuta_spain ceuta_spark ceuta_territory challenge chaotic check citing claim clashe clashe_erupt comes concern condition conflicting consequence continue contributed control controversy crise crisi crisi_highlight crisi_italy crisi_spain crisi_tens criticism criticized cross crossed crossing crowd deadliest deadly deadly_migrant death decision declare defend demand demonstrator denie denie_evidence designated despite died difficult diplomatic discrepancie discussion disinformation dismisse dismisse_moroccan dispute dispute_spain division drawn driven drowning effective emergency emergency_measure emphasizing enclave enhance enhance_security enter entered erupt erupt_across erupted escalated escalating escalation establishment eu europe europe. europe._spain european european_division event evidence exclave exonerate exonerate_morocco explained express face faced faces faces_aftermath faces_migrant facing false familie far-right fatalitie floating follow food force force_near france fueled future gradually growing halts halts_migrant handling highlight highlight_european holiday however humanitarian hundred illegal immigration implement implement_border implement_temporary implementation implemented implicating impose imposition incident incident_spain include including indicate indicated indicating individual influx initial initiated installation installing interior interpreted introduced introduction involvement israel italian italian_traveler italy italy. italy_maintain july july. july._spain kylian kylian_mbapp lack large last late lead leads least legal life lift lives living local local_tension lost loved madrid maintain maintain_border majority makeshift manage management managing many marching marks mass mass_migration mass_protest massive massive_influx massive_migrant mbapp mbapp_addresse meant measure measure_tens media midnight migrant migrant_arrested migrant_crisi migrant_cross migrant_crossing migrant_dispute migrant_influx migrant_surge migrant_tension migration military ministry misinformation misinformation_moroccan missing moroccan moroccan_involvement moroccan_security morocco morocco. morocco._ceuta morocco._local morocco_authoritie morocco_calm morocco_ceuta morocco_strengthen most move nation national national_emergency nchez near near_ceuta nearly nearly_migrant need normal north north_african number occurred office ones ongoing ongoing_crisi only opening operation orchestrated other overwhelmed parliament partially pedro period person pm policie political port port_area potential poverty presence present previously prime prompting protest protest_erupt protested protester rare reach recent recover refused regarding region reignited reinforce reinforcement rejection relocate relocate_migrant relocating remain reopen reported reportedly reporting request request_national requested resident responding response result resulted resume retaliation return returned returning rising roll russia saturday scrutiny searching security security_force seeking seen several shelter shops short shortly significant similar since situation small social solidarity solidarity_t-shirt spain spain_assumption spain_ceuta spain_ceuta. spain_enhance spain_halts spain_implement spain_prime spain_relocate spain_retaliation spark spark_return sparked spat spreading spurred stampede stated statement stating still still_present strengthen strengthen_border suggesting supporting surge swimming t-shirt t-shirt_kylian temporary temporary_border tens tension tension_thousand tented territory there these those thousand thousand_still three toll toll_discrepancie toll_spain tragically trampol travel traveler trying unaccounted unfolded unprecedented unrest voluntarily wake warning week weeks where which while within without work would young"
   },
   "related_events": [
     {
@@ -3256,40 +3376,6 @@
         "focal_tall_y": 0.48
       },
       "href": "/timeline.html?event=event_wildfire-forces-evacuation-of-nearly-12-000_839c1db808"
-    },
-    {
-      "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
-      "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
-      "summary": "Muninn first tracked this thread on 2026-07-25: Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse. The latest development is Renewed Violence in Yemen Displaces Thousands Amid Ceasefire Collapse.",
-      "activity_status": "active",
-      "stage": "timeline",
-      "stage_label": "Timeline",
-      "first_seen_at": "2026-07-25",
-      "last_seen_at": "2026-09-16",
-      "development_count": 21,
-      "latest_title": "Renewed Violence in Yemen Displaces Thousands Amid Ceasefire Collapse",
-      "topic_label": "Russia-Ukraine War",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea"
     }
   ]
 }
