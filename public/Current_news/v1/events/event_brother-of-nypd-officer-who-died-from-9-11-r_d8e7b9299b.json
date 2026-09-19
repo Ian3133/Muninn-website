@@ -15,7 +15,7 @@
     "summary": "As the 25th anniversary of the September 11 attacks approaches, Phil Alvarez, a retired NYPD detective, reflects on his brother Luis's death from cancer linked to toxins at Ground Zero. Alvarez is working to extend the September 11th Victim Compensation Fund to assist others affected by similar health issues. This year, a seventh moment of silence will be observed to honor those who have died from illnesses related to the toxic dust from the attacks.",
     "status": "active",
     "first_seen_at": "2026-09-11",
-    "last_seen_at": "2026-09-18",
+    "last_seen_at": "2026-09-19",
     "timeline": [
       {
         "development_id": "story_839b70c2e2bb6def",
@@ -1418,7 +1418,116 @@
           "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
         },
         "first_seen_at": "2026-09-18",
-        "last_seen_at": "2026-09-18",
+        "last_seen_at": "2026-09-19",
+        "integrity_status": "trusted",
+        "revisions": [
+          {
+            "daily_story_id": "story_544077ae722e99a0",
+            "reported_at": "2026-09-19",
+            "update_kind": "recirculation",
+            "title": "Russian Drone Strike Hits Shopping Mall in Zaporizhzhia",
+            "summary": "A Russian drone strike targeted a shopping complex in Zaporizhzhia, resulting in one injury and igniting a fire that spread over 10,000 square meters, as reported by Ukraine's State Emergency Service.",
+            "topic_label": "Russia-Ukraine War",
+            "key_facts": [
+              "Russian drones struck a shopping mall in Zaporizhzhia.",
+              "One person was injured in the attack.",
+              "The fire caused by the strike spread across more than 10,000 square meters."
+            ],
+            "source_urls": [
+              "http://www.africanews.com/2026/09/18/russian-drones-devastate-shopping-mall-in-zaporizhzhia-city",
+              "https://www.euronews.com/video/2026/09/18/russian-drones-devastate-shopping-mall-in-zaporizhzhia-city"
+            ]
+          }
+        ],
+        "merged_development_ids": [
+          "story_544077ae722e99a0"
+        ],
+        "revision_count": 1
+      },
+      {
+        "development_id": "story_56a79b3f6f1a9609",
+        "daily_story_id": "story_56a79b3f6f1a9609",
+        "date": "2026-09-19",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Smoke and Flames Erupt Near Riyadh Airport Amid Air Raid Alerts",
+        "summary": "Flames and a large plume of smoke were observed near Riyadh's main airport following overnight air raid alerts issued by Saudi authorities. The alerts were prompted by escalating attacks from Yemen's Houthi group, marking the first such warnings for the capital since the conflict intensified in July. Residents reported hearing loud explosions, and firefighters responded to a fire at a fuel tank near the airport.",
+        "topic_label": "Saudi Arabia Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "Smoke and flames seen near Riyadh airport.",
+          "Saudi Arabia issued air raid alerts due to Houthi attacks.",
+          "Explosions were reported in the capital.",
+          "Firefighters responded to a burning fuel tank."
+        ],
+        "source_count": 3,
+        "sources": [
+          "France 24",
+          "RTE News",
+          "The Guardian"
+        ],
+        "source_urls": [
+          "https://www.rte.ie/news/world/2026/0919/1592186-saudi-arabia-houthis",
+          "https://www.theguardian.com/world/2026/sep/19/saudi-arabia-riyadh-airport",
+          "https://www.france24.com/en/middle-east/20260919-smoke-flames-seen-near-riyadh-airport-major-flight-disruptions-reported"
+        ],
+        "source_details": [
+          {
+            "title": "Flames and smoke seen near Riyadh airport after warnings",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/world/2026/0919/1592186-saudi-arabia-houthis",
+            "source_bias": "center"
+          },
+          {
+            "title": "Thick smoke seen near Riyadh airport after air-raid alerts in Saudi capital",
+            "source": "The Guardian",
+            "link": "https://www.theguardian.com/world/2026/sep/19/saudi-arabia-riyadh-airport",
+            "source_bias": "left"
+          },
+          {
+            "title": "Smoke, flames seen near Riyadh airport, ‘major’ flight disruptions reported",
+            "source": "France 24",
+            "link": "https://www.france24.com/en/middle-east/20260919-smoke-flames-seen-near-riyadh-airport-major-flight-disruptions-reported",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "attack"
+          ],
+          "shared_incident_anchors": [
+            "houthi",
+            "near",
+            "yemen"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "attack",
+            "conflict",
+            "escalating",
+            "houthi",
+            "near",
+            "saudi",
+            "yemen"
+          ],
+          "shared_entities": [
+            "houthi",
+            "near",
+            "yemen"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_9614fc985b66221b",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-19",
+        "last_seen_at": "2026-09-19",
         "integrity_status": "trusted"
       }
     ],
@@ -1453,12 +1562,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 18,
+      "public_development_count": 19,
       "questionable_development_count": 2,
       "review_required": true
     },
-    "latest_title": "Russian Drone Strike Damages Shopping Mall in Zaporizhzhia",
-    "latest_summary": "A Russian drone strike targeted a shopping complex in Zaporizhzhia, resulting in one injury and igniting a fire that spread over 10,000 square meters, as reported by Ukraine's State Emergency Service.",
+    "latest_title": "Smoke and Flames Erupt Near Riyadh Airport Amid Air Raid Alerts",
+    "latest_summary": "Flames and a large plume of smoke were observed near Riyadh's main airport following overnight air raid alerts issued by Saudi authorities. The alerts were prompted by escalating attacks from Yemen's Houthi group, marking the first such warnings for the capital since the conflict intensified in July. Residents reported hearing loud explosions, and firefighters responded to a fire at a fuel tank near the airport.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -1469,29 +1578,29 @@
       "milestone_development_ids": [
         "story_839b70c2e2bb6def",
         "story_125ebf77ea097322",
-        "story_9614fc985b66221b",
-        "story_58b729046f749e11"
+        "story_b88f2bee728f2cb2",
+        "story_56a79b3f6f1a9609"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-09-18",
-      "development_count": 18,
-      "coverage_packet_count": 18,
-      "date_count": 8,
-      "source_count": 50,
-      "independent_source_count": 26,
+      "summary_updated_at": "2026-09-19",
+      "development_count": 19,
+      "coverage_packet_count": 20,
+      "date_count": 9,
+      "source_count": 53,
+      "independent_source_count": 27,
       "first_date": "2026-09-11",
-      "latest_date": "2026-09-18",
-      "latest_update_title": "Russian Drone Strike Damages Shopping Mall in Zaporizhzhia",
+      "latest_date": "2026-09-19",
+      "latest_update_title": "Smoke and Flames Erupt Near Riyadh Airport Amid Air Raid Alerts",
       "coverage_score": 1.0,
       "recency_score": 1.0,
       "rank_score": 1.0,
-      "context_summary": "Muninn first tracked this thread on 2026-09-11: Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims. The latest development is Russian Drone Strike Damages Shopping Mall in Zaporizhzhia.",
-      "cta_label": "Explore 18 developments"
+      "context_summary": "Muninn first tracked this thread on 2026-09-11: Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims. The latest development is Smoke and Flames Erupt Near Riyadh Airport Amid Air Raid Alerts.",
+      "cta_label": "Explore 19 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "As the 25th anniversary of the September 11 attacks approaches, Phil Alvarez, a retired NYPD detective, reflects on his brother Luis's death from cancer linked to toxins at Ground Zero. A later development was Saudi Arabia's East-West Pipeline Remains Closed Following Drone Attack. Most recently, a Russian drone strike targeted a shopping complex in Zaporizhzhia, resulting in one injury and igniting a fire that spread over 10,000 square meters, as reported by Ukraine's State Emergency Service.",
+      "summary": "As the 25th anniversary of the September 11 attacks approaches, Phil Alvarez, a retired NYPD detective, reflects on his brother Luis's death from cancer linked to toxins at Ground Zero. A later development was Saudi Arabia's East-West Pipeline Remains Closed Following Drone Attack. Most recently, flames and a large plume of smoke were observed near Riyadh's main airport following overnight air raid alerts issued by Saudi authorities.",
       "key_developments": [
         {
           "development_id": "story_839b70c2e2bb6def",
@@ -1504,14 +1613,14 @@
           "title": "Trump Urges Ukraine to Cease Strikes on Russian Diesel Refineries Amid Global Shortage"
         },
         {
-          "development_id": "story_9614fc985b66221b",
+          "development_id": "story_b88f2bee728f2cb2",
           "date": "2026-09-16",
-          "title": "Escalating Conflict: Houthis Claim Downing Saudi Jet, Saudis Accuse of Drone Attack Near Mecca"
+          "title": "Saudi Arabia Claims Houthi Drone Targeted Mecca, Warns of Consequences"
         },
         {
-          "development_id": "story_58b729046f749e11",
-          "date": "2026-09-18",
-          "title": "Russian Drone Strike Damages Shopping Mall in Zaporizhzhia"
+          "development_id": "story_56a79b3f6f1a9609",
+          "date": "2026-09-19",
+          "title": "Smoke and Flames Erupt Near Riyadh Airport Amid Air Raid Alerts"
         }
       ],
       "sources": [
@@ -1814,9 +1923,27 @@
           "source": "Euronews",
           "link": "https://www.euronews.com/video/2026/09/18/russian-drones-devastate-shopping-mall-in-zaporizhzhia-city",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Flames and smoke seen near Riyadh airport after warnings",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/world/2026/0919/1592186-saudi-arabia-houthis",
+          "source_bias": "center"
+        },
+        {
+          "title": "Thick smoke seen near Riyadh airport after air-raid alerts in Saudi capital",
+          "source": "The Guardian",
+          "link": "https://www.theguardian.com/world/2026/sep/19/saudi-arabia-riyadh-airport",
+          "source_bias": "left"
+        },
+        {
+          "title": "Smoke, flames seen near Riyadh airport, ‘major’ flight disruptions reported",
+          "source": "France 24",
+          "link": "https://www.france24.com/en/middle-east/20260919-smoke-flames-seen-near-riyadh-airport-major-flight-disruptions-reported",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-09-18",
+      "updated_at": "2026-09-19",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -1860,6 +1987,7 @@
         "confidence": 0.95,
         "shared_entities": [
           "iran-backed_houthi",
+          "july.",
           "red_sea.",
           "russia",
           "ukraine",
@@ -1875,7 +2003,7 @@
         "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
         "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
         "relationship": "related_topic",
-        "confidence": 0.943,
+        "confidence": 0.944,
         "shared_entities": [
           "donald_trump",
           "halt",
@@ -1891,7 +2019,7 @@
         "event_id": "event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a",
         "title": "Trump Delays Iran Strikes to Pursue Diplomatic Deal",
         "relationship": "related_topic",
-        "confidence": 0.81,
+        "confidence": 0.811,
         "shared_entities": [
           "donald_trump",
           "iran",
@@ -1905,89 +2033,104 @@
       "available": true,
       "title": "About 9/11 Victim Compensation",
       "subject": "9/11 Victim Compensation",
-      "summary": "The September 11th Victim Compensation Fund (VCF) is a federally funded, no-fault compensation program for people who suffered eligible physical harm or died as a result of the September 11, 2001 terrorist attacks or related debris-removal work. It is distinct from the World Trade Center Health Program: the VCF provides financial compensation, while the health program provides monitoring and treatment for certified conditions.",
+      "summary": "The September 11th Victim Compensation Fund (VCF) is a U.S. federal compensation program for people physically harmed by the September 11, 2001 terrorist attacks or subsequent debris-removal work, and for personal representatives of people who died from those causes. Reopened under the James Zadroga 9/11 Health and Compensation Act and later permanently authorized, it addresses eligible 9/11-related health claims rather than serving as a general memorial or emergency-relief program.",
       "facts": [
         {
-          "label": "Origins and duration",
-          "value": "Congress created the original fund in 2001; it operated from 2001 to 2004. The James Zadroga 9/11 Health and Compensation Act reactivated it in 2011, and the 2019 permanent-authorization law set an October 1, 2090 claim-filing deadline and provides funding necessary for approved claims.",
+          "label": "Origins and purpose",
+          "value": "Congress created the original September 11th Victim Compensation Fund in Title IV of the Air Transportation Safety and System Stabilization Act, enacted September 22, 2001; it initially operated from 2001 to 2004.",
           "source_ids": [
             "o1",
             "o2"
           ]
         },
         {
-          "label": "Purpose and legal scope",
-          "value": "The VCF compensates eligible individuals, or personal representatives of those who died, for physical injury, illness, or death connected to the September 11 attacks or immediate post-attack debris removal; it is designed as an alternative to tort litigation.",
-          "source_ids": [
-            "o1",
-            "o3"
-          ]
-        },
-        {
-          "label": "Covered locations and periods",
-          "value": "For presence eligibility, the program recognizes the World Trade Center and surrounding New York City Exposure Zone from September 11, 2001 through May 30, 2002; the Pentagon site through November 19, 2001; and the Shanksville, Pennsylvania site through October 3, 2001.",
-          "source_ids": [
-            "o4"
-          ]
-        },
-        {
           "label": "Administration",
-          "value": "The fund is administered by the U.S. Department of Justice, with a Special Master appointed by the Attorney General and operational support from DOJ's Civil Division.",
+          "value": "The Fund is administered by the U.S. Department of Justice under a Special Master appointed by the Attorney General.",
           "source_ids": [
-            "o1",
+            "o2",
             "o3"
           ]
         },
         {
-          "label": "Relationship to health benefits",
-          "value": "VCF eligibility generally requires an eligible physical health condition and proof of presence; World Trade Center Health Program certification is accepted as proof of an eligible condition subject to other requirements. Enrollment in the health program does not automatically register someone with the VCF.",
+          "label": "Eligibility scope",
+          "value": "The reopened VCF can compensate people with qualifying 9/11-related physical health conditions who can document presence at a covered site or exposure zone, as well as authorized representatives filing for deceased victims. Covered locations include the New York City exposure zone, the Pentagon site, and the Shanksville, Pennsylvania site during defined post-attack periods.",
           "source_ids": [
             "o4",
             "o5"
           ]
+        },
+        {
+          "label": "Reauthorization and filing deadline",
+          "value": "The 2010 Zadroga Act reactivated the program, and the Never Forget the Heroes Act, enacted July 29, 2019, extended the deadline for claims and amendments to October 1, 2090 and provided funding for eligible claims.",
+          "source_ids": [
+            "o2",
+            "o6"
+          ]
+        },
+        {
+          "label": "Legal framework",
+          "value": "The original program was designed as a no-fault alternative to certain civil litigation for physical injury and death caused by the September 11 attacks; awards take account of specified collateral-source payments under the governing law.",
+          "source_ids": [
+            "o7",
+            "o3"
+          ]
         }
       ],
-      "scope_note": "The selected Muninn timeline covers anniversary-related advocacy and commemoration connected to 9/11 victims; it does not attempt to track every VCF claim, award, health-program development, or related lawsuit.",
+      "scope_note": "The selected timeline follows 25th-anniversary remembrance, advocacy, and related 9/11-records developments, not the full history of VCF claims processing, awards, eligibility decisions, or World Trade Center Health Program operations.",
       "sources": [
+        {
+          "title": "House",
+          "publisher": "House",
+          "url": "https://uscode.house.gov/statutes/pl/107/42.pdf",
+          "source_type": "primary",
+          "id": "o1"
+        },
         {
           "title": "Justice",
           "publisher": "Justice",
           "url": "https://www.justice.gov/civil/vcf",
           "source_type": "primary",
-          "id": "o1"
-        },
-        {
-          "title": "Vcf",
-          "publisher": "Vcf",
-          "url": "https://www.vcf.gov/permanent-authorization",
-          "source_type": "primary",
           "id": "o2"
         },
         {
-          "title": "Vcf",
-          "publisher": "Vcf",
-          "url": "https://www.vcf.gov/sites/vcf/files/media/document/2020-09/VCF_Info%20Sheet.pdf",
+          "title": "House",
+          "publisher": "House",
+          "url": "https://uscode.house.gov/view.xhtml?edition=prelim&path=%2Fprelim%40title49%2Fsubtitle7%2FpartA%2Fsubpart1",
           "source_type": "primary",
           "id": "o3"
         },
         {
-          "title": "Vcf",
-          "publisher": "Vcf",
-          "url": "https://www.vcf.gov/policy/eligibility-criteria-and-deadlines",
+          "title": "Justice",
+          "publisher": "Justice",
+          "url": "https://www.justice.gov/opa/speech/september-11th-victim-compensation-fund-vcf-special-master-allison-turkel-delivers",
           "source_type": "primary",
           "id": "o4"
         },
         {
-          "title": "Cdc",
-          "publisher": "Cdc",
-          "url": "https://www.cdc.gov/wtc/faq.html",
+          "title": "Justice",
+          "publisher": "Justice",
+          "url": "https://www.justice.gov/d9/2023-03/vcf_fy_2024_pb_narrative_omb_cleared_03.10.23.pdf",
           "source_type": "primary",
           "id": "o5"
+        },
+        {
+          "title": "Congress",
+          "publisher": "Congress",
+          "url": "https://www.congress.gov/116/plaws/publ34/PLAW-116publ34.pdf",
+          "source_type": "primary",
+          "id": "o6"
+        },
+        {
+          "title": "Justice",
+          "publisher": "Justice",
+          "url": "https://www.justice.gov/archive/victimcompensation/victimcompfedreg.htm",
+          "source_type": "primary",
+          "id": "o7"
         }
       ],
       "publisher_count": 3,
-      "generated_at": "2026-09-11T15:47:24.588628+00:00",
-      "expires_at": "2026-09-18T15:47:24.588628+00:00",
+      "generated_at": "2026-09-19T15:16:05.378806+00:00",
+      "expires_at": "2026-09-26T15:16:05.378806+00:00",
       "model": "gpt-5.6-terra",
       "provenance": "openai_web_search_source_grounded_event_overview_v1"
     },
@@ -2033,7 +2176,9 @@
       "agree",
       "agreed",
       "aims",
+      "airport",
       "al-qaida",
+      "alert",
       "allegation",
       "alleged",
       "also",
@@ -2054,6 +2199,7 @@
       "attended",
       "attributed",
       "attributing",
+      "authoritie",
       "await",
       "backed",
       "believe",
@@ -2066,6 +2212,7 @@
       "called",
       "cancel",
       "cancer",
+      "capital",
       "casualtie",
       "caused",
       "cease",
@@ -2136,6 +2283,7 @@
       "emergency",
       "emphasized",
       "energy",
+      "erupt",
       "escalating",
       "escalation",
       "estimated",
@@ -2144,6 +2292,7 @@
       "expected",
       "expense",
       "expert",
+      "explosion",
       "export",
       "express",
       "extend",
@@ -2160,8 +2309,10 @@
       "find",
       "finding",
       "fire",
+      "firefighter",
       "first",
       "five",
+      "flame",
       "four",
       "fuel",
       "fund",
@@ -2169,10 +2320,12 @@
       "global",
       "globally",
       "ground",
+      "group",
       "gulf",
       "halt",
       "halts",
       "health",
+      "hearing",
       "held",
       "highlight",
       "hijacker",
@@ -2205,10 +2358,13 @@
       "iraq",
       "islam",
       "issue",
+      "issued",
+      "july",
       "justice",
       "killed",
       "labeling",
       "laden",
+      "large",
       "launching",
       "leader",
       "leading",
@@ -2218,11 +2374,14 @@
       "linked",
       "lives",
       "lost",
+      "loud",
       "luis",
       "made",
+      "main",
       "mall",
       "many",
       "marked",
+      "marking",
       "marks",
       "measure",
       "mecca",
@@ -2254,6 +2413,7 @@
       "orchestrating",
       "osama",
       "other",
+      "overnight",
       "paid",
       "participated",
       "parts",
@@ -2266,6 +2426,7 @@
       "pipeline",
       "place",
       "planned",
+      "plume",
       "potential",
       "power",
       "prepared",
@@ -2273,8 +2434,10 @@
       "prevent",
       "price",
       "profound",
+      "prompted",
       "prompting",
       "quarter-century",
+      "raid",
       "rail",
       "raised",
       "rather",
@@ -2299,7 +2462,9 @@
       "representative",
       "republican",
       "request",
+      "resident",
       "resolution",
+      "responded",
       "responder",
       "response",
       "resulted",
@@ -2307,6 +2472,7 @@
       "retired",
       "reveal",
       "rising",
+      "riyadh",
       "russia",
       "same",
       "saudi",
@@ -2332,6 +2498,7 @@
       "since",
       "sites",
       "situation",
+      "smoke",
       "solemn",
       "somber",
       "some",
@@ -2343,10 +2510,12 @@
       "stated",
       "stop",
       "strike",
+      "such",
       "suggest",
       "supplie",
       "support",
       "survivor",
+      "tank",
       "target",
       "targeted",
       "tehran",
@@ -2401,8 +2570,10 @@
       "zero"
     ],
     "entities": [
+      "air_raid",
       "al-qaida",
       "al-qaida.",
+      "alert_flame",
       "america",
       "arabia_claim",
       "arabia_east-west",
@@ -2439,12 +2610,14 @@
       "emergency_service.",
       "end",
       "end_ongoing",
+      "erupt_near",
       "europeans._familie",
       "expert_find",
       "family_request",
       "february.",
       "february._these",
       "find_ground",
+      "flame_erupt",
       "ground",
       "ground_zero",
       "ground_zero.",
@@ -2461,11 +2634,14 @@
       "iraq.",
       "jd",
       "jet_saudi",
+      "july.",
+      "july._resident",
       "mecca",
       "mecca._u.n.",
       "mecca_islam",
       "mecca_warns",
       "near_mecca",
+      "near_riyadh",
       "nearly_billion",
       "nypd",
       "nypd_officer",
@@ -2476,6 +2652,7 @@
       "phil_alvarez",
       "pipeline_remain",
       "presidential_brief",
+      "raid_alert",
       "red_sea.",
       "related_cancer",
       "remain_closed",
@@ -2485,6 +2662,8 @@
       "request_donald",
       "rising_inflation",
       "rising_tension",
+      "riyadh",
+      "riyadh_airport",
       "russia",
       "russia_diesel",
       "russia_drone",
@@ -2496,6 +2675,7 @@
       "sea._saudi",
       "senate",
       "september_victim",
+      "service._smoke",
       "shanksville",
       "shanksville_pennsylvania",
       "shopping_mall",
@@ -2525,7 +2705,7 @@
       "zaporizhzhia",
       "zero._alvarez"
     ],
-    "search_text": "000 11-related 11th 120 156 184 2001 2026 25th accusation accuse accused across action additional advance advocate affected agree agreed aims al-qaida al-qaida. allegation alleged also alvarez america among anger anniversary announced approache approval approving arabia arabia_claim arabia_east-west assist attack attacking attempting attended attributed attributing await backed believe billion bin_laden both brief broader brother budget budget_office called cancel cancel_meeting cancer cancer_advocate casualtie caused cbo cease ceremonie ceremony children cia cia_declassifie civilian claim claim_downing claim_houthi claim_russia claimed claiming clashe closed coalition comes commemorate commemorate_anniversary commemorating commemorating_years commemoration committed committed_war compensation compensation_fund complex concern concluded conflict congressional congressional_budget consequence consequence_saudi consider consider_releasing consideration constitute context continued continuing contributed convention cost costs crime crisi daily dalla damage damage_shopping de-escalate death declassifie declassifie_presidential declassify defense deliver denied depending deployed despite despite_trump destroyed detailing detective deterrent died diesel diesel_refinerie dignitarie disruption document donald donald_trump downed downing downing_saudi dozen drone drone_targeted dust each east-west east-west_pipeline emergency emergency_service. emphasized end end_ongoing energy escalating escalation estimated european europeans._familie exchange expected expense expert expert_find export express extend extremist face facility fact-finding false familie family family_request fatalitie fatality february february. february._these find find_ground finding fire first five four fuel fund gathered global globally ground ground_zero ground_zero. gulf halt halt_energy halts health held highlight hijacker holiest honor house house_votes houthi houthi_claim houthi_drone however however_ukraine igniting illnesse impact including incur indicate individual inflation influence infrastructure initially injury intelligence intensified intensity intercepted international involvement iran iran-backed iran-backed_houthi iran_war iranian-backed iraq iraq. islam issue jd jet_saudi justice killed labeling laden launching leader leading least leave line linked lives lost luis made mall many marked marks measure mecca mecca._u.n. mecca_islam mecca_warns meeting memorial meter midterm military militia mission moment month mood movement names nation near near_mecca nearly nearly_billion network nypd nypd_officer observed occurred offensive office officer officer_who oil ongoing ongoing_iran only orchestrating osama other paid participated parts passage past pennsylvania pentagon persian persian_gulf phil phil_alvarez pipeline pipeline_remain place planned potential power prepared presidential presidential_brief prevent price profound prompting quarter-century rail raised rather read reasonable rebel recent record red_sea. refinerie reflect reflected reflecting regarding region related related_cancer released releasing remain remain_closed remembrance remembrance_ceremonie repair reported representative republican republican_convention request request_donald resolution responder response resulted resulting retired reveal rising rising_inflation rising_tension russia russia_diesel russia_drone same saudi saudi-led saudi_accuse saudi_arabia saudi_arabia. saudi_jet scheduled school sea._saudi security seek seizing senate september september_victim service seventh several shanksville shanksville_pennsylvania shopping shopping_mall shortage shortage_trump shrapnel shut sides significant silence similar since sites situation solemn somber some speech sport spread square stability stated stop strike suggest supplie support survivor target targeted targeted_mecca tehran tension tension_persian than them there these third those threat threatening time took toward toxic toxin tracking tragic transparency tribute trump trump_claim trump_urges u.n. u.n._expert ukraine ukraine_agree undertaken united united_nation united_states. urges urges_ukraine us vance vice victim victim_compensation violation violence volodymyr volodymyr_zelensky voted votes war war_costs war_crime warned warning warns weeks where which while who_died without working year years years_since yemen yemen_houthi yemen_red yemeni york zaporizhzhia zelensky zero zero._alvarez"
+    "search_text": "000 11-related 11th 120 156 184 2001 2026 25th accusation accuse accused across action additional advance advocate affected agree agreed aims air_raid airport al-qaida al-qaida. alert alert_flame allegation alleged also alvarez america among anger anniversary announced approache approval approving arabia arabia_claim arabia_east-west assist attack attacking attempting attended attributed attributing authoritie await backed believe billion bin_laden both brief broader brother budget budget_office called cancel cancel_meeting cancer cancer_advocate capital casualtie caused cbo cease ceremonie ceremony children cia cia_declassifie civilian claim claim_downing claim_houthi claim_russia claimed claiming clashe closed coalition comes commemorate commemorate_anniversary commemorating commemorating_years commemoration committed committed_war compensation compensation_fund complex concern concluded conflict congressional congressional_budget consequence consequence_saudi consider consider_releasing consideration constitute context continued continuing contributed convention cost costs crime crisi daily dalla damage damage_shopping de-escalate death declassifie declassifie_presidential declassify defense deliver denied depending deployed despite despite_trump destroyed detailing detective deterrent died diesel diesel_refinerie dignitarie disruption document donald donald_trump downed downing downing_saudi dozen drone drone_targeted dust each east-west east-west_pipeline emergency emergency_service. emphasized end end_ongoing energy erupt erupt_near escalating escalation estimated european europeans._familie exchange expected expense expert expert_find explosion export express extend extremist face facility fact-finding false familie family family_request fatalitie fatality february february. february._these find find_ground finding fire firefighter first five flame flame_erupt four fuel fund gathered global globally ground ground_zero ground_zero. group gulf halt halt_energy halts health hearing held highlight hijacker holiest honor house house_votes houthi houthi_claim houthi_drone however however_ukraine igniting illnesse impact including incur indicate individual inflation influence infrastructure initially injury intelligence intensified intensity intercepted international involvement iran iran-backed iran-backed_houthi iran_war iranian-backed iraq iraq. islam issue issued jd jet_saudi july july. july._resident justice killed labeling laden large launching leader leading least leave line linked lives lost loud luis made main mall many marked marking marks measure mecca mecca._u.n. mecca_islam mecca_warns meeting memorial meter midterm military militia mission moment month mood movement names nation near near_mecca near_riyadh nearly nearly_billion network nypd nypd_officer observed occurred offensive office officer officer_who oil ongoing ongoing_iran only orchestrating osama other overnight paid participated parts passage past pennsylvania pentagon persian persian_gulf phil phil_alvarez pipeline pipeline_remain place planned plume potential power prepared presidential presidential_brief prevent price profound prompted prompting quarter-century raid raid_alert rail raised rather read reasonable rebel recent record red_sea. refinerie reflect reflected reflecting regarding region related related_cancer released releasing remain remain_closed remembrance remembrance_ceremonie repair reported representative republican republican_convention request request_donald resident resolution responded responder response resulted resulting retired reveal rising rising_inflation rising_tension riyadh riyadh_airport russia russia_diesel russia_drone same saudi saudi-led saudi_accuse saudi_arabia saudi_arabia. saudi_jet scheduled school sea._saudi security seek seizing senate september september_victim service service._smoke seventh several shanksville shanksville_pennsylvania shopping shopping_mall shortage shortage_trump shrapnel shut sides significant silence similar since sites situation smoke solemn somber some speech sport spread square stability stated stop strike such suggest supplie support survivor tank target targeted targeted_mecca tehran tension tension_persian than them there these third those threat threatening time took toward toxic toxin tracking tragic transparency tribute trump trump_claim trump_urges u.n. u.n._expert ukraine ukraine_agree undertaken united united_nation united_states. urges urges_ukraine us vance vice victim victim_compensation violation violence volodymyr volodymyr_zelensky voted votes war war_costs war_crime warned warning warns weeks where which while who_died without working year years years_since yemen yemen_houthi yemen_red yemeni york zaporizhzhia zelensky zero zero._alvarez"
   },
   "related_events": [
     {
