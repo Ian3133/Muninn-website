@@ -15,7 +15,7 @@
     "summary": "A Hong Kong court has convicted Dow Jones, the publisher of the Wall Street Journal, of deterring reporter Selina Cheng from taking on a leadership role at the Hong Kong Journalist Association. The court found Dow Jones guilty of one charge but acquitted it of a second charge related to Cheng's dismissal shortly after her appointment in 2024, which raised concerns about press freedom in the region.",
     "status": "active",
     "first_seen_at": "2026-09-10",
-    "last_seen_at": "2026-09-19",
+    "last_seen_at": "2026-09-20",
     "timeline": [
       {
         "development_id": "story_868b529acfacbc79",
@@ -143,15 +143,101 @@
         "first_seen_at": "2026-09-19",
         "last_seen_at": "2026-09-19",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_7398152de36d2358",
+        "daily_story_id": "story_7398152de36d2358",
+        "date": "2026-09-20",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Trump Bans Journalists from White House; Barrasso Defends Decision",
+        "summary": "President Trump announced a ban on journalists from CNN, MS NOW, and Politico from accessing the White House, citing unfavorable coverage. This decision was made effective immediately. Senator John Barrasso stated that the ban does not violate the US Constitution, emphasizing the press's obligation to report fairly.",
+        "topic_label": "Press Freedom",
+        "development_type": "policy",
+        "key_facts": [
+          "Trump banned CNN, MS NOW, and Politico journalists from the White House.",
+          "Barrasso defended the ban, stating it does not violate the Constitution.",
+          "The ban was announced via a Truth Social post by Trump."
+        ],
+        "source_count": 5,
+        "sources": [
+          "DW",
+          "NBC News",
+          "NewsNation",
+          "PBS News"
+        ],
+        "source_urls": [
+          "https://www.nbcnews.com/meet-the-press/video/john-barrasso-says-president-trump-banning-media-outlets-doesn-t-violate-the-u-s-constitution-270177349901",
+          "https://www.dw.com/en/cnn-ms-now-and-politico-denied-access-to-white-house/a-79339055?maca=en-rss-en-all-1573-rdf",
+          "https://www.pbs.org/newshour/politics/ms-now-cnn-and-politico-say-their-journalists-were-denied-access-to-white-house-after-trump-ban",
+          "https://www.pbs.org/newshour/show/trump-says-hes-banning-3-outlets-from-white-house-in-his-latest-attack-on-press-freedom",
+          "https://www.newsnationnow.com/politics/cnn-ms-now-politico-journalists-denied-white-house-entry"
+        ],
+        "source_details": [
+          {
+            "title": "John Barrasso says President Trump banning media outlets doesn’t violate the US Constitution",
+            "source": "NBC News",
+            "link": "https://www.nbcnews.com/meet-the-press/video/john-barrasso-says-president-trump-banning-media-outlets-doesn-t-violate-the-u-s-constitution-270177349901",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "CNN, MS NOW and Politico denied access to White House",
+            "source": "DW",
+            "link": "https://www.dw.com/en/cnn-ms-now-and-politico-denied-access-to-white-house/a-79339055?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "MS NOW, CNN and Politico say their journalists were denied access to White House after Trump ban",
+            "source": "PBS News",
+            "link": "https://www.pbs.org/newshour/politics/ms-now-cnn-and-politico-say-their-journalists-were-denied-access-to-white-house-after-trump-ban",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Trump says he's banning 3 outlets from White House in his latest attack on press freedom",
+            "source": "PBS News",
+            "link": "https://www.pbs.org/newshour/show/trump-says-hes-banning-3-outlets-from-white-house-in-his-latest-attack-on-press-freedom",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "CNN, MS NOW, Politico say journalists denied White House entry",
+            "source": "NewsNation",
+            "link": "https://www.newsnationnow.com/politics/cnn-ms-now-politico-journalists-denied-white-house-entry",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_868b529acfacbc79",
+          "shared_tokens": [
+            "freedom",
+            "journalist",
+            "press"
+          ],
+          "shared_entities": [
+            "press_freedom"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-20",
+        "last_seen_at": "2026-09-20",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 2,
+      "public_development_count": 3,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Trump Bans CNN, MS NOW, and Politico from White House Access",
-    "latest_summary": "President Trump announced a ban on CNN, MS NOW, and Politico from White House access, citing their reporting as 'fake news.' The ban took effect immediately, with journalists from the affected outlets reporting they were denied entry to the White House grounds. This action has raised concerns about press freedom and could face legal challenges.",
+    "latest_title": "Trump Bans Journalists from White House; Barrasso Defends Decision",
+    "latest_summary": "President Trump announced a ban on journalists from CNN, MS NOW, and Politico from accessing the White House, citing unfavorable coverage. This decision was made effective immediately. Senator John Barrasso stated that the ban does not violate the US Constitution, emphasizing the press's obligation to report fairly.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": false,
@@ -161,28 +247,29 @@
       "display_title": "Dow Jones Found Guilty of Deterring Journalist from Union Role in Hong Kong",
       "milestone_development_ids": [
         "story_868b529acfacbc79",
-        "story_a47b814415372ed4"
+        "story_a47b814415372ed4",
+        "story_7398152de36d2358"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-09-19",
-      "development_count": 2,
-      "coverage_packet_count": 2,
-      "date_count": 2,
-      "source_count": 5,
-      "independent_source_count": 5,
+      "summary_updated_at": "2026-09-20",
+      "development_count": 3,
+      "coverage_packet_count": 3,
+      "date_count": 3,
+      "source_count": 10,
+      "independent_source_count": 8,
       "first_date": "2026-09-10",
-      "latest_date": "2026-09-19",
-      "latest_update_title": "Trump Bans CNN, MS NOW, and Politico from White House Access",
-      "coverage_score": 0.447,
+      "latest_date": "2026-09-20",
+      "latest_update_title": "Trump Bans Journalists from White House; Barrasso Defends Decision",
+      "coverage_score": 0.72,
       "recency_score": 1.0,
-      "rank_score": 0.768,
-      "context_summary": "Muninn first tracked this thread on 2026-09-10: Dow Jones Found Guilty of Deterring Journalist from Union Role in Hong Kong. The latest development is Trump Bans CNN, MS NOW, and Politico from White House Access.",
+      "rank_score": 0.882,
+      "context_summary": "Muninn first tracked this thread on 2026-09-10: Dow Jones Found Guilty of Deterring Journalist from Union Role in Hong Kong. The latest development is Trump Bans Journalists from White House; Barrasso Defends Decision.",
       "cta_label": ""
     },
     "event_summary": {
       "available": true,
-      "summary": "A Hong Kong court has convicted Dow Jones, the publisher of the Wall Street Journal, of deterring reporter Selina Cheng from taking on a leadership role at the Hong Kong Journalist Association. Most recently, president Trump announced a ban on CNN, MS NOW, and Politico from White House access, citing their reporting as 'fake news.' The ban took effect immediately, with journalists from the affected outlets reporting they were denied entry to the White House grounds.",
+      "summary": "A Hong Kong court has convicted Dow Jones, the publisher of the Wall Street Journal, of deterring reporter Selina Cheng from taking on a leadership role at the Hong Kong Journalist Association. A later development was Trump Bans CNN, MS NOW, and Politico from White House Access. Most recently, president Trump announced a ban on journalists from CNN, MS NOW, and Politico from accessing the White House, citing unfavorable coverage.",
       "key_developments": [
         {
           "development_id": "story_868b529acfacbc79",
@@ -193,6 +280,11 @@
           "development_id": "story_a47b814415372ed4",
           "date": "2026-09-19",
           "title": "Trump Bans CNN, MS NOW, and Politico from White House Access"
+        },
+        {
+          "development_id": "story_7398152de36d2358",
+          "date": "2026-09-20",
+          "title": "Trump Bans Journalists from White House; Barrasso Defends Decision"
         }
       ],
       "sources": [
@@ -225,9 +317,39 @@
           "source": "France 24",
           "link": "https://www.france24.com/en/donald-trump-bans-three-media-outlets-from-the-white-house-accusing-them-of-spreading-fake-news",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "John Barrasso says President Trump banning media outlets doesn’t violate the US Constitution",
+          "source": "NBC News",
+          "link": "https://www.nbcnews.com/meet-the-press/video/john-barrasso-says-president-trump-banning-media-outlets-doesn-t-violate-the-u-s-constitution-270177349901",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "CNN, MS NOW and Politico denied access to White House",
+          "source": "DW",
+          "link": "https://www.dw.com/en/cnn-ms-now-and-politico-denied-access-to-white-house/a-79339055?maca=en-rss-en-all-1573-rdf",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "MS NOW, CNN and Politico say their journalists were denied access to White House after Trump ban",
+          "source": "PBS News",
+          "link": "https://www.pbs.org/newshour/politics/ms-now-cnn-and-politico-say-their-journalists-were-denied-access-to-white-house-after-trump-ban",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Trump says he's banning 3 outlets from White House in his latest attack on press freedom",
+          "source": "PBS News",
+          "link": "https://www.pbs.org/newshour/show/trump-says-hes-banning-3-outlets-from-white-house-in-his-latest-attack-on-press-freedom",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "CNN, MS NOW, Politico say journalists denied White House entry",
+          "source": "NewsNation",
+          "link": "https://www.newsnationnow.com/politics/cnn-ms-now-politico-journalists-denied-white-house-entry",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-09-19",
+      "updated_at": "2026-09-20",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "developing_event",
@@ -236,7 +358,7 @@
         "event_id": "event_trump-prohibits-three-media-outlets-from-whi_587f6e05b0",
         "title": "Trump Prohibits Three Media Outlets from White House Access",
         "relationship": "related_topic",
-        "confidence": 0.72,
+        "confidence": 0.735,
         "shared_entities": [
           "house_access",
           "white",
@@ -247,20 +369,21 @@
         "event_id": "event_trump-plans-supreme-court-appeal-after-court_2902613cd6",
         "title": "Court Halts Trump's White House Ballroom Construction, Appeals Expected",
         "relationship": "related_topic",
-        "confidence": 0.661,
+        "confidence": 0.701,
         "shared_entities": [
+          "us",
           "white",
           "white_house"
         ]
       },
       {
-        "event_id": "event_hong-kong-activists-sentenced-for-organizing_8372079341",
-        "title": "Hong Kong Activists Sentenced for Organizing Tiananmen Vigils",
+        "event_id": "event_trump-announces-major-agreement-for-us-contr_5685022b9b",
+        "title": "Trump Announces Major Agreement for US Control of Venezuelan Oil Reserves",
         "relationship": "related_topic",
         "confidence": 0.657,
         "shared_entities": [
-          "hong",
-          "hong_kong"
+          "us",
+          "white_house"
         ]
       },
       {
@@ -274,89 +397,6 @@
         ]
       }
     ],
-    "search_tokens": [
-      "2024",
-      "access",
-      "acquitted",
-      "action",
-      "affected",
-      "announced",
-      "appointment",
-      "association",
-      "bans",
-      "challenge",
-      "charge",
-      "cheng",
-      "citing",
-      "concern",
-      "convicted",
-      "court",
-      "denied",
-      "deterring",
-      "dismissal",
-      "effect",
-      "entry",
-      "face",
-      "fake",
-      "found",
-      "freedom",
-      "ground",
-      "guilty",
-      "hong",
-      "house",
-      "immediately",
-      "jones",
-      "journal",
-      "journalist",
-      "kong",
-      "leadership",
-      "legal",
-      "outlet",
-      "politico",
-      "press",
-      "publisher",
-      "raised",
-      "region",
-      "related",
-      "reporter",
-      "reporting",
-      "role",
-      "second",
-      "selina",
-      "shortly",
-      "street",
-      "taking",
-      "they",
-      "took",
-      "trump",
-      "union",
-      "wall",
-      "which",
-      "white"
-    ],
-    "entities": [
-      "bans_cnn",
-      "cheng",
-      "cnn",
-      "deterring_journalist",
-      "dow_jones",
-      "hong",
-      "hong_kong",
-      "house_access",
-      "journalist_association.",
-      "kong_journalist",
-      "ms",
-      "now",
-      "selina_cheng",
-      "street_journal",
-      "trump_bans",
-      "union",
-      "union_role",
-      "wall_street",
-      "white",
-      "white_house"
-    ],
-    "search_text": "2024 access acquitted action affected announced appointment association bans bans_cnn challenge charge cheng citing cnn concern convicted court denied deterring deterring_journalist dismissal dow_jones effect entry face fake found freedom ground guilty hong hong_kong house house_access immediately jones journal journalist journalist_association. kong kong_journalist leadership legal ms now outlet politico press publisher raised region related reporter reporting role second selina selina_cheng shortly street street_journal taking they took trump trump_bans union union_role wall wall_street which white white_house",
     "event_overview": {
       "available": true,
       "title": "About Press Freedom",
@@ -478,7 +518,112 @@
       "focal_wide_y": 0.48,
       "focal_tall_x": 0.5,
       "focal_tall_y": 0.48
-    }
+    },
+    "search_tokens": [
+      "2024",
+      "access",
+      "accessing",
+      "acquitted",
+      "action",
+      "affected",
+      "announced",
+      "appointment",
+      "association",
+      "bans",
+      "barrasso",
+      "challenge",
+      "charge",
+      "cheng",
+      "citing",
+      "concern",
+      "constitution",
+      "convicted",
+      "court",
+      "coverage",
+      "decision",
+      "defend",
+      "denied",
+      "deterring",
+      "dismissal",
+      "does",
+      "effect",
+      "effective",
+      "emphasizing",
+      "entry",
+      "face",
+      "fairly",
+      "fake",
+      "found",
+      "freedom",
+      "ground",
+      "guilty",
+      "hong",
+      "house",
+      "immediately",
+      "john",
+      "jones",
+      "journal",
+      "journalist",
+      "kong",
+      "leadership",
+      "legal",
+      "made",
+      "obligation",
+      "outlet",
+      "politico",
+      "press",
+      "publisher",
+      "raised",
+      "region",
+      "related",
+      "reporter",
+      "reporting",
+      "role",
+      "second",
+      "selina",
+      "shortly",
+      "stated",
+      "street",
+      "taking",
+      "they",
+      "took",
+      "trump",
+      "unfavorable",
+      "union",
+      "violate",
+      "wall",
+      "which",
+      "white"
+    ],
+    "entities": [
+      "bans_cnn",
+      "bans_journalist",
+      "barrasso_defend",
+      "cheng",
+      "cnn",
+      "defend_decision",
+      "deterring_journalist",
+      "dow_jones",
+      "hong",
+      "hong_kong",
+      "house_access",
+      "house_barrasso",
+      "john_barrasso",
+      "journalist_association.",
+      "kong_journalist",
+      "ms",
+      "now",
+      "selina_cheng",
+      "street_journal",
+      "trump_bans",
+      "union",
+      "union_role",
+      "us",
+      "wall_street",
+      "white",
+      "white_house"
+    ],
+    "search_text": "2024 access accessing acquitted action affected announced appointment association bans bans_cnn bans_journalist barrasso barrasso_defend challenge charge cheng citing cnn concern constitution convicted court coverage decision defend defend_decision denied deterring deterring_journalist dismissal does dow_jones effect effective emphasizing entry face fairly fake found freedom ground guilty hong hong_kong house house_access house_barrasso immediately john john_barrasso jones journal journalist journalist_association. kong kong_journalist leadership legal made ms now obligation outlet politico press publisher raised region related reporter reporting role second selina selina_cheng shortly stated street street_journal taking they took trump trump_bans unfavorable union union_role us violate wall wall_street which white white_house"
   },
   "related_events": [
     {
@@ -514,6 +659,40 @@
         "focal_tall_y": 0.48
       },
       "href": "/timeline.html?event=event_trump-plans-supreme-court-appeal-after-court_2902613cd6"
+    },
+    {
+      "event_id": "event_trump-announces-major-agreement-for-us-contr_5685022b9b",
+      "title": "Trump Announces Major Agreement for US Control of Venezuelan Oil Reserves",
+      "summary": "Muninn first tracked this thread on 2026-08-29: Trump Announces Major Agreement for US Control of Venezuelan Oil Reserves. The latest development is Trump Announces Major Oil Deal for US Access to Venezuela's Reserves.",
+      "activity_status": "active",
+      "stage": "developing_event",
+      "stage_label": "Developing event",
+      "first_seen_at": "2026-08-29",
+      "last_seen_at": "2026-08-31",
+      "development_count": 2,
+      "latest_title": "Trump Announces Major Oil Deal for US Access to Venezuela's Reserves",
+      "topic_label": "Venezuela Oil Deal",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_trump-announces-major-agreement-for-us-contr_5685022b9b.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_trump-announces-major-agreement-for-us-contr_5685022b9b.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_trump-announces-major-agreement-for-us-contr_5685022b9b"
     }
   ]
 }

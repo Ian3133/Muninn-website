@@ -1,0 +1,576 @@
+{
+  "schema_version": 1,
+  "resource_type": "event",
+  "event_id": "event_us-ambassador-visits-palestinian-town-affect_b3a27c1286",
+  "publication": {
+    "status": "published",
+    "permalink": "/timeline.html?event=event_us-ambassador-visits-palestinian-town-affect_b3a27c1286",
+    "share_expires_at": null
+  },
+  "event": {
+    "event_id": "event_us-ambassador-visits-palestinian-town-affect_b3a27c1286",
+    "title": "US Ambassador Visits Palestinian Town Affected by Settler Violence",
+    "canonical_title": "US Ambassador Visits Palestinian Town Affected by Settler Violence",
+    "topic_label": "West Bank Violence",
+    "summary": "US Ambassador to Israel Mike Huckabee visited the Palestinian town of Turmus Ayya in the Israeli-occupied West Bank, which has faced repeated violence from Israeli settlers. During his visit, Huckabee emphasized the need for the Israeli government to address the issue of violent settlers.",
+    "status": "active",
+    "first_seen_at": "2026-09-05",
+    "last_seen_at": "2026-09-20",
+    "timeline": [
+      {
+        "development_id": "story_cd415c0fcdec63ff",
+        "daily_story_id": "story_cd415c0fcdec63ff",
+        "date": "2026-09-05",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "US Ambassador Visits Palestinian Town Affected by Settler Violence",
+        "summary": "US Ambassador to Israel Mike Huckabee visited the Palestinian town of Turmus Ayya in the Israeli-occupied West Bank, which has faced repeated violence from Israeli settlers. During his visit, Huckabee emphasized the need for the Israeli government to address the issue of violent settlers.",
+        "topic_label": "West Bank Violence",
+        "development_type": "policy",
+        "key_facts": [
+          "Mike Huckabee visited Turmus Ayya, a Palestinian town in the West Bank.",
+          "The town has been targeted by Israeli settler violence.",
+          "Huckabee called for action against violent settlers."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Al Jazeera English",
+          "France 24 - English"
+        ],
+        "source_urls": [
+          "https://www.france24.com/en/middle-east/20260905-us-ambassador-to-israel-visits-palestinian-town-hit-by-west-bank-settler-violence",
+          "https://www.aljazeera.com/video/newsfeed/2026/9/5/us-ambassador-to-israel-meets-palestinian-americans-in-occupied-west-bank?traffic_source=rss"
+        ],
+        "source_details": [
+          {
+            "title": "US ambassador to Israel visits Palestinian town hit by West Bank settler violence",
+            "source": "France 24 - English",
+            "link": "https://www.france24.com/en/middle-east/20260905-us-ambassador-to-israel-visits-palestinian-town-hit-by-west-bank-settler-violence",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "US ambassador to Israel meets Palestinian-Americans in occupied West Bank",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/video/newsfeed/2026/9/5/us-ambassador-to-israel-meets-palestinian-americans-in-occupied-west-bank?traffic_source=rss",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 1.0,
+        "match_evidence": {
+          "score": 1.0,
+          "method": "new_event",
+          "shared_tokens": [],
+          "shared_entities": []
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-05",
+        "last_seen_at": "2026-09-05",
+        "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_3aa18e68fd5c8cf7",
+        "daily_story_id": "story_3aa18e68fd5c8cf7",
+        "date": "2026-09-20",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Violence in West Bank: Israeli Forces Kill Palestinian Amid Escalating Tensions",
+        "summary": "Israeli forces killed a Palestinian man near Jenin in the occupied West Bank, while an Israeli settler was also fatally shot in a separate incident. The violence is part of a broader escalation in the region, with military authorities warning that the situation is increasingly out of control.",
+        "topic_label": "West Bank Violence",
+        "development_type": "policy",
+        "key_facts": [
+          "Israeli forces killed a Palestinian man near Jenin.",
+          "An Israeli settler was fatally shot in a separate incident.",
+          "The violence in the West Bank is escalating rapidly."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Al Jazeera English",
+          "France 24 - English"
+        ],
+        "source_urls": [
+          "https://www.aljazeera.com/news/2026/9/20/israeli-forces-kill-palestinian-near-jenin-in-occupied-west-bank?traffic_source=rss",
+          "https://www.france24.com/en/an-israeli-settler-and-a-palestinian-driver-killed-in-west-bank-shootings"
+        ],
+        "source_details": [
+          {
+            "title": "Israeli forces kill Palestinian near Jenin in occupied West Bank",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/news/2026/9/20/israeli-forces-kill-palestinian-near-jenin-in-occupied-west-bank?traffic_source=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "An Israeli settler and a Palestinian driver killed in West Bank shootings",
+            "source": "France 24 - English",
+            "link": "https://www.france24.com/en/an-israeli-settler-and-a-palestinian-driver-killed-in-west-bank-shootings",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_cd415c0fcdec63ff",
+          "shared_tokens": [
+            "bank",
+            "israel",
+            "palestinian",
+            "settler",
+            "violence",
+            "west"
+          ],
+          "shared_entities": [
+            "israel",
+            "west"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-20",
+        "last_seen_at": "2026-09-20",
+        "integrity_status": "trusted"
+      }
+    ],
+    "integrity": {
+      "public_development_count": 2,
+      "questionable_development_count": 0,
+      "review_required": false
+    },
+    "latest_title": "Violence in West Bank: Israeli Forces Kill Palestinian Amid Escalating Tensions",
+    "latest_summary": "Israeli forces killed a Palestinian man near Jenin in the occupied West Bank, while an Israeli settler was also fatally shot in a separate incident. The violence is part of a broader escalation in the region, with military authorities warning that the situation is increasingly out of control.",
+    "presentation": {
+      "has_context": true,
+      "has_full_timeline": false,
+      "stage": "developing_event",
+      "stage_label": "Developing event",
+      "base_title": "US Ambassador Visits Palestinian Town Affected by Settler Violence",
+      "display_title": "US Ambassador Visits Palestinian Town Affected by Settler Violence",
+      "milestone_development_ids": [
+        "story_cd415c0fcdec63ff",
+        "story_3aa18e68fd5c8cf7"
+      ],
+      "summary_available": true,
+      "summary_label": "Read the story so far",
+      "summary_updated_at": "2026-09-20",
+      "development_count": 2,
+      "coverage_packet_count": 2,
+      "date_count": 2,
+      "source_count": 4,
+      "independent_source_count": 2,
+      "first_date": "2026-09-05",
+      "latest_date": "2026-09-20",
+      "latest_update_title": "Violence in West Bank: Israeli Forces Kill Palestinian Amid Escalating Tensions",
+      "coverage_score": 0.322,
+      "recency_score": 1.0,
+      "rank_score": 0.715,
+      "context_summary": "Muninn first tracked this thread on 2026-09-05: US Ambassador Visits Palestinian Town Affected by Settler Violence. The latest development is Violence in West Bank: Israeli Forces Kill Palestinian Amid Escalating Tensions.",
+      "cta_label": ""
+    },
+    "event_summary": {
+      "available": true,
+      "summary": "US Ambassador to Israel Mike Huckabee visited the Palestinian town of Turmus Ayya in the Israeli-occupied West Bank, which has faced repeated violence from Israeli settlers. Most recently, israeli forces killed a Palestinian man near Jenin in the occupied West Bank, while an Israeli settler was also fatally shot in a separate incident.",
+      "key_developments": [
+        {
+          "development_id": "story_cd415c0fcdec63ff",
+          "date": "2026-09-05",
+          "title": "US Ambassador Visits Palestinian Town Affected by Settler Violence"
+        },
+        {
+          "development_id": "story_3aa18e68fd5c8cf7",
+          "date": "2026-09-20",
+          "title": "Violence in West Bank: Israeli Forces Kill Palestinian Amid Escalating Tensions"
+        }
+      ],
+      "sources": [
+        {
+          "title": "US ambassador to Israel visits Palestinian town hit by West Bank settler violence",
+          "source": "France 24 - English",
+          "link": "https://www.france24.com/en/middle-east/20260905-us-ambassador-to-israel-visits-palestinian-town-hit-by-west-bank-settler-violence",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "US ambassador to Israel meets Palestinian-Americans in occupied West Bank",
+          "source": "Al Jazeera English",
+          "link": "https://www.aljazeera.com/video/newsfeed/2026/9/5/us-ambassador-to-israel-meets-palestinian-americans-in-occupied-west-bank?traffic_source=rss",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Israeli forces kill Palestinian near Jenin in occupied West Bank",
+          "source": "Al Jazeera English",
+          "link": "https://www.aljazeera.com/news/2026/9/20/israeli-forces-kill-palestinian-near-jenin-in-occupied-west-bank?traffic_source=rss",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "An Israeli settler and a Palestinian driver killed in West Bank shootings",
+          "source": "France 24 - English",
+          "link": "https://www.france24.com/en/an-israeli-settler-and-a-palestinian-driver-killed-in-west-bank-shootings",
+          "source_bias": "lean-left"
+        }
+      ],
+      "updated_at": "2026-09-20",
+      "provenance": "source_grounded_event_memory"
+    },
+    "event_stage": "developing_event",
+    "related_events": [
+      {
+        "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
+        "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
+        "relationship": "related_topic",
+        "confidence": 0.761,
+        "shared_entities": [
+          "israel",
+          "tension_israel",
+          "us"
+        ]
+      },
+      {
+        "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+        "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
+        "relationship": "related_topic",
+        "confidence": 0.76,
+        "shared_entities": [
+          "escalating_tension",
+          "israel",
+          "us"
+        ]
+      },
+      {
+        "event_id": "event_fatal-confrontation-in-west-bank-leaves-four_41bb348cd9",
+        "title": "Fatal Confrontation in West Bank Leaves Four Palestinians and Two Israelis Dead",
+        "relationship": "related_topic",
+        "confidence": 0.749,
+        "shared_entities": [
+          "israel",
+          "us",
+          "west"
+        ]
+      },
+      {
+        "event_id": "event_twelve-countries-announce-sanctions-on-israe_b5d6f6dc32",
+        "title": "Twelve Countries Announce Sanctions on Israeli Settlements Amid Rising Tensions",
+        "relationship": "related_topic",
+        "confidence": 0.674,
+        "shared_entities": [
+          "israel",
+          "west"
+        ]
+      }
+    ],
+    "search_tokens": [
+      "address",
+      "affected",
+      "also",
+      "ambassador",
+      "authoritie",
+      "ayya",
+      "bank",
+      "broader",
+      "control",
+      "emphasized",
+      "escalating",
+      "escalation",
+      "faced",
+      "fatally",
+      "force",
+      "huckabee",
+      "incident",
+      "increasingly",
+      "israel",
+      "israeli-occupied",
+      "issue",
+      "jenin",
+      "kill",
+      "killed",
+      "mike",
+      "military",
+      "near",
+      "need",
+      "occupied",
+      "palestinian",
+      "part",
+      "region",
+      "repeated",
+      "separate",
+      "settler",
+      "shot",
+      "situation",
+      "tension",
+      "town",
+      "turmu",
+      "violence",
+      "violent",
+      "visit",
+      "visited",
+      "warning",
+      "west",
+      "which",
+      "while"
+    ],
+    "entities": [
+      "ambassador_visit",
+      "escalating_tension",
+      "israel",
+      "israel_force",
+      "israel_mike",
+      "israeli-occupied",
+      "israeli-occupied_west",
+      "jenin",
+      "mike_huckabee",
+      "palestinian_town",
+      "settler_violence",
+      "tension_israel",
+      "town_affected",
+      "turmu_ayya",
+      "us",
+      "visit_palestinian",
+      "west"
+    ],
+    "search_text": "address affected also ambassador ambassador_visit authoritie ayya bank broader control emphasized escalating escalating_tension escalation faced fatally force huckabee incident increasingly israel israel_force israel_mike israeli-occupied israeli-occupied_west issue jenin kill killed mike mike_huckabee military near need occupied palestinian palestinian_town part region repeated separate settler settler_violence shot situation tension tension_israel town town_affected turmu turmu_ayya us violence violent visit visit_palestinian visited warning west which while",
+    "event_overview": {
+      "available": true,
+      "title": "About West Bank Violence",
+      "subject": "West Bank Violence",
+      "summary": "West Bank violence refers to a continuing pattern of confrontations and attacks in the Israeli-occupied West Bank, including violence involving Israeli settlers, Israeli security forces and Palestinians. The selected developments focus on attacks affecting Palestinian communities and a diplomatic visit, within a wider context of casualties, property damage, access restrictions and displacement.",
+      "facts": [
+        {
+          "label": "Location",
+          "value": "The event concerns the West Bank, including East Jerusalem, which United Nations bodies and the International Court of Justice treat as part of the Occupied Palestinian Territory.",
+          "source_ids": [
+            "o1",
+            "o2"
+          ]
+        },
+        {
+          "label": "What “settler-related violence” covers",
+          "value": "OCHA defines settler-related incidents as violence, intimidation or trespass carried out by or against Israeli settlers and other Israeli civilians in the West Bank; its data can include deaths or injuries, property damage, and some intimidation or trespass incidents.",
+          "source_ids": [
+            "o3"
+          ]
+        },
+        {
+          "label": "Monitoring",
+          "value": "OCHA has systematically recorded settler violence since 2006. For incidents targeting Palestinians, it draws on sources including local authorities, Palestinian coordination offices, UN agencies, civil-society organizations and media, and generally validates incidents through at least two independent reliable sources.",
+          "source_ids": [
+            "o3",
+            "o4"
+          ]
+        },
+        {
+          "label": "Humanitarian impact",
+          "value": "By the end of August 2026, OCHA had documented more than 1,600 settler attacks causing Palestinian casualties or property damage across 275 Palestinian communities that year; OCHA also identifies settler attacks and related access restrictions as a leading driver of displacement in the West Bank.",
+          "source_ids": [
+            "o2"
+          ]
+        },
+        {
+          "label": "Legal context",
+          "value": "In its advisory opinion of 19 July 2024, the International Court of Justice addressed the legal consequences of Israel’s policies and practices in the Occupied Palestinian Territory, including East Jerusalem. The Court’s opinion is part of the international legal context frequently cited in reporting on settlements and related violence.",
+          "source_ids": [
+            "o1"
+          ]
+        }
+      ],
+      "scope_note": "This Muninn timeline highlights selected September 2026 developments, including a diplomatic visit and a reported killing, rather than providing a complete record of West Bank violence, settlement activity, military operations or legal and diplomatic responses.",
+      "sources": [
+        {
+          "title": "Icj Cij",
+          "publisher": "Icj Cij",
+          "url": "https://www.icj-cij.org/case/186/advisory-opinions",
+          "source_type": "reporting",
+          "id": "o1"
+        },
+        {
+          "title": "Ochaopt",
+          "publisher": "Ochaopt",
+          "url": "https://www.ochaopt.org/content/humanitarian-situation-report-11-september-2026",
+          "source_type": "reporting",
+          "id": "o2"
+        },
+        {
+          "title": "Ochaopt",
+          "publisher": "Ochaopt",
+          "url": "https://www.ochaopt.org/page/settler-related-violence",
+          "source_type": "reporting",
+          "id": "o3"
+        },
+        {
+          "title": "Ochaopt",
+          "publisher": "Ochaopt",
+          "url": "https://www.ochaopt.org/content/humanitarian-situation-update-252-west-bank",
+          "source_type": "reporting",
+          "id": "o4"
+        }
+      ],
+      "publisher_count": 2,
+      "generated_at": "2026-09-20T15:19:44.973795+00:00",
+      "expires_at": "2026-09-27T15:19:44.973795+00:00",
+      "model": "gpt-5.6-terra",
+      "provenance": "openai_web_search_source_grounded_event_overview_v1"
+    },
+    "hero_image": {
+      "url": "/Current_news/generated/events/event_us-ambassador-visits-palestinian-town-affect_b3a27c1286.jpg",
+      "thumbnail_url": "/Current_news/generated/events/event_us-ambassador-visits-palestinian-town-affect_b3a27c1286.jpg",
+      "source": "Muninn AI illustration",
+      "author": "OpenAI GPT Image 2",
+      "license": "AI-generated content",
+      "image_role": "illustrative",
+      "image_role_label": "AI illustration",
+      "is_ai_generated": true,
+      "generation_model": "gpt-image-2",
+      "generation_quality": "low",
+      "safe_to_crop": true,
+      "allows_crop": true,
+      "focal_x": 0.5,
+      "focal_y": 0.48,
+      "focal_wide_x": 0.5,
+      "focal_wide_y": 0.48,
+      "focal_tall_x": 0.5,
+      "focal_tall_y": 0.48
+    }
+  },
+  "related_events": [
+    {
+      "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
+      "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
+      "summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Russian Strikes Kill Civilians in Ukraine Following Putin's Warning.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-31",
+      "last_seen_at": "2026-09-12",
+      "development_count": 37,
+      "latest_title": "Russian Strikes Kill Civilians in Ukraine Following Putin's Warning",
+      "topic_label": "Gaza Peace Deal",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b"
+    },
+    {
+      "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+      "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
+      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Russian Drone Strike Ignites Fire at Ukraine-Poland Border Crossing.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-22",
+      "last_seen_at": "2026-09-14",
+      "development_count": 61,
+      "latest_title": "Russian Drone Strike Ignites Fire at Ukraine-Poland Border Crossing",
+      "topic_label": "Iran War",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
+    },
+    {
+      "event_id": "event_fatal-confrontation-in-west-bank-leaves-four_41bb348cd9",
+      "title": "Fatal Confrontation in West Bank Leaves Four Palestinians and Two Israelis Dead",
+      "summary": "Muninn first tracked this thread on 2026-07-25: Funerals Held for Four Palestinians Killed in West Bank Clash with Israeli Settlers. The latest development is Haiti Holds Funeral for Victims of Kenscoff Gang Attack Amid Rising Fear.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-25",
+      "last_seen_at": "2026-09-01",
+      "development_count": 13,
+      "latest_title": "Haiti Holds Funeral for Victims of Kenscoff Gang Attack Amid Rising Fear",
+      "topic_label": "Israeli-Palestinian Conflict",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_fatal-confrontation-in-west-bank-leaves-four_41bb348cd9.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_fatal-confrontation-in-west-bank-leaves-four_41bb348cd9.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_fatal-confrontation-in-west-bank-leaves-four_41bb348cd9"
+    },
+    {
+      "event_id": "event_twelve-countries-announce-sanctions-on-israe_b5d6f6dc32",
+      "title": "Twelve Countries Announce Sanctions on Israeli Settlements Amid Rising Tensions",
+      "summary": "Muninn first tracked this thread on 2026-09-09: Twelve Countries Announce Sanctions on Israeli Settlements Amid Rising Tensions. The latest development is UK Sanctions on Israeli Settlements Welcomed by Prominent Israelis and Rabbis.",
+      "activity_status": "active",
+      "stage": "developing_event",
+      "stage_label": "Developing event",
+      "first_seen_at": "2026-09-09",
+      "last_seen_at": "2026-09-10",
+      "development_count": 2,
+      "latest_title": "UK Sanctions on Israeli Settlements Welcomed by Prominent Israelis and Rabbis",
+      "topic_label": "Israeli Settlements",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_twelve-countries-announce-sanctions-on-israe_b5d6f6dc32.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_twelve-countries-announce-sanctions-on-israe_b5d6f6dc32.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_twelve-countries-announce-sanctions-on-israe_b5d6f6dc32"
+    }
+  ]
+}
