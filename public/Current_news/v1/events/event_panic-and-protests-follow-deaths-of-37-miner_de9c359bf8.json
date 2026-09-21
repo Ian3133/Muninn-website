@@ -15,7 +15,7 @@
     "summary": "In Nigeria, 37 suspected illegal gold miners died while in custody, prompting protests in Minna. Survivors described a harrowing struggle for breath in an overcrowded prison cell. In response to the unrest, police fired teargas at demonstrators and imposed a curfew. Authorities are investigating the cause of the deaths, with some reports indicating overcrowding and poor ventilation may have contributed.",
     "status": "active",
     "first_seen_at": "2026-09-19",
-    "last_seen_at": "2026-09-20",
+    "last_seen_at": "2026-09-21",
     "timeline": [
       {
         "development_id": "story_fe25929f94fd2793",
@@ -115,6 +115,101 @@
           "story_4e363b77dfafd91e"
         ],
         "revision_count": 1
+      },
+      {
+        "development_id": "story_2d415fc9dcbe6931",
+        "daily_story_id": "story_2d415fc9dcbe6931",
+        "date": "2026-09-21",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Nigeria Forms Panel to Investigate Deaths of 37 Miners in Custody",
+        "summary": "The Nigerian government has established a 10-member independent panel to investigate the deaths of 37 suspected illegal gold miners in a holding cell operated by a paramilitary civil defense force. Survivors have described their distressing experiences in detention, while protests erupted in Minna, leading to police deploying tear gas and imposing a curfew. Families of the deceased are demanding justice following the incident.",
+        "topic_label": "Nigerian Miners",
+        "development_type": "development",
+        "key_facts": [
+          "37 suspected illegal gold miners died in custody in Nigeria.",
+          "An independent panel has been appointed to investigate the deaths.",
+          "Survivors reported panic and struggle for breath in the holding cell.",
+          "Protests occurred in Minna, resulting in police using tear gas."
+        ],
+        "source_count": 4,
+        "sources": [
+          "Africanews",
+          "The Guardian - World"
+        ],
+        "source_urls": [
+          "http://www.africanews.com/2026/09/20/nigeria-appoints-panel-to-probe-deaths-of-37-miners-in-holding-cell",
+          "https://www.theguardian.com/world/2026/sep/18/survivor-panic-struggle-breathe-nigeria-prison-cell-died-minna",
+          "http://www.africanews.com/2026/09/21/surviving-nigerian-miners-recount-ordeal-in-detention-after-37-deaths",
+          "http://www.africanews.com/2026/09/21/nigeria-families-demand-justice-for-37-men-who-died-in-custody"
+        ],
+        "source_details": [
+          {
+            "title": "Nigeria appoints panel to probe deaths of 37 miners in holding cell",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/09/20/nigeria-appoints-panel-to-probe-deaths-of-37-miners-in-holding-cell",
+            "source_bias": "center"
+          },
+          {
+            "title": "Survivors recount panic and struggle to breathe in Nigerian prison cell where 37 died",
+            "source": "The Guardian - World",
+            "link": "https://www.theguardian.com/world/2026/sep/18/survivor-panic-struggle-breathe-nigeria-prison-cell-died-minna",
+            "source_bias": "left"
+          },
+          {
+            "title": "Surviving Nigerian miners recount ordeal in detention after 37 deaths",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/09/21/surviving-nigerian-miners-recount-ordeal-in-detention-after-37-deaths",
+            "source_bias": "center"
+          },
+          {
+            "title": "Families demand justice for 37 men who died in custody",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/09/21/nigeria-families-demand-justice-for-37-men-who-died-in-custody",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 1.0,
+        "match_evidence": {
+          "score": 1.0,
+          "matched_development_id": "story_fe25929f94fd2793",
+          "shared_tokens": [
+            "cell",
+            "curfew",
+            "custody",
+            "death",
+            "died",
+            "erupted",
+            "force",
+            "illegal",
+            "incident",
+            "leading",
+            "miner",
+            "minna",
+            "nigeria",
+            "nigerian",
+            "occurred",
+            "panic",
+            "protest",
+            "reported",
+            "survivor",
+            "suspected"
+          ],
+          "shared_entities": [
+            "custody_nigerian",
+            "minna"
+          ],
+          "source_url_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-21",
+        "last_seen_at": "2026-09-21",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -137,12 +232,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 1,
+      "public_development_count": 2,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Panic and Protests Follow Deaths of Miners in Nigerian Custody",
-    "latest_summary": "In Nigeria's Minna, 37 suspected illegal goldminers died in a prison cell, prompting panic among survivors who struggled to breathe. Protests erupted in response, leading police to fire teargas and impose an overnight curfew. Armed security forces have been deployed to manage the unrest following the incident, which has drawn significant public outcry.",
+    "latest_title": "Nigeria Forms Panel to Investigate Deaths of 37 Miners in Custody",
+    "latest_summary": "The Nigerian government has established a 10-member independent panel to investigate the deaths of 37 suspected illegal gold miners in a holding cell operated by a paramilitary civil defense force. Survivors have described their distressing experiences in detention, while protests erupted in Minna, leading to police deploying tear gas and imposing a curfew. Families of the deceased are demanding justice following the incident.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": false,
@@ -151,33 +246,39 @@
       "base_title": "Panic and Protests Follow Deaths of 37 Miners in Nigerian Custody",
       "display_title": "Panic and Protests Follow Deaths of 37 Miners in Nigerian Custody",
       "milestone_development_ids": [
-        "story_fe25929f94fd2793"
+        "story_fe25929f94fd2793",
+        "story_2d415fc9dcbe6931"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-09-19",
-      "development_count": 1,
-      "coverage_packet_count": 2,
-      "date_count": 1,
-      "source_count": 4,
-      "independent_source_count": 4,
+      "summary_updated_at": "2026-09-21",
+      "development_count": 2,
+      "coverage_packet_count": 3,
+      "date_count": 2,
+      "source_count": 7,
+      "independent_source_count": 5,
       "first_date": "2026-09-19",
-      "latest_date": "2026-09-19",
-      "latest_update_title": "Panic and Protests Follow Deaths of Miners in Nigerian Custody",
-      "coverage_score": 0.298,
-      "recency_score": 0.875,
-      "rank_score": 0.633,
-      "context_summary": "In Nigeria's Minna, 37 suspected illegal goldminers died in a prison cell, prompting panic among survivors who struggled to breathe. Protests erupted in response, leading police to fire teargas and impose an overnight curfew. Armed security forces have been deployed to manage the unrest following the incident, which has drawn significant public outcry.",
+      "latest_date": "2026-09-21",
+      "latest_update_title": "Nigeria Forms Panel to Investigate Deaths of 37 Miners in Custody",
+      "coverage_score": 0.472,
+      "recency_score": 1.0,
+      "rank_score": 0.778,
+      "context_summary": "Muninn first tracked this thread on 2026-09-19: Panic and Protests Follow Deaths of Miners in Nigerian Custody. The latest development is Nigeria Forms Panel to Investigate Deaths of 37 Miners in Custody.",
       "cta_label": ""
     },
     "event_summary": {
       "available": true,
-      "summary": "In Nigeria's Minna, 37 suspected illegal goldminers died in a prison cell, prompting panic among survivors who struggled to breathe.",
+      "summary": "In Nigeria's Minna, 37 suspected illegal goldminers died in a prison cell, prompting panic among survivors who struggled to breathe. Most recently, the Nigerian government has established a 10-member independent panel to investigate the deaths of 37 suspected illegal gold miners in a holding cell operated by a paramilitary civil defense force.",
       "key_developments": [
         {
           "development_id": "story_fe25929f94fd2793",
           "date": "2026-09-19",
           "title": "Panic and Protests Follow Deaths of Miners in Nigerian Custody"
+        },
+        {
+          "development_id": "story_2d415fc9dcbe6931",
+          "date": "2026-09-21",
+          "title": "Nigeria Forms Panel to Investigate Deaths of 37 Miners in Custody"
         }
       ],
       "sources": [
@@ -204,9 +305,27 @@
           "source": "Al Jazeera English",
           "link": "https://www.aljazeera.com/video/newsfeed/2026/9/19/19-09-sv-nigeria-curfew-after-protests-nr?traffic_source=rss",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Nigeria appoints panel to probe deaths of 37 miners in holding cell",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/09/20/nigeria-appoints-panel-to-probe-deaths-of-37-miners-in-holding-cell",
+          "source_bias": "center"
+        },
+        {
+          "title": "Surviving Nigerian miners recount ordeal in detention after 37 deaths",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/09/21/surviving-nigerian-miners-recount-ordeal-in-detention-after-37-deaths",
+          "source_bias": "center"
+        },
+        {
+          "title": "Families demand justice for 37 men who died in custody",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/09/21/nigeria-families-demand-justice-for-37-men-who-died-in-custody",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-09-19",
+      "updated_at": "2026-09-21",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "developing_event",
@@ -215,62 +334,13 @@
         "event_id": "event_dozens-of-illegal-mining-suspects-found-dead_2206c553b0",
         "title": "Custody Outbreak",
         "relationship": "related_topic",
-        "confidence": 0.687,
+        "confidence": 0.696,
         "shared_entities": [
           "nigerian",
           "nigerian_custody"
         ]
       }
     ],
-    "search_tokens": [
-      "among",
-      "armed",
-      "breathe",
-      "cell",
-      "curfew",
-      "custody",
-      "death",
-      "deployed",
-      "died",
-      "drawn",
-      "erupted",
-      "fire",
-      "follow",
-      "force",
-      "goldminer",
-      "illegal",
-      "impose",
-      "incident",
-      "leading",
-      "manage",
-      "miner",
-      "minna",
-      "nigeria",
-      "nigerian",
-      "outcry",
-      "overnight",
-      "panic",
-      "prison",
-      "prompting",
-      "protest",
-      "public",
-      "response",
-      "security",
-      "significant",
-      "struggled",
-      "survivor",
-      "suspected",
-      "tearga",
-      "unrest",
-      "which"
-    ],
-    "entities": [
-      "nigeria_minna",
-      "nigerian",
-      "nigerian_custody",
-      "protest_follow"
-    ],
-    "search_text": "among armed breathe cell curfew custody death deployed died drawn erupted fire follow force goldminer illegal impose incident leading manage miner minna nigeria nigeria_minna nigerian nigerian_custody outcry overnight panic prison prompting protest protest_follow public response security significant struggled survivor suspected tearga unrest which",
     "hero_image": {
       "url": "/Current_news/generated/events/event_panic-and-protests-follow-deaths-of-37-miner_de9c359bf8.jpg",
       "thumbnail_url": "/Current_news/generated/events/event_panic-and-protests-follow-deaths-of-37-miner_de9c359bf8.jpg",
@@ -290,7 +360,86 @@
       "focal_wide_y": 0.48,
       "focal_tall_x": 0.5,
       "focal_tall_y": 0.48
-    }
+    },
+    "search_tokens": [
+      "10-member",
+      "among",
+      "armed",
+      "breathe",
+      "cell",
+      "civil",
+      "curfew",
+      "custody",
+      "death",
+      "deceased",
+      "defense",
+      "demanding",
+      "deployed",
+      "deploying",
+      "described",
+      "detention",
+      "died",
+      "distressing",
+      "drawn",
+      "erupted",
+      "established",
+      "experience",
+      "familie",
+      "fire",
+      "follow",
+      "force",
+      "forms",
+      "gas",
+      "gold",
+      "goldminer",
+      "holding",
+      "illegal",
+      "impose",
+      "imposing",
+      "incident",
+      "independent",
+      "investigate",
+      "justice",
+      "leading",
+      "manage",
+      "miner",
+      "minna",
+      "nigeria",
+      "nigerian",
+      "operated",
+      "outcry",
+      "overnight",
+      "panel",
+      "panic",
+      "paramilitary",
+      "prison",
+      "prompting",
+      "protest",
+      "public",
+      "response",
+      "security",
+      "significant",
+      "struggled",
+      "survivor",
+      "suspected",
+      "tear",
+      "tearga",
+      "unrest",
+      "which",
+      "while"
+    ],
+    "entities": [
+      "custody",
+      "forms_panel",
+      "investigate",
+      "minna",
+      "nigeria_forms",
+      "nigeria_minna",
+      "nigerian",
+      "nigerian_custody",
+      "protest_follow"
+    ],
+    "search_text": "10-member among armed breathe cell civil curfew custody death deceased defense demanding deployed deploying described detention died distressing drawn erupted established experience familie fire follow force forms forms_panel gas gold goldminer holding illegal impose imposing incident independent investigate justice leading manage miner minna nigeria nigeria_forms nigeria_minna nigerian nigerian_custody operated outcry overnight panel panic paramilitary prison prompting protest protest_follow public response security significant struggled survivor suspected tear tearga unrest which while"
   },
   "related_events": [
     {

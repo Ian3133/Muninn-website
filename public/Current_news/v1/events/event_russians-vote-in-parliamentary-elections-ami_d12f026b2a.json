@@ -15,7 +15,7 @@
     "summary": "Russians are participating in a three-day parliamentary election, the first since the invasion of Ukraine, where only pro-Kremlin parties are on the ballot. The elections are viewed by many as a means for the Kremlin to reinforce its power and legitimacy, with fears of mobilization overshadowing the voting process. Most anti-war candidates have been excluded, raising concerns about the authenticity of the electoral process.",
     "status": "active",
     "first_seen_at": "2026-09-18",
-    "last_seen_at": "2026-09-19",
+    "last_seen_at": "2026-09-21",
     "timeline": [
       {
         "development_id": "story_5ac91343ddfc8cb5",
@@ -294,47 +294,134 @@
         "first_seen_at": "2026-09-19",
         "last_seen_at": "2026-09-19",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_47d24b392d265795",
+        "daily_story_id": "story_47d24b392d265795",
+        "date": "2026-09-21",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Putin's United Russia Party Secures Majority in Parliamentary Elections",
+        "summary": "Vladimir Putin's ruling United Russia party has achieved a record majority in the recent parliamentary elections, winning approximately 58% of the vote. The elections, which have faced criticism for being tightly controlled, resulted in United Russia securing 355 out of 450 seats in the Duma. Additionally, 49 veterans of the Ukraine war were elected to the new parliament, further consolidating the party's influence.",
+        "topic_label": "Russian Elections",
+        "development_type": "policy",
+        "key_facts": [
+          "United Russia won about 58% of the vote.",
+          "The party secured 355 out of 450 seats in the Duma.",
+          "49 veterans of the Ukraine war were elected."
+        ],
+        "source_count": 4,
+        "sources": [
+          "BBC - World",
+          "DW - English",
+          "RTE News",
+          "The Guardian - World"
+        ],
+        "source_urls": [
+          "https://www.dw.com/en/russia-putin-party-retains-majority-in-controlled-parliamentary-vote/a-79353231?maca=en-rss-en-all-1573-rdf",
+          "https://www.bbc.co.uk/news/videos/cjp30pq0rx6ro?at_medium=RSS&at_campaign=rss",
+          "https://www.rte.ie/news/world/2026/0921/1592291-russia-election",
+          "https://www.theguardian.com/world/2026/sep/21/putin-consolidates-grip-russia-ukraine-war-veterans-elected-duma"
+        ],
+        "source_details": [
+          {
+            "title": "Russia: Putin party retains majority in controlled parliamentary vote",
+            "source": "DW - English",
+            "link": "https://www.dw.com/en/russia-putin-party-retains-majority-in-controlled-parliamentary-vote/a-79353231?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "'No surprises' as results emerge in Russian parliamentary election",
+            "source": "BBC - World",
+            "link": "https://www.bbc.co.uk/news/videos/cjp30pq0rx6ro?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          },
+          {
+            "title": "Putin's party wins record majority in Russian election",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/world/2026/0921/1592291-russia-election",
+            "source_bias": "center"
+          },
+          {
+            "title": "Putin consolidates grip on Russia as 49 Ukraine war veterans elected to parliament",
+            "source": "The Guardian - World",
+            "link": "https://www.theguardian.com/world/2026/sep/21/putin-consolidates-grip-russia-ukraine-war-veterans-elected-duma",
+            "source_bias": "left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_5ac91343ddfc8cb5",
+          "shared_tokens": [
+            "450",
+            "duma",
+            "elected",
+            "election",
+            "parliamentary",
+            "russia",
+            "ukraine",
+            "war"
+          ],
+          "shared_entities": [
+            "russia",
+            "russia_election",
+            "ukraine"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-21",
+        "last_seen_at": "2026-09-21",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 3,
+      "public_development_count": 4,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Russia Conducts Parliamentary Elections Including Occupied Ukrainian Regions",
-    "latest_summary": "Russia is holding parliamentary elections for the first time in regions of Ukraine that it annexed during the ongoing conflict. The elections will fill 450 seats in the State Duma and 11 regional governorships, with only pro-Putin parties on the ballot. The vote is overshadowed by fears of mobilization and is characterized by a lack of genuine opposition.",
+    "latest_title": "Putin's United Russia Party Secures Majority in Parliamentary Elections",
+    "latest_summary": "Vladimir Putin's ruling United Russia party has achieved a record majority in the recent parliamentary elections, winning approximately 58% of the vote. The elections, which have faced criticism for being tightly controlled, resulted in United Russia securing 355 out of 450 seats in the Duma. Additionally, 49 veterans of the Ukraine war were elected to the new parliament, further consolidating the party's influence.",
     "presentation": {
       "has_context": true,
-      "has_full_timeline": false,
-      "stage": "developing_event",
-      "stage_label": "Developing event",
+      "has_full_timeline": true,
+      "stage": "timeline",
+      "stage_label": "Timeline",
       "base_title": "Russians Vote in Parliamentary Elections Amid Ongoing War and Limited Opposition",
-      "display_title": "Russians Vote in Parliamentary Elections Amid Ongoing War and Limited Opposition",
+      "display_title": "Russians Vote in Parliamentary Elections Amid Ongoing War and Limited Opposition Timeline",
       "milestone_development_ids": [
         "story_5ac91343ddfc8cb5",
         "story_a721883a33a64ad5",
-        "story_b1a4eb351fae0c08"
+        "story_b1a4eb351fae0c08",
+        "story_47d24b392d265795"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-09-19",
-      "development_count": 3,
-      "coverage_packet_count": 4,
-      "date_count": 2,
-      "source_count": 12,
-      "independent_source_count": 11,
+      "summary_updated_at": "2026-09-21",
+      "development_count": 4,
+      "coverage_packet_count": 5,
+      "date_count": 3,
+      "source_count": 16,
+      "independent_source_count": 14,
       "first_date": "2026-09-18",
-      "latest_date": "2026-09-19",
-      "latest_update_title": "Russia Conducts Parliamentary Elections Including Occupied Ukrainian Regions",
-      "coverage_score": 0.705,
-      "recency_score": 0.875,
-      "rank_score": 0.804,
-      "context_summary": "Muninn first tracked this thread on 2026-09-18: Voting Begins in Russia's Duma Elections Amid Ongoing Ukraine Conflict. The latest development is Russia Conducts Parliamentary Elections Including Occupied Ukrainian Regions.",
-      "cta_label": ""
+      "latest_date": "2026-09-21",
+      "latest_update_title": "Putin's United Russia Party Secures Majority in Parliamentary Elections",
+      "coverage_score": 0.803,
+      "recency_score": 1.0,
+      "rank_score": 0.917,
+      "context_summary": "Muninn first tracked this thread on 2026-09-18: Voting Begins in Russia's Duma Elections Amid Ongoing Ukraine Conflict. The latest development is Putin's United Russia Party Secures Majority in Parliamentary Elections.",
+      "cta_label": "Explore 4 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Voting for Russia's parliamentary elections has commenced, starting in the Far East on September 18 and continuing for three days. A later development was Russians Vote in Parliamentary Elections Amid Ongoing War and Limited Opposition. Most recently, russia is holding parliamentary elections for the first time in regions of Ukraine that it annexed during the ongoing conflict.",
+      "summary": "Voting for Russia's parliamentary elections has commenced, starting in the Far East on September 18 and continuing for three days. A later development was Russia Conducts Parliamentary Elections Including Occupied Ukrainian Regions. Most recently, vladimir Putin's ruling United Russia party has achieved a record majority in the recent parliamentary elections, winning approximately 58% of the vote.",
       "key_developments": [
         {
           "development_id": "story_5ac91343ddfc8cb5",
@@ -350,6 +437,11 @@
           "development_id": "story_b1a4eb351fae0c08",
           "date": "2026-09-19",
           "title": "Russia Conducts Parliamentary Elections Including Occupied Ukrainian Regions"
+        },
+        {
+          "development_id": "story_47d24b392d265795",
+          "date": "2026-09-21",
+          "title": "Putin's United Russia Party Secures Majority in Parliamentary Elections"
         }
       ],
       "sources": [
@@ -424,56 +516,86 @@
           "source": "DW",
           "link": "https://www.dw.com/en/russia-votes-for-new-parliament-in-controlled-elections/a-79318392?maca=en-rss-en-all-1573-rdf",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Russia: Putin party retains majority in controlled parliamentary vote",
+          "source": "DW - English",
+          "link": "https://www.dw.com/en/russia-putin-party-retains-majority-in-controlled-parliamentary-vote/a-79353231?maca=en-rss-en-all-1573-rdf",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "'No surprises' as results emerge in Russian parliamentary election",
+          "source": "BBC - World",
+          "link": "https://www.bbc.co.uk/news/videos/cjp30pq0rx6ro?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
+        },
+        {
+          "title": "Putin's party wins record majority in Russian election",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/world/2026/0921/1592291-russia-election",
+          "source_bias": "center"
+        },
+        {
+          "title": "Putin consolidates grip on Russia as 49 Ukraine war veterans elected to parliament",
+          "source": "The Guardian - World",
+          "link": "https://www.theguardian.com/world/2026/sep/21/putin-consolidates-grip-russia-ukraine-war-veterans-elected-duma",
+          "source_bias": "left"
         }
       ],
-      "updated_at": "2026-09-19",
+      "updated_at": "2026-09-21",
       "provenance": "source_grounded_event_memory"
     },
-    "event_stage": "developing_event",
+    "event_stage": "timeline",
     "related_events": [
+      {
+        "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
+        "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
+        "relationship": "related_topic",
+        "confidence": 0.868,
+        "shared_entities": [
+          "party_secure",
+          "pro-putin",
+          "russia",
+          "state",
+          "ukraine",
+          "united"
+        ]
+      },
       {
         "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
         "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
         "relationship": "related_topic",
-        "confidence": 0.759,
+        "confidence": 0.798,
         "shared_entities": [
           "russia",
           "ukraine",
           "ukraine.",
-          "ukraine._russia"
+          "ukraine._russia",
+          "vladimir_putin"
         ]
       },
       {
         "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
         "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
         "relationship": "related_topic",
-        "confidence": 0.745,
+        "confidence": 0.789,
         "shared_entities": [
           "russia",
           "ukraine",
-          "ukraine."
+          "ukraine.",
+          "vladimir_putin"
         ]
       },
       {
-        "event_id": "event_pressure-mounts-on-zelenskyy-to-hold-electio_9d3365cc1e",
-        "title": "Pressure Mounts on Zelenskyy to Hold Elections Amid Ongoing Martial Law",
+        "event_id": "event_putin-dismisses-need-for-new-mobilization-am_ebfb88abcf",
+        "title": "Putin Dismisses Need for New Mobilization Amid Peace Talks",
         "relationship": "related_topic",
-        "confidence": 0.709,
+        "confidence": 0.738,
         "shared_entities": [
           "russia",
           "ukraine",
-          "voting_begin"
-        ]
-      },
-      {
-        "event_id": "event_us-house-passes-sanctions-bill-against-russi_275bd706e9",
-        "title": "US House Passes Sanctions Bill Against Russia and Iran",
-        "relationship": "related_topic",
-        "confidence": 0.695,
-        "shared_entities": [
-          "russia",
-          "ukraine",
-          "ukraine."
+          "ukraine.",
+          "vladimir_putin"
         ]
       }
     ],
@@ -601,9 +723,13 @@
       "focal_tall_y": 0.48
     },
     "search_tokens": [
+      "355",
       "450",
+      "achieved",
+      "additionally",
       "annexed",
       "anti-war",
+      "approximately",
       "authenticity",
       "backdrop",
       "ballot",
@@ -615,25 +741,33 @@
       "concern",
       "conduct",
       "conflict",
+      "consolidating",
       "continuing",
+      "controlled",
+      "criticism",
       "duma",
       "east",
+      "elected",
       "election",
       "electoral",
       "evening",
       "excluded",
+      "faced",
       "fears",
       "fill",
       "first",
+      "further",
       "genuine",
       "governorship",
       "holding",
       "including",
+      "influence",
       "invasion",
       "kremlin",
       "lack",
       "legitimacy",
       "limited",
+      "majority",
       "many",
       "means",
       "member",
@@ -645,21 +779,30 @@
       "opposition",
       "overshadowed",
       "overshadowing",
+      "parliament",
       "parliamentary",
       "participating",
       "partie",
+      "party",
       "place",
       "polls",
       "power",
       "pro-kremlin",
       "pro-putin",
       "process",
+      "putin",
       "raising",
+      "recent",
+      "record",
       "region",
       "regional",
       "reinforce",
+      "resulted",
+      "ruling",
       "russia",
       "seats",
+      "secure",
+      "securing",
       "selecting",
       "september",
       "since",
@@ -668,19 +811,28 @@
       "taking",
       "three",
       "three-day",
+      "tightly",
       "time",
       "ukraine",
+      "united",
+      "veteran",
       "viewed",
+      "vladimir",
       "vote",
       "voter",
       "voting",
       "war",
-      "where"
+      "where",
+      "which",
+      "winning"
     ],
     "entities": [
       "conduct_parliamentary",
+      "duma.",
+      "duma._additionally",
       "duma_election",
       "election_including",
+      "election_vladimir",
       "far",
       "far_east",
       "including_occupied",
@@ -691,23 +843,64 @@
       "opposition_russia",
       "parliamentary",
       "parliamentary_election",
+      "party_secure",
       "pro-kremlin",
       "pro-putin",
+      "putin_united",
       "region_russia",
       "russia",
       "russia_conduct",
       "russia_duma",
+      "russia_party",
       "russia_vote",
+      "secure_majority",
       "state",
       "ukraine",
       "ukraine.",
       "ukraine._russia",
       "ukraine_region",
+      "united",
+      "united_russia",
+      "vladimir_putin",
       "voting_begin"
     ],
-    "search_text": "450 annexed anti-war authenticity backdrop ballot begin candidate characterized close commenced concern conduct conduct_parliamentary conflict continuing duma duma_election east election election_including electoral evening excluded far far_east fears fill first genuine governorship holding including including_occupied invasion kremlin lack legitimacy limited limited_opposition many means member mobilization most occupied occupied_ukraine ongoing ongoing_ukraine ongoing_war only opposition opposition_russia overshadowed overshadowing parliamentary parliamentary_election participating partie place polls power pro-kremlin pro-putin process raising region region_russia regional reinforce russia russia_conduct russia_duma russia_vote seats selecting september since starting state sunday taking three three-day time ukraine ukraine. ukraine._russia ukraine_region viewed vote voter voting voting_begin war where"
+    "search_text": "355 450 achieved additionally annexed anti-war approximately authenticity backdrop ballot begin candidate characterized close commenced concern conduct conduct_parliamentary conflict consolidating continuing controlled criticism duma duma. duma._additionally duma_election east elected election election_including election_vladimir electoral evening excluded faced far far_east fears fill first further genuine governorship holding including including_occupied influence invasion kremlin lack legitimacy limited limited_opposition majority many means member mobilization most occupied occupied_ukraine ongoing ongoing_ukraine ongoing_war only opposition opposition_russia overshadowed overshadowing parliament parliamentary parliamentary_election participating partie party party_secure place polls power pro-kremlin pro-putin process putin putin_united raising recent record region region_russia regional reinforce resulted ruling russia russia_conduct russia_duma russia_party russia_vote seats secure secure_majority securing selecting september since starting state sunday taking three three-day tightly time ukraine ukraine. ukraine._russia ukraine_region united united_russia veteran viewed vladimir vladimir_putin vote voter voting voting_begin war where which winning"
   },
   "related_events": [
+    {
+      "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
+      "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
+      "summary": "Muninn first tracked this thread on 2026-09-11: Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims. The latest development is Iran Threatens to Expand Conflict if US Launches New Assault.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-09-11",
+      "last_seen_at": "2026-09-21",
+      "development_count": 24,
+      "latest_title": "Iran Threatens to Expand Conflict if US Launches New Assault",
+      "topic_label": "9/11 Victim Compensation",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b"
+    },
     {
       "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
       "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
@@ -777,20 +970,20 @@
       "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
     },
     {
-      "event_id": "event_pressure-mounts-on-zelenskyy-to-hold-electio_9d3365cc1e",
-      "title": "Pressure Mounts on Zelenskyy to Hold Elections Amid Ongoing Martial Law",
-      "summary": "Muninn first tracked this thread on 2026-08-20: Pressure Mounts on Zelenskyy to Hold Elections Amid Ongoing Martial Law. The latest development is Early Voting Begins in Russian-Occupied Ukraine Ahead of Elections.",
+      "event_id": "event_putin-dismisses-need-for-new-mobilization-am_ebfb88abcf",
+      "title": "Putin Dismisses Need for New Mobilization Amid Peace Talks",
+      "summary": "Muninn first tracked this thread on 2026-09-03: Putin Dismisses Need for New Mobilization Amid Peace Talks. The latest development is NATO Shoots Down Drone in Lithuania; Russian Frigate Fires Flares at Danish Helicopter.",
       "activity_status": "active",
       "stage": "developing_event",
       "stage_label": "Developing event",
-      "first_seen_at": "2026-08-20",
-      "last_seen_at": "2026-09-16",
+      "first_seen_at": "2026-09-03",
+      "last_seen_at": "2026-09-15",
       "development_count": 3,
-      "latest_title": "Early Voting Begins in Russian-Occupied Ukraine Ahead of Elections",
-      "topic_label": "Ukraine Elections",
+      "latest_title": "NATO Shoots Down Drone in Lithuania; Russian Frigate Fires Flares at Danish Helicopter",
+      "topic_label": "Ukraine War",
       "hero_image": {
-        "url": "/Current_news/generated/events/event_pressure-mounts-on-zelenskyy-to-hold-electio_9d3365cc1e.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_pressure-mounts-on-zelenskyy-to-hold-electio_9d3365cc1e.jpg",
+        "url": "/Current_news/generated/events/event_putin-dismisses-need-for-new-mobilization-am_ebfb88abcf.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_putin-dismisses-need-for-new-mobilization-am_ebfb88abcf.jpg",
         "source": "Muninn AI illustration",
         "author": "OpenAI GPT Image 2",
         "license": "AI-generated content",
@@ -808,41 +1001,7 @@
         "focal_tall_x": 0.5,
         "focal_tall_y": 0.48
       },
-      "href": "/timeline.html?event=event_pressure-mounts-on-zelenskyy-to-hold-electio_9d3365cc1e"
-    },
-    {
-      "event_id": "event_us-house-passes-sanctions-bill-against-russi_275bd706e9",
-      "title": "US House Passes Sanctions Bill Against Russia and Iran",
-      "summary": "Muninn first tracked this thread on 2026-09-17: US House Passes Sanctions Bill Against Russia and Iran. The latest development is Trump Enacts Comprehensive Sanctions Against Russia Amid Ukraine Conflict.",
-      "activity_status": "active",
-      "stage": "developing_event",
-      "stage_label": "Developing event",
-      "first_seen_at": "2026-09-17",
-      "last_seen_at": "2026-09-19",
-      "development_count": 2,
-      "latest_title": "Trump Enacts Comprehensive Sanctions Against Russia Amid Ukraine Conflict",
-      "topic_label": "Russia Sanctions",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_us-house-passes-sanctions-bill-against-russi_275bd706e9.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_us-house-passes-sanctions-bill-against-russi_275bd706e9.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_us-house-passes-sanctions-bill-against-russi_275bd706e9"
+      "href": "/timeline.html?event=event_putin-dismisses-need-for-new-mobilization-am_ebfb88abcf"
     }
   ]
 }

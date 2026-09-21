@@ -15,7 +15,7 @@
     "summary": "A suicide bombing targeted a mosque near a police facility in Kohat, Pakistan, resulting in at least 16 to 21 fatalities and numerous injuries. The attack involved a vehicle loaded with explosives, and gunmen reportedly attempted to storm the police compound during the incident. Among the casualties were police officers attending prayers at the mosque.",
     "status": "active",
     "first_seen_at": "2026-09-18",
-    "last_seen_at": "2026-09-19",
+    "last_seen_at": "2026-09-21",
     "timeline": [
       {
         "development_id": "story_1eeda8090f5b3ca7",
@@ -162,6 +162,89 @@
         "first_seen_at": "2026-09-19",
         "last_seen_at": "2026-09-19",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_3f596d9b78ee81a2",
+        "daily_story_id": "story_3f596d9b78ee81a2",
+        "date": "2026-09-21",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Pakistan Claims Airstrikes in Afghanistan Kill 28 Militants; Afghanistan Reports Civilian Casualties",
+        "summary": "Pakistan reported that airstrikes in Afghanistan resulted in the deaths of 28 militants in the border provinces of Kunar and Paktika. In contrast, Afghan authorities stated that three civilians were killed in the strikes. This incident follows a recent attack on police in Kohat, Pakistan.",
+        "topic_label": "",
+        "development_type": "military_action",
+        "key_facts": [
+          "Pakistan claims 28 militants killed in airstrikes in Afghanistan.",
+          "Afghanistan reports three civilian deaths from the same airstrikes.",
+          "The strikes occurred in the provinces of Kunar and Paktika."
+        ],
+        "source_count": 3,
+        "sources": [
+          "AP",
+          "Channel NewsAsia",
+          "DW"
+        ],
+        "source_urls": [
+          "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPWVh3aU1udV9wY1RJQzlCTGhUSjE0NmplSjdvTDhmN3phXzZ4ZUdDcFpIQVNKQlVhSm04eE1aWVBHeXp2RExjWDNiaDRfcDM3dDkzcGZpSWxJblF0LTNQeGJWVFR0dFFHTUtyVEdUQmtFYTN4MVRUMU1UOWljNzNQVFNXNldQVmhMYlFBc2ZIOHQ3QlZSU0hyTndRRk84bzgtZFJUYTNNNEIwR3M?oc=5",
+          "https://www.channelnewsasia.com/asia/pakistan-says-it-killed-28-militants-afghan-taliban-and-un-report-three-civilian-deaths-6399366",
+          "https://www.dw.com/en/pakistan-says-strikes-in-afghanistan-killed-28-terrorists/a-79350604?maca=en-rss-en-all-1573-rdf"
+        ],
+        "source_details": [
+          {
+            "title": "Pakistan says airstrikes in Afghanistan kill 28 militants; Kabul reports 3 civilians killed",
+            "source": "AP",
+            "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPWVh3aU1udV9wY1RJQzlCTGhUSjE0NmplSjdvTDhmN3phXzZ4ZUdDcFpIQVNKQlVhSm04eE1aWVBHeXp2RExjWDNiaDRfcDM3dDkzcGZpSWxJblF0LTNQeGJWVFR0dFFHTUtyVEdUQmtFYTN4MVRUMU1UOWljNzNQVFNXNldQVmhMYlFBc2ZIOHQ3QlZSU0hyTndRRk84bzgtZFJUYTNNNEIwR3M?oc=5",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Pakistan says it killed 28 militants, Afghan Taliban and UN report three civilian deaths",
+            "source": "Channel NewsAsia",
+            "link": "https://www.channelnewsasia.com/asia/pakistan-says-it-killed-28-militants-afghan-taliban-and-un-report-three-civilian-deaths-6399366",
+            "source_bias": "center"
+          },
+          {
+            "title": "Pakistan says strikes in Afghanistan killed '28 terrorists'",
+            "source": "DW",
+            "link": "https://www.dw.com/en/pakistan-says-strikes-in-afghanistan-killed-28-terrorists/a-79350604?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "attack"
+          ],
+          "shared_incident_anchors": [
+            "kohat",
+            "pakistan"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "attack",
+            "casualtie",
+            "incident",
+            "killed",
+            "kohat",
+            "pakistan",
+            "reported"
+          ],
+          "shared_entities": [
+            "kohat",
+            "pakistan"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_1eeda8090f5b3ca7",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-21",
+        "last_seen_at": "2026-09-21",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -186,12 +269,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 2,
+      "public_development_count": 3,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Casualties from Police HQ Attack in Pakistan Reach 31",
-    "latest_summary": "The death toll from an attack on a police headquarters in Kohat, Khyber Pakhtunkhwa province, Pakistan, has risen to at least 31. The incident involved both an explosion and a gun assault, with local officials confirming the updated figures following the attack on September 18.",
+    "latest_title": "Pakistan Claims Airstrikes in Afghanistan Kill 28 Militants; Afghanistan Reports Civilian Casualties",
+    "latest_summary": "Pakistan reported that airstrikes in Afghanistan resulted in the deaths of 28 militants in the border provinces of Kunar and Paktika. In contrast, Afghan authorities stated that three civilians were killed in the strikes. This incident follows a recent attack on police in Kohat, Pakistan.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": false,
@@ -201,28 +284,29 @@
       "display_title": "Pakistan Storm",
       "milestone_development_ids": [
         "story_1eeda8090f5b3ca7",
-        "story_b58139e6922f07df"
+        "story_b58139e6922f07df",
+        "story_3f596d9b78ee81a2"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-09-19",
-      "development_count": 2,
-      "coverage_packet_count": 2,
-      "date_count": 2,
-      "source_count": 6,
-      "independent_source_count": 6,
+      "summary_updated_at": "2026-09-21",
+      "development_count": 3,
+      "coverage_packet_count": 3,
+      "date_count": 3,
+      "source_count": 9,
+      "independent_source_count": 8,
       "first_date": "2026-09-18",
-      "latest_date": "2026-09-19",
-      "latest_update_title": "Casualties from Police HQ Attack in Pakistan Reach 31",
-      "coverage_score": 0.497,
-      "recency_score": 0.875,
-      "rank_score": 0.716,
-      "context_summary": "Muninn first tracked this thread on 2026-09-18: Suicide Bombing at Police Facility in Kohat, Pakistan, Leaves Many Dead. The latest development is Casualties from Police HQ Attack in Pakistan Reach 31.",
+      "latest_date": "2026-09-21",
+      "latest_update_title": "Pakistan Claims Airstrikes in Afghanistan Kill 28 Militants; Afghanistan Reports Civilian Casualties",
+      "coverage_score": 0.708,
+      "recency_score": 1.0,
+      "rank_score": 0.877,
+      "context_summary": "Muninn first tracked this thread on 2026-09-18: Suicide Bombing at Police Facility in Kohat, Pakistan, Leaves Many Dead. The latest development is Pakistan Claims Airstrikes in Afghanistan Kill 28 Militants; Afghanistan Reports Civilian Casualties.",
       "cta_label": ""
     },
     "event_summary": {
       "available": true,
-      "summary": "A suicide bombing targeted a mosque near a police facility in Kohat, Pakistan, resulting in at least 16 to 21 fatalities and numerous injuries. Most recently, the death toll from an attack on a police headquarters in Kohat, Khyber Pakhtunkhwa province, Pakistan, has risen to at least 31.",
+      "summary": "A suicide bombing targeted a mosque near a police facility in Kohat, Pakistan, resulting in at least 16 to 21 fatalities and numerous injuries. A later development was Casualties from Police HQ Attack in Pakistan Reach 31. Most recently, pakistan reported that airstrikes in Afghanistan resulted in the deaths of 28 militants in the border provinces of Kunar and Paktika.",
       "key_developments": [
         {
           "development_id": "story_1eeda8090f5b3ca7",
@@ -233,6 +317,11 @@
           "development_id": "story_b58139e6922f07df",
           "date": "2026-09-19",
           "title": "Casualties from Police HQ Attack in Pakistan Reach 31"
+        },
+        {
+          "development_id": "story_3f596d9b78ee81a2",
+          "date": "2026-09-21",
+          "title": "Pakistan Claims Airstrikes in Afghanistan Kill 28 Militants; Afghanistan Reports Civilian Casualties"
         }
       ],
       "sources": [
@@ -271,9 +360,27 @@
           "source": "RTE News",
           "link": "https://www.rte.ie/news/world/2026/0919/1592157-pakistan-bomb-attack",
           "source_bias": "center"
+        },
+        {
+          "title": "Pakistan says airstrikes in Afghanistan kill 28 militants; Kabul reports 3 civilians killed",
+          "source": "AP",
+          "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPWVh3aU1udV9wY1RJQzlCTGhUSjE0NmplSjdvTDhmN3phXzZ4ZUdDcFpIQVNKQlVhSm04eE1aWVBHeXp2RExjWDNiaDRfcDM3dDkzcGZpSWxJblF0LTNQeGJWVFR0dFFHTUtyVEdUQmtFYTN4MVRUMU1UOWljNzNQVFNXNldQVmhMYlFBc2ZIOHQ3QlZSU0hyTndRRk84bzgtZFJUYTNNNEIwR3M?oc=5",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Pakistan says it killed 28 militants, Afghan Taliban and UN report three civilian deaths",
+          "source": "Channel NewsAsia",
+          "link": "https://www.channelnewsasia.com/asia/pakistan-says-it-killed-28-militants-afghan-taliban-and-un-report-three-civilian-deaths-6399366",
+          "source_bias": "center"
+        },
+        {
+          "title": "Pakistan says strikes in Afghanistan killed '28 terrorists'",
+          "source": "DW",
+          "link": "https://www.dw.com/en/pakistan-says-strikes-in-afghanistan-killed-28-terrorists/a-79350604?maca=en-rss-en-all-1573-rdf",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-09-19",
+      "updated_at": "2026-09-21",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "developing_event",
@@ -299,16 +406,24 @@
       "focal_tall_y": 0.48
     },
     "search_tokens": [
+      "afghan",
+      "afghanistan",
+      "airstrike",
       "among",
       "assault",
       "attack",
       "attempted",
       "attending",
+      "authoritie",
       "bombing",
+      "border",
       "both",
       "casualtie",
+      "civilian",
+      "claim",
       "compound",
       "confirming",
+      "contrast",
       "dead",
       "death",
       "explosion",
@@ -316,50 +431,182 @@
       "facility",
       "fatalitie",
       "figure",
+      "follow",
       "gunmen",
       "headquarter",
       "incident",
       "injurie",
       "involved",
       "khyber",
+      "kill",
+      "killed",
       "kohat",
+      "kunar",
       "least",
       "leave",
       "loaded",
       "local",
       "many",
+      "militant",
       "mosque",
       "near",
       "numerou",
       "officer",
       "pakhtunkhwa",
       "pakistan",
+      "paktika",
       "prayer",
       "province",
       "reach",
+      "recent",
+      "reported",
       "reportedly",
+      "resulted",
       "resulting",
       "risen",
       "september",
+      "stated",
       "storm",
+      "strike",
       "suicide",
       "targeted",
+      "three",
       "toll",
       "updated",
       "vehicle"
     ],
     "entities": [
+      "afghanistan",
+      "casualtie_pakistan",
+      "civilian_casualtie",
+      "claim_airstrike",
       "hq",
       "khyber_pakhtunkhwa",
       "kohat",
       "kohat_khyber",
       "kohat_pakistan",
+      "kohat_pakistan.",
+      "militant_afghanistan",
       "pakistan",
+      "pakistan_claim",
       "pakistan_reach",
       "police",
+      "september_pakistan",
       "suicide_bombing"
     ],
-    "search_text": "among assault attack attempted attending bombing both casualtie compound confirming dead death explosion explosive facility fatalitie figure gunmen headquarter hq incident injurie involved khyber khyber_pakhtunkhwa kohat kohat_khyber kohat_pakistan least leave loaded local many mosque near numerou officer pakhtunkhwa pakistan pakistan_reach police prayer province reach reportedly resulting risen september storm suicide suicide_bombing targeted toll updated vehicle"
+    "search_text": "afghan afghanistan airstrike among assault attack attempted attending authoritie bombing border both casualtie casualtie_pakistan civilian civilian_casualtie claim claim_airstrike compound confirming contrast dead death explosion explosive facility fatalitie figure follow gunmen headquarter hq incident injurie involved khyber khyber_pakhtunkhwa kill killed kohat kohat_khyber kohat_pakistan kohat_pakistan. kunar least leave loaded local many militant militant_afghanistan mosque near numerou officer pakhtunkhwa pakistan pakistan_claim pakistan_reach paktika police prayer province reach recent reported reportedly resulted resulting risen september september_pakistan stated storm strike suicide suicide_bombing targeted three toll updated vehicle",
+    "event_overview": {
+      "available": true,
+      "title": "About Pakistan Storm",
+      "subject": "Pakistan Storm",
+      "summary": "“Pakistan Storm” is a tracking label for a September 2026 escalation centered on a deadly militant attack on a police complex in Kohat, northwestern Pakistan, and Pakistan’s subsequent military action across the Afghan border. It sits within a longer pattern of violence involving Pakistan-based militant groups and recurring Pakistan-Afghanistan cross-border hostilities, for which the sides have made competing claims about targets and civilian harm.",
+      "facts": [
+        {
+          "label": "Timeframe",
+          "value": "The selected developments run from September 18 through September 21, 2026; the incident sequence began with an attack at Kohat Police Lines and remained active as Pakistan announced strikes in Afghanistan.",
+          "source_ids": [
+            "o1",
+            "o2"
+          ]
+        },
+        {
+          "label": "Location",
+          "value": "Kohat is in Pakistan’s northwestern Khyber Pakhtunkhwa province. The related military dimension concerns locations across the Pakistan-Afghanistan border, rather than a single battlefield or formally declared operation area.",
+          "source_ids": [
+            "o3",
+            "o4"
+          ]
+        },
+        {
+          "label": "Kohat attack",
+          "value": "Pakistan’s government confirmed that a bomb blast struck the mosque at Kohat Police Lines during Friday prayers on September 18. Pakistani security forces subsequently conducted a clearance operation at the complex.",
+          "source_ids": [
+            "o1",
+            "o5"
+          ]
+        },
+        {
+          "label": "Militancy context",
+          "value": "Tehrik-e-Taliban Pakistan (TTP) has been listed by Pakistan’s Interior Ministry as a proscribed organization since August 25, 2008. Reporting on the Kohat attack linked the violence to militants operating in the border region, but responsibility and affiliations should be treated separately from official attribution and ongoing investigations.",
+          "source_ids": [
+            "o6",
+            "o7"
+          ]
+        },
+        {
+          "label": "Cross-border context",
+          "value": "Pakistan-Afghanistan armed clashes and air operations predate this episode. UNAMA documented civilian casualties from cross-border fire and aerial attacks in late February and early March 2026 and called on all parties to meet their international humanitarian-law obligations to protect civilians.",
+          "source_ids": [
+            "o4",
+            "o8"
+          ]
+        }
+      ],
+      "scope_note": "The selected Muninn timeline covers the Kohat attack, its reported casualty updates, and the immediate Pakistan-Afghanistan escalation; it does not attempt to cover every militant incident in Pakistan, the full history of the TTP, or all prior cross-border clashes.",
+      "sources": [
+        {
+          "title": "Gov",
+          "publisher": "Gov",
+          "url": "https://pid.gov.pk/site/press_detail/33979",
+          "source_type": "reporting",
+          "id": "o1"
+        },
+        {
+          "title": "AP News",
+          "publisher": "AP News",
+          "url": "https://apnews.com/article/95178c5833c7a6a621c9bb0f06a78915",
+          "source_type": "reporting",
+          "id": "o2"
+        },
+        {
+          "title": "AP News",
+          "publisher": "AP News",
+          "url": "https://apnews.com/article/ebfc29859f724630e25f8549116859c8",
+          "source_type": "reporting",
+          "id": "o3"
+        },
+        {
+          "title": "Unmissions",
+          "publisher": "Unmissions",
+          "url": "https://unama.unmissions.org/en/node/134369",
+          "source_type": "reporting",
+          "id": "o4"
+        },
+        {
+          "title": "Gov",
+          "publisher": "Gov",
+          "url": "https://radio.gov.pk/19-09-2026/all-seven-khwarij-involved-in-kohat-mosque-blast-neutralized",
+          "source_type": "reporting",
+          "id": "o5"
+        },
+        {
+          "title": "Gov",
+          "publisher": "Gov",
+          "url": "https://nacta.gov.pk/wp-content/uploads/2018/12/Proscribed-OrganizationsEng-3.pdf",
+          "source_type": "reporting",
+          "id": "o6"
+        },
+        {
+          "title": "AP News",
+          "publisher": "AP News",
+          "url": "https://apnews.com/article/b63e9cf30e8b871616b7d0f94cbaff6d",
+          "source_type": "reporting",
+          "id": "o7"
+        },
+        {
+          "title": "Unmissions",
+          "publisher": "Unmissions",
+          "url": "https://unama.unmissions.org/en/news/unama-urges-halt-afghanistan-pakistan-clashes-warns-increasing-civilian-casualties-and",
+          "source_type": "reporting",
+          "id": "o8"
+        }
+      ],
+      "publisher_count": 3,
+      "generated_at": "2026-09-21T17:45:35.675406+00:00",
+      "expires_at": "2026-09-28T17:45:35.675406+00:00",
+      "model": "gpt-5.6-terra",
+      "provenance": "openai_web_search_source_grounded_event_overview_v1"
+    }
   },
   "related_events": []
 }
