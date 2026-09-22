@@ -15,7 +15,7 @@
     "summary": "Trump announced that the US will refrain from launching new strikes against Iran in hopes of reaching a diplomatic agreement. This decision comes after Iran issued a warning against any 'adventurous action,' stating it would respond decisively to potential attacks on its territory.",
     "status": "active",
     "first_seen_at": "2026-08-02",
-    "last_seen_at": "2026-08-31",
+    "last_seen_at": "2026-09-22",
     "timeline": [
       {
         "development_id": "story_eeac5a41d1e28e7e",
@@ -487,15 +487,102 @@
         "first_seen_at": "2026-08-31",
         "last_seen_at": "2026-08-31",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_cef09aa4fafc93dd",
+        "daily_story_id": "story_cef09aa4fafc93dd",
+        "date": "2026-09-22",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Trump Discusses Iran Decision at UN, Threatens Annihilation or Deal",
+        "summary": "During his speech at the United Nations General Assembly, President Trump stated he faces a significant decision regarding Iran: to either negotiate a deal or consider military action, which he described as the potential to 'annihilate' the regime. He expressed confidence that Tehran might seek a resolution after the upcoming US midterm elections, emphasizing the importance of preventing Iran from acquiring nuclear weapons.",
+        "topic_label": "Iran Relations",
+        "development_type": "election",
+        "key_facts": [
+          "Trump addressed the UN General Assembly regarding Iran.",
+          "He mentioned the possibility of annihilating Iran if no deal is reached.",
+          "Trump predicted that Iran would seek a deal after the US midterm elections."
+        ],
+        "source_count": 4,
+        "sources": [
+          "CBS News",
+          "Fox News",
+          "NewsNation",
+          "RTE News"
+        ],
+        "source_urls": [
+          "https://www.foxnews.com/politics/trump-defends-us-interventions-abroad-ahead-big-decision-iran-settling-years-unfinished-business",
+          "https://www.cbsnews.com/news/trump-address-united-nations-general-assembly-meetings-world-leaders-iran-ukraine",
+          "https://www.newsnationnow.com/world/g7-iran-houthis-yemen-red-sea-saudi-arabia",
+          "https://www.rte.ie/news/us/2026/0922/1592545-trump-un-meetings"
+        ],
+        "source_details": [
+          {
+            "title": "Trump defends US interventions abroad ahead of 'big decision' on Iran: 'Settling years of unfinished business'",
+            "source": "Fox News",
+            "link": "https://www.foxnews.com/politics/trump-defends-us-interventions-abroad-ahead-big-decision-iran-settling-years-unfinished-business",
+            "source_bias": "right"
+          },
+          {
+            "title": "In U.N. speech, Trump threatens to 'annihilate' Iran and defends foreign policy",
+            "source": "CBS News",
+            "link": "https://www.cbsnews.com/news/trump-address-united-nations-general-assembly-meetings-world-leaders-iran-ukraine",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Trump warns he could 'annihilate' Iran without peace deal in UN speech",
+            "source": "NewsNation",
+            "link": "https://www.newsnationnow.com/world/g7-iran-houthis-yemen-red-sea-saudi-arabia",
+            "source_bias": "center"
+          },
+          {
+            "title": "Trump warns he could 'annihilate' Iran without deal at UN",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/us/2026/0922/1592545-trump-un-meetings",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_eeac5a41d1e28e7e",
+          "shared_tokens": [
+            "action",
+            "deal",
+            "decision",
+            "iran",
+            "potential",
+            "relation",
+            "trump",
+            "would"
+          ],
+          "shared_entities": [
+            "deal_iran",
+            "iran",
+            "iran_relation",
+            "us"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-22",
+        "last_seen_at": "2026-09-22",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 7,
+      "public_development_count": 8,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Vance Supports Trump's AI Video of Kharg Island as a Warning to Iran",
-    "latest_summary": "Vice President JD Vance defended President Trump's recent social media post featuring an AI-generated video depicting a bombing of Kharg Island, asserting that it serves as a message to Iran. Vance commented on the video, which illustrates a stylized attack on the island, crucial for Iran's oil exports, and noted that Trump often likes to 'switch it up' with his posts. The video follows Trump's ongoing threats towards Iran.",
+    "latest_title": "Trump Discusses Iran Decision at UN, Threatens Annihilation or Deal",
+    "latest_summary": "During his speech at the United Nations General Assembly, President Trump stated he faces a significant decision regarding Iran: to either negotiate a deal or consider military action, which he described as the potential to 'annihilate' the regime. He expressed confidence that Tehran might seek a resolution after the upcoming US midterm elections, emphasizing the importance of preventing Iran from acquiring nuclear weapons.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -506,29 +593,29 @@
       "milestone_development_ids": [
         "story_eeac5a41d1e28e7e",
         "story_587a3eb59eb54f2b",
-        "story_ff19dfb57fbe0194",
-        "story_2957253d412b8d51"
+        "story_d09097b2a404da55",
+        "story_cef09aa4fafc93dd"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-08-31",
-      "development_count": 7,
-      "coverage_packet_count": 7,
-      "date_count": 6,
-      "source_count": 17,
-      "independent_source_count": 11,
+      "summary_updated_at": "2026-09-22",
+      "development_count": 8,
+      "coverage_packet_count": 8,
+      "date_count": 7,
+      "source_count": 21,
+      "independent_source_count": 13,
       "first_date": "2026-08-02",
-      "latest_date": "2026-08-31",
-      "latest_update_title": "Vance Supports Trump's AI Video of Kharg Island as a Warning to Iran",
+      "latest_date": "2026-09-22",
+      "latest_update_title": "Trump Discusses Iran Decision at UN, Threatens Annihilation or Deal",
       "coverage_score": 1.0,
-      "recency_score": 0.25,
-      "rank_score": 0.565,
-      "context_summary": "Muninn first tracked this thread on 2026-08-02: Trump Delays Iran Strikes to Pursue Diplomatic Deal. The latest development is Vance Supports Trump's AI Video of Kharg Island as a Warning to Iran.",
-      "cta_label": "Explore 7 developments"
+      "recency_score": 1.0,
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-08-02: Trump Delays Iran Strikes to Pursue Diplomatic Deal. The latest development is Trump Discusses Iran Decision at UN, Threatens Annihilation or Deal.",
+      "cta_label": "Explore 8 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Trump announced that the US will refrain from launching new strikes against Iran in hopes of reaching a diplomatic agreement. A later development was Trump Threatens Economic Warfare Against Nations Supporting Iran. Most recently, vice President JD Vance defended President Trump's recent social media post featuring an AI-generated video depicting a bombing of Kharg Island, asserting that it serves as a message to Iran.",
+      "summary": "Trump announced that the US will refrain from launching new strikes against Iran in hopes of reaching a diplomatic agreement. A later development was UAE Suspends All Trade and Financial Transactions with Iran. Most recently, during his speech at the United Nations General Assembly, President Trump stated he faces a significant decision regarding Iran: to either negotiate a deal or consider military action, which he described as the potential to 'annihilate' the regime.",
       "key_developments": [
         {
           "development_id": "story_eeac5a41d1e28e7e",
@@ -541,14 +628,14 @@
           "title": "Iran Sets Six Conditions for US to Reopen Strait of Hormuz"
         },
         {
-          "development_id": "story_ff19dfb57fbe0194",
-          "date": "2026-08-20",
-          "title": "UAE Suspends All Trade and Financial Transactions with Iran"
+          "development_id": "story_d09097b2a404da55",
+          "date": "2026-08-30",
+          "title": "Iran's Supreme Leader Calls for Gulf Unity Against Common Adversaries"
         },
         {
-          "development_id": "story_2957253d412b8d51",
-          "date": "2026-08-31",
-          "title": "Vance Supports Trump's AI Video of Kharg Island as a Warning to Iran"
+          "development_id": "story_cef09aa4fafc93dd",
+          "date": "2026-09-22",
+          "title": "Trump Discusses Iran Decision at UN, Threatens Annihilation or Deal"
         }
       ],
       "sources": [
@@ -653,9 +740,33 @@
           "source": "Al Jazeera English",
           "link": "https://www.aljazeera.com/economy/2026/8/31/vance-says-trump-sending-a-message-to-iran-with-ai-generated-video?traffic_source=rss",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Trump defends US interventions abroad ahead of 'big decision' on Iran: 'Settling years of unfinished business'",
+          "source": "Fox News",
+          "link": "https://www.foxnews.com/politics/trump-defends-us-interventions-abroad-ahead-big-decision-iran-settling-years-unfinished-business",
+          "source_bias": "right"
+        },
+        {
+          "title": "In U.N. speech, Trump threatens to 'annihilate' Iran and defends foreign policy",
+          "source": "CBS News",
+          "link": "https://www.cbsnews.com/news/trump-address-united-nations-general-assembly-meetings-world-leaders-iran-ukraine",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Trump warns he could 'annihilate' Iran without peace deal in UN speech",
+          "source": "NewsNation",
+          "link": "https://www.newsnationnow.com/world/g7-iran-houthis-yemen-red-sea-saudi-arabia",
+          "source_bias": "center"
+        },
+        {
+          "title": "Trump warns he could 'annihilate' Iran without deal at UN",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/us/2026/0922/1592545-trump-un-meetings",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-08-31",
+      "updated_at": "2026-09-22",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -684,35 +795,39 @@
         "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
         "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
         "relationship": "related_topic",
-        "confidence": 0.815,
+        "confidence": 0.895,
         "shared_entities": [
           "donald_trump",
           "iran",
           "jd",
           "trump_claim",
+          "united",
+          "united_nation",
           "us"
         ]
       },
       {
-        "event_id": "event_iran-and-oman-near-agreement-on-strait-of-ho_af01d76b94",
-        "title": "Iran and Oman Near Agreement on Strait of Hormuz, Excluding US Involvement",
+        "event_id": "event_iran-and-us-indicate-possible-talks-amid-str_0e9342eb40",
+        "title": "Iran and US Indicate Possible Talks Amid Strait of Hormuz Tensions",
         "relationship": "related_topic",
-        "confidence": 0.769,
+        "confidence": 0.798,
         "shared_entities": [
-          "hormuz_iran",
+          "gulf",
           "iran",
-          "strait",
+          "un",
           "us"
         ]
       },
       {
-        "event_id": "event_trump-claims-us-has-permanent-security-contr_283d92313c",
-        "title": "Trump Claims US Has Permanent Security Control Over Greenland Following Denmark Deal",
+        "event_id": "event_us-denies-visa-to-palestinian-officials-ahea_ff7e499c31",
+        "title": "US Denies Visa to Palestinian Officials Ahead of UN General Assembly",
         "relationship": "related_topic",
-        "confidence": 0.748,
+        "confidence": 0.794,
         "shared_entities": [
+          "ai",
           "donald_trump",
-          "trump_claim",
+          "general_assembly",
+          "un",
           "us"
         ]
       }
@@ -741,50 +856,47 @@
       "available": true,
       "title": "About Iran Relations",
       "subject": "Iran Relations",
-      "summary": "Iran Relations refers here to the U.S.-Iran relationship and its regional consequences, including diplomacy, military deterrence, economic sanctions, Iran's nuclear program, and security of Gulf shipping routes. The relationship has operated without formal U.S.-Iran diplomatic ties since 1980, so communication and crisis management often involve indirect channels, international institutions, and third-country intermediaries.",
+      "summary": "Iran relations refers to the long-running, adversarial relationship between the United States and the Islamic Republic of Iran, shaped by the absence of formal diplomatic ties, nuclear non-proliferation disputes, sanctions, and regional-security concerns. Diplomatic contacts, when they occur, are generally indirect or mediated and take place alongside separate legal and multilateral frameworks governing Iran’s nuclear activities and international restrictions.",
       "facts": [
         {
           "label": "Diplomatic status",
-          "value": "The United States severed diplomatic relations with Iran on April 7, 1980; Switzerland serves as the protecting power for U.S. interests in Iran.",
+          "value": "The United States severed diplomatic relations with Iran on April 7, 1980; Switzerland acts as the U.S. protecting power in Iran, and there is no U.S. embassy or consulate there.",
           "source_ids": [
             "o1",
             "o2"
           ]
         },
         {
-          "label": "U.S. sanctions framework",
-          "value": "U.S. Iran-related economic restrictions are administered principally by the Treasury Department's Office of Foreign Assets Control under the Iranian Transactions and Sanctions Regulations, 31 C.F.R. Part 560; OFAC provides licensing mechanisms for activity otherwise prohibited.",
+          "label": "Nuclear agreement framework",
+          "value": "Iran and the E3/EU+3 (China, France, Germany, Russia, the United Kingdom, the United States, and the EU High Representative) concluded the Joint Comprehensive Plan of Action (JCPOA) on July 14, 2015. The UN Security Council unanimously endorsed it through Resolution 2231 on July 20, 2015.",
           "source_ids": [
             "o3",
             "o4"
           ]
         },
         {
-          "label": "Nuclear safeguards",
-          "value": "Iran's comprehensive safeguards agreement with the International Atomic Energy Agency in connection with the Nuclear Non-Proliferation Treaty entered into force on May 15, 1974. It provides for IAEA safeguards on nuclear material in Iran's peaceful nuclear activities.",
+          "label": "UN legal setting",
+          "value": "According to the UN Security Council’s Resolution 2231 page, prior Iran-related Security Council measures were re-applied on September 27, 2025 under the resolution’s process; this is distinct from unilateral national sanctions programs.",
           "source_ids": [
-            "o5",
+            "o3"
+          ]
+        },
+        {
+          "label": "IAEA safeguards",
+          "value": "Iran’s safeguards agreement with the International Atomic Energy Agency in connection with the Nuclear Non-Proliferation Treaty entered into force on May 15, 1974. Iran signed an Additional Protocol in 2003, but the IAEA country record does not list it as in force.",
+          "source_ids": [
+            "o5"
+          ]
+        },
+        {
+          "label": "U.S. economic measures",
+          "value": "U.S. policy toward Iran also operates through Treasury sanctions authorities: for example, Treasury has designated foreign persons and entities it says support procurement for Iran’s Islamic Revolutionary Guard Corps and defense ministry.",
+          "source_ids": [
             "o6"
-          ]
-        },
-        {
-          "label": "UN nuclear diplomacy",
-          "value": "On July 20, 2015, the UN Security Council unanimously adopted Resolution 2231, endorsing the Joint Comprehensive Plan of Action (JCPOA) and setting out UN measures concerning Iran's nuclear program.",
-          "source_ids": [
-            "o7",
-            "o8"
-          ]
-        },
-        {
-          "label": "Strait of Hormuz",
-          "value": "The Strait of Hormuz lies between Iran and Oman and connects the Persian Gulf with the Gulf of Oman and Arabian Sea. It is a major global oil-transit chokepoint, making maritime access and security there central to wider Iran-related tensions.",
-          "source_ids": [
-            "o9",
-            "o10"
           ]
         }
       ],
-      "scope_note": "The selected Muninn timeline follows specific developments from August 2 through August 31, 2026 involving U.S.-Iran diplomacy, regional economic measures, and Strait of Hormuz-related tensions; it does not aim to be a complete history of U.S.-Iran relations, Iran's domestic politics, or all regional security events.",
+      "scope_note": "The selected Muninn timeline follows a limited set of late-2026 developments involving U.S.-Iran diplomacy, military signaling, economic pressure, and Gulf maritime issues; it does not constitute a complete record of U.S.-Iran relations, nuclear negotiations, or actions by all regional and international actors.",
       "sources": [
         {
           "title": "State",
@@ -796,22 +908,22 @@
         {
           "title": "State",
           "publisher": "State",
-          "url": "https://2017-2021.state.gov/u-s-relations-with-iran/",
+          "url": "https://travel.state.gov/en/international-travel/travel-advisories/iran.html",
           "source_type": "primary",
           "id": "o2"
         },
         {
-          "title": "Treasury",
-          "publisher": "Treasury",
-          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/iran-sanctions",
-          "source_type": "primary",
+          "title": "UN",
+          "publisher": "UN",
+          "url": "https://main.un.org/securitycouncil/en/content/2231/background",
+          "source_type": "reporting",
           "id": "o3"
         },
         {
-          "title": "Treasury",
-          "publisher": "Treasury",
-          "url": "https://ofac.treasury.gov/additional-ofac-resources/ofac-legal-library/code-of-federal-regulations-cfr",
-          "source_type": "primary",
+          "title": "UN",
+          "publisher": "UN",
+          "url": "https://digitallibrary.un.org/record/797839/?ln=en&v=%5B%27pdf%27%5D",
+          "source_type": "reporting",
           "id": "o4"
         },
         {
@@ -822,48 +934,21 @@
           "id": "o5"
         },
         {
-          "title": "Iaea",
-          "publisher": "Iaea",
-          "url": "https://www.iaea.org/sites/default/files/publications/documents/infcircs/1974/infcirc214.pdf",
-          "source_type": "reporting",
-          "id": "o6"
-        },
-        {
-          "title": "UN",
-          "publisher": "UN",
-          "url": "https://main.un.org/securitycouncil/en/content/2231/background",
-          "source_type": "reporting",
-          "id": "o7"
-        },
-        {
-          "title": "UN",
-          "publisher": "UN",
-          "url": "https://digitallibrary.un.org/record/797839/?ln=en&v=%5B%27pdf%27%5D",
-          "source_type": "reporting",
-          "id": "o8"
-        },
-        {
-          "title": "Eia",
-          "publisher": "Eia",
-          "url": "https://www.eia.gov/todayinenergy/detail.php?id=61002",
+          "title": "Treasury",
+          "publisher": "Treasury",
+          "url": "https://home.treasury.gov/news/press-releases/sb0528",
           "source_type": "primary",
-          "id": "o9"
-        },
-        {
-          "title": "Iea",
-          "publisher": "Iea",
-          "url": "https://www.iea.org/about/oil-security-and-emergency-response/strait-of-hormuz",
-          "source_type": "reporting",
-          "id": "o10"
+          "id": "o6"
         }
       ],
-      "publisher_count": 6,
-      "generated_at": "2026-08-31T18:41:58.461963+00:00",
-      "expires_at": "2026-09-07T18:41:58.461963+00:00",
+      "publisher_count": 4,
+      "generated_at": "2026-09-22T16:13:28.928237+00:00",
+      "expires_at": "2026-09-29T16:13:28.928237+00:00",
       "model": "gpt-5.6-terra",
       "provenance": "openai_web_search_source_grounded_event_overview_v1"
     },
     "search_tokens": [
+      "acquiring",
       "action",
       "adventurou",
       "adversarie",
@@ -871,8 +956,11 @@
       "ai-generated",
       "also",
       "among",
+      "annihilate",
+      "annihilation",
       "announced",
       "arab",
+      "assembly",
       "asserting",
       "assertion",
       "assist",
@@ -895,7 +983,9 @@
       "complicating",
       "condition",
       "conduct",
+      "confidence",
       "consequence",
+      "consider",
       "contradicting",
       "countrie",
       "crucial",
@@ -914,25 +1004,33 @@
       "depicting",
       "described",
       "diplomatic",
+      "discusse",
       "discussion",
       "division",
       "donald",
       "economic",
+      "either",
+      "election",
       "emirate",
       "emphasized",
+      "emphasizing",
       "enemy",
       "exchange",
       "export",
+      "expressed",
+      "faces",
       "featuring",
       "financial",
       "flow",
       "follow",
       "further",
+      "general",
       "gulf",
       "halt",
       "hopes",
       "hormuz",
       "illustrate",
+      "importance",
       "important",
       "increased",
       "indicated",
@@ -956,6 +1054,8 @@
       "meet",
       "meeting",
       "message",
+      "midterm",
+      "might",
       "military",
       "missile",
       "mojtaba",
@@ -963,6 +1063,7 @@
       "muslim",
       "must",
       "nation",
+      "negotiate",
       "negotiation",
       "noted",
       "nuclear",
@@ -980,6 +1081,7 @@
       "posts",
       "potential",
       "pre-war",
+      "preventing",
       "price",
       "program",
       "progress",
@@ -991,6 +1093,7 @@
       "recent",
       "refrain",
       "regarding",
+      "regime",
       "region",
       "regional",
       "relation",
@@ -998,6 +1101,7 @@
       "reparation",
       "reportedly",
       "representative",
+      "resolution",
       "respond",
       "response",
       "rising",
@@ -1010,6 +1114,7 @@
       "ships",
       "significant",
       "social",
+      "speech",
       "stated",
       "stating",
       "strait",
@@ -1021,6 +1126,7 @@
       "suspend",
       "switch",
       "talks",
+      "tehran",
       "tension",
       "territory",
       "than",
@@ -1037,11 +1143,13 @@
       "unite",
       "united",
       "unity",
+      "upcoming",
       "vance",
       "vice",
       "video",
       "warfare",
       "warning",
+      "weapon",
       "what",
       "which",
       "would",
@@ -1058,15 +1166,19 @@
       "delay_iran",
       "denie_ongoing",
       "diplomatic_deal",
+      "discusse_iran",
       "donald_trump",
       "economic_warfare",
       "financial_transaction",
+      "general_assembly",
       "gulf",
       "gulf_unity",
       "hormuz_iran",
       "iran",
       "iran.",
+      "iran._trump",
       "iran._vance",
+      "iran_decision",
       "iran_denie",
       "iran_sets",
       "iran_vice",
@@ -1074,6 +1186,7 @@
       "kharg_island",
       "leader_mojtaba",
       "mojtaba_khamenei",
+      "nation_general",
       "nation_supporting",
       "ongoing_talks",
       "progress_iran",
@@ -1084,17 +1197,22 @@
       "strait",
       "support_trump",
       "supporting_iran",
+      "threaten_annihilation",
       "threaten_economic",
       "trump_claim",
       "trump_delay",
+      "trump_discusse",
       "trump_threaten",
       "uae",
       "uae.",
+      "un",
+      "united",
       "united_arab",
+      "united_nation",
       "us",
       "vance_support"
     ],
-    "search_text": "action adventurou adversarie adversarie_iran agreement ai ai-generated also among announced arab arab_emirate asserting assertion assist attack ballistic bombing bond business called calls canceling cease cited claim comes commented commercial common common_adversarie complete complicating condition conduct consequence contradicting countrie crucial crude current d-day deal deal_trump dealing decision decisively decreased defended delay delay_iran demand denie denie_ongoing depicting described diplomatic diplomatic_deal discussion division donald donald_trump economic economic_warfare emirate emphasized enemy exchange export featuring financial financial_transaction flow follow further gulf gulf_unity halt hopes hormuz hormuz_iran illustrate important increased indicated indicating instructed interest iran iran. iran._vance iran_denie iran_sets iran_vice island issued jd khamenei kharg kharg_island launch launching leader leader_mojtaba less level likes market marks media meet meeting message military missile mojtaba mojtaba_khamenei most muslim must nation nation_supporting negotiation noted nuclear occur often oil ongoing ongoing_talks only outlined particularly partner planned plans post posts potential pre-war price program progress progress_iran pursue pursue_diplomatic quarter reaching real reason recent refrain regarding region regional relation reopen reopen_strait reparation reportedly representative respond response rising same seek serve sets severe shift ships significant social stated stating strait strike stylized support support_trump supporting supporting_iran supreme suspend switch talks tension territory than there those threat threaten threaten_economic through toward trade trading transaction trump trump_claim trump_delay trump_threaten uae uae. unite united united_arab unity us vance vance_support vice video warfare warning what which would yield"
+    "search_text": "acquiring action adventurou adversarie adversarie_iran agreement ai ai-generated also among annihilate annihilation announced arab arab_emirate assembly asserting assertion assist attack ballistic bombing bond business called calls canceling cease cited claim comes commented commercial common common_adversarie complete complicating condition conduct confidence consequence consider contradicting countrie crucial crude current d-day deal deal_trump dealing decision decisively decreased defended delay delay_iran demand denie denie_ongoing depicting described diplomatic diplomatic_deal discusse discusse_iran discussion division donald donald_trump economic economic_warfare either election emirate emphasized emphasizing enemy exchange export expressed faces featuring financial financial_transaction flow follow further general general_assembly gulf gulf_unity halt hopes hormuz hormuz_iran illustrate importance important increased indicated indicating instructed interest iran iran. iran._trump iran._vance iran_decision iran_denie iran_sets iran_vice island issued jd khamenei kharg kharg_island launch launching leader leader_mojtaba less level likes market marks media meet meeting message midterm might military missile mojtaba mojtaba_khamenei most muslim must nation nation_general nation_supporting negotiate negotiation noted nuclear occur often oil ongoing ongoing_talks only outlined particularly partner planned plans post posts potential pre-war preventing price program progress progress_iran pursue pursue_diplomatic quarter reaching real reason recent refrain regarding regime region regional relation reopen reopen_strait reparation reportedly representative resolution respond response rising same seek serve sets severe shift ships significant social speech stated stating strait strike stylized support support_trump supporting supporting_iran supreme suspend switch talks tehran tension territory than there those threat threaten threaten_annihilation threaten_economic through toward trade trading transaction trump trump_claim trump_delay trump_discusse trump_threaten uae uae. un unite united united_arab united_nation unity upcoming us vance vance_support vice video warfare warning weapon what which would yield"
   },
   "related_events": [
     {
@@ -1166,20 +1284,20 @@
       "href": "/timeline.html?event=event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b"
     },
     {
-      "event_id": "event_iran-and-oman-near-agreement-on-strait-of-ho_af01d76b94",
-      "title": "Iran and Oman Near Agreement on Strait of Hormuz, Excluding US Involvement",
-      "summary": "Muninn first tracked this thread on 2026-08-06: Iran and Oman Near Agreement on Strait of Hormuz, Excluding US Involvement. The latest development is Iran and Oman Establish Temporary Shipping Corridor in Strait of Hormuz.",
+      "event_id": "event_us-denies-visa-to-palestinian-officials-ahea_ff7e499c31",
+      "title": "US Denies Visa to Palestinian Officials Ahead of UN General Assembly",
+      "summary": "Muninn first tracked this thread on 2026-09-17: US Denies Visa to Palestinian Officials Ahead of UN General Assembly. The latest development is World Leaders Address UN General Assembly Amid Calls for Greater Representation.",
       "activity_status": "active",
       "stage": "developing_event",
       "stage_label": "Developing event",
-      "first_seen_at": "2026-08-06",
-      "last_seen_at": "2026-08-26",
-      "development_count": 2,
-      "latest_title": "Iran and Oman Establish Temporary Shipping Corridor in Strait of Hormuz",
-      "topic_label": "Strait of Hormuz",
+      "first_seen_at": "2026-09-17",
+      "last_seen_at": "2026-09-22",
+      "development_count": 4,
+      "latest_title": "World Leaders Address UN General Assembly Amid Calls for Greater Representation",
+      "topic_label": "UN General Assembly",
       "hero_image": {
-        "url": "/Current_news/generated/events/event_iran-and-oman-near-agreement-on-strait-of-ho_af01d76b94.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_iran-and-oman-near-agreement-on-strait-of-ho_af01d76b94.jpg",
+        "url": "/Current_news/generated/events/event_us-denies-visa-to-palestinian-officials-ahea_ff7e499c31.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_us-denies-visa-to-palestinian-officials-ahea_ff7e499c31.jpg",
         "source": "Muninn AI illustration",
         "author": "OpenAI GPT Image 2",
         "license": "AI-generated content",
@@ -1197,41 +1315,7 @@
         "focal_tall_x": 0.5,
         "focal_tall_y": 0.48
       },
-      "href": "/timeline.html?event=event_iran-and-oman-near-agreement-on-strait-of-ho_af01d76b94"
-    },
-    {
-      "event_id": "event_trump-claims-us-has-permanent-security-contr_283d92313c",
-      "title": "Trump Claims US Has Permanent Security Control Over Greenland Following Denmark Deal",
-      "summary": "Muninn first tracked this thread on 2026-09-19: Trump Claims US Has Permanent Security Control Over Greenland Following Denmark Deal. The latest development is US and Denmark Reach Security Agreement on Greenland.",
-      "activity_status": "active",
-      "stage": "developing_event",
-      "stage_label": "Developing event",
-      "first_seen_at": "2026-09-19",
-      "last_seen_at": "2026-09-20",
-      "development_count": 2,
-      "latest_title": "US and Denmark Reach Security Agreement on Greenland",
-      "topic_label": "Greenland Security Agreement",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_trump-claims-us-has-permanent-security-contr_283d92313c.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_trump-claims-us-has-permanent-security-contr_283d92313c.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_trump-claims-us-has-permanent-security-contr_283d92313c"
+      "href": "/timeline.html?event=event_us-denies-visa-to-palestinian-officials-ahea_ff7e499c31"
     }
   ]
 }
