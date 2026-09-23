@@ -1,0 +1,440 @@
+{
+  "schema_version": 1,
+  "resource_type": "event",
+  "event_id": "event_hurricane-polo-intensifies-to-category-5-off_6b6dfd9d9b",
+  "publication": {
+    "status": "published",
+    "permalink": "/timeline.html?event=event_hurricane-polo-intensifies-to-category-5-off_6b6dfd9d9b",
+    "share_expires_at": null
+  },
+  "event": {
+    "event_id": "event_hurricane-polo-intensifies-to-category-5-off_6b6dfd9d9b",
+    "title": "Mexico Storm",
+    "canonical_title": "Mexico Storm",
+    "topic_label": "Mexico Storm",
+    "summary": "Hurricane Polo has intensified into a Category 5 storm in the eastern Pacific, located off the southwestern coast of Mexico. The storm is expected to bring heavy rainfall to the region while remaining offshore.",
+    "status": "active",
+    "first_seen_at": "2026-09-22",
+    "last_seen_at": "2026-09-23",
+    "timeline": [
+      {
+        "development_id": "story_ca5eec08a52fa4b3",
+        "daily_story_id": "story_ca5eec08a52fa4b3",
+        "date": "2026-09-22",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Hurricane Polo Intensifies to Category 5 Off Southwestern Mexico",
+        "summary": "Hurricane Polo has intensified into a Category 5 storm in the eastern Pacific, located off the southwestern coast of Mexico. The storm is expected to bring heavy rainfall to the region while remaining offshore.",
+        "topic_label": "Hurricane Polo",
+        "development_type": "development",
+        "key_facts": [
+          "Hurricane Polo grew into a Category 5 storm.",
+          "The storm is located off the southwestern coast of Mexico.",
+          "Heavy rain is forecast for southwestern Mexico."
+        ],
+        "source_count": 2,
+        "sources": [
+          "CBS News",
+          "PBS News"
+        ],
+        "source_urls": [
+          "https://www.pbs.org/newshour/nation/live-map-track-the-path-of-hurricane-polo",
+          "https://www.cbsnews.com/news/hurricane-polo-category-5-mexico-life-threatening-flooding"
+        ],
+        "source_details": [
+          {
+            "title": "Live Map: Track the path of Hurricane Polo",
+            "source": "PBS News",
+            "link": "https://www.pbs.org/newshour/nation/live-map-track-the-path-of-hurricane-polo",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Hurricane Polo grows into Category 5 storm off Mexico",
+            "source": "CBS News",
+            "link": "https://www.cbsnews.com/news/hurricane-polo-category-5-mexico-life-threatening-flooding",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 1.0,
+        "match_evidence": {
+          "score": 1.0,
+          "method": "new_event",
+          "shared_tokens": [],
+          "shared_entities": []
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-22",
+        "last_seen_at": "2026-09-22",
+        "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_4ff82142b5bf4552",
+        "daily_story_id": "story_4ff82142b5bf4552",
+        "date": "2026-09-23",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Hurricane Polo Reaches Category 5 Status Off Mexico's Pacific Coast",
+        "summary": "Hurricane Polo has intensified into one of the strongest storms ever recorded in the Pacific, reaching Category 5 status with maximum sustained winds exceeding 157 mph (253 kph). The storm is currently off the southwestern coast of Mexico and is being influenced by warm waters associated with the El Niño phenomenon. Although it has since weakened to a Category 4 storm, it remains a powerful cyclone expected to affect the region.",
+        "topic_label": "Hurricane Polo",
+        "development_type": "development",
+        "key_facts": [
+          "Hurricane Polo reached Category 5 status.",
+          "Maximum sustained winds exceeded 157 mph (253 kph).",
+          "The storm is influenced by the El Niño phenomenon.",
+          "Polo has since weakened to a Category 4 storm."
+        ],
+        "source_count": 3,
+        "sources": [
+          "BBC",
+          "CBS News",
+          "NewsNation"
+        ],
+        "source_urls": [
+          "https://www.newsnationnow.com/weather/hurricane-polo-mexico-one-of-strongest-storms-ever",
+          "https://www.bbc.co.uk/news/articles/ckddvlrlr5qeo?at_medium=RSS&at_campaign=rss",
+          "https://www.cbsnews.com/news/hurricane-polo-category-5-mexico-life-threatening-flooding"
+        ],
+        "source_details": [
+          {
+            "title": "Hurricane Polo churns off Mexico's Pacific coast as 'one of the strongest storms ever'",
+            "source": "NewsNation",
+            "link": "https://www.newsnationnow.com/weather/hurricane-polo-mexico-one-of-strongest-storms-ever",
+            "source_bias": "center"
+          },
+          {
+            "title": "Hurricane Polo downgraded but remains 'very powerful' off coast of Mexico",
+            "source": "BBC",
+            "link": "https://www.bbc.co.uk/news/articles/ckddvlrlr5qeo?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          },
+          {
+            "title": "Hurricane Polo is a powerful Category 4 storm off Mexico. See its path.",
+            "source": "CBS News",
+            "link": "https://www.cbsnews.com/news/hurricane-polo-category-5-mexico-life-threatening-flooding",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 1.0,
+        "match_evidence": {
+          "score": 1.0,
+          "matched_development_id": "story_ca5eec08a52fa4b3",
+          "shared_tokens": [
+            "category",
+            "coast",
+            "expected",
+            "hurricane",
+            "intensified",
+            "mexico",
+            "pacific",
+            "polo",
+            "region",
+            "southwestern",
+            "storm"
+          ],
+          "shared_entities": [
+            "category",
+            "hurricane_polo",
+            "mexico",
+            "polo_hurricane"
+          ],
+          "source_url_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-23",
+        "last_seen_at": "2026-09-23",
+        "integrity_status": "trusted"
+      }
+    ],
+    "incident_fingerprint": {
+      "types": [
+        "storm"
+      ],
+      "anchors": [
+        "category",
+        "category_off",
+        "hurricane",
+        "hurricane_polo",
+        "mexico",
+        "mexico._heavy",
+        "mexico_hurricane",
+        "off",
+        "off_southwestern",
+        "polo",
+        "polo_hurricane",
+        "polo_intensifie",
+        "southwestern",
+        "southwestern_mexico"
+      ],
+      "countries": [
+        "mexico"
+      ],
+      "method": "bounded_incident_fingerprint_v1"
+    },
+    "integrity": {
+      "public_development_count": 2,
+      "questionable_development_count": 0,
+      "review_required": false
+    },
+    "latest_title": "Hurricane Polo Reaches Category 5 Status Off Mexico's Pacific Coast",
+    "latest_summary": "Hurricane Polo has intensified into one of the strongest storms ever recorded in the Pacific, reaching Category 5 status with maximum sustained winds exceeding 157 mph (253 kph). The storm is currently off the southwestern coast of Mexico and is being influenced by warm waters associated with the El Niño phenomenon. Although it has since weakened to a Category 4 storm, it remains a powerful cyclone expected to affect the region.",
+    "presentation": {
+      "has_context": true,
+      "has_full_timeline": false,
+      "stage": "developing_event",
+      "stage_label": "Developing event",
+      "base_title": "Mexico Storm",
+      "display_title": "Mexico Storm",
+      "milestone_development_ids": [
+        "story_ca5eec08a52fa4b3",
+        "story_4ff82142b5bf4552"
+      ],
+      "summary_available": true,
+      "summary_label": "Read the story so far",
+      "summary_updated_at": "2026-09-23",
+      "development_count": 2,
+      "coverage_packet_count": 2,
+      "date_count": 2,
+      "source_count": 4,
+      "independent_source_count": 4,
+      "first_date": "2026-09-22",
+      "latest_date": "2026-09-23",
+      "latest_update_title": "Hurricane Polo Reaches Category 5 Status Off Mexico's Pacific Coast",
+      "coverage_score": 0.397,
+      "recency_score": 1.0,
+      "rank_score": 0.747,
+      "context_summary": "Muninn first tracked this thread on 2026-09-22: Hurricane Polo Intensifies to Category 5 Off Southwestern Mexico. The latest development is Hurricane Polo Reaches Category 5 Status Off Mexico's Pacific Coast.",
+      "cta_label": ""
+    },
+    "event_summary": {
+      "available": true,
+      "summary": "Hurricane Polo has intensified into a Category 5 storm in the eastern Pacific, located off the southwestern coast of Mexico. Most recently, hurricane Polo has intensified into one of the strongest storms ever recorded in the Pacific, reaching Category 5 status with maximum sustained winds exceeding 157 mph (253 kph).",
+      "key_developments": [
+        {
+          "development_id": "story_ca5eec08a52fa4b3",
+          "date": "2026-09-22",
+          "title": "Hurricane Polo Intensifies to Category 5 Off Southwestern Mexico"
+        },
+        {
+          "development_id": "story_4ff82142b5bf4552",
+          "date": "2026-09-23",
+          "title": "Hurricane Polo Reaches Category 5 Status Off Mexico's Pacific Coast"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Live Map: Track the path of Hurricane Polo",
+          "source": "PBS News",
+          "link": "https://www.pbs.org/newshour/nation/live-map-track-the-path-of-hurricane-polo",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Hurricane Polo grows into Category 5 storm off Mexico",
+          "source": "CBS News",
+          "link": "https://www.cbsnews.com/news/hurricane-polo-category-5-mexico-life-threatening-flooding",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Hurricane Polo churns off Mexico's Pacific coast as 'one of the strongest storms ever'",
+          "source": "NewsNation",
+          "link": "https://www.newsnationnow.com/weather/hurricane-polo-mexico-one-of-strongest-storms-ever",
+          "source_bias": "center"
+        },
+        {
+          "title": "Hurricane Polo downgraded but remains 'very powerful' off coast of Mexico",
+          "source": "BBC",
+          "link": "https://www.bbc.co.uk/news/articles/ckddvlrlr5qeo?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
+        }
+      ],
+      "updated_at": "2026-09-23",
+      "provenance": "source_grounded_event_memory"
+    },
+    "event_stage": "developing_event",
+    "related_events": [],
+    "search_tokens": [
+      "157",
+      "253",
+      "affect",
+      "although",
+      "associated",
+      "bring",
+      "category",
+      "coast",
+      "currently",
+      "cyclone",
+      "eastern",
+      "ever",
+      "exceeding",
+      "expected",
+      "heavy",
+      "hurricane",
+      "influenced",
+      "intensifie",
+      "intensified",
+      "located",
+      "maximum",
+      "mexico",
+      "offshore",
+      "pacific",
+      "phenomenon",
+      "polo",
+      "powerful",
+      "rainfall",
+      "reache",
+      "reaching",
+      "recorded",
+      "region",
+      "remain",
+      "remaining",
+      "since",
+      "southwestern",
+      "statu",
+      "storm",
+      "strongest",
+      "sustained",
+      "warm",
+      "water",
+      "weakened",
+      "while",
+      "winds"
+    ],
+    "entities": [
+      "category",
+      "category_off",
+      "category_statu",
+      "coast_hurricane",
+      "hurricane_polo",
+      "mexico",
+      "mexico_hurricane",
+      "mexico_pacific",
+      "off_mexico",
+      "off_southwestern",
+      "pacific",
+      "pacific_coast",
+      "polo_intensifie",
+      "polo_reache",
+      "reache_category",
+      "southwestern_mexico",
+      "statu_off"
+    ],
+    "search_text": "157 253 affect although associated bring category category_off category_statu coast coast_hurricane currently cyclone eastern ever exceeding expected heavy hurricane hurricane_polo influenced intensifie intensified located maximum mexico mexico_hurricane mexico_pacific off_mexico off_southwestern offshore pacific pacific_coast phenomenon polo polo_intensifie polo_reache powerful rainfall reache reache_category reaching recorded region remain remaining since southwestern southwestern_mexico statu statu_off storm strongest sustained warm water weakened while winds",
+    "event_overview": {
+      "available": true,
+      "title": "About Mexico Storm",
+      "subject": "Mexico Storm",
+      "summary": "Mexico Storm refers to Hurricane Polo, an eastern North Pacific tropical cyclone that developed south of Mexico and intensified rapidly while tracking near the country’s southwestern Pacific coast. As of September 23, 2026, its outer rainbands were affecting coastal areas, creating risks from heavy rain, flooding, mudslides, dangerous surf and tropical-storm-force winds even though the storm’s core was forecast to remain offshore.",
+      "facts": [
+        {
+          "label": "Dates",
+          "value": "The National Hurricane Center’s advisory archive begins for Polo on September 20, 2026; the cyclone was still active and under NHC advisories on September 23, 2026.",
+          "source_ids": [
+            "o1"
+          ]
+        },
+        {
+          "label": "Location",
+          "value": "Polo formed in the eastern North Pacific and approached the southwestern Mexican coast, with official advisories focusing on effects near Guerrero, Michoacán, Colima, Jalisco and Oaxaca.",
+          "source_ids": [
+            "o2",
+            "o3"
+          ]
+        },
+        {
+          "label": "Official monitoring",
+          "value": "The U.S. National Hurricane Center, part of the National Weather Service, issued the storm’s forecasts, public advisories and tropical-cyclone discussions; NOAA Hurricane Hunter aircraft observations were used to assess its intensity.",
+          "source_ids": [
+            "o3",
+            "o4"
+          ]
+        },
+        {
+          "label": "Hazards",
+          "value": "Official forecasts warned that rainfall along coastal southwestern Mexico could cause life-threatening flooding and mudslides, while ocean swells could produce dangerous surf and rip currents.",
+          "source_ids": [
+            "o2",
+            "o5"
+          ]
+        },
+        {
+          "label": "Intensity context",
+          "value": "Polo underwent rapid intensification after becoming a tropical storm; NOAA aircraft observations on September 22 found maximum sustained winds near 180 mph and a minimum central pressure of 892 mb.",
+          "source_ids": [
+            "o4"
+          ]
+        }
+      ],
+      "scope_note": "The selected Muninn timeline covers Polo’s late-September 2026 intensification near Mexico, not a complete record of every advisory, forecast revision, local impact or wider Pacific hurricane-season development.",
+      "sources": [
+        {
+          "title": "Noaa",
+          "publisher": "Noaa",
+          "url": "https://www.nhc.noaa.gov/archive/2026/POLO.shtml",
+          "source_type": "primary",
+          "id": "o1"
+        },
+        {
+          "title": "Noaa",
+          "publisher": "Noaa",
+          "url": "https://www.nhc.noaa.gov/archive/2026/ep17/ep172026.public_a.004.shtml",
+          "source_type": "primary",
+          "id": "o2"
+        },
+        {
+          "title": "Noaa",
+          "publisher": "Noaa",
+          "url": "https://www.nhc.noaa.gov/archive/2026/ep17/ep172026.discus.009.shtml",
+          "source_type": "primary",
+          "id": "o3"
+        },
+        {
+          "title": "Noaa",
+          "publisher": "Noaa",
+          "url": "https://www.nhc.noaa.gov/mobile/text/refresh/MIATCUEP2%2Bhtml/221919.shtml",
+          "source_type": "primary",
+          "id": "o4"
+        },
+        {
+          "title": "Noaa",
+          "publisher": "Noaa",
+          "url": "https://www.nhc.noaa.gov/archive/2026/ep17/ep172026.discus.004.shtml",
+          "source_type": "primary",
+          "id": "o5"
+        }
+      ],
+      "publisher_count": 1,
+      "generated_at": "2026-09-23T16:02:09.642540+00:00",
+      "expires_at": "2026-09-30T16:02:09.642540+00:00",
+      "model": "gpt-5.6-terra",
+      "provenance": "openai_web_search_source_grounded_event_overview_v1"
+    },
+    "hero_image": {
+      "url": "/Current_news/generated/events/event_hurricane-polo-intensifies-to-category-5-off_6b6dfd9d9b.jpg",
+      "thumbnail_url": "/Current_news/generated/events/event_hurricane-polo-intensifies-to-category-5-off_6b6dfd9d9b.jpg",
+      "source": "Muninn AI illustration",
+      "author": "OpenAI GPT Image 2",
+      "license": "AI-generated content",
+      "image_role": "illustrative",
+      "image_role_label": "AI illustration",
+      "is_ai_generated": true,
+      "generation_model": "gpt-image-2",
+      "generation_quality": "low",
+      "safe_to_crop": true,
+      "allows_crop": true,
+      "focal_x": 0.5,
+      "focal_y": 0.48,
+      "focal_wide_x": 0.5,
+      "focal_wide_y": 0.48,
+      "focal_tall_x": 0.5,
+      "focal_tall_y": 0.48
+    }
+  },
+  "related_events": []
+}
