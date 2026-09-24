@@ -1,0 +1,543 @@
+{
+  "schema_version": 1,
+  "resource_type": "story",
+  "story_id": "story_d789fe3baeccda8c",
+  "edition": {
+    "date": "2026-09-24",
+    "generated_at": "2026-09-24T16:24:27.398498+00:00"
+  },
+  "publication": {
+    "status": "published",
+    "published_at": "2026-09-24T16:24:27.398498+00:00",
+    "permalink": "/story.html?sid=story_d789fe3baeccda8c",
+    "share_expires_at": null,
+    "placements": [
+      {
+        "surface": "today",
+        "visible_from": "2026-09-24T16:24:27.398498+00:00",
+        "visible_until": "2026-09-25T16:24:27.398498+00:00"
+      },
+      {
+        "surface": "more_news",
+        "visible_from": "2026-09-25T16:24:27.398498+00:00",
+        "visible_until": "2026-10-01T16:24:27.398498+00:00"
+      }
+    ]
+  },
+  "story": {
+    "cluster_id": "demo_cluster_016",
+    "title": "Trump Hosts Xi Jinping for State Visit Focused on AI and Tariffs",
+    "category": "Politics",
+    "topic_label": "US-China Relations",
+    "summary": "President Trump is welcoming Chinese President Xi Jinping to the White House for a series of meetings and a state dinner. The discussions will focus on extending a tariff truce and addressing competition in advanced artificial intelligence between the two nations.",
+    "occurred_at": "2026-09-24",
+    "occurrence_precision": "exact_time",
+    "occurrence_basis": "source_stated",
+    "source_count": 2,
+    "sources": [
+      "ABC News",
+      "CBS News"
+    ],
+    "items": [
+      {
+        "title": "Trump greets Xi at White House for high-stakes state visit",
+        "description": "",
+        "source": "ABC News",
+        "station": "ABC News",
+        "source_bias": "lean-left",
+        "access_type": null,
+        "published_ts": 1790259957,
+        "link": "https://abcnews.com/Politics/trump-greets-xi-white-house-high-stakes-state/story?id=136717468"
+      },
+      {
+        "title": "Trump hosting China's Xi at White House with AI and tariffs on the agenda",
+        "description": "",
+        "source": "CBS News",
+        "station": "CBS News",
+        "source_bias": "lean-left",
+        "access_type": null,
+        "published_ts": 1790266418,
+        "link": "https://www.cbsnews.com/live-updates/trump-china-xi-jinping-state-visit-dinner-tariffs-ai/"
+      }
+    ],
+    "quality_label": "review",
+    "quality_score": 0.65,
+    "key_facts": [
+      "Trump is hosting Xi Jinping at the White House.",
+      "Meetings and a state dinner are scheduled for Thursday.",
+      "The agenda includes discussions on tariffs and AI rivalry."
+    ],
+    "primary_source": {
+      "title": "Trump greets Xi at White House for high-stakes state visit",
+      "source": "ABC News",
+      "source_bias": "lean-left",
+      "access_type": null,
+      "link": "https://abcnews.com/Politics/trump-greets-xi-white-house-high-stakes-state/story?id=136717468",
+      "published_ts": 1790259957
+    },
+    "story_id": "story_d789fe3baeccda8c",
+    "development_id": "story_d789fe3baeccda8c",
+    "event_id": "event_trump-hosts-xi-jinping-for-talks-at-the-whit_7f9e41e6e2",
+    "event_match_confidence": 0.72,
+    "update_kind": "new_development",
+    "novelty_score": 0.9,
+    "new_facts": [
+      "Trump is hosting Xi Jinping at the White House.",
+      "Meetings and a state dinner are scheduled for Thursday.",
+      "The agenda includes discussions on tariffs and AI rivalry."
+    ],
+    "today_eligible": true,
+    "development_relation": {
+      "same_development": false,
+      "reason": "new state change inside a continuing event",
+      "numbers_changed": false
+    },
+    "timeline_highlights": [
+      {
+        "development_id": "story_58997b21abca2461",
+        "daily_story_id": "story_58997b21abca2461",
+        "date": "2026-09-24",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Trump Hosts Xi Jinping for Talks at the White House",
+        "summary": "Donald Trump welcomed Chinese President Xi Jinping to the White House for discussions on various pressing issues, including trade and artificial intelligence. The meeting is expected to address a range of complex topics that have characterized the US-China relationship.",
+        "topic_label": "US-China Relations",
+        "development_type": "diplomacy",
+        "key_facts": [
+          "Trump welcomed Xi Jinping to the White House.",
+          "The leaders will discuss trade and artificial intelligence."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Al Jazeera English",
+          "PBS News - Headlines"
+        ],
+        "source_urls": [
+          "https://www.aljazeera.com/video/newsfeed/2026/9/24/trump-welcomes-chinas-xi-jinping-to-white-house?traffic_source=rss",
+          "https://www.pbs.org/newshour/politics/trump-and-xi-jinping-will-hold-talks-in-washington-on-trade-ai-and-more"
+        ],
+        "source_details": [
+          {
+            "title": "Trump welcomes China’s Xi Jinping to White House",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/video/newsfeed/2026/9/24/trump-welcomes-chinas-xi-jinping-to-white-house?traffic_source=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Trump and Xi Jinping will hold talks in Washington on trade, AI and more",
+            "source": "PBS News - Headlines",
+            "link": "https://www.pbs.org/newshour/politics/trump-and-xi-jinping-will-hold-talks-in-washington-on-trade-ai-and-more",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 1.0,
+        "match_evidence": {
+          "score": 1.0,
+          "method": "new_event",
+          "shared_tokens": [],
+          "shared_entities": []
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-24",
+        "last_seen_at": "2026-09-24",
+        "integrity_status": "trusted"
+      }
+    ],
+    "event_title": "Trump Hosts Xi Jinping for Talks at the White House",
+    "timeline_available": false,
+    "story_context": {
+      "available": true,
+      "label": "The story so far",
+      "event_title": "Trump Hosts Xi Jinping for Talks at the White House",
+      "display_title": "Trump Hosts Xi Jinping for Talks at the White House",
+      "stage": "standalone_candidate",
+      "stage_label": "Standalone story",
+      "summary": "Donald Trump welcomed Chinese President Xi Jinping to the White House for discussions on various pressing issues, including trade and artificial intelligence. The meeting is expected to address a range of complex topics that have characterized the US-China relationship.",
+      "highlights": [
+        {
+          "development_id": "story_58997b21abca2461",
+          "daily_story_id": "story_58997b21abca2461",
+          "date": "2026-09-24",
+          "occurred_at": null,
+          "date_basis": "first_reported_by_muninn",
+          "title": "Trump Hosts Xi Jinping for Talks at the White House",
+          "summary": "Donald Trump welcomed Chinese President Xi Jinping to the White House for discussions on various pressing issues, including trade and artificial intelligence. The meeting is expected to address a range of complex topics that have characterized the US-China relationship.",
+          "topic_label": "US-China Relations",
+          "development_type": "diplomacy",
+          "key_facts": [
+            "Trump welcomed Xi Jinping to the White House.",
+            "The leaders will discuss trade and artificial intelligence."
+          ],
+          "source_count": 2,
+          "sources": [
+            "Al Jazeera English",
+            "PBS News - Headlines"
+          ],
+          "source_urls": [
+            "https://www.aljazeera.com/video/newsfeed/2026/9/24/trump-welcomes-chinas-xi-jinping-to-white-house?traffic_source=rss",
+            "https://www.pbs.org/newshour/politics/trump-and-xi-jinping-will-hold-talks-in-washington-on-trade-ai-and-more"
+          ],
+          "source_details": [
+            {
+              "title": "Trump welcomes China’s Xi Jinping to White House",
+              "source": "Al Jazeera English",
+              "link": "https://www.aljazeera.com/video/newsfeed/2026/9/24/trump-welcomes-chinas-xi-jinping-to-white-house?traffic_source=rss",
+              "source_bias": "lean-left"
+            },
+            {
+              "title": "Trump and Xi Jinping will hold talks in Washington on trade, AI and more",
+              "source": "PBS News - Headlines",
+              "link": "https://www.pbs.org/newshour/politics/trump-and-xi-jinping-will-hold-talks-in-washington-on-trade-ai-and-more",
+              "source_bias": "lean-left"
+            }
+          ],
+          "confidence": 1.0,
+          "match_evidence": {
+            "score": 1.0,
+            "method": "new_event",
+            "shared_tokens": [],
+            "shared_entities": []
+          },
+          "verification": {
+            "provider": "deterministic_source_grounded_event_match_v1",
+            "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+          },
+          "first_seen_at": "2026-09-24",
+          "last_seen_at": "2026-09-24",
+          "integrity_status": "trusted"
+        }
+      ],
+      "development_count": 1,
+      "date_count": 1,
+      "full_timeline_available": false,
+      "timeline_url": "/timeline.html?event=event_trump-hosts-xi-jinping-for-talks-at-the-whit_7f9e41e6e2",
+      "cta_label": "",
+      "event_summary": {
+        "available": false,
+        "summary": "Donald Trump welcomed Chinese President Xi Jinping to the White House for discussions on various pressing issues, including trade and artificial intelligence.",
+        "key_developments": [
+          {
+            "development_id": "story_58997b21abca2461",
+            "date": "2026-09-24",
+            "title": "Trump Hosts Xi Jinping for Talks at the White House"
+          }
+        ],
+        "sources": [
+          {
+            "title": "Trump welcomes China’s Xi Jinping to White House",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/video/newsfeed/2026/9/24/trump-welcomes-chinas-xi-jinping-to-white-house?traffic_source=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Trump and Xi Jinping will hold talks in Washington on trade, AI and more",
+            "source": "PBS News - Headlines",
+            "link": "https://www.pbs.org/newshour/politics/trump-and-xi-jinping-will-hold-talks-in-washington-on-trade-ai-and-more",
+            "source_bias": "lean-left"
+          }
+        ],
+        "updated_at": "2026-09-24",
+        "provenance": "source_grounded_event_memory"
+      },
+      "related_events": [
+        {
+          "event_id": "event_trump-plans-supreme-court-appeal-after-court_2902613cd6",
+          "title": "Court Halts Trump's White House Ballroom Construction, Appeals Expected",
+          "relationship": "related_topic",
+          "confidence": 0.706,
+          "shared_entities": [
+            "donald_trump",
+            "white",
+            "white_house"
+          ]
+        },
+        {
+          "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
+          "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
+          "relationship": "related_topic",
+          "confidence": 0.699,
+          "shared_entities": [
+            "china",
+            "donald_trump"
+          ]
+        },
+        {
+          "event_id": "event_xi-jinping-begins-state-visit-to-washington_501082261e",
+          "title": "Xi Jinping Begins State Visit to Washington with Unusual Welcome from Trump",
+          "relationship": "related_topic",
+          "confidence": 0.67,
+          "shared_entities": [
+            "china",
+            "donald_trump"
+          ]
+        },
+        {
+          "event_id": "event_trump-gave-45-000-holiday-gifts-to-aides-fin_29b050175d",
+          "title": "Trump Gave $45,000 Holiday Gifts to Aides, Financial Disclosures Reveal",
+          "relationship": "related_topic",
+          "confidence": 0.663,
+          "shared_entities": [
+            "donald_trump",
+            "white_house"
+          ]
+        }
+      ]
+    },
+    "original_daily_position": 16,
+    "today_rank_score": 0.54,
+    "today_rank": 16,
+    "primary_category": "Politics",
+    "secondary_categories": [],
+    "category_method": "controlled_taxonomy_v2",
+    "category_scores": {
+      "Politics": 2,
+      "World": 1,
+      "Business & Economy": 1,
+      "Technology & AI": 1
+    },
+    "canonical_topic_label": "US-China Relations",
+    "image": {
+      "url": "/Current_news/generated/ai-daily/2026-09-24/demo_cluster_016.jpg",
+      "thumbnail_url": "/Current_news/generated/ai-daily/2026-09-24/demo_cluster_016.jpg",
+      "source": "Muninn AI illustration",
+      "author": "OpenAI GPT Image 2",
+      "license": "AI-generated content",
+      "image_role": "illustrative",
+      "image_role_label": "AI illustration",
+      "is_ai_generated": true,
+      "generation_model": "gpt-image-2",
+      "generation_quality": "low",
+      "composition_role": "standard",
+      "safe_to_crop": true,
+      "allows_crop": true,
+      "focal_x": 0.5,
+      "focal_y": 0.48,
+      "focal_wide_x": 0.5,
+      "focal_wide_y": 0.48,
+      "focal_tall_x": 0.5,
+      "focal_tall_y": 0.48,
+      "generation_prompt_tier": "story_specific"
+    }
+  },
+  "related_stories": [
+    {
+      "story_id": "story_58997b21abca2461",
+      "title": "Trump Hosts Xi Jinping for Talks at the White House",
+      "summary": "Donald Trump welcomed Chinese President Xi Jinping to the White House for discussions on various pressing issues, including trade and artificial intelligence. The meeting is expected to address a range of complex topics that have characterized the US-China relationship.",
+      "occurred_at": "2026-09-24",
+      "source_count": 2,
+      "category": "Politics",
+      "primary_category": "Politics",
+      "secondary_categories": [],
+      "topic_label": "US-China Relations",
+      "canonical_topic_label": "US-China Relations",
+      "event_id": "event_trump-hosts-xi-jinping-for-talks-at-the-whit_7f9e41e6e2",
+      "event_title": "Trump Hosts Xi Jinping for Talks at the White House",
+      "story_context": {
+        "available": false,
+        "event_title": "Trump Hosts Xi Jinping for Talks at the White House",
+        "display_title": "Trump Hosts Xi Jinping for Talks at the White House",
+        "stage": "standalone_candidate",
+        "stage_label": "Standalone story",
+        "development_count": 1,
+        "timeline_url": "/timeline.html?event=event_trump-hosts-xi-jinping-for-talks-at-the-whit_7f9e41e6e2"
+      },
+      "tracked_coverage": {
+        "available": false,
+        "stage": "standalone_candidate",
+        "stage_label": "Standalone story"
+      },
+      "image": {
+        "url": "/Current_news/generated/ai-daily/2026-09-24/demo_cluster_033.jpg",
+        "thumbnail_url": "/Current_news/generated/ai-daily/2026-09-24/demo_cluster_033.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "composition_role": "standard",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48,
+        "generation_prompt_tier": "story_specific"
+      },
+      "edition_date": "2026-09-24",
+      "edition_generated_at": "2026-09-24T16:24:27.398498+00:00",
+      "visible_until": "2026-10-01T16:24:27.398498+00:00",
+      "href": "/story.html?sid=story_58997b21abca2461"
+    },
+    {
+      "story_id": "story_bcdbb7497170c54d",
+      "title": "Reporters Denied White House Access Despite Court Ruling",
+      "summary": "Journalists from CNN, MS NOW, and Politico reported being denied access to the White House, despite a federal judge's order to restore their credentials. The judge had ruled that the Trump administration's ban on these outlets was likely unconstitutional. The denial occurred shortly after the ruling, raising questions about the enforcement of the court's decision.",
+      "occurred_at": "2026-09-24",
+      "source_count": 7,
+      "category": "Politics",
+      "primary_category": "Politics",
+      "secondary_categories": [],
+      "topic_label": "Press Freedom",
+      "canonical_topic_label": "Press Freedom",
+      "event_id": "event_dow-jones-found-guilty-of-deterring-journali_e98cb8ae59",
+      "event_title": "Dow Jones Found Guilty of Deterring Journalist from Union Role in Hong Kong",
+      "story_context": {
+        "available": true,
+        "event_title": "Dow Jones Found Guilty of Deterring Journalist from Union Role in Hong Kong",
+        "display_title": "Dow Jones Found Guilty of Deterring Journalist from Union Role in Hong Kong",
+        "stage": "developing_event",
+        "stage_label": "Developing event",
+        "development_count": 3,
+        "timeline_url": "/timeline.html?event=event_dow-jones-found-guilty-of-deterring-journali_e98cb8ae59"
+      },
+      "tracked_coverage": {
+        "available": true,
+        "stage": "developing_event",
+        "stage_label": "Developing event"
+      },
+      "image": {
+        "url": "/Current_news/generated/ai-daily/2026-09-24/demo_cluster_001.jpg",
+        "thumbnail_url": "/Current_news/generated/ai-daily/2026-09-24/demo_cluster_001.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "composition_role": "lead_overlay",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48,
+        "generation_prompt_tier": "story_specific"
+      },
+      "edition_date": "2026-09-24",
+      "edition_generated_at": "2026-09-24T16:24:27.398498+00:00",
+      "visible_until": "2026-10-01T16:24:27.398498+00:00",
+      "href": "/story.html?sid=story_bcdbb7497170c54d"
+    },
+    {
+      "story_id": "story_b57b4f8e87e16ca9",
+      "title": "Senate Confirmation Hearing for FDA Commissioner Nominee Heidi Overton Underway",
+      "summary": "Dr. Heidi Overton is currently undergoing a confirmation hearing before a Senate committee for the position of FDA commissioner. Overton, known for her critical stance on abortion, will oversee the FDA's review of mifepristone, a key abortion pill in the U.S.",
+      "occurred_at": null,
+      "source_count": 3,
+      "category": "Politics",
+      "primary_category": "Politics",
+      "secondary_categories": [],
+      "topic_label": "FDA Nomination",
+      "canonical_topic_label": "FDA Nomination",
+      "event_id": "event_senate-confirmation-hearing-for-fda-commissi_617353afd7",
+      "event_title": "Senate Confirmation Hearing for FDA Commissioner Nominee Heidi Overton Underway",
+      "story_context": {
+        "available": false,
+        "event_title": "Senate Confirmation Hearing for FDA Commissioner Nominee Heidi Overton Underway",
+        "display_title": "Senate Confirmation Hearing for FDA Commissioner Nominee Heidi Overton Underway",
+        "stage": "standalone_candidate",
+        "stage_label": "Standalone story",
+        "development_count": 1,
+        "timeline_url": "/timeline.html?event=event_senate-confirmation-hearing-for-fda-commissi_617353afd7"
+      },
+      "tracked_coverage": {
+        "available": false,
+        "stage": "standalone_candidate",
+        "stage_label": "Standalone story"
+      },
+      "image": {
+        "url": "/Current_news/generated/ai-daily/2026-09-24/demo_cluster_008.jpg",
+        "thumbnail_url": "/Current_news/generated/ai-daily/2026-09-24/demo_cluster_008.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "composition_role": "standard",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48,
+        "generation_prompt_tier": "story_specific"
+      },
+      "edition_date": "2026-09-24",
+      "edition_generated_at": "2026-09-24T16:24:27.398498+00:00",
+      "visible_until": "2026-10-01T16:24:27.398498+00:00",
+      "href": "/story.html?sid=story_b57b4f8e87e16ca9"
+    },
+    {
+      "story_id": "story_86ce323a96575c37",
+      "title": "Palestinian President Abbas Addresses UN via Video After Visa Denial",
+      "summary": "Palestinian President Mahmoud Abbas delivered a pre-recorded speech to the UN General Assembly from Ramallah after being denied a visa to attend for the second consecutive year. In his remarks, he criticized Israeli policies, claiming they threaten the very existence of Palestinians and called for international support for a two-state solution.",
+      "occurred_at": "2026-09-24",
+      "source_count": 3,
+      "category": "Politics",
+      "primary_category": "Politics",
+      "secondary_categories": [],
+      "topic_label": "Middle East Conflict",
+      "canonical_topic_label": "Middle East Conflict",
+      "event_id": "event_violence-in-southern-lebanon-claims-three-li_bc43d3ac28",
+      "event_title": "Violence in Southern Lebanon Claims Three Lives Amid Ongoing Tensions",
+      "story_context": {
+        "available": true,
+        "event_title": "Violence in Southern Lebanon Claims Three Lives Amid Ongoing Tensions",
+        "display_title": "Violence in Southern Lebanon Claims Three Lives Amid Ongoing Tensions Timeline",
+        "stage": "timeline",
+        "stage_label": "Timeline",
+        "development_count": 5,
+        "timeline_url": "/timeline.html?event=event_violence-in-southern-lebanon-claims-three-li_bc43d3ac28"
+      },
+      "tracked_coverage": {
+        "available": true,
+        "stage": "timeline",
+        "stage_label": "Timeline"
+      },
+      "image": {
+        "url": "/Current_news/generated/ai-daily/2026-09-24/demo_cluster_003.jpg",
+        "thumbnail_url": "/Current_news/generated/ai-daily/2026-09-24/demo_cluster_003.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "composition_role": "event_overlay",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48,
+        "generation_prompt_tier": "story_specific"
+      },
+      "edition_date": "2026-09-24",
+      "edition_generated_at": "2026-09-24T16:24:27.398498+00:00",
+      "visible_until": "2026-10-01T16:24:27.398498+00:00",
+      "href": "/story.html?sid=story_86ce323a96575c37"
+    }
+  ]
+}

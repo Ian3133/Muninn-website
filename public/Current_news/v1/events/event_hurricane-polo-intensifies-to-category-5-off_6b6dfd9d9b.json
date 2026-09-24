@@ -15,7 +15,7 @@
     "summary": "Hurricane Polo has intensified into a Category 5 storm in the eastern Pacific, located off the southwestern coast of Mexico. The storm is expected to bring heavy rainfall to the region while remaining offshore.",
     "status": "active",
     "first_seen_at": "2026-09-22",
-    "last_seen_at": "2026-09-23",
+    "last_seen_at": "2026-09-24",
     "timeline": [
       {
         "development_id": "story_ca5eec08a52fa4b3",
@@ -151,6 +151,91 @@
         "first_seen_at": "2026-09-23",
         "last_seen_at": "2026-09-23",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_5f627d20ec956bdc",
+        "daily_story_id": "story_5f627d20ec956bdc",
+        "date": "2026-09-24",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Hurricane Polo Threatens Mexico with Heavy Rain and Flooding Risks",
+        "summary": "Hurricane Polo has made landfall on Mexico's Pacific coast, bringing heavy rainfall that poses risks of life-threatening flooding and landslides, according to warnings from the US National Hurricane Center. The situation is compounded by the approach of Tropical Storm Nolo towards Hawaii, which is also expected to bring severe weather conditions.",
+        "topic_label": "Hurricane Polo",
+        "development_type": "development",
+        "key_facts": [
+          "Hurricane Polo has hit Mexico's Pacific coast.",
+          "Heavy rains are expected to cause life-threatening flooding and landslides.",
+          "The US National Hurricane Center issued warnings regarding the storm."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Al Jazeera English",
+          "Sky News - Top Stories"
+        ],
+        "source_urls": [
+          "https://www.aljazeera.com/news/2026/9/24/hurricane-polo-hits-mexicos-coast-as-tropical-storm-nolo-approaches-hawaii?traffic_source=rss",
+          "https://news.sky.com/story/hurricane-polo-brings-heavy-rain-to-mexican-coast-with-fears-of-life-threatening-floods-13591402"
+        ],
+        "source_details": [
+          {
+            "title": "Hurricane Polo brings fears of heavy rain and landslides in Mexico",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/news/2026/9/24/hurricane-polo-hits-mexicos-coast-as-tropical-storm-nolo-approaches-hawaii?traffic_source=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Hurricane Polo brings heavy rain to Mexican coast with fears of life-threatening floods",
+            "source": "Sky News - Top Stories",
+            "link": "https://news.sky.com/story/hurricane-polo-brings-heavy-rain-to-mexican-coast-with-fears-of-life-threatening-floods-13591402",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "storm"
+          ],
+          "shared_incident_anchors": [
+            "hurricane",
+            "hurricane_polo",
+            "mexico",
+            "polo",
+            "polo_hurricane"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "bring",
+            "coast",
+            "expected",
+            "heavy",
+            "hurricane",
+            "mexico",
+            "pacific",
+            "polo",
+            "rain",
+            "rainfall",
+            "storm"
+          ],
+          "shared_entities": [
+            "hurricane",
+            "hurricane_polo",
+            "mexico",
+            "polo",
+            "polo_hurricane"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_ca5eec08a52fa4b3",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-24",
+        "last_seen_at": "2026-09-24",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -179,12 +264,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 2,
+      "public_development_count": 3,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Hurricane Polo Reaches Category 5 Status Off Mexico's Pacific Coast",
-    "latest_summary": "Hurricane Polo has intensified into one of the strongest storms ever recorded in the Pacific, reaching Category 5 status with maximum sustained winds exceeding 157 mph (253 kph). The storm is currently off the southwestern coast of Mexico and is being influenced by warm waters associated with the El Niño phenomenon. Although it has since weakened to a Category 4 storm, it remains a powerful cyclone expected to affect the region.",
+    "latest_title": "Hurricane Polo Threatens Mexico with Heavy Rain and Flooding Risks",
+    "latest_summary": "Hurricane Polo has made landfall on Mexico's Pacific coast, bringing heavy rainfall that poses risks of life-threatening flooding and landslides, according to warnings from the US National Hurricane Center. The situation is compounded by the approach of Tropical Storm Nolo towards Hawaii, which is also expected to bring severe weather conditions.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": false,
@@ -194,28 +279,29 @@
       "display_title": "Mexico Storm",
       "milestone_development_ids": [
         "story_ca5eec08a52fa4b3",
-        "story_4ff82142b5bf4552"
+        "story_4ff82142b5bf4552",
+        "story_5f627d20ec956bdc"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-09-23",
-      "development_count": 2,
-      "coverage_packet_count": 2,
-      "date_count": 2,
-      "source_count": 4,
-      "independent_source_count": 4,
+      "summary_updated_at": "2026-09-24",
+      "development_count": 3,
+      "coverage_packet_count": 3,
+      "date_count": 3,
+      "source_count": 6,
+      "independent_source_count": 6,
       "first_date": "2026-09-22",
-      "latest_date": "2026-09-23",
-      "latest_update_title": "Hurricane Polo Reaches Category 5 Status Off Mexico's Pacific Coast",
-      "coverage_score": 0.397,
+      "latest_date": "2026-09-24",
+      "latest_update_title": "Hurricane Polo Threatens Mexico with Heavy Rain and Flooding Risks",
+      "coverage_score": 0.595,
       "recency_score": 1.0,
-      "rank_score": 0.747,
-      "context_summary": "Muninn first tracked this thread on 2026-09-22: Hurricane Polo Intensifies to Category 5 Off Southwestern Mexico. The latest development is Hurricane Polo Reaches Category 5 Status Off Mexico's Pacific Coast.",
+      "rank_score": 0.83,
+      "context_summary": "Muninn first tracked this thread on 2026-09-22: Hurricane Polo Intensifies to Category 5 Off Southwestern Mexico. The latest development is Hurricane Polo Threatens Mexico with Heavy Rain and Flooding Risks.",
       "cta_label": ""
     },
     "event_summary": {
       "available": true,
-      "summary": "Hurricane Polo has intensified into a Category 5 storm in the eastern Pacific, located off the southwestern coast of Mexico. Most recently, hurricane Polo has intensified into one of the strongest storms ever recorded in the Pacific, reaching Category 5 status with maximum sustained winds exceeding 157 mph (253 kph).",
+      "summary": "Hurricane Polo has intensified into a Category 5 storm in the eastern Pacific, located off the southwestern coast of Mexico. A later development was Hurricane Polo Reaches Category 5 Status Off Mexico's Pacific Coast. Most recently, hurricane Polo has made landfall on Mexico's Pacific coast, bringing heavy rainfall that poses risks of life-threatening flooding and landslides, according to warnings from the US National Hurricane Center.",
       "key_developments": [
         {
           "development_id": "story_ca5eec08a52fa4b3",
@@ -226,6 +312,11 @@
           "development_id": "story_4ff82142b5bf4552",
           "date": "2026-09-23",
           "title": "Hurricane Polo Reaches Category 5 Status Off Mexico's Pacific Coast"
+        },
+        {
+          "development_id": "story_5f627d20ec956bdc",
+          "date": "2026-09-24",
+          "title": "Hurricane Polo Threatens Mexico with Heavy Rain and Flooding Risks"
         }
       ],
       "sources": [
@@ -252,80 +343,46 @@
           "source": "BBC",
           "link": "https://www.bbc.co.uk/news/articles/ckddvlrlr5qeo?at_medium=RSS&at_campaign=rss",
           "source_bias": "center"
+        },
+        {
+          "title": "Hurricane Polo brings fears of heavy rain and landslides in Mexico",
+          "source": "Al Jazeera English",
+          "link": "https://www.aljazeera.com/news/2026/9/24/hurricane-polo-hits-mexicos-coast-as-tropical-storm-nolo-approaches-hawaii?traffic_source=rss",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Hurricane Polo brings heavy rain to Mexican coast with fears of life-threatening floods",
+          "source": "Sky News - Top Stories",
+          "link": "https://news.sky.com/story/hurricane-polo-brings-heavy-rain-to-mexican-coast-with-fears-of-life-threatening-floods-13591402",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-09-23",
+      "updated_at": "2026-09-24",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "developing_event",
-    "related_events": [],
-    "search_tokens": [
-      "157",
-      "253",
-      "affect",
-      "although",
-      "associated",
-      "bring",
-      "category",
-      "coast",
-      "currently",
-      "cyclone",
-      "eastern",
-      "ever",
-      "exceeding",
-      "expected",
-      "heavy",
-      "hurricane",
-      "influenced",
-      "intensifie",
-      "intensified",
-      "located",
-      "maximum",
-      "mexico",
-      "offshore",
-      "pacific",
-      "phenomenon",
-      "polo",
-      "powerful",
-      "rainfall",
-      "reache",
-      "reaching",
-      "recorded",
-      "region",
-      "remain",
-      "remaining",
-      "since",
-      "southwestern",
-      "statu",
-      "storm",
-      "strongest",
-      "sustained",
-      "warm",
-      "water",
-      "weakened",
-      "while",
-      "winds"
+    "related_events": [
+      {
+        "event_id": "event_hurricane-lowell-approaches-hawaii-tropical_baef50d883",
+        "title": "Approache Hawaii Storm",
+        "relationship": "related_topic",
+        "confidence": 0.713,
+        "shared_entities": [
+          "national_hurricane",
+          "tropical_storm"
+        ]
+      },
+      {
+        "event_id": "event_tropical-storm-dolly-named-coincidentally-am_54408072a6",
+        "title": "Death Storm",
+        "relationship": "related_topic",
+        "confidence": 0.663,
+        "shared_entities": [
+          "pacific",
+          "tropical_storm"
+        ]
+      }
     ],
-    "entities": [
-      "category",
-      "category_off",
-      "category_statu",
-      "coast_hurricane",
-      "hurricane_polo",
-      "mexico",
-      "mexico_hurricane",
-      "mexico_pacific",
-      "off_mexico",
-      "off_southwestern",
-      "pacific",
-      "pacific_coast",
-      "polo_intensifie",
-      "polo_reache",
-      "reache_category",
-      "southwestern_mexico",
-      "statu_off"
-    ],
-    "search_text": "157 253 affect although associated bring category category_off category_statu coast coast_hurricane currently cyclone eastern ever exceeding expected heavy hurricane hurricane_polo influenced intensifie intensified located maximum mexico mexico_hurricane mexico_pacific off_mexico off_southwestern offshore pacific pacific_coast phenomenon polo polo_intensifie polo_reache powerful rainfall reache reache_category reaching recorded region remain remaining since southwestern southwestern_mexico statu statu_off storm strongest sustained warm water weakened while winds",
     "event_overview": {
       "available": true,
       "title": "About Mexico Storm",
@@ -434,7 +491,144 @@
       "focal_wide_y": 0.48,
       "focal_tall_x": 0.5,
       "focal_tall_y": 0.48
-    }
+    },
+    "search_tokens": [
+      "157",
+      "253",
+      "affect",
+      "also",
+      "although",
+      "approach",
+      "associated",
+      "bring",
+      "bringing",
+      "category",
+      "center",
+      "coast",
+      "compounded",
+      "condition",
+      "currently",
+      "cyclone",
+      "eastern",
+      "ever",
+      "exceeding",
+      "expected",
+      "flooding",
+      "hawaii",
+      "heavy",
+      "hurricane",
+      "influenced",
+      "intensifie",
+      "intensified",
+      "landfall",
+      "landslide",
+      "life-threatening",
+      "located",
+      "made",
+      "maximum",
+      "mexico",
+      "national",
+      "nolo",
+      "offshore",
+      "pacific",
+      "phenomenon",
+      "polo",
+      "poses",
+      "powerful",
+      "rain",
+      "rainfall",
+      "reache",
+      "reaching",
+      "recorded",
+      "region",
+      "remain",
+      "remaining",
+      "risks",
+      "severe",
+      "since",
+      "situation",
+      "southwestern",
+      "statu",
+      "storm",
+      "strongest",
+      "sustained",
+      "threaten",
+      "toward",
+      "tropical",
+      "warm",
+      "warning",
+      "water",
+      "weakened",
+      "weather",
+      "which",
+      "while",
+      "winds"
+    ],
+    "entities": [
+      "category",
+      "category_off",
+      "category_statu",
+      "coast_hurricane",
+      "flooding_risks",
+      "heavy_rain",
+      "hurricane_center.",
+      "hurricane_polo",
+      "mexico",
+      "mexico_hurricane",
+      "mexico_pacific",
+      "national_hurricane",
+      "off_mexico",
+      "off_southwestern",
+      "pacific",
+      "pacific_coast",
+      "polo_intensifie",
+      "polo_reache",
+      "polo_threaten",
+      "reache_category",
+      "risks_hurricane",
+      "southwestern_mexico",
+      "statu_off",
+      "storm_nolo",
+      "threaten_mexico",
+      "tropical_storm",
+      "us"
+    ],
+    "search_text": "157 253 affect also although approach associated bring bringing category category_off category_statu center coast coast_hurricane compounded condition currently cyclone eastern ever exceeding expected flooding flooding_risks hawaii heavy heavy_rain hurricane hurricane_center. hurricane_polo influenced intensifie intensified landfall landslide life-threatening located made maximum mexico mexico_hurricane mexico_pacific national national_hurricane nolo off_mexico off_southwestern offshore pacific pacific_coast phenomenon polo polo_intensifie polo_reache polo_threaten poses powerful rain rainfall reache reache_category reaching recorded region remain remaining risks risks_hurricane severe since situation southwestern southwestern_mexico statu statu_off storm storm_nolo strongest sustained threaten threaten_mexico toward tropical tropical_storm us warm warning water weakened weather which while winds"
   },
-  "related_events": []
+  "related_events": [
+    {
+      "event_id": "event_tropical-storm-dolly-named-coincidentally-am_54408072a6",
+      "title": "Death Storm",
+      "summary": "Muninn first tracked this thread on 2026-08-26: Tropical Storm Dolly Named Coincidentally Amid Parton's Death. The latest development is Tropical Storm Edouard Approaches Gulf Coast, May Strengthen to Hurricane.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-08-26",
+      "last_seen_at": "2026-09-01",
+      "development_count": 4,
+      "latest_title": "Tropical Storm Edouard Approaches Gulf Coast, May Strengthen to Hurricane",
+      "topic_label": "Death Storm",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_tropical-storm-dolly-named-coincidentally-am_54408072a6.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_tropical-storm-dolly-named-coincidentally-am_54408072a6.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_tropical-storm-dolly-named-coincidentally-am_54408072a6"
+    }
+  ]
 }
