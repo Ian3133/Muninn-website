@@ -15,7 +15,7 @@
     "summary": "French President Emmanuel Macron has ordered protective measures for the country's critical infrastructure and defense industry in response to escalating Russian hybrid attacks. This announcement followed a meeting with political party leaders to discuss the growing threats from Russia, particularly in light of recent developments in Europe. Macron emphasized that the hybrid threat from Moscow has intensified in recent weeks, necessitating immediate action.",
     "status": "active",
     "first_seen_at": "2026-09-18",
-    "last_seen_at": "2026-09-23",
+    "last_seen_at": "2026-09-25",
     "timeline": [
       {
         "development_id": "story_d3dbd0df63be1e56",
@@ -446,6 +446,97 @@
         "first_seen_at": "2026-09-23",
         "last_seen_at": "2026-09-23",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_15ff5b6c7dc19e6f",
+        "daily_story_id": "story_15ff5b6c7dc19e6f",
+        "date": "2026-09-25",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Russian Drone Strike in Kyiv Claims Life of Teen and Injures 20 Others",
+        "summary": "A Russian drone strike on a residential building in Kyiv's Pecherskyi district resulted in the death of a 14-year-old boy and injuries to 20 residents. The incident occurred overnight on September 25, 2026, when the drone hit a 16-storey apartment block.",
+        "topic_label": "Ukraine Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "14-year-old boy killed",
+          "20 residents injured",
+          "Drone strike on residential building",
+          "Location: Pecherskyi district, Kyiv",
+          "Date: September 25, 2026"
+        ],
+        "source_count": 2,
+        "sources": [
+          "Africanews",
+          "Euronews"
+        ],
+        "source_urls": [
+          "http://www.africanews.com/2026/09/25/ukraine-russian-drone-barrage-on-kyiv-kills-teenage-boy-and-wounds-20-residents",
+          "https://www.euronews.com/video/2026/09/25/ukraine-russian-drone-barrage-on-kyiv-kills-teenage-boy-and-wounds-20-residents"
+        ],
+        "source_details": [
+          {
+            "title": "Ukraine: Russian drone barrage on Kyiv kills teenage boy and wounds 20 residents",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/09/25/ukraine-russian-drone-barrage-on-kyiv-kills-teenage-boy-and-wounds-20-residents",
+            "source_bias": "center"
+          },
+          {
+            "title": "Ukraine: Russian drone barrage on Kyiv kills teenage boy and wounds 20 residents",
+            "source": "Euronews",
+            "link": "https://www.euronews.com/video/2026/09/25/ukraine-russian-drone-barrage-on-kyiv-kills-teenage-boy-and-wounds-20-residents",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "strike"
+          ],
+          "shared_incident_anchors": [
+            "drone",
+            "kyiv",
+            "russia",
+            "russia_drone",
+            "ukraine"
+          ],
+          "shared_incident_numbers": [
+            "2026"
+          ],
+          "shared_tokens": [
+            "2026",
+            "conflict",
+            "drone",
+            "injured",
+            "injurie",
+            "killed",
+            "kyiv",
+            "location",
+            "occurred",
+            "russia",
+            "september",
+            "strike",
+            "ukraine"
+          ],
+          "shared_entities": [
+            "drone",
+            "kyiv",
+            "russia",
+            "russia_drone",
+            "ukraine"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_cb2fce3e4d1b665a",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-25",
+        "last_seen_at": "2026-09-25",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -476,12 +567,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 5,
+      "public_development_count": 6,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Kyiv Struck by Russian Drones Ahead of Zelenskyy's UN Address",
-    "latest_summary": "On Wednesday, Kyiv was targeted by Russian drone strikes, resulting in two fatalities and 23 injuries. The attacks occurred just hours before Ukrainian President Volodymyr Zelenskyy was scheduled to address the United Nations General Assembly. The strikes hit various locations, including railway infrastructure and fuel stations, amid ongoing tensions in the region.",
+    "latest_title": "Russian Drone Strike in Kyiv Claims Life of Teen and Injures 20 Others",
+    "latest_summary": "A Russian drone strike on a residential building in Kyiv's Pecherskyi district resulted in the death of a 14-year-old boy and injuries to 20 residents. The incident occurred overnight on September 25, 2026, when the drone hit a 16-storey apartment block.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -494,28 +585,29 @@
         "story_91ef6c058299e3fa",
         "story_3f1297199d18f857",
         "story_7b4d9e1d7ec3a0c6",
-        "story_cb2fce3e4d1b665a"
+        "story_cb2fce3e4d1b665a",
+        "story_15ff5b6c7dc19e6f"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-09-23",
-      "development_count": 5,
-      "coverage_packet_count": 5,
-      "date_count": 4,
-      "source_count": 17,
-      "independent_source_count": 14,
+      "summary_updated_at": "2026-09-25",
+      "development_count": 6,
+      "coverage_packet_count": 6,
+      "date_count": 5,
+      "source_count": 19,
+      "independent_source_count": 15,
       "first_date": "2026-09-18",
-      "latest_date": "2026-09-23",
-      "latest_update_title": "Kyiv Struck by Russian Drones Ahead of Zelenskyy's UN Address",
-      "coverage_score": 0.902,
-      "recency_score": 0.875,
-      "rank_score": 0.886,
-      "context_summary": "Muninn first tracked this thread on 2026-09-18: Macron Implements Measures Against Intensifying Russian Hybrid Threats. The latest development is Kyiv Struck by Russian Drones Ahead of Zelenskyy's UN Address.",
-      "cta_label": "Explore 5 developments"
+      "latest_date": "2026-09-25",
+      "latest_update_title": "Russian Drone Strike in Kyiv Claims Life of Teen and Injures 20 Others",
+      "coverage_score": 1.0,
+      "recency_score": 1.0,
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-09-18: Macron Implements Measures Against Intensifying Russian Hybrid Threats. The latest development is Russian Drone Strike in Kyiv Claims Life of Teen and Injures 20 Others.",
+      "cta_label": "Explore 6 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "French President Emmanuel Macron has ordered protective measures for the country's critical infrastructure and defense industry in response to escalating Russian hybrid attacks. A later development was Ukraine Launches Massive Drone Attack on Moscow, Causing Casualties and Damage. Most recently, on Wednesday, Kyiv was targeted by Russian drone strikes, resulting in two fatalities and 23 injuries.",
+      "summary": "French President Emmanuel Macron has ordered protective measures for the country's critical infrastructure and defense industry in response to escalating Russian hybrid attacks. A later development was Syrian President Asserts Golan Heights Will Remain Syrian Territory. Most recently, a Russian drone strike on a residential building in Kyiv's Pecherskyi district resulted in the death of a 14-year-old boy and injuries to 20 residents.",
       "key_developments": [
         {
           "development_id": "story_d3dbd0df63be1e56",
@@ -541,6 +633,11 @@
           "development_id": "story_cb2fce3e4d1b665a",
           "date": "2026-09-23",
           "title": "Kyiv Struck by Russian Drones Ahead of Zelenskyy's UN Address"
+        },
+        {
+          "development_id": "story_15ff5b6c7dc19e6f",
+          "date": "2026-09-25",
+          "title": "Russian Drone Strike in Kyiv Claims Life of Teen and Injures 20 Others"
         }
       ],
       "sources": [
@@ -645,9 +742,21 @@
           "source": "CBC - Top Stories",
           "link": "https://www.cbc.ca/news/world/unga-zelenskyy-rubio-lavrov-russia-ukraine-war-9.7354849?cmp=rss",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Ukraine: Russian drone barrage on Kyiv kills teenage boy and wounds 20 residents",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/09/25/ukraine-russian-drone-barrage-on-kyiv-kills-teenage-boy-and-wounds-20-residents",
+          "source_bias": "center"
+        },
+        {
+          "title": "Ukraine: Russian drone barrage on Kyiv kills teenage boy and wounds 20 residents",
+          "source": "Euronews",
+          "link": "https://www.euronews.com/video/2026/09/25/ukraine-russian-drone-barrage-on-kyiv-kills-teenage-boy-and-wounds-20-residents",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-09-23",
+      "updated_at": "2026-09-25",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -659,6 +768,7 @@
         "confidence": 0.95,
         "shared_entities": [
           "israel",
+          "kyiv",
           "moscow",
           "russia",
           "russia.",
@@ -676,9 +786,25 @@
         "confidence": 0.95,
         "shared_entities": [
           "israel",
+          "kyiv",
           "nation_general",
           "russia",
           "russia_drone",
+          "ukraine",
+          "un",
+          "united_nation",
+          "us",
+          "volodymyr_zelenskyy"
+        ]
+      },
+      {
+        "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
+        "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
+        "relationship": "related_topic",
+        "confidence": 0.915,
+        "shared_entities": [
+          "kyiv",
+          "russia",
           "ukraine",
           "un",
           "united_nation",
@@ -698,20 +824,6 @@
           "un",
           "united_nation",
           "us"
-        ]
-      },
-      {
-        "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
-        "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
-        "relationship": "related_topic",
-        "confidence": 0.875,
-        "shared_entities": [
-          "russia",
-          "ukraine",
-          "un",
-          "united_nation",
-          "us",
-          "volodymyr_zelenskyy"
         ]
       }
     ],
@@ -831,20 +943,26 @@
     },
     "search_tokens": [
       "000",
+      "14-year-old",
+      "16-storey",
+      "2026",
       "action",
       "address",
       "ahead",
       "ahmed",
       "al-sharaa",
       "announcement",
+      "apartment",
       "apply",
       "assault",
       "assembly",
       "assert",
       "attack",
+      "block",
       "building",
       "casualtie",
       "causing",
+      "claim",
       "coincided",
       "confirmed",
       "controlled",
@@ -852,12 +970,14 @@
       "criticized",
       "damage",
       "date",
+      "death",
       "declared",
       "defense",
       "described",
       "despite",
       "development",
       "discuss",
+      "district",
       "drone",
       "election",
       "emmanuel",
@@ -878,10 +998,12 @@
       "hybrid",
       "immediate",
       "implement",
+      "incident",
       "including",
       "indicate",
       "industry",
       "infrastructure",
+      "injure",
       "injurie",
       "instead",
       "intensified",
@@ -896,6 +1018,7 @@
       "launched",
       "leader",
       "least",
+      "life",
       "light",
       "local",
       "location",
@@ -915,9 +1038,12 @@
       "oil",
       "ongoing",
       "ordered",
+      "other",
+      "overnight",
       "parliamentary",
       "particularly",
       "party",
+      "pecherskyi",
       "political",
       "protective",
       "railway",
@@ -928,6 +1054,7 @@
       "reiterated",
       "remain",
       "reported",
+      "resident",
       "residential",
       "response",
       "resulted",
@@ -935,6 +1062,7 @@
       "russia",
       "scale",
       "scheduled",
+      "september",
       "should",
       "significant",
       "sovereignty",
@@ -948,6 +1076,7 @@
       "syrian",
       "targeted",
       "targeting",
+      "teen",
       "tension",
       "territory",
       "threat",
@@ -958,12 +1087,14 @@
       "volodymyr",
       "wednesday",
       "weeks",
+      "when",
       "zelenskyy"
     ],
     "entities": [
       "al-sharaa",
       "assert_golan",
       "causing_casualtie",
+      "claim_life",
       "damage_ukraine",
       "drone_ahead",
       "election_ukraine",
@@ -975,9 +1106,13 @@
       "golan_height",
       "hybrid_threat",
       "implement_measure",
+      "injure_other",
       "intensifying_russia",
       "israel",
       "jersey._kyiv",
+      "kyiv",
+      "kyiv_claim",
+      "kyiv_pecherskyi",
       "kyiv_struck",
       "launche_massive",
       "macron_implement",
@@ -1004,7 +1139,7 @@
       "volodymyr_zelenskyy",
       "wednesday_kyiv"
     ],
-    "search_text": "000 action address ahead ahmed al-sharaa announcement apply assault assembly assert assert_golan attack building casualtie causing causing_casualtie coincided confirmed controlled critical criticized damage damage_ukraine date declared defense described despite development discuss drone drone_ahead election election_ukraine emmanuel emmanuel_macron emphasized escalating europe europe. europe._macron event fatalitie final followed france fuel general general_assembly. golan golan_height growing height hours hybrid hybrid_threat immediate implement implement_measure including indicate industry infrastructure injurie instead intensified intensifying intensifying_russia involving israel jersey jersey._kyiv just kyiv kyiv_struck largest launche launche_massive launched leader least light local location macron macron_implement marking massive massive_drone mayor measure meeting military moscow moscow. moscow_causing nation nation_general necessitating numerou occupation occurred oil ongoing ordered parliamentary particularly party political protective railway recent recognition refinery region reiterated remain remain_syrian reported residential response resulted resulting russia russia. russia_drone russia_election russia_hybrid scale scheduled should significant sovereignty stance station strike struck such suggesting syria syrian syrian_territory targeted targeting tension territory territory_syrian threat threat_france tightly ukraine ukraine_launche un united united_nation us variou volodymyr volodymyr_zelenskyy wednesday wednesday_kyiv weeks zelenskyy"
+    "search_text": "000 14-year-old 16-storey 2026 action address ahead ahmed al-sharaa announcement apartment apply assault assembly assert assert_golan attack block building casualtie causing causing_casualtie claim claim_life coincided confirmed controlled critical criticized damage damage_ukraine date death declared defense described despite development discuss district drone drone_ahead election election_ukraine emmanuel emmanuel_macron emphasized escalating europe europe. europe._macron event fatalitie final followed france fuel general general_assembly. golan golan_height growing height hours hybrid hybrid_threat immediate implement implement_measure incident including indicate industry infrastructure injure injure_other injurie instead intensified intensifying intensifying_russia involving israel jersey jersey._kyiv just kyiv kyiv_claim kyiv_pecherskyi kyiv_struck largest launche launche_massive launched leader least life light local location macron macron_implement marking massive massive_drone mayor measure meeting military moscow moscow. moscow_causing nation nation_general necessitating numerou occupation occurred oil ongoing ordered other overnight parliamentary particularly party pecherskyi political protective railway recent recognition refinery region reiterated remain remain_syrian reported resident residential response resulted resulting russia russia. russia_drone russia_election russia_hybrid scale scheduled september should significant sovereignty stance station strike struck such suggesting syria syrian syrian_territory targeted targeting teen tension territory territory_syrian threat threat_france tightly ukraine ukraine_launche un united united_nation us variou volodymyr volodymyr_zelenskyy wednesday wednesday_kyiv weeks when zelenskyy"
   },
   "related_events": [
     {
@@ -1076,40 +1211,6 @@
       "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
     },
     {
-      "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
-      "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
-      "summary": "Muninn first tracked this thread on 2026-09-11: Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims. The latest development is Iran's President Declares Defiance at UN Amid Ongoing Tensions.",
-      "activity_status": "active",
-      "stage": "timeline",
-      "stage_label": "Timeline",
-      "first_seen_at": "2026-09-11",
-      "last_seen_at": "2026-09-23",
-      "development_count": 27,
-      "latest_title": "Iran's President Declares Defiance at UN Amid Ongoing Tensions",
-      "topic_label": "9/11 Victim Compensation",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b"
-    },
-    {
       "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
       "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
       "summary": "Muninn first tracked this thread on 2026-07-25: Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse. The latest development is Renewed Violence in Yemen Displaces Thousands Amid Ceasefire Collapse.",
@@ -1142,6 +1243,40 @@
         "focal_tall_y": 0.48
       },
       "href": "/timeline.html?event=event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea"
+    },
+    {
+      "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
+      "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
+      "summary": "Muninn first tracked this thread on 2026-09-11: Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims. The latest development is Iran Proposes Reopening Strait of Hormuz Amid US Sanctions.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-09-11",
+      "last_seen_at": "2026-09-25",
+      "development_count": 29,
+      "latest_title": "Iran Proposes Reopening Strait of Hormuz Amid US Sanctions",
+      "topic_label": "9/11 Victim Compensation",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b"
     }
   ]
 }
