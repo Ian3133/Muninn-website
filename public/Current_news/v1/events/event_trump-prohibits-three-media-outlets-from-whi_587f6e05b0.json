@@ -15,7 +15,7 @@
     "summary": "Trump has banned three media outlets from accessing the White House, marking a continuation of his contentious relationship with the press. This move is seen as part of his broader strategy to target media he views as unfavorable to his administration.",
     "status": "active",
     "first_seen_at": "2026-09-19",
-    "last_seen_at": "2026-09-25",
+    "last_seen_at": "2026-09-26",
     "timeline": [
       {
         "development_id": "story_80d383aceee79e4a",
@@ -340,15 +340,109 @@
         "first_seen_at": "2026-09-25",
         "last_seen_at": "2026-09-25",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_3bc9726bab068dbe",
+        "daily_story_id": "story_3bc9726bab068dbe",
+        "date": "2026-09-26",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "White House Denies CNN Access to Cover Trump's Tennessee Trip",
+        "summary": "The White House has barred CNN from covering President Trump's upcoming trip to Tennessee, preventing the network from joining him on Air Force One. This decision follows a recent court order that restored CNN's access to the White House after a previous ban. The move is seen as part of ongoing tensions between the Trump administration and the news network.",
+        "topic_label": "",
+        "development_type": "policy",
+        "key_facts": [
+          "CNN was scheduled to cover Trump's trip to Tennessee.",
+          "The White House has barred CNN from traveling with Trump on Air Force One.",
+          "This incident follows a court order that restored CNN's access to the White House."
+        ],
+        "source_count": 5,
+        "sources": [
+          "BBC",
+          "DW",
+          "NBC News",
+          "NPR",
+          "New York Times"
+        ],
+        "source_urls": [
+          "https://www.nytimes.com/2026/09/25/business/media/white-house-cnn-air-force-one-ban.html",
+          "https://www.nbcnews.com/politics/white-house/white-house-blocks-cnn-covering-trumps-tennessee-trip-rcna599944",
+          "https://www.bbc.co.uk/news/articles/cxq633770y16o?at_medium=RSS&at_campaign=rss",
+          "https://www.dw.com/en/white-house-bars-cnn-from-covering-upcoming-trump-trip-broadcaster-says/a-79440241?maca=en-rss-en-all-1573-rdf",
+          "https://www.npr.org/2026/09/26/g-s1-145142/cnn-left-off-air-force-one"
+        ],
+        "source_details": [
+          {
+            "title": "White House Blocks CNN From Covering Trump’s Trip to Tennessee",
+            "source": "New York Times",
+            "link": "https://www.nytimes.com/2026/09/25/business/media/white-house-cnn-air-force-one-ban.html",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "White House blocks CNN from covering Trump’s Tennessee trip",
+            "source": "NBC News",
+            "link": "https://www.nbcnews.com/politics/white-house/white-house-blocks-cnn-covering-trumps-tennessee-trip-rcna599944",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "White House bars CNN from travelling with Trump on Air Force One",
+            "source": "BBC",
+            "link": "https://www.bbc.co.uk/news/articles/cxq633770y16o?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          },
+          {
+            "title": "White House bars CNN from covering upcoming Trump trip, broadcaster says",
+            "source": "DW",
+            "link": "https://www.dw.com/en/white-house-bars-cnn-from-covering-upcoming-trump-trip-broadcaster-says/a-79440241?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "CNN left off Air Force One for Trump's upcoming trip, White House signals in new media restriction",
+            "source": "NPR",
+            "link": "https://www.npr.org/2026/09/26/g-s1-145142/cnn-left-off-air-force-one",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.385,
+        "match_evidence": {
+          "score": 0.385,
+          "matched_development_id": "story_80d383aceee79e4a",
+          "shared_tokens": [
+            "access",
+            "administration",
+            "house",
+            "move",
+            "ongoing",
+            "part",
+            "seen",
+            "trump",
+            "white"
+          ],
+          "shared_entities": [
+            "white",
+            "white_house",
+            "white_house."
+          ],
+          "source_url_match": false,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-26",
+        "last_seen_at": "2026-09-26",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 4,
+      "public_development_count": 5,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Media Outlets Return to White House Following Court Order, Denied Access to State Dinner",
-    "latest_summary": "Several media outlets, including CNN and MS NOW, returned to the White House after a judge ordered the restoration of their press passes, which had been revoked by the Trump administration. However, reporters from these outlets were denied access to cover the arrival of Chinese leader Xi Jinping at a state dinner, despite the court ruling.",
+    "latest_title": "White House Denies CNN Access to Cover Trump's Tennessee Trip",
+    "latest_summary": "The White House has barred CNN from covering President Trump's upcoming trip to Tennessee, preventing the network from joining him on Air Force One. This decision follows a recent court order that restored CNN's access to the White House after a previous ban. The move is seen as part of ongoing tensions between the Trump administration and the news network.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -360,28 +454,29 @@
         "story_80d383aceee79e4a",
         "story_69d41ff22cb77d5a",
         "story_0111f235eba2a042",
-        "story_4b4b09883a12b024"
+        "story_4b4b09883a12b024",
+        "story_3bc9726bab068dbe"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-09-25",
-      "development_count": 4,
-      "coverage_packet_count": 4,
-      "date_count": 4,
-      "source_count": 14,
-      "independent_source_count": 12,
+      "summary_updated_at": "2026-09-26",
+      "development_count": 5,
+      "coverage_packet_count": 5,
+      "date_count": 5,
+      "source_count": 19,
+      "independent_source_count": 14,
       "first_date": "2026-09-19",
-      "latest_date": "2026-09-25",
-      "latest_update_title": "Media Outlets Return to White House Following Court Order, Denied Access to State Dinner",
-      "coverage_score": 0.843,
+      "latest_date": "2026-09-26",
+      "latest_update_title": "White House Denies CNN Access to Cover Trump's Tennessee Trip",
+      "coverage_score": 0.942,
       "recency_score": 1.0,
-      "rank_score": 0.934,
-      "context_summary": "Muninn first tracked this thread on 2026-09-19: Trump Prohibits Three Media Outlets from White House Access. The latest development is Media Outlets Return to White House Following Court Order, Denied Access to State Dinner.",
-      "cta_label": "Explore 4 developments"
+      "rank_score": 0.976,
+      "context_summary": "Muninn first tracked this thread on 2026-09-19: Trump Prohibits Three Media Outlets from White House Access. The latest development is White House Denies CNN Access to Cover Trump's Tennessee Trip.",
+      "cta_label": "Explore 5 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Trump has banned three media outlets from accessing the White House, marking a continuation of his contentious relationship with the press. A later development was White House Defends Media Ban in Court, Citing National Security and Professionalism. Most recently, several media outlets, including CNN and MS NOW, returned to the White House after a judge ordered the restoration of their press passes, which had been revoked by the Trump administration.",
+      "summary": "Trump has banned three media outlets from accessing the White House, marking a continuation of his contentious relationship with the press. A later development was White House Defends Media Ban in Court, Citing National Security and Professionalism. Most recently, the White House has barred CNN from covering President Trump's upcoming trip to Tennessee, preventing the network from joining him on Air Force One.",
       "key_developments": [
         {
           "development_id": "story_80d383aceee79e4a",
@@ -402,6 +497,11 @@
           "development_id": "story_4b4b09883a12b024",
           "date": "2026-09-25",
           "title": "Media Outlets Return to White House Following Court Order, Denied Access to State Dinner"
+        },
+        {
+          "development_id": "story_3bc9726bab068dbe",
+          "date": "2026-09-26",
+          "title": "White House Denies CNN Access to Cover Trump's Tennessee Trip"
         }
       ],
       "sources": [
@@ -488,9 +588,39 @@
           "source": "NBC News - Top Stories",
           "link": "https://www.nbcnews.com/video/cnn-ms-now-turned-away-from-state-dinner-event-despite-court-order-to-restore-access-270489669793",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "White House Blocks CNN From Covering Trump’s Trip to Tennessee",
+          "source": "New York Times",
+          "link": "https://www.nytimes.com/2026/09/25/business/media/white-house-cnn-air-force-one-ban.html",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "White House blocks CNN from covering Trump’s Tennessee trip",
+          "source": "NBC News",
+          "link": "https://www.nbcnews.com/politics/white-house/white-house-blocks-cnn-covering-trumps-tennessee-trip-rcna599944",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "White House bars CNN from travelling with Trump on Air Force One",
+          "source": "BBC",
+          "link": "https://www.bbc.co.uk/news/articles/cxq633770y16o?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
+        },
+        {
+          "title": "White House bars CNN from covering upcoming Trump trip, broadcaster says",
+          "source": "DW",
+          "link": "https://www.dw.com/en/white-house-bars-cnn-from-covering-upcoming-trump-trip-broadcaster-says/a-79440241?maca=en-rss-en-all-1573-rdf",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "CNN left off Air Force One for Trump's upcoming trip, White House signals in new media restriction",
+          "source": "NPR",
+          "link": "https://www.npr.org/2026/09/26/g-s1-145142/cnn-left-off-air-force-one",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-09-25",
+      "updated_at": "2026-09-26",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -499,7 +629,7 @@
         "event_id": "event_dow-jones-found-guilty-of-deterring-journali_e98cb8ae59",
         "title": "Dow Jones Found Guilty of Deterring Journalist from Union Role in Hong Kong",
         "relationship": "related_topic",
-        "confidence": 0.897,
+        "confidence": 0.898,
         "shared_entities": [
           "cnn",
           "house_access",
@@ -514,7 +644,7 @@
         "event_id": "event_trump-plans-supreme-court-appeal-after-court_2902613cd6",
         "title": "Court Halts Trump's White House Ballroom Construction, Appeals Expected",
         "relationship": "related_topic",
-        "confidence": 0.76,
+        "confidence": 0.757,
         "shared_entities": [
           "justice_department",
           "us",
@@ -526,7 +656,7 @@
         "event_id": "event_trump-hosts-xi-jinping-for-talks-at-the-whit_7f9e41e6e2",
         "title": "Trump Hosts Xi Jinping for Talks at the White House",
         "relationship": "related_topic",
-        "confidence": 0.716,
+        "confidence": 0.715,
         "shared_entities": [
           "china",
           "white",
@@ -534,12 +664,12 @@
         ]
       },
       {
-        "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
-        "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
+        "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+        "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
         "relationship": "related_topic",
-        "confidence": 0.697,
+        "confidence": 0.709,
         "shared_entities": [
-          "china",
+          "air_force",
           "us"
         ]
       }
@@ -686,6 +816,7 @@
       "argue",
       "arrival",
       "banned",
+      "barred",
       "behavior",
       "broader",
       "case",
@@ -700,8 +831,11 @@
       "court",
       "cover",
       "coverage",
+      "covering",
+      "decision",
       "defend",
       "denial",
+      "denie",
       "denied",
       "department",
       "despite",
@@ -709,6 +843,8 @@
       "event",
       "filed",
       "first",
+      "follow",
+      "force",
       "ground",
       "heard",
       "house",
@@ -716,6 +852,7 @@
       "including",
       "infringe",
       "jinping",
+      "joining",
       "judge",
       "justice",
       "lawsuit",
@@ -725,6 +862,7 @@
       "media",
       "move",
       "national",
+      "network",
       "ongoing",
       "order",
       "ordered",
@@ -734,14 +872,18 @@
       "passe",
       "politico",
       "press",
+      "preventing",
+      "previou",
       "privilege",
       "professionalism",
       "prohibit",
+      "recent",
       "regarding",
       "relationship",
       "reporter",
       "response",
       "restoration",
+      "restored",
       "return",
       "returned",
       "revoked",
@@ -752,13 +894,16 @@
       "several",
       "strategy",
       "target",
+      "tennessee",
       "tension",
       "these",
       "they",
       "three",
+      "trip",
       "trump",
       "unfavorable",
       "unprofessional",
+      "upcoming",
       "upon",
       "views",
       "violate",
@@ -770,20 +915,27 @@
     "entities": [
       "access_citing",
       "access_trump",
+      "air_force",
       "amendment_right",
       "china",
       "citing_first",
       "citing_national",
       "cnn",
+      "cnn_access",
       "court",
+      "cover",
+      "cover_trump",
       "defend_media",
+      "denie_cnn",
       "denied_access",
       "denied_white",
       "dinner_several",
       "doj",
       "first_amendment",
+      "force_one.",
       "house_access",
       "house_defend",
+      "house_denie",
       "justice_department",
       "media_ban",
       "media_outlet",
@@ -795,12 +947,15 @@
       "outlet_sue",
       "right_cnn",
       "state",
+      "tennessee",
+      "tennessee_trip",
       "trump_prohibit",
+      "trump_tennessee",
       "us",
       "white",
       "white_house"
     ],
-    "search_text": "access access_citing access_trump accessing accusation action administration amendment amendment_right argue arrival banned behavior broader case challenge china cites citing citing_first citing_national claiming cnn concern contentiou continuation court cover coverage defend defend_media denial denied denied_access denied_white department despite dinner dinner_several doj event filed first first_amendment ground heard house house_access house_defend however including infringe jinping judge justice justice_department lawsuit leader legal marking media media_ban media_outlet move ms national national_security now ongoing order order_denied ordered organization outlet outlet_return outlet_sue part passe politico press privilege professionalism prohibit regarding relationship reporter response restoration return returned revoked right right_cnn ruling security seen several state strategy target tension these they three trump trump_prohibit unfavorable unprofessional upon us views violate well where which white white_house"
+    "search_text": "access access_citing access_trump accessing accusation action administration air_force amendment amendment_right argue arrival banned barred behavior broader case challenge china cites citing citing_first citing_national claiming cnn cnn_access concern contentiou continuation court cover cover_trump coverage covering decision defend defend_media denial denie denie_cnn denied denied_access denied_white department despite dinner dinner_several doj event filed first first_amendment follow force force_one. ground heard house house_access house_defend house_denie however including infringe jinping joining judge justice justice_department lawsuit leader legal marking media media_ban media_outlet move ms national national_security network now ongoing order order_denied ordered organization outlet outlet_return outlet_sue part passe politico press preventing previou privilege professionalism prohibit recent regarding relationship reporter response restoration restored return returned revoked right right_cnn ruling security seen several state strategy target tennessee tennessee_trip tension these they three trip trump trump_prohibit trump_tennessee unfavorable unprofessional upcoming upon us views violate well where which white white_house"
   },
   "related_events": [
     {
@@ -906,20 +1061,20 @@
       "href": "/timeline.html?event=event_trump-hosts-xi-jinping-for-talks-at-the-whit_7f9e41e6e2"
     },
     {
-      "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
-      "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
-      "summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Russian Strikes Kill Civilians in Ukraine Following Putin's Warning.",
+      "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+      "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
+      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Iran's President Responds to Trump's Threat at UN General Assembly.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
-      "first_seen_at": "2026-07-31",
-      "last_seen_at": "2026-09-12",
-      "development_count": 37,
-      "latest_title": "Russian Strikes Kill Civilians in Ukraine Following Putin's Warning",
-      "topic_label": "Gaza Peace Deal",
+      "first_seen_at": "2026-07-22",
+      "last_seen_at": "2026-09-23",
+      "development_count": 62,
+      "latest_title": "Iran's President Responds to Trump's Threat at UN General Assembly",
+      "topic_label": "Iran War",
       "hero_image": {
-        "url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
+        "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
         "source": "Muninn AI illustration",
         "author": "OpenAI GPT Image 2",
         "license": "AI-generated content",
@@ -937,7 +1092,7 @@
         "focal_tall_x": 0.5,
         "focal_tall_y": 0.48
       },
-      "href": "/timeline.html?event=event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b"
+      "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
     }
   ]
 }

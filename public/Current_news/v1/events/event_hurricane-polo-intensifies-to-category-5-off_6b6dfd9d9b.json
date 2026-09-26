@@ -15,7 +15,7 @@
     "summary": "Hurricane Polo has intensified into a Category 5 storm in the eastern Pacific, located off the southwestern coast of Mexico. The storm is expected to bring heavy rainfall to the region while remaining offshore.",
     "status": "active",
     "first_seen_at": "2026-09-22",
-    "last_seen_at": "2026-09-25",
+    "last_seen_at": "2026-09-26",
     "timeline": [
       {
         "development_id": "story_ca5eec08a52fa4b3",
@@ -307,6 +307,83 @@
         "first_seen_at": "2026-09-25",
         "last_seen_at": "2026-09-25",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_e6408cad159fc206",
+        "daily_story_id": "story_e6408cad159fc206",
+        "date": "2026-09-26",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Severe Flooding in New Jersey as Nor'easter Approaches",
+        "summary": "New Jersey is experiencing significant flooding as a nor'easter approaches, with roads inundated and some homes affected. Thousands are reported without power across the US East Coast as the storm brings strong winds and heavy rain. The region is bracing for more severe weather in the coming days.",
+        "topic_label": "Severe Weather",
+        "development_type": "development",
+        "key_facts": [
+          "Roads are flooding in coastal New Jersey communities.",
+          "Thousands are without power on the US East Coast.",
+          "The storm is expected to bring more severe weather."
+        ],
+        "source_count": 2,
+        "sources": [
+          "NPR",
+          "PBS News"
+        ],
+        "source_urls": [
+          "https://www.pbs.org/newshour/nation/roads-flood-in-new-jersey-inundate-some-homes-as-major-signs-of-noreaster-take-shape",
+          "https://www.npr.org/2026/09/26/g-s1-145146/roads-flood-in-new-jersey"
+        ],
+        "source_details": [
+          {
+            "title": "Roads flood in New Jersey, inundate some homes, as major signs of nor'easter take shape",
+            "source": "PBS News",
+            "link": "https://www.pbs.org/newshour/nation/roads-flood-in-new-jersey-inundate-some-homes-as-major-signs-of-noreaster-take-shape",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Roads flood in New Jersey, inundate some homes, as first major signs of nor'easter take shape",
+            "source": "NPR",
+            "link": "https://www.npr.org/2026/09/26/g-s1-145146/roads-flood-in-new-jersey",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "storm"
+          ],
+          "shared_incident_anchors": [
+            "flooding",
+            "us"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "bring",
+            "coast",
+            "expected",
+            "flooding",
+            "heavy",
+            "rain",
+            "severe",
+            "storm",
+            "weather"
+          ],
+          "shared_entities": [
+            "flooding",
+            "us"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_5f627d20ec956bdc",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-26",
+        "last_seen_at": "2026-09-26",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -335,12 +412,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 4,
+      "public_development_count": 5,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Coastal Flood Alerts Issued as Nor’easter Approaches East Coast",
-    "latest_summary": "A powerful nor’easter is making its way up the East Coast, prompting coastal flood alerts for millions. The storm has already begun to cause gusty winds and early flooding in various areas along the Eastern Seaboard, with impacts expected to intensify over the weekend.",
+    "latest_title": "Severe Flooding in New Jersey as Nor'easter Approaches",
+    "latest_summary": "New Jersey is experiencing significant flooding as a nor'easter approaches, with roads inundated and some homes affected. Thousands are reported without power across the US East Coast as the storm brings strong winds and heavy rain. The region is bracing for more severe weather in the coming days.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -352,28 +429,29 @@
         "story_ca5eec08a52fa4b3",
         "story_4ff82142b5bf4552",
         "story_5f627d20ec956bdc",
-        "story_95550f366cae1988"
+        "story_95550f366cae1988",
+        "story_e6408cad159fc206"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-09-25",
-      "development_count": 4,
-      "coverage_packet_count": 4,
-      "date_count": 4,
-      "source_count": 8,
-      "independent_source_count": 8,
+      "summary_updated_at": "2026-09-26",
+      "development_count": 5,
+      "coverage_packet_count": 5,
+      "date_count": 5,
+      "source_count": 10,
+      "independent_source_count": 9,
       "first_date": "2026-09-22",
-      "latest_date": "2026-09-25",
-      "latest_update_title": "Coastal Flood Alerts Issued as Nor’easter Approaches East Coast",
-      "coverage_score": 0.793,
+      "latest_date": "2026-09-26",
+      "latest_update_title": "Severe Flooding in New Jersey as Nor'easter Approaches",
+      "coverage_score": 0.917,
       "recency_score": 1.0,
-      "rank_score": 0.913,
-      "context_summary": "Muninn first tracked this thread on 2026-09-22: Hurricane Polo Intensifies to Category 5 Off Southwestern Mexico. The latest development is Coastal Flood Alerts Issued as Nor’easter Approaches East Coast.",
-      "cta_label": "Explore 4 developments"
+      "rank_score": 0.965,
+      "context_summary": "Muninn first tracked this thread on 2026-09-22: Hurricane Polo Intensifies to Category 5 Off Southwestern Mexico. The latest development is Severe Flooding in New Jersey as Nor'easter Approaches.",
+      "cta_label": "Explore 5 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Hurricane Polo has intensified into a Category 5 storm in the eastern Pacific, located off the southwestern coast of Mexico. A later development was Hurricane Polo Threatens Mexico with Heavy Rain and Flooding Risks. Most recently, a powerful nor’easter is making its way up the East Coast, prompting coastal flood alerts for millions.",
+      "summary": "Hurricane Polo has intensified into a Category 5 storm in the eastern Pacific, located off the southwestern coast of Mexico. A later development was Hurricane Polo Threatens Mexico with Heavy Rain and Flooding Risks. Most recently, new Jersey is experiencing significant flooding as a nor'easter approaches, with roads inundated and some homes affected.",
       "key_developments": [
         {
           "development_id": "story_ca5eec08a52fa4b3",
@@ -394,6 +472,11 @@
           "development_id": "story_95550f366cae1988",
           "date": "2026-09-25",
           "title": "Coastal Flood Alerts Issued as Nor’easter Approaches East Coast"
+        },
+        {
+          "development_id": "story_e6408cad159fc206",
+          "date": "2026-09-26",
+          "title": "Severe Flooding in New Jersey as Nor'easter Approaches"
         }
       ],
       "sources": [
@@ -444,9 +527,21 @@
           "source": "ABC News",
           "link": "https://abcnews.com/video/136712482",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Roads flood in New Jersey, inundate some homes, as major signs of nor'easter take shape",
+          "source": "PBS News",
+          "link": "https://www.pbs.org/newshour/nation/roads-flood-in-new-jersey-inundate-some-homes-as-major-signs-of-noreaster-take-shape",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Roads flood in New Jersey, inundate some homes, as first major signs of nor'easter take shape",
+          "source": "NPR",
+          "link": "https://www.npr.org/2026/09/26/g-s1-145146/roads-flood-in-new-jersey",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-09-25",
+      "updated_at": "2026-09-26",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -455,7 +550,7 @@
         "event_id": "event_hurricane-lowell-approaches-hawaii-tropical_baef50d883",
         "title": "Approache Hawaii Storm",
         "relationship": "related_topic",
-        "confidence": 0.724,
+        "confidence": 0.723,
         "shared_entities": [
           "national_hurricane",
           "tropical_storm"
@@ -584,7 +679,9 @@
     "search_tokens": [
       "157",
       "253",
+      "across",
       "affect",
+      "affected",
       "alert",
       "along",
       "already",
@@ -595,6 +692,7 @@
       "areas",
       "associated",
       "begun",
+      "bracing",
       "bring",
       "bringing",
       "category",
@@ -602,6 +700,7 @@
       "center",
       "coast",
       "coastal",
+      "coming",
       "compounded",
       "condition",
       "currently",
@@ -613,18 +712,22 @@
       "ever",
       "exceeding",
       "expected",
+      "experiencing",
       "flood",
       "flooding",
       "gusty",
       "hawaii",
       "heavy",
+      "homes",
       "hurricane",
       "impact",
       "influenced",
       "intensifie",
       "intensified",
       "intensify",
+      "inundated",
       "issued",
+      "jersey",
       "landfall",
       "landslide",
       "life-threatening",
@@ -636,11 +739,13 @@
       "million",
       "national",
       "nolo",
+      "nor'easter",
       "offshore",
       "pacific",
       "phenomenon",
       "polo",
       "poses",
+      "power",
       "powerful",
       "prompting",
       "rain",
@@ -651,16 +756,22 @@
       "region",
       "remain",
       "remaining",
+      "reported",
       "risks",
+      "roads",
       "seaboard",
       "severe",
+      "significant",
       "since",
       "situation",
+      "some",
       "southwestern",
       "statu",
       "storm",
+      "strong",
       "strongest",
       "sustained",
+      "thousand",
       "threaten",
       "toward",
       "tropical",
@@ -673,7 +784,8 @@
       "weekend",
       "which",
       "while",
-      "winds"
+      "winds",
+      "without"
     ],
     "entities": [
       "alert_issued",
@@ -694,6 +806,7 @@
       "mexico_hurricane",
       "mexico_pacific",
       "national_hurricane",
+      "nor'easter_approache",
       "off_mexico",
       "off_southwestern",
       "pacific",
@@ -703,6 +816,7 @@
       "polo_threaten",
       "reache_category",
       "risks_hurricane",
+      "severe_flooding",
       "southwestern_mexico",
       "statu_off",
       "storm_nolo",
@@ -710,7 +824,7 @@
       "tropical_storm",
       "us"
     ],
-    "search_text": "157 253 affect alert alert_issued along already also although approach approache approache_east areas associated begun bring bringing category category_off category_statu cause center coast coast_hurricane coastal coastal_flood compounded condition currently cyclone early east east_coast easter eastern eastern_seaboard ever exceeding expected flood flood_alert flooding flooding_risks gusty hawaii heavy heavy_rain hurricane hurricane_center. hurricane_polo impact influenced intensifie intensified intensify issued landfall landslide life-threatening located made making maximum mexico mexico_hurricane mexico_pacific million national national_hurricane nolo off_mexico off_southwestern offshore pacific pacific_coast phenomenon polo polo_intensifie polo_reache polo_threaten poses powerful prompting rain rainfall reache reache_category reaching recorded region remain remaining risks risks_hurricane seaboard severe since situation southwestern southwestern_mexico statu statu_off storm storm_nolo strongest sustained threaten threaten_mexico toward tropical tropical_storm us variou warm warning water weakened weather weekend which while winds"
+    "search_text": "157 253 across affect affected alert alert_issued along already also although approach approache approache_east areas associated begun bracing bring bringing category category_off category_statu cause center coast coast_hurricane coastal coastal_flood coming compounded condition currently cyclone early east east_coast easter eastern eastern_seaboard ever exceeding expected experiencing flood flood_alert flooding flooding_risks gusty hawaii heavy heavy_rain homes hurricane hurricane_center. hurricane_polo impact influenced intensifie intensified intensify inundated issued jersey landfall landslide life-threatening located made making maximum mexico mexico_hurricane mexico_pacific million national national_hurricane nolo nor'easter nor'easter_approache off_mexico off_southwestern offshore pacific pacific_coast phenomenon polo polo_intensifie polo_reache polo_threaten poses power powerful prompting rain rainfall reache reache_category reaching recorded region remain remaining reported risks risks_hurricane roads seaboard severe severe_flooding significant since situation some southwestern southwestern_mexico statu statu_off storm storm_nolo strong strongest sustained thousand threaten threaten_mexico toward tropical tropical_storm us variou warm warning water weakened weather weekend which while winds without"
   },
   "related_events": [
     {
