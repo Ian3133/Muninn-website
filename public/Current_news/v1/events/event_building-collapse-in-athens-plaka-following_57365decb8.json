@@ -15,7 +15,7 @@
     "summary": "A powerful explosion in the Plaka district of Athens, near the Acropolis, caused a two-storey building to collapse on September 25, 2026. At least two people were injured in the incident. The cause of the explosion is under investigation, with a gas leak suspected.",
     "status": "active",
     "first_seen_at": "2026-09-25",
-    "last_seen_at": "2026-09-26",
+    "last_seen_at": "2026-09-27",
     "timeline": [
       {
         "development_id": "story_0218a5400abe884d",
@@ -182,6 +182,94 @@
         "first_seen_at": "2026-09-26",
         "last_seen_at": "2026-09-26",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_63034a0cf53d6c15",
+        "daily_story_id": "story_63034a0cf53d6c15",
+        "date": "2026-09-27",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Explosion in Athens' Plaka District Kills Six, Including Four American Tourists",
+        "summary": "A suspected gas leak caused an explosion that leveled a two-storey residential building in the Plaka district of Athens, resulting in the deaths of six individuals, including four American tourists and two Greek residents. Emergency teams discovered the victims after the building collapsed shortly after the explosion, which occurred early in the morning. Greek authorities are investigating the incident to determine the cause of the explosion.",
+        "topic_label": "",
+        "development_type": "development",
+        "key_facts": [
+          "Explosion caused by suspected gas leak",
+          "Building collapsed in the Plaka district near the Acropolis",
+          "Six fatalities: four American tourists and two Greek residents",
+          "Emergency teams found victims after the collapse"
+        ],
+        "source_count": 3,
+        "sources": [
+          "BBC",
+          "Fox News",
+          "The Guardian"
+        ],
+        "source_urls": [
+          "https://www.foxnews.com/world/four-american-tourists-among-6-killed-explosion-levels-building-near-athens-acropolis",
+          "https://www.theguardian.com/world/2026/sep/26/greek-authorities-seek-answers-after-six-killed-in-athens-apartment-block-explosion",
+          "https://www.bbc.co.uk/news/articles/c6p3kk78l4l1o?at_medium=RSS&at_campaign=rss"
+        ],
+        "source_details": [
+          {
+            "title": "Four American tourists among 6 killed after explosion levels building near Athens’ Acropolis",
+            "source": "Fox News",
+            "link": "https://www.foxnews.com/world/four-american-tourists-among-6-killed-explosion-levels-building-near-athens-acropolis",
+            "source_bias": "right"
+          },
+          {
+            "title": "Greek authorities seek answers after six killed in Athens apartment block explosion",
+            "source": "The Guardian",
+            "link": "https://www.theguardian.com/world/2026/sep/26/greek-authorities-seek-answers-after-six-killed-in-athens-apartment-block-explosion",
+            "source_bias": "left"
+          },
+          {
+            "title": "British national among six dead in building explosion close to Acropolis in Athens",
+            "source": "BBC",
+            "link": "https://www.bbc.co.uk/news/articles/c6p3kk78l4l1o?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 1.0,
+        "match_evidence": {
+          "score": 1.0,
+          "matched_development_id": "story_0235885bcd39c152",
+          "shared_tokens": [
+            "acropoli",
+            "america",
+            "athen",
+            "building",
+            "caused",
+            "collapsed",
+            "explosion",
+            "fatalitie",
+            "four",
+            "gas",
+            "greek",
+            "incident",
+            "including",
+            "leak",
+            "near",
+            "occurred",
+            "tourist",
+            "victim"
+          ],
+          "shared_entities": [
+            "acropoli",
+            "america",
+            "athen"
+          ],
+          "source_url_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-27",
+        "last_seen_at": "2026-09-27",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -202,12 +290,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 2,
+      "public_development_count": 3,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Explosion in Athens Claims Lives of British Man and Greek Wife",
-    "latest_summary": "A British man and his Greek wife are believed to be among six fatalities from a building explosion in Athens, attributed to a gas leak. The incident occurred near the Acropolis, with four American tourists also reported dead. Rescuers have been working to recover victims from the collapsed structure.",
+    "latest_title": "Explosion in Athens' Plaka District Kills Six, Including Four American Tourists",
+    "latest_summary": "A suspected gas leak caused an explosion that leveled a two-storey residential building in the Plaka district of Athens, resulting in the deaths of six individuals, including four American tourists and two Greek residents. Emergency teams discovered the victims after the building collapsed shortly after the explosion, which occurred early in the morning. Greek authorities are investigating the incident to determine the cause of the explosion.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": false,
@@ -217,28 +305,29 @@
       "display_title": "Building Collapse in Athens' Plaka Following Explosion Injures Two",
       "milestone_development_ids": [
         "story_0218a5400abe884d",
-        "story_0235885bcd39c152"
+        "story_0235885bcd39c152",
+        "story_63034a0cf53d6c15"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-09-26",
-      "development_count": 2,
-      "coverage_packet_count": 3,
-      "date_count": 2,
-      "source_count": 5,
-      "independent_source_count": 5,
+      "summary_updated_at": "2026-09-27",
+      "development_count": 3,
+      "coverage_packet_count": 4,
+      "date_count": 3,
+      "source_count": 7,
+      "independent_source_count": 7,
       "first_date": "2026-09-25",
-      "latest_date": "2026-09-26",
-      "latest_update_title": "Explosion in Athens Claims Lives of British Man and Greek Wife",
-      "coverage_score": 0.447,
+      "latest_date": "2026-09-27",
+      "latest_update_title": "Explosion in Athens' Plaka District Kills Six, Including Four American Tourists",
+      "coverage_score": 0.645,
       "recency_score": 1.0,
-      "rank_score": 0.768,
-      "context_summary": "Muninn first tracked this thread on 2026-09-25: Building Collapse in Athens' Plaka Following Explosion Injures Two. The latest development is Explosion in Athens Claims Lives of British Man and Greek Wife.",
+      "rank_score": 0.851,
+      "context_summary": "Muninn first tracked this thread on 2026-09-25: Building Collapse in Athens' Plaka Following Explosion Injures Two. The latest development is Explosion in Athens' Plaka District Kills Six, Including Four American Tourists.",
       "cta_label": ""
     },
     "event_summary": {
       "available": true,
-      "summary": "A powerful explosion in the Plaka district of Athens, near the Acropolis, caused a two-storey building to collapse on September 25, 2026. Most recently, a British man and his Greek wife are believed to be among six fatalities from a building explosion in Athens, attributed to a gas leak.",
+      "summary": "A powerful explosion in the Plaka district of Athens, near the Acropolis, caused a two-storey building to collapse on September 25, 2026. A later development was Explosion in Athens Claims Lives of British Man and Greek Wife. Most recently, a suspected gas leak caused an explosion that leveled a two-storey residential building in the Plaka district of Athens, resulting in the deaths of six individuals, including four American tourists and two Greek residents.",
       "key_developments": [
         {
           "development_id": "story_0218a5400abe884d",
@@ -249,6 +338,11 @@
           "development_id": "story_0235885bcd39c152",
           "date": "2026-09-26",
           "title": "Explosion in Athens Claims Lives of British Man and Greek Wife"
+        },
+        {
+          "development_id": "story_63034a0cf53d6c15",
+          "date": "2026-09-27",
+          "title": "Explosion in Athens' Plaka District Kills Six, Including Four American Tourists"
         }
       ],
       "sources": [
@@ -281,9 +375,21 @@
           "source": "BBC",
           "link": "https://www.bbc.co.uk/news/articles/c6p3kk78l4l1o?at_medium=RSS&at_campaign=rss",
           "source_bias": "center"
+        },
+        {
+          "title": "Four American tourists among 6 killed after explosion levels building near Athens’ Acropolis",
+          "source": "Fox News",
+          "link": "https://www.foxnews.com/world/four-american-tourists-among-6-killed-explosion-levels-building-near-athens-acropolis",
+          "source_bias": "right"
+        },
+        {
+          "title": "Greek authorities seek answers after six killed in Athens apartment block explosion",
+          "source": "The Guardian",
+          "link": "https://www.theguardian.com/world/2026/sep/26/greek-authorities-seek-answers-after-six-killed-in-athens-apartment-block-explosion",
+          "source_bias": "left"
         }
       ],
-      "updated_at": "2026-09-26",
+      "updated_at": "2026-09-27",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "developing_event",
@@ -292,7 +398,7 @@
         "event_id": "event_israeli-strikes-in-gaza-result-in-seven-deat_837b156199",
         "title": "Israeli Strikes in Gaza Result in Seven Deaths and Destruction of Medical Warehouses",
         "relationship": "related_topic",
-        "confidence": 0.713,
+        "confidence": 0.712,
         "shared_entities": [
           "building_collapse",
           "claim_lives"
@@ -302,7 +408,7 @@
         "event_id": "event_flash-floods-along-nepal-tibet-border-leave_002673505b",
         "title": "Flash Floods in Nepal and Tibet Leave Hundreds Missing, Including Tourists",
         "relationship": "related_topic",
-        "confidence": 0.704,
+        "confidence": 0.705,
         "shared_entities": [
           "britain",
           "claim_lives"
@@ -319,68 +425,6 @@
         ]
       }
     ],
-    "search_tokens": [
-      "2026",
-      "acropoli",
-      "also",
-      "america",
-      "among",
-      "athen",
-      "attributed",
-      "believed",
-      "britain",
-      "building",
-      "cause",
-      "caused",
-      "claim",
-      "collapse",
-      "collapsed",
-      "dead",
-      "district",
-      "explosion",
-      "fatalitie",
-      "four",
-      "gas",
-      "greek",
-      "incident",
-      "injure",
-      "injured",
-      "investigation",
-      "leak",
-      "least",
-      "lives",
-      "near",
-      "occurred",
-      "plaka",
-      "powerful",
-      "recover",
-      "reported",
-      "rescuer",
-      "september",
-      "structure",
-      "suspected",
-      "tourist",
-      "two-storey",
-      "under",
-      "victim",
-      "wife",
-      "working"
-    ],
-    "entities": [
-      "acropoli",
-      "america",
-      "athen",
-      "athen_claim",
-      "athen_plaka",
-      "britain",
-      "britain_man",
-      "building_collapse",
-      "claim_lives",
-      "explosion_injure",
-      "greek_wife",
-      "plaka"
-    ],
-    "search_text": "2026 acropoli also america among athen athen_claim athen_plaka attributed believed britain britain_man building building_collapse cause caused claim claim_lives collapse collapsed dead district explosion explosion_injure fatalitie four gas greek greek_wife incident injure injured investigation leak least lives near occurred plaka powerful recover reported rescuer september structure suspected tourist two-storey under victim wife working",
     "hero_image": {
       "url": "/Current_news/generated/events/event_building-collapse-in-athens-plaka-following_57365decb8.jpg",
       "thumbnail_url": "/Current_news/generated/events/event_building-collapse-in-athens-plaka-following_57365decb8.jpg",
@@ -400,6 +444,169 @@
       "focal_wide_y": 0.48,
       "focal_tall_x": 0.5,
       "focal_tall_y": 0.48
+    },
+    "search_tokens": [
+      "2026",
+      "acropoli",
+      "also",
+      "america",
+      "among",
+      "athen",
+      "attributed",
+      "authoritie",
+      "believed",
+      "britain",
+      "building",
+      "cause",
+      "caused",
+      "claim",
+      "collapse",
+      "collapsed",
+      "dead",
+      "death",
+      "determine",
+      "discovered",
+      "district",
+      "early",
+      "emergency",
+      "explosion",
+      "fatalitie",
+      "four",
+      "gas",
+      "greek",
+      "incident",
+      "including",
+      "individual",
+      "injure",
+      "injured",
+      "investigating",
+      "investigation",
+      "kills",
+      "leak",
+      "least",
+      "leveled",
+      "lives",
+      "morning",
+      "near",
+      "occurred",
+      "plaka",
+      "powerful",
+      "recover",
+      "reported",
+      "rescuer",
+      "resident",
+      "residential",
+      "resulting",
+      "september",
+      "shortly",
+      "structure",
+      "suspected",
+      "teams",
+      "tourist",
+      "two-storey",
+      "under",
+      "victim",
+      "which",
+      "wife",
+      "working"
+    ],
+    "entities": [
+      "acropoli",
+      "america",
+      "america_tourist",
+      "athen",
+      "athen_claim",
+      "athen_plaka",
+      "britain",
+      "britain_man",
+      "building_collapse",
+      "claim_lives",
+      "explosion_injure",
+      "greek_wife",
+      "plaka",
+      "plaka_district"
+    ],
+    "search_text": "2026 acropoli also america america_tourist among athen athen_claim athen_plaka attributed authoritie believed britain britain_man building building_collapse cause caused claim claim_lives collapse collapsed dead death determine discovered district early emergency explosion explosion_injure fatalitie four gas greek greek_wife incident including individual injure injured investigating investigation kills leak least leveled lives morning near occurred plaka plaka_district powerful recover reported rescuer resident residential resulting september shortly structure suspected teams tourist two-storey under victim which wife working",
+    "event_overview": {
+      "available": true,
+      "title": "About Building Collapse in Athens' Plaka Following Explosion Injures Two",
+      "subject": "Building Collapse in Athens' Plaka Following Explosion Injures Two",
+      "summary": "A two-storey building on Lysikratous Street in Athens’ historic Plaka district collapsed after an explosion shortly before 8 a.m. on September 25, 2026. The incident triggered a multi-agency rescue operation, caused damage to nearby properties, and remained under official investigation as of September 27; authorities had not publicly established the cause of the explosion.",
+      "facts": [
+        {
+          "label": "Date and location",
+          "value": "The explosion and collapse occurred shortly before 8 a.m. on September 25, 2026, at a two-storey house on Lysikratous Street in Plaka, central Athens.",
+          "source_ids": [
+            "o1",
+            "o2"
+          ]
+        },
+        {
+          "label": "Casualties and rescues",
+          "value": "In a September 26 briefing, Greece’s Fire Service said six people had been recovered unconscious from the collapsed building and that two women were rescued from an adjacent building and taken by ambulance.",
+          "source_ids": [
+            "o1"
+          ]
+        },
+        {
+          "label": "Emergency response",
+          "value": "The search-and-rescue operation involved 30 firefighters, six vehicles including two specialist rescue vehicles, three search-and-rescue dogs, geophones and cameras; Athens municipal equipment assisted debris removal.",
+          "source_ids": [
+            "o1"
+          ]
+        },
+        {
+          "label": "Investigation",
+          "value": "The Fire Service’s Arson Crimes Division opened an ex officio preliminary investigation, under the direction of the Athens Court of First Instance prosecutor, to determine the sequence and causes of the explosion, fire and collapse. A reported gas smell prompted attendance by the gas-network operator, but officials had not confirmed a cause.",
+          "source_ids": [
+            "o1"
+          ]
+        },
+        {
+          "label": "Affected area",
+          "value": "The blast also damaged neighboring buildings and vehicles in Plaka, a historic district at the foot of the Acropolis and a major visitor area.",
+          "source_ids": [
+            "o3",
+            "o4"
+          ]
+        }
+      ],
+      "scope_note": "The selected Muninn timeline follows major reported developments in the Plaka explosion and collapse, including changing casualty reports; it does not provide a final official cause, complete victim identification, or the full investigative and recovery record.",
+      "sources": [
+        {
+          "title": "Gov",
+          "publisher": "Gov",
+          "url": "https://civilprotection.gov.gr/en/deltia-tupou/anadimosieysi-anakoinosis-pyrosbestikoy-somatos-ektakti-enimerosi-gia-tin-katarreysi-toy-ktirioy-epi",
+          "source_type": "reporting",
+          "id": "o1"
+        },
+        {
+          "title": "Ekathimerini",
+          "publisher": "Ekathimerini",
+          "url": "https://www.ekathimerini.com/news/1316286/strong-blast-in-central-athens-causes-building-collapse/",
+          "source_type": "reporting",
+          "id": "o2"
+        },
+        {
+          "title": "Ekathimerini",
+          "publisher": "Ekathimerini",
+          "url": "https://www.ekathimerini.com/news/1316296/rescuers-comb-ruins-of-plaka-house-for-missing-residents-after-blast/",
+          "source_type": "reporting",
+          "id": "o3"
+        },
+        {
+          "title": "Washingtonpost",
+          "publisher": "Washingtonpost",
+          "url": "https://www.washingtonpost.com/world/2026/09/25/greece-explosion-athens-plaka-acropolis/6fe01702-b8ae-11f1-94cb-d3d8f22a8c8b_story.html",
+          "source_type": "reporting",
+          "id": "o4"
+        }
+      ],
+      "publisher_count": 3,
+      "generated_at": "2026-09-27T16:18:14.015854+00:00",
+      "expires_at": "2026-10-04T16:18:14.015854+00:00",
+      "model": "gpt-5.6-terra",
+      "provenance": "openai_web_search_source_grounded_event_overview_v1"
     }
   },
   "related_events": [

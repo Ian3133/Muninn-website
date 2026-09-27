@@ -15,7 +15,7 @@
     "summary": "A suicide bombing targeted a mosque near a police facility in Kohat, Pakistan, resulting in at least 16 to 21 fatalities and numerous injuries. The attack involved a vehicle loaded with explosives, and gunmen reportedly attempted to storm the police compound during the incident. Among the casualties were police officers attending prayers at the mosque.",
     "status": "active",
     "first_seen_at": "2026-09-18",
-    "last_seen_at": "2026-09-26",
+    "last_seen_at": "2026-09-27",
     "timeline": [
       {
         "development_id": "story_1eeda8090f5b3ca7",
@@ -316,6 +316,85 @@
         "first_seen_at": "2026-09-26",
         "last_seen_at": "2026-09-26",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_a7f21000ced3fede",
+        "daily_story_id": "story_a7f21000ced3fede",
+        "date": "2026-09-27",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Suicide Bombing in Pakistan Claims at Least 12 Lives",
+        "summary": "A suicide bombing involving a vehicle packed with explosives targeted a roadside checkpoint in northwest Pakistan, resulting in the deaths of at least 12 individuals. Following the attack, gunmen also targeted an ambulance responding to the scene.",
+        "topic_label": "",
+        "development_type": "military_action",
+        "key_facts": [
+          "Suicide bombing at a roadside checkpoint",
+          "At least 12 people killed",
+          "Gunmen targeted an ambulance after the bombing"
+        ],
+        "source_count": 2,
+        "sources": [
+          "AP - Top News via Google News",
+          "Al Jazeera English"
+        ],
+        "source_urls": [
+          "https://www.aljazeera.com/video/newsfeed/2026/9/27/suicide-bombing-in-northwest-pakistan-kills-at-least-12?traffic_source=rss",
+          "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOd1JTRGdCNzVjMUkzSmE4cTA3Szh6WE8zNlpLQlRmSGdIRDVoTkVSN1VvS3dqZlBQSUlXSVVwX2xwV0tOVTZ6aUlySExzR2w4RzhwZHlwQlhlVmFfdDZTTWNSSW9KdkpYdGRkeVpXcmgyNzZuZ3FxUm9qbUtCalcwaVNEcm1meS1GU1lJ?oc=5"
+        ],
+        "source_details": [
+          {
+            "title": "Suicide bombing in northwest Pakistan kills at least 12",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/video/newsfeed/2026/9/27/suicide-bombing-in-northwest-pakistan-kills-at-least-12?traffic_source=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Gunmen target ambulance in Pakistan after suicide bombing at checkpoint killed 12 - AP News",
+            "source": "AP - Top News via Google News",
+            "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOd1JTRGdCNzVjMUkzSmE4cTA3Szh6WE8zNlpLQlRmSGdIRDVoTkVSN1VvS3dqZlBQSUlXSVVwX2xwV0tOVTZ6aUlySExzR2w4RzhwZHlwQlhlVmFfdDZTTWNSSW9KdkpYdGRkeVpXcmgyNzZuZ3FxUm9qbUtCalcwaVNEcm1meS1GU1lJ?oc=5",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "attack",
+            "explosion"
+          ],
+          "shared_incident_anchors": [
+            "pakistan",
+            "suicide",
+            "suicide_bombing"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "also",
+            "attack",
+            "bombing",
+            "checkpoint",
+            "killed",
+            "least",
+            "pakistan",
+            "suicide"
+          ],
+          "shared_entities": [
+            "pakistan",
+            "suicide",
+            "suicide_bombing"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_daa37f3f5c3d7caf",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-27",
+        "last_seen_at": "2026-09-27",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -340,12 +419,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 4,
+      "public_development_count": 5,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Suicide Bombing in Northwestern Pakistan Leaves 11 Dead",
-    "latest_summary": "A suicide bomb attack at a police checkpoint in northwestern Pakistan has resulted in at least 11 fatalities. The Tehreek-e-Taliban Pakistan (TTP), also known as the Pakistani Taliban, has claimed responsibility for the attack, which reflects a rise in violence against security forces in the region.",
+    "latest_title": "Suicide Bombing in Pakistan Claims at Least 12 Lives",
+    "latest_summary": "A suicide bombing involving a vehicle packed with explosives targeted a roadside checkpoint in northwest Pakistan, resulting in the deaths of at least 12 individuals. Following the attack, gunmen also targeted an ambulance responding to the scene.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -357,28 +436,29 @@
         "story_1eeda8090f5b3ca7",
         "story_b58139e6922f07df",
         "story_3f596d9b78ee81a2",
-        "story_daa37f3f5c3d7caf"
+        "story_daa37f3f5c3d7caf",
+        "story_a7f21000ced3fede"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-09-26",
-      "development_count": 4,
-      "coverage_packet_count": 4,
-      "date_count": 4,
-      "source_count": 11,
-      "independent_source_count": 9,
+      "summary_updated_at": "2026-09-27",
+      "development_count": 5,
+      "coverage_packet_count": 5,
+      "date_count": 5,
+      "source_count": 13,
+      "independent_source_count": 11,
       "first_date": "2026-09-18",
-      "latest_date": "2026-09-26",
-      "latest_update_title": "Suicide Bombing in Northwestern Pakistan Leaves 11 Dead",
-      "coverage_score": 0.831,
+      "latest_date": "2026-09-27",
+      "latest_update_title": "Suicide Bombing in Pakistan Claims at Least 12 Lives",
+      "coverage_score": 0.942,
       "recency_score": 1.0,
-      "rank_score": 0.929,
-      "context_summary": "Muninn first tracked this thread on 2026-09-18: Suicide Bombing at Police Facility in Kohat, Pakistan, Leaves Many Dead. The latest development is Suicide Bombing in Northwestern Pakistan Leaves 11 Dead.",
-      "cta_label": "Explore 4 developments"
+      "rank_score": 0.976,
+      "context_summary": "Muninn first tracked this thread on 2026-09-18: Suicide Bombing at Police Facility in Kohat, Pakistan, Leaves Many Dead. The latest development is Suicide Bombing in Pakistan Claims at Least 12 Lives.",
+      "cta_label": "Explore 5 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "A suicide bombing targeted a mosque near a police facility in Kohat, Pakistan, resulting in at least 16 to 21 fatalities and numerous injuries. A later development was Pakistan Claims Airstrikes in Afghanistan Kill 28 Militants; Afghanistan Reports Civilian Casualties. Most recently, a suicide bomb attack at a police checkpoint in northwestern Pakistan has resulted in at least 11 fatalities.",
+      "summary": "A suicide bombing targeted a mosque near a police facility in Kohat, Pakistan, resulting in at least 16 to 21 fatalities and numerous injuries. A later development was Pakistan Claims Airstrikes in Afghanistan Kill 28 Militants; Afghanistan Reports Civilian Casualties. Most recently, a suicide bombing involving a vehicle packed with explosives targeted a roadside checkpoint in northwest Pakistan, resulting in the deaths of at least 12 individuals.",
       "key_developments": [
         {
           "development_id": "story_1eeda8090f5b3ca7",
@@ -399,6 +479,11 @@
           "development_id": "story_daa37f3f5c3d7caf",
           "date": "2026-09-26",
           "title": "Suicide Bombing in Northwestern Pakistan Leaves 11 Dead"
+        },
+        {
+          "development_id": "story_a7f21000ced3fede",
+          "date": "2026-09-27",
+          "title": "Suicide Bombing in Pakistan Claims at Least 12 Lives"
         }
       ],
       "sources": [
@@ -467,13 +552,56 @@
           "source": "Euronews",
           "link": "https://www.euronews.com/2026/09/26/at-least-11-dead-following-suicide-bomb-attack-in-northwestern-pakistan",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Suicide bombing in northwest Pakistan kills at least 12",
+          "source": "Al Jazeera English",
+          "link": "https://www.aljazeera.com/video/newsfeed/2026/9/27/suicide-bombing-in-northwest-pakistan-kills-at-least-12?traffic_source=rss",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Gunmen target ambulance in Pakistan after suicide bombing at checkpoint killed 12 - AP News",
+          "source": "AP - Top News via Google News",
+          "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOd1JTRGdCNzVjMUkzSmE4cTA3Szh6WE8zNlpLQlRmSGdIRDVoTkVSN1VvS3dqZlBQSUlXSVVwX2xwV0tOVTZ6aUlySExzR2w4RzhwZHlwQlhlVmFfdDZTTWNSSW9KdkpYdGRkeVpXcmgyNzZuZ3FxUm9qbUtCalcwaVNEcm1meS1GU1lJ?oc=5",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-09-26",
+      "updated_at": "2026-09-27",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
-    "related_events": [],
+    "related_events": [
+      {
+        "event_id": "event_gold-mine-collapse-in-sudan-claims-at-least_f7350911db",
+        "title": "Gold Mine Collapse in Sudan Claims at Least 82 Lives",
+        "relationship": "related_topic",
+        "confidence": 0.689,
+        "shared_entities": [
+          "least",
+          "least_lives"
+        ]
+      },
+      {
+        "event_id": "event_cargo-ship-fire-in-china-claims-at-least-25_ac2ec60aec",
+        "title": "Cargo Ship Fire in China Claims at Least 25 Lives",
+        "relationship": "related_topic",
+        "confidence": 0.677,
+        "shared_entities": [
+          "least",
+          "least_lives"
+        ]
+      },
+      {
+        "event_id": "event_kurdish-led-syrian-democratic-forces-officia_e748740748",
+        "title": "Kurdish-led Syrian Democratic Forces Officially Dissolve After Merging with Army",
+        "relationship": "related_topic",
+        "confidence": 0.671,
+        "shared_entities": [
+          "least",
+          "least_lives"
+        ]
+      }
+    ],
     "hero_image": {
       "url": "/Current_news/generated/events/event_suicide-bombing-at-police-facility-in-kohat_daa45e0054.jpg",
       "thumbnail_url": "/Current_news/generated/events/event_suicide-bombing-at-police-facility-in-kohat_daa45e0054.jpg",
@@ -611,6 +739,7 @@
       "afghanistan",
       "airstrike",
       "also",
+      "ambulance",
       "among",
       "assault",
       "attack",
@@ -641,8 +770,10 @@
       "gunmen",
       "headquarter",
       "incident",
+      "individual",
       "injurie",
       "involved",
+      "involving",
       "khyber",
       "kill",
       "killed",
@@ -651,15 +782,18 @@
       "kunar",
       "least",
       "leave",
+      "lives",
       "loaded",
       "local",
       "many",
       "militant",
       "mosque",
       "near",
+      "northwest",
       "northwestern",
       "numerou",
       "officer",
+      "packed",
       "pakhtunkhwa",
       "pakistan",
       "pakistani",
@@ -672,11 +806,14 @@
       "region",
       "reported",
       "reportedly",
+      "responding",
       "responsibility",
       "resulted",
       "resulting",
       "rise",
       "risen",
+      "roadside",
+      "scene",
       "security",
       "september",
       "stated",
@@ -704,6 +841,8 @@
       "kohat_khyber",
       "kohat_pakistan",
       "kohat_pakistan.",
+      "least",
+      "least_lives",
       "militant_afghanistan",
       "northwestern",
       "northwestern_pakistan",
@@ -720,7 +859,42 @@
       "tehreek-e-taliban_pakistan",
       "ttp"
     ],
-    "search_text": "afghan afghanistan airstrike also among assault attack attempted attending authoritie bomb bombing border both casualtie casualtie_pakistan checkpoint civilian civilian_casualtie claim claim_airstrike claimed compound confirming contrast dead death explosion explosive facility fatalitie figure follow force gunmen headquarter hq incident injurie involved khyber khyber_pakhtunkhwa kill killed known kohat kohat_khyber kohat_pakistan kohat_pakistan. kunar least leave loaded local many militant militant_afghanistan mosque near northwestern northwestern_pakistan numerou officer pakhtunkhwa pakistan pakistan._suicide pakistan_claim pakistan_reach pakistan_ttp pakistani pakistani_taliban paktika police prayer province reach recent reflect region reported reportedly responsibility resulted resulting rise risen security september september_pakistan stated storm strike suicide suicide_bombing taliban targeted tehreek-e-taliban tehreek-e-taliban_pakistan three toll ttp updated vehicle violence which"
+    "search_text": "afghan afghanistan airstrike also ambulance among assault attack attempted attending authoritie bomb bombing border both casualtie casualtie_pakistan checkpoint civilian civilian_casualtie claim claim_airstrike claimed compound confirming contrast dead death explosion explosive facility fatalitie figure follow force gunmen headquarter hq incident individual injurie involved involving khyber khyber_pakhtunkhwa kill killed known kohat kohat_khyber kohat_pakistan kohat_pakistan. kunar least least_lives leave lives loaded local many militant militant_afghanistan mosque near northwest northwestern northwestern_pakistan numerou officer packed pakhtunkhwa pakistan pakistan._suicide pakistan_claim pakistan_reach pakistan_ttp pakistani pakistani_taliban paktika police prayer province reach recent reflect region reported reportedly responding responsibility resulted resulting rise risen roadside scene security september september_pakistan stated storm strike suicide suicide_bombing taliban targeted tehreek-e-taliban tehreek-e-taliban_pakistan three toll ttp updated vehicle violence which"
   },
-  "related_events": []
+  "related_events": [
+    {
+      "event_id": "event_kurdish-led-syrian-democratic-forces-officia_e748740748",
+      "title": "Kurdish-led Syrian Democratic Forces Officially Dissolve After Merging with Army",
+      "summary": "Muninn first tracked this thread on 2026-08-26: Kurdish-led Syrian Democratic Forces Officially Dissolve After Merging with Army. The latest development is Explosion at Weapons Depot in Idlib, Syria, Claims at Least 14 Lives.",
+      "activity_status": "active",
+      "stage": "developing_event",
+      "stage_label": "Developing event",
+      "first_seen_at": "2026-08-26",
+      "last_seen_at": "2026-09-09",
+      "development_count": 2,
+      "latest_title": "Explosion at Weapons Depot in Idlib, Syria, Claims at Least 14 Lives",
+      "topic_label": "Syria Conflict",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_kurdish-led-syrian-democratic-forces-officia_e748740748.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_kurdish-led-syrian-democratic-forces-officia_e748740748.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_kurdish-led-syrian-democratic-forces-officia_e748740748"
+    }
+  ]
 }

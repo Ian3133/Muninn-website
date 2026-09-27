@@ -15,7 +15,7 @@
     "summary": "A Ukrainian drone strike ignited a significant fire at a Wildberries warehouse near Saint Petersburg on July 24. The blaze produced thick smoke that spread across the city and led to temporary disruptions at Pulkovo Airport, as reported by Russian authorities.",
     "status": "active",
     "first_seen_at": "2026-07-25",
-    "last_seen_at": "2026-09-16",
+    "last_seen_at": "2026-09-27",
     "timeline": [
       {
         "development_id": "story_b77a481c5a1a5ef9",
@@ -1590,15 +1590,80 @@
         "first_seen_at": "2026-09-16",
         "last_seen_at": "2026-09-16",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_7a4a6fa2262fbda8",
+        "daily_story_id": "story_7a4a6fa2262fbda8",
+        "date": "2026-09-27",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Saudi Airstrike in Yemen Kills Seven, Injures Dozens",
+        "summary": "A Saudi airstrike on a market in Yemen's Taiz province resulted in the deaths of seven individuals and injured 40 others. This incident occurs amid escalating Houthi advances and intensified Saudi-led air raids.",
+        "topic_label": "Yemen Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "{'deaths': 7, 'injuries': 40, 'location': 'Taiz province, Yemen', 'event_type': 'airstrike'}"
+        ],
+        "source_count": 2,
+        "sources": [
+          "Africanews",
+          "Euronews"
+        ],
+        "source_urls": [
+          "http://www.africanews.com/2026/09/27/seven-killed-dozens-hurt-in-saudi-airstrike-on-yemen-market",
+          "https://www.euronews.com/video/2026/09/27/seven-killed-dozens-hurt-in-saudi-airstrike-on-yemen-market"
+        ],
+        "source_details": [
+          {
+            "title": "Seven killed, dozens hurt in Saudi airstrike on Yemen market",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/09/27/seven-killed-dozens-hurt-in-saudi-airstrike-on-yemen-market",
+            "source_bias": "center"
+          },
+          {
+            "title": "Seven killed, dozens hurt in Saudi airstrike on Yemen market",
+            "source": "Euronews",
+            "link": "https://www.euronews.com/video/2026/09/27/seven-killed-dozens-hurt-in-saudi-airstrike-on-yemen-market",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_9d81f5cac6c269a0",
+          "shared_tokens": [
+            "conflict",
+            "death",
+            "escalating",
+            "houthi",
+            "resulted",
+            "taiz",
+            "yemen"
+          ],
+          "shared_entities": [
+            "yemen"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-27",
+        "last_seen_at": "2026-09-27",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 21,
+      "public_development_count": 22,
       "questionable_development_count": 2,
       "review_required": true
     },
-    "latest_title": "Renewed Violence in Yemen Displaces Thousands Amid Ceasefire Collapse",
-    "latest_summary": "A surge in violence in Yemen has led to the end of a ceasefire and the displacement of approximately 125,000 people in the past two weeks. Many are fleeing to makeshift camps, such as Al Kadha in Taiz, as fighting intensifies in the region. The situation has resulted in overcrowded camps and a humanitarian crisis.",
+    "latest_title": "Saudi Airstrike in Yemen Kills Seven, Injures Dozens",
+    "latest_summary": "A Saudi airstrike on a market in Yemen's Taiz province resulted in the deaths of seven individuals and injured 40 others. This incident occurs amid escalating Houthi advances and intensified Saudi-led air raids.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -1609,29 +1674,29 @@
       "milestone_development_ids": [
         "story_b77a481c5a1a5ef9",
         "story_abce59c4535e502b",
-        "story_4aa2188a44af6b1d",
-        "story_6114daff14a871a5"
+        "story_9d81f5cac6c269a0",
+        "story_7a4a6fa2262fbda8"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-09-16",
-      "development_count": 21,
-      "coverage_packet_count": 21,
-      "date_count": 17,
-      "source_count": 53,
+      "summary_updated_at": "2026-09-27",
+      "development_count": 22,
+      "coverage_packet_count": 22,
+      "date_count": 18,
+      "source_count": 55,
       "independent_source_count": 24,
       "first_date": "2026-07-25",
-      "latest_date": "2026-09-16",
-      "latest_update_title": "Renewed Violence in Yemen Displaces Thousands Amid Ceasefire Collapse",
+      "latest_date": "2026-09-27",
+      "latest_update_title": "Saudi Airstrike in Yemen Kills Seven, Injures Dozens",
       "coverage_score": 1.0,
-      "recency_score": 0.412,
-      "rank_score": 0.659,
-      "context_summary": "Muninn first tracked this thread on 2026-07-25: Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse. The latest development is Renewed Violence in Yemen Displaces Thousands Amid Ceasefire Collapse.",
-      "cta_label": "Explore 21 developments"
+      "recency_score": 1.0,
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-07-25: Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse. The latest development is Saudi Airstrike in Yemen Kills Seven, Injures Dozens.",
+      "cta_label": "Explore 22 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "A Ukrainian drone strike ignited a significant fire at a Wildberries warehouse near Saint Petersburg on July 24. A later development was Drone Strike on Passenger Train in Odesa Region Results in Fatalities. Most recently, a surge in violence in Yemen has led to the end of a ceasefire and the displacement of approximately 125,000 people in the past two weeks.",
+      "summary": "A Ukrainian drone strike ignited a significant fire at a Wildberries warehouse near Saint Petersburg on July 24. A later development was Russia Claims Strikes on Ukrainian Infrastructure Amid Drone Attacks. Most recently, a Saudi airstrike on a market in Yemen's Taiz province resulted in the deaths of seven individuals and injured 40 others.",
       "key_developments": [
         {
           "development_id": "story_b77a481c5a1a5ef9",
@@ -1644,14 +1709,14 @@
           "title": "Zelenskyy Reports Russian Attack with North Korean Missiles Kills Six in Zaporizhzhia"
         },
         {
-          "development_id": "story_4aa2188a44af6b1d",
-          "date": "2026-08-16",
-          "title": "Ukraine Conducts Major Drone Attack on Moscow Amid Ongoing Conflict"
+          "development_id": "story_9d81f5cac6c269a0",
+          "date": "2026-09-05",
+          "title": "Escalating Ground Fighting in Yemen Results in Over 60 Deaths, Including Civilians"
         },
         {
-          "development_id": "story_6114daff14a871a5",
-          "date": "2026-09-16",
-          "title": "Renewed Violence in Yemen Displaces Thousands Amid Ceasefire Collapse"
+          "development_id": "story_7a4a6fa2262fbda8",
+          "date": "2026-09-27",
+          "title": "Saudi Airstrike in Yemen Kills Seven, Injures Dozens"
         }
       ],
       "sources": [
@@ -1972,9 +2037,21 @@
           "source": "Al Jazeera English",
           "link": "https://www.aljazeera.com/features/2026/9/16/taiz-camps-overflow-with-yemenis-fleeing-fighting-after-houthi-offensive?traffic_source=rss",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Seven killed, dozens hurt in Saudi airstrike on Yemen market",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/09/27/seven-killed-dozens-hurt-in-saudi-airstrike-on-yemen-market",
+          "source_bias": "center"
+        },
+        {
+          "title": "Seven killed, dozens hurt in Saudi airstrike on Yemen market",
+          "source": "Euronews",
+          "link": "https://www.euronews.com/video/2026/09/27/seven-killed-dozens-hurt-in-saudi-airstrike-on-yemen-market",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-09-16",
+      "updated_at": "2026-09-27",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -2053,7 +2130,7 @@
         "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
         "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
         "relationship": "related_topic",
-        "confidence": 0.915,
+        "confidence": 0.918,
         "shared_entities": [
           "kyiv",
           "russia",
@@ -2089,109 +2166,110 @@
       "available": true,
       "title": "About Russia-Ukraine War",
       "subject": "Russia-Ukraine War",
-      "summary": "The Russia-Ukraine War is an armed conflict centered on Ukraine that grew from Russia's 2014 occupation of Crimea and fighting in eastern Ukraine into a full-scale Russian armed attack on 24 February 2022. It involves sustained ground combat and long-range strikes, including missiles and drones, and has caused extensive civilian harm, displacement and damage to civilian infrastructure.",
+      "summary": "The Russia-Ukraine War is an interstate armed conflict centered on Ukraine, whose full-scale phase began with Russia’s armed attack on February 24, 2022, escalating hostilities that had already affected eastern Ukraine since 2014. It has involved conventional ground fighting, missile and drone strikes, attacks on infrastructure, displacement, and allegations of serious violations of international law.",
       "facts": [
         {
-          "label": "Origins",
-          "value": "The conflict’s modern phase began in 2014, when Russia occupied Crimea and hostilities began in Ukraine’s Donetsk and Luhansk regions; the United Nations General Assembly affirmed Ukraine’s sovereignty and territorial integrity within its internationally recognized borders and said the 16 March 2014 Crimea referendum could not alter Crimea’s status.",
+          "label": "Conflict timeline",
+          "value": "Hostilities in eastern Ukraine date to 2014; the United Nations describes Russia’s February 24, 2022 attack as the full-scale escalation of that conflict.",
           "source_ids": [
             "o1",
             "o2"
           ]
         },
         {
-          "label": "Full-scale invasion",
-          "value": "The United Nations Human Rights Monitoring Mission in Ukraine states that Russian armed forces launched a full-scale armed attack on Ukraine on 24 February 2022.",
+          "label": "Territorial scope",
+          "value": "The conflict centers on Ukraine, including territory internationally recognized as Ukrainian. The UN General Assembly has reaffirmed Ukraine’s sovereignty and territorial integrity within its internationally recognized borders, including territorial waters.",
           "source_ids": [
-            "o3"
+            "o3",
+            "o4"
           ]
         },
         {
-          "label": "Geographic scope",
-          "value": "Hostilities affect Ukraine, including occupied territory and areas under Ukrainian government control; the war’s effects also extend beyond the front through long-range weapons and cross-border drone and missile incidents.",
+          "label": "International position",
+          "value": "On March 2, 2022, the UN General Assembly adopted Resolution ES-11/1, deploring Russia’s aggression against Ukraine and demanding that Russia cease its use of force and withdraw its military forces.",
           "source_ids": [
-            "o4",
-            "o5"
-          ]
-        },
-        {
-          "label": "International legal position",
-          "value": "On 2 March 2022, the UN General Assembly adopted resolution A/RES/ES-11/1, deploring Russia’s aggression against Ukraine and demanding that Russia immediately, completely and unconditionally withdraw its military forces from Ukraine’s internationally recognized borders. On 16 March 2022, the International Court of Justice indicated provisional measures directing Russia to suspend the military operations it had commen",
-          "source_ids": [
-            "o6",
-            "o7"
+            "o5",
+            "o6"
           ]
         },
         {
           "label": "Humanitarian impact",
-          "value": "UNHCR’s 2026 planning appeal says the war has continued to produce acute humanitarian and protection needs in Ukraine and among refugees in Europe; it recorded 5.86 million refugees from Ukraine globally and 3.7 million internally displaced people as of December 2025.",
+          "value": "UN human-rights monitors document civilian deaths, injuries, displacement, and damage to homes, public services, and infrastructure; they caution that verified casualty figures are incomplete because access and verification remain limited in some affected areas.",
+          "source_ids": [
+            "o2",
+            "o7"
+          ]
+        },
+        {
+          "label": "Accountability process",
+          "value": "The International Criminal Court opened an investigation into alleged war crimes, crimes against humanity, and genocide in the situation in Ukraine on March 2, 2022. Its jurisdictional framework covers alleged Rome Statute crimes on Ukrainian territory from November 21, 2013 onward.",
           "source_ids": [
             "o8"
           ]
         }
       ],
-      "scope_note": "The selected Muninn timeline follows a limited set of late-July to mid-August 2026 developments, particularly reported strikes, casualties and diplomatic-security consequences; it does not provide a complete chronology of the war, battlefield control, peace efforts or all humanitarian impacts.",
+      "scope_note": "The selected Muninn timeline follows specific late-July to mid-August 2026 developments, including reported cross-border drone and missile incidents, strikes, and civilian-protection claims; it does not aim to be a complete military, diplomatic, humanitarian, or legal history of the war.",
       "sources": [
         {
-          "title": "UN",
-          "publisher": "UN",
-          "url": "https://digitallibrary.un.org/record/767883/files/A_RES_68_262-EN.pdf",
+          "title": "Ohchr",
+          "publisher": "Ohchr",
+          "url": "https://ukraine.ohchr.org/en/comment-matilda-bogner-head-un-human-rights-monitoring-mission-ukraine-six-months-russia%E2%80%99s",
           "source_type": "reporting",
           "id": "o1"
-        },
-        {
-          "title": "UN",
-          "publisher": "UN",
-          "url": "https://ukraine.un.org/en/download/151048/256565",
-          "source_type": "reporting",
-          "id": "o2"
         },
         {
           "title": "Ohchr",
           "publisher": "Ohchr",
           "url": "https://ukraine.ohchr.org/en/two-year-update-protection-civilians-impact-hostilities-civilians-24-february-2022-EN",
           "source_type": "reporting",
+          "id": "o2"
+        },
+        {
+          "title": "UN",
+          "publisher": "UN",
+          "url": "https://press.un.org/en/2023/ga12492.doc.htm",
+          "source_type": "reporting",
           "id": "o3"
         },
         {
-          "title": "Ohchr",
-          "publisher": "Ohchr",
-          "url": "https://ukraine.ohchr.org/en/Deadly-drones-Civilians-at-risk-from-short-range-drones-in-frontline-areas-of-Ukraine-24-February-2022-30-April-2025",
+          "title": "UN",
+          "publisher": "UN",
+          "url": "https://press.un.org/en/2022/ga12458.doc.htm",
           "source_type": "reporting",
           "id": "o4"
         },
         {
-          "title": "Ohchr",
-          "publisher": "Ohchr",
-          "url": "https://ukraine.ohchr.org/en/civilian-deaths-ukraine-war-top-10000-un-says-UA",
+          "title": "UN",
+          "publisher": "UN",
+          "url": "https://documents.un.org/api/symbol/access?l=en&s=a%2Fres%2Fes-11%2F1&t=pdf",
           "source_type": "reporting",
           "id": "o5"
         },
         {
           "title": "UN",
           "publisher": "UN",
-          "url": "https://documents.un.org/access.nsf/get?DS=A%2FRES%2FES-11%2F1&Lang=E&OpenAgent=",
+          "url": "https://press.un.org/en/2022/ga12407.doc.htm",
           "source_type": "reporting",
           "id": "o6"
         },
         {
-          "title": "Icj Cij",
-          "publisher": "Icj Cij",
-          "url": "https://www.icj-cij.org/node/106135",
+          "title": "Ohchr",
+          "publisher": "Ohchr",
+          "url": "https://ukraine.ohchr.org/sites/default/files/2026-02/2026-02-16%20HRMMU_Four%20Years%20On_fact%20sheet.pdf",
           "source_type": "reporting",
           "id": "o7"
         },
         {
-          "title": "Unhcr",
-          "publisher": "Unhcr",
-          "url": "https://www.unhcr.org/ua/sites/ua/files/2026-02/20260126_RBE_UKR_Sit_Appeal_2026.pdf",
-          "source_type": "reporting",
+          "title": "Icc Cpi",
+          "publisher": "Icc Cpi",
+          "url": "https://www.icc-cpi.int/situations/ukraine",
+          "source_type": "primary",
           "id": "o8"
         }
       ],
-      "publisher_count": 4,
-      "generated_at": "2026-09-10T15:45:54.037311+00:00",
-      "expires_at": "2026-09-17T15:45:54.037311+00:00",
+      "publisher_count": 3,
+      "generated_at": "2026-09-27T16:18:14.015854+00:00",
+      "expires_at": "2026-10-04T16:18:14.015854+00:00",
       "model": "gpt-5.6-terra",
       "provenance": "openai_web_search_source_grounded_event_overview_v1"
     },
@@ -2307,6 +2385,7 @@
       "donald",
       "down",
       "downed",
+      "dozen",
       "driver",
       "drone",
       "early",
@@ -2372,10 +2451,12 @@
       "individual",
       "industrial",
       "infrastructure",
+      "injure",
       "injured",
       "injurie",
       "inside",
       "intensifie",
+      "intensified",
       "international",
       "invasion",
       "involving",
@@ -2405,6 +2486,7 @@
       "makeshift",
       "many",
       "maritime",
+      "market",
       "marks",
       "military",
       "missile",
@@ -2456,9 +2538,11 @@
       "prime",
       "produced",
       "provided",
+      "province",
       "pulkovo",
       "purchase",
       "pyongyang",
+      "raids",
       "railway",
       "raised",
       "reach",
@@ -2483,13 +2567,16 @@
       "route",
       "russia",
       "saint",
+      "saudi",
       "saudi-backed",
+      "saudi-led",
       "securing",
       "seen",
       "seize",
       "seized",
       "separate",
       "serbia",
+      "seven",
       "shahed",
       "shipping",
       "shortly",
@@ -2614,6 +2701,7 @@
       "houthi_seize",
       "human_right",
       "including_civilian",
+      "injure_dozen",
       "iran-backed_houthi",
       "island_strengthening",
       "july.",
@@ -2657,6 +2745,7 @@
       "russian._authoritie",
       "saint",
       "saint_petersburg",
+      "saudi_airstrike",
       "sea._displacement",
       "sea_shipping",
       "seize_strategic",
@@ -2691,6 +2780,7 @@
       "yemen_houthi",
       "yemen_result",
       "yemen_saudi-backed",
+      "yemen_taiz",
       "yemen_tens",
       "yemen_threatening",
       "zaporizhzhia",
@@ -2698,20 +2788,20 @@
       "zelensky_visit",
       "zelenskyy_visit"
     ],
-    "search_text": "000 125 153 201 2022 2025 2026 243 340 400 437 610 9-year-old accounted across action additional additionally aden advance aerial affected ahead aimed airport airstrike airstrike_concern alarming although amidst among appear approximately april archipelago arrival assault assistant atacm attack august authoritie bab beginning belgorod berezivka blaze bolster both broader campaign camps canada capabilitie capital capture capture_strategic captured casualtie cause ceasefire ceasefire_collapse child children civil civilian civilian_casualtie civilian_clashe civilian_still claim claim_lives claimed clashe coast coincided collaboration collapse comply concern concern_ukraine concluded concurrently concurrently_russia concurrently_ukraine condolence conduct confirm confirm_civilian confirming conflict continue contributed control crater crisi critical crucial data deadliest deadly deadly_ukraine deal deals deals_recent death debri decision deep defense deploying deprived described detained development discovered displace displace_thousand displaced displacement displacement_crisi displacing displacing_thousand disruption district djibouti donald donald_tusk down downed driver drone early eastern eastern_poland effort el-mandeb energy engage enhance enhancing escalating escalating_ground escalation escaping evacuated expand expand_control experiencing explosion faces facilitie facility fatalitie fearing fell field fighting finalized fire fired fires first five fled fleeing force four frontline full-scale global goods government-allied ground ground_fighting gulf hanish held highest highest_civilian highest_monthly highlight highlighted houthi houthi_advance houthi_capture houthi_expand houthi_seize human human_right humanitarian hundred hysterical ignited igniting ill-treatment impacting incident including including_civilian increase increasing indicate indicating individual industrial infrastructure injured injurie inside intensifie international invasion involving iran-backed iran-backed_houthi island island_strengthening july july. just kadha killed killing kills kilometer korean korean_missile kyiv kyiv_result largest launched least leave level level_since liberty lives local located location logistic long-range makeshift many maritime marks military military_deals missile missile_downed mission mission._drone mokha monitor monitoring monitoring_mission. month monthly monthly_level moscow move multi-nation multiple nation near near_kyiv nearly nine nizhnekamsk nizhnekamsk_russia north north_korean noted number numerou occur occurred odesa odesa_region offensive oil ongoing onset other overcrowded overnight panic part parts passenger passenger_train passing past payment pentagon perim perim_island petersburg petersburg_warehouse pm poland poland_polish polish polish_prime port poses position possible possible_russia prime produced provided pulkovo pulkovo_airport purchase pyongyang railway raised ras_isa reach reach_highest reached reason rebel recent red red_sea red_sea. refinery refinery_claim region region_result renewed renewed_violence reported reportedly resource response result resulted resulting resurgence revealed review right right_monitoring route russia russia_claim russia_missile russia_shahed russian._authoritie saint saint_petersburg saudi-backed sea._displacement sea_shipping securing seen seize seize_strategic seized separate serbia serbia_russia shahed shipping shipping_yemen shortly shot side significant since since_may sites situation smoke specific spread stated still still_detained strait strategic strategic_perim strategic_port strengthening strengthening_control strike struck such supplie support surge surged surrounding system taiz taneco target targeted tatarstan temporary tens tension territory than these thick those thousand threat threatening three through time torture tour train trend turkey tusk ukraine ukraine_conduct ukraine_drone ukraine_infrastructure ukraine_odesa ukraine_reach ukraine_since un united united_nation us variou victim violence visit visit_canada visiting vital volodymyr volodymyr_zelensky volodymyr_zelenskyy war warehouse warranted waterway ways weeks western what which while wildberrie winter withdrawal woman year years yemen yemen_displace yemen_displacing yemen_houthi yemen_result yemen_saudi-backed yemen_tens yemen_threatening yemeni zaporizhzhia zaporizhzhia_ukraine zelensky zelensky_visit zelenskyy zelenskyy_visit"
+    "search_text": "000 125 153 201 2022 2025 2026 243 340 400 437 610 9-year-old accounted across action additional additionally aden advance aerial affected ahead aimed airport airstrike airstrike_concern alarming although amidst among appear approximately april archipelago arrival assault assistant atacm attack august authoritie bab beginning belgorod berezivka blaze bolster both broader campaign camps canada capabilitie capital capture capture_strategic captured casualtie cause ceasefire ceasefire_collapse child children civil civilian civilian_casualtie civilian_clashe civilian_still claim claim_lives claimed clashe coast coincided collaboration collapse comply concern concern_ukraine concluded concurrently concurrently_russia concurrently_ukraine condolence conduct confirm confirm_civilian confirming conflict continue contributed control crater crisi critical crucial data deadliest deadly deadly_ukraine deal deals deals_recent death debri decision deep defense deploying deprived described detained development discovered displace displace_thousand displaced displacement displacement_crisi displacing displacing_thousand disruption district djibouti donald donald_tusk down downed dozen driver drone early eastern eastern_poland effort el-mandeb energy engage enhance enhancing escalating escalating_ground escalation escaping evacuated expand expand_control experiencing explosion faces facilitie facility fatalitie fearing fell field fighting finalized fire fired fires first five fled fleeing force four frontline full-scale global goods government-allied ground ground_fighting gulf hanish held highest highest_civilian highest_monthly highlight highlighted houthi houthi_advance houthi_capture houthi_expand houthi_seize human human_right humanitarian hundred hysterical ignited igniting ill-treatment impacting incident including including_civilian increase increasing indicate indicating individual industrial infrastructure injure injure_dozen injured injurie inside intensifie intensified international invasion involving iran-backed iran-backed_houthi island island_strengthening july july. just kadha killed killing kills kilometer korean korean_missile kyiv kyiv_result largest launched least leave level level_since liberty lives local located location logistic long-range makeshift many maritime market marks military military_deals missile missile_downed mission mission._drone mokha monitor monitoring monitoring_mission. month monthly monthly_level moscow move multi-nation multiple nation near near_kyiv nearly nine nizhnekamsk nizhnekamsk_russia north north_korean noted number numerou occur occurred odesa odesa_region offensive oil ongoing onset other overcrowded overnight panic part parts passenger passenger_train passing past payment pentagon perim perim_island petersburg petersburg_warehouse pm poland poland_polish polish polish_prime port poses position possible possible_russia prime produced provided province pulkovo pulkovo_airport purchase pyongyang raids railway raised ras_isa reach reach_highest reached reason rebel recent red red_sea red_sea. refinery refinery_claim region region_result renewed renewed_violence reported reportedly resource response result resulted resulting resurgence revealed review right right_monitoring route russia russia_claim russia_missile russia_shahed russian._authoritie saint saint_petersburg saudi saudi-backed saudi-led saudi_airstrike sea._displacement sea_shipping securing seen seize seize_strategic seized separate serbia serbia_russia seven shahed shipping shipping_yemen shortly shot side significant since since_may sites situation smoke specific spread stated still still_detained strait strategic strategic_perim strategic_port strengthening strengthening_control strike struck such supplie support surge surged surrounding system taiz taneco target targeted tatarstan temporary tens tension territory than these thick those thousand threat threatening three through time torture tour train trend turkey tusk ukraine ukraine_conduct ukraine_drone ukraine_infrastructure ukraine_odesa ukraine_reach ukraine_since un united united_nation us variou victim violence visit visit_canada visiting vital volodymyr volodymyr_zelensky volodymyr_zelenskyy war warehouse warranted waterway ways weeks western what which while wildberrie winter withdrawal woman year years yemen yemen_displace yemen_displacing yemen_houthi yemen_result yemen_saudi-backed yemen_taiz yemen_tens yemen_threatening yemeni zaporizhzhia zaporizhzhia_ukraine zelensky zelensky_visit zelenskyy zelenskyy_visit"
   },
   "related_events": [
     {
       "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
       "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
-      "summary": "Muninn first tracked this thread on 2026-09-11: Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims. The latest development is Trump Dismisses Iran's Proposal to Reopen Strait of Hormuz.",
+      "summary": "Muninn first tracked this thread on 2026-09-11: Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims. The latest development is Five Men Arrested Near UK Air Base on Terrorism Charges.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-09-11",
-      "last_seen_at": "2026-09-26",
-      "development_count": 31,
-      "latest_title": "Trump Dismisses Iran's Proposal to Reopen Strait of Hormuz",
+      "last_seen_at": "2026-09-27",
+      "development_count": 33,
+      "latest_title": "Five Men Arrested Near UK Air Base on Terrorism Charges",
       "topic_label": "9/11 Victim Compensation",
       "hero_image": {
         "url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",

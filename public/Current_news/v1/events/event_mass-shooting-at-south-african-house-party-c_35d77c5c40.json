@@ -11,11 +11,11 @@
     "event_id": "event_mass-shooting-at-south-african-house-party-c_35d77c5c40",
     "title": "Mass Shooting at South African House Party Claims 11 Lives",
     "canonical_title": "Mass Shooting at South African House Party Claims 11 Lives",
-    "topic_label": "",
+    "topic_label": "Gun Violence",
     "summary": "A mass shooting at a house party in South Africa resulted in the deaths of at least 11 people, including a pregnant woman. The attack involved three gunmen who forced the victims into a single room before opening fire, leaving only two survivors. Police are currently searching for the attackers.",
     "status": "active",
     "first_seen_at": "2026-09-23",
-    "last_seen_at": "2026-09-24",
+    "last_seen_at": "2026-09-27",
     "timeline": [
       {
         "development_id": "story_f5b15fe24cf829a2",
@@ -193,6 +193,119 @@
         "first_seen_at": "2026-09-24",
         "last_seen_at": "2026-09-24",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_493f945558f78d13",
+        "daily_story_id": "story_493f945558f78d13",
+        "date": "2026-09-27",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Mass Shootings in South Africa Leave 27 Dead in Separate Incidents",
+        "summary": "Two mass shootings occurred hours apart in South Africa, resulting in at least 27 fatalities. The first incident took place at a tavern near Johannesburg, where 17 people were killed by gunmen armed with assault rifles. The second shooting, which left 10 dead, happened at a barbecue venue near Cape Town. Police are investigating potential links to gang violence and illegal mining turf wars, with no arrests made so far.",
+        "topic_label": "Gun Violence",
+        "development_type": "impact",
+        "key_facts": [
+          "Two mass shootings occurred in South Africa.",
+          "At least 27 people were killed.",
+          "17 fatalities were reported near Johannesburg.",
+          "10 fatalities occurred near Cape Town.",
+          "Police are investigating links to gang violence."
+        ],
+        "source_count": 6,
+        "sources": [
+          "ABC News",
+          "Africanews",
+          "BBC",
+          "CBC",
+          "France 24",
+          "The Guardian"
+        ],
+        "source_urls": [
+          "https://abcnews.com/International/wireStory/separate-mass-shootings-south-africa-townships-leave-27-136793211",
+          "https://www.bbc.co.uk/news/articles/ck5ywnp075d1o?at_medium=RSS&at_campaign=rss",
+          "https://www.cbc.ca/news/world/south-africa-shootings-9.7360076?cmp=rss",
+          "https://www.france24.com/en/south-africa-shootings-leave-27-killed",
+          "http://www.africanews.com/2026/09/27/gunmen-kill-17-in-south-africa-bar-shooting-15-wounded-police",
+          "https://www.theguardian.com/world/2026/sep/27/mass-shootings-south-africa-johannesburg-cape-town"
+        ],
+        "source_details": [
+          {
+            "title": "Separate mass shootings in South Africa townships leave at least 27 people dead",
+            "source": "ABC News",
+            "link": "https://abcnews.com/International/wireStory/separate-mass-shootings-south-africa-townships-leave-27-136793211",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Two mass shootings in South Africa leave 27 dead",
+            "source": "BBC",
+            "link": "https://www.bbc.co.uk/news/articles/ck5ywnp075d1o?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          },
+          {
+            "title": "South African police probe mining feud, business rivalry after shootings kill 27",
+            "source": "CBC",
+            "link": "https://www.cbc.ca/news/world/south-africa-shootings-9.7360076?cmp=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "South Africa shootings leave 27 killed",
+            "source": "France 24",
+            "link": "https://www.france24.com/en/south-africa-shootings-leave-27-killed",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "At least 27 people killed in two mass shootings in South Africa",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/09/27/gunmen-kill-17-in-south-africa-bar-shooting-15-wounded-police",
+            "source_bias": "center"
+          },
+          {
+            "title": "At least 27 dead after two mass shootings in South Africa, police say",
+            "source": "The Guardian",
+            "link": "https://www.theguardian.com/world/2026/sep/27/mass-shootings-south-africa-johannesburg-cape-town",
+            "source_bias": "left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "shooting"
+          ],
+          "shared_incident_anchors": [
+            "africa",
+            "south",
+            "south_africa"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "africa",
+            "gunmen",
+            "incident",
+            "killed",
+            "least",
+            "mass",
+            "occurred",
+            "shooting",
+            "south"
+          ],
+          "shared_entities": [
+            "africa",
+            "south",
+            "south_africa"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_3a3be43bb0cc9440",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-27",
+        "last_seen_at": "2026-09-27",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -217,12 +330,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 2,
+      "public_development_count": 3,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Eleven Killed in South Africa House Party Shooting; Police Hunt for Attackers",
-    "latest_summary": "A mass shooting at a house party in South Africa resulted in the deaths of at least 11 people, including a pregnant woman. The attack was carried out by three gunmen who entered the party and opened fire on the attendees. Police are currently searching for the suspects involved in this tragic incident.",
+    "latest_title": "Mass Shootings in South Africa Leave 27 Dead in Separate Incidents",
+    "latest_summary": "Two mass shootings occurred hours apart in South Africa, resulting in at least 27 fatalities. The first incident took place at a tavern near Johannesburg, where 17 people were killed by gunmen armed with assault rifles. The second shooting, which left 10 dead, happened at a barbecue venue near Cape Town. Police are investigating potential links to gang violence and illegal mining turf wars, with no arrests made so far.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": false,
@@ -232,28 +345,29 @@
       "display_title": "Mass Shooting at South African House Party Claims 11 Lives",
       "milestone_development_ids": [
         "story_f5b15fe24cf829a2",
-        "story_3a3be43bb0cc9440"
+        "story_3a3be43bb0cc9440",
+        "story_493f945558f78d13"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-09-24",
-      "development_count": 2,
-      "coverage_packet_count": 2,
-      "date_count": 2,
-      "source_count": 7,
-      "independent_source_count": 7,
+      "summary_updated_at": "2026-09-27",
+      "development_count": 3,
+      "coverage_packet_count": 3,
+      "date_count": 3,
+      "source_count": 13,
+      "independent_source_count": 12,
       "first_date": "2026-09-23",
-      "latest_date": "2026-09-24",
-      "latest_update_title": "Eleven Killed in South Africa House Party Shooting; Police Hunt for Attackers",
-      "coverage_score": 0.547,
-      "recency_score": 0.778,
-      "rank_score": 0.681,
-      "context_summary": "Muninn first tracked this thread on 2026-09-23: Mass Shooting at South African House Party Claims 11 Lives. The latest development is Eleven Killed in South Africa House Party Shooting; Police Hunt for Attackers.",
+      "latest_date": "2026-09-27",
+      "latest_update_title": "Mass Shootings in South Africa Leave 27 Dead in Separate Incidents",
+      "coverage_score": 0.745,
+      "recency_score": 1.0,
+      "rank_score": 0.893,
+      "context_summary": "Muninn first tracked this thread on 2026-09-23: Mass Shooting at South African House Party Claims 11 Lives. The latest development is Mass Shootings in South Africa Leave 27 Dead in Separate Incidents.",
       "cta_label": ""
     },
     "event_summary": {
       "available": true,
-      "summary": "A mass shooting at a house party in South Africa resulted in the deaths of at least 11 people, including a pregnant woman.",
+      "summary": "A mass shooting at a house party in South Africa resulted in the deaths of at least 11 people, including a pregnant woman. A later development was Eleven Killed in South Africa House Party Shooting; Police Hunt for Attackers. Most recently, two mass shootings occurred hours apart in South Africa, resulting in at least 27 fatalities.",
       "key_developments": [
         {
           "development_id": "story_f5b15fe24cf829a2",
@@ -264,6 +378,11 @@
           "development_id": "story_3a3be43bb0cc9440",
           "date": "2026-09-24",
           "title": "Eleven Killed in South Africa House Party Shooting; Police Hunt for Attackers"
+        },
+        {
+          "development_id": "story_493f945558f78d13",
+          "date": "2026-09-27",
+          "title": "Mass Shootings in South Africa Leave 27 Dead in Separate Incidents"
         }
       ],
       "sources": [
@@ -308,29 +427,66 @@
           "source": "France 24 - English",
           "link": "https://www.france24.com/en/video/20260924-mass-shooting-at-a-house-party-in-south-africa-kills-11",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Separate mass shootings in South Africa townships leave at least 27 people dead",
+          "source": "ABC News",
+          "link": "https://abcnews.com/International/wireStory/separate-mass-shootings-south-africa-townships-leave-27-136793211",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Two mass shootings in South Africa leave 27 dead",
+          "source": "BBC",
+          "link": "https://www.bbc.co.uk/news/articles/ck5ywnp075d1o?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
+        },
+        {
+          "title": "South African police probe mining feud, business rivalry after shootings kill 27",
+          "source": "CBC",
+          "link": "https://www.cbc.ca/news/world/south-africa-shootings-9.7360076?cmp=rss",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "South Africa shootings leave 27 killed",
+          "source": "France 24",
+          "link": "https://www.france24.com/en/south-africa-shootings-leave-27-killed",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "At least 27 people killed in two mass shootings in South Africa",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/09/27/gunmen-kill-17-in-south-africa-bar-shooting-15-wounded-police",
+          "source_bias": "center"
+        },
+        {
+          "title": "At least 27 dead after two mass shootings in South Africa, police say",
+          "source": "The Guardian",
+          "link": "https://www.theguardian.com/world/2026/sep/27/mass-shootings-south-africa-johannesburg-cape-town",
+          "source_bias": "left"
         }
       ],
-      "updated_at": "2026-09-24",
+      "updated_at": "2026-09-27",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "developing_event",
     "related_events": [
       {
-        "event_id": "event_ninth-woman-found-as-ongoing-investigation-c_a0bbcf0f3f",
-        "title": "Ninth Woman Found as Ongoing Investigation Continues in South Africa",
-        "relationship": "related_topic",
-        "confidence": 0.706,
-        "shared_entities": [
-          "south",
-          "south_africa",
-          "south_african"
-        ]
-      },
-      {
         "event_id": "event_south-african-president-promises-justice-ami_93ccfcd351",
         "title": "South African President Promises Justice Amid Discovery of Women's Bodies Near Johannesburg",
         "relationship": "related_topic",
-        "confidence": 0.701,
+        "confidence": 0.758,
+        "shared_entities": [
+          "johannesburg",
+          "south",
+          "south_africa",
+          "south_african"
+        ]
+      },
+      {
+        "event_id": "event_ninth-woman-found-as-ongoing-investigation-c_a0bbcf0f3f",
+        "title": "Ninth Woman Found as Ongoing Investigation Continues in South Africa",
+        "relationship": "related_topic",
+        "confidence": 0.725,
         "shared_entities": [
           "south",
           "south_africa",
@@ -338,13 +494,13 @@
         ]
       },
       {
-        "event_id": "event_us-imposes-visa-restrictions-on-south-africa_911360fb14",
-        "title": "US Imposes Visa Restrictions on South Africans Amid Claims of Racial Discrimination",
+        "event_id": "event_investigation-launched-into-low-flying-jets_860ac42bd7",
+        "title": "Investigation Launched into Low-Flying Jets Over Cape Town Stadium",
         "relationship": "related_topic",
-        "confidence": 0.691,
+        "confidence": 0.716,
         "shared_entities": [
-          "south",
-          "south_africa",
+          "cape",
+          "cape_town.",
           "south_african"
         ]
       },
@@ -352,7 +508,7 @@
         "event_id": "event_deadly-minibus-crash-in-zimbabwe-claims-27-l_6ea4a47111",
         "title": "Deadly Minibus Crash in Zimbabwe Claims 27 Lives",
         "relationship": "related_topic",
-        "confidence": 0.678,
+        "confidence": 0.705,
         "shared_entities": [
           "claim_lives",
           "south"
@@ -382,93 +538,166 @@
     "search_tokens": [
       "africa",
       "african",
+      "apart",
+      "armed",
+      "arrest",
+      "assault",
       "attack",
       "attacker",
       "attendee",
+      "barbecue",
+      "cape",
       "carried",
       "claim",
       "currently",
+      "dead",
       "death",
       "eleven",
       "entered",
+      "fatalitie",
       "fire",
+      "first",
       "forced",
+      "gang",
       "gunmen",
+      "happened",
+      "hours",
       "house",
       "hunt",
+      "illegal",
       "incident",
       "including",
+      "investigating",
       "involved",
+      "johannesburg",
       "killed",
       "least",
+      "leave",
       "leaving",
+      "left",
+      "links",
       "lives",
+      "made",
       "mass",
+      "mining",
+      "near",
+      "occurred",
       "only",
       "opened",
       "opening",
       "party",
+      "place",
+      "potential",
       "pregnant",
       "resulted",
+      "resulting",
+      "rifle",
       "room",
       "searching",
+      "second",
+      "separate",
       "shooting",
       "single",
       "south",
       "survivor",
       "suspect",
+      "tavern",
       "three",
+      "took",
+      "town",
       "tragic",
+      "turf",
+      "venue",
       "victim",
+      "violence",
+      "wars",
+      "where",
+      "which",
       "woman"
     ],
     "entities": [
       "africa_house",
       "african_house",
+      "cape",
+      "cape_town.",
       "claim_lives",
       "house_party",
+      "johannesburg",
       "party_claim",
+      "separate",
+      "separate_incident",
       "south",
       "south_africa",
       "south_african"
     ],
-    "search_text": "africa africa_house african african_house attack attacker attendee carried claim claim_lives currently death eleven entered fire forced gunmen house house_party hunt incident including involved killed least leaving lives mass only opened opening party party_claim pregnant resulted room searching shooting single south south_africa south_african survivor suspect three tragic victim woman"
+    "search_text": "africa africa_house african african_house apart armed arrest assault attack attacker attendee barbecue cape cape_town. carried claim claim_lives currently dead death eleven entered fatalitie fire first forced gang gunmen happened hours house house_party hunt illegal incident including investigating involved johannesburg killed least leave leaving left links lives made mass mining near occurred only opened opening party party_claim place potential pregnant resulted resulting rifle room searching second separate separate_incident shooting single south south_africa south_african survivor suspect tavern three took town tragic turf venue victim violence wars where which woman",
+    "event_overview": {
+      "available": true,
+      "title": "About Gun Violence",
+      "subject": "Gun Violence",
+      "summary": "This event concerns a fatal shooting at a private gathering in KwaMakhutha, KwaZulu-Natal, South Africa, and the police investigation that followed. It is part of a late-September 2026 cluster of separate mass shootings that drew attention to gun violence in multiple South African provinces.",
+      "facts": [
+        {
+          "label": "Date and place",
+          "value": "The shooting occurred on the night of September 22, 2026, in the Ziko area of KwaMakhutha, in KwaZulu-Natal, near Durban.",
+          "source_ids": [
+            "o1"
+          ]
+        },
+        {
+          "label": "Victims and casualties",
+          "value": "SAPS reported that 11 people were killed and three injured after gunmen fired on people gathered at a house; ten people died at the scene and one later died of gunshot injuries in hospital.",
+          "source_ids": [
+            "o1"
+          ]
+        },
+        {
+          "label": "Alleged attack circumstances",
+          "value": "According to the initial police account, 13 men and one woman, believed to be pregnant, were at the house when three men arrived and opened fire.",
+          "source_ids": [
+            "o1"
+          ]
+        },
+        {
+          "label": "Investigation",
+          "value": "KwaZulu-Natal police opened a manhunt for the attackers. As of the initial statement, the motive had not been confirmed, although police said a feud between rival groups could not be ruled out.",
+          "source_ids": [
+            "o1"
+          ]
+        },
+        {
+          "label": "Related late-September incidents",
+          "value": "On September 27, police also reported separate shootings near Johannesburg and Cape Town that killed at least 27 people in total; those incidents were distinct from the KwaMakhutha attack.",
+          "source_ids": [
+            "o2"
+          ]
+        }
+      ],
+      "scope_note": "The selected Muninn timeline follows the KwaMakhutha shooting and its immediate connection to other major shootings reported through September 27, 2026; it does not attempt to catalog all gun violence in South Africa or later investigative and court developments.",
+      "sources": [
+        {
+          "title": "Gov",
+          "publisher": "Gov",
+          "url": "https://www.saps.gov.za/newsroom/msspeechdetail.php?nid=70911",
+          "source_type": "reporting",
+          "id": "o1"
+        },
+        {
+          "title": "CBS News",
+          "publisher": "CBS News",
+          "url": "https://www.cbsnews.com/news/mass-shooting-south-africa-johannesburg-capetown/",
+          "source_type": "reporting",
+          "id": "o2"
+        }
+      ],
+      "publisher_count": 2,
+      "generated_at": "2026-09-27T16:18:14.015854+00:00",
+      "expires_at": "2026-10-04T16:18:14.015854+00:00",
+      "model": "gpt-5.6-terra",
+      "provenance": "openai_web_search_source_grounded_event_overview_v1"
+    }
   },
   "related_events": [
-    {
-      "event_id": "event_ninth-woman-found-as-ongoing-investigation-c_a0bbcf0f3f",
-      "title": "Ninth Woman Found as Ongoing Investigation Continues in South Africa",
-      "summary": "Muninn first tracked this thread on 2026-09-17: Ninth Woman Found as Ongoing Investigation Continues in South Africa. The latest development is Three Arrested in Connection with Series of Killings of Women in South Africa.",
-      "activity_status": "active",
-      "stage": "developing_event",
-      "stage_label": "Developing event",
-      "first_seen_at": "2026-09-17",
-      "last_seen_at": "2026-09-21",
-      "development_count": 2,
-      "latest_title": "Three Arrested in Connection with Series of Killings of Women in South Africa",
-      "topic_label": "South Africa Killings",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_ninth-woman-found-as-ongoing-investigation-c_a0bbcf0f3f.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_ninth-woman-found-as-ongoing-investigation-c_a0bbcf0f3f.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_ninth-woman-found-as-ongoing-investigation-c_a0bbcf0f3f"
-    },
     {
       "event_id": "event_south-african-president-promises-justice-ami_93ccfcd351",
       "title": "South African President Promises Justice Amid Discovery of Women's Bodies Near Johannesburg",
@@ -504,20 +733,20 @@
       "href": "/timeline.html?event=event_south-african-president-promises-justice-ami_93ccfcd351"
     },
     {
-      "event_id": "event_us-imposes-visa-restrictions-on-south-africa_911360fb14",
-      "title": "US Imposes Visa Restrictions on South Africans Amid Claims of Racial Discrimination",
-      "summary": "Muninn first tracked this thread on 2026-09-16: US Imposes Visa Restrictions on South Africans Amid Claims of Racial Discrimination. The latest development is Trump Administration Plans to Admit 17,500 South African Refugees in 2027.",
+      "event_id": "event_ninth-woman-found-as-ongoing-investigation-c_a0bbcf0f3f",
+      "title": "Ninth Woman Found as Ongoing Investigation Continues in South Africa",
+      "summary": "Muninn first tracked this thread on 2026-09-17: Ninth Woman Found as Ongoing Investigation Continues in South Africa. The latest development is Three Arrested in Connection with Series of Killings of Women in South Africa.",
       "activity_status": "active",
       "stage": "developing_event",
       "stage_label": "Developing event",
-      "first_seen_at": "2026-09-16",
-      "last_seen_at": "2026-09-23",
+      "first_seen_at": "2026-09-17",
+      "last_seen_at": "2026-09-21",
       "development_count": 2,
-      "latest_title": "Trump Administration Plans to Admit 17,500 South African Refugees in 2027",
-      "topic_label": "South Africa Discrimination",
+      "latest_title": "Three Arrested in Connection with Series of Killings of Women in South Africa",
+      "topic_label": "South Africa Killings",
       "hero_image": {
-        "url": "/Current_news/generated/events/event_us-imposes-visa-restrictions-on-south-africa_911360fb14.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_us-imposes-visa-restrictions-on-south-africa_911360fb14.jpg",
+        "url": "/Current_news/generated/events/event_ninth-woman-found-as-ongoing-investigation-c_a0bbcf0f3f.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_ninth-woman-found-as-ongoing-investigation-c_a0bbcf0f3f.jpg",
         "source": "Muninn AI illustration",
         "author": "OpenAI GPT Image 2",
         "license": "AI-generated content",
@@ -535,7 +764,7 @@
         "focal_tall_x": 0.5,
         "focal_tall_y": 0.48
       },
-      "href": "/timeline.html?event=event_us-imposes-visa-restrictions-on-south-africa_911360fb14"
+      "href": "/timeline.html?event=event_ninth-woman-found-as-ongoing-investigation-c_a0bbcf0f3f"
     },
     {
       "event_id": "event_deadly-minibus-crash-in-zimbabwe-claims-27-l_6ea4a47111",
