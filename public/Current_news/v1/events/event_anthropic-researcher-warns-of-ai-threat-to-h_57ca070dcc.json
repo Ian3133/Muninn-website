@@ -15,7 +15,7 @@
     "summary": "A researcher from Anthropic has stated there is more than a 10% chance that artificial intelligence could lead to human extinction within the next decade. This warning follows the resignation of a colleague who expressed similar concerns about the rapid development of superintelligent AI that may surpass human control. Experts emphasize the seriousness of these risks, given their access to unreleased AI systems.",
     "status": "active",
     "first_seen_at": "2026-09-09",
-    "last_seen_at": "2026-09-20",
+    "last_seen_at": "2026-09-28",
     "timeline": [
       {
         "development_id": "story_a0954c956943c541",
@@ -548,15 +548,87 @@
         "first_seen_at": "2026-09-20",
         "last_seen_at": "2026-09-20",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_994b304e5063624b",
+        "daily_story_id": "story_994b304e5063624b",
+        "date": "2026-09-28",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Trump Meets Anthropic CEO, Dismisses AI Development Concerns",
+        "summary": "US President Donald Trump held a dinner meeting with Anthropic CEO Dario Amodei, during which he reiterated his opposition to slowing AI development. Amodei has expressed concerns about the rapid growth of AI and the need for industry safeguards, a stance that Trump has rejected.",
+        "topic_label": "AI Development",
+        "development_type": "development",
+        "key_facts": [
+          "Trump confirmed a dinner meeting with Anthropic CEO Dario Amodei.",
+          "Trump reaffirmed his stance against slowing AI development.",
+          "Amodei warned about the exponential growth of AI and called for safeguards."
+        ],
+        "source_count": 2,
+        "sources": [
+          "CBS News - Latest",
+          "RTE News"
+        ],
+        "source_urls": [
+          "https://www.rte.ie/news/2026/0928/1593146-trump-ai",
+          "https://www.cbsnews.com/news/trump-dario-amodei-anthropic-dinner"
+        ],
+        "source_details": [
+          {
+            "title": "Trump dismisses AI fears ahead of meeting Anthropic CEO",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/2026/0928/1593146-trump-ai",
+            "source_bias": "center"
+          },
+          {
+            "title": "Trump had private dinner with Anthropic CEO Dario Amodei",
+            "source": "CBS News - Latest",
+            "link": "https://www.cbsnews.com/news/trump-dario-amodei-anthropic-dinner",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.405,
+        "match_evidence": {
+          "score": 0.405,
+          "matched_development_id": "story_7e3fb5a340fa2685",
+          "shared_tokens": [
+            "amodei",
+            "anthropic",
+            "concern",
+            "dario",
+            "dismisse",
+            "industry",
+            "rapid",
+            "rejected",
+            "trump"
+          ],
+          "shared_entities": [
+            "ai",
+            "anthropic_ceo",
+            "ceo",
+            "ceo_dario",
+            "dario_amodei"
+          ],
+          "source_url_match": false,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-28",
+        "last_seen_at": "2026-09-28",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 7,
+      "public_development_count": 8,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Trump Announces AI Task Force and Czar Amid Tech Concerns",
-    "latest_summary": "President Donald Trump announced the creation of an artificial intelligence task force and the appointment of a czar to oversee AI initiatives. This decision comes in response to growing concerns regarding the rapid development of AI technology.",
+    "latest_title": "Trump Meets Anthropic CEO, Dismisses AI Development Concerns",
+    "latest_summary": "US President Donald Trump held a dinner meeting with Anthropic CEO Dario Amodei, during which he reiterated his opposition to slowing AI development. Amodei has expressed concerns about the rapid growth of AI and the need for industry safeguards, a stance that Trump has rejected.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -567,29 +639,29 @@
       "milestone_development_ids": [
         "story_a0954c956943c541",
         "story_83fa6e47bd4b3420",
-        "story_a29a8454965019ea",
-        "story_a22c6da0090f7439"
+        "story_1f6606ad835b04b5",
+        "story_994b304e5063624b"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-09-20",
-      "development_count": 7,
-      "coverage_packet_count": 7,
-      "date_count": 6,
-      "source_count": 22,
-      "independent_source_count": 13,
+      "summary_updated_at": "2026-09-28",
+      "development_count": 8,
+      "coverage_packet_count": 8,
+      "date_count": 7,
+      "source_count": 24,
+      "independent_source_count": 15,
       "first_date": "2026-09-09",
-      "latest_date": "2026-09-20",
-      "latest_update_title": "Trump Announces AI Task Force and Czar Amid Tech Concerns",
+      "latest_date": "2026-09-28",
+      "latest_update_title": "Trump Meets Anthropic CEO, Dismisses AI Development Concerns",
       "coverage_score": 1.0,
-      "recency_score": 0.5,
-      "rank_score": 0.71,
-      "context_summary": "Muninn first tracked this thread on 2026-09-09: Anthropic Researcher Warns of AI Threat to Humanity. The latest development is Trump Announces AI Task Force and Czar Amid Tech Concerns.",
-      "cta_label": "Explore 7 developments"
+      "recency_score": 1.0,
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-09-09: Anthropic Researcher Warns of AI Threat to Humanity. The latest development is Trump Meets Anthropic CEO, Dismisses AI Development Concerns.",
+      "cta_label": "Explore 8 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "A researcher from Anthropic has stated there is more than a 10% chance that artificial intelligence could lead to human extinction within the next decade. A later development was Trump Dismisses AI Safety Concerns Amid Industry Warnings. Most recently, president Donald Trump announced the creation of an artificial intelligence task force and the appointment of a czar to oversee AI initiatives.",
+      "summary": "A researcher from Anthropic has stated there is more than a 10% chance that artificial intelligence could lead to human extinction within the next decade. A later development was OpenAI Reports Six New Incidents of Concerning AI Behavior. Most recently, uS President Donald Trump held a dinner meeting with Anthropic CEO Dario Amodei, during which he reiterated his opposition to slowing AI development.",
       "key_developments": [
         {
           "development_id": "story_a0954c956943c541",
@@ -602,14 +674,14 @@
           "title": "Trump Criticizes AI Regulation Calls Amid Tech Stock Decline"
         },
         {
-          "development_id": "story_a29a8454965019ea",
-          "date": "2026-09-17",
-          "title": "OpenAI Reports Six New Incidents of Concerning AI Behavior"
+          "development_id": "story_1f6606ad835b04b5",
+          "date": "2026-09-20",
+          "title": "Lawsuit Alleges Illegal Agreement Among Major AI Companies to Slow Development"
         },
         {
-          "development_id": "story_a22c6da0090f7439",
-          "date": "2026-09-20",
-          "title": "Trump Announces AI Task Force and Czar Amid Tech Concerns"
+          "development_id": "story_994b304e5063624b",
+          "date": "2026-09-28",
+          "title": "Trump Meets Anthropic CEO, Dismisses AI Development Concerns"
         }
       ],
       "sources": [
@@ -744,9 +816,21 @@
           "source": "NBC News",
           "link": "https://www.nbcnews.com/politics/white-house/artificial-intelligence-task-force-czar-technology-trump-rcna598688",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Trump dismisses AI fears ahead of meeting Anthropic CEO",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/2026/0928/1593146-trump-ai",
+          "source_bias": "center"
+        },
+        {
+          "title": "Trump had private dinner with Anthropic CEO Dario Amodei",
+          "source": "CBS News - Latest",
+          "link": "https://www.cbsnews.com/news/trump-dario-amodei-anthropic-dinner",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-09-20",
+      "updated_at": "2026-09-28",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -755,7 +839,7 @@
         "event_id": "event_shooting-outside-turkish-school-injures-seve_a0bcc9717a",
         "title": "Shooting Outside Turkish School Injures Several Pupils",
         "relationship": "related_topic",
-        "confidence": 0.738,
+        "confidence": 0.74,
         "shared_entities": [
           "ai",
           "ceo",
@@ -767,30 +851,33 @@
         "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
         "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
         "relationship": "related_topic",
-        "confidence": 0.692,
+        "confidence": 0.733,
         "shared_entities": [
           "donald_trump",
-          "trump_dismisse"
-        ]
-      },
-      {
-        "event_id": "event_trump-hosts-xi-jinping-for-talks-at-the-whit_7f9e41e6e2",
-        "title": "Trump Hosts Xi Jinping for Talks at the White House",
-        "relationship": "related_topic",
-        "confidence": 0.672,
-        "shared_entities": [
-          "ai",
-          "donald_trump"
+          "trump_dismisse",
+          "us"
         ]
       },
       {
         "event_id": "event_us-denies-visa-to-palestinian-officials-ahea_ff7e499c31",
         "title": "US Denies Visa to Palestinian Officials Ahead of UN General Assembly",
         "relationship": "related_topic",
-        "confidence": 0.671,
+        "confidence": 0.715,
         "shared_entities": [
           "ai",
-          "donald_trump"
+          "donald_trump",
+          "us"
+        ]
+      },
+      {
+        "event_id": "event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a",
+        "title": "Trump Delays Iran Strikes to Pursue Diplomatic Deal",
+        "relationship": "related_topic",
+        "confidence": 0.711,
+        "shared_entities": [
+          "ai",
+          "donald_trump",
+          "us"
         ]
       }
     ],
@@ -972,6 +1059,7 @@
       "decline",
       "development",
       "diminish",
+      "dinner",
       "disclosed",
       "discussion",
       "dismisse",
@@ -997,6 +1085,8 @@
       "google",
       "greater",
       "growing",
+      "growth",
+      "held",
       "highlight",
       "human",
       "humanity",
@@ -1018,6 +1108,8 @@
       "leadership",
       "like",
       "measure",
+      "meeting",
+      "meets",
       "model",
       "musk",
       "necessary",
@@ -1026,6 +1118,7 @@
       "ongoing",
       "only",
       "openai",
+      "opposition",
       "organization",
       "other",
       "oversee",
@@ -1041,12 +1134,14 @@
       "recent",
       "regarding",
       "regulation",
+      "reiterated",
       "rejected",
       "reliability",
       "researcher",
       "resignation",
       "response",
       "risks",
+      "safeguard",
       "safety",
       "sentiment",
       "seriousness",
@@ -1055,8 +1150,10 @@
       "similar",
       "slow",
       "slowdown",
+      "slowing",
       "society",
       "spacexai",
+      "stance",
       "stated",
       "stock",
       "stricter",
@@ -1083,6 +1180,7 @@
       "violate",
       "warning",
       "warns",
+      "which",
       "within"
     ],
     "entities": [
@@ -1098,7 +1196,9 @@
       "behavior_openai",
       "ceo",
       "ceo_dario",
+      "ceo_dismisse",
       "dario_amodei",
+      "development_concern",
       "development_slowdown",
       "donald_trump",
       "elon_musk",
@@ -1106,6 +1206,7 @@
       "illegal_agreement",
       "industry_warning",
       "lawsuit_allege",
+      "meets_anthropic",
       "openai",
       "openai_sam",
       "openai_spacexai",
@@ -1120,9 +1221,11 @@
       "task_force",
       "tech_concern",
       "tech_stock",
-      "trump_dismisse"
+      "trump_dismisse",
+      "trump_meets",
+      "us"
     ],
-    "search_text": "access across advanced advancement advocate agent agreement agreement_among ai allege allege_illegal allow altman amodei amodei_advocate amodei_ceo among announce announced anthropic anthropic_ceo anthropic_openai anthropic_researcher antitrust appeal appointment argue around artificial asserted associated behavior behavior_openai called calls catch ceo ceo_dario chance claiming closely collaboration colleague come comes comment committed companie concern concerning condemned conspiracy consumer control coordinate creation criticize czar dario dario_amodei debate decade decision decline development development_slowdown diminish disclosed discussion dismisse donald donald_trump down downturn echoed effort elon elon_musk emphasize emphasized engaged exhibited experienced expert expressed extinction field filed follow force given google greater growing highlight human humanity illegal illegal_agreement impose incident including increased industry industry_warning initiative intelligence intensify involving labeling laws lawsuit lawsuit_allege lead leader leadership like measure model musk necessary need next ongoing only openai openai_sam openai_spacexai organization other oversee oversight part particularly poses presidency progress question raise rapid recent regarding regulation rejected reliability researcher researcher_warns resignation response risks safety safety_concern sam_altman sentiment seriousness sick significant similar slow slow_development slowdown slowdown_dario society spacexai stated stock stock_decline stricter strong subscription superintelligent surpass system task task_force tech tech_concern tech_stock technological technology tension than them there these threat tracking trump trump_dismisse unexpected unreleased value violate warning warns within"
+    "search_text": "access across advanced advancement advocate agent agreement agreement_among ai allege allege_illegal allow altman amodei amodei_advocate amodei_ceo among announce announced anthropic anthropic_ceo anthropic_openai anthropic_researcher antitrust appeal appointment argue around artificial asserted associated behavior behavior_openai called calls catch ceo ceo_dario ceo_dismisse chance claiming closely collaboration colleague come comes comment committed companie concern concerning condemned conspiracy consumer control coordinate creation criticize czar dario dario_amodei debate decade decision decline development development_concern development_slowdown diminish dinner disclosed discussion dismisse donald donald_trump down downturn echoed effort elon elon_musk emphasize emphasized engaged exhibited experienced expert expressed extinction field filed follow force given google greater growing growth held highlight human humanity illegal illegal_agreement impose incident including increased industry industry_warning initiative intelligence intensify involving labeling laws lawsuit lawsuit_allege lead leader leadership like measure meeting meets meets_anthropic model musk necessary need next ongoing only openai openai_sam openai_spacexai opposition organization other oversee oversight part particularly poses presidency progress question raise rapid recent regarding regulation reiterated rejected reliability researcher researcher_warns resignation response risks safeguard safety safety_concern sam_altman sentiment seriousness sick significant similar slow slow_development slowdown slowdown_dario slowing society spacexai stance stated stock stock_decline stricter strong subscription superintelligent surpass system task task_force tech tech_concern tech_stock technological technology tension than them there these threat tracking trump trump_dismisse trump_meets unexpected unreleased us value violate warning warns which within"
   },
   "related_events": [
     {
@@ -1194,40 +1297,6 @@
       "href": "/timeline.html?event=event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b"
     },
     {
-      "event_id": "event_trump-hosts-xi-jinping-for-talks-at-the-whit_7f9e41e6e2",
-      "title": "Trump Hosts Xi Jinping for Talks at the White House",
-      "summary": "Muninn first tracked this thread on 2026-09-24: Trump Hosts Xi Jinping for Talks at the White House. The latest development is Progress Reported from Trump-Xi Meeting on AI, Iran, and Exports.",
-      "activity_status": "active",
-      "stage": "developing_event",
-      "stage_label": "Developing event",
-      "first_seen_at": "2026-09-24",
-      "last_seen_at": "2026-09-27",
-      "development_count": 3,
-      "latest_title": "Progress Reported from Trump-Xi Meeting on AI, Iran, and Exports",
-      "topic_label": "US-China Relations",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_trump-hosts-xi-jinping-for-talks-at-the-whit_7f9e41e6e2.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_trump-hosts-xi-jinping-for-talks-at-the-whit_7f9e41e6e2.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_trump-hosts-xi-jinping-for-talks-at-the-whit_7f9e41e6e2"
-    },
-    {
       "event_id": "event_us-denies-visa-to-palestinian-officials-ahea_ff7e499c31",
       "title": "US Denies Visa to Palestinian Officials Ahead of UN General Assembly",
       "summary": "Muninn first tracked this thread on 2026-09-17: US Denies Visa to Palestinian Officials Ahead of UN General Assembly. The latest development is World Leaders Address UN General Assembly Amid Calls for Greater Representation.",
@@ -1260,6 +1329,40 @@
         "focal_tall_y": 0.48
       },
       "href": "/timeline.html?event=event_us-denies-visa-to-palestinian-officials-ahea_ff7e499c31"
+    },
+    {
+      "event_id": "event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a",
+      "title": "Trump Delays Iran Strikes to Pursue Diplomatic Deal",
+      "summary": "Muninn first tracked this thread on 2026-08-02: Trump Delays Iran Strikes to Pursue Diplomatic Deal. The latest development is Iran Proposes Seven-Day Plan to Reopen Strait of Hormuz Amid US Discussions.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-08-02",
+      "last_seen_at": "2026-09-26",
+      "development_count": 10,
+      "latest_title": "Iran Proposes Seven-Day Plan to Reopen Strait of Hormuz Amid US Discussions",
+      "topic_label": "Iran Relations",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a"
     }
   ]
 }
