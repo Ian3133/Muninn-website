@@ -15,7 +15,7 @@
     "summary": "French President Emmanuel Macron has ordered protective measures for the country's critical infrastructure and defense industry in response to escalating Russian hybrid attacks. This announcement followed a meeting with political party leaders to discuss the growing threats from Russia, particularly in light of recent developments in Europe. Macron emphasized that the hybrid threat from Moscow has intensified in recent weeks, necessitating immediate action.",
     "status": "active",
     "first_seen_at": "2026-09-18",
-    "last_seen_at": "2026-09-28",
+    "last_seen_at": "2026-09-29",
     "timeline": [
       {
         "development_id": "story_d3dbd0df63be1e56",
@@ -738,6 +738,97 @@
         "first_seen_at": "2026-09-28",
         "last_seen_at": "2026-09-28",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_326caac77b4b1c50",
+        "daily_story_id": "story_326caac77b4b1c50",
+        "date": "2026-09-29",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Estonia Accuses Russia of Orchestrating Arson Attack on Defense Company",
+        "summary": "Estonia has accused Russia of orchestrating an arson attack on Milrem Robotics, a defense company that supplies unmanned vehicles to Ukraine. The attack, which occurred in mid-August, is described by Estonian officials as an act of sabotage commissioned by Russian security services. This allegation has drawn support from European and NATO leaders, who condemned the attack as unacceptable.",
+        "topic_label": "Ukraine Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "Estonia blames Russia for an arson attack on Milrem Robotics.",
+          "The attack occurred in mid-August 2026.",
+          "Milrem Robotics supplies unmanned vehicles to Ukraine.",
+          "Estonian officials describe the incident as sabotage by Russian security services."
+        ],
+        "source_count": 5,
+        "sources": [
+          "AP News",
+          "Al Jazeera",
+          "BBC",
+          "CBC",
+          "The Guardian"
+        ],
+        "source_urls": [
+          "https://www.aljazeera.com/news/2026/9/29/estonia-says-russia-ordered-august-arson-attack-on-defence?traffic_source=rss",
+          "https://www.bbc.co.uk/news/articles/c6m27l4er4jxo?at_medium=RSS&at_campaign=rss",
+          "https://news.google.com/rss/articles/CBMinwFBVV95cUxQb2xSOGRNSUNHU1M5RzVHOHpYdzBya1VaOUZhcFhXa2hjUEd2T0pNZGNGRTIyVXE4U1lOc3owRGxBTFVHY3RvcTRZdDMzSElIOHlnNlJrSVVyRDdPZ255cXpIMW9xSllTQkdiOEdrRXFLT0xmWnJJRkVyQ0Q0Rjh5a0VvbFNZTnRCVzF2QWJtck1rVFlwUzVQWVZDZGwtUVU?oc=5",
+          "https://www.cbc.ca/news/world/estonia-russia-allegation-9.7362016?cmp=rss",
+          "https://www.theguardian.com/world/2026/sep/29/estonia-blames-russia-arson-attack-drone-maker-ukraine"
+        ],
+        "source_details": [
+          {
+            "title": "Estonia says Russia ordered August arson attack on defence company",
+            "source": "Al Jazeera",
+            "link": "https://www.aljazeera.com/news/2026/9/29/estonia-says-russia-ordered-august-arson-attack-on-defence?traffic_source=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Estonia blames Russia for arson at defence company supplying Ukraine",
+            "source": "BBC",
+            "link": "https://www.bbc.co.uk/news/articles/c6m27l4er4jxo?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          },
+          {
+            "title": "Estonia blames Russia for arson attack on defense company that provides vehicles to Ukraine",
+            "source": "AP News",
+            "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQb2xSOGRNSUNHU1M5RzVHOHpYdzBya1VaOUZhcFhXa2hjUEd2T0pNZGNGRTIyVXE4U1lOc3owRGxBTFVHY3RvcTRZdDMzSElIOHlnNlJrSVVyRDdPZ255cXpIMW9xSllTQkdiOEdrRXFLT0xmWnJJRkVyQ0Q0Rjh5a0VvbFNZTnRCVzF2QWJtck1rVFlwUzVQWVZDZGwtUVU?oc=5",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Estonia blames Russia for arson at defence factory that produces vehicles Ukraine has used",
+            "source": "CBC",
+            "link": "https://www.cbc.ca/news/world/estonia-russia-allegation-9.7362016?cmp=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Estonia blames Russia for arson attack on drone maker supplying Ukraine",
+            "source": "The Guardian",
+            "link": "https://www.theguardian.com/world/2026/sep/29/estonia-blames-russia-arson-attack-drone-maker-ukraine",
+            "source_bias": "left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_91ef6c058299e3fa",
+          "shared_tokens": [
+            "attack",
+            "conflict",
+            "occurred",
+            "russia",
+            "ukraine"
+          ],
+          "shared_entities": [
+            "russia",
+            "ukraine"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-29",
+        "last_seen_at": "2026-09-29",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -768,12 +859,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 8,
+      "public_development_count": 9,
       "questionable_development_count": 1,
       "review_required": true
     },
-    "latest_title": "Russian Strike on Kharkiv Apartment Block Injures 25",
-    "latest_summary": "A Russian strike targeted a nine-storey apartment block in Kharkiv, injuring 25 individuals, including nine children. Emergency services evacuated 32 residents from the affected building, as reported by regional authorities.",
+    "latest_title": "Estonia Accuses Russia of Orchestrating Arson Attack on Defense Company",
+    "latest_summary": "Estonia has accused Russia of orchestrating an arson attack on Milrem Robotics, a defense company that supplies unmanned vehicles to Ukraine. The attack, which occurred in mid-August, is described by Estonian officials as an act of sabotage commissioned by Russian security services. This allegation has drawn support from European and NATO leaders, who condemned the attack as unacceptable.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -783,30 +874,30 @@
       "display_title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats Timeline",
       "milestone_development_ids": [
         "story_d3dbd0df63be1e56",
-        "story_3f1297199d18f857",
+        "story_7b4d9e1d7ec3a0c6",
         "story_15ff5b6c7dc19e6f",
-        "story_f1a016f31f9411bf"
+        "story_326caac77b4b1c50"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-09-28",
-      "development_count": 8,
-      "coverage_packet_count": 9,
-      "date_count": 6,
-      "source_count": 26,
-      "independent_source_count": 18,
+      "summary_updated_at": "2026-09-29",
+      "development_count": 9,
+      "coverage_packet_count": 10,
+      "date_count": 7,
+      "source_count": 31,
+      "independent_source_count": 21,
       "first_date": "2026-09-18",
-      "latest_date": "2026-09-28",
-      "latest_update_title": "Russian Strike on Kharkiv Apartment Block Injures 25",
+      "latest_date": "2026-09-29",
+      "latest_update_title": "Estonia Accuses Russia of Orchestrating Arson Attack on Defense Company",
       "coverage_score": 1.0,
       "recency_score": 1.0,
       "rank_score": 1.0,
-      "context_summary": "Muninn first tracked this thread on 2026-09-18: Macron Implements Measures Against Intensifying Russian Hybrid Threats. The latest development is Russian Strike on Kharkiv Apartment Block Injures 25.",
-      "cta_label": "Explore 8 developments"
+      "context_summary": "Muninn first tracked this thread on 2026-09-18: Macron Implements Measures Against Intensifying Russian Hybrid Threats. The latest development is Estonia Accuses Russia of Orchestrating Arson Attack on Defense Company.",
+      "cta_label": "Explore 9 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "French President Emmanuel Macron has ordered protective measures for the country's critical infrastructure and defense industry in response to escalating Russian hybrid attacks. A later development was Kyiv Struck by Russian Drones Ahead of Zelenskyy's UN Address. Most recently, a Russian strike targeted a nine-storey apartment block in Kharkiv, injuring 25 individuals, including nine children.",
+      "summary": "French President Emmanuel Macron has ordered protective measures for the country's critical infrastructure and defense industry in response to escalating Russian hybrid attacks. A later development was Kyiv Struck by Russian Drones Ahead of Zelenskyy's UN Address. Most recently, estonia has accused Russia of orchestrating an arson attack on Milrem Robotics, a defense company that supplies unmanned vehicles to Ukraine.",
       "key_developments": [
         {
           "development_id": "story_d3dbd0df63be1e56",
@@ -814,9 +905,9 @@
           "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats"
         },
         {
-          "development_id": "story_3f1297199d18f857",
-          "date": "2026-09-21",
-          "title": "Ukraine Launches Massive Drone Attack on Moscow, Causing Casualties and Damage"
+          "development_id": "story_7b4d9e1d7ec3a0c6",
+          "date": "2026-09-23",
+          "title": "Syrian President Asserts Golan Heights Will Remain Syrian Territory"
         },
         {
           "development_id": "story_15ff5b6c7dc19e6f",
@@ -824,9 +915,9 @@
           "title": "Russian Drone Strike in Kyiv Claims Life of Teen and Injures 20 Others"
         },
         {
-          "development_id": "story_f1a016f31f9411bf",
-          "date": "2026-09-28",
-          "title": "Russian Strike on Kharkiv Apartment Block Injures 25"
+          "development_id": "story_326caac77b4b1c50",
+          "date": "2026-09-29",
+          "title": "Estonia Accuses Russia of Orchestrating Arson Attack on Defense Company"
         }
       ],
       "sources": [
@@ -985,9 +1076,39 @@
           "source": "Africanews",
           "link": "http://www.africanews.com/2026/09/28/ukraine-kharkiv-apartment-block-hit-by-russian-strike-25-injured",
           "source_bias": "center"
+        },
+        {
+          "title": "Estonia says Russia ordered August arson attack on defence company",
+          "source": "Al Jazeera",
+          "link": "https://www.aljazeera.com/news/2026/9/29/estonia-says-russia-ordered-august-arson-attack-on-defence?traffic_source=rss",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Estonia blames Russia for arson at defence company supplying Ukraine",
+          "source": "BBC",
+          "link": "https://www.bbc.co.uk/news/articles/c6m27l4er4jxo?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
+        },
+        {
+          "title": "Estonia blames Russia for arson attack on defense company that provides vehicles to Ukraine",
+          "source": "AP News",
+          "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQb2xSOGRNSUNHU1M5RzVHOHpYdzBya1VaOUZhcFhXa2hjUEd2T0pNZGNGRTIyVXE4U1lOc3owRGxBTFVHY3RvcTRZdDMzSElIOHlnNlJrSVVyRDdPZ255cXpIMW9xSllTQkdiOEdrRXFLT0xmWnJJRkVyQ0Q0Rjh5a0VvbFNZTnRCVzF2QWJtck1rVFlwUzVQWVZDZGwtUVU?oc=5",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Estonia blames Russia for arson at defence factory that produces vehicles Ukraine has used",
+          "source": "CBC",
+          "link": "https://www.cbc.ca/news/world/estonia-russia-allegation-9.7362016?cmp=rss",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Estonia blames Russia for arson attack on drone maker supplying Ukraine",
+          "source": "The Guardian",
+          "link": "https://www.theguardian.com/world/2026/sep/29/estonia-blames-russia-arson-attack-drone-maker-ukraine",
+          "source_bias": "left"
         }
       ],
-      "updated_at": "2026-09-28",
+      "updated_at": "2026-09-29",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -998,15 +1119,18 @@
         "relationship": "related_topic",
         "confidence": 0.95,
         "shared_entities": [
+          "accuse_russia",
           "israel",
           "kharkiv",
           "kyiv",
           "moscow",
+          "nato",
           "russia",
           "russia.",
           "russia_drone",
           "syria",
           "ukraine",
+          "ukraine.",
           "us",
           "volodymyr_zelenskyy"
         ]
@@ -1023,6 +1147,7 @@
           "russia",
           "russia_drone",
           "ukraine",
+          "ukraine.",
           "un",
           "united_nation",
           "us",
@@ -1033,7 +1158,7 @@
         "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
         "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
         "relationship": "related_topic",
-        "confidence": 0.92,
+        "confidence": 0.918,
         "shared_entities": [
           "general_assembly.",
           "russia",
@@ -1048,7 +1173,7 @@
         "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
         "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
         "relationship": "related_topic",
-        "confidence": 0.919,
+        "confidence": 0.912,
         "shared_entities": [
           "kyiv",
           "russia",
@@ -1180,15 +1305,19 @@
       "16-storey",
       "2026",
       "academy",
+      "accuse",
+      "accused",
       "action",
       "address",
       "affected",
       "ahead",
       "ahmed",
       "al-sharaa",
+      "allegation",
       "announcement",
       "apartment",
       "apply",
+      "arson",
       "assault",
       "assembly",
       "assert",
@@ -1206,6 +1335,9 @@
       "children",
       "claim",
       "coincided",
+      "commissioned",
+      "company",
+      "condemned",
       "confirmed",
       "controlled",
       "critical",
@@ -1220,6 +1352,7 @@
       "development",
       "discuss",
       "district",
+      "drawn",
       "drone",
       "election",
       "emergency",
@@ -1227,7 +1360,10 @@
       "emphasized",
       "escalating",
       "escape",
+      "estonia",
+      "estonian",
       "europe",
+      "european",
       "evacuated",
       "event",
       "fatalitie",
@@ -1280,11 +1416,14 @@
       "mayor",
       "measure",
       "meeting",
+      "mid-august",
       "military",
+      "milrem",
       "moscow",
       "multiple",
       "nation",
       "national",
+      "nato",
       "necessitating",
       "nine",
       "nine-storey",
@@ -1293,6 +1432,7 @@
       "occurred",
       "oil",
       "ongoing",
+      "orchestrating",
       "ordered",
       "other",
       "overnight",
@@ -1318,10 +1458,13 @@
       "response",
       "resulted",
       "resulting",
+      "robotic",
       "russia",
+      "sabotage",
       "scale",
       "scheduled",
       "science",
+      "security",
       "seen",
       "september",
       "service",
@@ -1334,6 +1477,8 @@
       "struck",
       "such",
       "suggesting",
+      "supplie",
+      "support",
       "syria",
       "syrian",
       "targeted",
@@ -1344,8 +1489,11 @@
       "threat",
       "tightly",
       "ukraine",
+      "unacceptable",
       "united",
+      "unmanned",
       "variou",
+      "vehicle",
       "violence",
       "visible",
       "volodymyr",
@@ -1356,18 +1504,23 @@
       "zelenskyy"
     ],
     "entities": [
+      "accuse_russia",
       "al-sharaa",
       "apartment_block",
       "assert_golan",
       "block_injure",
       "causing_casualtie",
       "claim_life",
+      "company_estonia",
       "damage_ukraine",
+      "defense_company",
       "drone_ahead",
       "election_ukraine",
       "emmanuel_macron",
+      "estonia_accuse",
       "europe.",
       "europe._macron",
+      "european",
       "france",
       "general_assembly.",
       "golan_height",
@@ -1388,11 +1541,15 @@
       "launche_massive",
       "macron_implement",
       "massive_drone",
+      "mid-august",
+      "milrem_robotic",
       "moscow",
       "moscow.",
       "moscow_causing",
       "nation_general",
       "national_academy",
+      "nato",
+      "orchestrating_arson",
       "remain_syrian",
       "russia",
       "russia.",
@@ -1405,6 +1562,7 @@
       "territory_syrian",
       "threat_france",
       "ukraine",
+      "ukraine.",
       "ukraine_launche",
       "un",
       "united_nation",
@@ -1412,7 +1570,7 @@
       "volodymyr_zelenskyy",
       "wednesday_kyiv"
     ],
-    "search_text": "000 14-year-old 16-storey 2026 academy action address affected ahead ahmed al-sharaa announcement apartment apartment_block apply assault assembly assert assert_golan attack attempted authoritie block block_injure broader building capital casualtie caused causing causing_casualtie central children claim claim_life coincided confirmed controlled critical criticized damage damage_ukraine date death declared defense described despite development discuss district drone drone_ahead election election_ukraine emergency emmanuel emmanuel_macron emphasized escalating escape europe europe. europe._macron evacuated event fatalitie final flame followed france fuel general general_assembly. golan golan_height growing height historic hospital hospital_causing hours hybrid hybrid_threat immediate implement implement_measure incident including increasing indicate individual industry infrastructure injure injure_other injurie injuring instead intensified intensifying intensifying_russia involving israel jersey jersey._kyiv just kharkiv kharkiv_apartment kyiv kyiv_claim kyiv_pecherskyi kyiv_science kyiv_struck largest launche launche_massive launched leader least life light local location macron macron_implement marking massive massive_drone mayor measure meeting military moscow moscow. moscow_causing multiple nation nation_general national national_academy necessitating nine nine-storey numerou occupation occurred oil ongoing ordered other overnight parliamentary part particularly party pattern pecherskyi political protective railway recent recognition refinery region regional reiterated remain remain_syrian reported resident residential response resulted resulting russia russia. russia_drone russia_election russia_hybrid scale scheduled science science_academy seen september service should significant sovereignty stance station strike struck such suggesting syria syrian syrian_territory targeted targeting teen tension territory territory_syrian threat threat_france tightly ukraine ukraine_launche un united united_nation us variou violence visible volodymyr volodymyr_zelenskyy wednesday wednesday_kyiv weeks when which zelenskyy"
+    "search_text": "000 14-year-old 16-storey 2026 academy accuse accuse_russia accused action address affected ahead ahmed al-sharaa allegation announcement apartment apartment_block apply arson assault assembly assert assert_golan attack attempted authoritie block block_injure broader building capital casualtie caused causing causing_casualtie central children claim claim_life coincided commissioned company company_estonia condemned confirmed controlled critical criticized damage damage_ukraine date death declared defense defense_company described despite development discuss district drawn drone drone_ahead election election_ukraine emergency emmanuel emmanuel_macron emphasized escalating escape estonia estonia_accuse estonian europe europe. europe._macron european evacuated event fatalitie final flame followed france fuel general general_assembly. golan golan_height growing height historic hospital hospital_causing hours hybrid hybrid_threat immediate implement implement_measure incident including increasing indicate individual industry infrastructure injure injure_other injurie injuring instead intensified intensifying intensifying_russia involving israel jersey jersey._kyiv just kharkiv kharkiv_apartment kyiv kyiv_claim kyiv_pecherskyi kyiv_science kyiv_struck largest launche launche_massive launched leader least life light local location macron macron_implement marking massive massive_drone mayor measure meeting mid-august military milrem milrem_robotic moscow moscow. moscow_causing multiple nation nation_general national national_academy nato necessitating nine nine-storey numerou occupation occurred oil ongoing orchestrating orchestrating_arson ordered other overnight parliamentary part particularly party pattern pecherskyi political protective railway recent recognition refinery region regional reiterated remain remain_syrian reported resident residential response resulted resulting robotic russia russia. russia_drone russia_election russia_hybrid sabotage scale scheduled science science_academy security seen september service should significant sovereignty stance station strike struck such suggesting supplie support syria syrian syrian_territory targeted targeting teen tension territory territory_syrian threat threat_france tightly ukraine ukraine. ukraine_launche un unacceptable united united_nation unmanned us variou vehicle violence visible volodymyr volodymyr_zelenskyy wednesday wednesday_kyiv weeks when which zelenskyy"
   },
   "related_events": [
     {
