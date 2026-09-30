@@ -1,0 +1,750 @@
+{
+  "schema_version": 1,
+  "resource_type": "event",
+  "event_id": "event_investigation-launched-into-low-flying-jets_860ac42bd7",
+  "publication": {
+    "status": "published",
+    "permalink": "/timeline.html?event=event_investigation-launched-into-low-flying-jets_860ac42bd7",
+    "share_expires_at": null
+  },
+  "event": {
+    "event_id": "event_investigation-launched-into-low-flying-jets_860ac42bd7",
+    "title": "Investigation Launched into Low-Flying Jets Over Cape Town Stadium",
+    "canonical_title": "Investigation Launched into Low-Flying Jets Over Cape Town Stadium",
+    "topic_label": "Aviation Safety",
+    "summary": "South African aviation authorities are investigating a low-altitude flyover by two Airlink passenger jets over DHL Stadium in Cape Town. The incident occurred before a rugby match between the Springboks and the All Blacks and has raised safety concerns following a viral video showing the jets barely clearing the stadium.",
+    "status": "active",
+    "first_seen_at": "2026-09-03",
+    "last_seen_at": "2026-09-30",
+    "timeline": [
+      {
+        "development_id": "story_943474985ba578ab",
+        "daily_story_id": "story_943474985ba578ab",
+        "date": "2026-09-03",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Investigation Launched into Low-Flying Jets Over Cape Town Stadium",
+        "summary": "South African aviation authorities are investigating a low-altitude flyover by two Airlink passenger jets over DHL Stadium in Cape Town. The incident occurred before a rugby match between the Springboks and the All Blacks and has raised safety concerns following a viral video showing the jets barely clearing the stadium.",
+        "topic_label": "Aviation Safety",
+        "development_type": "investigation",
+        "key_facts": [
+          "Two Embraer E-Jets flew low over DHL Stadium in Cape Town.",
+          "The incident took place before a rugby match.",
+          "South African aviation authorities are reviewing the flyover."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Africanews",
+          "Fox News"
+        ],
+        "source_urls": [
+          "https://www.foxnews.com/outkick-sports/viral-video-jets-buzzing-dhl-stadium-cape-town-prompts-aviation-safety-investigation",
+          "http://www.africanews.com/2026/09/03/south-africa-probes-low-flying-passenger-jets-at-rugby-match"
+        ],
+        "source_details": [
+          {
+            "title": "Viral video of jets buzzing DHL Stadium in Cape Town prompts aviation safety investigation",
+            "source": "Fox News",
+            "link": "https://www.foxnews.com/outkick-sports/viral-video-jets-buzzing-dhl-stadium-cape-town-prompts-aviation-safety-investigation",
+            "source_bias": "right"
+          },
+          {
+            "title": "South Africa probes low-flying passenger Jets at rugby match",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/09/03/south-africa-probes-low-flying-passenger-jets-at-rugby-match",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 1.0,
+        "match_evidence": {
+          "score": 1.0,
+          "method": "new_event",
+          "shared_tokens": [],
+          "shared_entities": []
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-03",
+        "last_seen_at": "2026-09-03",
+        "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_c86b3394e0cce319",
+        "daily_story_id": "story_c86b3394e0cce319",
+        "date": "2026-09-30",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "UAE President Meets Israeli PM Netanyahu Amid Controversy Over 2023 Attack Warnings",
+        "summary": "The UAE has confirmed that its president met with Israeli leader Benjamin Netanyahu in Abu Dhabi on Sunday. This meeting follows reports suggesting that the Emirati president had warned Netanyahu about an impending Hamas-led attack on Israel in October 2023, a claim Netanyahu has denied, stating he did not receive any advance warnings from security officials.",
+        "topic_label": "",
+        "development_type": "military_action",
+        "key_facts": [
+          "UAE president met with Israeli leader Netanyahu in Abu Dhabi.",
+          "Meeting occurred weeks after reports of a warning about a Hamas attack.",
+          "Netanyahu denies receiving advance knowledge of the attack."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Africanews",
+          "Euronews"
+        ],
+        "source_urls": [
+          "https://www.euronews.com/2026/09/29/uae-confirms-president-met-with-israels-pm-netanyahu-in-abu-dhabi-on-sunday",
+          "http://www.africanews.com/2026/09/29/multiple-reports-claim-netanyahu-was-warned-ahead-of-hamas-2023-attack"
+        ],
+        "source_details": [
+          {
+            "title": "UAE confirms president met with Israel's PM Netanyahu in Abu Dhabi on Sunday",
+            "source": "Euronews",
+            "link": "https://www.euronews.com/2026/09/29/uae-confirms-president-met-with-israels-pm-netanyahu-in-abu-dhabi-on-sunday",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Multiple reports claim Netanyahu was warned ahead of Hamas' 2023 attack",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/09/29/multiple-reports-claim-netanyahu-was-warned-ahead-of-hamas-2023-attack",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "attack"
+          ],
+          "shared_incident_anchors": [
+            "benjamin_netanyahu",
+            "israel"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "attack",
+            "benjamin",
+            "confirmed",
+            "israel",
+            "netanyahu",
+            "occurred"
+          ],
+          "shared_entities": [
+            "benjamin_netanyahu",
+            "israel"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_eee9079076f235bb",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-30",
+        "last_seen_at": "2026-09-30",
+        "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_eee9079076f235bb",
+        "daily_story_id": "story_eee9079076f235bb",
+        "date": "2026-09-30",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Co-Pilot Attempts to Crash Flydubai Flight After Stabbing Pilot",
+        "summary": "An incident occurred on a Flydubai flight from Dubai to Tel Aviv when a co-pilot stabbed the pilot and attempted to crash the plane. Passengers intervened, subduing the co-pilot, allowing the flight to be safely diverted to Saudi Arabia. Israeli Prime Minister Benjamin Netanyahu confirmed that most passengers were Israeli nationals and described the situation as a potential terror attack.",
+        "topic_label": "Aviation Safety",
+        "development_type": "military_action",
+        "key_facts": [
+          "Co-pilot stabbed the pilot during the flight.",
+          "Attempted to crash the plane.",
+          "Passengers intervened to subdue the co-pilot.",
+          "Flight was diverted to Saudi Arabia.",
+          "Most passengers were Israeli nationals."
+        ],
+        "source_count": 5,
+        "sources": [
+          "Al Jazeera English",
+          "France 24 - English",
+          "Google News - Top Stories",
+          "NBC News - Top Stories",
+          "RTE News"
+        ],
+        "source_urls": [
+          "https://www.france24.com/en/video/20260930-attempted-terror-attack-what-happened-on-board-the-rerouted-flydubai-flight",
+          "https://news.google.com/rss/articles/CBMixAFBVV95cUxOWnpLNmZJUXN6UzQ0RlhKSFhxT2xYMWZ1R1VwYVdZX3ZuZWFTYUZyV1VYTVhralA5Y0ROVjlNVl9XOGpTSWhEcGM3UE01WVA3clNKcm5KdDZ2dUY1U3FyODdsWkkzSWs2VW5NZUJWQXFYQ0dxamNudlljZl92REs3SnFXSEUzTEswdjh4NnRia2VWZGd2TGE2SmZ6VDBQTXpiRDM0SDZSZ29ubUZUd3Zsa0E4LTBoRmxpSDRjd0JkcmhYbkNV?oc=5",
+          "https://www.nbcnews.com/world/middle-east/flight-dubai-tel-aviv-diverted-emergency-alert-rcna600628",
+          "https://www.aljazeera.com/news/2026/9/30/what-happened-on-diverted-flydubai-flight-from-dubai-to-tel-aviv?traffic_source=rss",
+          "https://www.rte.ie/news/2026/0930/1593502-pilot-tried-crash-israel-flight"
+        ],
+        "source_details": [
+          {
+            "title": "‘Attempted terror attack’: What happened on board the rerouted Flydubai flight?",
+            "source": "France 24 - English",
+            "link": "https://www.france24.com/en/video/20260930-attempted-terror-attack-what-happened-on-board-the-rerouted-flydubai-flight",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Passengers overcame pilot who tried to crash flydubai flight, Israel says",
+            "source": "Google News - Top Stories",
+            "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOWnpLNmZJUXN6UzQ0RlhKSFhxT2xYMWZ1R1VwYVdZX3ZuZWFTYUZyV1VYTVhralA5Y0ROVjlNVl9XOGpTSWhEcGM3UE01WVA3clNKcm5KdDZ2dUY1U3FyODdsWkkzSWs2VW5NZUJWQXFYQ0dxamNudlljZl92REs3SnFXSEUzTEswdjh4NnRia2VWZGd2TGE2SmZ6VDBQTXpiRDM0SDZSZ29ubUZUd3Zsa0E4LTBoRmxpSDRjd0JkcmhYbkNV?oc=5",
+            "source_bias": "mixed"
+          },
+          {
+            "title": "Pilot stabbed fellow pilot in apparent attempt to crash Israel-bound plane, Netanyahu says",
+            "source": "NBC News - Top Stories",
+            "link": "https://www.nbcnews.com/world/middle-east/flight-dubai-tel-aviv-diverted-emergency-alert-rcna600628",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "What happened on diverted Flydubai flight from Dubai to Tel Aviv?",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/news/2026/9/30/what-happened-on-diverted-flydubai-flight-from-dubai-to-tel-aviv?traffic_source=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Passenger says plane was 'pretty much out of control'",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/2026/0930/1593502-pilot-tried-crash-israel-flight",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_943474985ba578ab",
+          "shared_tokens": [
+            "aviation",
+            "incident",
+            "occurred",
+            "passenger",
+            "safety"
+          ],
+          "shared_entities": [
+            "aviation_safety"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-09-30",
+        "last_seen_at": "2026-09-30",
+        "integrity_status": "trusted"
+      }
+    ],
+    "integrity": {
+      "public_development_count": 3,
+      "questionable_development_count": 0,
+      "review_required": false
+    },
+    "latest_title": "Co-Pilot Attempts to Crash Flydubai Flight After Stabbing Pilot",
+    "latest_summary": "An incident occurred on a Flydubai flight from Dubai to Tel Aviv when a co-pilot stabbed the pilot and attempted to crash the plane. Passengers intervened, subduing the co-pilot, allowing the flight to be safely diverted to Saudi Arabia. Israeli Prime Minister Benjamin Netanyahu confirmed that most passengers were Israeli nationals and described the situation as a potential terror attack.",
+    "presentation": {
+      "has_context": true,
+      "has_full_timeline": false,
+      "stage": "developing_event",
+      "stage_label": "Developing event",
+      "base_title": "Investigation Launched into Low-Flying Jets Over Cape Town Stadium",
+      "display_title": "Investigation Launched into Low-Flying Jets Over Cape Town Stadium",
+      "milestone_development_ids": [
+        "story_943474985ba578ab",
+        "story_c86b3394e0cce319",
+        "story_eee9079076f235bb"
+      ],
+      "summary_available": true,
+      "summary_label": "Read the story so far",
+      "summary_updated_at": "2026-09-30",
+      "development_count": 3,
+      "coverage_packet_count": 3,
+      "date_count": 2,
+      "source_count": 9,
+      "independent_source_count": 8,
+      "first_date": "2026-09-03",
+      "latest_date": "2026-09-30",
+      "latest_update_title": "Co-Pilot Attempts to Crash Flydubai Flight After Stabbing Pilot",
+      "coverage_score": 0.667,
+      "recency_score": 1.0,
+      "rank_score": 0.86,
+      "context_summary": "Muninn first tracked this thread on 2026-09-03: Investigation Launched into Low-Flying Jets Over Cape Town Stadium. The latest development is Co-Pilot Attempts to Crash Flydubai Flight After Stabbing Pilot.",
+      "cta_label": ""
+    },
+    "event_summary": {
+      "available": true,
+      "summary": "South African aviation authorities are investigating a low-altitude flyover by two Airlink passenger jets over DHL Stadium in Cape Town. A later development was UAE President Meets Israeli PM Netanyahu Amid Controversy Over 2023 Attack Warnings. Most recently, an incident occurred on a Flydubai flight from Dubai to Tel Aviv when a co-pilot stabbed the pilot and attempted to crash the plane.",
+      "key_developments": [
+        {
+          "development_id": "story_943474985ba578ab",
+          "date": "2026-09-03",
+          "title": "Investigation Launched into Low-Flying Jets Over Cape Town Stadium"
+        },
+        {
+          "development_id": "story_c86b3394e0cce319",
+          "date": "2026-09-30",
+          "title": "UAE President Meets Israeli PM Netanyahu Amid Controversy Over 2023 Attack Warnings"
+        },
+        {
+          "development_id": "story_eee9079076f235bb",
+          "date": "2026-09-30",
+          "title": "Co-Pilot Attempts to Crash Flydubai Flight After Stabbing Pilot"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Viral video of jets buzzing DHL Stadium in Cape Town prompts aviation safety investigation",
+          "source": "Fox News",
+          "link": "https://www.foxnews.com/outkick-sports/viral-video-jets-buzzing-dhl-stadium-cape-town-prompts-aviation-safety-investigation",
+          "source_bias": "right"
+        },
+        {
+          "title": "South Africa probes low-flying passenger Jets at rugby match",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/09/03/south-africa-probes-low-flying-passenger-jets-at-rugby-match",
+          "source_bias": "center"
+        },
+        {
+          "title": "UAE confirms president met with Israel's PM Netanyahu in Abu Dhabi on Sunday",
+          "source": "Euronews",
+          "link": "https://www.euronews.com/2026/09/29/uae-confirms-president-met-with-israels-pm-netanyahu-in-abu-dhabi-on-sunday",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Multiple reports claim Netanyahu was warned ahead of Hamas' 2023 attack",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/09/29/multiple-reports-claim-netanyahu-was-warned-ahead-of-hamas-2023-attack",
+          "source_bias": "center"
+        },
+        {
+          "title": "‘Attempted terror attack’: What happened on board the rerouted Flydubai flight?",
+          "source": "France 24 - English",
+          "link": "https://www.france24.com/en/video/20260930-attempted-terror-attack-what-happened-on-board-the-rerouted-flydubai-flight",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Passengers overcame pilot who tried to crash flydubai flight, Israel says",
+          "source": "Google News - Top Stories",
+          "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOWnpLNmZJUXN6UzQ0RlhKSFhxT2xYMWZ1R1VwYVdZX3ZuZWFTYUZyV1VYTVhralA5Y0ROVjlNVl9XOGpTSWhEcGM3UE01WVA3clNKcm5KdDZ2dUY1U3FyODdsWkkzSWs2VW5NZUJWQXFYQ0dxamNudlljZl92REs3SnFXSEUzTEswdjh4NnRia2VWZGd2TGE2SmZ6VDBQTXpiRDM0SDZSZ29ubUZUd3Zsa0E4LTBoRmxpSDRjd0JkcmhYbkNV?oc=5",
+          "source_bias": "mixed"
+        },
+        {
+          "title": "Pilot stabbed fellow pilot in apparent attempt to crash Israel-bound plane, Netanyahu says",
+          "source": "NBC News - Top Stories",
+          "link": "https://www.nbcnews.com/world/middle-east/flight-dubai-tel-aviv-diverted-emergency-alert-rcna600628",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "What happened on diverted Flydubai flight from Dubai to Tel Aviv?",
+          "source": "Al Jazeera English",
+          "link": "https://www.aljazeera.com/news/2026/9/30/what-happened-on-diverted-flydubai-flight-from-dubai-to-tel-aviv?traffic_source=rss",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Passenger says plane was 'pretty much out of control'",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/2026/0930/1593502-pilot-tried-crash-israel-flight",
+          "source_bias": "center"
+        }
+      ],
+      "updated_at": "2026-09-30",
+      "provenance": "source_grounded_event_memory"
+    },
+    "event_stage": "developing_event",
+    "related_events": [
+      {
+        "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+        "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
+        "relationship": "related_topic",
+        "confidence": 0.793,
+        "shared_entities": [
+          "benjamin_netanyahu",
+          "israel",
+          "israel_prime",
+          "saudi"
+        ]
+      },
+      {
+        "event_id": "event_netanyahu-denies-receiving-warning-about-ham_43138003c8",
+        "title": "Netanyahu Denies Receiving Warning About Hamas Attacks Before October 7",
+        "relationship": "related_topic",
+        "confidence": 0.792,
+        "shared_entities": [
+          "benjamin_netanyahu",
+          "israel",
+          "israel_prime",
+          "uae"
+        ]
+      },
+      {
+        "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
+        "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
+        "relationship": "related_topic",
+        "confidence": 0.73,
+        "shared_entities": [
+          "benjamin_netanyahu",
+          "israel",
+          "israel_prime"
+        ]
+      },
+      {
+        "event_id": "event_israeli-strikes-in-gaza-result-in-seven-deat_837b156199",
+        "title": "Israeli Strikes in Gaza Result in Seven Deaths and Destruction of Medical Warehouses",
+        "relationship": "related_topic",
+        "confidence": 0.707,
+        "shared_entities": [
+          "benjamin_netanyahu",
+          "israel",
+          "israel_prime"
+        ]
+      }
+    ],
+    "search_tokens": [
+      "2023",
+      "advance",
+      "african",
+      "airlink",
+      "allowing",
+      "arabia",
+      "attack",
+      "attempt",
+      "attempted",
+      "authoritie",
+      "aviation",
+      "aviv",
+      "barely",
+      "benjamin",
+      "black",
+      "cape",
+      "claim",
+      "clearing",
+      "co-pilot",
+      "concern",
+      "confirmed",
+      "controversy",
+      "crash",
+      "denied",
+      "described",
+      "dhabi",
+      "diverted",
+      "dubai",
+      "emirati",
+      "flight",
+      "flydubai",
+      "flyover",
+      "follow",
+      "hamas-led",
+      "impending",
+      "incident",
+      "intervened",
+      "investigating",
+      "investigation",
+      "israel",
+      "jets",
+      "launched",
+      "leader",
+      "low-altitude",
+      "low-flying",
+      "match",
+      "meeting",
+      "meets",
+      "most",
+      "national",
+      "netanyahu",
+      "occurred",
+      "october",
+      "passenger",
+      "pilot",
+      "plane",
+      "potential",
+      "prime",
+      "raised",
+      "receive",
+      "rugby",
+      "safely",
+      "safety",
+      "saudi",
+      "security",
+      "showing",
+      "situation",
+      "south",
+      "springbok",
+      "stabbed",
+      "stabbing",
+      "stadium",
+      "stating",
+      "subduing",
+      "suggesting",
+      "sunday",
+      "terror",
+      "town",
+      "video",
+      "viral",
+      "warned",
+      "warning",
+      "when"
+    ],
+    "entities": [
+      "abu",
+      "abu_dhabi",
+      "arabia._israel",
+      "benjamin_netanyahu",
+      "cape",
+      "cape_town",
+      "cape_town.",
+      "co-pilot",
+      "co-pilot_attempt",
+      "crash",
+      "dhl",
+      "dhl_stadium",
+      "dubai",
+      "flydubai_flight",
+      "investigation_launched",
+      "israel",
+      "israel_prime",
+      "low-flying",
+      "low-flying_jets",
+      "meets_israel",
+      "october",
+      "pm",
+      "saudi",
+      "saudi_arabia.",
+      "south_african",
+      "stabbing_pilot",
+      "stadium_south",
+      "tel",
+      "tel_aviv",
+      "town_stadium",
+      "uae"
+    ],
+    "search_text": "2023 abu abu_dhabi advance african airlink allowing arabia arabia._israel attack attempt attempted authoritie aviation aviv barely benjamin benjamin_netanyahu black cape cape_town cape_town. claim clearing co-pilot co-pilot_attempt concern confirmed controversy crash denied described dhabi dhl dhl_stadium diverted dubai emirati flight flydubai flydubai_flight flyover follow hamas-led impending incident intervened investigating investigation investigation_launched israel israel_prime jets launched leader low-altitude low-flying low-flying_jets match meeting meets meets_israel most national netanyahu occurred october passenger pilot plane pm potential prime raised receive rugby safely safety saudi saudi_arabia. security showing situation south south_african springbok stabbed stabbing stabbing_pilot stadium stadium_south stating subduing suggesting sunday tel tel_aviv terror town town_stadium uae video viral warned warning when",
+    "event_overview": {
+      "available": true,
+      "title": "About Aviation Safety",
+      "subject": "Aviation Safety",
+      "summary": "Aviation safety concerns the regulation, operation and investigation of civil aircraft activities intended to prevent accidents and incidents. In the Cape Town context, reports of aircraft operating unusually low over a stadium raise questions about compliance with South African flight rules and whether an occurrence warrants regulatory or safety-investigation action.",
+      "facts": [
+        {
+          "label": "International framework",
+          "value": "Aircraft accident and incident investigations are governed internationally by ICAO Annex 13, whose stated purpose is prevention and improvement of aviation safety—not the assignment of blame or liability.",
+          "source_ids": [
+            "o1",
+            "o2"
+          ]
+        },
+        {
+          "label": "South African regulator",
+          "value": "The South African Civil Aviation Authority regulates civil-aviation safety and security under the Civil Aviation Act, 2009, including oversight of operators, airworthiness, airports, airspace and flight procedures.",
+          "source_ids": [
+            "o3",
+            "o4"
+          ]
+        },
+        {
+          "label": "Investigation and reporting",
+          "value": "South Africa's Accident and Incident Investigations Division says safety-affecting occurrences must be reported; its investigations are intended to prevent recurrence and are not mandated to establish blame or liability.",
+          "source_ids": [
+            "o5"
+          ]
+        },
+        {
+          "label": "Minimum-height rules",
+          "value": "Except for takeoff, landing or prior written approval, South African rules generally prohibit aircraft from flying below 1,000 feet above the highest obstacle over congested areas or open-air assemblies, and prohibit circling or repeated overflights of such assemblies below 3,000 feet above the surface.",
+          "source_ids": [
+            "o6",
+            "o7"
+          ]
+        },
+        {
+          "label": "Which state leads an investigation",
+          "value": "Under the Chicago Convention and ICAO procedures, the state where an accident occurs normally institutes the inquiry; the states of registry, operator, design and manufacture may participate under defined rights and responsibilities.",
+          "source_ids": [
+            "o2"
+          ]
+        }
+      ],
+      "scope_note": "The selected Muninn timeline follows specific reported aviation-safety developments, including the Cape Town low-flying allegation and later airline-related incidents; it does not constitute a complete record of investigations, regulatory actions, or final safety findings.",
+      "sources": [
+        {
+          "title": "Icao",
+          "publisher": "Icao",
+          "url": "https://store.icao.int/en/annex-13-aircraft-accident-and-incident-investigation",
+          "source_type": "primary",
+          "id": "o1"
+        },
+        {
+          "title": "Icao",
+          "publisher": "Icao",
+          "url": "https://www.icao.int/icao-frequently-asked-questions-4",
+          "source_type": "primary",
+          "id": "o2"
+        },
+        {
+          "title": "Co",
+          "publisher": "Co",
+          "url": "https://www.caa.co.za/about-us/",
+          "source_type": "reporting",
+          "id": "o3"
+        },
+        {
+          "title": "Gov",
+          "publisher": "Gov",
+          "url": "https://www.gov.za/news/media-statements/minister-sindisiwe-chikunga-media-briefing-providing-updates-aviation-sector",
+          "source_type": "reporting",
+          "id": "o4"
+        },
+        {
+          "title": "Co",
+          "publisher": "Co",
+          "url": "https://www.caa.co.za/industry-information/accidents-and-incidents/",
+          "source_type": "reporting",
+          "id": "o5"
+        },
+        {
+          "title": "Gov",
+          "publisher": "Gov",
+          "url": "https://www.gov.za/sites/default/files/gcis_document/201409/35398rg9769gen425.pdf",
+          "source_type": "reporting",
+          "id": "o6"
+        },
+        {
+          "title": "Co",
+          "publisher": "Co",
+          "url": "https://www.acts.co.za/civil-aviation-act-2009/nr425_91_06_32_minimum_he",
+          "source_type": "reporting",
+          "id": "o7"
+        }
+      ],
+      "publisher_count": 3,
+      "generated_at": "2026-09-30T17:31:48.950260+00:00",
+      "expires_at": "2026-10-07T17:31:48.950260+00:00",
+      "model": "gpt-5.6-terra",
+      "provenance": "openai_web_search_source_grounded_event_overview_v1"
+    },
+    "hero_image": {
+      "url": "/Current_news/generated/events/event_investigation-launched-into-low-flying-jets_860ac42bd7.jpg",
+      "thumbnail_url": "/Current_news/generated/events/event_investigation-launched-into-low-flying-jets_860ac42bd7.jpg",
+      "source": "Muninn AI illustration",
+      "author": "OpenAI GPT Image 2",
+      "license": "AI-generated content",
+      "image_role": "illustrative",
+      "image_role_label": "AI illustration",
+      "is_ai_generated": true,
+      "generation_model": "gpt-image-2",
+      "generation_quality": "low",
+      "safe_to_crop": true,
+      "allows_crop": true,
+      "focal_x": 0.5,
+      "focal_y": 0.48,
+      "focal_wide_x": 0.5,
+      "focal_wide_y": 0.48,
+      "focal_tall_x": 0.5,
+      "focal_tall_y": 0.48
+    }
+  },
+  "related_events": [
+    {
+      "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+      "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
+      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Iran's President Responds to Trump's Threat at UN General Assembly.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-22",
+      "last_seen_at": "2026-09-23",
+      "development_count": 62,
+      "latest_title": "Iran's President Responds to Trump's Threat at UN General Assembly",
+      "topic_label": "Iran War",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
+    },
+    {
+      "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
+      "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
+      "summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Russian Strikes Kill Civilians in Ukraine Following Putin's Warning.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-31",
+      "last_seen_at": "2026-09-12",
+      "development_count": 37,
+      "latest_title": "Russian Strikes Kill Civilians in Ukraine Following Putin's Warning",
+      "topic_label": "Gaza Peace Deal",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b"
+    },
+    {
+      "event_id": "event_israeli-strikes-in-gaza-result-in-seven-deat_837b156199",
+      "title": "Israeli Strikes in Gaza Result in Seven Deaths and Destruction of Medical Warehouses",
+      "summary": "Muninn first tracked this thread on 2026-08-01: Israeli Strikes in Gaza Result in Seven Deaths and Destruction of Medical Warehouses. The latest development is Israeli Airstrikes Target Hamas Commander, Resulting in Multiple Deaths.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-08-01",
+      "last_seen_at": "2026-09-29",
+      "development_count": 15,
+      "latest_title": "Israeli Airstrikes Target Hamas Commander, Resulting in Multiple Deaths",
+      "topic_label": "Gaza Conflict",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_israeli-strikes-in-gaza-result-in-seven-deat_837b156199.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_israeli-strikes-in-gaza-result-in-seven-deat_837b156199.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_israeli-strikes-in-gaza-result-in-seven-deat_837b156199"
+    }
+  ]
+}
