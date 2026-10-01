@@ -15,7 +15,7 @@
     "summary": "A youth group known as the 'Cockroach' movement has threatened to resume mass protests unless Gyanesh Kumar resigns as head of India's election commission. This demand follows allegations of election rigging, which have also prompted opposition parties, including Congress, to join the protests. Police have responded with tear gas to disperse demonstrators.",
     "status": "active",
     "first_seen_at": "2026-09-25",
-    "last_seen_at": "2026-09-29",
+    "last_seen_at": "2026-10-01",
     "timeline": [
       {
         "development_id": "story_c777191e98b23c65",
@@ -288,6 +288,78 @@
         "first_seen_at": "2026-09-29",
         "last_seen_at": "2026-09-29",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_dc423d7b866ef392",
+        "daily_story_id": "story_dc423d7b866ef392",
+        "date": "2026-10-01",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Escalating Student Protests in France Lead to Hundreds of Arrests and Violence",
+        "summary": "Student protests in France have escalated, resulting in violent clashes and widespread unrest. Hundreds have been arrested as demonstrations grow in scale and intensity, with officials noting the involvement of outside agitators. The situation has led to school blockades and numerous injuries among protesters and law enforcement.",
+        "topic_label": "France Protests",
+        "development_type": "policy",
+        "key_facts": [
+          "Student protests have escalated in France.",
+          "Hundreds of arrests have been made.",
+          "Violent clashes have occurred in multiple locations.",
+          "Officials have warned of outside agitators."
+        ],
+        "source_count": 2,
+        "sources": [
+          "DW - English",
+          "Fox News"
+        ],
+        "source_urls": [
+          "https://www.foxnews.com/world/france-rocked-student-riots-hundreds-arrested-violence-spreads-nationwide",
+          "https://www.dw.com/en/france-hundreds-arrested-as-student-protests-escalate/a-79495633?maca=en-rss-en-all-1573-rdf"
+        ],
+        "source_details": [
+          {
+            "title": "France rocked by student riots as hundreds arrested, violence spreads nationwide",
+            "source": "Fox News",
+            "link": "https://www.foxnews.com/world/france-rocked-student-riots-hundreds-arrested-violence-spreads-nationwide",
+            "source_bias": "right"
+          },
+          {
+            "title": "France: Hundreds arrested as student protests escalate",
+            "source": "DW - English",
+            "link": "https://www.dw.com/en/france-hundreds-arrested-as-student-protests-escalate/a-79495633?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_95aa1afe728f64a4",
+          "shared_tokens": [
+            "arrest",
+            "blockade",
+            "clashe",
+            "escalated",
+            "france",
+            "injurie",
+            "multiple",
+            "protest",
+            "school",
+            "student"
+          ],
+          "shared_entities": [
+            "france",
+            "france_protest"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-01",
+        "last_seen_at": "2026-10-01",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -313,12 +385,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 4,
+      "public_development_count": 5,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Protests Erupt in France as Students and Workers Clash with Police Over Budget Cuts",
-    "latest_summary": "Protests in France have escalated as students and public workers demonstrate against planned budget cuts. Clashes with police have resulted in over 200 arrests and multiple injuries. Students are particularly protesting against class sizes, teacher shortages, and long timetables, leading to school blockades that have spread across the country.",
+    "latest_title": "Escalating Student Protests in France Lead to Hundreds of Arrests and Violence",
+    "latest_summary": "Student protests in France have escalated, resulting in violent clashes and widespread unrest. Hundreds have been arrested as demonstrations grow in scale and intensity, with officials noting the involvement of outside agitators. The situation has led to school blockades and numerous injuries among protesters and law enforcement.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -330,28 +402,29 @@
         "story_c777191e98b23c65",
         "story_6f4388e798f59f5d",
         "story_4cfa21f8bb723661",
-        "story_95aa1afe728f64a4"
+        "story_95aa1afe728f64a4",
+        "story_dc423d7b866ef392"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-09-29",
-      "development_count": 4,
-      "coverage_packet_count": 4,
-      "date_count": 4,
-      "source_count": 9,
-      "independent_source_count": 7,
+      "summary_updated_at": "2026-10-01",
+      "development_count": 5,
+      "coverage_packet_count": 5,
+      "date_count": 5,
+      "source_count": 11,
+      "independent_source_count": 8,
       "first_date": "2026-09-25",
-      "latest_date": "2026-09-29",
-      "latest_update_title": "Protests Erupt in France as Students and Workers Clash with Police Over Budget Cuts",
-      "coverage_score": 0.768,
-      "recency_score": 0.875,
-      "rank_score": 0.83,
-      "context_summary": "Muninn first tracked this thread on 2026-09-25: Protests Erupt in India Demanding Resignation of Election Chief. The latest development is Protests Erupt in France as Students and Workers Clash with Police Over Budget Cuts.",
-      "cta_label": "Explore 4 developments"
+      "latest_date": "2026-10-01",
+      "latest_update_title": "Escalating Student Protests in France Lead to Hundreds of Arrests and Violence",
+      "coverage_score": 0.929,
+      "recency_score": 1.0,
+      "rank_score": 0.97,
+      "context_summary": "Muninn first tracked this thread on 2026-09-25: Protests Erupt in India Demanding Resignation of Election Chief. The latest development is Escalating Student Protests in France Lead to Hundreds of Arrests and Violence.",
+      "cta_label": "Explore 5 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "A youth group known as the 'Cockroach' movement has threatened to resume mass protests unless Gyanesh Kumar resigns as head of India's election commission. A later development was Protests Erupt in Madrid Over Eviction of 87-Year-Old Resident. Most recently, protests in France have escalated as students and public workers demonstrate against planned budget cuts.",
+      "summary": "A youth group known as the 'Cockroach' movement has threatened to resume mass protests unless Gyanesh Kumar resigns as head of India's election commission. A later development was Protests Erupt in Madrid Over Eviction of 87-Year-Old Resident. Most recently, student protests in France have escalated, resulting in violent clashes and widespread unrest.",
       "key_developments": [
         {
           "development_id": "story_c777191e98b23c65",
@@ -372,6 +445,11 @@
           "development_id": "story_95aa1afe728f64a4",
           "date": "2026-09-29",
           "title": "Protests Erupt in France as Students and Workers Clash with Police Over Budget Cuts"
+        },
+        {
+          "development_id": "story_dc423d7b866ef392",
+          "date": "2026-10-01",
+          "title": "Escalating Student Protests in France Lead to Hundreds of Arrests and Violence"
         }
       ],
       "sources": [
@@ -428,9 +506,21 @@
           "source": "The Guardian - World",
           "link": "https://www.theguardian.com/world/2026/sep/29/french-students-police-clash-school-blockades-violent",
           "source_bias": "left"
+        },
+        {
+          "title": "France rocked by student riots as hundreds arrested, violence spreads nationwide",
+          "source": "Fox News",
+          "link": "https://www.foxnews.com/world/france-rocked-student-riots-hundreds-arrested-violence-spreads-nationwide",
+          "source_bias": "right"
+        },
+        {
+          "title": "France: Hundreds arrested as student protests escalate",
+          "source": "DW - English",
+          "link": "https://www.dw.com/en/france-hundreds-arrested-as-student-protests-escalate/a-79495633?maca=en-rss-en-all-1573-rdf",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-09-29",
+      "updated_at": "2026-10-01",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -439,7 +529,7 @@
         "event_id": "event_ceuta-requests-national-emergency-amid-surge_4919a90e1a",
         "title": "Ceuta Border Surge",
         "relationship": "related_topic",
-        "confidence": 0.809,
+        "confidence": 0.813,
         "shared_entities": [
           "france",
           "madrid",
@@ -487,10 +577,13 @@
       "across",
       "action",
       "address",
+      "agitator",
       "allegation",
       "also",
+      "among",
       "anger",
       "arrest",
+      "arrested",
       "blockade",
       "budget",
       "calls",
@@ -517,27 +610,34 @@
       "disperse",
       "elderly",
       "election",
+      "enforcement",
       "erupt",
       "escalated",
+      "escalating",
       "eviction",
       "follow",
       "france",
       "further",
       "gas",
       "group",
+      "grow",
       "gyanesh",
       "head",
       "highlight",
       "home",
       "housing",
+      "hundred",
       "incident",
       "including",
       "india",
       "injurie",
+      "intensity",
+      "involvement",
       "issue",
       "join",
       "known",
       "kumar",
+      "lead",
       "leading",
       "long",
       "madrid",
@@ -547,8 +647,11 @@
       "movement",
       "multiple",
       "night",
+      "noting",
+      "numerou",
       "ongoing",
       "opposition",
+      "outside",
       "particularly",
       "partie",
       "planned",
@@ -566,12 +669,15 @@
       "resignation",
       "responded",
       "resulted",
+      "resulting",
       "resume",
       "rigging",
       "rising",
+      "scale",
       "school",
       "second",
       "shortage",
+      "situation",
       "sizes",
       "spain",
       "sparked",
@@ -584,6 +690,9 @@
       "threatened",
       "timetable",
       "unless",
+      "unrest",
+      "violence",
+      "violent",
       "which",
       "widespread",
       "woman",
@@ -598,10 +707,13 @@
       "demanding_resignation",
       "elderly_woman",
       "election_chief",
+      "escalating_student",
       "eviction_tens",
       "france",
+      "france_lead",
       "gyanesh_kumar",
       "housing_crisi",
+      "hundred",
       "india",
       "india_demanding",
       "madrid",
@@ -609,12 +721,14 @@
       "protest_erupt",
       "puerta",
       "spain",
+      "student_protest",
+      "violence_student",
       "woman_eviction",
       "worker_clash",
       "year-old",
       "year-old_resident"
     ],
-    "search_text": "200 87-year-old abascal across action address allegation also anger arrest blockade budget budget_cuts calls camp camped carmen carmen_abascal chief clash clashe class cockroach commission concern congress costs creating crisi cuts cuts_protest demand demanding demanding_resignation demonstrate demonstration demonstrator disperse elderly elderly_woman election election_chief erupt escalated eviction eviction_tens follow france further gas group gyanesh gyanesh_kumar head highlight home housing housing_crisi incident including india india_demanding injurie issue join known kumar leading long madrid makeshift maricarmen mass mass_protest movement multiple night ongoing opposition particularly partie planned prevent prompted protest protest_erupt protested protester protesting public puerta regarding resident resign resignation responded resulted resume rigging rising school second shortage sizes spain sparked spread student teacher tear tens thousand threatened timetable unless which widespread woman woman_eviction worker worker_clash year-old year-old_resident years youth"
+    "search_text": "200 87-year-old abascal across action address agitator allegation also among anger arrest arrested blockade budget budget_cuts calls camp camped carmen carmen_abascal chief clash clashe class cockroach commission concern congress costs creating crisi cuts cuts_protest demand demanding demanding_resignation demonstrate demonstration demonstrator disperse elderly elderly_woman election election_chief enforcement erupt escalated escalating escalating_student eviction eviction_tens follow france france_lead further gas group grow gyanesh gyanesh_kumar head highlight home housing housing_crisi hundred incident including india india_demanding injurie intensity involvement issue join known kumar lead leading long madrid makeshift maricarmen mass mass_protest movement multiple night noting numerou ongoing opposition outside particularly partie planned prevent prompted protest protest_erupt protested protester protesting public puerta regarding resident resign resignation responded resulted resulting resume rigging rising scale school second shortage situation sizes spain sparked spread student student_protest teacher tear tens thousand threatened timetable unless unrest violence violence_student violent which widespread woman woman_eviction worker worker_clash year-old year-old_resident years youth"
   },
   "related_events": [
     {

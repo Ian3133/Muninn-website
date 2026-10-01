@@ -15,7 +15,7 @@
     "summary": "British police arrested five men on suspicion of terrorism and explosives offenses near RAF Fairford, a UK air base used by US forces. The arrests occurred after reports of three suspicious vehicles heading toward the military airfield. Homes in the vicinity were evacuated as bomb disposal teams conducted investigations.",
     "status": "active",
     "first_seen_at": "2026-09-27",
-    "last_seen_at": "2026-09-28",
+    "last_seen_at": "2026-10-01",
     "timeline": [
       {
         "development_id": "story_8e5b6d4c6138da58",
@@ -282,6 +282,94 @@
           "story_8fbebe3a8eb657e2"
         ],
         "revision_count": 2
+      },
+      {
+        "development_id": "story_3b1f7500fdb1b8c4",
+        "daily_story_id": "story_3b1f7500fdb1b8c4",
+        "date": "2026-10-01",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "UK-Iranian National Arrested in RAF Fairford Terror Investigation",
+        "summary": "A dual UK-Iranian national has been arrested by counter-terrorism police in connection with a suspected terror plot involving RAF Fairford. This arrest marks the sixth related to the incident, which British officials believe may have involved Iranian planning. The individual, aged 27, was taken into custody as part of ongoing investigations following the earlier arrests of five others, who have since been released on bail.",
+        "topic_label": "Terrorism Investigation",
+        "development_type": "investigation",
+        "key_facts": [
+          "A dual UK-Iranian national was arrested on suspicion of preparing terrorist acts.",
+          "This arrest is the sixth in connection with the RAF Fairford incident.",
+          "British officials suspect Iranian involvement in planning the incident."
+        ],
+        "source_count": 4,
+        "sources": [
+          "Al Jazeera English",
+          "New York Times",
+          "RTE News",
+          "Sky News"
+        ],
+        "source_urls": [
+          "https://news.sky.com/story/dual-uk-iranian-national-arrested-over-raf-fairford-incident-counter-terror-police-say-13594090",
+          "https://www.rte.ie/news/2026/1001/1593714-raf-fairford-incident",
+          "https://www.nytimes.com/2026/10/01/world/europe/uk-iran-terrorism-raf-fairford.html",
+          "https://www.aljazeera.com/news/2026/10/1/british-police-arrest-uk-iranian-national-over-airbase-incident?traffic_source=rss"
+        ],
+        "source_details": [
+          {
+            "title": "Dual UK-Iranian national arrested over RAF Fairford incident, counter terror police say",
+            "source": "Sky News",
+            "link": "https://news.sky.com/story/dual-uk-iranian-national-arrested-over-raf-fairford-incident-counter-terror-police-say-13594090",
+            "source_bias": "center"
+          },
+          {
+            "title": "UK-Iranian national arrested over RAF Fairford incident",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/2026/1001/1593714-raf-fairford-incident",
+            "source_bias": "center"
+          },
+          {
+            "title": "UK-Iranian Man Arrested in Connection to RAF Fairford Air Base Incident",
+            "source": "New York Times",
+            "link": "https://www.nytimes.com/2026/10/01/world/europe/uk-iran-terrorism-raf-fairford.html",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "British police arrest UK-Iranian national over airbase incident",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/news/2026/10/1/british-police-arrest-uk-iranian-national-over-airbase-incident?traffic_source=rss",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_8e5b6d4c6138da58",
+          "shared_tokens": [
+            "arrest",
+            "arrested",
+            "britain",
+            "fairford",
+            "five",
+            "incident",
+            "investigation",
+            "suspicion",
+            "terrorism"
+          ],
+          "shared_entities": [
+            "britain",
+            "raf",
+            "raf_fairford",
+            "terrorism_investigation"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-01",
+        "last_seen_at": "2026-10-01",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -311,12 +399,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 2,
+      "public_development_count": 3,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Five Men Released on Bail After RAF Base Terror Plot Arrests",
-    "latest_summary": "Five British men arrested in connection with a suspected terror plot near an RAF airbase have been granted bail. The head of the UK's Counter Terrorism Policing confirmed that while they are released, they remain under investigation and face strict conditions.",
+    "latest_title": "UK-Iranian National Arrested in RAF Fairford Terror Investigation",
+    "latest_summary": "A dual UK-Iranian national has been arrested by counter-terrorism police in connection with a suspected terror plot involving RAF Fairford. This arrest marks the sixth related to the incident, which British officials believe may have involved Iranian planning. The individual, aged 27, was taken into custody as part of ongoing investigations following the earlier arrests of five others, who have since been released on bail.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": false,
@@ -326,28 +414,29 @@
       "display_title": "Five Arrested in Terrorism Investigation Near UK Air Base Used by US Forces",
       "milestone_development_ids": [
         "story_8e5b6d4c6138da58",
-        "story_a85d0b3d3eb15a73"
+        "story_a85d0b3d3eb15a73",
+        "story_3b1f7500fdb1b8c4"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-09-28",
-      "development_count": 2,
-      "coverage_packet_count": 4,
-      "date_count": 2,
-      "source_count": 16,
-      "independent_source_count": 11,
+      "summary_updated_at": "2026-10-01",
+      "development_count": 3,
+      "coverage_packet_count": 5,
+      "date_count": 3,
+      "source_count": 20,
+      "independent_source_count": 12,
       "first_date": "2026-09-27",
-      "latest_date": "2026-09-28",
-      "latest_update_title": "Five Men Released on Bail After RAF Base Terror Plot Arrests",
-      "coverage_score": 0.647,
-      "recency_score": 0.778,
-      "rank_score": 0.723,
-      "context_summary": "Muninn first tracked this thread on 2026-09-27: Five Arrested in Terrorism Investigation Near UK Air Base Used by US Forces. The latest development is Five Men Released on Bail After RAF Base Terror Plot Arrests.",
+      "latest_date": "2026-10-01",
+      "latest_update_title": "UK-Iranian National Arrested in RAF Fairford Terror Investigation",
+      "coverage_score": 0.745,
+      "recency_score": 1.0,
+      "rank_score": 0.893,
+      "context_summary": "Muninn first tracked this thread on 2026-09-27: Five Arrested in Terrorism Investigation Near UK Air Base Used by US Forces. The latest development is UK-Iranian National Arrested in RAF Fairford Terror Investigation.",
       "cta_label": ""
     },
     "event_summary": {
       "available": true,
-      "summary": "British police arrested five men on suspicion of terrorism and explosives offenses near RAF Fairford, a UK air base used by US forces. Most recently, five British men arrested in connection with a suspected terror plot near an RAF airbase have been granted bail.",
+      "summary": "British police arrested five men on suspicion of terrorism and explosives offenses near RAF Fairford, a UK air base used by US forces. A later development was Five Men Released on Bail After RAF Base Terror Plot Arrests. Most recently, a dual UK-Iranian national has been arrested by counter-terrorism police in connection with a suspected terror plot involving RAF Fairford.",
       "key_developments": [
         {
           "development_id": "story_8e5b6d4c6138da58",
@@ -358,6 +447,11 @@
           "development_id": "story_a85d0b3d3eb15a73",
           "date": "2026-09-28",
           "title": "Five Men Released on Bail After RAF Base Terror Plot Arrests"
+        },
+        {
+          "development_id": "story_3b1f7500fdb1b8c4",
+          "date": "2026-10-01",
+          "title": "UK-Iranian National Arrested in RAF Fairford Terror Investigation"
         }
       ],
       "sources": [
@@ -456,9 +550,33 @@
           "source": "PBS News - Headlines",
           "link": "https://www.pbs.org/newshour/world/uk-police-say-5-men-arrested-near-a-u-s-run-air-base-will-be-released-on-bail",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Dual UK-Iranian national arrested over RAF Fairford incident, counter terror police say",
+          "source": "Sky News",
+          "link": "https://news.sky.com/story/dual-uk-iranian-national-arrested-over-raf-fairford-incident-counter-terror-police-say-13594090",
+          "source_bias": "center"
+        },
+        {
+          "title": "UK-Iranian national arrested over RAF Fairford incident",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/2026/1001/1593714-raf-fairford-incident",
+          "source_bias": "center"
+        },
+        {
+          "title": "UK-Iranian Man Arrested in Connection to RAF Fairford Air Base Incident",
+          "source": "New York Times",
+          "link": "https://www.nytimes.com/2026/10/01/world/europe/uk-iran-terrorism-raf-fairford.html",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "British police arrest UK-Iranian national over airbase incident",
+          "source": "Al Jazeera English",
+          "link": "https://www.aljazeera.com/news/2026/10/1/british-police-arrest-uk-iranian-national-over-airbase-incident?traffic_source=rss",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-09-28",
+      "updated_at": "2026-10-01",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "developing_event",
@@ -467,11 +585,13 @@
         "event_id": "event_uk-prime-minister-suggests-iran-s-involvemen_3f117f9250",
         "title": "UK Prime Minister Suggests Iran's Involvement in RAF Fairford Incident",
         "relationship": "related_topic",
-        "confidence": 0.76,
+        "confidence": 0.863,
         "shared_entities": [
           "britain",
+          "iran",
           "raf",
           "raf_fairford",
+          "raf_fairford.",
           "uk"
         ]
       },
@@ -479,9 +599,10 @@
         "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
         "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
         "relationship": "related_topic",
-        "confidence": 0.755,
+        "confidence": 0.802,
         "shared_entities": [
           "air_base",
+          "iran",
           "uk",
           "us"
         ]
@@ -490,7 +611,7 @@
         "event_id": "event_foreign-actor-suspected-in-raf-base-plot-say_406d6b5840",
         "title": "Foreign Actor Suspected in RAF Base Plot, Says Rubio",
         "relationship": "related_topic",
-        "confidence": 0.717,
+        "confidence": 0.725,
         "shared_entities": [
           "raf",
           "raf_base",
@@ -498,12 +619,12 @@
         ]
       },
       {
-        "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
-        "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
+        "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+        "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
         "relationship": "related_topic",
-        "confidence": 0.693,
+        "confidence": 0.718,
         "shared_entities": [
-          "uk",
+          "iran",
           "us"
         ]
       }
@@ -611,12 +732,14 @@
       "focal_tall_y": 0.48
     },
     "search_tokens": [
+      "aged",
       "airbase",
       "airfield",
       "arrest",
       "arrested",
       "bail",
       "base",
+      "believe",
       "bomb",
       "britain",
       "condition",
@@ -624,7 +747,11 @@
       "confirmed",
       "connection",
       "counter",
+      "counter-terrorism",
+      "custody",
       "disposal",
+      "dual",
+      "earlier",
       "evacuated",
       "explosive",
       "face",
@@ -635,19 +762,34 @@
       "head",
       "heading",
       "homes",
+      "incident",
+      "individual",
       "investigation",
+      "involved",
+      "involving",
+      "iran",
+      "marks",
       "military",
+      "national",
       "near",
       "occurred",
       "offense",
+      "ongoing",
+      "other",
+      "part",
+      "planning",
       "plot",
       "policing",
+      "related",
       "released",
       "remain",
+      "since",
+      "sixth",
       "strict",
       "suspected",
       "suspicion",
       "suspiciou",
+      "taken",
       "teams",
       "terror",
       "terrorism",
@@ -655,10 +797,12 @@
       "three",
       "toward",
       "uk",
+      "uk-iranian",
       "under",
       "used",
       "vehicle",
       "vicinity",
+      "which",
       "while"
     ],
     "entities": [
@@ -667,21 +811,28 @@
       "base_used",
       "britain",
       "counter_terrorism",
+      "fairford_terror",
       "force_britain",
       "investigation_near",
+      "iran",
       "men_released",
+      "national_arrested",
       "plot_arrest",
       "raf",
       "raf_base",
       "raf_fairford",
+      "raf_fairford.",
+      "terror_investigation",
       "terror_plot",
       "terrorism",
       "terrorism_investigation",
       "terrorism_policing",
       "uk",
+      "uk-iranian",
+      "uk-iranian_national",
       "us"
     ],
-    "search_text": "air_base airbase airfield arrest arrested bail base base_terror base_used bomb britain condition conducted confirmed connection counter counter_terrorism disposal evacuated explosive face fairford five force force_britain granted head heading homes investigation investigation_near men_released military near occurred offense plot plot_arrest policing raf raf_base raf_fairford released remain strict suspected suspicion suspiciou teams terror terror_plot terrorism terrorism_investigation terrorism_policing they three toward uk under us used vehicle vicinity while"
+    "search_text": "aged air_base airbase airfield arrest arrested bail base base_terror base_used believe bomb britain condition conducted confirmed connection counter counter-terrorism counter_terrorism custody disposal dual earlier evacuated explosive face fairford fairford_terror five force force_britain granted head heading homes incident individual investigation investigation_near involved involving iran marks men_released military national national_arrested near occurred offense ongoing other part planning plot plot_arrest policing raf raf_base raf_fairford raf_fairford. related released remain since sixth strict suspected suspicion suspiciou taken teams terror terror_investigation terror_plot terrorism terrorism_investigation terrorism_policing they three toward uk uk-iranian uk-iranian_national under us used vehicle vicinity which while"
   },
   "related_events": [
     {
@@ -719,20 +870,20 @@
       "href": "/timeline.html?event=event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b"
     },
     {
-      "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
-      "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
-      "summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Russian Strikes Kill Civilians in Ukraine Following Putin's Warning.",
+      "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+      "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
+      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Iran's President Responds to Trump's Threat at UN General Assembly.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
-      "first_seen_at": "2026-07-31",
-      "last_seen_at": "2026-09-12",
-      "development_count": 37,
-      "latest_title": "Russian Strikes Kill Civilians in Ukraine Following Putin's Warning",
-      "topic_label": "Gaza Peace Deal",
+      "first_seen_at": "2026-07-22",
+      "last_seen_at": "2026-09-23",
+      "development_count": 62,
+      "latest_title": "Iran's President Responds to Trump's Threat at UN General Assembly",
+      "topic_label": "Iran War",
       "hero_image": {
-        "url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
+        "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
         "source": "Muninn AI illustration",
         "author": "OpenAI GPT Image 2",
         "license": "AI-generated content",
@@ -750,7 +901,7 @@
         "focal_tall_x": 0.5,
         "focal_tall_y": 0.48
       },
-      "href": "/timeline.html?event=event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b"
+      "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
     }
   ]
 }

@@ -15,7 +15,7 @@
     "summary": "French President Emmanuel Macron has ordered protective measures for the country's critical infrastructure and defense industry in response to escalating Russian hybrid attacks. This announcement followed a meeting with political party leaders to discuss the growing threats from Russia, particularly in light of recent developments in Europe. Macron emphasized that the hybrid threat from Moscow has intensified in recent weeks, necessitating immediate action.",
     "status": "active",
     "first_seen_at": "2026-09-18",
-    "last_seen_at": "2026-09-30",
+    "last_seen_at": "2026-10-01",
     "timeline": [
       {
         "development_id": "story_d3dbd0df63be1e56",
@@ -912,6 +912,89 @@
         "first_seen_at": "2026-09-30",
         "last_seen_at": "2026-09-30",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_f470bd0ba841299b",
+        "daily_story_id": "story_f470bd0ba841299b",
+        "date": "2026-10-01",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Russian Drone Strikes School in Kyiv Amid Ongoing Air Assault",
+        "summary": "A Russian drone strike hit a school in Kyiv, causing a fire but resulting in no injuries among students, according to Ukrainian authorities. The attack is part of a broader wave of air assaults by Moscow, which also targeted a main bridge in the city, disrupting transport.",
+        "topic_label": "Ukraine Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "Russian drone struck a school in Kyiv.",
+          "The strike caused a fire but no injuries to pupils.",
+          "The attack is part of ongoing air assaults by Russia."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Al Jazeera English",
+          "RTE News"
+        ],
+        "source_urls": [
+          "https://www.aljazeera.com/news/2026/10/1/russian-drone-hits-school-in-ukraines-kyiv-as-moscow-presses-air-assault?traffic_source=rss",
+          "https://www.rte.ie/news/ukraine/2026/1001/1593666-ukraine-russia"
+        ],
+        "source_details": [
+          {
+            "title": "Russian drone hits school in Ukraine’s Kyiv as Moscow presses air assault",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/news/2026/10/1/russian-drone-hits-school-in-ukraines-kyiv-as-moscow-presses-air-assault?traffic_source=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Russian drone strikes Kyiv school, pupils escape unhurt",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/ukraine/2026/1001/1593666-ukraine-russia",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "attack",
+            "strike"
+          ],
+          "shared_incident_anchors": [
+            "drone",
+            "kyiv",
+            "russia",
+            "ukraine"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "attack",
+            "caused",
+            "conflict",
+            "drone",
+            "injurie",
+            "kyiv",
+            "russia",
+            "school",
+            "strike",
+            "ukraine"
+          ],
+          "shared_entities": [
+            "drone",
+            "kyiv",
+            "russia",
+            "ukraine"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_18ad127ff02d5682",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-01",
+        "last_seen_at": "2026-10-01",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -942,12 +1025,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 10,
+      "public_development_count": 11,
       "questionable_development_count": 1,
       "review_required": true
     },
-    "latest_title": "Russia Launches Major Air Campaign Against Ukrainian Energy Infrastructure",
-    "latest_summary": "Russia has initiated a significant air campaign targeting Ukraine's energy grid, striking power facilities and infrastructure in Kyiv and other regions. This attack is reported to be the most intense on energy sites in several months, resulting in at least seven fatalities and extensive damage to infrastructure.",
+    "latest_title": "Russian Drone Strikes School in Kyiv Amid Ongoing Air Assault",
+    "latest_summary": "A Russian drone strike hit a school in Kyiv, causing a fire but resulting in no injuries among students, according to Ukrainian authorities. The attack is part of a broader wave of air assaults by Moscow, which also targeted a main bridge in the city, disrupting transport.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -958,29 +1041,29 @@
       "milestone_development_ids": [
         "story_d3dbd0df63be1e56",
         "story_7b4d9e1d7ec3a0c6",
-        "story_bd14b201e1633baa",
-        "story_ad17ba0feca3c75b"
+        "story_f1a016f31f9411bf",
+        "story_f470bd0ba841299b"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-09-30",
-      "development_count": 10,
-      "coverage_packet_count": 11,
-      "date_count": 8,
-      "source_count": 33,
+      "summary_updated_at": "2026-10-01",
+      "development_count": 11,
+      "coverage_packet_count": 12,
+      "date_count": 9,
+      "source_count": 35,
       "independent_source_count": 21,
       "first_date": "2026-09-18",
-      "latest_date": "2026-09-30",
-      "latest_update_title": "Russia Launches Major Air Campaign Against Ukrainian Energy Infrastructure",
+      "latest_date": "2026-10-01",
+      "latest_update_title": "Russian Drone Strikes School in Kyiv Amid Ongoing Air Assault",
       "coverage_score": 1.0,
       "recency_score": 1.0,
       "rank_score": 1.0,
-      "context_summary": "Muninn first tracked this thread on 2026-09-18: Macron Implements Measures Against Intensifying Russian Hybrid Threats. The latest development is Russia Launches Major Air Campaign Against Ukrainian Energy Infrastructure.",
-      "cta_label": "Explore 10 developments"
+      "context_summary": "Muninn first tracked this thread on 2026-09-18: Macron Implements Measures Against Intensifying Russian Hybrid Threats. The latest development is Russian Drone Strikes School in Kyiv Amid Ongoing Air Assault.",
+      "cta_label": "Explore 11 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "French President Emmanuel Macron has ordered protective measures for the country's critical infrastructure and defense industry in response to escalating Russian hybrid attacks. A later development was Russian Drone Strike in Kyiv Claims Life of Teen and Injures 20 Others. Most recently, russia has initiated a significant air campaign targeting Ukraine's energy grid, striking power facilities and infrastructure in Kyiv and other regions.",
+      "summary": "French President Emmanuel Macron has ordered protective measures for the country's critical infrastructure and defense industry in response to escalating Russian hybrid attacks. A later development was Russian Drone Strike in Kyiv Claims Life of Teen and Injures 20 Others. Most recently, a Russian drone strike hit a school in Kyiv, causing a fire but resulting in no injuries among students, according to Ukrainian authorities.",
       "key_developments": [
         {
           "development_id": "story_d3dbd0df63be1e56",
@@ -993,14 +1076,14 @@
           "title": "Syrian President Asserts Golan Heights Will Remain Syrian Territory"
         },
         {
-          "development_id": "story_bd14b201e1633baa",
+          "development_id": "story_f1a016f31f9411bf",
           "date": "2026-09-28",
-          "title": "Russian Drone Strikes Kyiv Science Academy and Hospital, Causing Casualties"
+          "title": "Russian Strike on Kharkiv Apartment Block Injures 25"
         },
         {
-          "development_id": "story_ad17ba0feca3c75b",
-          "date": "2026-09-30",
-          "title": "Russia Launches Major Air Campaign Against Ukrainian Energy Infrastructure"
+          "development_id": "story_f470bd0ba841299b",
+          "date": "2026-10-01",
+          "title": "Russian Drone Strikes School in Kyiv Amid Ongoing Air Assault"
         }
       ],
       "sources": [
@@ -1201,13 +1284,45 @@
           "source": "CBC - Top Stories",
           "link": "https://www.cbc.ca/news/world/kyiv-attacked-russian-missiles-drones-9.7363623?cmp=rss",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Russian drone hits school in Ukraine’s Kyiv as Moscow presses air assault",
+          "source": "Al Jazeera English",
+          "link": "https://www.aljazeera.com/news/2026/10/1/russian-drone-hits-school-in-ukraines-kyiv-as-moscow-presses-air-assault?traffic_source=rss",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Russian drone strikes Kyiv school, pupils escape unhurt",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/ukraine/2026/1001/1593666-ukraine-russia",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-09-30",
+      "updated_at": "2026-10-01",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
     "related_events": [
+      {
+        "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+        "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
+        "relationship": "related_topic",
+        "confidence": 0.95,
+        "shared_entities": [
+          "israel",
+          "kyiv",
+          "nation_general",
+          "russia",
+          "russia_drone",
+          "russia_launche",
+          "ukraine",
+          "ukraine.",
+          "un",
+          "united_nation",
+          "us",
+          "volodymyr_zelenskyy"
+        ]
+      },
       {
         "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
         "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
@@ -1231,30 +1346,10 @@
         ]
       },
       {
-        "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
-        "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
-        "relationship": "related_topic",
-        "confidence": 0.95,
-        "shared_entities": [
-          "israel",
-          "kyiv",
-          "nation_general",
-          "russia",
-          "russia_drone",
-          "russia_launche",
-          "ukraine",
-          "ukraine.",
-          "un",
-          "united_nation",
-          "us",
-          "volodymyr_zelenskyy"
-        ]
-      },
-      {
         "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
         "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
         "relationship": "related_topic",
-        "confidence": 0.919,
+        "confidence": 0.92,
         "shared_entities": [
           "general_assembly.",
           "russia",
@@ -1269,7 +1364,7 @@
         "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
         "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
         "relationship": "related_topic",
-        "confidence": 0.913,
+        "confidence": 0.912,
         "shared_entities": [
           "kyiv",
           "russia",
@@ -1410,6 +1505,8 @@
       "ahmed",
       "al-sharaa",
       "allegation",
+      "also",
+      "among",
       "announcement",
       "apartment",
       "apply",
@@ -1421,6 +1518,7 @@
       "attempted",
       "authoritie",
       "block",
+      "bridge",
       "broader",
       "building",
       "campaign",
@@ -1448,6 +1546,7 @@
       "despite",
       "development",
       "discuss",
+      "disrupting",
       "district",
       "drawn",
       "drone",
@@ -1468,6 +1567,7 @@
       "facilitie",
       "fatalitie",
       "final",
+      "fire",
       "flame",
       "followed",
       "france",
@@ -1514,6 +1614,7 @@
       "local",
       "location",
       "macron",
+      "main",
       "marking",
       "massive",
       "mayor",
@@ -1569,6 +1670,7 @@
       "sabotage",
       "scale",
       "scheduled",
+      "school",
       "science",
       "security",
       "seen",
@@ -1585,6 +1687,7 @@
       "strike",
       "striking",
       "struck",
+      "student",
       "such",
       "suggesting",
       "supplie",
@@ -1598,6 +1701,7 @@
       "territory",
       "threat",
       "tightly",
+      "transport",
       "ukraine",
       "unacceptable",
       "united",
@@ -1607,6 +1711,7 @@
       "violence",
       "visible",
       "volodymyr",
+      "wave",
       "wednesday",
       "weeks",
       "when",
@@ -1615,6 +1720,7 @@
     ],
     "entities": [
       "accuse_russia",
+      "air_assault",
       "air_campaign",
       "al-sharaa",
       "apartment_block",
@@ -1662,6 +1768,7 @@
       "nation_general",
       "national_academy",
       "nato",
+      "ongoing_air",
       "orchestrating_arson",
       "remain_syrian",
       "russia",
@@ -1685,43 +1792,9 @@
       "volodymyr_zelenskyy",
       "wednesday_kyiv"
     ],
-    "search_text": "000 14-year-old 16-storey 2026 academy accuse accuse_russia accused action address affected ahead ahmed air_campaign al-sharaa allegation announcement apartment apartment_block apply arson assault assembly assert assert_golan attack attempted authoritie block block_injure broader building campaign capital casualtie caused causing causing_casualtie central children claim claim_life coincided commissioned company company_estonia condemned confirmed controlled critical criticized damage damage_ukraine date death declared defense defense_company described despite development discuss district drawn drone drone_ahead election election_ukraine emergency emmanuel emmanuel_macron emphasized energy energy_infrastructure escalating escape estonia estonia_accuse estonian europe europe. europe._macron european evacuated event extensive facilitie fatalitie final flame followed france fuel general general_assembly. golan golan_height grid growing height historic hospital hospital_causing hours hybrid hybrid_threat immediate implement implement_measure incident including increasing indicate individual industry infrastructure infrastructure_russia initiated injure injure_other injurie injuring instead intense intensified intensifying intensifying_russia involving israel jersey jersey._kyiv just kharkiv kharkiv_apartment kyiv kyiv_claim kyiv_pecherskyi kyiv_science kyiv_struck largest launche launche_massive launched leader least life light local location macron macron_implement marking massive massive_drone mayor measure meeting mid-august military milrem milrem_robotic month moscow moscow. moscow_causing most multiple nation nation_general national national_academy nato necessitating nine nine-storey numerou occupation occurred oil ongoing orchestrating orchestrating_arson ordered other overnight parliamentary part particularly party pattern pecherskyi political power protective railway recent recognition refinery region regional reiterated remain remain_syrian reported resident residential response resulted resulting robotic russia russia. russia_drone russia_election russia_hybrid russia_launche sabotage scale scheduled science science_academy security seen september service seven several should significant sites sovereignty stance station strike striking struck such suggesting supplie support syria syrian syrian_territory targeted targeting teen tension territory territory_syrian threat threat_france tightly ukraine ukraine. ukraine_energy ukraine_launche un unacceptable united united_nation unmanned us variou vehicle violence visible volodymyr volodymyr_zelenskyy wednesday wednesday_kyiv weeks when which zelenskyy"
+    "search_text": "000 14-year-old 16-storey 2026 academy accuse accuse_russia accused action address affected ahead ahmed air_assault air_campaign al-sharaa allegation also among announcement apartment apartment_block apply arson assault assembly assert assert_golan attack attempted authoritie block block_injure bridge broader building campaign capital casualtie caused causing causing_casualtie central children claim claim_life coincided commissioned company company_estonia condemned confirmed controlled critical criticized damage damage_ukraine date death declared defense defense_company described despite development discuss disrupting district drawn drone drone_ahead election election_ukraine emergency emmanuel emmanuel_macron emphasized energy energy_infrastructure escalating escape estonia estonia_accuse estonian europe europe. europe._macron european evacuated event extensive facilitie fatalitie final fire flame followed france fuel general general_assembly. golan golan_height grid growing height historic hospital hospital_causing hours hybrid hybrid_threat immediate implement implement_measure incident including increasing indicate individual industry infrastructure infrastructure_russia initiated injure injure_other injurie injuring instead intense intensified intensifying intensifying_russia involving israel jersey jersey._kyiv just kharkiv kharkiv_apartment kyiv kyiv_claim kyiv_pecherskyi kyiv_science kyiv_struck largest launche launche_massive launched leader least life light local location macron macron_implement main marking massive massive_drone mayor measure meeting mid-august military milrem milrem_robotic month moscow moscow. moscow_causing most multiple nation nation_general national national_academy nato necessitating nine nine-storey numerou occupation occurred oil ongoing ongoing_air orchestrating orchestrating_arson ordered other overnight parliamentary part particularly party pattern pecherskyi political power protective railway recent recognition refinery region regional reiterated remain remain_syrian reported resident residential response resulted resulting robotic russia russia. russia_drone russia_election russia_hybrid russia_launche sabotage scale scheduled school science science_academy security seen september service seven several should significant sites sovereignty stance station strike striking struck student such suggesting supplie support syria syrian syrian_territory targeted targeting teen tension territory territory_syrian threat threat_france tightly transport ukraine ukraine. ukraine_energy ukraine_launche un unacceptable united united_nation unmanned us variou vehicle violence visible volodymyr volodymyr_zelenskyy wave wednesday wednesday_kyiv weeks when which zelenskyy"
   },
   "related_events": [
-    {
-      "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
-      "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
-      "summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Russian Strikes Kill Civilians in Ukraine Following Putin's Warning.",
-      "activity_status": "active",
-      "stage": "timeline",
-      "stage_label": "Timeline",
-      "first_seen_at": "2026-07-31",
-      "last_seen_at": "2026-09-12",
-      "development_count": 37,
-      "latest_title": "Russian Strikes Kill Civilians in Ukraine Following Putin's Warning",
-      "topic_label": "Gaza Peace Deal",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b"
-    },
     {
       "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
       "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
@@ -1755,6 +1828,40 @@
         "focal_tall_y": 0.48
       },
       "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
+    },
+    {
+      "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
+      "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
+      "summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Russian Strikes Kill Civilians in Ukraine Following Putin's Warning.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-31",
+      "last_seen_at": "2026-09-12",
+      "development_count": 37,
+      "latest_title": "Russian Strikes Kill Civilians in Ukraine Following Putin's Warning",
+      "topic_label": "Gaza Peace Deal",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b"
     },
     {
       "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
