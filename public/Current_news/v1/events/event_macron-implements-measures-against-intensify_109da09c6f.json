@@ -15,7 +15,7 @@
     "summary": "French President Emmanuel Macron has ordered protective measures for the country's critical infrastructure and defense industry in response to escalating Russian hybrid attacks. This announcement followed a meeting with political party leaders to discuss the growing threats from Russia, particularly in light of recent developments in Europe. Macron emphasized that the hybrid threat from Moscow has intensified in recent weeks, necessitating immediate action.",
     "status": "active",
     "first_seen_at": "2026-09-18",
-    "last_seen_at": "2026-10-01",
+    "last_seen_at": "2026-10-02",
     "timeline": [
       {
         "development_id": "story_d3dbd0df63be1e56",
@@ -995,6 +995,165 @@
         "first_seen_at": "2026-10-01",
         "last_seen_at": "2026-10-01",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_4fdc4b36687c4d28",
+        "daily_story_id": "story_4fdc4b36687c4d28",
+        "date": "2026-10-02",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Kyiv Mayor Reports Severe Disruption from Russian Attacks",
+        "summary": "The mayor of Kyiv has stated that Russian attacks on key infrastructure are severely disrupting the city, describing the situation as 'tearing Kyiv apart.' Recent strikes have particularly impacted a bridge that connects the eastern and western parts of the capital, causing significant traffic paralysis.",
+        "topic_label": "Ukraine Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "Russian attacks are targeting key infrastructure in Kyiv.",
+          "The mayor described the situation as 'tearing Kyiv apart.'",
+          "Strikes have caused severe traffic disruptions, especially on a crucial bridge."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Channel NewsAsia",
+          "RTE News"
+        ],
+        "source_urls": [
+          "https://www.rte.ie/news/world/2026/1002/1593734-kyiv-russian-attacks",
+          "https://www.channelnewsasia.com/world/russia-tearing-kyiv-apart-mayor-says-strikes-paralyse-traffic-6426761"
+        ],
+        "source_details": [
+          {
+            "title": "Russian attacks 'tearing Kyiv apart' - city Mayor",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/world/2026/1002/1593734-kyiv-russian-attacks",
+            "source_bias": "center"
+          },
+          {
+            "title": "Russia 'tearing Kyiv apart', mayor says, as strikes paralyse traffic",
+            "source": "Channel NewsAsia",
+            "link": "https://www.channelnewsasia.com/world/russia-tearing-kyiv-apart-mayor-says-strikes-paralyse-traffic-6426761",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "attack"
+          ],
+          "shared_incident_anchors": [
+            "kyiv",
+            "russia",
+            "ukraine"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "attack",
+            "conflict",
+            "infrastructure",
+            "kyiv",
+            "russia",
+            "significant",
+            "targeting",
+            "ukraine"
+          ],
+          "shared_entities": [
+            "kyiv",
+            "russia",
+            "ukraine"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_ad17ba0feca3c75b",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-02",
+        "last_seen_at": "2026-10-02",
+        "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_7c70a246876ea6ca",
+        "daily_story_id": "story_7c70a246876ea6ca",
+        "date": "2026-10-02",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Ukraine Urges Stronger Sanctions Amid Traffic Chaos from Russian Drone Attacks",
+        "summary": "Ukraine has called for tighter sanctions against Russia following drone attacks that resulted in the closure of several bridges in Kyiv, causing significant traffic disruptions. At least one person was reported killed in the assaults, which have intensified the ongoing conflict between the two nations.",
+        "topic_label": "Ukraine Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "Ukraine calls for tighter sanctions against Russia.",
+          "Russian drone attacks led to the closure of bridges in Kyiv.",
+          "Traffic chaos ensued due to the bridge closures.",
+          "At least one fatality reported from the attacks."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Al Jazeera English",
+          "DW - English"
+        ],
+        "source_urls": [
+          "https://www.aljazeera.com/news/2026/10/2/ukraine-calls-for-tighter-sanctions-as-russian-attacks-spark-kyiv-gridlock?traffic_source=rss",
+          "https://www.dw.com/en/ukraine-kyiv-bridges-shut-after-fatal-russian-drone-assault/a-79510950?maca=en-rss-en-all-1573-rdf"
+        ],
+        "source_details": [
+          {
+            "title": "Ukraine calls for tighter sanctions as Russian attacks spark Kyiv gridlock",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/news/2026/10/2/ukraine-calls-for-tighter-sanctions-as-russian-attacks-spark-kyiv-gridlock?traffic_source=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Ukraine: Kyiv bridges shut after fatal Russian drone assault",
+            "source": "DW - English",
+            "link": "https://www.dw.com/en/ukraine-kyiv-bridges-shut-after-fatal-russian-drone-assault/a-79510950?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "attack"
+          ],
+          "shared_incident_anchors": [
+            "kyiv",
+            "russia",
+            "ukraine"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "attack",
+            "conflict",
+            "killed",
+            "kyiv",
+            "least",
+            "reported",
+            "russia",
+            "several",
+            "significant",
+            "ukraine"
+          ],
+          "shared_entities": [
+            "kyiv",
+            "russia",
+            "ukraine"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_ad17ba0feca3c75b",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-02",
+        "last_seen_at": "2026-10-02",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -1025,12 +1184,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 11,
+      "public_development_count": 13,
       "questionable_development_count": 1,
       "review_required": true
     },
-    "latest_title": "Russian Drone Strikes School in Kyiv Amid Ongoing Air Assault",
-    "latest_summary": "A Russian drone strike hit a school in Kyiv, causing a fire but resulting in no injuries among students, according to Ukrainian authorities. The attack is part of a broader wave of air assaults by Moscow, which also targeted a main bridge in the city, disrupting transport.",
+    "latest_title": "Ukraine Urges Stronger Sanctions Amid Traffic Chaos from Russian Drone Attacks",
+    "latest_summary": "Ukraine has called for tighter sanctions against Russia following drone attacks that resulted in the closure of several bridges in Kyiv, causing significant traffic disruptions. At least one person was reported killed in the assaults, which have intensified the ongoing conflict between the two nations.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -1040,30 +1199,30 @@
       "display_title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats Timeline",
       "milestone_development_ids": [
         "story_d3dbd0df63be1e56",
-        "story_7b4d9e1d7ec3a0c6",
-        "story_f1a016f31f9411bf",
-        "story_f470bd0ba841299b"
+        "story_cb2fce3e4d1b665a",
+        "story_326caac77b4b1c50",
+        "story_7c70a246876ea6ca"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-10-01",
-      "development_count": 11,
-      "coverage_packet_count": 12,
-      "date_count": 9,
-      "source_count": 35,
-      "independent_source_count": 21,
+      "summary_updated_at": "2026-10-02",
+      "development_count": 13,
+      "coverage_packet_count": 14,
+      "date_count": 10,
+      "source_count": 39,
+      "independent_source_count": 23,
       "first_date": "2026-09-18",
-      "latest_date": "2026-10-01",
-      "latest_update_title": "Russian Drone Strikes School in Kyiv Amid Ongoing Air Assault",
+      "latest_date": "2026-10-02",
+      "latest_update_title": "Ukraine Urges Stronger Sanctions Amid Traffic Chaos from Russian Drone Attacks",
       "coverage_score": 1.0,
       "recency_score": 1.0,
       "rank_score": 1.0,
-      "context_summary": "Muninn first tracked this thread on 2026-09-18: Macron Implements Measures Against Intensifying Russian Hybrid Threats. The latest development is Russian Drone Strikes School in Kyiv Amid Ongoing Air Assault.",
-      "cta_label": "Explore 11 developments"
+      "context_summary": "Muninn first tracked this thread on 2026-09-18: Macron Implements Measures Against Intensifying Russian Hybrid Threats. The latest development is Ukraine Urges Stronger Sanctions Amid Traffic Chaos from Russian Drone Attacks.",
+      "cta_label": "Explore 13 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "French President Emmanuel Macron has ordered protective measures for the country's critical infrastructure and defense industry in response to escalating Russian hybrid attacks. A later development was Russian Drone Strike in Kyiv Claims Life of Teen and Injures 20 Others. Most recently, a Russian drone strike hit a school in Kyiv, causing a fire but resulting in no injuries among students, according to Ukrainian authorities.",
+      "summary": "French President Emmanuel Macron has ordered protective measures for the country's critical infrastructure and defense industry in response to escalating Russian hybrid attacks. A later development was Russian Drone Strikes Kyiv Science Academy and Hospital, Causing Casualties. Most recently, ukraine has called for tighter sanctions against Russia following drone attacks that resulted in the closure of several bridges in Kyiv, causing significant traffic disruptions.",
       "key_developments": [
         {
           "development_id": "story_d3dbd0df63be1e56",
@@ -1071,19 +1230,19 @@
           "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats"
         },
         {
-          "development_id": "story_7b4d9e1d7ec3a0c6",
+          "development_id": "story_cb2fce3e4d1b665a",
           "date": "2026-09-23",
-          "title": "Syrian President Asserts Golan Heights Will Remain Syrian Territory"
+          "title": "Kyiv Struck by Russian Drones Ahead of Zelenskyy's UN Address"
         },
         {
-          "development_id": "story_f1a016f31f9411bf",
-          "date": "2026-09-28",
-          "title": "Russian Strike on Kharkiv Apartment Block Injures 25"
+          "development_id": "story_326caac77b4b1c50",
+          "date": "2026-09-29",
+          "title": "Estonia Accuses Russia of Orchestrating Arson Attack on Defense Company"
         },
         {
-          "development_id": "story_f470bd0ba841299b",
-          "date": "2026-10-01",
-          "title": "Russian Drone Strikes School in Kyiv Amid Ongoing Air Assault"
+          "development_id": "story_7c70a246876ea6ca",
+          "date": "2026-10-02",
+          "title": "Ukraine Urges Stronger Sanctions Amid Traffic Chaos from Russian Drone Attacks"
         }
       ],
       "sources": [
@@ -1296,9 +1455,33 @@
           "source": "RTE News",
           "link": "https://www.rte.ie/news/ukraine/2026/1001/1593666-ukraine-russia",
           "source_bias": "center"
+        },
+        {
+          "title": "Russian attacks 'tearing Kyiv apart' - city Mayor",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/world/2026/1002/1593734-kyiv-russian-attacks",
+          "source_bias": "center"
+        },
+        {
+          "title": "Russia 'tearing Kyiv apart', mayor says, as strikes paralyse traffic",
+          "source": "Channel NewsAsia",
+          "link": "https://www.channelnewsasia.com/world/russia-tearing-kyiv-apart-mayor-says-strikes-paralyse-traffic-6426761",
+          "source_bias": "center"
+        },
+        {
+          "title": "Ukraine calls for tighter sanctions as Russian attacks spark Kyiv gridlock",
+          "source": "Al Jazeera English",
+          "link": "https://www.aljazeera.com/news/2026/10/2/ukraine-calls-for-tighter-sanctions-as-russian-attacks-spark-kyiv-gridlock?traffic_source=rss",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Ukraine: Kyiv bridges shut after fatal Russian drone assault",
+          "source": "DW - English",
+          "link": "https://www.dw.com/en/ukraine-kyiv-bridges-shut-after-fatal-russian-drone-assault/a-79510950?maca=en-rss-en-all-1573-rdf",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-10-01",
+      "updated_at": "2026-10-02",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -1349,7 +1532,7 @@
         "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
         "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
         "relationship": "related_topic",
-        "confidence": 0.92,
+        "confidence": 0.919,
         "shared_entities": [
           "general_assembly.",
           "russia",
@@ -1364,7 +1547,7 @@
         "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
         "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
         "relationship": "related_topic",
-        "confidence": 0.912,
+        "confidence": 0.913,
         "shared_entities": [
           "kyiv",
           "russia",
@@ -1508,6 +1691,7 @@
       "also",
       "among",
       "announcement",
+      "apart",
       "apartment",
       "apply",
       "arson",
@@ -1521,19 +1705,24 @@
       "bridge",
       "broader",
       "building",
+      "called",
       "campaign",
       "capital",
       "casualtie",
       "caused",
       "causing",
       "central",
+      "chaos",
       "children",
       "claim",
+      "closure",
       "coincided",
       "commissioned",
       "company",
       "condemned",
       "confirmed",
+      "conflict",
+      "connect",
       "controlled",
       "critical",
       "criticized",
@@ -1543,13 +1732,16 @@
       "declared",
       "defense",
       "described",
+      "describing",
       "despite",
       "development",
       "discuss",
       "disrupting",
+      "disruption",
       "district",
       "drawn",
       "drone",
+      "eastern",
       "election",
       "emergency",
       "emmanuel",
@@ -1582,6 +1774,7 @@
       "hours",
       "hybrid",
       "immediate",
+      "impacted",
       "implement",
       "incident",
       "including",
@@ -1603,6 +1796,7 @@
       "jersey",
       "just",
       "kharkiv",
+      "killed",
       "kyiv",
       "largest",
       "launche",
@@ -1642,12 +1836,15 @@
       "ordered",
       "other",
       "overnight",
+      "paralysi",
       "parliamentary",
       "part",
       "particularly",
+      "parts",
       "party",
       "pattern",
       "pecherskyi",
+      "person",
       "political",
       "power",
       "protective",
@@ -1668,6 +1865,7 @@
       "robotic",
       "russia",
       "sabotage",
+      "sanction",
       "scale",
       "scheduled",
       "school",
@@ -1678,14 +1876,19 @@
       "service",
       "seven",
       "several",
+      "severe",
+      "severely",
       "should",
       "significant",
       "sites",
+      "situation",
       "sovereignty",
       "stance",
+      "stated",
       "station",
       "strike",
       "striking",
+      "stronger",
       "struck",
       "student",
       "such",
@@ -1696,16 +1899,20 @@
       "syrian",
       "targeted",
       "targeting",
+      "tearing",
       "teen",
       "tension",
       "territory",
       "threat",
+      "tighter",
       "tightly",
+      "traffic",
       "transport",
       "ukraine",
       "unacceptable",
       "united",
       "unmanned",
+      "urges",
       "variou",
       "vehicle",
       "violence",
@@ -1714,6 +1921,7 @@
       "wave",
       "wednesday",
       "weeks",
+      "western",
       "when",
       "which",
       "zelenskyy"
@@ -1754,6 +1962,7 @@
       "kharkiv_apartment",
       "kyiv",
       "kyiv_claim",
+      "kyiv_mayor",
       "kyiv_pecherskyi",
       "kyiv_science",
       "kyiv_struck",
@@ -1778,21 +1987,25 @@
       "russia_hybrid",
       "russia_launche",
       "science_academy",
+      "severe_disruption",
       "syria",
       "syrian_territory",
       "territory_syrian",
       "threat_france",
+      "traffic_chaos",
       "ukraine",
       "ukraine.",
       "ukraine_energy",
       "ukraine_launche",
+      "ukraine_urges",
       "un",
       "united_nation",
+      "urges_stronger",
       "us",
       "volodymyr_zelenskyy",
       "wednesday_kyiv"
     ],
-    "search_text": "000 14-year-old 16-storey 2026 academy accuse accuse_russia accused action address affected ahead ahmed air_assault air_campaign al-sharaa allegation also among announcement apartment apartment_block apply arson assault assembly assert assert_golan attack attempted authoritie block block_injure bridge broader building campaign capital casualtie caused causing causing_casualtie central children claim claim_life coincided commissioned company company_estonia condemned confirmed controlled critical criticized damage damage_ukraine date death declared defense defense_company described despite development discuss disrupting district drawn drone drone_ahead election election_ukraine emergency emmanuel emmanuel_macron emphasized energy energy_infrastructure escalating escape estonia estonia_accuse estonian europe europe. europe._macron european evacuated event extensive facilitie fatalitie final fire flame followed france fuel general general_assembly. golan golan_height grid growing height historic hospital hospital_causing hours hybrid hybrid_threat immediate implement implement_measure incident including increasing indicate individual industry infrastructure infrastructure_russia initiated injure injure_other injurie injuring instead intense intensified intensifying intensifying_russia involving israel jersey jersey._kyiv just kharkiv kharkiv_apartment kyiv kyiv_claim kyiv_pecherskyi kyiv_science kyiv_struck largest launche launche_massive launched leader least life light local location macron macron_implement main marking massive massive_drone mayor measure meeting mid-august military milrem milrem_robotic month moscow moscow. moscow_causing most multiple nation nation_general national national_academy nato necessitating nine nine-storey numerou occupation occurred oil ongoing ongoing_air orchestrating orchestrating_arson ordered other overnight parliamentary part particularly party pattern pecherskyi political power protective railway recent recognition refinery region regional reiterated remain remain_syrian reported resident residential response resulted resulting robotic russia russia. russia_drone russia_election russia_hybrid russia_launche sabotage scale scheduled school science science_academy security seen september service seven several should significant sites sovereignty stance station strike striking struck student such suggesting supplie support syria syrian syrian_territory targeted targeting teen tension territory territory_syrian threat threat_france tightly transport ukraine ukraine. ukraine_energy ukraine_launche un unacceptable united united_nation unmanned us variou vehicle violence visible volodymyr volodymyr_zelenskyy wave wednesday wednesday_kyiv weeks when which zelenskyy"
+    "search_text": "000 14-year-old 16-storey 2026 academy accuse accuse_russia accused action address affected ahead ahmed air_assault air_campaign al-sharaa allegation also among announcement apart apartment apartment_block apply arson assault assembly assert assert_golan attack attempted authoritie block block_injure bridge broader building called campaign capital casualtie caused causing causing_casualtie central chaos children claim claim_life closure coincided commissioned company company_estonia condemned confirmed conflict connect controlled critical criticized damage damage_ukraine date death declared defense defense_company described describing despite development discuss disrupting disruption district drawn drone drone_ahead eastern election election_ukraine emergency emmanuel emmanuel_macron emphasized energy energy_infrastructure escalating escape estonia estonia_accuse estonian europe europe. europe._macron european evacuated event extensive facilitie fatalitie final fire flame followed france fuel general general_assembly. golan golan_height grid growing height historic hospital hospital_causing hours hybrid hybrid_threat immediate impacted implement implement_measure incident including increasing indicate individual industry infrastructure infrastructure_russia initiated injure injure_other injurie injuring instead intense intensified intensifying intensifying_russia involving israel jersey jersey._kyiv just kharkiv kharkiv_apartment killed kyiv kyiv_claim kyiv_mayor kyiv_pecherskyi kyiv_science kyiv_struck largest launche launche_massive launched leader least life light local location macron macron_implement main marking massive massive_drone mayor measure meeting mid-august military milrem milrem_robotic month moscow moscow. moscow_causing most multiple nation nation_general national national_academy nato necessitating nine nine-storey numerou occupation occurred oil ongoing ongoing_air orchestrating orchestrating_arson ordered other overnight paralysi parliamentary part particularly parts party pattern pecherskyi person political power protective railway recent recognition refinery region regional reiterated remain remain_syrian reported resident residential response resulted resulting robotic russia russia. russia_drone russia_election russia_hybrid russia_launche sabotage sanction scale scheduled school science science_academy security seen september service seven several severe severe_disruption severely should significant sites situation sovereignty stance stated station strike striking stronger struck student such suggesting supplie support syria syrian syrian_territory targeted targeting tearing teen tension territory territory_syrian threat threat_france tighter tightly traffic traffic_chaos transport ukraine ukraine. ukraine_energy ukraine_launche ukraine_urges un unacceptable united united_nation unmanned urges urges_stronger us variou vehicle violence visible volodymyr volodymyr_zelenskyy wave wednesday wednesday_kyiv weeks western when which zelenskyy"
   },
   "related_events": [
     {
@@ -1900,14 +2113,14 @@
     {
       "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
       "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
-      "summary": "Muninn first tracked this thread on 2026-07-25: Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse. The latest development is Saudi Airstrike in Yemen Kills Seven, Injures Dozens.",
+      "summary": "Muninn first tracked this thread on 2026-07-25: Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse. The latest development is Severe Hunger Affects Three in Four Households in Yemen Amid Ongoing Conflict.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-07-25",
-      "last_seen_at": "2026-09-27",
-      "development_count": 22,
-      "latest_title": "Saudi Airstrike in Yemen Kills Seven, Injures Dozens",
+      "last_seen_at": "2026-10-02",
+      "development_count": 23,
+      "latest_title": "Severe Hunger Affects Three in Four Households in Yemen Amid Ongoing Conflict",
       "topic_label": "Russia-Ukraine War",
       "hero_image": {
         "url": "/Current_news/generated/events/event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea.jpg",
