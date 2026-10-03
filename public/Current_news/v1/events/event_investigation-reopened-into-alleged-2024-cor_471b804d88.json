@@ -550,8 +550,8 @@
       "latest_date": "2026-10-02",
       "latest_update_title": "Lawsuit Filed by Jane Doe Over Alleged Fraternity Assault at Cornell",
       "coverage_score": 0.96,
-      "recency_score": 1.0,
-      "rank_score": 0.983,
+      "recency_score": 0.875,
+      "rank_score": 0.911,
       "context_summary": "Muninn first tracked this thread on 2026-09-28: Investigation Reopened into Alleged 2024 Cornell Fraternity Rape Case. The latest development is Lawsuit Filed by Jane Doe Over Alleged Fraternity Assault at Cornell.",
       "cta_label": "Explore 6 developments"
     },
@@ -692,7 +692,19 @@
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
-    "related_events": [],
+    "related_events": [
+      {
+        "event_id": "event_district-attorney-declines-to-review-evidenc_c448029fe6",
+        "title": "District Attorney Declines to Review Evidence in Cornell Rape Case",
+        "relationship": "related_topic",
+        "confidence": 0.746,
+        "shared_entities": [
+          "cornell",
+          "cornell_university",
+          "rape_case"
+        ]
+      }
+    ],
     "hero_image": {
       "url": "/Current_news/generated/events/event_investigation-reopened-into-alleged-2024-cor_471b804d88.jpg",
       "thumbnail_url": "/Current_news/generated/events/event_investigation-reopened-into-alleged-2024-cor_471b804d88.jpg",
@@ -712,6 +724,97 @@
       "focal_wide_y": 0.48,
       "focal_tall_x": 0.5,
       "focal_tall_y": 0.48
+    },
+    "event_overview": {
+      "available": true,
+      "title": "About Cornell University Case",
+      "subject": "Cornell University Case",
+      "summary": "This event concerns renewed criminal, civil, and university scrutiny of allegations by a former Cornell student, identified in court records as Jane Doe, that she was drugged and sexually assaulted by seven men at the Chi Phi fraternity house in Ithaca, New York, in October 2024. The allegations are contested, and the matter involves separate processes: a civil lawsuit, Cornell’s internal disciplinary response, and a criminal investigation that was reopened in late September 2026 and transferred to New York Attorney General Letitia James as special prosecutor by October 1.",
+      "facts": [
+        {
+          "label": "Alleged incident",
+          "value": "The civil complaint alleges that the assault occurred at Cornell’s Chi Phi fraternity house during the night of October 19–20, 2024; the accused men have denied wrongdoing through counsel.",
+          "source_ids": [
+            "o1",
+            "o2"
+          ]
+        },
+        {
+          "label": "Initial reporting and criminal review",
+          "value": "Jane Doe reported the incident to Cornell University Police in November 2024. The Tompkins County District Attorney’s Office initially declined to bring charges after reviewing her statement, then said it would revisit the matter after learning of the later civil allegations.",
+          "source_ids": [
+            "o3",
+            "o1"
+          ]
+        },
+        {
+          "label": "University process",
+          "value": "Cornell separately suspended the Chi Phi chapter and some students in November 2024, and its Title IX process began in January 2025. Cornell’s 2026 campus-sexual-assault task-force report describes broader prevention, reporting, and fraternity/sorority-life reforms; it is not a finding on the merits of this individual case.",
+          "source_ids": [
+            "o1",
+            "o4"
+          ]
+        },
+        {
+          "label": "Civil case",
+          "value": "On September 16, 2026, Jane Doe filed a civil lawsuit naming Cornell, the Chi Phi chapter, seven men, and additional defendants. A civil suit seeks legal remedies and is distinct from a criminal prosecution.",
+          "source_ids": [
+            "o1"
+          ]
+        },
+        {
+          "label": "Status as of October 2, 2026",
+          "value": "The Tompkins County district attorney reopened the criminal inquiry in late September 2026, stating that new information would be assessed for potential grand-jury presentation. On October 1, Governor Kathy Hochul appointed Attorney General Letitia James as special prosecutor to lead the investigation.",
+          "source_ids": [
+            "o3",
+            "o1",
+            "o5"
+          ]
+        }
+      ],
+      "scope_note": "The selected Muninn timeline covers the late-September and early-October 2026 reopening, related legal and institutional responses, and public reaction; it does not resolve disputed facts, reproduce confidential investigative material, or establish criminal or civil liability.",
+      "sources": [
+        {
+          "title": "Abcnews",
+          "publisher": "Abcnews",
+          "url": "https://abcnews.com/US/timeline-alleged-cornell-university-fraternity-house-rape-investigation/story?id=136884431",
+          "source_type": "reporting",
+          "id": "o1"
+        },
+        {
+          "title": "AP News",
+          "publisher": "AP News",
+          "url": "https://apnews.com/article/16f59e89ce97e3a40a8e672f7b3f374b",
+          "source_type": "reporting",
+          "id": "o2"
+        },
+        {
+          "title": "Tompkinscountyny",
+          "publisher": "Tompkinscountyny",
+          "url": "https://www.tompkinscountyny.gov/All-Departments/District-Attorney",
+          "source_type": "primary",
+          "id": "o3"
+        },
+        {
+          "title": "Cornell",
+          "publisher": "Cornell",
+          "url": "https://provost.cornell.edu/initiatives/task-force-sa/tfsa-final-report-2026.pdf",
+          "source_type": "reporting",
+          "id": "o4"
+        },
+        {
+          "title": "AP News",
+          "publisher": "AP News",
+          "url": "https://apnews.com/article/7203e55c76f7be14ab929764c90b60b1",
+          "source_type": "reporting",
+          "id": "o5"
+        }
+      ],
+      "publisher_count": 4,
+      "generated_at": "2026-10-02T17:21:50.874435+00:00",
+      "expires_at": "2026-10-09T17:21:50.874435+00:00",
+      "model": "gpt-5.6-terra",
+      "provenance": "openai_web_search_source_grounded_event_overview_v1"
     },
     "search_tokens": [
       "2024",
@@ -849,98 +952,7 @@
       "university_rape",
       "university_response"
     ],
-    "search_text": "2024 adequately administration adriana adriana_vink agreed allegation alleged alleged_cornell alleged_fraternity alleged_gang alleging also among assault assembly assembly_cornell attendee authoritie based broader campu case case_prosecutor case_reopened challenge charge chi chi_phi civil claiming closed concern conduct conduct_independent connection conviction cornell cornell_fraternity cornell_student cornell_university criminal decision discussion down drugged expert express express_frustration face failed felt filed follow fraternity fraternity_assault fraternity_rape frustration gang gang_rape governor handling hearing highlighted house incident incident_cornell independent independent_review inquiry investigation investigation_reopened involving issue jane jane_doe jane_doe. lawsuit lawsuit_filed leader legal legal_challenge made many member occurred previously prosecutor providing public rape rape_case rape_incident rape_investigation raped recent referred regarding related reopened reopening response review revisited safety securing seven sexual sexual_violence significant sparked stated student student_assembly student_express suggest support these university university_chi university_fraternity university_rape university_response victim vink violence voiced years york",
-    "event_overview": {
-      "available": true,
-      "title": "About Cornell University Case",
-      "subject": "Cornell University Case",
-      "summary": "This event concerns renewed criminal, civil, and university scrutiny of allegations by a former Cornell student, identified in court records as Jane Doe, that she was drugged and sexually assaulted by seven men at the Chi Phi fraternity house in Ithaca, New York, in October 2024. The allegations are contested, and the matter involves separate processes: a civil lawsuit, Cornell’s internal disciplinary response, and a criminal investigation that was reopened in late September 2026 and transferred to New York Attorney General Letitia James as special prosecutor by October 1.",
-      "facts": [
-        {
-          "label": "Alleged incident",
-          "value": "The civil complaint alleges that the assault occurred at Cornell’s Chi Phi fraternity house during the night of October 19–20, 2024; the accused men have denied wrongdoing through counsel.",
-          "source_ids": [
-            "o1",
-            "o2"
-          ]
-        },
-        {
-          "label": "Initial reporting and criminal review",
-          "value": "Jane Doe reported the incident to Cornell University Police in November 2024. The Tompkins County District Attorney’s Office initially declined to bring charges after reviewing her statement, then said it would revisit the matter after learning of the later civil allegations.",
-          "source_ids": [
-            "o3",
-            "o1"
-          ]
-        },
-        {
-          "label": "University process",
-          "value": "Cornell separately suspended the Chi Phi chapter and some students in November 2024, and its Title IX process began in January 2025. Cornell’s 2026 campus-sexual-assault task-force report describes broader prevention, reporting, and fraternity/sorority-life reforms; it is not a finding on the merits of this individual case.",
-          "source_ids": [
-            "o1",
-            "o4"
-          ]
-        },
-        {
-          "label": "Civil case",
-          "value": "On September 16, 2026, Jane Doe filed a civil lawsuit naming Cornell, the Chi Phi chapter, seven men, and additional defendants. A civil suit seeks legal remedies and is distinct from a criminal prosecution.",
-          "source_ids": [
-            "o1"
-          ]
-        },
-        {
-          "label": "Status as of October 2, 2026",
-          "value": "The Tompkins County district attorney reopened the criminal inquiry in late September 2026, stating that new information would be assessed for potential grand-jury presentation. On October 1, Governor Kathy Hochul appointed Attorney General Letitia James as special prosecutor to lead the investigation.",
-          "source_ids": [
-            "o3",
-            "o1",
-            "o5"
-          ]
-        }
-      ],
-      "scope_note": "The selected Muninn timeline covers the late-September and early-October 2026 reopening, related legal and institutional responses, and public reaction; it does not resolve disputed facts, reproduce confidential investigative material, or establish criminal or civil liability.",
-      "sources": [
-        {
-          "title": "Abcnews",
-          "publisher": "Abcnews",
-          "url": "https://abcnews.com/US/timeline-alleged-cornell-university-fraternity-house-rape-investigation/story?id=136884431",
-          "source_type": "reporting",
-          "id": "o1"
-        },
-        {
-          "title": "AP News",
-          "publisher": "AP News",
-          "url": "https://apnews.com/article/16f59e89ce97e3a40a8e672f7b3f374b",
-          "source_type": "reporting",
-          "id": "o2"
-        },
-        {
-          "title": "Tompkinscountyny",
-          "publisher": "Tompkinscountyny",
-          "url": "https://www.tompkinscountyny.gov/All-Departments/District-Attorney",
-          "source_type": "primary",
-          "id": "o3"
-        },
-        {
-          "title": "Cornell",
-          "publisher": "Cornell",
-          "url": "https://provost.cornell.edu/initiatives/task-force-sa/tfsa-final-report-2026.pdf",
-          "source_type": "reporting",
-          "id": "o4"
-        },
-        {
-          "title": "AP News",
-          "publisher": "AP News",
-          "url": "https://apnews.com/article/7203e55c76f7be14ab929764c90b60b1",
-          "source_type": "reporting",
-          "id": "o5"
-        }
-      ],
-      "publisher_count": 4,
-      "generated_at": "2026-10-02T17:21:50.874435+00:00",
-      "expires_at": "2026-10-09T17:21:50.874435+00:00",
-      "model": "gpt-5.6-terra",
-      "provenance": "openai_web_search_source_grounded_event_overview_v1"
-    }
+    "search_text": "2024 adequately administration adriana adriana_vink agreed allegation alleged alleged_cornell alleged_fraternity alleged_gang alleging also among assault assembly assembly_cornell attendee authoritie based broader campu case case_prosecutor case_reopened challenge charge chi chi_phi civil claiming closed concern conduct conduct_independent connection conviction cornell cornell_fraternity cornell_student cornell_university criminal decision discussion down drugged expert express express_frustration face failed felt filed follow fraternity fraternity_assault fraternity_rape frustration gang gang_rape governor handling hearing highlighted house incident incident_cornell independent independent_review inquiry investigation investigation_reopened involving issue jane jane_doe jane_doe. lawsuit lawsuit_filed leader legal legal_challenge made many member occurred previously prosecutor providing public rape rape_case rape_incident rape_investigation raped recent referred regarding related reopened reopening response review revisited safety securing seven sexual sexual_violence significant sparked stated student student_assembly student_express suggest support these university university_chi university_fraternity university_rape university_response victim vink violence voiced years york"
   },
   "related_events": []
 }

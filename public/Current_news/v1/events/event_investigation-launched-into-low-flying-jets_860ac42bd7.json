@@ -15,7 +15,7 @@
     "summary": "South African aviation authorities are investigating a low-altitude flyover by two Airlink passenger jets over DHL Stadium in Cape Town. The incident occurred before a rugby match between the Springboks and the All Blacks and has raised safety concerns following a viral video showing the jets barely clearing the stadium.",
     "status": "active",
     "first_seen_at": "2026-09-03",
-    "last_seen_at": "2026-10-02",
+    "last_seen_at": "2026-10-03",
     "timeline": [
       {
         "development_id": "story_943474985ba578ab",
@@ -621,15 +621,84 @@
         "first_seen_at": "2026-10-02",
         "last_seen_at": "2026-10-02",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_d706ceb421f53049",
+        "daily_story_id": "story_d706ceb421f53049",
+        "date": "2026-10-03",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "FlyDubai Co-Pilot Identified as Security Risk Before Incident",
+        "summary": "The co-pilot of a FlyDubai flight, who allegedly attacked the captain with an axe, has been identified as an Omani national. He was previously suspended by Oman Air due to security concerns. Emirati authorities have described the incident as an attempted terrorist attack.",
+        "topic_label": "",
+        "development_type": "military_action",
+        "key_facts": [
+          "Co-pilot attacked the captain with an axe.",
+          "Incident described as an attempted terrorist attack by UAE authorities.",
+          "Co-pilot was previously identified as a security risk and suspended by Oman Air."
+        ],
+        "source_count": 2,
+        "sources": [
+          "ABC News",
+          "Channel NewsAsia"
+        ],
+        "source_urls": [
+          "https://abcnews.com/US/suspect-flydubai-incident-previously-identified-security-risk-officials/story?id=136960488",
+          "https://www.channelnewsasia.com/world/flydubai-co-pilot-attempted-terrorist-attack-uae-6428876"
+        ],
+        "source_details": [
+          {
+            "title": "Suspect in FlyDubai incident was previously identified as security risk: Officials",
+            "source": "ABC News",
+            "link": "https://abcnews.com/US/suspect-flydubai-incident-previously-identified-security-risk-officials/story?id=136960488",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Flydubai co-pilot attacked pilot with axe, attempted 'terrorist attack', UAE says",
+            "source": "Channel NewsAsia",
+            "link": "https://www.channelnewsasia.com/world/flydubai-co-pilot-attempted-terrorist-attack-uae-6428876",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "attack"
+          ],
+          "shared_incident_anchors": [
+            "uae"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "attack",
+            "emirati",
+            "security"
+          ],
+          "shared_entities": [
+            "uae"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_c86b3394e0cce319",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-03",
+        "last_seen_at": "2026-10-03",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 6,
+      "public_development_count": 7,
       "questionable_development_count": 3,
       "review_required": true
     },
-    "latest_title": "Pilot Recalls Heroic Actions During Flydubai Cockpit Attack",
-    "latest_summary": "Capt. Smit Machchhar, recovering in a hospital, described his harrowing experience during an attack on a Flydubai flight. He recounted how he fought to regain control of the cockpit, realizing that if he did not act, the passengers' lives were at risk. His actions, which included opening the cockpit door to allow passengers to assist, have led to him being hailed as a hero.",
+    "latest_title": "FlyDubai Co-Pilot Identified as Security Risk Before Incident",
+    "latest_summary": "The co-pilot of a FlyDubai flight, who allegedly attacked the captain with an axe, has been identified as an Omani national. He was previously suspended by Oman Air due to security concerns. Emirati authorities have described the incident as an attempted terrorist attack.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -639,32 +708,30 @@
       "display_title": "Investigation Launched into Low-Flying Jets Over Cape Town Stadium Timeline",
       "milestone_development_ids": [
         "story_943474985ba578ab",
-        "story_c86b3394e0cce319",
         "story_eee9079076f235bb",
-        "story_013f4c255737eeeb",
         "story_359025fe7feca8fe",
-        "story_f851088d369fe24e"
+        "story_d706ceb421f53049"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-10-02",
-      "development_count": 6,
-      "coverage_packet_count": 8,
-      "date_count": 4,
-      "source_count": 25,
-      "independent_source_count": 13,
+      "summary_updated_at": "2026-10-03",
+      "development_count": 7,
+      "coverage_packet_count": 9,
+      "date_count": 5,
+      "source_count": 27,
+      "independent_source_count": 15,
       "first_date": "2026-09-03",
-      "latest_date": "2026-10-02",
-      "latest_update_title": "Pilot Recalls Heroic Actions During Flydubai Cockpit Attack",
-      "coverage_score": 0.96,
+      "latest_date": "2026-10-03",
+      "latest_update_title": "FlyDubai Co-Pilot Identified as Security Risk Before Incident",
+      "coverage_score": 1.0,
       "recency_score": 1.0,
-      "rank_score": 0.983,
-      "context_summary": "Muninn first tracked this thread on 2026-09-03: Investigation Launched into Low-Flying Jets Over Cape Town Stadium. The latest development is Pilot Recalls Heroic Actions During Flydubai Cockpit Attack.",
-      "cta_label": "Explore 6 developments"
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-09-03: Investigation Launched into Low-Flying Jets Over Cape Town Stadium. The latest development is FlyDubai Co-Pilot Identified as Security Risk Before Incident.",
+      "cta_label": "Explore 7 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "South African aviation authorities are investigating a low-altitude flyover by two Airlink passenger jets over DHL Stadium in Cape Town. A later development was Investigation Underway After Co-Pilot Stabs Pilot on Israel-Bound Flight. Most recently, capt.",
+      "summary": "South African aviation authorities are investigating a low-altitude flyover by two Airlink passenger jets over DHL Stadium in Cape Town. A later development was Investigation Underway After Co-Pilot Stabs Pilot on Israel-Bound Flight. Most recently, the co-pilot of a FlyDubai flight, who allegedly attacked the captain with an axe, has been identified as an Omani national.",
       "key_developments": [
         {
           "development_id": "story_943474985ba578ab",
@@ -672,19 +739,9 @@
           "title": "Investigation Launched into Low-Flying Jets Over Cape Town Stadium"
         },
         {
-          "development_id": "story_c86b3394e0cce319",
-          "date": "2026-09-30",
-          "title": "UAE President Meets Israeli PM Netanyahu Amid Controversy Over 2023 Attack Warnings"
-        },
-        {
           "development_id": "story_eee9079076f235bb",
           "date": "2026-09-30",
           "title": "Co-Pilot Attempts to Crash Flydubai Flight After Stabbing Pilot"
-        },
-        {
-          "development_id": "story_013f4c255737eeeb",
-          "date": "2026-10-01",
-          "title": "Investigation Underway After Co-Pilot Stabs Pilot on Israel-Bound Flight"
         },
         {
           "development_id": "story_359025fe7feca8fe",
@@ -692,9 +749,9 @@
           "title": "Pilot Describes Co-Pilot Attack During Flydubai Flight"
         },
         {
-          "development_id": "story_f851088d369fe24e",
-          "date": "2026-10-02",
-          "title": "Pilot Recalls Heroic Actions During Flydubai Cockpit Attack"
+          "development_id": "story_d706ceb421f53049",
+          "date": "2026-10-03",
+          "title": "FlyDubai Co-Pilot Identified as Security Risk Before Incident"
         }
       ],
       "sources": [
@@ -847,18 +904,43 @@
           "source": "Euronews",
           "link": "https://www.euronews.com/2026/10/02/i-was-fighting-for-my-life-flydubai-captain-recalls-cockpit-attack",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Suspect in FlyDubai incident was previously identified as security risk: Officials",
+          "source": "ABC News",
+          "link": "https://abcnews.com/US/suspect-flydubai-incident-previously-identified-security-risk-officials/story?id=136960488",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Flydubai co-pilot attacked pilot with axe, attempted 'terrorist attack', UAE says",
+          "source": "Channel NewsAsia",
+          "link": "https://www.channelnewsasia.com/world/flydubai-co-pilot-attempted-terrorist-attack-uae-6428876",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-10-02",
+      "updated_at": "2026-10-03",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
     "related_events": [
       {
+        "event_id": "event_flydubai-co-pilot-attacked-captain-with-axe_8e228774bc",
+        "title": "FlyDubai Co-Pilot Attacked Captain with Axe, Barred from Flying Over Extremism Concerns",
+        "relationship": "related_topic",
+        "confidence": 0.854,
+        "shared_entities": [
+          "co-pilot",
+          "flydubai",
+          "flydubai_co-pilot",
+          "israel",
+          "uae"
+        ]
+      },
+      {
         "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
         "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
         "relationship": "related_topic",
-        "confidence": 0.827,
+        "confidence": 0.828,
         "shared_entities": [
           "benjamin_netanyahu",
           "israel",
@@ -883,22 +965,11 @@
         "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
         "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
         "relationship": "related_topic",
-        "confidence": 0.727,
+        "confidence": 0.726,
         "shared_entities": [
           "benjamin_netanyahu",
           "israel",
           "israel_prime"
-        ]
-      },
-      {
-        "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
-        "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
-        "relationship": "related_topic",
-        "confidence": 0.718,
-        "shared_entities": [
-          "saudi",
-          "saudi_arabia",
-          "saudi_arabia."
         ]
       }
     ],
@@ -1088,6 +1159,7 @@
       "hero",
       "heroic",
       "hospital",
+      "identified",
       "impending",
       "incident",
       "included",
@@ -1114,12 +1186,15 @@
       "netanyahu",
       "occurred",
       "october",
+      "oman",
+      "omani",
       "ongoing",
       "opening",
       "passenger",
       "pilot",
       "plane",
       "potential",
+      "previously",
       "prime",
       "protect",
       "raised",
@@ -1153,7 +1228,9 @@
       "subduing",
       "suggesting",
       "sunday",
+      "suspended",
       "terror",
+      "terrorist",
       "town",
       "traumatic",
       "treated",
@@ -1181,6 +1258,7 @@
       "captain_smit",
       "co-pilot",
       "co-pilot_attempt",
+      "co-pilot_identified",
       "co-pilot_stabs",
       "crash",
       "describe_co-pilot",
@@ -1190,6 +1268,7 @@
       "flight_flydubai",
       "flydubai",
       "flydubai_captain",
+      "flydubai_co-pilot",
       "flydubai_cockpit",
       "flydubai_flight",
       "heroic_action",
@@ -1203,6 +1282,7 @@
       "low-flying_jets",
       "meets_israel",
       "october",
+      "oman_air",
       "pilot_describe",
       "pilot_recall",
       "pm",
@@ -1210,6 +1290,7 @@
       "saudi",
       "saudi_arabia",
       "saudi_arabia.",
+      "security_risk",
       "smit_machchhar",
       "south_african",
       "stabbing_pilot",
@@ -1221,7 +1302,7 @@
       "town_stadium",
       "uae"
     ],
-    "search_text": "2023 abu abu_dhabi action advance african aircraft airlink alarming allegedly allow allowing altercation another arabia arabia._israel assist attack attacked attempt attempted authoritie aviation aviv aviv._despite barely benjamin benjamin_netanyahu black board cape cape_town cape_town. capt capt._smit captain captain_smit claim clearing co-pilot co-pilot_attempt co-pilot_stabs cockpit compelled concern confirmed control controversy crash denied describe describe_co-pilot described despite dhabi dhl dhl_stadium diverted door dubai earlier emergency emirati experience felt flight flight_flydubai flydubai flydubai_captain flydubai_cockpit flydubai_flight flyover follow fought hailed hamas-led harrowing hero heroic heroic_action hospital impending incident included intervened investigating investigation investigation_launched investigation_underway involving israel israel-bound israel-bound_flight israel_prime jets landing launched leader lives low-altitude low-flying low-flying_jets machchhar made match meeting meets meets_israel most national netanyahu occurred october ongoing opening passenger pilot pilot_describe pilot_recall plane pm potential prime protect raised raising realizing recall recall_heroic receive recounted recovering regain reported risk rugby safely safety saudi saudi_arabia saudi_arabia. scene security seriou showing situation smit smit_machchhar south south_african springbok stabbed stabbing stabbing_pilot stabs stabs_pilot stadium stadium_south stated stating subduing suggesting sunday tel tel_aviv tel_aviv. terror town town_stadium traumatic treated uae underway video viral warned warning week when where which wounded"
+    "search_text": "2023 abu abu_dhabi action advance african aircraft airlink alarming allegedly allow allowing altercation another arabia arabia._israel assist attack attacked attempt attempted authoritie aviation aviv aviv._despite barely benjamin benjamin_netanyahu black board cape cape_town cape_town. capt capt._smit captain captain_smit claim clearing co-pilot co-pilot_attempt co-pilot_identified co-pilot_stabs cockpit compelled concern confirmed control controversy crash denied describe describe_co-pilot described despite dhabi dhl dhl_stadium diverted door dubai earlier emergency emirati experience felt flight flight_flydubai flydubai flydubai_captain flydubai_co-pilot flydubai_cockpit flydubai_flight flyover follow fought hailed hamas-led harrowing hero heroic heroic_action hospital identified impending incident included intervened investigating investigation investigation_launched investigation_underway involving israel israel-bound israel-bound_flight israel_prime jets landing launched leader lives low-altitude low-flying low-flying_jets machchhar made match meeting meets meets_israel most national netanyahu occurred october oman oman_air omani ongoing opening passenger pilot pilot_describe pilot_recall plane pm potential previously prime protect raised raising realizing recall recall_heroic receive recounted recovering regain reported risk rugby safely safety saudi saudi_arabia saudi_arabia. scene security security_risk seriou showing situation smit smit_machchhar south south_african springbok stabbed stabbing stabbing_pilot stabs stabs_pilot stadium stadium_south stated stating subduing suggesting sunday suspended tel tel_aviv tel_aviv. terror terrorist town town_stadium traumatic treated uae underway video viral warned warning week when where which wounded"
   },
   "related_events": [
     {
@@ -1291,40 +1372,6 @@
         "focal_tall_y": 0.48
       },
       "href": "/timeline.html?event=event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b"
-    },
-    {
-      "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
-      "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
-      "summary": "Muninn first tracked this thread on 2026-09-11: Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims. The latest development is Five Men Arrested Near UK Air Base on Terrorism Charges.",
-      "activity_status": "active",
-      "stage": "timeline",
-      "stage_label": "Timeline",
-      "first_seen_at": "2026-09-11",
-      "last_seen_at": "2026-09-27",
-      "development_count": 33,
-      "latest_title": "Five Men Arrested Near UK Air Base on Terrorism Charges",
-      "topic_label": "9/11 Victim Compensation",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b"
     }
   ]
 }
