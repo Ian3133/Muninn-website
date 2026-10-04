@@ -15,7 +15,7 @@
     "summary": "Tigrayan rebels have taken control of airports in northern Ethiopia and engaged in clashes with federal troops in the Afar region. This escalation marks a significant resurgence of conflict, with reports indicating that Ethiopian Airlines has suspended flights to three airports in Tigray, signaling a breakdown of the Pretoria Agreement that had previously ended the 2020-2022 war.",
     "status": "active",
     "first_seen_at": "2026-09-23",
-    "last_seen_at": "2026-09-27",
+    "last_seen_at": "2026-10-04",
     "timeline": [
       {
         "development_id": "story_f00cb11195649ef9",
@@ -464,15 +464,98 @@
         "first_seen_at": "2026-09-27",
         "last_seen_at": "2026-09-27",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_4b4835a55923c259",
+        "daily_story_id": "story_4b4835a55923c259",
+        "date": "2026-10-04",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Ethiopian Forces Capture Mekelle as TPLF Withdraws",
+        "summary": "Ethiopian federal forces have taken control of Mekelle, the capital of the Tigray region, following the withdrawal of Tigrayan rebel forces. The government troops, along with allied fighters, were reported to have seized the main regional airport as part of their advance. Residents confirmed the presence of pro-government forces in the city.",
+        "topic_label": "Ethiopia Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "Ethiopian federal forces captured Mekelle, the Tigray capital.",
+          "Tigrayan rebel forces have withdrawn from the city.",
+          "Federal troops seized the main regional airport."
+        ],
+        "source_count": 3,
+        "sources": [
+          "Africanews",
+          "Al Jazeera English",
+          "BBC - World"
+        ],
+        "source_urls": [
+          "https://www.aljazeera.com/news/2026/10/4/government-forces-seize-capital-of-ethiopias-tigray-region-from-rebels?traffic_source=rss",
+          "https://www.bbc.co.uk/news/articles/cqm249v07j4xo?at_medium=RSS&at_campaign=rss",
+          "http://www.africanews.com/2026/10/04/ethiopian-forces-recapture-mekelle-airport-from-tigrayan-fighters"
+        ],
+        "source_details": [
+          {
+            "title": "Ethiopian government forces seize Tigray capital Mekelle as TPLF withdraws",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/news/2026/10/4/government-forces-seize-capital-of-ethiopias-tigray-region-from-rebels?traffic_source=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Ethiopian rebel forces withdraw from Tigray regional capital",
+            "source": "BBC - World",
+            "link": "https://www.bbc.co.uk/news/articles/cqm249v07j4xo?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          },
+          {
+            "title": "Ethiopian forces recapture Mekelle airport from Tigrayan fighters",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/10/04/ethiopian-forces-recapture-mekelle-airport-from-tigrayan-fighters",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_f00cb11195649ef9",
+          "shared_tokens": [
+            "airport",
+            "capture",
+            "conflict",
+            "control",
+            "ethiopia",
+            "ethiopian",
+            "federal",
+            "force",
+            "rebel",
+            "region",
+            "seized",
+            "taken",
+            "tigray",
+            "tigrayan",
+            "troop"
+          ],
+          "shared_entities": [
+            "force_capture"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-04",
+        "last_seen_at": "2026-10-04",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 6,
+      "public_development_count": 7,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Ethiopians Celebrate Meskel Holiday Amid Ongoing Tigray Conflict",
-    "latest_summary": "Ethiopians celebrated the Meskel holiday with vibrant festivities, despite ongoing fighting in the Tigray region. The celebrations included calls for peace as communities came together to honor the occasion, reflecting resilience in the face of adversity.",
+    "latest_title": "Ethiopian Forces Capture Mekelle as TPLF Withdraws",
+    "latest_summary": "Ethiopian federal forces have taken control of Mekelle, the capital of the Tigray region, following the withdrawal of Tigrayan rebel forces. The government troops, along with allied fighters, were reported to have seized the main regional airport as part of their advance. Residents confirmed the presence of pro-government forces in the city.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -482,32 +565,30 @@
       "display_title": "Tigray Forces Capture Airports Amid Renewed Fighting in Ethiopia Timeline",
       "milestone_development_ids": [
         "story_f00cb11195649ef9",
-        "story_9dfc78a0027eed29",
         "story_c04f92db4c26d620",
-        "story_34d128e7211365ec",
         "story_892d7f100c87846f",
-        "story_1a833d0546b5be5e"
+        "story_4b4835a55923c259"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-09-27",
-      "development_count": 6,
-      "coverage_packet_count": 6,
-      "date_count": 4,
-      "source_count": 14,
-      "independent_source_count": 7,
+      "summary_updated_at": "2026-10-04",
+      "development_count": 7,
+      "coverage_packet_count": 7,
+      "date_count": 5,
+      "source_count": 17,
+      "independent_source_count": 8,
       "first_date": "2026-09-23",
-      "latest_date": "2026-09-27",
-      "latest_update_title": "Ethiopians Celebrate Meskel Holiday Amid Ongoing Tigray Conflict",
-      "coverage_score": 0.922,
-      "recency_score": 0.538,
-      "rank_score": 0.7,
-      "context_summary": "Muninn first tracked this thread on 2026-09-23: Tigray Forces Capture Airports Amid Renewed Fighting in Ethiopia. The latest development is Ethiopians Celebrate Meskel Holiday Amid Ongoing Tigray Conflict.",
-      "cta_label": "Explore 6 developments"
+      "latest_date": "2026-10-04",
+      "latest_update_title": "Ethiopian Forces Capture Mekelle as TPLF Withdraws",
+      "coverage_score": 1.0,
+      "recency_score": 1.0,
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-09-23: Tigray Forces Capture Airports Amid Renewed Fighting in Ethiopia. The latest development is Ethiopian Forces Capture Mekelle as TPLF Withdraws.",
+      "cta_label": "Explore 7 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Tigrayan rebels have taken control of airports in northern Ethiopia and engaged in clashes with federal troops in the Afar region. A later development was Renewed Fighting Erupts in Northern Ethiopia as Tigray Rebels Declare War. Most recently, ethiopians celebrated the Meskel holiday with vibrant festivities, despite ongoing fighting in the Tigray region.",
+      "summary": "Tigrayan rebels have taken control of airports in northern Ethiopia and engaged in clashes with federal troops in the Afar region. A later development was Renewed Fighting Erupts in Northern Ethiopia as Tigray Rebels Declare War. Most recently, ethiopian federal forces have taken control of Mekelle, the capital of the Tigray region, following the withdrawal of Tigrayan rebel forces.",
       "key_developments": [
         {
           "development_id": "story_f00cb11195649ef9",
@@ -515,19 +596,9 @@
           "title": "Tigray Forces Capture Airports Amid Renewed Fighting in Ethiopia"
         },
         {
-          "development_id": "story_9dfc78a0027eed29",
-          "date": "2026-09-24",
-          "title": "Ethiopia's Tigray Rebels Declare Full-Blown War Amid Intensifying Conflict"
-        },
-        {
           "development_id": "story_c04f92db4c26d620",
           "date": "2026-09-24",
           "title": "Escalating Clashes in Northern Ethiopia Raise Concerns of Wider Conflict"
-        },
-        {
-          "development_id": "story_34d128e7211365ec",
-          "date": "2026-09-25",
-          "title": "Renewed Fighting Erupts in Northern Ethiopia as Tigray Rebels Declare War"
         },
         {
           "development_id": "story_892d7f100c87846f",
@@ -535,9 +606,9 @@
           "title": "Intense Fighting and Internet Blackout Reported in Ethiopia's Afar Region"
         },
         {
-          "development_id": "story_1a833d0546b5be5e",
-          "date": "2026-09-27",
-          "title": "Ethiopians Celebrate Meskel Holiday Amid Ongoing Tigray Conflict"
+          "development_id": "story_4b4835a55923c259",
+          "date": "2026-10-04",
+          "title": "Ethiopian Forces Capture Mekelle as TPLF Withdraws"
         }
       ],
       "sources": [
@@ -624,9 +695,27 @@
           "source": "Al Jazeera English",
           "link": "https://www.aljazeera.com/video/newsfeed/2026/9/27/ethiopians-celebrate-meskel-and-call-for-peace-amid-fighting?traffic_source=rss",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Ethiopian government forces seize Tigray capital Mekelle as TPLF withdraws",
+          "source": "Al Jazeera English",
+          "link": "https://www.aljazeera.com/news/2026/10/4/government-forces-seize-capital-of-ethiopias-tigray-region-from-rebels?traffic_source=rss",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Ethiopian rebel forces withdraw from Tigray regional capital",
+          "source": "BBC - World",
+          "link": "https://www.bbc.co.uk/news/articles/cqm249v07j4xo?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
+        },
+        {
+          "title": "Ethiopian forces recapture Mekelle airport from Tigrayan fighters",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/10/04/ethiopian-forces-recapture-mekelle-airport-from-tigrayan-fighters",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-09-27",
+      "updated_at": "2026-10-04",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -635,7 +724,7 @@
         "event_id": "event_ethiopia-and-eritrea-cut-diplomatic-ties-ami_549df3b1dc",
         "title": "Ethiopia and Eritrea Cut Diplomatic Ties Amid Tigray Conflict Escalation",
         "relationship": "related_topic",
-        "confidence": 0.794,
+        "confidence": 0.793,
         "shared_entities": [
           "ethiopia_afar",
           "front_tplf",
@@ -647,7 +736,7 @@
         "event_id": "event_seven-ethiopian-rebel-groups-unite-in-new-al_293a851eed",
         "title": "Seven Ethiopian Rebel Groups Unite in New Alliance Against Government",
         "relationship": "related_topic",
-        "confidence": 0.736,
+        "confidence": 0.739,
         "shared_entities": [
           "ethiopia",
           "liberation_front",
@@ -658,7 +747,7 @@
         "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
         "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
         "relationship": "related_topic",
-        "confidence": 0.702,
+        "confidence": 0.703,
         "shared_entities": [
           "raise_concern",
           "uk"
@@ -689,64 +778,94 @@
       "available": true,
       "title": "About Ethiopia Conflict",
       "subject": "Ethiopia Conflict",
-      "summary": "The Ethiopia conflict refers here to the armed and political crisis centered on the Tigray region in northern Ethiopia, principally involving Ethiopia’s federal government and the Tigray People’s Liberation Front (TPLF), with major effects across neighboring Afar and Amhara. The large-scale war that began in November 2020 was followed by an African Union-mediated permanent cessation-of-hostilities agreement in November 2022, but unresolved security, territorial, humanitarian and accountability issues have left the situation vulnerable to renewed violence.",
+      "summary": "The Ethiopia conflict refers here to the armed conflict centered on the Tigray region of northern Ethiopia, involving federal forces and forces aligned with the Tigray People’s Liberation Front (TPLF), with fighting also affecting neighboring areas. It began in November 2020, created a major humanitarian and human-rights crisis, and was followed by an African Union-mediated cessation-of-hostilities agreement in 2022.",
       "facts": [
         {
-          "label": "Conflict period",
-          "value": "Large-scale fighting in the Tigray war began in November 2020; the UN’s international commission documented major phases of fighting through the November 2, 2022 cessation-of-hostilities agreement.",
+          "label": "Start",
+          "value": "Armed conflict in Tigray began on November 4, 2020, amid clashes between Ethiopian federal forces and forces of the TPLF.",
           "source_ids": [
             "o1"
           ]
         },
         {
-          "label": "Core parties and armed actors",
-          "value": "The Pretoria agreement was signed by the Government of the Federal Democratic Republic of Ethiopia and the TPLF. The wider war also involved Ethiopian federal and regional forces, Eritrean forces and local militias at different times.",
-          "source_ids": []
-        },
-        {
-          "label": "Peace agreement",
-          "value": "African Union-led talks in Pretoria, South Africa, produced the Agreement for Lasting Peace through a Permanent Cessation of Hostilities on November 2, 2022. Its stated objectives included stopping hostilities, enabling humanitarian access, restoring services, and supporting reconciliation and implementation measures.",
-          "source_ids": [
-            "o2",
-            "o1"
-          ]
-        },
-        {
-          "label": "Outstanding issues",
-          "value": "Implementation of the agreement has been tied to disarmament, humanitarian access, restoration of services, return of displaced people, transitional justice and the status of forces in parts of Tigray; UN reporting found that the agreement had not yet produced a sustainable settlement.",
+          "label": "Geographic scope",
+          "value": "Although centered in Tigray, the war spread into Ethiopia’s neighboring Amhara and Afar regions and drove refugee movements into Sudan.",
           "source_ids": [
             "o2",
             "o3"
           ]
+        },
+        {
+          "label": "Main parties",
+          "value": "The principal negotiating parties in the AU-led peace process were the Government of the Federal Democratic Republic of Ethiopia and the TPLF.",
+          "source_ids": [
+            "o4"
+          ]
+        },
+        {
+          "label": "Peace framework",
+          "value": "On November 2, 2022, the parties concluded an African Union-led cessation-of-hostilities agreement in Pretoria, intended to end fighting, restore humanitarian access and services, and support reconciliation.",
+          "source_ids": [
+            "o4",
+            "o5"
+          ]
+        },
+        {
+          "label": "Civilian protection and accountability",
+          "value": "A joint investigation by the Ethiopian Human Rights Commission and the UN human-rights office documented serious alleged violations and abuses by multiple parties during the conflict; its findings were not an exhaustive record of every incident.",
+          "source_ids": [
+            "o6"
+          ]
         }
       ],
-      "scope_note": "The selected Muninn timeline follows the reported renewal of fighting in northern Ethiopia from September 23-25, 2026; it does not attempt to catalog the full 2020-22 war, all armed groups, or separate conflicts elsewhere in Ethiopia.",
+      "scope_note": "The selected Muninn timeline follows reported military and political developments from September 23 through October 4, 2026, rather than providing a complete history of the conflict, its humanitarian effects, or peace-process implementation.",
       "sources": [
         {
           "title": "UN",
           "publisher": "UN",
-          "url": "https://digitallibrary.un.org/record/4041317/files/A_HRC_54_55-EN.pdf",
+          "url": "https://www.un.org/en/Enabling-Humanitarian-Missions-Northern-Ethiopia",
           "source_type": "reporting",
           "id": "o1"
         },
         {
-          "title": "Peaceau",
-          "publisher": "Peaceau",
-          "url": "https://www.peaceau.org/en/article/cessation-of-hostilities-agreement-between-the-government-of-the-federal-democratic-republic-of-ethiopia-and-the-tigray-peoples-liberation-front-tplf",
+          "title": "UN",
+          "publisher": "UN",
+          "url": "https://unsdg.un.org/latest/stories/ethiopia-un-chief-welcomes-tigray-humanitarian-ceasefire",
           "source_type": "reporting",
           "id": "o2"
         },
         {
           "title": "UN",
           "publisher": "UN",
-          "url": "https://ethiopia.un.org/en/212602-ohchr-ehrc-joint-advisory-note-transitional-justice",
+          "url": "https://ethiopia.un.org/en/164315-update-humanitarian-operations-northern-ethiopia",
           "source_type": "reporting",
           "id": "o3"
+        },
+        {
+          "title": "Peaceau",
+          "publisher": "Peaceau",
+          "url": "https://beta.peaceau.org/en/article/cessation-of-hostilities-agreement-between-the-government-of-the-federal-democratic-republic-of-ethiopia-and-the-tigray-peoples-liberation-front-tplf",
+          "source_type": "reporting",
+          "id": "o4"
+        },
+        {
+          "title": "Peaceau",
+          "publisher": "Peaceau",
+          "url": "https://www.peaceau.org/uploads/press-release-cessation-of-hostilities-pretoria-2-11-2022.pdf",
+          "source_type": "reporting",
+          "id": "o5"
+        },
+        {
+          "title": "Ohchr",
+          "publisher": "Ohchr",
+          "url": "https://www.ohchr.org/sites/default/files/2021-11/OHCHR-EHRC-Tigray-Report.pdf",
+          "source_type": "reporting",
+          "id": "o6"
         }
       ],
-      "publisher_count": 2,
-      "generated_at": "2026-09-25T16:24:19.496257+00:00",
-      "expires_at": "2026-10-02T16:24:19.496257+00:00",
+      "publisher_count": 3,
+      "generated_at": "2026-10-04T16:23:42.256017+00:00",
+      "expires_at": "2026-10-11T16:23:42.256017+00:00",
       "model": "gpt-5.6-terra",
       "provenance": "openai_web_search_source_grounded_event_overview_v1"
     },
@@ -755,12 +874,15 @@
       "260",
       "272",
       "across",
+      "advance",
       "adversity",
       "afar",
       "affecting",
       "agreement",
       "airline",
       "airport",
+      "allied",
+      "along",
       "also",
       "although",
       "amhara",
@@ -786,6 +908,7 @@
       "communitie",
       "concern",
       "condemned",
+      "confirmed",
       "conflict",
       "control",
       "counter-offensive",
@@ -829,6 +952,7 @@
       "killed",
       "lead",
       "liberation",
+      "main",
       "marking",
       "marks",
       "mekelle",
@@ -842,9 +966,11 @@
       "part",
       "peace",
       "potential",
+      "presence",
       "pretoria",
       "previou",
       "previously",
+      "pro-government",
       "raise",
       "raising",
       "rebel",
@@ -855,6 +981,7 @@
       "renewed",
       "repel",
       "reported",
+      "resident",
       "resilience",
       "resurgence",
       "seized",
@@ -878,6 +1005,8 @@
       "vibrant",
       "war",
       "wider",
+      "withdraw",
+      "withdrawal",
       "wounded"
     ],
     "entities": [
@@ -886,6 +1015,7 @@
       "amhara",
       "blackout_reported",
       "capture_airport",
+      "capture_mekelle",
       "celebrate_meskel",
       "declare_full-blown",
       "declare_war",
@@ -897,6 +1027,7 @@
       "ethiopia_tigrayan",
       "ethiopian_airline",
       "ethiopian_celebrate",
+      "ethiopian_force",
       "fighting_erupt",
       "force_capture",
       "front_tplf",
@@ -921,7 +1052,7 @@
       "uk",
       "war_fighting"
     ],
-    "search_text": "2020-2022 260 272 across adversity afar afar_region affecting agreement airline airport also although amhara another armed army artillery assault attack authoritie blackout blackout_reported breakdown calls came capital capture capture_airport celebrate celebrate_meskel celebrated celebration civil claiming clashe communitie concern condemned conflict control counter-offensive crisi declare declare_full-blown declare_war declared despite ended engage engaged erupt escalating escalating_clashe escalation ethiopia ethiopia_afar ethiopia_raise ethiopia_tigray ethiopia_tigrayan ethiopian ethiopian_airline ethiopian_celebrate face fears federal festivitie fighter fighting fighting_erupt figure flight force force_capture front front_tplf full-blown full-blown_war group heavy highlighting holiday honor humanitarian included independently indicate indicating intense intense_fighting intensified intensifying internet internet_blackout killed lead liberation liberation_front marking marks mekelle meskel meskel_holiday neighboring northern occasion occurring ongoing ongoing_tigray overnight part peace potential pretoria pretoria_agreement previou previously raise raise_concern raising rebel rebel_declare recent reflecting region region_ethiopian regional renewed renewed_fighting repel reported resilience resurgence seized signaling significant similar situation spreading stated suspended taken tension these three tigray tigray_force tigray_rebel tigrayan together tplf troop uk verified vibrant war war_fighting wider wounded"
+    "search_text": "2020-2022 260 272 across advance adversity afar afar_region affecting agreement airline airport allied along also although amhara another armed army artillery assault attack authoritie blackout blackout_reported breakdown calls came capital capture capture_airport capture_mekelle celebrate celebrate_meskel celebrated celebration civil claiming clashe communitie concern condemned confirmed conflict control counter-offensive crisi declare declare_full-blown declare_war declared despite ended engage engaged erupt escalating escalating_clashe escalation ethiopia ethiopia_afar ethiopia_raise ethiopia_tigray ethiopia_tigrayan ethiopian ethiopian_airline ethiopian_celebrate ethiopian_force face fears federal festivitie fighter fighting fighting_erupt figure flight force force_capture front front_tplf full-blown full-blown_war group heavy highlighting holiday honor humanitarian included independently indicate indicating intense intense_fighting intensified intensifying internet internet_blackout killed lead liberation liberation_front main marking marks mekelle meskel meskel_holiday neighboring northern occasion occurring ongoing ongoing_tigray overnight part peace potential presence pretoria pretoria_agreement previou previously pro-government raise raise_concern raising rebel rebel_declare recent reflecting region region_ethiopian regional renewed renewed_fighting repel reported resident resilience resurgence seized signaling significant similar situation spreading stated suspended taken tension these three tigray tigray_force tigray_rebel tigrayan together tplf troop uk verified vibrant war war_fighting wider withdraw withdrawal wounded"
   },
   "related_events": [
     {

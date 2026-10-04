@@ -15,7 +15,7 @@
     "summary": "Western Europe has recorded its hottest June and July on record, with average temperatures reaching 21.62°C, surpassing the previous record set in 2022. This extreme heat has been linked to climate change and has resulted in significant drought, wildfires, and health risks across the region. The heat waves began in May and have contributed to a historic summer characterized by severe weather conditions.",
     "status": "active",
     "first_seen_at": "2026-08-10",
-    "last_seen_at": "2026-09-10",
+    "last_seen_at": "2026-10-04",
     "timeline": [
       {
         "development_id": "story_7495c82ea2c3fc50",
@@ -241,47 +241,113 @@
         "first_seen_at": "2026-09-10",
         "last_seen_at": "2026-09-10",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_c2f12d63df41f706",
+        "daily_story_id": "story_c2f12d63df41f706",
+        "date": "2026-10-04",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Understanding the Kelvin Wave Impacting Sea Levels on the West Coast",
+        "summary": "A Kelvin wave is currently affecting sea levels along the West Coast, characterized by bulges of water that raise sea levels as they travel. Unlike tsunamis, these waves do not crash onto the shore but rather resemble water sloshing in a bathtub. This phenomenon is significant for coastal areas as it can lead to temporary increases in sea level.",
+        "topic_label": "Climate Change",
+        "development_type": "development",
+        "key_facts": [
+          "Kelvin waves raise sea levels along the West Coast.",
+          "They are characterized by bulges of water moving along the coast.",
+          "Unlike tsunamis, they do not crash onto the shore."
+        ],
+        "source_count": 2,
+        "sources": [
+          "AP News",
+          "PBS News"
+        ],
+        "source_urls": [
+          "https://news.google.com/rss/articles/CBMiogFBVV95cUxQd05TU0YyTW1Lc2dYUVo0QVo3QjAxWTI0MVgwWnpRSzZHSkdNVFNKOUxRZW9UemhOeVo0NDNVeTR5QXlUZmVFU29vbTFHcEprRUNwdDZuaUdmRDdiMDV2TmMzRFFadVBZSnFVak1kZ0sxeThYR3diWWdSNDRUX2RJYjBVeXgzQTVpd2ZLOFg1QWhSVTdvdzR3eVNHaVEyM1o4WVE?oc=5",
+          "https://www.pbs.org/newshour/science/what-to-know-about-the-kelvin-wave-raising-the-sea-level-along-the-west-coast"
+        ],
+        "source_details": [
+          {
+            "title": "What to know about the Kelvin wave raising the sea level along the West Coast",
+            "source": "AP News",
+            "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQd05TU0YyTW1Lc2dYUVo0QVo3QjAxWTI0MVgwWnpRSzZHSkdNVFNKOUxRZW9UemhOeVo0NDNVeTR5QXlUZmVFU29vbTFHcEprRUNwdDZuaUdmRDdiMDV2TmMzRFFadVBZSnFVak1kZ0sxeThYR3diWWdSNDRUX2RJYjBVeXgzQTVpd2ZLOFg1QWhSVTdvdzR3eVNHaVEyM1o4WVE?oc=5",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "What to know about the Kelvin wave raising the sea level along the West Coast",
+            "source": "PBS News",
+            "link": "https://www.pbs.org/newshour/science/what-to-know-about-the-kelvin-wave-raising-the-sea-level-along-the-west-coast",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_7495c82ea2c3fc50",
+          "shared_tokens": [
+            "change",
+            "characterized",
+            "climate",
+            "significant",
+            "waves"
+          ],
+          "shared_entities": [
+            "climate_change"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-04",
+        "last_seen_at": "2026-10-04",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 3,
+      "public_development_count": 4,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "August Recorded as Earth's Hottest Month Ever",
-    "latest_summary": "Scientists have reported that August was the hottest month on record, with global temperatures averaging 1.65°C above pre-industrial levels. This surge in heat is attributed primarily to human-caused climate change and is part of a concerning trend linked to the strengthening El Niño phenomenon. The record temperatures reflect a new normal for global climate conditions.",
+    "latest_title": "Understanding the Kelvin Wave Impacting Sea Levels on the West Coast",
+    "latest_summary": "A Kelvin wave is currently affecting sea levels along the West Coast, characterized by bulges of water that raise sea levels as they travel. Unlike tsunamis, these waves do not crash onto the shore but rather resemble water sloshing in a bathtub. This phenomenon is significant for coastal areas as it can lead to temporary increases in sea level.",
     "presentation": {
       "has_context": true,
-      "has_full_timeline": false,
-      "stage": "developing_event",
-      "stage_label": "Developing event",
+      "has_full_timeline": true,
+      "stage": "timeline",
+      "stage_label": "Timeline",
       "base_title": "Western Europe Experiences Record Heat in June and July",
-      "display_title": "Western Europe Experiences Record Heat in June and July",
+      "display_title": "Western Europe Experiences Record Heat in June and July Timeline",
       "milestone_development_ids": [
         "story_7495c82ea2c3fc50",
         "story_c369e93d8042b005",
-        "story_06495b49ea378afd"
+        "story_06495b49ea378afd",
+        "story_c2f12d63df41f706"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-09-10",
-      "development_count": 3,
-      "coverage_packet_count": 3,
-      "date_count": 3,
-      "source_count": 11,
-      "independent_source_count": 9,
+      "summary_updated_at": "2026-10-04",
+      "development_count": 4,
+      "coverage_packet_count": 4,
+      "date_count": 4,
+      "source_count": 13,
+      "independent_source_count": 10,
       "first_date": "2026-08-10",
-      "latest_date": "2026-09-10",
-      "latest_update_title": "August Recorded as Earth's Hottest Month Ever",
-      "coverage_score": 0.732,
-      "recency_score": 0.233,
-      "rank_score": 0.443,
-      "context_summary": "Muninn first tracked this thread on 2026-08-10: Western Europe Experiences Record Heat in June and July. The latest development is August Recorded as Earth's Hottest Month Ever.",
-      "cta_label": ""
+      "latest_date": "2026-10-04",
+      "latest_update_title": "Understanding the Kelvin Wave Impacting Sea Levels on the West Coast",
+      "coverage_score": 0.843,
+      "recency_score": 1.0,
+      "rank_score": 0.934,
+      "context_summary": "Muninn first tracked this thread on 2026-08-10: Western Europe Experiences Record Heat in June and July. The latest development is Understanding the Kelvin Wave Impacting Sea Levels on the West Coast.",
+      "cta_label": "Explore 4 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Western Europe has recorded its hottest June and July on record, with average temperatures reaching 21.62°C, surpassing the previous record set in 2022. A later development was Nepal Flooding Sparks Concerns Over Climate Change Impact on Himalayan Glaciers. Most recently, scientists have reported that August was the hottest month on record, with global temperatures averaging 1.65°C above pre-industrial levels.",
+      "summary": "Western Europe has recorded its hottest June and July on record, with average temperatures reaching 21.62°C, surpassing the previous record set in 2022. A later development was August Recorded as Earth's Hottest Month Ever. Most recently, a Kelvin wave is currently affecting sea levels along the West Coast, characterized by bulges of water that raise sea levels as they travel.",
       "key_developments": [
         {
           "development_id": "story_7495c82ea2c3fc50",
@@ -297,6 +363,11 @@
           "development_id": "story_06495b49ea378afd",
           "date": "2026-09-10",
           "title": "August Recorded as Earth's Hottest Month Ever"
+        },
+        {
+          "development_id": "story_c2f12d63df41f706",
+          "date": "2026-10-04",
+          "title": "Understanding the Kelvin Wave Impacting Sea Levels on the West Coast"
         }
       ],
       "sources": [
@@ -365,18 +436,30 @@
           "source": "New York Times",
           "link": "https://www.nytimes.com/2026/09/09/climate/august-hottest-month-global-warming.html",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "What to know about the Kelvin wave raising the sea level along the West Coast",
+          "source": "AP News",
+          "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQd05TU0YyTW1Lc2dYUVo0QVo3QjAxWTI0MVgwWnpRSzZHSkdNVFNKOUxRZW9UemhOeVo0NDNVeTR5QXlUZmVFU29vbTFHcEprRUNwdDZuaUdmRDdiMDV2TmMzRFFadVBZSnFVak1kZ0sxeThYR3diWWdSNDRUX2RJYjBVeXgzQTVpd2ZLOFg1QWhSVTdvdzR3eVNHaVEyM1o4WVE?oc=5",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "What to know about the Kelvin wave raising the sea level along the West Coast",
+          "source": "PBS News",
+          "link": "https://www.pbs.org/newshour/science/what-to-know-about-the-kelvin-wave-raising-the-sea-level-along-the-west-coast",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-09-10",
+      "updated_at": "2026-10-04",
       "provenance": "source_grounded_event_memory"
     },
-    "event_stage": "developing_event",
+    "event_stage": "timeline",
     "related_events": [
       {
         "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
         "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
         "relationship": "related_topic",
-        "confidence": 0.705,
+        "confidence": 0.699,
         "shared_entities": [
           "india",
           "june"
@@ -386,7 +469,7 @@
         "event_id": "event_analysis-links-climate-change-to-deadly-glac_ba07eb768f",
         "title": "Analysis Links Climate Change to Deadly Glacier and Rock Collapse in Nepal",
         "relationship": "related_topic",
-        "confidence": 0.683,
+        "confidence": 0.682,
         "shared_entities": [
           "climate_change",
           "nepal"
@@ -488,25 +571,34 @@
       "above",
       "accelerating",
       "across",
+      "affecting",
       "alarm",
+      "along",
       "among",
+      "areas",
       "assert",
       "attributed",
       "attributing",
       "august",
       "average",
       "averaging",
+      "bathtub",
       "began",
       "better",
+      "bulge",
       "catastrophic",
       "caution",
       "change",
       "characterized",
       "climate",
+      "coast",
+      "coastal",
       "concern",
       "concerning",
       "condition",
       "contributed",
+      "crash",
+      "currently",
       "disaster",
       "drought",
       "earth",
@@ -529,10 +621,14 @@
       "human-caused",
       "human-induced",
       "impact",
+      "impacting",
+      "increase",
       "increased",
       "india",
       "july",
       "june",
+      "kelvin",
+      "lead",
       "level",
       "linked",
       "long",
@@ -542,6 +638,7 @@
       "month",
       "nepal",
       "normal",
+      "onto",
       "other",
       "part",
       "phenomenon",
@@ -550,8 +647,10 @@
       "predicted",
       "previou",
       "primarily",
+      "raise",
       "raised",
       "rapidly",
+      "rather",
       "reaching",
       "recent",
       "record",
@@ -560,12 +659,15 @@
       "regarding",
       "region",
       "reported",
+      "resemble",
       "response",
       "resulted",
       "risks",
       "scientist",
       "severe",
+      "shore",
       "significant",
+      "sloshing",
       "solely",
       "some",
       "spark",
@@ -574,11 +676,20 @@
       "surge",
       "surpassing",
       "temperature",
+      "temporary",
+      "these",
       "they",
+      "travel",
       "trend",
+      "tsunami",
       "understand",
+      "understanding",
+      "unlike",
+      "water",
+      "wave",
       "waves",
       "weather",
+      "west",
       "western",
       "while",
       "wildfire"
@@ -595,18 +706,23 @@
       "glacier_recent",
       "himalayan_glacier",
       "hottest_month",
+      "impacting_sea",
       "india",
       "july_western",
       "june",
+      "kelvin_wave",
       "may",
       "month_ever",
       "nepal",
       "nepal_flooding",
       "record_heat",
+      "sea_level",
       "spark_concern",
+      "wave_impacting",
+      "west_coast",
       "western_europe"
     ],
-    "search_text": "2022 above accelerating across alarm among assert attributed attributing august august_recorded average averaging began better catastrophic caution change change_impact characterized climate climate_change concern concerning condition contributed disaster drought earth earth_hottest effort europe europe_experience event ever ever_scientist exemplifie experience experience_record expert extreme flooding flooding_spark glacier glacier_recent global health heat himalayan himalayan_glacier historic hottest hottest_month human-caused human-induced impact increased india july july_western june level linked long may melting mitigate monitoring month month_ever nepal nepal_flooding normal other part phenomenon posed pre-industrial predicted previou primarily raised rapidly reaching recent record record_heat recorded reflect regarding region reported response resulted risks scientist severe significant solely some spark spark_concern strengthening summer surge surpassing temperature they trend understand waves weather western western_europe while wildfire"
+    "search_text": "2022 above accelerating across affecting alarm along among areas assert attributed attributing august august_recorded average averaging bathtub began better bulge catastrophic caution change change_impact characterized climate climate_change coast coastal concern concerning condition contributed crash currently disaster drought earth earth_hottest effort europe europe_experience event ever ever_scientist exemplifie experience experience_record expert extreme flooding flooding_spark glacier glacier_recent global health heat himalayan himalayan_glacier historic hottest hottest_month human-caused human-induced impact impacting impacting_sea increase increased india july july_western june kelvin kelvin_wave lead level linked long may melting mitigate monitoring month month_ever nepal nepal_flooding normal onto other part phenomenon posed pre-industrial predicted previou primarily raise raised rapidly rather reaching recent record record_heat recorded reflect regarding region reported resemble response resulted risks scientist sea_level severe shore significant sloshing solely some spark spark_concern strengthening summer surge surpassing temperature temporary these they travel trend tsunami understand understanding unlike water wave wave_impacting waves weather west west_coast western western_europe while wildfire"
   },
   "related_events": [
     {
