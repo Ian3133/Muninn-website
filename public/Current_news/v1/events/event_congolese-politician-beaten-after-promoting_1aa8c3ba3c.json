@@ -15,7 +15,7 @@
     "summary": "Marie-Celestin Karondwa, a politician from the ruling UDPS party in the Democratic Republic of the Congo, was beaten on Sunday after advocating for Ebola awareness during a radio interview. The incident occurred in Butembo, a region experiencing an Ebola outbreak, as residents reacted violently to his message promoting disease prevention measures.",
     "status": "active",
     "first_seen_at": "2026-09-29",
-    "last_seen_at": "2026-10-04",
+    "last_seen_at": "2026-10-06",
     "timeline": [
       {
         "development_id": "story_e63f966f30208f6c",
@@ -299,6 +299,97 @@
         "first_seen_at": "2026-10-03",
         "last_seen_at": "2026-10-03",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_9bea55cbae5c1645",
+        "daily_story_id": "story_9bea55cbae5c1645",
+        "date": "2026-10-06",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Kenya Reports First Confirmed Ebola Case and Death Following Return from DRC",
+        "summary": "Kenya has confirmed its first-ever case of Ebola, resulting in the death of a man who had recently returned from the Democratic Republic of Congo. Health authorities have identified 28 contacts of the deceased as they monitor the situation closely. The outbreak in the DRC has been severe, with over 4,000 deaths reported this year.",
+        "topic_label": "Ebola Outbreak",
+        "development_type": "development",
+        "key_facts": [
+          "First confirmed Ebola case in Kenya.",
+          "The patient died after returning from the DRC.",
+          "28 contacts have been traced by health authorities."
+        ],
+        "source_count": 3,
+        "sources": [
+          "Africanews",
+          "Al Jazeera English",
+          "BBC - World"
+        ],
+        "source_urls": [
+          "https://www.aljazeera.com/news/2026/10/6/kenya-confirms-first-ebola-case-after-patient-from-dr-congo-dies-in-nairobi?traffic_source=rss",
+          "http://www.africanews.com/2026/10/06/kenya-confirms-first-ebola-death-as-28-contacts-traced",
+          "https://www.bbc.co.uk/news/articles/cqzrd7v1j163o?at_medium=RSS&at_campaign=rss"
+        ],
+        "source_details": [
+          {
+            "title": "Kenya confirms first Ebola case as man dies in Nairobi after DRC return",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/news/2026/10/6/kenya-confirms-first-ebola-case-after-patient-from-dr-congo-dies-in-nairobi?traffic_source=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Kenya confirms first Ebola death as 28 contacts traced",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/10/06/kenya-confirms-first-ebola-death-as-28-contacts-traced",
+            "source_bias": "center"
+          },
+          {
+            "title": "Kenya confirms its first Ebola death as outbreak spreads",
+            "source": "BBC - World",
+            "link": "https://www.bbc.co.uk/news/articles/cqzrd7v1j163o?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "outbreak"
+          ],
+          "shared_incident_anchors": [
+            "democratic_republic",
+            "ebola",
+            "ebola_outbreak"
+          ],
+          "shared_incident_numbers": [
+            "000",
+            "4"
+          ],
+          "shared_tokens": [
+            "000",
+            "confirmed",
+            "congo",
+            "death",
+            "democratic",
+            "ebola",
+            "outbreak",
+            "reported",
+            "republic",
+            "severe"
+          ],
+          "shared_entities": [
+            "democratic_republic",
+            "ebola",
+            "ebola_outbreak"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_871c8d64f23ce369",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-06",
+        "last_seen_at": "2026-10-06",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -327,12 +418,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 4,
+      "public_development_count": 5,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Ebola Outbreak in DR Congo Claims Over 4,000 Lives",
-    "latest_summary": "The Democratic Republic of Congo is experiencing its worst Ebola outbreak, with official figures reporting over 4,000 deaths among more than 8,000 confirmed cases. This outbreak has been characterized as the most severe in the country's history.",
+    "latest_title": "Kenya Reports First Confirmed Ebola Case and Death Following Return from DRC",
+    "latest_summary": "Kenya has confirmed its first-ever case of Ebola, resulting in the death of a man who had recently returned from the Democratic Republic of Congo. Health authorities have identified 28 contacts of the deceased as they monitor the situation closely. The outbreak in the DRC has been severe, with over 4,000 deaths reported this year.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -344,28 +435,29 @@
         "story_e63f966f30208f6c",
         "story_d52eb0bf28383c8e",
         "story_df5edf31e323e0ad",
-        "story_871c8d64f23ce369"
+        "story_871c8d64f23ce369",
+        "story_9bea55cbae5c1645"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-10-03",
-      "development_count": 4,
-      "coverage_packet_count": 4,
-      "date_count": 3,
-      "source_count": 7,
-      "independent_source_count": 5,
+      "summary_updated_at": "2026-10-06",
+      "development_count": 5,
+      "coverage_packet_count": 5,
+      "date_count": 4,
+      "source_count": 10,
+      "independent_source_count": 6,
       "first_date": "2026-09-29",
-      "latest_date": "2026-10-03",
-      "latest_update_title": "Ebola Outbreak in DR Congo Claims Over 4,000 Lives",
-      "coverage_score": 0.628,
-      "recency_score": 0.875,
-      "rank_score": 0.771,
-      "context_summary": "Muninn first tracked this thread on 2026-09-29: Congolese Politician Beaten After Promoting Ebola Awareness. The latest development is Ebola Outbreak in DR Congo Claims Over 4,000 Lives.",
-      "cta_label": "Explore 4 developments"
+      "latest_date": "2026-10-06",
+      "latest_update_title": "Kenya Reports First Confirmed Ebola Case and Death Following Return from DRC",
+      "coverage_score": 0.802,
+      "recency_score": 1.0,
+      "rank_score": 0.917,
+      "context_summary": "Muninn first tracked this thread on 2026-09-29: Congolese Politician Beaten After Promoting Ebola Awareness. The latest development is Kenya Reports First Confirmed Ebola Case and Death Following Return from DRC.",
+      "cta_label": "Explore 5 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Marie-Celestin Karondwa, a politician from the ruling UDPS party in the Democratic Republic of the Congo, was beaten on Sunday after advocating for Ebola awareness during a radio interview. A later development was Ebola Outbreak in DR Congo Exceeds 4,000 Deaths Amid Ongoing Challenges. Most recently, the Democratic Republic of Congo is experiencing its worst Ebola outbreak, with official figures reporting over 4,000 deaths among more than 8,000 confirmed cases.",
+      "summary": "Marie-Celestin Karondwa, a politician from the ruling UDPS party in the Democratic Republic of the Congo, was beaten on Sunday after advocating for Ebola awareness during a radio interview. A later development was Ebola Outbreak in DR Congo Exceeds 4,000 Deaths Amid Ongoing Challenges. Most recently, kenya has confirmed its first-ever case of Ebola, resulting in the death of a man who had recently returned from the Democratic Republic of Congo.",
       "key_developments": [
         {
           "development_id": "story_e63f966f30208f6c",
@@ -386,6 +478,11 @@
           "development_id": "story_871c8d64f23ce369",
           "date": "2026-10-03",
           "title": "Ebola Outbreak in DR Congo Claims Over 4,000 Lives"
+        },
+        {
+          "development_id": "story_9bea55cbae5c1645",
+          "date": "2026-10-06",
+          "title": "Kenya Reports First Confirmed Ebola Case and Death Following Return from DRC"
         }
       ],
       "sources": [
@@ -430,9 +527,27 @@
           "source": "Euronews",
           "link": "https://www.euronews.com/2026/10/02/dr-congo-ebola-outbreak-killed-more-than-4000-official-figures",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Kenya confirms first Ebola case as man dies in Nairobi after DRC return",
+          "source": "Al Jazeera English",
+          "link": "https://www.aljazeera.com/news/2026/10/6/kenya-confirms-first-ebola-case-after-patient-from-dr-congo-dies-in-nairobi?traffic_source=rss",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Kenya confirms first Ebola death as 28 contacts traced",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/10/06/kenya-confirms-first-ebola-death-as-28-contacts-traced",
+          "source_bias": "center"
+        },
+        {
+          "title": "Kenya confirms its first Ebola death as outbreak spreads",
+          "source": "BBC - World",
+          "link": "https://www.bbc.co.uk/news/articles/cqzrd7v1j163o?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-10-03",
+      "updated_at": "2026-10-06",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -441,13 +556,14 @@
         "event_id": "event_ebola-outbreak-in-congo-approaches-1-000-dea_10c383b98f",
         "title": "Ebola Outbreak in DR Congo Exceeds 1,000 Deaths",
         "relationship": "related_topic",
-        "confidence": 0.867,
+        "confidence": 0.898,
         "shared_entities": [
           "congo_claim",
           "congo_exceed",
           "democratic",
           "democratic_republic",
           "dr",
+          "drc",
           "ebola_outbreak"
         ]
       },
@@ -455,9 +571,10 @@
         "event_id": "event_fire-in-bukavu-claims-lives-of-schoolchildre_a785448e1f",
         "title": "Fire in Bukavu Claims Lives of Schoolchildren and Destroys Neighborhood",
         "relationship": "related_topic",
-        "confidence": 0.669,
+        "confidence": 0.709,
         "shared_entities": [
           "democratic_republic",
+          "drc",
           "eastern"
         ]
       }
@@ -492,16 +609,20 @@
       "burning",
       "butembo",
       "camp",
+      "case",
       "cases",
       "center",
       "challenge",
       "characterized",
       "claim",
+      "closely",
       "confirmed",
       "congo",
       "congolese",
+      "contact",
       "control",
       "death",
+      "deceased",
       "democratic",
       "disease",
       "eastern",
@@ -516,16 +637,20 @@
       "experiencing",
       "facility",
       "figure",
+      "first",
+      "first-ever",
       "flee",
       "forced",
       "hampered",
       "health",
       "history",
       "hours",
+      "identified",
       "improvement",
       "incident",
       "interview",
       "karondwa",
+      "kenya",
       "laboratory",
       "labs",
       "lives",
@@ -534,6 +659,7 @@
       "message",
       "mistrust",
       "mobile",
+      "monitor",
       "most",
       "nearby",
       "occurred",
@@ -550,17 +676,23 @@
       "radio",
       "reacted",
       "recent",
+      "recently",
       "reducing",
       "region",
       "relief",
+      "reported",
       "reporting",
       "republic",
       "required",
       "resident",
       "result",
+      "resulting",
+      "return",
+      "returned",
       "ruling",
       "severe",
       "significantly",
+      "situation",
       "some",
       "staff",
       "sunday",
@@ -568,6 +700,7 @@
       "test",
       "testing",
       "than",
+      "they",
       "time",
       "took",
       "transit",
@@ -578,21 +711,28 @@
       "weeks",
       "which",
       "within",
-      "worst"
+      "worst",
+      "year"
     ],
     "entities": [
       "awareness_marie-celestin",
       "butembo",
+      "confirmed_ebola",
+      "congo._health",
       "congo_claim",
       "congo_exceed",
       "democratic",
       "democratic_republic",
       "dr",
+      "drc",
+      "drc_kenya",
       "eastern",
       "ebola_awareness",
+      "ebola_case",
       "ebola_outbreak",
       "ebola_testing",
       "enhance_ebola",
+      "first_confirmed",
       "labs_enhance",
       "marie-celestin",
       "marie-celestin_karondwa",
@@ -602,7 +742,111 @@
       "testing_efficiency",
       "udps"
     ],
-    "search_text": "000 advocating among authoritie awareness awareness_marie-celestin beaten burning butembo camp cases center challenge characterized claim confirmed congo congo_claim congo_exceed congolese control death democratic democratic_republic disease dr eastern ebola ebola-hit ebola_awareness ebola_outbreak ebola_testing efficiency effort enhance enhance_ebola epidemic exceed exemplified experiencing facility figure flee forced hampered health history hours improvement incident interview karondwa laboratory labs labs_enhance lives marie-celestin marie-celestin_karondwa measure message mistrust mobile mobile_labs most nearby occurred ongoing ongoing_challenge operational outbreak party prevention previously promoting promoting_ebola provide public quickly radio reacted recent reducing region relief reporting republic required resident result ruling severe significantly some staff sunday surpassed test testing testing_efficiency than time took transit treatment udps violence violently weeks which within worst"
+    "search_text": "000 advocating among authoritie awareness awareness_marie-celestin beaten burning butembo camp case cases center challenge characterized claim closely confirmed confirmed_ebola congo congo._health congo_claim congo_exceed congolese contact control death deceased democratic democratic_republic disease dr drc drc_kenya eastern ebola ebola-hit ebola_awareness ebola_case ebola_outbreak ebola_testing efficiency effort enhance enhance_ebola epidemic exceed exemplified experiencing facility figure first first-ever first_confirmed flee forced hampered health history hours identified improvement incident interview karondwa kenya laboratory labs labs_enhance lives marie-celestin marie-celestin_karondwa measure message mistrust mobile mobile_labs monitor most nearby occurred ongoing ongoing_challenge operational outbreak party prevention previously promoting promoting_ebola provide public quickly radio reacted recent recently reducing region relief reported reporting republic required resident result resulting return returned ruling severe significantly situation some staff sunday surpassed test testing testing_efficiency than they time took transit treatment udps violence violently weeks which within worst year",
+    "event_overview": {
+      "available": true,
+      "title": "About Awareness Outbreak",
+      "subject": "Awareness Outbreak",
+      "summary": "“Awareness Outbreak” is not an official outbreak designation in the sources consulted; the timeline appears to concern Ebola virus disease (EVD) reporting and response in and around the Democratic Republic of the Congo (DRC). EVD outbreaks are public-health emergencies managed primarily by DRC health authorities with support from the World Health Organization (WHO) and partners, using testing, contact tracing, infection prevention, treatment, vaccination and community engagement.",
+      "facts": [
+        {
+          "label": "Disease and setting",
+          "value": "Ebola virus disease outbreaks in the DRC have involved Zaire ebolavirus; the country has experienced repeated outbreaks since Ebola was first identified there in 1976.",
+          "source_ids": [
+            "o1",
+            "o2"
+          ]
+        },
+        {
+          "label": "Largest recent outbreak",
+          "value": "The DRC’s tenth Ebola outbreak ran from 1 August 2018 to 25 June 2020, affecting North Kivu, Ituri and South Kivu provinces; WHO recorded 3,470 confirmed and probable cases and 2,287 deaths.",
+          "source_ids": [
+            "o3",
+            "o4"
+          ]
+        },
+        {
+          "label": "Cross-border relevance",
+          "value": "The 2018–2020 outbreak also had cross-border implications: four cases in Uganda were attributed to movement from the DRC and were included in the DRC death count in CDC reporting.",
+          "source_ids": [
+            "o4"
+          ]
+        },
+        {
+          "label": "Recent officially documented DRC outbrea",
+          "value": "WHO records that the April–July 2022 outbreak in Mbandaka, Équateur Province, involved five cases and five deaths, while an August–September 2022 event in Beni, North Kivu, involved one confirmed case; both were formally declared over after 42 days without further transmission following the last burial.",
+          "source_ids": [
+            "o5",
+            "o6"
+          ]
+        },
+        {
+          "label": "Response model",
+          "value": "National authorities and WHO describe the core response as laboratory testing, contact tracing, infection prevention and control, treatment, vaccination where appropriate, safe burials and community engagement.",
+          "source_ids": [
+            "o7",
+            "o3"
+          ]
+        }
+      ],
+      "scope_note": "The selected Muninn timeline covers particular claimed developments related to Ebola awareness, diagnostics, deaths and possible regional spread; it does not by itself establish that these items constitute one officially declared outbreak or validate their reported totals.",
+      "sources": [
+        {
+          "title": "Who",
+          "publisher": "Who",
+          "url": "https://www.who.int/emergencies/situations/ebola-%C3%A9quateur-province-democratic-republic-of-the-congo-2022",
+          "source_type": "primary",
+          "id": "o1"
+        },
+        {
+          "title": "Who",
+          "publisher": "Who",
+          "url": "https://www.afro.who.int/countries/democratic-republic-congo/news/democratic-republic-congo-ebola-outbreak-declared-over",
+          "source_type": "primary",
+          "id": "o2"
+        },
+        {
+          "title": "Who",
+          "publisher": "Who",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2020-DON284",
+          "source_type": "primary",
+          "id": "o3"
+        },
+        {
+          "title": "Cdc",
+          "publisher": "Cdc",
+          "url": "https://www.cdc.gov/ebola/outbreaks/index.html",
+          "source_type": "primary",
+          "id": "o4"
+        },
+        {
+          "title": "Who",
+          "publisher": "Who",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2022-DON398",
+          "source_type": "primary",
+          "id": "o5"
+        },
+        {
+          "title": "Who",
+          "publisher": "Who",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2022-DON411",
+          "source_type": "primary",
+          "id": "o6"
+        },
+        {
+          "title": "Who",
+          "publisher": "Who",
+          "url": "https://www.afro.who.int/countries/democratic-republic-congo/news/democratic-republic-congo-declares-14th-ebola-outbreak",
+          "source_type": "primary",
+          "id": "o7"
+        }
+      ],
+      "publisher_count": 2,
+      "generated_at": "2026-10-06T17:51:29.428951+00:00",
+      "expires_at": "2026-10-13T17:51:29.428951+00:00",
+      "model": "gpt-5.6-terra",
+      "provenance": "openai_web_search_source_grounded_event_overview_v1"
+    }
   },
   "related_events": [
     {

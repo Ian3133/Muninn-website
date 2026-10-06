@@ -15,7 +15,7 @@
     "summary": "A Ukrainian drone strike ignited a significant fire at a Wildberries warehouse near Saint Petersburg on July 24. The blaze produced thick smoke that spread across the city and led to temporary disruptions at Pulkovo Airport, as reported by Russian authorities.",
     "status": "active",
     "first_seen_at": "2026-07-25",
-    "last_seen_at": "2026-10-02",
+    "last_seen_at": "2026-10-06",
     "timeline": [
       {
         "development_id": "story_b77a481c5a1a5ef9",
@@ -1721,15 +1721,83 @@
         "first_seen_at": "2026-10-02",
         "last_seen_at": "2026-10-02",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_bad240d0a1102fb2",
+        "daily_story_id": "story_bad240d0a1102fb2",
+        "date": "2026-10-06",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Yemen Government Forces Regain Control Near Bab el-Mandeb Strait",
+        "summary": "Forces loyal to the Yemeni government have recaptured several strategic areas around the Bab el-Mandeb Strait from Houthi rebels. The operation, supported by the Saudi-led coalition, included the retaking of the town of Dhubab and other locations in the vicinity. This offensive aims to reclaim all territory held by the Iran-backed Houthis.",
+        "topic_label": "Yemen Conflict",
+        "development_type": "development",
+        "key_facts": [
+          "Yemeni government forces recaptured areas around Bab el-Mandeb Strait.",
+          "The operation was supported by the Saudi-led coalition.",
+          "Key locations retaken include the town of Dhubab."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Africanews",
+          "The Guardian"
+        ],
+        "source_urls": [
+          "http://www.africanews.com/2026/10/06/yemen-fighting-intensifies-as-government-forces-retake-key-areas-near-bab-el-mandeb",
+          "https://www.theguardian.com/world/2026/oct/05/saudi-forces-recapture-key-areas-strait-houthis-yemen"
+        ],
+        "source_details": [
+          {
+            "title": "Yemen fighting intensifies as government forces retake key areas near Bab el-Mandeb",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/10/06/yemen-fighting-intensifies-as-government-forces-retake-key-areas-near-bab-el-mandeb",
+            "source_bias": "center"
+          },
+          {
+            "title": "Saudi-backed forces recapture key areas around strait from Houthis in Yemen",
+            "source": "The Guardian",
+            "link": "https://www.theguardian.com/world/2026/oct/05/saudi-forces-recapture-key-areas-strait-houthis-yemen",
+            "source_bias": "left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_a3a93fbe52b6f5c6",
+          "shared_tokens": [
+            "conflict",
+            "control",
+            "el-mandeb",
+            "houthi",
+            "rebel",
+            "strait",
+            "strategic",
+            "yemen"
+          ],
+          "shared_entities": [
+            "el-mandeb"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-06",
+        "last_seen_at": "2026-10-06",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 23,
+      "public_development_count": 24,
       "questionable_development_count": 2,
       "review_required": true
     },
-    "latest_title": "Severe Hunger Affects Three in Four Households in Yemen Amid Ongoing Conflict",
-    "latest_summary": "The World Food Programme has reported that three in four households in parts of Yemen are experiencing hunger due to ongoing fighting. The conflict has displaced thousands and severely disrupted food supplies, leading to a 'devastating' humanitarian impact.",
+    "latest_title": "Yemen Government Forces Regain Control Near Bab el-Mandeb Strait",
+    "latest_summary": "Forces loyal to the Yemeni government have recaptured several strategic areas around the Bab el-Mandeb Strait from Houthi rebels. The operation, supported by the Saudi-led coalition, included the retaking of the town of Dhubab and other locations in the vicinity. This offensive aims to reclaim all territory held by the Iran-backed Houthis.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -1739,30 +1807,30 @@
       "display_title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse Timeline",
       "milestone_development_ids": [
         "story_b77a481c5a1a5ef9",
-        "story_abce59c4535e502b",
+        "story_0b5b97783aac8f21",
         "story_228507eb67b34d83",
-        "story_7146dd3ab5c5c0a8"
+        "story_bad240d0a1102fb2"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-10-02",
-      "development_count": 23,
-      "coverage_packet_count": 23,
-      "date_count": 19,
-      "source_count": 57,
+      "summary_updated_at": "2026-10-06",
+      "development_count": 24,
+      "coverage_packet_count": 24,
+      "date_count": 20,
+      "source_count": 59,
       "independent_source_count": 25,
       "first_date": "2026-07-25",
-      "latest_date": "2026-10-02",
-      "latest_update_title": "Severe Hunger Affects Three in Four Households in Yemen Amid Ongoing Conflict",
+      "latest_date": "2026-10-06",
+      "latest_update_title": "Yemen Government Forces Regain Control Near Bab el-Mandeb Strait",
       "coverage_score": 1.0,
-      "recency_score": 0.778,
-      "rank_score": 0.871,
-      "context_summary": "Muninn first tracked this thread on 2026-07-25: Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse. The latest development is Severe Hunger Affects Three in Four Households in Yemen Amid Ongoing Conflict.",
-      "cta_label": "Explore 23 developments"
+      "recency_score": 1.0,
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-07-25: Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse. The latest development is Yemen Government Forces Regain Control Near Bab el-Mandeb Strait.",
+      "cta_label": "Explore 24 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "A Ukrainian drone strike ignited a significant fire at a Wildberries warehouse near Saint Petersburg on July 24. A later development was Russia Claims Strikes on Ukrainian Infrastructure Amid Drone Attacks. Most recently, the World Food Programme has reported that three in four households in parts of Yemen are experiencing hunger due to ongoing fighting.",
+      "summary": "A Ukrainian drone strike ignited a significant fire at a Wildberries warehouse near Saint Petersburg on July 24. A later development was Civilian Casualties in Ukraine Reach Highest Monthly Level Since 2022. Most recently, forces loyal to the Yemeni government have recaptured several strategic areas around the Bab el-Mandeb Strait from Houthi rebels.",
       "key_developments": [
         {
           "development_id": "story_b77a481c5a1a5ef9",
@@ -1770,9 +1838,9 @@
           "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse"
         },
         {
-          "development_id": "story_abce59c4535e502b",
-          "date": "2026-08-12",
-          "title": "Zelenskyy Reports Russian Attack with North Korean Missiles Kills Six in Zaporizhzhia"
+          "development_id": "story_0b5b97783aac8f21",
+          "date": "2026-08-13",
+          "title": "Pentagon Report Confirms 153 Civilian Deaths from US Strikes on Houthis in Yemen"
         },
         {
           "development_id": "story_228507eb67b34d83",
@@ -1780,9 +1848,9 @@
           "title": "Ukrainian President Zelenskyy Visits Canada Amid Airstrike Concerns"
         },
         {
-          "development_id": "story_7146dd3ab5c5c0a8",
-          "date": "2026-10-02",
-          "title": "Severe Hunger Affects Three in Four Households in Yemen Amid Ongoing Conflict"
+          "development_id": "story_bad240d0a1102fb2",
+          "date": "2026-10-06",
+          "title": "Yemen Government Forces Regain Control Near Bab el-Mandeb Strait"
         }
       ],
       "sources": [
@@ -2127,9 +2195,21 @@
           "source": "Channel NewsAsia - Latest",
           "link": "https://www.channelnewsasia.com/world/three-in-four-families-go-hungry-in-parts-yemen-new-fighting-6426751",
           "source_bias": "center"
+        },
+        {
+          "title": "Yemen fighting intensifies as government forces retake key areas near Bab el-Mandeb",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/10/06/yemen-fighting-intensifies-as-government-forces-retake-key-areas-near-bab-el-mandeb",
+          "source_bias": "center"
+        },
+        {
+          "title": "Saudi-backed forces recapture key areas around strait from Houthis in Yemen",
+          "source": "The Guardian",
+          "link": "https://www.theguardian.com/world/2026/oct/05/saudi-forces-recapture-key-areas-strait-houthis-yemen",
+          "source_bias": "left"
         }
       ],
-      "updated_at": "2026-10-02",
+      "updated_at": "2026-10-06",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -2152,6 +2232,25 @@
           "yemen",
           "yemen_houthi",
           "zaporizhzhia"
+        ]
+      },
+      {
+        "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
+        "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
+        "relationship": "related_topic",
+        "confidence": 0.95,
+        "shared_entities": [
+          "kyiv",
+          "kyiv_result",
+          "near_kyiv",
+          "russia",
+          "russia_missile",
+          "turkey",
+          "ukraine",
+          "ukraine_conduct",
+          "ukraine_drone",
+          "us",
+          "volodymyr_zelenskyy"
         ]
       },
       {
@@ -2186,33 +2285,15 @@
         ]
       },
       {
-        "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
-        "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
-        "relationship": "related_topic",
-        "confidence": 0.95,
-        "shared_entities": [
-          "kyiv",
-          "kyiv_result",
-          "near_kyiv",
-          "russia",
-          "russia_missile",
-          "turkey",
-          "ukraine",
-          "ukraine_conduct",
-          "ukraine_drone",
-          "us",
-          "volodymyr_zelenskyy"
-        ]
-      },
-      {
         "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
         "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
         "relationship": "related_topic",
-        "confidence": 0.904,
+        "confidence": 0.94,
         "shared_entities": [
           "kyiv",
           "russia",
           "ukraine",
+          "ukraine_drone",
           "un",
           "united_nation",
           "us",
@@ -2377,6 +2458,7 @@
       "affected",
       "ahead",
       "aimed",
+      "aims",
       "airport",
       "airstrike",
       "alarming",
@@ -2387,6 +2469,8 @@
       "approximately",
       "april",
       "archipelago",
+      "areas",
+      "around",
       "arrival",
       "assault",
       "assistant",
@@ -2418,6 +2502,7 @@
       "claim",
       "claimed",
       "clashe",
+      "coalition",
       "coast",
       "coincided",
       "collaboration",
@@ -2454,6 +2539,7 @@
       "detained",
       "devastating",
       "development",
+      "dhubab",
       "discovered",
       "displace",
       "displaced",
@@ -2528,6 +2614,7 @@
       "impact",
       "impacting",
       "incident",
+      "included",
       "including",
       "increase",
       "increasing",
@@ -2569,6 +2656,7 @@
       "location",
       "logistic",
       "long-range",
+      "loyal",
       "makeshift",
       "many",
       "maritime",
@@ -2602,6 +2690,7 @@
       "oil",
       "ongoing",
       "onset",
+      "operation",
       "other",
       "overcrowded",
       "overnight",
@@ -2636,8 +2725,11 @@
       "reached",
       "reason",
       "rebel",
+      "recaptured",
       "recent",
+      "reclaim",
       "refinery",
+      "regain",
       "region",
       "renewed",
       "reported",
@@ -2648,6 +2740,7 @@
       "resulted",
       "resulting",
       "resurgence",
+      "retaking",
       "revealed",
       "review",
       "right",
@@ -2664,6 +2757,7 @@
       "separate",
       "serbia",
       "seven",
+      "several",
       "severe",
       "severely",
       "shahed",
@@ -2688,6 +2782,7 @@
       "such",
       "supplie",
       "support",
+      "supported",
       "surge",
       "surged",
       "surrounding",
@@ -2713,6 +2808,7 @@
       "time",
       "torture",
       "tour",
+      "town",
       "train",
       "trend",
       "turkey",
@@ -2720,6 +2816,7 @@
       "ukraine",
       "united",
       "variou",
+      "vicinity",
       "victim",
       "violence",
       "visit",
@@ -2766,6 +2863,7 @@
       "concurrently_russia",
       "concurrently_ukraine",
       "confirm_civilian",
+      "control_near",
       "deadly_ukraine",
       "deals_recent",
       "displace_thousand",
@@ -2780,11 +2878,13 @@
       "expand_control",
       "fatalitie",
       "food_programme",
+      "force_regain",
       "four",
       "ground_fighting",
       "gulf",
       "highest_civilian",
       "highest_monthly",
+      "houthi",
       "houthi_advance",
       "houthi_capture",
       "houthi_expand",
@@ -2794,6 +2894,7 @@
       "including_civilian",
       "injure_dozen",
       "iran-backed_houthi",
+      "iran-backed_houthis.",
       "island_strengthening",
       "july.",
       "korean_missile",
@@ -2805,6 +2906,7 @@
       "mission._drone",
       "monitoring_mission.",
       "monthly_level",
+      "near_bab",
       "near_kyiv",
       "nizhnekamsk",
       "nizhnekamsk_russia",
@@ -2826,6 +2928,7 @@
       "red_sea",
       "red_sea.",
       "refinery_claim",
+      "regain_control",
       "region_result",
       "renewed_violence",
       "right_monitoring",
@@ -2846,6 +2949,7 @@
       "shipping_yemen",
       "since_may",
       "still_detained",
+      "strait_force",
       "strategic_perim",
       "strategic_port",
       "strengthening_control",
@@ -2875,12 +2979,13 @@
       "yemen_taiz",
       "yemen_tens",
       "yemen_threatening",
+      "yemeni",
       "zaporizhzhia",
       "zaporizhzhia_ukraine",
       "zelensky_visit",
       "zelenskyy_visit"
     ],
-    "search_text": "000 125 153 201 2022 2025 2026 243 340 400 437 610 9-year-old accounted across action additional additionally aden advance aerial affect affected ahead aimed airport airstrike airstrike_concern alarming although amidst among appear approximately april archipelago arrival assault assistant atacm attack august authoritie bab beginning belgorod berezivka blaze bolster both broader campaign camps canada capabilitie capital capture capture_strategic captured casualtie cause ceasefire ceasefire_collapse child children civil civilian civilian_casualtie civilian_clashe civilian_still claim claim_lives claimed clashe coast coincided collaboration collapse comply concern concern_ukraine concluded concurrently concurrently_russia concurrently_ukraine condolence conduct confirm confirm_civilian confirming conflict continue contributed control crater crisi critical crucial data deadliest deadly deadly_ukraine deal deals deals_recent death debri decision deep defense deploying deprived described detained devastating development discovered displace displace_thousand displaced displacement displacement_crisi displacing displacing_thousand disrupted disruption district djibouti donald donald_tusk down downed dozen driver drone early eastern eastern_poland effort el-mandeb energy engage enhance enhancing escalating escalating_ground escalation escaping evacuated expand expand_control experiencing explosion faces facilitie facility fatalitie fearing fell field fighting finalized fire fired fires first five fled fleeing food food_programme force four frontline full-scale global goods government-allied ground ground_fighting gulf hanish held highest highest_civilian highest_monthly highlight highlighted household houthi houthi_advance houthi_capture houthi_expand houthi_seize human human_right humanitarian hundred hunger hunger_affect hysterical ignited igniting ill-treatment impact impacting incident including including_civilian increase increasing indicate indicating individual industrial infrastructure injure injure_dozen injured injurie inside intensifie intensified international invasion involving iran-backed iran-backed_houthi island island_strengthening july july. just kadha killed killing kills kilometer korean korean_missile kyiv kyiv_result largest launched leading least leave level level_since liberty lives local located location logistic long-range makeshift many maritime market marks military military_deals missile missile_downed mission mission._drone mokha monitor monitoring monitoring_mission. month monthly monthly_level moscow move multi-nation multiple nation near near_kyiv nearly nine nizhnekamsk nizhnekamsk_russia north north_korean noted number numerou occur occurred odesa odesa_region offensive oil ongoing onset other overcrowded overnight panic part parts passenger passenger_train passing past payment pentagon perim perim_island petersburg petersburg_warehouse pm poland poland_polish polish polish_prime port poses position possible possible_russia prime produced programme provided province pulkovo pulkovo_airport purchase pyongyang raids railway raised ras_isa reach reach_highest reached reason rebel recent red red_sea red_sea. refinery refinery_claim region region_result renewed renewed_violence reported reportedly resource response result resulted resulting resurgence revealed review right right_monitoring route russia russia_claim russia_missile russia_shahed russian._authoritie saint saint_petersburg saudi saudi-backed saudi-led saudi_airstrike sea._displacement sea_shipping securing seen seize seize_strategic seized separate serbia serbia_russia seven severe severe_hunger severely shahed shipping shipping_yemen shortly shot side significant since since_may sites situation smoke specific spread stated still still_detained strait strategic strategic_perim strategic_port strengthening strengthening_control strike struck such supplie support surge surged surrounding system taiz taneco target targeted tatarstan temporary tens tension territory than these thick those thousand threat threatening three through time torture tour train trend turkey tusk ukraine ukraine_conduct ukraine_drone ukraine_infrastructure ukraine_odesa ukraine_reach ukraine_since un united united_nation us variou victim violence visit visit_canada visiting vital volodymyr volodymyr_zelensky volodymyr_zelenskyy war warehouse warranted waterway ways weeks western what which while wildberrie winter withdrawal woman year years yemen yemen_displace yemen_displacing yemen_houthi yemen_result yemen_saudi-backed yemen_taiz yemen_tens yemen_threatening yemeni zaporizhzhia zaporizhzhia_ukraine zelensky zelensky_visit zelenskyy zelenskyy_visit"
+    "search_text": "000 125 153 201 2022 2025 2026 243 340 400 437 610 9-year-old accounted across action additional additionally aden advance aerial affect affected ahead aimed aims airport airstrike airstrike_concern alarming although amidst among appear approximately april archipelago areas around arrival assault assistant atacm attack august authoritie bab beginning belgorod berezivka blaze bolster both broader campaign camps canada capabilitie capital capture capture_strategic captured casualtie cause ceasefire ceasefire_collapse child children civil civilian civilian_casualtie civilian_clashe civilian_still claim claim_lives claimed clashe coalition coast coincided collaboration collapse comply concern concern_ukraine concluded concurrently concurrently_russia concurrently_ukraine condolence conduct confirm confirm_civilian confirming conflict continue contributed control control_near crater crisi critical crucial data deadliest deadly deadly_ukraine deal deals deals_recent death debri decision deep defense deploying deprived described detained devastating development dhubab discovered displace displace_thousand displaced displacement displacement_crisi displacing displacing_thousand disrupted disruption district djibouti donald donald_tusk down downed dozen driver drone early eastern eastern_poland effort el-mandeb energy engage enhance enhancing escalating escalating_ground escalation escaping evacuated expand expand_control experiencing explosion faces facilitie facility fatalitie fearing fell field fighting finalized fire fired fires first five fled fleeing food food_programme force force_regain four frontline full-scale global goods government-allied ground ground_fighting gulf hanish held highest highest_civilian highest_monthly highlight highlighted household houthi houthi_advance houthi_capture houthi_expand houthi_seize human human_right humanitarian hundred hunger hunger_affect hysterical ignited igniting ill-treatment impact impacting incident included including including_civilian increase increasing indicate indicating individual industrial infrastructure injure injure_dozen injured injurie inside intensifie intensified international invasion involving iran-backed iran-backed_houthi iran-backed_houthis. island island_strengthening july july. just kadha killed killing kills kilometer korean korean_missile kyiv kyiv_result largest launched leading least leave level level_since liberty lives local located location logistic long-range loyal makeshift many maritime market marks military military_deals missile missile_downed mission mission._drone mokha monitor monitoring monitoring_mission. month monthly monthly_level moscow move multi-nation multiple nation near near_bab near_kyiv nearly nine nizhnekamsk nizhnekamsk_russia north north_korean noted number numerou occur occurred odesa odesa_region offensive oil ongoing onset operation other overcrowded overnight panic part parts passenger passenger_train passing past payment pentagon perim perim_island petersburg petersburg_warehouse pm poland poland_polish polish polish_prime port poses position possible possible_russia prime produced programme provided province pulkovo pulkovo_airport purchase pyongyang raids railway raised ras_isa reach reach_highest reached reason rebel recaptured recent reclaim red red_sea red_sea. refinery refinery_claim regain regain_control region region_result renewed renewed_violence reported reportedly resource response result resulted resulting resurgence retaking revealed review right right_monitoring route russia russia_claim russia_missile russia_shahed russian._authoritie saint saint_petersburg saudi saudi-backed saudi-led saudi_airstrike sea._displacement sea_shipping securing seen seize seize_strategic seized separate serbia serbia_russia seven several severe severe_hunger severely shahed shipping shipping_yemen shortly shot side significant since since_may sites situation smoke specific spread stated still still_detained strait strait_force strategic strategic_perim strategic_port strengthening strengthening_control strike struck such supplie support supported surge surged surrounding system taiz taneco target targeted tatarstan temporary tens tension territory than these thick those thousand threat threatening three through time torture tour town train trend turkey tusk ukraine ukraine_conduct ukraine_drone ukraine_infrastructure ukraine_odesa ukraine_reach ukraine_since un united united_nation us variou vicinity victim violence visit visit_canada visiting vital volodymyr volodymyr_zelensky volodymyr_zelenskyy war warehouse warranted waterway ways weeks western what which while wildberrie winter withdrawal woman year years yemen yemen_displace yemen_displacing yemen_houthi yemen_result yemen_saudi-backed yemen_taiz yemen_tens yemen_threatening yemeni zaporizhzhia zaporizhzhia_ukraine zelensky zelensky_visit zelenskyy zelenskyy_visit"
   },
   "related_events": [
     {
@@ -2918,40 +3023,6 @@
       "href": "/timeline.html?event=event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b"
     },
     {
-      "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
-      "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
-      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Iran's President Responds to Trump's Threat at UN General Assembly.",
-      "activity_status": "active",
-      "stage": "timeline",
-      "stage_label": "Timeline",
-      "first_seen_at": "2026-07-22",
-      "last_seen_at": "2026-09-23",
-      "development_count": 62,
-      "latest_title": "Iran's President Responds to Trump's Threat at UN General Assembly",
-      "topic_label": "Iran War",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
-    },
-    {
       "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
       "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
       "summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Russian Strikes Kill Civilians in Ukraine Following Putin's Warning.",
@@ -2986,16 +3057,50 @@
       "href": "/timeline.html?event=event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b"
     },
     {
+      "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+      "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
+      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Iran's President Responds to Trump's Threat at UN General Assembly.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-22",
+      "last_seen_at": "2026-09-23",
+      "development_count": 62,
+      "latest_title": "Iran's President Responds to Trump's Threat at UN General Assembly",
+      "topic_label": "Iran War",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
+    },
+    {
       "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
       "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
-      "summary": "Muninn first tracked this thread on 2026-09-18: Macron Implements Measures Against Intensifying Russian Hybrid Threats. The latest development is French Schools Face Closures Amid Ongoing Student Protests.",
+      "summary": "Muninn first tracked this thread on 2026-09-18: Macron Implements Measures Against Intensifying Russian Hybrid Threats. The latest development is Massive Protests Erupt in France Over Education Conditions.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-09-18",
-      "last_seen_at": "2026-10-04",
-      "development_count": 18,
-      "latest_title": "French Schools Face Closures Amid Ongoing Student Protests",
+      "last_seen_at": "2026-10-06",
+      "development_count": 21,
+      "latest_title": "Massive Protests Erupt in France Over Education Conditions",
       "topic_label": "Russian Hybrid Attacks",
       "hero_image": {
         "url": "/Current_news/generated/events/event_macron-implements-measures-against-intensify_109da09c6f.jpg",

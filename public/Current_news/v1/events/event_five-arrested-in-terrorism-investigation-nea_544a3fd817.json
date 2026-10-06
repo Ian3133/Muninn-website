@@ -15,7 +15,7 @@
     "summary": "British police arrested five men on suspicion of terrorism and explosives offenses near RAF Fairford, a UK air base used by US forces. The arrests occurred after reports of three suspicious vehicles heading toward the military airfield. Homes in the vicinity were evacuated as bomb disposal teams conducted investigations.",
     "status": "active",
     "first_seen_at": "2026-09-27",
-    "last_seen_at": "2026-10-03",
+    "last_seen_at": "2026-10-06",
     "timeline": [
       {
         "development_id": "story_8e5b6d4c6138da58",
@@ -449,6 +449,78 @@
         "first_seen_at": "2026-10-03",
         "last_seen_at": "2026-10-03",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_81173bf38fb6a334",
+        "daily_story_id": "story_81173bf38fb6a334",
+        "date": "2026-10-06",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "British National Arrested in Connection with RAF Fairford Incident",
+        "summary": "A 22-year-old British national was arrested in London on suspicion of preparing terrorist acts related to an incident at RAF Fairford airbase. This marks the seventh arrest in connection with the ongoing investigation, following the release of other suspects on bail.",
+        "topic_label": "Terrorism Investigation",
+        "development_type": "investigation",
+        "key_facts": [
+          "22-year-old British national arrested",
+          "Suspected of preparing terrorist acts",
+          "Seventh arrest in the investigation",
+          "Other suspects released on bail"
+        ],
+        "source_count": 2,
+        "sources": [
+          "Al Jazeera English",
+          "DW - English"
+        ],
+        "source_urls": [
+          "https://www.aljazeera.com/news/2026/10/6/uk-police-arrest-british-national-linked-to-airbase-incident?traffic_source=rss",
+          "https://www.dw.com/en/uk-seventh-arrest-made-after-air-base-plot/a-79566985?maca=en-rss-en-all-1573-rdf"
+        ],
+        "source_details": [
+          {
+            "title": "UK police arrest British national linked to RAF Fairford airbase incident",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/news/2026/10/6/uk-police-arrest-british-national-linked-to-airbase-incident?traffic_source=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "UK: Seventh arrest made after air base plot",
+            "source": "DW - English",
+            "link": "https://www.dw.com/en/uk-seventh-arrest-made-after-air-base-plot/a-79566985?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_8e5b6d4c6138da58",
+          "shared_tokens": [
+            "arrest",
+            "arrested",
+            "britain",
+            "fairford",
+            "incident",
+            "investigation",
+            "suspicion",
+            "terrorism"
+          ],
+          "shared_entities": [
+            "britain",
+            "raf",
+            "raf_fairford",
+            "terrorism_investigation"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-06",
+        "last_seen_at": "2026-10-06",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -478,12 +550,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 4,
+      "public_development_count": 5,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "UK-Iranian National Released on Bail After Terror Plot Arrest",
-    "latest_summary": "A 25-year-old dual UK-Iranian national has been released on bail following his arrest in London on suspicion of preparing terrorist acts near the RAF Fairford air base. The arrest occurred in the Westminster borough on Thursday, and police have confirmed his release.",
+    "latest_title": "British National Arrested in Connection with RAF Fairford Incident",
+    "latest_summary": "A 22-year-old British national was arrested in London on suspicion of preparing terrorist acts related to an incident at RAF Fairford airbase. This marks the seventh arrest in connection with the ongoing investigation, following the release of other suspects on bail.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -495,28 +567,29 @@
         "story_8e5b6d4c6138da58",
         "story_a85d0b3d3eb15a73",
         "story_3b1f7500fdb1b8c4",
-        "story_f11692b3127b2211"
+        "story_f11692b3127b2211",
+        "story_81173bf38fb6a334"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-10-03",
-      "development_count": 4,
-      "coverage_packet_count": 6,
-      "date_count": 4,
-      "source_count": 23,
-      "independent_source_count": 14,
+      "summary_updated_at": "2026-10-06",
+      "development_count": 5,
+      "coverage_packet_count": 7,
+      "date_count": 5,
+      "source_count": 25,
+      "independent_source_count": 15,
       "first_date": "2026-09-27",
-      "latest_date": "2026-10-03",
-      "latest_update_title": "UK-Iranian National Released on Bail After Terror Plot Arrest",
-      "coverage_score": 0.843,
-      "recency_score": 0.875,
-      "rank_score": 0.862,
-      "context_summary": "Muninn first tracked this thread on 2026-09-27: Five Arrested in Terrorism Investigation Near UK Air Base Used by US Forces. The latest development is UK-Iranian National Released on Bail After Terror Plot Arrest.",
-      "cta_label": "Explore 4 developments"
+      "latest_date": "2026-10-06",
+      "latest_update_title": "British National Arrested in Connection with RAF Fairford Incident",
+      "coverage_score": 0.942,
+      "recency_score": 1.0,
+      "rank_score": 0.976,
+      "context_summary": "Muninn first tracked this thread on 2026-09-27: Five Arrested in Terrorism Investigation Near UK Air Base Used by US Forces. The latest development is British National Arrested in Connection with RAF Fairford Incident.",
+      "cta_label": "Explore 5 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "British police arrested five men on suspicion of terrorism and explosives offenses near RAF Fairford, a UK air base used by US forces. A later development was UK-Iranian National Arrested in RAF Fairford Terror Investigation. Most recently, a 25-year-old dual UK-Iranian national has been released on bail following his arrest in London on suspicion of preparing terrorist acts near the RAF Fairford air base.",
+      "summary": "British police arrested five men on suspicion of terrorism and explosives offenses near RAF Fairford, a UK air base used by US forces. A later development was UK-Iranian National Arrested in RAF Fairford Terror Investigation. Most recently, a 22-year-old British national was arrested in London on suspicion of preparing terrorist acts related to an incident at RAF Fairford airbase.",
       "key_developments": [
         {
           "development_id": "story_8e5b6d4c6138da58",
@@ -537,6 +610,11 @@
           "development_id": "story_f11692b3127b2211",
           "date": "2026-10-03",
           "title": "UK-Iranian National Released on Bail After Terror Plot Arrest"
+        },
+        {
+          "development_id": "story_81173bf38fb6a334",
+          "date": "2026-10-06",
+          "title": "British National Arrested in Connection with RAF Fairford Incident"
         }
       ],
       "sources": [
@@ -677,9 +755,21 @@
           "source": "BBC",
           "link": "https://www.bbc.co.uk/news/articles/c6d095ygggv1o?at_medium=RSS&at_campaign=rss",
           "source_bias": "center"
+        },
+        {
+          "title": "UK police arrest British national linked to RAF Fairford airbase incident",
+          "source": "Al Jazeera English",
+          "link": "https://www.aljazeera.com/news/2026/10/6/uk-police-arrest-british-national-linked-to-airbase-incident?traffic_source=rss",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "UK: Seventh arrest made after air base plot",
+          "source": "DW - English",
+          "link": "https://www.dw.com/en/uk-seventh-arrest-made-after-air-base-plot/a-79566985?maca=en-rss-en-all-1573-rdf",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-10-03",
+      "updated_at": "2026-10-06",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -688,9 +778,10 @@
         "event_id": "event_uk-prime-minister-suggests-iran-s-involvemen_3f117f9250",
         "title": "UK Prime Minister Suggests Iran's Involvement in RAF Fairford Incident",
         "relationship": "related_topic",
-        "confidence": 0.863,
+        "confidence": 0.902,
         "shared_entities": [
           "britain",
+          "fairford_incident",
           "iran",
           "raf",
           "raf_fairford",
@@ -699,10 +790,22 @@
         ]
       },
       {
+        "event_id": "event_seventh-arrest-made-in-raf-fairford-incident_e08a723771",
+        "title": "Seventh Arrest Made in RAF Fairford Incident Investigation",
+        "relationship": "related_topic",
+        "confidence": 0.806,
+        "shared_entities": [
+          "fairford_incident",
+          "london",
+          "raf",
+          "raf_fairford"
+        ]
+      },
+      {
         "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
         "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
         "relationship": "related_topic",
-        "confidence": 0.799,
+        "confidence": 0.798,
         "shared_entities": [
           "air_base",
           "iran",
@@ -711,23 +814,14 @@
         ]
       },
       {
-        "event_id": "event_foreign-actor-suspected-in-raf-base-plot-say_406d6b5840",
-        "title": "Foreign Actor Suspected in RAF Base Plot, Says Rubio",
+        "event_id": "event_us-withdraws-b-1-bombers-from-raf-fairford-a_cc44563a01",
+        "title": "US Withdraws B-1 Bombers from RAF Fairford Amid Threats",
         "relationship": "related_topic",
-        "confidence": 0.725,
+        "confidence": 0.75,
         "shared_entities": [
+          "britain",
           "raf",
-          "raf_base",
-          "us"
-        ]
-      },
-      {
-        "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
-        "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
-        "relationship": "related_topic",
-        "confidence": 0.715,
-        "shared_entities": [
-          "iran",
+          "raf_fairford",
           "us"
         ]
       }
@@ -736,19 +830,26 @@
       "available": true,
       "title": "About Terrorism Investigation",
       "subject": "Terrorism Investigation",
-      "summary": "This is an ongoing UK counter-terrorism investigation into activity reported near RAF Fairford in Gloucestershire on September 27, 2026. Police arrested five men after reports of three vehicles travelling toward the airbase; authorities said they were investigating suspected Explosives Act offences and suspected preparation of a terrorist act, while seeking to establish the circumstances, knowledge and motivation involved.",
+      "summary": "This is a live UK Counter Terrorism Policing investigation into suspicious activity near RAF Fairford, a Gloucestershire airbase that supports U.S. Air Force operations. The inquiry began after reports of vehicles travelling toward the base; arrests have been made on suspicion of explosives offences and of preparing terrorist acts, but the investigation had not reached a public charging or trial outcome as of October 6, 2026.",
       "facts": [
         {
-          "label": "Date and location",
-          "value": "The incident was reported at about 12:45 a.m. on September 27, 2026, near RAF Fairford; the five arrests were made in the nearby Whelford area of Gloucestershire.",
+          "label": "Start and status",
+          "value": "The investigation concerns an incident reported near RAF Fairford on September 27, 2026, and Counter Terrorism Policing described it as a live, complex inquiry on October 6, 2026.",
           "source_ids": [
             "o1",
             "o2"
           ]
         },
         {
-          "label": "Lead authority",
-          "value": "Counter Terrorism Policing took over the investigation from the local response, working with Gloucestershire Police, the Ministry of Defence and other agencies.",
+          "label": "Location",
+          "value": "The initial arrests occurred in Whelford, Gloucestershire, after reports at about 12:45 a.m. of three vehicles travelling toward RAF Fairford.",
+          "source_ids": [
+            "o1"
+          ]
+        },
+        {
+          "label": "Investigating authority",
+          "value": "UK Counter Terrorism Policing is leading the investigation; its updates say specialist investigators examined the scene and pursued multiple lines of inquiry.",
           "source_ids": [
             "o1",
             "o2"
@@ -756,28 +857,21 @@
         },
         {
           "label": "Legal scope",
-          "value": "The men were detained on suspicion of offences under the Explosives Act and of preparing a terrorist act under section 5 of the Terrorism Act 2006. Section 5 concerns conduct undertaken with intent to commit, or assist another to commit, acts of terrorism.",
+          "value": "The arrests cited suspected Explosives Act offences and Section 5 of the Terrorism Act 2006. Section 5 covers conduct undertaken with the intention of committing, or assisting another to commit, acts of terrorism.",
           "source_ids": [
             "o1",
             "o3"
           ]
         },
         {
-          "label": "Initial public-safety response",
-          "value": "Police established a 400-metre cordon around the vehicles, deployed Army Explosive Ordnance Disposal personnel, and advised roughly 85 households to evacuate as a precaution.",
-          "source_ids": [
-            "o2"
-          ]
-        },
-        {
-          "label": "Why RAF Fairford is notable",
-          "value": "RAF Fairford has hosted U.S. Air Force Bomber Task Force deployments, with the RAF describing it as a staging location for integration with NATO allies.",
+          "label": "Why RAF Fairford is significant",
+          "value": "RAF Fairford is in Gloucestershire and is home to the 501st Combat Support Wing headquarters and the 420th Air Base Squadron; the U.S. Air Force identifies it as its preferred European forward operating location for bombers.",
           "source_ids": [
             "o4"
           ]
         }
       ],
-      "scope_note": "The selected Muninn timeline covers the initial arrests on September 27 and the subsequent bail releases on September 28; it does not establish motive, prove an intended attack, or cover any later charging decision or court outcome.",
+      "scope_note": "The selected Muninn timeline follows publicly reported arrests and bail developments in this investigation, not a definitive account of motive, responsibility, evidence, charges, or eventual court outcomes.",
       "sources": [
         {
           "title": "Police",
@@ -789,7 +883,7 @@
         {
           "title": "Police",
           "publisher": "Police",
-          "url": "https://www.gloucestershire.police.uk/news/gloucestershire/2026/september/counter-terrorism-policing-leading-investigation-following-whelford-arrests/",
+          "url": "https://www.counterterrorism.police.uk/news/new-arrest-made-in-the-raf-fairford-investigation/",
           "source_type": "reporting",
           "id": "o2"
         },
@@ -801,16 +895,16 @@
           "id": "o3"
         },
         {
-          "title": "Mod",
-          "publisher": "Mod",
-          "url": "https://www.raf.mod.uk/news/articles/raf-welcomes-back-us-bomber-task-force-to-europe/",
+          "title": "Af",
+          "publisher": "Af",
+          "url": "https://www.501csw.usafe.af.mil/PATHFINDER-PORTAL/RAF-Fairford-Welford/",
           "source_type": "reporting",
           "id": "o4"
         }
       ],
       "publisher_count": 3,
-      "generated_at": "2026-09-28T19:11:43.663255+00:00",
-      "expires_at": "2026-10-05T19:11:43.663255+00:00",
+      "generated_at": "2026-10-06T17:51:29.428951+00:00",
+      "expires_at": "2026-10-13T17:51:29.428951+00:00",
       "model": "gpt-5.6-terra",
       "provenance": "openai_web_search_source_grounded_event_overview_v1"
     },
@@ -835,6 +929,7 @@
       "focal_tall_y": 0.48
     },
     "search_tokens": [
+      "22-year-old",
       "25-year-old",
       "acts",
       "aged",
@@ -892,9 +987,11 @@
       "release",
       "released",
       "remain",
+      "seventh",
       "since",
       "sixth",
       "strict",
+      "suspect",
       "suspected",
       "suspicion",
       "suspiciou",
@@ -922,7 +1019,10 @@
       "base_terror",
       "base_used",
       "britain",
+      "britain_national",
+      "connection",
       "counter_terrorism",
+      "fairford_incident",
       "fairford_terror",
       "force_britain",
       "investigation_near",
@@ -947,7 +1047,7 @@
       "us",
       "westminster"
     ],
-    "search_text": "25-year-old acts aged air_base airbase airfield arrest arrested bail base base_terror base_used believe bomb borough britain condition conducted confirmed connection counter counter-terrorism counter_terrorism custody disposal dual earlier evacuated explosive face fairford fairford_terror five force force_britain granted head heading homes incident individual investigation investigation_near involved involving iran london marks men_released military national national_arrested national_released near occurred offense ongoing other part planning plot plot_arrest policing preparing raf raf_base raf_fairford raf_fairford. related release released remain since sixth strict suspected suspicion suspiciou taken teams terror terror_investigation terror_plot terrorism terrorism_investigation terrorism_policing terrorist they three thursday toward uk uk-iranian uk-iranian_national under us used vehicle vicinity westminster which while"
+    "search_text": "22-year-old 25-year-old acts aged air_base airbase airfield arrest arrested bail base base_terror base_used believe bomb borough britain britain_national condition conducted confirmed connection counter counter-terrorism counter_terrorism custody disposal dual earlier evacuated explosive face fairford fairford_incident fairford_terror five force force_britain granted head heading homes incident individual investigation investigation_near involved involving iran london marks men_released military national national_arrested national_released near occurred offense ongoing other part planning plot plot_arrest policing preparing raf raf_base raf_fairford raf_fairford. related release released remain seventh since sixth strict suspect suspected suspicion suspiciou taken teams terror terror_investigation terror_plot terrorism terrorism_investigation terrorism_policing terrorist they three thursday toward uk uk-iranian uk-iranian_national under us used vehicle vicinity westminster which while"
   },
   "related_events": [
     {
@@ -983,40 +1083,6 @@
         "focal_tall_y": 0.48
       },
       "href": "/timeline.html?event=event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b"
-    },
-    {
-      "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
-      "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
-      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Iran's President Responds to Trump's Threat at UN General Assembly.",
-      "activity_status": "active",
-      "stage": "timeline",
-      "stage_label": "Timeline",
-      "first_seen_at": "2026-07-22",
-      "last_seen_at": "2026-09-23",
-      "development_count": 62,
-      "latest_title": "Iran's President Responds to Trump's Threat at UN General Assembly",
-      "topic_label": "Iran War",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
     }
   ]
 }
