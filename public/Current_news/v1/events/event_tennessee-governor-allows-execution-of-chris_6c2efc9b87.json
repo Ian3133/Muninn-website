@@ -15,7 +15,7 @@
     "summary": "Tennessee Governor Bill Lee has decided not to halt the execution of Christa Pike, who is currently the only woman on death row in the state. If carried out, Pike's execution would mark the first time a woman has been executed in Tennessee in over 200 years. Pike, now 50, was involved in a murder at the age of 18.",
     "status": "active",
     "first_seen_at": "2026-09-29",
-    "last_seen_at": "2026-10-04",
+    "last_seen_at": "2026-10-07",
     "timeline": [
       {
         "development_id": "story_635ef0abae1f3cda",
@@ -566,15 +566,104 @@
         "first_seen_at": "2026-10-04",
         "last_seen_at": "2026-10-04",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_fd4ef39c97b23c71",
+        "daily_story_id": "story_fd4ef39c97b23c71",
+        "date": "2026-10-07",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Lawyers Request Access to Equipment After Christa Pike's Failed Execution Attempt",
+        "summary": "Lawyers for Christa Pike are seeking a court order to inspect the syringes and equipment used in her recent execution attempt in Tennessee. Pike, who was convicted of murder in 1995, is currently awake and recovering in a hospital after surviving two lethal injections. Following the incident, Tennessee has suspended executions and the prison chief has resigned.",
+        "topic_label": "",
+        "development_type": "policy",
+        "key_facts": [
+          "Christa Pike survived two lethal injections during her execution attempt.",
+          "Pike is currently awake and speaking in a hospital.",
+          "Lawyers are requesting access to inspect the syringes and equipment used.",
+          "Tennessee has suspended executions following the incident.",
+          "The prison chief has resigned."
+        ],
+        "source_count": 4,
+        "sources": [
+          "BBC - World",
+          "Euronews",
+          "NewsNation - Latest",
+          "RTE News"
+        ],
+        "source_urls": [
+          "https://www.rte.ie/news/world/2026/1007/1594465-christa-pike",
+          "https://www.bbc.co.uk/news/articles/ckge4eql4q7eo?at_medium=RSS&at_campaign=rss",
+          "https://www.euronews.com/2026/10/07/christa-pike-awake-a-week-after-lethal-injection-as-her-lawyers-seek-answers",
+          "https://www.newsnationnow.com/crime/judge-motion-christa-pike-execution-attempt"
+        ],
+        "source_details": [
+          {
+            "title": "Lawyers seek access to syringes after failed execution",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/world/2026/1007/1594465-christa-pike",
+            "source_bias": "center"
+          },
+          {
+            "title": "How did Christa Pike survive two lethal injections - and what happens now?",
+            "source": "BBC - World",
+            "link": "https://www.bbc.co.uk/news/articles/ckge4eql4q7eo?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          },
+          {
+            "title": "Christa Pike awake a week after lethal injection as her lawyers seek answers",
+            "source": "Euronews",
+            "link": "https://www.euronews.com/2026/10/07/christa-pike-awake-a-week-after-lethal-injection-as-her-lawyers-seek-answers",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Judge orders evidence from Christa Pike execution attempt be preserved",
+            "source": "NewsNation - Latest",
+            "link": "https://www.newsnationnow.com/crime/judge-motion-christa-pike-execution-attempt",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 1.0,
+        "match_evidence": {
+          "score": 1.0,
+          "matched_development_id": "story_f97124b6e500d691",
+          "shared_tokens": [
+            "attempt",
+            "christa",
+            "currently",
+            "execution",
+            "failed",
+            "incident",
+            "injection",
+            "lethal",
+            "pike",
+            "prison",
+            "tennessee"
+          ],
+          "shared_entities": [
+            "christa_pike",
+            "tennessee."
+          ],
+          "source_url_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-07",
+        "last_seen_at": "2026-10-07",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 5,
+      "public_development_count": 6,
       "questionable_development_count": 1,
       "review_required": true
     },
-    "latest_title": "Tennessee Prison Chief Resigns Following Failed Execution of Christa Pike",
-    "latest_summary": "The prison commissioner of Tennessee has resigned after the failed execution of death row inmate Christa Pike. Despite administering two doses of a lethal drug, Pike survived and is reported to be in critical condition. The resignation was announced by Governor Bill Lee, with the commissioner stating that his departure is in the best interest of the state while an independent review is conducted.",
+    "latest_title": "Lawyers Request Access to Equipment After Christa Pike's Failed Execution Attempt",
+    "latest_summary": "Lawyers for Christa Pike are seeking a court order to inspect the syringes and equipment used in her recent execution attempt in Tennessee. Pike, who was convicted of murder in 1995, is currently awake and recovering in a hospital after surviving two lethal injections. Following the incident, Tennessee has suspended executions and the prison chief has resigned.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -587,28 +676,29 @@
         "story_43e7322e4b13c536",
         "story_d05b01270d5ea23e",
         "story_f97124b6e500d691",
-        "story_74b1b34b14faccf1"
+        "story_74b1b34b14faccf1",
+        "story_fd4ef39c97b23c71"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-10-04",
-      "development_count": 5,
-      "coverage_packet_count": 8,
-      "date_count": 5,
-      "source_count": 27,
-      "independent_source_count": 16,
+      "summary_updated_at": "2026-10-07",
+      "development_count": 6,
+      "coverage_packet_count": 9,
+      "date_count": 6,
+      "source_count": 30,
+      "independent_source_count": 18,
       "first_date": "2026-09-29",
-      "latest_date": "2026-10-04",
-      "latest_update_title": "Tennessee Prison Chief Resigns Following Failed Execution of Christa Pike",
-      "coverage_score": 0.942,
-      "recency_score": 0.778,
-      "rank_score": 0.847,
-      "context_summary": "Muninn first tracked this thread on 2026-09-29: Tennessee Governor Allows Execution of Christa Pike, the State's Only Woman on Death Row. The latest development is Tennessee Prison Chief Resigns Following Failed Execution of Christa Pike.",
-      "cta_label": "Explore 5 developments"
+      "latest_date": "2026-10-07",
+      "latest_update_title": "Lawyers Request Access to Equipment After Christa Pike's Failed Execution Attempt",
+      "coverage_score": 1.0,
+      "recency_score": 1.0,
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-09-29: Tennessee Governor Allows Execution of Christa Pike, the State's Only Woman on Death Row. The latest development is Lawyers Request Access to Equipment After Christa Pike's Failed Execution Attempt.",
+      "cta_label": "Explore 6 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Tennessee Governor Bill Lee has decided not to halt the execution of Christa Pike, who is currently the only woman on death row in the state. A later development was Tennessee Inmate Christa Pike Survives Two Lethal Injection Attempts. Most recently, the prison commissioner of Tennessee has resigned after the failed execution of death row inmate Christa Pike.",
+      "summary": "Tennessee Governor Bill Lee has decided not to halt the execution of Christa Pike, who is currently the only woman on death row in the state. A later development was Christa Pike in Critical Condition After Botched Execution in Tennessee. Most recently, lawyers for Christa Pike are seeking a court order to inspect the syringes and equipment used in her recent execution attempt in Tennessee.",
       "key_developments": [
         {
           "development_id": "story_635ef0abae1f3cda",
@@ -634,6 +724,11 @@
           "development_id": "story_74b1b34b14faccf1",
           "date": "2026-10-04",
           "title": "Tennessee Prison Chief Resigns Following Failed Execution of Christa Pike"
+        },
+        {
+          "development_id": "story_fd4ef39c97b23c71",
+          "date": "2026-10-07",
+          "title": "Lawyers Request Access to Equipment After Christa Pike's Failed Execution Attempt"
         }
       ],
       "sources": [
@@ -798,18 +893,47 @@
           "source": "DW",
           "link": "https://www.dw.com/en/tennessee-s-prison-chief-resigns-after-botched-execution-of-murderer-christa-pike/a-79532481?maca=en-rss-en-all-1573-rdf",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Lawyers seek access to syringes after failed execution",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/world/2026/1007/1594465-christa-pike",
+          "source_bias": "center"
+        },
+        {
+          "title": "Christa Pike awake a week after lethal injection as her lawyers seek answers",
+          "source": "Euronews",
+          "link": "https://www.euronews.com/2026/10/07/christa-pike-awake-a-week-after-lethal-injection-as-her-lawyers-seek-answers",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Judge orders evidence from Christa Pike execution attempt be preserved",
+          "source": "NewsNation - Latest",
+          "link": "https://www.newsnationnow.com/crime/judge-motion-christa-pike-execution-attempt",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-10-04",
+      "updated_at": "2026-10-07",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
     "related_events": [
       {
+        "event_id": "event_texas-execution-planned-amid-concerns-over-l_c375fc1b4f",
+        "title": "Texas Execution Planned Amid Concerns Over Lethal Injection Drug",
+        "relationship": "related_topic",
+        "confidence": 0.753,
+        "shared_entities": [
+          "christa_pike.",
+          "lethal_injection",
+          "tennessee."
+        ]
+      },
+      {
         "event_id": "event_trump-prohibits-three-media-outlets-from-whi_587f6e05b0",
         "title": "Trump Prohibits Three Media Outlets from White House Access",
         "relationship": "related_topic",
-        "confidence": 0.65,
+        "confidence": 0.655,
         "shared_entities": [
           "tennessee",
           "us"
@@ -820,94 +944,111 @@
       "available": true,
       "title": "About Death Penalty",
       "subject": "Death Penalty",
-      "summary": "This event concerns Tennessee’s use of capital punishment in the case of Christa Gail Pike, who received a death sentence for first-degree murder after a Knox County prosecution. It centers on the legal and executive processes governing a court-set execution date, including the state’s execution protocol, custody arrangements, and last-minute litigation or clemency decisions.",
+      "summary": "This event concerns Tennessee’s effort to carry out the death sentence imposed on Christa Gail Pike, whose case has generated court proceedings, clemency litigation, and scrutiny of the state’s execution process. Pike is Tennessee’s only woman on death row; the selected developments center on the scheduled September 2026 execution and its immediate legal and administrative aftermath.",
       "facts": [
         {
-          "label": "Underlying case",
-          "value": "Pike was convicted of premeditated first-degree murder and conspiracy to commit first-degree murder; the jury imposed a death sentence on the murder count, and the trial court imposed a consecutive 25-year sentence for conspiracy.",
+          "label": "Jurisdiction and sentence",
+          "value": "Pike was convicted in Knox County of first-degree murder in 1996 and entered Tennessee’s death row on March 30, 1996.",
           "source_ids": [
-            "o1"
-          ]
-        },
-        {
-          "label": "Scheduled execution date",
-          "value": "On September 30, 2025, the Tennessee Supreme Court granted the state’s request to set Pike’s execution for September 30, 2026, subject to further order by a court or other appropriate authority.",
-          "source_ids": [
+            "o1",
             "o2"
           ]
         },
         {
-          "label": "Administration and location",
-          "value": "The Tennessee Department of Correction carries out court-ordered death sentences; the planned execution site was Riverbend Maximum Security Institution in Nashville.",
+          "label": "Death-row status",
+          "value": "As of the Tennessee Department of Correction’s current death-row materials, Pike is the only woman serving a death sentence in Tennessee; women sentenced to death are housed at the Debra K. Johnson Rehabilitation Center in Nashville.",
           "source_ids": [
             "o3",
-            "o4"
+            "o1"
+          ]
+        },
+        {
+          "label": "Execution-date process",
+          "value": "On September 30, 2025, the Tennessee Supreme Court set September 30, 2026, as Pike’s execution date after finding that the standard three-tier appeals process had been completed; the court’s Rule 12 governs requests to set execution dates after direct appeal, state post-conviction, and federal habeas proceedings.",
+          "source_ids": [
+            "o4",
+            "o5"
+          ]
+        },
+        {
+          "label": "Location and responsible agency",
+          "value": "Tennessee scheduled the September 2026 execution at Riverbend Maximum Security Institution in Nashville. The Tennessee Department of Correction administers executions under state law and its execution protocol.",
+          "source_ids": [
+            "o6",
+            "o7"
           ]
         },
         {
           "label": "Method of execution",
-          "value": "Tennessee made lethal injection its primary execution method in March 2000, while people whose crimes occurred before January 1, 1999, may request electrocution. TDOC’s revised protocol, completed in December 2024, uses the single drug pentobarbital.",
+          "value": "Tennessee law makes lethal injection the default method of execution. For offenses committed before January 1, 1999, a condemned person may elect electrocution in writing; state materials say the revised protocol uses a single drug, pentobarbital.",
           "source_ids": [
-            "o5",
-            "o6"
-          ]
-        },
-        {
-          "label": "Death-row placement",
-          "value": "TDOC states that its one female death-row prisoner is housed at the Debra K. Johnson Rehabilitation Center in Nashville, while most death-row prisoners are housed in a separate unit at Riverbend.",
-          "source_ids": [
-            "o5"
+            "o8",
+            "o7"
           ]
         }
       ],
-      "scope_note": "The selected timeline covers the immediate September 2026 decisions and court actions affecting Pike’s scheduled execution, not the full history of Tennessee capital punishment, Pike’s entire appellate record, or every execution-related filing.",
+      "scope_note": "The selected Muninn timeline follows the September–October 2026 developments directly related to Pike’s scheduled execution and its aftermath, rather than providing a complete history of her criminal case, all appeals, or capital punishment in Tennessee.",
       "sources": [
         {
-          "title": "Tncourts",
-          "publisher": "Tncourts",
-          "url": "https://www.tncourts.gov/sites/default/files/OPINIONS/TSC/PDF/984/pike.pdf",
+          "title": "Tn",
+          "publisher": "Tn",
+          "url": "https://www.tn.gov/correction/about-us/executions/women-on-death-row.html",
           "source_type": "primary",
           "id": "o1"
         },
         {
-          "title": "Tncourts",
-          "publisher": "Tncourts",
-          "url": "https://www.tncourts.gov/sites/default/files/docs/Order%20setting%20execution%20%2814%29%20-%20Christa%20Gail%20Pike.pdf",
+          "title": "Tn",
+          "publisher": "Tn",
+          "url": "https://www.tn.gov/correction/about-us/executions/death-row-offenders.html",
           "source_type": "primary",
           "id": "o2"
         },
         {
           "title": "Tn",
           "publisher": "Tn",
-          "url": "https://www.tn.gov/correction/about-us/executions.html",
+          "url": "https://www.tn.gov/correction/about-us/executions/death-row-facts.html",
           "source_type": "primary",
           "id": "o3"
         },
         {
-          "title": "Tn",
-          "publisher": "Tn",
-          "url": "https://www.tn.gov/correction/news/2026/9/14/execution-advisory--media-guidelines---christa-pike--261368.html",
+          "title": "Tncourts",
+          "publisher": "Tncourts",
+          "url": "https://www.tncourts.gov/sites/default/files/docs/Order%20setting%20execution%20%2814%29%20-%20Christa%20Gail%20Pike.pdf",
           "source_type": "primary",
           "id": "o4"
         },
         {
-          "title": "Tn",
-          "publisher": "Tn",
-          "url": "https://www.tn.gov/correction/about-us/executions/death-penalty-in-tennessee.html",
+          "title": "Tncourts",
+          "publisher": "Tncourts",
+          "url": "https://www.tncourts.gov/sites/default/files/rule12propamd.pdf",
           "source_type": "primary",
           "id": "o5"
         },
         {
           "title": "Tn",
           "publisher": "Tn",
-          "url": "https://www.tn.gov/correction/news/2024/12/27/tdoc-completes-lethal-injection-protocol-review.html",
+          "url": "https://www.tn.gov/correction/news/2026/9/14/execution-advisory--media-guidelines---christa-pike--261368.html",
           "source_type": "primary",
           "id": "o6"
+        },
+        {
+          "title": "Tn",
+          "publisher": "Tn",
+          "url": "https://www.tn.gov/correction/about-us/executions/death-penalty-in-tennessee.html",
+          "source_type": "primary",
+          "id": "o7"
+        },
+        {
+          "title": "Justia",
+          "publisher": "Justia",
+          "url": "https://law.justia.com/codes/tennessee/title-40/chapter-23/section-40-23-114/",
+          "source_type": "reporting",
+          "id": "o8"
         }
       ],
-      "publisher_count": 2,
-      "generated_at": "2026-09-30T17:31:48.950260+00:00",
-      "expires_at": "2026-10-07T17:31:48.950260+00:00",
+      "publisher_count": 3,
+      "generated_at": "2026-10-07T18:22:52.079125+00:00",
+      "expires_at": "2026-10-14T18:22:52.079125+00:00",
       "model": "gpt-5.6-terra",
       "provenance": "openai_web_search_source_grounded_event_overview_v1"
     },
@@ -932,8 +1073,10 @@
       "focal_tall_y": 0.48
     },
     "search_tokens": [
+      "1995",
       "200",
       "50-year-old",
+      "access",
       "administering",
       "affected",
       "alive",
@@ -941,6 +1084,7 @@
       "announced",
       "attempt",
       "attorney",
+      "awake",
       "best",
       "bill",
       "botched",
@@ -954,6 +1098,7 @@
       "comprehensive",
       "condition",
       "conducted",
+      "convicted",
       "court",
       "critical",
       "critically",
@@ -967,6 +1112,7 @@
       "doses",
       "down",
       "drug",
+      "equipment",
       "executed",
       "execution",
       "failed",
@@ -982,10 +1128,12 @@
       "independent",
       "injection",
       "inmate",
+      "inspect",
       "interest",
       "involved",
       "issued",
       "just",
+      "lawyer",
       "left",
       "lethal",
       "mark",
@@ -994,13 +1142,17 @@
       "murder",
       "nearly",
       "only",
+      "order",
       "ordered",
       "pike",
       "prison",
       "process",
       "protocol",
       "receiving",
+      "recent",
+      "recovering",
       "reported",
+      "request",
       "resign",
       "resignation",
       "resigned",
@@ -1008,18 +1160,23 @@
       "review",
       "scheduled",
       "second",
+      "seeking",
       "snoring",
       "stating",
       "stay",
       "stepped",
       "survive",
       "survived",
+      "surviving",
+      "suspended",
+      "syringe",
       "taken",
       "tennessee",
       "three",
       "time",
       "treatment",
       "unconsciou",
+      "used",
       "ventilator",
       "while",
       "woman",
@@ -1030,6 +1187,7 @@
     "entities": [
       "allow_execution",
       "attempt_christa",
+      "attempt_lawyer",
       "bill_lee",
       "botched_execution",
       "chief_resign",
@@ -1037,22 +1195,28 @@
       "christa_pike.",
       "critical",
       "critical_condition",
+      "equipment",
+      "execution_attempt",
       "failed_execution",
       "governor_allow",
       "governor_bill",
       "halted_just",
       "injection_attempt",
       "inmate_christa",
+      "lawyer_request",
       "lethal_injection",
       "only_woman",
       "pike._despite",
+      "pike_failed",
       "pike_survive",
       "prison_chief",
+      "request_access",
       "row_tennessee",
       "scheduled_lethal",
       "tennessee",
       "tennessee.",
       "tennessee._her",
+      "tennessee._pike",
       "tennessee_christa",
       "tennessee_governor",
       "tennessee_inmate",
@@ -1061,7 +1225,7 @@
       "us",
       "woman_halted"
     ],
-    "search_text": "200 50-year-old administering affected alive allow allow_execution announced attempt attempt_christa attorney best bill bill_lee botched botched_execution care carried chief chief_resign christa christa_pike christa_pike. classmate comes commissioner comprehensive condition conducted court critical critical_condition critically currently death decade decided decision departure despite doses down drug executed execution failed failed_execution first future governor governor_allow governor_bill gravely halt halted halted_just hospital hour incident independent injection injection_attempt inmate inmate_christa interest involved issued just left lethal lethal_injection mark marking medical murder nearly only only_woman ordered pike pike._despite pike_survive prison prison_chief process protocol receiving reported resign resignation resigned response review row_tennessee scheduled scheduled_lethal second snoring stating stay stepped survive survived taken tennessee tennessee. tennessee._her tennessee_christa tennessee_governor tennessee_inmate tennessee_prison tennessee_woman three time treatment unconsciou us ventilator while woman woman_halted would year years"
+    "search_text": "1995 200 50-year-old access administering affected alive allow allow_execution announced attempt attempt_christa attempt_lawyer attorney awake best bill bill_lee botched botched_execution care carried chief chief_resign christa christa_pike christa_pike. classmate comes commissioner comprehensive condition conducted convicted court critical critical_condition critically currently death decade decided decision departure despite doses down drug equipment executed execution execution_attempt failed failed_execution first future governor governor_allow governor_bill gravely halt halted halted_just hospital hour incident independent injection injection_attempt inmate inmate_christa inspect interest involved issued just lawyer lawyer_request left lethal lethal_injection mark marking medical murder nearly only only_woman order ordered pike pike._despite pike_failed pike_survive prison prison_chief process protocol receiving recent recovering reported request request_access resign resignation resigned response review row_tennessee scheduled scheduled_lethal second seeking snoring stating stay stepped survive survived surviving suspended syringe taken tennessee tennessee. tennessee._her tennessee._pike tennessee_christa tennessee_governor tennessee_inmate tennessee_prison tennessee_woman three time treatment unconsciou us used ventilator while woman woman_halted would year years"
   },
   "related_events": [
     {

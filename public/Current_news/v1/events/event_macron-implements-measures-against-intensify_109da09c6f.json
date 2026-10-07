@@ -15,7 +15,7 @@
     "summary": "French President Emmanuel Macron has ordered protective measures for the country's critical infrastructure and defense industry in response to escalating Russian hybrid attacks. This announcement followed a meeting with political party leaders to discuss the growing threats from Russia, particularly in light of recent developments in Europe. Macron emphasized that the hybrid threat from Moscow has intensified in recent weeks, necessitating immediate action.",
     "status": "active",
     "first_seen_at": "2026-09-18",
-    "last_seen_at": "2026-10-06",
+    "last_seen_at": "2026-10-07",
     "timeline": [
       {
         "development_id": "story_d3dbd0df63be1e56",
@@ -1852,6 +1852,361 @@
           "story_6079c293c2e5b57e"
         ],
         "revision_count": 1
+      },
+      {
+        "development_id": "story_089dcdecf92cdfcc",
+        "daily_story_id": "story_089dcdecf92cdfcc",
+        "date": "2026-10-07",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Russian Missile Strikes Kill 24 in Ukrainian Residential Area, Including Children",
+        "summary": "A series of Russian missile strikes in Ukraine resulted in at least 24 fatalities, including five children, as families slept in their homes. The most devastating attack occurred in the northern town of Pryluky, where a residential building was destroyed, leading to significant casualties. Ukrainian President Volodymyr Zelenskyy condemned the attacks, suggesting they were a deliberate act against civilians.",
+        "topic_label": "Ukraine Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "At least 24 people killed in Russian strikes in Ukraine.",
+          "Five children among the victims.",
+          "Significant damage to residential buildings in Pryluky."
+        ],
+        "source_count": 3,
+        "sources": [
+          "BBC",
+          "RTE News",
+          "The Guardian"
+        ],
+        "source_urls": [
+          "https://www.bbc.co.uk/news/articles/ckr5ym098vdeo?at_medium=RSS&at_campaign=rss",
+          "https://www.theguardian.com/world/2026/oct/07/ukraine-accuses-russia-of-bombing-apartment-block-as-birthday-gift-for-putin",
+          "https://www.rte.ie/news/world/2026/1007/1594350-ukraine-russia"
+        ],
+        "source_details": [
+          {
+            "title": "Children killed while they slept as Russian missile kills 19 in block of flats",
+            "source": "BBC",
+            "link": "https://www.bbc.co.uk/news/articles/ckr5ym098vdeo?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          },
+          {
+            "title": "Ukraine says Russia bombed apartment block as birthday gift for Putin",
+            "source": "The Guardian",
+            "link": "https://www.theguardian.com/world/2026/oct/07/ukraine-accuses-russia-of-bombing-apartment-block-as-birthday-gift-for-putin",
+            "source_bias": "left"
+          },
+          {
+            "title": "18 dead in Ukraine's Pryluky after Russian strike",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/world/2026/1007/1594350-ukraine-russia",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_f470bd0ba841299b",
+          "shared_tokens": [
+            "among",
+            "attack",
+            "conflict",
+            "russia",
+            "strike",
+            "ukraine"
+          ],
+          "shared_entities": [
+            "russia",
+            "ukraine"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-07",
+        "last_seen_at": "2026-10-07",
+        "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_23a7e2db9592c3c1",
+        "daily_story_id": "story_23a7e2db9592c3c1",
+        "date": "2026-10-07",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Belgian Student Protests Lead to Over 100 Arrests Amid Calls for Education Reform",
+        "summary": "In Belgium, student protests demanding education reforms in French-speaking regions have resulted in over 100 arrests. Reports indicate that 107 individuals were detained during the demonstrations, which have drawn parallels to similar protests in France.",
+        "topic_label": "Education Protests",
+        "development_type": "development",
+        "key_facts": [
+          "Over 100 arrests made during student protests in Belgium.",
+          "Protests focused on education costs and reforms in French-speaking areas.",
+          "Demonstrations have similarities to protests occurring in France."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Al Jazeera English",
+          "Channel NewsAsia - Latest"
+        ],
+        "source_urls": [
+          "https://www.aljazeera.com/news/2026/10/7/over-100-arrested-in-belgium-student-protests-over-education-costs?traffic_source=rss",
+          "https://www.channelnewsasia.com/world/belgium-student-protests-education-france-arrests-6440236"
+        ],
+        "source_details": [
+          {
+            "title": "Over 100 arrested in Belgium student protests over education costs",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/news/2026/10/7/over-100-arrested-in-belgium-student-protests-over-education-costs?traffic_source=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Belgian students rally over education costs in protests echoing France",
+            "source": "Channel NewsAsia - Latest",
+            "link": "https://www.channelnewsasia.com/world/belgium-student-protests-education-france-arrests-6440236",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "protest"
+          ],
+          "shared_incident_anchors": [
+            "france",
+            "student",
+            "student_protest"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "france",
+            "protest",
+            "student",
+            "which"
+          ],
+          "shared_entities": [
+            "france",
+            "student",
+            "student_protest"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_7fa1be14ee744787",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-07",
+        "last_seen_at": "2026-10-07",
+        "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_a25ef8cf66a7be67",
+        "daily_story_id": "story_a25ef8cf66a7be67",
+        "date": "2026-10-07",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "France Halts Stun Grenade Use Amid Student Protests",
+        "summary": "France has suspended the use of stun grenades by police during student-led demonstrations following allegations of police brutality. The decision comes after two weeks of protests that have seen violent clashes and hundreds of injuries. The interior minister emphasized the need to address students' concerns amid rising tensions.",
+        "topic_label": "Student Protests",
+        "development_type": "policy",
+        "key_facts": [
+          "France suspended police use of stun grenades at student protests.",
+          "The decision follows allegations of police brutality.",
+          "Protests have lasted for two weeks and involved violent clashes."
+        ],
+        "source_count": 6,
+        "sources": [
+          "BBC",
+          "CBS News",
+          "DW - English",
+          "France 24",
+          "France 24 - English",
+          "RTE News"
+        ],
+        "source_urls": [
+          "https://www.bbc.co.uk/news/articles/cqzjx7z2r4gko?at_medium=RSS&at_campaign=rss",
+          "https://www.cbsnews.com/video/french-boys-hand-blown-off-by-police-stun-grenade-during-student-protests",
+          "https://www.dw.com/en/france-suspends-use-of-stun-grenades-against-protesters/a-79577769?maca=en-rss-en-all-1573-rdf",
+          "https://www.france24.com/en/france/20261007-france-suspends-the-use-of-stun-grenades-after-student-protester-loses-hand",
+          "https://www.france24.com/en/video/20261007-france-government-suspends-stun-grenade-use-in-school-protests",
+          "https://www.rte.ie/news/2026/1007/1594369-france-suspends-grenades-student-protest"
+        ],
+        "source_details": [
+          {
+            "title": "France halts stun grenade use after boy's hand blown off in student protests",
+            "source": "CBS News",
+            "link": "https://www.cbsnews.com/video/french-boys-hand-blown-off-by-police-stun-grenade-during-student-protests",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "France halts use of stun grenades after boy's hand blown off in student protests",
+            "source": "BBC",
+            "link": "https://www.bbc.co.uk/news/articles/cqzjx7z2r4gko?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          },
+          {
+            "title": "France suspends the use of stun grenades after student protester loses hand",
+            "source": "France 24",
+            "link": "https://www.france24.com/en/france/20261007-france-suspends-the-use-of-stun-grenades-after-student-protester-loses-hand",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "France suspends stun grenades after student injury",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/2026/1007/1594369-france-suspends-grenades-student-protest",
+            "source_bias": "center"
+          },
+          {
+            "title": "France suspends use of stun grenades against protesters",
+            "source": "DW - English",
+            "link": "https://www.dw.com/en/france-suspends-use-of-stun-grenades-against-protesters/a-79577769?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "France: Government suspends stun grenade use in school protests",
+            "source": "France 24 - English",
+            "link": "https://www.france24.com/en/video/20261007-france-government-suspends-stun-grenade-use-in-school-protests",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "protest"
+          ],
+          "shared_incident_anchors": [
+            "france",
+            "student",
+            "student_protest"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "france",
+            "ongoing",
+            "protest",
+            "student",
+            "suspended"
+          ],
+          "shared_entities": [
+            "france",
+            "student",
+            "student_protest"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_7fa1be14ee744787",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-07",
+        "last_seen_at": "2026-10-07",
+        "integrity_status": "trusted",
+        "revisions": [
+          {
+            "daily_story_id": "story_0f5d84bb23bbd8ee",
+            "reported_at": "2026-10-07",
+            "update_kind": "factual_update",
+            "title": "France Halts Stun Grenade Use Amid Student Protests",
+            "summary": "France has suspended the use of stun grenades by police during student-led demonstrations following allegations of police brutality. The decision comes after two weeks of protests that have seen violent clashes and hundreds of injuries. The interior minister emphasized the need to address students' concerns amid rising tensions.",
+            "topic_label": "Student Protests",
+            "key_facts": [
+              "France suspended police use of stun grenades at student protests.",
+              "The decision follows allegations of police brutality.",
+              "Protests have lasted for two weeks and involved violent clashes."
+            ],
+            "source_urls": [
+              "https://www.rte.ie/news/2026/1007/1594369-france-suspends-grenades-student-protest",
+              "https://www.dw.com/en/france-suspends-use-of-stun-grenades-against-protesters/a-79577769?maca=en-rss-en-all-1573-rdf",
+              "https://www.france24.com/en/video/20261007-france-government-suspends-stun-grenade-use-in-school-protests"
+            ]
+          }
+        ],
+        "last_updated_at": "2026-10-07",
+        "merged_development_ids": [
+          "story_0f5d84bb23bbd8ee"
+        ],
+        "revision_count": 1
+      },
+      {
+        "development_id": "story_e03d223d5001c618",
+        "daily_story_id": "story_e03d223d5001c618",
+        "date": "2026-10-07",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Violent Clashes Erupt in Paris Amid Nationwide Student Protests for School Funding",
+        "summary": "Violent clashes occurred in Paris as students protested for better school funding, facing riot police who deployed tear gas. This unrest is part of a larger nationwide demonstration involving over 250,000 participants advocating for improvements in education amid concerns over shortages and deteriorating school conditions.",
+        "topic_label": "Student Protests",
+        "development_type": "impact",
+        "key_facts": [
+          "Students protested for better funding in Paris.",
+          "Riot police used tear gas to disperse crowds.",
+          "Nationwide protests involved over 250,000 participants."
+        ],
+        "source_count": 2,
+        "sources": [
+          "AP - Top News via Google News",
+          "Euronews"
+        ],
+        "source_urls": [
+          "https://www.euronews.com/video/2026/10/07/tear-gas-and-fireworks-as-student-protests-turn-violent-in-paris",
+          "https://news.google.com/rss/articles/CBMioAFBVV95cUxPUnN2bXRwby0zM25GY1BlLXJKNW5CVzJ0SDNaSTdySmR6Y2pGa1o0dDJBY2NGVFNONjk2UDFqaVRlcnhKNmw5T3pncWNhMWpyYVNuMVZyRzVOYzdkZmRYeXRGUUxpSjNqdHpJQVFYcHR0WHl1RllNZGZEdEZicG5xdW1JemhvYkpSUlVSbjc0dnFYblpzbkMtUEloUy0wMGEz?oc=5"
+        ],
+        "source_details": [
+          {
+            "title": "Tear gas and fireworks as student protests turn violent in Paris",
+            "source": "Euronews",
+            "link": "https://www.euronews.com/video/2026/10/07/tear-gas-and-fireworks-as-student-protests-turn-violent-in-paris",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "French riot police fire tear gas as more than 250,000 rally nationwide for school funding",
+            "source": "AP - Top News via Google News",
+            "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPUnN2bXRwby0zM25GY1BlLXJKNW5CVzJ0SDNaSTdySmR6Y2pGa1o0dDJBY2NGVFNONjk2UDFqaVRlcnhKNmw5T3pncWNhMWpyYVNuMVZyRzVOYzdkZmRYeXRGUUxpSjNqdHpJQVFYcHR0WHl1RllNZGZEdEZicG5xdW1JemhvYkpSUlVSbjc0dnFYblpzbkMtUEloUy0wMGEz?oc=5",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "protest"
+          ],
+          "shared_incident_anchors": [
+            "school",
+            "student_protest"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "condition",
+            "protest",
+            "school",
+            "shortage",
+            "student",
+            "unrest"
+          ],
+          "shared_entities": [
+            "school",
+            "student_protest"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_7fa1be14ee744787",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-07",
+        "last_seen_at": "2026-10-07",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -1882,12 +2237,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 21,
+      "public_development_count": 25,
       "questionable_development_count": 1,
       "review_required": true
     },
-    "latest_title": "Massive Protests Erupt in France Over Education Conditions",
-    "latest_summary": "On Tuesday, tens of thousands of demonstrators, including students, teachers, and trade unions, took to the streets across France to demand improved education conditions. The protests, which were largely student-led, highlighted issues such as poor learning environments and deteriorating school facilities. Reports indicate that approximately 256,000 people participated in the demonstrations, some of which were marked by violent confrontations.",
+    "latest_title": "Violent Clashes Erupt in Paris Amid Nationwide Student Protests for School Funding",
+    "latest_summary": "Violent clashes occurred in Paris as students protested for better school funding, facing riot police who deployed tear gas. This unrest is part of a larger nationwide demonstration involving over 250,000 participants advocating for improvements in education amid concerns over shortages and deteriorating school conditions.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -1897,30 +2252,30 @@
       "display_title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats Timeline",
       "milestone_development_ids": [
         "story_d3dbd0df63be1e56",
-        "story_f1a016f31f9411bf",
-        "story_670a94ee8821ff9c",
-        "story_b14d3f526dcd0978"
+        "story_326caac77b4b1c50",
+        "story_592d741a9536c737",
+        "story_e03d223d5001c618"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-10-06",
-      "development_count": 21,
-      "coverage_packet_count": 23,
-      "date_count": 13,
-      "source_count": 65,
-      "independent_source_count": 26,
+      "summary_updated_at": "2026-10-07",
+      "development_count": 25,
+      "coverage_packet_count": 28,
+      "date_count": 14,
+      "source_count": 78,
+      "independent_source_count": 28,
       "first_date": "2026-09-18",
-      "latest_date": "2026-10-06",
-      "latest_update_title": "Massive Protests Erupt in France Over Education Conditions",
+      "latest_date": "2026-10-07",
+      "latest_update_title": "Violent Clashes Erupt in Paris Amid Nationwide Student Protests for School Funding",
       "coverage_score": 1.0,
       "recency_score": 1.0,
       "rank_score": 1.0,
-      "context_summary": "Muninn first tracked this thread on 2026-09-18: Macron Implements Measures Against Intensifying Russian Hybrid Threats. The latest development is Massive Protests Erupt in France Over Education Conditions.",
-      "cta_label": "Explore 21 developments"
+      "context_summary": "Muninn first tracked this thread on 2026-09-18: Macron Implements Measures Against Intensifying Russian Hybrid Threats. The latest development is Violent Clashes Erupt in Paris Amid Nationwide Student Protests for School Funding.",
+      "cta_label": "Explore 25 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "French President Emmanuel Macron has ordered protective measures for the country's critical infrastructure and defense industry in response to escalating Russian hybrid attacks. A later development was Russian Drone Strikes School in Kyiv Amid Ongoing Air Assault. Most recently, on Tuesday, tens of thousands of demonstrators, including students, teachers, and trade unions, took to the streets across France to demand improved education conditions.",
+      "summary": "French President Emmanuel Macron has ordered protective measures for the country's critical infrastructure and defense industry in response to escalating Russian hybrid attacks. A later development was Ukraine Urges Stronger Sanctions Amid Traffic Chaos from Russian Drone Attacks. Most recently, violent clashes occurred in Paris as students protested for better school funding, facing riot police who deployed tear gas.",
       "key_developments": [
         {
           "development_id": "story_d3dbd0df63be1e56",
@@ -1928,19 +2283,19 @@
           "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats"
         },
         {
-          "development_id": "story_f1a016f31f9411bf",
-          "date": "2026-09-28",
-          "title": "Russian Strike on Kharkiv Apartment Block Injures 25"
+          "development_id": "story_326caac77b4b1c50",
+          "date": "2026-09-29",
+          "title": "Estonia Accuses Russia of Orchestrating Arson Attack on Defense Company"
         },
         {
-          "development_id": "story_670a94ee8821ff9c",
-          "date": "2026-10-03",
-          "title": "Massive Protests Erupt in Spain Over Housing Crisis Following Lawmakers' Rejection of Relief Measures"
+          "development_id": "story_592d741a9536c737",
+          "date": "2026-10-04",
+          "title": "Merz Announces Military and Energy Aid for Ukraine During Kyiv Visit"
         },
         {
-          "development_id": "story_b14d3f526dcd0978",
-          "date": "2026-10-06",
-          "title": "Massive Protests Erupt in France Over Education Conditions"
+          "development_id": "story_e03d223d5001c618",
+          "date": "2026-10-07",
+          "title": "Violent Clashes Erupt in Paris Amid Nationwide Student Protests for School Funding"
         }
       ],
       "sources": [
@@ -2333,34 +2688,107 @@
           "source": "DW - English",
           "link": "https://www.dw.com/en/france-trade-unions-join-students-in-major-demonstration/a-79560273?maca=en-rss-en-all-1573-rdf",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Children killed while they slept as Russian missile kills 19 in block of flats",
+          "source": "BBC",
+          "link": "https://www.bbc.co.uk/news/articles/ckr5ym098vdeo?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
+        },
+        {
+          "title": "Ukraine says Russia bombed apartment block as birthday gift for Putin",
+          "source": "The Guardian",
+          "link": "https://www.theguardian.com/world/2026/oct/07/ukraine-accuses-russia-of-bombing-apartment-block-as-birthday-gift-for-putin",
+          "source_bias": "left"
+        },
+        {
+          "title": "18 dead in Ukraine's Pryluky after Russian strike",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/world/2026/1007/1594350-ukraine-russia",
+          "source_bias": "center"
+        },
+        {
+          "title": "Over 100 arrested in Belgium student protests over education costs",
+          "source": "Al Jazeera English",
+          "link": "https://www.aljazeera.com/news/2026/10/7/over-100-arrested-in-belgium-student-protests-over-education-costs?traffic_source=rss",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Belgian students rally over education costs in protests echoing France",
+          "source": "Channel NewsAsia - Latest",
+          "link": "https://www.channelnewsasia.com/world/belgium-student-protests-education-france-arrests-6440236",
+          "source_bias": "center"
+        },
+        {
+          "title": "France halts stun grenade use after boy's hand blown off in student protests",
+          "source": "CBS News",
+          "link": "https://www.cbsnews.com/video/french-boys-hand-blown-off-by-police-stun-grenade-during-student-protests",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "France halts use of stun grenades after boy's hand blown off in student protests",
+          "source": "BBC",
+          "link": "https://www.bbc.co.uk/news/articles/cqzjx7z2r4gko?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
+        },
+        {
+          "title": "France suspends the use of stun grenades after student protester loses hand",
+          "source": "France 24",
+          "link": "https://www.france24.com/en/france/20261007-france-suspends-the-use-of-stun-grenades-after-student-protester-loses-hand",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "France suspends stun grenades after student injury",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/2026/1007/1594369-france-suspends-grenades-student-protest",
+          "source_bias": "center"
+        },
+        {
+          "title": "France suspends use of stun grenades against protesters",
+          "source": "DW - English",
+          "link": "https://www.dw.com/en/france-suspends-use-of-stun-grenades-against-protesters/a-79577769?maca=en-rss-en-all-1573-rdf",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "France: Government suspends stun grenade use in school protests",
+          "source": "France 24 - English",
+          "link": "https://www.france24.com/en/video/20261007-france-government-suspends-stun-grenade-use-in-school-protests",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Tear gas and fireworks as student protests turn violent in Paris",
+          "source": "Euronews",
+          "link": "https://www.euronews.com/video/2026/10/07/tear-gas-and-fireworks-as-student-protests-turn-violent-in-paris",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "French riot police fire tear gas as more than 250,000 rally nationwide for school funding",
+          "source": "AP - Top News via Google News",
+          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPUnN2bXRwby0zM25GY1BlLXJKNW5CVzJ0SDNaSTdySmR6Y2pGa1o0dDJBY2NGVFNONjk2UDFqaVRlcnhKNmw5T3pncWNhMWpyYVNuMVZyRzVOYzdkZmRYeXRGUUxpSjNqdHpJQVFYcHR0WHl1RllNZGZEdEZicG5xdW1JemhvYkpSUlVSbjc0dnFYblpzbkMtUEloUy0wMGEz?oc=5",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-10-06",
+      "updated_at": "2026-10-07",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
     "related_events": [
       {
-        "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
-        "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
+        "event_id": "event_ceuta-requests-national-emergency-amid-surge_4919a90e1a",
+        "title": "Ceuta Border Surge",
         "relationship": "related_topic",
         "confidence": 0.95,
         "shared_entities": [
-          "accuse_russia",
+          "clashe_erupt",
+          "erupt_across",
+          "europe.",
+          "france",
           "israel",
-          "kharkiv",
-          "kyiv",
-          "moscow",
-          "nato",
+          "madrid",
+          "measure_tens",
+          "protest_erupt",
           "russia",
-          "russia.",
-          "russia_drone",
-          "syria",
-          "ukraine",
-          "ukraine.",
-          "ukraine_drone",
-          "us",
-          "volodymyr_zelenskyy"
+          "spain"
         ]
       },
       {
@@ -2384,34 +2812,43 @@
         ]
       },
       {
-        "event_id": "event_ceuta-requests-national-emergency-amid-surge_4919a90e1a",
-        "title": "Ceuta Border Surge",
-        "relationship": "related_topic",
-        "confidence": 0.95,
-        "shared_entities": [
-          "erupt_across",
-          "europe.",
-          "france",
-          "israel",
-          "madrid",
-          "measure_tens",
-          "protest_erupt",
-          "russia",
-          "spain"
-        ]
-      },
-      {
         "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
         "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
         "relationship": "related_topic",
-        "confidence": 0.94,
+        "confidence": 0.95,
         "shared_entities": [
           "kyiv",
           "russia",
+          "russia_missile",
           "ukraine",
           "ukraine_drone",
           "un",
           "united_nation",
+          "us",
+          "volodymyr_zelenskyy"
+        ]
+      },
+      {
+        "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
+        "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
+        "relationship": "related_topic",
+        "confidence": 0.95,
+        "shared_entities": [
+          "accuse_russia",
+          "including_children",
+          "israel",
+          "kharkiv",
+          "kyiv",
+          "moscow",
+          "nato",
+          "russia",
+          "russia.",
+          "russia_drone",
+          "russia_missile",
+          "syria",
+          "ukraine",
+          "ukraine.",
+          "ukraine_drone",
           "us",
           "volodymyr_zelenskyy"
         ]
@@ -2518,9 +2955,12 @@
     },
     "search_tokens": [
       "000",
+      "100",
+      "107",
       "14-year-old",
       "16-storey",
       "2026",
+      "250",
       "256",
       "290",
       "500",
@@ -2531,6 +2971,7 @@
       "across",
       "action",
       "address",
+      "advocating",
       "affected",
       "affordable",
       "ahead",
@@ -2550,6 +2991,7 @@
       "approximately",
       "area",
       "around",
+      "arrest",
       "arson",
       "assault",
       "assembly",
@@ -2558,14 +3000,19 @@
       "attempted",
       "authoritie",
       "began",
+      "belgian",
+      "belgium",
+      "better",
       "billion",
       "block",
       "blockading",
       "bridge",
       "broader",
+      "brutality",
       "building",
       "burned",
       "called",
+      "calls",
       "campaign",
       "cannon",
       "capital",
@@ -2577,10 +3024,13 @@
       "chaos",
       "children",
       "citie",
+      "civilian",
       "claim",
+      "clashe",
       "classroom",
       "closure",
       "coincided",
+      "comes",
       "commissioned",
       "company",
       "concern",
@@ -2601,7 +3051,9 @@
       "decision",
       "declared",
       "defense",
+      "deliberate",
       "demand",
+      "demanding",
       "demonstration",
       "demonstrator",
       "deployed",
@@ -2609,7 +3061,10 @@
       "described",
       "describing",
       "despite",
+      "destroyed",
+      "detained",
       "deteriorating",
+      "devastating",
       "development",
       "dilapidated",
       "discuss",
@@ -2643,36 +3098,46 @@
       "extensive",
       "face",
       "facilitie",
+      "facing",
+      "familie",
       "fatalitie",
       "final",
       "fire",
+      "five",
       "flame",
       "follow",
       "followed",
       "france",
+      "french-speaking",
       "friedrich",
       "fuel",
       "fueled",
+      "funding",
       "gas",
       "general",
       "german",
       "golan",
+      "grenade",
       "grid",
       "growing",
+      "halts",
       "height",
       "high",
       "highlighted",
       "highlighting",
       "historic",
+      "homes",
       "hospital",
       "hours",
       "housing",
+      "hundred",
       "hybrid",
       "immediate",
       "impact",
       "impacted",
       "implement",
       "improved",
+      "improvement",
       "incident",
       "included",
       "including",
@@ -2690,6 +3155,7 @@
       "intense",
       "intensified",
       "intensifying",
+      "interior",
       "involved",
       "involving",
       "israel",
@@ -2698,15 +3164,19 @@
       "joint",
       "just",
       "kharkiv",
+      "kill",
       "killed",
       "kills",
       "klitschko",
       "kyiv",
       "largely",
+      "larger",
       "largest",
       "launche",
       "launched",
+      "lead",
       "leader",
+      "leading",
       "learning",
       "least",
       "lesson",
@@ -2729,6 +3199,7 @@
       "mid-august",
       "military",
       "milrem",
+      "missile",
       "monday",
       "month",
       "moscow",
@@ -2739,6 +3210,7 @@
       "nationwide",
       "nato",
       "necessitating",
+      "need",
       "nine",
       "nine-storey",
       "northern",
@@ -2754,10 +3226,13 @@
       "overcrowded",
       "overnight",
       "package",
+      "parallel",
       "paralysi",
       "parent",
+      "paris",
       "parliamentary",
       "part",
+      "participant",
       "participated",
       "particularly",
       "partly",
@@ -2777,7 +3252,9 @@
       "proposed",
       "protective",
       "protest",
+      "protested",
       "protester",
+      "pryluky",
       "putin",
       "quickly",
       "railway",
@@ -2787,6 +3264,7 @@
       "recent",
       "recognition",
       "refinery",
+      "reform",
       "region",
       "regional",
       "reiterated",
@@ -2800,6 +3278,8 @@
       "response",
       "resulted",
       "resulting",
+      "riot",
+      "rising",
       "robotic",
       "russia",
       "sabotage",
@@ -2814,6 +3294,7 @@
       "security",
       "seen",
       "september",
+      "serie",
       "service",
       "seven",
       "several",
@@ -2822,9 +3303,11 @@
       "shortage",
       "should",
       "significant",
+      "similar",
       "since",
       "sites",
       "situation",
+      "slept",
       "some",
       "southern",
       "sovereignty",
@@ -2842,6 +3325,7 @@
       "struck",
       "student",
       "student-led",
+      "stun",
       "substantial",
       "such",
       "suggesting",
@@ -2861,12 +3345,14 @@
       "tens",
       "tension",
       "territory",
+      "they",
       "thousand",
       "threat",
       "tighter",
       "tightly",
       "took",
       "totally",
+      "town",
       "trade",
       "traffic",
       "transport",
@@ -2895,6 +3381,7 @@
       "weeks",
       "western",
       "when",
+      "where",
       "which",
       "zelenskyy",
       "zero-tolerance"
@@ -2906,11 +3393,14 @@
       "air_campaign",
       "al-sharaa",
       "apartment_block",
+      "area_including",
       "assert_golan",
+      "belgian_student",
       "block_injure",
       "causing_casualtie",
       "chancellor_friedrich",
       "claim_life",
+      "clashe_erupt",
       "company_estonia",
       "concern_demonstration",
       "condition_concern",
@@ -2918,6 +3408,7 @@
       "defense_company",
       "drone_ahead",
       "education_condition",
+      "education_reform",
       "election_ukraine",
       "emmanuel_macron",
       "energy_aid",
@@ -2928,17 +3419,25 @@
       "europe._macron",
       "european",
       "france",
+      "france.",
+      "france._france",
       "france_france",
+      "france_halts",
+      "french-speaking",
       "friedrich_merz",
       "fuel_depot",
+      "funding_violent",
       "gas_used",
       "general_assembly.",
       "german_chancellor",
       "golan_height",
+      "grenade_use",
+      "halts_stun",
       "hospital_causing",
       "housing_crisi",
       "hybrid_threat",
       "implement_measure",
+      "including_children",
       "infrastructure_russia",
       "injure_other",
       "intensifying_russia",
@@ -2969,27 +3468,34 @@
       "moscow_region",
       "nation_general",
       "national_academy",
+      "nationwide_student",
       "nato",
       "ongoing_air",
       "ongoing_student",
       "orchestrating_arson",
+      "paris",
       "pedro_sanchez.",
       "protest_erupt",
+      "protest_france",
+      "protest_lead",
       "protest_poor",
       "region_ukraine",
       "relief_measure",
       "remain_syrian",
+      "residential_area",
       "russia",
       "russia.",
       "russia_drone",
       "russia_election",
       "russia_hybrid",
       "russia_launche",
+      "russia_missile",
       "sanchez._protester",
       "science_academy",
       "severe_disruption",
       "spain",
       "student_protest",
+      "stun_grenade",
       "syria",
       "syrian_territory",
       "tear_gas",
@@ -3001,34 +3507,36 @@
       "ukraine_drone",
       "ukraine_energy",
       "ukraine_launche",
+      "ukraine_residential",
       "ukraine_urges",
       "ukrainian-german",
       "un",
       "united_nation",
       "urges_stronger",
       "us",
+      "violent_clashe",
       "vitali_klitschko.",
       "volodymyr_zelenskyy",
       "wednesday_kyiv"
     ],
-    "search_text": "000 14-year-old 16-storey 2026 256 290 500 ablaze academy accuse accuse_russia accused across across_france action address affected affordable ahead ahmed aid air_assault air_campaign al-sharaa allegation also among anger announce announced announcement apart apartment apartment_block apply approximately area around arson assault assembly assert assert_golan attack attempted authoritie began billion block block_injure blockading bridge broader building burned called campaign cannon capital casualtie caused causing causing_casualtie central chancellor chancellor_friedrich chaos children citie claim claim_life classroom closure coincided commissioned company company_estonia concern concern_demonstration condemned condition condition_concern confirmed conflict confrontation connect connectivity controlled crisi critical criticized damage damage_ukraine date death decision declared defense defense_company demand demonstration demonstrator deployed depot described describing despite deteriorating development dilapidated discuss discussed disrupting disruption dissatisfaction district drawn driven drone drone_ahead eastern education education_condition election election_ukraine emergency emmanuel emmanuel_macron emphasized energy energy_aid energy_infrastructure environment erupt erupt_across escalating escalation escape estonia estonia_accuse estonian europe europe. europe._macron european evacuated event expressed extensive face facilitie fatalitie final fire flame follow followed france france_france friedrich friedrich_merz fuel fuel_depot fueled gas gas_used general general_assembly. german german_chancellor golan golan_height grid growing height high highlighted highlighting historic hospital hospital_causing hours housing housing_crisi hybrid hybrid_threat immediate impact impacted implement implement_measure improved incident included including increasing indicate individual industry infrastructure infrastructure_russia initiated injure injure_other injured injurie injuring instead intense intensified intensifying intensifying_russia involved involving israel issue jersey jersey._kyiv joint just kharkiv kharkiv_apartment killed kills klitschko kyiv kyiv_claim kyiv_mayor kyiv_pecherskyi kyiv_science kyiv_struck kyiv_visit largely largest launche launche_massive launched leader learning least lesson life light local location macron macron_implement madrid main marked marking massive massive_drone massive_protest mayor mayor_vitali measure measure_tens meeting member merz metz mid-august military milrem milrem_robotic monday month moscow moscow. moscow_causing moscow_region most multiple nation nation_general national national_academy nationwide nato necessitating nine nine-storey northern notable numerou occupation occurred oil ongoing ongoing_air ongoing_student orchestrating orchestrating_arson ordered other overcrowded overnight package paralysi parent parliamentary part participated particularly partly parts party pattern pecherskyi pedro pedro_sanchez. person plans policy political poor power prime production proposed protective protest protest_erupt protest_poor protester putin quickly railway raised rallying ransacked recent recognition refinery region region_ukraine regional reiterated rejection relief relief_measure remain remain_syrian reported reportedly resident residential response resulted resulting robotic russia russia. russia_drone russia_election russia_hybrid russia_launche sabotage safety sanchez sanchez._protester sanction scale scheduled school science science_academy second security seen september service seven several severe severe_disruption severely shortage should significant since sites situation some southern sovereignty spain sparked spread staff stance stated station street strike striking stronger struck student student-led student_protest substantial such suggesting supplie support surrounding suspended syria syrian syrian_territory targeted targeting teacher tear tear_gas tearing teen tenant tens tension territory territory_syrian thousand threat threat_france tighter tightly took totally trade traffic traffic_chaos transport tuesday ukraine ukraine. ukraine_drone ukraine_energy ukraine_launche ukraine_urges ukrainian-german un unacceptable understaffed union united united_nation unmanned unrest urges urges_stronger us used variou vehicle violence violent visible visit vitali vitali_klitschko. volodymyr volodymyr_zelenskyy water wave wednesday wednesday_kyiv weeks western when which zelenskyy zero-tolerance"
+    "search_text": "000 100 107 14-year-old 16-storey 2026 250 256 290 500 ablaze academy accuse accuse_russia accused across across_france action address advocating affected affordable ahead ahmed aid air_assault air_campaign al-sharaa allegation also among anger announce announced announcement apart apartment apartment_block apply approximately area area_including around arrest arson assault assembly assert assert_golan attack attempted authoritie began belgian belgian_student belgium better billion block block_injure blockading bridge broader brutality building burned called calls campaign cannon capital casualtie caused causing causing_casualtie central chancellor chancellor_friedrich chaos children citie civilian claim claim_life clashe clashe_erupt classroom closure coincided comes commissioned company company_estonia concern concern_demonstration condemned condition condition_concern confirmed conflict confrontation connect connectivity controlled crisi critical criticized damage damage_ukraine date death decision declared defense defense_company deliberate demand demanding demonstration demonstrator deployed depot described describing despite destroyed detained deteriorating devastating development dilapidated discuss discussed disrupting disruption dissatisfaction district drawn driven drone drone_ahead eastern education education_condition education_reform election election_ukraine emergency emmanuel emmanuel_macron emphasized energy energy_aid energy_infrastructure environment erupt erupt_across escalating escalation escape estonia estonia_accuse estonian europe europe. europe._macron european evacuated event expressed extensive face facilitie facing familie fatalitie final fire five flame follow followed france france. france._france france_france france_halts french-speaking friedrich friedrich_merz fuel fuel_depot fueled funding funding_violent gas gas_used general general_assembly. german german_chancellor golan golan_height grenade grenade_use grid growing halts halts_stun height high highlighted highlighting historic homes hospital hospital_causing hours housing housing_crisi hundred hybrid hybrid_threat immediate impact impacted implement implement_measure improved improvement incident included including including_children increasing indicate individual industry infrastructure infrastructure_russia initiated injure injure_other injured injurie injuring instead intense intensified intensifying intensifying_russia interior involved involving israel issue jersey jersey._kyiv joint just kharkiv kharkiv_apartment kill killed kills klitschko kyiv kyiv_claim kyiv_mayor kyiv_pecherskyi kyiv_science kyiv_struck kyiv_visit largely larger largest launche launche_massive launched lead leader leading learning least lesson life light local location macron macron_implement madrid main marked marking massive massive_drone massive_protest mayor mayor_vitali measure measure_tens meeting member merz metz mid-august military milrem milrem_robotic missile monday month moscow moscow. moscow_causing moscow_region most multiple nation nation_general national national_academy nationwide nationwide_student nato necessitating need nine nine-storey northern notable numerou occupation occurred oil ongoing ongoing_air ongoing_student orchestrating orchestrating_arson ordered other overcrowded overnight package parallel paralysi parent paris parliamentary part participant participated particularly partly parts party pattern pecherskyi pedro pedro_sanchez. person plans policy political poor power prime production proposed protective protest protest_erupt protest_france protest_lead protest_poor protested protester pryluky putin quickly railway raised rallying ransacked recent recognition refinery reform region region_ukraine regional reiterated rejection relief relief_measure remain remain_syrian reported reportedly resident residential residential_area response resulted resulting riot rising robotic russia russia. russia_drone russia_election russia_hybrid russia_launche russia_missile sabotage safety sanchez sanchez._protester sanction scale scheduled school science science_academy second security seen september serie service seven several severe severe_disruption severely shortage should significant similar since sites situation slept some southern sovereignty spain sparked spread staff stance stated station street strike striking stronger struck student student-led student_protest stun stun_grenade substantial such suggesting supplie support surrounding suspended syria syrian syrian_territory targeted targeting teacher tear tear_gas tearing teen tenant tens tension territory territory_syrian they thousand threat threat_france tighter tightly took totally town trade traffic traffic_chaos transport tuesday ukraine ukraine. ukraine_drone ukraine_energy ukraine_launche ukraine_residential ukraine_urges ukrainian-german un unacceptable understaffed union united united_nation unmanned unrest urges urges_stronger us used variou vehicle violence violent violent_clashe visible visit vitali vitali_klitschko. volodymyr volodymyr_zelenskyy water wave wednesday wednesday_kyiv weeks western when where which zelenskyy zero-tolerance"
   },
   "related_events": [
     {
-      "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
-      "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
-      "summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Russian Strikes Kill Civilians in Ukraine Following Putin's Warning.",
+      "event_id": "event_ceuta-requests-national-emergency-amid-surge_4919a90e1a",
+      "title": "Ceuta Border Surge",
+      "summary": "Muninn first tracked this thread on 2026-07-30: Ceuta Requests National Emergency Amid Surge of Migrants from Morocco. The latest development is Spanish Police Relocate Migrants from Ceuta Beaches to Port Area.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
-      "first_seen_at": "2026-07-31",
-      "last_seen_at": "2026-09-12",
-      "development_count": 37,
-      "latest_title": "Russian Strikes Kill Civilians in Ukraine Following Putin's Warning",
-      "topic_label": "Gaza Peace Deal",
+      "first_seen_at": "2026-07-30",
+      "last_seen_at": "2026-09-18",
+      "development_count": 25,
+      "latest_title": "Spanish Police Relocate Migrants from Ceuta Beaches to Port Area",
+      "topic_label": "Ceuta Border Surge",
       "hero_image": {
-        "url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
+        "url": "/Current_news/generated/events/event_ceuta-requests-national-emergency-amid-surge_4919a90e1a.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_ceuta-requests-national-emergency-amid-surge_4919a90e1a.jpg",
         "source": "Muninn AI illustration",
         "author": "OpenAI GPT Image 2",
         "license": "AI-generated content",
@@ -3046,7 +3554,7 @@
         "focal_tall_x": 0.5,
         "focal_tall_y": 0.48
       },
-      "href": "/timeline.html?event=event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b"
+      "href": "/timeline.html?event=event_ceuta-requests-national-emergency-amid-surge_4919a90e1a"
     },
     {
       "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
@@ -3083,50 +3591,16 @@
       "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
     },
     {
-      "event_id": "event_ceuta-requests-national-emergency-amid-surge_4919a90e1a",
-      "title": "Ceuta Border Surge",
-      "summary": "Muninn first tracked this thread on 2026-07-30: Ceuta Requests National Emergency Amid Surge of Migrants from Morocco. The latest development is Spanish Police Relocate Migrants from Ceuta Beaches to Port Area.",
-      "activity_status": "active",
-      "stage": "timeline",
-      "stage_label": "Timeline",
-      "first_seen_at": "2026-07-30",
-      "last_seen_at": "2026-09-18",
-      "development_count": 25,
-      "latest_title": "Spanish Police Relocate Migrants from Ceuta Beaches to Port Area",
-      "topic_label": "Ceuta Border Surge",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_ceuta-requests-national-emergency-amid-surge_4919a90e1a.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_ceuta-requests-national-emergency-amid-surge_4919a90e1a.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_ceuta-requests-national-emergency-amid-surge_4919a90e1a"
-    },
-    {
       "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
       "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
-      "summary": "Muninn first tracked this thread on 2026-07-25: Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse. The latest development is Yemen Government Forces Regain Control Near Bab el-Mandeb Strait.",
+      "summary": "Muninn first tracked this thread on 2026-07-25: Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse. The latest development is Over 200,000 Displaced Amid Renewed Fighting in Yemen, UN Reports.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-07-25",
-      "last_seen_at": "2026-10-06",
-      "development_count": 24,
-      "latest_title": "Yemen Government Forces Regain Control Near Bab el-Mandeb Strait",
+      "last_seen_at": "2026-10-07",
+      "development_count": 25,
+      "latest_title": "Over 200,000 Displaced Amid Renewed Fighting in Yemen, UN Reports",
       "topic_label": "Russia-Ukraine War",
       "hero_image": {
         "url": "/Current_news/generated/events/event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea.jpg",
@@ -3149,6 +3623,40 @@
         "focal_tall_y": 0.48
       },
       "href": "/timeline.html?event=event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea"
+    },
+    {
+      "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
+      "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
+      "summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Russian Strikes Kill Civilians in Ukraine Following Putin's Warning.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-31",
+      "last_seen_at": "2026-09-12",
+      "development_count": 37,
+      "latest_title": "Russian Strikes Kill Civilians in Ukraine Following Putin's Warning",
+      "topic_label": "Gaza Peace Deal",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b"
     }
   ]
 }

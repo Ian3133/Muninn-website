@@ -15,7 +15,7 @@
     "summary": "On September 17, dozens of Israelis gathered outside the Knesset in West Jerusalem to protest against political leaders. The demonstrators accused these leaders of exploiting regional tensions to interfere with the upcoming parliamentary election scheduled for October 27.",
     "status": "active",
     "first_seen_at": "2026-09-18",
-    "last_seen_at": "2026-09-20",
+    "last_seen_at": "2026-10-07",
     "timeline": [
       {
         "development_id": "story_1806b9bb9b89962c",
@@ -208,6 +208,80 @@
         "first_seen_at": "2026-09-20",
         "last_seen_at": "2026-09-20",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_abfb038906775f3b",
+        "daily_story_id": "story_abfb038906775f3b",
+        "date": "2026-10-07",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Netanyahu Faces Criticism Over Oct. 7 Attack Handling Ahead of Elections",
+        "summary": "Israeli Prime Minister Benjamin Netanyahu is facing significant criticism regarding his response to the Oct. 7, 2023, attacks as the country prepares for its first elections since the incident. Conflicting accounts have emerged about whether he was warned of the attack, which is now central to the political campaigns of both Netanyahu and his opponents. The attack is viewed as a major security failure, potentially jeopardizing Netanyahu's long-standing political career.",
+        "topic_label": "Israeli Elections",
+        "development_type": "military_action",
+        "key_facts": [
+          "Netanyahu criticized for handling of Oct. 7 attacks.",
+          "Conflicting accounts about prior warnings of the attack.",
+          "Upcoming elections are the first since the attacks."
+        ],
+        "source_count": 3,
+        "sources": [
+          "CBS News",
+          "France 24",
+          "PBS News"
+        ],
+        "source_urls": [
+          "https://www.cbsnews.com/video/netanyahu-criticized-oct-7-attacks-weeks-before-israel-election",
+          "https://www.france24.com/en/video/20261007-scars-from-oct-7-fuel-deep-divisions-over-netanyahu-ahead-of-israeli-election",
+          "https://www.pbs.org/newshour/world/scars-from-oct-7-fuel-deep-divisions-over-netanyahu-ahead-of-israeli-election"
+        ],
+        "source_details": [
+          {
+            "title": "Netanyahu criticized by opponents for handling of Oct. 7 attacks weeks before Israeli election",
+            "source": "CBS News",
+            "link": "https://www.cbsnews.com/video/netanyahu-criticized-oct-7-attacks-weeks-before-israel-election",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Scars from Oct. 7 fuel deep divisions over Netanyahu ahead of Israeli election",
+            "source": "France 24",
+            "link": "https://www.france24.com/en/video/20261007-scars-from-oct-7-fuel-deep-divisions-over-netanyahu-ahead-of-israeli-election",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Scars from Oct. 7 fuel deep divisions over Netanyahu ahead of Israeli election",
+            "source": "PBS News",
+            "link": "https://www.pbs.org/newshour/world/scars-from-oct-7-fuel-deep-divisions-over-netanyahu-ahead-of-israeli-election",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_1806b9bb9b89962c",
+          "shared_tokens": [
+            "ahead",
+            "election",
+            "israel",
+            "political",
+            "upcoming"
+          ],
+          "shared_entities": [
+            "israel",
+            "israel_election"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-07",
+        "last_seen_at": "2026-10-07",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -236,44 +310,45 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 3,
+      "public_development_count": 4,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Protests Erupt in Tunisia for Jailed Gaza Flotilla Activists",
-    "latest_summary": "Hundreds of Tunisians gathered in Tunis to demand the release of four activists from the Global Sumud Flotilla. The activists are currently jailed on accusations related to money laundering connected to their efforts in organizing a humanitarian flotilla to Gaza.",
+    "latest_title": "Netanyahu Faces Criticism Over Oct. 7 Attack Handling Ahead of Elections",
+    "latest_summary": "Israeli Prime Minister Benjamin Netanyahu is facing significant criticism regarding his response to the Oct. 7, 2023, attacks as the country prepares for its first elections since the incident. Conflicting accounts have emerged about whether he was warned of the attack, which is now central to the political campaigns of both Netanyahu and his opponents. The attack is viewed as a major security failure, potentially jeopardizing Netanyahu's long-standing political career.",
     "presentation": {
       "has_context": true,
-      "has_full_timeline": false,
-      "stage": "developing_event",
-      "stage_label": "Developing event",
+      "has_full_timeline": true,
+      "stage": "timeline",
+      "stage_label": "Timeline",
       "base_title": "Protests Erupt in Israel Against Election Interference Ahead of October Vote",
-      "display_title": "Protests Erupt in Israel Against Election Interference Ahead of October Vote",
+      "display_title": "Protests Erupt in Israel Against Election Interference Ahead of October Vote Timeline",
       "milestone_development_ids": [
         "story_1806b9bb9b89962c",
         "story_2b1f08941de0976e",
-        "story_cc82bb40aeee2b8a"
+        "story_cc82bb40aeee2b8a",
+        "story_abfb038906775f3b"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-09-20",
-      "development_count": 3,
-      "coverage_packet_count": 3,
-      "date_count": 2,
-      "source_count": 6,
-      "independent_source_count": 5,
+      "summary_updated_at": "2026-10-07",
+      "development_count": 4,
+      "coverage_packet_count": 4,
+      "date_count": 3,
+      "source_count": 9,
+      "independent_source_count": 8,
       "first_date": "2026-09-18",
-      "latest_date": "2026-09-20",
-      "latest_update_title": "Protests Erupt in Tunisia for Jailed Gaza Flotilla Activists",
-      "coverage_score": 0.517,
-      "recency_score": 0.304,
-      "rank_score": 0.394,
-      "context_summary": "Muninn first tracked this thread on 2026-09-18: Protests Erupt in Israel Against Election Interference Ahead of October Vote. The latest development is Protests Erupt in Tunisia for Jailed Gaza Flotilla Activists.",
-      "cta_label": ""
+      "latest_date": "2026-10-07",
+      "latest_update_title": "Netanyahu Faces Criticism Over Oct. 7 Attack Handling Ahead of Elections",
+      "coverage_score": 0.766,
+      "recency_score": 1.0,
+      "rank_score": 0.902,
+      "context_summary": "Muninn first tracked this thread on 2026-09-18: Protests Erupt in Israel Against Election Interference Ahead of October Vote. The latest development is Netanyahu Faces Criticism Over Oct. 7 Attack Handling Ahead of Elections.",
+      "cta_label": "Explore 4 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "On September 17, dozens of Israelis gathered outside the Knesset in West Jerusalem to protest against political leaders. A later development was Ed Sheeran Addresses Gaza Situation and Macklemore Controversy at Concert. Most recently, hundreds of Tunisians gathered in Tunis to demand the release of four activists from the Global Sumud Flotilla.",
+      "summary": "On September 17, dozens of Israelis gathered outside the Knesset in West Jerusalem to protest against political leaders. A later development was Protests Erupt in Tunisia for Jailed Gaza Flotilla Activists. Most recently, israeli Prime Minister Benjamin Netanyahu is facing significant criticism regarding his response to the Oct.",
       "key_developments": [
         {
           "development_id": "story_1806b9bb9b89962c",
@@ -289,6 +364,11 @@
           "development_id": "story_cc82bb40aeee2b8a",
           "date": "2026-09-20",
           "title": "Protests Erupt in Tunisia for Jailed Gaza Flotilla Activists"
+        },
+        {
+          "development_id": "story_abfb038906775f3b",
+          "date": "2026-10-07",
+          "title": "Netanyahu Faces Criticism Over Oct. 7 Attack Handling Ahead of Elections"
         }
       ],
       "sources": [
@@ -327,23 +407,43 @@
           "source": "Africanews",
           "link": "http://www.africanews.com/2026/09/20/hundreds-of-tunisians-demand-release-of-jailed-gaza-flotilla-activists",
           "source_bias": "center"
+        },
+        {
+          "title": "Netanyahu criticized by opponents for handling of Oct. 7 attacks weeks before Israeli election",
+          "source": "CBS News",
+          "link": "https://www.cbsnews.com/video/netanyahu-criticized-oct-7-attacks-weeks-before-israel-election",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Scars from Oct. 7 fuel deep divisions over Netanyahu ahead of Israeli election",
+          "source": "France 24",
+          "link": "https://www.france24.com/en/video/20261007-scars-from-oct-7-fuel-deep-divisions-over-netanyahu-ahead-of-israeli-election",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Scars from Oct. 7 fuel deep divisions over Netanyahu ahead of Israeli election",
+          "source": "PBS News",
+          "link": "https://www.pbs.org/newshour/world/scars-from-oct-7-fuel-deep-divisions-over-netanyahu-ahead-of-israeli-election",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-09-20",
+      "updated_at": "2026-10-07",
       "provenance": "source_grounded_event_memory"
     },
-    "event_stage": "developing_event",
+    "event_stage": "timeline",
     "related_events": [
       {
         "event_id": "event_israeli-strikes-in-gaza-result-in-seven-deat_837b156199",
         "title": "Israeli Strikes in Gaza Result in Seven Deaths and Destruction of Medical Warehouses",
         "relationship": "related_topic",
-        "confidence": 0.904,
+        "confidence": 0.95,
         "shared_entities": [
           "addresse_gaza",
+          "benjamin_netanyahu",
           "gaza",
           "gaza.",
           "israel",
+          "israel_prime",
           "macklemore_controversy",
           "protest_erupt",
           "sheeran_addresse"
@@ -353,7 +453,7 @@
         "event_id": "event_ed-sheeran-addresses-gaza-conflict-after-mac_c9c1d77ae6",
         "title": "Ed Sheeran Addresses Gaza Conflict After Macklemore Controversy at Concert",
         "relationship": "related_topic",
-        "confidence": 0.876,
+        "confidence": 0.897,
         "shared_entities": [
           "addresse_gaza",
           "concert",
@@ -367,21 +467,25 @@
         "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
         "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
         "relationship": "related_topic",
-        "confidence": 0.721,
+        "confidence": 0.853,
         "shared_entities": [
+          "benjamin_netanyahu",
           "gaza",
           "gaza.",
-          "israel"
+          "gaza._netanyahu",
+          "israel",
+          "israel_prime"
         ]
       },
       {
-        "event_id": "event_macklemore-donates-1-million-to-palestinian_b24f457977",
-        "title": "Macklemore Donates $1 Million to Palestinian Aid Amid Tour Controversy",
+        "event_id": "event_netanyahu-denies-receiving-warning-about-ham_43138003c8",
+        "title": "Netanyahu Denies Receiving Warning About Hamas Attacks Before October 7",
         "relationship": "related_topic",
-        "confidence": 0.69,
+        "confidence": 0.744,
         "shared_entities": [
-          "philadelphia",
-          "pro-palestinian"
+          "benjamin_netanyahu",
+          "israel",
+          "israel_prime"
         ]
       }
     ],
@@ -406,6 +510,8 @@
       "focal_tall_y": 0.48
     },
     "search_tokens": [
+      "2023",
+      "account",
       "accusation",
       "accused",
       "activist",
@@ -413,11 +519,19 @@
       "addressing",
       "ahead",
       "amidst",
+      "attack",
       "attended",
+      "benjamin",
+      "both",
+      "campaign",
+      "career",
+      "central",
       "comment",
       "concert",
+      "conflicting",
       "connected",
       "controversy",
+      "criticism",
       "currently",
       "demand",
       "demonstrator",
@@ -426,32 +540,46 @@
       "dozen",
       "effort",
       "election",
+      "emerged",
       "erupt",
       "exploiting",
+      "faces",
+      "facing",
+      "failure",
       "fans",
+      "first",
       "flotilla",
       "four",
       "gathered",
       "gaza",
       "global",
+      "handling",
       "humanitarian",
       "hundred",
+      "incident",
       "interfere",
       "interference",
       "israel",
       "jailed",
+      "jeopardizing",
       "jerusalem",
       "knesset",
       "laundering",
       "leader",
+      "long-standing",
       "macklemore",
       "money",
+      "netanyahu",
       "october",
+      "opponent",
       "organizing",
       "outside",
       "parliamentary",
       "philadelphia",
       "political",
+      "potentially",
+      "prepare",
+      "prime",
       "pro-palestinian",
       "protest",
       "recent",
@@ -460,9 +588,13 @@
       "related",
       "release",
       "removal",
+      "response",
       "scheduled",
+      "security",
       "september",
       "sheeran",
+      "significant",
+      "since",
       "situation",
       "sumud",
       "surrounding",
@@ -475,25 +607,37 @@
       "unjustifiable",
       "upcoming",
       "venue",
+      "viewed",
       "vote",
+      "warned",
       "west",
+      "whether",
+      "which",
       "while"
     ],
     "entities": [
       "activist_hundred",
       "addresse_gaza",
+      "benjamin_netanyahu",
       "concert",
       "election_interference",
+      "election_israel",
+      "faces_criticism",
       "flotilla_activist",
       "gaza",
       "gaza.",
+      "gaza._netanyahu",
       "gaza_flotilla",
       "gaza_situation",
       "global",
+      "handling_ahead",
       "interference_ahead",
       "israel",
+      "israel_prime",
       "jailed_gaza",
       "macklemore_controversy",
+      "netanyahu_faces",
+      "oct.",
       "october_vote",
       "philadelphia",
       "pro-palestinian",
@@ -505,7 +649,7 @@
       "west",
       "west_jerusalem"
     ],
-    "search_text": "accusation accused activist activist_hundred addresse addresse_gaza addressing ahead amidst attended comment concert connected controversy currently demand demonstrator departure described dozen effort election election_interference erupt exploiting fans flotilla flotilla_activist four gathered gaza gaza. gaza_flotilla gaza_situation global humanitarian hundred interfere interference interference_ahead israel jailed jailed_gaza jerusalem knesset laundering leader macklemore macklemore_controversy money october october_vote organizing outside parliamentary philadelphia political pro-palestinian protest protest_erupt recent regarding regional related release removal scheduled september sheeran sheeran_addresse situation sumud sumud_flotilla. surrounding tension these tour tunis tunisia tunisian unjustifiable upcoming venue vote west west_jerusalem while"
+    "search_text": "2023 account accusation accused activist activist_hundred addresse addresse_gaza addressing ahead amidst attack attended benjamin benjamin_netanyahu both campaign career central comment concert conflicting connected controversy criticism currently demand demonstrator departure described dozen effort election election_interference election_israel emerged erupt exploiting faces faces_criticism facing failure fans first flotilla flotilla_activist four gathered gaza gaza. gaza._netanyahu gaza_flotilla gaza_situation global handling handling_ahead humanitarian hundred incident interfere interference interference_ahead israel israel_prime jailed jailed_gaza jeopardizing jerusalem knesset laundering leader long-standing macklemore macklemore_controversy money netanyahu netanyahu_faces oct. october october_vote opponent organizing outside parliamentary philadelphia political potentially prepare prime pro-palestinian protest protest_erupt recent regarding regional related release removal response scheduled security september sheeran sheeran_addresse significant since situation sumud sumud_flotilla. surrounding tension these tour tunis tunisia tunisian unjustifiable upcoming venue viewed vote warned west west_jerusalem whether which while"
   },
   "related_events": [
     {
@@ -575,40 +719,6 @@
         "focal_tall_y": 0.48
       },
       "href": "/timeline.html?event=event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b"
-    },
-    {
-      "event_id": "event_macklemore-donates-1-million-to-palestinian_b24f457977",
-      "title": "Macklemore Donates $1 Million to Palestinian Aid Amid Tour Controversy",
-      "summary": "Muninn first tracked this thread on 2026-09-17: Macklemore Donates $1 Million to Palestinian Aid Amid Tour Controversy. The latest development is Ed Sheeran Apologizes for Mistakes During Philadelphia Concert.",
-      "activity_status": "active",
-      "stage": "developing_event",
-      "stage_label": "Developing event",
-      "first_seen_at": "2026-09-17",
-      "last_seen_at": "2026-09-20",
-      "development_count": 2,
-      "latest_title": "Ed Sheeran Apologizes for Mistakes During Philadelphia Concert",
-      "topic_label": "Palestinian Aid",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_macklemore-donates-1-million-to-palestinian_b24f457977.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_macklemore-donates-1-million-to-palestinian_b24f457977.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_macklemore-donates-1-million-to-palestinian_b24f457977"
     }
   ]
 }
