@@ -1,0 +1,480 @@
+{
+  "schema_version": 1,
+  "resource_type": "event",
+  "event_id": "event_hurricane-isaias-forms-amid-strong-el-ni-o-c_3ef53d82ce",
+  "publication": {
+    "status": "published",
+    "permalink": "/timeline.html?event=event_hurricane-isaias-forms-amid-strong-el-ni-o-c_3ef53d82ce",
+    "share_expires_at": null
+  },
+  "event": {
+    "event_id": "event_hurricane-isaias-forms-amid-strong-el-ni-o-c_3ef53d82ce",
+    "title": "Condition Hurricane Storm",
+    "canonical_title": "Condition Hurricane Storm",
+    "topic_label": "Condition Hurricane Storm",
+    "summary": "Hurricane Isaias has strengthened as it moves toward the Gulf Coast, marking the first Atlantic hurricane of the season. This development comes after a quiet start to the hurricane season, attributed to one of the strongest El Niño years on record.",
+    "status": "active",
+    "first_seen_at": "2026-10-08",
+    "last_seen_at": "2026-10-09",
+    "timeline": [
+      {
+        "development_id": "story_c2d519e23c9e4e72",
+        "daily_story_id": "story_c2d519e23c9e4e72",
+        "date": "2026-10-08",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Hurricane Isaias Forms Amid Strong El Niño Conditions",
+        "summary": "Hurricane Isaias has strengthened as it moves toward the Gulf Coast, marking the first Atlantic hurricane of the season. This development comes after a quiet start to the hurricane season, attributed to one of the strongest El Niño years on record.",
+        "topic_label": "Hurricane Season",
+        "development_type": "development",
+        "key_facts": [
+          "Hurricane Isaias is the first Atlantic hurricane of the season.",
+          "The storm is moving toward the Gulf Coast.",
+          "This hurricane season began quietly due to strong El Niño conditions."
+        ],
+        "source_count": 2,
+        "sources": [
+          "ABC News",
+          "PBS News"
+        ],
+        "source_urls": [
+          "https://www.pbs.org/newshour/science/how-el-nino-is-playing-a-role-in-hurricane-isaias",
+          "https://abcnews.com/US/tropical-storm-isaias-forecast-make-landfall-hurricane-friday/story?id=137059483"
+        ],
+        "source_details": [
+          {
+            "title": "How El Niño is playing a role in Hurricane Isaias",
+            "source": "PBS News",
+            "link": "https://www.pbs.org/newshour/science/how-el-nino-is-playing-a-role-in-hurricane-isaias",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Isaias strengthens into a hurricane as it continues moving toward Gulf Coast",
+            "source": "ABC News",
+            "link": "https://abcnews.com/US/tropical-storm-isaias-forecast-make-landfall-hurricane-friday/story?id=137059483",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 1.0,
+        "match_evidence": {
+          "score": 1.0,
+          "method": "new_event",
+          "shared_tokens": [],
+          "shared_entities": []
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-08",
+        "last_seen_at": "2026-10-08",
+        "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_f610ba698eac74dc",
+        "daily_story_id": "story_f610ba698eac74dc",
+        "date": "2026-10-09",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Hurricane Isaias Upgraded to Category 3, Landfall Expected on US Gulf Coast",
+        "summary": "Hurricane Isaias has rapidly intensified into a Category 3 storm as it approaches the US Gulf Coast. Mandatory evacuations have been ordered in anticipation of the storm making landfall later on Friday or early Saturday.",
+        "topic_label": "Hurricane Isaias",
+        "development_type": "development",
+        "key_facts": [
+          "Hurricane Isaias is now a Category 3 storm.",
+          "The storm is expected to make landfall on the US Gulf Coast.",
+          "Mandatory evacuations have been issued in affected areas."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Al Jazeera English",
+          "RTE News"
+        ],
+        "source_urls": [
+          "https://www.aljazeera.com/news/2026/10/9/hurricane-isaias-strengthens-into-category-3-storm-with-us-in-its-sights?traffic_source=rss",
+          "https://www.rte.ie/news/world/2026/1009/1594680-hurricane-isaias"
+        ],
+        "source_details": [
+          {
+            "title": "Hurricane Isaias strengthens into Category 3 storm with US in its sights",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/news/2026/10/9/hurricane-isaias-strengthens-into-category-3-storm-with-us-in-its-sights?traffic_source=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Hurricane Isaias rapidly intensifies approaching US Gulf",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/world/2026/1009/1594680-hurricane-isaias",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "storm"
+          ],
+          "shared_incident_anchors": [
+            "gulf_coast",
+            "gulf_coast.",
+            "hurricane",
+            "hurricane_isaia"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "coast",
+            "gulf",
+            "hurricane",
+            "isaia",
+            "storm"
+          ],
+          "shared_entities": [
+            "gulf_coast",
+            "gulf_coast.",
+            "hurricane",
+            "hurricane_isaia"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_c2d519e23c9e4e72",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-09",
+        "last_seen_at": "2026-10-09",
+        "integrity_status": "trusted"
+      }
+    ],
+    "incident_fingerprint": {
+      "types": [
+        "storm"
+      ],
+      "anchors": [
+        "condition_hurricane",
+        "gulf_coast",
+        "gulf_coast.",
+        "hurricane",
+        "hurricane_isaia",
+        "hurricane_season",
+        "isaia_forms",
+        "season_hurricane"
+      ],
+      "countries": [],
+      "method": "bounded_incident_fingerprint_v1"
+    },
+    "integrity": {
+      "public_development_count": 2,
+      "questionable_development_count": 0,
+      "review_required": false
+    },
+    "latest_title": "Hurricane Isaias Upgraded to Category 3, Landfall Expected on US Gulf Coast",
+    "latest_summary": "Hurricane Isaias has rapidly intensified into a Category 3 storm as it approaches the US Gulf Coast. Mandatory evacuations have been ordered in anticipation of the storm making landfall later on Friday or early Saturday.",
+    "presentation": {
+      "has_context": true,
+      "has_full_timeline": false,
+      "stage": "developing_event",
+      "stage_label": "Developing event",
+      "base_title": "Condition Hurricane Storm",
+      "display_title": "Condition Hurricane Storm",
+      "milestone_development_ids": [
+        "story_c2d519e23c9e4e72",
+        "story_f610ba698eac74dc"
+      ],
+      "summary_available": true,
+      "summary_label": "Read the story so far",
+      "summary_updated_at": "2026-10-09",
+      "development_count": 2,
+      "coverage_packet_count": 2,
+      "date_count": 2,
+      "source_count": 4,
+      "independent_source_count": 4,
+      "first_date": "2026-10-08",
+      "latest_date": "2026-10-09",
+      "latest_update_title": "Hurricane Isaias Upgraded to Category 3, Landfall Expected on US Gulf Coast",
+      "coverage_score": 0.397,
+      "recency_score": 1.0,
+      "rank_score": 0.747,
+      "context_summary": "Muninn first tracked this thread on 2026-10-08: Hurricane Isaias Forms Amid Strong El Niño Conditions. The latest development is Hurricane Isaias Upgraded to Category 3, Landfall Expected on US Gulf Coast.",
+      "cta_label": ""
+    },
+    "event_summary": {
+      "available": true,
+      "summary": "Hurricane Isaias has strengthened as it moves toward the Gulf Coast, marking the first Atlantic hurricane of the season. Most recently, hurricane Isaias has rapidly intensified into a Category 3 storm as it approaches the US Gulf Coast.",
+      "key_developments": [
+        {
+          "development_id": "story_c2d519e23c9e4e72",
+          "date": "2026-10-08",
+          "title": "Hurricane Isaias Forms Amid Strong El Niño Conditions"
+        },
+        {
+          "development_id": "story_f610ba698eac74dc",
+          "date": "2026-10-09",
+          "title": "Hurricane Isaias Upgraded to Category 3, Landfall Expected on US Gulf Coast"
+        }
+      ],
+      "sources": [
+        {
+          "title": "How El Niño is playing a role in Hurricane Isaias",
+          "source": "PBS News",
+          "link": "https://www.pbs.org/newshour/science/how-el-nino-is-playing-a-role-in-hurricane-isaias",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Isaias strengthens into a hurricane as it continues moving toward Gulf Coast",
+          "source": "ABC News",
+          "link": "https://abcnews.com/US/tropical-storm-isaias-forecast-make-landfall-hurricane-friday/story?id=137059483",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Hurricane Isaias strengthens into Category 3 storm with US in its sights",
+          "source": "Al Jazeera English",
+          "link": "https://www.aljazeera.com/news/2026/10/9/hurricane-isaias-strengthens-into-category-3-storm-with-us-in-its-sights?traffic_source=rss",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Hurricane Isaias rapidly intensifies approaching US Gulf",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/world/2026/1009/1594680-hurricane-isaias",
+          "source_bias": "center"
+        }
+      ],
+      "updated_at": "2026-10-09",
+      "provenance": "source_grounded_event_memory"
+    },
+    "event_stage": "developing_event",
+    "related_events": [
+      {
+        "event_id": "event_hurricane-polo-intensifies-to-category-5-off_6b6dfd9d9b",
+        "title": "Mexico Storm",
+        "relationship": "related_topic",
+        "confidence": 0.779,
+        "shared_entities": [
+          "category",
+          "coast_hurricane",
+          "landfall_expected",
+          "us"
+        ]
+      }
+    ],
+    "search_tokens": [
+      "anticipation",
+      "approache",
+      "atlantic",
+      "attributed",
+      "category",
+      "coast",
+      "comes",
+      "condition",
+      "development",
+      "early",
+      "evacuation",
+      "expected",
+      "first",
+      "forms",
+      "friday",
+      "gulf",
+      "hurricane",
+      "intensified",
+      "isaia",
+      "landfall",
+      "later",
+      "making",
+      "mandatory",
+      "marking",
+      "moves",
+      "ordered",
+      "quiet",
+      "rapidly",
+      "record",
+      "saturday",
+      "season",
+      "start",
+      "storm",
+      "strengthened",
+      "strong",
+      "strongest",
+      "toward",
+      "upgraded",
+      "years"
+    ],
+    "entities": [
+      "category",
+      "category_landfall",
+      "coast._mandatory",
+      "coast_hurricane",
+      "condition_hurricane",
+      "gulf_coast",
+      "gulf_coast.",
+      "hurricane_isaia",
+      "isaia_forms",
+      "isaia_upgraded",
+      "landfall_expected",
+      "us"
+    ],
+    "search_text": "anticipation approache atlantic attributed category category_landfall coast coast._mandatory coast_hurricane comes condition condition_hurricane development early evacuation expected first forms friday gulf gulf_coast gulf_coast. hurricane hurricane_isaia intensified isaia isaia_forms isaia_upgraded landfall landfall_expected later making mandatory marking moves ordered quiet rapidly record saturday season start storm strengthened strong strongest toward upgraded us years",
+    "event_overview": {
+      "available": true,
+      "title": "About Condition Hurricane Storm",
+      "subject": "Condition Hurricane Storm",
+      "summary": "Hurricane Isaias is an Atlantic tropical cyclone in the Gulf of America, tracked by the U.S. National Hurricane Center (NHC) as AL092026. It formed as Tropical Depression Nine on October 6, 2026, became Tropical Storm Isaias on October 7, and strengthened into a major hurricane while approaching the northern Gulf Coast.",
+      "facts": [
+        {
+          "label": "Formation and name",
+          "value": "The system became Tropical Depression Nine over the Gulf of America at 4:00 PM CDT on October 6, 2026, and was named Tropical Storm Isaias at 4:00 AM CDT on October 7.",
+          "source_ids": [
+            "o1",
+            "o2"
+          ]
+        },
+        {
+          "label": "Monitoring authority",
+          "value": "The National Hurricane Center, part of the U.S. National Weather Service, issues the storm’s official advisories, forecasts, and U.S. coastal watch and warning products.",
+          "source_ids": [
+            "o3",
+            "o4"
+          ]
+        },
+        {
+          "label": "Status on October 9, 2026",
+          "value": "At 11:00 AM CDT on October 9, Isaias had maximum sustained winds of 120 mph and a central pressure of 959 mb, placing it in Category 3—the “major hurricane” range—on the Saffir-Simpson Hurricane Wind Scale.",
+          "source_ids": [
+            "o5",
+            "o6"
+          ]
+        },
+        {
+          "label": "Location and movement",
+          "value": "At that update, the center was about 180 miles south of Pensacola, Florida, moving north-northeast at 16 mph toward the western Florida Panhandle and Alabama coast.",
+          "source_ids": [
+            "o5",
+            "o7"
+          ]
+        },
+        {
+          "label": "Hazards and warnings",
+          "value": "NHC warned that the storm could bring life-threatening storm surge and destructive winds to parts of the Florida Panhandle and Alabama coast; hurricane and storm-surge warnings were in effect for portions of the northern Gulf Coast.",
+          "source_ids": [
+            "o5",
+            "o4"
+          ]
+        }
+      ],
+      "scope_note": "The selected Muninn timeline covers the October 8-9 intensification and projected Gulf Coast landfall period, not Isaias’s full development from October 6, localized warning changes, impacts, or any post-storm assessment.",
+      "sources": [
+        {
+          "title": "Noaa",
+          "publisher": "Noaa",
+          "url": "https://www.nhc.noaa.gov/mobile/text/refresh/MIATCPAT4%2Bhtml/062038.shtml",
+          "source_type": "primary",
+          "id": "o1"
+        },
+        {
+          "title": "Noaa",
+          "publisher": "Noaa",
+          "url": "https://www.nhc.noaa.gov/text/refresh/MIATCPAT4%2Bshtml/041457.shtml",
+          "source_type": "primary",
+          "id": "o2"
+        },
+        {
+          "title": "Noaa",
+          "publisher": "Noaa",
+          "url": "https://www.nhc.noaa.gov/refresh.shtml",
+          "source_type": "primary",
+          "id": "o3"
+        },
+        {
+          "title": "Noaa",
+          "publisher": "Noaa",
+          "url": "https://www.nhc.noaa.gov/mobile/text/refresh/MIATCVAT4%2Bhtml/091456.shtml",
+          "source_type": "primary",
+          "id": "o4"
+        },
+        {
+          "title": "Noaa",
+          "publisher": "Noaa",
+          "url": "https://www.nhc.noaa.gov/text/refresh/MIATCUAT4%2Bshtml/091555.shtml",
+          "source_type": "primary",
+          "id": "o5"
+        },
+        {
+          "title": "Noaa",
+          "publisher": "Noaa",
+          "url": "https://www.nhc.noaa.gov/aboutsshws.php",
+          "source_type": "primary",
+          "id": "o6"
+        },
+        {
+          "title": "Noaa",
+          "publisher": "Noaa",
+          "url": "https://www.nhc.noaa.gov/mobile/",
+          "source_type": "primary",
+          "id": "o7"
+        }
+      ],
+      "publisher_count": 1,
+      "generated_at": "2026-10-09T17:56:47.227782+00:00",
+      "expires_at": "2026-10-16T17:56:47.227782+00:00",
+      "model": "gpt-5.6-terra",
+      "provenance": "openai_web_search_source_grounded_event_overview_v1"
+    },
+    "hero_image": {
+      "url": "/Current_news/generated/events/event_hurricane-isaias-forms-amid-strong-el-ni-o-c_3ef53d82ce.jpg",
+      "thumbnail_url": "/Current_news/generated/events/event_hurricane-isaias-forms-amid-strong-el-ni-o-c_3ef53d82ce.jpg",
+      "source": "Muninn AI illustration",
+      "author": "OpenAI GPT Image 2",
+      "license": "AI-generated content",
+      "image_role": "illustrative",
+      "image_role_label": "AI illustration",
+      "is_ai_generated": true,
+      "generation_model": "gpt-image-2",
+      "generation_quality": "low",
+      "safe_to_crop": true,
+      "allows_crop": true,
+      "focal_x": 0.5,
+      "focal_y": 0.48,
+      "focal_wide_x": 0.5,
+      "focal_wide_y": 0.48,
+      "focal_tall_x": 0.5,
+      "focal_tall_y": 0.48
+    }
+  },
+  "related_events": [
+    {
+      "event_id": "event_hurricane-polo-intensifies-to-category-5-off_6b6dfd9d9b",
+      "title": "Mexico Storm",
+      "summary": "Muninn first tracked this thread on 2026-09-22: Hurricane Polo Intensifies to Category 5 Off Southwestern Mexico. The latest development is Hurricane Polo Hits Mexico's Baja California, Second Landfall Expected.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-09-22",
+      "last_seen_at": "2026-09-29",
+      "development_count": 8,
+      "latest_title": "Hurricane Polo Hits Mexico's Baja California, Second Landfall Expected",
+      "topic_label": "Mexico Storm",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_hurricane-polo-intensifies-to-category-5-off_6b6dfd9d9b.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_hurricane-polo-intensifies-to-category-5-off_6b6dfd9d9b.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_hurricane-polo-intensifies-to-category-5-off_6b6dfd9d9b"
+    }
+  ]
+}

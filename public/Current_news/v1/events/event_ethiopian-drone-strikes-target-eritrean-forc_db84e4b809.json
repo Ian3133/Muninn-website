@@ -1,0 +1,528 @@
+{
+  "schema_version": 1,
+  "resource_type": "event",
+  "event_id": "event_ethiopian-drone-strikes-target-eritrean-forc_db84e4b809",
+  "publication": {
+    "status": "published",
+    "permalink": "/timeline.html?event=event_ethiopian-drone-strikes-target-eritrean-forc_db84e4b809",
+    "share_expires_at": null
+  },
+  "event": {
+    "event_id": "event_ethiopian-drone-strikes-target-eritrean-forc_db84e4b809",
+    "title": "Ethiopian Drone Strikes Target Eritrean Forces Near Adigrat Amid Rising Tensions",
+    "canonical_title": "Ethiopian Drone Strikes Target Eritrean Forces Near Adigrat Amid Rising Tensions",
+    "topic_label": "Ethiopia-Eritrea Conflict",
+    "summary": "Ethiopian drone strikes have targeted Eritrean forces near the city of Adigrat, resulting in damaged vehicles and reports of retreating troops. This escalation follows Ethiopia's expulsion of Eritrean diplomats and Eritrea's severance of diplomatic ties, raising concerns about a potential regional conflict.",
+    "status": "active",
+    "first_seen_at": "2026-10-08",
+    "last_seen_at": "2026-10-09",
+    "timeline": [
+      {
+        "development_id": "story_3ee8b7ec54dcfae9",
+        "daily_story_id": "story_3ee8b7ec54dcfae9",
+        "date": "2026-10-08",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Ethiopian Drone Strikes Target Eritrean Forces Near Adigrat Amid Rising Tensions",
+        "summary": "Ethiopian drone strikes have targeted Eritrean forces near the city of Adigrat, resulting in damaged vehicles and reports of retreating troops. This escalation follows Ethiopia's expulsion of Eritrean diplomats and Eritrea's severance of diplomatic ties, raising concerns about a potential regional conflict.",
+        "topic_label": "Ethiopia-Eritrea Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "Ethiopian drones struck Eritrean forces near Adigrat.",
+          "Witnesses reported destroyed vehicles and retreating troops.",
+          "The strikes occurred after Ethiopia expelled Eritrean diplomats."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Africanews",
+          "Euronews"
+        ],
+        "source_urls": [
+          "https://www.euronews.com/2026/10/08/ethiopian-drones-hit-eritrean-forces-accused-of-backing-rebels-in-tigray",
+          "http://www.africanews.com/2026/10/08/ethiopian-drones-strike-eritrean-forces-near-adigrat"
+        ],
+        "source_details": [
+          {
+            "title": "Ethiopian drones hit Eritrean forces accused of backing rebels in Tigray",
+            "source": "Euronews",
+            "link": "https://www.euronews.com/2026/10/08/ethiopian-drones-hit-eritrean-forces-accused-of-backing-rebels-in-tigray",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Ethiopian drones strike Eritrean forces near Adigrat",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/10/08/ethiopian-drones-strike-eritrean-forces-near-adigrat",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 1.0,
+        "match_evidence": {
+          "score": 1.0,
+          "method": "new_event",
+          "shared_tokens": [],
+          "shared_entities": []
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-08",
+        "last_seen_at": "2026-10-08",
+        "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_162f5a9c853237e5",
+        "daily_story_id": "story_162f5a9c853237e5",
+        "date": "2026-10-09",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Ukraine Targets Russian AI Infrastructure with Drone Strikes",
+        "summary": "Ukraine has launched drone attacks aimed at Russian digital giant Yandex, disrupting its operations. The strikes are part of a broader campaign that includes ongoing assaults on missile plants and oil refineries. Yandex has acknowledged that customers may face service disruptions due to these attacks.",
+        "topic_label": "Ukraine Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "Ukraine conducted drone attacks targeting Yandex.",
+          "The strikes are part of a broader campaign against Russian military infrastructure.",
+          "Yandex reported potential disruptions to its digital services."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Al Jazeera English",
+          "BBC - World"
+        ],
+        "source_urls": [
+          "https://www.aljazeera.com/news/2026/10/9/ukraine-takes-aim-at-russias-ai-data-infrastructure?traffic_source=rss",
+          "https://www.bbc.co.uk/news/articles/c68xzqqn4ekro?at_medium=RSS&at_campaign=rss"
+        ],
+        "source_details": [
+          {
+            "title": "Ukraine takes aim at Russia’s AI data infrastructure",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/news/2026/10/9/ukraine-takes-aim-at-russias-ai-data-infrastructure?traffic_source=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Russian search engine Yandex struggles after Ukrainian strikes on data centres",
+            "source": "BBC - World",
+            "link": "https://www.bbc.co.uk/news/articles/c68xzqqn4ekro?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "strike"
+          ],
+          "shared_incident_anchors": [
+            "drone"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "conflict",
+            "drone",
+            "potential",
+            "reported",
+            "strike",
+            "target"
+          ],
+          "shared_entities": [
+            "drone"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_3ee8b7ec54dcfae9",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-09",
+        "last_seen_at": "2026-10-09",
+        "integrity_status": "trusted"
+      }
+    ],
+    "incident_fingerprint": {
+      "types": [
+        "strike"
+      ],
+      "anchors": [
+        "adigrat",
+        "adigrat.",
+        "adigrat._witnesse",
+        "drone",
+        "eritrean",
+        "eritrean_force",
+        "ethiopia-eritrea",
+        "ethiopian",
+        "ethiopian_drone",
+        "force_near",
+        "near",
+        "near_adigrat",
+        "rising_tension",
+        "target_eritrean",
+        "tension_ethiopia-eritrea"
+      ],
+      "countries": [],
+      "method": "bounded_incident_fingerprint_v1"
+    },
+    "integrity": {
+      "public_development_count": 2,
+      "questionable_development_count": 0,
+      "review_required": false
+    },
+    "latest_title": "Ukraine Targets Russian AI Infrastructure with Drone Strikes",
+    "latest_summary": "Ukraine has launched drone attacks aimed at Russian digital giant Yandex, disrupting its operations. The strikes are part of a broader campaign that includes ongoing assaults on missile plants and oil refineries. Yandex has acknowledged that customers may face service disruptions due to these attacks.",
+    "presentation": {
+      "has_context": true,
+      "has_full_timeline": false,
+      "stage": "developing_event",
+      "stage_label": "Developing event",
+      "base_title": "Ethiopian Drone Strikes Target Eritrean Forces Near Adigrat Amid Rising Tensions",
+      "display_title": "Ethiopian Drone Strikes Target Eritrean Forces Near Adigrat Amid Rising Tensions",
+      "milestone_development_ids": [
+        "story_3ee8b7ec54dcfae9",
+        "story_162f5a9c853237e5"
+      ],
+      "summary_available": true,
+      "summary_label": "Read the story so far",
+      "summary_updated_at": "2026-10-09",
+      "development_count": 2,
+      "coverage_packet_count": 2,
+      "date_count": 2,
+      "source_count": 4,
+      "independent_source_count": 4,
+      "first_date": "2026-10-08",
+      "latest_date": "2026-10-09",
+      "latest_update_title": "Ukraine Targets Russian AI Infrastructure with Drone Strikes",
+      "coverage_score": 0.397,
+      "recency_score": 1.0,
+      "rank_score": 0.747,
+      "context_summary": "Muninn first tracked this thread on 2026-10-08: Ethiopian Drone Strikes Target Eritrean Forces Near Adigrat Amid Rising Tensions. The latest development is Ukraine Targets Russian AI Infrastructure with Drone Strikes.",
+      "cta_label": ""
+    },
+    "event_summary": {
+      "available": true,
+      "summary": "Ethiopian drone strikes have targeted Eritrean forces near the city of Adigrat, resulting in damaged vehicles and reports of retreating troops. Most recently, ukraine has launched drone attacks aimed at Russian digital giant Yandex, disrupting its operations.",
+      "key_developments": [
+        {
+          "development_id": "story_3ee8b7ec54dcfae9",
+          "date": "2026-10-08",
+          "title": "Ethiopian Drone Strikes Target Eritrean Forces Near Adigrat Amid Rising Tensions"
+        },
+        {
+          "development_id": "story_162f5a9c853237e5",
+          "date": "2026-10-09",
+          "title": "Ukraine Targets Russian AI Infrastructure with Drone Strikes"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Ethiopian drones hit Eritrean forces accused of backing rebels in Tigray",
+          "source": "Euronews",
+          "link": "https://www.euronews.com/2026/10/08/ethiopian-drones-hit-eritrean-forces-accused-of-backing-rebels-in-tigray",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Ethiopian drones strike Eritrean forces near Adigrat",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/10/08/ethiopian-drones-strike-eritrean-forces-near-adigrat",
+          "source_bias": "center"
+        },
+        {
+          "title": "Ukraine takes aim at Russia’s AI data infrastructure",
+          "source": "Al Jazeera English",
+          "link": "https://www.aljazeera.com/news/2026/10/9/ukraine-takes-aim-at-russias-ai-data-infrastructure?traffic_source=rss",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Russian search engine Yandex struggles after Ukrainian strikes on data centres",
+          "source": "BBC - World",
+          "link": "https://www.bbc.co.uk/news/articles/c68xzqqn4ekro?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
+        }
+      ],
+      "updated_at": "2026-10-09",
+      "provenance": "source_grounded_event_memory"
+    },
+    "event_stage": "developing_event",
+    "related_events": [
+      {
+        "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
+        "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
+        "relationship": "related_topic",
+        "confidence": 0.785,
+        "shared_entities": [
+          "rising_tension",
+          "russia",
+          "ukraine"
+        ]
+      },
+      {
+        "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+        "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
+        "relationship": "related_topic",
+        "confidence": 0.78,
+        "shared_entities": [
+          "rising_tension",
+          "russia",
+          "ukraine"
+        ]
+      },
+      {
+        "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
+        "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
+        "relationship": "related_topic",
+        "confidence": 0.769,
+        "shared_entities": [
+          "rising_tension",
+          "russia",
+          "ukraine"
+        ]
+      },
+      {
+        "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
+        "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
+        "relationship": "related_topic",
+        "confidence": 0.724,
+        "shared_entities": [
+          "russia",
+          "ukraine"
+        ]
+      }
+    ],
+    "search_tokens": [
+      "acknowledged",
+      "adigrat",
+      "aimed",
+      "assault",
+      "attack",
+      "broader",
+      "campaign",
+      "concern",
+      "conflict",
+      "customer",
+      "damaged",
+      "digital",
+      "diplomat",
+      "diplomatic",
+      "disrupting",
+      "disruption",
+      "drone",
+      "eritrea",
+      "eritrean",
+      "escalation",
+      "ethiopia",
+      "ethiopian",
+      "expulsion",
+      "face",
+      "follow",
+      "force",
+      "giant",
+      "include",
+      "infrastructure",
+      "launched",
+      "missile",
+      "near",
+      "oil",
+      "ongoing",
+      "operation",
+      "part",
+      "plant",
+      "potential",
+      "raising",
+      "refinerie",
+      "regional",
+      "resulting",
+      "retreating",
+      "rising",
+      "russia",
+      "service",
+      "severance",
+      "strike",
+      "target",
+      "targeted",
+      "tension",
+      "these",
+      "ties",
+      "troop",
+      "ukraine",
+      "vehicle",
+      "yandex"
+    ],
+    "entities": [
+      "ai",
+      "eritrean_force",
+      "ethiopian_drone",
+      "force_near",
+      "near_adigrat",
+      "rising_tension",
+      "russia",
+      "target_eritrean",
+      "target_russia",
+      "tension_ethiopian",
+      "ukraine",
+      "ukraine_target"
+    ],
+    "search_text": "acknowledged adigrat ai aimed assault attack broader campaign concern conflict customer damaged digital diplomat diplomatic disrupting disruption drone eritrea eritrean eritrean_force escalation ethiopia ethiopian ethiopian_drone expulsion face follow force force_near giant include infrastructure launched missile near near_adigrat oil ongoing operation part plant potential raising refinerie regional resulting retreating rising rising_tension russia service severance strike target target_eritrean target_russia targeted tension tension_ethiopian these ties troop ukraine ukraine_target vehicle yandex",
+    "hero_image": {
+      "url": "/Current_news/generated/events/event_ethiopian-drone-strikes-target-eritrean-forc_db84e4b809.jpg",
+      "thumbnail_url": "/Current_news/generated/events/event_ethiopian-drone-strikes-target-eritrean-forc_db84e4b809.jpg",
+      "source": "Muninn AI illustration",
+      "author": "OpenAI GPT Image 2",
+      "license": "AI-generated content",
+      "image_role": "illustrative",
+      "image_role_label": "AI illustration",
+      "is_ai_generated": true,
+      "generation_model": "gpt-image-2",
+      "generation_quality": "low",
+      "safe_to_crop": true,
+      "allows_crop": true,
+      "focal_x": 0.5,
+      "focal_y": 0.48,
+      "focal_wide_x": 0.5,
+      "focal_wide_y": 0.48,
+      "focal_tall_x": 0.5,
+      "focal_tall_y": 0.48
+    }
+  },
+  "related_events": [
+    {
+      "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
+      "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
+      "summary": "Muninn first tracked this thread on 2026-07-31: Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza. The latest development is Russian Strikes Kill Civilians in Ukraine Following Putin's Warning.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-31",
+      "last_seen_at": "2026-09-12",
+      "development_count": 37,
+      "latest_title": "Russian Strikes Kill Civilians in Ukraine Following Putin's Warning",
+      "topic_label": "Gaza Peace Deal",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b"
+    },
+    {
+      "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+      "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
+      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Three Saudis Killed in Houthi Strikes on Riyadh Airport.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-22",
+      "last_seen_at": "2026-10-09",
+      "development_count": 65,
+      "latest_title": "Three Saudis Killed in Houthi Strikes on Riyadh Airport",
+      "topic_label": "Iran War",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
+    },
+    {
+      "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
+      "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
+      "summary": "Muninn first tracked this thread on 2026-09-11: Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims. The latest development is Iran's Control Over Hormuz Strait Questioned by US Officials.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-09-11",
+      "last_seen_at": "2026-10-07",
+      "development_count": 34,
+      "latest_title": "Iran's Control Over Hormuz Strait Questioned by US Officials",
+      "topic_label": "9/11 Victim Compensation",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b"
+    },
+    {
+      "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
+      "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
+      "summary": "Muninn first tracked this thread on 2026-07-25: Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse. The latest development is Russian Strike on Kramatorsk Buses Results in Significant Civilian Casualties.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-25",
+      "last_seen_at": "2026-10-08",
+      "development_count": 26,
+      "latest_title": "Russian Strike on Kramatorsk Buses Results in Significant Civilian Casualties",
+      "topic_label": "Russia-Ukraine War",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea"
+    }
+  ]
+}
