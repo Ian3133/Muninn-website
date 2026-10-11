@@ -15,7 +15,7 @@
     "summary": "At least 22 bodies have been recovered following devastating flash floods that struck the border areas of Nepal and Tibet, with 384 individuals reported missing. The floods, triggered by an avalanche of ice and rock, have caused significant destruction to villages, infrastructure, and power projects. Among the missing are 291 foreign nationals, including many from India.",
     "status": "active",
     "first_seen_at": "2026-08-26",
-    "last_seen_at": "2026-09-26",
+    "last_seen_at": "2026-10-11",
     "timeline": [
       {
         "development_id": "story_47f1a414d370909a",
@@ -1645,15 +1645,89 @@
         "first_seen_at": "2026-09-26",
         "last_seen_at": "2026-09-26",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_30d329e6196cb65c",
+        "daily_story_id": "story_30d329e6196cb65c",
+        "date": "2026-10-11",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Flash Floods Prompt Evacuations in Northern Nepal",
+        "summary": "Residents in northern Nepal have evacuated their villages due to flash flooding from the Budhi Gandaki River. The floods have reportedly swept away several buildings and bridges, exacerbating the situation in an area already affected by previous catastrophic floods two months prior.",
+        "topic_label": "Nepal Floods",
+        "development_type": "development",
+        "key_facts": [
+          "Flash floods from the Budhi Gandaki River have led to evacuations in northern Nepal.",
+          "Several buildings and bridges have been swept away by the floods.",
+          "This event follows catastrophic floods that occurred two months earlier."
+        ],
+        "source_count": 3,
+        "sources": [
+          "AP News",
+          "BBC",
+          "The Hindu"
+        ],
+        "source_urls": [
+          "https://news.google.com/rss/articles/CBMirAFBVV95cUxQSHJiTE5uU0t3VjY2XzhVV09yeXR5OV9OWDdYeHpJMk15WW1ScXplQnZIRFJWT2RkdHpfRHhMZjZhUDdVcmZoUldnUXo0bEtPa1F2Q3JHWGtieFV5YkE5WDdNa29lbVNpWXBaQ2ZhQWNrRzQ1VkhkLVdaUjNOYjlpZHRVTVU2TkZPTlBvM3FSOUpBVmhXMFhYUzVBUHI4UlpUMm5HYnd3RUFSY0pt?oc=5",
+          "https://www.thehindu.com/news/international/villages-evacuated-as-flash-flood-from-budhi-gandaki-river-hits-northern-nepal/article71570887.ece",
+          "https://www.bbc.co.uk/news/videos/cwzrdnljedx0o?at_medium=RSS&at_campaign=rss"
+        ],
+        "source_details": [
+          {
+            "title": "Villages evacuated as flash flood from Budhi Gandaki River hits northern Nepal",
+            "source": "AP News",
+            "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQSHJiTE5uU0t3VjY2XzhVV09yeXR5OV9OWDdYeHpJMk15WW1ScXplQnZIRFJWT2RkdHpfRHhMZjZhUDdVcmZoUldnUXo0bEtPa1F2Q3JHWGtieFV5YkE5WDdNa29lbVNpWXBaQ2ZhQWNrRzQ1VkhkLVdaUjNOYjlpZHRVTVU2TkZPTlBvM3FSOUpBVmhXMFhYUzVBUHI4UlpUMm5HYnd3RUFSY0pt?oc=5",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Villages evacuated as flash flood from Budhi Gandaki River hits northern Nepal",
+            "source": "The Hindu",
+            "link": "https://www.thehindu.com/news/international/villages-evacuated-as-flash-flood-from-budhi-gandaki-river-hits-northern-nepal/article71570887.ece",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Buildings swept away as flash floods hit central Nepal",
+            "source": "BBC",
+            "link": "https://www.bbc.co.uk/news/videos/cwzrdnljedx0o?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_a2a308d7efb0b211",
+          "shared_tokens": [
+            "flash",
+            "flood",
+            "flooding",
+            "nepal",
+            "river"
+          ],
+          "shared_entities": [
+            "flash_flood",
+            "nepal_flood"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-11",
+        "last_seen_at": "2026-10-11",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 19,
+      "public_development_count": 20,
       "questionable_development_count": 2,
       "review_required": true
     },
-    "latest_title": "Ongoing Recovery Efforts in Nepal Following Devastating Floods",
-    "latest_summary": "One month after severe floods in Nepal, thousands of individuals remain unaccounted for, and families are struggling to recover. The disaster has left many communities facing significant challenges as they begin the long process of rebuilding their lives.",
+    "latest_title": "Flash Floods Prompt Evacuations in Northern Nepal",
+    "latest_summary": "Residents in northern Nepal have evacuated their villages due to flash flooding from the Budhi Gandaki River. The floods have reportedly swept away several buildings and bridges, exacerbating the situation in an area already affected by previous catastrophic floods two months prior.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -1664,29 +1738,29 @@
       "milestone_development_ids": [
         "story_47f1a414d370909a",
         "story_e14f20ba0e449b7b",
-        "story_311c00b267e0ae03",
-        "story_aa36bf88b8c3d3c3"
+        "story_b6578b1333ed17a4",
+        "story_30d329e6196cb65c"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-09-26",
-      "development_count": 19,
-      "coverage_packet_count": 22,
-      "date_count": 13,
-      "source_count": 57,
+      "summary_updated_at": "2026-10-11",
+      "development_count": 20,
+      "coverage_packet_count": 23,
+      "date_count": 14,
+      "source_count": 60,
       "independent_source_count": 31,
       "first_date": "2026-08-26",
-      "latest_date": "2026-09-26",
-      "latest_update_title": "Ongoing Recovery Efforts in Nepal Following Devastating Floods",
+      "latest_date": "2026-10-11",
+      "latest_update_title": "Flash Floods Prompt Evacuations in Northern Nepal",
       "coverage_score": 1.0,
-      "recency_score": 0.333,
-      "rank_score": 0.613,
-      "context_summary": "Muninn first tracked this thread on 2026-08-26: Flash Floods in Nepal and Tibet Leave Hundreds Dead and Thousands Missing. The latest development is Ongoing Recovery Efforts in Nepal Following Devastating Floods.",
-      "cta_label": "Explore 19 developments"
+      "recency_score": 1.0,
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-08-26: Flash Floods in Nepal and Tibet Leave Hundreds Dead and Thousands Missing. The latest development is Flash Floods Prompt Evacuations in Northern Nepal.",
+      "cta_label": "Explore 20 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Devastating flash floods triggered by a glacier collapse have affected the Nepal-Tibet border, resulting in nearly 600 deaths and leaving approximately 1,900 people missing. A later development was Principal's Quick Action Saves 900 Students from Nepal Flood. Most recently, one month after severe floods in Nepal, thousands of individuals remain unaccounted for, and families are struggling to recover.",
+      "summary": "Devastating flash floods triggered by a glacier collapse have affected the Nepal-Tibet border, resulting in nearly 600 deaths and leaving approximately 1,900 people missing. A later development was Severe Flooding in Nepal and Tibet Leaves Nearly 1,000 Dead and Thousands Missing. Most recently, residents in northern Nepal have evacuated their villages due to flash flooding from the Budhi Gandaki River.",
       "key_developments": [
         {
           "development_id": "story_47f1a414d370909a",
@@ -1699,14 +1773,14 @@
           "title": "Death Toll from Nepal-Tibet Floods Approaches 800 with Thousands Missing"
         },
         {
-          "development_id": "story_311c00b267e0ae03",
-          "date": "2026-09-01",
-          "title": "Flash Floods on Nepal-Tibet Border Result in Over 1,000 Deaths"
+          "development_id": "story_b6578b1333ed17a4",
+          "date": "2026-09-02",
+          "title": "Nepal Faces Mass Burials as Flash Flood Death Toll Surpasses 1,100"
         },
         {
-          "development_id": "story_aa36bf88b8c3d3c3",
-          "date": "2026-09-26",
-          "title": "Ongoing Recovery Efforts in Nepal Following Devastating Floods"
+          "development_id": "story_30d329e6196cb65c",
+          "date": "2026-10-11",
+          "title": "Flash Floods Prompt Evacuations in Northern Nepal"
         }
       ],
       "sources": [
@@ -2051,9 +2125,27 @@
           "source": "France 24",
           "link": "https://www.france24.com/en/a-month-after-thousands-are-still-missing-and-families-face-a-long-recovery",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Villages evacuated as flash flood from Budhi Gandaki River hits northern Nepal",
+          "source": "AP News",
+          "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQSHJiTE5uU0t3VjY2XzhVV09yeXR5OV9OWDdYeHpJMk15WW1ScXplQnZIRFJWT2RkdHpfRHhMZjZhUDdVcmZoUldnUXo0bEtPa1F2Q3JHWGtieFV5YkE5WDdNa29lbVNpWXBaQ2ZhQWNrRzQ1VkhkLVdaUjNOYjlpZHRVTVU2TkZPTlBvM3FSOUpBVmhXMFhYUzVBUHI4UlpUMm5HYnd3RUFSY0pt?oc=5",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Villages evacuated as flash flood from Budhi Gandaki River hits northern Nepal",
+          "source": "The Hindu",
+          "link": "https://www.thehindu.com/news/international/villages-evacuated-as-flash-flood-from-budhi-gandaki-river-hits-northern-nepal/article71570887.ece",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Buildings swept away as flash floods hit central Nepal",
+          "source": "BBC",
+          "link": "https://www.bbc.co.uk/news/videos/cwzrdnljedx0o?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-09-26",
+      "updated_at": "2026-10-11",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -2062,7 +2154,7 @@
         "event_id": "event_building-collapse-in-athens-plaka-following_57365decb8",
         "title": "Building Collapse in Athens' Plaka Following Explosion Injures Two",
         "relationship": "related_topic",
-        "confidence": 0.705,
+        "confidence": 0.711,
         "shared_entities": [
           "britain",
           "claim_lives"
@@ -2072,7 +2164,7 @@
         "event_id": "event_trump-announces-deal-for-hamas-disarmament-a_0efac9467b",
         "title": "Trump Announces Deal for Hamas Disarmament and Israeli Withdrawal from Gaza",
         "relationship": "related_topic",
-        "confidence": 0.692,
+        "confidence": 0.694,
         "shared_entities": [
           "border_result",
           "china"
@@ -2103,82 +2195,96 @@
       "available": true,
       "title": "About Nepal Floods",
       "subject": "Nepal Floods",
-      "summary": "The Nepal floods refer here to the August 26, 2026 flash-flood disaster in the Himalayan border area between Nepal and China’s Tibet Autonomous Region. The flood struck the Lhende Khola/Bhote Koshi–Trishuli river corridor, damaging communities, transport links, hydropower infrastructure and monitoring sites; scientific assessments of the initiating mechanism were still preliminary as of September 5.",
+      "summary": "The Nepal floods refer to the catastrophic flash-flood disaster that began on 26 August 2026 in northern Nepal’s Bhotekoshi–Trishuli river corridor. The event caused major loss of life and damage to communities, transport links, hydropower facilities, and border infrastructure, prompting a Government of Nepal-led emergency and recovery response supported by UN and humanitarian partners.",
       "facts": [
         {
-          "label": "Date",
-          "value": "The major flash flood began on August 26, 2026; its humanitarian and infrastructure effects continued to be assessed in the following days.",
+          "label": "Start date and status",
+          "value": "The flash floods began on 26 August 2026; emergency relief was followed by a four-month humanitarian appeal, while longer-term recovery continued beyond the immediate response period.",
           "source_ids": [
             "o1",
             "o2"
           ]
         },
         {
-          "label": "Location",
-          "value": "The principal affected area was Nepal’s Rasuwa District and the Nepal–China border zone, with impacts reported along the Bhote Koshi and Trishuli river corridors and in Kyirong, Tibet Autonomous Region.",
+          "label": "Main affected area",
+          "value": "The core impact area was northern Nepal, particularly Rasuwa, Nuwakot and Dhading districts along the Bhotekoshi and Trishuli river systems; damage also affected transport, trade and tourism connections near the Nepal–China border.",
           "source_ids": [
             "o1",
-            "o2"
+            "o3"
           ]
         },
         {
-          "label": "Preliminary cause",
-          "value": "ICIMOD said an ice-rock avalanche or related high-altitude collapse was the suspected trigger; debris may have temporarily dammed the Lhende River before a sudden downstream surge. The cause had not been conclusively established.",
+          "label": "Hazard mechanism",
+          "value": "UN material describes the disaster as a cascading mountain-hazard event triggered by a large rock-ice avalanche in the high Himalaya, which generated destructive flash floods downstream.",
           "source_ids": [
-            "o2",
-            "o1"
+            "o3"
           ]
         },
         {
-          "label": "Risk context",
-          "value": "The event was a cascading mountain hazard: a high-altitude ice-and-rock movement, possible river blockage and rapid flood wave. ICIMOD cautioned that the role of climate change in this specific event was too early to determine, even though warming is altering Himalayan cryosphere risks more broadly.",
+          "label": "Response leadership",
+          "value": "Nepal’s disaster response was led by the Government of Nepal, including the National Disaster Risk Reduction and Management Authority and the Ministry of Home Affairs, with UN agencies, the Red Cross movement and other partners supporting coordination and relief.",
           "source_ids": [
-            "o2"
-          ]
-        },
-        {
-          "label": "Nepal disaster management",
-          "value": "Nepal’s National Disaster Risk Reduction and Management Authority, under the Ministry of Home Affairs, is the national disaster-management authority; the Department of Hydrology and Meteorology’s Flood Forecasting Division provides river, rainfall and flood-warning information.",
-          "source_ids": [
-            "o3",
+            "o1",
             "o4"
+          ]
+        },
+        {
+          "label": "Seasonal context",
+          "value": "The event occurred during Nepal’s June-to-September monsoon season, when heavy rainfall commonly increases flood and landslide risk across the country.",
+          "source_ids": [
+            "o5",
+            "o6"
           ]
         }
       ],
-      "scope_note": "The selected Muninn timeline covers the immediate August 26–31, 2026 disaster, rescue and casualty-reporting phase, not a final accounting, long-term recovery, or a definitive scientific attribution of the flood’s cause.",
+      "scope_note": "The selected Muninn timeline covers the late-August 2026 acute disaster phase—casualty and missing-person reports, rescue operations and immediate cross-border impacts—not the full history of flooding in Nepal or the subsequent recovery and reconstruction process.",
       "sources": [
         {
-          "title": "Icimod",
-          "publisher": "Icimod",
-          "url": "https://www.icimod.org/kyirong-rasuwa-flood-2026-nepal-china-border/",
+          "title": "UN",
+          "publisher": "UN",
+          "url": "https://unsdg.un.org/latest/stories/one-month-rasuwa-floods-six-ways-coordinated-action-making-difference",
           "source_type": "reporting",
           "id": "o1"
         },
         {
-          "title": "Icimod",
-          "publisher": "Icimod",
-          "url": "https://www.icimod.org/press-release/major-flash-flood-sweeps-through-nepals-rasuwa-district-raising-fears-of-further-downstream-flooding/",
+          "title": "UN",
+          "publisher": "UN",
+          "url": "https://nepal.un.org/en/323258-flash-appeal-rasuwa-floods",
           "source_type": "reporting",
           "id": "o2"
         },
         {
-          "title": "Gov",
-          "publisher": "Gov",
-          "url": "https://ndrrma.gov.np/en",
+          "title": "UN",
+          "publisher": "UN",
+          "url": "https://indico.un.org/event/1026074/",
           "source_type": "reporting",
           "id": "o3"
         },
         {
           "title": "Gov",
           "publisher": "Gov",
-          "url": "https://dms2.dhm.gov.np/",
+          "url": "https://ndrrma.gov.np/en/",
           "source_type": "reporting",
           "id": "o4"
+        },
+        {
+          "title": "Gov",
+          "publisher": "Gov",
+          "url": "https://dhm.gov.np/climate-services/seasonal-outlook",
+          "source_type": "reporting",
+          "id": "o5"
+        },
+        {
+          "title": "Gov",
+          "publisher": "Gov",
+          "url": "https://www.dhm.gov.np/uploads/dhm/downloads/1723793980Final_report_MWE_2016.pdf",
+          "source_type": "reporting",
+          "id": "o6"
         }
       ],
       "publisher_count": 2,
-      "generated_at": "2026-09-05T14:28:59.568197+00:00",
-      "expires_at": "2026-09-12T14:28:59.568197+00:00",
+      "generated_at": "2026-10-11T17:17:04.772263+00:00",
+      "expires_at": "2026-10-18T17:17:04.772263+00:00",
       "model": "gpt-5.6-terra",
       "provenance": "openai_web_search_source_grounded_event_overview_v1"
     },
@@ -2209,6 +2315,7 @@
       "airlifted",
       "alive",
       "along",
+      "already",
       "although",
       "america",
       "among",
@@ -2216,6 +2323,7 @@
       "approache",
       "approaching",
       "approximately",
+      "area",
       "areas",
       "argue",
       "authoritie",
@@ -2228,7 +2336,10 @@
       "bhotekoshi",
       "border",
       "both",
+      "bridge",
       "britain",
+      "budhi",
+      "building",
       "burial",
       "capture",
       "catastrophe",
@@ -2272,7 +2383,9 @@
       "dramatic",
       "effort",
       "evacuated",
+      "evacuation",
       "exacerbated",
+      "exacerbating",
       "exceed",
       "expert",
       "extensive",
@@ -2294,6 +2407,7 @@
       "formed",
       "funeral",
       "further",
+      "gandaki",
       "glacier",
       "grim",
       "halt",
@@ -2348,6 +2462,7 @@
       "nepal-tibet",
       "nepalese",
       "nine",
+      "northern",
       "numerou",
       "occur",
       "occurred",
@@ -2362,9 +2477,12 @@
       "population",
       "potential",
       "practice",
+      "previou",
       "principal",
+      "prior",
       "process",
       "project",
+      "prompt",
       "prompting",
       "pulled",
       "quick",
@@ -2382,8 +2500,10 @@
       "religiou",
       "remain",
       "reported",
+      "reportedly",
       "rescue",
       "rescued",
+      "resident",
       "response",
       "result",
       "resulted",
@@ -2404,6 +2524,7 @@
       "school",
       "search",
       "searching",
+      "several",
       "severe",
       "severely",
       "significant",
@@ -2419,6 +2540,7 @@
       "surpassed",
       "survivor",
       "sustained",
+      "swept",
       "swift",
       "symbolic",
       "teams",
@@ -2449,6 +2571,7 @@
       "unidentified",
       "unusual",
       "victim",
+      "village",
       "warned",
       "warning",
       "washed",
@@ -2472,6 +2595,8 @@
       "border_causing",
       "border_result",
       "britain",
+      "budhi",
+      "budhi_gandaki",
       "causing_hundred",
       "china",
       "china-nepal",
@@ -2493,10 +2618,12 @@
       "flood_exceed",
       "flood_hit",
       "flood_one",
+      "flood_prompt",
       "flood_rajendra",
       "flood_rescue",
       "flood_result",
       "flood_victim",
+      "gandaki_river.",
       "hit_nepal-tibet",
       "hold_symbolic",
       "hundred_trapped",
@@ -2521,11 +2648,14 @@
       "nepal_flood",
       "nepal_hydropower",
       "nepal_rasuwa",
+      "nepal_resident",
+      "northern",
       "ongoing_recovery",
       "ongoing_rescue",
       "ongoing_search",
       "operation_continue",
       "principal_quick",
+      "prompt_evacuation",
       "quick_action",
       "rajendra_dawadi",
       "rasuwa_district",
@@ -2546,7 +2676,7 @@
       "victim_familie",
       "worker_rescued"
     ],
-    "search_text": "000 050 100 157 200 300 389 400 502 546 600 669 670 800 900 939 action action_saves actively additional adverse affected aftermath aid airlifted alive along although america americans._rescue among anxiously approache approaching approximately areas argue authoritie authority awaiting away begin believe believed bhotekoshi bhotekoshi_river border border_causing border_result both britain burial capture catastrophe catastrophic caused causing causing_hundred challenge china china-nepal china._ongoing claim claim_lives collapse comes communitie complicating compounding concentrating concern condition conduct conducting confirmed continue continue_flash contradict contributing countrie crisi crucial currently dawadi dead death debri decision delivered despair destruction devastating devastating_flash devastating_flood disaster displacement displacement_flash district district_claim dramatic effort effort_continue effort_intensify effort_nepalese evacuated exacerbated exceed exceed_thousand expert extensive extent faces faces_mass facing familie familie_hold fatalitie feared find finding flash flash_flood flood flood_approache flood_exceed flood_hit flood_one flood_rajendra flood_rescue flood_result flood_victim flooding floodwater footage foreign foreigner formed funeral further glacier grim halt hampered hampering heat heavy helicopter hindered hindu hit_nepal-tibet hold hold_symbolic hopes hospital hundred hundred_trapped hydropower hydropower_tunnel included including individual injurie intensify isolated kathmandu lake landslide large-scale largely last lead leading least leave leaving left less level lives locate long loved management many mass mass_burial minute missing missing_devastating missing_flash missing_rescue missing_severe mission month mudslide national nearly nearly_missing nepal nepal-china nepal-china_flood nepal-tibet nepal-tibet_border nepal-tibet_flash nepal-tibet_flood nepal-tibet_region nepal_faces nepal_flood nepal_hydropower nepal_rasuwa nepalese nine numerou occur occurred ones ongoing ongoing_recovery ongoing_rescue ongoing_search operation operation_continue opportunity other outrage perform permeate population potential practice principal principal_quick process project prompting pulled quick quick_action rain rajendra rajendra_dawadi rasuwa rasuwa_district reaching rebuilding receiving recent recover recovery recovery_effort region relief religiou remain reported rescue rescue_effort rescue_operation rescued response result resulted resulting retrieved rise risen rising risk rites river roads rocks rush saved saves saves_student saving school search searching severe severe_flooding severely significant situation smell sparked still still_missing struck struggling student successfully surpasse surpassed survivor sustained swift symbolic symbolic_funeral teams temporary than there they those thousand thousand_missing thousand_still three through tibet tibet. tibet._heavy toll toll_exceed toll_surpasse total tourist tradition traditional trapped treatment triggered trishuli tunnel turned ultimately unaccounted underground underway unidentified unusual victim victim_familie warned warning washed water weather week weeks where which without woman worker worker_rescued working year"
+    "search_text": "000 050 100 157 200 300 389 400 502 546 600 669 670 800 900 939 action action_saves actively additional adverse affected aftermath aid airlifted alive along already although america americans._rescue among anxiously approache approaching approximately area areas argue authoritie authority awaiting away begin believe believed bhotekoshi bhotekoshi_river border border_causing border_result both bridge britain budhi budhi_gandaki building burial capture catastrophe catastrophic caused causing causing_hundred challenge china china-nepal china._ongoing claim claim_lives collapse comes communitie complicating compounding concentrating concern condition conduct conducting confirmed continue continue_flash contradict contributing countrie crisi crucial currently dawadi dead death debri decision delivered despair destruction devastating devastating_flash devastating_flood disaster displacement displacement_flash district district_claim dramatic effort effort_continue effort_intensify effort_nepalese evacuated evacuation exacerbated exacerbating exceed exceed_thousand expert extensive extent faces faces_mass facing familie familie_hold fatalitie feared find finding flash flash_flood flood flood_approache flood_exceed flood_hit flood_one flood_prompt flood_rajendra flood_rescue flood_result flood_victim flooding floodwater footage foreign foreigner formed funeral further gandaki gandaki_river. glacier grim halt hampered hampering heat heavy helicopter hindered hindu hit_nepal-tibet hold hold_symbolic hopes hospital hundred hundred_trapped hydropower hydropower_tunnel included including individual injurie intensify isolated kathmandu lake landslide large-scale largely last lead leading least leave leaving left less level lives locate long loved management many mass mass_burial minute missing missing_devastating missing_flash missing_rescue missing_severe mission month mudslide national nearly nearly_missing nepal nepal-china nepal-china_flood nepal-tibet nepal-tibet_border nepal-tibet_flash nepal-tibet_flood nepal-tibet_region nepal_faces nepal_flood nepal_hydropower nepal_rasuwa nepal_resident nepalese nine northern numerou occur occurred ones ongoing ongoing_recovery ongoing_rescue ongoing_search operation operation_continue opportunity other outrage perform permeate population potential practice previou principal principal_quick prior process project prompt prompt_evacuation prompting pulled quick quick_action rain rajendra rajendra_dawadi rasuwa rasuwa_district reaching rebuilding receiving recent recover recovery recovery_effort region relief religiou remain reported reportedly rescue rescue_effort rescue_operation rescued resident response result resulted resulting retrieved rise risen rising risk rites river roads rocks rush saved saves saves_student saving school search searching several severe severe_flooding severely significant situation smell sparked still still_missing struck struggling student successfully surpasse surpassed survivor sustained swept swift symbolic symbolic_funeral teams temporary than there they those thousand thousand_missing thousand_still three through tibet tibet. tibet._heavy toll toll_exceed toll_surpasse total tourist tradition traditional trapped treatment triggered trishuli tunnel turned ultimately unaccounted underground underway unidentified unusual victim victim_familie village warned warning washed water weather week weeks where which without woman worker worker_rescued working year"
   },
   "related_events": [
     {

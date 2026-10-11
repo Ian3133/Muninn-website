@@ -15,7 +15,7 @@
     "summary": "Authorities in Ceuta have requested Spain to declare a national emergency due to a significant influx of migrants swimming from Morocco. The local government is seeking military assistance as border security is overwhelmed by the number of individuals attempting to enter the territory.",
     "status": "active",
     "first_seen_at": "2026-07-30",
-    "last_seen_at": "2026-09-18",
+    "last_seen_at": "2026-10-11",
     "timeline": [
       {
         "development_id": "story_dff81ceff84cab9d",
@@ -2168,15 +2168,85 @@
         "first_seen_at": "2026-09-18",
         "last_seen_at": "2026-09-18",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_3acf27718b6cebfc",
+        "daily_story_id": "story_3acf27718b6cebfc",
+        "date": "2026-10-11",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Spanish Police Clear Last Migrant Camp in Ceuta Before Royal Visit",
+        "summary": "Spanish police have dismantled the last migrant beach camp in Ceuta, transporting individuals to reception centers for processing. This action took place ahead of a planned visit by the king. Some migrants have reported allegations of mistreatment by Spanish soldiers during the camp clearance.",
+        "topic_label": "Ceuta Border Surge",
+        "development_type": "development",
+        "key_facts": [
+          "Spanish police cleared the last migrant camp in Ceuta.",
+          "Migrants were taken to reception centers for processing.",
+          "Allegations of mistreatment by Spanish soldiers have been reported."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Africanews",
+          "Al Jazeera English"
+        ],
+        "source_urls": [
+          "http://www.africanews.com/2026/10/11/spainish-police-clear-last-ceuta-migrant-beach-camp-ahead-of-kings-visit",
+          "https://www.aljazeera.com/video/newsfeed/2026/10/11/ceuta-migrants-allege-beatings-as-camps-cleared-ahead-of-royal-visit?traffic_source=rss"
+        ],
+        "source_details": [
+          {
+            "title": "Spainish police clear last Ceuta migrant beach camp ahead of king's visit",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/10/11/spainish-police-clear-last-ceuta-migrant-beach-camp-ahead-of-kings-visit",
+            "source_bias": "center"
+          },
+          {
+            "title": "Ceuta migrants allege beatings as camps cleared ahead of royal visit",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/video/newsfeed/2026/10/11/ceuta-migrants-allege-beatings-as-camps-cleared-ahead-of-royal-visit?traffic_source=rss",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "matched_development_id": "story_bf8eacd3559847dd",
+          "shared_tokens": [
+            "border",
+            "ceuta",
+            "migrant",
+            "spain",
+            "surge"
+          ],
+          "shared_entities": [
+            "border_surge",
+            "ceuta",
+            "ceuta.",
+            "ceuta_border",
+            "spain"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "canonical_bounded_event_identity_v1",
+          "event_identity_key": "ceuta-border-surge",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-11",
+        "last_seen_at": "2026-10-11",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 25,
+      "public_development_count": 26,
       "questionable_development_count": 6,
       "review_required": true
     },
-    "latest_title": "Spanish Police Relocate Migrants from Ceuta Beaches to Port Area",
-    "latest_summary": "Spanish police have begun relocating hundreds of migrants from the beaches of Ceuta to a designated tented area at the port. The operation was initiated as police faced challenges managing large crowds of migrants seeking shelter. This move comes in the wake of a significant influx of migrants crossing from Morocco in late July, with several thousand still present in the enclave.",
+    "latest_title": "Spanish Police Clear Last Migrant Camp in Ceuta Before Royal Visit",
+    "latest_summary": "Spanish police have dismantled the last migrant beach camp in Ceuta, transporting individuals to reception centers for processing. This action took place ahead of a planned visit by the king. Some migrants have reported allegations of mistreatment by Spanish soldiers during the camp clearance.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -2187,29 +2257,29 @@
       "milestone_development_ids": [
         "story_dff81ceff84cab9d",
         "story_5c5c83fb1a194f9f",
-        "story_fb234e23c589ddb8",
-        "story_80255d62ded751a8"
+        "story_2cd022de1792a67f",
+        "story_3acf27718b6cebfc"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-09-18",
-      "development_count": 25,
-      "coverage_packet_count": 29,
-      "date_count": 21,
-      "source_count": 65,
+      "summary_updated_at": "2026-10-11",
+      "development_count": 26,
+      "coverage_packet_count": 30,
+      "date_count": 22,
+      "source_count": 67,
       "independent_source_count": 24,
       "first_date": "2026-07-30",
-      "latest_date": "2026-09-18",
-      "latest_update_title": "Spanish Police Relocate Migrants from Ceuta Beaches to Port Area",
+      "latest_date": "2026-10-11",
+      "latest_update_title": "Spanish Police Clear Last Migrant Camp in Ceuta Before Royal Visit",
       "coverage_score": 1.0,
-      "recency_score": 0.241,
-      "rank_score": 0.56,
-      "context_summary": "Muninn first tracked this thread on 2026-07-30: Ceuta Requests National Emergency Amid Surge of Migrants from Morocco. The latest development is Spanish Police Relocate Migrants from Ceuta Beaches to Port Area.",
-      "cta_label": "Explore 25 developments"
+      "recency_score": 1.0,
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-07-30: Ceuta Requests National Emergency Amid Surge of Migrants from Morocco. The latest development is Spanish Police Clear Last Migrant Camp in Ceuta Before Royal Visit.",
+      "cta_label": "Explore 26 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Authorities in Ceuta have requested Spain to declare a national emergency due to a significant influx of migrants swimming from Morocco. A later development was Spain Implements Border Checks on Italy Amid Migrant Dispute. Most recently, spanish police have begun relocating hundreds of migrants from the beaches of Ceuta to a designated tented area at the port.",
+      "summary": "Authorities in Ceuta have requested Spain to declare a national emergency due to a significant influx of migrants swimming from Morocco. A later development was Spain Implements Temporary Border Checks for Italian Travelers Amid Migrant Dispute. Most recently, spanish police have dismantled the last migrant beach camp in Ceuta, transporting individuals to reception centers for processing.",
       "key_developments": [
         {
           "development_id": "story_dff81ceff84cab9d",
@@ -2222,14 +2292,14 @@
           "title": "Ceuta Migrant Crisis Highlights European Divisions and Death Toll Discrepancies"
         },
         {
-          "development_id": "story_fb234e23c589ddb8",
-          "date": "2026-08-21",
-          "title": "Spain Relocates Migrants from Ceuta Beach to Shelters Amid Ongoing Crisis"
+          "development_id": "story_2cd022de1792a67f",
+          "date": "2026-08-28",
+          "title": "Clashes Erupt in Ceuta Amid Anti-Migrant Protests"
         },
         {
-          "development_id": "story_80255d62ded751a8",
-          "date": "2026-09-18",
-          "title": "Spanish Police Relocate Migrants from Ceuta Beaches to Port Area"
+          "development_id": "story_3acf27718b6cebfc",
+          "date": "2026-10-11",
+          "title": "Spanish Police Clear Last Migrant Camp in Ceuta Before Royal Visit"
         }
       ],
       "sources": [
@@ -2622,9 +2692,21 @@
           "source": "France 24 - English",
           "link": "https://www.france24.com/en/europe/20260918-police-move-hundreds-of-migrants-still-in-ceuta-off-beaches-in-spanish-enclave",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Spainish police clear last Ceuta migrant beach camp ahead of king's visit",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/10/11/spainish-police-clear-last-ceuta-migrant-beach-camp-ahead-of-kings-visit",
+          "source_bias": "center"
+        },
+        {
+          "title": "Ceuta migrants allege beatings as camps cleared ahead of royal visit",
+          "source": "Al Jazeera English",
+          "link": "https://www.aljazeera.com/video/newsfeed/2026/10/11/ceuta-migrants-allege-beatings-as-camps-cleared-ahead-of-royal-visit?traffic_source=rss",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-09-18",
+      "updated_at": "2026-10-11",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -2651,7 +2733,7 @@
         "event_id": "event_protests-erupt-in-india-demanding-resignatio_ce12dfc1ae",
         "title": "Protests Erupt in India Demanding Resignation of Election Chief",
         "relationship": "related_topic",
-        "confidence": 0.854,
+        "confidence": 0.859,
         "shared_entities": [
           "clashe",
           "france",
@@ -2678,7 +2760,7 @@
         "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
         "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
         "relationship": "related_topic",
-        "confidence": 0.753,
+        "confidence": 0.754,
         "shared_entities": [
           "eu",
           "israel",
@@ -2811,6 +2893,8 @@
       "adequate",
       "african",
       "aftermath",
+      "ahead",
+      "allegation",
       "along",
       "amidst",
       "among",
@@ -2847,6 +2931,7 @@
       "camp",
       "caused",
       "ceased",
+      "center",
       "ceuta",
       "challenge",
       "chaotic",
@@ -2854,6 +2939,8 @@
       "citing",
       "claim",
       "clashe",
+      "clear",
+      "clearance",
       "comes",
       "concern",
       "condition",
@@ -2888,6 +2975,7 @@
       "discrepancie",
       "discussion",
       "disinformation",
+      "dismantled",
       "dismisse",
       "dispute",
       "division",
@@ -2968,6 +3056,7 @@
       "italian",
       "italy",
       "july",
+      "king",
       "kylian",
       "lack",
       "large",
@@ -3007,6 +3096,7 @@
       "ministry",
       "misinformation",
       "missing",
+      "mistreatment",
       "moroccan",
       "morocco",
       "most",
@@ -3035,6 +3125,8 @@
       "pedro",
       "period",
       "person",
+      "place",
+      "planned",
       "policie",
       "political",
       "port",
@@ -3044,6 +3136,7 @@
       "present",
       "previously",
       "prime",
+      "processing",
       "prompting",
       "protest",
       "protested",
@@ -3051,6 +3144,7 @@
       "rare",
       "reach",
       "recent",
+      "reception",
       "recover",
       "refused",
       "regarding",
@@ -3080,6 +3174,7 @@
       "returning",
       "rising",
       "roll",
+      "royal",
       "russia",
       "saturday",
       "scrutiny",
@@ -3098,7 +3193,9 @@
       "situation",
       "small",
       "social",
+      "soldier",
       "solidarity",
+      "some",
       "spain",
       "spark",
       "sparked",
@@ -3127,8 +3224,10 @@
       "thousand",
       "three",
       "toll",
+      "took",
       "tragically",
       "trampol",
+      "transporting",
       "travel",
       "traveler",
       "trying",
@@ -3136,6 +3235,7 @@
       "unfolded",
       "unprecedented",
       "unrest",
+      "visit",
       "voluntarily",
       "wake",
       "warning",
@@ -3184,6 +3284,7 @@
       "ceuta_territory",
       "clashe",
       "clashe_erupt",
+      "clear_last",
       "crisi_highlight",
       "crisi_italy",
       "crisi_spain",
@@ -3218,6 +3319,7 @@
       "july.",
       "july._spain",
       "kylian_mbapp",
+      "last_migrant",
       "local_tension",
       "madrid",
       "maintain_border",
@@ -3228,6 +3330,7 @@
       "mbapp_addresse",
       "measure_tens",
       "migrant_arrested",
+      "migrant_camp",
       "migrant_crisi",
       "migrant_cross",
       "migrant_crossing",
@@ -3259,6 +3362,7 @@
       "relocate_migrant",
       "request_national",
       "return",
+      "royal_visit",
       "russia",
       "security_force",
       "shelter",
@@ -3282,22 +3386,23 @@
       "tension_thousand",
       "thousand_still",
       "toll_discrepancie",
-      "toll_spain"
+      "toll_spain",
+      "visit_spain"
     ],
-    "search_text": "000 100 141 24-hour 300 500-meter accused across across_spain action address addresse addresse_controversy adequate african aftermath along amidst among announced anti-migrant anti-migrant_protest approximately area area_spain around arrested arrival arriving assist assistance assisted assumption attempt attempting august authoritie barrier beach beache began beginning begun believe believed border border_breach border_check border_control border_crisi border_incident both both_moroccan breach breach_pedro cafes called calm camp caused ceased ceuta ceuta. ceuta._demonstrator ceuta._massive ceuta_beach ceuta_beache ceuta_border ceuta_faces ceuta_lead ceuta_leads ceuta_migrant ceuta_moroccan ceuta_recover ceuta_request ceuta_result ceuta_solidarity ceuta_spain ceuta_spark ceuta_territory challenge chaotic check citing claim clashe clashe_erupt comes concern condition conflicting consequence continue contributed control controversy crise crisi crisi_highlight crisi_italy crisi_spain crisi_tens criticism criticized cross crossed crossing crowd deadliest deadly deadly_migrant death decision declare defend demand demonstrator denie denie_evidence designated despite died difficult diplomatic discrepancie discussion disinformation dismisse dismisse_moroccan dispute dispute_spain division drawn driven drowning effective emergency emergency_measure emphasizing enclave enhance enhance_security enter entered erupt erupt_across erupted escalated escalating escalation establishment eu europe europe. europe._spain european european_division event evidence exclave exonerate exonerate_morocco explained express face faced faces faces_aftermath faces_migrant facing false familie far-right fatalitie floating follow food force force_near france fueled future gradually growing halts halts_migrant handling highlight highlight_european holiday however humanitarian hundred illegal immigration implement implement_border implement_temporary implementation implemented implicating impose imposition incident incident_spain include including indicate indicated indicating individual influx initial initiated installation installing interior interpreted introduced introduction involvement israel italian italian_traveler italy italy. italy_maintain july july. july._spain kylian kylian_mbapp lack large last late lead leads least legal life lift lives living local local_tension lost loved madrid maintain maintain_border majority makeshift manage management managing many marching marks mass mass_migration mass_protest massive massive_influx massive_migrant mbapp mbapp_addresse meant measure measure_tens media midnight migrant migrant_arrested migrant_crisi migrant_cross migrant_crossing migrant_dispute migrant_influx migrant_surge migrant_tension migration military ministry misinformation misinformation_moroccan missing moroccan moroccan_involvement moroccan_security morocco morocco. morocco._ceuta morocco._local morocco_authoritie morocco_calm morocco_ceuta morocco_strengthen most move nation national national_emergency nchez near near_ceuta nearly nearly_migrant need normal north north_african number occurred office ones ongoing ongoing_crisi only opening operation orchestrated other overwhelmed parliament partially pedro period person pm policie political port port_area potential poverty presence present previously prime prompting protest protest_erupt protested protester rare reach recent recover refused regarding region reignited reinforce reinforcement rejection relocate relocate_migrant relocating remain reopen reported reportedly reporting request request_national requested resident responding response result resulted resume retaliation return returned returning rising roll russia saturday scrutiny searching security security_force seeking seen several shelter shops short shortly significant similar since situation small social solidarity solidarity_t-shirt spain spain_assumption spain_ceuta spain_ceuta. spain_enhance spain_halts spain_implement spain_prime spain_relocate spain_retaliation spark spark_return sparked spat spreading spurred stampede stated statement stating still still_present strengthen strengthen_border suggesting supporting surge swimming t-shirt t-shirt_kylian temporary temporary_border tens tension tension_thousand tented territory there these those thousand thousand_still three toll toll_discrepancie toll_spain tragically trampol travel traveler trying unaccounted unfolded unprecedented unrest voluntarily wake warning week weeks where which while within without work would young"
+    "search_text": "000 100 141 24-hour 300 500-meter accused across across_spain action address addresse addresse_controversy adequate african aftermath ahead allegation along amidst among announced anti-migrant anti-migrant_protest approximately area area_spain around arrested arrival arriving assist assistance assisted assumption attempt attempting august authoritie barrier beach beache began beginning begun believe believed border border_breach border_check border_control border_crisi border_incident both both_moroccan breach breach_pedro cafes called calm camp caused ceased center ceuta ceuta. ceuta._demonstrator ceuta._massive ceuta_beach ceuta_beache ceuta_border ceuta_faces ceuta_lead ceuta_leads ceuta_migrant ceuta_moroccan ceuta_recover ceuta_request ceuta_result ceuta_solidarity ceuta_spain ceuta_spark ceuta_territory challenge chaotic check citing claim clashe clashe_erupt clear clear_last clearance comes concern condition conflicting consequence continue contributed control controversy crise crisi crisi_highlight crisi_italy crisi_spain crisi_tens criticism criticized cross crossed crossing crowd deadliest deadly deadly_migrant death decision declare defend demand demonstrator denie denie_evidence designated despite died difficult diplomatic discrepancie discussion disinformation dismantled dismisse dismisse_moroccan dispute dispute_spain division drawn driven drowning effective emergency emergency_measure emphasizing enclave enhance enhance_security enter entered erupt erupt_across erupted escalated escalating escalation establishment eu europe europe. europe._spain european european_division event evidence exclave exonerate exonerate_morocco explained express face faced faces faces_aftermath faces_migrant facing false familie far-right fatalitie floating follow food force force_near france fueled future gradually growing halts halts_migrant handling highlight highlight_european holiday however humanitarian hundred illegal immigration implement implement_border implement_temporary implementation implemented implicating impose imposition incident incident_spain include including indicate indicated indicating individual influx initial initiated installation installing interior interpreted introduced introduction involvement israel italian italian_traveler italy italy. italy_maintain july july. july._spain king kylian kylian_mbapp lack large last last_migrant late lead leads least legal life lift lives living local local_tension lost loved madrid maintain maintain_border majority makeshift manage management managing many marching marks mass mass_migration mass_protest massive massive_influx massive_migrant mbapp mbapp_addresse meant measure measure_tens media midnight migrant migrant_arrested migrant_camp migrant_crisi migrant_cross migrant_crossing migrant_dispute migrant_influx migrant_surge migrant_tension migration military ministry misinformation misinformation_moroccan missing mistreatment moroccan moroccan_involvement moroccan_security morocco morocco. morocco._ceuta morocco._local morocco_authoritie morocco_calm morocco_ceuta morocco_strengthen most move nation national national_emergency nchez near near_ceuta nearly nearly_migrant need normal north north_african number occurred office ones ongoing ongoing_crisi only opening operation orchestrated other overwhelmed parliament partially pedro period person place planned pm policie political port port_area potential poverty presence present previously prime processing prompting protest protest_erupt protested protester rare reach recent reception recover refused regarding region reignited reinforce reinforcement rejection relocate relocate_migrant relocating remain reopen reported reportedly reporting request request_national requested resident responding response result resulted resume retaliation return returned returning rising roll royal royal_visit russia saturday scrutiny searching security security_force seeking seen several shelter shops short shortly significant similar since situation small social soldier solidarity solidarity_t-shirt some spain spain_assumption spain_ceuta spain_ceuta. spain_enhance spain_halts spain_implement spain_prime spain_relocate spain_retaliation spark spark_return sparked spat spreading spurred stampede stated statement stating still still_present strengthen strengthen_border suggesting supporting surge swimming t-shirt t-shirt_kylian temporary temporary_border tens tension tension_thousand tented territory there these those thousand thousand_still three toll toll_discrepancie toll_spain took tragically trampol transporting travel traveler trying unaccounted unfolded unprecedented unrest visit visit_spain voluntarily wake warning week weeks where which while within without work would young"
   },
   "related_events": [
     {
       "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
       "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
-      "summary": "Muninn first tracked this thread on 2026-09-18: Macron Implements Measures Against Intensifying Russian Hybrid Threats. The latest development is Trump Announces Diesel Deal with Russia Amid Ukraine Strikes.",
+      "summary": "Muninn first tracked this thread on 2026-09-18: Macron Implements Measures Against Intensifying Russian Hybrid Threats. The latest development is Deadly Airstrikes in Zaporizhzhia Claim 17 Lives Amid Intensified Russian Attacks.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-09-18",
-      "last_seen_at": "2026-10-10",
-      "development_count": 30,
-      "latest_title": "Trump Announces Diesel Deal with Russia Amid Ukraine Strikes",
+      "last_seen_at": "2026-10-11",
+      "development_count": 33,
+      "latest_title": "Deadly Airstrikes in Zaporizhzhia Claim 17 Lives Amid Intensified Russian Attacks",
       "topic_label": "Russian Hybrid Attacks",
       "hero_image": {
         "url": "/Current_news/generated/events/event_macron-implements-measures-against-intensify_109da09c6f.jpg",
@@ -3358,14 +3463,14 @@
     {
       "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
       "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
-      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Riyadh Airport Targeted Again Amid Ongoing Houthi Attacks.",
+      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Deadly Houthi Attacks on Riyadh Airport Leave 12 Dead and Hundreds Injured.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-07-22",
-      "last_seen_at": "2026-10-10",
-      "development_count": 66,
-      "latest_title": "Riyadh Airport Targeted Again Amid Ongoing Houthi Attacks",
+      "last_seen_at": "2026-10-11",
+      "development_count": 67,
+      "latest_title": "Deadly Houthi Attacks on Riyadh Airport Leave 12 Dead and Hundreds Injured",
       "topic_label": "Iran War",
       "hero_image": {
         "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
