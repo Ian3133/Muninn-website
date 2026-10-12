@@ -15,7 +15,7 @@
     "summary": "Hurricane Isaias has strengthened as it moves toward the Gulf Coast, marking the first Atlantic hurricane of the season. This development comes after a quiet start to the hurricane season, attributed to one of the strongest El Niño years on record.",
     "status": "active",
     "first_seen_at": "2026-10-08",
-    "last_seen_at": "2026-10-11",
+    "last_seen_at": "2026-10-12",
     "timeline": [
       {
         "development_id": "story_c2d519e23c9e4e72",
@@ -334,6 +334,87 @@
         "first_seen_at": "2026-10-11",
         "last_seen_at": "2026-10-11",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_c0ce4c4d99746530",
+        "daily_story_id": "story_c0ce4c4d99746530",
+        "date": "2026-10-12",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Hurricane Simon Strikes Mexico's Pacific Coast, Causing Flooding and Damage",
+        "summary": "Hurricane Simon has weakened to a Category 3 storm but continues to impact Mexico's Pacific coast with strong winds and heavy rainfall. The storm has caused significant flooding in homes and has affected resorts and vulnerable towns along the coastline.",
+        "topic_label": "Hurricane Simon",
+        "development_type": "military_action",
+        "key_facts": [
+          "Hurricane Simon weakened to a Category 3 storm.",
+          "The storm is causing flooding and damage along Mexico's Pacific coast.",
+          "Resorts and vulnerable towns are particularly affected."
+        ],
+        "source_count": 3,
+        "sources": [
+          "AP - Top News via Google News",
+          "CBS News",
+          "RTE News"
+        ],
+        "source_urls": [
+          "https://www.cbsnews.com/news/hurricane-simon-takes-aim-mexico-pacific-coast",
+          "https://www.rte.ie/news/world/2026/1012/1594957-hurricane-simon-mexico",
+          "https://news.google.com/rss/articles/CBMiigFBVV95cUxPM1JYNEFiNHpwMTFGZFVETFU1SG9OMXEzTzIzbWh1ZmxoVWY4bTNwTzlxZ1A1VWhmaFJ1bWNIbFEtc0VYVmJZZ0FIQ1JBdTkyU21wamtWdXh1azZUMnpWZ0JOVHc3emE3WVNmTlFBVXdjQ2xiX1FldkExelhnbFRJM1NBY0J6ZVJ4LUE?oc=5"
+        ],
+        "source_details": [
+          {
+            "title": "Hurricane Simon lashes Mexico's Pacific coast, pounds resorts and towns",
+            "source": "CBS News",
+            "link": "https://www.cbsnews.com/news/hurricane-simon-takes-aim-mexico-pacific-coast",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Rain floods Mexico's coast as Hurricane Simon weakens",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/world/2026/1012/1594957-hurricane-simon-mexico",
+            "source_bias": "center"
+          },
+          {
+            "title": "Hurricane Simon pounds resorts and vulnerable towns along Mexico’s Pacific coast - AP News",
+            "source": "AP - Top News via Google News",
+            "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPM1JYNEFiNHpwMTFGZFVETFU1SG9OMXEzTzIzbWh1ZmxoVWY4bTNwTzlxZ1A1VWhmaFJ1bWNIbFEtc0VYVmJZZ0FIQ1JBdTkyU21wamtWdXh1azZUMnpWZ0JOVHc3emE3WVNmTlFBVXdjQ2xiX1FldkExelhnbFRJM1NBY0J6ZVJ4LUE?oc=5",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 1.0,
+        "match_evidence": {
+          "score": 1.0,
+          "matched_development_id": "story_88db5979cef2a339",
+          "shared_tokens": [
+            "category",
+            "coast",
+            "flooding",
+            "hurricane",
+            "mexico",
+            "pacific",
+            "simon",
+            "storm",
+            "winds"
+          ],
+          "shared_entities": [
+            "category",
+            "hurricane_simon",
+            "mexico",
+            "mexico_pacific",
+            "pacific_coast",
+            "simon_hurricane"
+          ],
+          "source_url_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-12",
+        "last_seen_at": "2026-10-12",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -354,12 +435,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 4,
+      "public_development_count": 5,
       "questionable_development_count": 1,
       "review_required": true
     },
-    "latest_title": "Hurricane Simon Strengthens to Category 4, Approaching Mexico's Pacific Coast",
-    "latest_summary": "Hurricane Simon has intensified into a powerful Category 4 storm with maximum sustained winds of 155 mph. The storm is currently located off the Pacific coast of Mexico and is expected to make landfall or closely approach the coast later today, posing threats of destructive winds, storm surges, and flooding.",
+    "latest_title": "Hurricane Simon Strikes Mexico's Pacific Coast, Causing Flooding and Damage",
+    "latest_summary": "Hurricane Simon has weakened to a Category 3 storm but continues to impact Mexico's Pacific coast with strong winds and heavy rainfall. The storm has caused significant flooding in homes and has affected resorts and vulnerable towns along the coastline.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -371,28 +452,29 @@
         "story_c2d519e23c9e4e72",
         "story_f610ba698eac74dc",
         "story_80377812257888f9",
-        "story_88db5979cef2a339"
+        "story_88db5979cef2a339",
+        "story_c0ce4c4d99746530"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-10-11",
-      "development_count": 4,
-      "coverage_packet_count": 4,
-      "date_count": 4,
-      "source_count": 13,
-      "independent_source_count": 9,
+      "summary_updated_at": "2026-10-12",
+      "development_count": 5,
+      "coverage_packet_count": 5,
+      "date_count": 5,
+      "source_count": 15,
+      "independent_source_count": 10,
       "first_date": "2026-10-08",
-      "latest_date": "2026-10-11",
-      "latest_update_title": "Hurricane Simon Strengthens to Category 4, Approaching Mexico's Pacific Coast",
-      "coverage_score": 0.843,
+      "latest_date": "2026-10-12",
+      "latest_update_title": "Hurricane Simon Strikes Mexico's Pacific Coast, Causing Flooding and Damage",
+      "coverage_score": 0.942,
       "recency_score": 1.0,
-      "rank_score": 0.934,
-      "context_summary": "Muninn first tracked this thread on 2026-10-08: Hurricane Isaias Forms Amid Strong El Niño Conditions. The latest development is Hurricane Simon Strengthens to Category 4, Approaching Mexico's Pacific Coast.",
-      "cta_label": "Explore 4 developments"
+      "rank_score": 0.976,
+      "context_summary": "Muninn first tracked this thread on 2026-10-08: Hurricane Isaias Forms Amid Strong El Niño Conditions. The latest development is Hurricane Simon Strikes Mexico's Pacific Coast, Causing Flooding and Damage.",
+      "cta_label": "Explore 5 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Hurricane Isaias has strengthened as it moves toward the Gulf Coast, marking the first Atlantic hurricane of the season. A later development was Hurricane Isaias Hits Gulf Coast, Causing Fatalities and Severe Weather. Most recently, hurricane Simon has intensified into a powerful Category 4 storm with maximum sustained winds of 155 mph.",
+      "summary": "Hurricane Isaias has strengthened as it moves toward the Gulf Coast, marking the first Atlantic hurricane of the season. A later development was Hurricane Isaias Hits Gulf Coast, Causing Fatalities and Severe Weather. Most recently, hurricane Simon has weakened to a Category 3 storm but continues to impact Mexico's Pacific coast with strong winds and heavy rainfall.",
       "key_developments": [
         {
           "development_id": "story_c2d519e23c9e4e72",
@@ -413,6 +495,11 @@
           "development_id": "story_88db5979cef2a339",
           "date": "2026-10-11",
           "title": "Hurricane Simon Strengthens to Category 4, Approaching Mexico's Pacific Coast"
+        },
+        {
+          "development_id": "story_c0ce4c4d99746530",
+          "date": "2026-10-12",
+          "title": "Hurricane Simon Strikes Mexico's Pacific Coast, Causing Flooding and Damage"
         }
       ],
       "sources": [
@@ -493,9 +580,21 @@
           "source": "RTE News",
           "link": "https://www.rte.ie/news/world/2026/1011/1594884-hurricane-simon",
           "source_bias": "center"
+        },
+        {
+          "title": "Rain floods Mexico's coast as Hurricane Simon weakens",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/world/2026/1012/1594957-hurricane-simon-mexico",
+          "source_bias": "center"
+        },
+        {
+          "title": "Hurricane Simon pounds resorts and vulnerable towns along Mexico’s Pacific coast - AP News",
+          "source": "AP - Top News via Google News",
+          "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPM1JYNEFiNHpwMTFGZFVETFU1SG9OMXEzTzIzbWh1ZmxoVWY4bTNwTzlxZ1A1VWhmaFJ1bWNIbFEtc0VYVmJZZ0FIQ1JBdTkyU21wamtWdXh1azZUMnpWZ0JOVHc3emE3WVNmTlFBVXdjQ2xiX1FldkExelhnbFRJM1NBY0J6ZVJ4LUE?oc=5",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-10-11",
+      "updated_at": "2026-10-12",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -507,6 +606,7 @@
         "confidence": 0.95,
         "shared_entities": [
           "category",
+          "causing_flooding",
           "coast_causing",
           "coast_hurricane",
           "landfall_expected",
@@ -644,6 +744,7 @@
     },
     "search_tokens": [
       "155",
+      "affected",
       "along",
       "anticipation",
       "approach",
@@ -653,14 +754,17 @@
       "attributed",
       "bringing",
       "category",
+      "caused",
       "causing",
       "closely",
       "coast",
+      "coastline",
       "comes",
       "condition",
       "continue",
       "currently",
       "cyclone",
+      "damage",
       "destin",
       "destructive",
       "development",
@@ -677,7 +781,9 @@
       "gulf",
       "heavy",
       "hits",
+      "homes",
       "hurricane",
+      "impact",
       "including",
       "intensified",
       "isaia",
@@ -706,20 +812,24 @@
       "prompted",
       "quiet",
       "rain",
+      "rainfall",
       "rapidly",
       "record",
+      "resort",
       "resulted",
       "saturday",
       "season",
       "service",
       "severe",
       "shortly",
+      "significant",
       "simon",
       "situation",
       "start",
       "storm",
       "strengthen",
       "strengthened",
+      "strike",
       "strong",
       "strongest",
       "surge",
@@ -727,7 +837,9 @@
       "threat",
       "tornadoe",
       "toward",
+      "towns",
       "upgraded",
+      "vulnerable",
       "warning",
       "weakened",
       "weather",
@@ -740,11 +852,13 @@
       "category_approaching",
       "category_landfall",
       "causing_fatalitie",
+      "causing_flooding",
       "coast._isaia",
       "coast._mandatory",
       "coast_causing",
       "coast_hurricane",
       "condition_hurricane",
+      "damage_hurricane",
       "destin",
       "destin_florida",
       "gulf_coast",
@@ -767,7 +881,7 @@
       "weather_hurricane",
       "weather_service"
     ],
-    "search_text": "155 along anticipation approach approache approaching approaching_mexico atlantic attributed bringing category category_approaching category_landfall causing causing_fatalitie closely coast coast._isaia coast._mandatory coast_causing coast_hurricane comes condition condition_hurricane continue currently cyclone destin destin_florida destructive development early evacuation expected extreme fatalitie first flooding florida forms friday gulf gulf_coast gulf_coast. heavy hits hits_gulf hurricane hurricane_isaia hurricane_simon including intensified isaia isaia_forms isaia_hits isaia_upgraded landfall landfall_expected later least life-threatening located made make making mandatory marking maximum mexico mexico_pacific monitor moves national national_weather near ordered pacific pacific_coast posing possible post-tropical powerful prompted quiet rain rapidly record resulted saturday saturday._hurricane season service severe severe_weather shortly simon simon_strengthen situation start storm strengthen strengthened strong strongest surge sustained threat tornadoe toward upgraded us warning weakened weather weather_hurricane weather_service winds years"
+    "search_text": "155 affected along anticipation approach approache approaching approaching_mexico atlantic attributed bringing category category_approaching category_landfall caused causing causing_fatalitie causing_flooding closely coast coast._isaia coast._mandatory coast_causing coast_hurricane coastline comes condition condition_hurricane continue currently cyclone damage damage_hurricane destin destin_florida destructive development early evacuation expected extreme fatalitie first flooding florida forms friday gulf gulf_coast gulf_coast. heavy hits hits_gulf homes hurricane hurricane_isaia hurricane_simon impact including intensified isaia isaia_forms isaia_hits isaia_upgraded landfall landfall_expected later least life-threatening located made make making mandatory marking maximum mexico mexico_pacific monitor moves national national_weather near ordered pacific pacific_coast posing possible post-tropical powerful prompted quiet rain rainfall rapidly record resort resulted saturday saturday._hurricane season service severe severe_weather shortly significant simon simon_strengthen situation start storm strengthen strengthened strike strong strongest surge sustained threat tornadoe toward towns upgraded us vulnerable warning weakened weather weather_hurricane weather_service winds years"
   },
   "related_events": [
     {

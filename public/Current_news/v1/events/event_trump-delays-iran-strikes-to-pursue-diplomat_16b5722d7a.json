@@ -15,7 +15,7 @@
     "summary": "Trump announced that the US will refrain from launching new strikes against Iran in hopes of reaching a diplomatic agreement. This decision comes after Iran issued a warning against any 'adventurous action,' stating it would respond decisively to potential attacks on its territory.",
     "status": "active",
     "first_seen_at": "2026-08-02",
-    "last_seen_at": "2026-10-04",
+    "last_seen_at": "2026-10-12",
     "timeline": [
       {
         "development_id": "story_eeac5a41d1e28e7e",
@@ -771,15 +771,94 @@
         "first_seen_at": "2026-10-04",
         "last_seen_at": "2026-10-04",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_076cce552d4a71e3",
+        "daily_story_id": "story_076cce552d4a71e3",
+        "date": "2026-10-12",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "UK Prime Minister Links Iran to RAF Fairford Incident",
+        "summary": "UK Prime Minister Andy Burnham stated that there are strong indications of Iranian involvement in the recent incident at RAF Fairford, suggesting it was likely coordinated by Iran's Islamic Revolutionary Guard Corps. The situation prompted the UK government to summon Iran's ambassador and led to the withdrawal of USAF B-1 bombers from the base.",
+        "topic_label": "Iran Relations",
+        "development_type": "military_action",
+        "key_facts": [
+          "Incident at RAF Fairford linked to Iran.",
+          "UK PM Burnham confirmed Iranian involvement.",
+          "USAF B-1 bombers withdrawn from the base."
+        ],
+        "source_count": 4,
+        "sources": [
+          "Al Jazeera English",
+          "Channel NewsAsia - Latest",
+          "DW - English",
+          "RTE News"
+        ],
+        "source_urls": [
+          "https://www.dw.com/en/uk-iran-highly-likely-to-be-behind-raf-fairford-incident/a-79645941?maca=en-rss-en-all-1573-rdf",
+          "https://www.channelnewsasia.com/world/uk-fairford-incident-iran-involvement-andy-burnham-6453551",
+          "https://www.aljazeera.com/video/newsfeed/2026/10/12/uk-pm-says-raf-base-incidents-likely-coordinated-by-iran?traffic_source=rss",
+          "https://www.rte.ie/news/2026/1012/1595036-burnham-urges-mps-to-back-closer-eu-ties-after-brexit"
+        ],
+        "source_details": [
+          {
+            "title": "UK: Iran 'highly likely' to be behind RAF Fairford incident",
+            "source": "DW - English",
+            "link": "https://www.dw.com/en/uk-iran-highly-likely-to-be-behind-raf-fairford-incident/a-79645941?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "UK PM Burnham says Iran's IRGC likely behind RAF Fairford incident",
+            "source": "Channel NewsAsia - Latest",
+            "link": "https://www.channelnewsasia.com/world/uk-fairford-incident-iran-involvement-andy-burnham-6453551",
+            "source_bias": "center"
+          },
+          {
+            "title": "UK PM says RAF base incidents ‘likely coordinated’ by Iran",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/video/newsfeed/2026/10/12/uk-pm-says-raf-base-incidents-likely-coordinated-by-iran?traffic_source=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "UK PM says Iran Guards likely behind airbase incident",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/2026/1012/1595036-burnham-urges-mps-to-back-closer-eu-ties-after-brexit",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_eeac5a41d1e28e7e",
+          "shared_tokens": [
+            "iran",
+            "relation"
+          ],
+          "shared_entities": [
+            "iran",
+            "iran_relation"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-12",
+        "last_seen_at": "2026-10-12",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 11,
+      "public_development_count": 12,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Iran Sets Conditions for Reopening the Strait of Hormuz",
-    "latest_summary": "Iran has stated that the Strait of Hormuz will remain closed until seven specific conditions, outlined in a June interim agreement with the US, are fulfilled. This announcement was made by Iran's parliament speaker during the UN General Assembly, where a proposal was also presented to potentially reopen the strait within seven days if the conditions are met.",
+    "latest_title": "UK Prime Minister Links Iran to RAF Fairford Incident",
+    "latest_summary": "UK Prime Minister Andy Burnham stated that there are strong indications of Iranian involvement in the recent incident at RAF Fairford, suggesting it was likely coordinated by Iran's Islamic Revolutionary Guard Corps. The situation prompted the UK government to summon Iran's ambassador and led to the withdrawal of USAF B-1 bombers from the base.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -789,30 +868,30 @@
       "display_title": "Trump Delays Iran Strikes to Pursue Diplomatic Deal Timeline",
       "milestone_development_ids": [
         "story_eeac5a41d1e28e7e",
-        "story_0f6de3ac0983c106",
+        "story_ff19dfb57fbe0194",
         "story_cef09aa4fafc93dd",
-        "story_337851fb39fcf4cd"
+        "story_076cce552d4a71e3"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-10-04",
-      "development_count": 11,
-      "coverage_packet_count": 11,
-      "date_count": 10,
-      "source_count": 27,
-      "independent_source_count": 14,
+      "summary_updated_at": "2026-10-12",
+      "development_count": 12,
+      "coverage_packet_count": 12,
+      "date_count": 11,
+      "source_count": 31,
+      "independent_source_count": 15,
       "first_date": "2026-08-02",
-      "latest_date": "2026-10-04",
-      "latest_update_title": "Iran Sets Conditions for Reopening the Strait of Hormuz",
+      "latest_date": "2026-10-12",
+      "latest_update_title": "UK Prime Minister Links Iran to RAF Fairford Incident",
       "coverage_score": 1.0,
-      "recency_score": 0.5,
-      "rank_score": 0.71,
-      "context_summary": "Muninn first tracked this thread on 2026-08-02: Trump Delays Iran Strikes to Pursue Diplomatic Deal. The latest development is Iran Sets Conditions for Reopening the Strait of Hormuz.",
-      "cta_label": "Explore 11 developments"
+      "recency_score": 1.0,
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-08-02: Trump Delays Iran Strikes to Pursue Diplomatic Deal. The latest development is UK Prime Minister Links Iran to RAF Fairford Incident.",
+      "cta_label": "Explore 12 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Trump announced that the US will refrain from launching new strikes against Iran in hopes of reaching a diplomatic agreement. A later development was Iran's Supreme Leader Calls for Gulf Unity Against Common Adversaries. Most recently, iran has stated that the Strait of Hormuz will remain closed until seven specific conditions, outlined in a June interim agreement with the US, are fulfilled.",
+      "summary": "Trump announced that the US will refrain from launching new strikes against Iran in hopes of reaching a diplomatic agreement. A later development was Vance Supports Trump's AI Video of Kharg Island as a Warning to Iran. Most recently, uK Prime Minister Andy Burnham stated that there are strong indications of Iranian involvement in the recent incident at RAF Fairford, suggesting it was likely coordinated by Iran's Islamic Revolutionary Guard Corps.",
       "key_developments": [
         {
           "development_id": "story_eeac5a41d1e28e7e",
@@ -820,9 +899,9 @@
           "title": "Trump Delays Iran Strikes to Pursue Diplomatic Deal"
         },
         {
-          "development_id": "story_0f6de3ac0983c106",
+          "development_id": "story_ff19dfb57fbe0194",
           "date": "2026-08-20",
-          "title": "Trump Threatens Economic Warfare Against Nations Supporting Iran"
+          "title": "UAE Suspends All Trade and Financial Transactions with Iran"
         },
         {
           "development_id": "story_cef09aa4fafc93dd",
@@ -830,9 +909,9 @@
           "title": "Trump Discusses Iran Decision at UN, Threatens Annihilation or Deal"
         },
         {
-          "development_id": "story_337851fb39fcf4cd",
-          "date": "2026-10-04",
-          "title": "Iran Sets Conditions for Reopening the Strait of Hormuz"
+          "development_id": "story_076cce552d4a71e3",
+          "date": "2026-10-12",
+          "title": "UK Prime Minister Links Iran to RAF Fairford Incident"
         }
       ],
       "sources": [
@@ -997,9 +1076,33 @@
           "source": "RTE News",
           "link": "https://www.rte.ie/news/middle-east/2026/1004/1593932-middle-east",
           "source_bias": "center"
+        },
+        {
+          "title": "UK: Iran 'highly likely' to be behind RAF Fairford incident",
+          "source": "DW - English",
+          "link": "https://www.dw.com/en/uk-iran-highly-likely-to-be-behind-raf-fairford-incident/a-79645941?maca=en-rss-en-all-1573-rdf",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "UK PM Burnham says Iran's IRGC likely behind RAF Fairford incident",
+          "source": "Channel NewsAsia - Latest",
+          "link": "https://www.channelnewsasia.com/world/uk-fairford-incident-iran-involvement-andy-burnham-6453551",
+          "source_bias": "center"
+        },
+        {
+          "title": "UK PM says RAF base incidents ‘likely coordinated’ by Iran",
+          "source": "Al Jazeera English",
+          "link": "https://www.aljazeera.com/video/newsfeed/2026/10/12/uk-pm-says-raf-base-incidents-likely-coordinated-by-iran?traffic_source=rss",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "UK PM says Iran Guards likely behind airbase incident",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/2026/1012/1595036-burnham-urges-mps-to-back-closer-eu-ties-after-brexit",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-10-04",
+      "updated_at": "2026-10-12",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -1020,6 +1123,7 @@
           "reopen",
           "reopen_strait",
           "trump_claim",
+          "uk",
           "un",
           "united",
           "united_nation",
@@ -1045,6 +1149,7 @@
           "kharg_island",
           "nation_general",
           "pursue",
+          "revolutionary_guard",
           "strait",
           "trump_issue",
           "un",
@@ -1054,28 +1159,31 @@
         ]
       },
       {
-        "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
-        "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
+        "event_id": "event_uk-prime-minister-suggests-iran-s-involvemen_3f117f9250",
+        "title": "UK Prime Minister Suggests Iran's Involvement in RAF Fairford Incident",
         "relationship": "related_topic",
-        "confidence": 0.847,
+        "confidence": 0.888,
         "shared_entities": [
-          "donald_trump",
-          "nation_general",
-          "un",
-          "united",
-          "united_nation",
-          "us"
+          "andy_burnham",
+          "fairford_incident",
+          "iran",
+          "raf",
+          "raf_fairford",
+          "uk"
         ]
       },
       {
-        "event_id": "event_iran-and-us-indicate-possible-talks-amid-str_0e9342eb40",
-        "title": "Iran and US Indicate Possible Talks Amid Strait of Hormuz Tensions",
+        "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
+        "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
         "relationship": "related_topic",
-        "confidence": 0.813,
+        "confidence": 0.887,
         "shared_entities": [
-          "gulf",
-          "iran",
+          "donald_trump",
+          "nation_general",
+          "trump_claim",
           "un",
+          "united",
+          "united_nation",
           "us"
         ]
       }
@@ -1104,60 +1212,44 @@
       "available": true,
       "title": "About Iran Relations",
       "subject": "Iran Relations",
-      "summary": "Iran relations refers to the long-running, adversarial relationship between the United States and the Islamic Republic of Iran, shaped by the absence of formal diplomatic ties, nuclear non-proliferation disputes, sanctions, and regional-security concerns. Diplomatic contacts, when they occur, are generally indirect or mediated and take place alongside separate legal and multilateral frameworks governing Iran’s nuclear activities and international restrictions.",
+      "summary": "Iran relations refers to the long-running diplomatic, security, economic and nuclear-policy tensions involving Iran, the United States and regional states. The relationship is shaped by the absence of formal U.S.-Iran diplomatic ties, sanctions, international nuclear-verification arrangements and the strategic importance of Gulf shipping routes.",
       "facts": [
         {
-          "label": "Diplomatic status",
-          "value": "The United States severed diplomatic relations with Iran on April 7, 1980; Switzerland acts as the U.S. protecting power in Iran, and there is no U.S. embassy or consulate there.",
+          "label": "Nuclear treaty framework",
+          "value": "Iran ratified the Treaty on the Non-Proliferation of Nuclear Weapons in May 1970 and has an IAEA safeguards agreement connected to that treaty, which entered into force on May 15, 1974.",
+          "source_ids": []
+        },
+        {
+          "label": "JCPOA and UN role",
+          "value": "UN Security Council Resolution 2231, adopted on July 20, 2015, endorsed the Joint Comprehensive Plan of Action and established an implementation structure in which the Security Council and IAEA had defined roles concerning Iran's nuclear program.",
           "source_ids": [
             "o1",
             "o2"
           ]
         },
         {
-          "label": "Nuclear agreement framework",
-          "value": "Iran and the E3/EU+3 (China, France, Germany, Russia, the United Kingdom, the United States, and the EU High Representative) concluded the Joint Comprehensive Plan of Action (JCPOA) on July 14, 2015. The UN Security Council unanimously endorsed it through Resolution 2231 on July 20, 2015.",
+          "label": "U.S. economic restrictions",
+          "value": "U.S. Iran sanctions are administered through multiple statutes, executive orders and regulations, including the Iranian Transactions and Sanctions Regulations in 31 C.F.R. Part 560; some transactions may be permitted through general or specific licenses.",
           "source_ids": [
             "o3",
             "o4"
           ]
-        },
-        {
-          "label": "UN legal setting",
-          "value": "According to the UN Security Council’s Resolution 2231 page, prior Iran-related Security Council measures were re-applied on September 27, 2025 under the resolution’s process; this is distinct from unilateral national sanctions programs.",
-          "source_ids": [
-            "o3"
-          ]
-        },
-        {
-          "label": "IAEA safeguards",
-          "value": "Iran’s safeguards agreement with the International Atomic Energy Agency in connection with the Nuclear Non-Proliferation Treaty entered into force on May 15, 1974. Iran signed an Additional Protocol in 2003, but the IAEA country record does not list it as in force.",
-          "source_ids": [
-            "o5"
-          ]
-        },
-        {
-          "label": "U.S. economic measures",
-          "value": "U.S. policy toward Iran also operates through Treasury sanctions authorities: for example, Treasury has designated foreign persons and entities it says support procurement for Iran’s Islamic Revolutionary Guard Corps and defense ministry.",
-          "source_ids": [
-            "o6"
-          ]
         }
       ],
-      "scope_note": "The selected Muninn timeline follows a limited set of late-2026 developments involving U.S.-Iran diplomacy, military signaling, economic pressure, and Gulf maritime issues; it does not constitute a complete record of U.S.-Iran relations, nuclear negotiations, or actions by all regional and international actors.",
+      "scope_note": "The selected Muninn timeline tracks major diplomatic, military, economic and maritime developments tied to the 2026 Iran crisis, not the full history of U.S.-Iran relations or all regional policy toward Iran.",
       "sources": [
         {
-          "title": "State",
-          "publisher": "State",
-          "url": "https://history.state.gov/countries/iran",
-          "source_type": "primary",
+          "title": "UN",
+          "publisher": "UN",
+          "url": "https://treaties.un.org/Pages/showActionDetails.aspx?clang=_en&objid=0800000280120bef",
+          "source_type": "reporting",
           "id": "o1"
         },
         {
-          "title": "State",
-          "publisher": "State",
-          "url": "https://travel.state.gov/en/international-travel/travel-advisories/iran.html",
-          "source_type": "primary",
+          "title": "Iaea",
+          "publisher": "Iaea",
+          "url": "https://ola.iaea.org/Applications/FactSheets/Country/Detail?code=IR",
+          "source_type": "reporting",
           "id": "o2"
         },
         {
@@ -1170,28 +1262,21 @@
         {
           "title": "UN",
           "publisher": "UN",
-          "url": "https://digitallibrary.un.org/record/797839/?ln=en&v=%5B%27pdf%27%5D",
+          "url": "https://main.un.org/securitycouncil/en/content/sres2231-2015",
           "source_type": "reporting",
           "id": "o4"
         },
         {
-          "title": "Iaea",
-          "publisher": "Iaea",
-          "url": "https://ola.iaea.org/Applications/FactSheets/Country/Detail?code=IR",
-          "source_type": "reporting",
-          "id": "o5"
-        },
-        {
           "title": "Treasury",
           "publisher": "Treasury",
-          "url": "https://home.treasury.gov/news/press-releases/sb0528",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/iran-sanctions",
           "source_type": "primary",
-          "id": "o6"
+          "id": "o5"
         }
       ],
-      "publisher_count": 4,
-      "generated_at": "2026-09-22T16:13:28.928237+00:00",
-      "expires_at": "2026-09-29T16:13:28.928237+00:00",
+      "publisher_count": 3,
+      "generated_at": "2026-10-12T20:50:24.812653+00:00",
+      "expires_at": "2026-10-19T20:50:24.812653+00:00",
       "model": "gpt-5.6-terra",
       "provenance": "openai_web_search_source_grounded_event_overview_v1"
     },
@@ -1205,7 +1290,9 @@
       "ai-generated",
       "also",
       "although",
+      "ambassador",
       "among",
+      "andy",
       "annihilate",
       "annihilation",
       "announced",
@@ -1216,9 +1303,13 @@
       "assertion",
       "assist",
       "attack",
+      "b-1",
       "ballistic",
+      "base",
+      "bomber",
       "bombing",
       "bond",
+      "burnham",
       "business",
       "called",
       "calls",
@@ -1242,6 +1333,8 @@
       "constructive",
       "contingent",
       "contradicting",
+      "coordinated",
+      "corps",
       "countrie",
       "crucial",
       "crude",
@@ -1276,6 +1369,7 @@
       "export",
       "expressed",
       "faces",
+      "fairford",
       "featuring",
       "financial",
       "flow",
@@ -1284,6 +1378,7 @@
       "fulfilled",
       "further",
       "general",
+      "guard",
       "gulf",
       "halt",
       "hopes",
@@ -1291,13 +1386,17 @@
       "illustrate",
       "importance",
       "important",
+      "incident",
       "increased",
       "indicated",
       "indicating",
+      "indication",
       "instructed",
       "interest",
       "interim",
+      "involvement",
       "iran",
+      "islamic",
       "island",
       "issue",
       "issued",
@@ -1309,7 +1408,9 @@
       "leader",
       "less",
       "level",
+      "likely",
       "likes",
+      "links",
       "made",
       "maritime",
       "market",
@@ -1355,8 +1456,10 @@
       "pressure",
       "preventing",
       "price",
+      "prime",
       "program",
       "progress",
+      "prompted",
       "proposal",
       "propose",
       "proposed",
@@ -1384,6 +1487,7 @@
       "respond",
       "response",
       "resume",
+      "revolutionary",
       "rising",
       "same",
       "satisfied",
@@ -1396,6 +1500,7 @@
       "shift",
       "ships",
       "significant",
+      "situation",
       "social",
       "speaker",
       "specific",
@@ -1406,9 +1511,11 @@
       "stating",
       "strait",
       "strike",
+      "strong",
       "stylized",
       "submit",
       "suggesting",
+      "summon",
       "support",
       "supporting",
       "supreme",
@@ -1438,6 +1545,7 @@
       "unity",
       "until",
       "upcoming",
+      "usaf",
       "vance",
       "vice",
       "victory",
@@ -1449,6 +1557,7 @@
       "what",
       "where",
       "which",
+      "withdrawal",
       "within",
       "would",
       "yield"
@@ -1457,7 +1566,9 @@
       "adversarie_iran",
       "ai",
       "ai-generated",
+      "andy_burnham",
       "arab_emirate",
+      "b-1",
       "common_adversarie",
       "d-day",
       "deal_trump",
@@ -1468,8 +1579,10 @@
       "discussion_iran",
       "donald_trump",
       "economic_warfare",
+      "fairford_incident",
       "financial_transaction",
       "general_assembly",
+      "guard_corps.",
       "gulf",
       "gulf_unity",
       "hormuz_iran",
@@ -1480,14 +1593,17 @@
       "iran_decision",
       "iran_denie",
       "iran_foreign",
+      "iran_islamic",
       "iran_propose",
       "iran_sets",
       "iran_vice",
+      "islamic_revolutionary",
       "issue_stark",
       "jd",
       "june",
       "kharg_island",
       "leader_mojtaba",
+      "links_iran",
       "mojtaba_khamenei",
       "nation_general",
       "nation_supporting",
@@ -1496,8 +1612,11 @@
       "propose_seven-day",
       "pursue",
       "pursue_diplomatic",
+      "raf",
+      "raf_fairford",
       "reopen",
       "reopen_strait",
+      "revolutionary_guard",
       "sets_condition",
       "seven-day",
       "stark_warning",
@@ -1513,14 +1632,17 @@
       "trump_threaten",
       "uae",
       "uae.",
+      "uk",
       "un",
       "united",
       "united_arab",
       "united_nation",
       "us",
+      "usaf",
+      "usaf_b-1",
       "vance_support"
     ],
-    "search_text": "acquiring action address adventurou adversarie adversarie_iran agreement ai ai-generated also although among annihilate annihilation announced announcement arab arab_emirate assembly asserting assertion assist attack ballistic bombing bond business called calls canceling cease certain cited claim closed comes commented commercial common common_adversarie complete complicating condition conduct confidence consequence consider constructive contingent contradicting countrie crucial crude current d-day deal deal_trump dealing decision decisively declared decreased defended defiance delay delay_iran demand denie denie_ongoing depicting described diplomatic diplomatic_deal discusse discusse_iran discussion discussion_iran division donald donald_trump economic economic_warfare either election emirate emphasized emphasizing enemy exchange export expressed faces featuring financial financial_transaction flow follow foreign fulfilled further general general_assembly gulf gulf_unity halt hopes hormuz hormuz_iran illustrate importance important increased indicated indicating instructed interest interim iran iran. iran._trump iran._vance iran_decision iran_denie iran_foreign iran_propose iran_sets iran_vice island issue issue_stark issued jd june khamenei kharg kharg_island launch launching leader leader_mojtaba less level likes made maritime market marks meanwhile media mediator meet meeting message midterm might military missile mojtaba mojtaba_khamenei most muslim must nation nation_general nation_supporting negotiate negotiation normal noted nuclear occur often oil ongoing ongoing_talks only outlined parliament particularly partner plan planned plans post posts potential potentially pre-war presented pressure preventing price program progress progress_iran proposal propose propose_seven-day proposed pursue pursue_diplomatic quarter reaching real reason recent refrain regarding regime region regional rejected relation remain remark reopen reopen_strait reopening reparation reportedly representative resolution respond response resume rising same satisfied seek serve sets sets_condition seven seven-day severe shift ships significant social speaker specific speech stance stark stark_warning stated stating strait strike stylized submit suggesting support support_trump supporting supporting_iran supreme suspend switch talks tehran tension territory than there these those threat threaten threaten_annihilation threaten_economic threatened through total toward trade trading traffic transaction trump trump_claim trump_delay trump_discusse trump_issue trump_threaten uae uae. un unite united united_arab united_nation unity until upcoming us vance vance_support vice victory video vision warfare warning weapon what where which within would yield"
+    "search_text": "acquiring action address adventurou adversarie adversarie_iran agreement ai ai-generated also although ambassador among andy andy_burnham annihilate annihilation announced announcement arab arab_emirate assembly asserting assertion assist attack b-1 ballistic base bomber bombing bond burnham business called calls canceling cease certain cited claim closed comes commented commercial common common_adversarie complete complicating condition conduct confidence consequence consider constructive contingent contradicting coordinated corps countrie crucial crude current d-day deal deal_trump dealing decision decisively declared decreased defended defiance delay delay_iran demand denie denie_ongoing depicting described diplomatic diplomatic_deal discusse discusse_iran discussion discussion_iran division donald donald_trump economic economic_warfare either election emirate emphasized emphasizing enemy exchange export expressed faces fairford fairford_incident featuring financial financial_transaction flow follow foreign fulfilled further general general_assembly guard guard_corps. gulf gulf_unity halt hopes hormuz hormuz_iran illustrate importance important incident increased indicated indicating indication instructed interest interim involvement iran iran. iran._trump iran._vance iran_decision iran_denie iran_foreign iran_islamic iran_propose iran_sets iran_vice islamic islamic_revolutionary island issue issue_stark issued jd june khamenei kharg kharg_island launch launching leader leader_mojtaba less level likely likes links links_iran made maritime market marks meanwhile media mediator meet meeting message midterm might military missile mojtaba mojtaba_khamenei most muslim must nation nation_general nation_supporting negotiate negotiation normal noted nuclear occur often oil ongoing ongoing_talks only outlined parliament particularly partner plan planned plans post posts potential potentially pre-war presented pressure preventing price prime program progress progress_iran prompted proposal propose propose_seven-day proposed pursue pursue_diplomatic quarter raf raf_fairford reaching real reason recent refrain regarding regime region regional rejected relation remain remark reopen reopen_strait reopening reparation reportedly representative resolution respond response resume revolutionary revolutionary_guard rising same satisfied seek serve sets sets_condition seven seven-day severe shift ships significant situation social speaker specific speech stance stark stark_warning stated stating strait strike strong stylized submit suggesting summon support support_trump supporting supporting_iran supreme suspend switch talks tehran tension territory than there these those threat threaten threaten_annihilation threaten_economic threatened through total toward trade trading traffic transaction trump trump_claim trump_delay trump_discusse trump_issue trump_threaten uae uae. uk un unite united united_arab united_nation unity until upcoming us usaf usaf_b-1 vance vance_support vice victory video vision warfare warning weapon what where which withdrawal within would yield"
   },
   "related_events": [
     {
@@ -1560,14 +1682,14 @@
     {
       "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
       "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
-      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Deadly Houthi Attacks on Riyadh Airport Leave 12 Dead and Hundreds Injured.",
+      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Saudi Arabia Investigates Defense Failures After Houthi Attacks on Riyadh Airport.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-07-22",
-      "last_seen_at": "2026-10-11",
-      "development_count": 67,
-      "latest_title": "Deadly Houthi Attacks on Riyadh Airport Leave 12 Dead and Hundreds Injured",
+      "last_seen_at": "2026-10-12",
+      "development_count": 68,
+      "latest_title": "Saudi Arabia Investigates Defense Failures After Houthi Attacks on Riyadh Airport",
       "topic_label": "Iran War",
       "hero_image": {
         "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
@@ -1594,14 +1716,14 @@
     {
       "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
       "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
-      "summary": "Muninn first tracked this thread on 2026-09-18: Macron Implements Measures Against Intensifying Russian Hybrid Threats. The latest development is Deadly Airstrikes in Zaporizhzhia Claim 17 Lives Amid Intensified Russian Attacks.",
+      "summary": "Muninn first tracked this thread on 2026-09-18: Macron Implements Measures Against Intensifying Russian Hybrid Threats. The latest development is Protests Erupt in India Over Voter List Revisions Amid Allegations of Police Abuse.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-09-18",
-      "last_seen_at": "2026-10-11",
-      "development_count": 33,
-      "latest_title": "Deadly Airstrikes in Zaporizhzhia Claim 17 Lives Amid Intensified Russian Attacks",
+      "last_seen_at": "2026-10-12",
+      "development_count": 36,
+      "latest_title": "Protests Erupt in India Over Voter List Revisions Amid Allegations of Police Abuse",
       "topic_label": "Russian Hybrid Attacks",
       "hero_image": {
         "url": "/Current_news/generated/events/event_macron-implements-measures-against-intensify_109da09c6f.jpg",
