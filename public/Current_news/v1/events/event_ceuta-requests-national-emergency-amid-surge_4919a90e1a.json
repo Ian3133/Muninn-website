@@ -15,7 +15,7 @@
     "summary": "Authorities in Ceuta have requested Spain to declare a national emergency due to a significant influx of migrants swimming from Morocco. The local government is seeking military assistance as border security is overwhelmed by the number of individuals attempting to enter the territory.",
     "status": "active",
     "first_seen_at": "2026-07-30",
-    "last_seen_at": "2026-10-11",
+    "last_seen_at": "2026-10-14",
     "timeline": [
       {
         "development_id": "story_dff81ceff84cab9d",
@@ -2238,15 +2238,101 @@
         "first_seen_at": "2026-10-11",
         "last_seen_at": "2026-10-11",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_53b57f6d3e00d7f1",
+        "daily_story_id": "story_53b57f6d3e00d7f1",
+        "date": "2026-10-14",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Spanish Royals Visit Ceuta Amid Migrant Crisis and Diplomatic Sensitivity",
+        "summary": "King Felipe VI and Queen Letizia visited Ceuta on October 13, marking their first royal visit to the Spanish enclave since 2007. The visit comes after a summer migration crisis that has impacted the region's social cohesion. Crowds welcomed the royals enthusiastically, waving Spanish flags and affirming their national identity during the event.",
+        "topic_label": "Ceuta Border Surge",
+        "development_type": "diplomacy",
+        "key_facts": [
+          "King Felipe VI and Queen Letizia visited Ceuta on October 13, 2026.",
+          "This is the first royal visit to Ceuta since 2007.",
+          "The visit follows a migrant influx from Morocco."
+        ],
+        "source_count": 4,
+        "sources": [
+          "Africanews",
+          "Euronews",
+          "France 24"
+        ],
+        "source_urls": [
+          "https://www.france24.com/en/video/20261014-spanish-royals-make-sensitive-official-visit-to-sensitive-ceuta-enclave",
+          "https://www.euronews.com/video/2026/10/13/ceuta-crowds-affirm-spanish-identity-during-royal-visit",
+          "https://www.euronews.com/video/2026/10/13/ceuta-awaits-king-felipe-after-summer-migration-crisis",
+          "http://www.africanews.com/2026/10/13/ceuta-crowds-affirm-spanish-identity-during-royal-visit"
+        ],
+        "source_details": [
+          {
+            "title": "Spanish royals make sensitive official visit to sensitive Ceuta enclave",
+            "source": "France 24",
+            "link": "https://www.france24.com/en/video/20261014-spanish-royals-make-sensitive-official-visit-to-sensitive-ceuta-enclave",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Ceuta crowds affirm Spanish identity during royal visit",
+            "source": "Euronews",
+            "link": "https://www.euronews.com/video/2026/10/13/ceuta-crowds-affirm-spanish-identity-during-royal-visit",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Ceuta awaits King Felipe after summer migration crisis",
+            "source": "Euronews",
+            "link": "https://www.euronews.com/video/2026/10/13/ceuta-awaits-king-felipe-after-summer-migration-crisis",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Ceuta crowds affirm Spanish identity during royal visit",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/10/13/ceuta-crowds-affirm-spanish-identity-during-royal-visit",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "matched_development_id": "story_5d7d0f98e1565054",
+          "shared_tokens": [
+            "border",
+            "ceuta",
+            "follow",
+            "migrant",
+            "migration",
+            "region",
+            "spain",
+            "surge"
+          ],
+          "shared_entities": [
+            "border_surge",
+            "ceuta_border",
+            "spain"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "canonical_bounded_event_identity_v1",
+          "event_identity_key": "ceuta-border-surge",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-14",
+        "last_seen_at": "2026-10-14",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 26,
-      "questionable_development_count": 6,
+      "public_development_count": 27,
+      "questionable_development_count": 7,
       "review_required": true
     },
-    "latest_title": "Spanish Police Clear Last Migrant Camp in Ceuta Before Royal Visit",
-    "latest_summary": "Spanish police have dismantled the last migrant beach camp in Ceuta, transporting individuals to reception centers for processing. This action took place ahead of a planned visit by the king. Some migrants have reported allegations of mistreatment by Spanish soldiers during the camp clearance.",
+    "latest_title": "Spanish Royals Visit Ceuta Amid Migrant Crisis and Diplomatic Sensitivity",
+    "latest_summary": "King Felipe VI and Queen Letizia visited Ceuta on October 13, marking their first royal visit to the Spanish enclave since 2007. The visit comes after a summer migration crisis that has impacted the region's social cohesion. Crowds welcomed the royals enthusiastically, waving Spanish flags and affirming their national identity during the event.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -2256,30 +2342,30 @@
       "display_title": "Ceuta Border Surge Timeline",
       "milestone_development_ids": [
         "story_dff81ceff84cab9d",
-        "story_5c5c83fb1a194f9f",
+        "story_00f4faca0821b9e2",
         "story_2cd022de1792a67f",
-        "story_3acf27718b6cebfc"
+        "story_53b57f6d3e00d7f1"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-10-11",
-      "development_count": 26,
-      "coverage_packet_count": 30,
-      "date_count": 22,
-      "source_count": 67,
+      "summary_updated_at": "2026-10-14",
+      "development_count": 27,
+      "coverage_packet_count": 31,
+      "date_count": 23,
+      "source_count": 71,
       "independent_source_count": 24,
       "first_date": "2026-07-30",
-      "latest_date": "2026-10-11",
-      "latest_update_title": "Spanish Police Clear Last Migrant Camp in Ceuta Before Royal Visit",
+      "latest_date": "2026-10-14",
+      "latest_update_title": "Spanish Royals Visit Ceuta Amid Migrant Crisis and Diplomatic Sensitivity",
       "coverage_score": 1.0,
-      "recency_score": 0.778,
-      "rank_score": 0.871,
-      "context_summary": "Muninn first tracked this thread on 2026-07-30: Ceuta Requests National Emergency Amid Surge of Migrants from Morocco. The latest development is Spanish Police Clear Last Migrant Camp in Ceuta Before Royal Visit.",
-      "cta_label": "Explore 26 developments"
+      "recency_score": 1.0,
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-07-30: Ceuta Requests National Emergency Amid Surge of Migrants from Morocco. The latest development is Spanish Royals Visit Ceuta Amid Migrant Crisis and Diplomatic Sensitivity.",
+      "cta_label": "Explore 27 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Authorities in Ceuta have requested Spain to declare a national emergency due to a significant influx of migrants swimming from Morocco. A later development was Spain Implements Temporary Border Checks for Italian Travelers Amid Migrant Dispute. Most recently, spanish police have dismantled the last migrant beach camp in Ceuta, transporting individuals to reception centers for processing.",
+      "summary": "Authorities in Ceuta have requested Spain to declare a national emergency due to a significant influx of migrants swimming from Morocco. A later development was Spain Implements Temporary Border Checks for Italian Travelers Amid Migrant Dispute. Most recently, king Felipe VI and Queen Letizia visited Ceuta on October 13, marking their first royal visit to the Spanish enclave since 2007.",
       "key_developments": [
         {
           "development_id": "story_dff81ceff84cab9d",
@@ -2287,9 +2373,9 @@
           "title": "Ceuta Requests National Emergency Amid Surge of Migrants from Morocco"
         },
         {
-          "development_id": "story_5c5c83fb1a194f9f",
-          "date": "2026-08-04",
-          "title": "Ceuta Migrant Crisis Highlights European Divisions and Death Toll Discrepancies"
+          "development_id": "story_00f4faca0821b9e2",
+          "date": "2026-08-05",
+          "title": "Ceuta Faces Aftermath of Deadly Migrant Crossings from Morocco"
         },
         {
           "development_id": "story_2cd022de1792a67f",
@@ -2297,9 +2383,9 @@
           "title": "Clashes Erupt in Ceuta Amid Anti-Migrant Protests"
         },
         {
-          "development_id": "story_3acf27718b6cebfc",
-          "date": "2026-10-11",
-          "title": "Spanish Police Clear Last Migrant Camp in Ceuta Before Royal Visit"
+          "development_id": "story_53b57f6d3e00d7f1",
+          "date": "2026-10-14",
+          "title": "Spanish Royals Visit Ceuta Amid Migrant Crisis and Diplomatic Sensitivity"
         }
       ],
       "sources": [
@@ -2704,9 +2790,33 @@
           "source": "Al Jazeera English",
           "link": "https://www.aljazeera.com/video/newsfeed/2026/10/11/ceuta-migrants-allege-beatings-as-camps-cleared-ahead-of-royal-visit?traffic_source=rss",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Spanish royals make sensitive official visit to sensitive Ceuta enclave",
+          "source": "France 24",
+          "link": "https://www.france24.com/en/video/20261014-spanish-royals-make-sensitive-official-visit-to-sensitive-ceuta-enclave",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Ceuta crowds affirm Spanish identity during royal visit",
+          "source": "Euronews",
+          "link": "https://www.euronews.com/video/2026/10/13/ceuta-crowds-affirm-spanish-identity-during-royal-visit",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Ceuta awaits King Felipe after summer migration crisis",
+          "source": "Euronews",
+          "link": "https://www.euronews.com/video/2026/10/13/ceuta-awaits-king-felipe-after-summer-migration-crisis",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Ceuta crowds affirm Spanish identity during royal visit",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/10/13/ceuta-crowds-affirm-spanish-identity-during-royal-visit",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-10-11",
+      "updated_at": "2026-10-14",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -2747,7 +2857,7 @@
         "event_id": "event_macron-welcomes-idea-of-uk-s-return-to-the-e_7705739cdb",
         "title": "Macron Welcomes Idea of UK's Return to the EU",
         "relationship": "related_topic",
-        "confidence": 0.803,
+        "confidence": 0.802,
         "shared_entities": [
           "eu",
           "france",
@@ -2760,7 +2870,7 @@
         "event_id": "event_spain-celebrates-national-day-with-unity-dem_9572f688d0",
         "title": "Spain Celebrates National Day with Unity Demonstrations from Barcelona to Ceuta",
         "relationship": "related_topic",
-        "confidence": 0.775,
+        "confidence": 0.789,
         "shared_entities": [
           "ceuta",
           "ceuta_spain",
@@ -2773,78 +2883,110 @@
       "available": true,
       "title": "About Ceuta Border Surge",
       "subject": "Ceuta Border Surge",
-      "summary": "The Ceuta Border Surge refers to a mass irregular crossing from Morocco into Ceuta, a Spanish territory on North Africa’s Mediterranean coast, in late July and early August 2026. European Union institutions described an estimated 50,000 to 60,000 people crossing, with dozens of deaths reported; Spanish and Moroccan authorities subsequently carried out or facilitated large-scale returns and increased border-management efforts.",
+      "summary": "The Ceuta Border Surge refers to the large-scale irregular crossings from Morocco into the Spanish autonomous city of Ceuta on July 30-31, 2026. The episode prompted an emergency humanitarian, border-management and return response by Spanish authorities, with coordination involving Morocco and support from European Union institutions.",
       "facts": [
         {
-          "label": "Period",
-          "value": "The surge emerged in late July 2026; EU home-affairs ministers held an emergency video conference on August 4, 2026, to assess the situation at Ceuta’s external border.",
+          "label": "Dates",
+          "value": "The main mass-entry episode occurred on July 30-31, 2026; Spanish government statements described more than 70,000 people entering Ceuta during those two days.",
           "source_ids": [
-            "o1"
-          ]
-        },
-        {
-          "label": "Location and border status",
-          "value": "Ceuta is a Spanish enclave bordering Morocco. Its border with Morocco is an external border of the Schengen area, although special rules apply to travel from Ceuta to mainland Spain and other Schengen countries.",
-          "source_ids": [
+            "o1",
             "o2"
           ]
         },
         {
-          "label": "Scale and humanitarian impact",
-          "value": "The European Parliament’s audiovisual service estimated that 50,000 to 60,000 migrants crossed from Morocco into Ceuta and reported dozens of deaths; it said the vast majority later returned or were guided back across the border.",
+          "label": "Location and status",
+          "value": "Ceuta is a Spanish autonomous city in North Africa bordering Morocco. Its land boundary is part of the EU’s external-border context and is a focal point of the Western Mediterranean migration route.",
           "source_ids": [
             "o3"
           ]
         },
         {
-          "label": "Government and EU response",
-          "value": "EU ministers said Spanish authorities, the European Commission and the European External Action Service assessed the events; the Council reported that the large majority of people who crossed irregularly had been returned and that there had been no onward movement to mainland Spain or other member states at that point.",
+          "label": "Government response",
+          "value": "Spain said it coordinated with Moroccan authorities to reinforce border-management efforts and facilitate the return, under legal procedures, of people who had entered irregularly; the government later declared a situation of interest for national security and established an interministerial coordination body.",
           "source_ids": [
-            "o1"
+            "o2",
+            "o4"
           ]
         },
         {
-          "label": "Protection and asylum context",
-          "value": "People arriving at the land borders of Ceuta and Melilla may apply for asylum in Spain. UNHCR states that applicants at those borders are entitled to an interpreter and legal assistance, and that their claims are handled under a border procedure.",
+          "label": "Legal and protection framework",
+          "value": "Spain’s immigration law provides a special Ceuta-and-Melilla border regime for people detected while crossing physical border-containment elements, but requires respect for international human-rights and international-protection obligations; asylum applications may be made at Ceuta’s land border.",
           "source_ids": [
-            "o4"
+            "o5",
+            "o6",
+            "o7"
+          ]
+        },
+        {
+          "label": "EU involvement",
+          "value": "The European Commission granted Spain €114.7 million in emergency assistance in September 2026 to help manage the consequences of the large-scale July crossings in Ceuta.",
+          "source_ids": [
+            "o8"
           ]
         }
       ],
-      "scope_note": "The selected Muninn timeline covers the initial late-July to early-August 2026 surge, returns, deaths, and immediate border measures; it does not aim to cover all later investigations, asylum cases, diplomatic discussions, or longer-term migration policy changes.",
+      "scope_note": "The selected Muninn timeline covers the immediate July 30-August 3, 2026 surge, emergency measures and early returns; it does not attempt to cover the longer-running Spain-Morocco migration relationship, subsequent legal proceedings or all later recovery actions.",
       "sources": [
         {
-          "title": "Europa",
-          "publisher": "Europa",
-          "url": "https://www.consilium.europa.eu/en/meetings/jha/2026/08/04/",
+          "title": "Gob",
+          "publisher": "Gob",
+          "url": "https://www.lamoncloa.gob.es/consejodeministros/ruedas/Paginas/2026/20260825-transcripcion-rueda-de-prensa-ministros.aspx",
           "source_type": "reporting",
           "id": "o1"
         },
         {
-          "title": "Europa",
-          "publisher": "Europa",
-          "url": "https://www.europarl.europa.eu/doceo/document/E-9-2022-000911-ASW_EN.html",
+          "title": "Gob",
+          "publisher": "Gob",
+          "url": "https://www.interior.gob.es/opencms/eu/detalle/articulo/Comunicado-sobre-la-situacion-en-la-ciudad-autonoma-de-Ceuta/",
           "source_type": "reporting",
           "id": "o2"
         },
         {
           "title": "Europa",
           "publisher": "Europa",
-          "url": "https://acceptance.audiovisual.ec.europa.eu/en/media/video/I-293315",
+          "url": "https://www.consilium.europa.eu/en/policies/western-routes/",
           "source_type": "reporting",
           "id": "o3"
+        },
+        {
+          "title": "Gob",
+          "publisher": "Gob",
+          "url": "https://www.lamoncloa.gob.es/consejodeministros/resumenes/Paginas/2026/250826-rueda-prensa-ministros.aspx",
+          "source_type": "reporting",
+          "id": "o4"
+        },
+        {
+          "title": "Boe",
+          "publisher": "Boe",
+          "url": "https://www.boe.es/buscar/pdf/2000/BOE-A-2000-544-consolidado.pdf",
+          "source_type": "reporting",
+          "id": "o5"
+        },
+        {
+          "title": "Boe",
+          "publisher": "Boe",
+          "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2020-16819",
+          "source_type": "reporting",
+          "id": "o6"
         },
         {
           "title": "Unhcr",
           "publisher": "Unhcr",
           "url": "https://help.unhcr.org/spain/en/solicitar-asilo-en-espana/solicitud-de-asilo-en-puestos-fronterizos-y-en-centros-de-internamiento-de-extranjeros-cies/",
           "source_type": "reporting",
-          "id": "o4"
+          "id": "o7"
+        },
+        {
+          "title": "Europa",
+          "publisher": "Europa",
+          "url": "https://spain.representation.ec.europa.eu/noticias-eventos/noticias-0/la-comision-concede-espana-1147-millones-de-euros-y-proporciona-asistencia-operativa-reforzada-para-2026-09-09_es?prefLang=ro",
+          "source_type": "reporting",
+          "id": "o8"
         }
       ],
-      "publisher_count": 2,
-      "generated_at": "2026-08-28T21:44:49.738880+00:00",
-      "expires_at": "2026-09-04T21:44:49.738880+00:00",
+      "publisher_count": 4,
+      "generated_at": "2026-10-14T16:24:29.972111+00:00",
+      "expires_at": "2026-10-21T16:24:29.972111+00:00",
       "model": "gpt-5.6-terra",
       "provenance": "openai_web_search_source_grounded_event_overview_v1"
     },
@@ -2883,6 +3025,7 @@
       "000",
       "100",
       "141",
+      "2007",
       "24-hour",
       "300",
       "500-meter",
@@ -2892,6 +3035,7 @@
       "address",
       "addresse",
       "adequate",
+      "affirming",
       "african",
       "aftermath",
       "ahead",
@@ -2942,6 +3086,7 @@
       "clashe",
       "clear",
       "clearance",
+      "cohesion",
       "comes",
       "concern",
       "condition",
@@ -2990,6 +3135,7 @@
       "enhance",
       "enter",
       "entered",
+      "enthusiastically",
       "erupt",
       "erupted",
       "escalated",
@@ -3012,6 +3158,9 @@
       "familie",
       "far-right",
       "fatalitie",
+      "felipe",
+      "first",
+      "flags",
       "floating",
       "follow",
       "food",
@@ -3028,8 +3177,10 @@
       "however",
       "humanitarian",
       "hundred",
+      "identity",
       "illegal",
       "immigration",
+      "impacted",
       "implement",
       "implementation",
       "implemented",
@@ -3067,6 +3218,7 @@
       "leads",
       "least",
       "legal",
+      "letizia",
       "life",
       "lift",
       "lives",
@@ -3083,6 +3235,7 @@
       "managing",
       "many",
       "marching",
+      "marking",
       "marks",
       "mass",
       "massive",
@@ -3112,6 +3265,7 @@
       "north",
       "number",
       "occurred",
+      "october",
       "office",
       "ones",
       "ongoing",
@@ -3142,6 +3296,7 @@
       "protest",
       "protested",
       "protester",
+      "queen",
       "rare",
       "reach",
       "recent",
@@ -3183,6 +3338,7 @@
       "security",
       "seeking",
       "seen",
+      "sensitivity",
       "several",
       "shelter",
       "shops",
@@ -3210,6 +3366,7 @@
       "still",
       "strengthen",
       "suggesting",
+      "summer",
       "supporting",
       "surge",
       "swimming",
@@ -3237,11 +3394,14 @@
       "unprecedented",
       "unrest",
       "visit",
+      "visited",
       "voluntarily",
       "wake",
       "warning",
+      "waving",
       "week",
       "weeks",
+      "welcomed",
       "where",
       "which",
       "while",
@@ -3293,6 +3453,7 @@
       "deadly_migrant",
       "death",
       "denie_evidence",
+      "diplomatic_sensitivity",
       "dismisse_moroccan",
       "dispute_spain",
       "emergency_measure",
@@ -3319,6 +3480,7 @@
       "italy_maintain",
       "july.",
       "july._spain",
+      "king_felipe",
       "kylian_mbapp",
       "last_migrant",
       "local_tension",
@@ -3360,12 +3522,14 @@
       "port",
       "port_area",
       "protest_erupt",
+      "queen_letizia",
       "relocate_migrant",
       "request_national",
       "return",
       "royal_visit",
       "russia",
       "security_force",
+      "sensitivity_king",
       "shelter",
       "solidarity_t-shirt",
       "spain",
@@ -3378,6 +3542,7 @@
       "spain_prime",
       "spain_relocate",
       "spain_retaliation",
+      "spain_royal",
       "spark_return",
       "still_present",
       "strengthen_border",
@@ -3388,9 +3553,11 @@
       "thousand_still",
       "toll_discrepancie",
       "toll_spain",
+      "vi",
+      "visit_ceuta",
       "visit_spain"
     ],
-    "search_text": "000 100 141 24-hour 300 500-meter accused across across_spain action address addresse addresse_controversy adequate african aftermath ahead allegation along amidst among announced anti-migrant anti-migrant_protest approximately area area_spain around arrested arrival arriving assist assistance assisted assumption attempt attempting august authoritie barrier beach beache began beginning begun believe believed border border_breach border_check border_control border_crisi border_incident both both_moroccan breach breach_pedro cafes called calm camp caused ceased center ceuta ceuta. ceuta._demonstrator ceuta._massive ceuta_beach ceuta_beache ceuta_border ceuta_faces ceuta_lead ceuta_leads ceuta_migrant ceuta_moroccan ceuta_recover ceuta_request ceuta_result ceuta_solidarity ceuta_spain ceuta_spark ceuta_territory challenge chaotic check citing claim clashe clashe_erupt clear clear_last clearance comes concern condition conflicting consequence continue contributed control controversy crise crisi crisi_highlight crisi_italy crisi_spain crisi_tens criticism criticized cross crossed crossing crowd deadliest deadly deadly_migrant death decision declare defend demand demonstrator denie denie_evidence designated despite died difficult diplomatic discrepancie discussion disinformation dismantled dismisse dismisse_moroccan dispute dispute_spain division drawn driven drowning effective emergency emergency_measure emphasizing enclave enhance enhance_security enter entered erupt erupt_across erupted escalated escalating escalation establishment eu europe europe. europe._spain european european_division event evidence exclave exonerate exonerate_morocco explained express face faced faces faces_aftermath faces_migrant facing false familie far-right fatalitie floating follow food force force_near france fueled future gradually growing halts halts_migrant handling highlight highlight_european holiday however humanitarian hundred illegal immigration implement implement_border implement_temporary implementation implemented implicating impose imposition incident incident_spain include including indicate indicated indicating individual influx initial initiated installation installing interior interpreted introduced introduction involvement israel italian italian_traveler italy italy. italy_maintain july july. july._spain king kylian kylian_mbapp lack large last last_migrant late lead leads least legal life lift lives living local local_tension lost loved madrid maintain maintain_border majority makeshift manage management managing many marching marks mass mass_migration mass_protest massive massive_influx massive_migrant mbapp mbapp_addresse meant measure measure_tens media midnight migrant migrant_arrested migrant_camp migrant_crisi migrant_cross migrant_crossing migrant_dispute migrant_influx migrant_surge migrant_tension migration military ministry misinformation misinformation_moroccan missing mistreatment moroccan moroccan_involvement moroccan_security morocco morocco. morocco._ceuta morocco._local morocco_authoritie morocco_calm morocco_ceuta morocco_strengthen most move nation national national_emergency nchez near near_ceuta nearly nearly_migrant need normal north north_african number occurred office ones ongoing ongoing_crisi only opening operation orchestrated other overwhelmed parliament partially pedro period person place planned pm policie political port port_area potential poverty presence present previously prime processing prompting protest protest_erupt protested protester rare reach recent reception recover refused regarding region reignited reinforce reinforcement rejection relocate relocate_migrant relocating remain reopen reported reportedly reporting request request_national requested resident responding response result resulted resume retaliation return returned returning rising roll royal royal_visit russia saturday scrutiny searching security security_force seeking seen several shelter shops short shortly significant similar since situation small social soldier solidarity solidarity_t-shirt some spain spain_assumption spain_ceuta spain_ceuta. spain_enhance spain_halts spain_implement spain_prime spain_relocate spain_retaliation spark spark_return sparked spat spreading spurred stampede stated statement stating still still_present strengthen strengthen_border suggesting supporting surge swimming t-shirt t-shirt_kylian temporary temporary_border tens tension tension_thousand tented territory there these those thousand thousand_still three toll toll_discrepancie toll_spain took tragically trampol transporting travel traveler trying unaccounted unfolded unprecedented unrest visit visit_spain voluntarily wake warning week weeks where which while within without work would young"
+    "search_text": "000 100 141 2007 24-hour 300 500-meter accused across across_spain action address addresse addresse_controversy adequate affirming african aftermath ahead allegation along amidst among announced anti-migrant anti-migrant_protest approximately area area_spain around arrested arrival arriving assist assistance assisted assumption attempt attempting august authoritie barrier beach beache began beginning begun believe believed border border_breach border_check border_control border_crisi border_incident both both_moroccan breach breach_pedro cafes called calm camp caused ceased center ceuta ceuta. ceuta._demonstrator ceuta._massive ceuta_beach ceuta_beache ceuta_border ceuta_faces ceuta_lead ceuta_leads ceuta_migrant ceuta_moroccan ceuta_recover ceuta_request ceuta_result ceuta_solidarity ceuta_spain ceuta_spark ceuta_territory challenge chaotic check citing claim clashe clashe_erupt clear clear_last clearance cohesion comes concern condition conflicting consequence continue contributed control controversy crise crisi crisi_highlight crisi_italy crisi_spain crisi_tens criticism criticized cross crossed crossing crowd deadliest deadly deadly_migrant death decision declare defend demand demonstrator denie denie_evidence designated despite died difficult diplomatic diplomatic_sensitivity discrepancie discussion disinformation dismantled dismisse dismisse_moroccan dispute dispute_spain division drawn driven drowning effective emergency emergency_measure emphasizing enclave enhance enhance_security enter entered enthusiastically erupt erupt_across erupted escalated escalating escalation establishment eu europe europe. europe._spain european european_division event evidence exclave exonerate exonerate_morocco explained express face faced faces faces_aftermath faces_migrant facing false familie far-right fatalitie felipe first flags floating follow food force force_near france fueled future gradually growing halts halts_migrant handling highlight highlight_european holiday however humanitarian hundred identity illegal immigration impacted implement implement_border implement_temporary implementation implemented implicating impose imposition incident incident_spain include including indicate indicated indicating individual influx initial initiated installation installing interior interpreted introduced introduction involvement israel italian italian_traveler italy italy. italy_maintain july july. july._spain king king_felipe kylian kylian_mbapp lack large last last_migrant late lead leads least legal letizia life lift lives living local local_tension lost loved madrid maintain maintain_border majority makeshift manage management managing many marching marking marks mass mass_migration mass_protest massive massive_influx massive_migrant mbapp mbapp_addresse meant measure measure_tens media midnight migrant migrant_arrested migrant_camp migrant_crisi migrant_cross migrant_crossing migrant_dispute migrant_influx migrant_surge migrant_tension migration military ministry misinformation misinformation_moroccan missing mistreatment moroccan moroccan_involvement moroccan_security morocco morocco. morocco._ceuta morocco._local morocco_authoritie morocco_calm morocco_ceuta morocco_strengthen most move nation national national_emergency nchez near near_ceuta nearly nearly_migrant need normal north north_african number occurred october office ones ongoing ongoing_crisi only opening operation orchestrated other overwhelmed parliament partially pedro period person place planned pm policie political port port_area potential poverty presence present previously prime processing prompting protest protest_erupt protested protester queen queen_letizia rare reach recent reception recover refused regarding region reignited reinforce reinforcement rejection relocate relocate_migrant relocating remain reopen reported reportedly reporting request request_national requested resident responding response result resulted resume retaliation return returned returning rising roll royal royal_visit russia saturday scrutiny searching security security_force seeking seen sensitivity sensitivity_king several shelter shops short shortly significant similar since situation small social soldier solidarity solidarity_t-shirt some spain spain_assumption spain_ceuta spain_ceuta. spain_enhance spain_halts spain_implement spain_prime spain_relocate spain_retaliation spain_royal spark spark_return sparked spat spreading spurred stampede stated statement stating still still_present strengthen strengthen_border suggesting summer supporting surge swimming t-shirt t-shirt_kylian temporary temporary_border tens tension tension_thousand tented territory there these those thousand thousand_still three toll toll_discrepancie toll_spain took tragically trampol transporting travel traveler trying unaccounted unfolded unprecedented unrest vi visit visit_ceuta visit_spain visited voluntarily wake warning waving week weeks welcomed where which while within without work would young"
   },
   "related_events": [
     {
@@ -3401,7 +3568,7 @@
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-09-18",
-      "last_seen_at": "2026-10-13",
+      "last_seen_at": "2026-10-14",
       "development_count": 36,
       "latest_title": "Protests Erupt in India Over Voter List Revisions Amid Allegations of Police Abuse",
       "topic_label": "Russian Hybrid Attacks",

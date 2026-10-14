@@ -15,7 +15,7 @@
     "summary": "Trump has banned three media outlets from accessing the White House, marking a continuation of his contentious relationship with the press. This move is seen as part of his broader strategy to target media he views as unfavorable to his administration.",
     "status": "active",
     "first_seen_at": "2026-09-19",
-    "last_seen_at": "2026-09-26",
+    "last_seen_at": "2026-10-14",
     "timeline": [
       {
         "development_id": "story_80d383aceee79e4a",
@@ -434,15 +434,99 @@
         "first_seen_at": "2026-09-26",
         "last_seen_at": "2026-09-26",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_ec7dd4f2a4312454",
+        "daily_story_id": "story_ec7dd4f2a4312454",
+        "date": "2026-10-14",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Federal Judge Blocks Trump's Media Ban on White House Access",
+        "summary": "A federal judge has granted a preliminary injunction that continues to block the Trump administration's attempt to bar CNN, MS Now, and Politico from accessing the White House. This decision is seen as a significant development in the ongoing legal battle between the Trump administration and these media outlets, which has heightened tensions between the White House and journalists.",
+        "topic_label": "Media Access",
+        "development_type": "policy",
+        "key_facts": [
+          "Federal judge grants preliminary injunction against Trump's media ban.",
+          "CNN, MS Now, and Politico can continue to access the White House.",
+          "The decision is part of an ongoing legal dispute over media access."
+        ],
+        "source_count": 3,
+        "sources": [
+          "ABC News",
+          "Al Jazeera English",
+          "PBS News"
+        ],
+        "source_urls": [
+          "https://abcnews.com/Politics/federal-judge-grants-preliminary-injunction-continuing-block-trumps/story?id=137247889",
+          "https://www.aljazeera.com/news/2026/10/14/us-judge-extends-white-house-access-for-media-outlets-amid-trump-standoff?traffic_source=rss",
+          "https://www.pbs.org/newshour/politics/judge-extends-order-blocking-trump-from-banning-cnn-ms-now-and-politico-reporters-from-white-house"
+        ],
+        "source_details": [
+          {
+            "title": "Judge grants preliminary injunction continuing to block Trump's White House media ban",
+            "source": "ABC News",
+            "link": "https://abcnews.com/Politics/federal-judge-grants-preliminary-injunction-continuing-block-trumps/story?id=137247889",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Judge extends White House access for US media outlets amid Trump standoff",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/news/2026/10/14/us-judge-extends-white-house-access-for-media-outlets-amid-trump-standoff?traffic_source=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Judge extends order blocking Trump from banning CNN, MS NOW and Politico reporters from White House",
+            "source": "PBS News",
+            "link": "https://www.pbs.org/newshour/politics/judge-extends-order-blocking-trump-from-banning-cnn-ms-now-and-politico-reporters-from-white-house",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.463,
+        "match_evidence": {
+          "score": 0.463,
+          "matched_development_id": "story_69d41ff22cb77d5a",
+          "shared_tokens": [
+            "access",
+            "administration",
+            "house",
+            "legal",
+            "media",
+            "ongoing",
+            "outlet",
+            "part",
+            "politico",
+            "seen",
+            "tension",
+            "trump",
+            "white"
+          ],
+          "shared_entities": [
+            "cnn",
+            "house_access",
+            "ms",
+            "white_house",
+            "white_house."
+          ],
+          "source_url_match": false,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-14",
+        "last_seen_at": "2026-10-14",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 5,
+      "public_development_count": 6,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "White House Denies CNN Access to Cover Trump's Tennessee Trip",
-    "latest_summary": "The White House has barred CNN from covering President Trump's upcoming trip to Tennessee, preventing the network from joining him on Air Force One. This decision follows a recent court order that restored CNN's access to the White House after a previous ban. The move is seen as part of ongoing tensions between the Trump administration and the news network.",
+    "latest_title": "Federal Judge Blocks Trump's Media Ban on White House Access",
+    "latest_summary": "A federal judge has granted a preliminary injunction that continues to block the Trump administration's attempt to bar CNN, MS Now, and Politico from accessing the White House. This decision is seen as a significant development in the ongoing legal battle between the Trump administration and these media outlets, which has heightened tensions between the White House and journalists.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -455,28 +539,29 @@
         "story_69d41ff22cb77d5a",
         "story_0111f235eba2a042",
         "story_4b4b09883a12b024",
-        "story_3bc9726bab068dbe"
+        "story_3bc9726bab068dbe",
+        "story_ec7dd4f2a4312454"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-09-26",
-      "development_count": 5,
-      "coverage_packet_count": 5,
-      "date_count": 5,
-      "source_count": 19,
-      "independent_source_count": 14,
+      "summary_updated_at": "2026-10-14",
+      "development_count": 6,
+      "coverage_packet_count": 6,
+      "date_count": 6,
+      "source_count": 22,
+      "independent_source_count": 15,
       "first_date": "2026-09-19",
-      "latest_date": "2026-09-26",
-      "latest_update_title": "White House Denies CNN Access to Cover Trump's Tennessee Trip",
-      "coverage_score": 0.942,
-      "recency_score": 0.292,
-      "rank_score": 0.565,
-      "context_summary": "Muninn first tracked this thread on 2026-09-19: Trump Prohibits Three Media Outlets from White House Access. The latest development is White House Denies CNN Access to Cover Trump's Tennessee Trip.",
-      "cta_label": "Explore 5 developments"
+      "latest_date": "2026-10-14",
+      "latest_update_title": "Federal Judge Blocks Trump's Media Ban on White House Access",
+      "coverage_score": 1.0,
+      "recency_score": 1.0,
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-09-19: Trump Prohibits Three Media Outlets from White House Access. The latest development is Federal Judge Blocks Trump's Media Ban on White House Access.",
+      "cta_label": "Explore 6 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Trump has banned three media outlets from accessing the White House, marking a continuation of his contentious relationship with the press. A later development was White House Defends Media Ban in Court, Citing National Security and Professionalism. Most recently, the White House has barred CNN from covering President Trump's upcoming trip to Tennessee, preventing the network from joining him on Air Force One.",
+      "summary": "Trump has banned three media outlets from accessing the White House, marking a continuation of his contentious relationship with the press. A later development was Media Outlets Return to White House Following Court Order, Denied Access to State Dinner. Most recently, a federal judge has granted a preliminary injunction that continues to block the Trump administration's attempt to bar CNN, MS Now, and Politico from accessing the White House.",
       "key_developments": [
         {
           "development_id": "story_80d383aceee79e4a",
@@ -502,6 +587,11 @@
           "development_id": "story_3bc9726bab068dbe",
           "date": "2026-09-26",
           "title": "White House Denies CNN Access to Cover Trump's Tennessee Trip"
+        },
+        {
+          "development_id": "story_ec7dd4f2a4312454",
+          "date": "2026-10-14",
+          "title": "Federal Judge Blocks Trump's Media Ban on White House Access"
         }
       ],
       "sources": [
@@ -618,9 +708,27 @@
           "source": "NPR",
           "link": "https://www.npr.org/2026/09/26/g-s1-145142/cnn-left-off-air-force-one",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Judge grants preliminary injunction continuing to block Trump's White House media ban",
+          "source": "ABC News",
+          "link": "https://abcnews.com/Politics/federal-judge-grants-preliminary-injunction-continuing-block-trumps/story?id=137247889",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Judge extends White House access for US media outlets amid Trump standoff",
+          "source": "Al Jazeera English",
+          "link": "https://www.aljazeera.com/news/2026/10/14/us-judge-extends-white-house-access-for-media-outlets-amid-trump-standoff?traffic_source=rss",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Judge extends order blocking Trump from banning CNN, MS NOW and Politico reporters from White House",
+          "source": "PBS News",
+          "link": "https://www.pbs.org/newshour/politics/judge-extends-order-blocking-trump-from-banning-cnn-ms-now-and-politico-reporters-from-white-house",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-09-26",
+      "updated_at": "2026-10-14",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -629,7 +737,7 @@
         "event_id": "event_dow-jones-found-guilty-of-deterring-journali_e98cb8ae59",
         "title": "Dow Jones Found Guilty of Deterring Journalist from Union Role in Hong Kong",
         "relationship": "related_topic",
-        "confidence": 0.898,
+        "confidence": 0.9,
         "shared_entities": [
           "cnn",
           "house_access",
@@ -644,7 +752,7 @@
         "event_id": "event_justice-department-investigates-tv-networks_8de3d37ab0",
         "title": "Justice Department Investigates TV Networks Over Trump Press Pool Suspension",
         "relationship": "related_topic",
-        "confidence": 0.794,
+        "confidence": 0.793,
         "shared_entities": [
           "cnn",
           "justice_department",
@@ -656,7 +764,7 @@
         "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
         "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
         "relationship": "related_topic",
-        "confidence": 0.718,
+        "confidence": 0.719,
         "shared_entities": [
           "air_force",
           "us"
@@ -666,7 +774,7 @@
         "event_id": "event_trump-hosts-xi-jinping-for-talks-at-the-whit_7f9e41e6e2",
         "title": "Trump Hosts Xi Jinping for Talks at the White House",
         "relationship": "related_topic",
-        "confidence": 0.71,
+        "confidence": 0.713,
         "shared_entities": [
           "china",
           "white",
@@ -698,111 +806,94 @@
       "available": true,
       "title": "About First Amendment",
       "subject": "First Amendment",
-      "summary": "The First Amendment to the U.S. Constitution protects freedom of religion, speech, press, peaceful assembly, and petition. In disputes over White House press access, it provides an important constitutional framework, but access credentials also involve executive-branch security procedures and due-process requirements established through court decisions.",
+      "summary": "This event concerns a dispute over whether the White House may deny particular news organizations access to White House grounds and press facilities because of their coverage. The legal background combines the First Amendment’s protection of press freedom with case law recognizing that government-controlled locations are not automatically open to the press, while limits may apply when the government provides press credentials or access under an established system.",
       "facts": [
         {
-          "label": "Adoption",
-          "value": "The First Amendment is part of the Bill of Rights, which became part of the Constitution on December 15, 1791.",
+          "label": "Constitutional basis",
+          "value": "The First Amendment, ratified on December 15, 1791, bars Congress from abridging freedom of speech or of the press; disputes over White House media access commonly invoke that press-freedom protection.",
           "source_ids": [
-            "o1",
-            "o2"
+            "o1"
           ]
         },
         {
-          "label": "Text and protections",
-          "value": "Its text bars Congress from making laws respecting an establishment of religion, prohibiting free exercise, or abridging freedom of speech or of the press, and also protects peaceful assembly and petitions for redress of grievances.",
+          "label": "Location and access system",
+          "value": "The dispute concerns access to the White House complex in Washington, D.C., including areas used for presidential press coverage; White House credentials are also subject to U.S. Secret Service entry and protective-security requirements.",
+          "source_ids": [
+            "o2",
+            "o3"
+          ]
+        },
+        {
+          "label": "Security authority",
+          "value": "Federal law places the Secret Service under the Department of Homeland Security and authorizes it to protect the President; the Secret Service Uniformed Division has duties connected to protecting the White House in the District of Columbia.",
           "source_ids": [
             "o3",
             "o4"
           ]
         },
         {
-          "label": "Government covered",
-          "value": "The amendment is a constitutional limit on government action; its press clause protects press freedom but does not itself create an unrestricted general right for journalists to enter government property or obtain information unavailable to the public.",
+          "label": "Legal scope of press access",
+          "value": "The Supreme Court has held that the First Amendment does not itself create a general special right for the press to enter government-controlled sources of information or places closed to the public. That principle does not by itself resolve claims that a credentialing decision was retaliatory, discriminatory, or made without required process.",
           "source_ids": [
-            "o5",
+            "o5"
+          ]
+        },
+        {
+          "label": "Core issue in the litigation",
+          "value": "The central constitutional question is whether selective exclusion of credentialed outlets from White House access is a permissible security or access decision, or an unlawful restriction based on the content or viewpoint of their reporting; the cited lawsuit framed the latter theory as a First Amendment and due-process claim.",
+          "source_ids": [
             "o6"
-          ]
-        },
-        {
-          "label": "White House credentialing",
-          "value": "White House press access has historically involved credentials processed through the White House and security review by the U.S. Secret Service, whose protective mission includes the President and immediate family.",
-          "source_ids": [
-            "o7",
-            "o8"
-          ]
-        },
-        {
-          "label": "Key legal precedent",
-          "value": "In Sherrill v. Knight (D.C. Cir. 1977), the court held that denial of a White House press pass to a bona fide Washington correspondent implicates First and Fifth Amendment interests and required a disclosed security standard, notice of the factual basis, an opportunity to respond, and a written decision.",
-          "source_ids": [
-            "o8",
-            "o7"
           ]
         }
       ],
-      "scope_note": "The selected timeline covers the September 19-23, 2026 dispute over denied White House media access and the related court arguments; it does not attempt to cover the full history of First Amendment doctrine, all press-access cases, or the eventual resolution of the litigation.",
+      "scope_note": "The selected Muninn timeline follows the reported White House access restrictions, the resulting litigation, and court-related developments from September 19 through October 14, 2026; it does not attempt to cover all First Amendment doctrine, all White House credential policies, or every dispute involving presidential press access.",
       "sources": [
         {
           "title": "Archives",
           "publisher": "Archives",
-          "url": "https://www.archives.gov/exhibits/featured-documents/ratification",
+          "url": "https://www.archives.gov/founding-docs/bill-of-rights-transcript",
           "source_type": "primary",
           "id": "o1"
         },
         {
-          "title": "Archives",
-          "publisher": "Archives",
-          "url": "https://www.archives.gov/founding-docs/bill-of-rights/how-did-it-happen",
+          "title": "Whitehouse",
+          "publisher": "Whitehouse",
+          "url": "https://www.whitehouse.gov/briefings-statements/2025/01/press-briefing-by-press-secretary-karoline-leavitt/",
           "source_type": "primary",
           "id": "o2"
         },
         {
-          "title": "Archives",
-          "publisher": "Archives",
-          "url": "https://www.archives.gov/files/legislative/resources/education/bill-of-rights/images/ratified.pdf",
+          "title": "House",
+          "publisher": "House",
+          "url": "https://uscode.house.gov/view.xhtml?req=%28title%3A18+section%3A3056+edition%3Aprelim%29",
           "source_type": "primary",
           "id": "o3"
         },
         {
-          "title": "Congress",
-          "publisher": "Congress",
-          "url": "https://constitution.congress.gov/browse/essay/amdt1-7-1/ALDE_00013537/%5B%27first%27%2C%20%27amendment%27%5D",
+          "title": "House",
+          "publisher": "House",
+          "url": "https://uscode.house.gov/view.xhtml?edition=prelim&path=%2Fprelim%40title18%2Fpart2",
           "source_type": "primary",
           "id": "o4"
         },
         {
-          "title": "Congress",
-          "publisher": "Congress",
-          "url": "https://constitution.congress.gov/browse/essay/amdt1-9-3/ALDE_00000765/%5B%27constitution%27%5D",
+          "title": "Govinfo",
+          "publisher": "Govinfo",
+          "url": "https://www.govinfo.gov/content/pkg/USREPORTS-438/pdf/USREPORTS-438-1.pdf",
           "source_type": "primary",
           "id": "o5"
         },
         {
-          "title": "Uscourts",
-          "publisher": "Uscourts",
-          "url": "https://media.ca1.uscourts.gov/pdf.opinions/07-2196-01A.pdf",
-          "source_type": "primary",
-          "id": "o6"
-        },
-        {
-          "title": "Justice",
-          "publisher": "Justice",
-          "url": "https://www.justice.gov/d9/pages/attachments/2022/09/02/la_19780720_revocation_of_white_house_press_passes_0_0.pdf",
-          "source_type": "primary",
-          "id": "o7"
-        },
-        {
-          "title": "Justia",
-          "publisher": "Justia",
-          "url": "https://law.justia.com/cases/federal/appellate-courts/F2/569/124/35083/",
+          "title": "Nbcnewyork",
+          "publisher": "Nbcnewyork",
+          "url": "https://www.nbcnewyork.com/news/national-international/cnn-ms-now-politico-sue-trump-administration-white-house-ban/6550007/",
           "source_type": "reporting",
-          "id": "o8"
+          "id": "o6"
         }
       ],
       "publisher_count": 5,
-      "generated_at": "2026-09-23T16:02:09.642540+00:00",
-      "expires_at": "2026-09-30T16:02:09.642540+00:00",
+      "generated_at": "2026-10-14T16:24:29.972111+00:00",
+      "expires_at": "2026-10-21T16:24:29.972111+00:00",
       "model": "gpt-5.6-terra",
       "provenance": "openai_web_search_source_grounded_event_overview_v1"
     },
@@ -815,9 +906,12 @@
       "amendment",
       "argue",
       "arrival",
+      "attempt",
       "banned",
       "barred",
+      "battle",
       "behavior",
+      "block",
       "broader",
       "case",
       "challenge",
@@ -828,6 +922,7 @@
       "concern",
       "contentiou",
       "continuation",
+      "continue",
       "court",
       "cover",
       "coverage",
@@ -839,20 +934,26 @@
       "denied",
       "department",
       "despite",
+      "development",
       "dinner",
       "event",
+      "federal",
       "filed",
       "first",
       "follow",
       "force",
+      "granted",
       "ground",
       "heard",
+      "heightened",
       "house",
       "however",
       "including",
       "infringe",
+      "injunction",
       "jinping",
       "joining",
+      "journalist",
       "judge",
       "justice",
       "lawsuit",
@@ -871,6 +972,7 @@
       "part",
       "passe",
       "politico",
+      "preliminary",
       "press",
       "preventing",
       "previou",
@@ -892,6 +994,7 @@
       "security",
       "seen",
       "several",
+      "significant",
       "strategy",
       "target",
       "tennessee",
@@ -917,6 +1020,7 @@
       "access_trump",
       "air_force",
       "amendment_right",
+      "block_trump",
       "china",
       "citing_first",
       "citing_national",
@@ -949,13 +1053,15 @@
       "state",
       "tennessee",
       "tennessee_trip",
+      "trump_media",
       "trump_prohibit",
       "trump_tennessee",
       "us",
       "white",
-      "white_house"
+      "white_house",
+      "white_house."
     ],
-    "search_text": "access access_citing access_trump accessing accusation action administration air_force amendment amendment_right argue arrival banned barred behavior broader case challenge china cites citing citing_first citing_national claiming cnn cnn_access concern contentiou continuation court cover cover_trump coverage covering decision defend defend_media denial denie denie_cnn denied denied_access denied_white department despite dinner dinner_several doj event filed first first_amendment follow force force_one. ground heard house house_access house_defend house_denie however including infringe jinping joining judge justice justice_department lawsuit leader legal marking media media_ban media_outlet move ms national national_security network now ongoing order order_denied ordered organization outlet outlet_return outlet_sue part passe politico press preventing previou privilege professionalism prohibit recent regarding relationship reporter response restoration restored return returned revoked right right_cnn ruling security seen several state strategy target tennessee tennessee_trip tension these they three trip trump trump_prohibit trump_tennessee unfavorable unprofessional upcoming upon us views violate well where which white white_house"
+    "search_text": "access access_citing access_trump accessing accusation action administration air_force amendment amendment_right argue arrival attempt banned barred battle behavior block block_trump broader case challenge china cites citing citing_first citing_national claiming cnn cnn_access concern contentiou continuation continue court cover cover_trump coverage covering decision defend defend_media denial denie denie_cnn denied denied_access denied_white department despite development dinner dinner_several doj event federal filed first first_amendment follow force force_one. granted ground heard heightened house house_access house_defend house_denie however including infringe injunction jinping joining journalist judge justice justice_department lawsuit leader legal marking media media_ban media_outlet move ms national national_security network now ongoing order order_denied ordered organization outlet outlet_return outlet_sue part passe politico preliminary press preventing previou privilege professionalism prohibit recent regarding relationship reporter response restoration restored return returned revoked right right_cnn ruling security seen several significant state strategy target tennessee tennessee_trip tension these they three trip trump trump_media trump_prohibit trump_tennessee unfavorable unprofessional upcoming upon us views violate well where which white white_house white_house."
   },
   "related_events": [
     {
@@ -995,14 +1101,14 @@
     {
       "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
       "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
-      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Saudi Arabia Faces Houthi Attacks on Energy Facilities.",
+      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Ukraine's Military Faces Starlink Internet Access Restrictions Amid Russian Attacks.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-07-22",
-      "last_seen_at": "2026-10-13",
-      "development_count": 73,
-      "latest_title": "Saudi Arabia Faces Houthi Attacks on Energy Facilities",
+      "last_seen_at": "2026-10-14",
+      "development_count": 76,
+      "latest_title": "Ukraine's Military Faces Starlink Internet Access Restrictions Amid Russian Attacks",
       "topic_label": "Iran War",
       "hero_image": {
         "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
