@@ -15,7 +15,7 @@
     "summary": "French President Emmanuel Macron has ordered protective measures for the country's critical infrastructure and defense industry in response to escalating Russian hybrid attacks. This announcement followed a meeting with political party leaders to discuss the growing threats from Russia, particularly in light of recent developments in Europe. Macron emphasized that the hybrid threat from Moscow has intensified in recent weeks, necessitating immediate action.",
     "status": "active",
     "first_seen_at": "2026-09-18",
-    "last_seen_at": "2026-10-14",
+    "last_seen_at": "2026-10-15",
     "timeline": [
       {
         "development_id": "story_d3dbd0df63be1e56",
@@ -3212,6 +3212,214 @@
         "first_seen_at": "2026-10-12",
         "last_seen_at": "2026-10-12",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_c0c004b98a2e16b7",
+        "daily_story_id": "story_c0c004b98a2e16b7",
+        "date": "2026-10-15",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Protests in Albania Continue as Prime Minister Refuses to Resign",
+        "summary": "Protests in Tirana, Albania, have entered their third day as demonstrators demand the resignation of Prime Minister Edi Rama. Clashes between protesters and police have intensified, with law enforcement using tear gas and water cannons to disperse crowds. Rama has stated he will not resign amid the ongoing unrest, which has also spread to other cities.",
+        "topic_label": "Albania Protests",
+        "development_type": "policy",
+        "key_facts": [
+          "Protests in Tirana have lasted for three days.",
+          "Demonstrators are calling for the resignation of Prime Minister Edi Rama.",
+          "Police have used tear gas and water cannons against protesters.",
+          "Protests have spread to other cities in Albania."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Fox News",
+          "The Guardian"
+        ],
+        "source_urls": [
+          "https://www.foxnews.com/world/albania-rioters-clash-police-socialist-government-european-unrest-spreads",
+          "https://www.theguardian.com/world/2026/oct/15/albania-prime-minister-edi-rama-vows-not-to-resign-student-led-protests"
+        ],
+        "source_details": [
+          {
+            "title": "Albania rioters clash with police for Socialist government as European unrest spreads",
+            "source": "Fox News",
+            "link": "https://www.foxnews.com/world/albania-rioters-clash-police-socialist-government-european-unrest-spreads",
+            "source_bias": "right"
+          },
+          {
+            "title": "Albania’s prime minister vows not to resign over student-led protests",
+            "source": "The Guardian",
+            "link": "https://www.theguardian.com/world/2026/oct/15/albania-prime-minister-edi-rama-vows-not-to-resign-student-led-protests",
+            "source_bias": "left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "protest"
+          ],
+          "shared_incident_anchors": [
+            "protest_protest"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "demand",
+            "demonstrator",
+            "prime",
+            "protest",
+            "resignation",
+            "which"
+          ],
+          "shared_entities": [
+            "protest_protest"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_7a6ad92865851fe0",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-15",
+        "last_seen_at": "2026-10-15",
+        "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_d5e23239e8e44b15",
+        "daily_story_id": "story_d5e23239e8e44b15",
+        "date": "2026-10-15",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "US Military Considers Using 'Mother of All Bombs' in Iran",
+        "summary": "Reports indicate that the US military is considering the use of the GBU-43/B Massive Ordnance Air Blast bomb, commonly known as the 'mother of all bombs,' in potential operations involving Iran. This bomb is noted for its significant explosive power.",
+        "topic_label": "Iran War",
+        "development_type": "military_action",
+        "key_facts": [
+          "US military is considering the GBU-43/B bomb for operations in Iran.",
+          "The GBU-43/B is referred to as the 'mother of all bombs.'"
+        ],
+        "source_count": 2,
+        "sources": [
+          "Al Jazeera English",
+          "NewsNation"
+        ],
+        "source_urls": [
+          "https://www.newsnationnow.com/world/us-iran-war-mother-of-all-bombs-houthis",
+          "https://www.aljazeera.com/news/2026/10/15/what-is-the-mother-of-all-bombs-us-could-use-in-iran?traffic_source=rss"
+        ],
+        "source_details": [
+          {
+            "title": "US plans for Iran include 'mother of all bombs': CNN report",
+            "source": "NewsNation",
+            "link": "https://www.newsnationnow.com/world/us-iran-war-mother-of-all-bombs-houthis",
+            "source_bias": "center"
+          },
+          {
+            "title": "What is the ‘Mother of All Bombs’ US could use in Iran?",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/news/2026/10/15/what-is-the-mother-of-all-bombs-us-could-use-in-iran?traffic_source=rss",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_1640f22d8afc08c1",
+          "shared_tokens": [
+            "consider",
+            "iran",
+            "military",
+            "war"
+          ],
+          "shared_entities": [
+            "iran",
+            "iran_war",
+            "us"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-15",
+        "last_seen_at": "2026-10-15",
+        "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_f1243496997a089c",
+        "daily_story_id": "story_f1243496997a089c",
+        "date": "2026-10-15",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Protests Erupt in Bangkok Against IMF and World Bank Meetings",
+        "summary": "On October 15, hundreds of protesters marched through Bangkok to oppose the annual meetings of the International Monetary Fund and World Bank. Demonstrators expressed concerns about the impacts of capitalism and the policies of these financial institutions.",
+        "topic_label": "Thailand Protests",
+        "development_type": "policy",
+        "key_facts": [
+          "Hundreds of protesters marched in Bangkok",
+          "Protests were against IMF and World Bank meetings",
+          "Demonstrators warned of destructive capitalism"
+        ],
+        "source_count": 2,
+        "sources": [
+          "Africanews",
+          "Euronews"
+        ],
+        "source_urls": [
+          "http://www.africanews.com/2026/10/15/thailand-bangkok-protesters-decry-imf-and-world-bank-warn-of-destructive-capitalism",
+          "https://www.euronews.com/video/2026/10/15/thailand-bangkok-protesters-decry-imf-and-world-bank-warn-of-destructive-capitalism"
+        ],
+        "source_details": [
+          {
+            "title": "Thailand: Bangkok protesters decry IMF and World Bank, warn of destructive capitalism",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/10/15/thailand-bangkok-protesters-decry-imf-and-world-bank-warn-of-destructive-capitalism",
+            "source_bias": "center"
+          },
+          {
+            "title": "Thailand: Bangkok protesters decry IMF and World Bank, warn of destructive capitalism",
+            "source": "Euronews",
+            "link": "https://www.euronews.com/video/2026/10/15/thailand-bangkok-protesters-decry-imf-and-world-bank-warn-of-destructive-capitalism",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "protest"
+          ],
+          "shared_incident_anchors": [
+            "protest_erupt"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "demonstrator",
+            "erupt",
+            "protest",
+            "these"
+          ],
+          "shared_entities": [
+            "protest_erupt"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_7a6ad92865851fe0",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-15",
+        "last_seen_at": "2026-10-15",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -3242,12 +3450,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 36,
+      "public_development_count": 39,
       "questionable_development_count": 2,
       "review_required": true
     },
-    "latest_title": "Protests Erupt in India Over Voter List Revisions Amid Allegations of Police Abuse",
-    "latest_summary": "Protests have erupted across India as opposition parties and supporters rally against recent revisions to the voter lists, which they allege favor Prime Minister Narendra Modi's ruling party. Critics claim that over 130 million names have been removed from the rolls, prompting calls for the resignation of the election chief. Reports indicate that police abuses have been reported during these demonstrations.",
+    "latest_title": "Protests Erupt in Bangkok Against IMF and World Bank Meetings",
+    "latest_summary": "On October 15, hundreds of protesters marched through Bangkok to oppose the annual meetings of the International Monetary Fund and World Bank. Demonstrators expressed concerns about the impacts of capitalism and the policies of these financial institutions.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -3257,30 +3465,30 @@
       "display_title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats Timeline",
       "milestone_development_ids": [
         "story_d3dbd0df63be1e56",
-        "story_7c70a246876ea6ca",
-        "story_a25ef8cf66a7be67",
-        "story_7a6ad92865851fe0"
+        "story_670a94ee8821ff9c",
+        "story_326ce638e806cecf",
+        "story_f1243496997a089c"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-10-12",
-      "development_count": 36,
-      "coverage_packet_count": 41,
-      "date_count": 18,
-      "source_count": 115,
-      "independent_source_count": 34,
+      "summary_updated_at": "2026-10-15",
+      "development_count": 39,
+      "coverage_packet_count": 44,
+      "date_count": 19,
+      "source_count": 121,
+      "independent_source_count": 35,
       "first_date": "2026-09-18",
-      "latest_date": "2026-10-12",
-      "latest_update_title": "Protests Erupt in India Over Voter List Revisions Amid Allegations of Police Abuse",
+      "latest_date": "2026-10-15",
+      "latest_update_title": "Protests Erupt in Bangkok Against IMF and World Bank Meetings",
       "coverage_score": 1.0,
-      "recency_score": 0.778,
-      "rank_score": 0.871,
-      "context_summary": "Muninn first tracked this thread on 2026-09-18: Macron Implements Measures Against Intensifying Russian Hybrid Threats. The latest development is Protests Erupt in India Over Voter List Revisions Amid Allegations of Police Abuse.",
-      "cta_label": "Explore 36 developments"
+      "recency_score": 1.0,
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-09-18: Macron Implements Measures Against Intensifying Russian Hybrid Threats. The latest development is Protests Erupt in Bangkok Against IMF and World Bank Meetings.",
+      "cta_label": "Explore 39 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "French President Emmanuel Macron has ordered protective measures for the country's critical infrastructure and defense industry in response to escalating Russian hybrid attacks. A later development was Ukrainian Drone Attack Kills Two and Strikes Fuel Depot in Moscow Region. Most recently, protests have erupted across India as opposition parties and supporters rally against recent revisions to the voter lists, which they allege favor Prime Minister Narendra Modi's ruling party.",
+      "summary": "French President Emmanuel Macron has ordered protective measures for the country's critical infrastructure and defense industry in response to escalating Russian hybrid attacks. A later development was Tear Gas Used as Students Protest Poor School Conditions in France. Most recently, on October 15, hundreds of protesters marched through Bangkok to oppose the annual meetings of the International Monetary Fund and World Bank.",
       "key_developments": [
         {
           "development_id": "story_d3dbd0df63be1e56",
@@ -3288,19 +3496,19 @@
           "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats"
         },
         {
-          "development_id": "story_7c70a246876ea6ca",
-          "date": "2026-10-02",
-          "title": "Ukraine Urges Stronger Sanctions Amid Traffic Chaos from Russian Drone Attacks"
+          "development_id": "story_670a94ee8821ff9c",
+          "date": "2026-10-03",
+          "title": "Massive Protests Erupt in Spain Over Housing Crisis Following Lawmakers' Rejection of Relief Measures"
         },
         {
-          "development_id": "story_a25ef8cf66a7be67",
-          "date": "2026-10-07",
-          "title": "France Halts Stun Grenade Use Amid Student Protests"
+          "development_id": "story_326ce638e806cecf",
+          "date": "2026-10-09",
+          "title": "Clashes Erupt in Brussels During Anti-Austerity Rally"
         },
         {
-          "development_id": "story_7a6ad92865851fe0",
-          "date": "2026-10-12",
-          "title": "Protests Erupt in India Over Voter List Revisions Amid Allegations of Police Abuse"
+          "development_id": "story_f1243496997a089c",
+          "date": "2026-10-15",
+          "title": "Protests Erupt in Bangkok Against IMF and World Bank Meetings"
         }
       ],
       "sources": [
@@ -3993,9 +4201,45 @@
           "source": "France 24 - English",
           "link": "https://www.france24.com/en/india-s-opposition-leader-marches-with-thousands-against-election-chief",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Albania rioters clash with police for Socialist government as European unrest spreads",
+          "source": "Fox News",
+          "link": "https://www.foxnews.com/world/albania-rioters-clash-police-socialist-government-european-unrest-spreads",
+          "source_bias": "right"
+        },
+        {
+          "title": "Albania’s prime minister vows not to resign over student-led protests",
+          "source": "The Guardian",
+          "link": "https://www.theguardian.com/world/2026/oct/15/albania-prime-minister-edi-rama-vows-not-to-resign-student-led-protests",
+          "source_bias": "left"
+        },
+        {
+          "title": "US plans for Iran include 'mother of all bombs': CNN report",
+          "source": "NewsNation",
+          "link": "https://www.newsnationnow.com/world/us-iran-war-mother-of-all-bombs-houthis",
+          "source_bias": "center"
+        },
+        {
+          "title": "What is the ‘Mother of All Bombs’ US could use in Iran?",
+          "source": "Al Jazeera English",
+          "link": "https://www.aljazeera.com/news/2026/10/15/what-is-the-mother-of-all-bombs-us-could-use-in-iran?traffic_source=rss",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Thailand: Bangkok protesters decry IMF and World Bank, warn of destructive capitalism",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/10/15/thailand-bangkok-protesters-decry-imf-and-world-bank-warn-of-destructive-capitalism",
+          "source_bias": "center"
+        },
+        {
+          "title": "Thailand: Bangkok protesters decry IMF and World Bank, warn of destructive capitalism",
+          "source": "Euronews",
+          "link": "https://www.euronews.com/video/2026/10/15/thailand-bangkok-protesters-decry-imf-and-world-bank-warn-of-destructive-capitalism",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-10-12",
+      "updated_at": "2026-10-15",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -4009,6 +4253,7 @@
           "donald_trump",
           "general_assembly.",
           "however_ukraine",
+          "iran",
           "riyadh",
           "riyadh_airport",
           "russia",
@@ -4023,6 +4268,22 @@
         ]
       },
       {
+        "event_id": "event_israel-commemorates-third-anniversary-of-oct_c05cefd020",
+        "title": "Israel Commemorates Third Anniversary of October 7 Attacks",
+        "relationship": "related_topic",
+        "confidence": 0.95,
+        "shared_entities": [
+          "diesel_deal",
+          "donald_trump",
+          "israel",
+          "kyiv",
+          "russia",
+          "ukraine",
+          "us",
+          "volodymyr_zelenskyy"
+        ]
+      },
+      {
         "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
         "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
         "relationship": "related_topic",
@@ -4032,6 +4293,7 @@
           "energy_facilitie",
           "india",
           "international_airport",
+          "iran",
           "israel",
           "khalid_international",
           "king_khalid",
@@ -4052,23 +4314,6 @@
           "united_nation",
           "us",
           "volodymyr_zelenskyy"
-        ]
-      },
-      {
-        "event_id": "event_israeli-strikes-in-gaza-result-in-seven-deat_837b156199",
-        "title": "Israeli Strikes in Gaza Result in Seven Deaths and Destruction of Medical Warehouses",
-        "relationship": "related_topic",
-        "confidence": 0.95,
-        "shared_entities": [
-          "claim_lives",
-          "including_children",
-          "injure_other",
-          "israel",
-          "nation_general",
-          "protest_erupt",
-          "un",
-          "united",
-          "united_nation"
         ]
       },
       {
@@ -4211,6 +4456,7 @@
       "airport",
       "airstrike",
       "al-sharaa",
+      "albania",
       "allegation",
       "allege",
       "also",
@@ -4220,6 +4466,7 @@
       "announce",
       "announced",
       "announcement",
+      "annual",
       "anti-austerity",
       "apart",
       "apartment",
@@ -4241,14 +4488,19 @@
       "attempted",
       "austerity",
       "authoritie",
+      "bangkok",
+      "bank",
       "became",
       "began",
       "belgian",
       "belgium",
       "better",
       "billion",
+      "blast",
       "block",
       "blockading",
+      "bomb",
+      "bombs",
       "both",
       "bridge",
       "broader",
@@ -4261,6 +4513,7 @@
       "campaign",
       "cannon",
       "capital",
+      "capitalism",
       "casualtie",
       "caused",
       "causing",
@@ -4282,6 +4535,7 @@
       "comes",
       "comment",
       "commissioned",
+      "commonly",
       "company",
       "concern",
       "condemnation",
@@ -4293,7 +4547,9 @@
       "connect",
       "connectivity",
       "consider",
+      "considering",
       "constitutional",
+      "continue",
       "continued",
       "contradicting",
       "controlled",
@@ -4307,6 +4563,7 @@
       "criticism",
       "criticize",
       "criticized",
+      "crowd",
       "cruel",
       "cuts",
       "damage",
@@ -4337,6 +4594,7 @@
       "directive",
       "discuss",
       "discussed",
+      "disperse",
       "disrupting",
       "disruption",
       "dissatisfaction",
@@ -4356,6 +4614,8 @@
       "emmanuel",
       "emphasized",
       "energy",
+      "enforcement",
+      "entered",
       "environment",
       "erupt",
       "erupted",
@@ -4372,6 +4632,7 @@
       "event",
       "evicted",
       "eviction",
+      "explosive",
       "expressed",
       "extensive",
       "face",
@@ -4381,6 +4642,7 @@
       "fatalitie",
       "favor",
       "final",
+      "financial",
       "fire",
       "five",
       "flame",
@@ -4396,6 +4658,7 @@
       "funding",
       "gas",
       "gathering",
+      "gbu-43",
       "general",
       "german",
       "global",
@@ -4444,6 +4707,7 @@
       "injurie",
       "injuring",
       "instead",
+      "institution",
       "intense",
       "intensified",
       "intensifying",
@@ -4452,6 +4716,7 @@
       "involved",
       "involvement",
       "involving",
+      "iran",
       "iran-backed",
       "israel",
       "issue",
@@ -4466,6 +4731,7 @@
       "kills",
       "king",
       "klitschko",
+      "known",
       "kyiv",
       "labeling",
       "largely",
@@ -4515,9 +4781,11 @@
       "missile",
       "modi",
       "monday",
+      "monetary",
       "month",
       "moscow",
       "most",
+      "mother",
       "mourner",
       "movement",
       "multiple",
@@ -4536,6 +4804,7 @@
       "nobel",
       "northern",
       "notable",
+      "noted",
       "numerou",
       "occupation",
       "occurred",
@@ -4544,10 +4813,12 @@
       "ongoing",
       "only",
       "operation",
+      "oppose",
       "opposed",
       "opposition",
       "orchestrating",
       "ordered",
+      "ordnance",
       "organized",
       "other",
       "overcrowded",
@@ -4576,9 +4847,11 @@
       "planned",
       "plans",
       "point",
+      "policie",
       "policy",
       "political",
       "poor",
+      "potential",
       "power",
       "previou",
       "prime",
@@ -4598,6 +4871,7 @@
       "raised",
       "rally",
       "rallying",
+      "rama",
       "ransacked",
       "recent",
       "recognition",
@@ -4606,6 +4880,7 @@
       "reflect",
       "reform",
       "refrain",
+      "refuse",
       "regarding",
       "region",
       "regional",
@@ -4621,6 +4896,7 @@
       "rescue",
       "resident",
       "residential",
+      "resign",
       "resignation",
       "response",
       "restriction",
@@ -4715,12 +4991,14 @@
       "them",
       "these",
       "they",
+      "third",
       "thousand",
       "threat",
       "three",
       "through",
       "tighter",
       "tightly",
+      "tirana",
       "took",
       "torched",
       "totally",
@@ -4743,6 +5021,7 @@
       "unrest",
       "urges",
       "used",
+      "using",
       "variou",
       "vehicle",
       "violence",
@@ -4776,14 +5055,19 @@
       "accuse_russia",
       "across_france",
       "air_assault",
+      "air_blast",
       "air_campaign",
       "al-sharaa",
+      "albania",
+      "albania_continue",
       "anti-austerity",
       "anti-austerity_rally",
       "apartment_block",
       "area_including",
       "assert_golan",
       "asylum_ruling",
+      "bangkok",
+      "bank._demonstrator",
       "belgian_student",
       "block_injure",
       "brussel",
@@ -4798,12 +5082,14 @@
       "company_estonia",
       "concern_demonstration",
       "condition_concern",
+      "consider_using",
       "damage_ukraine",
       "deadly_airstrike",
       "defense_company",
       "diesel_deal",
       "donald_trump",
       "drone_ahead",
+      "edi_rama.",
       "education_condition",
       "education_reform",
       "election_ukraine",
@@ -4828,6 +5114,7 @@
       "fuel_depot",
       "funding_violent",
       "gas_used",
+      "gbu-43",
       "general_assembly.",
       "german_chancellor",
       "golan_height",
@@ -4839,6 +5126,7 @@
       "however_ukraine",
       "hybrid_threat",
       "icc",
+      "imf",
       "implement_measure",
       "including_children",
       "india",
@@ -4848,6 +5136,8 @@
       "intensifying_russia",
       "international_airport",
       "international_criminal",
+      "international_monetary",
+      "iran",
       "iran-backed_houthis.",
       "israel",
       "jersey._kyiv",
@@ -4869,12 +5159,15 @@
       "madrid_honor",
       "maricarmen_abascal",
       "massive_drone",
+      "massive_ordnance",
       "massive_protest",
       "mayor_vitali",
       "measure_tens",
       "metz",
       "mid-august",
+      "military_consider",
       "milrem_robotic",
+      "monetary_fund",
       "moscow",
       "moscow.",
       "moscow_causing",
@@ -4890,6 +5183,7 @@
       "ongoing_air",
       "ongoing_student",
       "orchestrating_arson",
+      "ordnance_air",
       "paris",
       "peace_prize",
       "pedro_sanchez.",
@@ -4899,10 +5193,13 @@
       "protest_lead",
       "protest_poor",
       "puerta",
+      "rama._clashe",
       "region_ukraine",
       "relief_measure",
       "remain_syrian",
       "residential_area",
+      "resign",
+      "resign_protest",
       "response",
       "riyadh",
       "riyadh_airport",
@@ -4935,6 +5232,8 @@
       "territory_syrian",
       "thousand_protest",
       "threat_france",
+      "tirana",
+      "tirana_albania",
       "traffic_chaos",
       "trump_consider",
       "ukraine",
@@ -4951,6 +5250,7 @@
       "united_nation",
       "urges_stronger",
       "us",
+      "using_mother",
       "violent_clashe",
       "violent_protest",
       "vitali_klitschko.",
@@ -4960,7 +5260,7 @@
       "zaporizhzhia",
       "zaporizhzhia_claim"
     ],
-    "search_text": "000 100 107 130 14-year-old 16-storey 2026 250 256 290 500 87-year-old abascal abascal_tens ablaze abuse abuse_protest academy accuse accuse_russia accused across across_france action address advocating affected affordable africa african agreed agreement ahead ahmed aid aiming air_assault air_campaign airport airstrike al-sharaa allegation allege also amidst among anger announce announced announcement anti-austerity anti-austerity_rally apart apartment apartment_block application apply approximately arabia area area_including areas around arrest arson assault assembly assert assert_golan asylum asylum_ruling attack attacking attempted austerity authoritie became began belgian belgian_student belgium better billion block block_injure blockading both bridge broader brussel brussels. brutality building burned called calls campaign cannon capital casualtie caused causing causing_casualtie ceased ceasefire ceasefire_claim central chancellor chancellor_friedrich chaos chief children citie civilian claim claim_life claim_lives claim_ukraine clashe clashe_erupt clashed classroom closure coincided comes comment commissioned company company_estonia concern concern_demonstration condemnation condemned condition condition_concern confirmed conflict confrontation connect connectivity consider constitutional continued contradicting controlled controversial costs court criminal crisi critic critical criticism criticize criticized cruel cuts damage damage_ukraine date deadly deadly_airstrike deal death decision declared defense defense_company deliberate demand demanding demonstration demonstrator deployed depot described describing despite destroyed detained deteriorating devastating development diesel diesel_deal dilapidated directive discuss discussed disrupting disruption dissatisfaction district donald donald_trump drawn drew driven drone drone_ahead durban eased eastern education education_condition education_reform effort election election_ukraine emergency emmanuel emmanuel_macron emphasized energy energy_aid energy_ceasefire energy_facilitie energy_infrastructure environment erupt erupt_across erupted escalated escalating escalation escape estimated estonia estonia_accuse estonian europe europe. europe._macron european evacuated event evicted evicted_pensioner eviction expressed extensive face facilitie facing familie fatalitie favor final fire five flame focal follow followed france france. france._france france_france france_halts french-speaking friedrich friedrich_merz fuel fuel_depot fueled fund funding funding_violent gas gas_used gathering general general_assembly. german german_chancellor global golan golan_height grenade grenade_use grid grief growing halt halts halts_stun height help high highlighted highlighting historic homes honor honor_evicted honoring hospital hospital_causing hours housing housing_crisi houthi however however_ukraine hundred hybrid hybrid_threat icc immediate impact impacted implement implement_measure improved improvement incident included including including_children increasing india indicate indicated individual industry infrastructure infrastructure_russia initiated injure injure_other injured injurie injuring instead intense intensified intensified_russia intensifying intensifying_russia interior international international_airport international_criminal involved involvement involving iran-backed iran-backed_houthis. israel issue jersey jersey._kyiv joining joint just khalid khalid_international kharkiv kharkiv_apartment kill killed kills king king_khalid klitschko kyiv kyiv_claim kyiv_mayor kyiv_pecherskyi kyiv_science kyiv_struck kyiv_visit labeling largely larger largest launche launche_massive launched lead leader leadership leading learning least lesson life light list list_revision lists lives local location looted lower macron macron_implement made madrid madrid_honor main march marched maricarmen maricarmen_abascal marked market marking masked massive massive_drone massive_protest mayor mayor_vitali measure measure_tens meeting member merz metz mid-august midterm military million milrem milrem_robotic missile modi monday month moscow moscow. moscow_causing moscow_region most mourner movement multiple names narendra narendra_modi nation nation_general national national_academy nationwide nationwide_student nato navi navi_pillay necessitating need negative nine nine-storey nobel nobel_peace northern notable numerou occupation occurred october october_zaporizhzhia oil ongoing ongoing_air ongoing_student only operation opposed opposition orchestrating orchestrating_arson ordered organized other overcrowded overnight package parallel paralysi parent paris parliamentary part participant participated particularly partie partly parts party pattern peace peace_prize pecherskyi pedro pedro_sanchez. pensioner pensioner_maricarmen person pillay planned plans point policy political poor power previou prime prize production prompting proposed protective protest protest_erupt protest_france protest_lead protest_poor protested protester pryluky puerta putin quickly railway raised rally rallying ransacked recent recognition refinerie refinery reflect reform refrain regarding region region_ukraine regional reiterated rejection release relief relief_measure remain remain_syrian remark removed reported reportedly rescue resident residential residential_area resignation response restriction resulted resulting revision riot rising riyadh riyadh_airport riyadh_king robotic rolls rubble ruling ruling_protest russia russia. russia_drone russia_election russia_hybrid russia_launche russia_missile sabotage safety sanchez sanchez._protester sanction saudi saudi_arabia scale scheduled school science science_academy search second security seen september serie service seven several severe severe_disruption severely shops shortage shortly should sides significant similar since sites situation skepticism slept some south south_africa south_african southern sovereignty soweto spain spain. spain._clashe sparked spending spending_cuts spread staff stance stated stating station street strike striking stronger struck student student-led student_protest stun stun_grenade substantial such suggesting supplie support supporter surrounding survivor suspended symbol syria syrian syrian_territory targeted targeting teacher teams tear tear_gas tearing teen tenant tens tension territory territory_syrian them these they thousand thousand_protest threat threat_france three through tighter tightly took torched totally town trade traffic traffic_chaos transport trump trump_consider tuesday turned ukraine ukraine. ukraine_drone ukraine_energy ukraine_launche ukraine_residential ukraine_urges ukrainian-german un unacceptable understaffed unfair unfair_navi union united united_nation unlawful unmanned unrest urges urges_stronger us used variou vehicle violence violent violent_clashe violent_protest visible visit vitali vitali_klitschko. volodymyr volodymyr_zelenskyy voter voter_list war water wave wednesday wednesday_kyiv weeks western when where which whose widespread winner withdrawn would zaporizhzhia zaporizhzhia_claim zelenskyy zero-tolerance"
+    "search_text": "000 100 107 130 14-year-old 16-storey 2026 250 256 290 500 87-year-old abascal abascal_tens ablaze abuse abuse_protest academy accuse accuse_russia accused across across_france action address advocating affected affordable africa african agreed agreement ahead ahmed aid aiming air_assault air_blast air_campaign airport airstrike al-sharaa albania albania_continue allegation allege also amidst among anger announce announced announcement annual anti-austerity anti-austerity_rally apart apartment apartment_block application apply approximately arabia area area_including areas around arrest arson assault assembly assert assert_golan asylum asylum_ruling attack attacking attempted austerity authoritie bangkok bank bank._demonstrator became began belgian belgian_student belgium better billion blast block block_injure blockading bomb bombs both bridge broader brussel brussels. brutality building burned called calls campaign cannon capital capitalism casualtie caused causing causing_casualtie ceased ceasefire ceasefire_claim central chancellor chancellor_friedrich chaos chief children citie civilian claim claim_life claim_lives claim_ukraine clashe clashe_erupt clashed classroom closure coincided comes comment commissioned commonly company company_estonia concern concern_demonstration condemnation condemned condition condition_concern confirmed conflict confrontation connect connectivity consider consider_using considering constitutional continue continued contradicting controlled controversial costs court criminal crisi critic critical criticism criticize criticized crowd cruel cuts damage damage_ukraine date deadly deadly_airstrike deal death decision declared defense defense_company deliberate demand demanding demonstration demonstrator deployed depot described describing despite destroyed detained deteriorating devastating development diesel diesel_deal dilapidated directive discuss discussed disperse disrupting disruption dissatisfaction district donald donald_trump drawn drew driven drone drone_ahead durban eased eastern edi_rama. education education_condition education_reform effort election election_ukraine emergency emmanuel emmanuel_macron emphasized energy energy_aid energy_ceasefire energy_facilitie energy_infrastructure enforcement entered environment erupt erupt_across erupted escalated escalating escalation escape estimated estonia estonia_accuse estonian europe europe. europe._macron european evacuated event evicted evicted_pensioner eviction explosive expressed extensive face facilitie facing familie fatalitie favor final financial fire five flame focal follow followed france france. france._france france_france france_halts french-speaking friedrich friedrich_merz fuel fuel_depot fueled fund funding funding_violent gas gas_used gathering gbu-43 general general_assembly. german german_chancellor global golan golan_height grenade grenade_use grid grief growing halt halts halts_stun height help high highlighted highlighting historic homes honor honor_evicted honoring hospital hospital_causing hours housing housing_crisi houthi however however_ukraine hundred hybrid hybrid_threat icc imf immediate impact impacted implement implement_measure improved improvement incident included including including_children increasing india indicate indicated individual industry infrastructure infrastructure_russia initiated injure injure_other injured injurie injuring instead institution intense intensified intensified_russia intensifying intensifying_russia interior international international_airport international_criminal international_monetary involved involvement involving iran iran-backed iran-backed_houthis. israel issue jersey jersey._kyiv joining joint just khalid khalid_international kharkiv kharkiv_apartment kill killed kills king king_khalid klitschko known kyiv kyiv_claim kyiv_mayor kyiv_pecherskyi kyiv_science kyiv_struck kyiv_visit labeling largely larger largest launche launche_massive launched lead leader leadership leading learning least lesson life light list list_revision lists lives local location looted lower macron macron_implement made madrid madrid_honor main march marched maricarmen maricarmen_abascal marked market marking masked massive massive_drone massive_ordnance massive_protest mayor mayor_vitali measure measure_tens meeting member merz metz mid-august midterm military military_consider million milrem milrem_robotic missile modi monday monetary monetary_fund month moscow moscow. moscow_causing moscow_region most mother mourner movement multiple names narendra narendra_modi nation nation_general national national_academy nationwide nationwide_student nato navi navi_pillay necessitating need negative nine nine-storey nobel nobel_peace northern notable noted numerou occupation occurred october october_zaporizhzhia oil ongoing ongoing_air ongoing_student only operation oppose opposed opposition orchestrating orchestrating_arson ordered ordnance ordnance_air organized other overcrowded overnight package parallel paralysi parent paris parliamentary part participant participated particularly partie partly parts party pattern peace peace_prize pecherskyi pedro pedro_sanchez. pensioner pensioner_maricarmen person pillay planned plans point policie policy political poor potential power previou prime prize production prompting proposed protective protest protest_erupt protest_france protest_lead protest_poor protested protester pryluky puerta putin quickly railway raised rally rallying rama rama._clashe ransacked recent recognition refinerie refinery reflect reform refrain refuse regarding region region_ukraine regional reiterated rejection release relief relief_measure remain remain_syrian remark removed reported reportedly rescue resident residential residential_area resign resign_protest resignation response restriction resulted resulting revision riot rising riyadh riyadh_airport riyadh_king robotic rolls rubble ruling ruling_protest russia russia. russia_drone russia_election russia_hybrid russia_launche russia_missile sabotage safety sanchez sanchez._protester sanction saudi saudi_arabia scale scheduled school science science_academy search second security seen september serie service seven several severe severe_disruption severely shops shortage shortly should sides significant similar since sites situation skepticism slept some south south_africa south_african southern sovereignty soweto spain spain. spain._clashe sparked spending spending_cuts spread staff stance stated stating station street strike striking stronger struck student student-led student_protest stun stun_grenade substantial such suggesting supplie support supporter surrounding survivor suspended symbol syria syrian syrian_territory targeted targeting teacher teams tear tear_gas tearing teen tenant tens tension territory territory_syrian them these they third thousand thousand_protest threat threat_france three through tighter tightly tirana tirana_albania took torched totally town trade traffic traffic_chaos transport trump trump_consider tuesday turned ukraine ukraine. ukraine_drone ukraine_energy ukraine_launche ukraine_residential ukraine_urges ukrainian-german un unacceptable understaffed unfair unfair_navi union united united_nation unlawful unmanned unrest urges urges_stronger us used using using_mother variou vehicle violence violent violent_clashe violent_protest visible visit vitali vitali_klitschko. volodymyr volodymyr_zelenskyy voter voter_list war water wave wednesday wednesday_kyiv weeks western when where which whose widespread winner withdrawn would zaporizhzhia zaporizhzhia_claim zelenskyy zero-tolerance"
   },
   "related_events": [
     {
@@ -4998,16 +5298,50 @@
       "href": "/timeline.html?event=event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b"
     },
     {
+      "event_id": "event_israel-commemorates-third-anniversary-of-oct_c05cefd020",
+      "title": "Israel Commemorates Third Anniversary of October 7 Attacks",
+      "summary": "Muninn first tracked this thread on 2026-10-07: Israel Commemorates Third Anniversary of October 7 Attacks. The latest development is Trump Criticizes Zelenskyy, Suggests Ukraine Needs New Leadership.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-10-07",
+      "last_seen_at": "2026-10-11",
+      "development_count": 7,
+      "latest_title": "Trump Criticizes Zelenskyy, Suggests Ukraine Needs New Leadership",
+      "topic_label": "Israel-Hamas Conflict",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_israel-commemorates-third-anniversary-of-oct_c05cefd020.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_israel-commemorates-third-anniversary-of-oct_c05cefd020.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_israel-commemorates-third-anniversary-of-oct_c05cefd020"
+    },
+    {
       "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
       "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
-      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Ukraine's Military Faces Starlink Internet Access Restrictions Amid Russian Attacks.",
+      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Ukraine Resumes Strikes on Russian Oil Refineries Following Truce Breakdown.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-07-22",
-      "last_seen_at": "2026-10-14",
-      "development_count": 76,
-      "latest_title": "Ukraine's Military Faces Starlink Internet Access Restrictions Amid Russian Attacks",
+      "last_seen_at": "2026-10-15",
+      "development_count": 78,
+      "latest_title": "Ukraine Resumes Strikes on Russian Oil Refineries Following Truce Breakdown",
       "topic_label": "Iran War",
       "hero_image": {
         "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
@@ -5030,40 +5364,6 @@
         "focal_tall_y": 0.48
       },
       "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
-    },
-    {
-      "event_id": "event_israeli-strikes-in-gaza-result-in-seven-deat_837b156199",
-      "title": "Israeli Strikes in Gaza Result in Seven Deaths and Destruction of Medical Warehouses",
-      "summary": "Muninn first tracked this thread on 2026-08-01: Israeli Strikes in Gaza Result in Seven Deaths and Destruction of Medical Warehouses. The latest development is Israeli Forces Remove Memorial at Birzeit University Amid Ongoing Violence in Gaza.",
-      "activity_status": "active",
-      "stage": "timeline",
-      "stage_label": "Timeline",
-      "first_seen_at": "2026-08-01",
-      "last_seen_at": "2026-10-06",
-      "development_count": 16,
-      "latest_title": "Israeli Forces Remove Memorial at Birzeit University Amid Ongoing Violence in Gaza",
-      "topic_label": "Gaza Conflict",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_israeli-strikes-in-gaza-result-in-seven-deat_837b156199.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_israeli-strikes-in-gaza-result-in-seven-deat_837b156199.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_israeli-strikes-in-gaza-result-in-seven-deat_837b156199"
     },
     {
       "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",

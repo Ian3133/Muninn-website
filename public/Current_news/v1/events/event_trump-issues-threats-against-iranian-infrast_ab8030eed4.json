@@ -15,7 +15,7 @@
     "summary": "US President Donald Trump has threatened to target Iranian bridges and power plants in retaliation for any attacks on ships in the Strait of Hormuz. He stated that for each ship fired upon by Iranian forces, the US would respond by destroying a corresponding piece of Iranian infrastructure. This escalation comes amid ongoing tensions in the region and rising oil prices.",
     "status": "active",
     "first_seen_at": "2026-07-22",
-    "last_seen_at": "2026-10-14",
+    "last_seen_at": "2026-10-15",
     "timeline": [
       {
         "development_id": "story_627e2a10f3d02720",
@@ -6356,15 +6356,201 @@
         "first_seen_at": "2026-10-14",
         "last_seen_at": "2026-10-14",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_a9213861e4d8e3cb",
+        "daily_story_id": "story_a9213861e4d8e3cb",
+        "date": "2026-10-15",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Houthi Rebels Continue Attacks on Saudi Airports and Riyadh",
+        "summary": "Yemen's Houthi rebels have intensified their attacks on Saudi Arabia, targeting airports and the capital city, Riyadh. The group has pledged to continue these assaults on key infrastructure, including oil facilities, as part of their ongoing conflict with Saudi Arabia.",
+        "topic_label": "Yemen Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "Houthi rebels are attacking Saudi airports and oil facilities.",
+          "Recent strikes have intensified in Riyadh."
+        ],
+        "source_count": 2,
+        "sources": [
+          "CBS News",
+          "TIME"
+        ],
+        "source_urls": [
+          "https://time.com/article/2026/10/15/who-are-the-houthi-rebels-saudi-arabia-oil-airport-attacks",
+          "https://www.cbsnews.com/video/houthi-strikes-on-saudi-capital-intensify-after-airport-attack"
+        ],
+        "source_details": [
+          {
+            "title": "Who Are the Houthis and Why Are They Attacking Saudi Arabia’s Airports?",
+            "source": "TIME",
+            "link": "https://time.com/article/2026/10/15/who-are-the-houthi-rebels-saudi-arabia-oil-airport-attacks",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Houthi strikes on Saudi capital intensify after airport attack",
+            "source": "CBS News",
+            "link": "https://www.cbsnews.com/video/houthi-strikes-on-saudi-capital-intensify-after-airport-attack",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "attack"
+          ],
+          "shared_incident_anchors": [
+            "houthi",
+            "riyadh",
+            "saudi",
+            "saudi_arabia"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "airport",
+            "arabia",
+            "attack",
+            "houthi",
+            "including",
+            "ongoing",
+            "riyadh",
+            "saudi",
+            "targeting",
+            "these"
+          ],
+          "shared_entities": [
+            "houthi",
+            "riyadh",
+            "saudi",
+            "saudi_arabia"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_45d8e9e56e2a2948",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-15",
+        "last_seen_at": "2026-10-15",
+        "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_e63de45e2a3668fc",
+        "daily_story_id": "story_e63de45e2a3668fc",
+        "date": "2026-10-15",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Ukraine Resumes Strikes on Russian Oil Refineries Following Truce Breakdown",
+        "summary": "Ukrainian President Volodymyr Zelensky announced that Ukraine will resume attacks on Russian oil refineries, declaring an end to a temporary ceasefire. This decision follows renewed Russian strikes on Ukrainian infrastructure. Reports indicate that Ukrainian drones targeted a refinery in Russia's Ryazan region shortly after Zelensky's announcement.",
+        "topic_label": "Ukraine Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "Zelensky stated Ukraine would resume strikes on Russian refineries.",
+          "The truce was reportedly ignored by Moscow.",
+          "Ukrainian drones attacked a refinery in Ryazan region."
+        ],
+        "source_count": 6,
+        "sources": [
+          "Al Jazeera English",
+          "BBC - World",
+          "DW - English",
+          "NBC News - Top Stories",
+          "NPR - News",
+          "RTE News"
+        ],
+        "source_urls": [
+          "https://www.rte.ie/news/ukraine/2026/1015/1595431-ukraine-russia",
+          "https://www.aljazeera.com/news/2026/10/15/russia-says-ukraine-resumes-attacks-on-oil-refineries?traffic_source=rss",
+          "https://www.npr.org/2026/10/15/g-s1-148194/russia-ukraine-war",
+          "https://www.nbcnews.com/world/ukraine/ukraine-resumes-strikes-russian-oil-refineries-trump-starlink-intel-rcna603648",
+          "https://www.bbc.co.uk/news/articles/cqwyrnwd9dw1o?at_medium=RSS&at_campaign=rss",
+          "https://www.dw.com/en/ukraine-resumes-attacks-on-russian-refineries-as-zelenskyy-says-we-re-done/a-79667757?maca=en-rss-en-all-1573-rdf"
+        ],
+        "source_details": [
+          {
+            "title": "Ukraine will keep hitting Russian refineries - Zelensky",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/ukraine/2026/1015/1595431-ukraine-russia",
+            "source_bias": "center"
+          },
+          {
+            "title": "Russia says Ukraine resumes attacks on oil refineries",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/news/2026/10/15/russia-says-ukraine-resumes-attacks-on-oil-refineries?traffic_source=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Ukraine resumes attacks on Russian oil refineries, officials say, after brief truce",
+            "source": "NPR - News",
+            "link": "https://www.npr.org/2026/10/15/g-s1-148194/russia-ukraine-war",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Ukraine resumes strikes on Russian oil refineries as anger at Trump mounts",
+            "source": "NBC News - Top Stories",
+            "link": "https://www.nbcnews.com/world/ukraine/ukraine-resumes-strikes-russian-oil-refineries-trump-starlink-intel-rcna603648",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Russia accuses Ukraine of attacking oil refinery after Zelensky says strikes to resume",
+            "source": "BBC - World",
+            "link": "https://www.bbc.co.uk/news/articles/cqwyrnwd9dw1o?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          },
+          {
+            "title": "Ukraine resumes attacks on Russian refineries as Zelenskyy says 'we're done'",
+            "source": "DW - English",
+            "link": "https://www.dw.com/en/ukraine-resumes-attacks-on-russian-refineries-as-zelenskyy-says-we-re-done/a-79667757?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "attack",
+            "strike"
+          ],
+          "shared_incident_anchors": [
+            "oil"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "attack",
+            "conflict",
+            "oil",
+            "region",
+            "strike",
+            "targeted"
+          ],
+          "shared_entities": [
+            "oil"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_3bed95d2992a5c52",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-15",
+        "last_seen_at": "2026-10-15",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 76,
+      "public_development_count": 78,
       "questionable_development_count": 10,
       "review_required": true
     },
-    "latest_title": "Ukraine's Military Faces Starlink Internet Access Restrictions Amid Russian Attacks",
-    "latest_summary": "Ukraine's military has reported sudden restrictions on its access to Starlink satellite internet, which is crucial for its operations. This change coincides with increased Russian missile attacks and a lack of prior warning from the US government. Ukrainian officials have described the impact of these restrictions as severely detrimental, likening it to a nuclear strike against their capabilities.",
+    "latest_title": "Ukraine Resumes Strikes on Russian Oil Refineries Following Truce Breakdown",
+    "latest_summary": "Ukrainian President Volodymyr Zelensky announced that Ukraine will resume attacks on Russian oil refineries, declaring an end to a temporary ceasefire. This decision follows renewed Russian strikes on Ukrainian infrastructure. Reports indicate that Ukrainian drones targeted a refinery in Russia's Ryazan region shortly after Zelensky's announcement.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -6374,30 +6560,30 @@
       "display_title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions Timeline",
       "milestone_development_ids": [
         "story_627e2a10f3d02720",
-        "story_a778f95314804d63",
-        "story_efd65eb6994d75cb",
-        "story_e78a00eca4615509"
+        "story_b8437ee3553e7165",
+        "story_32c35e940379751f",
+        "story_e63de45e2a3668fc"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-10-14",
-      "development_count": 76,
-      "coverage_packet_count": 85,
-      "date_count": 43,
-      "source_count": 237,
+      "summary_updated_at": "2026-10-15",
+      "development_count": 78,
+      "coverage_packet_count": 87,
+      "date_count": 44,
+      "source_count": 245,
       "independent_source_count": 37,
       "first_date": "2026-07-22",
-      "latest_date": "2026-10-14",
-      "latest_update_title": "Ukraine's Military Faces Starlink Internet Access Restrictions Amid Russian Attacks",
+      "latest_date": "2026-10-15",
+      "latest_update_title": "Ukraine Resumes Strikes on Russian Oil Refineries Following Truce Breakdown",
       "coverage_score": 1.0,
       "recency_score": 1.0,
       "rank_score": 1.0,
-      "context_summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Ukraine's Military Faces Starlink Internet Access Restrictions Amid Russian Attacks.",
-      "cta_label": "Explore 76 developments"
+      "context_summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Ukraine Resumes Strikes on Russian Oil Refineries Following Truce Breakdown.",
+      "cta_label": "Explore 78 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "US President Donald Trump has threatened to target Iranian bridges and power plants in retaliation for any attacks on ships in the Strait of Hormuz. A later development was Putin Engages with US Envoys at Kremlin for Ukraine War Talks. Most recently, ukraine's military has reported sudden restrictions on its access to Starlink satellite internet, which is crucial for its operations.",
+      "summary": "US President Donald Trump has threatened to target Iranian bridges and power plants in retaliation for any attacks on ships in the Strait of Hormuz. A later development was Iran Announces Plans for Restricted Zone Around Strait of Hormuz Amid Rising Tensions. Most recently, ukrainian President Volodymyr Zelensky announced that Ukraine will resume attacks on Russian oil refineries, declaring an end to a temporary ceasefire.",
       "key_developments": [
         {
           "development_id": "story_627e2a10f3d02720",
@@ -6405,19 +6591,19 @@
           "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions"
         },
         {
-          "development_id": "story_a778f95314804d63",
-          "date": "2026-08-21",
-          "title": "Iran Threatens Strong Retaliation Against Upcoming US Sanctions"
+          "development_id": "story_b8437ee3553e7165",
+          "date": "2026-08-22",
+          "title": "Iran Claims Victory Amid US Economic Warfare Declaration"
         },
         {
-          "development_id": "story_efd65eb6994d75cb",
-          "date": "2026-09-11",
-          "title": "Zelenskyy Visits Canada for Increased Military Support Amid Russian Attacks"
+          "development_id": "story_32c35e940379751f",
+          "date": "2026-09-12",
+          "title": "Houthis Gain Control of Strategic Bab el-Mandeb Strait, Threatening Oil Exports"
         },
         {
-          "development_id": "story_e78a00eca4615509",
-          "date": "2026-10-14",
-          "title": "Ukraine's Military Faces Starlink Internet Access Restrictions Amid Russian Attacks"
+          "development_id": "story_e63de45e2a3668fc",
+          "date": "2026-10-15",
+          "title": "Ukraine Resumes Strikes on Russian Oil Refineries Following Truce Breakdown"
         }
       ],
       "sources": [
@@ -7842,13 +8028,129 @@
           "source": "New York Times",
           "link": "https://www.nytimes.com/2026/10/14/world/europe/ukraine-starlink-energy.html",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Who Are the Houthis and Why Are They Attacking Saudi Arabia’s Airports?",
+          "source": "TIME",
+          "link": "https://time.com/article/2026/10/15/who-are-the-houthi-rebels-saudi-arabia-oil-airport-attacks",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Houthi strikes on Saudi capital intensify after airport attack",
+          "source": "CBS News",
+          "link": "https://www.cbsnews.com/video/houthi-strikes-on-saudi-capital-intensify-after-airport-attack",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Ukraine will keep hitting Russian refineries - Zelensky",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/ukraine/2026/1015/1595431-ukraine-russia",
+          "source_bias": "center"
+        },
+        {
+          "title": "Russia says Ukraine resumes attacks on oil refineries",
+          "source": "Al Jazeera English",
+          "link": "https://www.aljazeera.com/news/2026/10/15/russia-says-ukraine-resumes-attacks-on-oil-refineries?traffic_source=rss",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Ukraine resumes attacks on Russian oil refineries, officials say, after brief truce",
+          "source": "NPR - News",
+          "link": "https://www.npr.org/2026/10/15/g-s1-148194/russia-ukraine-war",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Ukraine resumes strikes on Russian oil refineries as anger at Trump mounts",
+          "source": "NBC News - Top Stories",
+          "link": "https://www.nbcnews.com/world/ukraine/ukraine-resumes-strikes-russian-oil-refineries-trump-starlink-intel-rcna603648",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Russia accuses Ukraine of attacking oil refinery after Zelensky says strikes to resume",
+          "source": "BBC - World",
+          "link": "https://www.bbc.co.uk/news/articles/cqwyrnwd9dw1o?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
+        },
+        {
+          "title": "Ukraine resumes attacks on Russian refineries as Zelenskyy says 'we're done'",
+          "source": "DW - English",
+          "link": "https://www.dw.com/en/ukraine-resumes-attacks-on-russian-refineries-as-zelenskyy-says-we-re-done/a-79667757?maca=en-rss-en-all-1573-rdf",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-10-14",
+      "updated_at": "2026-10-15",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
     "related_events": [
+      {
+        "event_id": "event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a",
+        "title": "Trump Delays Iran Strikes to Pursue Diplomatic Deal",
+        "relationship": "related_topic",
+        "confidence": 0.95,
+        "shared_entities": [
+          "deal_trump",
+          "donald_trump",
+          "economic_warfare",
+          "general_assembly",
+          "gulf",
+          "hormuz_iran",
+          "iran",
+          "iran.",
+          "jd",
+          "june",
+          "kharg_island",
+          "nation_general",
+          "pursue",
+          "revolutionary_guard",
+          "strait",
+          "trump_issue",
+          "un",
+          "united",
+          "united_nation",
+          "us"
+        ]
+      },
+      {
+        "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
+        "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
+        "relationship": "related_topic",
+        "confidence": 0.95,
+        "shared_entities": [
+          "bab",
+          "canada",
+          "capture_strategic",
+          "civilian_casualtie",
+          "concurrently_russia",
+          "el-mandeb",
+          "fatalitie",
+          "gulf",
+          "houthi",
+          "houthi_capture",
+          "iran-backed_houthi",
+          "kyiv",
+          "kyiv_result",
+          "perim_island",
+          "red",
+          "red_sea",
+          "red_sea.",
+          "region_result",
+          "russia",
+          "russia_missile",
+          "saudi_airstrike",
+          "ukraine",
+          "un",
+          "united_nation",
+          "us",
+          "visit_canada",
+          "volodymyr_zelensky",
+          "volodymyr_zelenskyy",
+          "yemen",
+          "yemen_houthi",
+          "yemen_result",
+          "zelenskyy_visit"
+        ]
+      },
       {
         "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
         "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
@@ -7901,91 +8203,21 @@
         ]
       },
       {
-        "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
-        "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
+        "event_id": "event_investigation-launched-into-low-flying-jets_860ac42bd7",
+        "title": "Investigation Launched into Low-Flying Jets Over Cape Town Stadium",
         "relationship": "related_topic",
         "confidence": 0.95,
         "shared_entities": [
-          "donald_trump",
-          "energy_facilitie",
-          "india",
-          "international_airport",
+          "benjamin_netanyahu",
+          "houthi_rebel",
           "israel",
-          "khalid_international",
-          "king_khalid",
-          "kyiv",
-          "nation_general",
+          "israel_prime",
           "riyadh",
-          "riyadh_airport",
-          "riyadh_king",
-          "russia",
-          "russia_drone",
-          "russia_launche",
-          "russia_missile",
+          "riyadh_yemen",
+          "saudi",
           "saudi_arabia",
-          "ukraine",
-          "ukraine.",
-          "un",
-          "united",
-          "united_nation",
-          "us",
-          "volodymyr_zelenskyy"
-        ]
-      },
-      {
-        "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
-        "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
-        "relationship": "related_topic",
-        "confidence": 0.95,
-        "shared_entities": [
-          "bab",
-          "canada",
-          "capture_strategic",
-          "civilian_casualtie",
-          "concurrently_russia",
-          "el-mandeb",
-          "fatalitie",
-          "gulf",
-          "houthi",
-          "houthi_capture",
-          "iran-backed_houthi",
-          "kyiv",
-          "kyiv_result",
-          "perim_island",
-          "red",
-          "red_sea",
-          "red_sea.",
-          "region_result",
-          "russia",
-          "russia_missile",
-          "saudi_airstrike",
-          "ukraine",
-          "un",
-          "united_nation",
-          "us",
-          "visit_canada",
-          "volodymyr_zelensky",
-          "volodymyr_zelenskyy",
-          "yemen",
-          "yemen_houthi",
-          "yemen_result",
-          "zelenskyy_visit"
-        ]
-      },
-      {
-        "event_id": "event_putin-dismisses-need-for-new-mobilization-am_ebfb88abcf",
-        "title": "Putin Dismisses Need for New Mobilization Amid Peace Talks",
-        "relationship": "related_topic",
-        "confidence": 0.95,
-        "shared_entities": [
-          "kyiv",
-          "peace_talks",
-          "russia",
-          "ukraine",
-          "ukraine.",
-          "us",
-          "vladimir_putin",
-          "volodymyr_zelenskyy."
+          "saudi_arabia.",
+          "yemen_houthi"
         ]
       }
     ],
@@ -8159,6 +8391,7 @@
       "anniversary",
       "announce",
       "announced",
+      "announcement",
       "announcing",
       "another",
       "appeal",
@@ -8201,6 +8434,7 @@
       "border",
       "both",
       "breach",
+      "breakdown",
       "brent",
       "brics",
       "bridge",
@@ -8317,6 +8551,7 @@
       "declaration",
       "declare",
       "declared",
+      "declaring",
       "decline",
       "deepening",
       "defeat",
@@ -8796,6 +9031,8 @@
       "reduce",
       "reduced",
       "referred",
+      "refinerie",
+      "refinery",
       "reflect",
       "reflecting",
       "refrain",
@@ -8849,6 +9086,7 @@
       "rough",
       "route",
       "russia",
+      "ryazan",
       "sanction",
       "satellite",
       "saturday",
@@ -8957,6 +9195,7 @@
       "targeted",
       "targeting",
       "tehran",
+      "temporary",
       "tens",
       "tension",
       "terminal",
@@ -8997,6 +9236,7 @@
       "trial",
       "tribunal",
       "tribute",
+      "truce",
       "trump",
       "twin",
       "ukraine",
@@ -9088,6 +9328,7 @@
       "alleged_wedding",
       "allie",
       "america",
+      "arabia._ukraine",
       "arabia_denounce",
       "arabia_faces",
       "arabia_investigate",
@@ -9101,6 +9342,7 @@
       "bombing_iran",
       "border_crossing",
       "both_poland",
+      "breakdown_ukraine",
       "brent_crude",
       "brics",
       "brics_leader",
@@ -9194,6 +9436,7 @@
       "houthi_claim",
       "houthi_gain",
       "houthi_missile",
+      "houthi_rebel",
       "houthis.",
       "houthis._russia",
       "increased_military",
@@ -9324,6 +9567,7 @@
       "qeshm",
       "qeshm_island",
       "reach_record",
+      "rebel_continue",
       "recent_russia",
       "record_high",
       "red",
@@ -9344,14 +9588,17 @@
       "riyadh_airport",
       "riyadh_king",
       "riyadh_saudi",
+      "riyadh_yemen",
       "rocket_launcher",
       "russia",
       "russia._iran",
       "russia_drone",
       "russia_launche",
       "russia_missile",
+      "russia_ryazan",
       "russia_ukraine",
       "saudi",
+      "saudi_airport",
       "saudi_airstrike",
       "saudi_arabia",
       "saudi_arabia.",
@@ -9399,6 +9646,7 @@
       "train_near",
       "treasury_secretary",
       "trial_scheduled",
+      "truce_breakdown",
       "trump",
       "trump_cancel",
       "trump_commemorate",
@@ -9423,6 +9671,7 @@
       "ukraine._both",
       "ukraine_condemn",
       "ukraine_military",
+      "ukraine_resume",
       "ukraine_war",
       "ulchi_freedom",
       "un",
@@ -9472,24 +9721,24 @@
       "zelenskyy_visit",
       "zone_around"
     ],
-    "search_text": "000 100 2001 2003 2006 2025 2028 25th 260 300 450 60-day 600 977 aboard accept access access_restriction achieved across action additional additionally address adjustment administration advance aerial affected affecting agreed agreement ahead aimed aiming air_force aircraft airline airport airport_result airport_saudi airport_targeted airstrike al-qaeda alive allegation alleged alleged_mastermind alleged_support alleged_wedding allie alongside also alternative ambition america anger annihilate anniversary announce announced announcing another appeal approximately arabia arabia_denounce arabia_faces arabia_investigate aramco around around_strait assault assembly assembly_iran assert asserting assistance attack attacked attempt attempted attempting attend attributed authoritie authority average awareness bab ballistic baloch barrel base becoming began began_israel behind benjamin benjamin_netanyahu bessent bipartisan black black_sea blaze blessing blockade bomb bombing bombing_iran border border_crossing both both_poland breach brent brent_crude brics brics_leader bridge brief broader building call calm came campaign canada cancel cancel_joint cancel_planned canceled cancellation capabilitie capital capture capture_strategic captured carrier casualtie casualtie_reported casualtie_russia casualty caused causing cctv ceasefire ceasefire_negotiation central central_command ceremony change characterized characterizing chief child chose citing citizen civil civilian civilian_casualtie claim claim_missile claim_victory claimed clashe close closely closure coalition coalition_intercept coastline coastline_impacting coincide coinciding come comes command commemorate commemorate_anniversary commemorate_victim commemoration commercial commercial_ship commitment communicated community company compensation completed concern concerning concurrently concurrently_russia condemn condemn_russia condemned condemning condition conduct conducted confirm confirm_origin confirmed conflict conflicting confrontation connected connection consecutive consequence consider consider_lawsuit considered considering constraint contingent continuation continue continuing control corps corresponding costs counter court create crescent crescent_society crew crime critical critique critique_uss crossing crucial crude cruise curbing currently d.c. damage danger dead deadliest deadline deadline_donald deadly deadly_houthi deal deal_deadline deal_negotiation deal_trump death decision decisive declaration declaration_iran declare declared decline deepening defeat defense defense_failure deliberate deliberating deliver delusion demand demand_compensation demanded democrat denial denial_iraq denie denied denounce denounce_drone deploy deployment deployment_duration describe describe_iran described despite destroy destroyed destroyer destroying destruction detrimental devastating development diesel diesel_price dignitarie diplomatic diplomatic_effort direct discuss discussion dismissed displacement display disruption diversion donald donald_trump dorohusk doubt downed downed_qatar downing downy drill driven drone drone_show duration each earlier early east east-west east-west_pipeline east._additionally eastern economic economic_warfare economy effective effectiveness effort eight eighth el-mandeb election electricity embassy emphasized ending enemy energy energy_facilitie engage engaged english enhance enough enter entrance envoy escalate escalated escalating escalating_iran escalating_tension escalation establish established eu evacuation event ever exact exceed exceeding exchange exercise exercised expanded expansion expect experienced experiencing expiration expired export export_iran-aligned export_terminal express express_concern expressed expressing extend extend_pause extension face faced faces faces_houthi faces_starlink facilitie facilitie_saudi facility fade fail failed failure familie family fatal fatalitie february february_trump fell fight fighter fighter_jets fighting fire fired firefighter firing firmly first first_time five flame flashpoint flight fluctuation focused focusing foiled foiled_missile follow footage force force_target foreign foreign_ministry forget four framework freedom freedom_shield front fuel funeral further gain gain_control gallon gas general general_assembly giant global goods governor graham grain grain_export grid group guantanamo guantanamo_bay guard guard_corps gulf half halt halted halts handling health heels heightened held high high-ranking higher highlight highlighted highlighting hijacker history hodeidah holding holding_iran home honor honored hopes hormuz hormuz._drone hormuz._trump hormuz_deal hormuz_iran hormuz_stalemate hormuz_tension hostilitie house house_votes houthi houthi-run houthi_capture houthi_claim houthi_gain houthi_missile houthis. houthis._russia hundred ignite image impact impacted impacting importance impose imposed incident included including increase increased increased_military increasing india india_brics indicate indicate_possible indicated indicating indication individual industrial inflation information infrastructure initial initiate injured injurie instead intelligence intended intensifie intensified intensify intercept intercept_houthi intercepted interfere interim international international_airport internet internet_access intimidate invasion investigate investigate_defense investigating investigation involved iran iran-aligned iran-aligned_houthi iran-backed iran-backed_houthi iran. iran._houthi iran._iran iran_claim iran_extend iran_infrastructure iran_launche iran_militia iran_negotiation iran_operation iran_pause iran_pending iran_pilot iran_promise iran_red iran_respond iran_revolutionary iran_rocket iran_tanker iran_target iran_tension iran_threaten iran_war iran_wedding iranian-backed iranian-backed_houthi iraq iraq. iraq_confirm iraqi islamic islamic_republic. island island_escalating island_iran israel israel_prime issue issue_threat issued jd jet-powered jets jets_downed jizan jizan. joining joint joint_drill jordan jordanian judge july june kaja kaja_kalla kalla khalid khalid_international khalid_sheikh kharg kharg_island kharkiv kharkiv. killed king king_khalid kingdom korea korea_due kremlin kuhestak kuhestak_iran kyiv kyiv_petrol kyiv_result kyiv_ukraine labeling lack lane larak larak_island late launch launche launche_retaliatory launche_targeted launched launcher lawsuit lead leader leader_express leadership leading learning least leave leaving legitimate length leo_xiv life likening limit limit_trump lincoln lincoln_deployment lindsey lindsey_graham lives loaded local located location locked long lost loved lviv lviv. lviv._houthi lviv_region made management march marine marine_cancel maritime mark marked market marking marks masoud masoud_pezeshkian mastermind mastermind_khalid matter mayor meanwhile meanwhile_saudi measure media meet meeting member middle middle_east middle_east. middle_eastern military military_action military_destroy military_faces military_support militia militia_denial mines ministry missile mohammed mokha moment monday month morale morning most mourning move multiple nation nation_general national nature naval near near_kharg near_polish nearly necessary need negotiate negotiation negotiator netanyahu never next noted notice nuclear numerou occur occurred october offensive office officially oil oman ones ongoing ongoing_houthi ongoing_russia ongoing_yemen online operation operation_trump opposition opting order ordered origin originated other outage outage_russia outside overnight package pakistani part particularly party passe passe_without passed past pause paused pavlohrad peace peace_talks peaceful pending pending_deal pentagon pentagon_ceremony perim perim_island perimeter period petrol petrol_station pezeshkian piece pilot pipeline place plaintiff planned plans plant pledged poignant poland policy polish polish_border political pope pope_leo ports poses position possible possible_upcoming potatoe potential power power_outage power_regarding precautionary predominantly preparing pressure previou previously price price_decline price_exceed price_reach price_surge prime prior proceed progress projectile promise promise_retaliation prompting proposal prospect protecting provide provided province punishment pursue pursuing push putin putin_engage qatar qatar_refute qatari qeshm qeshm_island question raise raised raising rapid reach reach_record reached reaching reaction reality reason rebel rebel-held rebuke receive received recent recent_russia recognized record record_high recreated red red_crescent red_sea red_sea. reduce reduced referred reflect reflecting refrain refute refute_claim regarding regarding_iran regime region region_recent region_result region_yemen regional regional_allie reject related remain remark remembering renewed reopen reopening reported reportedly representative representing republic republic._pezeshkian republican request requested resident residential resolution resolving respond responded responding response responsibility restrict restricted restricted_zone restriction result resulted resulting resume resumed retaliate retaliation retaliatory returned revolutionary revolutionary_guard rise rising rising_tension riyadh riyadh_airport riyadh_king riyadh_saudi rocket rocket_launcher rough route russia russia._iran russia_drone russia_launche russia_missile russia_ukraine sanction satellite saturday saudi saudi-led saudi_airstrike saudi_arabia saudi_arabia. saudi_base saudi_coalition saudi_force saudi_foreign saudi_pipeline saving scene scheduled school scott scott_bessent sea._meanwhile sea_coastline sea_region sea_result second secretary secretary_scott security seeks seen senior september september_video serie seriou serving several severe severely sharing sheikh sheikh_mohammed shield shift ship shipping shipping_houthi ships shortly should show show_commemorate showcasing showing shrapnel sides significant significantly since since_iran site situation six six-month small small_potatoe smoke society soldier solution some soon sought south south_korea southern space spark spark_mourning speaking specifically speech stability stage stalemate stalled stark starlink starlink_internet start stated statement stating station still strait strait_threatening strategic strategic_bab strategic_island strategy strengthen strike striking strong strong_retaliation struck success successfully such sudden suggesting suggestion summit sunday supplie supply supply_concern support supported supporting surge surge_past surged surpassed surprise surrender suspend suspended system take taken takeover talks talks_passe talks_vladimir tanker tanker_near target target_iran targeted targeted_drone targeting tehran tens tension tension_iran tension_recent terminal terminal_escalate territory terrorism terrorist there these they thick though thousand threat threaten threaten_strong threatened threatening three through thursday thwarting tighten time time_since toll tolls total toughest toward tower track traffic tragic train train_near transfer transition transportation travel treasury treasury_secretary trial trial_scheduled tribunal tribute trump trump_cancel trump_commemorate trump_critique trump_demand trump_describe trump_halts trump_issue trump_meet trump_threat trump_war trump_warns trump_weigh twin twin_tower u.s. u.s.-iran u.s.-iran_peace ukraine ukraine-poland ukraine-poland_border ukraine. ukraine._both ukraine_condemn ukraine_military ukraine_war ulchi ulchi_freedom umbrella un unclear undermine underway unidentified unilateral united united_nation unmanned until upcoming upcoming_negotiation upon urged urging us us-iran us. used using uss uss_lincoln vance variou vessel vice victim victim_ahead victory video vile violating violence visit visit_canada visiting vital vladimir vladimir_putin volodymyr volodymyr_zelensky volodymyr_zelenskyy volodymyr_zelenskyy. vote voted votes vowed war war_began war_constraint war_power war_talks warfare warfare_declaration warned warning warns warns_iran warsaw-bound warship washington washington_d.c. waterway wedding wedding_bombing wedding_spark wednesday week weekend weekly weekly_gain weeks weigh weigh_military western when where whether which while winter withdrawal without without_agreement worldwide worried would wounded xiv xiv_commemorate yahodyn yahodyn_dorohusk year years yemen yemen. yemen._zelenskyy yemen_hodeidah yemen_houthi yemen_red yemen_result yemeni yemeni_houthi york york._houthi zelensky zelensky_indicate zelenskyy zelenskyy._escalation zelenskyy_claim zelenskyy_visit zone zone_around"
+    "search_text": "000 100 2001 2003 2006 2025 2028 25th 260 300 450 60-day 600 977 aboard accept access access_restriction achieved across action additional additionally address adjustment administration advance aerial affected affecting agreed agreement ahead aimed aiming air_force aircraft airline airport airport_result airport_saudi airport_targeted airstrike al-qaeda alive allegation alleged alleged_mastermind alleged_support alleged_wedding allie alongside also alternative ambition america anger annihilate anniversary announce announced announcement announcing another appeal approximately arabia arabia._ukraine arabia_denounce arabia_faces arabia_investigate aramco around around_strait assault assembly assembly_iran assert asserting assistance attack attacked attempt attempted attempting attend attributed authoritie authority average awareness bab ballistic baloch barrel base becoming began began_israel behind benjamin benjamin_netanyahu bessent bipartisan black black_sea blaze blessing blockade bomb bombing bombing_iran border border_crossing both both_poland breach breakdown breakdown_ukraine brent brent_crude brics brics_leader bridge brief broader building call calm came campaign canada cancel cancel_joint cancel_planned canceled cancellation capabilitie capital capture capture_strategic captured carrier casualtie casualtie_reported casualtie_russia casualty caused causing cctv ceasefire ceasefire_negotiation central central_command ceremony change characterized characterizing chief child chose citing citizen civil civilian civilian_casualtie claim claim_missile claim_victory claimed clashe close closely closure coalition coalition_intercept coastline coastline_impacting coincide coinciding come comes command commemorate commemorate_anniversary commemorate_victim commemoration commercial commercial_ship commitment communicated community company compensation completed concern concerning concurrently concurrently_russia condemn condemn_russia condemned condemning condition conduct conducted confirm confirm_origin confirmed conflict conflicting confrontation connected connection consecutive consequence consider consider_lawsuit considered considering constraint contingent continuation continue continuing control corps corresponding costs counter court create crescent crescent_society crew crime critical critique critique_uss crossing crucial crude cruise curbing currently d.c. damage danger dead deadliest deadline deadline_donald deadly deadly_houthi deal deal_deadline deal_negotiation deal_trump death decision decisive declaration declaration_iran declare declared declaring decline deepening defeat defense defense_failure deliberate deliberating deliver delusion demand demand_compensation demanded democrat denial denial_iraq denie denied denounce denounce_drone deploy deployment deployment_duration describe describe_iran described despite destroy destroyed destroyer destroying destruction detrimental devastating development diesel diesel_price dignitarie diplomatic diplomatic_effort direct discuss discussion dismissed displacement display disruption diversion donald donald_trump dorohusk doubt downed downed_qatar downing downy drill driven drone drone_show duration each earlier early east east-west east-west_pipeline east._additionally eastern economic economic_warfare economy effective effectiveness effort eight eighth el-mandeb election electricity embassy emphasized ending enemy energy energy_facilitie engage engaged english enhance enough enter entrance envoy escalate escalated escalating escalating_iran escalating_tension escalation establish established eu evacuation event ever exact exceed exceeding exchange exercise exercised expanded expansion expect experienced experiencing expiration expired export export_iran-aligned export_terminal express express_concern expressed expressing extend extend_pause extension face faced faces faces_houthi faces_starlink facilitie facilitie_saudi facility fade fail failed failure familie family fatal fatalitie february february_trump fell fight fighter fighter_jets fighting fire fired firefighter firing firmly first first_time five flame flashpoint flight fluctuation focused focusing foiled foiled_missile follow footage force force_target foreign foreign_ministry forget four framework freedom freedom_shield front fuel funeral further gain gain_control gallon gas general general_assembly giant global goods governor graham grain grain_export grid group guantanamo guantanamo_bay guard guard_corps gulf half halt halted halts handling health heels heightened held high high-ranking higher highlight highlighted highlighting hijacker history hodeidah holding holding_iran home honor honored hopes hormuz hormuz._drone hormuz._trump hormuz_deal hormuz_iran hormuz_stalemate hormuz_tension hostilitie house house_votes houthi houthi-run houthi_capture houthi_claim houthi_gain houthi_missile houthi_rebel houthis. houthis._russia hundred ignite image impact impacted impacting importance impose imposed incident included including increase increased increased_military increasing india india_brics indicate indicate_possible indicated indicating indication individual industrial inflation information infrastructure initial initiate injured injurie instead intelligence intended intensifie intensified intensify intercept intercept_houthi intercepted interfere interim international international_airport internet internet_access intimidate invasion investigate investigate_defense investigating investigation involved iran iran-aligned iran-aligned_houthi iran-backed iran-backed_houthi iran. iran._houthi iran._iran iran_claim iran_extend iran_infrastructure iran_launche iran_militia iran_negotiation iran_operation iran_pause iran_pending iran_pilot iran_promise iran_red iran_respond iran_revolutionary iran_rocket iran_tanker iran_target iran_tension iran_threaten iran_war iran_wedding iranian-backed iranian-backed_houthi iraq iraq. iraq_confirm iraqi islamic islamic_republic. island island_escalating island_iran israel israel_prime issue issue_threat issued jd jet-powered jets jets_downed jizan jizan. joining joint joint_drill jordan jordanian judge july june kaja kaja_kalla kalla khalid khalid_international khalid_sheikh kharg kharg_island kharkiv kharkiv. killed king king_khalid kingdom korea korea_due kremlin kuhestak kuhestak_iran kyiv kyiv_petrol kyiv_result kyiv_ukraine labeling lack lane larak larak_island late launch launche launche_retaliatory launche_targeted launched launcher lawsuit lead leader leader_express leadership leading learning least leave leaving legitimate length leo_xiv life likening limit limit_trump lincoln lincoln_deployment lindsey lindsey_graham lives loaded local located location locked long lost loved lviv lviv. lviv._houthi lviv_region made management march marine marine_cancel maritime mark marked market marking marks masoud masoud_pezeshkian mastermind mastermind_khalid matter mayor meanwhile meanwhile_saudi measure media meet meeting member middle middle_east middle_east. middle_eastern military military_action military_destroy military_faces military_support militia militia_denial mines ministry missile mohammed mokha moment monday month morale morning most mourning move multiple nation nation_general national nature naval near near_kharg near_polish nearly necessary need negotiate negotiation negotiator netanyahu never next noted notice nuclear numerou occur occurred october offensive office officially oil oman ones ongoing ongoing_houthi ongoing_russia ongoing_yemen online operation operation_trump opposition opting order ordered origin originated other outage outage_russia outside overnight package pakistani part particularly party passe passe_without passed past pause paused pavlohrad peace peace_talks peaceful pending pending_deal pentagon pentagon_ceremony perim perim_island perimeter period petrol petrol_station pezeshkian piece pilot pipeline place plaintiff planned plans plant pledged poignant poland policy polish polish_border political pope pope_leo ports poses position possible possible_upcoming potatoe potential power power_outage power_regarding precautionary predominantly preparing pressure previou previously price price_decline price_exceed price_reach price_surge prime prior proceed progress projectile promise promise_retaliation prompting proposal prospect protecting provide provided province punishment pursue pursuing push putin putin_engage qatar qatar_refute qatari qeshm qeshm_island question raise raised raising rapid reach reach_record reached reaching reaction reality reason rebel rebel-held rebel_continue rebuke receive received recent recent_russia recognized record record_high recreated red red_crescent red_sea red_sea. reduce reduced referred refinerie refinery reflect reflecting refrain refute refute_claim regarding regarding_iran regime region region_recent region_result region_yemen regional regional_allie reject related remain remark remembering renewed reopen reopening reported reportedly representative representing republic republic._pezeshkian republican request requested resident residential resolution resolving respond responded responding response responsibility restrict restricted restricted_zone restriction result resulted resulting resume resumed retaliate retaliation retaliatory returned revolutionary revolutionary_guard rise rising rising_tension riyadh riyadh_airport riyadh_king riyadh_saudi riyadh_yemen rocket rocket_launcher rough route russia russia._iran russia_drone russia_launche russia_missile russia_ryazan russia_ukraine ryazan sanction satellite saturday saudi saudi-led saudi_airport saudi_airstrike saudi_arabia saudi_arabia. saudi_base saudi_coalition saudi_force saudi_foreign saudi_pipeline saving scene scheduled school scott scott_bessent sea._meanwhile sea_coastline sea_region sea_result second secretary secretary_scott security seeks seen senior september september_video serie seriou serving several severe severely sharing sheikh sheikh_mohammed shield shift ship shipping shipping_houthi ships shortly should show show_commemorate showcasing showing shrapnel sides significant significantly since since_iran site situation six six-month small small_potatoe smoke society soldier solution some soon sought south south_korea southern space spark spark_mourning speaking specifically speech stability stage stalemate stalled stark starlink starlink_internet start stated statement stating station still strait strait_threatening strategic strategic_bab strategic_island strategy strengthen strike striking strong strong_retaliation struck success successfully such sudden suggesting suggestion summit sunday supplie supply supply_concern support supported supporting surge surge_past surged surpassed surprise surrender suspend suspended system take taken takeover talks talks_passe talks_vladimir tanker tanker_near target target_iran targeted targeted_drone targeting tehran temporary tens tension tension_iran tension_recent terminal terminal_escalate territory terrorism terrorist there these they thick though thousand threat threaten threaten_strong threatened threatening three through thursday thwarting tighten time time_since toll tolls total toughest toward tower track traffic tragic train train_near transfer transition transportation travel treasury treasury_secretary trial trial_scheduled tribunal tribute truce truce_breakdown trump trump_cancel trump_commemorate trump_critique trump_demand trump_describe trump_halts trump_issue trump_meet trump_threat trump_war trump_warns trump_weigh twin twin_tower u.s. u.s.-iran u.s.-iran_peace ukraine ukraine-poland ukraine-poland_border ukraine. ukraine._both ukraine_condemn ukraine_military ukraine_resume ukraine_war ulchi ulchi_freedom umbrella un unclear undermine underway unidentified unilateral united united_nation unmanned until upcoming upcoming_negotiation upon urged urging us us-iran us. used using uss uss_lincoln vance variou vessel vice victim victim_ahead victory video vile violating violence visit visit_canada visiting vital vladimir vladimir_putin volodymyr volodymyr_zelensky volodymyr_zelenskyy volodymyr_zelenskyy. vote voted votes vowed war war_began war_constraint war_power war_talks warfare warfare_declaration warned warning warns warns_iran warsaw-bound warship washington washington_d.c. waterway wedding wedding_bombing wedding_spark wednesday week weekend weekly weekly_gain weeks weigh weigh_military western when where whether which while winter withdrawal without without_agreement worldwide worried would wounded xiv xiv_commemorate yahodyn yahodyn_dorohusk year years yemen yemen. yemen._zelenskyy yemen_hodeidah yemen_houthi yemen_red yemen_result yemeni yemeni_houthi york york._houthi zelensky zelensky_indicate zelenskyy zelenskyy._escalation zelenskyy_claim zelenskyy_visit zone zone_around"
   },
   "related_events": [
     {
-      "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
-      "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
-      "summary": "Muninn first tracked this thread on 2026-09-11: Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims. The latest development is Iran's Control Over Hormuz Strait Questioned by US Officials.",
+      "event_id": "event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a",
+      "title": "Trump Delays Iran Strikes to Pursue Diplomatic Deal",
+      "summary": "Muninn first tracked this thread on 2026-08-02: Trump Delays Iran Strikes to Pursue Diplomatic Deal. The latest development is UK Prime Minister Links Iran to RAF Fairford Incident.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
-      "first_seen_at": "2026-09-11",
-      "last_seen_at": "2026-10-07",
-      "development_count": 34,
-      "latest_title": "Iran's Control Over Hormuz Strait Questioned by US Officials",
-      "topic_label": "9/11 Victim Compensation",
+      "first_seen_at": "2026-08-02",
+      "last_seen_at": "2026-10-12",
+      "development_count": 12,
+      "latest_title": "UK Prime Minister Links Iran to RAF Fairford Incident",
+      "topic_label": "Iran Relations",
       "hero_image": {
-        "url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",
+        "url": "/Current_news/generated/events/event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a.jpg",
         "source": "Muninn AI illustration",
         "author": "OpenAI GPT Image 2",
         "license": "AI-generated content",
@@ -9507,41 +9756,7 @@
         "focal_tall_x": 0.5,
         "focal_tall_y": 0.48
       },
-      "href": "/timeline.html?event=event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b"
-    },
-    {
-      "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
-      "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
-      "summary": "Muninn first tracked this thread on 2026-09-18: Macron Implements Measures Against Intensifying Russian Hybrid Threats. The latest development is Protests Erupt in India Over Voter List Revisions Amid Allegations of Police Abuse.",
-      "activity_status": "active",
-      "stage": "timeline",
-      "stage_label": "Timeline",
-      "first_seen_at": "2026-09-18",
-      "last_seen_at": "2026-10-14",
-      "development_count": 36,
-      "latest_title": "Protests Erupt in India Over Voter List Revisions Amid Allegations of Police Abuse",
-      "topic_label": "Russian Hybrid Attacks",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_macron-implements-measures-against-intensify_109da09c6f.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_macron-implements-measures-against-intensify_109da09c6f.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_macron-implements-measures-against-intensify_109da09c6f"
+      "href": "/timeline.html?event=event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a"
     },
     {
       "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
@@ -9578,20 +9793,20 @@
       "href": "/timeline.html?event=event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea"
     },
     {
-      "event_id": "event_putin-dismisses-need-for-new-mobilization-am_ebfb88abcf",
-      "title": "Putin Dismisses Need for New Mobilization Amid Peace Talks",
-      "summary": "Muninn first tracked this thread on 2026-09-03: Putin Dismisses Need for New Mobilization Amid Peace Talks. The latest development is NATO Shoots Down Drone in Lithuania; Russian Frigate Fires Flares at Danish Helicopter.",
+      "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
+      "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
+      "summary": "Muninn first tracked this thread on 2026-09-11: Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims. The latest development is Iran's Control Over Hormuz Strait Questioned by US Officials.",
       "activity_status": "active",
-      "stage": "developing_event",
-      "stage_label": "Developing event",
-      "first_seen_at": "2026-09-03",
-      "last_seen_at": "2026-09-15",
-      "development_count": 3,
-      "latest_title": "NATO Shoots Down Drone in Lithuania; Russian Frigate Fires Flares at Danish Helicopter",
-      "topic_label": "Ukraine War",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-09-11",
+      "last_seen_at": "2026-10-07",
+      "development_count": 34,
+      "latest_title": "Iran's Control Over Hormuz Strait Questioned by US Officials",
+      "topic_label": "9/11 Victim Compensation",
       "hero_image": {
-        "url": "/Current_news/generated/events/event_putin-dismisses-need-for-new-mobilization-am_ebfb88abcf.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_putin-dismisses-need-for-new-mobilization-am_ebfb88abcf.jpg",
+        "url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",
         "source": "Muninn AI illustration",
         "author": "OpenAI GPT Image 2",
         "license": "AI-generated content",
@@ -9609,7 +9824,41 @@
         "focal_tall_x": 0.5,
         "focal_tall_y": 0.48
       },
-      "href": "/timeline.html?event=event_putin-dismisses-need-for-new-mobilization-am_ebfb88abcf"
+      "href": "/timeline.html?event=event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b"
+    },
+    {
+      "event_id": "event_investigation-launched-into-low-flying-jets_860ac42bd7",
+      "title": "Investigation Launched into Low-Flying Jets Over Cape Town Stadium",
+      "summary": "Muninn first tracked this thread on 2026-09-03: Investigation Launched into Low-Flying Jets Over Cape Town Stadium. The latest development is Houthi Rebels Claim Responsibility for Attacks on Saudi Oil Facilities in Riyadh.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-09-03",
+      "last_seen_at": "2026-10-04",
+      "development_count": 8,
+      "latest_title": "Houthi Rebels Claim Responsibility for Attacks on Saudi Oil Facilities in Riyadh",
+      "topic_label": "Aviation Safety",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_investigation-launched-into-low-flying-jets_860ac42bd7.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_investigation-launched-into-low-flying-jets_860ac42bd7.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_investigation-launched-into-low-flying-jets_860ac42bd7"
     }
   ]
 }
