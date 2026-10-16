@@ -15,7 +15,7 @@
     "summary": "A ship sank off the coast of Bulgaria following a drone attack that targeted two commercial vessels. Eighteen sailors were rescued from the affected ships after the incident.",
     "status": "active",
     "first_seen_at": "2026-10-06",
-    "last_seen_at": "2026-10-15",
+    "last_seen_at": "2026-10-16",
     "timeline": [
       {
         "development_id": "story_a59f66f2c6bff8ab",
@@ -209,6 +209,83 @@
         "first_seen_at": "2026-10-15",
         "last_seen_at": "2026-10-15",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_6ec7fa05f6b4105c",
+        "daily_story_id": "story_6ec7fa05f6b4105c",
+        "date": "2026-10-16",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Drone Strikes in Black Sea Heighten Concerns Over Russian Escalation and NATO Response",
+        "summary": "Recent drone strikes in the Black Sea have raised alarms about potential Russian escalation and its implications for NATO's response. The attacks occurred within the exclusive economic zones of two countries, resulting in two fatalities and leaving at least 25 individuals missing. These developments pose a threat to a critical global shipping route and increase the risk of broader international involvement in the ongoing conflict in Ukraine.",
+        "topic_label": "Ukraine Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "Drone strikes occurred in the Black Sea.",
+          "Two people have died, and at least 25 are missing.",
+          "The strikes threaten a vital global shipping route."
+        ],
+        "source_count": 2,
+        "sources": [
+          "AP News",
+          "PBS News"
+        ],
+        "source_urls": [
+          "https://news.google.com/rss/articles/CBMirgFBVV95cUxNTzFrRE5pMHU0QUV5V2ZHeTBuUHR3cnJDY09QMnEyMndIVVA5TG5aUE5zSkhIdWNhZVVLcEJPSGMweVFtVGFma3RXcWlZa2xaeVpMWjg3UnFsUXQ0SXQ1ZFdwdXY0cG4zc3U3NlJBRm81eEkyanlKcG1ENGJWS21CWHN5M3RmZkcxY1dnWTBDNFNna0o1WDgyNnZvTlJOSDlwN1VyeDY1VHktNnVyU0E?oc=5",
+          "https://www.pbs.org/newshour/world/drone-strikes-in-the-black-sea-raise-fears-of-russian-escalation-to-test-natos-response"
+        ],
+        "source_details": [
+          {
+            "title": "Drone strikes in the Black Sea raise fears of Russian escalation to test NATO’s response",
+            "source": "AP News",
+            "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNTzFrRE5pMHU0QUV5V2ZHeTBuUHR3cnJDY09QMnEyMndIVVA5TG5aUE5zSkhIdWNhZVVLcEJPSGMweVFtVGFma3RXcWlZa2xaeVpMWjg3UnFsUXQ0SXQ1ZFdwdXY0cG4zc3U3NlJBRm81eEkyanlKcG1ENGJWS21CWHN5M3RmZkcxY1dnWTBDNFNna0o1WDgyNnZvTlJOSDlwN1VyeDY1VHktNnVyU0E?oc=5",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Drone strikes in the Black Sea raise fears of Russian escalation to test NATO's response",
+            "source": "PBS News",
+            "link": "https://www.pbs.org/newshour/world/drone-strikes-in-the-black-sea-raise-fears-of-russian-escalation-to-test-natos-response",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "attack"
+          ],
+          "shared_incident_anchors": [
+            "black",
+            "black_sea",
+            "sea"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "attack",
+            "black",
+            "drone",
+            "escalation",
+            "missing",
+            "occurred",
+            "ongoing"
+          ],
+          "shared_entities": [
+            "black",
+            "black_sea",
+            "sea"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_776e4acbe0fa4317",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-16",
+        "last_seen_at": "2026-10-16",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -229,44 +306,45 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 3,
+      "public_development_count": 4,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Search Underway for Seven Missing Crew After Tanker Attack in Black Sea",
-    "latest_summary": "A search and rescue operation is ongoing in the Black Sea after a suspected drone attack left a tanker ablaze. Seven crew members are reported missing following the incident involving a vessel flying the San Marino flag, marking another escalation in the series of drone attacks in the region.",
+    "latest_title": "Drone Strikes in Black Sea Heighten Concerns Over Russian Escalation and NATO Response",
+    "latest_summary": "Recent drone strikes in the Black Sea have raised alarms about potential Russian escalation and its implications for NATO's response. The attacks occurred within the exclusive economic zones of two countries, resulting in two fatalities and leaving at least 25 individuals missing. These developments pose a threat to a critical global shipping route and increase the risk of broader international involvement in the ongoing conflict in Ukraine.",
     "presentation": {
       "has_context": true,
-      "has_full_timeline": false,
-      "stage": "developing_event",
-      "stage_label": "Developing event",
+      "has_full_timeline": true,
+      "stage": "timeline",
+      "stage_label": "Timeline",
       "base_title": "Drone Attack Leads to Ship Sinking and Sailor Rescues in Black Sea",
-      "display_title": "Drone Attack Leads to Ship Sinking and Sailor Rescues in Black Sea",
+      "display_title": "Drone Attack Leads to Ship Sinking and Sailor Rescues in Black Sea Timeline",
       "milestone_development_ids": [
         "story_a59f66f2c6bff8ab",
         "story_5d50c152914f58c4",
-        "story_776e4acbe0fa4317"
+        "story_776e4acbe0fa4317",
+        "story_6ec7fa05f6b4105c"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-10-15",
-      "development_count": 3,
-      "coverage_packet_count": 3,
-      "date_count": 3,
-      "source_count": 5,
-      "independent_source_count": 5,
+      "summary_updated_at": "2026-10-16",
+      "development_count": 4,
+      "coverage_packet_count": 4,
+      "date_count": 4,
+      "source_count": 7,
+      "independent_source_count": 7,
       "first_date": "2026-10-06",
-      "latest_date": "2026-10-15",
-      "latest_update_title": "Search Underway for Seven Missing Crew After Tanker Attack in Black Sea",
-      "coverage_score": 0.545,
+      "latest_date": "2026-10-16",
+      "latest_update_title": "Drone Strikes in Black Sea Heighten Concerns Over Russian Escalation and NATO Response",
+      "coverage_score": 0.743,
       "recency_score": 1.0,
-      "rank_score": 0.809,
-      "context_summary": "Muninn first tracked this thread on 2026-10-06: Drone Attack Leads to Ship Sinking and Sailor Rescues in Black Sea. The latest development is Search Underway for Seven Missing Crew After Tanker Attack in Black Sea.",
-      "cta_label": ""
+      "rank_score": 0.892,
+      "context_summary": "Muninn first tracked this thread on 2026-10-06: Drone Attack Leads to Ship Sinking and Sailor Rescues in Black Sea. The latest development is Drone Strikes in Black Sea Heighten Concerns Over Russian Escalation and NATO Response.",
+      "cta_label": "Explore 4 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "A ship sank off the coast of Bulgaria following a drone attack that targeted two commercial vessels. A later development was Drone Attack on Commercial Vessels in Black Sea Rescues 18 Sailors. Most recently, a search and rescue operation is ongoing in the Black Sea after a suspected drone attack left a tanker ablaze.",
+      "summary": "A ship sank off the coast of Bulgaria following a drone attack that targeted two commercial vessels. A later development was Search Underway for Seven Missing Crew After Tanker Attack in Black Sea. Most recently, recent drone strikes in the Black Sea have raised alarms about potential Russian escalation and its implications for NATO's response.",
       "key_developments": [
         {
           "development_id": "story_a59f66f2c6bff8ab",
@@ -282,6 +360,11 @@
           "development_id": "story_776e4acbe0fa4317",
           "date": "2026-10-15",
           "title": "Search Underway for Seven Missing Crew After Tanker Attack in Black Sea"
+        },
+        {
+          "development_id": "story_6ec7fa05f6b4105c",
+          "date": "2026-10-16",
+          "title": "Drone Strikes in Black Sea Heighten Concerns Over Russian Escalation and NATO Response"
         }
       ],
       "sources": [
@@ -314,41 +397,69 @@
           "source": "RTE News",
           "link": "https://www.rte.ie/news/2026/1015/1595445-black-sea-shipping-attack",
           "source_bias": "center"
+        },
+        {
+          "title": "Drone strikes in the Black Sea raise fears of Russian escalation to test NATO’s response",
+          "source": "AP News",
+          "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNTzFrRE5pMHU0QUV5V2ZHeTBuUHR3cnJDY09QMnEyMndIVVA5TG5aUE5zSkhIdWNhZVVLcEJPSGMweVFtVGFma3RXcWlZa2xaeVpMWjg3UnFsUXQ0SXQ1ZFdwdXY0cG4zc3U3NlJBRm81eEkyanlKcG1ENGJWS21CWHN5M3RmZkcxY1dnWTBDNFNna0o1WDgyNnZvTlJOSDlwN1VyeDY1VHktNnVyU0E?oc=5",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Drone strikes in the Black Sea raise fears of Russian escalation to test NATO's response",
+          "source": "PBS News",
+          "link": "https://www.pbs.org/newshour/world/drone-strikes-in-the-black-sea-raise-fears-of-russian-escalation-to-test-natos-response",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-10-15",
+      "updated_at": "2026-10-16",
       "provenance": "source_grounded_event_memory"
     },
-    "event_stage": "developing_event",
+    "event_stage": "timeline",
     "related_events": [
       {
         "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
         "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
         "relationship": "related_topic",
-        "confidence": 0.776,
+        "confidence": 0.865,
         "shared_entities": [
           "black",
           "black_sea",
-          "ukraine"
+          "russia",
+          "ukraine",
+          "ukraine."
         ]
       },
       {
         "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
         "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
         "relationship": "related_topic",
-        "confidence": 0.714,
+        "confidence": 0.849,
         "shared_entities": [
+          "nato",
+          "russia",
           "russia.",
+          "ukraine",
+          "ukraine."
+        ]
+      },
+      {
+        "event_id": "event_poland-claims-sabotage-in-fire-at-starlink-s_2374853920",
+        "title": "Poland Claims Sabotage in Fire at Starlink Station Amid Danish Warnings of Russian Threat",
+        "relationship": "related_topic",
+        "confidence": 0.726,
+        "shared_entities": [
+          "nato",
+          "russia",
           "ukraine"
         ]
       },
       {
-        "event_id": "event_pressure-mounts-on-zelenskyy-to-hold-electio_9d3365cc1e",
-        "title": "Pressure Mounts on Zelenskyy to Hold Elections Amid Ongoing Martial Law",
+        "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
+        "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
         "relationship": "related_topic",
-        "confidence": 0.648,
+        "confidence": 0.72,
         "shared_entities": [
-          "russia.",
+          "russia",
           "ukraine"
         ]
       }
@@ -376,35 +487,64 @@
     "search_tokens": [
       "ablaze",
       "affected",
+      "alarm",
       "another",
       "attack",
       "attributed",
       "black",
+      "broader",
       "bulgaria",
       "coast",
       "commercial",
+      "concern",
+      "conflict",
+      "countrie",
       "crew",
+      "critical",
+      "development",
       "drone",
+      "economic",
       "eighteen",
       "escalation",
+      "exclusive",
+      "fatalitie",
       "flag",
       "flying",
+      "global",
+      "heighten",
+      "implication",
       "incident",
+      "increase",
+      "individual",
+      "international",
+      "involvement",
       "involving",
       "leader",
       "leading",
       "leads",
+      "least",
+      "leaving",
       "left",
       "marino",
       "marking",
       "member",
       "missing",
+      "nato",
+      "occurred",
       "ongoing",
       "operation",
+      "pose",
+      "potential",
+      "raised",
+      "recent",
       "region",
       "reported",
       "rescue",
       "rescued",
+      "response",
+      "resulting",
+      "risk",
+      "route",
       "russia",
       "sailor",
       "sank",
@@ -412,46 +552,60 @@
       "serie",
       "seven",
       "ship",
+      "shipping",
       "ships",
       "sinking",
+      "strike",
       "suspected",
       "tanker",
       "targeted",
+      "these",
+      "threat",
       "ukraine",
       "underway",
       "vessel",
-      "while"
+      "while",
+      "within",
+      "zones"
     ],
     "entities": [
       "black",
       "black_sea",
       "commercial_vessel",
+      "heighten_concern",
       "missing_crew",
+      "nato",
+      "nato_response",
       "rescue_sailor",
+      "response_recent",
+      "russia",
       "russia.",
       "russia._search",
+      "russia_escalation",
       "sailor_rescue",
       "san_marino",
+      "sea_heighten",
       "sea_rescue",
       "search_underway",
       "ship",
       "ship_sinking",
-      "ukraine"
+      "ukraine",
+      "ukraine."
     ],
-    "search_text": "ablaze affected another attack attributed black black_sea bulgaria coast commercial commercial_vessel crew drone eighteen escalation flag flying incident involving leader leading leads left marino marking member missing missing_crew ongoing operation region reported rescue rescue_sailor rescued russia russia. russia._search sailor sailor_rescue san_marino sank sea_rescue search search_underway serie seven ship ship_sinking ships sinking suspected tanker targeted ukraine underway vessel while"
+    "search_text": "ablaze affected alarm another attack attributed black black_sea broader bulgaria coast commercial commercial_vessel concern conflict countrie crew critical development drone economic eighteen escalation exclusive fatalitie flag flying global heighten heighten_concern implication incident increase individual international involvement involving leader leading leads least leaving left marino marking member missing missing_crew nato nato_response occurred ongoing operation pose potential raised recent region reported rescue rescue_sailor rescued response response_recent resulting risk route russia russia. russia._search russia_escalation sailor sailor_rescue san_marino sank sea_heighten sea_rescue search search_underway serie seven ship ship_sinking shipping ships sinking strike suspected tanker targeted these threat ukraine ukraine. underway vessel while within zones"
   },
   "related_events": [
     {
       "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
       "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
-      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Ukraine Resumes Strikes on Russian Oil Refineries Following Truce Breakdown.",
+      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Houthi Missile Attack on Yemeni Presidential Palace Leaves Casualties.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-07-22",
-      "last_seen_at": "2026-10-15",
-      "development_count": 78,
-      "latest_title": "Ukraine Resumes Strikes on Russian Oil Refineries Following Truce Breakdown",
+      "last_seen_at": "2026-10-16",
+      "development_count": 80,
+      "latest_title": "Houthi Missile Attack on Yemeni Presidential Palace Leaves Casualties",
       "topic_label": "Iran War",
       "hero_image": {
         "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
@@ -478,14 +632,14 @@
     {
       "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
       "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
-      "summary": "Muninn first tracked this thread on 2026-09-18: Macron Implements Measures Against Intensifying Russian Hybrid Threats. The latest development is Protests Erupt in Bangkok Against IMF and World Bank Meetings.",
+      "summary": "Muninn first tracked this thread on 2026-09-18: Macron Implements Measures Against Intensifying Russian Hybrid Threats. The latest development is Zelensky Criticizes Trump's Diesel Deal with Russia at EU Summit.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-09-18",
-      "last_seen_at": "2026-10-15",
-      "development_count": 39,
-      "latest_title": "Protests Erupt in Bangkok Against IMF and World Bank Meetings",
+      "last_seen_at": "2026-10-16",
+      "development_count": 41,
+      "latest_title": "Zelensky Criticizes Trump's Diesel Deal with Russia at EU Summit",
       "topic_label": "Russian Hybrid Attacks",
       "hero_image": {
         "url": "/Current_news/generated/events/event_macron-implements-measures-against-intensify_109da09c6f.jpg",
@@ -510,20 +664,20 @@
       "href": "/timeline.html?event=event_macron-implements-measures-against-intensify_109da09c6f"
     },
     {
-      "event_id": "event_pressure-mounts-on-zelenskyy-to-hold-electio_9d3365cc1e",
-      "title": "Pressure Mounts on Zelenskyy to Hold Elections Amid Ongoing Martial Law",
-      "summary": "Muninn first tracked this thread on 2026-08-20: Pressure Mounts on Zelenskyy to Hold Elections Amid Ongoing Martial Law. The latest development is Early Voting Begins in Russian-Occupied Ukraine Ahead of Elections.",
+      "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
+      "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
+      "summary": "Muninn first tracked this thread on 2026-09-11: Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims. The latest development is Iran's Control Over Hormuz Strait Questioned by US Officials.",
       "activity_status": "active",
-      "stage": "developing_event",
-      "stage_label": "Developing event",
-      "first_seen_at": "2026-08-20",
-      "last_seen_at": "2026-09-16",
-      "development_count": 3,
-      "latest_title": "Early Voting Begins in Russian-Occupied Ukraine Ahead of Elections",
-      "topic_label": "Ukraine Elections",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-09-11",
+      "last_seen_at": "2026-10-07",
+      "development_count": 34,
+      "latest_title": "Iran's Control Over Hormuz Strait Questioned by US Officials",
+      "topic_label": "9/11 Victim Compensation",
       "hero_image": {
-        "url": "/Current_news/generated/events/event_pressure-mounts-on-zelenskyy-to-hold-electio_9d3365cc1e.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_pressure-mounts-on-zelenskyy-to-hold-electio_9d3365cc1e.jpg",
+        "url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",
         "source": "Muninn AI illustration",
         "author": "OpenAI GPT Image 2",
         "license": "AI-generated content",
@@ -541,7 +695,7 @@
         "focal_tall_x": 0.5,
         "focal_tall_y": 0.48
       },
-      "href": "/timeline.html?event=event_pressure-mounts-on-zelenskyy-to-hold-electio_9d3365cc1e"
+      "href": "/timeline.html?event=event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b"
     }
   ]
 }

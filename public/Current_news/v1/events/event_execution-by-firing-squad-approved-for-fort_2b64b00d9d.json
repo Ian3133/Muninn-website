@@ -15,7 +15,7 @@
     "summary": "Nidal Malik Hasan, the former Army psychiatrist responsible for the 2009 Fort Hood shooting that killed 13 people, is set to be executed by firing squad. This decision marks the first military execution by firing squad in the United States since World War II. The execution plan has been approved by the Trump administration and confirmed by the Pentagon.",
     "status": "active",
     "first_seen_at": "2026-10-06",
-    "last_seen_at": "2026-10-15",
+    "last_seen_at": "2026-10-16",
     "timeline": [
       {
         "development_id": "story_3adb52fd43e09f4e",
@@ -357,6 +357,79 @@
           "story_ff92765ab1189361"
         ],
         "revision_count": 2
+      },
+      {
+        "development_id": "story_58757efd69a7b32a",
+        "daily_story_id": "story_58757efd69a7b32a",
+        "date": "2026-10-16",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Trump Cancels Livestream of Nidal Hasan's Execution",
+        "summary": "President Trump announced that the execution of Nidal Hasan, the Fort Hood shooter, scheduled for December, will not be livestreamed. He stated that some people would prefer not to witness the execution, which marks the first military execution in over 60 years.",
+        "topic_label": "",
+        "development_type": "development",
+        "key_facts": [
+          "Trump canceled plans to livestream Nidal Hasan's execution.",
+          "The execution is set for December.",
+          "Nidal Hasan is the first military execution in over 60 years."
+        ],
+        "source_count": 2,
+        "sources": [
+          "BBC",
+          "PBS News"
+        ],
+        "source_urls": [
+          "https://www.pbs.org/newshour/show/news-wrap-trump-says-fort-hood-shooters-execution-will-not-be-livestreamed",
+          "https://www.bbc.co.uk/news/articles/crx23qlnj27qo?at_medium=RSS&at_campaign=rss"
+        ],
+        "source_details": [
+          {
+            "title": "News Wrap: Trump says Fort Hood shooter's execution will not be livestreamed",
+            "source": "PBS News",
+            "link": "https://www.pbs.org/newshour/show/news-wrap-trump-says-fort-hood-shooters-execution-will-not-be-livestreamed",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Trump calls off livestream of Fort Hood attacker's execution by firing squad",
+            "source": "BBC",
+            "link": "https://www.bbc.co.uk/news/articles/crx23qlnj27qo?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.468,
+        "match_evidence": {
+          "score": 0.468,
+          "matched_development_id": "story_3adb52fd43e09f4e",
+          "shared_tokens": [
+            "announced",
+            "december",
+            "execution",
+            "first",
+            "fort",
+            "hasan",
+            "hood",
+            "livestream",
+            "livestreamed",
+            "military",
+            "nidal",
+            "scheduled",
+            "shooter"
+          ],
+          "shared_entities": [
+            "fort_hood",
+            "nidal_hasan"
+          ],
+          "source_url_match": false,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-16",
+        "last_seen_at": "2026-10-16",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -393,44 +466,45 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 3,
+      "public_development_count": 4,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Pentagon Will Not Livestream Execution of Fort Hood Shooter, Trump Confirms",
-    "latest_summary": "The Pentagon has decided against livestreaming the execution of the Fort Hood shooter, as confirmed by Trump. This decision follows bipartisan backlash regarding the potential broadcasting of the execution.",
+    "latest_title": "Trump Cancels Livestream of Nidal Hasan's Execution",
+    "latest_summary": "President Trump announced that the execution of Nidal Hasan, the Fort Hood shooter, scheduled for December, will not be livestreamed. He stated that some people would prefer not to witness the execution, which marks the first military execution in over 60 years.",
     "presentation": {
       "has_context": true,
-      "has_full_timeline": false,
-      "stage": "developing_event",
-      "stage_label": "Developing event",
+      "has_full_timeline": true,
+      "stage": "timeline",
+      "stage_label": "Timeline",
       "base_title": "Execution by Firing Squad Approved for Fort Hood Shooter Nidal Hasan",
-      "display_title": "Execution by Firing Squad Approved for Fort Hood Shooter Nidal Hasan",
+      "display_title": "Execution by Firing Squad Approved for Fort Hood Shooter Nidal Hasan Timeline",
       "milestone_development_ids": [
         "story_3adb52fd43e09f4e",
         "story_e845f279a7731f01",
-        "story_97b9c7e9839c0f2f"
+        "story_97b9c7e9839c0f2f",
+        "story_58757efd69a7b32a"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-10-15",
-      "development_count": 3,
-      "coverage_packet_count": 6,
-      "date_count": 3,
-      "source_count": 15,
-      "independent_source_count": 12,
+      "summary_updated_at": "2026-10-16",
+      "development_count": 4,
+      "coverage_packet_count": 7,
+      "date_count": 4,
+      "source_count": 17,
+      "independent_source_count": 13,
       "first_date": "2026-10-06",
-      "latest_date": "2026-10-15",
-      "latest_update_title": "Pentagon Will Not Livestream Execution of Fort Hood Shooter, Trump Confirms",
-      "coverage_score": 0.745,
+      "latest_date": "2026-10-16",
+      "latest_update_title": "Trump Cancels Livestream of Nidal Hasan's Execution",
+      "coverage_score": 0.843,
       "recency_score": 1.0,
-      "rank_score": 0.893,
-      "context_summary": "Muninn first tracked this thread on 2026-10-06: US to Livestream Execution of Fort Hood Shooter Nidal Hasan. The latest development is Pentagon Will Not Livestream Execution of Fort Hood Shooter, Trump Confirms.",
-      "cta_label": ""
+      "rank_score": 0.934,
+      "context_summary": "Muninn first tracked this thread on 2026-10-06: US to Livestream Execution of Fort Hood Shooter Nidal Hasan. The latest development is Trump Cancels Livestream of Nidal Hasan's Execution.",
+      "cta_label": "Explore 4 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "The Pentagon has announced that the execution of Nidal Malik Hasan, who killed 13 people at Fort Hood in 2009, will be livestreamed. A later development was US Army Plans to Use Firing Squad for Execution of Fort Hood Shooter. Most recently, the Pentagon has decided against livestreaming the execution of the Fort Hood shooter, as confirmed by Trump.",
+      "summary": "The Pentagon has announced that the execution of Nidal Malik Hasan, who killed 13 people at Fort Hood in 2009, will be livestreamed. A later development was Pentagon Will Not Livestream Execution of Fort Hood Shooter, Trump Confirms. Most recently, president Trump announced that the execution of Nidal Hasan, the Fort Hood shooter, scheduled for December, will not be livestreamed.",
       "key_developments": [
         {
           "development_id": "story_3adb52fd43e09f4e",
@@ -446,6 +520,11 @@
           "development_id": "story_97b9c7e9839c0f2f",
           "date": "2026-10-15",
           "title": "Pentagon Will Not Livestream Execution of Fort Hood Shooter, Trump Confirms"
+        },
+        {
+          "development_id": "story_58757efd69a7b32a",
+          "date": "2026-10-16",
+          "title": "Trump Cancels Livestream of Nidal Hasan's Execution"
         }
       ],
       "sources": [
@@ -538,13 +617,36 @@
           "source": "AP",
           "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNRzNuVjFfdUxtUEJVU1J2MVVFNmRGTDBCM0E5a2ZwWk03bVNSMndsSHFySWtKUkdDdWtNdlRKQ1lWYW1sVlNQTzBwd043dDVlTEJUQ3dHT3pUVVVFVC1Mc0wwLWFjeHM1U24wXzZzYWR0WEY3ZThpOWRvOU1ENElFakNMZ2lmRy1obVpLYkN3?oc=5",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "News Wrap: Trump says Fort Hood shooter's execution will not be livestreamed",
+          "source": "PBS News",
+          "link": "https://www.pbs.org/newshour/show/news-wrap-trump-says-fort-hood-shooters-execution-will-not-be-livestreamed",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Trump calls off livestream of Fort Hood attacker's execution by firing squad",
+          "source": "BBC",
+          "link": "https://www.bbc.co.uk/news/articles/crx23qlnj27qo?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-10-15",
+      "updated_at": "2026-10-16",
       "provenance": "source_grounded_event_memory"
     },
-    "event_stage": "developing_event",
-    "related_events": [],
+    "event_stage": "timeline",
+    "related_events": [
+      {
+        "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+        "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
+        "relationship": "related_topic",
+        "confidence": 0.733,
+        "shared_entities": [
+          "trump_cancel",
+          "us"
+        ]
+      }
+    ],
     "hero_image": {
       "url": "/Current_news/generated/events/event_execution-by-firing-squad-approved-for-fort_2b64b00d9d.jpg",
       "thumbnail_url": "/Current_news/generated/events/event_execution-by-firing-squad-approved-for-fort_2b64b00d9d.jpg",
@@ -565,81 +667,6 @@
       "focal_tall_x": 0.5,
       "focal_tall_y": 0.48
     },
-    "search_tokens": [
-      "1945",
-      "2009",
-      "also",
-      "announced",
-      "army",
-      "backlash",
-      "bipartisan",
-      "broadcast",
-      "broadcasting",
-      "conducted",
-      "confirm",
-      "confirmed",
-      "december",
-      "decided",
-      "decision",
-      "event",
-      "execute",
-      "execution",
-      "firing",
-      "first",
-      "follow",
-      "fort",
-      "gunman",
-      "hasan",
-      "hood",
-      "killed",
-      "legal",
-      "livestream",
-      "livestreamed",
-      "livestreaming",
-      "malik",
-      "marking",
-      "military",
-      "nidal",
-      "pentagon",
-      "plans",
-      "potential",
-      "potentially",
-      "preparing",
-      "public",
-      "question",
-      "raising",
-      "regarding",
-      "scheduled",
-      "shooter",
-      "since",
-      "squad",
-      "such",
-      "time",
-      "trump",
-      "using",
-      "war"
-    ],
-    "entities": [
-      "firing_squad",
-      "fort",
-      "fort_hood",
-      "hood_shooter",
-      "ii.",
-      "livestream",
-      "livestream_execution",
-      "malik_hasan",
-      "nidal_hasan",
-      "nidal_malik",
-      "not_livestream",
-      "shooter_nidal",
-      "shooter_trump",
-      "trump_confirm",
-      "us",
-      "use",
-      "use_firing",
-      "war_ii."
-    ],
-    "search_text": "1945 2009 also announced army backlash bipartisan broadcast broadcasting conducted confirm confirmed december decided decision event execute execution firing firing_squad first follow fort fort_hood gunman hasan hood hood_shooter ii. killed legal livestream livestream_execution livestreamed livestreaming malik malik_hasan marking military nidal nidal_hasan nidal_malik not_livestream pentagon plans potential potentially preparing public question raising regarding scheduled shooter shooter_nidal shooter_trump since squad such time trump trump_confirm us use use_firing using war war_ii.",
     "event_overview": {
       "available": true,
       "title": "About Military Execution",
@@ -742,7 +769,129 @@
       "expires_at": "2026-10-22T16:13:37.423599+00:00",
       "model": "gpt-5.6-terra",
       "provenance": "openai_web_search_source_grounded_event_overview_v1"
-    }
+    },
+    "search_tokens": [
+      "1945",
+      "2009",
+      "also",
+      "announced",
+      "army",
+      "backlash",
+      "bipartisan",
+      "broadcast",
+      "broadcasting",
+      "cancel",
+      "conducted",
+      "confirm",
+      "confirmed",
+      "december",
+      "decided",
+      "decision",
+      "event",
+      "execute",
+      "execution",
+      "firing",
+      "first",
+      "follow",
+      "fort",
+      "gunman",
+      "hasan",
+      "hood",
+      "killed",
+      "legal",
+      "livestream",
+      "livestreamed",
+      "livestreaming",
+      "malik",
+      "marking",
+      "marks",
+      "military",
+      "nidal",
+      "pentagon",
+      "plans",
+      "potential",
+      "potentially",
+      "prefer",
+      "preparing",
+      "public",
+      "question",
+      "raising",
+      "regarding",
+      "scheduled",
+      "shooter",
+      "since",
+      "some",
+      "squad",
+      "stated",
+      "such",
+      "time",
+      "trump",
+      "using",
+      "war",
+      "which",
+      "witness",
+      "would",
+      "years"
+    ],
+    "entities": [
+      "cancel_livestream",
+      "firing_squad",
+      "fort",
+      "fort_hood",
+      "hasan_execution",
+      "hood_shooter",
+      "ii.",
+      "livestream",
+      "livestream_execution",
+      "malik_hasan",
+      "nidal_hasan",
+      "nidal_malik",
+      "not_livestream",
+      "shooter_nidal",
+      "shooter_trump",
+      "trump_cancel",
+      "trump_confirm",
+      "us",
+      "use",
+      "use_firing",
+      "war_ii."
+    ],
+    "search_text": "1945 2009 also announced army backlash bipartisan broadcast broadcasting cancel cancel_livestream conducted confirm confirmed december decided decision event execute execution firing firing_squad first follow fort fort_hood gunman hasan hasan_execution hood hood_shooter ii. killed legal livestream livestream_execution livestreamed livestreaming malik malik_hasan marking marks military nidal nidal_hasan nidal_malik not_livestream pentagon plans potential potentially prefer preparing public question raising regarding scheduled shooter shooter_nidal shooter_trump since some squad stated such time trump trump_cancel trump_confirm us use use_firing using war war_ii. which witness would years"
   },
-  "related_events": []
+  "related_events": [
+    {
+      "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+      "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
+      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Houthi Missile Attack on Yemeni Presidential Palace Leaves Casualties.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-22",
+      "last_seen_at": "2026-10-16",
+      "development_count": 80,
+      "latest_title": "Houthi Missile Attack on Yemeni Presidential Palace Leaves Casualties",
+      "topic_label": "Iran War",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
+    }
+  ]
 }
