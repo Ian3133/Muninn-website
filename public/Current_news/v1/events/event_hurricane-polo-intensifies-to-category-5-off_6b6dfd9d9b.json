@@ -15,7 +15,7 @@
     "summary": "Hurricane Polo has intensified into a Category 5 storm in the eastern Pacific, located off the southwestern coast of Mexico. The storm is expected to bring heavy rainfall to the region while remaining offshore.",
     "status": "active",
     "first_seen_at": "2026-09-22",
-    "last_seen_at": "2026-09-29",
+    "last_seen_at": "2026-10-17",
     "timeline": [
       {
         "development_id": "story_ca5eec08a52fa4b3",
@@ -665,6 +665,78 @@
         "first_seen_at": "2026-09-29",
         "last_seen_at": "2026-09-29",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_0b7967a798ba5aeb",
+        "daily_story_id": "story_0b7967a798ba5aeb",
+        "date": "2026-10-17",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Hurricane Trudy Approaches Mexico's Pacific Coast with Heavy Rain Threat",
+        "summary": "Hurricane Trudy is moving towards Mexico's Pacific coast, bringing the threat of heavy rain. The storm has slightly strengthened as it approaches, marking another event in a series of storms impacting the region this year.",
+        "topic_label": "Hurricane Trudy",
+        "development_type": "development",
+        "key_facts": [
+          "Hurricane Trudy is approaching Mexico's Pacific coast.",
+          "The storm is expected to bring heavy rain.",
+          "Trudy has slightly strengthened as it moves closer."
+        ],
+        "source_count": 2,
+        "sources": [
+          "AP - Top News via Google News",
+          "Al Jazeera English"
+        ],
+        "source_urls": [
+          "https://www.aljazeera.com/news/2026/10/17/hurricane-trudy-makes-its-way-towards-mexico-threatening-heavy-rain?traffic_source=rss",
+          "https://news.google.com/rss/articles/CBMipAFBVV95cUxPQTJwQVFSckQyTG8welFNdElXZkNVRVc5VFI5VnY0OHlLekpPNklCczhobEVMTDNaRDI2TGlPTGNma2U2cXg2YXRWMVpPczV5eS1HdHBIN3I5bE1oSGVZZXRYVWlidmdldVlaQVRRU1JGNDNGSEJKSTdkY0NkeGtiNFVuclZ1NFJiZmVnWkZNbHNNMkpaWFN2WjdjU0g5aEt3WGN0Vg?oc=5"
+        ],
+        "source_details": [
+          {
+            "title": "Hurricane Trudy makes its way towards Mexico, threatening heavy rain",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/news/2026/10/17/hurricane-trudy-makes-its-way-towards-mexico-threatening-heavy-rain?traffic_source=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Hurricane Trudy strengthens slightly as it moves towards Mexico’s Pacific coast - AP News",
+            "source": "AP - Top News via Google News",
+            "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPQTJwQVFSckQyTG8welFNdElXZkNVRVc5VFI5VnY0OHlLekpPNklCczhobEVMTDNaRDI2TGlPTGNma2U2cXg2YXRWMVpPczV5eS1HdHBIN3I5bE1oSGVZZXRYVWlidmdldVlaQVRRU1JGNDNGSEJKSTdkY0NkeGtiNFVuclZ1NFJiZmVnWkZNbHNNMkpaWFN2WjdjU0g5aEt3WGN0Vg?oc=5",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.39,
+        "match_evidence": {
+          "score": 0.39,
+          "matched_development_id": "story_5f627d20ec956bdc",
+          "shared_tokens": [
+            "bring",
+            "bringing",
+            "coast",
+            "expected",
+            "heavy",
+            "hurricane",
+            "mexico",
+            "pacific",
+            "rain",
+            "storm",
+            "toward"
+          ],
+          "shared_entities": [
+            "heavy_rain",
+            "mexico",
+            "mexico_pacific"
+          ],
+          "source_url_match": false,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-17",
+        "last_seen_at": "2026-10-17",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -693,12 +765,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 8,
+      "public_development_count": 9,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Hurricane Polo Hits Mexico's Baja California, Second Landfall Expected",
-    "latest_summary": "Hurricane Polo made landfall in Baja California Sur, Mexico, bringing damaging winds and life-threatening flash flooding. The storm is anticipated to make a second landfall on the mainland of Mexico soon. It is also expected to impact the Southwest US with heavy rain and flooding.",
+    "latest_title": "Hurricane Trudy Approaches Mexico's Pacific Coast with Heavy Rain Threat",
+    "latest_summary": "Hurricane Trudy is moving towards Mexico's Pacific coast, bringing the threat of heavy rain. The storm has slightly strengthened as it approaches, marking another event in a series of storms impacting the region this year.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -708,30 +780,30 @@
       "display_title": "Mexico Storm Timeline",
       "milestone_development_ids": [
         "story_ca5eec08a52fa4b3",
-        "story_5f627d20ec956bdc",
+        "story_95550f366cae1988",
         "story_923c33c661b73b3d",
-        "story_558b324a876a623d"
+        "story_0b7967a798ba5aeb"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-09-29",
-      "development_count": 8,
-      "coverage_packet_count": 9,
-      "date_count": 7,
-      "source_count": 19,
-      "independent_source_count": 11,
+      "summary_updated_at": "2026-10-17",
+      "development_count": 9,
+      "coverage_packet_count": 10,
+      "date_count": 8,
+      "source_count": 21,
+      "independent_source_count": 12,
       "first_date": "2026-09-22",
-      "latest_date": "2026-09-29",
-      "latest_update_title": "Hurricane Polo Hits Mexico's Baja California, Second Landfall Expected",
+      "latest_date": "2026-10-17",
+      "latest_update_title": "Hurricane Trudy Approaches Mexico's Pacific Coast with Heavy Rain Threat",
       "coverage_score": 1.0,
-      "recency_score": 0.292,
-      "rank_score": 0.589,
-      "context_summary": "Muninn first tracked this thread on 2026-09-22: Hurricane Polo Intensifies to Category 5 Off Southwestern Mexico. The latest development is Hurricane Polo Hits Mexico's Baja California, Second Landfall Expected.",
-      "cta_label": "Explore 8 developments"
+      "recency_score": 1.0,
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-09-22: Hurricane Polo Intensifies to Category 5 Off Southwestern Mexico. The latest development is Hurricane Trudy Approaches Mexico's Pacific Coast with Heavy Rain Threat.",
+      "cta_label": "Explore 9 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Hurricane Polo has intensified into a Category 5 storm in the eastern Pacific, located off the southwestern coast of Mexico. A later development was Severe Flooding in New Jersey as Nor'easter Approaches. Most recently, hurricane Polo made landfall in Baja California Sur, Mexico, bringing damaging winds and life-threatening flash flooding.",
+      "summary": "Hurricane Polo has intensified into a Category 5 storm in the eastern Pacific, located off the southwestern coast of Mexico. A later development was Severe Flooding in New Jersey as Nor'easter Approaches. Most recently, hurricane Trudy is moving towards Mexico's Pacific coast, bringing the threat of heavy rain.",
       "key_developments": [
         {
           "development_id": "story_ca5eec08a52fa4b3",
@@ -739,9 +811,9 @@
           "title": "Hurricane Polo Intensifies to Category 5 Off Southwestern Mexico"
         },
         {
-          "development_id": "story_5f627d20ec956bdc",
-          "date": "2026-09-24",
-          "title": "Hurricane Polo Threatens Mexico with Heavy Rain and Flooding Risks"
+          "development_id": "story_95550f366cae1988",
+          "date": "2026-09-25",
+          "title": "Coastal Flood Alerts Issued as Nor’easter Approaches East Coast"
         },
         {
           "development_id": "story_923c33c661b73b3d",
@@ -749,9 +821,9 @@
           "title": "Nor’easter Floods Northeast, Leaving Over 100,000 Without Power"
         },
         {
-          "development_id": "story_558b324a876a623d",
-          "date": "2026-09-29",
-          "title": "Hurricane Polo Hits Mexico's Baja California, Second Landfall Expected"
+          "development_id": "story_0b7967a798ba5aeb",
+          "date": "2026-10-17",
+          "title": "Hurricane Trudy Approaches Mexico's Pacific Coast with Heavy Rain Threat"
         }
       ],
       "sources": [
@@ -868,9 +940,21 @@
           "source": "BBC",
           "link": "https://www.bbc.co.uk/news/articles/cw8d3z5y7958o?at_medium=RSS&at_campaign=rss",
           "source_bias": "center"
+        },
+        {
+          "title": "Hurricane Trudy makes its way towards Mexico, threatening heavy rain",
+          "source": "Al Jazeera English",
+          "link": "https://www.aljazeera.com/news/2026/10/17/hurricane-trudy-makes-its-way-towards-mexico-threatening-heavy-rain?traffic_source=rss",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Hurricane Trudy strengthens slightly as it moves towards Mexico’s Pacific coast - AP News",
+          "source": "AP - Top News via Google News",
+          "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPQTJwQVFSckQyTG8welFNdElXZkNVRVc5VFI5VnY0OHlLekpPNklCczhobEVMTDNaRDI2TGlPTGNma2U2cXg2YXRWMVpPczV5eS1HdHBIN3I5bE1oSGVZZXRYVWlidmdldVlaQVRRU1JGNDNGSEJKSTdkY0NkeGtiNFVuclZ1NFJiZmVnWkZNbHNNMkpaWFN2WjdjU0g5aEt3WGN0Vg?oc=5",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-09-29",
+      "updated_at": "2026-10-17",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -896,13 +980,26 @@
         "event_id": "event_hurricane-nolo-moves-away-from-hawaii-threat_56bed2bd3f",
         "title": "Mexico Storm",
         "relationship": "related_topic",
-        "confidence": 0.861,
+        "confidence": 0.909,
         "shared_entities": [
+          "approache_mexico",
           "baja_california",
           "hurricane_polo",
           "mexico",
           "mexico_baja",
           "mexico_hurricane"
+        ]
+      },
+      {
+        "event_id": "event_three-men-convicted-for-murdering-australian_c85bb625d9",
+        "title": "Three Men Convicted for Murdering Australian Brothers and US Friend in Mexico",
+        "relationship": "related_topic",
+        "confidence": 0.728,
+        "shared_entities": [
+          "baja",
+          "baja_california",
+          "mexico",
+          "us"
         ]
       },
       {
@@ -1038,6 +1135,7 @@
       "already",
       "also",
       "although",
+      "another",
       "anticipated",
       "approach",
       "approache",
@@ -1072,6 +1170,7 @@
       "easter",
       "eastern",
       "england",
+      "event",
       "ever",
       "exceeding",
       "expected",
@@ -1107,10 +1206,12 @@
       "mainland",
       "make",
       "making",
+      "marking",
       "massachusett",
       "maximum",
       "mexico",
       "million",
+      "moving",
       "national",
       "nolo",
       "nor'easter",
@@ -1139,16 +1240,19 @@
       "roads",
       "seaboard",
       "second",
+      "serie",
       "severe",
       "significant",
       "since",
       "situation",
+      "slightly",
       "some",
       "soon",
       "southwest",
       "southwestern",
       "statu",
       "storm",
+      "strengthened",
       "strong",
       "strongest",
       "struck",
@@ -1156,12 +1260,14 @@
       "surf",
       "sustained",
       "thousand",
+      "threat",
       "threaten",
       "through",
       "toward",
       "tragically",
       "tree",
       "tropical",
+      "trudy",
       "variou",
       "warm",
       "warning",
@@ -1175,11 +1281,13 @@
       "winds",
       "without",
       "worker",
+      "year",
       "york"
     ],
     "entities": [
       "alert_issued",
       "approache_east",
+      "approache_mexico",
       "baja",
       "baja_california",
       "california_second",
@@ -1204,6 +1312,7 @@
       "hits_mexico",
       "hurricane_center.",
       "hurricane_polo",
+      "hurricane_trudy",
       "landfall_expected",
       "massachusetts.",
       "mexico",
@@ -1224,6 +1333,7 @@
       "polo_reache",
       "polo_threaten",
       "powerful_nor'easter",
+      "rain_threat",
       "reache_category",
       "risks_hurricane",
       "second_landfall",
@@ -1232,12 +1342,14 @@
       "statu_off",
       "storm_nolo",
       "sur_mexico",
+      "threat_hurricane",
       "threaten_mexico",
       "tropical_storm",
+      "trudy_approache",
       "us",
       "without_power"
     ],
-    "search_text": "000 100 157 253 across affect affected alert alert_issued along already also although anticipated approach approache approache_east areas associated authority baja baja_california begun bracing bring bringing brought california california_second california_sur category category_off category_statu cause caused causing causing_flooding center coast coast_causing coast_hurricane coastal coastal_flood coming compounded condition continue currently cyclone damaging dangerou delaware early east east_coast easter eastern eastern_seaboard england england._tragically ever exceeding expected expected_hurricane experiencing fatalitie fell flash flood flood_alert flood_northeast flooding flooding_risks gusty hawaii heavy heavy_rain hits hits_east hits_mexico homes housing hurricane hurricane_center. hurricane_polo impact impacting influenced intensifie intensified intensify inundated issued jersey killed landfall landfall_expected landslide leaving life-threatening located made mainland make making massachusett massachusetts. maximum mexico mexico_baja mexico_hurricane mexico_pacific million national national_hurricane nolo nor'easter nor'easter_approache nor'easter_hits northeast northeast_leaving off_mexico off_southwestern offshore outage pacific pacific_coast phenomenon polo polo_hits polo_intensifie polo_reache polo_threaten poses power powerful powerful_nor'easter progresse prompting rain rainfall reache reache_category reaching recorded region remain remaining reported resulted risks risks_hurricane roads seaboard second second_landfall severe severe_flooding significant since situation some soon southwest southwestern southwestern_mexico statu statu_off storm storm_nolo strong strongest struck sunday sur_mexico surf sustained thousand threaten threaten_mexico through toward tragically tree tropical tropical_storm us variou warm warning water weakened weather weekend when which while winds without without_power worker york"
+    "search_text": "000 100 157 253 across affect affected alert alert_issued along already also although another anticipated approach approache approache_east approache_mexico areas associated authority baja baja_california begun bracing bring bringing brought california california_second california_sur category category_off category_statu cause caused causing causing_flooding center coast coast_causing coast_hurricane coastal coastal_flood coming compounded condition continue currently cyclone damaging dangerou delaware early east east_coast easter eastern eastern_seaboard england england._tragically event ever exceeding expected expected_hurricane experiencing fatalitie fell flash flood flood_alert flood_northeast flooding flooding_risks gusty hawaii heavy heavy_rain hits hits_east hits_mexico homes housing hurricane hurricane_center. hurricane_polo hurricane_trudy impact impacting influenced intensifie intensified intensify inundated issued jersey killed landfall landfall_expected landslide leaving life-threatening located made mainland make making marking massachusett massachusetts. maximum mexico mexico_baja mexico_hurricane mexico_pacific million moving national national_hurricane nolo nor'easter nor'easter_approache nor'easter_hits northeast northeast_leaving off_mexico off_southwestern offshore outage pacific pacific_coast phenomenon polo polo_hits polo_intensifie polo_reache polo_threaten poses power powerful powerful_nor'easter progresse prompting rain rain_threat rainfall reache reache_category reaching recorded region remain remaining reported resulted risks risks_hurricane roads seaboard second second_landfall serie severe severe_flooding significant since situation slightly some soon southwest southwestern southwestern_mexico statu statu_off storm storm_nolo strengthened strong strongest struck sunday sur_mexico surf sustained thousand threat threat_hurricane threaten threaten_mexico through toward tragically tree tropical tropical_storm trudy trudy_approache us variou warm warning water weakened weather weekend when which while winds without without_power worker year york"
   },
   "related_events": [
     {
@@ -1273,6 +1385,40 @@
         "focal_tall_y": 0.48
       },
       "href": "/timeline.html?event=event_hurricane-isaias-forms-amid-strong-el-ni-o-c_3ef53d82ce"
+    },
+    {
+      "event_id": "event_three-men-convicted-for-murdering-australian_c85bb625d9",
+      "title": "Three Men Convicted for Murdering Australian Brothers and US Friend in Mexico",
+      "summary": "Muninn first tracked this thread on 2026-10-10: Three Men Convicted for Murdering Australian Brothers and US Friend in Mexico. The latest development is Three Men Sentenced to 158 Years for Murdering Surfers in Mexico.",
+      "activity_status": "active",
+      "stage": "developing_event",
+      "stage_label": "Developing event",
+      "first_seen_at": "2026-10-10",
+      "last_seen_at": "2026-10-17",
+      "development_count": 2,
+      "latest_title": "Three Men Sentenced to 158 Years for Murdering Surfers in Mexico",
+      "topic_label": "Surfing Incident",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_three-men-convicted-for-murdering-australian_c85bb625d9.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_three-men-convicted-for-murdering-australian_c85bb625d9.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_three-men-convicted-for-murdering-australian_c85bb625d9"
     }
   ]
 }
