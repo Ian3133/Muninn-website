@@ -15,7 +15,7 @@
     "summary": "As the 25th anniversary of the September 11 attacks approaches, Phil Alvarez, a retired NYPD detective, reflects on his brother Luis's death from cancer linked to toxins at Ground Zero. Alvarez is working to extend the September 11th Victim Compensation Fund to assist others affected by similar health issues. This year, a seventh moment of silence will be observed to honor those who have died from illnesses related to the toxic dust from the attacks.",
     "status": "active",
     "first_seen_at": "2026-09-11",
-    "last_seen_at": "2026-10-07",
+    "last_seen_at": "2026-10-19",
     "timeline": [
       {
         "development_id": "story_839b70c2e2bb6def",
@@ -2670,6 +2670,75 @@
         "first_seen_at": "2026-10-07",
         "last_seen_at": "2026-10-07",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_8ef0985b41fe8ee3",
+        "daily_story_id": "story_8ef0985b41fe8ee3",
+        "date": "2026-10-19",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Trump Endorses Netanyahu Ahead of Israeli Election Amid Iran Tensions",
+        "summary": "The US President has endorsed Israeli Prime Minister Netanyahu just nine days before the upcoming election, marking a significant shift after months of silence. This endorsement comes as both leaders face challenges regarding their strategies on Iran and Gaza, with Trump cautioning that the US may not support Israel if there is a change in leadership.",
+        "topic_label": "Iran War",
+        "development_type": "election",
+        "key_facts": [
+          "Trump endorsed Netanyahu nine days before the Israeli election.",
+          "The endorsement follows a period of rocky relations between the two leaders.",
+          "Trump warned that US support may wane if Israel changes leaders."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Euronews",
+          "TIME"
+        ],
+        "source_urls": [
+          "https://time.com/article/2026/10/19/trump-netanyahu-israel-election-endorsement",
+          "https://www.euronews.com/2026/10/19/trump-endorses-netanyahu-days-before-israeli-election-breaking-months-of-silence"
+        ],
+        "source_details": [
+          {
+            "title": "Trump Endorses Netanyahu Days Before Israeli Election as Iran War Tests Friendship",
+            "source": "TIME",
+            "link": "https://time.com/article/2026/10/19/trump-netanyahu-israel-election-endorsement",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Trump endorses Netanyahu nine days before Israeli election, breaking months of silence",
+            "source": "Euronews",
+            "link": "https://www.euronews.com/2026/10/19/trump-endorses-netanyahu-days-before-israeli-election-breaking-months-of-silence",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_e74a9dbe252ccfd8",
+          "shared_tokens": [
+            "comes",
+            "follow",
+            "iran",
+            "regarding",
+            "tension",
+            "trump",
+            "war"
+          ],
+          "shared_entities": [
+            "iran",
+            "iran_war",
+            "us"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-19",
+        "last_seen_at": "2026-10-19",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -2703,12 +2772,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 34,
+      "public_development_count": 35,
       "questionable_development_count": 2,
       "review_required": true
     },
-    "latest_title": "Iran's Control Over Hormuz Strait Questioned by US Officials",
-    "latest_summary": "US Senator Marco Rubio stated that Iran has 'lost complete control' of the Strait of Hormuz, noting that oil flow through the strait remains nearly unchanged despite ongoing conflicts. This assertion comes amid discussions on Iran's nuclear enrichment and its implications for the region.",
+    "latest_title": "Trump Endorses Netanyahu Ahead of Israeli Election Amid Iran Tensions",
+    "latest_summary": "The US President has endorsed Israeli Prime Minister Netanyahu just nine days before the upcoming election, marking a significant shift after months of silence. This endorsement comes as both leaders face challenges regarding their strategies on Iran and Gaza, with Trump cautioning that the US may not support Israel if there is a change in leadership.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -2719,29 +2788,29 @@
       "milestone_development_ids": [
         "story_839b70c2e2bb6def",
         "story_9614fc985b66221b",
-        "story_85438a65cb28f52e",
-        "story_2dfca8019000d96f"
+        "story_e74a9dbe252ccfd8",
+        "story_8ef0985b41fe8ee3"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-10-07",
-      "development_count": 34,
-      "coverage_packet_count": 36,
-      "date_count": 16,
-      "source_count": 91,
+      "summary_updated_at": "2026-10-19",
+      "development_count": 35,
+      "coverage_packet_count": 37,
+      "date_count": 17,
+      "source_count": 93,
       "independent_source_count": 32,
       "first_date": "2026-09-11",
-      "latest_date": "2026-10-07",
-      "latest_update_title": "Iran's Control Over Hormuz Strait Questioned by US Officials",
+      "latest_date": "2026-10-19",
+      "latest_update_title": "Trump Endorses Netanyahu Ahead of Israeli Election Amid Iran Tensions",
       "coverage_score": 1.0,
-      "recency_score": 0.389,
-      "rank_score": 0.646,
-      "context_summary": "Muninn first tracked this thread on 2026-09-11: Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims. The latest development is Iran's Control Over Hormuz Strait Questioned by US Officials.",
-      "cta_label": "Explore 34 developments"
+      "recency_score": 1.0,
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-09-11: Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims. The latest development is Trump Endorses Netanyahu Ahead of Israeli Election Amid Iran Tensions.",
+      "cta_label": "Explore 35 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "As the 25th anniversary of the September 11 attacks approaches, Phil Alvarez, a retired NYPD detective, reflects on his brother Luis's death from cancer linked to toxins at Ground Zero. A later development was Russian Drone Strike Damages Shopping Mall in Zaporizhzhia. Most recently, uS Senator Marco Rubio stated that Iran has 'lost complete control' of the Strait of Hormuz, noting that oil flow through the strait remains nearly unchanged despite ongoing conflicts.",
+      "summary": "As the 25th anniversary of the September 11 attacks approaches, Phil Alvarez, a retired NYPD detective, reflects on his brother Luis's death from cancer linked to toxins at Ground Zero. A later development was Russian Drone Strike Damages Shopping Mall in Zaporizhzhia. Most recently, the US President has endorsed Israeli Prime Minister Netanyahu just nine days before the upcoming election, marking a significant shift after months of silence.",
       "key_developments": [
         {
           "development_id": "story_839b70c2e2bb6def",
@@ -2754,14 +2823,14 @@
           "title": "Escalating Conflict: Houthis Claim Downing Saudi Jet, Saudis Accuse of Drone Attack Near Mecca"
         },
         {
-          "development_id": "story_85438a65cb28f52e",
+          "development_id": "story_e74a9dbe252ccfd8",
           "date": "2026-09-21",
-          "title": "Kremlin Party Secures 355 Seats in Russian Parliament Amid Controversial Elections"
+          "title": "Iran Threatens to Expand Conflict if US Launches New Assault"
         },
         {
-          "development_id": "story_2dfca8019000d96f",
-          "date": "2026-10-07",
-          "title": "Iran's Control Over Hormuz Strait Questioned by US Officials"
+          "development_id": "story_8ef0985b41fe8ee3",
+          "date": "2026-10-19",
+          "title": "Trump Endorses Netanyahu Ahead of Israeli Election Amid Iran Tensions"
         }
       ],
       "sources": [
@@ -3310,13 +3379,73 @@
           "source": "CBS News",
           "link": "https://www.cbsnews.com/live-updates/iran-war-nuclear-donald-trump-vance-rubio-strait-of-hormuz",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Trump Endorses Netanyahu Days Before Israeli Election as Iran War Tests Friendship",
+          "source": "TIME",
+          "link": "https://time.com/article/2026/10/19/trump-netanyahu-israel-election-endorsement",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Trump endorses Netanyahu nine days before Israeli election, breaking months of silence",
+          "source": "Euronews",
+          "link": "https://www.euronews.com/2026/10/19/trump-endorses-netanyahu-days-before-israeli-election-breaking-months-of-silence",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-10-07",
+      "updated_at": "2026-10-19",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
     "related_events": [
+      {
+        "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
+        "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
+        "relationship": "related_topic",
+        "confidence": 0.95,
+        "shared_entities": [
+          "donald_trump",
+          "general_assembly.",
+          "however_ukraine",
+          "iran",
+          "israel",
+          "riyadh",
+          "riyadh_airport",
+          "russia",
+          "russia_drone",
+          "saudi_arabia",
+          "ukraine",
+          "un",
+          "united",
+          "united_nation",
+          "us",
+          "volodymyr_zelensky",
+          "zaporizhzhia"
+        ]
+      },
+      {
+        "event_id": "event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a",
+        "title": "Trump Delays Iran Strikes to Pursue Diplomatic Deal",
+        "relationship": "related_topic",
+        "confidence": 0.95,
+        "shared_entities": [
+          "donald_trump",
+          "general_assembly",
+          "hormuz_iran",
+          "iran",
+          "iran_foreign",
+          "iran_propose",
+          "jd",
+          "reopen",
+          "reopen_strait",
+          "trump_claim",
+          "uk",
+          "un",
+          "united",
+          "united_nation",
+          "us"
+        ]
+      },
       {
         "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
         "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
@@ -3338,10 +3467,13 @@
           "houthi_claim",
           "iran",
           "iran-backed_houthi",
+          "iran_tension",
           "iran_threaten",
           "iran_war",
           "iraq.",
           "islamic_republic.",
+          "israel",
+          "israel_prime",
           "issue_threat",
           "jd",
           "masoud_pezeshkian",
@@ -3369,29 +3501,6 @@
         ]
       },
       {
-        "event_id": "event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a",
-        "title": "Trump Delays Iran Strikes to Pursue Diplomatic Deal",
-        "relationship": "related_topic",
-        "confidence": 0.95,
-        "shared_entities": [
-          "donald_trump",
-          "general_assembly",
-          "hormuz_iran",
-          "iran",
-          "iran_foreign",
-          "iran_propose",
-          "jd",
-          "reopen",
-          "reopen_strait",
-          "trump_claim",
-          "uk",
-          "un",
-          "united",
-          "united_nation",
-          "us"
-        ]
-      },
-      {
         "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
         "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
         "relationship": "related_topic",
@@ -3408,30 +3517,6 @@
           "volodymyr_zelensky",
           "yemen",
           "yemen_houthi",
-          "zaporizhzhia"
-        ]
-      },
-      {
-        "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
-        "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
-        "relationship": "related_topic",
-        "confidence": 0.95,
-        "shared_entities": [
-          "donald_trump",
-          "general_assembly.",
-          "however_ukraine",
-          "iran",
-          "riyadh",
-          "riyadh_airport",
-          "russia",
-          "russia_drone",
-          "saudi_arabia",
-          "ukraine",
-          "un",
-          "united",
-          "united_nation",
-          "us",
-          "volodymyr_zelensky",
           "zaporizhzhia"
         ]
       }
@@ -3584,6 +3669,7 @@
       "agree",
       "agreed",
       "agreement",
+      "ahead",
       "aimed",
       "aims",
       "airport",
@@ -3649,10 +3735,13 @@
       "caribbean",
       "casualtie",
       "caused",
+      "cautioning",
       "cease",
       "ceasefire",
       "ceremonie",
       "ceremony",
+      "challenge",
+      "change",
       "characterized",
       "charge",
       "children",
@@ -3751,6 +3840,9 @@
       "emergency",
       "emphasized",
       "ending",
+      "endorse",
+      "endorsed",
+      "endorsement",
       "energy",
       "engage",
       "enrichment",
@@ -3803,6 +3895,7 @@
       "funds",
       "gains",
       "gathered",
+      "gaza",
       "general",
       "geography",
       "german",
@@ -3869,10 +3962,12 @@
       "iraq",
       "islam",
       "islamic",
+      "israel",
       "issue",
       "issued",
       "jared",
       "july",
+      "just",
       "justice",
       "killed",
       "knee",
@@ -3886,6 +3981,7 @@
       "lavrov",
       "lead",
       "leader",
+      "leadership",
       "leading",
       "least",
       "leave",
@@ -3934,9 +4030,11 @@
       "nearly",
       "negotiate",
       "negotiation",
+      "netanyahu",
       "network",
       "never",
       "next",
+      "nine",
       "noted",
       "noting",
       "november",
@@ -3985,6 +4083,7 @@
       "pressure",
       "prevent",
       "price",
+      "prime",
       "pro-putin",
       "process",
       "productive",
@@ -4074,6 +4173,7 @@
       "seventh",
       "several",
       "shanksville",
+      "shift",
       "shopping",
       "shortage",
       "shrapnel",
@@ -4107,6 +4207,7 @@
       "steve",
       "stop",
       "strait",
+      "strategie",
       "strike",
       "submission",
       "such",
@@ -4260,6 +4361,7 @@
       "emergency_service.",
       "end",
       "end_ongoing",
+      "endorse_netanyahu",
       "erupt_near",
       "escalating_houthi",
       "europeans._familie",
@@ -4299,12 +4401,16 @@
       "iran_foreign",
       "iran_proposal",
       "iran_propose",
+      "iran_tension",
       "iran_threaten",
       "iran_unveil",
       "iran_war",
       "iranian-backed",
       "iraq.",
       "islamic_republic.",
+      "israel",
+      "israel_election",
+      "israel_prime",
       "issue_threat",
       "jared_kushner",
       "jd",
@@ -4324,6 +4430,7 @@
       "near_mecca",
       "near_riyadh",
       "nearly_billion",
+      "netanyahu_ahead",
       "november",
       "nypd",
       "nypd_officer",
@@ -4390,6 +4497,7 @@
       "trump_addresse",
       "trump_claim",
       "trump_dismisse",
+      "trump_endorse",
       "trump_urges",
       "u.n.",
       "u.n._expert",
@@ -4416,24 +4524,24 @@
       "zaporizhzhia",
       "zero._alvarez"
     ],
-    "search_text": "000 11-related 11th 120 156 184 2001 2022 2026 25th 355 7-day abbas abbas_araghchi acceptable accusation accuse accused achieved across action additional address addresse administration advance advocate affected agree agreed agreement aimed aims air_base air_raid airport al-qaida al-qaida. alert alert_flame allegation alleged also alternative alvarez america amidst among anger annihilate anniversary announced anti-war approache approval approving arabia arabia_claim arabia_east-west araghchi armed arrest arrested arrested_near assault assault_iran assembly assembly_iran assembly_russia asserted assertion assist attack attacking attempting attended attributed attributing authoritie await aware backed ballistic ballot base believe bend better billion bin_laden blockade boat border both brief broader brother budget budget_office called calls cancel cancel_meeting cancer cancer_advocate capabilitie capital caribbean caribbean. caribbean_drug-trafficking casualtie caused cbo cease ceasefire ceremonie ceremony characterized charge children cia cia_declassifie civilian claim claim_downing claim_houthi claim_missile claim_russia claimed claiming clashe closed coalition combat comes commemorate commemorate_anniversary commemorating commemorating_years commemoration comment committed committed_war communicated compensation compensation_fund complete complex concern concession concluded confirmed conflict congressional congressional_budget consequence consequence_saudi consider consider_releasing consideration constitute context continued continuing contributed control controlled controversial controversial_election convention cost costs counterpart crime crisi daily dalla damage damage_shopping dangerou de-escalate deal death declare declare_defiance declassifie declassifie_presidential declassify defend defend_iran defended defense defense_intercept defiance defiant delegation deliver denied depending deployed described desire despite despite_trump destroyed detailing detective deterrent died diesel diesel_refinerie dignitarie diplomacy diplomatic direct discussion dismisse dismisse_german dismisse_iran disruption document dominance donald donald_trump downed downing downing_saudi dozen drone drone_targeted drug drug-trafficking drug-trafficking_boat duma dust each east-west east-west_pipeline effort election emergency emergency_service. emphasized end end_ongoing ending energy engage enrichment envoy erupt erupt_near escalating escalating_houthi escalation estimated european europeans._familie evacuated event exchange expand expansion expected expense expert expert_find explosion explosive export express expressing extend extremist face facility fact-finding failing false familie family family_request fatalitie fatality february february. february._these february_trump find find_ground finding fire firefighter first first_time five flame flame_erupt flow foreign formal four frozen fuel full-scale fund funds gains gathered general general_assembly general_assembly. geography german german_concern germany germany_foreign global globally ground ground_zero ground_zero. group gulf halt halt_energy halts health hearing heavily heightened held highlight hijacker holiest homes honor hopes hormuz hormuz_iran hormuz_strait hostilitie house house_votes houthi houthi_claim houthi_drone however however_ukraine hundred igniting illnesse impact implication impose incident include including incur indicate indicated individual inflation influence infrastructure initially injury insecurity instance intelligence intended intensification intensified intensity intercept intercept_yemen intercepted international invasion invasion_germany involve involved involvement involving iran iran-backed iran-backed_houthi iran._despite iran_control iran_engage iran_foreign iran_proposal iran_propose iran_threaten iran_unveil iran_war iranian-backed iraq iraq. islam islamic islamic_republic. issue issue_threat issued jared jared_kushner jd jet_saudi july july. july._resident justice killed knee kremlin kremlin_party kushner labeling laden large launche launching lavrov lead leader leading least leave lebanon lebanon._germany lifts line linked lives lost loud luis made main maintaining mall many marco marco_rubio marked marking marks masoud masoud_pezeshkian measure mecca mecca._u.n. mecca_islam mecca_warns mediator meet meeting meets meets_lavrov memorial men_arrested mentioned meter midterm military militia missile mission moment monitored month mood most movement names nation near near_mecca near_riyadh nearby nearly nearly_billion negotiate negotiation network never next noted noting november nuclear nypd nypd_officer observed occurred offense offensive office officer officer_who oil ongoing ongoing_iran ongoing_tension only open operation orchestrating osama other overnight overseeing paid parliament parliamentary part participated parts party party_secure passage past pennsylvania pentagon persian persian_gulf pezeshkian phil phil_alvarez pipeline pipeline_remain place plan planned plume potential power prepared preparing presidential presidential_brief pressure prevent price pro-putin process productive productive_talks profound program progress progress_recent prompted prompting proposal propose propose_reopening proposed putting quarter-century questioned raid raid_alert rail raise raise_concern raised rare rather reach read reasonable rebel received recent record red_sea. refinerie reflect reflected reflecting regarding region rejected rejection related related_cancer release released releasing remain remain_closed remembrance remembrance_ceremonie renewed reopen reopen_strait reopening reopening_strait repair reported representation representative republic republican republican_convention request request_donald resident resolution responded responder response responsibility resulted resulting resume resumption retired reveal rising rising_inflation rising_tension riyadh riyadh_airport riyadh_saudi rubio russia russia_diesel russia_drone russia_foreign russia_parliament same sanction saudi saudi-led saudi_accuse saudi_arabia saudi_arabia. saudi_defense saudi_jet scheduled school sea._saudi seats secure secure_seats security seek seeks seen seizing senate sensitive september september_victim sergei sergei_lavrov service service._smoke seven seven-day seventh several shanksville shanksville_pennsylvania shopping shopping_mall shortage shortage_trump shrapnel shut shuttle sideline sides significant silence similar since since_ukraine sites situation smoke smuggling soldier solemn solution somber some speech sport spread square stability stark state stated statement stating steps steve steve_witkoff stop strait strait_questioned strike submission such suggest suggestion supplie support survivor suspected suspicion talks tank target targeted targeted_mecca targeting tehran tension tension_persian territorial terrorism terrorism_charge terrorist than them there these they third those threat threaten threatening three threshold through tightly time time_since took toward toxic toxin tracking trafficking tragic transcend transparency tribute truck trump trump_addresse trump_claim trump_dismisse trump_urges u.n. u.n._expert uk ukraine ukraine_agree ukraine_invasion un unchanged undertaken unga united united_nation united_states. unremarkable unveil upcoming urges urges_ukraine us used vance vice victim victim_compensation violation violence volodymyr volodymyr_zelensky voted votes voting wadephul waive walked war war_costs war_crime warfare warned warning warns weapon week weeks where which while who_died within without witkoff working would year years years_since yemen yemen_houthi yemen_red yemeni york zaporizhzhia zelensky zero zero._alvarez"
+    "search_text": "000 11-related 11th 120 156 184 2001 2022 2026 25th 355 7-day abbas abbas_araghchi acceptable accusation accuse accused achieved across action additional address addresse administration advance advocate affected agree agreed agreement ahead aimed aims air_base air_raid airport al-qaida al-qaida. alert alert_flame allegation alleged also alternative alvarez america amidst among anger annihilate anniversary announced anti-war approache approval approving arabia arabia_claim arabia_east-west araghchi armed arrest arrested arrested_near assault assault_iran assembly assembly_iran assembly_russia asserted assertion assist attack attacking attempting attended attributed attributing authoritie await aware backed ballistic ballot base believe bend better billion bin_laden blockade boat border both brief broader brother budget budget_office called calls cancel cancel_meeting cancer cancer_advocate capabilitie capital caribbean caribbean. caribbean_drug-trafficking casualtie caused cautioning cbo cease ceasefire ceremonie ceremony challenge change characterized charge children cia cia_declassifie civilian claim claim_downing claim_houthi claim_missile claim_russia claimed claiming clashe closed coalition combat comes commemorate commemorate_anniversary commemorating commemorating_years commemoration comment committed committed_war communicated compensation compensation_fund complete complex concern concession concluded confirmed conflict congressional congressional_budget consequence consequence_saudi consider consider_releasing consideration constitute context continued continuing contributed control controlled controversial controversial_election convention cost costs counterpart crime crisi daily dalla damage damage_shopping dangerou de-escalate deal death declare declare_defiance declassifie declassifie_presidential declassify defend defend_iran defended defense defense_intercept defiance defiant delegation deliver denied depending deployed described desire despite despite_trump destroyed detailing detective deterrent died diesel diesel_refinerie dignitarie diplomacy diplomatic direct discussion dismisse dismisse_german dismisse_iran disruption document dominance donald donald_trump downed downing downing_saudi dozen drone drone_targeted drug drug-trafficking drug-trafficking_boat duma dust each east-west east-west_pipeline effort election emergency emergency_service. emphasized end end_ongoing ending endorse endorse_netanyahu endorsed endorsement energy engage enrichment envoy erupt erupt_near escalating escalating_houthi escalation estimated european europeans._familie evacuated event exchange expand expansion expected expense expert expert_find explosion explosive export express expressing extend extremist face facility fact-finding failing false familie family family_request fatalitie fatality february february. february._these february_trump find find_ground finding fire firefighter first first_time five flame flame_erupt flow foreign formal four frozen fuel full-scale fund funds gains gathered gaza general general_assembly general_assembly. geography german german_concern germany germany_foreign global globally ground ground_zero ground_zero. group gulf halt halt_energy halts health hearing heavily heightened held highlight hijacker holiest homes honor hopes hormuz hormuz_iran hormuz_strait hostilitie house house_votes houthi houthi_claim houthi_drone however however_ukraine hundred igniting illnesse impact implication impose incident include including incur indicate indicated individual inflation influence infrastructure initially injury insecurity instance intelligence intended intensification intensified intensity intercept intercept_yemen intercepted international invasion invasion_germany involve involved involvement involving iran iran-backed iran-backed_houthi iran._despite iran_control iran_engage iran_foreign iran_proposal iran_propose iran_tension iran_threaten iran_unveil iran_war iranian-backed iraq iraq. islam islamic islamic_republic. israel israel_election israel_prime issue issue_threat issued jared jared_kushner jd jet_saudi july july. july._resident just justice killed knee kremlin kremlin_party kushner labeling laden large launche launching lavrov lead leader leadership leading least leave lebanon lebanon._germany lifts line linked lives lost loud luis made main maintaining mall many marco marco_rubio marked marking marks masoud masoud_pezeshkian measure mecca mecca._u.n. mecca_islam mecca_warns mediator meet meeting meets meets_lavrov memorial men_arrested mentioned meter midterm military militia missile mission moment monitored month mood most movement names nation near near_mecca near_riyadh nearby nearly nearly_billion negotiate negotiation netanyahu netanyahu_ahead network never next nine noted noting november nuclear nypd nypd_officer observed occurred offense offensive office officer officer_who oil ongoing ongoing_iran ongoing_tension only open operation orchestrating osama other overnight overseeing paid parliament parliamentary part participated parts party party_secure passage past pennsylvania pentagon persian persian_gulf pezeshkian phil phil_alvarez pipeline pipeline_remain place plan planned plume potential power prepared preparing presidential presidential_brief pressure prevent price prime pro-putin process productive productive_talks profound program progress progress_recent prompted prompting proposal propose propose_reopening proposed putting quarter-century questioned raid raid_alert rail raise raise_concern raised rare rather reach read reasonable rebel received recent record red_sea. refinerie reflect reflected reflecting regarding region rejected rejection related related_cancer release released releasing remain remain_closed remembrance remembrance_ceremonie renewed reopen reopen_strait reopening reopening_strait repair reported representation representative republic republican republican_convention request request_donald resident resolution responded responder response responsibility resulted resulting resume resumption retired reveal rising rising_inflation rising_tension riyadh riyadh_airport riyadh_saudi rubio russia russia_diesel russia_drone russia_foreign russia_parliament same sanction saudi saudi-led saudi_accuse saudi_arabia saudi_arabia. saudi_defense saudi_jet scheduled school sea._saudi seats secure secure_seats security seek seeks seen seizing senate sensitive september september_victim sergei sergei_lavrov service service._smoke seven seven-day seventh several shanksville shanksville_pennsylvania shift shopping shopping_mall shortage shortage_trump shrapnel shut shuttle sideline sides significant silence similar since since_ukraine sites situation smoke smuggling soldier solemn solution somber some speech sport spread square stability stark state stated statement stating steps steve steve_witkoff stop strait strait_questioned strategie strike submission such suggest suggestion supplie support survivor suspected suspicion talks tank target targeted targeted_mecca targeting tehran tension tension_persian territorial terrorism terrorism_charge terrorist than them there these they third those threat threaten threatening three threshold through tightly time time_since took toward toxic toxin tracking trafficking tragic transcend transparency tribute truck trump trump_addresse trump_claim trump_dismisse trump_endorse trump_urges u.n. u.n._expert uk ukraine ukraine_agree ukraine_invasion un unchanged undertaken unga united united_nation united_states. unremarkable unveil upcoming urges urges_ukraine us used vance vice victim victim_compensation violation violence volodymyr volodymyr_zelensky voted votes voting wadephul waive walked war war_costs war_crime warfare warned warning warns weapon week weeks where which while who_died within without witkoff working would year years years_since yemen yemen_houthi yemen_red yemeni york zaporizhzhia zelensky zero zero._alvarez"
   },
   "related_events": [
     {
-      "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
-      "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
-      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Ukrainian Drone Attack on St Petersburg Kills One and Damages Oil Facilities.",
+      "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
+      "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
+      "summary": "Muninn first tracked this thread on 2026-09-18: Macron Implements Measures Against Intensifying Russian Hybrid Threats. The latest development is Protesters Block Access to Louvre Museum in Support of Student Movement.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
-      "first_seen_at": "2026-07-22",
-      "last_seen_at": "2026-10-18",
-      "development_count": 83,
-      "latest_title": "Ukrainian Drone Attack on St Petersburg Kills One and Damages Oil Facilities",
-      "topic_label": "Iran War",
+      "first_seen_at": "2026-09-18",
+      "last_seen_at": "2026-10-19",
+      "development_count": 49,
+      "latest_title": "Protesters Block Access to Louvre Museum in Support of Student Movement",
+      "topic_label": "Russian Hybrid Attacks",
       "hero_image": {
-        "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
+        "url": "/Current_news/generated/events/event_macron-implements-measures-against-intensify_109da09c6f.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_macron-implements-measures-against-intensify_109da09c6f.jpg",
         "source": "Muninn AI illustration",
         "author": "OpenAI GPT Image 2",
         "license": "AI-generated content",
@@ -4451,7 +4559,7 @@
         "focal_tall_x": 0.5,
         "focal_tall_y": 0.48
       },
-      "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
+      "href": "/timeline.html?event=event_macron-implements-measures-against-intensify_109da09c6f"
     },
     {
       "event_id": "event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a",
@@ -4488,6 +4596,40 @@
       "href": "/timeline.html?event=event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a"
     },
     {
+      "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+      "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
+      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Houthi Missile Attack on Yemeni Training Camp Results in 53 Deaths.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-22",
+      "last_seen_at": "2026-10-19",
+      "development_count": 84,
+      "latest_title": "Houthi Missile Attack on Yemeni Training Camp Results in 53 Deaths",
+      "topic_label": "Iran War",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
+    },
+    {
       "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
       "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
       "summary": "Muninn first tracked this thread on 2026-07-25: Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse. The latest development is Russian Strike on Kramatorsk Buses Results in Significant Civilian Casualties.",
@@ -4520,40 +4662,6 @@
         "focal_tall_y": 0.48
       },
       "href": "/timeline.html?event=event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea"
-    },
-    {
-      "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
-      "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
-      "summary": "Muninn first tracked this thread on 2026-09-18: Macron Implements Measures Against Intensifying Russian Hybrid Threats. The latest development is Major Drone Attack Causes Fires in St. Petersburg.",
-      "activity_status": "active",
-      "stage": "timeline",
-      "stage_label": "Timeline",
-      "first_seen_at": "2026-09-18",
-      "last_seen_at": "2026-10-18",
-      "development_count": 47,
-      "latest_title": "Major Drone Attack Causes Fires in St. Petersburg",
-      "topic_label": "Russian Hybrid Attacks",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_macron-implements-measures-against-intensify_109da09c6f.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_macron-implements-measures-against-intensify_109da09c6f.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_macron-implements-measures-against-intensify_109da09c6f"
     }
   ]
 }

@@ -15,7 +15,7 @@
     "summary": "US Ambassador to Israel Mike Huckabee visited the Palestinian town of Turmus Ayya in the Israeli-occupied West Bank, which has faced repeated violence from Israeli settlers. During his visit, Huckabee emphasized the need for the Israeli government to address the issue of violent settlers.",
     "status": "active",
     "first_seen_at": "2026-09-05",
-    "last_seen_at": "2026-10-18",
+    "last_seen_at": "2026-10-19",
     "timeline": [
       {
         "development_id": "story_cd415c0fcdec63ff",
@@ -370,15 +370,186 @@
         "first_seen_at": "2026-10-18",
         "last_seen_at": "2026-10-18",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_5b10890459049a8f",
+        "daily_story_id": "story_5b10890459049a8f",
+        "date": "2026-10-19",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Supreme Court Denies Khalid Sheikh Mohammed's Plea Deal Appeal",
+        "summary": "The US Supreme Court has rejected an appeal from Khalid Sheikh Mohammed and two other alleged plotters of the September 11 attacks, who sought to revive a previously revoked plea deal with military prosecutors. Mohammed is scheduled to stand trial in June 2028 for his role in the attacks.",
+        "topic_label": "9/11 Attacks",
+        "development_type": "military_action",
+        "key_facts": [
+          "Supreme Court denied appeal from Khalid Sheikh Mohammed.",
+          "Appeal aimed to revive a revoked plea deal.",
+          "Trial scheduled for June 2028."
+        ],
+        "source_count": 3,
+        "sources": [
+          "CBS News",
+          "Channel NewsAsia",
+          "NBC News"
+        ],
+        "source_urls": [
+          "https://www.nbcnews.com/politics/supreme-court/supreme-court-rejects-alleged-911-masterminds-attempt-revive-plea-deal-rcna603448",
+          "https://www.channelnewsasia.com/world/sep-11-attack-khalid-mohammed-court-reject-plea-6472846",
+          "https://www.cbsnews.com/news/supreme-court-khalid-sheikh-mohammed-911-appeal"
+        ],
+        "source_details": [
+          {
+            "title": "Supreme Court rejects alleged 9/11 mastermind’s attempt to revive plea deal",
+            "source": "NBC News",
+            "link": "https://www.nbcnews.com/politics/supreme-court/supreme-court-rejects-alleged-911-masterminds-attempt-revive-plea-deal-rcna603448",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "US Supreme Court denies bid by 9/11 mastermind to revive plea deal",
+            "source": "Channel NewsAsia",
+            "link": "https://www.channelnewsasia.com/world/sep-11-attack-khalid-mohammed-court-reject-plea-6472846",
+            "source_bias": "center"
+          },
+          {
+            "title": "Supreme Court turns away appeal from alleged 9/11 mastermind",
+            "source": "CBS News",
+            "link": "https://www.cbsnews.com/news/supreme-court-khalid-sheikh-mohammed-911-appeal",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "attack"
+          ],
+          "shared_incident_anchors": [
+            "us"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "attack",
+            "september"
+          ],
+          "shared_entities": [
+            "us"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_acc33fdfa1193c50",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-19",
+        "last_seen_at": "2026-10-19",
+        "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_acc33fdfa1193c50",
+        "daily_story_id": "story_acc33fdfa1193c50",
+        "date": "2026-10-19",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Ten Arrested in Israel Following Attacks by West Bank Settlers on Journalists and Diplomats",
+        "summary": "Israeli police have arrested ten individuals in the West Bank following a series of attacks on a US journalist and European diplomats. The arrests occurred amid a rise in settler violence, particularly during the Palestinian olive harvest season. Reports indicate that there have been at least 170 settler attacks since late September.",
+        "topic_label": "",
+        "development_type": "military_action",
+        "key_facts": [
+          "Ten individuals were arrested by Israeli police.",
+          "The arrests are linked to attacks on a US journalist and European diplomats.",
+          "The incidents occurred during a spike in settler violence."
+        ],
+        "source_count": 4,
+        "sources": [
+          "CBC",
+          "DW - English",
+          "PBS News",
+          "RTE News"
+        ],
+        "source_urls": [
+          "https://www.pbs.org/newshour/world/israeli-police-arrest-10-following-weekend-attacks-by-west-bank-settlers-on-journalist-and-diplomats",
+          "https://www.rte.ie/news/world/2026/1019/1595913-israel-arrests",
+          "https://www.dw.com/en/west-bank-israel-arrests-10-suspects-over-settler-attacks-on-us-journalist-european-diplomats/a-79696514?maca=en-rss-en-all-1573-rdf",
+          "https://www.cbc.ca/news/world/israel-west-bank-settlers-arrests-9.7386445?cmp=rss"
+        ],
+        "source_details": [
+          {
+            "title": "Israeli police arrest 10 following weekend attacks by West Bank settlers on journalist and diplomats",
+            "source": "PBS News",
+            "link": "https://www.pbs.org/newshour/world/israeli-police-arrest-10-following-weekend-attacks-by-west-bank-settlers-on-journalist-and-diplomats",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Israeli police arrest 10 following settler attacks",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/world/2026/1019/1595913-israel-arrests",
+            "source_bias": "center"
+          },
+          {
+            "title": "West Bank: Israel arrests 10 suspects over settler attacks on US journalist, European diplomats",
+            "source": "DW - English",
+            "link": "https://www.dw.com/en/west-bank-israel-arrests-10-suspects-over-settler-attacks-on-us-journalist-european-diplomats/a-79696514?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Israel arrests 10 people after West Bank settler attacks on diplomats, journalist",
+            "source": "CBC",
+            "link": "https://www.cbc.ca/news/world/israel-west-bank-settlers-arrests-9.7386445?cmp=rss",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "attack"
+          ],
+          "shared_incident_anchors": [
+            "bank",
+            "israel",
+            "west"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "attack",
+            "bank",
+            "harvest",
+            "israel",
+            "olive",
+            "palestinian",
+            "settler",
+            "violence",
+            "west"
+          ],
+          "shared_entities": [
+            "bank",
+            "israel",
+            "west"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_92e4a46874d8c0f3",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-19",
+        "last_seen_at": "2026-10-19",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 4,
+      "public_development_count": 6,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Attack on European Diplomats by Masked Settlers in West Bank",
-    "latest_summary": "Masked settlers attacked European diplomats in the village of Taybeh, targeting representatives from Belgium, France, and Poland, as well as Catholic officials. The incident was confirmed by Belgium's Foreign Minister Maxime Prevot.",
+    "latest_title": "Ten Arrested in Israel Following Attacks by West Bank Settlers on Journalists and Diplomats",
+    "latest_summary": "Israeli police have arrested ten individuals in the West Bank following a series of attacks on a US journalist and European diplomats. The arrests occurred amid a rise in settler violence, particularly during the Palestinian olive harvest season. Reports indicate that there have been at least 170 settler attacks since late September.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -390,28 +561,30 @@
         "story_cd415c0fcdec63ff",
         "story_3aa18e68fd5c8cf7",
         "story_92e4a46874d8c0f3",
-        "story_eaffa9fcfa67d109"
+        "story_eaffa9fcfa67d109",
+        "story_5b10890459049a8f",
+        "story_acc33fdfa1193c50"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-10-18",
-      "development_count": 4,
-      "coverage_packet_count": 6,
-      "date_count": 4,
-      "source_count": 14,
-      "independent_source_count": 10,
+      "summary_updated_at": "2026-10-19",
+      "development_count": 6,
+      "coverage_packet_count": 8,
+      "date_count": 5,
+      "source_count": 21,
+      "independent_source_count": 14,
       "first_date": "2026-09-05",
-      "latest_date": "2026-10-18",
-      "latest_update_title": "Attack on European Diplomats by Masked Settlers in West Bank",
-      "coverage_score": 0.843,
+      "latest_date": "2026-10-19",
+      "latest_update_title": "Ten Arrested in Israel Following Attacks by West Bank Settlers on Journalists and Diplomats",
+      "coverage_score": 1.0,
       "recency_score": 1.0,
-      "rank_score": 0.934,
-      "context_summary": "Muninn first tracked this thread on 2026-09-05: US Ambassador Visits Palestinian Town Affected by Settler Violence. The latest development is Attack on European Diplomats by Masked Settlers in West Bank.",
-      "cta_label": "Explore 4 developments"
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-09-05: US Ambassador Visits Palestinian Town Affected by Settler Violence. The latest development is Ten Arrested in Israel Following Attacks by West Bank Settlers on Journalists and Diplomats.",
+      "cta_label": "Explore 6 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "US Ambassador to Israel Mike Huckabee visited the Palestinian town of Turmus Ayya in the Israeli-occupied West Bank, which has faced repeated violence from Israeli settlers. A later development was Violence Erupts as Israeli Settlers Attack Palestinians During Olive Harvest in West Bank. Most recently, masked settlers attacked European diplomats in the village of Taybeh, targeting representatives from Belgium, France, and Poland, as well as Catholic officials.",
+      "summary": "US Ambassador to Israel Mike Huckabee visited the Palestinian town of Turmus Ayya in the Israeli-occupied West Bank, which has faced repeated violence from Israeli settlers. A later development was Attack on European Diplomats by Masked Settlers in West Bank. Most recently, israeli police have arrested ten individuals in the West Bank following a series of attacks on a US journalist and European diplomats.",
       "key_developments": [
         {
           "development_id": "story_cd415c0fcdec63ff",
@@ -432,6 +605,16 @@
           "development_id": "story_eaffa9fcfa67d109",
           "date": "2026-10-18",
           "title": "Attack on European Diplomats by Masked Settlers in West Bank"
+        },
+        {
+          "development_id": "story_5b10890459049a8f",
+          "date": "2026-10-19",
+          "title": "Supreme Court Denies Khalid Sheikh Mohammed's Plea Deal Appeal"
+        },
+        {
+          "development_id": "story_acc33fdfa1193c50",
+          "date": "2026-10-19",
+          "title": "Ten Arrested in Israel Following Attacks by West Bank Settlers on Journalists and Diplomats"
         }
       ],
       "sources": [
@@ -518,31 +701,76 @@
           "source": "AP",
           "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQVlRiVjVsUFhzbGdNVXNZRm9JNDNUMGJDN2FrQlRjc00tM2JRTEh0bFNFVjFZdXRwN18teXNLN2lvblRwaHlzWHFQQnVqc1pVSWhHUWtDaks1eXNodVJsYmdHSzR6R0RBQk1jTjRmZ0wxYl9OZm5KQ285WU0tWDVzNDZISzA3bktzeXU0V2d1QklWYVlNWmdoQnNzRHFaQ2E1LUU3MTN4Zw?oc=5",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Supreme Court rejects alleged 9/11 mastermind’s attempt to revive plea deal",
+          "source": "NBC News",
+          "link": "https://www.nbcnews.com/politics/supreme-court/supreme-court-rejects-alleged-911-masterminds-attempt-revive-plea-deal-rcna603448",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "US Supreme Court denies bid by 9/11 mastermind to revive plea deal",
+          "source": "Channel NewsAsia",
+          "link": "https://www.channelnewsasia.com/world/sep-11-attack-khalid-mohammed-court-reject-plea-6472846",
+          "source_bias": "center"
+        },
+        {
+          "title": "Supreme Court turns away appeal from alleged 9/11 mastermind",
+          "source": "CBS News",
+          "link": "https://www.cbsnews.com/news/supreme-court-khalid-sheikh-mohammed-911-appeal",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Israeli police arrest 10 following weekend attacks by West Bank settlers on journalist and diplomats",
+          "source": "PBS News",
+          "link": "https://www.pbs.org/newshour/world/israeli-police-arrest-10-following-weekend-attacks-by-west-bank-settlers-on-journalist-and-diplomats",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Israeli police arrest 10 following settler attacks",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/world/2026/1019/1595913-israel-arrests",
+          "source_bias": "center"
+        },
+        {
+          "title": "West Bank: Israel arrests 10 suspects over settler attacks on US journalist, European diplomats",
+          "source": "DW - English",
+          "link": "https://www.dw.com/en/west-bank-israel-arrests-10-suspects-over-settler-attacks-on-us-journalist-european-diplomats/a-79696514?maca=en-rss-en-all-1573-rdf",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Israel arrests 10 people after West Bank settler attacks on diplomats, journalist",
+          "source": "CBC",
+          "link": "https://www.cbc.ca/news/world/israel-west-bank-settlers-arrests-9.7386445?cmp=rss",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-10-18",
+      "updated_at": "2026-10-19",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
     "related_events": [
       {
-        "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
-        "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
+        "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+        "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
         "relationship": "related_topic",
-        "confidence": 0.755,
+        "confidence": 0.886,
         "shared_entities": [
-          "france",
+          "escalating_tension",
           "israel",
+          "june",
+          "khalid_sheikh",
+          "sheikh_mohammed",
           "us"
         ]
       },
       {
-        "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
-        "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
+        "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
+        "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
         "relationship": "related_topic",
-        "confidence": 0.754,
+        "confidence": 0.752,
         "shared_entities": [
-          "escalating_tension",
+          "france",
           "israel",
           "us"
         ]
@@ -551,7 +779,7 @@
         "event_id": "event_us-denies-visa-to-palestinian-officials-ahea_ff7e499c31",
         "title": "US Denies Visa to Palestinian Officials Ahead of UN General Assembly",
         "relationship": "related_topic",
-        "confidence": 0.698,
+        "confidence": 0.703,
         "shared_entities": [
           "france",
           "us",
@@ -559,12 +787,11 @@
         ]
       },
       {
-        "event_id": "event_g7-nations-to-release-100-million-barrels-of_a5ce6f7f24",
-        "title": "G7 Nations to Release 100 Million Barrels of Diesel and Crude Oil",
+        "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
+        "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
         "relationship": "related_topic",
-        "confidence": 0.691,
+        "confidence": 0.702,
         "shared_entities": [
-          "france",
           "israel",
           "us"
         ]
@@ -693,12 +920,18 @@
       "focal_tall_y": 0.48
     },
     "search_tokens": [
+      "170",
+      "2028",
       "address",
       "affected",
       "aimed",
+      "alleged",
       "also",
       "ambassador",
       "annual",
+      "appeal",
+      "arrest",
+      "arrested",
       "assault",
       "attack",
       "attacked",
@@ -715,7 +948,10 @@
       "confirmed",
       "control",
       "coordinated",
+      "court",
       "covering",
+      "deal",
+      "denie",
       "diplomat",
       "disrupt",
       "emphasized",
@@ -736,43 +972,74 @@
       "incident",
       "included",
       "increasingly",
+      "indicate",
+      "individual",
       "israel",
       "israeli-occupied",
       "issue",
       "jenin",
+      "journalist",
+      "june",
+      "khalid",
       "kill",
       "killed",
+      "late",
+      "least",
       "masked",
       "maxime",
       "mike",
       "military",
+      "mohammed",
       "near",
       "need",
       "occupied",
+      "occurred",
       "olive",
+      "other",
       "palestinian",
       "part",
+      "particularly",
       "photographer",
       "physical",
+      "plea",
+      "plotter",
       "poland",
       "post",
+      "previously",
       "prevot",
+      "prosecutor",
       "region",
+      "rejected",
       "repeated",
       "representative",
       "resident",
+      "revive",
+      "revoked",
+      "rise",
       "rocks",
+      "role",
+      "scheduled",
+      "season",
       "separate",
+      "september",
+      "serie",
       "setting",
       "settler",
+      "sheikh",
       "shot",
+      "since",
       "situation",
+      "sought",
+      "stand",
+      "supreme",
       "targeting",
       "taybeh",
       "tension",
+      "there",
       "those",
       "town",
       "trees",
+      "trial",
       "turmu",
       "using",
       "village",
@@ -792,6 +1059,9 @@
       "belgium",
       "belgium_foreign",
       "belgium_france",
+      "deal_appeal",
+      "denie_khalid",
+      "diplomat_israel",
       "escalating_tension",
       "european_diplomat",
       "france",
@@ -802,12 +1072,18 @@
       "israeli-occupied",
       "israeli-occupied_west",
       "jenin",
+      "june",
+      "khalid",
+      "khalid_sheikh",
       "masked_settler",
       "maxime_prevot.",
       "mike_huckabee",
+      "mohammed_plea",
       "olive_harvest",
       "palestinian_town",
+      "plea_deal",
       "settler_violence",
+      "sheikh_mohammed",
       "tension_israel",
       "town_affected",
       "turmu_ayya",
@@ -817,54 +1093,20 @@
       "washington_post",
       "west"
     ],
-    "search_text": "address affected aimed also ambassador ambassador_visit annual assault attack attacked attempting authoritie ayya bank beaten belgium belgium_foreign belgium_france broader cars catholic clubs confirmed control coordinated covering diplomat disrupt emphasized erupt escalating escalating_tension escalation european european_diplomat event faced fatally fire force foreign france gather harvest huckabee incident included increasingly israel israel_force israel_mike israel_settler israeli-occupied israeli-occupied_west issue jenin kill killed masked masked_settler maxime maxime_prevot. mike mike_huckabee military near need occupied olive olive_harvest palestinian palestinian_town part photographer physical poland post prevot region repeated representative resident rocks separate setting settler settler_violence shot situation targeting taybeh tension tension_israel those town town_affected trees turmu turmu_ayya us using village violence violence_erupt violent visit visit_palestinian visited warning washington washington_post well west which while"
+    "search_text": "170 2028 address affected aimed alleged also ambassador ambassador_visit annual appeal arrest arrested assault attack attacked attempting authoritie ayya bank beaten belgium belgium_foreign belgium_france broader cars catholic clubs confirmed control coordinated court covering deal deal_appeal denie denie_khalid diplomat diplomat_israel disrupt emphasized erupt escalating escalating_tension escalation european european_diplomat event faced fatally fire force foreign france gather harvest huckabee incident included increasingly indicate individual israel israel_force israel_mike israel_settler israeli-occupied israeli-occupied_west issue jenin journalist june khalid khalid_sheikh kill killed late least masked masked_settler maxime maxime_prevot. mike mike_huckabee military mohammed mohammed_plea near need occupied occurred olive olive_harvest other palestinian palestinian_town part particularly photographer physical plea plea_deal plotter poland post previously prevot prosecutor region rejected repeated representative resident revive revoked rise rocks role scheduled season separate september serie setting settler settler_violence sheikh sheikh_mohammed shot since situation sought stand supreme targeting taybeh tension tension_israel there those town town_affected trees trial turmu turmu_ayya us using village violence violence_erupt violent visit visit_palestinian visited warning washington washington_post well west which while"
   },
   "related_events": [
     {
-      "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
-      "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
-      "summary": "Muninn first tracked this thread on 2026-09-18: Macron Implements Measures Against Intensifying Russian Hybrid Threats. The latest development is Major Drone Attack Causes Fires in St. Petersburg.",
-      "activity_status": "active",
-      "stage": "timeline",
-      "stage_label": "Timeline",
-      "first_seen_at": "2026-09-18",
-      "last_seen_at": "2026-10-18",
-      "development_count": 47,
-      "latest_title": "Major Drone Attack Causes Fires in St. Petersburg",
-      "topic_label": "Russian Hybrid Attacks",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_macron-implements-measures-against-intensify_109da09c6f.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_macron-implements-measures-against-intensify_109da09c6f.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_macron-implements-measures-against-intensify_109da09c6f"
-    },
-    {
       "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
       "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
-      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Ukrainian Drone Attack on St Petersburg Kills One and Damages Oil Facilities.",
+      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Houthi Missile Attack on Yemeni Training Camp Results in 53 Deaths.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-07-22",
-      "last_seen_at": "2026-10-18",
-      "development_count": 83,
-      "latest_title": "Ukrainian Drone Attack on St Petersburg Kills One and Damages Oil Facilities",
+      "last_seen_at": "2026-10-19",
+      "development_count": 84,
+      "latest_title": "Houthi Missile Attack on Yemeni Training Camp Results in 53 Deaths",
       "topic_label": "Iran War",
       "hero_image": {
         "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
@@ -887,6 +1129,40 @@
         "focal_tall_y": 0.48
       },
       "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
+    },
+    {
+      "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
+      "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
+      "summary": "Muninn first tracked this thread on 2026-09-18: Macron Implements Measures Against Intensifying Russian Hybrid Threats. The latest development is Protesters Block Access to Louvre Museum in Support of Student Movement.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-09-18",
+      "last_seen_at": "2026-10-19",
+      "development_count": 49,
+      "latest_title": "Protesters Block Access to Louvre Museum in Support of Student Movement",
+      "topic_label": "Russian Hybrid Attacks",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_macron-implements-measures-against-intensify_109da09c6f.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_macron-implements-measures-against-intensify_109da09c6f.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_macron-implements-measures-against-intensify_109da09c6f"
     },
     {
       "event_id": "event_us-denies-visa-to-palestinian-officials-ahea_ff7e499c31",
@@ -923,20 +1199,20 @@
       "href": "/timeline.html?event=event_us-denies-visa-to-palestinian-officials-ahea_ff7e499c31"
     },
     {
-      "event_id": "event_g7-nations-to-release-100-million-barrels-of_a5ce6f7f24",
-      "title": "G7 Nations to Release 100 Million Barrels of Diesel and Crude Oil",
-      "summary": "Muninn first tracked this thread on 2026-10-02: G7 Nations to Release 100 Million Barrels of Diesel and Crude Oil. The latest development is France to Release 10 Million Barrels of Diesel from Strategic Reserves.",
+      "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
+      "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
+      "summary": "Muninn first tracked this thread on 2026-09-11: Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims. The latest development is Trump Endorses Netanyahu Ahead of Israeli Election Amid Iran Tensions.",
       "activity_status": "active",
-      "stage": "developing_event",
-      "stage_label": "Developing event",
-      "first_seen_at": "2026-10-02",
-      "last_seen_at": "2026-10-08",
-      "development_count": 3,
-      "latest_title": "France to Release 10 Million Barrels of Diesel from Strategic Reserves",
-      "topic_label": "Energy Reserves",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-09-11",
+      "last_seen_at": "2026-10-19",
+      "development_count": 35,
+      "latest_title": "Trump Endorses Netanyahu Ahead of Israeli Election Amid Iran Tensions",
+      "topic_label": "9/11 Victim Compensation",
       "hero_image": {
-        "url": "/Current_news/generated/events/event_g7-nations-to-release-100-million-barrels-of_a5ce6f7f24.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_g7-nations-to-release-100-million-barrels-of_a5ce6f7f24.jpg",
+        "url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",
         "source": "Muninn AI illustration",
         "author": "OpenAI GPT Image 2",
         "license": "AI-generated content",
@@ -954,7 +1230,7 @@
         "focal_tall_x": 0.5,
         "focal_tall_y": 0.48
       },
-      "href": "/timeline.html?event=event_g7-nations-to-release-100-million-barrels-of_a5ce6f7f24"
+      "href": "/timeline.html?event=event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b"
     }
   ]
 }
