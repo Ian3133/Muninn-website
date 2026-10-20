@@ -15,7 +15,7 @@
     "summary": "French President Emmanuel Macron has ordered protective measures for the country's critical infrastructure and defense industry in response to escalating Russian hybrid attacks. This announcement followed a meeting with political party leaders to discuss the growing threats from Russia, particularly in light of recent developments in Europe. Macron emphasized that the hybrid threat from Moscow has intensified in recent weeks, necessitating immediate action.",
     "status": "active",
     "first_seen_at": "2026-09-18",
-    "last_seen_at": "2026-10-19",
+    "last_seen_at": "2026-10-20",
     "timeline": [
       {
         "development_id": "story_d3dbd0df63be1e56",
@@ -4234,6 +4234,165 @@
         "first_seen_at": "2026-10-19",
         "last_seen_at": "2026-10-19",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_8373bbcded0ae4ec",
+        "daily_story_id": "story_8373bbcded0ae4ec",
+        "date": "2026-10-20",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Demonstrators Block Louvre Museum Access in Paris Amid Ongoing Protests",
+        "summary": "On Monday, protesters blocked access to the Louvre Museum in Paris, continuing demonstrations in support of a student movement. This action followed a weekend marked by violent protests and clashes across France, reflecting heightened tensions in the country.",
+        "topic_label": "Student Protests",
+        "development_type": "development",
+        "key_facts": [
+          "Protesters blocked access to the Louvre Museum in Paris.",
+          "The demonstration was in support of a student movement.",
+          "The protests followed a weekend of violence and clashes in France."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Africanews",
+          "Euronews"
+        ],
+        "source_urls": [
+          "http://www.africanews.com/2026/10/19/protesters-block-access-to-paris-louvre-museum-in-support-of-student-movement",
+          "https://www.euronews.com/video/2026/10/19/protesters-block-entrances-to-pariss-louvre-museum"
+        ],
+        "source_details": [
+          {
+            "title": "Protesters block access to Paris' Louvre Museum in support of student movement",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/10/19/protesters-block-access-to-paris-louvre-museum-in-support-of-student-movement",
+            "source_bias": "center"
+          },
+          {
+            "title": "Protesters block entrances to Paris’s Louvre museum",
+            "source": "Euronews",
+            "link": "https://www.euronews.com/video/2026/10/19/protesters-block-entrances-to-pariss-louvre-museum",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 1.0,
+        "match_evidence": {
+          "score": 1.0,
+          "matched_development_id": "story_96b348a25fb5c0a5",
+          "shared_tokens": [
+            "access",
+            "across",
+            "block",
+            "demonstration",
+            "followed",
+            "france",
+            "louvre",
+            "monday",
+            "movement",
+            "museum",
+            "ongoing",
+            "paris",
+            "protest",
+            "protester",
+            "student",
+            "support",
+            "violent",
+            "weekend"
+          ],
+          "shared_entities": [
+            "france",
+            "louvre",
+            "louvre_museum",
+            "paris",
+            "student_protest"
+          ],
+          "source_url_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-20",
+        "last_seen_at": "2026-10-20",
+        "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_b2afc07fdfd7b681",
+        "daily_story_id": "story_b2afc07fdfd7b681",
+        "date": "2026-10-20",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "French PM Announces Major Police Presence for Upcoming Protests",
+        "summary": "French Prime Minister Sebastien Lecornu announced a 'massive' police deployment for planned protests this Saturday. This decision follows recent riots that occurred during nationwide demonstrations. Lecornu acknowledged that the previous security measures were insufficiently mobile and stated that the government aims to reinforce police presence in major cities to address the situation.",
+        "topic_label": "France Protests",
+        "development_type": "policy",
+        "key_facts": [
+          "French Prime Minister Sebastien Lecornu announced a massive police deployment for protests on Saturday.",
+          "The announcement follows riots during recent nationwide demonstrations.",
+          "Lecornu criticized previous security measures as too static."
+        ],
+        "source_count": 2,
+        "sources": [
+          "DW - English",
+          "France 24 - English"
+        ],
+        "source_urls": [
+          "https://www.france24.com/en/video/20261020-french-pm-vows-massive-police-deployment-for-new-demonstrations-saturday",
+          "https://www.dw.com/en/france-plans-massive-weekend-police-surge-amid-protests/live-79707186?maca=en-rss-en-all-1573-rdf"
+        ],
+        "source_details": [
+          {
+            "title": "French PM vows 'massive' police deployment for new demonstrations Saturday",
+            "source": "France 24 - English",
+            "link": "https://www.france24.com/en/video/20261020-french-pm-vows-massive-police-deployment-for-new-demonstrations-saturday",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "France plans 'massive' weekend police surge amid protests",
+            "source": "DW - English",
+            "link": "https://www.dw.com/en/france-plans-massive-weekend-police-surge-amid-protests/live-79707186?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "protest"
+          ],
+          "shared_incident_anchors": [
+            "france",
+            "france_prime",
+            "pm"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "address",
+            "france",
+            "lecornu",
+            "prime",
+            "protest",
+            "security",
+            "situation",
+            "upcoming"
+          ],
+          "shared_entities": [
+            "france",
+            "france_prime",
+            "pm"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_9672f250ced3c745",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-20",
+        "last_seen_at": "2026-10-20",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -4264,12 +4423,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 49,
+      "public_development_count": 51,
       "questionable_development_count": 3,
       "review_required": true
     },
-    "latest_title": "Protesters Block Access to Louvre Museum in Support of Student Movement",
-    "latest_summary": "Protesters gathered in front of the Louvre Museum in Paris on Monday in support of the ongoing student movement. This demonstration followed a weekend of violent protests across France, highlighting the students' demands and frustrations.",
+    "latest_title": "French PM Announces Major Police Presence for Upcoming Protests",
+    "latest_summary": "French Prime Minister Sebastien Lecornu announced a 'massive' police deployment for planned protests this Saturday. This decision follows recent riots that occurred during nationwide demonstrations. Lecornu acknowledged that the previous security measures were insufficiently mobile and stated that the government aims to reinforce police presence in major cities to address the situation.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -4279,30 +4438,30 @@
       "display_title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats Timeline",
       "milestone_development_ids": [
         "story_d3dbd0df63be1e56",
-        "story_592d741a9536c737",
-        "story_9428eb12d10e4f9a",
-        "story_96b348a25fb5c0a5"
+        "story_7fa1be14ee744787",
+        "story_0a210ed9984a6b71",
+        "story_b2afc07fdfd7b681"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-10-19",
-      "development_count": 49,
-      "coverage_packet_count": 54,
-      "date_count": 23,
-      "source_count": 147,
+      "summary_updated_at": "2026-10-20",
+      "development_count": 51,
+      "coverage_packet_count": 56,
+      "date_count": 24,
+      "source_count": 150,
       "independent_source_count": 36,
       "first_date": "2026-09-18",
-      "latest_date": "2026-10-19",
-      "latest_update_title": "Protesters Block Access to Louvre Museum in Support of Student Movement",
+      "latest_date": "2026-10-20",
+      "latest_update_title": "French PM Announces Major Police Presence for Upcoming Protests",
       "coverage_score": 1.0,
       "recency_score": 1.0,
       "rank_score": 1.0,
-      "context_summary": "Muninn first tracked this thread on 2026-09-18: Macron Implements Measures Against Intensifying Russian Hybrid Threats. The latest development is Protesters Block Access to Louvre Museum in Support of Student Movement.",
-      "cta_label": "Explore 49 developments"
+      "context_summary": "Muninn first tracked this thread on 2026-09-18: Macron Implements Measures Against Intensifying Russian Hybrid Threats. The latest development is French PM Announces Major Police Presence for Upcoming Protests.",
+      "cta_label": "Explore 51 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "French President Emmanuel Macron has ordered protective measures for the country's critical infrastructure and defense industry in response to escalating Russian hybrid attacks. A later development was Violent Clashes Erupt in Paris Amid Nationwide Student Protests for School Funding. Most recently, protesters gathered in front of the Louvre Museum in Paris on Monday in support of the ongoing student movement.",
+      "summary": "French President Emmanuel Macron has ordered protective measures for the country's critical infrastructure and defense industry in response to escalating Russian hybrid attacks. A later development was Clashes Erupt in Brussels During Anti-Austerity Rally. Most recently, french Prime Minister Sebastien Lecornu announced a 'massive' police deployment for planned protests this Saturday.",
       "key_developments": [
         {
           "development_id": "story_d3dbd0df63be1e56",
@@ -4310,19 +4469,19 @@
           "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats"
         },
         {
-          "development_id": "story_592d741a9536c737",
+          "development_id": "story_7fa1be14ee744787",
           "date": "2026-10-04",
-          "title": "Merz Announces Military and Energy Aid for Ukraine During Kyiv Visit"
+          "title": "French Schools Face Closures Amid Ongoing Student Protests"
         },
         {
-          "development_id": "story_9428eb12d10e4f9a",
-          "date": "2026-10-11",
-          "title": "Deadly Airstrikes in Zaporizhzhia Claim 17 Lives Amid Intensified Russian Attacks"
+          "development_id": "story_0a210ed9984a6b71",
+          "date": "2026-10-12",
+          "title": "Russia Attacks Ukrainian Energy Facilities Amid Ceasefire Claims"
         },
         {
-          "development_id": "story_96b348a25fb5c0a5",
-          "date": "2026-10-19",
-          "title": "Protesters Block Access to Louvre Museum in Support of Student Movement"
+          "development_id": "story_b2afc07fdfd7b681",
+          "date": "2026-10-20",
+          "title": "French PM Announces Major Police Presence for Upcoming Protests"
         }
       ],
       "sources": [
@@ -5207,54 +5366,31 @@
           "source": "AP - Top News via Google News",
           "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNV29RNmhRQUIwZHBFcnJINElNd1ZUTkRNTF8xS3RzQTdoUjkxb0tsQkZqUzF6bjVGS0VXRnlGeGRGQS01dGhYSDh2UG1DUjF1eWlveWo5YlRPaTVfWXYyY1FwUGJVdFdnZEdTX3FkTVU1MVAxQkNVTVhiNkhkQXBRWlVaaWxRQjhEUl81WTFhckpEZGdaMnhQNnZldU13M3BaN1NhWkZKUGp2VGt3eEhOUnVsMU9YTTBQT3dkSWNWVm1WYlZLVUg1OWl4dlhTWUE1VUp3Q1lR?oc=5",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Protesters block entrances to Paris’s Louvre museum",
+          "source": "Euronews",
+          "link": "https://www.euronews.com/video/2026/10/19/protesters-block-entrances-to-pariss-louvre-museum",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "French PM vows 'massive' police deployment for new demonstrations Saturday",
+          "source": "France 24 - English",
+          "link": "https://www.france24.com/en/video/20261020-french-pm-vows-massive-police-deployment-for-new-demonstrations-saturday",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "France plans 'massive' weekend police surge amid protests",
+          "source": "DW - English",
+          "link": "https://www.dw.com/en/france-plans-massive-weekend-police-surge-amid-protests/live-79707186?maca=en-rss-en-all-1573-rdf",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-10-19",
+      "updated_at": "2026-10-20",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
     "related_events": [
-      {
-        "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
-        "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
-        "relationship": "related_topic",
-        "confidence": 0.95,
-        "shared_entities": [
-          "donald_trump",
-          "general_assembly.",
-          "however_ukraine",
-          "iran",
-          "israel",
-          "riyadh",
-          "riyadh_airport",
-          "russia",
-          "russia_drone",
-          "saudi_arabia",
-          "ukraine",
-          "un",
-          "united",
-          "united_nation",
-          "us",
-          "volodymyr_zelensky",
-          "zaporizhzhia"
-        ]
-      },
-      {
-        "event_id": "event_israel-commemorates-third-anniversary-of-oct_c05cefd020",
-        "title": "Israel Commemorates Third Anniversary of October 7 Attacks",
-        "relationship": "related_topic",
-        "confidence": 0.95,
-        "shared_entities": [
-          "diesel_deal",
-          "donald_trump",
-          "israel",
-          "kyiv",
-          "russia",
-          "ukraine",
-          "us",
-          "volodymyr_zelenskyy"
-        ]
-      },
       {
         "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
         "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
@@ -5293,6 +5429,31 @@
         ]
       },
       {
+        "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
+        "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
+        "relationship": "related_topic",
+        "confidence": 0.95,
+        "shared_entities": [
+          "donald_trump",
+          "general_assembly.",
+          "however_ukraine",
+          "iran",
+          "israel",
+          "riyadh",
+          "riyadh_airport",
+          "russia",
+          "russia_drone",
+          "saudi_arabia",
+          "ukraine",
+          "un",
+          "united",
+          "united_nation",
+          "us",
+          "volodymyr_zelensky",
+          "zaporizhzhia"
+        ]
+      },
+      {
         "event_id": "event_ceuta-requests-national-emergency-amid-surge_4919a90e1a",
         "title": "Ceuta Border Surge",
         "relationship": "related_topic",
@@ -5310,6 +5471,22 @@
           "protest_erupt",
           "russia",
           "spain"
+        ]
+      },
+      {
+        "event_id": "event_israel-commemorates-third-anniversary-of-oct_c05cefd020",
+        "title": "Israel Commemorates Third Anniversary of October 7 Attacks",
+        "relationship": "related_topic",
+        "confidence": 0.95,
+        "shared_entities": [
+          "diesel_deal",
+          "donald_trump",
+          "israel",
+          "kyiv",
+          "russia",
+          "ukraine",
+          "us",
+          "volodymyr_zelenskyy"
         ]
       }
     ],
@@ -5418,6 +5595,7 @@
       "access",
       "accuse",
       "accused",
+      "acknowledged",
       "across",
       "action",
       "activist",
@@ -5434,6 +5612,7 @@
       "ahmed",
       "aid",
       "aiming",
+      "aims",
       "airport",
       "airstrike",
       "al-sharaa",
@@ -5488,6 +5667,7 @@
       "blast",
       "block",
       "blockading",
+      "blocked",
       "bomb",
       "bombs",
       "both",
@@ -5548,6 +5728,7 @@
       "constitutional",
       "continue",
       "continued",
+      "continuing",
       "contradicting",
       "controlled",
       "controversial",
@@ -5581,6 +5762,7 @@
       "demonstration",
       "demonstrator",
       "deployed",
+      "deployment",
       "depot",
       "described",
       "describing",
@@ -5689,6 +5871,7 @@
       "halt",
       "halts",
       "height",
+      "heightened",
       "held",
       "help",
       "high",
@@ -5731,6 +5914,7 @@
       "injuring",
       "instead",
       "institution",
+      "insufficiently",
       "intense",
       "intensified",
       "intensifying",
@@ -5818,6 +6002,7 @@
       "million",
       "milrem",
       "missile",
+      "mobile",
       "mobilization",
       "modi",
       "monday",
@@ -5903,6 +6088,7 @@
       "poor",
       "potential",
       "power",
+      "presence",
       "presidential",
       "previou",
       "price",
@@ -5932,12 +6118,14 @@
       "refinerie",
       "refinery",
       "reflect",
+      "reflecting",
       "reform",
       "refrain",
       "refuse",
       "regarding",
       "region",
       "regional",
+      "reinforce",
       "reiterated",
       "rejection",
       "release",
@@ -5959,6 +6147,7 @@
       "resulting",
       "revision",
       "riot",
+      "riots",
       "rise",
       "rising",
       "riyadh",
@@ -5974,12 +6163,14 @@
       "sanchez",
       "sanction",
       "satellite",
+      "saturday",
       "saudi",
       "scale",
       "scheduled",
       "school",
       "science",
       "search",
+      "sebastien",
       "second",
       "security",
       "seen",
@@ -6151,6 +6342,7 @@
       "belgian_student",
       "block_access",
       "block_injure",
+      "block_louvre",
       "broader_political",
       "brussel",
       "brussels.",
@@ -6169,6 +6361,7 @@
       "damage_ukraine",
       "deadly_airstrike",
       "defense_company",
+      "demonstrator_block",
       "diesel_deal",
       "donald_trump",
       "drone_ahead",
@@ -6270,6 +6463,7 @@
       "moscow_causing",
       "moscow_region",
       "movement_protester",
+      "museum_access",
       "narendra_modi",
       "nation_general",
       "national_academy",
@@ -6282,6 +6476,7 @@
       "october_zaporizhzhia",
       "odesa",
       "ongoing_air",
+      "ongoing_protest",
       "ongoing_student",
       "ongoing_violence",
       "orchestrating_arson",
@@ -6328,6 +6523,7 @@
       "sanchez._protester",
       "saudi_arabia",
       "science_academy",
+      "sebastien_lecornu",
       "severe_disruption",
       "south",
       "south_africa",
@@ -6370,6 +6566,7 @@
       "united",
       "united_nation",
       "unrest_recent",
+      "upcoming_protest",
       "urges_stronger",
       "us",
       "using_mother",
@@ -6386,9 +6583,43 @@
       "zaporizhzhia_claim",
       "zaporizhzhia_russia"
     ],
-    "search_text": "000 100 107 126 130 14-year-old 16-storey 2026 250 256 290 500 800 87-year-old abascal abascal_tens ablaze abuse abuse_protest academy access accuse accuse_russia accused across across_france action activist address advocating aerial affected affordable africa african agreed agreement ahead ahmed aid aiming air_assault air_blast air_campaign airport airstrike al-sharaa albania albania_continue albanian allegation allege allie already also amidst among anger announce announced announcement annual anti-austerity anti-austerity_rally anti-government anti-government_protest apart apartment apartment_block application apply approach approximately arabia area area_including areas around arrest arrest_nationwide arson assault assembly assert assert_golan asylum asylum_ruling attack attacking attempted attended austerity authoritie bangkok bank bank._demonstrator bastien became began belgian belgian_student belgium benefit better billion blast block block_access block_injure blockading bomb bombs both bridge broader broader_political brussel brussels. brutality building bullet burned burnt cabinet called calls campaign cannon capital capitalism cars casualtie cause cause_fires caused causing causing_casualtie ceased ceasefire ceasefire_claim central certain challenge chancellor chancellor_friedrich chaos chief children citie civilian claim claim_life claim_lives claim_ukraine clashe clashe_erupt clashed classroom closure coincided comes comment commissioned commonly company company_estonia concern concern_demonstration condemnation condemned condition condition_concern conducted confirmed conflict confrontation connect connectivity consider consider_using considering constitutional continue continued contradicting controlled controversial cost costs court criminal crisi critic critical criticism criticize criticized crowd cruel culminated curfew cuts damage damage_ukraine date deadly deadly_airstrike deal death decision declare declared defense defense_company deliberate demand demanding demonstration demonstrator deployed depot described describing despite destroyed detained deteriorating devastating development diesel diesel_deal dilapidated directive discuss discussed discussion disperse disrupting disruption dissatisfaction district donald donald_trump drawn drew driven drone drone_ahead durban eased easing eastern economic edi_rama. education education_condition education_reform effort election election_ukraine emergency emmanuel emmanuel_macron emphasized energy energy_aid energy_ceasefire energy_facilitie energy_infrastructure enforcement engaged entered environment erupt erupt_across erupted escalate escalated escalating escalating_anti-government escalation escape estimated estonia estonia_accuse estonian eu europe europe. europe._macron european european_union evacuated event evicted evicted_pensioner eviction expected experienced experiencing explosive expressed extensive face facilitie facing factorie familie fatalitie favor felt fifth final financial financially fire fires five flame focal follow followed france france. france._france france_france france_halts france_prime french-speaking friedrich friedrich_merz front frustration fuel fuel_depot fueled fund funding funding_violent gas gas_used gathered gathering gbu-43 general general_assembly. german german_chancellor glass global golan golan_height grapple grenade grenade_use grid grief growing halt halts halts_stun height held help high high_price highlighted highlighting historic homes honor honor_evicted honoring hospital hospital_causing hours housing housing_crisi houthi however however_ukraine hundred hybrid hybrid_threat icc idea imf immediate impact impacted implement implement_measure improved improvement incident included including including_children increasing india indicate indicated individual industrial industry inequality inequality_france infrastructure infrastructure_russia initiated injure injure_other injured injurie injuring instead institution intense intensified intensified_russia intensifying intensifying_russia intercepted interior international international_airport international_criminal international_monetary involved involvement involving iran iran-backed iran-backed_houthis. israel issue jersey jersey._kyiv joining joint just khalid khalid_international kharkiv kharkiv_apartment kill killed kills king king_khalid klitschko known kyiv kyiv_claim kyiv_mayor kyiv_pecherskyi kyiv_science kyiv_struck kyiv_visit labeling large-scale large-scale_drone largely larger largest launche launche_large-scale launche_massive launched lead leader leadership leading learning least leaving lecornu lecornu_consider lesson life light like linked list list_revision lists littered lives living local localized location logistic looted looting looting_france louvre louvre_museum lower macron macron_implement made madrid madrid_honor main many march marched maricarmen maricarmen_abascal marked market marking marks marseille marseille._tens masked massive massive_drone massive_ordnance massive_protest mayor mayor_vitali measure measure_tens meeting member membership merz metz mid-august midterm military military_consider million milrem milrem_robotic missile mobilization modi monday monetary monetary_fund month moscow moscow. moscow_causing moscow_region most mother mourner movement movement_protester multiple museum names narendra narendra_modi nation nation_general national national_academy nationwide nationwide_protest nationwide_student nato navi navi_pillay near necessary necessitating need negative negotiation nine nine-storey nobel nobel_peace northern notable noted numerou occupation occurred october october_st. october_zaporizhzhia odesa office oil ongoing ongoing_air ongoing_student ongoing_violence only operation oppose opposed opposition orchestrating orchestrating_arson ordered ordnance ordnance_air organized other outbreak overcrowded overnight package parallel paralysi parent paris paris_escalate parliamentary parody part participant participate participated particularly partie partly parts party pattern peace peace_prize pecherskyi pedro pedro_sanchez. pensioner pensioner_maricarmen person petersburg petersburg_refinery pillay planned plans pm point policie policy political political_unrest poor potential power presidential previou price prime prize production prompting proposed protective protest protest_continue protest_erupt protest_france protest_lead protest_poor protest_spark protested protester protester_block pryluky public puerta putin quickly railway raised raising rally rallying rama rama._clashe ransacked recent recognition refinerie refinery refinery_ukraine reflect reform refrain refuse regarding region region_ukraine regional reiterated rejection release relief relief_measure remain remain_syrian remark removed reported reportedly rescue resident residential residential_area resign resign_protest resignation responded response restriction resulted resulting revision riot rise rising riyadh riyadh_airport riyadh_king robotic rolls rubber rubble ruling ruling_protest russia russia. russia._nationwide russia_drone russia_election russia_hybrid russia_launche russia_missile sabotage safety saint saint_petersburg sanchez sanchez._protester sanction satellite saudi saudi_arabia scale scheduled school science science_academy search second security seen september serie service seven several severe severe_disruption severely shattered shops shortage shortly should sides significant similar since sites situation skepticism slept social some south south_africa south_african southern sovereignty soweto spain spain. spain._clashe spark spark_broader sparked spending spending_cuts spread st. st._petersburg staff stance stated stating station street strike striking stronger struck student student-led student_movement student_protest stun stun_grenade substantial such suggesting summit summit_ukraine supplie support supporter surrounding survivor suspended symbol syria syrian syrian_territory system talks targeted targeting teacher teams tear tear_gas tearing teen tenant tens tension territory territory_syrian them these they third thousand thousand_protest threat threat_france threaten three through tighter tightly tirana tirana_albania tirana_anti-government took torched totally town trade traffic traffic_chaos transport trump trump_consider trump_diesel tuesday turned ukraine ukraine. ukraine_drone ukraine_energy ukraine_launche ukraine_residential ukraine_urges ukrainian-german un unacceptable understaffed unfair unfair_navi union unionist united united_nation unlawful unmanned unrest unrest_recent upcoming urges urges_stronger us used using using_mother vandalism variou vehicle vest violence violent violent_clashe violent_protest visible visit vitali vitali_klitschko. volodymyr volodymyr_zelensky volodymyr_zelenskyy voter voter_list war water wave wednesday wednesday_kyiv weekend weeks welcomed western when where which while whose widespread willingness winner withdrawn would year yellow yellow_vest zaporizhzhia zaporizhzhia_claim zaporizhzhia_russia zelensky zelenskyy zero-tolerance"
+    "search_text": "000 100 107 126 130 14-year-old 16-storey 2026 250 256 290 500 800 87-year-old abascal abascal_tens ablaze abuse abuse_protest academy access accuse accuse_russia accused acknowledged across across_france action activist address advocating aerial affected affordable africa african agreed agreement ahead ahmed aid aiming aims air_assault air_blast air_campaign airport airstrike al-sharaa albania albania_continue albanian allegation allege allie already also amidst among anger announce announced announcement annual anti-austerity anti-austerity_rally anti-government anti-government_protest apart apartment apartment_block application apply approach approximately arabia area area_including areas around arrest arrest_nationwide arson assault assembly assert assert_golan asylum asylum_ruling attack attacking attempted attended austerity authoritie bangkok bank bank._demonstrator bastien became began belgian belgian_student belgium benefit better billion blast block block_access block_injure block_louvre blockading blocked bomb bombs both bridge broader broader_political brussel brussels. brutality building bullet burned burnt cabinet called calls campaign cannon capital capitalism cars casualtie cause cause_fires caused causing causing_casualtie ceased ceasefire ceasefire_claim central certain challenge chancellor chancellor_friedrich chaos chief children citie civilian claim claim_life claim_lives claim_ukraine clashe clashe_erupt clashed classroom closure coincided comes comment commissioned commonly company company_estonia concern concern_demonstration condemnation condemned condition condition_concern conducted confirmed conflict confrontation connect connectivity consider consider_using considering constitutional continue continued continuing contradicting controlled controversial cost costs court criminal crisi critic critical criticism criticize criticized crowd cruel culminated curfew cuts damage damage_ukraine date deadly deadly_airstrike deal death decision declare declared defense defense_company deliberate demand demanding demonstration demonstrator demonstrator_block deployed deployment depot described describing despite destroyed detained deteriorating devastating development diesel diesel_deal dilapidated directive discuss discussed discussion disperse disrupting disruption dissatisfaction district donald donald_trump drawn drew driven drone drone_ahead durban eased easing eastern economic edi_rama. education education_condition education_reform effort election election_ukraine emergency emmanuel emmanuel_macron emphasized energy energy_aid energy_ceasefire energy_facilitie energy_infrastructure enforcement engaged entered environment erupt erupt_across erupted escalate escalated escalating escalating_anti-government escalation escape estimated estonia estonia_accuse estonian eu europe europe. europe._macron european european_union evacuated event evicted evicted_pensioner eviction expected experienced experiencing explosive expressed extensive face facilitie facing factorie familie fatalitie favor felt fifth final financial financially fire fires five flame focal follow followed france france. france._france france_france france_halts france_prime french-speaking friedrich friedrich_merz front frustration fuel fuel_depot fueled fund funding funding_violent gas gas_used gathered gathering gbu-43 general general_assembly. german german_chancellor glass global golan golan_height grapple grenade grenade_use grid grief growing halt halts halts_stun height heightened held help high high_price highlighted highlighting historic homes honor honor_evicted honoring hospital hospital_causing hours housing housing_crisi houthi however however_ukraine hundred hybrid hybrid_threat icc idea imf immediate impact impacted implement implement_measure improved improvement incident included including including_children increasing india indicate indicated individual industrial industry inequality inequality_france infrastructure infrastructure_russia initiated injure injure_other injured injurie injuring instead institution insufficiently intense intensified intensified_russia intensifying intensifying_russia intercepted interior international international_airport international_criminal international_monetary involved involvement involving iran iran-backed iran-backed_houthis. israel issue jersey jersey._kyiv joining joint just khalid khalid_international kharkiv kharkiv_apartment kill killed kills king king_khalid klitschko known kyiv kyiv_claim kyiv_mayor kyiv_pecherskyi kyiv_science kyiv_struck kyiv_visit labeling large-scale large-scale_drone largely larger largest launche launche_large-scale launche_massive launched lead leader leadership leading learning least leaving lecornu lecornu_consider lesson life light like linked list list_revision lists littered lives living local localized location logistic looted looting looting_france louvre louvre_museum lower macron macron_implement made madrid madrid_honor main many march marched maricarmen maricarmen_abascal marked market marking marks marseille marseille._tens masked massive massive_drone massive_ordnance massive_protest mayor mayor_vitali measure measure_tens meeting member membership merz metz mid-august midterm military military_consider million milrem milrem_robotic missile mobile mobilization modi monday monetary monetary_fund month moscow moscow. moscow_causing moscow_region most mother mourner movement movement_protester multiple museum museum_access names narendra narendra_modi nation nation_general national national_academy nationwide nationwide_protest nationwide_student nato navi navi_pillay near necessary necessitating need negative negotiation nine nine-storey nobel nobel_peace northern notable noted numerou occupation occurred october october_st. october_zaporizhzhia odesa office oil ongoing ongoing_air ongoing_protest ongoing_student ongoing_violence only operation oppose opposed opposition orchestrating orchestrating_arson ordered ordnance ordnance_air organized other outbreak overcrowded overnight package parallel paralysi parent paris paris_escalate parliamentary parody part participant participate participated particularly partie partly parts party pattern peace peace_prize pecherskyi pedro pedro_sanchez. pensioner pensioner_maricarmen person petersburg petersburg_refinery pillay planned plans pm point policie policy political political_unrest poor potential power presence presidential previou price prime prize production prompting proposed protective protest protest_continue protest_erupt protest_france protest_lead protest_poor protest_spark protested protester protester_block pryluky public puerta putin quickly railway raised raising rally rallying rama rama._clashe ransacked recent recognition refinerie refinery refinery_ukraine reflect reflecting reform refrain refuse regarding region region_ukraine regional reinforce reiterated rejection release relief relief_measure remain remain_syrian remark removed reported reportedly rescue resident residential residential_area resign resign_protest resignation responded response restriction resulted resulting revision riot riots rise rising riyadh riyadh_airport riyadh_king robotic rolls rubber rubble ruling ruling_protest russia russia. russia._nationwide russia_drone russia_election russia_hybrid russia_launche russia_missile sabotage safety saint saint_petersburg sanchez sanchez._protester sanction satellite saturday saudi saudi_arabia scale scheduled school science science_academy search sebastien sebastien_lecornu second security seen september serie service seven several severe severe_disruption severely shattered shops shortage shortly should sides significant similar since sites situation skepticism slept social some south south_africa south_african southern sovereignty soweto spain spain. spain._clashe spark spark_broader sparked spending spending_cuts spread st. st._petersburg staff stance stated stating station street strike striking stronger struck student student-led student_movement student_protest stun stun_grenade substantial such suggesting summit summit_ukraine supplie support supporter surrounding survivor suspended symbol syria syrian syrian_territory system talks targeted targeting teacher teams tear tear_gas tearing teen tenant tens tension territory territory_syrian them these they third thousand thousand_protest threat threat_france threaten three through tighter tightly tirana tirana_albania tirana_anti-government took torched totally town trade traffic traffic_chaos transport trump trump_consider trump_diesel tuesday turned ukraine ukraine. ukraine_drone ukraine_energy ukraine_launche ukraine_residential ukraine_urges ukrainian-german un unacceptable understaffed unfair unfair_navi union unionist united united_nation unlawful unmanned unrest unrest_recent upcoming upcoming_protest urges urges_stronger us used using using_mother vandalism variou vehicle vest violence violent violent_clashe violent_protest visible visit vitali vitali_klitschko. volodymyr volodymyr_zelensky volodymyr_zelenskyy voter voter_list war water wave wednesday wednesday_kyiv weekend weeks welcomed western when where which while whose widespread willingness winner withdrawn would year yellow yellow_vest zaporizhzhia zaporizhzhia_claim zaporizhzhia_russia zelensky zelenskyy zero-tolerance"
   },
   "related_events": [
+    {
+      "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+      "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
+      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Ukraine Executes First Drone Airlift for Wounded Soldier from Front Line.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-22",
+      "last_seen_at": "2026-10-20",
+      "development_count": 85,
+      "latest_title": "Ukraine Executes First Drone Airlift for Wounded Soldier from Front Line",
+      "topic_label": "Iran War",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
+    },
     {
       "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
       "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
@@ -6424,74 +6655,6 @@
       "href": "/timeline.html?event=event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b"
     },
     {
-      "event_id": "event_israel-commemorates-third-anniversary-of-oct_c05cefd020",
-      "title": "Israel Commemorates Third Anniversary of October 7 Attacks",
-      "summary": "Muninn first tracked this thread on 2026-10-07: Israel Commemorates Third Anniversary of October 7 Attacks. The latest development is Trump Criticizes Zelenskyy, Suggests Ukraine Needs New Leadership.",
-      "activity_status": "active",
-      "stage": "timeline",
-      "stage_label": "Timeline",
-      "first_seen_at": "2026-10-07",
-      "last_seen_at": "2026-10-11",
-      "development_count": 7,
-      "latest_title": "Trump Criticizes Zelenskyy, Suggests Ukraine Needs New Leadership",
-      "topic_label": "Israel-Hamas Conflict",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_israel-commemorates-third-anniversary-of-oct_c05cefd020.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_israel-commemorates-third-anniversary-of-oct_c05cefd020.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_israel-commemorates-third-anniversary-of-oct_c05cefd020"
-    },
-    {
-      "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
-      "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
-      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Houthi Missile Attack on Yemeni Training Camp Results in 53 Deaths.",
-      "activity_status": "active",
-      "stage": "timeline",
-      "stage_label": "Timeline",
-      "first_seen_at": "2026-07-22",
-      "last_seen_at": "2026-10-19",
-      "development_count": 84,
-      "latest_title": "Houthi Missile Attack on Yemeni Training Camp Results in 53 Deaths",
-      "topic_label": "Iran War",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
-    },
-    {
       "event_id": "event_ceuta-requests-national-emergency-amid-surge_4919a90e1a",
       "title": "Ceuta Border Surge",
       "summary": "Muninn first tracked this thread on 2026-07-30: Ceuta Requests National Emergency Amid Surge of Migrants from Morocco. The latest development is Spanish Royals Visit Ceuta Amid Migrant Crisis and Diplomatic Sensitivity.",
@@ -6524,6 +6687,40 @@
         "focal_tall_y": 0.48
       },
       "href": "/timeline.html?event=event_ceuta-requests-national-emergency-amid-surge_4919a90e1a"
+    },
+    {
+      "event_id": "event_israel-commemorates-third-anniversary-of-oct_c05cefd020",
+      "title": "Israel Commemorates Third Anniversary of October 7 Attacks",
+      "summary": "Muninn first tracked this thread on 2026-10-07: Israel Commemorates Third Anniversary of October 7 Attacks. The latest development is Trump Criticizes Zelenskyy, Suggests Ukraine Needs New Leadership.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-10-07",
+      "last_seen_at": "2026-10-11",
+      "development_count": 7,
+      "latest_title": "Trump Criticizes Zelenskyy, Suggests Ukraine Needs New Leadership",
+      "topic_label": "Israel-Hamas Conflict",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_israel-commemorates-third-anniversary-of-oct_c05cefd020.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_israel-commemorates-third-anniversary-of-oct_c05cefd020.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_israel-commemorates-third-anniversary-of-oct_c05cefd020"
     }
   ]
 }
