@@ -1,0 +1,302 @@
+{
+  "schema_version": 1,
+  "resource_type": "event",
+  "event_id": "event_a-multi-storey-building-under-construction-h_5f35862908",
+  "publication": {
+    "status": "published",
+    "permalink": "/timeline.html?event=event_a-multi-storey-building-under-construction-h_5f35862908",
+    "share_expires_at": null
+  },
+  "event": {
+    "event_id": "event_a-multi-storey-building-under-construction-h_5f35862908",
+    "title": "A multi-storey building under construction has collapsed in Nairobi, leaving a vast pile of rubble",
+    "canonical_title": "A multi-storey building under construction has collapsed in Nairobi, leaving a vast pile of rubble",
+    "topic_label": "Nairobi Building Collapse",
+    "summary": "A multi-storey building under construction has collapsed in Nairobi, leaving a vast pile of rubble. Red Cross workers have arrived at the scene, where excavators are being used among the debris.",
+    "status": "active",
+    "first_seen_at": "2026-10-24",
+    "last_seen_at": "2026-10-25",
+    "timeline": [
+      {
+        "development_id": "story_830047f8f8162554",
+        "daily_story_id": "story_830047f8f8162554",
+        "date": "2026-10-24",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "A multi-storey building under construction has collapsed in Nairobi, leaving a vast pile of rubble",
+        "summary": "A multi-storey building under construction has collapsed in Nairobi, leaving a vast pile of rubble. Red Cross workers have arrived at the scene, where excavators are being used among the debris.",
+        "topic_label": "",
+        "development_type": "development",
+        "key_facts": [
+          "A multi-storey building under construction has collapsed in Nairobi, leaving a vast pile of rubble",
+          "Red Cross workers have arrived at the scene, where excavators are being used among the debris"
+        ],
+        "source_count": 2,
+        "sources": [
+          "Africanews",
+          "Euronews"
+        ],
+        "source_urls": [
+          "http://www.africanews.com/2026/10/23/kenya-huge-piles-of-rubble-after-high-rise-building-collapses",
+          "https://www.euronews.com/video/2026/10/23/kenya-huge-piles-of-rubble-after-high-rise-building-collapses"
+        ],
+        "source_details": [
+          {
+            "title": "Kenya: huge piles of rubble after high-rise building collapses",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/10/23/kenya-huge-piles-of-rubble-after-high-rise-building-collapses",
+            "source_bias": "center"
+          },
+          {
+            "title": "Kenya: huge piles of rubble after high-rise building collapses",
+            "source": "Euronews",
+            "link": "https://www.euronews.com/video/2026/10/23/kenya-huge-piles-of-rubble-after-high-rise-building-collapses",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 1.0,
+        "match_evidence": {
+          "score": 1.0,
+          "method": "new_event",
+          "shared_tokens": [],
+          "shared_entities": []
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-24",
+        "last_seen_at": "2026-10-24",
+        "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_0d3c0f987538d1f6",
+        "daily_story_id": "story_0d3c0f987538d1f6",
+        "date": "2026-10-25",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Building Collapse in Nairobi Leaves Rubble and Rescue Efforts Underway",
+        "summary": "A multi-storey building under construction collapsed in Nairobi on October 23, resulting in a significant pile of rubble. Red Cross workers and excavators are currently on the scene, searching for individuals who may be trapped beneath the debris. Concerns regarding safety have been raised following the incident.",
+        "topic_label": "Nairobi Building Collapse",
+        "development_type": "development",
+        "key_facts": [
+          "Multi-storey building under construction collapsed in Nairobi.",
+          "Rescue efforts are ongoing with Red Cross involvement.",
+          "Several people are feared trapped under the rubble."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Africanews"
+        ],
+        "source_urls": [
+          "http://www.africanews.com/2026/10/23/kenya-huge-piles-of-rubble-after-high-rise-building-collapses",
+          "http://www.africanews.com/2026/10/23/several-feared-trapped-as-multi-storey-building-collapses-in-nairobi"
+        ],
+        "source_details": [
+          {
+            "title": "Kenya: huge piles of rubble after high-rise building collapses",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/10/23/kenya-huge-piles-of-rubble-after-high-rise-building-collapses",
+            "source_bias": "center"
+          },
+          {
+            "title": "Nairobi building collapse raises safety concerns as rescuers search rubble",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/10/23/several-feared-trapped-as-multi-storey-building-collapses-in-nairobi",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 1.0,
+        "match_evidence": {
+          "score": 1.0,
+          "matched_development_id": "story_830047f8f8162554",
+          "shared_tokens": [
+            "building",
+            "collapsed",
+            "construction",
+            "cross",
+            "debri",
+            "excavator",
+            "multi-storey",
+            "nairobi",
+            "pile",
+            "rubble",
+            "scene",
+            "under",
+            "worker"
+          ],
+          "shared_entities": [
+            "nairobi",
+            "red_cross"
+          ],
+          "source_url_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-25",
+        "last_seen_at": "2026-10-25",
+        "integrity_status": "trusted"
+      }
+    ],
+    "integrity": {
+      "public_development_count": 2,
+      "questionable_development_count": 0,
+      "review_required": false
+    },
+    "latest_title": "Building Collapse in Nairobi Leaves Rubble and Rescue Efforts Underway",
+    "latest_summary": "A multi-storey building under construction collapsed in Nairobi on October 23, resulting in a significant pile of rubble. Red Cross workers and excavators are currently on the scene, searching for individuals who may be trapped beneath the debris. Concerns regarding safety have been raised following the incident.",
+    "presentation": {
+      "has_context": true,
+      "has_full_timeline": false,
+      "stage": "developing_event",
+      "stage_label": "Developing event",
+      "base_title": "A multi-storey building under construction has collapsed in Nairobi, leaving a vast pile of rubble",
+      "display_title": "A multi-storey building under construction has collapsed in Nairobi, leaving a vast pile of rubble",
+      "milestone_development_ids": [
+        "story_830047f8f8162554",
+        "story_0d3c0f987538d1f6"
+      ],
+      "summary_available": true,
+      "summary_label": "Read the story so far",
+      "summary_updated_at": "2026-10-25",
+      "development_count": 2,
+      "coverage_packet_count": 2,
+      "date_count": 2,
+      "source_count": 3,
+      "independent_source_count": 2,
+      "first_date": "2026-10-24",
+      "latest_date": "2026-10-25",
+      "latest_update_title": "Building Collapse in Nairobi Leaves Rubble and Rescue Efforts Underway",
+      "coverage_score": 0.309,
+      "recency_score": 1.0,
+      "rank_score": 0.71,
+      "context_summary": "Muninn first tracked this thread on 2026-10-24: A multi-storey building under construction has collapsed in Nairobi, leaving a vast pile of rubble. The latest development is Building Collapse in Nairobi Leaves Rubble and Rescue Efforts Underway.",
+      "cta_label": ""
+    },
+    "event_summary": {
+      "available": true,
+      "summary": "A multi-storey building under construction has collapsed in Nairobi, leaving a vast pile of rubble. Most recently, a multi-storey building under construction collapsed in Nairobi on October 23, resulting in a significant pile of rubble.",
+      "key_developments": [
+        {
+          "development_id": "story_830047f8f8162554",
+          "date": "2026-10-24",
+          "title": "A multi-storey building under construction has collapsed in Nairobi, leaving a vast pile of rubble"
+        },
+        {
+          "development_id": "story_0d3c0f987538d1f6",
+          "date": "2026-10-25",
+          "title": "Building Collapse in Nairobi Leaves Rubble and Rescue Efforts Underway"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Kenya: huge piles of rubble after high-rise building collapses",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/10/23/kenya-huge-piles-of-rubble-after-high-rise-building-collapses",
+          "source_bias": "center"
+        },
+        {
+          "title": "Kenya: huge piles of rubble after high-rise building collapses",
+          "source": "Euronews",
+          "link": "https://www.euronews.com/video/2026/10/23/kenya-huge-piles-of-rubble-after-high-rise-building-collapses",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Nairobi building collapse raises safety concerns as rescuers search rubble",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/10/23/several-feared-trapped-as-multi-storey-building-collapses-in-nairobi",
+          "source_bias": "center"
+        }
+      ],
+      "updated_at": "2026-10-25",
+      "provenance": "source_grounded_event_memory"
+    },
+    "event_stage": "developing_event",
+    "related_events": [
+      {
+        "event_id": "event_rescue-efforts-underway-after-nairobi-buildi_faf6d8a8aa",
+        "title": "Rescue Efforts Underway After Nairobi Building Collapse Leaves Five Missing",
+        "relationship": "related_topic",
+        "confidence": 0.808,
+        "shared_entities": [
+          "building_collapse",
+          "effort_underway",
+          "nairobi",
+          "rescue_effort"
+        ]
+      }
+    ],
+    "search_tokens": [
+      "among",
+      "arrived",
+      "beneath",
+      "building",
+      "collapse",
+      "collapsed",
+      "concern",
+      "construction",
+      "cross",
+      "currently",
+      "debri",
+      "effort",
+      "excavator",
+      "incident",
+      "individual",
+      "leave",
+      "leaving",
+      "multi-storey",
+      "nairobi",
+      "october",
+      "pile",
+      "raised",
+      "regarding",
+      "rescue",
+      "resulting",
+      "rubble",
+      "safety",
+      "scene",
+      "searching",
+      "significant",
+      "trapped",
+      "under",
+      "underway",
+      "used",
+      "vast",
+      "where",
+      "worker"
+    ],
+    "entities": [
+      "building_collapse",
+      "effort_underway",
+      "nairobi",
+      "red_cross",
+      "rescue_effort"
+    ],
+    "search_text": "among arrived beneath building building_collapse collapse collapsed concern construction cross currently debri effort effort_underway excavator incident individual leave leaving multi-storey nairobi october pile raised red_cross regarding rescue rescue_effort resulting rubble safety scene searching significant trapped under underway used vast where worker",
+    "hero_image": {
+      "url": "/Current_news/generated/events/event_a-multi-storey-building-under-construction-h_5f35862908.jpg",
+      "thumbnail_url": "/Current_news/generated/events/event_a-multi-storey-building-under-construction-h_5f35862908.jpg",
+      "source": "Muninn AI illustration",
+      "author": "OpenAI GPT Image 2",
+      "license": "AI-generated content",
+      "image_role": "illustrative",
+      "image_role_label": "AI illustration",
+      "is_ai_generated": true,
+      "generation_model": "gpt-image-2",
+      "generation_quality": "low",
+      "safe_to_crop": true,
+      "allows_crop": true,
+      "focal_x": 0.5,
+      "focal_y": 0.48,
+      "focal_wide_x": 0.5,
+      "focal_wide_y": 0.48,
+      "focal_tall_x": 0.5,
+      "focal_tall_y": 0.48
+    }
+  },
+  "related_events": []
+}

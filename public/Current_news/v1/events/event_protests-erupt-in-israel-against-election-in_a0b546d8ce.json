@@ -15,7 +15,7 @@
     "summary": "On September 17, dozens of Israelis gathered outside the Knesset in West Jerusalem to protest against political leaders. The demonstrators accused these leaders of exploiting regional tensions to interfere with the upcoming parliamentary election scheduled for October 27.",
     "status": "active",
     "first_seen_at": "2026-09-18",
-    "last_seen_at": "2026-10-24",
+    "last_seen_at": "2026-10-25",
     "timeline": [
       {
         "development_id": "story_1806b9bb9b89962c",
@@ -510,6 +510,86 @@
         "first_seen_at": "2026-10-24",
         "last_seen_at": "2026-10-24",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_7420b7249b4f8104",
+        "daily_story_id": "story_7420b7249b4f8104",
+        "date": "2026-10-25",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Israel Implements Restrictions in West Bank Ahead of Elections Following Soldier Deaths",
+        "summary": "In the lead-up to elections, Israel has announced the closure of all land crossings between Israel and the West Bank on election day. This decision follows a deadly attack in Hebron that resulted in the deaths of two Israeli soldiers. Concurrently, Israeli military operations have led to the displacement of approximately 1,200 Palestinians from their homes in Hebron, as part of a broader crackdown in response to the attack.",
+        "topic_label": "West Bank Tensions",
+        "development_type": "military_action",
+        "key_facts": [
+          "Closure of all West Bank land crossings on election day.",
+          "Two Israeli soldiers were killed in Hebron.",
+          "Approximately 1,200 Palestinians were displaced from their homes."
+        ],
+        "source_count": 4,
+        "sources": [
+          "BBC",
+          "Euronews",
+          "RTE News"
+        ],
+        "source_urls": [
+          "https://www.bbc.co.uk/news/articles/c6y93ylpl5p2o?at_medium=RSS&at_campaign=rss",
+          "https://www.euronews.com/2026/10/24/israel-removes-around-250-palestinian-families-from-west-bank-city-of-hebron-after-soldier",
+          "https://www.rte.ie/news/world/2026/1024/1596734-israel-west-bank-palestinians",
+          "https://www.euronews.com/2026/10/25/israel-orders-west-bank-crossings-to-close-on-election-day-following-hebron-shooting"
+        ],
+        "source_details": [
+          {
+            "title": "Israel to close West Bank crossings on election day as crackdown escalates",
+            "source": "BBC",
+            "link": "https://www.bbc.co.uk/news/articles/c6y93ylpl5p2o?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          },
+          {
+            "title": "Israel removes around 250 Palestinian families from West Bank city of Hebron after soldier deaths",
+            "source": "Euronews",
+            "link": "https://www.euronews.com/2026/10/24/israel-removes-around-250-palestinian-families-from-west-bank-city-of-hebron-after-soldier",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Israel displaces 1,200 people in West Bank after attack",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/world/2026/1024/1596734-israel-west-bank-palestinians",
+            "source_bias": "center"
+          },
+          {
+            "title": "Israel orders West Bank crossings to close on election day following Hebron shooting",
+            "source": "Euronews",
+            "link": "https://www.euronews.com/2026/10/25/israel-orders-west-bank-crossings-to-close-on-election-day-following-hebron-shooting",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 1.0,
+        "match_evidence": {
+          "score": 1.0,
+          "matched_development_id": "story_b25e058eed7aab11",
+          "shared_tokens": [
+            "announced",
+            "hebron",
+            "israel",
+            "killed",
+            "soldier"
+          ],
+          "shared_entities": [
+            "hebron",
+            "israel"
+          ],
+          "source_url_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-25",
+        "last_seen_at": "2026-10-25",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -538,12 +618,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 6,
+      "public_development_count": 7,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Benjamin Netanyahu announced a siege on Hebron and neighbouring Halhul and said residents of the gunmen’s home neighbourhoods would all be f",
-    "latest_summary": "Israel launches collective punishment campaign in Hebron after two soldiers killed. Benjamin Netanyahu announced a siege on Hebron and neighbouring Halhul and said residents of the gunmen’s home neighbourhoods would all be forced out.",
+    "latest_title": "Israel Implements Restrictions in West Bank Ahead of Elections Following Soldier Deaths",
+    "latest_summary": "In the lead-up to elections, Israel has announced the closure of all land crossings between Israel and the West Bank on election day. This decision follows a deadly attack in Hebron that resulted in the deaths of two Israeli soldiers. Concurrently, Israeli military operations have led to the displacement of approximately 1,200 Palestinians from their homes in Hebron, as part of a broader crackdown in response to the attack.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -553,32 +633,30 @@
       "display_title": "Protests Erupt in Israel Against Election Interference Ahead of October Vote Timeline",
       "milestone_development_ids": [
         "story_1806b9bb9b89962c",
-        "story_2b1f08941de0976e",
         "story_cc82bb40aeee2b8a",
-        "story_abfb038906775f3b",
         "story_bfeb700c0402ed8d",
-        "story_b25e058eed7aab11"
+        "story_7420b7249b4f8104"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-10-24",
-      "development_count": 6,
-      "coverage_packet_count": 6,
-      "date_count": 5,
-      "source_count": 24,
-      "independent_source_count": 19,
+      "summary_updated_at": "2026-10-25",
+      "development_count": 7,
+      "coverage_packet_count": 7,
+      "date_count": 6,
+      "source_count": 26,
+      "independent_source_count": 20,
       "first_date": "2026-09-18",
-      "latest_date": "2026-10-24",
-      "latest_update_title": "Benjamin Netanyahu announced a siege on Hebron and neighbouring Halhul and said residents of the gunmen’s home neighbourhoods would all be f",
+      "latest_date": "2026-10-25",
+      "latest_update_title": "Israel Implements Restrictions in West Bank Ahead of Elections Following Soldier Deaths",
       "coverage_score": 1.0,
       "recency_score": 1.0,
       "rank_score": 1.0,
-      "context_summary": "Muninn first tracked this thread on 2026-09-18: Protests Erupt in Israel Against Election Interference Ahead of October Vote. The latest development is Benjamin Netanyahu announced a siege on Hebron and neighbouring Halhul and said residents of the gunmen’s home neighbourhoods would all be f.",
-      "cta_label": "Explore 6 developments"
+      "context_summary": "Muninn first tracked this thread on 2026-09-18: Protests Erupt in Israel Against Election Interference Ahead of October Vote. The latest development is Israel Implements Restrictions in West Bank Ahead of Elections Following Soldier Deaths.",
+      "cta_label": "Explore 7 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "On September 17, dozens of Israelis gathered outside the Knesset in West Jerusalem to protest against political leaders. A later development was Netanyahu Faces Criticism Over Oct. 7 Attack Handling Ahead of Elections. Most recently, israel launches collective punishment campaign in Hebron after two soldiers killed.",
+      "summary": "On September 17, dozens of Israelis gathered outside the Knesset in West Jerusalem to protest against political leaders. A later development was Netanyahu Faces Criticism Over Oct. 7 Attack Handling Ahead of Elections. Most recently, in the lead-up to elections, Israel has announced the closure of all land crossings between Israel and the West Bank on election day.",
       "key_developments": [
         {
           "development_id": "story_1806b9bb9b89962c",
@@ -586,19 +664,9 @@
           "title": "Protests Erupt in Israel Against Election Interference Ahead of October Vote"
         },
         {
-          "development_id": "story_2b1f08941de0976e",
-          "date": "2026-09-20",
-          "title": "Ed Sheeran Addresses Gaza Situation and Macklemore Controversy at Concert"
-        },
-        {
           "development_id": "story_cc82bb40aeee2b8a",
           "date": "2026-09-20",
           "title": "Protests Erupt in Tunisia for Jailed Gaza Flotilla Activists"
-        },
-        {
-          "development_id": "story_abfb038906775f3b",
-          "date": "2026-10-07",
-          "title": "Netanyahu Faces Criticism Over Oct. 7 Attack Handling Ahead of Elections"
         },
         {
           "development_id": "story_bfeb700c0402ed8d",
@@ -606,9 +674,9 @@
           "title": "Israeli Prime Minister Benjamin Netanyahu on Friday warned of an imminent large-scale military operation in the West Bank and vowed to displ"
         },
         {
-          "development_id": "story_b25e058eed7aab11",
-          "date": "2026-10-24",
-          "title": "Benjamin Netanyahu announced a siege on Hebron and neighbouring Halhul and said residents of the gunmen’s home neighbourhoods would all be f"
+          "development_id": "story_7420b7249b4f8104",
+          "date": "2026-10-25",
+          "title": "Israel Implements Restrictions in West Bank Ahead of Elections Following Soldier Deaths"
         }
       ],
       "sources": [
@@ -755,9 +823,21 @@
           "source": "RTE News",
           "link": "https://www.rte.ie/news/world/2026/1024/1596734-israel-west-bank-palestinians",
           "source_bias": "center"
+        },
+        {
+          "title": "Israel to close West Bank crossings on election day as crackdown escalates",
+          "source": "BBC",
+          "link": "https://www.bbc.co.uk/news/articles/c6y93ylpl5p2o?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
+        },
+        {
+          "title": "Israel orders West Bank crossings to close on election day following Hebron shooting",
+          "source": "Euronews",
+          "link": "https://www.euronews.com/2026/10/25/israel-orders-west-bank-crossings-to-close-on-election-day-following-hebron-shooting",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-10-24",
+      "updated_at": "2026-10-25",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -783,7 +863,7 @@
         "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
         "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
         "relationship": "related_topic",
-        "confidence": 0.755,
+        "confidence": 0.762,
         "shared_entities": [
           "benjamin_netanyahu",
           "israel",
@@ -794,7 +874,7 @@
         "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
         "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
         "relationship": "related_topic",
-        "confidence": 0.707,
+        "confidence": 0.713,
         "shared_entities": [
           "israel",
           "protest_erupt"
@@ -804,7 +884,7 @@
         "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
         "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
         "relationship": "related_topic",
-        "confidence": 0.703,
+        "confidence": 0.701,
         "shared_entities": [
           "israel",
           "israel_prime"
@@ -832,6 +912,7 @@
       "focal_tall_y": 0.48
     },
     "search_tokens": [
+      "200",
       "2023",
       "account",
       "accusation",
@@ -842,23 +923,32 @@
       "ahead",
       "amidst",
       "announced",
+      "approximately",
       "attack",
       "attended",
       "bank",
       "benjamin",
       "better",
       "both",
+      "broader",
       "campaign",
       "career",
       "central",
+      "closure",
       "collective",
       "comment",
       "concert",
+      "concurrently",
       "conflicting",
       "connected",
       "controversy",
+      "crackdown",
       "criticism",
+      "crossing",
       "currently",
+      "deadly",
+      "death",
+      "decision",
       "demand",
       "demonstrator",
       "departure",
@@ -866,6 +956,7 @@
       "didn",
       "displ",
       "displace",
+      "displacement",
       "dozen",
       "effort",
       "election",
@@ -879,6 +970,7 @@
       "feel",
       "first",
       "flotilla",
+      "follow",
       "forced",
       "four",
       "friday",
@@ -891,9 +983,11 @@
       "haunting",
       "hebron",
       "home",
+      "homes",
       "humanitarian",
       "hundred",
       "imminent",
+      "implement",
       "incident",
       "interfere",
       "interference",
@@ -903,9 +997,11 @@
       "jerusalem",
       "killed",
       "knesset",
+      "land",
       "large-scale",
       "launche",
       "laundering",
+      "lead-up",
       "leader",
       "long-standing",
       "lots",
@@ -923,6 +1019,7 @@
       "outside",
       "palestinian",
       "parliamentary",
+      "part",
       "philadelphia",
       "political",
       "potentially",
@@ -939,6 +1036,8 @@
       "removal",
       "resident",
       "response",
+      "restriction",
+      "resulted",
       "scheduled",
       "security",
       "september",
@@ -977,6 +1076,7 @@
       "addresse_gaza",
       "benjamin_netanyahu",
       "concert",
+      "concurrently_israel",
       "election_interference",
       "election_israel",
       "faces_criticism",
@@ -989,8 +1089,10 @@
       "global",
       "handling_ahead",
       "hebron",
+      "implement_restriction",
       "interference_ahead",
       "israel",
+      "israel_implement",
       "israel_prime",
       "jailed_gaza",
       "macklemore_controversy",
@@ -1007,7 +1109,7 @@
       "west",
       "west_jerusalem"
     ],
-    "search_text": "2023 account accusation accused activist activist_hundred addresse addresse_gaza addressing ahead amidst announced attack attended bank benjamin benjamin_netanyahu better both campaign career central collective comment concert conflicting connected controversy criticism currently demand demonstrator departure described didn displ displace dozen effort election election_interference election_israel emerged erupt exploiting faces faces_criticism facing failure fans feel first flotilla flotilla_activist forced four friday gathered gaza gaza. gaza._netanyahu gaza_flotilla gaza_situation global gunmen halhul handling handling_ahead haunting hebron home humanitarian hundred imminent incident interfere interference interference_ahead israel israel_prime jailed jailed_gaza jeopardizing jerusalem killed knesset large-scale launche laundering leader long-standing lots macklemore macklemore_controversy make military money neighbourhood neighbouring netanyahu netanyahu_faces oct. october october_vote operation opponent organizing outside palestinian parliamentary philadelphia political potentially prepare prime pro-palestinian protest protest_erupt punishment recent regarding regional related release removal resident response scheduled security september sheeran sheeran_addresse siege significant since situation soldier some sumud sumud_flotilla. surrounding tension terrorist these tour trauma tunis tunisia tunisian unjustifiable upcoming venue viewed vote vowed warned west west_jerusalem whether which while would"
+    "search_text": "200 2023 account accusation accused activist activist_hundred addresse addresse_gaza addressing ahead amidst announced approximately attack attended bank benjamin benjamin_netanyahu better both broader campaign career central closure collective comment concert concurrently concurrently_israel conflicting connected controversy crackdown criticism crossing currently deadly death decision demand demonstrator departure described didn displ displace displacement dozen effort election election_interference election_israel emerged erupt exploiting faces faces_criticism facing failure fans feel first flotilla flotilla_activist follow forced four friday gathered gaza gaza. gaza._netanyahu gaza_flotilla gaza_situation global gunmen halhul handling handling_ahead haunting hebron home homes humanitarian hundred imminent implement implement_restriction incident interfere interference interference_ahead israel israel_implement israel_prime jailed jailed_gaza jeopardizing jerusalem killed knesset land large-scale launche laundering lead-up leader long-standing lots macklemore macklemore_controversy make military money neighbourhood neighbouring netanyahu netanyahu_faces oct. october october_vote operation opponent organizing outside palestinian parliamentary part philadelphia political potentially prepare prime pro-palestinian protest protest_erupt punishment recent regarding regional related release removal resident response restriction resulted scheduled security september sheeran sheeran_addresse siege significant since situation soldier some sumud sumud_flotilla. surrounding tension terrorist these tour trauma tunis tunisia tunisian unjustifiable upcoming venue viewed vote vowed warned west west_jerusalem whether which while would"
   },
   "related_events": [
     {
