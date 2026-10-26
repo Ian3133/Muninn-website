@@ -15,7 +15,7 @@
     "summary": "France is dealing with significant damage following violent protests that erupted on Saturday, October 17. The demonstrations, which were initially against rising living costs and poor school conditions, escalated into clashes with police, resulting in widespread looting and destruction across multiple cities. Authorities reported approximately 1,800 arrests nationwide, with significant incidents including a historic town hall being set ablaze.",
     "status": "active",
     "first_seen_at": "2026-10-18",
-    "last_seen_at": "2026-10-25",
+    "last_seen_at": "2026-10-26",
     "timeline": [
       {
         "development_id": "story_c59b5b96ff9b6cde",
@@ -1181,6 +1181,88 @@
         "first_seen_at": "2026-10-25",
         "last_seen_at": "2026-10-25",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_6c537bc7daf36992",
+        "daily_story_id": "story_6c537bc7daf36992",
+        "date": "2026-10-26",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Macron to Announce Measures Addressing Student Protests in France",
+        "summary": "French President Emmanuel Macron announced that his government will unveil 'concrete measures' to address the demands of student protesters following weeks of unrest. Prime Minister Sébastien Lecornu is scheduled to meet with students to discuss their grievances. Macron acknowledged the legitimacy of the students' concerns amidst the recent protests.",
+        "topic_label": "French Student Protests",
+        "development_type": "development",
+        "key_facts": [
+          "Emmanuel Macron will announce measures to address student demands.",
+          "Prime Minister Sébastien Lecornu is set to meet with students.",
+          "Protests have occurred in France over the past weeks."
+        ],
+        "source_count": 3,
+        "sources": [
+          "DW - English",
+          "France 24 - English",
+          "Sky News - Top Stories"
+        ],
+        "source_urls": [
+          "https://www.france24.com/en/video/20261026-french-president-promises-concrete-measures-in-response-to-french-students-demands",
+          "https://news.sky.com/story/macron-promises-concrete-measures-over-protest-demands-amid-fears-of-halloween-unrest-13604048",
+          "https://www.dw.com/en/macron-vows-strong-measures-to-combat-protests-that-rocked-france/a-79764224?maca=en-rss-en-all-1573-rdf"
+        ],
+        "source_details": [
+          {
+            "title": "Macron promises 'concrete measures' in response to French students' demands",
+            "source": "France 24 - English",
+            "link": "https://www.france24.com/en/video/20261026-french-president-promises-concrete-measures-in-response-to-french-students-demands",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Macron promises 'concrete measures' over protest demands - amid fears of Halloween unrest",
+            "source": "Sky News - Top Stories",
+            "link": "https://news.sky.com/story/macron-promises-concrete-measures-over-protest-demands-amid-fears-of-halloween-unrest-13604048",
+            "source_bias": "center"
+          },
+          {
+            "title": "Macron vows 'strong measures' to combat protests that rocked France",
+            "source": "DW - English",
+            "link": "https://www.dw.com/en/macron-vows-strong-measures-to-combat-protests-that-rocked-france/a-79764224?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "protest"
+          ],
+          "shared_incident_anchors": [
+            "emmanuel_macron",
+            "france"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "demand",
+            "emmanuel",
+            "france",
+            "macron",
+            "occurred",
+            "protest"
+          ],
+          "shared_entities": [
+            "emmanuel_macron",
+            "france"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_1e258ae97eeca3fc",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-26",
+        "last_seen_at": "2026-10-26",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -1208,12 +1290,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 15,
+      "public_development_count": 16,
       "questionable_development_count": 1,
       "review_required": true
     },
-    "latest_title": "Nationwide Protests in France Lead to Over 1,000 Arrests",
-    "latest_summary": "On Saturday, hundreds of thousands of people marched across France to protest against the rising cost of living and insufficient government resources for essential services. While the demonstrations began peacefully, they escalated in some areas, resulting in a heavy police response and over 1,000 arrests nationwide. The French government stated that the protests 'went well' despite the clashes.",
+    "latest_title": "Macron to Announce Measures Addressing Student Protests in France",
+    "latest_summary": "French President Emmanuel Macron announced that his government will unveil 'concrete measures' to address the demands of student protesters following weeks of unrest. Prime Minister Sébastien Lecornu is scheduled to meet with students to discuss their grievances. Macron acknowledged the legitimacy of the students' concerns amidst the recent protests.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -1224,29 +1306,29 @@
       "milestone_development_ids": [
         "story_c59b5b96ff9b6cde",
         "story_0245db01932dcab4",
-        "story_772e51e1f805c894",
-        "story_d3bfb549319cf753"
+        "story_fe66f4e44a151a3f",
+        "story_6c537bc7daf36992"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-10-25",
-      "development_count": 15,
-      "coverage_packet_count": 15,
-      "date_count": 6,
-      "source_count": 36,
-      "independent_source_count": 16,
+      "summary_updated_at": "2026-10-26",
+      "development_count": 16,
+      "coverage_packet_count": 16,
+      "date_count": 7,
+      "source_count": 39,
+      "independent_source_count": 17,
       "first_date": "2026-10-18",
-      "latest_date": "2026-10-25",
-      "latest_update_title": "Nationwide Protests in France Lead to Over 1,000 Arrests",
+      "latest_date": "2026-10-26",
+      "latest_update_title": "Macron to Announce Measures Addressing Student Protests in France",
       "coverage_score": 1.0,
       "recency_score": 1.0,
       "rank_score": 1.0,
-      "context_summary": "Muninn first tracked this thread on 2026-10-18: France Faces Aftermath of Violent Protests with Widespread Damage and Arrests. The latest development is Nationwide Protests in France Lead to Over 1,000 Arrests.",
-      "cta_label": "Explore 15 developments"
+      "context_summary": "Muninn first tracked this thread on 2026-10-18: France Faces Aftermath of Violent Protests with Widespread Damage and Arrests. The latest development is Macron to Announce Measures Addressing Student Protests in France.",
+      "cta_label": "Explore 16 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "France is dealing with significant damage following violent protests that erupted on Saturday, October 17. A later development was ⁠French President Emmanuel ​Macron landed in Riyadh on Wednseday, ‌adding an ⁠unscheduled stop to his ‌ongoing tour of the Gulf ⁠region. Most recently, on Saturday, hundreds of thousands of people marched across France to protest against the rising cost of living and insufficient government resources for essential services.",
+      "summary": "France is dealing with significant damage following violent protests that erupted on Saturday, October 17. A later development was Speaking after a ​meeting with intelligence chiefs and senior ministers, the French president said on Thursday that demonstrations organised. Most recently, french President Emmanuel Macron announced that his government will unveil 'concrete measures' to address the demands of student protesters following weeks of unrest.",
       "key_developments": [
         {
           "development_id": "story_c59b5b96ff9b6cde",
@@ -1259,14 +1341,14 @@
           "title": "French President Emmanuel Macron condemned comments by \"foreign leaders\" on the violent protests in France on October 17"
         },
         {
-          "development_id": "story_772e51e1f805c894",
-          "date": "2026-10-22",
-          "title": "Art Basel Paris brings international galleries and contemporary artists to the Grand Palais"
+          "development_id": "story_fe66f4e44a151a3f",
+          "date": "2026-10-24",
+          "title": "Heated exchanges and chaotic scenes gripped Albania's parliament in Tirana on Thursday as rival MPs clashed inside, while student demonstrat"
         },
         {
-          "development_id": "story_d3bfb549319cf753",
-          "date": "2026-10-25",
-          "title": "Nationwide Protests in France Lead to Over 1,000 Arrests"
+          "development_id": "story_6c537bc7daf36992",
+          "date": "2026-10-26",
+          "title": "Macron to Announce Measures Addressing Student Protests in France"
         }
       ],
       "sources": [
@@ -1485,9 +1567,27 @@
           "source": "France 24 - English",
           "link": "https://www.france24.com/en/france/20261024-the-marches-went-well-%E2%80%93-french-government-on-demonstrations-a-week-after-looting-and-violence",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Macron promises 'concrete measures' in response to French students' demands",
+          "source": "France 24 - English",
+          "link": "https://www.france24.com/en/video/20261026-french-president-promises-concrete-measures-in-response-to-french-students-demands",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Macron promises 'concrete measures' over protest demands - amid fears of Halloween unrest",
+          "source": "Sky News - Top Stories",
+          "link": "https://news.sky.com/story/macron-promises-concrete-measures-over-protest-demands-amid-fears-of-halloween-unrest-13604048",
+          "source_bias": "center"
+        },
+        {
+          "title": "Macron vows 'strong measures' to combat protests that rocked France",
+          "source": "DW - English",
+          "link": "https://www.dw.com/en/macron-vows-strong-measures-to-combat-protests-that-rocked-france/a-79764224?maca=en-rss-en-all-1573-rdf",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-10-25",
+      "updated_at": "2026-10-26",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -1512,6 +1612,7 @@
           "riyadh",
           "saudi_arabia",
           "sebastien_lecornu",
+          "student_protest",
           "tirana",
           "violent_protest"
         ]
@@ -1520,21 +1621,22 @@
         "event_id": "event_protests-erupt-in-india-demanding-resignatio_ce12dfc1ae",
         "title": "Protests Erupt in India Demanding Resignation of Election Chief",
         "relationship": "related_topic",
-        "confidence": 0.866,
+        "confidence": 0.905,
         "shared_entities": [
           "france",
           "france.",
           "france_lead",
           "mass_protest",
           "nationwide_protest",
-          "protest_erupt"
+          "protest_erupt",
+          "student_protest"
         ]
       },
       {
         "event_id": "event_ceuta-requests-national-emergency-amid-surge_4919a90e1a",
         "title": "Ceuta Border Surge",
         "relationship": "related_topic",
-        "confidence": 0.813,
+        "confidence": 0.812,
         "shared_entities": [
           "erupt_across",
           "faces_aftermath",
@@ -1547,7 +1649,7 @@
         "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
         "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
         "relationship": "related_topic",
-        "confidence": 0.752,
+        "confidence": 0.753,
         "shared_entities": [
           "riyadh",
           "saudi",
@@ -1693,10 +1795,12 @@
       "800",
       "ablaze",
       "accepted",
+      "acknowledged",
       "across",
       "adding",
       "address",
       "addresse",
+      "addressing",
       "administration",
       "admitted",
       "aftermath",
@@ -1704,6 +1808,9 @@
       "albania",
       "allowed",
       "although",
+      "amidst",
+      "announce",
+      "announced",
       "approximately",
       "arabia",
       "areas",
@@ -1717,6 +1824,7 @@
       "banned",
       "barricaded",
       "basel",
+      "bastien",
       "began",
       "block",
       "brief",
@@ -1741,6 +1849,7 @@
       "comprehensive",
       "concern",
       "concluded",
+      "concrete",
       "condemn",
       "condemned",
       "condition",
@@ -1762,6 +1871,7 @@
       "deployed",
       "despite",
       "destruction",
+      "discuss",
       "disperse",
       "doors",
       "emmanuel",
@@ -1785,6 +1895,7 @@
       "gallerie",
       "gas",
       "grand",
+      "grievance",
       "gripped",
       "group",
       "gulf",
@@ -1814,6 +1925,7 @@
       "leader",
       "leading",
       "lecornu",
+      "legitimacy",
       "limoge",
       "lisbon",
       "living",
@@ -1830,6 +1942,7 @@
       "marseille",
       "mass",
       "measure",
+      "meet",
       "meeting",
       "milan",
       "million",
@@ -1885,6 +1998,7 @@
       "saturday",
       "saudi",
       "scene",
+      "scheduled",
       "school",
       "sebastien",
       "security",
@@ -1920,6 +2034,7 @@
       "union",
       "unrest",
       "unscheduled",
+      "unveil",
       "used",
       "vandalizing",
       "variou",
@@ -1930,6 +2045,7 @@
       "water",
       "wednseday",
       "weekend",
+      "weeks",
       "well",
       "went",
       "which",
@@ -1941,6 +2057,8 @@
       "across_europe",
       "across_france",
       "addresse_unrest",
+      "addressing_student",
+      "announce",
       "arrest_france",
       "art_basel",
       "basel_paris",
@@ -1969,6 +2087,7 @@
       "marseille_faces",
       "marseille_paris",
       "mass_protest",
+      "measure_addressing",
       "milan",
       "milan_rome",
       "milan_thousand",
@@ -1993,13 +2112,14 @@
       "saudi_arabia",
       "sebastien_lecornu",
       "soldier_deployed",
+      "student_protest",
       "tirana",
       "tirana._while",
       "turin._nationwide",
       "violent_protest",
       "widespread_damage"
     ],
-    "search_text": "000 400 800 ablaze accepted across across_europe across_france adding address addresse addresse_unrest administration admitted aftermath ahead albania allowed although approximately arabia areas around arrest arrest_france arrested arrived art_basel artist authoritie authority banned barricaded basel basel_paris began block brief bring building called cannon capital challenge changed chaos chaotic characterized chief citie clashe clashed cleaning close close_due closed comment comprehensive concern concluded condemn condemn_violent condemned condition contemporary continued control cost costs costs_marseille criticism curfew damage dealing declining demand demonstrat demonstrated demonstration demonstrator deployed despite destruction disperse doors emmanuel emmanuel_macron enforcement entrance erupt erupt_across erupted escalated essential europe european evening event exchange faces faces_aftermath fair follow foreign france france. france._his france_faces france_france france_lead france_prime funding gallerie gas grand grand_palai grand_palais. gripped group gulf half hall heated heavy heightened historic hundred illegitimate incident including increased initially inside insufficient intelligence interior international isolation landed lands largely laurent lead leader leading lecornu limoge lisbon living living_costs localized looting lost louvre louvre_museum lyon lyon._macron macron macron_addresse macron_condemn madrid madrid_lisbon march marched marked marseille marseille_faces marseille_paris mass mass_protest measure meeting milan milan_rome milan_thousand million most mostly mps multiple museum museum_close nationwide nationwide_protest nearly occurred october october_france officer ongoing organised organiser outside palai palai_art palais._but paris paris_marseille parliament part participated past peaceful peacefully political poor posed president prestigiou primarily prime proposed protest protest_across protest_erupt protester public raised recent recognised region remained reported resignation resource response resulted resulting review rioting rising rising_costs rival riyadh rome rome_madrid route saturday saturday_october saudi saudi_arabia scene school sebastien sebastien_lecornu security senior service several significant situation soldier soldier_deployed solidarity some speaking stated stepped stop student such surprise targeting tear tension tenth than there they thousand thursday tirana tirana._while tour town turin turin._nationwide turned union unrest unscheduled used vandalizing variou violence violent violent_protest visit visited water wednseday weekend well went which while widespread widespread_damage would"
+    "search_text": "000 400 800 ablaze accepted acknowledged across across_europe across_france adding address addresse addresse_unrest addressing addressing_student administration admitted aftermath ahead albania allowed although amidst announce announced approximately arabia areas around arrest arrest_france arrested arrived art_basel artist authoritie authority banned barricaded basel basel_paris bastien began block brief bring building called cannon capital challenge changed chaos chaotic characterized chief citie clashe clashed cleaning close close_due closed comment comprehensive concern concluded concrete condemn condemn_violent condemned condition contemporary continued control cost costs costs_marseille criticism curfew damage dealing declining demand demonstrat demonstrated demonstration demonstrator deployed despite destruction discuss disperse doors emmanuel emmanuel_macron enforcement entrance erupt erupt_across erupted escalated essential europe european evening event exchange faces faces_aftermath fair follow foreign france france. france._his france_faces france_france france_lead france_prime funding gallerie gas grand grand_palai grand_palais. grievance gripped group gulf half hall heated heavy heightened historic hundred illegitimate incident including increased initially inside insufficient intelligence interior international isolation landed lands largely laurent lead leader leading lecornu legitimacy limoge lisbon living living_costs localized looting lost louvre louvre_museum lyon lyon._macron macron macron_addresse macron_condemn madrid madrid_lisbon march marched marked marseille marseille_faces marseille_paris mass mass_protest measure measure_addressing meet meeting milan milan_rome milan_thousand million most mostly mps multiple museum museum_close nationwide nationwide_protest nearly occurred october october_france officer ongoing organised organiser outside palai palai_art palais._but paris paris_marseille parliament part participated past peaceful peacefully political poor posed president prestigiou primarily prime proposed protest protest_across protest_erupt protester public raised recent recognised region remained reported resignation resource response resulted resulting review rioting rising rising_costs rival riyadh rome rome_madrid route saturday saturday_october saudi saudi_arabia scene scheduled school sebastien sebastien_lecornu security senior service several significant situation soldier soldier_deployed solidarity some speaking stated stepped stop student student_protest such surprise targeting tear tension tenth than there they thousand thursday tirana tirana._while tour town turin turin._nationwide turned union unrest unscheduled unveil used vandalizing variou violence violent violent_protest visit visited water wednseday weekend weeks well went which while widespread widespread_damage would"
   },
   "related_events": [
     {
