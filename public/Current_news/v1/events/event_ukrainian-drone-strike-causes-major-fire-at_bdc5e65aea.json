@@ -15,7 +15,7 @@
     "summary": "A Ukrainian drone strike ignited a significant fire at a Wildberries warehouse near Saint Petersburg on July 24. The blaze produced thick smoke that spread across the city and led to temporary disruptions at Pulkovo Airport, as reported by Russian authorities.",
     "status": "active",
     "first_seen_at": "2026-07-25",
-    "last_seen_at": "2026-10-25",
+    "last_seen_at": "2026-10-27",
     "timeline": [
       {
         "development_id": "story_b77a481c5a1a5ef9",
@@ -2116,15 +2116,146 @@
         "first_seen_at": "2026-10-25",
         "last_seen_at": "2026-10-25",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_69f9f0bc0e967671",
+        "daily_story_id": "story_69f9f0bc0e967671",
+        "date": "2026-10-27",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Ceasefire Established in Oleshky, Ukraine Amid Humanitarian Crisis",
+        "summary": "A ceasefire has been initiated in the Ukrainian city of Oleshky, reportedly facilitated by US First Lady Melania Trump. The truce aims to enable the delivery of humanitarian aid and allow civilians to evacuate the area. However, there are conflicting claims regarding who brokered the ceasefire, with some attributing it to the Vatican.",
+        "topic_label": "Ukraine Conflict",
+        "development_type": "diplomacy",
+        "key_facts": [
+          "Ceasefire in Oleshky, Ukraine",
+          "Facilitated by Melania Trump according to the White House",
+          "Aims to allow aid delivery and civilian evacuation",
+          "Conflicting claims about the broker of the ceasefire"
+        ],
+        "source_count": 2,
+        "sources": [
+          "Al Jazeera English",
+          "BBC"
+        ],
+        "source_urls": [
+          "https://www.bbc.co.uk/news/articles/ck20wjnv3w0jo?at_medium=RSS&at_campaign=rss",
+          "https://www.aljazeera.com/news/2026/10/27/melania-or-the-pope-who-brokered-russia-ukraine-ceasefire-in-oleshky?traffic_source=rss"
+        ],
+        "source_details": [
+          {
+            "title": "Truce begins in Ukraine city where residents ate weeds to survive",
+            "source": "BBC",
+            "link": "https://www.bbc.co.uk/news/articles/ck20wjnv3w0jo?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          },
+          {
+            "title": "Melania or the pope: Who brokered Russia-Ukraine ceasefire in Oleshky?",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/news/2026/10/27/melania-or-the-pope-who-brokered-russia-ukraine-ceasefire-in-oleshky?traffic_source=rss",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_4f5c295a6fee8e73",
+          "shared_tokens": [
+            "area",
+            "civilian",
+            "conflict",
+            "ukraine"
+          ],
+          "shared_entities": [
+            "ukraine"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-27",
+        "last_seen_at": "2026-10-27",
+        "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_908deee278b83909",
+        "daily_story_id": "story_908deee278b83909",
+        "date": "2026-10-27",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Ceasefire Initiated in Oleshky Amid Ongoing Strikes on Kyiv",
+        "summary": "A ceasefire has commenced in the Russian-occupied town of Oleshky, allowing civilian officials from both Russia and Ukraine to assess the needs of local residents. Despite this localized ceasefire, strikes on Kyiv continue, highlighting the ongoing conflict in the region.",
+        "topic_label": "Ukraine Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "Ceasefire initiated in Oleshky, a Russian-occupied town.",
+          "Civilian officials from Russia and Ukraine will visit residents to assess assistance needs.",
+          "Strikes on Kyiv are ongoing despite the ceasefire."
+        ],
+        "source_count": 2,
+        "sources": [
+          "CBS News - Latest",
+          "Euronews"
+        ],
+        "source_urls": [
+          "https://www.euronews.com/2026/10/27/us-brokered-ceasefire-begins-in-russian-occupied-oleshky-as-strikes-hit-kyiv",
+          "https://www.cbsnews.com/video/ceasefire-begins-in-russian-occupied-ukrainian-town-as-strikes-on-kyiv-continue"
+        ],
+        "source_details": [
+          {
+            "title": "US-brokered ceasefire begins in Russian-occupied Oleshky as strikes hit Kyiv",
+            "source": "Euronews",
+            "link": "https://www.euronews.com/2026/10/27/us-brokered-ceasefire-begins-in-russian-occupied-oleshky-as-strikes-hit-kyiv",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Ceasefire begins in Russian-occupied Ukrainian town as strikes on Kyiv continue",
+            "source": "CBS News - Latest",
+            "link": "https://www.cbsnews.com/video/ceasefire-begins-in-russian-occupied-ukrainian-town-as-strikes-on-kyiv-continue",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_4f5c295a6fee8e73",
+          "shared_tokens": [
+            "civilian",
+            "conflict",
+            "russia",
+            "strike",
+            "ukraine"
+          ],
+          "shared_entities": [
+            "russia",
+            "ukraine"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-27",
+        "last_seen_at": "2026-10-27",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 28,
+      "public_development_count": 30,
       "questionable_development_count": 2,
       "review_required": true
     },
-    "latest_title": "Musk Admits to Starlink Speed Restrictions After Service Restoration in Ukraine",
-    "latest_summary": "Elon Musk has acknowledged that he was responsible for the recent speed restrictions imposed on Starlink services in Ukraine. This admission follows the restoration of normal service levels, which had been disrupted and affected military operations in the region. The interruptions had raised questions about the decision-making behind the satellite internet system relied upon by Ukraine amid ongoing conflict.",
+    "latest_title": "Ceasefire Initiated in Oleshky Amid Ongoing Strikes on Kyiv",
+    "latest_summary": "A ceasefire has commenced in the Russian-occupied town of Oleshky, allowing civilian officials from both Russia and Ukraine to assess the needs of local residents. Despite this localized ceasefire, strikes on Kyiv continue, highlighting the ongoing conflict in the region.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -2134,30 +2265,30 @@
       "display_title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse Timeline",
       "milestone_development_ids": [
         "story_b77a481c5a1a5ef9",
-        "story_ac7a5d31978a717e",
-        "story_6e05d943fef1479c",
-        "story_e7dad15864832837"
+        "story_bff18433653c48e7",
+        "story_ada06a792d74582b",
+        "story_908deee278b83909"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-10-25",
-      "development_count": 28,
-      "coverage_packet_count": 28,
-      "date_count": 24,
-      "source_count": 75,
+      "summary_updated_at": "2026-10-27",
+      "development_count": 30,
+      "coverage_packet_count": 30,
+      "date_count": 25,
+      "source_count": 79,
       "independent_source_count": 26,
       "first_date": "2026-07-25",
-      "latest_date": "2026-10-25",
-      "latest_update_title": "Musk Admits to Starlink Speed Restrictions After Service Restoration in Ukraine",
+      "latest_date": "2026-10-27",
+      "latest_update_title": "Ceasefire Initiated in Oleshky Amid Ongoing Strikes on Kyiv",
       "coverage_score": 1.0,
-      "recency_score": 0.875,
-      "rank_score": 0.927,
-      "context_summary": "Muninn first tracked this thread on 2026-07-25: Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse. The latest development is Musk Admits to Starlink Speed Restrictions After Service Restoration in Ukraine.",
-      "cta_label": "Explore 28 developments"
+      "recency_score": 1.0,
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-07-25: Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse. The latest development is Ceasefire Initiated in Oleshky Amid Ongoing Strikes on Kyiv.",
+      "cta_label": "Explore 30 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "A Ukrainian drone strike ignited a significant fire at a Wildberries warehouse near Saint Petersburg on July 24. A later development was Escalating Ground Fighting in Yemen Results in Over 60 Deaths, Including Civilians. Most recently, elon Musk has acknowledged that he was responsible for the recent speed restrictions imposed on Starlink services in Ukraine.",
+      "summary": "A Ukrainian drone strike ignited a significant fire at a Wildberries warehouse near Saint Petersburg on July 24. A later development was Ukrainian President Zelenskyy Visits Canada Amid Airstrike Concerns. Most recently, a ceasefire has commenced in the Russian-occupied town of Oleshky, allowing civilian officials from both Russia and Ukraine to assess the needs of local residents.",
       "key_developments": [
         {
           "development_id": "story_b77a481c5a1a5ef9",
@@ -2165,19 +2296,19 @@
           "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse"
         },
         {
-          "development_id": "story_ac7a5d31978a717e",
+          "development_id": "story_bff18433653c48e7",
           "date": "2026-08-13",
-          "title": "UN Reports Highest Civilian Deaths in Ukraine Since May 2022"
+          "title": "Drone Strike on Passenger Train in Odesa Region Results in Fatalities"
         },
         {
-          "development_id": "story_6e05d943fef1479c",
-          "date": "2026-09-13",
-          "title": "Displacement Crisis as Houthis Advance in Yemen"
+          "development_id": "story_ada06a792d74582b",
+          "date": "2026-09-14",
+          "title": "Houthis Expand Control in Yemen, Displacing Thousands Amid Ongoing Conflict"
         },
         {
-          "development_id": "story_e7dad15864832837",
-          "date": "2026-10-25",
-          "title": "Musk Admits to Starlink Speed Restrictions After Service Restoration in Ukraine"
+          "development_id": "story_908deee278b83909",
+          "date": "2026-10-27",
+          "title": "Ceasefire Initiated in Oleshky Amid Ongoing Strikes on Kyiv"
         }
       ],
       "sources": [
@@ -2630,9 +2761,33 @@
           "source": "PBS News",
           "link": "https://www.pbs.org/newshour/world/ukraines-starlink-satellite-speeds-restored-after-a-week-of-front-line-disruption",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Truce begins in Ukraine city where residents ate weeds to survive",
+          "source": "BBC",
+          "link": "https://www.bbc.co.uk/news/articles/ck20wjnv3w0jo?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
+        },
+        {
+          "title": "Melania or the pope: Who brokered Russia-Ukraine ceasefire in Oleshky?",
+          "source": "Al Jazeera English",
+          "link": "https://www.aljazeera.com/news/2026/10/27/melania-or-the-pope-who-brokered-russia-ukraine-ceasefire-in-oleshky?traffic_source=rss",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "US-brokered ceasefire begins in Russian-occupied Oleshky as strikes hit Kyiv",
+          "source": "Euronews",
+          "link": "https://www.euronews.com/2026/10/27/us-brokered-ceasefire-begins-in-russian-occupied-oleshky-as-strikes-hit-kyiv",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Ceasefire begins in Russian-occupied Ukrainian town as strikes on Kyiv continue",
+          "source": "CBS News - Latest",
+          "link": "https://www.cbsnews.com/video/ceasefire-begins-in-russian-occupied-ukrainian-town-as-strikes-on-kyiv-continue",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-10-25",
+      "updated_at": "2026-10-27",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -2884,11 +3039,14 @@
       "affect",
       "affected",
       "ahead",
+      "aid",
       "aimed",
       "aims",
       "airport",
       "airstrike",
       "alarming",
+      "allow",
+      "allowing",
       "also",
       "although",
       "amidst",
@@ -2902,9 +3060,11 @@
       "around",
       "arrival",
       "assault",
+      "assess",
       "assistant",
       "atacm",
       "attack",
+      "attributing",
       "august",
       "authoritie",
       "beginning",
@@ -2915,6 +3075,7 @@
       "bolster",
       "both",
       "broader",
+      "brokered",
       "buses",
       "campaign",
       "camps",
@@ -2938,6 +3099,7 @@
       "coincided",
       "collaboration",
       "collapse",
+      "commenced",
       "comply",
       "concern",
       "concluded",
@@ -2947,6 +3109,7 @@
       "confirm",
       "confirming",
       "conflict",
+      "conflicting",
       "continue",
       "contributed",
       "control",
@@ -2965,9 +3128,11 @@
       "decision-making",
       "deep",
       "defense",
+      "delivery",
       "deploying",
       "deprived",
       "described",
+      "despite",
       "detained",
       "devastating",
       "development",
@@ -2992,6 +3157,7 @@
       "effort",
       "el-mandeb",
       "elon",
+      "enable",
       "energy",
       "engage",
       "enhance",
@@ -2999,12 +3165,15 @@
       "escalating",
       "escalation",
       "escaping",
+      "established",
+      "evacuate",
       "evacuated",
       "expand",
       "experiencing",
       "explosion",
       "face",
       "faces",
+      "facilitated",
       "facilitie",
       "facility",
       "factory",
@@ -3038,8 +3207,10 @@
       "highest",
       "highlight",
       "highlighted",
+      "highlighting",
       "household",
       "houthi",
+      "however",
       "human",
       "humanitarian",
       "hundred",
@@ -3061,6 +3232,7 @@
       "individual",
       "industrial",
       "infrastructure",
+      "initiated",
       "injure",
       "injured",
       "injurie",
@@ -3084,6 +3256,7 @@
       "korean",
       "kramatorsk",
       "kyiv",
+      "lady",
       "largest",
       "launched",
       "leading",
@@ -3093,6 +3266,7 @@
       "liberty",
       "lives",
       "local",
+      "localized",
       "located",
       "location",
       "logistic",
@@ -3104,6 +3278,7 @@
       "maritime",
       "market",
       "marks",
+      "melania",
       "military",
       "missile",
       "mission",
@@ -3120,6 +3295,7 @@
       "nation",
       "near",
       "nearly",
+      "needs",
       "nine",
       "nizhnekamsk",
       "non-combatant",
@@ -3133,6 +3309,7 @@
       "odesa",
       "offensive",
       "oil",
+      "oleshky",
       "ongoing",
       "onset",
       "operation",
@@ -3183,11 +3360,13 @@
       "reclaim",
       "refinery",
       "regain",
+      "regarding",
       "region",
       "relied",
       "renewed",
       "reported",
       "reportedly",
+      "resident",
       "resource",
       "response",
       "responsible",
@@ -3203,6 +3382,7 @@
       "right",
       "route",
       "russia",
+      "russian-occupied",
       "safety",
       "saint",
       "satellite",
@@ -3232,6 +3412,7 @@
       "sites",
       "situation",
       "smoke",
+      "some",
       "specific",
       "speed",
       "spread",
@@ -3263,6 +3444,7 @@
       "territory",
       "terrorist",
       "than",
+      "there",
       "these",
       "thick",
       "those",
@@ -3278,12 +3460,15 @@
       "train",
       "transport",
       "trend",
+      "truce",
+      "trump",
       "turkey",
       "tusk",
       "ukraine",
       "united",
       "upon",
       "variou",
+      "vatican",
       "vicinity",
       "victim",
       "violence",
@@ -3326,6 +3511,8 @@
       "canada",
       "capture_strategic",
       "ceasefire_collapse",
+      "ceasefire_established",
+      "ceasefire_initiated",
       "civilian_casualtie",
       "civilian_clashe",
       "civilian_still",
@@ -3350,6 +3537,7 @@
       "escalating_ground",
       "expand_control",
       "fatalitie",
+      "first_lady",
       "food_programme",
       "force_regain",
       "four",
@@ -3363,6 +3551,7 @@
       "houthi_expand",
       "houthi_seize",
       "human_right",
+      "humanitarian_crisi",
       "hunger_affect",
       "including_civilian",
       "injure_dozen",
@@ -3374,7 +3563,9 @@
       "kramatorsk_buses",
       "kyiv",
       "kyiv_result",
+      "lady_melania",
       "level_since",
+      "melania_trump.",
       "military_deals",
       "missile_downed",
       "mission._drone",
@@ -3388,6 +3579,8 @@
       "north_korean",
       "odesa",
       "odesa_region",
+      "oleshky",
+      "oleshky_ukraine",
       "paris",
       "passenger_train",
       "perim_island",
@@ -3413,6 +3606,7 @@
       "russia_claim",
       "russia_missile",
       "russia_shahed",
+      "russian-occupied",
       "russian._authoritie",
       "saint",
       "saint_petersburg",
@@ -3451,6 +3645,8 @@
       "un",
       "united_nation",
       "us",
+      "vatican.",
+      "vatican._ceasefire",
       "visit_canada",
       "volodymyr_zelensky",
       "volodymyr_zelenskyy",
@@ -3470,7 +3666,7 @@
       "zelensky_visit",
       "zelenskyy_visit"
     ],
-    "search_text": "000 125 153 200 201 2022 2025 2026 243 340 400 437 610 9-year-old accounted acknowledged across action additional additionally aden admission admit advance aerial affect affected ahead aimed aims airport airstrike airstrike_concern alarming also although amidst among appear approximately april archipelago area areas around arrival assault assistant atacm attack august authoritie bab beginning behind belgorod berezivka blaze bolster both broader buses buses_result campaign camps canada capabilitie capital capture capture_strategic captured casualtie cause ceasefire ceasefire_collapse child children civil civilian civilian_casualtie civilian_clashe civilian_still claim claim_lives claimed clashe coalition coast coincided collaboration collapse comply concern concern_ukraine concluded concurrently concurrently_russia concurrently_ukraine condolence conduct confirm confirm_civilian confirming conflict continue contributed control control_near crater crisi critical crucial data deadliest deadly deadly_ukraine deal deals deals_recent death debri decision decision-making deep defense deploying deprived described detained devastating development dhubab discovered displace displace_thousand displaced displacement displacement_crisi displacing displacing_thousand disrupted disruption district djibouti djibouti. donald donald_tusk down downed dozen driver drone early eastern eastern_poland effort el-mandeb elon elon_musk energy engage enhance enhancing escalating escalating_ground escalation escaping evacuated expand expand_control experiencing explosion face faces facilitie facility factory familie fatalitie fearing fell field fighting finalized fire fired fires first five fled fleeing follow food food_programme force force_regain four frontline full-scale global goods government-allied ground ground_fighting gulf hanish held highest highest_civilian highest_monthly highlight highlighted household houthi houthi_advance houthi_capture houthi_expand houthi_seize human human_right humanitarian hundred hunger hunger_affect hysterical ignited igniting ill-treatment impact impacting imposed incident included including including_civilian increase increasing indicate indicating individual industrial infrastructure injure injure_dozen injured injurie inside intensifie intensified international internet interruption invasion involving iran-backed iran-backed_houthi iran-backed_houthis. island island_strengthening july july. just kadha killed killing kills kilometer korean korean_missile kramatorsk kramatorsk_buses kyiv kyiv_result largest launched leading least leave level level_since liberty lives local located location logistic long-range loyal macron makeshift many maritime market marks military military_deals missile missile_downed mission mission._drone mokha monitor monitoring monitoring_mission. month monthly monthly_level moscow move multi-nation multiple musk musk_admit nation near near_bab near_kyiv nearly nine nizhnekamsk nizhnekamsk_russia non-combatant normal north north_korean noted number numerou occur occurred odesa odesa_region offensive oil ongoing onset operation oryol other overcrowded overnight panic paris part parts passenger passenger_train passing past pattern payment pentagon perim perim_island petersburg petersburg_warehouse pm poland poland_polish polish polish_prime port portion poses position possible possible_russia prime produced programme provided province public pulkovo pulkovo_airport purchase pyongyang question racist raids railway raised raising ras_isa reach reach_highest reached reason rebel recaptured recent reclaim red red_sea red_sea. refinery refinery_claim regain regain_control region region_result relied renewed renewed_fighting renewed_violence reported reportedly resource response responsible restoration restriction result resulted resulting resurgence retaking revealed review right right_monitoring route russia russia_claim russia_missile russia_shahed russian._authoritie safety saint saint_petersburg satellite saudi saudi-backed saudi-led saudi_airstrike sea._displacement sea_shipping securing seen seize seize_strategic seized separate serbia serbia_russia seriously service service_restoration seven several severe severe_hunger severely shahed shipping shipping_yemen shooting shortly shot side significant significant_civilian since since_may sites situation smoke specific speed speed_restriction spread starlink starlink_speed stated still still_detained strait strait_force strategic strategic_perim strategic_port strengthening strengthening_control strike struck such supplie support supported surge surged surrounding suspended system taiz taneco target targeted tatarstan temporary tens tension territory terrorist than these thick those thousand threat threatening three through time torture tour town train transport trend turkey tusk ukraine ukraine. ukraine_conduct ukraine_drone ukraine_elon ukraine_infrastructure ukraine_odesa ukraine_reach ukraine_since un united united_nation upon us variou vicinity victim violence visit visit_canada visiting vital volodymyr volodymyr_zelensky volodymyr_zelenskyy war warehouse warns warranted waterway ways weeks western what which while wildberrie winter withdrawal woman wounded year years yemen yemen_displace yemen_displacing yemen_houthi yemen_result yemen_saudi-backed yemen_taiz yemen_tens yemen_threatening yemeni zaporizhzhia zaporizhzhia_ukraine zelensky zelensky_visit zelenskyy zelenskyy_visit"
+    "search_text": "000 125 153 200 201 2022 2025 2026 243 340 400 437 610 9-year-old accounted acknowledged across action additional additionally aden admission admit advance aerial affect affected ahead aid aimed aims airport airstrike airstrike_concern alarming allow allowing also although amidst among appear approximately april archipelago area areas around arrival assault assess assistant atacm attack attributing august authoritie bab beginning behind belgorod berezivka blaze bolster both broader brokered buses buses_result campaign camps canada capabilitie capital capture capture_strategic captured casualtie cause ceasefire ceasefire_collapse ceasefire_established ceasefire_initiated child children civil civilian civilian_casualtie civilian_clashe civilian_still claim claim_lives claimed clashe coalition coast coincided collaboration collapse commenced comply concern concern_ukraine concluded concurrently concurrently_russia concurrently_ukraine condolence conduct confirm confirm_civilian confirming conflict conflicting continue contributed control control_near crater crisi critical crucial data deadliest deadly deadly_ukraine deal deals deals_recent death debri decision decision-making deep defense delivery deploying deprived described despite detained devastating development dhubab discovered displace displace_thousand displaced displacement displacement_crisi displacing displacing_thousand disrupted disruption district djibouti djibouti. donald donald_tusk down downed dozen driver drone early eastern eastern_poland effort el-mandeb elon elon_musk enable energy engage enhance enhancing escalating escalating_ground escalation escaping established evacuate evacuated expand expand_control experiencing explosion face faces facilitated facilitie facility factory familie fatalitie fearing fell field fighting finalized fire fired fires first first_lady five fled fleeing follow food food_programme force force_regain four frontline full-scale global goods government-allied ground ground_fighting gulf hanish held highest highest_civilian highest_monthly highlight highlighted highlighting household houthi houthi_advance houthi_capture houthi_expand houthi_seize however human human_right humanitarian humanitarian_crisi hundred hunger hunger_affect hysterical ignited igniting ill-treatment impact impacting imposed incident included including including_civilian increase increasing indicate indicating individual industrial infrastructure initiated injure injure_dozen injured injurie inside intensifie intensified international internet interruption invasion involving iran-backed iran-backed_houthi iran-backed_houthis. island island_strengthening july july. just kadha killed killing kills kilometer korean korean_missile kramatorsk kramatorsk_buses kyiv kyiv_result lady lady_melania largest launched leading least leave level level_since liberty lives local localized located location logistic long-range loyal macron makeshift many maritime market marks melania melania_trump. military military_deals missile missile_downed mission mission._drone mokha monitor monitoring monitoring_mission. month monthly monthly_level moscow move multi-nation multiple musk musk_admit nation near near_bab near_kyiv nearly needs nine nizhnekamsk nizhnekamsk_russia non-combatant normal north north_korean noted number numerou occur occurred odesa odesa_region offensive oil oleshky oleshky_ukraine ongoing onset operation oryol other overcrowded overnight panic paris part parts passenger passenger_train passing past pattern payment pentagon perim perim_island petersburg petersburg_warehouse pm poland poland_polish polish polish_prime port portion poses position possible possible_russia prime produced programme provided province public pulkovo pulkovo_airport purchase pyongyang question racist raids railway raised raising ras_isa reach reach_highest reached reason rebel recaptured recent reclaim red red_sea red_sea. refinery refinery_claim regain regain_control regarding region region_result relied renewed renewed_fighting renewed_violence reported reportedly resident resource response responsible restoration restriction result resulted resulting resurgence retaking revealed review right right_monitoring route russia russia_claim russia_missile russia_shahed russian-occupied russian._authoritie safety saint saint_petersburg satellite saudi saudi-backed saudi-led saudi_airstrike sea._displacement sea_shipping securing seen seize seize_strategic seized separate serbia serbia_russia seriously service service_restoration seven several severe severe_hunger severely shahed shipping shipping_yemen shooting shortly shot side significant significant_civilian since since_may sites situation smoke some specific speed speed_restriction spread starlink starlink_speed stated still still_detained strait strait_force strategic strategic_perim strategic_port strengthening strengthening_control strike struck such supplie support supported surge surged surrounding suspended system taiz taneco target targeted tatarstan temporary tens tension territory terrorist than there these thick those thousand threat threatening three through time torture tour town train transport trend truce trump turkey tusk ukraine ukraine. ukraine_conduct ukraine_drone ukraine_elon ukraine_infrastructure ukraine_odesa ukraine_reach ukraine_since un united united_nation upon us variou vatican vatican. vatican._ceasefire vicinity victim violence visit visit_canada visiting vital volodymyr volodymyr_zelensky volodymyr_zelenskyy war warehouse warns warranted waterway ways weeks western what which while wildberrie winter withdrawal woman wounded year years yemen yemen_displace yemen_displacing yemen_houthi yemen_result yemen_saudi-backed yemen_taiz yemen_tens yemen_threatening yemeni zaporizhzhia zaporizhzhia_ukraine zelensky zelensky_visit zelenskyy zelenskyy_visit"
   },
   "related_events": [
     {

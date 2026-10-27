@@ -15,7 +15,7 @@
     "summary": "On September 17, dozens of Israelis gathered outside the Knesset in West Jerusalem to protest against political leaders. The demonstrators accused these leaders of exploiting regional tensions to interfere with the upcoming parliamentary election scheduled for October 27.",
     "status": "active",
     "first_seen_at": "2026-09-18",
-    "last_seen_at": "2026-10-26",
+    "last_seen_at": "2026-10-27",
     "timeline": [
       {
         "development_id": "story_1806b9bb9b89962c",
@@ -906,6 +906,336 @@
         "first_seen_at": "2026-10-26",
         "last_seen_at": "2026-10-26",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_0df69ff14b19c47b",
+        "daily_story_id": "story_0df69ff14b19c47b",
+        "date": "2026-10-27",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Israel Prepares for Pivotal Election to Choose Next Prime Minister",
+        "summary": "Israelis are set to vote in a crucial election that will determine the next prime minister. The process of forming a new government may take weeks or even months following the election, reflecting the complexities of the political landscape.",
+        "topic_label": "Israeli Elections",
+        "development_type": "election",
+        "key_facts": [
+          "Israelis head to the polls on October 25, 2026.",
+          "The election is considered one of the most pivotal in Israel's history.",
+          "Forming a new government may take weeks or months."
+        ],
+        "source_count": 2,
+        "sources": [
+          "BBC",
+          "New York Times"
+        ],
+        "source_urls": [
+          "https://www.nytimes.com/2026/10/25/world/middleeast/israel-election-guide-netanyahu-eisenkot.html",
+          "https://www.bbc.co.uk/news/videos/c574p31l1l2no?at_medium=RSS&at_campaign=rss"
+        ],
+        "source_details": [
+          {
+            "title": "Israel’s High-Stakes Election: What to Know",
+            "source": "New York Times",
+            "link": "https://www.nytimes.com/2026/10/25/world/middleeast/israel-election-guide-netanyahu-eisenkot.html",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Why it could take time for a new Israeli government to form",
+            "source": "BBC",
+            "link": "https://www.bbc.co.uk/news/videos/c574p31l1l2no?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_abfb038906775f3b",
+          "shared_tokens": [
+            "election",
+            "israel",
+            "political",
+            "prepare",
+            "prime"
+          ],
+          "shared_entities": [
+            "election_israel",
+            "israel",
+            "israel_election"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-27",
+        "last_seen_at": "2026-10-27",
+        "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_18bb72aeca1c9e2e",
+        "daily_story_id": "story_18bb72aeca1c9e2e",
+        "date": "2026-10-27",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Qatar Calls on Iran to Improve Relations Amid Regional Tensions",
+        "summary": "Qatar has urged Iran to demonstrate goodwill by ceasing threats to the region and reopening the Strait of Hormuz. This call comes as regional powers, including Saudi Arabia, Pakistan, and Turkey, engage in diplomatic talks with Iranian leaders in Tehran to seek a resolution to ongoing conflicts that threaten shipping and energy supplies. Turkey's president has also cautioned that renewed attacks on Iran could destabilize the region further.",
+        "topic_label": "Iran War",
+        "development_type": "military_action",
+        "key_facts": [
+          "Qatar is urging Iran to end regional threats.",
+          "The Strait of Hormuz is a critical shipping route.",
+          "Diplomatic talks are ongoing among regional powers."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Euronews",
+          "NewsNation - Latest"
+        ],
+        "source_urls": [
+          "https://www.euronews.com/2026/10/27/qatar-urges-iran-to-show-goodwill-by-ending-threats-to-the-region-and-reopening-the-strait",
+          "https://www.newsnationnow.com/world/us-iran-war-saudi-arabia-pakistan-turkey-trump"
+        ],
+        "source_details": [
+          {
+            "title": "Qatar urges Iran to 'show goodwill' by ending threats to the region and reopening the Strait of Hormuz",
+            "source": "Euronews",
+            "link": "https://www.euronews.com/2026/10/27/qatar-urges-iran-to-show-goodwill-by-ending-threats-to-the-region-and-reopening-the-strait",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Saudi, Pakistani, and Turkish officials meet Iranian leaders in Tehran",
+            "source": "NewsNation - Latest",
+            "link": "https://www.newsnationnow.com/world/us-iran-war-saudi-arabia-pakistan-turkey-trump",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "attack"
+          ],
+          "shared_incident_anchors": [
+            "iran",
+            "pakistan",
+            "saudi_arabia",
+            "tehran",
+            "turkey"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "among",
+            "arabia",
+            "attack",
+            "comes",
+            "conflict",
+            "diplomatic",
+            "engage",
+            "iran",
+            "pakistan",
+            "renewed",
+            "saudi",
+            "talks",
+            "tehran",
+            "turkey"
+          ],
+          "shared_entities": [
+            "iran",
+            "pakistan",
+            "saudi_arabia",
+            "tehran",
+            "turkey"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_f9053da72e0b3a19",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-27",
+        "last_seen_at": "2026-10-27",
+        "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_2fb86a1f7f409d92",
+        "daily_story_id": "story_2fb86a1f7f409d92",
+        "date": "2026-10-27",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Jordan Launches Airstrikes in Syria Following Church Attack",
+        "summary": "In response to a deadly attack on a Greek Orthodox church in Karak, Jordanian forces conducted airstrikes against militant groups in Syria. The church attack resulted in the deaths of nine individuals, prompting Jordan to target what it described as 'militant hideouts' linked to the incident. Reports indicate that the strikes led to casualties among the militants and the destruction of their facilities.",
+        "topic_label": "Middle East Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "Jordanian airstrikes targeted militant groups in Syria.",
+          "The strikes were in retaliation for a church attack in Karak that killed nine people.",
+          "The operation reportedly resulted in casualties among militants."
+        ],
+        "source_count": 3,
+        "sources": [
+          "BBC",
+          "DW",
+          "The Guardian"
+        ],
+        "source_urls": [
+          "https://www.bbc.co.uk/news/articles/cq8ezg6dy6xlo?at_medium=RSS&at_campaign=rss",
+          "https://www.theguardian.com/world/2026/oct/26/jordan-attacks-militants-syria-retaliation-for-last-week-church-attack",
+          "https://www.dw.com/en/jordan-says-its-military-struck-militant-hideouts-in-syria-after-deadly-church-attack/a-79760441?maca=en-rss-en-all-1573-rdf"
+        ],
+        "source_details": [
+          {
+            "title": "Jordan carries out deadly strike in Syria in retaliation for church attack",
+            "source": "BBC",
+            "link": "https://www.bbc.co.uk/news/articles/cq8ezg6dy6xlo?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          },
+          {
+            "title": "Jordan attacks militants in Syria in retaliation for church attack",
+            "source": "The Guardian",
+            "link": "https://www.theguardian.com/world/2026/oct/26/jordan-attacks-militants-syria-retaliation-for-last-week-church-attack",
+            "source_bias": "left"
+          },
+          {
+            "title": "Jordan says its military struck 'militant hideouts' in Syria after deadly church attack",
+            "source": "DW",
+            "link": "https://www.dw.com/en/jordan-says-its-military-struck-militant-hideouts-in-syria-after-deadly-church-attack/a-79760441?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "attack"
+          ],
+          "shared_incident_anchors": [
+            "middle_east"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "among",
+            "attack",
+            "conflict",
+            "east",
+            "middle"
+          ],
+          "shared_entities": [
+            "middle_east"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_f9053da72e0b3a19",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-27",
+        "last_seen_at": "2026-10-27",
+        "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_8fe560bf1f9c72ea",
+        "daily_story_id": "story_8fe560bf1f9c72ea",
+        "date": "2026-10-27",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Israelis Vote in Crucial Election Amid Tensions and High Turnout",
+        "summary": "On October 27, Israelis participated in a pivotal national election, viewed as a referendum on Prime Minister Benjamin Netanyahu's leadership following the October 7 Hamas attack. Voter turnout was reported to be the highest in decades, with many citizens, including tens of thousands living abroad, returning to cast their ballots. The election is marked by deep divisions within the electorate regarding the future direction of the country.",
+        "topic_label": "Israeli Elections",
+        "development_type": "military_action",
+        "key_facts": [
+          "Election held on October 27, 2026.",
+          "High voter turnout, the highest in decades.",
+          "Election seen as a referendum on Netanyahu's leadership.",
+          "Tens of thousands of Israelis abroad returned to vote."
+        ],
+        "source_count": 5,
+        "sources": [
+          "Africanews",
+          "France 24 - English",
+          "PBS News - Headlines",
+          "RTE News"
+        ],
+        "source_urls": [
+          "https://www.france24.com/en/israelis-vote-in-a-tense-election-what-s-at-stake",
+          "https://www.pbs.org/newshour/world/israelis-are-voting-on-whether-to-oust-netanyahu-in-first-election-since-oct-7-attack",
+          "http://www.africanews.com/2026/10/27/israelis-vote-in-pivotal-election-as-netanyahu-faces-challenge-from-eisenkot",
+          "https://www.pbs.org/newshour/politics/tens-of-thousands-of-israelis-living-abroad-are-expected-to-fly-in-for-pivotal-vote",
+          "https://www.rte.ie/news/middle-east/2026/1027/1596896-israel-election"
+        ],
+        "source_details": [
+          {
+            "title": "Israelis vote in a tense election: What's at stake?",
+            "source": "France 24 - English",
+            "link": "https://www.france24.com/en/israelis-vote-in-a-tense-election-what-s-at-stake",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Israelis are voting on whether to oust Netanyahu in first election since Oct. 7 attack",
+            "source": "PBS News - Headlines",
+            "link": "https://www.pbs.org/newshour/world/israelis-are-voting-on-whether-to-oust-netanyahu-in-first-election-since-oct-7-attack",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Israelis vote in pivotal election as Netanyahu faces challenge from Eisenkot",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/10/27/israelis-vote-in-pivotal-election-as-netanyahu-faces-challenge-from-eisenkot",
+            "source_bias": "center"
+          },
+          {
+            "title": "Tens of thousands of Israelis living abroad are expected to fly in for pivotal vote",
+            "source": "PBS News - Headlines",
+            "link": "https://www.pbs.org/newshour/politics/tens-of-thousands-of-israelis-living-abroad-are-expected-to-fly-in-for-pivotal-vote",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "What to know as Israel holds first vote since 7 October",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/middle-east/2026/1027/1596896-israel-election",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "attack"
+          ],
+          "shared_incident_anchors": [
+            "election",
+            "israel"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "attack",
+            "election",
+            "israel",
+            "tension"
+          ],
+          "shared_entities": [
+            "election",
+            "israel"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_7420b7249b4f8104",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-27",
+        "last_seen_at": "2026-10-27",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -934,12 +1264,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 11,
+      "public_development_count": 15,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Middle Eastern Nations Engage in Talks with Iran Amid Security Concerns",
-    "latest_summary": "Senior officials from Saudi Arabia, Turkey, and Pakistan have met in Tehran to discuss preventing the resumption of conflict in the Middle East. This diplomatic effort comes as these nations strengthen their military readiness under the Mecca Defence Alliance, amid reports of potential renewed attacks on Iran by the US and Israel.",
+    "latest_title": "Israelis Vote in Crucial Election Amid Tensions and High Turnout",
+    "latest_summary": "On October 27, Israelis participated in a pivotal national election, viewed as a referendum on Prime Minister Benjamin Netanyahu's leadership following the October 7 Hamas attack. Voter turnout was reported to be the highest in decades, with many citizens, including tens of thousands living abroad, returning to cast their ballots. The election is marked by deep divisions within the electorate regarding the future direction of the country.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -949,30 +1279,30 @@
       "display_title": "Protests Erupt in Israel Against Election Interference Ahead of October Vote Timeline",
       "milestone_development_ids": [
         "story_1806b9bb9b89962c",
-        "story_abfb038906775f3b",
-        "story_4d4e824059167f92",
-        "story_f9053da72e0b3a19"
+        "story_b25e058eed7aab11",
+        "story_b2250bf7da868a16",
+        "story_8fe560bf1f9c72ea"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-10-26",
-      "development_count": 11,
-      "coverage_packet_count": 11,
-      "date_count": 7,
-      "source_count": 37,
-      "independent_source_count": 23,
+      "summary_updated_at": "2026-10-27",
+      "development_count": 15,
+      "coverage_packet_count": 15,
+      "date_count": 8,
+      "source_count": 49,
+      "independent_source_count": 24,
       "first_date": "2026-09-18",
-      "latest_date": "2026-10-26",
-      "latest_update_title": "Middle Eastern Nations Engage in Talks with Iran Amid Security Concerns",
+      "latest_date": "2026-10-27",
+      "latest_update_title": "Israelis Vote in Crucial Election Amid Tensions and High Turnout",
       "coverage_score": 1.0,
       "recency_score": 1.0,
       "rank_score": 1.0,
-      "context_summary": "Muninn first tracked this thread on 2026-09-18: Protests Erupt in Israel Against Election Interference Ahead of October Vote. The latest development is Middle Eastern Nations Engage in Talks with Iran Amid Security Concerns.",
-      "cta_label": "Explore 11 developments"
+      "context_summary": "Muninn first tracked this thread on 2026-09-18: Protests Erupt in Israel Against Election Interference Ahead of October Vote. The latest development is Israelis Vote in Crucial Election Amid Tensions and High Turnout.",
+      "cta_label": "Explore 15 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "On September 17, dozens of Israelis gathered outside the Knesset in West Jerusalem to protest against political leaders. A later development was Benjamin Netanyahu announced a siege on Hebron and neighbouring Halhul and said residents of the gunmen’s home neighbourhoods would all be f. Most recently, senior officials from Saudi Arabia, Turkey, and Pakistan have met in Tehran to discuss preventing the resumption of conflict in the Middle East.",
+      "summary": "On September 17, dozens of Israelis gathered outside the Knesset in West Jerusalem to protest against political leaders. A later development was Israel Displaces 250 Palestinian Families in Hebron Following Soldier Deaths. Most recently, on October 27, Israelis participated in a pivotal national election, viewed as a referendum on Prime Minister Benjamin Netanyahu's leadership following the October 7 Hamas attack.",
       "key_developments": [
         {
           "development_id": "story_1806b9bb9b89962c",
@@ -980,19 +1310,19 @@
           "title": "Protests Erupt in Israel Against Election Interference Ahead of October Vote"
         },
         {
-          "development_id": "story_abfb038906775f3b",
-          "date": "2026-10-07",
-          "title": "Netanyahu Faces Criticism Over Oct. 7 Attack Handling Ahead of Elections"
+          "development_id": "story_b25e058eed7aab11",
+          "date": "2026-10-24",
+          "title": "Benjamin Netanyahu announced a siege on Hebron and neighbouring Halhul and said residents of the gunmen’s home neighbourhoods would all be f"
         },
         {
-          "development_id": "story_4d4e824059167f92",
+          "development_id": "story_b2250bf7da868a16",
           "date": "2026-10-26",
-          "title": "Israel Displaces 250 Palestinian Families in Hebron Following Soldier Deaths"
+          "title": "Netanyahu Denies Rift with Army Chief Amid Election Tensions"
         },
         {
-          "development_id": "story_f9053da72e0b3a19",
-          "date": "2026-10-26",
-          "title": "Middle Eastern Nations Engage in Talks with Iran Amid Security Concerns"
+          "development_id": "story_8fe560bf1f9c72ea",
+          "date": "2026-10-27",
+          "title": "Israelis Vote in Crucial Election Amid Tensions and High Turnout"
         }
       ],
       "sources": [
@@ -1217,13 +1547,104 @@
           "source": "RTE News",
           "link": "https://www.rte.ie/news/2026/1026/1596838-middle-east",
           "source_bias": "center"
+        },
+        {
+          "title": "Israel’s High-Stakes Election: What to Know",
+          "source": "New York Times",
+          "link": "https://www.nytimes.com/2026/10/25/world/middleeast/israel-election-guide-netanyahu-eisenkot.html",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Why it could take time for a new Israeli government to form",
+          "source": "BBC",
+          "link": "https://www.bbc.co.uk/news/videos/c574p31l1l2no?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
+        },
+        {
+          "title": "Qatar urges Iran to 'show goodwill' by ending threats to the region and reopening the Strait of Hormuz",
+          "source": "Euronews",
+          "link": "https://www.euronews.com/2026/10/27/qatar-urges-iran-to-show-goodwill-by-ending-threats-to-the-region-and-reopening-the-strait",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Saudi, Pakistani, and Turkish officials meet Iranian leaders in Tehran",
+          "source": "NewsNation - Latest",
+          "link": "https://www.newsnationnow.com/world/us-iran-war-saudi-arabia-pakistan-turkey-trump",
+          "source_bias": "center"
+        },
+        {
+          "title": "Jordan carries out deadly strike in Syria in retaliation for church attack",
+          "source": "BBC",
+          "link": "https://www.bbc.co.uk/news/articles/cq8ezg6dy6xlo?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
+        },
+        {
+          "title": "Jordan attacks militants in Syria in retaliation for church attack",
+          "source": "The Guardian",
+          "link": "https://www.theguardian.com/world/2026/oct/26/jordan-attacks-militants-syria-retaliation-for-last-week-church-attack",
+          "source_bias": "left"
+        },
+        {
+          "title": "Jordan says its military struck 'militant hideouts' in Syria after deadly church attack",
+          "source": "DW",
+          "link": "https://www.dw.com/en/jordan-says-its-military-struck-militant-hideouts-in-syria-after-deadly-church-attack/a-79760441?maca=en-rss-en-all-1573-rdf",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Israelis vote in a tense election: What's at stake?",
+          "source": "France 24 - English",
+          "link": "https://www.france24.com/en/israelis-vote-in-a-tense-election-what-s-at-stake",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Israelis are voting on whether to oust Netanyahu in first election since Oct. 7 attack",
+          "source": "PBS News - Headlines",
+          "link": "https://www.pbs.org/newshour/world/israelis-are-voting-on-whether-to-oust-netanyahu-in-first-election-since-oct-7-attack",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Israelis vote in pivotal election as Netanyahu faces challenge from Eisenkot",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/10/27/israelis-vote-in-pivotal-election-as-netanyahu-faces-challenge-from-eisenkot",
+          "source_bias": "center"
+        },
+        {
+          "title": "Tens of thousands of Israelis living abroad are expected to fly in for pivotal vote",
+          "source": "PBS News - Headlines",
+          "link": "https://www.pbs.org/newshour/politics/tens-of-thousands-of-israelis-living-abroad-are-expected-to-fly-in-for-pivotal-vote",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "What to know as Israel holds first vote since 7 October",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/middle-east/2026/1027/1596896-israel-election",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-10-26",
+      "updated_at": "2026-10-27",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
     "related_events": [
+      {
+        "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+        "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
+        "relationship": "related_topic",
+        "confidence": 0.95,
+        "shared_entities": [
+          "benjamin_netanyahu",
+          "iran",
+          "israel",
+          "israel_prime",
+          "middle",
+          "middle_east.",
+          "middle_eastern",
+          "saudi",
+          "saudi_arabia",
+          "united_nation",
+          "us"
+        ]
+      },
       {
         "event_id": "event_israeli-strikes-in-gaza-result-in-seven-deat_837b156199",
         "title": "Israeli Strikes in Gaza Result in Seven Deaths and Destruction of Medical Warehouses",
@@ -1245,20 +1666,16 @@
         ]
       },
       {
-        "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
-        "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
+        "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
+        "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
         "relationship": "related_topic",
-        "confidence": 0.95,
+        "confidence": 0.91,
         "shared_entities": [
-          "benjamin_netanyahu",
           "iran",
           "israel",
-          "israel_prime",
-          "middle",
-          "middle_east.",
-          "middle_eastern",
-          "saudi",
+          "protest_erupt",
           "saudi_arabia",
+          "syria",
           "united_nation",
           "us"
         ]
@@ -1267,26 +1684,12 @@
         "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
         "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
         "relationship": "related_topic",
-        "confidence": 0.902,
+        "confidence": 0.906,
         "shared_entities": [
           "iran",
           "israel",
           "israel_prime",
           "saudi",
-          "saudi_arabia",
-          "united_nation",
-          "us"
-        ]
-      },
-      {
-        "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
-        "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
-        "relationship": "related_topic",
-        "confidence": 0.87,
-        "shared_entities": [
-          "iran",
-          "israel",
-          "protest_erupt",
           "saudi_arabia",
           "united_nation",
           "us"
@@ -1317,6 +1720,7 @@
       "200",
       "2023",
       "250",
+      "abroad",
       "account",
       "accusation",
       "accused",
@@ -1325,8 +1729,11 @@
       "addresse",
       "addressing",
       "ahead",
+      "airstrike",
       "alliance",
+      "also",
       "amidst",
+      "among",
       "announced",
       "approache",
       "approximately",
@@ -1335,16 +1742,26 @@
       "around",
       "attack",
       "attended",
+      "ballot",
       "bank",
       "benjamin",
       "better",
       "both",
       "broader",
+      "call",
+      "calls",
       "campaign",
       "career",
+      "cast",
+      "casualtie",
+      "cautioned",
+      "ceasing",
       "central",
       "checkpoint",
       "chief",
+      "choose",
+      "church",
+      "citizen",
       "clampdown",
       "cleansing",
       "closely",
@@ -1354,9 +1771,11 @@
       "comes",
       "comment",
       "competition",
+      "complexitie",
       "concern",
       "concert",
       "concurrently",
+      "conducted",
       "conflict",
       "conflicting",
       "confrontation",
@@ -1372,36 +1791,48 @@
       "currently",
       "deadly",
       "death",
+      "decade",
       "decision",
       "deems",
+      "deep",
       "defence",
       "demand",
+      "demonstrate",
       "demonstrator",
       "denial",
       "denie",
       "denied",
       "departure",
       "described",
+      "destabilize",
+      "destruction",
+      "determine",
       "didn",
       "diplomatic",
+      "direction",
       "discuss",
       "displ",
       "displace",
       "displacement",
       "displacing",
+      "division",
       "dozen",
       "east",
       "eastern",
       "effort",
       "eisenkot",
       "election",
+      "electorate",
       "emerged",
       "emphasizing",
+      "energy",
       "engage",
       "erupt",
       "ethnic",
+      "even",
       "exploiting",
       "faces",
+      "facilitie",
       "facing",
       "failure",
       "familie",
@@ -1410,13 +1841,20 @@
       "first",
       "flotilla",
       "follow",
+      "force",
       "forced",
+      "forming",
       "four",
       "friday",
+      "further",
+      "future",
       "gadi",
       "gathered",
       "gaza",
       "global",
+      "goodwill",
+      "greek",
+      "group",
       "gunmen",
       "halhul",
       "hamas",
@@ -1425,14 +1863,21 @@
       "head",
       "hebron",
       "heightened",
+      "hideout",
+      "high",
+      "highest",
       "home",
       "homes",
+      "hormuz",
       "humanitarian",
       "hundred",
       "imminent",
       "implement",
+      "improve",
       "incident",
+      "including",
       "indicate",
+      "individual",
       "initiated",
       "interfere",
       "interference",
@@ -1442,38 +1887,53 @@
       "jailed",
       "jeopardizing",
       "jerusalem",
+      "jordan",
+      "jordanian",
+      "karak",
       "killed",
       "killing",
       "knesset",
       "land",
+      "landscape",
       "large-scale",
       "launche",
       "laundering",
       "lead-up",
       "leader",
       "leadership",
+      "linked",
+      "living",
       "long-standing",
       "lots",
       "macklemore",
       "make",
+      "many",
+      "marked",
       "mecca",
       "middle",
+      "militant",
       "military",
       "money",
+      "month",
       "nation",
       "national",
       "neighbourhood",
       "neighbouring",
       "netanyahu",
+      "next",
+      "nine",
       "october",
+      "ongoing",
       "operation",
       "opponent",
       "organizing",
+      "orthodox",
       "outside",
       "pakistan",
       "palestinian",
       "parliamentary",
       "part",
+      "participated",
       "period",
       "philadelphia",
       "pivotal",
@@ -1482,36 +1942,50 @@
       "polls",
       "potential",
       "potentially",
+      "power",
       "prepare",
       "preventing",
       "prime",
       "pro-palestinian",
+      "process",
+      "prompting",
       "protest",
       "punishment",
+      "qatar",
       "race",
       "raised",
       "readiness",
       "recent",
+      "referendum",
+      "reflecting",
       "regarding",
+      "region",
       "regional",
       "related",
+      "relation",
       "release",
       "removal",
       "renewed",
+      "reopening",
+      "reported",
       "resident",
+      "resolution",
       "response",
       "restriction",
       "resulted",
       "resumption",
+      "returning",
       "rift",
       "rivalrie",
       "saudi",
       "scheduled",
       "scrutiny",
       "security",
+      "seek",
       "senior",
       "september",
       "sheeran",
+      "shipping",
       "siege",
       "significant",
       "since",
@@ -1520,16 +1994,25 @@
       "some",
       "staff",
       "stance",
+      "strait",
       "strengthen",
+      "strike",
       "sumud",
+      "supplie",
       "surrounding",
+      "syria",
+      "take",
       "talks",
+      "target",
       "tehran",
+      "tens",
       "tension",
       "terrorist",
       "theme",
       "these",
+      "thousand",
       "threat",
+      "threaten",
       "tight",
       "tour",
       "toward",
@@ -1538,28 +2021,37 @@
       "tunisia",
       "tunisian",
       "turkey",
+      "turnout",
       "under",
       "united",
       "unjustifiable",
       "upcoming",
+      "urged",
       "venue",
       "viewed",
       "violation",
       "vote",
+      "voter",
       "vowed",
       "warned",
+      "weeks",
       "west",
+      "what",
       "whether",
       "which",
       "while",
+      "within",
       "would"
     ],
     "entities": [
       "activist_hundred",
       "addresse_gaza",
+      "arabia_pakistan",
       "arabia_turkey",
       "army_chief",
       "benjamin_netanyahu",
+      "choose",
+      "choose_next",
       "concern_senior",
       "concert",
       "concurrently_israel",
@@ -1582,21 +2074,31 @@
       "gaza_flotilla",
       "gaza_situation",
       "global",
+      "greek_orthodox",
       "hamas._prime",
       "handling_ahead",
       "hebron",
+      "high_turnout",
       "implement_restriction",
+      "improve",
+      "improve_relation",
       "interference_ahead",
       "iran",
       "iran._middle",
       "israel",
       "israel.",
+      "israel._israel",
       "israel_army",
       "israel_displace",
       "israel_implement",
+      "israel_prepare",
       "israel_prime",
       "israel_vote",
       "jailed_gaza",
+      "jordan_launche",
+      "karak",
+      "karak_jordanian",
+      "launche_airstrike",
       "macklemore_controversy",
       "mecca_defence",
       "middle",
@@ -1605,13 +2107,18 @@
       "nation_engage",
       "netanyahu_denie",
       "netanyahu_faces",
+      "next_prime",
       "oct.",
+      "october_hamas",
+      "october_israel",
       "october_vote",
       "palestinian_familie",
       "philadelphia",
+      "pivotal_election",
       "political_rivalrie",
       "pro-palestinian",
       "protest_erupt",
+      "regional_tension",
       "rivalrie_israel",
       "saudi",
       "saudi_arabia",
@@ -1619,9 +2126,12 @@
       "sheeran_addresse",
       "staff_gadi",
       "sumud_flotilla.",
+      "syria",
+      "syria.",
       "talks",
       "tehran",
       "tension_israel",
+      "tension_qatar",
       "tunis",
       "tunisia",
       "turkey",
@@ -1630,43 +2140,9 @@
       "west",
       "west_jerusalem"
     ],
-    "search_text": "200 2023 250 account accusation accused action activist activist_hundred addresse addresse_gaza addressing ahead alliance amidst announced approache approximately arabia arabia_turkey army army_chief around attack attended bank benjamin benjamin_netanyahu better both broader campaign career central checkpoint chief clampdown cleansing closely closure coinciding collective comes comment competition concern concern_senior concert concurrently concurrently_israel conflict conflicting confrontation connected contested controversy crackdown credential critical criticism crossing crucial crucial_election currently deadly death decision deems defence defence_alliance demand demonstrator denial denie denie_rift denied departure described didn diplomatic discuss displ displace displace_palestinian displacement displacing dozen east eastern eastern_nation effort eisenkot eisenkot._polls election election_interference election_israel election_tension emerged emphasizing engage erupt ethnic exploiting faces faces_criticism facing failure familie fans feel first flotilla flotilla_activist follow forced four friday gadi gadi_eisenkot. gathered gaza gaza. gaza._netanyahu gaza_flotilla gaza_situation global gunmen halhul hamas hamas._prime handling handling_ahead haunting head hebron heightened home homes humanitarian hundred imminent implement implement_restriction incident indicate initiated interfere interference interference_ahead international iran iran._middle israel israel. israel_army israel_displace israel_implement israel_prime israel_vote jailed jailed_gaza jeopardizing jerusalem killed killing knesset land large-scale launche laundering lead-up leader leadership long-standing lots macklemore macklemore_controversy make mecca mecca_defence middle middle_east. middle_eastern military money nation nation_engage national neighbourhood neighbouring netanyahu netanyahu_denie netanyahu_faces oct. october october_vote operation opponent organizing outside pakistan palestinian palestinian_familie parliamentary part period philadelphia pivotal political political_rivalrie politicizing polls potential potentially prepare preventing prime pro-palestinian protest protest_erupt punishment race raised readiness recent regarding regional related release removal renewed resident response restriction resulted resumption rift rivalrie rivalrie_israel saudi saudi_arabia scheduled scrutiny security security_concern senior september sheeran sheeran_addresse siege significant since situation soldier some staff staff_gadi stance strengthen sumud sumud_flotilla. surrounding talks tehran tension tension_israel terrorist theme these threat tight tour toward trauma tunis tunisia tunisian turkey under united united_nation unjustifiable upcoming us venue viewed violation vote vowed warned west west_jerusalem whether which while would"
+    "search_text": "200 2023 250 abroad account accusation accused action activist activist_hundred addresse addresse_gaza addressing ahead airstrike alliance also amidst among announced approache approximately arabia arabia_pakistan arabia_turkey army army_chief around attack attended ballot bank benjamin benjamin_netanyahu better both broader call calls campaign career cast casualtie cautioned ceasing central checkpoint chief choose choose_next church citizen clampdown cleansing closely closure coinciding collective comes comment competition complexitie concern concern_senior concert concurrently concurrently_israel conducted conflict conflicting confrontation connected contested controversy crackdown credential critical criticism crossing crucial crucial_election currently deadly death decade decision deems deep defence defence_alliance demand demonstrate demonstrator denial denie denie_rift denied departure described destabilize destruction determine didn diplomatic direction discuss displ displace displace_palestinian displacement displacing division dozen east eastern eastern_nation effort eisenkot eisenkot._polls election election_interference election_israel election_tension electorate emerged emphasizing energy engage erupt ethnic even exploiting faces faces_criticism facilitie facing failure familie fans feel first flotilla flotilla_activist follow force forced forming four friday further future gadi gadi_eisenkot. gathered gaza gaza. gaza._netanyahu gaza_flotilla gaza_situation global goodwill greek greek_orthodox group gunmen halhul hamas hamas._prime handling handling_ahead haunting head hebron heightened hideout high high_turnout highest home homes hormuz humanitarian hundred imminent implement implement_restriction improve improve_relation incident including indicate individual initiated interfere interference interference_ahead international iran iran._middle israel israel. israel._israel israel_army israel_displace israel_implement israel_prepare israel_prime israel_vote jailed jailed_gaza jeopardizing jerusalem jordan jordan_launche jordanian karak karak_jordanian killed killing knesset land landscape large-scale launche launche_airstrike laundering lead-up leader leadership linked living long-standing lots macklemore macklemore_controversy make many marked mecca mecca_defence middle middle_east. middle_eastern militant military money month nation nation_engage national neighbourhood neighbouring netanyahu netanyahu_denie netanyahu_faces next next_prime nine oct. october october_hamas october_israel october_vote ongoing operation opponent organizing orthodox outside pakistan palestinian palestinian_familie parliamentary part participated period philadelphia pivotal pivotal_election political political_rivalrie politicizing polls potential potentially power prepare preventing prime pro-palestinian process prompting protest protest_erupt punishment qatar race raised readiness recent referendum reflecting regarding region regional regional_tension related relation release removal renewed reopening reported resident resolution response restriction resulted resumption returning rift rivalrie rivalrie_israel saudi saudi_arabia scheduled scrutiny security security_concern seek senior september sheeran sheeran_addresse shipping siege significant since situation soldier some staff staff_gadi stance strait strengthen strike sumud sumud_flotilla. supplie surrounding syria syria. take talks target tehran tens tension tension_israel tension_qatar terrorist theme these thousand threat threaten tight tour toward trauma tunis tunisia tunisian turkey turnout under united united_nation unjustifiable upcoming urged us venue viewed violation vote voter vowed warned weeks west west_jerusalem what whether which while within would"
   },
   "related_events": [
-    {
-      "event_id": "event_israeli-strikes-in-gaza-result-in-seven-deat_837b156199",
-      "title": "Israeli Strikes in Gaza Result in Seven Deaths and Destruction of Medical Warehouses",
-      "summary": "Muninn first tracked this thread on 2026-08-01: Israeli Strikes in Gaza Result in Seven Deaths and Destruction of Medical Warehouses. The latest development is Israeli Forces Remove Memorial at Birzeit University Amid Ongoing Violence in Gaza.",
-      "activity_status": "active",
-      "stage": "timeline",
-      "stage_label": "Timeline",
-      "first_seen_at": "2026-08-01",
-      "last_seen_at": "2026-10-06",
-      "development_count": 16,
-      "latest_title": "Israeli Forces Remove Memorial at Birzeit University Amid Ongoing Violence in Gaza",
-      "topic_label": "Gaza Conflict",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_israeli-strikes-in-gaza-result-in-seven-deat_837b156199.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_israeli-strikes-in-gaza-result-in-seven-deat_837b156199.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_israeli-strikes-in-gaza-result-in-seven-deat_837b156199"
-    },
     {
       "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
       "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
@@ -1702,20 +2178,20 @@
       "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
     },
     {
-      "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
-      "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
-      "summary": "Muninn first tracked this thread on 2026-09-11: Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims. The latest development is Iran's state television reported that seven oil tankers either caught fire or were damaged by mines overnight Wednesday into Thursday after.",
+      "event_id": "event_israeli-strikes-in-gaza-result-in-seven-deat_837b156199",
+      "title": "Israeli Strikes in Gaza Result in Seven Deaths and Destruction of Medical Warehouses",
+      "summary": "Muninn first tracked this thread on 2026-08-01: Israeli Strikes in Gaza Result in Seven Deaths and Destruction of Medical Warehouses. The latest development is Israeli Forces Remove Memorial at Birzeit University Amid Ongoing Violence in Gaza.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
-      "first_seen_at": "2026-09-11",
-      "last_seen_at": "2026-10-23",
-      "development_count": 38,
-      "latest_title": "Iran's state television reported that seven oil tankers either caught fire or were damaged by mines overnight Wednesday into Thursday after",
-      "topic_label": "9/11 Victim Compensation",
+      "first_seen_at": "2026-08-01",
+      "last_seen_at": "2026-10-06",
+      "development_count": 16,
+      "latest_title": "Israeli Forces Remove Memorial at Birzeit University Amid Ongoing Violence in Gaza",
+      "topic_label": "Gaza Conflict",
       "hero_image": {
-        "url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",
+        "url": "/Current_news/generated/events/event_israeli-strikes-in-gaza-result-in-seven-deat_837b156199.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_israeli-strikes-in-gaza-result-in-seven-deat_837b156199.jpg",
         "source": "Muninn AI illustration",
         "author": "OpenAI GPT Image 2",
         "license": "AI-generated content",
@@ -1733,7 +2209,7 @@
         "focal_tall_x": 0.5,
         "focal_tall_y": 0.48
       },
-      "href": "/timeline.html?event=event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b"
+      "href": "/timeline.html?event=event_israeli-strikes-in-gaza-result-in-seven-deat_837b156199"
     },
     {
       "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
@@ -1768,6 +2244,40 @@
         "focal_tall_y": 0.48
       },
       "href": "/timeline.html?event=event_macron-implements-measures-against-intensify_109da09c6f"
+    },
+    {
+      "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
+      "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
+      "summary": "Muninn first tracked this thread on 2026-09-11: Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims. The latest development is Iran's state television reported that seven oil tankers either caught fire or were damaged by mines overnight Wednesday into Thursday after.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-09-11",
+      "last_seen_at": "2026-10-23",
+      "development_count": 38,
+      "latest_title": "Iran's state television reported that seven oil tankers either caught fire or were damaged by mines overnight Wednesday into Thursday after",
+      "topic_label": "9/11 Victim Compensation",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b"
     }
   ]
 }
