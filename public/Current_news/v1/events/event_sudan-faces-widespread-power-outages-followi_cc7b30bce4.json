@@ -15,7 +15,7 @@
     "summary": "Sudan's paramilitary Rapid Support Forces (RSF) conducted a coordinated drone strike on five power stations, leading to significant power outages across the eastern regions of the country. The attacks targeted two power stations each in Al-Jazira and Gedaref states, and one in White Nile state, affecting large areas of these regions, according to a government official.",
     "status": "active",
     "first_seen_at": "2026-10-26",
-    "last_seen_at": "2026-10-27",
+    "last_seen_at": "2026-10-28",
     "timeline": [
       {
         "development_id": "story_0219295d65ad8789",
@@ -235,6 +235,108 @@
         "first_seen_at": "2026-10-27",
         "last_seen_at": "2026-10-27",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_3aa3cbcb27ce0f95",
+        "daily_story_id": "story_3aa3cbcb27ce0f95",
+        "date": "2026-10-28",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Russian Strikes Cause Casualties and Fires in Kyiv and Kharkiv",
+        "summary": "Recent Russian missile and drone strikes in Ukraine have resulted in casualties and significant damage. In Kyiv, one person was killed and 15 injured, with emergency workers rescuing a dog from the rubble of damaged university buildings and a major bridge. Meanwhile, a drone strike in Kharkiv injured five people, including a 4-year-old child, and ignited several fires, prompting firefighters to respond amid ongoing threats of further attacks.",
+        "topic_label": "Ukraine Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "One person killed and 15 injured in Kyiv due to a Russian missile and drone attack.",
+          "Emergency workers rescued a dog from the rubble in Kyiv.",
+          "In Kharkiv, five people, including a child, were injured in a drone strike that caused multiple fires."
+        ],
+        "source_count": 3,
+        "sources": [
+          "Africanews",
+          "Euronews"
+        ],
+        "source_urls": [
+          "https://www.euronews.com/video/2026/10/27/ukraine-firefighters-battle-flames-and-rescue-dog-from-kyiv-ruins",
+          "https://www.euronews.com/video/2026/10/28/ukraine-massive-fire-engulfs-buildings-after-russian-strike-on-kharkiv",
+          "http://www.africanews.com/2026/10/28/ukraine-massive-fire-engulfs-buildings-after-russian-strike-on-kharkiv"
+        ],
+        "source_details": [
+          {
+            "title": "Ukraine: firefighters battle flames and rescue dog from Kyiv ruins",
+            "source": "Euronews",
+            "link": "https://www.euronews.com/video/2026/10/27/ukraine-firefighters-battle-flames-and-rescue-dog-from-kyiv-ruins",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Ukraine: massive fire engulfs buildings after Russian strike on Kharkiv",
+            "source": "Euronews",
+            "link": "https://www.euronews.com/video/2026/10/28/ukraine-massive-fire-engulfs-buildings-after-russian-strike-on-kharkiv",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Ukraine: massive fire engulfs buildings after Russian strike on Kharkiv",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/10/28/ukraine-massive-fire-engulfs-buildings-after-russian-strike-on-kharkiv",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "attack",
+            "strike"
+          ],
+          "shared_incident_anchors": [
+            "kyiv",
+            "russia",
+            "ukraine"
+          ],
+          "shared_incident_numbers": [
+            "15"
+          ],
+          "shared_tokens": [
+            "attack",
+            "bridge",
+            "building",
+            "casualtie",
+            "conflict",
+            "damage",
+            "drone",
+            "fires",
+            "injured",
+            "killed",
+            "kyiv",
+            "missile",
+            "multiple",
+            "ongoing",
+            "person",
+            "recent",
+            "resulted",
+            "russia",
+            "significant",
+            "strike",
+            "ukraine",
+            "university"
+          ],
+          "shared_entities": [
+            "kyiv",
+            "russia",
+            "ukraine"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_b77a23e366414371",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-28",
+        "last_seen_at": "2026-10-28",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -264,44 +366,45 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 3,
+      "public_development_count": 4,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Escalating Attacks in Ukraine-Russia Conflict Result in Casualties",
-    "latest_summary": "Recent drone and missile attacks in the ongoing Ukraine-Russia conflict have resulted in multiple casualties. A Ukrainian drone strike in Russia's Voronezh region killed at least two people and injured 17, causing significant damage to buildings and a commuter train. In Ukraine, a Russian missile and drone attack on Kyiv killed one person and injured 15, damaging university buildings and a major bridge. Additionally, Russian strikes in Odesa and Zaporizhzhia injured four people and sparked fires in the region.",
+    "latest_title": "Russian Strikes Cause Casualties and Fires in Kyiv and Kharkiv",
+    "latest_summary": "Recent Russian missile and drone strikes in Ukraine have resulted in casualties and significant damage. In Kyiv, one person was killed and 15 injured, with emergency workers rescuing a dog from the rubble of damaged university buildings and a major bridge. Meanwhile, a drone strike in Kharkiv injured five people, including a 4-year-old child, and ignited several fires, prompting firefighters to respond amid ongoing threats of further attacks.",
     "presentation": {
       "has_context": true,
-      "has_full_timeline": false,
-      "stage": "developing_event",
-      "stage_label": "Developing event",
+      "has_full_timeline": true,
+      "stage": "timeline",
+      "stage_label": "Timeline",
       "base_title": "Sudan Faces Widespread Power Outages Following RSF Drone Attacks",
-      "display_title": "Sudan Faces Widespread Power Outages Following RSF Drone Attacks",
+      "display_title": "Sudan Faces Widespread Power Outages Following RSF Drone Attacks Timeline",
       "milestone_development_ids": [
         "story_0219295d65ad8789",
         "story_ebba204ca6a39d11",
-        "story_b77a23e366414371"
+        "story_b77a23e366414371",
+        "story_3aa3cbcb27ce0f95"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-10-27",
-      "development_count": 3,
-      "coverage_packet_count": 3,
-      "date_count": 2,
-      "source_count": 7,
+      "summary_updated_at": "2026-10-28",
+      "development_count": 4,
+      "coverage_packet_count": 4,
+      "date_count": 3,
+      "source_count": 10,
       "independent_source_count": 4,
       "first_date": "2026-10-26",
-      "latest_date": "2026-10-27",
-      "latest_update_title": "Escalating Attacks in Ukraine-Russia Conflict Result in Casualties",
-      "coverage_score": 0.493,
+      "latest_date": "2026-10-28",
+      "latest_update_title": "Russian Strikes Cause Casualties and Fires in Kyiv and Kharkiv",
+      "coverage_score": 0.628,
       "recency_score": 1.0,
-      "rank_score": 0.787,
-      "context_summary": "Muninn first tracked this thread on 2026-10-26: Ukrainian Drone Attack in Voronezh Region Results in Casualties and Damage. The latest development is Escalating Attacks in Ukraine-Russia Conflict Result in Casualties.",
-      "cta_label": ""
+      "rank_score": 0.844,
+      "context_summary": "Muninn first tracked this thread on 2026-10-26: Ukrainian Drone Attack in Voronezh Region Results in Casualties and Damage. The latest development is Russian Strikes Cause Casualties and Fires in Kyiv and Kharkiv.",
+      "cta_label": "Explore 4 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "A Ukrainian drone attack on Russia's Voronezh region has resulted in at least two fatalities and 17 injuries. A later development was Sudan Faces Widespread Power Outages Following RSF Drone Attacks. Most recently, recent drone and missile attacks in the ongoing Ukraine-Russia conflict have resulted in multiple casualties.",
+      "summary": "A Ukrainian drone attack on Russia's Voronezh region has resulted in at least two fatalities and 17 injuries. A later development was Escalating Attacks in Ukraine-Russia Conflict Result in Casualties. Most recently, recent Russian missile and drone strikes in Ukraine have resulted in casualties and significant damage.",
       "key_developments": [
         {
           "development_id": "story_0219295d65ad8789",
@@ -317,6 +420,11 @@
           "development_id": "story_b77a23e366414371",
           "date": "2026-10-27",
           "title": "Escalating Attacks in Ukraine-Russia Conflict Result in Casualties"
+        },
+        {
+          "development_id": "story_3aa3cbcb27ce0f95",
+          "date": "2026-10-28",
+          "title": "Russian Strikes Cause Casualties and Fires in Kyiv and Kharkiv"
         }
       ],
       "sources": [
@@ -361,34 +469,41 @@
           "source": "Euronews",
           "link": "https://www.euronews.com/video/2026/10/26/ukraine-russian-strikes-hit-odesa-and-zaporizhzhia-injuring-four",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Ukraine: firefighters battle flames and rescue dog from Kyiv ruins",
+          "source": "Euronews",
+          "link": "https://www.euronews.com/video/2026/10/27/ukraine-firefighters-battle-flames-and-rescue-dog-from-kyiv-ruins",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Ukraine: massive fire engulfs buildings after Russian strike on Kharkiv",
+          "source": "Euronews",
+          "link": "https://www.euronews.com/video/2026/10/28/ukraine-massive-fire-engulfs-buildings-after-russian-strike-on-kharkiv",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Ukraine: massive fire engulfs buildings after Russian strike on Kharkiv",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/10/28/ukraine-massive-fire-engulfs-buildings-after-russian-strike-on-kharkiv",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-28",
       "provenance": "source_grounded_event_memory"
     },
-    "event_stage": "developing_event",
+    "event_stage": "timeline",
     "related_events": [
       {
         "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
         "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
         "relationship": "related_topic",
-        "confidence": 0.919,
+        "confidence": 0.95,
         "shared_entities": [
           "casualtie",
+          "kyiv",
           "power_outage",
-          "region_result",
-          "russia",
-          "ukraine",
-          "ukraine_drone"
-        ]
-      },
-      {
-        "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
-        "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
-        "relationship": "related_topic",
-        "confidence": 0.857,
-        "shared_entities": [
-          "odesa",
+          "recent_russia",
           "region_result",
           "russia",
           "ukraine",
@@ -399,9 +514,25 @@
         "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
         "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
         "relationship": "related_topic",
-        "confidence": 0.828,
+        "confidence": 0.901,
         "shared_entities": [
+          "kharkiv",
+          "kyiv",
           "odesa",
+          "russia",
+          "ukraine",
+          "ukraine_drone"
+        ]
+      },
+      {
+        "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
+        "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
+        "relationship": "related_topic",
+        "confidence": 0.889,
+        "shared_entities": [
+          "kyiv",
+          "odesa",
+          "region_result",
           "russia",
           "ukraine",
           "ukraine_drone"
@@ -411,7 +542,7 @@
         "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
         "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
         "relationship": "related_topic",
-        "confidence": 0.755,
+        "confidence": 0.753,
         "shared_entities": [
           "russia",
           "ukraine",
@@ -544,6 +675,7 @@
       "focal_tall_y": 0.48
     },
     "search_tokens": [
+      "4-year-old",
       "across",
       "additionally",
       "affecting",
@@ -553,36 +685,46 @@
       "bridge",
       "building",
       "casualtie",
+      "cause",
       "caused",
       "causing",
+      "child",
       "commuter",
       "conducted",
       "conflict",
       "coordinated",
       "damage",
+      "damaged",
       "damaging",
       "debri",
       "drone",
       "each",
       "eastern",
+      "emergency",
       "engulf",
       "escalating",
       "faces",
       "fatalitie",
+      "firefighter",
       "fires",
       "five",
       "flame",
       "force",
       "four",
+      "further",
       "gedaref",
+      "ignited",
       "incident",
+      "including",
       "injured",
       "injurie",
+      "kharkiv",
       "killed",
       "kyiv",
       "large",
       "leading",
       "least",
+      "meanwhile",
       "missile",
       "multiple",
       "nile",
@@ -592,12 +734,17 @@
       "paramilitary",
       "person",
       "power",
+      "prompting",
       "rapid",
       "recent",
       "region",
+      "rescuing",
+      "respond",
       "result",
       "resulted",
+      "rubble",
       "russia",
+      "several",
       "significant",
       "sparked",
       "station",
@@ -607,6 +754,7 @@
       "support",
       "targeted",
       "these",
+      "threat",
       "train",
       "ukraine",
       "ukraine-russia",
@@ -614,6 +762,7 @@
       "voronezh",
       "white",
       "widespread",
+      "worker",
       "zaporizhzhia"
     ],
     "entities": [
@@ -621,11 +770,16 @@
       "al-jazira",
       "casualtie",
       "casualtie_recent",
+      "cause_casualtie",
       "faces_widespread",
       "force_rsf",
+      "kharkiv",
+      "kharkiv_recent",
+      "kyiv",
       "odesa",
       "power_outage",
       "rapid_support",
+      "recent_russia",
       "region_result",
       "rsf",
       "rsf_drone",
@@ -642,7 +796,7 @@
       "white_nile",
       "widespread_power"
     ],
-    "search_text": "across additionally additionally_russia affecting al-jazira areas attack bridge building casualtie casualtie_recent caused causing commuter conducted conflict coordinated damage damaging debri drone each eastern engulf escalating faces faces_widespread fatalitie fires five flame force force_rsf four gedaref incident injured injurie killed kyiv large leading least missile multiple nile odesa ongoing outage paramilitary person power power_outage rapid rapid_support recent region region_result result resulted rsf rsf_drone russia russia_voronezh significant sparked station strike struck sudan sudan_faces support support_force targeted these train ukraine ukraine-russia ukraine_drone university voronezh voronezh_region white white_nile widespread widespread_power zaporizhzhia"
+    "search_text": "4-year-old across additionally additionally_russia affecting al-jazira areas attack bridge building casualtie casualtie_recent cause cause_casualtie caused causing child commuter conducted conflict coordinated damage damaged damaging debri drone each eastern emergency engulf escalating faces faces_widespread fatalitie firefighter fires five flame force force_rsf four further gedaref ignited incident including injured injurie kharkiv kharkiv_recent killed kyiv large leading least meanwhile missile multiple nile odesa ongoing outage paramilitary person power power_outage prompting rapid rapid_support recent recent_russia region region_result rescuing respond result resulted rsf rsf_drone rubble russia russia_voronezh several significant sparked station strike struck sudan sudan_faces support support_force targeted these threat train ukraine ukraine-russia ukraine_drone university voronezh voronezh_region white white_nile widespread widespread_power worker zaporizhzhia"
   },
   "related_events": [
     {
@@ -680,40 +834,6 @@
       "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
     },
     {
-      "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
-      "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
-      "summary": "Muninn first tracked this thread on 2026-07-25: Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse. The latest development is Ceasefire Initiated in Oleshky Amid Ongoing Strikes on Kyiv.",
-      "activity_status": "active",
-      "stage": "timeline",
-      "stage_label": "Timeline",
-      "first_seen_at": "2026-07-25",
-      "last_seen_at": "2026-10-27",
-      "development_count": 30,
-      "latest_title": "Ceasefire Initiated in Oleshky Amid Ongoing Strikes on Kyiv",
-      "topic_label": "Russia-Ukraine War",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea"
-    },
-    {
       "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
       "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
       "summary": "Muninn first tracked this thread on 2026-09-18: Macron Implements Measures Against Intensifying Russian Hybrid Threats. The latest development is French PM Announces Major Police Presence for Upcoming Protests.",
@@ -746,6 +866,40 @@
         "focal_tall_y": 0.48
       },
       "href": "/timeline.html?event=event_macron-implements-measures-against-intensify_109da09c6f"
+    },
+    {
+      "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
+      "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
+      "summary": "Muninn first tracked this thread on 2026-07-25: Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse. The latest development is Ceasefire Initiated in Oleshky Amid Ongoing Strikes on Kyiv.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-25",
+      "last_seen_at": "2026-10-27",
+      "development_count": 30,
+      "latest_title": "Ceasefire Initiated in Oleshky Amid Ongoing Strikes on Kyiv",
+      "topic_label": "Russia-Ukraine War",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea"
     },
     {
       "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",

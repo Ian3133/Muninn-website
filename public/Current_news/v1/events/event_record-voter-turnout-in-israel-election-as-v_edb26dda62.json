@@ -1,0 +1,393 @@
+{
+  "schema_version": 1,
+  "resource_type": "event",
+  "event_id": "event_record-voter-turnout-in-israel-election-as-v_edb26dda62",
+  "publication": {
+    "status": "published",
+    "permalink": "/timeline.html?event=event_record-voter-turnout-in-israel-election-as-v_edb26dda62",
+    "share_expires_at": null
+  },
+  "event": {
+    "event_id": "event_record-voter-turnout-in-israel-election-as-v_edb26dda62",
+    "title": "Record Voter Turnout in Israel Election as Voting Continues",
+    "canonical_title": "Record Voter Turnout in Israel Election as Voting Continues",
+    "topic_label": "Israel Elections",
+    "summary": "As voting continues in Israel's election, nearly 45% of the electorate had cast their ballots by mid-afternoon, marking the highest turnout since records began in 1973. The election is anticipated to be closely contested, with potential for a stalemate.",
+    "status": "active",
+    "first_seen_at": "2026-10-27",
+    "last_seen_at": "2026-10-28",
+    "timeline": [
+      {
+        "development_id": "story_9526acfe9f5890e4",
+        "daily_story_id": "story_9526acfe9f5890e4",
+        "date": "2026-10-27",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Record Voter Turnout in Israel Election as Voting Continues",
+        "summary": "As voting continues in Israel's election, nearly 45% of the electorate had cast their ballots by mid-afternoon, marking the highest turnout since records began in 1973. The election is anticipated to be closely contested, with potential for a stalemate.",
+        "topic_label": "Israel Elections",
+        "development_type": "election",
+        "key_facts": [
+          "Almost 45% of voters had voted by 2 p.m.",
+          "This is the highest turnout recorded since 1973.",
+          "The election is expected to be a close contest."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Al Jazeera English",
+          "DW - English"
+        ],
+        "source_urls": [
+          "https://www.aljazeera.com/news/2026/10/27/israel-election-turnout-highest-in-50-years-as-voting-continues?traffic_source=rss",
+          "https://www.dw.com/en/turnout-at-israel-s-election-has-reached-a-record-high-at-the-halfway-stage/live-79713839?maca=en-rss-en-all-1573-rdf"
+        ],
+        "source_details": [
+          {
+            "title": "Israel election turnout highest in 50 years as voting continues",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/news/2026/10/27/israel-election-turnout-highest-in-50-years-as-voting-continues?traffic_source=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Turnout at Israel's election has reached a record high at the halfway stage",
+            "source": "DW - English",
+            "link": "https://www.dw.com/en/turnout-at-israel-s-election-has-reached-a-record-high-at-the-halfway-stage/live-79713839?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 1.0,
+        "match_evidence": {
+          "score": 1.0,
+          "method": "new_event",
+          "shared_tokens": [],
+          "shared_entities": []
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-27",
+        "last_seen_at": "2026-10-27",
+        "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_9ee2b2cf27cb4f0a",
+        "daily_story_id": "story_9ee2b2cf27cb4f0a",
+        "date": "2026-10-28",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Israel Faces Political Deadlock Following Record Turnout in Election",
+        "summary": "In a highly anticipated election, Israeli voters turned out in record numbers, marking the highest participation in decades. Provisional results indicate a political deadlock, with no clear path to power for either of the main parties, leaving the outcome uncertain.",
+        "topic_label": "Israel Elections",
+        "development_type": "election",
+        "key_facts": [
+          "Voter turnout was the highest in decades.",
+          "Provisional results show no clear path to power for main parties."
+        ],
+        "source_count": 2,
+        "sources": [
+          "NPR - News",
+          "RTE News"
+        ],
+        "source_urls": [
+          "https://www.rte.ie/news/world/2026/1028/1597124-behind-the-story-israel",
+          "https://www.npr.org/2026/10/28/g-s1-150313/up-first-newsletter-midterm-campaign-trump-israel-elections-federal-reserve-ebola-outbreak"
+        ],
+        "source_details": [
+          {
+            "title": "Podcast: Political deadlock in Israel after election",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/world/2026/1028/1597124-behind-the-story-israel",
+            "source_bias": "center"
+          },
+          {
+            "title": "Israel's election too close to call",
+            "source": "NPR - News",
+            "link": "https://www.npr.org/2026/10/28/g-s1-150313/up-first-newsletter-midterm-campaign-trump-israel-elections-federal-reserve-ebola-outbreak",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_9526acfe9f5890e4",
+          "shared_tokens": [
+            "anticipated",
+            "election",
+            "highest",
+            "israel",
+            "marking",
+            "record",
+            "turnout",
+            "voter"
+          ],
+          "shared_entities": [
+            "israel",
+            "israel_election"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-28",
+        "last_seen_at": "2026-10-28",
+        "integrity_status": "trusted"
+      }
+    ],
+    "integrity": {
+      "public_development_count": 2,
+      "questionable_development_count": 0,
+      "review_required": false
+    },
+    "latest_title": "Israel Faces Political Deadlock Following Record Turnout in Election",
+    "latest_summary": "In a highly anticipated election, Israeli voters turned out in record numbers, marking the highest participation in decades. Provisional results indicate a political deadlock, with no clear path to power for either of the main parties, leaving the outcome uncertain.",
+    "presentation": {
+      "has_context": true,
+      "has_full_timeline": false,
+      "stage": "developing_event",
+      "stage_label": "Developing event",
+      "base_title": "Record Voter Turnout in Israel Election as Voting Continues",
+      "display_title": "Record Voter Turnout in Israel Election as Voting Continues",
+      "milestone_development_ids": [
+        "story_9526acfe9f5890e4",
+        "story_9ee2b2cf27cb4f0a"
+      ],
+      "summary_available": true,
+      "summary_label": "Read the story so far",
+      "summary_updated_at": "2026-10-28",
+      "development_count": 2,
+      "coverage_packet_count": 2,
+      "date_count": 2,
+      "source_count": 4,
+      "independent_source_count": 4,
+      "first_date": "2026-10-27",
+      "latest_date": "2026-10-28",
+      "latest_update_title": "Israel Faces Political Deadlock Following Record Turnout in Election",
+      "coverage_score": 0.397,
+      "recency_score": 1.0,
+      "rank_score": 0.747,
+      "context_summary": "Muninn first tracked this thread on 2026-10-27: Record Voter Turnout in Israel Election as Voting Continues. The latest development is Israel Faces Political Deadlock Following Record Turnout in Election.",
+      "cta_label": ""
+    },
+    "event_summary": {
+      "available": true,
+      "summary": "As voting continues in Israel's election, nearly 45% of the electorate had cast their ballots by mid-afternoon, marking the highest turnout since records began in 1973. Most recently, in a highly anticipated election, Israeli voters turned out in record numbers, marking the highest participation in decades.",
+      "key_developments": [
+        {
+          "development_id": "story_9526acfe9f5890e4",
+          "date": "2026-10-27",
+          "title": "Record Voter Turnout in Israel Election as Voting Continues"
+        },
+        {
+          "development_id": "story_9ee2b2cf27cb4f0a",
+          "date": "2026-10-28",
+          "title": "Israel Faces Political Deadlock Following Record Turnout in Election"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Israel election turnout highest in 50 years as voting continues",
+          "source": "Al Jazeera English",
+          "link": "https://www.aljazeera.com/news/2026/10/27/israel-election-turnout-highest-in-50-years-as-voting-continues?traffic_source=rss",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Turnout at Israel's election has reached a record high at the halfway stage",
+          "source": "DW - English",
+          "link": "https://www.dw.com/en/turnout-at-israel-s-election-has-reached-a-record-high-at-the-halfway-stage/live-79713839?maca=en-rss-en-all-1573-rdf",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Podcast: Political deadlock in Israel after election",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/world/2026/1028/1597124-behind-the-story-israel",
+          "source_bias": "center"
+        },
+        {
+          "title": "Israel's election too close to call",
+          "source": "NPR - News",
+          "link": "https://www.npr.org/2026/10/28/g-s1-150313/up-first-newsletter-midterm-campaign-trump-israel-elections-federal-reserve-ebola-outbreak",
+          "source_bias": "lean-left"
+        }
+      ],
+      "updated_at": "2026-10-28",
+      "provenance": "source_grounded_event_memory"
+    },
+    "event_stage": "developing_event",
+    "related_events": [
+      {
+        "event_id": "event_protests-erupt-in-israel-against-election-in_a0b546d8ce",
+        "title": "Protests Erupt in Israel Against Election Interference Ahead of October Vote",
+        "relationship": "related_topic",
+        "confidence": 0.775,
+        "shared_entities": [
+          "israel",
+          "israel_election",
+          "voter_turnout"
+        ]
+      },
+      {
+        "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
+        "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
+        "relationship": "related_topic",
+        "confidence": 0.69,
+        "shared_entities": [
+          "israel",
+          "israel_election"
+        ]
+      }
+    ],
+    "search_tokens": [
+      "1973",
+      "anticipated",
+      "ballot",
+      "began",
+      "cast",
+      "clear",
+      "closely",
+      "contested",
+      "continue",
+      "deadlock",
+      "decade",
+      "either",
+      "election",
+      "electorate",
+      "faces",
+      "highest",
+      "highly",
+      "indicate",
+      "israel",
+      "leaving",
+      "main",
+      "marking",
+      "mid-afternoon",
+      "nearly",
+      "number",
+      "outcome",
+      "participation",
+      "partie",
+      "path",
+      "political",
+      "potential",
+      "power",
+      "provisional",
+      "record",
+      "result",
+      "since",
+      "stalemate",
+      "turned",
+      "turnout",
+      "uncertain",
+      "voter",
+      "voting"
+    ],
+    "entities": [
+      "election",
+      "faces_political",
+      "israel",
+      "israel_election",
+      "israel_faces",
+      "political_deadlock",
+      "record_turnout",
+      "record_voter",
+      "voter_turnout",
+      "voting_continue"
+    ],
+    "search_text": "1973 anticipated ballot began cast clear closely contested continue deadlock decade either election electorate faces faces_political highest highly indicate israel israel_election israel_faces leaving main marking mid-afternoon nearly number outcome participation partie path political political_deadlock potential power provisional record record_turnout record_voter result since stalemate turned turnout uncertain voter voter_turnout voting voting_continue",
+    "hero_image": {
+      "url": "/Current_news/generated/events/event_record-voter-turnout-in-israel-election-as-v_edb26dda62.jpg",
+      "thumbnail_url": "/Current_news/generated/events/event_record-voter-turnout-in-israel-election-as-v_edb26dda62.jpg",
+      "source": "Muninn AI illustration",
+      "author": "OpenAI GPT Image 2",
+      "license": "AI-generated content",
+      "image_role": "illustrative",
+      "image_role_label": "AI illustration",
+      "is_ai_generated": true,
+      "generation_model": "gpt-image-2",
+      "generation_quality": "low",
+      "safe_to_crop": true,
+      "allows_crop": true,
+      "focal_x": 0.5,
+      "focal_y": 0.48,
+      "focal_wide_x": 0.5,
+      "focal_wide_y": 0.48,
+      "focal_tall_x": 0.5,
+      "focal_tall_y": 0.48
+    }
+  },
+  "related_events": [
+    {
+      "event_id": "event_protests-erupt-in-israel-against-election-in_a0b546d8ce",
+      "title": "Protests Erupt in Israel Against Election Interference Ahead of October Vote",
+      "summary": "Muninn first tracked this thread on 2026-09-18: Protests Erupt in Israel Against Election Interference Ahead of October Vote. The latest development is High Arab Voter Turnout in Israel's Elections Reaches Notable Levels.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-09-18",
+      "last_seen_at": "2026-10-28",
+      "development_count": 18,
+      "latest_title": "High Arab Voter Turnout in Israel's Elections Reaches Notable Levels",
+      "topic_label": "Israeli Elections",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_protests-erupt-in-israel-against-election-in_a0b546d8ce.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_protests-erupt-in-israel-against-election-in_a0b546d8ce.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_protests-erupt-in-israel-against-election-in_a0b546d8ce"
+    },
+    {
+      "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
+      "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
+      "summary": "Muninn first tracked this thread on 2026-09-11: Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims. The latest development is Iran's state television reported that seven oil tankers either caught fire or were damaged by mines overnight Wednesday into Thursday after.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-09-11",
+      "last_seen_at": "2026-10-23",
+      "development_count": 38,
+      "latest_title": "Iran's state television reported that seven oil tankers either caught fire or were damaged by mines overnight Wednesday into Thursday after",
+      "topic_label": "9/11 Victim Compensation",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b"
+    }
+  ]
+}
