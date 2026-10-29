@@ -15,7 +15,7 @@
     "summary": "Marie-Celestin Karondwa, a politician from the ruling UDPS party in the Democratic Republic of the Congo, was beaten on Sunday after advocating for Ebola awareness during a radio interview. The incident occurred in Butembo, a region experiencing an Ebola outbreak, as residents reacted violently to his message promoting disease prevention measures.",
     "status": "active",
     "first_seen_at": "2026-09-29",
-    "last_seen_at": "2026-10-27",
+    "last_seen_at": "2026-10-29",
     "timeline": [
       {
         "development_id": "story_e63f966f30208f6c",
@@ -810,6 +810,84 @@
         "first_seen_at": "2026-10-27",
         "last_seen_at": "2026-10-27",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_1a012b2ccbac8328",
+        "daily_story_id": "story_1a012b2ccbac8328",
+        "date": "2026-10-29",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Last Ebola Patients Depart Treatment Center in DR Congo",
+        "summary": "A treatment center in Ituri province, DR Congo, celebrated the discharge of its last confirmed Ebola patients, marking the first time since May that the facility has had no active cases. Medical staff and local residents participated in a joyful celebration as the clinic, run by Médecins Sans Frontières, reached this significant milestone.",
+        "topic_label": "Ebola Outbreak",
+        "development_type": "investigation",
+        "key_facts": [
+          "Last confirmed Ebola patients discharged from a treatment center in Ituri province, DR Congo.",
+          "The clinic has had no confirmed cases since the outbreak was declared in May.",
+          "Celebration involved medical staff and local residents."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Africanews",
+          "France 24 - English"
+        ],
+        "source_urls": [
+          "http://www.africanews.com/2026/10/29/drc-ebola-clinic-celebrates-departure-of-last-confirmed-cases",
+          "https://www.france24.com/en/video/20261029-dr-congo-a-centre-celebrates-the-discharge-of-last-ebola-patients"
+        ],
+        "source_details": [
+          {
+            "title": "DRC Ebola clinic celebrates departure of last confirmed cases",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/10/29/drc-ebola-clinic-celebrates-departure-of-last-confirmed-cases",
+            "source_bias": "center"
+          },
+          {
+            "title": "DR Congo: A centre celebrates the discharge of last Ebola patients",
+            "source": "France 24 - English",
+            "link": "https://www.france24.com/en/video/20261029-dr-congo-a-centre-celebrates-the-discharge-of-last-ebola-patients",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "outbreak"
+          ],
+          "shared_incident_anchors": [
+            "congo",
+            "dr",
+            "ebola",
+            "ebola_outbreak"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "cases",
+            "confirmed",
+            "congo",
+            "ebola",
+            "outbreak",
+            "treatment"
+          ],
+          "shared_entities": [
+            "congo",
+            "dr",
+            "ebola",
+            "ebola_outbreak"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_ed6f5568f1ba48c7",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-29",
+        "last_seen_at": "2026-10-29",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -838,12 +916,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 10,
+      "public_development_count": 11,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Ebola Outbreak in DR Congo Surpasses 10,000 Cases Amid Growing Concerns",
-    "latest_summary": "The Ebola outbreak in the Democratic Republic of Congo has exceeded 10,000 confirmed cases, with nearly 4,900 reported deaths. This outbreak, driven by the Bundibugyo virus, is noted as the fastest-growing in history, raising alarms about potential spread to other African nations. Currently, there are no approved vaccines or specific treatments available for this strain of the virus.",
+    "latest_title": "Last Ebola Patients Depart Treatment Center in DR Congo",
+    "latest_summary": "A treatment center in Ituri province, DR Congo, celebrated the discharge of its last confirmed Ebola patients, marking the first time since May that the facility has had no active cases. Medical staff and local residents participated in a joyful celebration as the clinic, run by Médecins Sans Frontières, reached this significant milestone.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -854,29 +932,29 @@
       "milestone_development_ids": [
         "story_e63f966f30208f6c",
         "story_871c8d64f23ce369",
-        "story_caae530d5de5aa53",
-        "story_ed6f5568f1ba48c7"
+        "story_af90dcb9e4621a6f",
+        "story_1a012b2ccbac8328"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-10-27",
-      "development_count": 10,
-      "coverage_packet_count": 10,
-      "date_count": 9,
-      "source_count": 25,
-      "independent_source_count": 14,
+      "summary_updated_at": "2026-10-29",
+      "development_count": 11,
+      "coverage_packet_count": 11,
+      "date_count": 10,
+      "source_count": 27,
+      "independent_source_count": 15,
       "first_date": "2026-09-29",
-      "latest_date": "2026-10-27",
-      "latest_update_title": "Ebola Outbreak in DR Congo Surpasses 10,000 Cases Amid Growing Concerns",
+      "latest_date": "2026-10-29",
+      "latest_update_title": "Last Ebola Patients Depart Treatment Center in DR Congo",
       "coverage_score": 1.0,
-      "recency_score": 0.875,
-      "rank_score": 0.927,
-      "context_summary": "Muninn first tracked this thread on 2026-09-29: Congolese Politician Beaten After Promoting Ebola Awareness. The latest development is Ebola Outbreak in DR Congo Surpasses 10,000 Cases Amid Growing Concerns.",
-      "cta_label": "Explore 10 developments"
+      "recency_score": 1.0,
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-09-29: Congolese Politician Beaten After Promoting Ebola Awareness. The latest development is Last Ebola Patients Depart Treatment Center in DR Congo.",
+      "cta_label": "Explore 11 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Marie-Celestin Karondwa, a politician from the ruling UDPS party in the Democratic Republic of the Congo, was beaten on Sunday after advocating for Ebola awareness during a radio interview. A later development was Kenya Reports First Ebola Death and Traces 28 Contacts. Most recently, the Ebola outbreak in the Democratic Republic of Congo has exceeded 10,000 confirmed cases, with nearly 4,900 reported deaths.",
+      "summary": "Marie-Celestin Karondwa, a politician from the ruling UDPS party in the Democratic Republic of the Congo, was beaten on Sunday after advocating for Ebola awareness during a radio interview. A later development was Kenya Reports First Ebola Death and Traces 28 Contacts. Most recently, a treatment center in Ituri province, DR Congo, celebrated the discharge of its last confirmed Ebola patients, marking the first time since May that the facility has had no active cases.",
       "key_developments": [
         {
           "development_id": "story_e63f966f30208f6c",
@@ -889,14 +967,14 @@
           "title": "Ebola Outbreak in DR Congo Claims Over 4,000 Lives"
         },
         {
-          "development_id": "story_caae530d5de5aa53",
-          "date": "2026-10-17",
-          "title": "Children Bear Heavy Toll in DRC's Severe Ebola Outbreak"
+          "development_id": "story_af90dcb9e4621a6f",
+          "date": "2026-10-19",
+          "title": "Kenya Reports Eighth Ebola Case Amid Regional Outbreak"
         },
         {
-          "development_id": "story_ed6f5568f1ba48c7",
-          "date": "2026-10-27",
-          "title": "Ebola Outbreak in DR Congo Surpasses 10,000 Cases Amid Growing Concerns"
+          "development_id": "story_1a012b2ccbac8328",
+          "date": "2026-10-29",
+          "title": "Last Ebola Patients Depart Treatment Center in DR Congo"
         }
       ],
       "sources": [
@@ -1049,13 +1127,38 @@
           "source": "AP News",
           "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPZlBHRG5jakZCMG5CbnJSZ1ZfdUZnRlRsMU9BYTRER2h4VEN3ZVJPdGxyTGRfaXQ2VTNrSmp1WmhpQnBFOTIzR0RjSXN4ejUzZ2Z3MTBwVnp3V3JZUy10ZFJkWUM4SGhaNVRWdWxXLVB1WE1UU25DY1FFMmxHN3FNUy1zWHBncDROX2k2NFBqdFlabWdkdGc5RnR4bmdDcWtQSU40?oc=5",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "DRC Ebola clinic celebrates departure of last confirmed cases",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/10/29/drc-ebola-clinic-celebrates-departure-of-last-confirmed-cases",
+          "source_bias": "center"
+        },
+        {
+          "title": "DR Congo: A centre celebrates the discharge of last Ebola patients",
+          "source": "France 24 - English",
+          "link": "https://www.france24.com/en/video/20261029-dr-congo-a-centre-celebrates-the-discharge-of-last-ebola-patients",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-10-27",
+      "updated_at": "2026-10-29",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
-    "related_events": [],
+    "related_events": [
+      {
+        "event_id": "event_us-sanctions-rwandan-defence-ministry-amid-d_9c80ca4255",
+        "title": "US Sanctions Rwandan Defence Ministry Amid DRC Conflict Allegations",
+        "relationship": "related_topic",
+        "confidence": 0.742,
+        "shared_entities": [
+          "congo_drc",
+          "democratic",
+          "democratic_republic",
+          "drc"
+        ]
+      }
+    ],
     "hero_image": {
       "url": "/Current_news/generated/events/event_congolese-politician-beaten-after-promoting_1aa8c3ba3c.jpg",
       "thumbnail_url": "/Current_news/generated/events/event_congolese-politician-beaten-after-promoting_1aa8c3ba3c.jpg",
@@ -1178,6 +1281,7 @@
       "000",
       "900",
       "across",
+      "active",
       "advocating",
       "affected",
       "african",
@@ -1199,12 +1303,15 @@
       "case",
       "cases",
       "caused",
+      "celebrated",
+      "celebration",
       "center",
       "challenge",
       "characterized",
       "children",
       "citizen",
       "claim",
+      "clinic",
       "closely",
       "concern",
       "confirmed",
@@ -1217,7 +1324,10 @@
       "deadliest",
       "death",
       "deceased",
+      "decin",
       "democratic",
+      "depart",
+      "discharge",
       "disease",
       "driven",
       "earlier",
@@ -1242,6 +1352,7 @@
       "first-ever",
       "flee",
       "forced",
+      "fronti",
       "growing",
       "hampered",
       "health",
@@ -1256,16 +1367,22 @@
       "infection",
       "interview",
       "involving",
+      "ituri",
+      "joyful",
       "karondwa",
       "kenya",
       "kenyan",
       "laboratory",
       "labs",
+      "last",
       "lives",
+      "local",
       "marie-celestin",
+      "marking",
       "measure",
       "medical",
       "message",
+      "milestone",
       "mistrust",
       "mobile",
       "monitor",
@@ -1284,8 +1401,10 @@
       "operational",
       "other",
       "outbreak",
+      "participated",
       "particularly",
       "party",
+      "patient",
       "personnel",
       "potential",
       "prevention",
@@ -1322,7 +1441,9 @@
       "return",
       "returned",
       "ruling",
+      "sans",
       "severe",
+      "significant",
       "significantly",
       "since",
       "situation",
@@ -1374,6 +1495,7 @@
       "contact_kenya",
       "democratic",
       "democratic_republic",
+      "depart_treatment",
       "dr",
       "drc",
       "drc_kenya",
@@ -1382,6 +1504,7 @@
       "ebola_awareness",
       "ebola_case",
       "ebola_outbreak",
+      "ebola_patient",
       "ebola_testing",
       "eighth_ebola",
       "enhance_ebola",
@@ -1389,7 +1512,9 @@
       "first_ebola",
       "growing_concern",
       "heavy_toll",
+      "ituri",
       "labs_enhance",
+      "last_ebola",
       "marie-celestin",
       "marie-celestin_karondwa",
       "mobile_labs",
@@ -1397,15 +1522,17 @@
       "north_ubangi",
       "ongoing_challenge",
       "outbreak_kenya",
+      "patient_depart",
       "promoting_ebola",
       "regional_outbreak",
+      "sans_fronti",
       "severe_ebola",
       "surpasse_cases",
       "testing_efficiency",
       "trace_contact",
       "udps"
     ],
-    "search_text": "000 900 across advocating affected african alarm among announced approved authoritie available awareness awareness_marie-celestin bear bear_heavy beaten better bundibugyo burning butembo calls camp case cases caused center challenge characterized children children_bear citizen claim closely concern confirmed confirmed_ebola congo congo._health congo_claim congo_drc congo_exceed congo_surpasse congolese contact contact_kenya continue control currently deadliest death deceased democratic democratic_republic disease dr drc drc_kenya drc_severe driven earlier eastern ebola ebola-hit ebola_awareness ebola_case ebola_outbreak ebola_testing efficiency effort eighth eighth_ebola enhance enhance_ebola epidemic exceed exceeded exemplified experiencing face facility fastest-growing fatality figure first first-ever first_confirmed first_ebola flee forced growing growing_concern hampered health heavy heavy_toll history hours identified improvement incident including indicate infection interview involving karondwa kenya kenyan laboratory labs labs_enhance lives marie-celestin marie-celestin_karondwa measure medical message mistrust mobile mobile_labs monitor month most nairobi nation nearby nearly nigeria nine north north_ubangi noted occurred ongoing ongoing_challenge operational other outbreak outbreak_kenya particularly party personnel potential prevention previously promoting promoting_ebola prompting protection provide province public quickly radio raised raising rare rate reached reacted recent recently recorded reducing region regional regional_outbreak relief reported reporting republic required resident respond result resulting return returned ruling severe severe_ebola significantly since situation some specific spread staff staggering strain sunday surpasse surpasse_cases surpassed test testing testing_efficiency than there they time toll took trace trace_contact transit treatment ubangi udps vaccine violence violently virus weeks where which within worker worst year"
+    "search_text": "000 900 across active advocating affected african alarm among announced approved authoritie available awareness awareness_marie-celestin bear bear_heavy beaten better bundibugyo burning butembo calls camp case cases caused celebrated celebration center challenge characterized children children_bear citizen claim clinic closely concern confirmed confirmed_ebola congo congo._health congo_claim congo_drc congo_exceed congo_surpasse congolese contact contact_kenya continue control currently deadliest death deceased decin democratic democratic_republic depart depart_treatment discharge disease dr drc drc_kenya drc_severe driven earlier eastern ebola ebola-hit ebola_awareness ebola_case ebola_outbreak ebola_patient ebola_testing efficiency effort eighth eighth_ebola enhance enhance_ebola epidemic exceed exceeded exemplified experiencing face facility fastest-growing fatality figure first first-ever first_confirmed first_ebola flee forced fronti growing growing_concern hampered health heavy heavy_toll history hours identified improvement incident including indicate infection interview involving ituri joyful karondwa kenya kenyan laboratory labs labs_enhance last last_ebola lives local marie-celestin marie-celestin_karondwa marking measure medical message milestone mistrust mobile mobile_labs monitor month most nairobi nation nearby nearly nigeria nine north north_ubangi noted occurred ongoing ongoing_challenge operational other outbreak outbreak_kenya participated particularly party patient patient_depart personnel potential prevention previously promoting promoting_ebola prompting protection provide province public quickly radio raised raising rare rate reached reacted recent recently recorded reducing region regional regional_outbreak relief reported reporting republic required resident respond result resulting return returned ruling sans sans_fronti severe severe_ebola significant significantly since situation some specific spread staff staggering strain sunday surpasse surpasse_cases surpassed test testing testing_efficiency than there they time toll took trace trace_contact transit treatment ubangi udps vaccine violence violently virus weeks where which within worker worst year"
   },
   "related_events": []
 }

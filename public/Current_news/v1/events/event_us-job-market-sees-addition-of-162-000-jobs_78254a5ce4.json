@@ -15,7 +15,7 @@
     "summary": "In August, the US job market experienced a significant rebound with the addition of 162,000 jobs. The unemployment rate remained steady at 4.1%. This hiring surge has drawn attention to inflation concerns in the country.",
     "status": "active",
     "first_seen_at": "2026-09-04",
-    "last_seen_at": "2026-09-30",
+    "last_seen_at": "2026-10-29",
     "timeline": [
       {
         "development_id": "story_a5a7413484765fa2",
@@ -173,15 +173,79 @@
         "first_seen_at": "2026-09-30",
         "last_seen_at": "2026-09-30",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_17e92272fe13f1c2",
+        "daily_story_id": "story_17e92272fe13f1c2",
+        "date": "2026-10-29",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "US Economy Expands by 3.4% in Third Quarter Driven by Consumer Spending and AI Investment",
+        "summary": "The US economy grew at a rate of 3.4% in the third quarter, supported by strong consumer spending and significant business investment, particularly in artificial intelligence. This growth occurred despite challenges such as rising energy prices linked to ongoing conflicts in the region.",
+        "topic_label": "US Economy",
+        "development_type": "impact",
+        "key_facts": [
+          "US economy grew by 3.4% in the third quarter.",
+          "Strong consumer spending contributed to the growth.",
+          "Business investment increased sharply, especially in AI."
+        ],
+        "source_count": 2,
+        "sources": [
+          "NewsNation",
+          "PBS News"
+        ],
+        "source_urls": [
+          "https://www.pbs.org/newshour/economy/u-s-economy-grows-at-brisk-3-4-pace-in-third-quarter-on-strong-consumer-spending-and-ai-investment",
+          "https://www.newsnationnow.com/business/your-money/ap-us-economy-grows-at-brisk-3-4-pace-in-third-quarter-on-strong-consumer-spending-and-ai-investment"
+        ],
+        "source_details": [
+          {
+            "title": "US economy grows at brisk 3.4% pace in third quarter on strong consumer spending and AI investment",
+            "source": "PBS News",
+            "link": "https://www.pbs.org/newshour/economy/u-s-economy-grows-at-brisk-3-4-pace-in-third-quarter-on-strong-consumer-spending-and-ai-investment",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "US economy grows at brisk 3.4% pace on strong consumer spending, AI investment",
+            "source": "NewsNation",
+            "link": "https://www.newsnationnow.com/business/your-money/ap-us-economy-grows-at-brisk-3-4-pace-in-third-quarter-on-strong-consumer-spending-and-ai-investment",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_a5a7413484765fa2",
+          "shared_tokens": [
+            "driven",
+            "economy",
+            "growth",
+            "rate"
+          ],
+          "shared_entities": [
+            "us"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-29",
+        "last_seen_at": "2026-10-29",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 2,
+      "public_development_count": 3,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "US Economy Grows 2.2% in Second Quarter, Revised Upward",
-    "latest_summary": "The US economy experienced a growth of 2.2% in the second quarter, according to a government report that upgraded previous estimates. This growth comes despite challenges such as ongoing conflicts with Iran and rising energy prices.",
+    "latest_title": "US Economy Expands by 3.4% in Third Quarter Driven by Consumer Spending and AI Investment",
+    "latest_summary": "The US economy grew at a rate of 3.4% in the third quarter, supported by strong consumer spending and significant business investment, particularly in artificial intelligence. This growth occurred despite challenges such as rising energy prices linked to ongoing conflicts in the region.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": false,
@@ -191,28 +255,29 @@
       "display_title": "US Job Growth Surpasses Expectations with 162,000 New Jobs in August",
       "milestone_development_ids": [
         "story_a5a7413484765fa2",
-        "story_9bae0ac4e32020d3"
+        "story_9bae0ac4e32020d3",
+        "story_17e92272fe13f1c2"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-09-30",
-      "development_count": 2,
-      "coverage_packet_count": 3,
-      "date_count": 2,
-      "source_count": 6,
+      "summary_updated_at": "2026-10-29",
+      "development_count": 3,
+      "coverage_packet_count": 4,
+      "date_count": 3,
+      "source_count": 8,
       "independent_source_count": 5,
       "first_date": "2026-09-04",
-      "latest_date": "2026-09-30",
-      "latest_update_title": "US Economy Grows 2.2% in Second Quarter, Revised Upward",
-      "coverage_score": 0.459,
-      "recency_score": 0.2,
-      "rank_score": 0.309,
-      "context_summary": "Muninn first tracked this thread on 2026-09-04: US Job Growth Surpasses Expectations with 162,000 New Jobs in August. The latest development is US Economy Grows 2.2% in Second Quarter, Revised Upward.",
+      "latest_date": "2026-10-29",
+      "latest_update_title": "US Economy Expands by 3.4% in Third Quarter Driven by Consumer Spending and AI Investment",
+      "coverage_score": 0.583,
+      "recency_score": 1.0,
+      "rank_score": 0.825,
+      "context_summary": "Muninn first tracked this thread on 2026-09-04: US Job Growth Surpasses Expectations with 162,000 New Jobs in August. The latest development is US Economy Expands by 3.4% in Third Quarter Driven by Consumer Spending and AI Investment.",
       "cta_label": ""
     },
     "event_summary": {
       "available": true,
-      "summary": "The US economy added 162,000 jobs in August, exceeding forecasts. Most recently, the US economy experienced a growth of 2.2% in the second quarter, according to a government report that upgraded previous estimates.",
+      "summary": "The US economy added 162,000 jobs in August, exceeding forecasts. A later development was US Economy Grows 2.2% in Second Quarter, Revised Upward. Most recently, the US economy grew at a rate of 3.4% in the third quarter, supported by strong consumer spending and significant business investment, particularly in artificial intelligence.",
       "key_developments": [
         {
           "development_id": "story_a5a7413484765fa2",
@@ -223,6 +288,11 @@
           "development_id": "story_9bae0ac4e32020d3",
           "date": "2026-09-30",
           "title": "US Economy Grows 2.2% in Second Quarter, Revised Upward"
+        },
+        {
+          "development_id": "story_17e92272fe13f1c2",
+          "date": "2026-10-29",
+          "title": "US Economy Expands by 3.4% in Third Quarter Driven by Consumer Spending and AI Investment"
         }
       ],
       "sources": [
@@ -261,9 +331,21 @@
           "source": "AP",
           "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOWXpwNmNIQjBnejM4WUNtaUpjWGdoQ09YZFFtckxWVTI2VVdval9lWDgzRUpfYk9wY3N4anZiRExiRkhESFZvay1TeTlzRE5zU1B4SkotQW9yanJGTFlxbFJDYWpLcW1waWdkendzMFZKM1l2dmZNT1paVVVMbkFORF9NcHFudjN5T0V0X01oLUtPdUdxWHU0NjZqZVNYQQ?oc=5",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "US economy grows at brisk 3.4% pace in third quarter on strong consumer spending and AI investment",
+          "source": "PBS News",
+          "link": "https://www.pbs.org/newshour/economy/u-s-economy-grows-at-brisk-3-4-pace-in-third-quarter-on-strong-consumer-spending-and-ai-investment",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "US economy grows at brisk 3.4% pace on strong consumer spending, AI investment",
+          "source": "NewsNation",
+          "link": "https://www.newsnationnow.com/business/your-money/ap-us-economy-grows-at-brisk-3-4-pace-in-third-quarter-on-strong-consumer-spending-and-ai-investment",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-09-30",
+      "updated_at": "2026-10-29",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "developing_event",
@@ -272,8 +354,19 @@
         "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
         "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
         "relationship": "related_topic",
-        "confidence": 0.705,
+        "confidence": 0.706,
         "shared_entities": [
+          "iran",
+          "us"
+        ]
+      },
+      {
+        "event_id": "event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a",
+        "title": "Trump Delays Iran Strikes to Pursue Diplomatic Deal",
+        "relationship": "related_topic",
+        "confidence": 0.704,
+        "shared_entities": [
+          "ai",
           "iran",
           "us"
         ]
@@ -282,7 +375,7 @@
         "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
         "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
         "relationship": "related_topic",
-        "confidence": 0.698,
+        "confidence": 0.701,
         "shared_entities": [
           "iran",
           "us"
@@ -292,17 +385,7 @@
         "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
         "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
         "relationship": "related_topic",
-        "confidence": 0.682,
-        "shared_entities": [
-          "iran",
-          "us"
-        ]
-      },
-      {
-        "event_id": "event_g7-nations-to-release-100-million-barrels-of_a5ce6f7f24",
-        "title": "G7 Nations to Release 100 Million Barrels of Diesel and Crude Oil",
-        "relationship": "related_topic",
-        "confidence": 0.663,
+        "confidence": 0.689,
         "shared_entities": [
           "iran",
           "us"
@@ -333,11 +416,14 @@
       "000",
       "162",
       "added",
+      "artificial",
       "august",
       "behind",
+      "business",
       "challenge",
       "comes",
       "conflict",
+      "consumer",
       "continued",
       "despite",
       "driven",
@@ -346,50 +432,69 @@
       "energy",
       "estimate",
       "exceeding",
+      "expand",
       "expectation",
       "experienced",
       "forecast",
+      "grew",
       "grows",
       "growth",
       "hospitality",
       "increase",
       "inflation",
+      "intelligence",
+      "investment",
       "iran",
       "jobs",
       "leisure",
+      "linked",
+      "occurred",
       "ongoing",
+      "particularly",
       "previou",
       "price",
       "primarily",
       "quarter",
       "rate",
+      "region",
       "remained",
       "revised",
       "rising",
       "second",
       "sector",
+      "significant",
+      "spending",
       "steady",
+      "strong",
       "such",
+      "supported",
       "surpasse",
+      "third",
       "unemployment",
       "upgraded",
       "upward",
       "wage"
     ],
     "entities": [
+      "ai",
       "august",
+      "consumer_spending",
+      "economy_expand",
       "economy_grows",
       "growth_surpasse",
       "iran",
       "job_growth",
+      "quarter_driven",
       "quarter_revised",
       "revised_upward",
       "second",
       "second_quarter",
       "surpasse_expectation",
+      "third",
+      "third_quarter",
       "us"
     ],
-    "search_text": "000 162 added august behind challenge comes conflict continued despite driven economy economy_grows education energy estimate exceeding expectation experienced forecast grows growth growth_surpasse hospitality increase inflation iran job_growth jobs leisure ongoing previou price primarily quarter quarter_revised rate remained revised revised_upward rising second second_quarter sector steady such surpasse surpasse_expectation unemployment upgraded upward us wage"
+    "search_text": "000 162 added ai artificial august behind business challenge comes conflict consumer consumer_spending continued despite driven economy economy_expand economy_grows education energy estimate exceeding expand expectation experienced forecast grew grows growth growth_surpasse hospitality increase inflation intelligence investment iran job_growth jobs leisure linked occurred ongoing particularly previou price primarily quarter quarter_driven quarter_revised rate region remained revised revised_upward rising second second_quarter sector significant spending steady strong such supported surpasse surpasse_expectation third third_quarter unemployment upgraded upward us wage"
   },
   "related_events": [
     {
@@ -425,6 +530,40 @@
         "focal_tall_y": 0.48
       },
       "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
+    },
+    {
+      "event_id": "event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a",
+      "title": "Trump Delays Iran Strikes to Pursue Diplomatic Deal",
+      "summary": "Muninn first tracked this thread on 2026-08-02: Trump Delays Iran Strikes to Pursue Diplomatic Deal. The latest development is UK Prime Minister Links Iran to RAF Fairford Incident.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-08-02",
+      "last_seen_at": "2026-10-12",
+      "development_count": 12,
+      "latest_title": "UK Prime Minister Links Iran to RAF Fairford Incident",
+      "topic_label": "Iran Relations",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a"
     },
     {
       "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
@@ -493,40 +632,6 @@
         "focal_tall_y": 0.48
       },
       "href": "/timeline.html?event=event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b"
-    },
-    {
-      "event_id": "event_g7-nations-to-release-100-million-barrels-of_a5ce6f7f24",
-      "title": "G7 Nations to Release 100 Million Barrels of Diesel and Crude Oil",
-      "summary": "Muninn first tracked this thread on 2026-10-02: G7 Nations to Release 100 Million Barrels of Diesel and Crude Oil. The latest development is France to Release 10 Million Barrels of Diesel from Strategic Reserves.",
-      "activity_status": "active",
-      "stage": "developing_event",
-      "stage_label": "Developing event",
-      "first_seen_at": "2026-10-02",
-      "last_seen_at": "2026-10-08",
-      "development_count": 3,
-      "latest_title": "France to Release 10 Million Barrels of Diesel from Strategic Reserves",
-      "topic_label": "Energy Reserves",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_g7-nations-to-release-100-million-barrels-of_a5ce6f7f24.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_g7-nations-to-release-100-million-barrels-of_a5ce6f7f24.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_g7-nations-to-release-100-million-barrels-of_a5ce6f7f24"
     }
   ]
 }

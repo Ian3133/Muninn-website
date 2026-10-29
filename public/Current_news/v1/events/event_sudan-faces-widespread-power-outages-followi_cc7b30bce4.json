@@ -15,7 +15,7 @@
     "summary": "Sudan's paramilitary Rapid Support Forces (RSF) conducted a coordinated drone strike on five power stations, leading to significant power outages across the eastern regions of the country. The attacks targeted two power stations each in Al-Jazira and Gedaref states, and one in White Nile state, affecting large areas of these regions, according to a government official.",
     "status": "active",
     "first_seen_at": "2026-10-26",
-    "last_seen_at": "2026-10-28",
+    "last_seen_at": "2026-10-29",
     "timeline": [
       {
         "development_id": "story_0219295d65ad8789",
@@ -337,6 +337,113 @@
         "first_seen_at": "2026-10-28",
         "last_seen_at": "2026-10-28",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_7ba780299f4048ee",
+        "daily_story_id": "story_7ba780299f4048ee",
+        "date": "2026-10-29",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Russian Drone Strike on Dnipro Train Station Kills at Least 14",
+        "summary": "A Russian drone attack on a crowded train station in Dnipro, Ukraine, resulted in at least 14 fatalities and numerous injuries, including an 11-year-old boy. Ukrainian President Volodymyr Zelensky described the incident as a 'horrific' attack, emphasizing the need for a response from Ukraine's allies. The strike occurred despite a local cease-fire in other areas, highlighting the ongoing violence in the region.",
+        "topic_label": "Russia-Ukraine War",
+        "development_type": "military_action",
+        "key_facts": [
+          "At least 14 people killed in a drone strike at a train station in Dnipro, Ukraine.",
+          "The attack injured several others, including an 11-year-old boy.",
+          "Ukrainian President Volodymyr Zelensky called the attack 'horrific.'"
+        ],
+        "source_count": 5,
+        "sources": [
+          "BBC",
+          "CBS News",
+          "DW - English",
+          "New York Times",
+          "RTE News"
+        ],
+        "source_urls": [
+          "https://www.bbc.co.uk/news/articles/c9p8gdlz1p2ko?at_medium=RSS&at_campaign=rss",
+          "https://www.cbsnews.com/news/russia-ukraine-war-drone-dnipro-train-station-oleshky-ceasefire",
+          "https://www.nytimes.com/2026/10/29/world/europe/ukraine-dnipro-train-russia.html",
+          "https://www.rte.ie/news/ukraine/2026/1029/1597186-ukraine-russia",
+          "https://www.dw.com/en/ukraine-14-killed-in-russian-drone-strike-on-crowded-dnipro-train-station/a-79795076?maca=en-rss-en-all-1573-rdf"
+        ],
+        "source_details": [
+          {
+            "title": "Russian drone attack on Ukrainian train station kills at least 14, officials say",
+            "source": "BBC",
+            "link": "https://www.bbc.co.uk/news/articles/c9p8gdlz1p2ko?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          },
+          {
+            "title": "Russian strikes kill 14 in Ukraine but local truce brings some hope",
+            "source": "CBS News",
+            "link": "https://www.cbsnews.com/news/russia-ukraine-war-drone-dnipro-train-station-oleshky-ceasefire",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Russian Strike on Ukrainian Train Station Kills 14",
+            "source": "New York Times",
+            "link": "https://www.nytimes.com/2026/10/29/world/europe/ukraine-dnipro-train-russia.html",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "14 killed in Russian strike on train station in Ukraine",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/ukraine/2026/1029/1597186-ukraine-russia",
+            "source_bias": "center"
+          },
+          {
+            "title": "Ukraine: 14 killed in Russian drone strike on crowded Dnipro train station",
+            "source": "DW - English",
+            "link": "https://www.dw.com/en/ukraine-14-killed-in-russian-drone-strike-on-crowded-dnipro-train-station/a-79795076?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "attack"
+          ],
+          "shared_incident_anchors": [
+            "drone",
+            "russia",
+            "ukraine"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "attack",
+            "drone",
+            "fatalitie",
+            "incident",
+            "injured",
+            "injurie",
+            "killed",
+            "least",
+            "region",
+            "resulted",
+            "russia",
+            "train",
+            "ukraine"
+          ],
+          "shared_entities": [
+            "drone",
+            "russia",
+            "ukraine"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_0219295d65ad8789",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-29",
+        "last_seen_at": "2026-10-29",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -366,12 +473,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 4,
+      "public_development_count": 5,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Russian Strikes Cause Casualties and Fires in Kyiv and Kharkiv",
-    "latest_summary": "Recent Russian missile and drone strikes in Ukraine have resulted in casualties and significant damage. In Kyiv, one person was killed and 15 injured, with emergency workers rescuing a dog from the rubble of damaged university buildings and a major bridge. Meanwhile, a drone strike in Kharkiv injured five people, including a 4-year-old child, and ignited several fires, prompting firefighters to respond amid ongoing threats of further attacks.",
+    "latest_title": "Russian Drone Strike on Dnipro Train Station Kills at Least 14",
+    "latest_summary": "A Russian drone attack on a crowded train station in Dnipro, Ukraine, resulted in at least 14 fatalities and numerous injuries, including an 11-year-old boy. Ukrainian President Volodymyr Zelensky described the incident as a 'horrific' attack, emphasizing the need for a response from Ukraine's allies. The strike occurred despite a local cease-fire in other areas, highlighting the ongoing violence in the region.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -383,28 +490,29 @@
         "story_0219295d65ad8789",
         "story_ebba204ca6a39d11",
         "story_b77a23e366414371",
-        "story_3aa3cbcb27ce0f95"
+        "story_3aa3cbcb27ce0f95",
+        "story_7ba780299f4048ee"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-10-28",
-      "development_count": 4,
-      "coverage_packet_count": 4,
-      "date_count": 3,
-      "source_count": 10,
-      "independent_source_count": 4,
+      "summary_updated_at": "2026-10-29",
+      "development_count": 5,
+      "coverage_packet_count": 5,
+      "date_count": 4,
+      "source_count": 15,
+      "independent_source_count": 9,
       "first_date": "2026-10-26",
-      "latest_date": "2026-10-28",
-      "latest_update_title": "Russian Strikes Cause Casualties and Fires in Kyiv and Kharkiv",
-      "coverage_score": 0.628,
+      "latest_date": "2026-10-29",
+      "latest_update_title": "Russian Drone Strike on Dnipro Train Station Kills at Least 14",
+      "coverage_score": 0.902,
       "recency_score": 1.0,
-      "rank_score": 0.844,
-      "context_summary": "Muninn first tracked this thread on 2026-10-26: Ukrainian Drone Attack in Voronezh Region Results in Casualties and Damage. The latest development is Russian Strikes Cause Casualties and Fires in Kyiv and Kharkiv.",
-      "cta_label": "Explore 4 developments"
+      "rank_score": 0.959,
+      "context_summary": "Muninn first tracked this thread on 2026-10-26: Ukrainian Drone Attack in Voronezh Region Results in Casualties and Damage. The latest development is Russian Drone Strike on Dnipro Train Station Kills at Least 14.",
+      "cta_label": "Explore 5 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "A Ukrainian drone attack on Russia's Voronezh region has resulted in at least two fatalities and 17 injuries. A later development was Escalating Attacks in Ukraine-Russia Conflict Result in Casualties. Most recently, recent Russian missile and drone strikes in Ukraine have resulted in casualties and significant damage.",
+      "summary": "A Ukrainian drone attack on Russia's Voronezh region has resulted in at least two fatalities and 17 injuries. A later development was Escalating Attacks in Ukraine-Russia Conflict Result in Casualties. Most recently, a Russian drone attack on a crowded train station in Dnipro, Ukraine, resulted in at least 14 fatalities and numerous injuries, including an 11-year-old boy.",
       "key_developments": [
         {
           "development_id": "story_0219295d65ad8789",
@@ -425,6 +533,11 @@
           "development_id": "story_3aa3cbcb27ce0f95",
           "date": "2026-10-28",
           "title": "Russian Strikes Cause Casualties and Fires in Kyiv and Kharkiv"
+        },
+        {
+          "development_id": "story_7ba780299f4048ee",
+          "date": "2026-10-29",
+          "title": "Russian Drone Strike on Dnipro Train Station Kills at Least 14"
         }
       ],
       "sources": [
@@ -487,13 +600,59 @@
           "source": "Africanews",
           "link": "http://www.africanews.com/2026/10/28/ukraine-massive-fire-engulfs-buildings-after-russian-strike-on-kharkiv",
           "source_bias": "center"
+        },
+        {
+          "title": "Russian drone attack on Ukrainian train station kills at least 14, officials say",
+          "source": "BBC",
+          "link": "https://www.bbc.co.uk/news/articles/c9p8gdlz1p2ko?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
+        },
+        {
+          "title": "Russian strikes kill 14 in Ukraine but local truce brings some hope",
+          "source": "CBS News",
+          "link": "https://www.cbsnews.com/news/russia-ukraine-war-drone-dnipro-train-station-oleshky-ceasefire",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Russian Strike on Ukrainian Train Station Kills 14",
+          "source": "New York Times",
+          "link": "https://www.nytimes.com/2026/10/29/world/europe/ukraine-dnipro-train-russia.html",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "14 killed in Russian strike on train station in Ukraine",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/ukraine/2026/1029/1597186-ukraine-russia",
+          "source_bias": "center"
+        },
+        {
+          "title": "Ukraine: 14 killed in Russian drone strike on crowded Dnipro train station",
+          "source": "DW - English",
+          "link": "https://www.dw.com/en/ukraine-14-killed-in-russian-drone-strike-on-crowded-dnipro-train-station/a-79795076?maca=en-rss-en-all-1573-rdf",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-10-28",
+      "updated_at": "2026-10-29",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
     "related_events": [
+      {
+        "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
+        "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
+        "relationship": "related_topic",
+        "confidence": 0.95,
+        "shared_entities": [
+          "kharkiv",
+          "kyiv",
+          "odesa",
+          "russia",
+          "russia_drone",
+          "ukraine",
+          "ukraine_drone",
+          "volodymyr_zelensky"
+        ]
+      },
       {
         "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
         "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
@@ -506,47 +665,38 @@
           "recent_russia",
           "region_result",
           "russia",
+          "russia_drone",
           "ukraine",
-          "ukraine_drone"
-        ]
-      },
-      {
-        "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
-        "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
-        "relationship": "related_topic",
-        "confidence": 0.901,
-        "shared_entities": [
-          "kharkiv",
-          "kyiv",
-          "odesa",
-          "russia",
-          "ukraine",
-          "ukraine_drone"
+          "ukraine_drone",
+          "volodymyr_zelensky"
         ]
       },
       {
         "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
         "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
         "relationship": "related_topic",
-        "confidence": 0.889,
+        "confidence": 0.933,
         "shared_entities": [
           "kyiv",
           "odesa",
           "region_result",
           "russia",
           "ukraine",
-          "ukraine_drone"
+          "ukraine_drone",
+          "volodymyr_zelensky"
         ]
       },
       {
         "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
         "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
         "relationship": "related_topic",
-        "confidence": 0.753,
+        "confidence": 0.832,
         "shared_entities": [
           "russia",
+          "russia_drone",
           "ukraine",
-          "ukraine-russia"
+          "ukraine-russia",
+          "volodymyr_zelensky"
         ]
       }
     ],
@@ -675,11 +825,13 @@
       "focal_tall_y": 0.48
     },
     "search_tokens": [
+      "11-year-old",
       "4-year-old",
       "across",
       "additionally",
       "affecting",
       "al-jazira",
+      "allie",
       "areas",
       "attack",
       "bridge",
@@ -688,19 +840,25 @@
       "cause",
       "caused",
       "causing",
+      "cease-fire",
       "child",
       "commuter",
       "conducted",
       "conflict",
       "coordinated",
+      "crowded",
       "damage",
       "damaged",
       "damaging",
       "debri",
+      "described",
+      "despite",
+      "dnipro",
       "drone",
       "each",
       "eastern",
       "emergency",
+      "emphasizing",
       "engulf",
       "escalating",
       "faces",
@@ -713,6 +871,8 @@
       "four",
       "further",
       "gedaref",
+      "highlighting",
+      "horrific",
       "ignited",
       "incident",
       "including",
@@ -720,16 +880,22 @@
       "injurie",
       "kharkiv",
       "killed",
+      "kills",
       "kyiv",
       "large",
       "leading",
       "least",
+      "local",
       "meanwhile",
       "missile",
       "multiple",
+      "need",
       "nile",
+      "numerou",
+      "occurred",
       "odesa",
       "ongoing",
+      "other",
       "outage",
       "paramilitary",
       "person",
@@ -740,6 +906,7 @@
       "region",
       "rescuing",
       "respond",
+      "response",
       "result",
       "resulted",
       "rubble",
@@ -759,11 +926,14 @@
       "ukraine",
       "ukraine-russia",
       "university",
+      "violence",
+      "volodymyr",
       "voronezh",
       "white",
       "widespread",
       "worker",
-      "zaporizhzhia"
+      "zaporizhzhia",
+      "zelensky"
     ],
     "entities": [
       "additionally_russia",
@@ -771,11 +941,15 @@
       "casualtie",
       "casualtie_recent",
       "cause_casualtie",
+      "dnipro",
+      "dnipro_train",
+      "dnipro_ukraine",
       "faces_widespread",
       "force_rsf",
       "kharkiv",
       "kharkiv_recent",
       "kyiv",
+      "least",
       "odesa",
       "power_outage",
       "rapid_support",
@@ -784,55 +958,24 @@
       "rsf",
       "rsf_drone",
       "russia",
+      "russia_drone",
       "russia_voronezh",
       "sudan_faces",
       "support_force",
+      "train_station",
       "ukraine",
       "ukraine-russia",
       "ukraine_drone",
+      "volodymyr_zelensky",
       "voronezh",
       "voronezh_region",
       "white",
       "white_nile",
       "widespread_power"
     ],
-    "search_text": "4-year-old across additionally additionally_russia affecting al-jazira areas attack bridge building casualtie casualtie_recent cause cause_casualtie caused causing child commuter conducted conflict coordinated damage damaged damaging debri drone each eastern emergency engulf escalating faces faces_widespread fatalitie firefighter fires five flame force force_rsf four further gedaref ignited incident including injured injurie kharkiv kharkiv_recent killed kyiv large leading least meanwhile missile multiple nile odesa ongoing outage paramilitary person power power_outage prompting rapid rapid_support recent recent_russia region region_result rescuing respond result resulted rsf rsf_drone rubble russia russia_voronezh several significant sparked station strike struck sudan sudan_faces support support_force targeted these threat train ukraine ukraine-russia ukraine_drone university voronezh voronezh_region white white_nile widespread widespread_power worker zaporizhzhia"
+    "search_text": "11-year-old 4-year-old across additionally additionally_russia affecting al-jazira allie areas attack bridge building casualtie casualtie_recent cause cause_casualtie caused causing cease-fire child commuter conducted conflict coordinated crowded damage damaged damaging debri described despite dnipro dnipro_train dnipro_ukraine drone each eastern emergency emphasizing engulf escalating faces faces_widespread fatalitie firefighter fires five flame force force_rsf four further gedaref highlighting horrific ignited incident including injured injurie kharkiv kharkiv_recent killed kills kyiv large leading least local meanwhile missile multiple need nile numerou occurred odesa ongoing other outage paramilitary person power power_outage prompting rapid rapid_support recent recent_russia region region_result rescuing respond response result resulted rsf rsf_drone rubble russia russia_drone russia_voronezh several significant sparked station strike struck sudan sudan_faces support support_force targeted these threat train train_station ukraine ukraine-russia ukraine_drone university violence volodymyr volodymyr_zelensky voronezh voronezh_region white white_nile widespread widespread_power worker zaporizhzhia zelensky"
   },
   "related_events": [
-    {
-      "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
-      "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
-      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Drone strike on a market in disputed African region of Abyei kills at least 153 AP News.",
-      "activity_status": "active",
-      "stage": "timeline",
-      "stage_label": "Timeline",
-      "first_seen_at": "2026-07-22",
-      "last_seen_at": "2026-10-21",
-      "development_count": 86,
-      "latest_title": "Drone strike on a market in disputed African region of Abyei kills at least 153 AP News",
-      "topic_label": "Iran War",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
-    },
     {
       "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
       "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
@@ -866,6 +1009,40 @@
         "focal_tall_y": 0.48
       },
       "href": "/timeline.html?event=event_macron-implements-measures-against-intensify_109da09c6f"
+    },
+    {
+      "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+      "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
+      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Drone strike on a market in disputed African region of Abyei kills at least 153 AP News.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-22",
+      "last_seen_at": "2026-10-21",
+      "development_count": 86,
+      "latest_title": "Drone strike on a market in disputed African region of Abyei kills at least 153 AP News",
+      "topic_label": "Iran War",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
     },
     {
       "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
