@@ -15,7 +15,7 @@
     "summary": "Sudan's paramilitary Rapid Support Forces (RSF) conducted a coordinated drone strike on five power stations, leading to significant power outages across the eastern regions of the country. The attacks targeted two power stations each in Al-Jazira and Gedaref states, and one in White Nile state, affecting large areas of these regions, according to a government official.",
     "status": "active",
     "first_seen_at": "2026-10-26",
-    "last_seen_at": "2026-10-29",
+    "last_seen_at": "2026-10-30",
     "timeline": [
       {
         "development_id": "story_0219295d65ad8789",
@@ -444,6 +444,118 @@
         "first_seen_at": "2026-10-29",
         "last_seen_at": "2026-10-29",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_e09073b127316ff4",
+        "daily_story_id": "story_e09073b127316ff4",
+        "date": "2026-10-30",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Humanitarian Evacuations Begin in Oleshky During Truce",
+        "summary": "A humanitarian mission has commenced evacuations from the besieged city of Oleshky as Russia and Ukraine observe a significant truce. This operation marks a crucial moment in the ongoing conflict that has persisted since Moscow's invasion of Ukraine over four years ago.",
+        "topic_label": "Ukraine Conflict",
+        "development_type": "impact",
+        "key_facts": [
+          "Humanitarian mission entered Oleshky",
+          "Evacuations are taking place amid a truce",
+          "Truce is described as the most significant of the war"
+        ],
+        "source_count": 5,
+        "sources": [
+          "CBC - Top Stories",
+          "France 24 - English",
+          "PBS News - Headlines",
+          "RTE News",
+          "The Guardian - World"
+        ],
+        "source_urls": [
+          "https://www.cbc.ca/news/world/israel-election-final-results-9.7402167?cmp=rss",
+          "https://www.france24.com/en/video/20261030-war-in-ukraine-evacuations-under-way-in-russian-occupied-oleshky",
+          "https://www.pbs.org/newshour/world/aid-operation-and-evacuations-in-oleshky-amid-brief-truce-agreed-to-by-russia-and-ukraine",
+          "https://www.rte.ie/news/2026/1030/1597343-evacuation-oleshky-ukraine-amid-truce",
+          "https://www.theguardian.com/world/2026/oct/30/evacuation-besieged-ukrainian-city-oleshky"
+        ],
+        "source_details": [
+          {
+            "title": "War in Ukraine: Evacuations under way in Russian-occupied Oleshky",
+            "source": "France 24 - English",
+            "link": "https://www.france24.com/en/video/20261030-war-in-ukraine-evacuations-under-way-in-russian-occupied-oleshky",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Aid operation, evacuations underway in Ukraine's stricken city of Oleshky",
+            "source": "CBC - Top Stories",
+            "link": "https://www.cbc.ca/news/world/israel-election-final-results-9.7402167?cmp=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Evacuation of civilians begins in besieged Ukrainian city of Oleshky",
+            "source": "The Guardian - World",
+            "link": "https://www.theguardian.com/world/2026/oct/30/evacuation-besieged-ukrainian-city-oleshky",
+            "source_bias": "left"
+          },
+          {
+            "title": "Evacuation begins from besieged Oleshky amid truce",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/2026/1030/1597343-evacuation-oleshky-ukraine-amid-truce",
+            "source_bias": "center"
+          },
+          {
+            "title": "Aid operation and evacuations in Oleshky amid brief truce agreed to by Russia and Ukraine",
+            "source": "PBS News - Headlines",
+            "link": "https://www.pbs.org/newshour/world/aid-operation-and-evacuations-in-oleshky-amid-brief-truce-agreed-to-by-russia-and-ukraine",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_3aa3cbcb27ce0f95",
+          "shared_tokens": [
+            "conflict",
+            "five",
+            "prompting",
+            "ukraine"
+          ],
+          "shared_entities": [
+            "ukraine"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-30",
+        "last_seen_at": "2026-10-30",
+        "integrity_status": "trusted",
+        "revisions": [
+          {
+            "daily_story_id": "story_d9ddadddfa0cf8c0",
+            "reported_at": "2026-10-30",
+            "update_kind": "factual_update",
+            "title": "Humanitarian Evacuations Begin in Oleshky During Truce",
+            "summary": "A humanitarian mission has commenced evacuations from the besieged city of Oleshky as Russia and Ukraine observe a significant truce. This operation marks a crucial moment in the ongoing conflict that has persisted since Moscow's invasion of Ukraine over four years ago.",
+            "topic_label": "Ukraine Conflict",
+            "key_facts": [
+              "Humanitarian mission entered Oleshky",
+              "Evacuations are taking place amid a truce",
+              "Truce is described as the most significant of the war"
+            ],
+            "source_urls": [
+              "https://www.rte.ie/news/2026/1030/1597343-evacuation-oleshky-ukraine-amid-truce",
+              "https://www.pbs.org/newshour/world/aid-operation-and-evacuations-in-oleshky-amid-brief-truce-agreed-to-by-russia-and-ukraine"
+            ]
+          }
+        ],
+        "last_updated_at": "2026-10-30",
+        "merged_development_ids": [
+          "story_d9ddadddfa0cf8c0"
+        ],
+        "revision_count": 1
       }
     ],
     "incident_fingerprint": {
@@ -473,12 +585,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 5,
+      "public_development_count": 6,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Russian Drone Strike on Dnipro Train Station Kills at Least 14",
-    "latest_summary": "A Russian drone attack on a crowded train station in Dnipro, Ukraine, resulted in at least 14 fatalities and numerous injuries, including an 11-year-old boy. Ukrainian President Volodymyr Zelensky described the incident as a 'horrific' attack, emphasizing the need for a response from Ukraine's allies. The strike occurred despite a local cease-fire in other areas, highlighting the ongoing violence in the region.",
+    "latest_title": "Humanitarian Evacuations Begin in Oleshky During Truce",
+    "latest_summary": "A humanitarian mission has commenced evacuations from the besieged city of Oleshky as Russia and Ukraine observe a significant truce. This operation marks a crucial moment in the ongoing conflict that has persisted since Moscow's invasion of Ukraine over four years ago.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -491,28 +603,29 @@
         "story_ebba204ca6a39d11",
         "story_b77a23e366414371",
         "story_3aa3cbcb27ce0f95",
-        "story_7ba780299f4048ee"
+        "story_7ba780299f4048ee",
+        "story_e09073b127316ff4"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-10-29",
-      "development_count": 5,
-      "coverage_packet_count": 5,
-      "date_count": 4,
-      "source_count": 15,
-      "independent_source_count": 9,
+      "summary_updated_at": "2026-10-30",
+      "development_count": 6,
+      "coverage_packet_count": 7,
+      "date_count": 5,
+      "source_count": 20,
+      "independent_source_count": 12,
       "first_date": "2026-10-26",
-      "latest_date": "2026-10-29",
-      "latest_update_title": "Russian Drone Strike on Dnipro Train Station Kills at Least 14",
-      "coverage_score": 0.902,
+      "latest_date": "2026-10-30",
+      "latest_update_title": "Humanitarian Evacuations Begin in Oleshky During Truce",
+      "coverage_score": 1.0,
       "recency_score": 1.0,
-      "rank_score": 0.959,
-      "context_summary": "Muninn first tracked this thread on 2026-10-26: Ukrainian Drone Attack in Voronezh Region Results in Casualties and Damage. The latest development is Russian Drone Strike on Dnipro Train Station Kills at Least 14.",
-      "cta_label": "Explore 5 developments"
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-10-26: Ukrainian Drone Attack in Voronezh Region Results in Casualties and Damage. The latest development is Humanitarian Evacuations Begin in Oleshky During Truce.",
+      "cta_label": "Explore 6 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "A Ukrainian drone attack on Russia's Voronezh region has resulted in at least two fatalities and 17 injuries. A later development was Escalating Attacks in Ukraine-Russia Conflict Result in Casualties. Most recently, a Russian drone attack on a crowded train station in Dnipro, Ukraine, resulted in at least 14 fatalities and numerous injuries, including an 11-year-old boy.",
+      "summary": "A Ukrainian drone attack on Russia's Voronezh region has resulted in at least two fatalities and 17 injuries. A later development was Russian Strikes Cause Casualties and Fires in Kyiv and Kharkiv. Most recently, a humanitarian mission has commenced evacuations from the besieged city of Oleshky as Russia and Ukraine observe a significant truce.",
       "key_developments": [
         {
           "development_id": "story_0219295d65ad8789",
@@ -538,6 +651,11 @@
           "development_id": "story_7ba780299f4048ee",
           "date": "2026-10-29",
           "title": "Russian Drone Strike on Dnipro Train Station Kills at Least 14"
+        },
+        {
+          "development_id": "story_e09073b127316ff4",
+          "date": "2026-10-30",
+          "title": "Humanitarian Evacuations Begin in Oleshky During Truce"
         }
       ],
       "sources": [
@@ -630,29 +748,43 @@
           "source": "DW - English",
           "link": "https://www.dw.com/en/ukraine-14-killed-in-russian-drone-strike-on-crowded-dnipro-train-station/a-79795076?maca=en-rss-en-all-1573-rdf",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "War in Ukraine: Evacuations under way in Russian-occupied Oleshky",
+          "source": "France 24 - English",
+          "link": "https://www.france24.com/en/video/20261030-war-in-ukraine-evacuations-under-way-in-russian-occupied-oleshky",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Aid operation, evacuations underway in Ukraine's stricken city of Oleshky",
+          "source": "CBC - Top Stories",
+          "link": "https://www.cbc.ca/news/world/israel-election-final-results-9.7402167?cmp=rss",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Evacuation of civilians begins in besieged Ukrainian city of Oleshky",
+          "source": "The Guardian - World",
+          "link": "https://www.theguardian.com/world/2026/oct/30/evacuation-besieged-ukrainian-city-oleshky",
+          "source_bias": "left"
+        },
+        {
+          "title": "Evacuation begins from besieged Oleshky amid truce",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/2026/1030/1597343-evacuation-oleshky-ukraine-amid-truce",
+          "source_bias": "center"
+        },
+        {
+          "title": "Aid operation and evacuations in Oleshky amid brief truce agreed to by Russia and Ukraine",
+          "source": "PBS News - Headlines",
+          "link": "https://www.pbs.org/newshour/world/aid-operation-and-evacuations-in-oleshky-amid-brief-truce-agreed-to-by-russia-and-ukraine",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-10-29",
+      "updated_at": "2026-10-30",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
     "related_events": [
-      {
-        "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
-        "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
-        "relationship": "related_topic",
-        "confidence": 0.95,
-        "shared_entities": [
-          "kharkiv",
-          "kyiv",
-          "odesa",
-          "russia",
-          "russia_drone",
-          "ukraine",
-          "ukraine_drone",
-          "volodymyr_zelensky"
-        ]
-      },
       {
         "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
         "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
@@ -675,12 +807,29 @@
         "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
         "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
         "relationship": "related_topic",
-        "confidence": 0.933,
+        "confidence": 0.95,
         "shared_entities": [
           "kyiv",
           "odesa",
+          "oleshky",
           "region_result",
           "russia",
+          "ukraine",
+          "ukraine_drone",
+          "volodymyr_zelensky"
+        ]
+      },
+      {
+        "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
+        "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
+        "relationship": "related_topic",
+        "confidence": 0.95,
+        "shared_entities": [
+          "kharkiv",
+          "kyiv",
+          "odesa",
+          "russia",
+          "russia_drone",
           "ukraine",
           "ukraine_drone",
           "volodymyr_zelensky"
@@ -690,7 +839,7 @@
         "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
         "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
         "relationship": "related_topic",
-        "confidence": 0.832,
+        "confidence": 0.831,
         "shared_entities": [
           "russia",
           "russia_drone",
@@ -834,6 +983,8 @@
       "allie",
       "areas",
       "attack",
+      "begin",
+      "besieged",
       "bridge",
       "building",
       "casualtie",
@@ -842,11 +993,13 @@
       "causing",
       "cease-fire",
       "child",
+      "commenced",
       "commuter",
       "conducted",
       "conflict",
       "coordinated",
       "crowded",
+      "crucial",
       "damage",
       "damaged",
       "damaging",
@@ -861,6 +1014,7 @@
       "emphasizing",
       "engulf",
       "escalating",
+      "evacuation",
       "faces",
       "fatalitie",
       "firefighter",
@@ -873,11 +1027,13 @@
       "gedaref",
       "highlighting",
       "horrific",
+      "humanitarian",
       "ignited",
       "incident",
       "including",
       "injured",
       "injurie",
+      "invasion",
       "kharkiv",
       "killed",
       "kills",
@@ -886,18 +1042,26 @@
       "leading",
       "least",
       "local",
+      "marks",
       "meanwhile",
       "missile",
+      "mission",
+      "moment",
+      "moscow",
       "multiple",
       "need",
       "nile",
       "numerou",
+      "observe",
       "occurred",
       "odesa",
+      "oleshky",
       "ongoing",
+      "operation",
       "other",
       "outage",
       "paramilitary",
+      "persisted",
       "person",
       "power",
       "prompting",
@@ -913,6 +1077,7 @@
       "russia",
       "several",
       "significant",
+      "since",
       "sparked",
       "station",
       "strike",
@@ -923,6 +1088,7 @@
       "these",
       "threat",
       "train",
+      "truce",
       "ukraine",
       "ukraine-russia",
       "university",
@@ -932,6 +1098,7 @@
       "white",
       "widespread",
       "worker",
+      "years",
       "zaporizhzhia",
       "zelensky"
     ],
@@ -944,13 +1111,16 @@
       "dnipro",
       "dnipro_train",
       "dnipro_ukraine",
+      "evacuation_begin",
       "faces_widespread",
       "force_rsf",
+      "humanitarian_evacuation",
       "kharkiv",
       "kharkiv_recent",
       "kyiv",
       "least",
       "odesa",
+      "oleshky",
       "power_outage",
       "rapid_support",
       "recent_russia",
@@ -973,43 +1143,9 @@
       "white_nile",
       "widespread_power"
     ],
-    "search_text": "11-year-old 4-year-old across additionally additionally_russia affecting al-jazira allie areas attack bridge building casualtie casualtie_recent cause cause_casualtie caused causing cease-fire child commuter conducted conflict coordinated crowded damage damaged damaging debri described despite dnipro dnipro_train dnipro_ukraine drone each eastern emergency emphasizing engulf escalating faces faces_widespread fatalitie firefighter fires five flame force force_rsf four further gedaref highlighting horrific ignited incident including injured injurie kharkiv kharkiv_recent killed kills kyiv large leading least local meanwhile missile multiple need nile numerou occurred odesa ongoing other outage paramilitary person power power_outage prompting rapid rapid_support recent recent_russia region region_result rescuing respond response result resulted rsf rsf_drone rubble russia russia_drone russia_voronezh several significant sparked station strike struck sudan sudan_faces support support_force targeted these threat train train_station ukraine ukraine-russia ukraine_drone university violence volodymyr volodymyr_zelensky voronezh voronezh_region white white_nile widespread widespread_power worker zaporizhzhia zelensky"
+    "search_text": "11-year-old 4-year-old across additionally additionally_russia affecting al-jazira allie areas attack begin besieged bridge building casualtie casualtie_recent cause cause_casualtie caused causing cease-fire child commenced commuter conducted conflict coordinated crowded crucial damage damaged damaging debri described despite dnipro dnipro_train dnipro_ukraine drone each eastern emergency emphasizing engulf escalating evacuation evacuation_begin faces faces_widespread fatalitie firefighter fires five flame force force_rsf four further gedaref highlighting horrific humanitarian humanitarian_evacuation ignited incident including injured injurie invasion kharkiv kharkiv_recent killed kills kyiv large leading least local marks meanwhile missile mission moment moscow multiple need nile numerou observe occurred odesa oleshky ongoing operation other outage paramilitary persisted person power power_outage prompting rapid rapid_support recent recent_russia region region_result rescuing respond response result resulted rsf rsf_drone rubble russia russia_drone russia_voronezh several significant since sparked station strike struck sudan sudan_faces support support_force targeted these threat train train_station truce ukraine ukraine-russia ukraine_drone university violence volodymyr volodymyr_zelensky voronezh voronezh_region white white_nile widespread widespread_power worker years zaporizhzhia zelensky"
   },
   "related_events": [
-    {
-      "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
-      "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
-      "summary": "Muninn first tracked this thread on 2026-09-18: Macron Implements Measures Against Intensifying Russian Hybrid Threats. The latest development is French PM Announces Major Police Presence for Upcoming Protests.",
-      "activity_status": "active",
-      "stage": "timeline",
-      "stage_label": "Timeline",
-      "first_seen_at": "2026-09-18",
-      "last_seen_at": "2026-10-20",
-      "development_count": 51,
-      "latest_title": "French PM Announces Major Police Presence for Upcoming Protests",
-      "topic_label": "Russian Hybrid Attacks",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_macron-implements-measures-against-intensify_109da09c6f.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_macron-implements-measures-against-intensify_109da09c6f.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_macron-implements-measures-against-intensify_109da09c6f"
-    },
     {
       "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
       "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
@@ -1077,6 +1213,40 @@
         "focal_tall_y": 0.48
       },
       "href": "/timeline.html?event=event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea"
+    },
+    {
+      "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
+      "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
+      "summary": "Muninn first tracked this thread on 2026-09-18: Macron Implements Measures Against Intensifying Russian Hybrid Threats. The latest development is French PM Announces Major Police Presence for Upcoming Protests.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-09-18",
+      "last_seen_at": "2026-10-20",
+      "development_count": 51,
+      "latest_title": "French PM Announces Major Police Presence for Upcoming Protests",
+      "topic_label": "Russian Hybrid Attacks",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_macron-implements-measures-against-intensify_109da09c6f.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_macron-implements-measures-against-intensify_109da09c6f.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_macron-implements-measures-against-intensify_109da09c6f"
     },
     {
       "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",

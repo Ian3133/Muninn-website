@@ -15,7 +15,7 @@
     "summary": "France is dealing with significant damage following violent protests that erupted on Saturday, October 17. The demonstrations, which were initially against rising living costs and poor school conditions, escalated into clashes with police, resulting in widespread looting and destruction across multiple cities. Authorities reported approximately 1,800 arrests nationwide, with significant incidents including a historic town hall being set ablaze.",
     "status": "active",
     "first_seen_at": "2026-10-18",
-    "last_seen_at": "2026-10-29",
+    "last_seen_at": "2026-10-30",
     "timeline": [
       {
         "development_id": "story_c59b5b96ff9b6cde",
@@ -1407,6 +1407,202 @@
         "first_seen_at": "2026-10-29",
         "last_seen_at": "2026-10-29",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_15b3bae62196ed03",
+        "daily_story_id": "story_15b3bae62196ed03",
+        "date": "2026-10-30",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Massive Protests Erupt in Rome Over Living Costs and Defense Spending",
+        "summary": "On October 30, thousands of protesters took to the streets of Rome during a general strike organized by the left-wing Unione Sindacale di Base (USB) trade union. The demonstrators expressed their discontent over rising living costs and increased defense spending.",
+        "topic_label": "Italy Protests",
+        "development_type": "military_action",
+        "key_facts": [
+          "Thousands protested in Rome",
+          "General strike called by Unione Sindacale di Base (USB)",
+          "Protests focused on living costs and defense spending"
+        ],
+        "source_count": 2,
+        "sources": [
+          "Africanews",
+          "Euronews"
+        ],
+        "source_urls": [
+          "http://www.africanews.com/2026/10/30/italy-thousands-protest-rising-living-costs-and-defence-spending-in-general-strike",
+          "https://www.euronews.com/video/2026/10/30/italy-thousands-protest-rising-living-costs-and-defence-spending-in-general-strike"
+        ],
+        "source_details": [
+          {
+            "title": "Italy: Thousands protest rising living costs and defence spending in general strike",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/10/30/italy-thousands-protest-rising-living-costs-and-defence-spending-in-general-strike",
+            "source_bias": "center"
+          },
+          {
+            "title": "Italy: Thousands protest rising living costs and defence spending in general strike",
+            "source": "Euronews",
+            "link": "https://www.euronews.com/video/2026/10/30/italy-thousands-protest-rising-living-costs-and-defence-spending-in-general-strike",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "protest"
+          ],
+          "shared_incident_anchors": [
+            "protest_erupt"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "called",
+            "demonstrator",
+            "erupt",
+            "protest"
+          ],
+          "shared_entities": [
+            "protest_erupt"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_02800c5bb6b0c35a",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-30",
+        "last_seen_at": "2026-10-30",
+        "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_6ecba708e6481f5e",
+        "daily_story_id": "story_6ecba708e6481f5e",
+        "date": "2026-10-30",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Netanyahu's Bloc Leads Israeli Election but Lacks Majority Amid Arab Party Gains",
+        "summary": "In the recent Israeli elections, Benjamin Netanyahu's bloc emerged as the leading faction but failed to secure a majority in the Knesset. This outcome sets the stage for a challenging negotiation process as party leaders attempt to form a government. Notably, parties representing Israel's Arab minority achieved historic gains, winning a total of 19 seats, reflecting a significant turnout among Palestinian citizens of Israel.",
+        "topic_label": "Israel Elections",
+        "development_type": "diplomacy",
+        "key_facts": [
+          "Netanyahu's bloc is the leading faction in the election.",
+          "The bloc did not secure a majority in the Knesset.",
+          "Arab parties won a combined 19 seats, marking historic gains."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Euronews",
+          "NBC News - Top Stories"
+        ],
+        "source_urls": [
+          "https://www.euronews.com/2026/10/30/netanyahu-bloc-emerges-ahead-in-israeli-election-but-fails-to-secure-majority",
+          "https://www.nbcnews.com/world/israel/israels-final-election-results-show-neither-netanyahu-rival-can-immedi-rcna606290"
+        ],
+        "source_details": [
+          {
+            "title": "Netanyahu bloc first but without majority as Arab parties hold balance of power in Israel election",
+            "source": "Euronews",
+            "link": "https://www.euronews.com/2026/10/30/netanyahu-bloc-emerges-ahead-in-israeli-election-but-fails-to-secure-majority",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Final election results show neither Netanyahu nor rival can immediately form government",
+            "source": "NBC News - Top Stories",
+            "link": "https://www.nbcnews.com/world/israel/israels-final-election-results-show-neither-netanyahu-rival-can-immedi-rcna606290",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_d77916062849ec9c",
+          "shared_tokens": [
+            "arab",
+            "election",
+            "israel",
+            "partie"
+          ],
+          "shared_entities": [
+            "israel",
+            "israel_election"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-30",
+        "last_seen_at": "2026-10-30",
+        "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_e9b4045abd33d8f5",
+        "daily_story_id": "story_e9b4045abd33d8f5",
+        "date": "2026-10-30",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "France Prepares for Protests Amid High Violence Risk",
+        "summary": "France's interior minister has warned of a 'very high risk of public disorder' as the country braces for a new wave of protests this weekend. Approximately 70,000 police officers will be deployed in response to widespread anger over the rising cost of living and inequality, following recent demonstrations that escalated into significant rioting on October 17.",
+        "topic_label": "France Protests",
+        "development_type": "development",
+        "key_facts": [
+          "Interior minister warns of very high risk of public disorder.",
+          "70,000 police officers to be deployed for upcoming protests.",
+          "Protests driven by anger over rising cost of living and inequality."
+        ],
+        "source_count": 1,
+        "sources": [
+          "France 24 - English"
+        ],
+        "source_urls": [
+          "https://www.france24.com/en/video/20261030-france-braces-for-new-wave-of-protests-govt-warns-of-very-high-violence-risk"
+        ],
+        "source_details": [
+          {
+            "title": "France braces for new wave of protests, govt warns of 'very high' violence risk",
+            "source": "France 24 - English",
+            "link": "https://www.france24.com/en/video/20261030-france-braces-for-new-wave-of-protests-govt-warns-of-very-high-violence-risk",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_1e258ae97eeca3fc",
+          "shared_tokens": [
+            "000",
+            "demonstration",
+            "france",
+            "living",
+            "protest",
+            "response",
+            "rising",
+            "significant"
+          ],
+          "shared_entities": [
+            "france",
+            "france_protest"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-30",
+        "last_seen_at": "2026-10-30",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -1434,12 +1630,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 18,
+      "public_development_count": 21,
       "questionable_development_count": 1,
       "review_required": true
     },
-    "latest_title": "Protests Erupt in Tel Aviv for Arab-Jewish Unity Government Following Election",
-    "latest_summary": "Following Israel's election, which resulted in no clear winner, protesters gathered in Tel Aviv demanding a unity government that includes both Jewish and Arab parties. Police intervened to disperse activists who were blocking traffic during the demonstration.",
+    "latest_title": "France Prepares for Protests Amid High Violence Risk",
+    "latest_summary": "France's interior minister has warned of a 'very high risk of public disorder' as the country braces for a new wave of protests this weekend. Approximately 70,000 police officers will be deployed in response to widespread anger over the rising cost of living and inequality, following recent demonstrations that escalated into significant rioting on October 17.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -1449,30 +1645,30 @@
       "display_title": "France Faces Aftermath of Violent Protests with Widespread Damage and Arrests Timeline",
       "milestone_development_ids": [
         "story_c59b5b96ff9b6cde",
-        "story_26b1f4f1c76aaf08",
-        "story_1e258ae97eeca3fc",
-        "story_d77916062849ec9c"
+        "story_59f352ff796ce049",
+        "story_c8cb3f7317779d4d",
+        "story_e9b4045abd33d8f5"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-10-29",
-      "development_count": 18,
-      "coverage_packet_count": 18,
-      "date_count": 9,
-      "source_count": 43,
+      "summary_updated_at": "2026-10-30",
+      "development_count": 21,
+      "coverage_packet_count": 21,
+      "date_count": 10,
+      "source_count": 48,
       "independent_source_count": 17,
       "first_date": "2026-10-18",
-      "latest_date": "2026-10-29",
-      "latest_update_title": "Protests Erupt in Tel Aviv for Arab-Jewish Unity Government Following Election",
+      "latest_date": "2026-10-30",
+      "latest_update_title": "France Prepares for Protests Amid High Violence Risk",
       "coverage_score": 1.0,
       "recency_score": 1.0,
       "rank_score": 1.0,
-      "context_summary": "Muninn first tracked this thread on 2026-10-18: France Faces Aftermath of Violent Protests with Widespread Damage and Arrests. The latest development is Protests Erupt in Tel Aviv for Arab-Jewish Unity Government Following Election.",
-      "cta_label": "Explore 18 developments"
+      "context_summary": "Muninn first tracked this thread on 2026-10-18: France Faces Aftermath of Violent Protests with Widespread Damage and Arrests. The latest development is France Prepares for Protests Amid High Violence Risk.",
+      "cta_label": "Explore 21 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "France is dealing with significant damage following violent protests that erupted on Saturday, October 17. A later development was Art Basel Paris brings international galleries and contemporary artists to the Grand Palais. Most recently, following Israel's election, which resulted in no clear winner, protesters gathered in Tel Aviv demanding a unity government that includes both Jewish and Arab parties.",
+      "summary": "France is dealing with significant damage following violent protests that erupted on Saturday, October 17. A later development was Heated exchanges and chaotic scenes gripped Albania's parliament in Tirana on Thursday as rival MPs clashed inside, while student demonstrat. Most recently, france's interior minister has warned of a 'very high risk of public disorder' as the country braces for a new wave of protests this weekend.",
       "key_developments": [
         {
           "development_id": "story_c59b5b96ff9b6cde",
@@ -1480,19 +1676,19 @@
           "title": "France Faces Aftermath of Violent Protests with Widespread Damage and Arrests"
         },
         {
-          "development_id": "story_26b1f4f1c76aaf08",
+          "development_id": "story_59f352ff796ce049",
           "date": "2026-10-21",
-          "title": "Prime Minister Sebastien Lecornu met with union leaders today in France"
+          "title": "⁠French President Emmanuel ​Macron landed in Riyadh on Wednseday, ‌adding an ⁠unscheduled stop to his ‌ongoing tour of the Gulf ⁠region"
         },
         {
-          "development_id": "story_1e258ae97eeca3fc",
+          "development_id": "story_c8cb3f7317779d4d",
           "date": "2026-10-25",
-          "title": "Mass Protests Erupt Across France Over Living Costs and School Funding"
+          "title": "Protests Erupt Across Europe with Soldiers Deployed in Milan"
         },
         {
-          "development_id": "story_d77916062849ec9c",
-          "date": "2026-10-29",
-          "title": "Protests Erupt in Tel Aviv for Arab-Jewish Unity Government Following Election"
+          "development_id": "story_e9b4045abd33d8f5",
+          "date": "2026-10-30",
+          "title": "France Prepares for Protests Amid High Violence Risk"
         }
       ],
       "sources": [
@@ -1753,9 +1949,39 @@
           "source": "Africanews",
           "link": "http://www.africanews.com/2026/10/29/israel-protesters-demand-arab-jewish-unity-government-after-election",
           "source_bias": "center"
+        },
+        {
+          "title": "Italy: Thousands protest rising living costs and defence spending in general strike",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/10/30/italy-thousands-protest-rising-living-costs-and-defence-spending-in-general-strike",
+          "source_bias": "center"
+        },
+        {
+          "title": "Italy: Thousands protest rising living costs and defence spending in general strike",
+          "source": "Euronews",
+          "link": "https://www.euronews.com/video/2026/10/30/italy-thousands-protest-rising-living-costs-and-defence-spending-in-general-strike",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Netanyahu bloc first but without majority as Arab parties hold balance of power in Israel election",
+          "source": "Euronews",
+          "link": "https://www.euronews.com/2026/10/30/netanyahu-bloc-emerges-ahead-in-israeli-election-but-fails-to-secure-majority",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Final election results show neither Netanyahu nor rival can immediately form government",
+          "source": "NBC News - Top Stories",
+          "link": "https://www.nbcnews.com/world/israel/israels-final-election-results-show-neither-netanyahu-rival-can-immedi-rcna606290",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "France braces for new wave of protests, govt warns of 'very high' violence risk",
+          "source": "France 24 - English",
+          "link": "https://www.france24.com/en/video/20261030-france-braces-for-new-wave-of-protests-govt-warns-of-very-high-violence-risk",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-10-29",
+      "updated_at": "2026-10-30",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -1776,6 +2002,7 @@
           "housing_crisi",
           "israel",
           "louvre_museum",
+          "massive_protest",
           "nationwide_protest",
           "paris",
           "protest_erupt",
@@ -1804,25 +2031,31 @@
         ]
       },
       {
-        "event_id": "event_ceuta-requests-national-emergency-amid-surge_4919a90e1a",
-        "title": "Ceuta Border Surge",
+        "event_id": "event_protests-erupt-in-israel-against-election-in_a0b546d8ce",
+        "title": "Protests Erupt in Israel Against Election Interference Ahead of October Vote",
         "relationship": "related_topic",
-        "confidence": 0.853,
+        "confidence": 0.95,
         "shared_entities": [
-          "erupt_across",
-          "faces_aftermath",
-          "france",
+          "benjamin_netanyahu",
+          "bloc_leads",
           "israel",
-          "mass_protest",
-          "protest_erupt"
+          "israel_election",
+          "knesset.",
+          "leads_israel",
+          "netanyahu_bloc",
+          "president",
+          "protest_erupt",
+          "saudi",
+          "saudi_arabia"
         ]
       },
       {
         "event_id": "event_investigation-launched-into-low-flying-jets_860ac42bd7",
         "title": "Investigation Launched into Low-Flying Jets Over Cape Town Stadium",
         "relationship": "related_topic",
-        "confidence": 0.826,
+        "confidence": 0.872,
         "shared_entities": [
+          "benjamin_netanyahu",
           "israel",
           "riyadh",
           "saudi",
@@ -1970,6 +2203,7 @@
       "800",
       "ablaze",
       "accepted",
+      "achieved",
       "acknowledged",
       "across",
       "action",
@@ -1986,6 +2220,8 @@
       "allowed",
       "although",
       "amidst",
+      "among",
+      "anger",
       "announce",
       "announced",
       "approximately",
@@ -1998,17 +2234,22 @@
       "arrested",
       "arrived",
       "artist",
+      "attempt",
       "authoritie",
       "authority",
       "aviv",
       "banned",
       "barricaded",
+      "base",
       "basel",
       "bastien",
       "began",
+      "benjamin",
+      "bloc",
       "block",
       "blocking",
       "both",
+      "brace",
       "brief",
       "bring",
       "building",
@@ -2017,12 +2258,14 @@
       "cannon",
       "capital",
       "challenge",
+      "challenging",
       "changed",
       "chaos",
       "chaotic",
       "characterized",
       "chief",
       "citie",
+      "citizen",
       "clashe",
       "clashed",
       "cleaning",
@@ -2050,6 +2293,7 @@
       "dealing",
       "declining",
       "defending",
+      "defense",
       "demand",
       "demanding",
       "demonstrat",
@@ -2060,10 +2304,13 @@
       "despite",
       "destruction",
       "dialogue",
+      "discontent",
       "discuss",
+      "disorder",
       "disperse",
       "doors",
       "election",
+      "emerged",
       "emmanuel",
       "enforcement",
       "entrance",
@@ -2076,15 +2323,21 @@
       "evening",
       "event",
       "exchange",
+      "expressed",
       "faces",
+      "faction",
+      "failed",
       "fair",
       "follow",
       "foreign",
+      "form",
       "france",
       "funding",
+      "gains",
       "gallerie",
       "gas",
       "gathered",
+      "general",
       "grand",
       "grievance",
       "gripped",
@@ -2095,6 +2348,7 @@
       "heated",
       "heavy",
       "heightened",
+      "high",
       "historic",
       "housing",
       "hundred",
@@ -2103,6 +2357,7 @@
       "include",
       "including",
       "increased",
+      "inequality",
       "initially",
       "inside",
       "insufficient",
@@ -2113,6 +2368,8 @@
       "isolation",
       "israel",
       "jewish",
+      "knesset",
+      "lacks",
       "landed",
       "lands",
       "largely",
@@ -2120,7 +2377,9 @@
       "lead",
       "leader",
       "leading",
+      "leads",
       "lecornu",
+      "left-wing",
       "legitimacy",
       "limoge",
       "lisbon",
@@ -2132,35 +2391,45 @@
       "lyon",
       "macron",
       "madrid",
+      "majority",
       "march",
       "marched",
       "marked",
       "marseille",
       "mass",
+      "massive",
       "measure",
       "meet",
       "meeting",
       "milan",
       "million",
+      "minority",
       "most",
       "mostly",
       "multiple",
       "museum",
       "nationwide",
       "nearly",
+      "negotiation",
+      "netanyahu",
+      "notably",
       "occurred",
       "october",
       "officer",
       "ongoing",
       "organised",
       "organiser",
+      "organized",
+      "outcome",
       "outside",
       "palai",
+      "palestinian",
       "paris",
       "parliament",
       "part",
       "participated",
       "partie",
+      "party",
       "past",
       "peaceful",
       "peacefully",
@@ -2168,9 +2437,11 @@
       "poor",
       "portugal",
       "posed",
+      "prepare",
       "prestigiou",
       "primarily",
       "prime",
+      "process",
       "proposed",
       "protest",
       "protester",
@@ -2178,10 +2449,12 @@
       "raised",
       "recent",
       "recognised",
+      "reflecting",
       "region",
       "related",
       "remained",
       "reported",
+      "representing",
       "resignation",
       "resource",
       "response",
@@ -2190,6 +2463,7 @@
       "review",
       "rioting",
       "rising",
+      "risk",
       "rival",
       "riyadh",
       "rome",
@@ -2199,20 +2473,28 @@
       "scene",
       "scheduled",
       "school",
+      "seats",
       "sebastien",
+      "secure",
       "security",
       "senior",
       "service",
+      "sets",
       "several",
       "significant",
+      "sindacale",
       "situation",
       "soldier",
       "solidarity",
       "some",
       "speaking",
+      "spending",
+      "stage",
       "stated",
       "stepped",
       "stop",
+      "street",
+      "strike",
       "student",
       "such",
       "surprise",
@@ -2226,12 +2508,17 @@
       "thousand",
       "thursday",
       "tirana",
+      "took",
+      "total",
       "tour",
       "town",
+      "trade",
       "traffic",
       "turin",
       "turned",
+      "turnout",
       "union",
+      "unione",
       "unity",
       "unrest",
       "unscheduled",
@@ -2239,11 +2526,14 @@
       "used",
       "vandalizing",
       "variou",
+      "very",
       "violence",
       "violent",
       "visit",
       "visited",
+      "warned",
       "water",
+      "wave",
       "wednseday",
       "weekend",
       "weeks",
@@ -2253,6 +2543,7 @@
       "while",
       "widespread",
       "winner",
+      "winning",
       "would"
     ],
     "entities": [
@@ -2264,12 +2555,17 @@
       "announce",
       "arab-jewish",
       "arab-jewish_unity",
+      "arab_party",
       "arrest_france",
       "art_basel",
+      "base_usb",
       "basel_paris",
+      "benjamin_netanyahu",
+      "bloc_leads",
       "close_due",
       "condemn_violent",
       "costs_marseille",
+      "defense_spending",
       "emmanuel_macron",
       "erupt_across",
       "faces_aftermath",
@@ -2279,12 +2575,20 @@
       "france_faces",
       "france_france",
       "france_lead",
+      "france_prepare",
       "france_prime",
       "grand",
       "grand_palai",
       "grand_palais.",
+      "high_violence",
       "housing_crisi",
       "israel",
+      "israel._france",
+      "israel_arab",
+      "israel_election",
+      "knesset.",
+      "lacks_majority",
+      "leads_israel",
       "lisbon",
       "living_costs",
       "louvre_museum",
@@ -2295,6 +2599,7 @@
       "marseille_faces",
       "marseille_paris",
       "mass_protest",
+      "massive_protest",
       "measure_addressing",
       "milan",
       "milan_rome",
@@ -2302,16 +2607,19 @@
       "mps",
       "museum_close",
       "nationwide_protest",
+      "netanyahu_bloc",
       "october_france",
       "palai_art",
       "palais._but",
       "paris",
       "paris_marseille",
+      "party_gains",
       "president",
       "protest",
       "protest_across",
       "protest_erupt",
       "rising_costs",
+      "risk_france",
       "riyadh",
       "rome",
       "rome_madrid",
@@ -2326,10 +2634,13 @@
       "tirana",
       "tirana._while",
       "turin._nationwide",
+      "unione_sindacale",
+      "usb",
+      "violence_risk",
       "violent_protest",
       "widespread_damage"
     ],
-    "search_text": "000 400 800 ablaze accepted acknowledged across across_europe across_france action action_demonstrator activist adding address addresse addresse_unrest addressing addressing_student administration admitted aftermath ahead albania allowed although amidst announce announced approximately arab arab-jewish arab-jewish_unity arabia areas around arrest arrest_france arrested arrived art_basel artist authoritie authority aviv banned barricaded basel basel_paris bastien began block blocking both brief bring building called camp cannon capital challenge changed chaos chaotic characterized chief citie clashe clashed cleaning clear clearance close close_due closed comment comprehensive concern concluded concrete condemn condemn_violent condemned condition contemporary continued control cost costs costs_marseille crisi criticism curfew damage dealing declining defending demand demanding demonstrat demonstrated demonstration demonstrator deployed despite destruction dialogue discuss disperse doors election emmanuel emmanuel_macron enforcement entrance erupt erupt_across erupted escalated essential europe european evening event exchange faces faces_aftermath fair follow foreign france france. france._his france_faces france_france france_lead france_prime funding gallerie gas gathered grand grand_palai grand_palais. grievance gripped group gulf half hall heated heavy heightened historic housing housing_crisi hundred illegitimate incident include including increased initially inside insufficient intelligence interior international intervened isolation israel jewish landed lands largely laurent lead leader leading lecornu legitimacy limoge lisbon living living_costs localized looting lost louvre louvre_museum lyon lyon._macron macron macron_addresse macron_condemn madrid madrid_lisbon march marched marked marseille marseille_faces marseille_paris mass mass_protest measure measure_addressing meet meeting milan milan_rome milan_thousand million most mostly mps multiple museum museum_close nationwide nationwide_protest nearly occurred october october_france officer ongoing organised organiser outside palai palai_art palais._but paris paris_marseille parliament part participated partie past peaceful peacefully political poor portugal posed president prestigiou primarily prime proposed protest protest_across protest_erupt protester public raised recent recognised region related remained reported resignation resource response resulted resulting review rioting rising rising_costs rival riyadh rome rome_madrid route saturday saturday_october saudi saudi_arabia scene scheduled school sebastien sebastien_lecornu security senior service several significant situation soldier soldier_deployed solidarity some speaking stated stepped stop student student_protest such surprise targeting tear tel tel_aviv tension tenth than there they thousand thursday tirana tirana._while tour town traffic turin turin._nationwide turned union unity unrest unscheduled unveil used vandalizing variou violence violent violent_protest visit visited water wednseday weekend weeks well went which while widespread widespread_damage winner would"
+    "search_text": "000 400 800 ablaze accepted achieved acknowledged across across_europe across_france action action_demonstrator activist adding address addresse addresse_unrest addressing addressing_student administration admitted aftermath ahead albania allowed although amidst among anger announce announced approximately arab arab-jewish arab-jewish_unity arab_party arabia areas around arrest arrest_france arrested arrived art_basel artist attempt authoritie authority aviv banned barricaded base base_usb basel basel_paris bastien began benjamin benjamin_netanyahu bloc bloc_leads block blocking both brace brief bring building called camp cannon capital challenge challenging changed chaos chaotic characterized chief citie citizen clashe clashed cleaning clear clearance close close_due closed comment comprehensive concern concluded concrete condemn condemn_violent condemned condition contemporary continued control cost costs costs_marseille crisi criticism curfew damage dealing declining defending defense defense_spending demand demanding demonstrat demonstrated demonstration demonstrator deployed despite destruction dialogue discontent discuss disorder disperse doors election emerged emmanuel emmanuel_macron enforcement entrance erupt erupt_across erupted escalated essential europe european evening event exchange expressed faces faces_aftermath faction failed fair follow foreign form france france. france._his france_faces france_france france_lead france_prepare france_prime funding gains gallerie gas gathered general grand grand_palai grand_palais. grievance gripped group gulf half hall heated heavy heightened high high_violence historic housing housing_crisi hundred illegitimate incident include including increased inequality initially inside insufficient intelligence interior international intervened isolation israel israel._france israel_arab israel_election jewish knesset knesset. lacks lacks_majority landed lands largely laurent lead leader leading leads leads_israel lecornu left-wing legitimacy limoge lisbon living living_costs localized looting lost louvre louvre_museum lyon lyon._macron macron macron_addresse macron_condemn madrid madrid_lisbon majority march marched marked marseille marseille_faces marseille_paris mass mass_protest massive massive_protest measure measure_addressing meet meeting milan milan_rome milan_thousand million minority most mostly mps multiple museum museum_close nationwide nationwide_protest nearly negotiation netanyahu netanyahu_bloc notably occurred october october_france officer ongoing organised organiser organized outcome outside palai palai_art palais._but palestinian paris paris_marseille parliament part participated partie party party_gains past peaceful peacefully political poor portugal posed prepare president prestigiou primarily prime process proposed protest protest_across protest_erupt protester public raised recent recognised reflecting region related remained reported representing resignation resource response resulted resulting review rioting rising rising_costs risk risk_france rival riyadh rome rome_madrid route saturday saturday_october saudi saudi_arabia scene scheduled school seats sebastien sebastien_lecornu secure security senior service sets several significant sindacale situation soldier soldier_deployed solidarity some speaking spending stage stated stepped stop street strike student student_protest such surprise targeting tear tel tel_aviv tension tenth than there they thousand thursday tirana tirana._while took total tour town trade traffic turin turin._nationwide turned turnout union unione unione_sindacale unity unrest unscheduled unveil usb used vandalizing variou very violence violence_risk violent violent_protest visit visited warned water wave wednseday weekend weeks well went which while widespread widespread_damage winner winning would"
   },
   "related_events": [
     {
@@ -2401,20 +2712,20 @@
       "href": "/timeline.html?event=event_protests-erupt-in-india-demanding-resignatio_ce12dfc1ae"
     },
     {
-      "event_id": "event_ceuta-requests-national-emergency-amid-surge_4919a90e1a",
-      "title": "Ceuta Border Surge",
-      "summary": "Muninn first tracked this thread on 2026-07-30: Ceuta Requests National Emergency Amid Surge of Migrants from Morocco. The latest development is Spanish Royals Visit Ceuta Amid Migrant Crisis and Diplomatic Sensitivity.",
+      "event_id": "event_protests-erupt-in-israel-against-election-in_a0b546d8ce",
+      "title": "Protests Erupt in Israel Against Election Interference Ahead of October Vote",
+      "summary": "Muninn first tracked this thread on 2026-09-18: Protests Erupt in Israel Against Election Interference Ahead of October Vote. The latest development is Netanyahu Accused of Smearing Arab Parties After Election Loss.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
-      "first_seen_at": "2026-07-30",
-      "last_seen_at": "2026-10-14",
-      "development_count": 27,
-      "latest_title": "Spanish Royals Visit Ceuta Amid Migrant Crisis and Diplomatic Sensitivity",
-      "topic_label": "Ceuta Border Surge",
+      "first_seen_at": "2026-09-18",
+      "last_seen_at": "2026-10-30",
+      "development_count": 20,
+      "latest_title": "Netanyahu Accused of Smearing Arab Parties After Election Loss",
+      "topic_label": "Israeli Elections",
       "hero_image": {
-        "url": "/Current_news/generated/events/event_ceuta-requests-national-emergency-amid-surge_4919a90e1a.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_ceuta-requests-national-emergency-amid-surge_4919a90e1a.jpg",
+        "url": "/Current_news/generated/events/event_protests-erupt-in-israel-against-election-in_a0b546d8ce.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_protests-erupt-in-israel-against-election-in_a0b546d8ce.jpg",
         "source": "Muninn AI illustration",
         "author": "OpenAI GPT Image 2",
         "license": "AI-generated content",
@@ -2432,7 +2743,7 @@
         "focal_tall_x": 0.5,
         "focal_tall_y": 0.48
       },
-      "href": "/timeline.html?event=event_ceuta-requests-national-emergency-amid-surge_4919a90e1a"
+      "href": "/timeline.html?event=event_protests-erupt-in-israel-against-election-in_a0b546d8ce"
     },
     {
       "event_id": "event_investigation-launched-into-low-flying-jets_860ac42bd7",

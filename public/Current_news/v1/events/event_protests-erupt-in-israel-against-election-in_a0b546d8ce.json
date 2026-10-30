@@ -15,7 +15,7 @@
     "summary": "On September 17, dozens of Israelis gathered outside the Knesset in West Jerusalem to protest against political leaders. The demonstrators accused these leaders of exploiting regional tensions to interfere with the upcoming parliamentary election scheduled for October 27.",
     "status": "active",
     "first_seen_at": "2026-09-18",
-    "last_seen_at": "2026-10-29",
+    "last_seen_at": "2026-10-30",
     "timeline": [
       {
         "development_id": "story_1806b9bb9b89962c",
@@ -1533,6 +1533,106 @@
         "first_seen_at": "2026-10-29",
         "last_seen_at": "2026-10-29",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_d6047b7ec36afe33",
+        "daily_story_id": "story_d6047b7ec36afe33",
+        "date": "2026-10-30",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Netanyahu Accused of Smearing Arab Parties After Election Loss",
+        "summary": "Following the recent elections, Prime Minister Benjamin Netanyahu has been accused of using smear tactics against Arab Israeli parties, alleging they received foreign support to 'steal' the election. His coalition lost its parliamentary majority, prompting calls for investigations into alleged vote buying. As opposition parties begin coalition negotiations, Netanyahu's claims have sparked accusations of attempting to delegitimize the election results.",
+        "topic_label": "",
+        "development_type": "diplomacy",
+        "key_facts": [
+          "Netanyahu's coalition lost its parliamentary majority in the recent elections.",
+          "He accused Arab Israeli parties of using foreign backing to influence the election.",
+          "Calls for investigations into alleged vote buying have been made."
+        ],
+        "source_count": 4,
+        "sources": [
+          "Africanews",
+          "BBC",
+          "PBS News",
+          "The Guardian"
+        ],
+        "source_urls": [
+          "https://www.theguardian.com/world/2026/oct/29/israeli-leader-netanyahu-accused-of-using-ugly-smear-tactics-to-cling-to-power",
+          "https://www.pbs.org/newshour/world/difficult-negotiations-lie-ahead-in-israel-after-netanyahus-bloc-lost-its-parliamentary-majority",
+          "https://www.bbc.co.uk/news/articles/ckdd8qdl9e0eo?at_medium=RSS&at_campaign=rss",
+          "http://www.africanews.com/2026/10/30/israels-final-election-results-show-no-bloc-has-won-a-majority"
+        ],
+        "source_details": [
+          {
+            "title": "Netanyahu accused of smearing Arab voters to hold on to power",
+            "source": "The Guardian",
+            "link": "https://www.theguardian.com/world/2026/oct/29/israeli-leader-netanyahu-accused-of-using-ugly-smear-tactics-to-cling-to-power",
+            "source_bias": "left"
+          },
+          {
+            "title": "Difficult negotiations lie ahead in Israel after Netanyahu's bloc lost its parliamentary majority",
+            "source": "PBS News",
+            "link": "https://www.pbs.org/newshour/world/difficult-negotiations-lie-ahead-in-israel-after-netanyahus-bloc-lost-its-parliamentary-majority",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Israeli opposition accuses Netanyahu of trying to 'delegitimise' election",
+            "source": "BBC",
+            "link": "https://www.bbc.co.uk/news/articles/ckdd8qdl9e0eo?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          },
+          {
+            "title": "Israel's final election results show no bloc has won a majority",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/10/30/israels-final-election-results-show-no-bloc-has-won-a-majority",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 1.0,
+        "match_evidence": {
+          "score": 1.0,
+          "matched_development_id": "story_4165991bd1a79c14",
+          "shared_tokens": [
+            "accused",
+            "alleging",
+            "arab",
+            "begin",
+            "benjamin",
+            "coalition",
+            "election",
+            "foreign",
+            "influence",
+            "israel",
+            "lost",
+            "made",
+            "majority",
+            "netanyahu",
+            "parliamentary",
+            "partie",
+            "prime",
+            "received",
+            "recent",
+            "result",
+            "smear",
+            "support",
+            "tactic"
+          ],
+          "shared_entities": [
+            "arab_israel",
+            "benjamin_netanyahu",
+            "israel"
+          ],
+          "source_url_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-30",
+        "last_seen_at": "2026-10-30",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -1561,12 +1661,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 19,
+      "public_development_count": 20,
       "questionable_development_count": 2,
       "review_required": true
     },
-    "latest_title": "Israel Faces Political Gridlock After Election Results",
-    "latest_summary": "In the recent Israeli elections, Prime Minister Benjamin Netanyahu and his allies emerged as the largest bloc but failed to secure a majority, leading to a potential political gridlock. Netanyahu has been accused of employing smear tactics, alleging that Arab Israeli parties received foreign support to influence the election outcome. The rise of Palestinian parties in the Knesset may significantly alter Israel's political landscape as coalition talks begin.",
+    "latest_title": "Netanyahu Accused of Smearing Arab Parties After Election Loss",
+    "latest_summary": "Following the recent elections, Prime Minister Benjamin Netanyahu has been accused of using smear tactics against Arab Israeli parties, alleging they received foreign support to 'steal' the election. His coalition lost its parliamentary majority, prompting calls for investigations into alleged vote buying. As opposition parties begin coalition negotiations, Netanyahu's claims have sparked accusations of attempting to delegitimize the election results.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -1577,29 +1677,29 @@
       "milestone_development_ids": [
         "story_1806b9bb9b89962c",
         "story_7420b7249b4f8104",
-        "story_18bb72aeca1c9e2e",
-        "story_4165991bd1a79c14"
+        "story_2fb86a1f7f409d92",
+        "story_d6047b7ec36afe33"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-10-29",
-      "development_count": 19,
-      "coverage_packet_count": 19,
-      "date_count": 10,
-      "source_count": 60,
+      "summary_updated_at": "2026-10-30",
+      "development_count": 20,
+      "coverage_packet_count": 20,
+      "date_count": 11,
+      "source_count": 63,
       "independent_source_count": 28,
       "first_date": "2026-09-18",
-      "latest_date": "2026-10-29",
-      "latest_update_title": "Israel Faces Political Gridlock After Election Results",
+      "latest_date": "2026-10-30",
+      "latest_update_title": "Netanyahu Accused of Smearing Arab Parties After Election Loss",
       "coverage_score": 1.0,
       "recency_score": 1.0,
       "rank_score": 1.0,
-      "context_summary": "Muninn first tracked this thread on 2026-09-18: Protests Erupt in Israel Against Election Interference Ahead of October Vote. The latest development is Israel Faces Political Gridlock After Election Results.",
-      "cta_label": "Explore 19 developments"
+      "context_summary": "Muninn first tracked this thread on 2026-09-18: Protests Erupt in Israel Against Election Interference Ahead of October Vote. The latest development is Netanyahu Accused of Smearing Arab Parties After Election Loss.",
+      "cta_label": "Explore 20 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "On September 17, dozens of Israelis gathered outside the Knesset in West Jerusalem to protest against political leaders. A later development was Netanyahu Denies Rift with Army Chief Amid Election Tensions. Most recently, in the recent Israeli elections, Prime Minister Benjamin Netanyahu and his allies emerged as the largest bloc but failed to secure a majority, leading to a potential political gridlock.",
+      "summary": "On September 17, dozens of Israelis gathered outside the Knesset in West Jerusalem to protest against political leaders. A later development was Middle Eastern Nations Engage in Talks with Iran Amid Security Concerns. Most recently, following the recent elections, Prime Minister Benjamin Netanyahu has been accused of using smear tactics against Arab Israeli parties, alleging they received foreign support to 'steal' the election.",
       "key_developments": [
         {
           "development_id": "story_1806b9bb9b89962c",
@@ -1612,14 +1712,14 @@
           "title": "Israel Implements Restrictions in West Bank Ahead of Elections Following Soldier Deaths"
         },
         {
-          "development_id": "story_18bb72aeca1c9e2e",
+          "development_id": "story_2fb86a1f7f409d92",
           "date": "2026-10-27",
-          "title": "Qatar Calls on Iran to Improve Relations Amid Regional Tensions"
+          "title": "Jordan Launches Airstrikes in Syria Following Church Attack"
         },
         {
-          "development_id": "story_4165991bd1a79c14",
-          "date": "2026-10-29",
-          "title": "Israel Faces Political Gridlock After Election Results"
+          "development_id": "story_d6047b7ec36afe33",
+          "date": "2026-10-30",
+          "title": "Netanyahu Accused of Smearing Arab Parties After Election Loss"
         }
       ],
       "sources": [
@@ -1982,9 +2082,27 @@
           "source": "The Guardian",
           "link": "https://www.theguardian.com/world/2026/oct/28/israel-election-exit-polls-suggest-netanyahu-eisenkot-blocs-tied-ntwnfb",
           "source_bias": "left"
+        },
+        {
+          "title": "Difficult negotiations lie ahead in Israel after Netanyahu's bloc lost its parliamentary majority",
+          "source": "PBS News",
+          "link": "https://www.pbs.org/newshour/world/difficult-negotiations-lie-ahead-in-israel-after-netanyahus-bloc-lost-its-parliamentary-majority",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Israeli opposition accuses Netanyahu of trying to 'delegitimise' election",
+          "source": "BBC",
+          "link": "https://www.bbc.co.uk/news/articles/ckdd8qdl9e0eo?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
+        },
+        {
+          "title": "Israel's final election results show no bloc has won a majority",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/10/30/israels-final-election-results-show-no-bloc-has-won-a-majority",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-10-29",
+      "updated_at": "2026-10-30",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -2031,6 +2149,25 @@
         ]
       },
       {
+        "event_id": "event_france-faces-aftermath-of-violent-protests-w_6d2156f35f",
+        "title": "France Faces Aftermath of Violent Protests with Widespread Damage and Arrests",
+        "relationship": "related_topic",
+        "confidence": 0.95,
+        "shared_entities": [
+          "benjamin_netanyahu",
+          "bloc_leads",
+          "israel",
+          "israel_election",
+          "knesset.",
+          "leads_israel",
+          "netanyahu_bloc",
+          "president",
+          "protest_erupt",
+          "saudi",
+          "saudi_arabia"
+        ]
+      },
+      {
         "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
         "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
         "relationship": "related_topic",
@@ -2042,21 +2179,6 @@
           "israel_prime",
           "saudi",
           "saudi_arabia",
-          "united_nation",
-          "us"
-        ]
-      },
-      {
-        "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
-        "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
-        "relationship": "related_topic",
-        "confidence": 0.907,
-        "shared_entities": [
-          "iran",
-          "israel",
-          "protest_erupt",
-          "saudi_arabia",
-          "syria",
           "united_nation",
           "us"
         ]
@@ -2096,6 +2218,7 @@
       "addressing",
       "ahead",
       "airstrike",
+      "alleged",
       "alleging",
       "alliance",
       "allie",
@@ -2115,6 +2238,7 @@
       "army",
       "around",
       "attack",
+      "attempting",
       "attended",
       "avoid",
       "ballot",
@@ -2125,6 +2249,7 @@
       "bloc",
       "both",
       "broader",
+      "buying",
       "call",
       "calls",
       "campaign",
@@ -2141,6 +2266,7 @@
       "church",
       "citizen",
       "civilian",
+      "claim",
       "clampdown",
       "cleansing",
       "clear",
@@ -2181,6 +2307,7 @@
       "deems",
       "deep",
       "defence",
+      "delegitimize",
       "demand",
       "demonstrate",
       "demonstrator",
@@ -2279,6 +2406,7 @@
       "interfere",
       "interference",
       "international",
+      "investigation",
       "iran",
       "isaac",
       "israel",
@@ -2308,6 +2436,8 @@
       "linked",
       "living",
       "long-standing",
+      "loss",
+      "lost",
       "lots",
       "macklemore",
       "majority",
@@ -2325,6 +2455,7 @@
       "national",
       "nearly",
       "needed",
+      "negotiation",
       "neighbourhood",
       "neighbouring",
       "netanyahu",
@@ -2336,6 +2467,7 @@
       "operation",
       "opponent",
       "opposing",
+      "opposition",
       "organizing",
       "orthodox",
       "outcome",
@@ -2419,11 +2551,14 @@
       "since",
       "situation",
       "smear",
+      "smearing",
       "soldier",
       "some",
       "southern",
+      "sparked",
       "staff",
       "stance",
+      "steal",
       "strait",
       "strengthen",
       "strike",
@@ -2444,6 +2579,7 @@
       "terrorist",
       "theme",
       "these",
+      "they",
       "thousand",
       "threat",
       "threaten",
@@ -2462,6 +2598,7 @@
       "unjustifiable",
       "upcoming",
       "urged",
+      "using",
       "venue",
       "viewed",
       "violation",
@@ -2484,6 +2621,7 @@
       "activist_hundred",
       "addresse_gaza",
       "arab_israel",
+      "arab_partie",
       "arab_voter",
       "arabia_pakistan",
       "arabia_turkey",
@@ -2507,6 +2645,7 @@
       "election_but",
       "election_interference",
       "election_israel",
+      "election_loss",
       "election_reache",
       "election_result",
       "election_tension",
@@ -2562,6 +2701,7 @@
       "middle_east.",
       "middle_eastern",
       "nation_engage",
+      "netanyahu_accused",
       "netanyahu_bloc",
       "netanyahu_denie",
       "netanyahu_faces",
@@ -2588,6 +2728,7 @@
       "saudi_arabia",
       "security_concern",
       "sheeran_addresse",
+      "smearing_arab",
       "southern",
       "staff_gadi",
       "sumud_flotilla.",
@@ -2607,7 +2748,7 @@
       "west",
       "west_jerusalem"
     ],
-    "search_text": "200 2023 250 abroad account accusation accused action activist activist_hundred addresse addresse_gaza addressing ahead airstrike alleging alliance allie alongside also alter although amidst among announced another approache approximately arab arab-led arab_israel arab_voter arabia arabia_pakistan arabia_turkey army army_chief around attack attended avoid ballot bank begin benjamin benjamin_netanyahu better bloc bloc_leads both broader but_majority call calls campaign career cast casualtie casualtie_reported cautioned ceasing central checkpoint chief children choose choose_next church citizen civilian clampdown cleansing clear closely closure coalition coincide coinciding collective comes comment competition complexitie concern concern_senior concert concurrently concurrently_israel conducted conflict conflicting confrontation connected contested controversy count counted crackdown credential critical criticism crossing crucial crucial_election currently deadlock deadly death decade decision deems deep defence defence_alliance demand demonstrate demonstrator denial denie denie_rift denied departure described destabilize destruction determine didn diplomatic direction discuss displ displace displace_palestinian displacement displacing division dozen east eastern eastern_nation effort eisenkot eisenkot._polls election election_but election_interference election_israel election_reache election_result election_tension electorate elusive emerged emphasizing employing energy engage engagement erupt estimated ethnic even expected exploiting faces faces_criticism faces_political facilitie facing failed failure falling familie fans feel first flotilla flotilla_activist follow force forced foreign forming four friday further future gadi gadi_eisenkot. gain gathered gaza gaza. gaza._netanyahu gaza_flotilla gaza_situation global goodwill greek greek_orthodox gridlock group gunmen halhul hamas hamas._prime handling handling_ahead haunting head hebron heightened herzog hideout high high_arab high_turnout highest home homes hormuz humanitarian hundred imminent implement implement_restriction improve improve_relation incident including indicate individual influence initiated interfere interference interference_ahead international iran iran._middle isaac isaac_herzog israel israel. israel._israel israel_army israel_displace israel_election israel_faces israel_implement israel_prepare israel_prime israel_vote jailed jailed_gaza jeopardizing jerusalem jordan jordan_air jordan_launche jordanian karak karak_jordanian killed killing knesset knesset. land landscape large-scale largest launche launche_airstrike laundering lead-up leader leadership leading leads leads_israel least level level_arab likud linked living long-standing lots macklemore macklemore_controversy majority majority_remain make many marked marking mecca mecca_defence middle middle_east. middle_eastern militant military money month nation nation_engage national nearly needed neighbourhood neighbouring netanyahu netanyahu_bloc netanyahu_denie netanyahu_faces netanyahu_likud next next_prime nine notable notable_level oct. october october_hamas october_israel october_vote ongoing operation opponent opposing organizing orthodox outcome outside overall pakistan palestinian palestinian_familie parliamentary part participated participation partie party period philadelphia pivotal pivotal_election political political_gridlock political_rivalrie politicizing polls potential potentially power prepare president preventing prime pro-palestinian process projection prompting protest protest_erupt punishment qatar race raised rate reache reache_notable readiness received recent referendum reflecting regarding region regional regional_tension related relation release remain remain_elusive removal renewed reopening reported resident resolution response restriction result resulted resumption returning rift right-wing rise rivalrie rivalrie_israel saudi saudi_arabia scheduled scrutiny seats secure security security_concern seek senior september seven sheeran sheeran_addresse shipping short siege significant significantly since situation smear soldier some southern staff staff_gadi stance strait strengthen strike suggest sumud sumud_flotilla. supplie support surge surrounding syria syria. syria_jordan tactic take talks target tehran tens tension tension_israel tension_qatar terrorist theme these thousand threat threaten three tight tour toward trauma tunis tunisia tunisian turkey turnout under united united_nation unjustifiable upcoming urged us venue viewed violation vote voter voter_turnout votes vowed warned weeks west west_jerusalem what whether which while winner within would"
+    "search_text": "200 2023 250 abroad account accusation accused action activist activist_hundred addresse addresse_gaza addressing ahead airstrike alleged alleging alliance allie alongside also alter although amidst among announced another approache approximately arab arab-led arab_israel arab_partie arab_voter arabia arabia_pakistan arabia_turkey army army_chief around attack attempting attended avoid ballot bank begin benjamin benjamin_netanyahu better bloc bloc_leads both broader but_majority buying call calls campaign career cast casualtie casualtie_reported cautioned ceasing central checkpoint chief children choose choose_next church citizen civilian claim clampdown cleansing clear closely closure coalition coincide coinciding collective comes comment competition complexitie concern concern_senior concert concurrently concurrently_israel conducted conflict conflicting confrontation connected contested controversy count counted crackdown credential critical criticism crossing crucial crucial_election currently deadlock deadly death decade decision deems deep defence defence_alliance delegitimize demand demonstrate demonstrator denial denie denie_rift denied departure described destabilize destruction determine didn diplomatic direction discuss displ displace displace_palestinian displacement displacing division dozen east eastern eastern_nation effort eisenkot eisenkot._polls election election_but election_interference election_israel election_loss election_reache election_result election_tension electorate elusive emerged emphasizing employing energy engage engagement erupt estimated ethnic even expected exploiting faces faces_criticism faces_political facilitie facing failed failure falling familie fans feel first flotilla flotilla_activist follow force forced foreign forming four friday further future gadi gadi_eisenkot. gain gathered gaza gaza. gaza._netanyahu gaza_flotilla gaza_situation global goodwill greek greek_orthodox gridlock group gunmen halhul hamas hamas._prime handling handling_ahead haunting head hebron heightened herzog hideout high high_arab high_turnout highest home homes hormuz humanitarian hundred imminent implement implement_restriction improve improve_relation incident including indicate individual influence initiated interfere interference interference_ahead international investigation iran iran._middle isaac isaac_herzog israel israel. israel._israel israel_army israel_displace israel_election israel_faces israel_implement israel_prepare israel_prime israel_vote jailed jailed_gaza jeopardizing jerusalem jordan jordan_air jordan_launche jordanian karak karak_jordanian killed killing knesset knesset. land landscape large-scale largest launche launche_airstrike laundering lead-up leader leadership leading leads leads_israel least level level_arab likud linked living long-standing loss lost lots macklemore macklemore_controversy majority majority_remain make many marked marking mecca mecca_defence middle middle_east. middle_eastern militant military money month nation nation_engage national nearly needed negotiation neighbourhood neighbouring netanyahu netanyahu_accused netanyahu_bloc netanyahu_denie netanyahu_faces netanyahu_likud next next_prime nine notable notable_level oct. october october_hamas october_israel october_vote ongoing operation opponent opposing opposition organizing orthodox outcome outside overall pakistan palestinian palestinian_familie parliamentary part participated participation partie party period philadelphia pivotal pivotal_election political political_gridlock political_rivalrie politicizing polls potential potentially power prepare president preventing prime pro-palestinian process projection prompting protest protest_erupt punishment qatar race raised rate reache reache_notable readiness received recent referendum reflecting regarding region regional regional_tension related relation release remain remain_elusive removal renewed reopening reported resident resolution response restriction result resulted resumption returning rift right-wing rise rivalrie rivalrie_israel saudi saudi_arabia scheduled scrutiny seats secure security security_concern seek senior september seven sheeran sheeran_addresse shipping short siege significant significantly since situation smear smearing smearing_arab soldier some southern sparked staff staff_gadi stance steal strait strengthen strike suggest sumud sumud_flotilla. supplie support surge surrounding syria syria. syria_jordan tactic take talks target tehran tens tension tension_israel tension_qatar terrorist theme these they thousand threat threaten three tight tour toward trauma tunis tunisia tunisian turkey turnout under united united_nation unjustifiable upcoming urged us using venue viewed violation vote voter voter_turnout votes vowed warned weeks west west_jerusalem what whether which while winner within would"
   },
   "related_events": [
     {
@@ -2679,6 +2820,40 @@
       "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
     },
     {
+      "event_id": "event_france-faces-aftermath-of-violent-protests-w_6d2156f35f",
+      "title": "France Faces Aftermath of Violent Protests with Widespread Damage and Arrests",
+      "summary": "Muninn first tracked this thread on 2026-10-18: France Faces Aftermath of Violent Protests with Widespread Damage and Arrests. The latest development is France Prepares for Protests Amid High Violence Risk.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-10-18",
+      "last_seen_at": "2026-10-30",
+      "development_count": 21,
+      "latest_title": "France Prepares for Protests Amid High Violence Risk",
+      "topic_label": "Protests in France",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_france-faces-aftermath-of-violent-protests-w_6d2156f35f.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_france-faces-aftermath-of-violent-protests-w_6d2156f35f.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_france-faces-aftermath-of-violent-protests-w_6d2156f35f"
+    },
+    {
       "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
       "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
       "summary": "Muninn first tracked this thread on 2026-09-11: Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims. The latest development is Iran's state television reported that seven oil tankers either caught fire or were damaged by mines overnight Wednesday into Thursday after.",
@@ -2711,40 +2886,6 @@
         "focal_tall_y": 0.48
       },
       "href": "/timeline.html?event=event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b"
-    },
-    {
-      "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
-      "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
-      "summary": "Muninn first tracked this thread on 2026-09-18: Macron Implements Measures Against Intensifying Russian Hybrid Threats. The latest development is French PM Announces Major Police Presence for Upcoming Protests.",
-      "activity_status": "active",
-      "stage": "timeline",
-      "stage_label": "Timeline",
-      "first_seen_at": "2026-09-18",
-      "last_seen_at": "2026-10-20",
-      "development_count": 51,
-      "latest_title": "French PM Announces Major Police Presence for Upcoming Protests",
-      "topic_label": "Russian Hybrid Attacks",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_macron-implements-measures-against-intensify_109da09c6f.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_macron-implements-measures-against-intensify_109da09c6f.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_macron-implements-measures-against-intensify_109da09c6f"
     }
   ]
 }
