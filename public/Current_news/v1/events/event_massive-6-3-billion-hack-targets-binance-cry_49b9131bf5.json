@@ -15,7 +15,7 @@
     "summary": "Hackers have stolen approximately $6.3 billion from Binance, the world's largest cryptocurrency exchange, marking it as potentially the largest crypto heist in history. Analysts suggest that the attack may have been orchestrated by North Korean hackers. In response to the breach, Binance has stated that it will cover the losses and has frozen about half of the stolen assets to mitigate the impact on users.",
     "status": "active",
     "first_seen_at": "2026-10-30",
-    "last_seen_at": "2026-10-30",
+    "last_seen_at": "2026-10-31",
     "timeline": [
       {
         "development_id": "story_a112872d7a403861",
@@ -156,6 +156,75 @@
         "first_seen_at": "2026-10-30",
         "last_seen_at": "2026-10-30",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_4ee91557c2642c3a",
+        "daily_story_id": "story_4ee91557c2642c3a",
+        "date": "2026-10-31",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Binance Recovers 90% of Stolen Cryptocurrency Assets After Hack",
+        "summary": "Binance has announced that it has replenished approximately 90% of the cryptocurrency assets stolen during a recent security incident. The exchange confirmed that the majority of the stolen funds have been recovered following the hack.",
+        "topic_label": "Cryptocurrency Security",
+        "development_type": "development",
+        "key_facts": [
+          "90% of stolen cryptocurrency assets have been replenished by Binance.",
+          "The replenishment follows a security incident involving a hack."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Channel NewsAsia",
+          "Sky News"
+        ],
+        "source_urls": [
+          "https://www.channelnewsasia.com/business/binance-replenishes-90-assets-stolen-in-security-incident-6509761",
+          "https://news.sky.com/story/majority-of-funds-stolen-in-cryptocurrency-hack-replenished-binance-says-13606152"
+        ],
+        "source_details": [
+          {
+            "title": "Binance replenishes 90% of assets stolen in security incident",
+            "source": "Channel NewsAsia",
+            "link": "https://www.channelnewsasia.com/business/binance-replenishes-90-assets-stolen-in-security-incident-6509761",
+            "source_bias": "center"
+          },
+          {
+            "title": "Majority of funds stolen in cryptocurrency hack replenished, Binance says",
+            "source": "Sky News",
+            "link": "https://news.sky.com/story/majority-of-funds-stolen-in-cryptocurrency-hack-replenished-binance-says-13606152",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_a112872d7a403861",
+          "shared_tokens": [
+            "approximately",
+            "binance",
+            "confirmed",
+            "cryptocurrency",
+            "exchange",
+            "funds",
+            "hack",
+            "security",
+            "stolen"
+          ],
+          "shared_entities": [
+            "cryptocurrency_security",
+            "security_binance"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-31",
+        "last_seen_at": "2026-10-31",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -180,12 +249,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 2,
+      "public_development_count": 3,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Massive $6.3 Billion Hack Targets Binance Cryptocurrency Exchange",
-    "latest_summary": "Hackers have stolen approximately $6.3 billion from Binance, the world's largest cryptocurrency exchange, marking it as potentially the largest crypto heist in history. Analysts suggest that the attack may have been orchestrated by North Korean hackers. In response to the breach, Binance has stated that it will cover the losses and has frozen about half of the stolen assets to mitigate the impact on users.",
+    "latest_title": "Binance Recovers 90% of Stolen Cryptocurrency Assets After Hack",
+    "latest_summary": "Binance has announced that it has replenished approximately 90% of the cryptocurrency assets stolen during a recent security incident. The exchange confirmed that the majority of the stolen funds have been recovered following the hack.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": false,
@@ -195,28 +264,29 @@
       "display_title": "Massive $6.3 Billion Hack Targets Binance Cryptocurrency Exchange",
       "milestone_development_ids": [
         "story_a112872d7a403861",
-        "story_b5e3e883cca2a09f"
+        "story_b5e3e883cca2a09f",
+        "story_4ee91557c2642c3a"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-10-30",
-      "development_count": 2,
-      "coverage_packet_count": 2,
-      "date_count": 1,
-      "source_count": 6,
-      "independent_source_count": 6,
+      "summary_updated_at": "2026-10-31",
+      "development_count": 3,
+      "coverage_packet_count": 3,
+      "date_count": 2,
+      "source_count": 8,
+      "independent_source_count": 8,
       "first_date": "2026-10-30",
-      "latest_date": "2026-10-30",
-      "latest_update_title": "Massive $6.3 Billion Hack Targets Binance Cryptocurrency Exchange",
-      "coverage_score": 0.457,
+      "latest_date": "2026-10-31",
+      "latest_update_title": "Binance Recovers 90% of Stolen Cryptocurrency Assets After Hack",
+      "coverage_score": 0.655,
       "recency_score": 1.0,
-      "rank_score": 0.772,
-      "context_summary": "Muninn first tracked this thread on 2026-10-30: Binance Investigates Major Security Issue Affecting $6.3 Billion. The latest development is Massive $6.3 Billion Hack Targets Binance Cryptocurrency Exchange.",
+      "rank_score": 0.855,
+      "context_summary": "Muninn first tracked this thread on 2026-10-30: Binance Investigates Major Security Issue Affecting $6.3 Billion. The latest development is Binance Recovers 90% of Stolen Cryptocurrency Assets After Hack.",
       "cta_label": ""
     },
     "event_summary": {
       "available": true,
-      "summary": "Binance, the largest cryptocurrency exchange, is investigating a potential security issue that may have impacted approximately $6.3 billion. Most recently, hackers have stolen approximately $6.3 billion from Binance, the world's largest cryptocurrency exchange, marking it as potentially the largest crypto heist in history.",
+      "summary": "Binance, the largest cryptocurrency exchange, is investigating a potential security issue that may have impacted approximately $6.3 billion. A later development was Massive $6.3 Billion Hack Targets Binance Cryptocurrency Exchange. Most recently, binance has announced that it has replenished approximately 90% of the cryptocurrency assets stolen during a recent security incident.",
       "key_developments": [
         {
           "development_id": "story_a112872d7a403861",
@@ -227,6 +297,11 @@
           "development_id": "story_b5e3e883cca2a09f",
           "date": "2026-10-30",
           "title": "Massive $6.3 Billion Hack Targets Binance Cryptocurrency Exchange"
+        },
+        {
+          "development_id": "story_4ee91557c2642c3a",
+          "date": "2026-10-31",
+          "title": "Binance Recovers 90% of Stolen Cryptocurrency Assets After Hack"
         }
       ],
       "sources": [
@@ -265,18 +340,52 @@
           "source": "France 24",
           "link": "https://www.france24.com/en/technology/20261030-how-the-record-breaking-6-3-billion-heist-in-crypto-history-unfolded",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Binance replenishes 90% of assets stolen in security incident",
+          "source": "Channel NewsAsia",
+          "link": "https://www.channelnewsasia.com/business/binance-replenishes-90-assets-stolen-in-security-incident-6509761",
+          "source_bias": "center"
+        },
+        {
+          "title": "Majority of funds stolen in cryptocurrency hack replenished, Binance says",
+          "source": "Sky News",
+          "link": "https://news.sky.com/story/majority-of-funds-stolen-in-cryptocurrency-hack-replenished-binance-says-13606152",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-10-30",
+      "updated_at": "2026-10-31",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "developing_event",
+    "related_events": [],
+    "hero_image": {
+      "url": "/Current_news/generated/events/event_massive-6-3-billion-hack-targets-binance-cry_49b9131bf5.jpg",
+      "thumbnail_url": "/Current_news/generated/events/event_massive-6-3-billion-hack-targets-binance-cry_49b9131bf5.jpg",
+      "source": "Muninn AI illustration",
+      "author": "OpenAI GPT Image 2",
+      "license": "AI-generated content",
+      "image_role": "illustrative",
+      "image_role_label": "AI illustration",
+      "is_ai_generated": true,
+      "generation_model": "gpt-image-2",
+      "generation_quality": "low",
+      "safe_to_crop": true,
+      "allows_crop": true,
+      "focal_x": 0.5,
+      "focal_y": 0.48,
+      "focal_wide_x": 0.5,
+      "focal_wide_y": 0.48,
+      "focal_tall_x": 0.5,
+      "focal_tall_y": 0.48
+    },
     "search_tokens": [
       "actively",
       "address",
       "affecting",
       "although",
       "analyst",
+      "announced",
       "approximately",
       "asset",
       "attack",
@@ -299,6 +408,7 @@
       "history",
       "impact",
       "impacted",
+      "incident",
       "indicated",
       "investigate",
       "investigating",
@@ -306,6 +416,7 @@
       "korean",
       "largest",
       "losse",
+      "majority",
       "marking",
       "massive",
       "mitigate",
@@ -313,6 +424,10 @@
       "orchestrated",
       "potential",
       "potentially",
+      "recent",
+      "recover",
+      "recovered",
+      "replenished",
       "resemble",
       "response",
       "security",
@@ -332,35 +447,18 @@
       "binance",
       "binance_cryptocurrency",
       "binance_investigate",
+      "binance_recover",
+      "cryptocurrency_asset",
+      "hack_binance",
       "hack_target",
       "issue_affecting",
       "massive_billion",
       "north_korean",
       "security_issue",
+      "stolen_cryptocurrency",
       "target_binance"
     ],
-    "search_text": "actively address affecting affecting_billion although analyst approximately asset attack billion billion_binance billion_hack binance binance_cryptocurrency binance_investigate breach company confirmed cover crypto cryptocurrency exchange founder frozen funds hack hack_target hacker half heist history impact impacted indicated investigate investigating issue issue_affecting korean largest losse marking massive massive_billion mitigate north north_korean orchestrated potential potentially resemble response security security_issue situation stated stolen suggest target target_binance teams users working",
-    "related_events": [],
-    "hero_image": {
-      "url": "/Current_news/generated/events/event_massive-6-3-billion-hack-targets-binance-cry_49b9131bf5.jpg",
-      "thumbnail_url": "/Current_news/generated/events/event_massive-6-3-billion-hack-targets-binance-cry_49b9131bf5.jpg",
-      "source": "Muninn AI illustration",
-      "author": "OpenAI GPT Image 2",
-      "license": "AI-generated content",
-      "image_role": "illustrative",
-      "image_role_label": "AI illustration",
-      "is_ai_generated": true,
-      "generation_model": "gpt-image-2",
-      "generation_quality": "low",
-      "safe_to_crop": true,
-      "allows_crop": true,
-      "focal_x": 0.5,
-      "focal_y": 0.48,
-      "focal_wide_x": 0.5,
-      "focal_wide_y": 0.48,
-      "focal_tall_x": 0.5,
-      "focal_tall_y": 0.48
-    }
+    "search_text": "actively address affecting affecting_billion although analyst announced approximately asset attack billion billion_binance billion_hack binance binance_cryptocurrency binance_investigate binance_recover breach company confirmed cover crypto cryptocurrency cryptocurrency_asset exchange founder frozen funds hack hack_binance hack_target hacker half heist history impact impacted incident indicated investigate investigating issue issue_affecting korean largest losse majority marking massive massive_billion mitigate north north_korean orchestrated potential potentially recent recover recovered replenished resemble response security security_issue situation stated stolen stolen_cryptocurrency suggest target target_binance teams users working"
   },
   "related_events": []
 }
