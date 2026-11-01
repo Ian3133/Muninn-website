@@ -15,7 +15,7 @@
     "summary": "Indian police detained Abhijeet Dipke, founder of the 'Cockroach' youth movement, along with other leaders and hundreds of protesters at Delhi airport on October 10. This crackdown aimed to prevent mass protests against the country's election chief and a contentious voter list revision. Authorities imposed a strict lockdown in New Delhi, blocking thousands from attending the demonstration organized by the Cockroach Janata Party.",
     "status": "active",
     "first_seen_at": "2026-10-10",
-    "last_seen_at": "2026-10-17",
+    "last_seen_at": "2026-11-01",
     "timeline": [
       {
         "development_id": "story_59fcc04f553b2ff2",
@@ -350,6 +350,77 @@
         "first_seen_at": "2026-10-17",
         "last_seen_at": "2026-10-17",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_8e37600faa082701",
+        "daily_story_id": "story_8e37600faa082701",
+        "date": "2026-11-01",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Opposition in India Stages Major Rally Demanding Election Chief's Resignation",
+        "summary": "Thousands of protesters gathered in New Delhi, calling for the resignation of the chief election commissioner. The rally was organized by the opposition in response to controversial revisions of electoral rolls.",
+        "topic_label": "India Elections",
+        "development_type": "election",
+        "key_facts": [
+          "Thousands gathered in New Delhi.",
+          "Protesters demanded the resignation of the chief election commissioner.",
+          "The rally was in response to controversial electoral roll revisions."
+        ],
+        "source_count": 2,
+        "sources": [
+          "BBC",
+          "DW"
+        ],
+        "source_urls": [
+          "https://www.bbc.co.uk/news/articles/c60qk92dvlwgo?at_medium=RSS&at_campaign=rss",
+          "https://www.dw.com/en/india-news-opposition-holds-major-rally-in-delhi-over-voter-roll-revisions/live-79820226?maca=en-rss-en-all-1573-rdf"
+        ],
+        "source_details": [
+          {
+            "title": "India's opposition holds mega rally seeking election chief's resignation",
+            "source": "BBC",
+            "link": "https://www.bbc.co.uk/news/articles/c60qk92dvlwgo?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          },
+          {
+            "title": "India news: Opposition holds major rally in Delhi over voter roll revisions",
+            "source": "DW",
+            "link": "https://www.dw.com/en/india-news-opposition-holds-major-rally-in-delhi-over-voter-roll-revisions/live-79820226?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_477d9e88895f9707",
+          "shared_tokens": [
+            "chief",
+            "delhi",
+            "demanded",
+            "election",
+            "india",
+            "protester",
+            "resignation"
+          ],
+          "shared_entities": [
+            "chief_resignation",
+            "election_chief",
+            "india",
+            "india_election",
+            "resignation_india"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-11-01",
+        "last_seen_at": "2026-11-01",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -379,12 +450,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 4,
+      "public_development_count": 5,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Founder of India's 'Cockroach' Movement Released After Detention",
-    "latest_summary": "Abhijeet Dipke, the founder of the Cockroach Janta Party, was released from detention a day after his arrest. His release followed an agreement to certain conditions, as confirmed by the party's head of legal affairs. Dipke gained attention earlier this year for leading a sit-in that contributed to the resignation of India's education minister.",
+    "latest_title": "Opposition in India Stages Major Rally Demanding Election Chief's Resignation",
+    "latest_summary": "Thousands of protesters gathered in New Delhi, calling for the resignation of the chief election commissioner. The rally was organized by the opposition in response to controversial revisions of electoral rolls.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -396,28 +467,29 @@
         "story_59fcc04f553b2ff2",
         "story_477d9e88895f9707",
         "story_ff474486043d4098",
-        "story_ba95eb626e1f153e"
+        "story_ba95eb626e1f153e",
+        "story_8e37600faa082701"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-10-17",
-      "development_count": 4,
-      "coverage_packet_count": 4,
-      "date_count": 4,
-      "source_count": 13,
+      "summary_updated_at": "2026-11-01",
+      "development_count": 5,
+      "coverage_packet_count": 5,
+      "date_count": 5,
+      "source_count": 15,
       "independent_source_count": 10,
       "first_date": "2026-10-10",
-      "latest_date": "2026-10-17",
-      "latest_update_title": "Founder of India's 'Cockroach' Movement Released After Detention",
-      "coverage_score": 0.843,
-      "recency_score": 0.333,
-      "rank_score": 0.548,
-      "context_summary": "Muninn first tracked this thread on 2026-10-10: Indian Police Detain Leaders of 'Cockroach' Movement Ahead of Protests. The latest development is Founder of India's 'Cockroach' Movement Released After Detention.",
-      "cta_label": "Explore 4 developments"
+      "latest_date": "2026-11-01",
+      "latest_update_title": "Opposition in India Stages Major Rally Demanding Election Chief's Resignation",
+      "coverage_score": 0.942,
+      "recency_score": 1.0,
+      "rank_score": 0.976,
+      "context_summary": "Muninn first tracked this thread on 2026-10-10: Indian Police Detain Leaders of 'Cockroach' Movement Ahead of Protests. The latest development is Opposition in India Stages Major Rally Demanding Election Chief's Resignation.",
+      "cta_label": "Explore 5 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Indian police detained Abhijeet Dipke, founder of the 'Cockroach' youth movement, along with other leaders and hundreds of protesters at Delhi airport on October 10. A later development was Indian Police Detain Cockroach Movement Founder Ahead of Planned Protest. Most recently, abhijeet Dipke, the founder of the Cockroach Janta Party, was released from detention a day after his arrest.",
+      "summary": "Indian police detained Abhijeet Dipke, founder of the 'Cockroach' youth movement, along with other leaders and hundreds of protesters at Delhi airport on October 10. A later development was Indian Police Detain Cockroach Movement Founder Ahead of Planned Protest. Most recently, thousands of protesters gathered in New Delhi, calling for the resignation of the chief election commissioner.",
       "key_developments": [
         {
           "development_id": "story_59fcc04f553b2ff2",
@@ -438,6 +510,11 @@
           "development_id": "story_ba95eb626e1f153e",
           "date": "2026-10-17",
           "title": "Founder of India's 'Cockroach' Movement Released After Detention"
+        },
+        {
+          "development_id": "story_8e37600faa082701",
+          "date": "2026-11-01",
+          "title": "Opposition in India Stages Major Rally Demanding Election Chief's Resignation"
         }
       ],
       "sources": [
@@ -518,18 +595,40 @@
           "source": "DW",
           "link": "https://www.dw.com/en/india-news-cjp-founder-released-a-day-after-detention/live-79685143?maca=en-rss-en-all-1573-rdf",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "India's opposition holds mega rally seeking election chief's resignation",
+          "source": "BBC",
+          "link": "https://www.bbc.co.uk/news/articles/c60qk92dvlwgo?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
+        },
+        {
+          "title": "India news: Opposition holds major rally in Delhi over voter roll revisions",
+          "source": "DW",
+          "link": "https://www.dw.com/en/india-news-opposition-holds-major-rally-in-delhi-over-voter-roll-revisions/live-79820226?maca=en-rss-en-all-1573-rdf",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-10-17",
+      "updated_at": "2026-11-01",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
     "related_events": [
       {
+        "event_id": "event_france-faces-aftermath-of-violent-protests-w_6d2156f35f",
+        "title": "France Faces Aftermath of Violent Protests with Widespread Damage and Arrests",
+        "relationship": "related_topic",
+        "confidence": 0.708,
+        "shared_entities": [
+          "delhi",
+          "india"
+        ]
+      },
+      {
         "event_id": "event_protests-erupt-in-india-demanding-resignatio_ce12dfc1ae",
         "title": "Protests Erupt in India Demanding Resignation of Election Chief",
         "relationship": "related_topic",
-        "confidence": 0.69,
+        "confidence": 0.689,
         "shared_entities": [
           "election_chief",
           "india"
@@ -693,6 +792,7 @@
       "authoritie",
       "banning",
       "blocking",
+      "calling",
       "calls",
       "central",
       "certain",
@@ -700,17 +800,20 @@
       "cockroach",
       "coincided",
       "comes",
+      "commissioner",
       "condition",
       "confirmed",
       "consecutive",
       "contentiou",
       "contributed",
+      "controversial",
       "court",
       "crackdown",
       "decision",
       "defie",
       "delhi",
       "demanded",
+      "demanding",
       "demonstration",
       "detain",
       "detained",
@@ -719,9 +822,11 @@
       "earlier",
       "education",
       "election",
+      "electoral",
       "followed",
       "founder",
       "gained",
+      "gathered",
       "gathering",
       "head",
       "hundred",
@@ -740,6 +845,7 @@
       "mass",
       "movement",
       "october",
+      "opposition",
       "order",
       "organized",
       "other",
@@ -749,6 +855,7 @@
       "preventive",
       "protest",
       "protester",
+      "rally",
       "recent",
       "release",
       "released",
@@ -756,9 +863,11 @@
       "response",
       "resulted",
       "revision",
+      "rolls",
       "second",
       "senior",
       "sit-in",
+      "stage",
       "strict",
       "such",
       "they",
@@ -775,6 +884,7 @@
       "cockroach_janta",
       "cockroach_movement",
       "delhi",
+      "demanding_election",
       "detain_cockroach",
       "detain_leader",
       "detention",
@@ -784,6 +894,7 @@
       "india",
       "india_cockroach",
       "india_lead",
+      "india_stage",
       "janata_party.",
       "janta_party",
       "movement_ahead",
@@ -791,11 +902,47 @@
       "movement_released",
       "party._protest",
       "planned_protest",
-      "protest_indian"
+      "protest_indian",
+      "rally_demanding",
+      "resignation_thousand"
     ],
-    "search_text": "abhijeet abhijeet_dipke action affair agreement ahead aimed airport along arrest attending attention authoritie banning blocking calls central certain chief chief_resignation cockroach cockroach_janata cockroach_janta cockroach_movement coincided comes condition confirmed consecutive contentiou contributed court crackdown decision defie delhi demanded demonstration detain detain_cockroach detain_leader detained detention detention_abhijeet dipke earlier education election election_chief followed founder founder_ahead gained gathering head hundred imposed india india_cockroach india_lead indian jailing janata janata_party. janta janta_party lead leader leading legal list lockdown mass movement movement_ahead movement_founder movement_released october order organized other party party._protest planned planned_protest prevent preventive protest protest_indian protester recent release released resignation response resulted revision second senior sit-in strict such they thousand voter which year youth"
+    "search_text": "abhijeet abhijeet_dipke action affair agreement ahead aimed airport along arrest attending attention authoritie banning blocking calling calls central certain chief chief_resignation cockroach cockroach_janata cockroach_janta cockroach_movement coincided comes commissioner condition confirmed consecutive contentiou contributed controversial court crackdown decision defie delhi demanded demanding demanding_election demonstration detain detain_cockroach detain_leader detained detention detention_abhijeet dipke earlier education election election_chief electoral followed founder founder_ahead gained gathered gathering head hundred imposed india india_cockroach india_lead india_stage indian jailing janata janata_party. janta janta_party lead leader leading legal list lockdown mass movement movement_ahead movement_founder movement_released october opposition order organized other party party._protest planned planned_protest prevent preventive protest protest_indian protester rally rally_demanding recent release released resignation resignation_thousand response resulted revision rolls second senior sit-in stage strict such they thousand voter which year youth"
   },
   "related_events": [
+    {
+      "event_id": "event_france-faces-aftermath-of-violent-protests-w_6d2156f35f",
+      "title": "France Faces Aftermath of Violent Protests with Widespread Damage and Arrests",
+      "summary": "Muninn first tracked this thread on 2026-10-18: France Faces Aftermath of Violent Protests with Widespread Damage and Arrests. The latest development is Student Unions Announce Resumption of School Blockades in France.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-10-18",
+      "last_seen_at": "2026-11-01",
+      "development_count": 25,
+      "latest_title": "Student Unions Announce Resumption of School Blockades in France",
+      "topic_label": "Protests in France",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_france-faces-aftermath-of-violent-protests-w_6d2156f35f.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_france-faces-aftermath-of-violent-protests-w_6d2156f35f.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_france-faces-aftermath-of-violent-protests-w_6d2156f35f"
+    },
     {
       "event_id": "event_protests-erupt-in-india-demanding-resignatio_ce12dfc1ae",
       "title": "Protests Erupt in India Demanding Resignation of Election Chief",

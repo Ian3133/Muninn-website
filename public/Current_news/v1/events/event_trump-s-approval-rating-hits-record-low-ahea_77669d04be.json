@@ -1,0 +1,368 @@
+{
+  "schema_version": 1,
+  "resource_type": "event",
+  "event_id": "event_trump-s-approval-rating-hits-record-low-ahea_77669d04be",
+  "publication": {
+    "status": "published",
+    "permalink": "/timeline.html?event=event_trump-s-approval-rating-hits-record-low-ahea_77669d04be",
+    "share_expires_at": null
+  },
+  "event": {
+    "event_id": "event_trump-s-approval-rating-hits-record-low-ahea_77669d04be",
+    "title": "Trump's Approval Rating Hits Record Low Ahead of Midterm Elections",
+    "canonical_title": "Trump's Approval Rating Hits Record Low Ahead of Midterm Elections",
+    "topic_label": "US Midterm Elections",
+    "summary": "President Donald Trump's approval rating has fallen to a record low of 31%, raising concerns among Republicans as they approach the November midterm elections. The decline in support could jeopardize the party's control of the House of Representatives, prompting discussions about potential gains for Democrats.",
+    "status": "active",
+    "first_seen_at": "2026-10-20",
+    "last_seen_at": "2026-11-01",
+    "timeline": [
+      {
+        "development_id": "story_43e9ed6fa86d83b4",
+        "daily_story_id": "story_43e9ed6fa86d83b4",
+        "date": "2026-10-20",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Trump's Approval Rating Hits Record Low Ahead of Midterm Elections",
+        "summary": "President Donald Trump's approval rating has fallen to a record low of 31%, raising concerns among Republicans as they approach the November midterm elections. The decline in support could jeopardize the party's control of the House of Representatives, prompting discussions about potential gains for Democrats.",
+        "topic_label": "US Midterm Elections",
+        "development_type": "election",
+        "key_facts": [
+          "Trump's approval rating is at 31%",
+          "Concerns among Republicans about midterm elections",
+          "Risk of losing control of the House of Representatives"
+        ],
+        "source_count": 2,
+        "sources": [
+          "France 24 - English",
+          "PBS News - Headlines"
+        ],
+        "source_urls": [
+          "https://www.france24.com/en/video/20261020-us-midterm-elections-trump-approval-rating-falls-to-new-low",
+          "https://www.pbs.org/newshour/show/tamara-keith-and-carrie-dann-on-trumps-approval-rating-hitting-a-record-low"
+        ],
+        "source_details": [
+          {
+            "title": "US midterm elections: Trump approval rating falls to new low",
+            "source": "France 24 - English",
+            "link": "https://www.france24.com/en/video/20261020-us-midterm-elections-trump-approval-rating-falls-to-new-low",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Tamara Keith and Carrie Dann on Trump's approval rating hitting a record low",
+            "source": "PBS News - Headlines",
+            "link": "https://www.pbs.org/newshour/show/tamara-keith-and-carrie-dann-on-trumps-approval-rating-hitting-a-record-low",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 1.0,
+        "match_evidence": {
+          "score": 1.0,
+          "method": "new_event",
+          "shared_tokens": [],
+          "shared_entities": []
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-10-20",
+        "last_seen_at": "2026-10-20",
+        "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_8821f774526f9563",
+        "daily_story_id": "story_8821f774526f9563",
+        "date": "2026-11-01",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Record Early Voting Ahead of Upcoming Midterm Elections",
+        "summary": "As the midterm elections approach, over 50 million votes have already been cast, marking a record for early voting. This turnout surpasses the early voting figures from the 2022 midterm elections, indicating heightened engagement from voters as both parties ramp up their campaigns ahead of the polls on Tuesday.",
+        "topic_label": "US Midterm Elections",
+        "development_type": "election",
+        "key_facts": [
+          "Over 50 million votes cast in early voting for the midterm elections.",
+          "Early voting numbers exceed those from the 2022 midterm elections.",
+          "Both parties are actively campaigning in the lead-up to the elections."
+        ],
+        "source_count": 2,
+        "sources": [
+          "ABC News",
+          "Al Jazeera English"
+        ],
+        "source_urls": [
+          "https://abcnews.com/video/137700177",
+          "https://www.aljazeera.com/news/2026/11/1/more-than-50-million-votes-cast-in-us-midterm-elections-what-does-it-mean?traffic_source=rss"
+        ],
+        "source_details": [
+          {
+            "title": "WATCH: State of the race with 4 days until midterm vote",
+            "source": "ABC News",
+            "link": "https://abcnews.com/video/137700177",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "More than 50 million votes cast in US midterm elections: What does it mean?",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/news/2026/11/1/more-than-50-million-votes-cast-in-us-midterm-elections-what-does-it-mean?traffic_source=rss",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_43e9ed6fa86d83b4",
+          "shared_tokens": [
+            "ahead",
+            "approach",
+            "election",
+            "midterm",
+            "record"
+          ],
+          "shared_entities": [
+            "midterm_election",
+            "us"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-11-01",
+        "last_seen_at": "2026-11-01",
+        "integrity_status": "trusted"
+      }
+    ],
+    "integrity": {
+      "public_development_count": 2,
+      "questionable_development_count": 0,
+      "review_required": false
+    },
+    "latest_title": "Record Early Voting Ahead of Upcoming Midterm Elections",
+    "latest_summary": "As the midterm elections approach, over 50 million votes have already been cast, marking a record for early voting. This turnout surpasses the early voting figures from the 2022 midterm elections, indicating heightened engagement from voters as both parties ramp up their campaigns ahead of the polls on Tuesday.",
+    "presentation": {
+      "has_context": true,
+      "has_full_timeline": false,
+      "stage": "developing_event",
+      "stage_label": "Developing event",
+      "base_title": "Trump's Approval Rating Hits Record Low Ahead of Midterm Elections",
+      "display_title": "Trump's Approval Rating Hits Record Low Ahead of Midterm Elections",
+      "milestone_development_ids": [
+        "story_43e9ed6fa86d83b4",
+        "story_8821f774526f9563"
+      ],
+      "summary_available": true,
+      "summary_label": "Read the story so far",
+      "summary_updated_at": "2026-11-01",
+      "development_count": 2,
+      "coverage_packet_count": 2,
+      "date_count": 2,
+      "source_count": 4,
+      "independent_source_count": 4,
+      "first_date": "2026-10-20",
+      "latest_date": "2026-11-01",
+      "latest_update_title": "Record Early Voting Ahead of Upcoming Midterm Elections",
+      "coverage_score": 0.397,
+      "recency_score": 1.0,
+      "rank_score": 0.747,
+      "context_summary": "Muninn first tracked this thread on 2026-10-20: Trump's Approval Rating Hits Record Low Ahead of Midterm Elections. The latest development is Record Early Voting Ahead of Upcoming Midterm Elections.",
+      "cta_label": ""
+    },
+    "event_summary": {
+      "available": true,
+      "summary": "President Donald Trump's approval rating has fallen to a record low of 31%, raising concerns among Republicans as they approach the November midterm elections. Most recently, as the midterm elections approach, over 50 million votes have already been cast, marking a record for early voting.",
+      "key_developments": [
+        {
+          "development_id": "story_43e9ed6fa86d83b4",
+          "date": "2026-10-20",
+          "title": "Trump's Approval Rating Hits Record Low Ahead of Midterm Elections"
+        },
+        {
+          "development_id": "story_8821f774526f9563",
+          "date": "2026-11-01",
+          "title": "Record Early Voting Ahead of Upcoming Midterm Elections"
+        }
+      ],
+      "sources": [
+        {
+          "title": "US midterm elections: Trump approval rating falls to new low",
+          "source": "France 24 - English",
+          "link": "https://www.france24.com/en/video/20261020-us-midterm-elections-trump-approval-rating-falls-to-new-low",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Tamara Keith and Carrie Dann on Trump's approval rating hitting a record low",
+          "source": "PBS News - Headlines",
+          "link": "https://www.pbs.org/newshour/show/tamara-keith-and-carrie-dann-on-trumps-approval-rating-hitting-a-record-low",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "WATCH: State of the race with 4 days until midterm vote",
+          "source": "ABC News",
+          "link": "https://abcnews.com/video/137700177",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "More than 50 million votes cast in US midterm elections: What does it mean?",
+          "source": "Al Jazeera English",
+          "link": "https://www.aljazeera.com/news/2026/11/1/more-than-50-million-votes-cast-in-us-midterm-elections-what-does-it-mean?traffic_source=rss",
+          "source_bias": "lean-left"
+        }
+      ],
+      "updated_at": "2026-11-01",
+      "provenance": "source_grounded_event_memory"
+    },
+    "event_stage": "developing_event",
+    "related_events": [
+      {
+        "event_id": "event_kushner-and-jeffries-meet-ahead-of-midterm-e_c40befd9a1",
+        "title": "Kushner and Jeffries Meet Ahead of Midterm Elections",
+        "relationship": "related_topic",
+        "confidence": 0.72,
+        "shared_entities": [
+          "donald_trump",
+          "midterm_election"
+        ]
+      },
+      {
+        "event_id": "event_no-kings-rallies-nationwide-encourage-early_e9ec3eee1d",
+        "title": "No Kings Rallies Nationwide Encourage Early Voting Ahead of Midterms",
+        "relationship": "related_topic",
+        "confidence": 0.687,
+        "shared_entities": [
+          "early_voting",
+          "voting_ahead"
+        ]
+      }
+    ],
+    "search_tokens": [
+      "2022",
+      "ahead",
+      "already",
+      "among",
+      "approach",
+      "approval",
+      "both",
+      "campaign",
+      "cast",
+      "concern",
+      "control",
+      "decline",
+      "democrat",
+      "discussion",
+      "donald",
+      "early",
+      "election",
+      "engagement",
+      "fallen",
+      "figure",
+      "gains",
+      "heightened",
+      "hits",
+      "house",
+      "indicating",
+      "jeopardize",
+      "marking",
+      "midterm",
+      "million",
+      "november",
+      "partie",
+      "party",
+      "polls",
+      "potential",
+      "prompting",
+      "raising",
+      "ramp",
+      "rating",
+      "record",
+      "representative",
+      "republican",
+      "support",
+      "surpasse",
+      "they",
+      "trump",
+      "tuesday",
+      "turnout",
+      "upcoming",
+      "voter",
+      "votes",
+      "voting"
+    ],
+    "entities": [
+      "approval_rating",
+      "democrats._record",
+      "donald_trump",
+      "early_voting",
+      "hits_record",
+      "low_ahead",
+      "midterm_election",
+      "rating_hits",
+      "record_early",
+      "record_low",
+      "trump_approval",
+      "upcoming_midterm",
+      "voting_ahead"
+    ],
+    "search_text": "2022 ahead already among approach approval approval_rating both campaign cast concern control decline democrat democrats._record discussion donald donald_trump early early_voting election engagement fallen figure gains heightened hits hits_record house indicating jeopardize low_ahead marking midterm midterm_election million november partie party polls potential prompting raising ramp rating rating_hits record record_early record_low representative republican support surpasse they trump trump_approval tuesday turnout upcoming upcoming_midterm voter votes voting voting_ahead",
+    "hero_image": {
+      "url": "/Current_news/generated/events/event_trump-s-approval-rating-hits-record-low-ahea_77669d04be.jpg",
+      "thumbnail_url": "/Current_news/generated/events/event_trump-s-approval-rating-hits-record-low-ahea_77669d04be.jpg",
+      "source": "Muninn AI illustration",
+      "author": "OpenAI GPT Image 2",
+      "license": "AI-generated content",
+      "image_role": "illustrative",
+      "image_role_label": "AI illustration",
+      "is_ai_generated": true,
+      "generation_model": "gpt-image-2",
+      "generation_quality": "low",
+      "safe_to_crop": true,
+      "allows_crop": true,
+      "focal_x": 0.5,
+      "focal_y": 0.48,
+      "focal_wide_x": 0.5,
+      "focal_wide_y": 0.48,
+      "focal_tall_x": 0.5,
+      "focal_tall_y": 0.48
+    }
+  },
+  "related_events": [
+    {
+      "event_id": "event_kushner-and-jeffries-meet-ahead-of-midterm-e_c40befd9a1",
+      "title": "Kushner and Jeffries Meet Ahead of Midterm Elections",
+      "summary": "Muninn first tracked this thread on 2026-08-24: Kushner and Jeffries Meet Ahead of Midterm Elections. The latest development is Obama and Trump Campaign Ahead of Midterm Elections.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-08-24",
+      "last_seen_at": "2026-10-25",
+      "development_count": 5,
+      "latest_title": "Obama and Trump Campaign Ahead of Midterm Elections",
+      "topic_label": "Midterm Elections",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_kushner-and-jeffries-meet-ahead-of-midterm-e_c40befd9a1.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_kushner-and-jeffries-meet-ahead-of-midterm-e_c40befd9a1.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_kushner-and-jeffries-meet-ahead-of-midterm-e_c40befd9a1"
+    }
+  ]
+}
