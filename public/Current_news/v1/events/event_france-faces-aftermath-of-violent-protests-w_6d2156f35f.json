@@ -15,7 +15,7 @@
     "summary": "France is dealing with significant damage following violent protests that erupted on Saturday, October 17. The demonstrations, which were initially against rising living costs and poor school conditions, escalated into clashes with police, resulting in widespread looting and destruction across multiple cities. Authorities reported approximately 1,800 arrests nationwide, with significant incidents including a historic town hall being set ablaze.",
     "status": "active",
     "first_seen_at": "2026-10-18",
-    "last_seen_at": "2026-11-01",
+    "last_seen_at": "2026-11-02",
     "timeline": [
       {
         "development_id": "story_c59b5b96ff9b6cde",
@@ -1912,6 +1912,87 @@
         "first_seen_at": "2026-11-01",
         "last_seen_at": "2026-11-01",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_b2e5e5b288276ec2",
+        "daily_story_id": "story_b2e5e5b288276ec2",
+        "date": "2026-11-02",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Student Protests Resume in France as Schools Reopen",
+        "summary": "Student protests have resumed in France as pupils return to school following a two-week break. The demonstrations are occurring on a smaller scale compared to previous weeks, with students attempting to blockade some secondary schools.",
+        "topic_label": "Student Protests",
+        "development_type": "development",
+        "key_facts": [
+          "Student protests resumed in France",
+          "Protests are smaller in scale than previous weeks",
+          "Students attempted to blockade some secondary schools"
+        ],
+        "source_count": 2,
+        "sources": [
+          "Al Jazeera English",
+          "RTE News"
+        ],
+        "source_urls": [
+          "https://www.aljazeera.com/video/newsfeed/2026/11/2/student-protests-resume-in-france-as-pupils-return-to-school?traffic_source=rss",
+          "https://www.rte.ie/news/world/2026/1102/1597605-school-protests-europe"
+        ],
+        "source_details": [
+          {
+            "title": "Student protests resume in France as pupils return to school",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/video/newsfeed/2026/11/2/student-protests-resume-in-france-as-pupils-return-to-school?traffic_source=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "School protests resume in France as schools reopen",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/world/2026/1102/1597605-school-protests-europe",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "protest"
+          ],
+          "shared_incident_anchors": [
+            "france",
+            "france_protest",
+            "protest_student",
+            "school",
+            "student"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "blockade",
+            "france",
+            "protest",
+            "resume",
+            "school",
+            "student",
+            "weeks"
+          ],
+          "shared_entities": [
+            "france",
+            "france_protest",
+            "protest_student",
+            "school",
+            "student"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_75d1734cccbbfb49",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-11-02",
+        "last_seen_at": "2026-11-02",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -1939,12 +2020,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 25,
+      "public_development_count": 26,
       "questionable_development_count": 1,
       "review_required": true
     },
-    "latest_title": "Student Unions Announce Resumption of School Blockades in France",
-    "latest_summary": "Student unions in France have announced that high school blockades will restart on Monday, following weeks of protests against rising prices and deteriorating learning conditions. The decision comes after President Emmanuel Macron's call for classes to resume, which students deemed insufficient in addressing the ongoing education crisis.",
+    "latest_title": "Student Protests Resume in France as Schools Reopen",
+    "latest_summary": "Student protests have resumed in France as pupils return to school following a two-week break. The demonstrations are occurring on a smaller scale compared to previous weeks, with students attempting to blockade some secondary schools.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -1955,29 +2036,29 @@
       "milestone_development_ids": [
         "story_c59b5b96ff9b6cde",
         "story_1d67be1fa965ede6",
-        "story_02800c5bb6b0c35a",
-        "story_75d1734cccbbfb49"
+        "story_d77916062849ec9c",
+        "story_b2e5e5b288276ec2"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-11-01",
-      "development_count": 25,
-      "coverage_packet_count": 26,
-      "date_count": 12,
-      "source_count": 57,
-      "independent_source_count": 24,
+      "summary_updated_at": "2026-11-02",
+      "development_count": 26,
+      "coverage_packet_count": 27,
+      "date_count": 13,
+      "source_count": 59,
+      "independent_source_count": 25,
       "first_date": "2026-10-18",
-      "latest_date": "2026-11-01",
-      "latest_update_title": "Student Unions Announce Resumption of School Blockades in France",
+      "latest_date": "2026-11-02",
+      "latest_update_title": "Student Protests Resume in France as Schools Reopen",
       "coverage_score": 1.0,
       "recency_score": 1.0,
       "rank_score": 1.0,
-      "context_summary": "Muninn first tracked this thread on 2026-10-18: France Faces Aftermath of Violent Protests with Widespread Damage and Arrests. The latest development is Student Unions Announce Resumption of School Blockades in France.",
-      "cta_label": "Explore 25 developments"
+      "context_summary": "Muninn first tracked this thread on 2026-10-18: France Faces Aftermath of Violent Protests with Widespread Damage and Arrests. The latest development is Student Protests Resume in France as Schools Reopen.",
+      "cta_label": "Explore 26 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "France is dealing with significant damage following violent protests that erupted on Saturday, October 17. A later development was Over 1,000 Arrested in France Amid Protests and Clashes. Most recently, student unions in France have announced that high school blockades will restart on Monday, following weeks of protests against rising prices and deteriorating learning conditions.",
+      "summary": "France is dealing with significant damage following violent protests that erupted on Saturday, October 17. A later development was Protests Erupt Across Europe with Soldiers Deployed in Milan. Most recently, student protests have resumed in France as pupils return to school following a two-week break.",
       "key_developments": [
         {
           "development_id": "story_c59b5b96ff9b6cde",
@@ -1990,14 +2071,14 @@
           "title": "Speaking after a ​meeting with intelligence chiefs and senior ministers, the French president said on Thursday that demonstrations organised"
         },
         {
-          "development_id": "story_02800c5bb6b0c35a",
-          "date": "2026-10-28",
-          "title": "Protests Erupt in Lisbon Over Housing Crisis and Police Actions"
+          "development_id": "story_d77916062849ec9c",
+          "date": "2026-10-29",
+          "title": "Protests Erupt in Tel Aviv for Arab-Jewish Unity Government Following Election"
         },
         {
-          "development_id": "story_75d1734cccbbfb49",
-          "date": "2026-11-01",
-          "title": "Student Unions Announce Resumption of School Blockades in France"
+          "development_id": "story_b2e5e5b288276ec2",
+          "date": "2026-11-02",
+          "title": "Student Protests Resume in France as Schools Reopen"
         }
       ],
       "sources": [
@@ -2342,9 +2423,21 @@
           "source": "France 24",
           "link": "https://www.france24.com/en/france/20261101-french-high-school-blockades-to-restart-on-monday-student-unions-say",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Student protests resume in France as pupils return to school",
+          "source": "Al Jazeera English",
+          "link": "https://www.aljazeera.com/video/newsfeed/2026/11/2/student-protests-resume-in-france-as-pupils-return-to-school?traffic_source=rss",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "School protests resume in France as schools reopen",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/world/2026/1102/1597605-school-protests-europe",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-11-01",
+      "updated_at": "2026-11-02",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -2419,7 +2512,7 @@
         "event_id": "event_ceuta-requests-national-emergency-amid-surge_4919a90e1a",
         "title": "Ceuta Border Surge",
         "relationship": "related_topic",
-        "confidence": 0.929,
+        "confidence": 0.93,
         "shared_entities": [
           "erupt_across",
           "europe.",
@@ -2582,6 +2675,7 @@
       "arrived",
       "artist",
       "attempt",
+      "attempting",
       "authoritie",
       "authority",
       "aviv",
@@ -2600,6 +2694,7 @@
       "blocking",
       "both",
       "brace",
+      "break",
       "brief",
       "bring",
       "building",
@@ -2631,6 +2726,7 @@
       "coincided",
       "comes",
       "comment",
+      "compared",
       "comprehensive",
       "concern",
       "concluded",
@@ -2799,6 +2895,7 @@
       "notably",
       "occupation",
       "occurred",
+      "occurring",
       "october",
       "officer",
       "ongoing",
@@ -2826,6 +2923,7 @@
       "posed",
       "prepare",
       "prestigiou",
+      "previou",
       "price",
       "primarily",
       "prime",
@@ -2834,6 +2932,7 @@
       "protest",
       "protester",
       "public",
+      "pupil",
       "raised",
       "recent",
       "recognised",
@@ -2842,6 +2941,7 @@
       "related",
       "remained",
       "removal",
+      "reopen",
       "reported",
       "representing",
       "resignation",
@@ -2851,7 +2951,9 @@
       "resulted",
       "resulting",
       "resume",
+      "resumed",
       "resumption",
+      "return",
       "review",
       "rioter",
       "rioting",
@@ -2864,11 +2966,13 @@
       "route",
       "saturday",
       "saudi",
+      "scale",
       "scene",
       "scheduled",
       "school",
       "seats",
       "sebastien",
+      "secondary",
       "secure",
       "security",
       "senior",
@@ -2880,6 +2984,7 @@
       "similar",
       "sindacale",
       "situation",
+      "smaller",
       "soldier",
       "solidarity",
       "some",
@@ -2915,6 +3020,7 @@
       "turin",
       "turned",
       "turnout",
+      "two-week",
       "union",
       "unione",
       "unity",
@@ -3035,6 +3141,8 @@
       "protest",
       "protest_across",
       "protest_erupt",
+      "protest_resume",
+      "reopen_student",
       "rising_costs",
       "risk_france",
       "riyadh",
@@ -3061,7 +3169,7 @@
       "voter_roll",
       "widespread_damage"
     ],
-    "search_text": "000 130 400 800 ablaze accepted achieved acknowledged across across_europe across_france action action_demonstrator activist adding address addresse addresse_unrest addressing addressing_student administration admitted aftermath ahead albania allowed although amidst among anger announce announced approximately arab arab-jewish arab-jewish_unity arab_party arabia areas around arrest arrest_france arrested arrived art_basel artist attempt authoritie authority aviv banned barricade barricaded base base_usb basel basel_paris bastien began benjamin benjamin_netanyahu berlin bloc bloc_leads block blockade blocking both brace brief bring building call called calls camp cannon capital challenge challenging change change_tens changed chant chaos chaotic characterized chief citie citizen clashe clashed classe cleaning clear clearance close close_due closed coincided comes comment comprehensive concern concluded concrete condemn condemn_violent condemned condition congress contemporary continued control cost cost-of-living cost-of-living_demand costs costs_marseille crisi criticism curfew damage dealing decision declining deemed defending defense defense_spending delhi demand demand_protest demanding demonstrat demonstrated demonstration demonstrator deployed despite destruction deteriorating dialogue discontent discuss disorder disperse doors drums education election electoral emerged emmanuel emmanuel_macron enforcement entrance erupt erupt_across erupted escalated essential europe europe. europe._student european evening event exchange express expressed faces faces_aftermath faction failed fair featured fires follow foreign form france france. france._his france_faces france_france france_lead france_prepare france_prime france_student frankfurt frankfurt_berlin fueled funding gains gallerie gas gathered general germany grand grand_palai grand_palais. grievance gripped group gulf half hall hamburg hamburg._rioter heated heavy heightened high high_violence highlighting historic housing housing_crisi hundred illegitimate improved incident include including increased india inequality initially inside insufficient intelligence interior international intervened isolation israel israel._france israel_arab israel_election italy jewish knesset knesset. lacks lacks_majority landed lands largely laurent lead leader leading leads leads_israel learning lecornu left-wing legitimacy limoge lisbon living living_costs localized looted looting lost louvre louvre_museum lower lyon lyon._macron macron macron_addresse macron_condemn madrid madrid_lisbon majority march marched marked marseille marseille_faces marseille_paris mass mass_protest massive massive_protest measure measure_addressing meet meeting milan milan_rome milan_thousand military military_spending million minority modi monday most mostly mps multiple museum museum_close names nationwide nationwide_protest nearly negotiation netanyahu netanyahu_bloc notably occupation occurred october october_france october_mass officer ongoing organised organiser organized outcome outside palai palai_art palais._but palestinian paris paris_marseille parliament part participant participated partie party party_gains past peaceful peacefully policie political poor portugal posed prepare president prestigiou price primarily prime process proposed protest protest_across protest_erupt protester public raised recent recognised reflecting region related remained removal reported representing resignation resource response restart resulted resulting resume resumption review rioter rioting rising rising_costs risk risk_france rival riyadh roll roll_change rome rome_madrid route saturday saturday_october saudi saudi_arabia scene scheduled school seats sebastien sebastien_lecornu secure security senior service sets several shops significant similar sindacale situation soldier soldier_deployed solidarity some speaking spending spending_thousand stage stated stepped stop street strike student student_protest student_union such surprise taken targeting tear tel tel_aviv tens tension tenth than there they thousand thursday tirana tirana._while took total tour town trade traffic turin turin._nationwide turned turnout union unione unione_sindacale unity unrest unscheduled unveil usb used vandalizing variou very violence violence_risk violent violent_protest visit visited voice voter voter_roll warned water wave wednseday weekend weeks well went which while widespread widespread_damage winner winning worker would young"
+    "search_text": "000 130 400 800 ablaze accepted achieved acknowledged across across_europe across_france action action_demonstrator activist adding address addresse addresse_unrest addressing addressing_student administration admitted aftermath ahead albania allowed although amidst among anger announce announced approximately arab arab-jewish arab-jewish_unity arab_party arabia areas around arrest arrest_france arrested arrived art_basel artist attempt attempting authoritie authority aviv banned barricade barricaded base base_usb basel basel_paris bastien began benjamin benjamin_netanyahu berlin bloc bloc_leads block blockade blocking both brace break brief bring building call called calls camp cannon capital challenge challenging change change_tens changed chant chaos chaotic characterized chief citie citizen clashe clashed classe cleaning clear clearance close close_due closed coincided comes comment compared comprehensive concern concluded concrete condemn condemn_violent condemned condition congress contemporary continued control cost cost-of-living cost-of-living_demand costs costs_marseille crisi criticism curfew damage dealing decision declining deemed defending defense defense_spending delhi demand demand_protest demanding demonstrat demonstrated demonstration demonstrator deployed despite destruction deteriorating dialogue discontent discuss disorder disperse doors drums education election electoral emerged emmanuel emmanuel_macron enforcement entrance erupt erupt_across erupted escalated essential europe europe. europe._student european evening event exchange express expressed faces faces_aftermath faction failed fair featured fires follow foreign form france france. france._his france_faces france_france france_lead france_prepare france_prime france_student frankfurt frankfurt_berlin fueled funding gains gallerie gas gathered general germany grand grand_palai grand_palais. grievance gripped group gulf half hall hamburg hamburg._rioter heated heavy heightened high high_violence highlighting historic housing housing_crisi hundred illegitimate improved incident include including increased india inequality initially inside insufficient intelligence interior international intervened isolation israel israel._france israel_arab israel_election italy jewish knesset knesset. lacks lacks_majority landed lands largely laurent lead leader leading leads leads_israel learning lecornu left-wing legitimacy limoge lisbon living living_costs localized looted looting lost louvre louvre_museum lower lyon lyon._macron macron macron_addresse macron_condemn madrid madrid_lisbon majority march marched marked marseille marseille_faces marseille_paris mass mass_protest massive massive_protest measure measure_addressing meet meeting milan milan_rome milan_thousand military military_spending million minority modi monday most mostly mps multiple museum museum_close names nationwide nationwide_protest nearly negotiation netanyahu netanyahu_bloc notably occupation occurred occurring october october_france october_mass officer ongoing organised organiser organized outcome outside palai palai_art palais._but palestinian paris paris_marseille parliament part participant participated partie party party_gains past peaceful peacefully policie political poor portugal posed prepare president prestigiou previou price primarily prime process proposed protest protest_across protest_erupt protest_resume protester public pupil raised recent recognised reflecting region related remained removal reopen reopen_student reported representing resignation resource response restart resulted resulting resume resumed resumption return review rioter rioting rising rising_costs risk risk_france rival riyadh roll roll_change rome rome_madrid route saturday saturday_october saudi saudi_arabia scale scene scheduled school seats sebastien sebastien_lecornu secondary secure security senior service sets several shops significant similar sindacale situation smaller soldier soldier_deployed solidarity some speaking spending spending_thousand stage stated stepped stop street strike student student_protest student_union such surprise taken targeting tear tel tel_aviv tens tension tenth than there they thousand thursday tirana tirana._while took total tour town trade traffic turin turin._nationwide turned turnout two-week union unione unione_sindacale unity unrest unscheduled unveil usb used vandalizing variou very violence violence_risk violent violent_protest visit visited voice voter voter_roll warned water wave wednseday weekend weeks well went which while widespread widespread_damage winner winning worker would young"
   },
   "related_events": [
     {
