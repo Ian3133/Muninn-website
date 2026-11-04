@@ -15,7 +15,7 @@
     "summary": "Marie-Celestin Karondwa, a politician from the ruling UDPS party in the Democratic Republic of the Congo, was beaten on Sunday after advocating for Ebola awareness during a radio interview. The incident occurred in Butembo, a region experiencing an Ebola outbreak, as residents reacted violently to his message promoting disease prevention measures.",
     "status": "active",
     "first_seen_at": "2026-09-29",
-    "last_seen_at": "2026-11-01",
+    "last_seen_at": "2026-11-04",
     "timeline": [
       {
         "development_id": "story_e63f966f30208f6c",
@@ -1070,6 +1070,75 @@
         "first_seen_at": "2026-10-31",
         "last_seen_at": "2026-10-31",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_eca379f7bec3a24b",
+        "daily_story_id": "story_eca379f7bec3a24b",
+        "date": "2026-11-04",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "British Healthcare Worker with Ebola Evacuated to UK for Treatment",
+        "summary": "A British healthcare worker in the Democratic Republic of Congo has tested positive for Ebola and is being evacuated to the UK for treatment. The patient is reported to be in stable condition and will be transferred to a specialist infectious disease unit. The UK government has confirmed the evacuation and stated that established procedures are in place for handling such cases.",
+        "topic_label": "Ebola Outbreak",
+        "development_type": "development",
+        "key_facts": [
+          "British healthcare worker tested positive for Ebola in DR Congo",
+          "Patient is being evacuated to the UK for treatment",
+          "Patient is reported to be in stable condition"
+        ],
+        "source_count": 2,
+        "sources": [
+          "Sky News",
+          "The Guardian"
+        ],
+        "source_urls": [
+          "https://news.sky.com/story/british-citizen-tests-positive-for-ebola-foreign-office-says-13607278",
+          "https://www.theguardian.com/world/2026/nov/04/british-healthcare-worker-ebola-evacuated-drc-to-uk-document-shows"
+        ],
+        "source_details": [
+          {
+            "title": "Briton with Ebola 'to be treated in UK'",
+            "source": "Sky News",
+            "link": "https://news.sky.com/story/british-citizen-tests-positive-for-ebola-foreign-office-says-13607278",
+            "source_bias": "center"
+          },
+          {
+            "title": "British healthcare worker with Ebola evacuated from DR Congo to UK",
+            "source": "The Guardian",
+            "link": "https://www.theguardian.com/world/2026/nov/04/british-healthcare-worker-ebola-evacuated-drc-to-uk-document-shows",
+            "source_bias": "left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_d52eb0bf28383c8e",
+          "shared_tokens": [
+            "cases",
+            "congo",
+            "democratic",
+            "ebola",
+            "outbreak",
+            "republic",
+            "treatment"
+          ],
+          "shared_entities": [
+            "democratic_republic",
+            "dr",
+            "ebola_outbreak"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-11-04",
+        "last_seen_at": "2026-11-04",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -1098,12 +1167,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 13,
+      "public_development_count": 14,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Ebola Outbreak in Democratic Republic of Congo Claims Over 5,000 Lives",
-    "latest_summary": "The Ebola outbreak in the Democratic Republic of Congo has resulted in more than 5,000 deaths, according to government data. Additionally, over 10,000 individuals have contracted the virus during this outbreak, marking it as one of the deadliest in the region's history.",
+    "latest_title": "British Healthcare Worker with Ebola Evacuated to UK for Treatment",
+    "latest_summary": "A British healthcare worker in the Democratic Republic of Congo has tested positive for Ebola and is being evacuated to the UK for treatment. The patient is reported to be in stable condition and will be transferred to a specialist infectious disease unit. The UK government has confirmed the evacuation and stated that established procedures are in place for handling such cases.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -1114,29 +1183,29 @@
       "milestone_development_ids": [
         "story_e63f966f30208f6c",
         "story_9bea55cbae5c1645",
-        "story_ddaf91923ac7edd9",
-        "story_77522cd6985c6682"
+        "story_ed6f5568f1ba48c7",
+        "story_eca379f7bec3a24b"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-10-31",
-      "development_count": 13,
-      "coverage_packet_count": 14,
-      "date_count": 11,
-      "source_count": 32,
+      "summary_updated_at": "2026-11-04",
+      "development_count": 14,
+      "coverage_packet_count": 15,
+      "date_count": 12,
+      "source_count": 34,
       "independent_source_count": 19,
       "first_date": "2026-09-29",
-      "latest_date": "2026-10-31",
-      "latest_update_title": "Ebola Outbreak in Democratic Republic of Congo Claims Over 5,000 Lives",
+      "latest_date": "2026-11-04",
+      "latest_update_title": "British Healthcare Worker with Ebola Evacuated to UK for Treatment",
       "coverage_score": 1.0,
-      "recency_score": 0.7,
-      "rank_score": 0.826,
-      "context_summary": "Muninn first tracked this thread on 2026-09-29: Congolese Politician Beaten After Promoting Ebola Awareness. The latest development is Ebola Outbreak in Democratic Republic of Congo Claims Over 5,000 Lives.",
-      "cta_label": "Explore 13 developments"
+      "recency_score": 1.0,
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-09-29: Congolese Politician Beaten After Promoting Ebola Awareness. The latest development is British Healthcare Worker with Ebola Evacuated to UK for Treatment.",
+      "cta_label": "Explore 14 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Marie-Celestin Karondwa, a politician from the ruling UDPS party in the Democratic Republic of the Congo, was beaten on Sunday after advocating for Ebola awareness during a radio interview. A later development was Children Bear Heavy Toll in DRC's Severe Ebola Outbreak. Most recently, the Ebola outbreak in the Democratic Republic of Congo has resulted in more than 5,000 deaths, according to government data.",
+      "summary": "Marie-Celestin Karondwa, a politician from the ruling UDPS party in the Democratic Republic of the Congo, was beaten on Sunday after advocating for Ebola awareness during a radio interview. A later development was Kenya Reports Eighth Ebola Case Amid Regional Outbreak. Most recently, a British healthcare worker in the Democratic Republic of Congo has tested positive for Ebola and is being evacuated to the UK for treatment.",
       "key_developments": [
         {
           "development_id": "story_e63f966f30208f6c",
@@ -1149,14 +1218,14 @@
           "title": "Kenya Reports First Confirmed Ebola Case and Death Following Return from DRC"
         },
         {
-          "development_id": "story_ddaf91923ac7edd9",
-          "date": "2026-10-21",
-          "title": "Nigeria is the latest country to report an Ebola case as the latest outbreak spreads across the region"
+          "development_id": "story_ed6f5568f1ba48c7",
+          "date": "2026-10-27",
+          "title": "Ebola Outbreak in DR Congo Surpasses 10,000 Cases Amid Growing Concerns"
         },
         {
-          "development_id": "story_77522cd6985c6682",
-          "date": "2026-10-31",
-          "title": "Ebola Outbreak in Democratic Republic of Congo Claims Over 5,000 Lives"
+          "development_id": "story_eca379f7bec3a24b",
+          "date": "2026-11-04",
+          "title": "British Healthcare Worker with Ebola Evacuated to UK for Treatment"
         }
       ],
       "sources": [
@@ -1351,9 +1420,21 @@
           "source": "BBC",
           "link": "https://www.bbc.co.uk/news/articles/cj5ynryyep2yo?at_medium=RSS&at_campaign=rss",
           "source_bias": "center"
+        },
+        {
+          "title": "Briton with Ebola 'to be treated in UK'",
+          "source": "Sky News",
+          "link": "https://news.sky.com/story/british-citizen-tests-positive-for-ebola-foreign-office-says-13607278",
+          "source_bias": "center"
+        },
+        {
+          "title": "British healthcare worker with Ebola evacuated from DR Congo to UK",
+          "source": "The Guardian",
+          "link": "https://www.theguardian.com/world/2026/nov/04/british-healthcare-worker-ebola-evacuated-drc-to-uk-document-shows",
+          "source_bias": "left"
         }
       ],
-      "updated_at": "2026-10-31",
+      "updated_at": "2026-11-04",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -1368,6 +1449,26 @@
           "democratic",
           "democratic_republic",
           "drc"
+        ]
+      },
+      {
+        "event_id": "event_five-arrested-in-terrorism-investigation-nea_544a3fd817",
+        "title": "Five Arrested in Terrorism Investigation Near UK Air Base Used by US Forces",
+        "relationship": "related_topic",
+        "confidence": 0.664,
+        "shared_entities": [
+          "britain",
+          "uk"
+        ]
+      },
+      {
+        "event_id": "event_uk-prime-minister-open-to-slavery-apology-am_50fe063eed",
+        "title": "UK Prime Minister Open to Slavery Apology Amid Caribbean Tour",
+        "relationship": "related_topic",
+        "confidence": 0.654,
+        "shared_entities": [
+          "britain",
+          "uk"
         ]
       }
     ],
@@ -1510,6 +1611,7 @@
       "bear",
       "beaten",
       "better",
+      "britain",
       "bundibugyo",
       "burning",
       "butembo",
@@ -1529,6 +1631,7 @@
       "clinic",
       "closely",
       "concern",
+      "condition",
       "confirmed",
       "congo",
       "congolese",
@@ -1556,6 +1659,9 @@
       "eighth",
       "enhance",
       "epidemic",
+      "established",
+      "evacuated",
+      "evacuation",
       "exceed",
       "exceeded",
       "exemplified",
@@ -1574,7 +1680,9 @@
       "fronti",
       "growing",
       "hampered",
+      "handling",
       "health",
+      "healthcare",
       "heavy",
       "history",
       "hours",
@@ -1586,6 +1694,7 @@
       "indicating",
       "individual",
       "infection",
+      "infectiou",
       "interview",
       "involving",
       "ituri",
@@ -1629,9 +1738,12 @@
       "party",
       "patient",
       "personnel",
+      "place",
+      "positive",
       "potential",
       "prevention",
       "previously",
+      "procedure",
       "promoting",
       "prompting",
       "protection",
@@ -1672,16 +1784,21 @@
       "since",
       "situation",
       "some",
+      "specialist",
       "specific",
       "spread",
       "spreading",
+      "stable",
       "staff",
       "staggering",
+      "stated",
       "strain",
+      "such",
       "sunday",
       "surpasse",
       "surpassed",
       "test",
+      "tested",
       "testing",
       "than",
       "there",
@@ -1690,10 +1807,12 @@
       "toll",
       "took",
       "trace",
+      "transferred",
       "transit",
       "treatment",
       "ubangi",
       "udps",
+      "unit",
       "vaccine",
       "violence",
       "violently",
@@ -1710,6 +1829,8 @@
     "entities": [
       "awareness_marie-celestin",
       "bear_heavy",
+      "britain",
+      "britain_healthcare",
       "butembo",
       "children_bear",
       "confirmed_ebola",
@@ -1732,6 +1853,7 @@
       "eastern",
       "ebola_awareness",
       "ebola_case",
+      "ebola_evacuated",
       "ebola_outbreak",
       "ebola_patient",
       "ebola_testing",
@@ -1740,6 +1862,7 @@
       "first_confirmed",
       "first_ebola",
       "growing_concern",
+      "healthcare_worker",
       "heavy_toll",
       "ituri",
       "labs_enhance",
@@ -1760,9 +1883,79 @@
       "testing_efficiency",
       "trace_contact",
       "udps",
+      "uk",
       "widespread_concern"
     ],
-    "search_text": "000 026 351 900 across active additionally advocating affected african alarm among announced approved authoritie available awareness awareness_marie-celestin bear bear_heavy beaten better bundibugyo burning butembo calls camp case cases caused celebrated celebration center challenge characterized children children_bear citizen claim clinic closely concern confirmed confirmed_ebola congo congo._health congo_claim congo_drc congo_exceed congo_surpasse congolese congolese_ministry contact contact_kenya continue contracted control currently data deadliest death deceased decin democratic democratic_republic depart depart_treatment discharge disease dr drc drc_kenya drc_severe driven earlier eastern ebola ebola-hit ebola_awareness ebola_case ebola_outbreak ebola_patient ebola_testing efficiency effort eighth eighth_ebola enhance enhance_ebola epidemic exceed exceeded exemplified experiencing face facility fastest-growing fatalitie fatality fears figure first first-ever first_confirmed first_ebola flee forced fronti growing growing_concern hampered health heavy heavy_toll history hours identified improvement incident including indicate indicating individual infection interview involving ituri joyful karondwa kenya kenyan laboratory labs labs_enhance last last_ebola lethality lives local marie-celestin marie-celestin_karondwa marking measure medical message milestone ministry mistrust mobile mobile_labs monitor month most nairobi nation nearby nearly nigeria nine north north_ubangi noted occurred ongoing ongoing_challenge operational other outbreak outbreak_kenya participated particularly party patient patient_depart personnel potential prevention previously promoting promoting_ebola prompting protection provide province public quickly radio raised raising rare rate reached reacted recent recently recorded reducing region regional regional_outbreak relief reported reporting republic required resident respond result resulted resulting return returned ruling sans sans_fronti severe severe_ebola significant significantly since situation some specific spread spreading staff staggering strain sunday surpasse surpasse_cases surpassed test testing testing_efficiency than there they time toll took trace trace_contact transit treatment ubangi udps vaccine violence violently virus weeks where which widespread widespread_concern within worker worst year"
+    "search_text": "000 026 351 900 across active additionally advocating affected african alarm among announced approved authoritie available awareness awareness_marie-celestin bear bear_heavy beaten better britain britain_healthcare bundibugyo burning butembo calls camp case cases caused celebrated celebration center challenge characterized children children_bear citizen claim clinic closely concern condition confirmed confirmed_ebola congo congo._health congo_claim congo_drc congo_exceed congo_surpasse congolese congolese_ministry contact contact_kenya continue contracted control currently data deadliest death deceased decin democratic democratic_republic depart depart_treatment discharge disease dr drc drc_kenya drc_severe driven earlier eastern ebola ebola-hit ebola_awareness ebola_case ebola_evacuated ebola_outbreak ebola_patient ebola_testing efficiency effort eighth eighth_ebola enhance enhance_ebola epidemic established evacuated evacuation exceed exceeded exemplified experiencing face facility fastest-growing fatalitie fatality fears figure first first-ever first_confirmed first_ebola flee forced fronti growing growing_concern hampered handling health healthcare healthcare_worker heavy heavy_toll history hours identified improvement incident including indicate indicating individual infection infectiou interview involving ituri joyful karondwa kenya kenyan laboratory labs labs_enhance last last_ebola lethality lives local marie-celestin marie-celestin_karondwa marking measure medical message milestone ministry mistrust mobile mobile_labs monitor month most nairobi nation nearby nearly nigeria nine north north_ubangi noted occurred ongoing ongoing_challenge operational other outbreak outbreak_kenya participated particularly party patient patient_depart personnel place positive potential prevention previously procedure promoting promoting_ebola prompting protection provide province public quickly radio raised raising rare rate reached reacted recent recently recorded reducing region regional regional_outbreak relief reported reporting republic required resident respond result resulted resulting return returned ruling sans sans_fronti severe severe_ebola significant significantly since situation some specialist specific spread spreading stable staff staggering stated strain such sunday surpasse surpasse_cases surpassed test tested testing testing_efficiency than there they time toll took trace trace_contact transferred transit treatment ubangi udps uk unit vaccine violence violently virus weeks where which widespread widespread_concern within worker worst year"
   },
-  "related_events": []
+  "related_events": [
+    {
+      "event_id": "event_five-arrested-in-terrorism-investigation-nea_544a3fd817",
+      "title": "Five Arrested in Terrorism Investigation Near UK Air Base Used by US Forces",
+      "summary": "Muninn first tracked this thread on 2026-09-27: Five Arrested in Terrorism Investigation Near UK Air Base Used by US Forces. The latest development is Two Men Charged in Connection with RAF Fairford Incident Linked to Iranian Intelligence.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-09-27",
+      "last_seen_at": "2026-10-27",
+      "development_count": 6,
+      "latest_title": "Two Men Charged in Connection with RAF Fairford Incident Linked to Iranian Intelligence",
+      "topic_label": "Terrorism Investigation",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_five-arrested-in-terrorism-investigation-nea_544a3fd817.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_five-arrested-in-terrorism-investigation-nea_544a3fd817.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_five-arrested-in-terrorism-investigation-nea_544a3fd817"
+    },
+    {
+      "event_id": "event_uk-prime-minister-open-to-slavery-apology-am_50fe063eed",
+      "title": "UK Prime Minister Open to Slavery Apology Amid Caribbean Tour",
+      "summary": "Muninn first tracked this thread on 2026-10-31: UK Prime Minister Open to Slavery Apology Amid Caribbean Tour. The latest development is King Charles III Addresses Legacy of Slave Trade at Commonwealth Summit.",
+      "activity_status": "active",
+      "stage": "developing_event",
+      "stage_label": "Developing event",
+      "first_seen_at": "2026-10-31",
+      "last_seen_at": "2026-11-03",
+      "development_count": 2,
+      "latest_title": "King Charles III Addresses Legacy of Slave Trade at Commonwealth Summit",
+      "topic_label": "Slavery Apology",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_uk-prime-minister-open-to-slavery-apology-am_50fe063eed.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_uk-prime-minister-open-to-slavery-apology-am_50fe063eed.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_uk-prime-minister-open-to-slavery-apology-am_50fe063eed"
+    }
+  ]
 }

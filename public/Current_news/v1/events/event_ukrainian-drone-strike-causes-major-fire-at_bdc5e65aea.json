@@ -15,7 +15,7 @@
     "summary": "A Ukrainian drone strike ignited a significant fire at a Wildberries warehouse near Saint Petersburg on July 24. The blaze produced thick smoke that spread across the city and led to temporary disruptions at Pulkovo Airport, as reported by Russian authorities.",
     "status": "active",
     "first_seen_at": "2026-07-25",
-    "last_seen_at": "2026-11-03",
+    "last_seen_at": "2026-11-04",
     "timeline": [
       {
         "development_id": "story_b77a481c5a1a5ef9",
@@ -2503,15 +2503,112 @@
         "first_seen_at": "2026-11-03",
         "last_seen_at": "2026-11-03",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_cc0933ed4b9761be",
+        "daily_story_id": "story_cc0933ed4b9761be",
+        "date": "2026-11-04",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Casualties Rise After Russian Bombing in Zaporizhzhia, Ukraine",
+        "summary": "A Russian bombing of a humanitarian aid site in Ukraine's Zaporizhzhia region on November 2 has resulted in at least 33 confirmed deaths, with over 50 individuals reported missing. The attack has been described as one of the deadliest in the ongoing conflict, with many survivors suffering severe injuries. Bodycam footage from the scene has emerged, capturing the moments leading up to the strike.",
+        "topic_label": "Ukraine Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "33 confirmed dead from the bombing",
+          "Over 50 individuals reported missing",
+          "Attack occurred on November 2, 2026",
+          "Bodycam footage captured moments before the strike"
+        ],
+        "source_count": 3,
+        "sources": [
+          "Africanews",
+          "BBC - World",
+          "RTE News"
+        ],
+        "source_urls": [
+          "http://www.africanews.com/2026/11/04/ukraine-31-dead-over-45-missing-after-russian-bombing-in-zaporizhzhia",
+          "https://www.rte.ie/news/ukraine/2026/1104/1597955-ukraine-russia",
+          "https://www.bbc.co.uk/news/articles/c98rz6penv86o?at_medium=RSS&at_campaign=rss"
+        ],
+        "source_details": [
+          {
+            "title": "Ukraine: 33 dead, over 50 missing after Russian bombing in Zaporizhzhia",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/11/04/ukraine-31-dead-over-45-missing-after-russian-bombing-in-zaporizhzhia",
+            "source_bias": "center"
+          },
+          {
+            "title": "Dozens missing after Russian strike on Ukraine aid centre",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/ukraine/2026/1104/1597955-ukraine-russia",
+            "source_bias": "center"
+          },
+          {
+            "title": "Ukraine says bodycam video shows deadly Russian double-tap bombing",
+            "source": "BBC - World",
+            "link": "https://www.bbc.co.uk/news/articles/c98rz6penv86o?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "attack",
+            "explosion",
+            "strike"
+          ],
+          "shared_incident_anchors": [
+            "russia",
+            "ukraine",
+            "ukraine_zaporizhzhia"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "aid",
+            "attack",
+            "bombing",
+            "conflict",
+            "death",
+            "humanitarian",
+            "least",
+            "many",
+            "missing",
+            "region",
+            "reported",
+            "resulted",
+            "russia",
+            "strike",
+            "ukraine",
+            "zaporizhzhia"
+          ],
+          "shared_entities": [
+            "russia",
+            "ukraine",
+            "ukraine_zaporizhzhia"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_57f743da291f238d",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-11-04",
+        "last_seen_at": "2026-11-04",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 33,
+      "public_development_count": 34,
       "questionable_development_count": 2,
       "review_required": true
     },
-    "latest_title": "Russian Airstrikes on Ukrainian Aid Center Result in 31 Deaths and Many Missing",
-    "latest_summary": "A Russian bombing raid on a humanitarian aid center in the village of Komyshuvakha, located in southern Ukraine's Zaporizhzhia region, has resulted in at least 31 fatalities. Emergency teams are searching through the debris, with more than 45 residents reported missing. The attack involved the use of large aerial bombs and is part of a broader wave of strikes across Ukraine, which also targeted power plants and hospitals.",
+    "latest_title": "Casualties Rise After Russian Bombing in Zaporizhzhia, Ukraine",
+    "latest_summary": "A Russian bombing of a humanitarian aid site in Ukraine's Zaporizhzhia region on November 2 has resulted in at least 33 confirmed deaths, with over 50 individuals reported missing. The attack has been described as one of the deadliest in the ongoing conflict, with many survivors suffering severe injuries. Bodycam footage from the scene has emerged, capturing the moments leading up to the strike.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -2522,29 +2619,29 @@
       "milestone_development_ids": [
         "story_b77a481c5a1a5ef9",
         "story_d402754f03591b92",
-        "story_7a4a6fa2262fbda8",
-        "story_57f743da291f238d"
+        "story_7146dd3ab5c5c0a8",
+        "story_cc0933ed4b9761be"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-11-03",
-      "development_count": 33,
-      "coverage_packet_count": 33,
-      "date_count": 28,
-      "source_count": 89,
+      "summary_updated_at": "2026-11-04",
+      "development_count": 34,
+      "coverage_packet_count": 34,
+      "date_count": 29,
+      "source_count": 92,
       "independent_source_count": 29,
       "first_date": "2026-07-25",
-      "latest_date": "2026-11-03",
-      "latest_update_title": "Russian Airstrikes on Ukrainian Aid Center Result in 31 Deaths and Many Missing",
+      "latest_date": "2026-11-04",
+      "latest_update_title": "Casualties Rise After Russian Bombing in Zaporizhzhia, Ukraine",
       "coverage_score": 1.0,
       "recency_score": 1.0,
       "rank_score": 1.0,
-      "context_summary": "Muninn first tracked this thread on 2026-07-25: Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse. The latest development is Russian Airstrikes on Ukrainian Aid Center Result in 31 Deaths and Many Missing.",
-      "cta_label": "Explore 33 developments"
+      "context_summary": "Muninn first tracked this thread on 2026-07-25: Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse. The latest development is Casualties Rise After Russian Bombing in Zaporizhzhia, Ukraine.",
+      "cta_label": "Explore 34 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "A Ukrainian drone strike ignited a significant fire at a Wildberries warehouse near Saint Petersburg on July 24. A later development was Houthis Capture Strategic Port City in Yemen, Threatening Global Shipping. Most recently, a Russian bombing raid on a humanitarian aid center in the village of Komyshuvakha, located in southern Ukraine's Zaporizhzhia region, has resulted in at least 31 fatalities.",
+      "summary": "A Ukrainian drone strike ignited a significant fire at a Wildberries warehouse near Saint Petersburg on July 24. A later development was Houthis Seize Strategic Perim Island, Strengthening Control Over Red Sea Shipping. Most recently, a Russian bombing of a humanitarian aid site in Ukraine's Zaporizhzhia region on November 2 has resulted in at least 33 confirmed deaths, with over 50 individuals reported missing.",
       "key_developments": [
         {
           "development_id": "story_b77a481c5a1a5ef9",
@@ -2557,14 +2654,14 @@
           "title": "Russia Claims Strikes on Ukrainian Infrastructure Amid Drone Attacks"
         },
         {
-          "development_id": "story_7a4a6fa2262fbda8",
-          "date": "2026-09-27",
-          "title": "Saudi Airstrike in Yemen Kills Seven, Injures Dozens"
+          "development_id": "story_7146dd3ab5c5c0a8",
+          "date": "2026-10-02",
+          "title": "Severe Hunger Affects Three in Four Households in Yemen Amid Ongoing Conflict"
         },
         {
-          "development_id": "story_57f743da291f238d",
-          "date": "2026-11-03",
-          "title": "Russian Airstrikes on Ukrainian Aid Center Result in 31 Deaths and Many Missing"
+          "development_id": "story_cc0933ed4b9761be",
+          "date": "2026-11-04",
+          "title": "Casualties Rise After Russian Bombing in Zaporizhzhia, Ukraine"
         }
       ],
       "sources": [
@@ -3101,55 +3198,50 @@
           "source": "The Guardian",
           "link": "https://www.theguardian.com/world/2026/nov/03/russia-bombs-ukrainian-aid-centre-komyshuvakha",
           "source_bias": "left"
+        },
+        {
+          "title": "Ukraine: 33 dead, over 50 missing after Russian bombing in Zaporizhzhia",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/11/04/ukraine-31-dead-over-45-missing-after-russian-bombing-in-zaporizhzhia",
+          "source_bias": "center"
+        },
+        {
+          "title": "Dozens missing after Russian strike on Ukraine aid centre",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/ukraine/2026/1104/1597955-ukraine-russia",
+          "source_bias": "center"
+        },
+        {
+          "title": "Ukraine says bodycam video shows deadly Russian double-tap bombing",
+          "source": "BBC - World",
+          "link": "https://www.bbc.co.uk/news/articles/c98rz6penv86o?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-11-03",
+      "updated_at": "2026-11-04",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
     "related_events": [
       {
-        "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
-        "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
+        "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
+        "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
         "relationship": "related_topic",
         "confidence": 0.95,
         "shared_entities": [
-          "claim_lives",
-          "iran-backed_houthis.",
-          "kyiv",
-          "odesa",
-          "paris",
-          "pm",
+          "iran-backed_houthi",
+          "july.",
+          "red_sea.",
           "russia",
-          "russia_missile",
-          "saint",
-          "saint_petersburg",
           "ukraine",
-          "ukraine.",
-          "ukraine_drone",
           "un",
           "united_nation",
           "us",
           "volodymyr_zelensky",
           "volodymyr_zelenskyy",
+          "yemen",
+          "yemen_houthi",
           "zaporizhzhia"
-        ]
-      },
-      {
-        "event_id": "event_israel-commemorates-third-anniversary-of-oct_c05cefd020",
-        "title": "Israel Commemorates Third Anniversary of October 7 Attacks",
-        "relationship": "related_topic",
-        "confidence": 0.95,
-        "shared_entities": [
-          "donald_tusk",
-          "kyiv",
-          "polish_prime",
-          "russia",
-          "significant",
-          "ukraine",
-          "ukraine_result",
-          "us",
-          "volodymyr_zelenskyy"
         ]
       },
       {
@@ -3199,24 +3291,50 @@
         ]
       },
       {
-        "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
-        "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
+        "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
+        "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
         "relationship": "related_topic",
         "confidence": 0.95,
         "shared_entities": [
-          "iran-backed_houthi",
-          "july.",
-          "red_sea.",
+          "claim_lives",
+          "iran-backed_houthis.",
+          "kyiv",
+          "odesa",
+          "paris",
+          "pm",
           "russia",
+          "russia_missile",
+          "saint",
+          "saint_petersburg",
           "ukraine",
+          "ukraine.",
+          "ukraine_drone",
           "un",
           "united_nation",
           "us",
           "volodymyr_zelensky",
           "volodymyr_zelenskyy",
-          "yemen",
-          "yemen_houthi",
           "zaporizhzhia"
+        ]
+      },
+      {
+        "event_id": "event_sudan-faces-widespread-power-outages-followi_cc7b30bce4",
+        "title": "Sudan Faces Widespread Power Outages Following RSF Drone Attacks",
+        "relationship": "related_topic",
+        "confidence": 0.95,
+        "shared_entities": [
+          "first_lady",
+          "kyiv",
+          "lady_melania",
+          "melania_trump.",
+          "odesa",
+          "oleshky",
+          "region_result",
+          "russia",
+          "ukraine",
+          "ukraine_drone",
+          "us",
+          "volodymyr_zelensky"
         ]
       }
     ],
@@ -3398,6 +3516,7 @@
       "belgorod",
       "berezivka",
       "blaze",
+      "bodycam",
       "bolster",
       "bombing",
       "bombs",
@@ -3413,6 +3532,7 @@
       "capital",
       "capture",
       "captured",
+      "capturing",
       "casualtie",
       "cause",
       "ceasefire",
@@ -3439,6 +3559,7 @@
       "condolence",
       "conduct",
       "confirm",
+      "confirmed",
       "confirming",
       "conflict",
       "conflicting",
@@ -3494,6 +3615,7 @@
       "effort",
       "el-mandeb",
       "elon",
+      "emerged",
       "emergency",
       "enable",
       "energy",
@@ -3531,6 +3653,7 @@
       "fleeing",
       "follow",
       "food",
+      "footage",
       "force",
       "four",
       "frontline",
@@ -3628,6 +3751,7 @@
       "missing",
       "mission",
       "mokha",
+      "moment",
       "monitor",
       "monitoring",
       "month",
@@ -3649,6 +3773,7 @@
       "normal",
       "north",
       "noted",
+      "november",
       "number",
       "numerou",
       "occur",
@@ -3732,6 +3857,7 @@
       "revealed",
       "review",
       "right",
+      "rise",
       "route",
       "russia",
       "russian-occupied",
@@ -3741,6 +3867,7 @@
       "saudi",
       "saudi-backed",
       "saudi-led",
+      "scene",
       "searching",
       "securing",
       "seen",
@@ -3765,6 +3892,7 @@
       "side",
       "significant",
       "since",
+      "site",
       "sites",
       "situation",
       "smoke",
@@ -3784,12 +3912,14 @@
       "strike",
       "struck",
       "such",
+      "suffering",
       "supplie",
       "support",
       "supported",
       "surge",
       "surged",
       "surrounding",
+      "survivor",
       "suspended",
       "system",
       "taiz",
@@ -3876,6 +4006,7 @@
       "buses_result",
       "canada",
       "capture_strategic",
+      "casualtie_rise",
       "ceasefire_collapse",
       "ceasefire_established",
       "ceasefire_initiated",
@@ -3974,6 +4105,7 @@
       "right_office",
       "russia",
       "russia_airstrike",
+      "russia_bombing",
       "russia_claim",
       "russia_missile",
       "russia_shahed",
@@ -4042,9 +4174,77 @@
       "zelensky_visit",
       "zelenskyy_visit"
     ],
-    "search_text": "000 125 153 200 201 2022 2025 2026 243 340 400 437 610 9-year-old accounted acknowledged across action additional additionally additionally_yemeni aden admission admit advance aerial affect affected ahead aid aimed aims airport airstrike airstrike_concern al-zindani alarming allow allowing also although amidst among appear approximately april arbitrary archipelago area areas around arrival assault assess assistant atacm attack attributing august authoritie bab beginning behind belgorod berezivka blaze bolster bombing bombs both broader brokered buses buses_result calls campaign camps canada capabilitie capital capture capture_strategic captured casualtie cause ceasefire ceasefire_collapse ceasefire_established ceasefire_initiated center chief child children civil civilian civilian_casualtie civilian_clashe civilian_still claim claim_lives claimed clashe coalition coast coincided collaboration collapse commenced comply concern concern_ukraine concluded concurrently concurrently_russia concurrently_ukraine condemned condolence conduct confirm confirm_civilian confirming conflict conflicting continue contributed control control_near crater crisi critical crucial custody data deadliest deadly deadly_ukraine deal deals deals_recent death debri decision decision-making deep defense delivery demanded deploying deprived described despite detained detention devastating development dhubab died discovered displace displace_thousand displaced displacement displacement_crisi displacing displacing_thousand disrupted disruption distribution district djibouti djibouti. donald donald_tusk down downed dozen driver drone early eastern eastern_poland effort el-mandeb elon elon_musk emergency enable energy engage enhance enhancing escalating escalating_ground escalation escaping established evacuate evacuated expand expand_control experiencing explosion face faces facilitated facilitie facility factory familie fatalitie fatalitie_russia fearing fell field fighting finalized fire fired fires first first_lady five fled fleeing follow food food_programme force force_regain four frontline full-scale global goods government-allied ground ground_fighting gulf hanish held highest highest_civilian highest_monthly highlight highlighted highlighting hospital household houthi houthi_advance houthi_capture houthi_custody houthi_expand houthi_seize however human human_right humanitarian humanitarian_crisi hundred hunger hunger_affect hysterical ignited igniting ill-treatment impact impacting imposed incident included including including_civilian increase increasing indicate indicating individual industrial infrastructure initiated injure injure_dozen injured injurie inside intensifie intensified international internet interruption invasion investigation involved involving iran-backed iran-backed_houthi iran-backed_houthis. island island_strengthening july july. just kadha killed killing kills kilometer komyshuvakha korean korean_missile kramatorsk kramatorsk_buses kyiv kyiv_result lady lady_melania large largest launched leading least leave level level_since liberty lives local localized located location logistic long-range loyal macron makeshift many many_missing maritime market marks melania melania_trump. member military military_deals missile missile_downed missing mission mission._drone mokha monitor monitoring monitoring_mission. month monthly monthly_level moscow move multi-nation multiple musk musk_admit nation nature near near_bab near_kyiv nearby nearly needs nine nizhnekamsk nizhnekamsk_russia non-combatant normal north north_korean noted number numerou occur occurred odesa odesa_region offensive office oil oleshky oleshky_ukraine ongoing onset operation oryol other overcrowded overnight panic paris part parts passenger passenger_train passing past pattern payment peace pentagon perim perim_island petersburg petersburg_warehouse plant pm poland poland_polish polish polish_prime port portion poses position possible possible_russia power prime produced programme provided province public pulkovo pulkovo_airport purchase pyongyang question racist raid raids railway raised raising ras_isa reach reach_highest reached reason rebel recaptured recent reclaim red red_sea red_sea. refinery refinery_claim regain regain_control regarding region region_result relied renewed renewed_fighting renewed_violence reported reportedly resident resource response responsible restoration restriction result resulted resulting resurgence retaking revealed review right right_monitoring right_office route russia russia_airstrike russia_claim russia_missile russia_shahed russian-occupied russian._authoritie safety saint saint_petersburg satellite saudi saudi-backed saudi-led saudi_airstrike sea._displacement sea_shipping searching securing seen seize seize_strategic seized separate serbia serbia_russia seriously service service_restoration setback seven several severe severe_hunger severely shahed shaya shelter shipping shipping_yemen shooting shortly shot side significant significant_civilian since since_may sites situation smoke some southern specific speed speed_restriction spread staff staff_member starlink starlink_speed stated stating still still_detained strait strait_force strategic strategic_perim strategic_port strengthening strengthening_control strike struck such supplie support supported surge surged surrounding suspended system taiz taneco target targeted tatarstan teams temporary tens tension territory terrorist than there these thick those thousand threat threatening three through time torture tour town train transport trend truce trump turkey tusk ukraine ukraine. ukraine_aid ukraine_conduct ukraine_drone ukraine_elon ukraine_infrastructure ukraine_odesa ukraine_reach ukraine_result ukraine_since ukraine_zaporizhzhia un united united_nation upon us used variou vatican vatican. vatican._ceasefire vicinity victim village violence visit visit_canada visiting vital volodymyr volodymyr_zelensky volodymyr_zelenskyy war warehouse warns warranted waterway wave ways weeks western what which while wildberrie winter withdrawal woman worker wounded year years yemen yemen_displace yemen_displacing yemen_houthi yemen_result yemen_saudi-backed yemen_taiz yemen_tens yemen_threatening yemeni yemeni_prime zaporizhzhia zaporizhzhia_ukraine zelensky zelensky_visit zelenskyy zelenskyy_visit"
+    "search_text": "000 125 153 200 201 2022 2025 2026 243 340 400 437 610 9-year-old accounted acknowledged across action additional additionally additionally_yemeni aden admission admit advance aerial affect affected ahead aid aimed aims airport airstrike airstrike_concern al-zindani alarming allow allowing also although amidst among appear approximately april arbitrary archipelago area areas around arrival assault assess assistant atacm attack attributing august authoritie bab beginning behind belgorod berezivka blaze bodycam bolster bombing bombs both broader brokered buses buses_result calls campaign camps canada capabilitie capital capture capture_strategic captured capturing casualtie casualtie_rise cause ceasefire ceasefire_collapse ceasefire_established ceasefire_initiated center chief child children civil civilian civilian_casualtie civilian_clashe civilian_still claim claim_lives claimed clashe coalition coast coincided collaboration collapse commenced comply concern concern_ukraine concluded concurrently concurrently_russia concurrently_ukraine condemned condolence conduct confirm confirm_civilian confirmed confirming conflict conflicting continue contributed control control_near crater crisi critical crucial custody data deadliest deadly deadly_ukraine deal deals deals_recent death debri decision decision-making deep defense delivery demanded deploying deprived described despite detained detention devastating development dhubab died discovered displace displace_thousand displaced displacement displacement_crisi displacing displacing_thousand disrupted disruption distribution district djibouti djibouti. donald donald_tusk down downed dozen driver drone early eastern eastern_poland effort el-mandeb elon elon_musk emerged emergency enable energy engage enhance enhancing escalating escalating_ground escalation escaping established evacuate evacuated expand expand_control experiencing explosion face faces facilitated facilitie facility factory familie fatalitie fatalitie_russia fearing fell field fighting finalized fire fired fires first first_lady five fled fleeing follow food food_programme footage force force_regain four frontline full-scale global goods government-allied ground ground_fighting gulf hanish held highest highest_civilian highest_monthly highlight highlighted highlighting hospital household houthi houthi_advance houthi_capture houthi_custody houthi_expand houthi_seize however human human_right humanitarian humanitarian_crisi hundred hunger hunger_affect hysterical ignited igniting ill-treatment impact impacting imposed incident included including including_civilian increase increasing indicate indicating individual industrial infrastructure initiated injure injure_dozen injured injurie inside intensifie intensified international internet interruption invasion investigation involved involving iran-backed iran-backed_houthi iran-backed_houthis. island island_strengthening july july. just kadha killed killing kills kilometer komyshuvakha korean korean_missile kramatorsk kramatorsk_buses kyiv kyiv_result lady lady_melania large largest launched leading least leave level level_since liberty lives local localized located location logistic long-range loyal macron makeshift many many_missing maritime market marks melania melania_trump. member military military_deals missile missile_downed missing mission mission._drone mokha moment monitor monitoring monitoring_mission. month monthly monthly_level moscow move multi-nation multiple musk musk_admit nation nature near near_bab near_kyiv nearby nearly needs nine nizhnekamsk nizhnekamsk_russia non-combatant normal north north_korean noted november number numerou occur occurred odesa odesa_region offensive office oil oleshky oleshky_ukraine ongoing onset operation oryol other overcrowded overnight panic paris part parts passenger passenger_train passing past pattern payment peace pentagon perim perim_island petersburg petersburg_warehouse plant pm poland poland_polish polish polish_prime port portion poses position possible possible_russia power prime produced programme provided province public pulkovo pulkovo_airport purchase pyongyang question racist raid raids railway raised raising ras_isa reach reach_highest reached reason rebel recaptured recent reclaim red red_sea red_sea. refinery refinery_claim regain regain_control regarding region region_result relied renewed renewed_fighting renewed_violence reported reportedly resident resource response responsible restoration restriction result resulted resulting resurgence retaking revealed review right right_monitoring right_office rise route russia russia_airstrike russia_bombing russia_claim russia_missile russia_shahed russian-occupied russian._authoritie safety saint saint_petersburg satellite saudi saudi-backed saudi-led saudi_airstrike scene sea._displacement sea_shipping searching securing seen seize seize_strategic seized separate serbia serbia_russia seriously service service_restoration setback seven several severe severe_hunger severely shahed shaya shelter shipping shipping_yemen shooting shortly shot side significant significant_civilian since since_may site sites situation smoke some southern specific speed speed_restriction spread staff staff_member starlink starlink_speed stated stating still still_detained strait strait_force strategic strategic_perim strategic_port strengthening strengthening_control strike struck such suffering supplie support supported surge surged surrounding survivor suspended system taiz taneco target targeted tatarstan teams temporary tens tension territory terrorist than there these thick those thousand threat threatening three through time torture tour town train transport trend truce trump turkey tusk ukraine ukraine. ukraine_aid ukraine_conduct ukraine_drone ukraine_elon ukraine_infrastructure ukraine_odesa ukraine_reach ukraine_result ukraine_since ukraine_zaporizhzhia un united united_nation upon us used variou vatican vatican. vatican._ceasefire vicinity victim village violence visit visit_canada visiting vital volodymyr volodymyr_zelensky volodymyr_zelenskyy war warehouse warns warranted waterway wave ways weeks western what which while wildberrie winter withdrawal woman worker wounded year years yemen yemen_displace yemen_displacing yemen_houthi yemen_result yemen_saudi-backed yemen_taiz yemen_tens yemen_threatening yemeni yemeni_prime zaporizhzhia zaporizhzhia_ukraine zelensky zelensky_visit zelenskyy zelenskyy_visit"
   },
   "related_events": [
+    {
+      "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
+      "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
+      "summary": "Muninn first tracked this thread on 2026-09-11: Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims. The latest development is Iran's state television reported that seven oil tankers either caught fire or were damaged by mines overnight Wednesday into Thursday after.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-09-11",
+      "last_seen_at": "2026-10-23",
+      "development_count": 38,
+      "latest_title": "Iran's state television reported that seven oil tankers either caught fire or were damaged by mines overnight Wednesday into Thursday after",
+      "topic_label": "9/11 Victim Compensation",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b"
+    },
+    {
+      "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+      "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
+      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Vance Attributes GOP Midterm Losses to Discontent Over Iran War.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-22",
+      "last_seen_at": "2026-11-04",
+      "development_count": 95,
+      "latest_title": "Vance Attributes GOP Midterm Losses to Discontent Over Iran War",
+      "topic_label": "Iran War",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
+    },
     {
       "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
       "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
@@ -4080,20 +4280,20 @@
       "href": "/timeline.html?event=event_macron-implements-measures-against-intensify_109da09c6f"
     },
     {
-      "event_id": "event_israel-commemorates-third-anniversary-of-oct_c05cefd020",
-      "title": "Israel Commemorates Third Anniversary of October 7 Attacks",
-      "summary": "Muninn first tracked this thread on 2026-10-07: Israel Commemorates Third Anniversary of October 7 Attacks. The latest development is Trump Criticizes Zelenskyy, Suggests Ukraine Needs New Leadership.",
+      "event_id": "event_sudan-faces-widespread-power-outages-followi_cc7b30bce4",
+      "title": "Sudan Faces Widespread Power Outages Following RSF Drone Attacks",
+      "summary": "Muninn first tracked this thread on 2026-10-26: Ukrainian Drone Attack in Voronezh Region Results in Casualties and Damage. The latest development is Civilians Evacuated from Oleshky Return to Ukraine Following Ceasefire.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
-      "first_seen_at": "2026-10-07",
-      "last_seen_at": "2026-10-23",
+      "first_seen_at": "2026-10-26",
+      "last_seen_at": "2026-10-31",
       "development_count": 7,
-      "latest_title": "Trump Criticizes Zelenskyy, Suggests Ukraine Needs New Leadership",
-      "topic_label": "Israel-Hamas Conflict",
+      "latest_title": "Civilians Evacuated from Oleshky Return to Ukraine Following Ceasefire",
+      "topic_label": "Sudan Conflict",
       "hero_image": {
-        "url": "/Current_news/generated/events/event_israel-commemorates-third-anniversary-of-oct_c05cefd020.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_israel-commemorates-third-anniversary-of-oct_c05cefd020.jpg",
+        "url": "/Current_news/generated/events/event_sudan-faces-widespread-power-outages-followi_cc7b30bce4.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_sudan-faces-widespread-power-outages-followi_cc7b30bce4.jpg",
         "source": "Muninn AI illustration",
         "author": "OpenAI GPT Image 2",
         "license": "AI-generated content",
@@ -4111,75 +4311,7 @@
         "focal_tall_x": 0.5,
         "focal_tall_y": 0.48
       },
-      "href": "/timeline.html?event=event_israel-commemorates-third-anniversary-of-oct_c05cefd020"
-    },
-    {
-      "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
-      "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
-      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is US Conducts Strikes on Iran's Qeshm Island Ahead of Midterm Elections.",
-      "activity_status": "active",
-      "stage": "timeline",
-      "stage_label": "Timeline",
-      "first_seen_at": "2026-07-22",
-      "last_seen_at": "2026-11-03",
-      "development_count": 93,
-      "latest_title": "US Conducts Strikes on Iran's Qeshm Island Ahead of Midterm Elections",
-      "topic_label": "Iran War",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
-    },
-    {
-      "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
-      "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
-      "summary": "Muninn first tracked this thread on 2026-09-11: Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims. The latest development is Iran's state television reported that seven oil tankers either caught fire or were damaged by mines overnight Wednesday into Thursday after.",
-      "activity_status": "active",
-      "stage": "timeline",
-      "stage_label": "Timeline",
-      "first_seen_at": "2026-09-11",
-      "last_seen_at": "2026-10-23",
-      "development_count": 38,
-      "latest_title": "Iran's state television reported that seven oil tankers either caught fire or were damaged by mines overnight Wednesday into Thursday after",
-      "topic_label": "9/11 Victim Compensation",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b"
+      "href": "/timeline.html?event=event_sudan-faces-widespread-power-outages-followi_cc7b30bce4"
     }
   ]
 }
