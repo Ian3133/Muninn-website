@@ -15,7 +15,7 @@
     "summary": "A youth group known as the 'Cockroach' movement has threatened to resume mass protests unless Gyanesh Kumar resigns as head of India's election commission. This demand follows allegations of election rigging, which have also prompted opposition parties, including Congress, to join the protests. Police have responded with tear gas to disperse demonstrators.",
     "status": "active",
     "first_seen_at": "2026-09-25",
-    "last_seen_at": "2026-10-08",
+    "last_seen_at": "2026-11-05",
     "timeline": [
       {
         "development_id": "story_c777191e98b23c65",
@@ -748,6 +748,300 @@
           "story_dc3d3633ece0be55"
         ],
         "revision_count": 1
+      },
+      {
+        "development_id": "story_0666fe489b0c743f",
+        "daily_story_id": "story_0666fe489b0c743f",
+        "date": "2026-11-05",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Students in Athens Demand Increased Education Funding",
+        "summary": "On Thursday, thousands of pupils, students, and teachers marched through central Athens, advocating for better funding for schools. This demonstration is part of a broader movement for educational reform that has been gaining momentum across southern Europe, following similar protests in France.",
+        "topic_label": "Education Protests",
+        "development_type": "development",
+        "key_facts": [
+          "Thousands of participants included pupils, students, and teachers.",
+          "The protest occurred in central Athens.",
+          "The demonstration is part of a nationwide push for better-funded schools."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Africanews",
+          "Euronews"
+        ],
+        "source_urls": [
+          "http://www.africanews.com/2026/11/05/greece-students-march-in-athens-demanding-more-education-funding",
+          "https://www.euronews.com/video/2026/11/05/greece-students-march-in-athens-demanding-more-education-funding"
+        ],
+        "source_details": [
+          {
+            "title": "Greece: Students march in Athens demanding more education funding",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/11/05/greece-students-march-in-athens-demanding-more-education-funding",
+            "source_bias": "center"
+          },
+          {
+            "title": "Greece: Students march in Athens demanding more education funding",
+            "source": "Euronews",
+            "link": "https://www.euronews.com/video/2026/11/05/greece-students-march-in-athens-demanding-more-education-funding",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_2009e704d01ed7f2",
+          "shared_tokens": [
+            "better",
+            "education",
+            "france",
+            "protest",
+            "school",
+            "student",
+            "teacher"
+          ],
+          "shared_entities": [
+            "education_protest",
+            "france."
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-11-05",
+        "last_seen_at": "2026-11-05",
+        "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_55cf150e5d59936e",
+        "daily_story_id": "story_55cf150e5d59936e",
+        "date": "2026-11-05",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Nationwide Protests and School Blockades in France Mark Fourth Strike",
+        "summary": "On a fourth nationwide day of protests, hundreds of thousands of people took to the streets across France. Demonstrations were marked by significant disruptions in cities like Marseille and Nantes, and police deployed tear gas outside a school in Paris.",
+        "topic_label": "France Protests",
+        "development_type": "military_action",
+        "key_facts": [
+          "Hundreds of thousands participated in protests across France.",
+          "Major demonstrations occurred in Marseille and Nantes.",
+          "Police used tear gas outside a school in Paris."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Africanews",
+          "Euronews"
+        ],
+        "source_urls": [
+          "http://www.africanews.com/2026/11/05/france-workers-and-students-unite-in-nationwide-protests-over-living-costs",
+          "https://www.euronews.com/video/2026/11/05/france-workers-and-students-unite-in-nationwide-protests-over-living-costs"
+        ],
+        "source_details": [
+          {
+            "title": "France: Mass protests and school blockades mark fourth national strike",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/11/05/france-workers-and-students-unite-in-nationwide-protests-over-living-costs",
+            "source_bias": "center"
+          },
+          {
+            "title": "France: Mass protests and school blockades mark fourth national strike",
+            "source": "Euronews",
+            "link": "https://www.euronews.com/video/2026/11/05/france-workers-and-students-unite-in-nationwide-protests-over-living-costs",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "protest"
+          ],
+          "shared_incident_anchors": [
+            "france",
+            "france."
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "across",
+            "demonstration",
+            "france",
+            "nationwide",
+            "occurred",
+            "protest",
+            "school",
+            "thousand"
+          ],
+          "shared_entities": [
+            "france",
+            "france."
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_0666fe489b0c743f",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-11-05",
+        "last_seen_at": "2026-11-05",
+        "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_e049b5568979c5db",
+        "daily_story_id": "story_e049b5568979c5db",
+        "date": "2026-11-05",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Nationwide Strikes and Protests in France Amid Police Clashes",
+        "summary": "On Thursday, workers across France staged a one-day strike and participated in largely peaceful demonstrations, marking a renewed challenge to President Emmanuel Macron. While most protests proceeded without incident, some clashes occurred between protesters and police in Paris and Lyon.",
+        "topic_label": "France Protests",
+        "development_type": "military_action",
+        "key_facts": [
+          "Nationwide demonstrations and strikes by public sector workers occurred.",
+          "Protests were largely peaceful, with some clashes reported in Paris and Lyon.",
+          "The events represent a renewed challenge to President Emmanuel Macron."
+        ],
+        "source_count": 2,
+        "sources": [
+          "CBC",
+          "RTE News"
+        ],
+        "source_urls": [
+          "https://www.cbc.ca/news/world/france-protests-macron-government-9.7410318?cmp=rss",
+          "https://www.rte.ie/news/europe/2026/1105/1598105-france-protests"
+        ],
+        "source_details": [
+          {
+            "title": "Largely peaceful marches across France as workers stage strike, some police clashes reported",
+            "source": "CBC",
+            "link": "https://www.cbc.ca/news/world/france-protests-macron-government-9.7410318?cmp=rss",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "France hit by more strikes, Macron bids to contain unrest",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/europe/2026/1105/1598105-france-protests",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_95aa1afe728f64a4",
+          "shared_tokens": [
+            "across",
+            "clashe",
+            "france",
+            "paris",
+            "protest",
+            "public",
+            "reported",
+            "worker"
+          ],
+          "shared_entities": [
+            "france",
+            "france_protest"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-11-05",
+        "last_seen_at": "2026-11-05",
+        "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_e0e74fd356b3c663",
+        "daily_story_id": "story_e0e74fd356b3c663",
+        "date": "2026-11-05",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Massive Protest in Lyon Sees Clashes and Tear Gas Amid Nationwide Strike",
+        "summary": "Up to 55,000 people participated in a march in Lyon as part of a nationwide strike focused on wages and purchasing power. The demonstration turned violent as police charged at protesters and deployed tear gas during clashes along the route.",
+        "topic_label": "France Protests",
+        "development_type": "military_action",
+        "key_facts": [
+          "Up to 55,000 marched in Lyon",
+          "Nationwide strike over wages and purchasing power",
+          "Police used tear gas and charged demonstrators"
+        ],
+        "source_count": 2,
+        "sources": [
+          "Africanews",
+          "Euronews"
+        ],
+        "source_urls": [
+          "https://www.euronews.com/video/2026/11/05/france-up-to-55000-march-in-lyon-amid-clashes-and-tear-gas",
+          "http://www.africanews.com/2026/11/05/france-up-to-55000-march-in-lyon-amid-clashes-and-tear-gas"
+        ],
+        "source_details": [
+          {
+            "title": "France: Up to 55,000 march in Lyon amid clashes and tear gas",
+            "source": "Euronews",
+            "link": "https://www.euronews.com/video/2026/11/05/france-up-to-55000-march-in-lyon-amid-clashes-and-tear-gas",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "France: Up to 55,000 march in Lyon amid clashes and tear gas",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/11/05/france-up-to-55000-march-in-lyon-amid-clashes-and-tear-gas",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "protest",
+            "strike"
+          ],
+          "shared_incident_anchors": [
+            "france",
+            "france_protest",
+            "nationwide"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "demonstration",
+            "deployed",
+            "france",
+            "gas",
+            "nationwide",
+            "participated",
+            "protest",
+            "strike",
+            "tear",
+            "used"
+          ],
+          "shared_entities": [
+            "france",
+            "france_protest",
+            "nationwide"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_55cf150e5d59936e",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-11-05",
+        "last_seen_at": "2026-11-05",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -773,12 +1067,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 8,
+      "public_development_count": 12,
       "questionable_development_count": 1,
       "review_required": true
     },
-    "latest_title": "Widespread Student Protests Lead to School Closures in France",
-    "latest_summary": "Around 400 schools have been closed across France due to ongoing student protests, which have resulted in approximately 2,000 arrests and numerous injuries. The unrest has prompted calls from ministers for a 'day of dialogue,' while students are planning further strike actions.",
+    "latest_title": "Massive Protest in Lyon Sees Clashes and Tear Gas Amid Nationwide Strike",
+    "latest_summary": "Up to 55,000 people participated in a march in Lyon as part of a nationwide strike focused on wages and purchasing power. The demonstration turned violent as police charged at protesters and deployed tear gas during clashes along the route.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -788,30 +1082,30 @@
       "display_title": "Protests Erupt in India Demanding Resignation of Election Chief Timeline",
       "milestone_development_ids": [
         "story_c777191e98b23c65",
-        "story_4cfa21f8bb723661",
-        "story_2009e704d01ed7f2",
-        "story_b4a24bb9e49bef6b"
+        "story_dc423d7b866ef392",
+        "story_b4a24bb9e49bef6b",
+        "story_e0e74fd356b3c663"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-10-02",
-      "development_count": 8,
-      "coverage_packet_count": 11,
-      "date_count": 6,
-      "source_count": 28,
-      "independent_source_count": 17,
+      "summary_updated_at": "2026-11-05",
+      "development_count": 12,
+      "coverage_packet_count": 15,
+      "date_count": 7,
+      "source_count": 36,
+      "independent_source_count": 18,
       "first_date": "2026-09-25",
-      "latest_date": "2026-10-02",
-      "latest_update_title": "Widespread Student Protests Lead to School Closures in France",
+      "latest_date": "2026-11-05",
+      "latest_update_title": "Massive Protest in Lyon Sees Clashes and Tear Gas Amid Nationwide Strike",
       "coverage_score": 1.0,
-      "recency_score": 0.175,
-      "rank_score": 0.521,
-      "context_summary": "Muninn first tracked this thread on 2026-09-25: Protests Erupt in India Demanding Resignation of Election Chief. The latest development is Widespread Student Protests Lead to School Closures in France.",
-      "cta_label": "Explore 8 developments"
+      "recency_score": 1.0,
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-09-25: Protests Erupt in India Demanding Resignation of Election Chief. The latest development is Massive Protest in Lyon Sees Clashes and Tear Gas Amid Nationwide Strike.",
+      "cta_label": "Explore 12 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "A youth group known as the 'Cockroach' movement has threatened to resume mass protests unless Gyanesh Kumar resigns as head of India's election commission. A later development was Escalating Student Protests in France Lead to Hundreds of Arrests and Violence. Most recently, around 400 schools have been closed across France due to ongoing student protests, which have resulted in approximately 2,000 arrests and numerous injuries.",
+      "summary": "A youth group known as the 'Cockroach' movement has threatened to resume mass protests unless Gyanesh Kumar resigns as head of India's election commission. A later development was Nationwide Protests Erupt in Spain Over Housing Crisis. Most recently, up to 55,000 people participated in a march in Lyon as part of a nationwide strike focused on wages and purchasing power.",
       "key_developments": [
         {
           "development_id": "story_c777191e98b23c65",
@@ -819,19 +1113,19 @@
           "title": "Protests Erupt in India Demanding Resignation of Election Chief"
         },
         {
-          "development_id": "story_4cfa21f8bb723661",
-          "date": "2026-09-28",
-          "title": "Protests Erupt in Madrid Over Eviction of 87-Year-Old Resident"
-        },
-        {
-          "development_id": "story_2009e704d01ed7f2",
-          "date": "2026-10-02",
-          "title": "Protests Over Education Standards Lead to Clashes in France"
+          "development_id": "story_dc423d7b866ef392",
+          "date": "2026-10-01",
+          "title": "Escalating Student Protests in France Lead to Hundreds of Arrests and Violence"
         },
         {
           "development_id": "story_b4a24bb9e49bef6b",
           "date": "2026-10-02",
           "title": "Widespread Student Protests Lead to School Closures in France"
+        },
+        {
+          "development_id": "story_e0e74fd356b3c663",
+          "date": "2026-11-05",
+          "title": "Massive Protest in Lyon Sees Clashes and Tear Gas Amid Nationwide Strike"
         }
       ],
       "sources": [
@@ -1002,9 +1296,57 @@
           "source": "Fox News - Latest",
           "link": "https://www.foxnews.com/world/frances-teen-riots-take-explosive-new-turn-government-points-finger-hard-left",
           "source_bias": "right"
+        },
+        {
+          "title": "Greece: Students march in Athens demanding more education funding",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/11/05/greece-students-march-in-athens-demanding-more-education-funding",
+          "source_bias": "center"
+        },
+        {
+          "title": "Greece: Students march in Athens demanding more education funding",
+          "source": "Euronews",
+          "link": "https://www.euronews.com/video/2026/11/05/greece-students-march-in-athens-demanding-more-education-funding",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "France: Mass protests and school blockades mark fourth national strike",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/11/05/france-workers-and-students-unite-in-nationwide-protests-over-living-costs",
+          "source_bias": "center"
+        },
+        {
+          "title": "France: Mass protests and school blockades mark fourth national strike",
+          "source": "Euronews",
+          "link": "https://www.euronews.com/video/2026/11/05/france-workers-and-students-unite-in-nationwide-protests-over-living-costs",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Largely peaceful marches across France as workers stage strike, some police clashes reported",
+          "source": "CBC",
+          "link": "https://www.cbc.ca/news/world/france-protests-macron-government-9.7410318?cmp=rss",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "France hit by more strikes, Macron bids to contain unrest",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/europe/2026/1105/1598105-france-protests",
+          "source_bias": "center"
+        },
+        {
+          "title": "France: Up to 55,000 march in Lyon amid clashes and tear gas",
+          "source": "Euronews",
+          "link": "https://www.euronews.com/video/2026/11/05/france-up-to-55000-march-in-lyon-amid-clashes-and-tear-gas",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "France: Up to 55,000 march in Lyon amid clashes and tear gas",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/11/05/france-up-to-55000-march-in-lyon-amid-clashes-and-tear-gas",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-10-02",
+      "updated_at": "2026-11-05",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -1021,7 +1363,10 @@
           "housing_crisi",
           "india",
           "mass_protest",
+          "massive_protest",
           "nationwide_protest",
+          "paris",
+          "president",
           "protest_erupt",
           "student_protest"
         ]
@@ -1037,19 +1382,22 @@
           "housing_crisi",
           "india",
           "madrid",
+          "massive_protest",
           "nationwide_protest",
+          "paris",
           "protest_erupt",
           "protest_lead",
           "puerta",
           "spain",
-          "student_protest"
+          "student_protest",
+          "tear_gas"
         ]
       },
       {
         "event_id": "event_ceuta-requests-national-emergency-amid-surge_4919a90e1a",
         "title": "Ceuta Border Surge",
         "relationship": "related_topic",
-        "confidence": 0.859,
+        "confidence": 0.851,
         "shared_entities": [
           "clashe",
           "france",
@@ -1060,13 +1408,13 @@
         ]
       },
       {
-        "event_id": "event_indian-police-detain-leaders-of-cockroach-mo_129867bc2c",
-        "title": "Indian Police Detain Leaders of 'Cockroach' Movement Ahead of Protests",
+        "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+        "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
         "relationship": "related_topic",
-        "confidence": 0.689,
+        "confidence": 0.713,
         "shared_entities": [
-          "election_chief",
-          "india"
+          "india",
+          "president"
         ]
       }
     ],
@@ -1094,101 +1442,89 @@
       "available": true,
       "title": "About India Elections",
       "subject": "India Elections",
-      "summary": "India’s elections are the recurring national and state electoral processes through which voters choose representatives to the Lok Sabha and state legislative assemblies, alongside indirect elections for some constitutional offices. They are administered by the Election Commission of India (ECI), an autonomous constitutional authority whose work includes preparing electoral rolls and conducting elections under the Constitution and election laws.",
+      "summary": "India’s elections are administered by the Election Commission of India (ECI), a permanent constitutional body responsible for electoral rolls and for conducting elections to Parliament, state legislatures, and the offices of president and vice-president. The referenced protests concern political pressure directed at the leadership of that institution; the underlying issue is the governance and perceived independence of the national election authority rather than a separate electoral contest.",
       "facts": [
         {
-          "label": "Constitutional authority",
-          "value": "Article 324 of the Constitution vests the superintendence, direction and control of electoral-roll preparation and elections to Parliament, state legislatures, and the offices of President and Vice-President in the Election Commission.",
+          "label": "Constitutional mandate",
+          "value": "Article 324 of the Constitution places the superintendence, direction and control of electoral-roll preparation and elections to Parliament, state legislatures, and the president and vice-president with the Election Commission of India.",
           "source_ids": [
-            "o1"
-          ]
-        },
-        {
-          "label": "Administering body",
-          "value": "The ECI administers elections to the Lok Sabha, Rajya Sabha, state legislative assemblies, and the President and Vice-President; it is headquartered in New Delhi.",
-          "source_ids": [
+            "o1",
             "o2"
           ]
         },
         {
-          "label": "Main legal framework",
-          "value": "The Representation of the People Act, 1951 governs the conduct of parliamentary and state-legislature elections, candidate qualifications and disqualifications, election offences and corrupt practices, and election disputes; the ECI also identifies the Representation of the People Act, 1950 as a core election law.",
+          "label": "Institutional structure",
+          "value": "The ECI consists of a Chief Election Commissioner and other Election Commissioners; it has operated as a multi-member commission since 1993, with decisions made by majority vote.",
           "source_ids": [
-            "o3",
-            "o4"
+            "o1",
+            "o3"
           ]
         },
         {
-          "label": "Voter eligibility",
-          "value": "For general electoral-roll registration, a person must be an Indian citizen, at least 18 years old on the applicable qualifying date, ordinarily resident in the relevant constituency, and not otherwise disqualified by law.",
+          "label": "Appointment and term",
+          "value": "Under the 2023 statute, the president appoints commissioners on the recommendation of a selection committee comprising the prime minister, the Lok Sabha opposition leader (or leader of the largest opposition party if no opposition leader is recognized), and a Union cabinet minister nominated by the prime minister. The term is six years or until age 65, whichever comes first, with no reappointment.",
           "source_ids": [
-            "o5",
-            "o6"
+            "o3"
           ]
         },
         {
-          "label": "Electoral cycle",
-          "value": "The Lok Sabha has a five-year term; the ECI’s published term information lists the 18th Lok Sabha as running from June 24, 2024 to June 23, 2029, while state assembly elections occur on their own constitutional cycles and through by-elections when vacancies arise.",
+          "label": "Removal protections",
+          "value": "The chief election commissioner may be removed in the same manner and on the same grounds as a Supreme Court judge; other election commissioners may be removed only on the chief election commissioner’s recommendation.",
           "source_ids": [
-            "o7"
+            "o1",
+            "o2"
+          ]
+        },
+        {
+          "label": "Electoral scope",
+          "value": "The ECI administers national and state-level elections, including elections to the Lok Sabha, Rajya Sabha and state legislative assemblies, as well as presidential and vice-presidential elections. The normal term of the Lok Sabha is five years, although it may be dissolved earlier.",
+          "source_ids": [
+            "o4",
+            "o5"
           ]
         }
       ],
-      "scope_note": "The selected Muninn timeline follows the specified September 25, 2026 protest development concerning the election chief; it does not aim to cover all Indian elections, every ECI decision, or unrelated protest developments listed elsewhere in the timeline.",
+      "scope_note": "The selected Muninn timeline captures the September 25, 2026 protest development involving India’s election leadership, but it does not provide a comprehensive record of India’s electoral administration, legal disputes, election results, or the unrelated protest developments listed for Spain and France.",
       "sources": [
         {
-          "title": "Nic",
-          "publisher": "Nic",
-          "url": "https://www.indiacode.nic.in/bitstream/123456789/19632/1/the_constitution_of_india.pdf",
+          "title": "Gov",
+          "publisher": "Gov",
+          "url": "https://www.eci.gov.in/about-eci/",
           "source_type": "reporting",
           "id": "o1"
         },
         {
           "title": "Gov",
           "publisher": "Gov",
-          "url": "https://www.eci.gov.in/election-management",
+          "url": "https://www.eci.gov.in/eci-backend/public/api/download?url=LMAhAK6sOPBp%2FNFF0iRfXbEB1EVSLT41NNLRjYNJJP1KivrUxbfqkDatmHy12e%2FzVx8fLfn2ReU7TfrqYobgIiIbojDr07fSor0%2BVk%2FYMDS09xcbwsD6Q7pZFHemZQv5uXsb1pgA548lA9OSgsSPwWdlNsGJVyOT%2F5fphCaGG39UmXsblntj%2BP2lE8v8phOcfTkLCnTR3M6gqm4hXmbNxg%3D%3D",
           "source_type": "reporting",
           "id": "o2"
         },
         {
           "title": "Nic",
           "publisher": "Nic",
-          "url": "https://www.indiacode.nic.in/bitstream/123456789/2096/9/A1951-43.pdf",
+          "url": "https://www.indiacode.nic.in/bitstream/123456789/19721/1/a2023-49.pdf",
           "source_type": "reporting",
           "id": "o3"
         },
         {
           "title": "Gov",
           "publisher": "Gov",
-          "url": "https://www.eci.gov.in/election-laws",
+          "url": "https://www.eci.gov.in/faq/1/5",
           "source_type": "reporting",
           "id": "o4"
         },
         {
           "title": "Gov",
           "publisher": "Gov",
-          "url": "https://www.eci.gov.in/faq/2/9",
+          "url": "https://www.eci.gov.in/faq/1/6?hl=en-US",
           "source_type": "reporting",
           "id": "o5"
-        },
-        {
-          "title": "Gov",
-          "publisher": "Gov",
-          "url": "https://www.eci.gov.in/eci-backend/public/api/download?url=LMAhAK6sOPBp%2FNFF0iRfXbEB1EVSLT41NNLRjYNJJP1KivrUxbfqkDatmHy12e%2FzVx8fLfn2ReU7TfrqYobgImepSLHhDs6QMUfhXEGDDAHYzYuVrmdB19m1Nmp2WSGsImRtTgTRO1MFNU4n9O%2ByX3x0GJT8BBOykpekme9tfO1Y7lGP%2Bxeg9RmW2N9UqFTF",
-          "source_type": "reporting",
-          "id": "o6"
-        },
-        {
-          "title": "Gov",
-          "publisher": "Gov",
-          "url": "https://www.eci.gov.in/term-of-the-houses/",
-          "source_type": "reporting",
-          "id": "o7"
         }
       ],
       "publisher_count": 2,
-      "generated_at": "2026-10-08T18:23:05.679527+00:00",
-      "expires_at": "2026-10-15T18:23:05.679527+00:00",
+      "generated_at": "2026-11-05T20:32:03.325397+00:00",
+      "expires_at": "2026-11-12T20:32:03.325397+00:00",
       "model": "gpt-5.6-terra",
       "provenance": "openai_web_search_source_grounded_event_overview_v1"
     },
@@ -1201,10 +1537,12 @@
       "across",
       "action",
       "address",
+      "advocating",
       "affected",
       "affordable",
       "agitator",
       "allegation",
+      "along",
       "also",
       "among",
       "anger",
@@ -1213,14 +1551,20 @@
       "around",
       "arrest",
       "arrested",
+      "athen",
       "better",
       "blockade",
+      "broader",
       "budget",
       "calls",
       "camp",
       "camped",
       "carmen",
+      "central",
+      "challenge",
+      "charged",
       "chief",
+      "citie",
       "clash",
       "clashe",
       "clashing",
@@ -1241,22 +1585,31 @@
       "demonstrate",
       "demonstration",
       "demonstrator",
+      "deployed",
       "dialogue",
       "disperse",
+      "disruption",
       "education",
+      "educational",
       "elderly",
       "election",
       "emergency",
+      "emmanuel",
       "enforcement",
       "erupt",
       "escalated",
       "escalating",
       "escalation",
+      "europe",
       "eviction",
       "failure",
+      "focused",
       "follow",
+      "fourth",
       "france",
+      "funding",
       "further",
+      "gaining",
       "gas",
       "group",
       "grow",
@@ -1269,6 +1622,7 @@
       "hundred",
       "incident",
       "including",
+      "increased",
       "india",
       "injurie",
       "intensity",
@@ -1277,31 +1631,53 @@
       "join",
       "known",
       "kumar",
+      "largely",
       "lead",
       "leading",
       "legislation",
+      "like",
       "long",
+      "lyon",
+      "macron",
       "madrid",
       "makeshift",
+      "march",
+      "marched",
       "maricarmen",
+      "mark",
+      "marked",
+      "marking",
       "marks",
+      "marseille",
       "mass",
+      "massive",
+      "momentum",
+      "most",
       "movement",
       "multiple",
+      "nante",
       "nationwide",
       "night",
       "noting",
       "numerou",
+      "occurred",
+      "one-day",
       "ongoing",
       "opposition",
       "outside",
+      "paris",
       "parliament",
+      "part",
+      "participated",
       "particularly",
       "partie",
       "pass",
+      "peaceful",
       "planned",
       "planning",
+      "power",
       "prevent",
+      "proceeded",
       "prompted",
       "protest",
       "protested",
@@ -1309,8 +1685,12 @@
       "protesting",
       "public",
       "puerta",
+      "pupil",
+      "purchasing",
+      "reform",
       "regarding",
       "rejected",
+      "renewed",
       "resident",
       "resign",
       "resignation",
@@ -1322,18 +1702,23 @@
       "rigging",
       "riot",
       "rising",
+      "route",
       "saturday",
       "scale",
       "school",
       "second",
+      "sees",
       "shortage",
       "significant",
+      "similar",
       "situation",
       "sizes",
       "some",
+      "southern",
       "spain",
       "sparked",
       "spread",
+      "staged",
       "standard",
       "street",
       "strike",
@@ -1343,51 +1728,77 @@
       "tens",
       "thousand",
       "threatened",
+      "through",
+      "thursday",
       "timetable",
       "took",
+      "turned",
       "unless",
       "unrest",
       "violence",
       "violent",
+      "wages",
       "which",
       "while",
       "widespread",
+      "without",
       "woman",
       "worker",
       "years",
       "youth"
     ],
     "entities": [
+      "athen",
+      "athen_demand",
       "budget_cuts",
       "carmen_abascal",
       "clashe",
       "cuts_protest",
+      "demand_increased",
       "demanding_resignation",
+      "education_funding",
       "education_standard",
       "elderly_woman",
       "election_chief",
+      "emmanuel_macron.",
       "escalating_student",
       "eviction_tens",
       "france",
       "france.",
+      "france._demonstration",
+      "france._nationwide",
       "france_around",
       "france_lead",
+      "france_mark",
       "france_protest",
       "gyanesh_kumar",
       "housing_crisi",
       "hundred",
+      "increased_education",
       "india",
       "india_demanding",
+      "lyon",
+      "lyon._massive",
+      "lyon_sees",
+      "macron._while",
       "madrid",
+      "mark_fourth",
       "mass_protest",
+      "massive_protest",
       "nationwide_protest",
+      "paris",
+      "paris.",
+      "paris._nationwide",
+      "president",
       "protest_erupt",
       "protest_lead",
       "puerta",
       "school",
+      "sees_clashe",
       "spain",
       "standard_lead",
       "student_protest",
+      "tear_gas",
       "violence_student",
       "widespread_student",
       "woman_eviction",
@@ -1395,7 +1806,7 @@
       "year-old",
       "year-old_resident"
     ],
-    "search_text": "000 200 400 87-year-old abascal across action address affected affordable agitator allegation also among anger approximately areas around arrest arrested better blockade budget budget_cuts calls camp camped carmen carmen_abascal chief clash clashe clashing class closed closure cockroach commission concern congress costs creating crisi cuts cuts_protest decree demand demanding demanding_resignation demonstrate demonstration demonstrator dialogue disperse education education_standard elderly elderly_woman election election_chief emergency enforcement erupt escalated escalating escalating_student escalation eviction eviction_tens failure follow france france. france_around france_lead france_protest further gas group grow gyanesh gyanesh_kumar head high highlight home housing housing_crisi hundred incident including india india_demanding injurie intensity involvement issue join known kumar lead leading legislation long madrid makeshift maricarmen marks mass mass_protest movement multiple nationwide nationwide_protest night noting numerou ongoing opposition outside parliament particularly partie pass planned planning prevent prompted protest protest_erupt protest_lead protested protester protesting public puerta regarding rejected resident resign resignation responded response resulted resulting resume rigging riot rising saturday scale school second shortage significant situation sizes some spain sparked spread standard standard_lead street strike student student_protest teacher tear tens thousand threatened timetable took unless unrest violence violence_student violent which while widespread widespread_student woman woman_eviction worker worker_clash year-old year-old_resident years youth"
+    "search_text": "000 200 400 87-year-old abascal across action address advocating affected affordable agitator allegation along also among anger approximately areas around arrest arrested athen athen_demand better blockade broader budget budget_cuts calls camp camped carmen carmen_abascal central challenge charged chief citie clash clashe clashing class closed closure cockroach commission concern congress costs creating crisi cuts cuts_protest decree demand demand_increased demanding demanding_resignation demonstrate demonstration demonstrator deployed dialogue disperse disruption education education_funding education_standard educational elderly elderly_woman election election_chief emergency emmanuel emmanuel_macron. enforcement erupt escalated escalating escalating_student escalation europe eviction eviction_tens failure focused follow fourth france france. france._demonstration france._nationwide france_around france_lead france_mark france_protest funding further gaining gas group grow gyanesh gyanesh_kumar head high highlight home housing housing_crisi hundred incident including increased increased_education india india_demanding injurie intensity involvement issue join known kumar largely lead leading legislation like long lyon lyon._massive lyon_sees macron macron._while madrid makeshift march marched maricarmen mark mark_fourth marked marking marks marseille mass mass_protest massive massive_protest momentum most movement multiple nante nationwide nationwide_protest night noting numerou occurred one-day ongoing opposition outside paris paris. paris._nationwide parliament part participated particularly partie pass peaceful planned planning power president prevent proceeded prompted protest protest_erupt protest_lead protested protester protesting public puerta pupil purchasing reform regarding rejected renewed resident resign resignation responded response resulted resulting resume rigging riot rising route saturday scale school second sees sees_clashe shortage significant similar situation sizes some southern spain sparked spread staged standard standard_lead street strike student student_protest teacher tear tear_gas tens thousand threatened through thursday timetable took turned unless unrest violence violence_student violent wages which while widespread widespread_student without woman woman_eviction worker worker_clash year-old year-old_resident years youth"
   },
   "related_events": [
     {
@@ -1501,20 +1912,20 @@
       "href": "/timeline.html?event=event_ceuta-requests-national-emergency-amid-surge_4919a90e1a"
     },
     {
-      "event_id": "event_indian-police-detain-leaders-of-cockroach-mo_129867bc2c",
-      "title": "Indian Police Detain Leaders of 'Cockroach' Movement Ahead of Protests",
-      "summary": "Muninn first tracked this thread on 2026-10-10: Indian Police Detain Leaders of 'Cockroach' Movement Ahead of Protests. The latest development is Opposition in India Stages Major Rally Demanding Election Chief's Resignation.",
+      "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+      "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
+      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Trump Administration Engaged in Talks with Iran on Deporting Iranians During War.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
-      "first_seen_at": "2026-10-10",
-      "last_seen_at": "2026-11-01",
-      "development_count": 5,
-      "latest_title": "Opposition in India Stages Major Rally Demanding Election Chief's Resignation",
-      "topic_label": "India Protests",
+      "first_seen_at": "2026-07-22",
+      "last_seen_at": "2026-11-05",
+      "development_count": 98,
+      "latest_title": "Trump Administration Engaged in Talks with Iran on Deporting Iranians During War",
+      "topic_label": "Iran War",
       "hero_image": {
-        "url": "/Current_news/generated/events/event_indian-police-detain-leaders-of-cockroach-mo_129867bc2c.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_indian-police-detain-leaders-of-cockroach-mo_129867bc2c.jpg",
+        "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
         "source": "Muninn AI illustration",
         "author": "OpenAI GPT Image 2",
         "license": "AI-generated content",
@@ -1532,7 +1943,7 @@
         "focal_tall_x": 0.5,
         "focal_tall_y": 0.48
       },
-      "href": "/timeline.html?event=event_indian-police-detain-leaders-of-cockroach-mo_129867bc2c"
+      "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
     }
   ]
 }
