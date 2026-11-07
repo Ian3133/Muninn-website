@@ -15,7 +15,7 @@
     "summary": "A youth group known as the 'Cockroach' movement has threatened to resume mass protests unless Gyanesh Kumar resigns as head of India's election commission. This demand follows allegations of election rigging, which have also prompted opposition parties, including Congress, to join the protests. Police have responded with tear gas to disperse demonstrators.",
     "status": "active",
     "first_seen_at": "2026-09-25",
-    "last_seen_at": "2026-11-05",
+    "last_seen_at": "2026-11-07",
     "timeline": [
       {
         "development_id": "story_c777191e98b23c65",
@@ -1042,6 +1042,84 @@
         "first_seen_at": "2026-11-05",
         "last_seen_at": "2026-11-05",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_ad01b2c8b4349807",
+        "daily_story_id": "story_ad01b2c8b4349807",
+        "date": "2026-11-07",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Mélenchon Launches 2027 Presidential Campaign Amid Protests in France",
+        "summary": "Jean-Luc Mélenchon, a prominent far-left candidate, officially launched his 2027 presidential campaign with a rally near Paris, presenting a platform that includes raising the minimum wage, capping prices for essential foods, and restoring the retirement age to 60. His progressive proposals resonate particularly with younger voters. Concurrently, France is preparing for protests led by students and the Yellow Vest movement, addressing high living costs and other social issues.",
+        "topic_label": "French Politics",
+        "development_type": "election",
+        "key_facts": [
+          "Mélenchon launched his presidential campaign on November 7, 2026.",
+          "His platform includes raising the minimum wage and capping food prices.",
+          "Protests are planned by students and the Yellow Vest movement on the same day."
+        ],
+        "source_count": 3,
+        "sources": [
+          "DW - English",
+          "France 24 - English"
+        ],
+        "source_urls": [
+          "https://www.france24.com/en/france/20261107-french-2027-presidential-elections-how-m%C3%A9lenchon-became-a-gen-z-favourite",
+          "https://www.france24.com/en/video/20261107-we-must-change-everything-french-far-left-leader-m%C3%A9lenchon-launches-presidential-programme",
+          "https://www.dw.com/en/france-braces-for-new-round-of-yellow-vest-student-protests/a-79884064?maca=en-rss-en-all-1573-rdf"
+        ],
+        "source_details": [
+          {
+            "title": "French presidential election: How far-left Mélenchon became a Gen Z favourite",
+            "source": "France 24 - English",
+            "link": "https://www.france24.com/en/france/20261107-french-2027-presidential-elections-how-m%C3%A9lenchon-became-a-gen-z-favourite",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "'We must change everything': French far-left leader Mélenchon launches presidential programme",
+            "source": "France 24 - English",
+            "link": "https://www.france24.com/en/video/20261107-we-must-change-everything-french-far-left-leader-m%C3%A9lenchon-launches-presidential-programme",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "France braces for new round of Yellow Vest, student protests",
+            "source": "DW - English",
+            "link": "https://www.dw.com/en/france-braces-for-new-round-of-yellow-vest-student-protests/a-79884064?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "protest"
+          ],
+          "shared_incident_anchors": [
+            "france",
+            "paris"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "france",
+            "paris",
+            "protest"
+          ],
+          "shared_entities": [
+            "france",
+            "paris"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_e049b5568979c5db",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-11-07",
+        "last_seen_at": "2026-11-07",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -1067,12 +1145,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 12,
+      "public_development_count": 13,
       "questionable_development_count": 1,
       "review_required": true
     },
-    "latest_title": "Massive Protest in Lyon Sees Clashes and Tear Gas Amid Nationwide Strike",
-    "latest_summary": "Up to 55,000 people participated in a march in Lyon as part of a nationwide strike focused on wages and purchasing power. The demonstration turned violent as police charged at protesters and deployed tear gas during clashes along the route.",
+    "latest_title": "Mélenchon Launches 2027 Presidential Campaign Amid Protests in France",
+    "latest_summary": "Jean-Luc Mélenchon, a prominent far-left candidate, officially launched his 2027 presidential campaign with a rally near Paris, presenting a platform that includes raising the minimum wage, capping prices for essential foods, and restoring the retirement age to 60. His progressive proposals resonate particularly with younger voters. Concurrently, France is preparing for protests led by students and the Yellow Vest movement, addressing high living costs and other social issues.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -1083,29 +1161,29 @@
       "milestone_development_ids": [
         "story_c777191e98b23c65",
         "story_dc423d7b866ef392",
-        "story_b4a24bb9e49bef6b",
-        "story_e0e74fd356b3c663"
+        "story_0666fe489b0c743f",
+        "story_ad01b2c8b4349807"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-11-05",
-      "development_count": 12,
-      "coverage_packet_count": 15,
-      "date_count": 7,
-      "source_count": 36,
+      "summary_updated_at": "2026-11-07",
+      "development_count": 13,
+      "coverage_packet_count": 16,
+      "date_count": 8,
+      "source_count": 39,
       "independent_source_count": 18,
       "first_date": "2026-09-25",
-      "latest_date": "2026-11-05",
-      "latest_update_title": "Massive Protest in Lyon Sees Clashes and Tear Gas Amid Nationwide Strike",
+      "latest_date": "2026-11-07",
+      "latest_update_title": "Mélenchon Launches 2027 Presidential Campaign Amid Protests in France",
       "coverage_score": 1.0,
-      "recency_score": 0.875,
-      "rank_score": 0.927,
-      "context_summary": "Muninn first tracked this thread on 2026-09-25: Protests Erupt in India Demanding Resignation of Election Chief. The latest development is Massive Protest in Lyon Sees Clashes and Tear Gas Amid Nationwide Strike.",
-      "cta_label": "Explore 12 developments"
+      "recency_score": 1.0,
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-09-25: Protests Erupt in India Demanding Resignation of Election Chief. The latest development is Mélenchon Launches 2027 Presidential Campaign Amid Protests in France.",
+      "cta_label": "Explore 13 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "A youth group known as the 'Cockroach' movement has threatened to resume mass protests unless Gyanesh Kumar resigns as head of India's election commission. A later development was Nationwide Protests Erupt in Spain Over Housing Crisis. Most recently, up to 55,000 people participated in a march in Lyon as part of a nationwide strike focused on wages and purchasing power.",
+      "summary": "A youth group known as the 'Cockroach' movement has threatened to resume mass protests unless Gyanesh Kumar resigns as head of India's election commission. A later development was Nationwide Protests Erupt in Spain Over Housing Crisis. Most recently, jean-Luc Mélenchon, a prominent far-left candidate, officially launched his 2027 presidential campaign with a rally near Paris, presenting a platform that includes raising the minimum wage, capping prices for essential foods, and restoring the retirement age to 60.",
       "key_developments": [
         {
           "development_id": "story_c777191e98b23c65",
@@ -1118,14 +1196,14 @@
           "title": "Escalating Student Protests in France Lead to Hundreds of Arrests and Violence"
         },
         {
-          "development_id": "story_b4a24bb9e49bef6b",
-          "date": "2026-10-02",
-          "title": "Widespread Student Protests Lead to School Closures in France"
+          "development_id": "story_0666fe489b0c743f",
+          "date": "2026-11-05",
+          "title": "Students in Athens Demand Increased Education Funding"
         },
         {
-          "development_id": "story_e0e74fd356b3c663",
-          "date": "2026-11-05",
-          "title": "Massive Protest in Lyon Sees Clashes and Tear Gas Amid Nationwide Strike"
+          "development_id": "story_ad01b2c8b4349807",
+          "date": "2026-11-07",
+          "title": "Mélenchon Launches 2027 Presidential Campaign Amid Protests in France"
         }
       ],
       "sources": [
@@ -1344,9 +1422,27 @@
           "source": "Africanews",
           "link": "http://www.africanews.com/2026/11/05/france-up-to-55000-march-in-lyon-amid-clashes-and-tear-gas",
           "source_bias": "center"
+        },
+        {
+          "title": "French presidential election: How far-left Mélenchon became a Gen Z favourite",
+          "source": "France 24 - English",
+          "link": "https://www.france24.com/en/france/20261107-french-2027-presidential-elections-how-m%C3%A9lenchon-became-a-gen-z-favourite",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "'We must change everything': French far-left leader Mélenchon launches presidential programme",
+          "source": "France 24 - English",
+          "link": "https://www.france24.com/en/video/20261107-we-must-change-everything-french-far-left-leader-m%C3%A9lenchon-launches-presidential-programme",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "France braces for new round of Yellow Vest, student protests",
+          "source": "DW - English",
+          "link": "https://www.dw.com/en/france-braces-for-new-round-of-yellow-vest-student-protests/a-79884064?maca=en-rss-en-all-1573-rdf",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-11-05",
+      "updated_at": "2026-11-07",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -1390,14 +1486,15 @@
           "puerta",
           "spain",
           "student_protest",
-          "tear_gas"
+          "tear_gas",
+          "yellow_vest"
         ]
       },
       {
         "event_id": "event_ceuta-requests-national-emergency-amid-surge_4919a90e1a",
         "title": "Ceuta Border Surge",
         "relationship": "related_topic",
-        "confidence": 0.851,
+        "confidence": 0.847,
         "shared_entities": [
           "clashe",
           "france",
@@ -1531,12 +1628,14 @@
     "search_tokens": [
       "000",
       "200",
+      "2027",
       "400",
       "87-year-old",
       "abascal",
       "across",
       "action",
       "address",
+      "addressing",
       "advocating",
       "affected",
       "affordable",
@@ -1558,7 +1657,10 @@
       "budget",
       "calls",
       "camp",
+      "campaign",
       "camped",
+      "candidate",
+      "capping",
       "carmen",
       "central",
       "challenge",
@@ -1574,6 +1676,7 @@
       "cockroach",
       "commission",
       "concern",
+      "concurrently",
       "congress",
       "costs",
       "creating",
@@ -1600,11 +1703,14 @@
       "escalated",
       "escalating",
       "escalation",
+      "essential",
       "europe",
       "eviction",
       "failure",
+      "far-left",
       "focused",
       "follow",
+      "foods",
       "fourth",
       "france",
       "funding",
@@ -1621,6 +1727,7 @@
       "housing",
       "hundred",
       "incident",
+      "include",
       "including",
       "increased",
       "india",
@@ -1628,14 +1735,19 @@
       "intensity",
       "involvement",
       "issue",
+      "jean-luc",
       "join",
       "known",
       "kumar",
       "largely",
+      "launche",
+      "launched",
       "lead",
       "leading",
       "legislation",
+      "lenchon",
       "like",
+      "living",
       "long",
       "lyon",
       "macron",
@@ -1651,19 +1763,23 @@
       "marseille",
       "mass",
       "massive",
+      "minimum",
       "momentum",
       "most",
       "movement",
       "multiple",
       "nante",
       "nationwide",
+      "near",
       "night",
       "noting",
       "numerou",
       "occurred",
+      "officially",
       "one-day",
       "ongoing",
       "opposition",
+      "other",
       "outside",
       "paris",
       "parliament",
@@ -1675,10 +1791,18 @@
       "peaceful",
       "planned",
       "planning",
+      "platform",
       "power",
+      "preparing",
+      "presenting",
+      "presidential",
       "prevent",
+      "price",
       "proceeded",
+      "progressive",
+      "prominent",
       "prompted",
+      "proposal",
       "protest",
       "protested",
       "protester",
@@ -1687,6 +1811,8 @@
       "puerta",
       "pupil",
       "purchasing",
+      "raising",
+      "rally",
       "reform",
       "regarding",
       "rejected",
@@ -1694,11 +1820,14 @@
       "resident",
       "resign",
       "resignation",
+      "resonate",
       "responded",
       "response",
+      "restoring",
       "resulted",
       "resulting",
       "resume",
+      "retirement",
       "rigging",
       "riot",
       "rising",
@@ -1713,6 +1842,7 @@
       "similar",
       "situation",
       "sizes",
+      "social",
       "some",
       "southern",
       "spain",
@@ -1735,8 +1865,11 @@
       "turned",
       "unless",
       "unrest",
+      "vest",
       "violence",
       "violent",
+      "voter",
+      "wage",
       "wages",
       "which",
       "while",
@@ -1745,6 +1878,8 @@
       "woman",
       "worker",
       "years",
+      "yellow",
+      "younger",
       "youth"
     ],
     "entities": [
@@ -1753,6 +1888,7 @@
       "budget_cuts",
       "carmen_abascal",
       "clashe",
+      "concurrently_france",
       "cuts_protest",
       "demand_increased",
       "demanding_resignation",
@@ -1768,6 +1904,7 @@
       "france._demonstration",
       "france._nationwide",
       "france_around",
+      "france_jean-luc",
       "france_lead",
       "france_mark",
       "france_protest",
@@ -1777,6 +1914,8 @@
       "increased_education",
       "india",
       "india_demanding",
+      "jean-luc",
+      "launche_presidential",
       "lyon",
       "lyon._massive",
       "lyon_sees",
@@ -1790,6 +1929,7 @@
       "paris.",
       "paris._nationwide",
       "president",
+      "presidential_campaign",
       "protest_erupt",
       "protest_lead",
       "puerta",
@@ -1804,9 +1944,10 @@
       "woman_eviction",
       "worker_clash",
       "year-old",
-      "year-old_resident"
+      "year-old_resident",
+      "yellow_vest"
     ],
-    "search_text": "000 200 400 87-year-old abascal across action address advocating affected affordable agitator allegation along also among anger approximately areas around arrest arrested athen athen_demand better blockade broader budget budget_cuts calls camp camped carmen carmen_abascal central challenge charged chief citie clash clashe clashing class closed closure cockroach commission concern congress costs creating crisi cuts cuts_protest decree demand demand_increased demanding demanding_resignation demonstrate demonstration demonstrator deployed dialogue disperse disruption education education_funding education_standard educational elderly elderly_woman election election_chief emergency emmanuel emmanuel_macron. enforcement erupt escalated escalating escalating_student escalation europe eviction eviction_tens failure focused follow fourth france france. france._demonstration france._nationwide france_around france_lead france_mark france_protest funding further gaining gas group grow gyanesh gyanesh_kumar head high highlight home housing housing_crisi hundred incident including increased increased_education india india_demanding injurie intensity involvement issue join known kumar largely lead leading legislation like long lyon lyon._massive lyon_sees macron macron._while madrid makeshift march marched maricarmen mark mark_fourth marked marking marks marseille mass mass_protest massive massive_protest momentum most movement multiple nante nationwide nationwide_protest night noting numerou occurred one-day ongoing opposition outside paris paris. paris._nationwide parliament part participated particularly partie pass peaceful planned planning power president prevent proceeded prompted protest protest_erupt protest_lead protested protester protesting public puerta pupil purchasing reform regarding rejected renewed resident resign resignation responded response resulted resulting resume rigging riot rising route saturday scale school second sees sees_clashe shortage significant similar situation sizes some southern spain sparked spread staged standard standard_lead street strike student student_protest teacher tear tear_gas tens thousand threatened through thursday timetable took turned unless unrest violence violence_student violent wages which while widespread widespread_student without woman woman_eviction worker worker_clash year-old year-old_resident years youth"
+    "search_text": "000 200 2027 400 87-year-old abascal across action address addressing advocating affected affordable agitator allegation along also among anger approximately areas around arrest arrested athen athen_demand better blockade broader budget budget_cuts calls camp campaign camped candidate capping carmen carmen_abascal central challenge charged chief citie clash clashe clashing class closed closure cockroach commission concern concurrently concurrently_france congress costs creating crisi cuts cuts_protest decree demand demand_increased demanding demanding_resignation demonstrate demonstration demonstrator deployed dialogue disperse disruption education education_funding education_standard educational elderly elderly_woman election election_chief emergency emmanuel emmanuel_macron. enforcement erupt escalated escalating escalating_student escalation essential europe eviction eviction_tens failure far-left focused follow foods fourth france france. france._demonstration france._nationwide france_around france_jean-luc france_lead france_mark france_protest funding further gaining gas group grow gyanesh gyanesh_kumar head high highlight home housing housing_crisi hundred incident include including increased increased_education india india_demanding injurie intensity involvement issue jean-luc join known kumar largely launche launche_presidential launched lead leading legislation lenchon like living long lyon lyon._massive lyon_sees macron macron._while madrid makeshift march marched maricarmen mark mark_fourth marked marking marks marseille mass mass_protest massive massive_protest minimum momentum most movement multiple nante nationwide nationwide_protest near night noting numerou occurred officially one-day ongoing opposition other outside paris paris. paris._nationwide parliament part participated particularly partie pass peaceful planned planning platform power preparing presenting president presidential presidential_campaign prevent price proceeded progressive prominent prompted proposal protest protest_erupt protest_lead protested protester protesting public puerta pupil purchasing raising rally reform regarding rejected renewed resident resign resignation resonate responded response restoring resulted resulting resume retirement rigging riot rising route saturday scale school second sees sees_clashe shortage significant similar situation sizes social some southern spain sparked spread staged standard standard_lead street strike student student_protest teacher tear tear_gas tens thousand threatened through thursday timetable took turned unless unrest vest violence violence_student violent voter wage wages which while widespread widespread_student without woman woman_eviction worker worker_clash year-old year-old_resident years yellow yellow_vest younger youth"
   },
   "related_events": [
     {
@@ -1914,14 +2055,14 @@
     {
       "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
       "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
-      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Sailor Killed in Gulf Tanker Attack Amid Rising Tensions.",
+      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Russian Attacks on Kyiv's Power Infrastructure Intensify as Winter Approaches.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-07-22",
-      "last_seen_at": "2026-11-06",
-      "development_count": 99,
-      "latest_title": "Sailor Killed in Gulf Tanker Attack Amid Rising Tensions",
+      "last_seen_at": "2026-11-07",
+      "development_count": 100,
+      "latest_title": "Russian Attacks on Kyiv's Power Infrastructure Intensify as Winter Approaches",
       "topic_label": "Iran War",
       "hero_image": {
         "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
