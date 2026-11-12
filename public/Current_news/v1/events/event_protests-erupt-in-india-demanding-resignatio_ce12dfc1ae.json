@@ -15,7 +15,7 @@
     "summary": "A youth group known as the 'Cockroach' movement has threatened to resume mass protests unless Gyanesh Kumar resigns as head of India's election commission. This demand follows allegations of election rigging, which have also prompted opposition parties, including Congress, to join the protests. Police have responded with tear gas to disperse demonstrators.",
     "status": "active",
     "first_seen_at": "2026-09-25",
-    "last_seen_at": "2026-11-11",
+    "last_seen_at": "2026-11-12",
     "timeline": [
       {
         "development_id": "story_c777191e98b23c65",
@@ -1344,6 +1344,84 @@
         "first_seen_at": "2026-11-11",
         "last_seen_at": "2026-11-11",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_5a3b3c03a7d343ba",
+        "daily_story_id": "story_5a3b3c03a7d343ba",
+        "date": "2026-11-12",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Violence Breaks Out in Barcelona Amid General Strike Protests",
+        "summary": "Tens of thousands participated in a general strike in Spain, organized by major unions to protest against high housing costs and the cost of living. Following a peaceful march in Barcelona, clashes erupted between protesters and riot police, with burning barricades reported and police using projectiles to disperse crowds as violence escalated in the city center.",
+        "topic_label": "Spain Protests",
+        "development_type": "military_action",
+        "key_facts": [
+          "Tens of thousands participated in the general strike.",
+          "The strike was organized by Spain's main unions.",
+          "Protests were against high housing costs and the cost of living.",
+          "Clashes occurred after a peaceful march in Barcelona.",
+          "Riot police used projectiles to disperse protesters."
+        ],
+        "source_count": 3,
+        "sources": [
+          "Africanews",
+          "BBC",
+          "Euronews"
+        ],
+        "source_urls": [
+          "https://www.euronews.com/video/2026/11/11/spain-clashes-erupt-in-barcelona-after-peaceful-general-strike-march",
+          "http://www.africanews.com/2026/11/11/spain-clashes-erupt-in-barcelona-after-peaceful-general-strike-march",
+          "https://www.bbc.co.uk/news/articles/cwvg25nypmrvo?at_medium=RSS&at_campaign=rss"
+        ],
+        "source_details": [
+          {
+            "title": "Clashes erupt in Barcelona after peaceful general strike march",
+            "source": "Euronews",
+            "link": "https://www.euronews.com/video/2026/11/11/spain-clashes-erupt-in-barcelona-after-peaceful-general-strike-march",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Clashes erupt in Barcelona after peaceful general strike march",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/11/11/spain-clashes-erupt-in-barcelona-after-peaceful-general-strike-march",
+            "source_bias": "unknown"
+          },
+          {
+            "title": "Clashes erupt in Barcelona after thousands join Spain general strike",
+            "source": "BBC",
+            "link": "https://www.bbc.co.uk/news/articles/cwvg25nypmrvo?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 1.0,
+        "match_evidence": {
+          "score": 1.0,
+          "matched_development_id": "story_5abd7cb921e8da13",
+          "shared_tokens": [
+            "costs",
+            "general",
+            "housing",
+            "occurred",
+            "participated",
+            "protest",
+            "reported",
+            "spain",
+            "strike"
+          ],
+          "shared_entities": [
+            "spain"
+          ],
+          "source_url_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-11-12",
+        "last_seen_at": "2026-11-12",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -1369,12 +1447,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 16,
+      "public_development_count": 17,
       "questionable_development_count": 1,
       "review_required": true
     },
-    "latest_title": "Spain Experiences First General Strike in 14 Years Amid Housing Crisis",
-    "latest_summary": "Millions of Spaniards participated in a general strike, the first in 14 years, to protest rising housing costs and stagnant wages. The strike led to significant disruptions across major cities, coinciding with upcoming parliamentary elections. Demonstrators expressed frustration over the affordability of housing, which has become a central issue in the country.",
+    "latest_title": "Violence Breaks Out in Barcelona Amid General Strike Protests",
+    "latest_summary": "Tens of thousands participated in a general strike in Spain, organized by major unions to protest against high housing costs and the cost of living. Following a peaceful march in Barcelona, clashes erupted between protesters and riot police, with burning barricades reported and police using projectiles to disperse crowds as violence escalated in the city center.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -1385,29 +1463,29 @@
       "milestone_development_ids": [
         "story_c777191e98b23c65",
         "story_2009e704d01ed7f2",
-        "story_e049b5568979c5db",
-        "story_5abd7cb921e8da13"
+        "story_e0e74fd356b3c663",
+        "story_5a3b3c03a7d343ba"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-11-11",
-      "development_count": 16,
-      "coverage_packet_count": 19,
-      "date_count": 11,
-      "source_count": 46,
+      "summary_updated_at": "2026-11-12",
+      "development_count": 17,
+      "coverage_packet_count": 20,
+      "date_count": 12,
+      "source_count": 48,
       "independent_source_count": 20,
       "first_date": "2026-09-25",
-      "latest_date": "2026-11-11",
-      "latest_update_title": "Spain Experiences First General Strike in 14 Years Amid Housing Crisis",
+      "latest_date": "2026-11-12",
+      "latest_update_title": "Violence Breaks Out in Barcelona Amid General Strike Protests",
       "coverage_score": 1.0,
       "recency_score": 1.0,
       "rank_score": 1.0,
-      "context_summary": "Muninn first tracked this thread on 2026-09-25: Protests Erupt in India Demanding Resignation of Election Chief. The latest development is Spain Experiences First General Strike in 14 Years Amid Housing Crisis.",
-      "cta_label": "Explore 16 developments"
+      "context_summary": "Muninn first tracked this thread on 2026-09-25: Protests Erupt in India Demanding Resignation of Election Chief. The latest development is Violence Breaks Out in Barcelona Amid General Strike Protests.",
+      "cta_label": "Explore 17 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "A youth group known as the 'Cockroach' movement has threatened to resume mass protests unless Gyanesh Kumar resigns as head of India's election commission. A later development was Students in Athens Demand Increased Education Funding. Most recently, millions of Spaniards participated in a general strike, the first in 14 years, to protest rising housing costs and stagnant wages.",
+      "summary": "A youth group known as the 'Cockroach' movement has threatened to resume mass protests unless Gyanesh Kumar resigns as head of India's election commission. A later development was Students in Athens Demand Increased Education Funding. Most recently, tens of thousands participated in a general strike in Spain, organized by major unions to protest against high housing costs and the cost of living.",
       "key_developments": [
         {
           "development_id": "story_c777191e98b23c65",
@@ -1420,14 +1498,14 @@
           "title": "Protests Over Education Standards Lead to Clashes in France"
         },
         {
-          "development_id": "story_e049b5568979c5db",
+          "development_id": "story_e0e74fd356b3c663",
           "date": "2026-11-05",
-          "title": "Nationwide Strikes and Protests in France Amid Police Clashes"
+          "title": "Massive Protest in Lyon Sees Clashes and Tear Gas Amid Nationwide Strike"
         },
         {
-          "development_id": "story_5abd7cb921e8da13",
-          "date": "2026-11-11",
-          "title": "Spain Experiences First General Strike in 14 Years Amid Housing Crisis"
+          "development_id": "story_5a3b3c03a7d343ba",
+          "date": "2026-11-12",
+          "title": "Violence Breaks Out in Barcelona Amid General Strike Protests"
         }
       ],
       "sources": [
@@ -1706,9 +1784,21 @@
           "source": "BBC - World",
           "link": "https://www.bbc.co.uk/news/articles/cwvg25nypmrvo?at_medium=RSS&at_campaign=rss",
           "source_bias": "center"
+        },
+        {
+          "title": "Clashes erupt in Barcelona after peaceful general strike march",
+          "source": "Euronews",
+          "link": "https://www.euronews.com/video/2026/11/11/spain-clashes-erupt-in-barcelona-after-peaceful-general-strike-march",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Clashes erupt in Barcelona after peaceful general strike march",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/11/11/spain-clashes-erupt-in-barcelona-after-peaceful-general-strike-march",
+          "source_bias": "unknown"
         }
       ],
-      "updated_at": "2026-11-11",
+      "updated_at": "2026-11-12",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -1774,15 +1864,15 @@
         ]
       },
       {
-        "event_id": "event_protests-erupt-in-israel-against-election-in_a0b546d8ce",
-        "title": "Protests Erupt in Israel Against Election Interference Ahead of October Vote",
+        "event_id": "event_footage-captures-the-moment-an-israeli-strik_a1122bc1bf",
+        "title": "Footage captures the moment an Israeli strike hits a building in Gaza's Nuseirat camp",
         "relationship": "related_topic",
-        "confidence": 0.758,
+        "confidence": 0.765,
         "shared_entities": [
+          "france",
           "gaza",
           "israel",
-          "president",
-          "protest_erupt"
+          "jean-luc"
         ]
       }
     ],
@@ -1928,11 +2018,15 @@
       "arrest",
       "arrested",
       "athen",
+      "barcelona",
+      "barricade",
       "become",
       "better",
       "blockade",
+      "break",
       "broader",
       "budget",
+      "burning",
       "called",
       "calls",
       "camp",
@@ -1942,6 +2036,7 @@
       "candidate",
       "capping",
       "carmen",
+      "center",
       "central",
       "challenge",
       "champion",
@@ -1961,9 +2056,11 @@
       "concurrently",
       "congress",
       "constitute",
+      "cost",
       "costs",
       "creating",
       "crisi",
+      "crowd",
       "cuts",
       "declaration",
       "declared",
@@ -1986,6 +2083,7 @@
       "emmanuel",
       "enforcement",
       "erupt",
+      "erupted",
       "escalated",
       "escalating",
       "escalation",
@@ -2085,6 +2183,7 @@
       "ongoing",
       "opinion",
       "opposition",
+      "organized",
       "organizer",
       "other",
       "outside",
@@ -2110,6 +2209,7 @@
       "price",
       "proceeded",
       "progressive",
+      "projectile",
       "prominent",
       "prompted",
       "proposal",
@@ -2127,6 +2227,7 @@
       "regarding",
       "rejected",
       "renewed",
+      "reported",
       "resident",
       "resign",
       "resignation",
@@ -2181,9 +2282,11 @@
       "took",
       "trade",
       "turned",
+      "union",
       "unless",
       "unrest",
       "upcoming",
+      "using",
       "vest",
       "violence",
       "violent",
@@ -2206,6 +2309,8 @@
       "amsterdam",
       "athen",
       "athen_demand",
+      "barcelona",
+      "break_out",
       "budget_cuts",
       "carmen_abascal",
       "clashe",
@@ -2262,6 +2367,7 @@
       "presidential_campaign",
       "protest_erupt",
       "protest_lead",
+      "protest_tens",
       "puerta",
       "red_line",
       "school",
@@ -2272,6 +2378,7 @@
       "student_protest",
       "tear_gas",
       "teddy_riner",
+      "violence_break",
       "violence_student",
       "widespread_student",
       "woman_eviction",
@@ -2280,7 +2387,7 @@
       "year-old_resident",
       "yellow_vest"
     ],
-    "search_text": "000 200 2027 37-year-old 400 87-year-old abascal across action address addressing advocating affected affordability affordable agitator allegation along also among amsterdam anger announce announcement approximately areas arms around arrest arrested athen athen_demand become better blockade broader budget budget_cuts called calls camp campaign camped candidacy candidate capping carmen carmen_abascal central challenge champion charged chief citie clash clashe clashing class closed closure cockroach coinciding commission concern concurrently concurrently_france congress constitute costs creating crisi crisi_million cuts cuts_protest declaration declared decree demand demand_increased demanding demanding_resignation demonstrate demonstration demonstrator deployed dialogue disperse disruption divided education education_funding education_standard educational elderly elderly_woman election election_chief emergency emmanuel emmanuel_macron. enforcement erupt escalated escalating escalating_student escalation essential europe eviction eviction_tens experience experience_first expressed failure far-left far-right first first_general focused follow foods fourth france france. france._demonstration france._nationwide france_around france_jean-luc france_lead france_mark france_protest france_teddy frustration funding further gaining gas gathered gaza general genocide group grow gyanesh gyanesh_kumar halt head high highlight home housing housing_crisi hundred incident include including increased increased_education india india_demanding injurie intensity involvement israel israel_hundred issue jean-luc join judo known kumar landscape largely launche launche_presidential launched lead leading legislation lenchon like line living long lyon lyon._massive lyon_sees macron macron._while made madrid makeshift march marched maricarmen marine mark mark_fourth marked marking marks marseille mass mass_protest massive massive_protest media million minimum momentum most movement multiple nante nationwide nationwide_protest near night noting numerou occurred officially olympic one-day ongoing opinion opposition organizer other outside paris paris. paris._nationwide parliament parliamentary part participated particularly partie pass peaceful pen._spain planned planning platform political power preparing presenting presidency president presidential presidential_bid presidential_campaign prevent price proceeded progressive prominent prompted proposal protest protest_erupt protest_lead protested protester protesting public puerta pupil purchasing raising rally red_line reform regarding rejected renewed resident resign resignation resonate responded response restoring restriction resulted resulting resume retirement rigging riner riot rising route sales saturday scale school second sees sees_clashe shortage significant similar situation sizes social some southern spain spain_experience spaniard sparked spread staged stagnant standard standard_lead street stricter strike student student_protest teacher tear tear_gas teddy teddy_riner tens thousand threatened through thursday timetable took trade turned unless unrest upcoming vest violence violence_student violent voter wage wages where which while widespread widespread_student without woman woman_eviction worker worker_clash year-old year-old_resident years yellow yellow_vest younger youth"
+    "search_text": "000 200 2027 37-year-old 400 87-year-old abascal across action address addressing advocating affected affordability affordable agitator allegation along also among amsterdam anger announce announcement approximately areas arms around arrest arrested athen athen_demand barcelona barricade become better blockade break break_out broader budget budget_cuts burning called calls camp campaign camped candidacy candidate capping carmen carmen_abascal center central challenge champion charged chief citie clash clashe clashing class closed closure cockroach coinciding commission concern concurrently concurrently_france congress constitute cost costs creating crisi crisi_million crowd cuts cuts_protest declaration declared decree demand demand_increased demanding demanding_resignation demonstrate demonstration demonstrator deployed dialogue disperse disruption divided education education_funding education_standard educational elderly elderly_woman election election_chief emergency emmanuel emmanuel_macron. enforcement erupt erupted escalated escalating escalating_student escalation essential europe eviction eviction_tens experience experience_first expressed failure far-left far-right first first_general focused follow foods fourth france france. france._demonstration france._nationwide france_around france_jean-luc france_lead france_mark france_protest france_teddy frustration funding further gaining gas gathered gaza general genocide group grow gyanesh gyanesh_kumar halt head high highlight home housing housing_crisi hundred incident include including increased increased_education india india_demanding injurie intensity involvement israel israel_hundred issue jean-luc join judo known kumar landscape largely launche launche_presidential launched lead leading legislation lenchon like line living long lyon lyon._massive lyon_sees macron macron._while made madrid makeshift march marched maricarmen marine mark mark_fourth marked marking marks marseille mass mass_protest massive massive_protest media million minimum momentum most movement multiple nante nationwide nationwide_protest near night noting numerou occurred officially olympic one-day ongoing opinion opposition organized organizer other outside paris paris. paris._nationwide parliament parliamentary part participated particularly partie pass peaceful pen._spain planned planning platform political power preparing presenting presidency president presidential presidential_bid presidential_campaign prevent price proceeded progressive projectile prominent prompted proposal protest protest_erupt protest_lead protest_tens protested protester protesting public puerta pupil purchasing raising rally red_line reform regarding rejected renewed reported resident resign resignation resonate responded response restoring restriction resulted resulting resume retirement rigging riner riot rising route sales saturday scale school second sees sees_clashe shortage significant similar situation sizes social some southern spain spain_experience spaniard sparked spread staged stagnant standard standard_lead street stricter strike student student_protest teacher tear tear_gas teddy teddy_riner tens thousand threatened through thursday timetable took trade turned union unless unrest upcoming using vest violence violence_break violence_student violent voter wage wages where which while widespread widespread_student without woman woman_eviction worker worker_clash year-old year-old_resident years yellow yellow_vest younger youth"
   },
   "related_events": [
     {
@@ -2386,20 +2493,20 @@
       "href": "/timeline.html?event=event_ceuta-requests-national-emergency-amid-surge_4919a90e1a"
     },
     {
-      "event_id": "event_protests-erupt-in-israel-against-election-in_a0b546d8ce",
-      "title": "Protests Erupt in Israel Against Election Interference Ahead of October Vote",
-      "summary": "Muninn first tracked this thread on 2026-09-18: Protests Erupt in Israel Against Election Interference Ahead of October Vote. The latest development is Netanyahu Accused of Smearing Arab Parties After Election Loss.",
+      "event_id": "event_footage-captures-the-moment-an-israeli-strik_a1122bc1bf",
+      "title": "Footage captures the moment an Israeli strike hits a building in Gaza's Nuseirat camp",
+      "summary": "Muninn first tracked this thread on 2026-10-24: Footage captures the moment an Israeli strike hits a building in Gaza's Nuseirat camp. The latest development is Israel Bans French Politician Jean-Luc Mélenchon from Entry Amid Gaza Aid Controversy.",
       "activity_status": "active",
-      "stage": "timeline",
-      "stage_label": "Timeline",
-      "first_seen_at": "2026-09-18",
-      "last_seen_at": "2026-10-30",
-      "development_count": 20,
-      "latest_title": "Netanyahu Accused of Smearing Arab Parties After Election Loss",
-      "topic_label": "Israeli Elections",
+      "stage": "developing_event",
+      "stage_label": "Developing event",
+      "first_seen_at": "2026-10-24",
+      "last_seen_at": "2026-11-12",
+      "development_count": 2,
+      "latest_title": "Israel Bans French Politician Jean-Luc Mélenchon from Entry Amid Gaza Aid Controversy",
+      "topic_label": "Israel-Gaza War",
       "hero_image": {
-        "url": "/Current_news/generated/events/event_protests-erupt-in-israel-against-election-in_a0b546d8ce.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_protests-erupt-in-israel-against-election-in_a0b546d8ce.jpg",
+        "url": "/Current_news/generated/events/event_footage-captures-the-moment-an-israeli-strik_a1122bc1bf.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_footage-captures-the-moment-an-israeli-strik_a1122bc1bf.jpg",
         "source": "Muninn AI illustration",
         "author": "OpenAI GPT Image 2",
         "license": "AI-generated content",
@@ -2417,7 +2524,7 @@
         "focal_tall_x": 0.5,
         "focal_tall_y": 0.48
       },
-      "href": "/timeline.html?event=event_protests-erupt-in-israel-against-election-in_a0b546d8ce"
+      "href": "/timeline.html?event=event_footage-captures-the-moment-an-israeli-strik_a1122bc1bf"
     }
   ]
 }

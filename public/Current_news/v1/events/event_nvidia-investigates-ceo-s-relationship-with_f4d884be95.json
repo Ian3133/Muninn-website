@@ -15,7 +15,7 @@
     "summary": "Nvidia has launched an investigation into CEO Jensen Huang's relationship with Alice Huang, a Chinese businesswoman suspected of being a spy for China. Reports indicate that Jensen Huang's affair with Alice Huang may have made him a target of foreign intelligence efforts. Following the announcement of the investigation, Nvidia's stock price experienced a significant drop, and US intelligence officials have raised concerns about the implications of this relationship.",
     "status": "active",
     "first_seen_at": "2026-11-09",
-    "last_seen_at": "2026-11-10",
+    "last_seen_at": "2026-11-12",
     "timeline": [
       {
         "development_id": "story_a7bc7d671a1555ec",
@@ -171,15 +171,104 @@
         "first_seen_at": "2026-11-10",
         "last_seen_at": "2026-11-10",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_eb3a541653ca47bd",
+        "daily_story_id": "story_eb3a541653ca47bd",
+        "date": "2026-11-12",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Nvidia CEO Jensen Huang Resigns Amid Allegations of Affair with Chinese Spy",
+        "summary": "Jensen Huang has resigned as CEO of Nvidia following reports of his involvement with Alice Huang, a Chinese businesswoman alleged to be linked to espionage activities. The resignation comes amid growing scrutiny from shareholders and lawmakers regarding his relationships, which have raised national security concerns. CFO Colette Kress will serve as interim CEO.",
+        "topic_label": "Corporate Scandal",
+        "development_type": "policy",
+        "key_facts": [
+          "Jensen Huang resigned from Nvidia amid allegations of an affair with Alice Huang.",
+          "Alice Huang is accused of being involved in a Chinese intelligence operation.",
+          "The resignation has prompted shareholder lawsuits and inquiries from US lawmakers."
+        ],
+        "source_count": 3,
+        "sources": [
+          "Euronews",
+          "NBC News",
+          "NewsNation"
+        ],
+        "source_urls": [
+          "https://www.euronews.com/2026/11/12/who-is-alice-huang-the-alleged-chinese-spy-linked-to-nvidias-jensen-huang",
+          "https://www.newsnationnow.com/business/tech/nvidia-jensen-huang-resigns",
+          "https://www.nbcnews.com/tech/tech-news/nvidia-ceo-jensen-huang-resigns-reports-extramarital-relationships-rcna608402"
+        ],
+        "source_details": [
+          {
+            "title": "Who is Alice Huang, the alleged Chinese spy linked to Nvidia's Jensen Huang?",
+            "source": "Euronews",
+            "link": "https://www.euronews.com/2026/11/12/who-is-alice-huang-the-alleged-chinese-spy-linked-to-nvidias-jensen-huang",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Nvidia CEO Jensen Huang resigns amid alleged Chinese spy scandal",
+            "source": "NewsNation",
+            "link": "https://www.newsnationnow.com/business/tech/nvidia-jensen-huang-resigns",
+            "source_bias": "center"
+          },
+          {
+            "title": "Nvidia CEO Jensen Huang resigns after affair with suspected Chinese spy",
+            "source": "NBC News",
+            "link": "https://www.nbcnews.com/tech/tech-news/nvidia-ceo-jensen-huang-resigns-reports-extramarital-relationships-rcna608402",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.48,
+        "match_evidence": {
+          "score": 0.48,
+          "matched_development_id": "story_a7bc7d671a1555ec",
+          "shared_tokens": [
+            "affair",
+            "alice",
+            "alleged",
+            "businesswoman",
+            "china",
+            "concern",
+            "corporate",
+            "espionage",
+            "huang",
+            "intelligence",
+            "jensen",
+            "nvidia",
+            "raised",
+            "relationship"
+          ],
+          "shared_entities": [
+            "alice_huang",
+            "alice_huang.",
+            "ceo",
+            "ceo_jensen",
+            "china",
+            "china_spy",
+            "huang._alice",
+            "jensen_huang",
+            "us"
+          ],
+          "source_url_match": false,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-11-12",
+        "last_seen_at": "2026-11-12",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 2,
+      "public_development_count": 3,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Investigation into Nvidia CEO Jensen Huang Over Alleged Affair with Chinese Spy",
-    "latest_summary": "Nvidia CEO Jensen Huang is under investigation by the FBI regarding his alleged affair with Alice Huang, a Chinese businesswoman suspected of being a spy for Beijing. US President Donald Trump stated that he spoke with Jensen Huang, who denied knowing about Alice Huang's alleged espionage activities. Following these developments, Nvidia is facing a shareholder lawsuit claiming that the company misled investors about the situation.",
+    "latest_title": "Nvidia CEO Jensen Huang Resigns Amid Allegations of Affair with Chinese Spy",
+    "latest_summary": "Jensen Huang has resigned as CEO of Nvidia following reports of his involvement with Alice Huang, a Chinese businesswoman alleged to be linked to espionage activities. The resignation comes amid growing scrutiny from shareholders and lawmakers regarding his relationships, which have raised national security concerns. CFO Colette Kress will serve as interim CEO.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": false,
@@ -189,28 +278,29 @@
       "display_title": "Nvidia Investigates CEO's Relationship with Alleged Chinese Spy Alice Huang",
       "milestone_development_ids": [
         "story_a7bc7d671a1555ec",
-        "story_459b954220f38e84"
+        "story_459b954220f38e84",
+        "story_eb3a541653ca47bd"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-11-10",
-      "development_count": 2,
-      "coverage_packet_count": 2,
-      "date_count": 2,
-      "source_count": 7,
-      "independent_source_count": 7,
+      "summary_updated_at": "2026-11-12",
+      "development_count": 3,
+      "coverage_packet_count": 3,
+      "date_count": 3,
+      "source_count": 10,
+      "independent_source_count": 9,
       "first_date": "2026-11-09",
-      "latest_date": "2026-11-10",
-      "latest_update_title": "Investigation into Nvidia CEO Jensen Huang Over Alleged Affair with Chinese Spy",
-      "coverage_score": 0.547,
-      "recency_score": 0.875,
-      "rank_score": 0.737,
-      "context_summary": "Muninn first tracked this thread on 2026-11-09: Nvidia Investigates CEO's Relationship with Alleged Chinese Spy Alice Huang. The latest development is Investigation into Nvidia CEO Jensen Huang Over Alleged Affair with Chinese Spy.",
+      "latest_date": "2026-11-12",
+      "latest_update_title": "Nvidia CEO Jensen Huang Resigns Amid Allegations of Affair with Chinese Spy",
+      "coverage_score": 0.72,
+      "recency_score": 1.0,
+      "rank_score": 0.882,
+      "context_summary": "Muninn first tracked this thread on 2026-11-09: Nvidia Investigates CEO's Relationship with Alleged Chinese Spy Alice Huang. The latest development is Nvidia CEO Jensen Huang Resigns Amid Allegations of Affair with Chinese Spy.",
       "cta_label": ""
     },
     "event_summary": {
       "available": true,
-      "summary": "Nvidia has launched an investigation into CEO Jensen Huang's relationship with Alice Huang, a Chinese businesswoman suspected of being a spy for China. Most recently, nvidia CEO Jensen Huang is under investigation by the FBI regarding his alleged affair with Alice Huang, a Chinese businesswoman suspected of being a spy for Beijing.",
+      "summary": "Nvidia has launched an investigation into CEO Jensen Huang's relationship with Alice Huang, a Chinese businesswoman suspected of being a spy for China. A later development was Investigation into Nvidia CEO Jensen Huang Over Alleged Affair with Chinese Spy. Most recently, jensen Huang has resigned as CEO of Nvidia following reports of his involvement with Alice Huang, a Chinese businesswoman alleged to be linked to espionage activities.",
       "key_developments": [
         {
           "development_id": "story_a7bc7d671a1555ec",
@@ -221,6 +311,11 @@
           "development_id": "story_459b954220f38e84",
           "date": "2026-11-10",
           "title": "Investigation into Nvidia CEO Jensen Huang Over Alleged Affair with Chinese Spy"
+        },
+        {
+          "development_id": "story_eb3a541653ca47bd",
+          "date": "2026-11-12",
+          "title": "Nvidia CEO Jensen Huang Resigns Amid Allegations of Affair with Chinese Spy"
         }
       ],
       "sources": [
@@ -265,9 +360,27 @@
           "source": "CBS News",
           "link": "https://www.cbsnews.com/news/nvidia-jensen-huang-shareholder-lawsuit-affair-chinese-spy",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Who is Alice Huang, the alleged Chinese spy linked to Nvidia's Jensen Huang?",
+          "source": "Euronews",
+          "link": "https://www.euronews.com/2026/11/12/who-is-alice-huang-the-alleged-chinese-spy-linked-to-nvidias-jensen-huang",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Nvidia CEO Jensen Huang resigns amid alleged Chinese spy scandal",
+          "source": "NewsNation",
+          "link": "https://www.newsnationnow.com/business/tech/nvidia-jensen-huang-resigns",
+          "source_bias": "center"
+        },
+        {
+          "title": "Nvidia CEO Jensen Huang resigns after affair with suspected Chinese spy",
+          "source": "NBC News",
+          "link": "https://www.nbcnews.com/tech/tech-news/nvidia-ceo-jensen-huang-resigns-reports-extramarital-relationships-rcna608402",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-11-10",
+      "updated_at": "2026-11-12",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "developing_event",
@@ -276,7 +389,7 @@
         "event_id": "event_nvidia-shares-decline-amid-internal-probe-of_17ab72516b",
         "title": "Nvidia Shares Decline Amid Internal Probe of CEO Jensen Huang",
         "relationship": "related_topic",
-        "confidence": 0.79,
+        "confidence": 0.798,
         "shared_entities": [
           "ceo",
           "ceo_jensen",
@@ -299,17 +412,17 @@
         "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
         "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
         "relationship": "related_topic",
-        "confidence": 0.732,
+        "confidence": 0.729,
         "shared_entities": [
           "donald_trump",
           "us"
         ]
       },
       {
-        "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
-        "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
+        "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
+        "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
         "relationship": "related_topic",
-        "confidence": 0.707,
+        "confidence": 0.711,
         "shared_entities": [
           "donald_trump",
           "us"
@@ -419,12 +532,15 @@
       "activitie",
       "affair",
       "alice",
+      "allegation",
       "alleged",
       "announcement",
       "beijing",
       "businesswoman",
       "china",
       "claiming",
+      "colette",
+      "comes",
       "company",
       "concern",
       "denied",
@@ -436,24 +552,36 @@
       "experienced",
       "facing",
       "foreign",
+      "growing",
       "huang",
       "implication",
       "indicate",
       "intelligence",
+      "interim",
       "investigate",
       "investigation",
       "investor",
+      "involvement",
       "jensen",
       "knowing",
+      "kress",
       "launched",
       "lawsuit",
+      "linked",
       "made",
       "misled",
+      "national",
       "nvidia",
       "price",
       "raised",
       "regarding",
       "relationship",
+      "resign",
+      "resignation",
+      "resigned",
+      "scrutiny",
+      "security",
+      "serve",
       "shareholder",
       "significant",
       "situation",
@@ -464,29 +592,36 @@
       "target",
       "these",
       "trump",
-      "under"
+      "under",
+      "which"
     ],
     "entities": [
       "alice_huang",
       "alleged_affair",
       "alleged_china",
       "ceo",
+      "ceo.",
       "ceo_jensen",
       "ceo_relationship",
+      "cfo",
+      "cfo_colette",
       "china",
       "china_spy",
+      "colette_kress",
       "donald_trump",
       "fbi",
       "huang_nvidia",
+      "huang_resign",
       "investigate_ceo",
       "jensen_huang",
       "nvidia_ceo",
       "nvidia_investigate",
       "spy_alice",
+      "spy_jensen",
       "spy_nvidia",
       "us"
     ],
-    "search_text": "activitie affair alice alice_huang alleged alleged_affair alleged_china announcement beijing businesswoman ceo ceo_jensen ceo_relationship china china_spy claiming company concern denied development donald donald_trump drop effort espionage experienced facing fbi foreign huang huang_nvidia implication indicate intelligence investigate investigate_ceo investigation investor jensen jensen_huang knowing launched lawsuit made misled nvidia nvidia_ceo nvidia_investigate price raised regarding relationship shareholder significant situation spoke spy_alice spy_nvidia stated stock suspected target these trump under us"
+    "search_text": "activitie affair alice alice_huang allegation alleged alleged_affair alleged_china announcement beijing businesswoman ceo ceo. ceo_jensen ceo_relationship cfo cfo_colette china china_spy claiming colette colette_kress comes company concern denied development donald donald_trump drop effort espionage experienced facing fbi foreign growing huang huang_nvidia huang_resign implication indicate intelligence interim investigate investigate_ceo investigation investor involvement jensen jensen_huang knowing kress launched lawsuit linked made misled national nvidia nvidia_ceo nvidia_investigate price raised regarding relationship resign resignation resigned scrutiny security serve shareholder significant situation spoke spy_alice spy_jensen spy_nvidia stated stock suspected target these trump under us which"
   },
   "related_events": [
     {
@@ -526,14 +661,14 @@
     {
       "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
       "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
-      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Iran Denies Ongoing Negotiations with the US Amid Sanctions.",
+      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Zelensky Cautions Europe on US-Russia Security Talks.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-07-22",
-      "last_seen_at": "2026-11-10",
-      "development_count": 102,
-      "latest_title": "Iran Denies Ongoing Negotiations with the US Amid Sanctions",
+      "last_seen_at": "2026-11-12",
+      "development_count": 106,
+      "latest_title": "Zelensky Cautions Europe on US-Russia Security Talks",
       "topic_label": "Iran War",
       "hero_image": {
         "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
@@ -558,20 +693,20 @@
       "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
     },
     {
-      "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
-      "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
-      "summary": "Muninn first tracked this thread on 2026-09-11: Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims. The latest development is Iran's state television reported that seven oil tankers either caught fire or were damaged by mines overnight Wednesday into Thursday after.",
+      "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
+      "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
+      "summary": "Muninn first tracked this thread on 2026-09-18: Macron Implements Measures Against Intensifying Russian Hybrid Threats. The latest development is French PM Announces Major Police Presence for Upcoming Protests.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
-      "first_seen_at": "2026-09-11",
-      "last_seen_at": "2026-10-23",
-      "development_count": 38,
-      "latest_title": "Iran's state television reported that seven oil tankers either caught fire or were damaged by mines overnight Wednesday into Thursday after",
-      "topic_label": "9/11 Victim Compensation",
+      "first_seen_at": "2026-09-18",
+      "last_seen_at": "2026-10-20",
+      "development_count": 51,
+      "latest_title": "French PM Announces Major Police Presence for Upcoming Protests",
+      "topic_label": "Russian Hybrid Attacks",
       "hero_image": {
-        "url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",
+        "url": "/Current_news/generated/events/event_macron-implements-measures-against-intensify_109da09c6f.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_macron-implements-measures-against-intensify_109da09c6f.jpg",
         "source": "Muninn AI illustration",
         "author": "OpenAI GPT Image 2",
         "license": "AI-generated content",
@@ -589,7 +724,7 @@
         "focal_tall_x": 0.5,
         "focal_tall_y": 0.48
       },
-      "href": "/timeline.html?event=event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b"
+      "href": "/timeline.html?event=event_macron-implements-measures-against-intensify_109da09c6f"
     }
   ]
 }

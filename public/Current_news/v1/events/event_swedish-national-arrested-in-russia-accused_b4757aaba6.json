@@ -15,7 +15,7 @@
     "summary": "Russian intelligence has arrested a Swedish man at the western border, alleging he led a Ukrainian drone unit. He faces accusations of planning acts of terrorism and sabotage. The arrest comes amid heightened tensions between Russia and Ukraine, with ongoing accusations from Russia regarding Ukraine's actions against US-brokered peace efforts.",
     "status": "active",
     "first_seen_at": "2026-10-15",
-    "last_seen_at": "2026-11-11",
+    "last_seen_at": "2026-11-12",
     "timeline": [
       {
         "development_id": "story_3e1da0525aa86e0b",
@@ -214,47 +214,117 @@
         "first_seen_at": "2026-11-11",
         "last_seen_at": "2026-11-11",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_73ed819ab64a8601",
+        "daily_story_id": "story_73ed819ab64a8601",
+        "date": "2026-11-12",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Progress in Russian-Ukrainian Peace Talks with Prisoner Exchange Agreement",
+        "summary": "Russian and Ukrainian negotiators reported progress in peace talks, agreeing to a significant exchange of prisoners of war. However, the discussions, mediated by the U.S., did not result in a major breakthrough towards ending the ongoing conflict that began with Russia's invasion in 2022.",
+        "topic_label": "Russia-Ukraine Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "Negotiators from Russia and Ukraine agreed to a large prisoner exchange.",
+          "The talks were mediated by the US",
+          "No major breakthrough was achieved regarding the conflict."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Africanews",
+          "PBS News - Headlines"
+        ],
+        "source_urls": [
+          "http://www.africanews.com/2026/11/11/russian-and-ukrainian-negotiators-report-some-progress-in-peace-talks",
+          "https://www.pbs.org/newshour/world/russia-and-ukraine-agree-to-a-large-prisoner-exchange-as-talks-end-with-no-major-breakthrough"
+        ],
+        "source_details": [
+          {
+            "title": "Russian and Ukrainian negotiators report some progress in peace talks",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/11/11/russian-and-ukrainian-negotiators-report-some-progress-in-peace-talks",
+            "source_bias": "center"
+          },
+          {
+            "title": "Russia and Ukraine agree to a large prisoner exchange as talks end with no major breakthrough",
+            "source": "PBS News - Headlines",
+            "link": "https://www.pbs.org/newshour/world/russia-and-ukraine-agree-to-a-large-prisoner-exchange-as-talks-end-with-no-major-breakthrough",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_3e1da0525aa86e0b",
+          "shared_tokens": [
+            "conflict",
+            "ongoing",
+            "peace",
+            "regarding",
+            "russia",
+            "russia-ukraine",
+            "ukraine"
+          ],
+          "shared_entities": [
+            "russia",
+            "russia-ukraine",
+            "ukraine"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-11-12",
+        "last_seen_at": "2026-11-12",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 3,
+      "public_development_count": 4,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Russia and Ukraine Reach Major Prisoner Exchange Agreement After Talks",
-    "latest_summary": "Russia and Ukraine have agreed to a significant prisoner exchange following two days of U.S.-mediated talks in Abu Dhabi. This exchange is noted as a major humanitarian release since the conflict began in 2022. However, no specific numbers regarding the prisoners involved have been disclosed.",
+    "latest_title": "Progress in Russian-Ukrainian Peace Talks with Prisoner Exchange Agreement",
+    "latest_summary": "Russian and Ukrainian negotiators reported progress in peace talks, agreeing to a significant exchange of prisoners of war. However, the discussions, mediated by the U.S., did not result in a major breakthrough towards ending the ongoing conflict that began with Russia's invasion in 2022.",
     "presentation": {
       "has_context": true,
-      "has_full_timeline": false,
-      "stage": "developing_event",
-      "stage_label": "Developing event",
+      "has_full_timeline": true,
+      "stage": "timeline",
+      "stage_label": "Timeline",
       "base_title": "Swedish National Arrested in Russia, Accused of Leading Ukrainian Drone Unit",
-      "display_title": "Swedish National Arrested in Russia, Accused of Leading Ukrainian Drone Unit",
+      "display_title": "Swedish National Arrested in Russia, Accused of Leading Ukrainian Drone Unit Timeline",
       "milestone_development_ids": [
         "story_3e1da0525aa86e0b",
         "story_a19e2206844ae580",
-        "story_4241cc47859775b4"
+        "story_4241cc47859775b4",
+        "story_73ed819ab64a8601"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-11-11",
-      "development_count": 3,
-      "coverage_packet_count": 3,
-      "date_count": 3,
-      "source_count": 7,
-      "independent_source_count": 6,
+      "summary_updated_at": "2026-11-12",
+      "development_count": 4,
+      "coverage_packet_count": 4,
+      "date_count": 4,
+      "source_count": 9,
+      "independent_source_count": 8,
       "first_date": "2026-10-15",
-      "latest_date": "2026-11-11",
-      "latest_update_title": "Russia and Ukraine Reach Major Prisoner Exchange Agreement After Talks",
-      "coverage_score": 0.608,
+      "latest_date": "2026-11-12",
+      "latest_update_title": "Progress in Russian-Ukrainian Peace Talks with Prisoner Exchange Agreement",
+      "coverage_score": 0.806,
       "recency_score": 1.0,
-      "rank_score": 0.835,
-      "context_summary": "Muninn first tracked this thread on 2026-10-15: Swedish National Arrested in Russia, Accused of Leading Ukrainian Drone Unit. The latest development is Russia and Ukraine Reach Major Prisoner Exchange Agreement After Talks.",
-      "cta_label": ""
+      "rank_score": 0.918,
+      "context_summary": "Muninn first tracked this thread on 2026-10-15: Swedish National Arrested in Russia, Accused of Leading Ukrainian Drone Unit. The latest development is Progress in Russian-Ukrainian Peace Talks with Prisoner Exchange Agreement.",
+      "cta_label": "Explore 4 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Russian intelligence has arrested a Swedish man at the western border, alleging he led a Ukrainian drone unit. A later development was South Africa Arrests Foreign Nationals Suspected of Joining Russian Forces. Most recently, russia and Ukraine have agreed to a significant prisoner exchange following two days of U.S.-mediated talks in Abu Dhabi.",
+      "summary": "Russian intelligence has arrested a Swedish man at the western border, alleging he led a Ukrainian drone unit. A later development was Russia and Ukraine Reach Major Prisoner Exchange Agreement After Talks. Most recently, russian and Ukrainian negotiators reported progress in peace talks, agreeing to a significant exchange of prisoners of war.",
       "key_developments": [
         {
           "development_id": "story_3e1da0525aa86e0b",
@@ -270,6 +340,11 @@
           "development_id": "story_4241cc47859775b4",
           "date": "2026-11-11",
           "title": "Russia and Ukraine Reach Major Prisoner Exchange Agreement After Talks"
+        },
+        {
+          "development_id": "story_73ed819ab64a8601",
+          "date": "2026-11-12",
+          "title": "Progress in Russian-Ukrainian Peace Talks with Prisoner Exchange Agreement"
         }
       ],
       "sources": [
@@ -314,21 +389,35 @@
           "source": "Channel NewsAsia",
           "link": "https://www.channelnewsasia.com/world/russia-ukraine-abu-dhabi-talks-us-putin-6543276",
           "source_bias": "center"
+        },
+        {
+          "title": "Russian and Ukrainian negotiators report some progress in peace talks",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/11/11/russian-and-ukrainian-negotiators-report-some-progress-in-peace-talks",
+          "source_bias": "center"
+        },
+        {
+          "title": "Russia and Ukraine agree to a large prisoner exchange as talks end with no major breakthrough",
+          "source": "PBS News - Headlines",
+          "link": "https://www.pbs.org/newshour/world/russia-and-ukraine-agree-to-a-large-prisoner-exchange-as-talks-end-with-no-major-breakthrough",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-11-11",
+      "updated_at": "2026-11-12",
       "provenance": "source_grounded_event_memory"
     },
-    "event_stage": "developing_event",
+    "event_stage": "timeline",
     "related_events": [
       {
         "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
         "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
         "relationship": "related_topic",
-        "confidence": 0.875,
+        "confidence": 0.95,
         "shared_entities": [
           "abu",
+          "peace_talks",
           "russia",
+          "u.s.",
           "ukraine",
           "ukraine_drone",
           "us-brokered"
@@ -338,7 +427,7 @@
         "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
         "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
         "relationship": "related_topic",
-        "confidence": 0.857,
+        "confidence": 0.849,
         "shared_entities": [
           "russia",
           "south_africa",
@@ -351,7 +440,7 @@
         "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
         "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
         "relationship": "related_topic",
-        "confidence": 0.796,
+        "confidence": 0.793,
         "shared_entities": [
           "russia",
           "ukraine",
@@ -360,11 +449,13 @@
         ]
       },
       {
-        "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
-        "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
+        "event_id": "event_russia-ukraine-and-us-begin-peace-talks-in-a_53bc5198f4",
+        "title": "Russia, Ukraine, and US Begin Peace Talks in Abu Dhabi",
         "relationship": "related_topic",
-        "confidence": 0.74,
+        "confidence": 0.782,
         "shared_entities": [
+          "abu",
+          "peace_talks",
           "russia",
           "ukraine"
         ]
@@ -502,6 +593,7 @@
       "africa",
       "african",
       "agreed",
+      "agreeing",
       "agreement",
       "alleging",
       "arrest",
@@ -510,13 +602,16 @@
       "authoritie",
       "began",
       "border",
+      "breakthrough",
       "comes",
       "conflict",
       "detained",
       "dhabi",
       "disclosed",
+      "discussion",
       "drone",
       "effort",
+      "ending",
       "exchange",
       "faces",
       "force",
@@ -528,6 +623,7 @@
       "indicate",
       "individual",
       "intelligence",
+      "invasion",
       "involved",
       "join",
       "joining",
@@ -536,6 +632,7 @@
       "military",
       "nation",
       "national",
+      "negotiator",
       "nine",
       "noted",
       "number",
@@ -543,11 +640,15 @@
       "peace",
       "planning",
       "prisoner",
+      "progress",
       "reach",
       "recruitment",
       "regarding",
       "release",
+      "reported",
+      "result",
       "russia",
+      "russian-ukrainian",
       "sabotage",
       "several",
       "significant",
@@ -560,11 +661,13 @@
       "targeting",
       "tension",
       "terrorism",
+      "toward",
       "travel",
       "ukraine",
       "unit",
       "us-brokered",
       "variou",
+      "war",
       "western",
       "zimbabwean"
     ],
@@ -572,6 +675,7 @@
       "abu",
       "abu_dhabi.",
       "africa_arrest",
+      "agreement_russia",
       "arrest_foreign",
       "drone_unit",
       "force_south",
@@ -580,13 +684,17 @@
       "leading_ukraine",
       "national_arrested",
       "national_suspected",
+      "peace_talks",
       "russia",
       "russia_accused",
       "russia_force",
+      "russian-ukrainian",
+      "russian-ukrainian_peace",
       "south_africa",
       "south_african",
       "swedish_national",
       "talks_russia",
+      "u.s.",
       "u.s.-mediated",
       "ukraine",
       "ukraine_drone",
@@ -594,20 +702,20 @@
       "unit_russia",
       "us-brokered"
     ],
-    "search_text": "2022 abu abu_dhabi. accusation accused action acts africa africa_arrest african agreed agreement alleging arrest arrest_foreign arrested attempting authoritie began border comes conflict detained dhabi disclosed drone drone_unit effort exchange faces force force_south foreign foreign_national heightened however humanitarian including indicate individual intelligence involved join joining joining_russia leading leading_ukraine mediated military nation national national_arrested national_suspected nine noted number ongoing peace planning prisoner reach recruitment regarding release russia russia_accused russia_force sabotage several significant since south south_africa south_african specific suspected swedish swedish_national talks talks_russia targeting tension terrorism travel u.s.-mediated ukraine ukraine_drone ukraine_reach unit unit_russia us-brokered variou western zimbabwean"
+    "search_text": "2022 abu abu_dhabi. accusation accused action acts africa africa_arrest african agreed agreeing agreement agreement_russia alleging arrest arrest_foreign arrested attempting authoritie began border breakthrough comes conflict detained dhabi disclosed discussion drone drone_unit effort ending exchange faces force force_south foreign foreign_national heightened however humanitarian including indicate individual intelligence invasion involved join joining joining_russia leading leading_ukraine mediated military nation national national_arrested national_suspected negotiator nine noted number ongoing peace peace_talks planning prisoner progress reach recruitment regarding release reported result russia russia_accused russia_force russian-ukrainian russian-ukrainian_peace sabotage several significant since south south_africa south_african specific suspected swedish swedish_national talks talks_russia targeting tension terrorism toward travel u.s. u.s.-mediated ukraine ukraine_drone ukraine_reach unit unit_russia us-brokered variou war western zimbabwean"
   },
   "related_events": [
     {
       "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
       "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
-      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Iran Denies Ongoing Negotiations with the US Amid Sanctions.",
+      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Zelensky Cautions Europe on US-Russia Security Talks.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-07-22",
-      "last_seen_at": "2026-11-10",
-      "development_count": 102,
-      "latest_title": "Iran Denies Ongoing Negotiations with the US Amid Sanctions",
+      "last_seen_at": "2026-11-12",
+      "development_count": 106,
+      "latest_title": "Zelensky Cautions Europe on US-Russia Security Talks",
       "topic_label": "Iran War",
       "hero_image": {
         "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
@@ -698,40 +806,6 @@
         "focal_tall_y": 0.48
       },
       "href": "/timeline.html?event=event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea"
-    },
-    {
-      "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
-      "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
-      "summary": "Muninn first tracked this thread on 2026-09-11: Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims. The latest development is Iran's state television reported that seven oil tankers either caught fire or were damaged by mines overnight Wednesday into Thursday after.",
-      "activity_status": "active",
-      "stage": "timeline",
-      "stage_label": "Timeline",
-      "first_seen_at": "2026-09-11",
-      "last_seen_at": "2026-10-23",
-      "development_count": 38,
-      "latest_title": "Iran's state television reported that seven oil tankers either caught fire or were damaged by mines overnight Wednesday into Thursday after",
-      "topic_label": "9/11 Victim Compensation",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b"
     }
   ]
 }
