@@ -15,7 +15,7 @@
     "summary": "A shooting incident in the Main Market Square of Krakow, Poland, resulted in six fatalities and at least 15 injuries. The gunman, a Polish citizen, reportedly opened fire from his car before being shot and wounded by police. Authorities are investigating the circumstances surrounding this tragic event, which is notable as mass shootings are rare in Poland.",
     "status": "active",
     "first_seen_at": "2026-11-07",
-    "last_seen_at": "2026-11-12",
+    "last_seen_at": "2026-11-13",
     "timeline": [
       {
         "development_id": "story_1d5cc0008b463869",
@@ -651,6 +651,78 @@
         "first_seen_at": "2026-11-12",
         "last_seen_at": "2026-11-12",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_fbdbd0c48468a4ba",
+        "daily_story_id": "story_fbdbd0c48468a4ba",
+        "date": "2026-11-13",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Confession Revealed in DC Gym Shooting Incident Involving Dispute Over Living Conditions",
+        "summary": "A gunman in Washington, D.C., killed one person and injured four others during a shooting at a gym before barricading himself in a building. The shooter, identified as Matt Lambert, reportedly confessed to a condo manager over the phone, citing a dispute regarding living conditions. The incident has raised concerns about safety and community relations in the area.",
+        "topic_label": "",
+        "development_type": "impact",
+        "key_facts": [
+          "One person killed and four injured in a shooting at a gym in Washington, D.C.",
+          "The shooter, Matt Lambert, confessed to a condo manager about the incident.",
+          "The shooter cited a dispute over living conditions as a motive."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Euronews",
+          "The Guardian"
+        ],
+        "source_urls": [
+          "https://news.google.com/rss/articles/CBMijAFBVV95cUxPSHR2M2V6Z2IyZ1NYNDZSMk14V1lXeGNqOVdaZkRzb0J5WUdFT0sxLS12dEtiSUozdEU5bVJaQUpUN3VwbGxYV2U2NEI3NHZOX2oxR25RbUFjb0JqVGYtZ1l5MUpFOWNXRHRkZTg2QTJuUUJ3d0czemtycGVxU3RRT25sbEhZY3czWThCMw?oc=5",
+          "https://www.euronews.com/2026/11/12/gunman-kills-one-and-barricades-himself-in-building-after-gym-shooting-in-washington-dc"
+        ],
+        "source_details": [
+          {
+            "title": "Condo manager says DC gym shooter confessed in phone call, noting dispute over living conditions",
+            "source": "The Guardian",
+            "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPSHR2M2V6Z2IyZ1NYNDZSMk14V1lXeGNqOVdaZkRzb0J5WUdFT0sxLS12dEtiSUozdEU5bVJaQUpUN3VwbGxYV2U2NEI3NHZOX2oxR25RbUFjb0JqVGYtZ1l5MUpFOWNXRHRkZTg2QTJuUUJ3d0czemtycGVxU3RRT25sbEhZY3czWThCMw?oc=5",
+            "source_bias": "mixed"
+          },
+          {
+            "title": "Gunman kills one and barricades himself in building after gym shooting in Washington, DC",
+            "source": "Euronews",
+            "link": "https://www.euronews.com/2026/11/12/gunman-kills-one-and-barricades-himself-in-building-after-gym-shooting-in-washington-dc",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 1.0,
+        "match_evidence": {
+          "score": 1.0,
+          "matched_development_id": "story_4d0ff9909d3c7ad2",
+          "shared_tokens": [
+            "barricading",
+            "building",
+            "four",
+            "gunman",
+            "himself",
+            "injured",
+            "killed",
+            "person",
+            "reportedly",
+            "shooting",
+            "washington"
+          ],
+          "shared_entities": [
+            "d.c.",
+            "washington",
+            "washington_d.c."
+          ],
+          "source_url_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-11-13",
+        "last_seen_at": "2026-11-13",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -674,12 +746,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 7,
+      "public_development_count": 8,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Shooting Suspect in DC Dies from Self-Inflicted Gunshot Wound",
-    "latest_summary": "Authorities have identified the shooter in a Washington DC fitness center incident as Matt Lambert. The shooting resulted in one death and four injuries. Lambert reportedly died from a self-inflicted gunshot wound following the incident.",
+    "latest_title": "Confession Revealed in DC Gym Shooting Incident Involving Dispute Over Living Conditions",
+    "latest_summary": "A gunman in Washington, D.C., killed one person and injured four others during a shooting at a gym before barricading himself in a building. The shooter, identified as Matt Lambert, reportedly confessed to a condo manager over the phone, citing a dispute regarding living conditions. The incident has raised concerns about safety and community relations in the area.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -690,29 +762,29 @@
       "milestone_development_ids": [
         "story_1d5cc0008b463869",
         "story_f0246fee9c7ff4e8",
-        "story_5e142238938c5500",
-        "story_a9a50c88344cab74"
+        "story_4d0ff9909d3c7ad2",
+        "story_fbdbd0c48468a4ba"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-11-12",
-      "development_count": 7,
-      "coverage_packet_count": 8,
-      "date_count": 4,
-      "source_count": 26,
+      "summary_updated_at": "2026-11-13",
+      "development_count": 8,
+      "coverage_packet_count": 9,
+      "date_count": 5,
+      "source_count": 27,
       "independent_source_count": 18,
       "first_date": "2026-11-07",
-      "latest_date": "2026-11-12",
-      "latest_update_title": "Shooting Suspect in DC Dies from Self-Inflicted Gunshot Wound",
-      "coverage_score": 0.96,
+      "latest_date": "2026-11-13",
+      "latest_update_title": "Confession Revealed in DC Gym Shooting Incident Involving Dispute Over Living Conditions",
+      "coverage_score": 1.0,
       "recency_score": 1.0,
-      "rank_score": 0.983,
-      "context_summary": "Muninn first tracked this thread on 2026-11-07: Shooting in Krakow Leaves Six Dead and Many Injured. The latest development is Shooting Suspect in DC Dies from Self-Inflicted Gunshot Wound.",
-      "cta_label": "Explore 7 developments"
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-11-07: Shooting in Krakow Leaves Six Dead and Many Injured. The latest development is Confession Revealed in DC Gym Shooting Incident Involving Dispute Over Living Conditions.",
+      "cta_label": "Explore 8 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "A shooting incident at Krakow's Main Market Square resulted in six fatalities and approximately 15 injuries. A later development was Poland's Leaders Commemorate Victims of Kraków Shooting. Most recently, authorities have identified the shooter in a Washington DC fitness center incident as Matt Lambert.",
+      "summary": "A shooting incident at Krakow's Main Market Square resulted in six fatalities and approximately 15 injuries. A later development was Krakow Mass Shooting Suspect Dies After Shootout with Police. Most recently, a gunman in Washington, D.C., killed one person and injured four others during a shooting at a gym before barricading himself in a building.",
       "key_developments": [
         {
           "development_id": "story_1d5cc0008b463869",
@@ -725,14 +797,14 @@
           "title": "Poland Observes Mourning After Deadly Krakow Shooting"
         },
         {
-          "development_id": "story_5e142238938c5500",
-          "date": "2026-11-09",
-          "title": "Krakow Mass Shooting Suspect Dies After Shootout with Police"
+          "development_id": "story_4d0ff9909d3c7ad2",
+          "date": "2026-11-12",
+          "title": "Shooting at D.C. Gym Leaves One Dead and Four Injured, Suspect Found Dead"
         },
         {
-          "development_id": "story_a9a50c88344cab74",
-          "date": "2026-11-12",
-          "title": "Shooting Suspect in DC Dies from Self-Inflicted Gunshot Wound"
+          "development_id": "story_fbdbd0c48468a4ba",
+          "date": "2026-11-13",
+          "title": "Confession Revealed in DC Gym Shooting Incident Involving Dispute Over Living Conditions"
         }
       ],
       "sources": [
@@ -891,9 +963,15 @@
           "source": "RTE News",
           "link": "https://www.rte.ie/news/world/2026/1112/1598986-multiple-dead-washington-shooting",
           "source_bias": "center"
+        },
+        {
+          "title": "Condo manager says DC gym shooter confessed in phone call, noting dispute over living conditions",
+          "source": "The Guardian",
+          "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPSHR2M2V6Z2IyZ1NYNDZSMk14V1lXeGNqOVdaZkRzb0J5WUdFT0sxLS12dEtiSUozdEU5bVJaQUpUN3VwbGxYV2U2NEI3NHZOX2oxR25RbUFjb0JqVGYtZ1l5MUpFOWNXRHRkZTg2QTJuUUJ3d0czemtycGVxU3RRT25sbEhZY3czWThCMw?oc=5",
+          "source_bias": "mixed"
         }
       ],
-      "updated_at": "2026-11-12",
+      "updated_at": "2026-11-13",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -902,7 +980,7 @@
         "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
         "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
         "relationship": "related_topic",
-        "confidence": 0.797,
+        "confidence": 0.796,
         "shared_entities": [
           "commemorate_victim",
           "d.c.",
@@ -1019,6 +1097,7 @@
       "amidst",
       "apparently",
       "approximately",
+      "area",
       "arrest",
       "authoritie",
       "barricading",
@@ -1033,8 +1112,14 @@
       "center",
       "central",
       "circle",
+      "citing",
       "commemorate",
+      "community",
       "concern",
+      "condition",
+      "condo",
+      "confessed",
+      "confession",
       "confirmed",
       "continuing",
       "cover",
@@ -1047,6 +1132,7 @@
       "dies",
       "difference",
       "discovered",
+      "dispute",
       "entered",
       "explore",
       "extremist",
@@ -1075,6 +1161,7 @@
       "injurie",
       "inside",
       "investigation",
+      "involving",
       "killed",
       "kneeling",
       "krak",
@@ -1088,8 +1175,10 @@
       "leave",
       "left",
       "linked",
+      "living",
       "logan",
       "main",
+      "manager",
       "many",
       "market",
       "mass",
@@ -1107,16 +1196,23 @@
       "outside",
       "parent",
       "participated",
+      "person",
+      "phone",
       "poland",
       "polish",
       "political",
       "prime",
+      "raised",
       "raising",
       "recent",
+      "regarding",
+      "relation",
       "remembrance",
       "reportedly",
       "resulted",
       "resulting",
+      "revealed",
+      "safety",
       "scene",
       "self-inflicted",
       "shooter",
@@ -1146,6 +1242,7 @@
     "entities": [
       "britain",
       "commemorate_victim",
+      "confession_revealed",
       "d.c.",
       "d.c._gym",
       "d.c._logan",
@@ -1154,15 +1251,19 @@
       "far-right",
       "far-right_ideologie",
       "gunshot_wound",
+      "incident_involving",
+      "involving_dispute",
       "krak",
       "krakow",
       "krakow_main",
       "krakow_mass",
       "krakow_poland",
       "leader_commemorate",
+      "living_condition",
       "logan_circle",
       "main_market",
       "market_square",
+      "matt_lambert",
       "matt_lambert.",
       "observe_mourning",
       "poland_leader",
@@ -1174,20 +1275,20 @@
       "washington_d.c.",
       "wound_authoritie"
     ],
-    "search_text": "24-year-old additionally affiliation also amidst apparently approximately arrest authoritie barricading bodie both britain building busy came candle casualtie center central circle commemorate commemorate_victim concern confirmed continuing cover critically d.c. d.c._gym d.c._logan dc dead deadly deadly_krakow death demonstrating died dies difference discovered entered explore extremist family far-right far-right_ideologie fatalitie fire fitness fleeing footage found four further gunman gunshot gunshot_wound himself historic home honor hospital identified ideologie incident including injured injurie inside investigation killed kneeling krak krakow krakow_main krakow_mass krakow_poland lambert later launched laying leader leader_commemorate least leave left linked logan logan_circle main main_market many market market_square mass matt matt_lambert. member moment motive mourning national nearby observe observe_mourning occurred opened other outside parent participated poland poland_leader poland_observe polish political prime raising recent remembrance reportedly resulted resulting scene self-inflicted self-inflicted_gunshot shooter shooting shootout shows sister square suspect suspect_dies sustained taking terror terrorism they three together turned unity victim views vigil washington washington_d.c. where which wound wound_authoritie"
+    "search_text": "24-year-old additionally affiliation also amidst apparently approximately area arrest authoritie barricading bodie both britain building busy came candle casualtie center central circle citing commemorate commemorate_victim community concern condition condo confessed confession confession_revealed confirmed continuing cover critically d.c. d.c._gym d.c._logan dc dead deadly deadly_krakow death demonstrating died dies difference discovered dispute entered explore extremist family far-right far-right_ideologie fatalitie fire fitness fleeing footage found four further gunman gunshot gunshot_wound himself historic home honor hospital identified ideologie incident incident_involving including injured injurie inside investigation involving involving_dispute killed kneeling krak krakow krakow_main krakow_mass krakow_poland lambert later launched laying leader leader_commemorate least leave left linked living living_condition logan logan_circle main main_market manager many market market_square mass matt matt_lambert matt_lambert. member moment motive mourning national nearby observe observe_mourning occurred opened other outside parent participated person phone poland poland_leader poland_observe polish political prime raised raising recent regarding relation remembrance reportedly resulted resulting revealed safety scene self-inflicted self-inflicted_gunshot shooter shooting shootout shows sister square suspect suspect_dies sustained taking terror terrorism they three together turned unity victim views vigil washington washington_d.c. where which wound wound_authoritie"
   },
   "related_events": [
     {
       "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
       "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
-      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Zelensky Cautions Europe on US-Russia Security Talks.",
+      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Iran Claims Attack on US Radar System in Bahrain Amid Ongoing Tensions.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-07-22",
-      "last_seen_at": "2026-11-12",
-      "development_count": 106,
-      "latest_title": "Zelensky Cautions Europe on US-Russia Security Talks",
+      "last_seen_at": "2026-11-13",
+      "development_count": 109,
+      "latest_title": "Iran Claims Attack on US Radar System in Bahrain Amid Ongoing Tensions",
       "topic_label": "Iran War",
       "hero_image": {
         "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
