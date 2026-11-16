@@ -15,7 +15,7 @@
     "summary": "A researcher from Anthropic has stated there is more than a 10% chance that artificial intelligence could lead to human extinction within the next decade. This warning follows the resignation of a colleague who expressed similar concerns about the rapid development of superintelligent AI that may surpass human control. Experts emphasize the seriousness of these risks, given their access to unreleased AI systems.",
     "status": "active",
     "first_seen_at": "2026-09-09",
-    "last_seen_at": "2026-11-08",
+    "last_seen_at": "2026-11-16",
     "timeline": [
       {
         "development_id": "story_a0954c956943c541",
@@ -903,15 +903,96 @@
         "first_seen_at": "2026-11-08",
         "last_seen_at": "2026-11-08",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_c809aade60535dd6",
+        "daily_story_id": "story_c809aade60535dd6",
+        "date": "2026-11-16",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "California Files Lawsuit Against OpenAI Over Cybersecurity Concerns",
+        "summary": "California has initiated a lawsuit against OpenAI, citing the company's failure to implement adequate safeguards in its AI models, which allegedly led to the 'Hugging Face' cyberattack. Attorney General Rob Bonta stated that the attack was predictable due to OpenAI's poor security practices. The lawsuit emphasizes the risks posed to public safety by the company's rapid development of AI technologies without proper monitoring.",
+        "topic_label": "AI Regulation",
+        "development_type": "military_action",
+        "key_facts": [
+          "California sued OpenAI over the 'Hugging Face' cyberattack.",
+          "The lawsuit claims OpenAI lacked necessary safeguards in its AI models.",
+          "Attorney General Rob Bonta described the attack as 'entirely foreseeable'."
+        ],
+        "source_count": 4,
+        "sources": [
+          "Al Jazeera English",
+          "France 24 - English",
+          "NBC News - Top Stories",
+          "NPR - News"
+        ],
+        "source_urls": [
+          "https://www.france24.com/en/tv-shows/business/20261116-rogue-ai-california-sues-openai-over-hugging-face-and-other-cyberattacks",
+          "https://www.npr.org/2026/11/16/nx-s1-6042920/california-sues-openai-hugging-face-hacking-incident",
+          "https://www.nbcnews.com/tech/tech-news/california-sues-chatgpt-maker-openai-rogue-hacking-incidents-rcna609596",
+          "https://www.aljazeera.com/news/2026/11/16/california-files-lawsuit-against-openai-alleging-lack-of-proper-safeguards?traffic_source=rss"
+        ],
+        "source_details": [
+          {
+            "title": "Rogue AI: California sues OpenAI over 'Hugging Face' and other cyberattacks",
+            "source": "France 24 - English",
+            "link": "https://www.france24.com/en/tv-shows/business/20261116-rogue-ai-california-sues-openai-over-hugging-face-and-other-cyberattacks",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "California sues OpenAI over hacking risks",
+            "source": "NPR - News",
+            "link": "https://www.npr.org/2026/11/16/nx-s1-6042920/california-sues-openai-hugging-face-hacking-incident",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "California sues ChatGPT maker OpenAI over rogue hacking incidents",
+            "source": "NBC News - Top Stories",
+            "link": "https://www.nbcnews.com/tech/tech-news/california-sues-chatgpt-maker-openai-rogue-hacking-incidents-rcna609596",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "California files lawsuit against OpenAI alleging lack of proper safeguards",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/news/2026/11/16/california-files-lawsuit-against-openai-alleging-lack-of-proper-safeguards?traffic_source=rss",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_83fa6e47bd4b3420",
+          "shared_tokens": [
+            "development",
+            "necessary",
+            "openai",
+            "regulation"
+          ],
+          "shared_entities": [
+            "ai",
+            "openai"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-11-16",
+        "last_seen_at": "2026-11-16",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 12,
+      "public_development_count": 13,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Concerns Raised Over Reporting Structure at US AI Safety Center",
-    "latest_summary": "Staff at the Center for Advancing Innovation and Standards for Super Intelligence (CAISSI), an independent division of the Commerce Department, have been asked to report informally to a White House office. This change has raised concerns regarding the center's independence and its ability to operate autonomously.",
+    "latest_title": "California Files Lawsuit Against OpenAI Over Cybersecurity Concerns",
+    "latest_summary": "California has initiated a lawsuit against OpenAI, citing the company's failure to implement adequate safeguards in its AI models, which allegedly led to the 'Hugging Face' cyberattack. Attorney General Rob Bonta stated that the attack was predictable due to OpenAI's poor security practices. The lawsuit emphasizes the risks posed to public safety by the company's rapid development of AI technologies without proper monitoring.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -922,29 +1003,29 @@
       "milestone_development_ids": [
         "story_a0954c956943c541",
         "story_a29a8454965019ea",
-        "story_994b304e5063624b",
-        "story_6fd720bd93263057"
+        "story_93879600a5e1ed71",
+        "story_c809aade60535dd6"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-11-08",
-      "development_count": 12,
-      "coverage_packet_count": 12,
-      "date_count": 10,
-      "source_count": 35,
-      "independent_source_count": 19,
+      "summary_updated_at": "2026-11-16",
+      "development_count": 13,
+      "coverage_packet_count": 13,
+      "date_count": 11,
+      "source_count": 39,
+      "independent_source_count": 21,
       "first_date": "2026-09-09",
-      "latest_date": "2026-11-08",
-      "latest_update_title": "Concerns Raised Over Reporting Structure at US AI Safety Center",
+      "latest_date": "2026-11-16",
+      "latest_update_title": "California Files Lawsuit Against OpenAI Over Cybersecurity Concerns",
       "coverage_score": 1.0,
-      "recency_score": 0.5,
-      "rank_score": 0.71,
-      "context_summary": "Muninn first tracked this thread on 2026-09-09: Anthropic Researcher Warns of AI Threat to Humanity. The latest development is Concerns Raised Over Reporting Structure at US AI Safety Center.",
-      "cta_label": "Explore 12 developments"
+      "recency_score": 1.0,
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-09-09: Anthropic Researcher Warns of AI Threat to Humanity. The latest development is California Files Lawsuit Against OpenAI Over Cybersecurity Concerns.",
+      "cta_label": "Explore 13 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "A researcher from Anthropic has stated there is more than a 10% chance that artificial intelligence could lead to human extinction within the next decade. A later development was Trump Announces AI Task Force and Czar Amid Tech Concerns. Most recently, staff at the Center for Advancing Innovation and Standards for Super Intelligence (CAISSI), an independent division of the Commerce Department, have been asked to report informally to a White House office.",
+      "summary": "A researcher from Anthropic has stated there is more than a 10% chance that artificial intelligence could lead to human extinction within the next decade. A later development was Trump Announces AI Task Force and Czar Amid Tech Concerns. Most recently, california has initiated a lawsuit against OpenAI, citing the company's failure to implement adequate safeguards in its AI models, which allegedly led to the 'Hugging Face' cyberattack.",
       "key_developments": [
         {
           "development_id": "story_a0954c956943c541",
@@ -957,14 +1038,14 @@
           "title": "OpenAI Reports Six New Incidents of Concerning AI Behavior"
         },
         {
-          "development_id": "story_994b304e5063624b",
-          "date": "2026-09-28",
-          "title": "Trump Meets Anthropic CEO, Dismisses AI Development Concerns"
+          "development_id": "story_93879600a5e1ed71",
+          "date": "2026-09-29",
+          "title": "OpenAI Delays Release of New AI Model Due to Safety Concerns"
         },
         {
-          "development_id": "story_6fd720bd93263057",
-          "date": "2026-11-08",
-          "title": "Concerns Raised Over Reporting Structure at US AI Safety Center"
+          "development_id": "story_c809aade60535dd6",
+          "date": "2026-11-16",
+          "title": "California Files Lawsuit Against OpenAI Over Cybersecurity Concerns"
         }
       ],
       "sources": [
@@ -1177,9 +1258,33 @@
           "source": "AP",
           "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOZy1KSXNvR1dGeEJmdHRLLUNyanRpWlFMR3JKVlhQR3AyMU83Vkp1bTk0Y2tXUUhEVHdIUzZpQ2o5RmVzclR3S1QtVjlacmthZlQ0OUFyTTRzbl9Nb3JpMlFreTFPdzVoRlRNeDZNMlRBODVieTBXbU9vSTNSN1VvT2lNNjVfcXBaMmpTaTJtS2Q?oc=5",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Rogue AI: California sues OpenAI over 'Hugging Face' and other cyberattacks",
+          "source": "France 24 - English",
+          "link": "https://www.france24.com/en/tv-shows/business/20261116-rogue-ai-california-sues-openai-over-hugging-face-and-other-cyberattacks",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "California sues OpenAI over hacking risks",
+          "source": "NPR - News",
+          "link": "https://www.npr.org/2026/11/16/nx-s1-6042920/california-sues-openai-hugging-face-hacking-incident",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "California sues ChatGPT maker OpenAI over rogue hacking incidents",
+          "source": "NBC News - Top Stories",
+          "link": "https://www.nbcnews.com/tech/tech-news/california-sues-chatgpt-maker-openai-rogue-hacking-incidents-rcna609596",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "California files lawsuit against OpenAI alleging lack of proper safeguards",
+          "source": "Al Jazeera English",
+          "link": "https://www.aljazeera.com/news/2026/11/16/california-files-lawsuit-against-openai-alleging-lack-of-proper-safeguards?traffic_source=rss",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-11-08",
+      "updated_at": "2026-11-16",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -1188,7 +1293,7 @@
         "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
         "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
         "relationship": "related_topic",
-        "confidence": 0.753,
+        "confidence": 0.751,
         "shared_entities": [
           "donald_trump",
           "elon_musk",
@@ -1199,7 +1304,7 @@
         "event_id": "event_nvidia-investigates-ceo-s-relationship-with_f4d884be95",
         "title": "Nvidia Investigates CEO's Relationship with Alleged Chinese Spy Alice Huang",
         "relationship": "related_topic",
-        "confidence": 0.735,
+        "confidence": 0.737,
         "shared_entities": [
           "ceo",
           "donald_trump",
@@ -1210,7 +1315,7 @@
         "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
         "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
         "relationship": "related_topic",
-        "confidence": 0.729,
+        "confidence": 0.728,
         "shared_entities": [
           "donald_trump",
           "trump_dismisse",
@@ -1221,7 +1326,7 @@
         "event_id": "event_tech-and-ai-stocks-decline-following-us-midt_05b98e8768",
         "title": "Tech and AI Stocks Decline Following US Midterm Elections",
         "relationship": "related_topic",
-        "confidence": 0.728,
+        "confidence": 0.727,
         "shared_entities": [
           "ai",
           "stock_decline",
@@ -1233,110 +1338,94 @@
       "available": true,
       "title": "About AI Safety",
       "subject": "AI Safety",
-      "summary": "AI safety is a broad research, engineering, and governance field concerned with reducing the risk that artificial-intelligence systems cause harm, whether through failures, misuse, or unintended behavior. It is not a single institution or legally uniform regime: governments, international organizations, standards bodies, companies, and researchers use different voluntary frameworks, declarations, and laws to address risks across an AI system’s lifecycle.",
+      "summary": "AI safety is the field of research, engineering, governance, and risk management concerned with ensuring that artificial-intelligence systems are reliable, secure, and used in ways that avoid serious harm. It encompasses immediate harms such as fraud, cyber misuse, and flawed automated decisions, as well as debated longer-term risks from increasingly capable general-purpose or autonomous systems. The September 2026 developments reflect a continuing policy and industry dispute over how quickly advanced AI should be developed and what safeguards should be required.",
       "facts": [
         {
-          "label": "Nature and purpose",
-          "value": "AI safety encompasses technical evaluation and risk management as well as governance efforts intended to make AI systems trustworthy, secure, resilient, and less likely to cause unreasonable harm.",
+          "label": "Focus",
+          "value": "International assessments commonly focus on general-purpose AI systems—models that can perform a wide variety of tasks—and on emerging risks associated with frontier capabilities.",
           "source_ids": [
-            "o1",
-            "o2"
+            "o1"
           ]
         },
         {
-          "label": "U.S. risk-management framework",
-          "value": "The U.S. National Institute of Standards and Technology released AI Risk Management Framework 1.0 on January 26, 2023. It is intended for voluntary use in managing risks to individuals, organizations, and society and in incorporating trustworthiness into AI design, development, use, and evaluation.",
+          "label": "Risk categories",
+          "value": "The 2026 International AI Safety Report groups major concerns into malicious use, malfunctions, and systemic risks; examples include cyber and biological misuse, unreliable or autonomous behavior, labor-market effects, manipulation, and potential loss-of-control scenarios.",
           "source_ids": [
-            "o1",
+            "o1"
+          ]
+        },
+        {
+          "label": "Industry safety practices",
+          "value": "Leading AI developers have adopted voluntary frontier-risk frameworks that use capability evaluations, thresholds, safeguards, incident reporting, and governance reviews before or during deployment. Anthropic’s Responsible Scaling Policy and OpenAI’s Preparedness Framework are examples, not universal standards.",
+          "source_ids": [
+            "o2",
             "o3"
           ]
         },
         {
-          "label": "Core risk-management format",
-          "value": "NIST’s AI RMF organizes risk-management activity around four functions—govern, map, measure, and manage—and describes risk management as continuous across the AI lifecycle rather than a one-time compliance exercise.",
+          "label": "Government and international coordinatio",
+          "value": "The United Kingdom convened the first AI Safety Summit at Bletchley Park on November 1-2, 2023; participants backed the Bletchley Declaration and development of an independent scientific report on frontier-AI risks. The resulting International AI Safety Report series is intended to inform policymaking, rather than itself impose binding rules.",
           "source_ids": [
-            "o4"
+            "o4",
+            "o5"
           ]
         },
         {
-          "label": "International coordination",
-          "value": "At the UK-hosted AI Safety Summit at Bletchley Park, Buckinghamshire, on November 1–2, 2023, participating countries agreed the Bletchley Declaration, which called for international cooperation on the opportunities and risks of frontier AI, including risks from misuse and loss of control.",
+          "label": "Regulatory context",
+          "value": "AI-safety governance combines voluntary practices with binding rules in some jurisdictions. In the European Union, the AI Act entered into force on August 1, 2024; governance rules and obligations for general-purpose AI models applied from August 2, 2025, while other provisions follow later timelines.",
           "source_ids": [
-            "o5",
             "o6"
-          ]
-        },
-        {
-          "label": "Global governance context",
-          "value": "The UN Secretary-General’s High-level Advisory Body on AI operated from October 26, 2023 for 12 months and issued its 2024 final report proposing internationally inclusive arrangements to address AI-related risks and share AI’s benefits; the report underscored that no single global AI-governance framework existed.",
-          "source_ids": [
-            "o7",
-            "o8"
           ]
         }
       ],
-      "scope_note": "The selected Muninn timeline covers a limited set of prominent September 2026 corporate, political, and alleged legal developments related to AI-safety debate; it does not aim to catalog the full technical research field, all AI incidents, or every national and international policy initiative.",
+      "scope_note": "The selected Muninn timeline follows a set of September 2026 statements, corporate disclosures, policy responses, and litigation-related developments; it does not constitute a complete history of AI safety research, regulation, or every AI-related incident.",
       "sources": [
         {
-          "title": "Nist",
-          "publisher": "Nist",
-          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
-          "source_type": "primary",
+          "title": "Internationalaisafetyreport",
+          "publisher": "Internationalaisafetyreport",
+          "url": "https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026",
+          "source_type": "reporting",
           "id": "o1"
         },
         {
-          "title": "Oecd",
-          "publisher": "Oecd",
-          "url": "https://oecd.ai/en/dashboards/ai-principles/P8",
+          "title": "Anthropic",
+          "publisher": "Anthropic",
+          "url": "https://www.anthropic.com/responsible-scaling-policy",
           "source_type": "reporting",
           "id": "o2"
         },
         {
-          "title": "Nist",
-          "publisher": "Nist",
-          "url": "https://www.nist.gov/document/about-nist-ai-rmf",
-          "source_type": "primary",
+          "title": "Openai",
+          "publisher": "Openai",
+          "url": "https://openai.com/index/updating-our-preparedness-framework/",
+          "source_type": "reporting",
           "id": "o3"
-        },
-        {
-          "title": "Nist",
-          "publisher": "Nist",
-          "url": "https://airc.nist.gov/airmf-resources/airmf/5-sec-core/",
-          "source_type": "primary",
-          "id": "o4"
         },
         {
           "title": "Gov",
           "publisher": "Gov",
           "url": "https://www.gov.uk/government/publications/ai-safety-summit-2023-the-bletchley-declaration",
           "source_type": "reporting",
+          "id": "o4"
+        },
+        {
+          "title": "Internationalaisafetyreport",
+          "publisher": "Internationalaisafetyreport",
+          "url": "https://internationalaisafetyreport.org/about",
+          "source_type": "reporting",
           "id": "o5"
         },
         {
-          "title": "Gov",
-          "publisher": "Gov",
-          "url": "https://www.gov.uk/government/news/countries-agree-to-safe-and-responsible-development-of-frontier-ai-in-landmark-bletchley-declaration",
+          "title": "Europa",
+          "publisher": "Europa",
+          "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
           "source_type": "reporting",
           "id": "o6"
-        },
-        {
-          "title": "UN",
-          "publisher": "UN",
-          "url": "https://www.un.org/en/node/212881",
-          "source_type": "reporting",
-          "id": "o7"
-        },
-        {
-          "title": "UN",
-          "publisher": "UN",
-          "url": "https://digitallibrary.un.org/record/4062495?ln=en",
-          "source_type": "reporting",
-          "id": "o8"
         }
       ],
-      "publisher_count": 4,
-      "generated_at": "2026-09-29T17:33:54.545817+00:00",
-      "expires_at": "2026-10-06T17:33:54.545817+00:00",
+      "publisher_count": 5,
+      "generated_at": "2026-11-16T22:48:07.218484+00:00",
+      "expires_at": "2026-11-23T22:48:07.218484+00:00",
       "model": "gpt-5.6-terra",
       "provenance": "openai_web_search_source_grounded_event_overview_v1"
     },
@@ -1377,6 +1466,7 @@
       "align",
       "allegation",
       "allege",
+      "allegedly",
       "allow",
       "altman",
       "america",
@@ -1396,10 +1486,14 @@
       "asserted",
       "associated",
       "astra",
+      "attack",
+      "attorney",
       "autonomously",
       "behavior",
+      "bonta",
       "breach",
       "caissi",
+      "california",
       "called",
       "calls",
       "catch",
@@ -1428,6 +1522,8 @@
       "coordinate",
       "creation",
       "criticize",
+      "cyberattack",
+      "cybersecurity",
       "czar",
       "dario",
       "debate",
@@ -1467,13 +1563,17 @@
       "expert",
       "expressed",
       "extinction",
+      "face",
+      "failure",
       "federal",
       "field",
       "figure",
       "filed",
+      "files",
       "follow",
       "force",
       "future",
+      "general",
       "given",
       "google",
       "gpt-6",
@@ -1484,9 +1584,11 @@
       "highlight",
       "host",
       "house",
+      "hugging",
       "human",
       "humanity",
       "illegal",
+      "implement",
       "impose",
       "incident",
       "including",
@@ -1496,6 +1598,7 @@
       "independent",
       "industry",
       "informally",
+      "initiated",
       "initiative",
       "innovation",
       "intelligence",
@@ -1516,6 +1619,7 @@
       "meeting",
       "meets",
       "model",
+      "monitoring",
       "musk",
       "necessary",
       "need",
@@ -1536,10 +1640,16 @@
       "passport",
       "pause",
       "plans",
+      "poor",
+      "posed",
       "poses",
       "powerful",
+      "practice",
+      "predictable",
       "presidency",
       "progress",
+      "proper",
+      "public",
       "question",
       "raise",
       "raised",
@@ -1561,6 +1671,7 @@
       "risks",
       "safeguard",
       "safety",
+      "security",
       "sentiment",
       "seriousness",
       "service",
@@ -1616,7 +1727,8 @@
       "which",
       "while",
       "white",
-      "within"
+      "within",
+      "without"
     ],
     "entities": [
       "advancing_innovation",
@@ -1631,21 +1743,27 @@
       "anthropic_ceo",
       "anthropic_openai",
       "anthropic_researcher",
+      "attorney_general",
       "behavior_openai",
       "caissi",
+      "california_files",
       "center",
       "ceo",
       "ceo_dario",
       "ceo_dismisse",
       "claim",
       "commerce_department",
+      "concern_california",
       "concern_openai",
       "concern_raised",
+      "cybersecurity_concern",
       "dario_amodei",
       "development_concern",
       "development_slowdown",
       "donald_trump",
       "elon_musk",
+      "files_lawsuit",
+      "general_rob",
       "gpt-6.1",
       "gpt-6.1_astra",
       "host",
@@ -1664,6 +1782,7 @@
       "openai_spacexai",
       "reporting_structure",
       "researcher_warns",
+      "rob_bonta",
       "safety",
       "safety_concern",
       "sam_altman",
@@ -1683,7 +1802,7 @@
       "white",
       "white_house"
     ],
-    "search_text": "ability access across action adequate advanced advancement advancing advancing_innovation advocate agent agreement agreement_among ai ai-powered alarm align allegation allege allege_illegal allow altman america america.gov_website amodei amodei_advocate amodei_ceo among announce announced anthropic anthropic_ceo anthropic_openai anthropic_researcher antitrust appeal application appointment argue around artificial asked asserted associated astra autonomously behavior behavior_openai breach caissi called calls catch center ceo ceo_dario ceo_dismisse chance change citing claim claiming closely collaboration colleague come comes comment commerce commerce_department committed companie company concern concern_openai concern_raised concerning condemned conspiracy consumer control coordinate creation criticize czar dario dario_amodei debate decade decided decision decline delay denied department designed deter development development_concern development_slowdown diminish dinner disclosed discussion dismissal dismisse dismissed division donald donald_trump down downturn echoed effort elon elon_musk emphasize emphasized engaged enrollment established event executive exhibited experienced expert expressed extinction federal field figure filed follow force future given google gpt-6 gpt-6.1 gpt-6.1_astra greater growing growth held highlight host house human humanity illegal illegal_agreement impose incident including increased increasingly independence independent industry industry_warning informally initiative innovation intelligence intelligence_caissi intensify involving labeling launch launching launching_america.gov laws lawsuit lawsuit_allege lead leader leadership leading like measure medicare meeting meets meets_anthropic model model_due musk necessary need next office ongoing only openai openai_delay openai_respond openai_sam openai_spacexai operate opposition order organization other oversee oversight part particularly passport pause plans poses powerful presidency progress question raise raised rapid recent regarding regulation reiterated rejected related release reliability renaming reporting reporting_structure researcher researcher_warns resignation respond response risks safeguard safety safety_concern sam_altman sentiment seriousness service sick sign significant similar slow slow_development slowdown slowdown_dario slowing society spacexai staff stance standard stated stock stock_decline streamline stricter strong structure subscription such summit super super_intelligence superintelligent surpass system task task_force tech tech_concern tech_stock technological technologie technology tension than them there these threat tracking trend trump trump_dismisse trump_meets trust unexpected unreleased until us value violate warning warns washington washington. website which while white white_house within"
+    "search_text": "ability access across action adequate advanced advancement advancing advancing_innovation advocate agent agreement agreement_among ai ai-powered alarm align allegation allege allege_illegal allegedly allow altman america america.gov_website amodei amodei_advocate amodei_ceo among announce announced anthropic anthropic_ceo anthropic_openai anthropic_researcher antitrust appeal application appointment argue around artificial asked asserted associated astra attack attorney attorney_general autonomously behavior behavior_openai bonta breach caissi california california_files called calls catch center ceo ceo_dario ceo_dismisse chance change citing claim claiming closely collaboration colleague come comes comment commerce commerce_department committed companie company concern concern_california concern_openai concern_raised concerning condemned conspiracy consumer control coordinate creation criticize cyberattack cybersecurity cybersecurity_concern czar dario dario_amodei debate decade decided decision decline delay denied department designed deter development development_concern development_slowdown diminish dinner disclosed discussion dismissal dismisse dismissed division donald donald_trump down downturn echoed effort elon elon_musk emphasize emphasized engaged enrollment established event executive exhibited experienced expert expressed extinction face failure federal field figure filed files files_lawsuit follow force future general general_rob given google gpt-6 gpt-6.1 gpt-6.1_astra greater growing growth held highlight host house hugging human humanity illegal illegal_agreement implement impose incident including increased increasingly independence independent industry industry_warning informally initiated initiative innovation intelligence intelligence_caissi intensify involving labeling launch launching launching_america.gov laws lawsuit lawsuit_allege lead leader leadership leading like measure medicare meeting meets meets_anthropic model model_due monitoring musk necessary need next office ongoing only openai openai_delay openai_respond openai_sam openai_spacexai operate opposition order organization other oversee oversight part particularly passport pause plans poor posed poses powerful practice predictable presidency progress proper public question raise raised rapid recent regarding regulation reiterated rejected related release reliability renaming reporting reporting_structure researcher researcher_warns resignation respond response risks rob_bonta safeguard safety safety_concern sam_altman security sentiment seriousness service sick sign significant similar slow slow_development slowdown slowdown_dario slowing society spacexai staff stance standard stated stock stock_decline streamline stricter strong structure subscription such summit super super_intelligence superintelligent surpass system task task_force tech tech_concern tech_stock technological technologie technology tension than them there these threat tracking trend trump trump_dismisse trump_meets trust unexpected unreleased until us value violate warning warns washington washington. website which while white white_house within without"
   },
   "related_events": [
     {
@@ -1757,14 +1876,14 @@
     {
       "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
       "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
-      "summary": "Muninn first tracked this thread on 2026-09-11: Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims. The latest development is Iran's state television reported that seven oil tankers either caught fire or were damaged by mines overnight Wednesday into Thursday after.",
+      "summary": "Muninn first tracked this thread on 2026-09-11: Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims. The latest development is USS Theodore Roosevelt Arrives in Middle East with Additional Troops.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-09-11",
-      "last_seen_at": "2026-10-23",
-      "development_count": 38,
-      "latest_title": "Iran's state television reported that seven oil tankers either caught fire or were damaged by mines overnight Wednesday into Thursday after",
+      "last_seen_at": "2026-11-16",
+      "development_count": 39,
+      "latest_title": "USS Theodore Roosevelt Arrives in Middle East with Additional Troops",
       "topic_label": "9/11 Victim Compensation",
       "hero_image": {
         "url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",

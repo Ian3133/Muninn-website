@@ -15,7 +15,7 @@
     "summary": "As the 25th anniversary of the September 11 attacks approaches, Phil Alvarez, a retired NYPD detective, reflects on his brother Luis's death from cancer linked to toxins at Ground Zero. Alvarez is working to extend the September 11th Victim Compensation Fund to assist others affected by similar health issues. This year, a seventh moment of silence will be observed to honor those who have died from illnesses related to the toxic dust from the attacks.",
     "status": "active",
     "first_seen_at": "2026-09-11",
-    "last_seen_at": "2026-10-23",
+    "last_seen_at": "2026-11-16",
     "timeline": [
       {
         "development_id": "story_839b70c2e2bb6def",
@@ -2932,6 +2932,71 @@
         "first_seen_at": "2026-10-23",
         "last_seen_at": "2026-10-23",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_35397063c74c3044",
+        "daily_story_id": "story_35397063c74c3044",
+        "date": "2026-11-16",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "USS Theodore Roosevelt Arrives in Middle East with Additional Troops",
+        "summary": "The USS Theodore Roosevelt, a third US aircraft carrier, has arrived in the Middle East, bringing thousands of additional troops. This deployment comes as the US president considers various military options in the ongoing conflict with Iran.",
+        "topic_label": "Iran War",
+        "development_type": "military_action",
+        "key_facts": [
+          "USS Theodore Roosevelt is the third US aircraft carrier to arrive in the Middle East.",
+          "The deployment includes thousands of additional troops.",
+          "The US president is weighing military options regarding Iran."
+        ],
+        "source_count": 2,
+        "sources": [
+          "PBS News",
+          "The Guardian"
+        ],
+        "source_urls": [
+          "https://www.theguardian.com/us-news/2026/nov/16/aircraft-middle-east-trump-military",
+          "https://www.pbs.org/newshour/world/third-u-s-aircraft-carrier-in-middle-east-as-trump-keeps-options-open-in-iran-war"
+        ],
+        "source_details": [
+          {
+            "title": "Third US aircraft carrier brings thousands more troops to Middle East",
+            "source": "The Guardian",
+            "link": "https://www.theguardian.com/us-news/2026/nov/16/aircraft-middle-east-trump-military",
+            "source_bias": "left"
+          },
+          {
+            "title": "Third US aircraft carrier in Middle East as Trump keeps options open in Iran war",
+            "source": "PBS News",
+            "link": "https://www.pbs.org/newshour/world/third-u-s-aircraft-carrier-in-middle-east-as-trump-keeps-options-open-in-iran-war",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_e698d17a2ee97aa4",
+          "shared_tokens": [
+            "iran",
+            "ongoing",
+            "war"
+          ],
+          "shared_entities": [
+            "iran",
+            "iran_war",
+            "us"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-11-16",
+        "last_seen_at": "2026-11-16",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -2965,12 +3030,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 38,
+      "public_development_count": 39,
       "questionable_development_count": 2,
       "review_required": true
     },
-    "latest_title": "Iran's state television reported that seven oil tankers either caught fire or were damaged by mines overnight Wednesday into Thursday after",
-    "latest_summary": "Iran's state television reported that seven oil tankers either caught fire or were damaged by mines overnight Wednesday into Thursday after being targeted or striking naval mines in the Strait of Hormuz. Iran says 7 tankers damaged in Strait of Hormuz, and other Mideast news - AP News.",
+    "latest_title": "USS Theodore Roosevelt Arrives in Middle East with Additional Troops",
+    "latest_summary": "The USS Theodore Roosevelt, a third US aircraft carrier, has arrived in the Middle East, bringing thousands of additional troops. This deployment comes as the US president considers various military options in the ongoing conflict with Iran.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -2980,30 +3045,30 @@
       "display_title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims Timeline",
       "milestone_development_ids": [
         "story_839b70c2e2bb6def",
-        "story_b88f2bee728f2cb2",
+        "story_fe616ebe3fd789aa",
         "story_d96569bd8bae6cc6",
-        "story_b76f50ff48edd2c7"
+        "story_35397063c74c3044"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-10-23",
-      "development_count": 38,
-      "coverage_packet_count": 40,
-      "date_count": 20,
-      "source_count": 99,
+      "summary_updated_at": "2026-11-16",
+      "development_count": 39,
+      "coverage_packet_count": 41,
+      "date_count": 21,
+      "source_count": 101,
       "independent_source_count": 33,
       "first_date": "2026-09-11",
-      "latest_date": "2026-10-23",
-      "latest_update_title": "Iran's state television reported that seven oil tankers either caught fire or were damaged by mines overnight Wednesday into Thursday after",
+      "latest_date": "2026-11-16",
+      "latest_update_title": "USS Theodore Roosevelt Arrives in Middle East with Additional Troops",
       "coverage_score": 1.0,
-      "recency_score": 0.233,
-      "rank_score": 0.555,
-      "context_summary": "Muninn first tracked this thread on 2026-09-11: Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims. The latest development is Iran's state television reported that seven oil tankers either caught fire or were damaged by mines overnight Wednesday into Thursday after.",
-      "cta_label": "Explore 38 developments"
+      "recency_score": 1.0,
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-09-11: Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims. The latest development is USS Theodore Roosevelt Arrives in Middle East with Additional Troops.",
+      "cta_label": "Explore 39 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "As the 25th anniversary of the September 11 attacks approaches, Phil Alvarez, a retired NYPD detective, reflects on his brother Luis's death from cancer linked to toxins at Ground Zero. A later development was Houthis Claim Missile Attack on Riyadh; Saudi Defense Intercepts. Most recently, iran's state television reported that seven oil tankers either caught fire or were damaged by mines overnight Wednesday into Thursday after being targeted or striking naval mines in the Strait of Hormuz.",
+      "summary": "As the 25th anniversary of the September 11 attacks approaches, Phil Alvarez, a retired NYPD detective, reflects on his brother Luis's death from cancer linked to toxins at Ground Zero. A later development was Houthis Claim Missile Attack on Riyadh; Saudi Defense Intercepts. Most recently, the USS Theodore Roosevelt, a third US aircraft carrier, has arrived in the Middle East, bringing thousands of additional troops.",
       "key_developments": [
         {
           "development_id": "story_839b70c2e2bb6def",
@@ -3011,9 +3076,9 @@
           "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims"
         },
         {
-          "development_id": "story_b88f2bee728f2cb2",
+          "development_id": "story_fe616ebe3fd789aa",
           "date": "2026-09-16",
-          "title": "Saudi Arabia Claims Houthi Drone Targeted Mecca, Warns of Consequences"
+          "title": "CBO Reports Iran War Costs US Nearly $40 Billion Amid Rising Inflation"
         },
         {
           "development_id": "story_d96569bd8bae6cc6",
@@ -3021,9 +3086,9 @@
           "title": "US and Iran Engage in Productive Talks Amid Hopes for Progress"
         },
         {
-          "development_id": "story_b76f50ff48edd2c7",
-          "date": "2026-10-23",
-          "title": "Iran's state television reported that seven oil tankers either caught fire or were damaged by mines overnight Wednesday into Thursday after"
+          "development_id": "story_35397063c74c3044",
+          "date": "2026-11-16",
+          "title": "USS Theodore Roosevelt Arrives in Middle East with Additional Troops"
         }
       ],
       "sources": [
@@ -3620,9 +3685,21 @@
           "source": "AP - Top News via Google News",
           "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPcmxkSUw3N3BIRncxYTA1MkE4Y1JuX0dKaG1kSU1jZElzcFVoWFk4REluNnd2VjZZMFo2S0c4U1k4VG9QaC03RF9zakxFQWpZQURfRTdLazEyaXFETmtNS2Q0TjJHamY2cTVPQ3JaRlBZZHhoRS11ZHFLblp3am05aGpaT2hUcW5UZDQ5bFJ4SGpjd0k0NVpiLTZFQlA2RVpFaHJZMA?oc=5",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Third US aircraft carrier brings thousands more troops to Middle East",
+          "source": "The Guardian",
+          "link": "https://www.theguardian.com/us-news/2026/nov/16/aircraft-middle-east-trump-military",
+          "source_bias": "left"
+        },
+        {
+          "title": "Third US aircraft carrier in Middle East as Trump keeps options open in Iran war",
+          "source": "PBS News",
+          "link": "https://www.pbs.org/newshour/world/third-u-s-aircraft-carrier-in-middle-east-as-trump-keeps-options-open-in-iran-war",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-10-23",
+      "updated_at": "2026-11-16",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -3663,6 +3740,8 @@
           "jd",
           "marco_rubio",
           "masoud_pezeshkian",
+          "middle",
+          "middle_east",
           "ongoing_tension",
           "pentagon",
           "persian_gulf",
@@ -3686,12 +3765,30 @@
           "united_nation",
           "united_states.",
           "us",
+          "uss",
           "vladimir_putin",
           "volodymyr_zelensky",
           "volodymyr_zelenskyy",
           "yemen",
           "yemen_houthi",
           "yemen_red"
+        ]
+      },
+      {
+        "event_id": "event_protests-erupt-in-israel-against-election-in_a0b546d8ce",
+        "title": "Protests Erupt in Israel Against Election Interference Ahead of October Vote",
+        "relationship": "related_topic",
+        "confidence": 0.95,
+        "shared_entities": [
+          "iran",
+          "israel",
+          "israel_election",
+          "israel_prime",
+          "middle",
+          "saudi",
+          "saudi_arabia",
+          "united_nation",
+          "us"
         ]
       },
       {
@@ -3721,31 +3818,6 @@
         ]
       },
       {
-        "event_id": "event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a",
-        "title": "Trump Delays Iran Strikes to Pursue Diplomatic Deal",
-        "relationship": "related_topic",
-        "confidence": 0.95,
-        "shared_entities": [
-          "abbas_araghchi",
-          "donald_trump",
-          "general_assembly",
-          "hormuz_iran",
-          "iran",
-          "iran_foreign",
-          "iran_propose",
-          "jd",
-          "reopen",
-          "reopen_strait",
-          "strait",
-          "trump_claim",
-          "uk",
-          "un",
-          "united",
-          "united_nation",
-          "us"
-        ]
-      },
-      {
         "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
         "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
         "relationship": "related_topic",
@@ -3756,6 +3828,7 @@
           "red_sea.",
           "russia",
           "saudi",
+          "saudi_arabia",
           "ukraine",
           "un",
           "united_nation",
@@ -3919,6 +3992,7 @@
       "ahead",
       "aimed",
       "aims",
+      "aircraft",
       "airport",
       "al-qaida",
       "alert",
@@ -3943,6 +4017,8 @@
       "armed",
       "arrest",
       "arrested",
+      "arrive",
+      "arrived",
       "assault",
       "assembly",
       "asserted",
@@ -3970,6 +4046,7 @@
       "border",
       "both",
       "brief",
+      "bringing",
       "broader",
       "brother",
       "budget",
@@ -3980,6 +4057,7 @@
       "capabilitie",
       "capital",
       "caribbean",
+      "carrier",
       "casualtie",
       "caught",
       "caused",
@@ -4056,6 +4134,7 @@
       "denied",
       "depending",
       "deployed",
+      "deployment",
       "described",
       "desire",
       "despite",
@@ -4085,6 +4164,7 @@
       "duma",
       "dust",
       "each",
+      "east",
       "east-west",
       "effort",
       "either",
@@ -4270,6 +4350,7 @@
       "memorial",
       "mentioned",
       "meter",
+      "middle",
       "mideast",
       "midterm",
       "military",
@@ -4312,6 +4393,7 @@
       "only",
       "open",
       "operation",
+      "option",
       "orchestrating",
       "osama",
       "other",
@@ -4415,6 +4497,7 @@
       "reveal",
       "rising",
       "riyadh",
+      "roosevelt",
       "rubio",
       "russia",
       "same",
@@ -4500,11 +4583,13 @@
       "terrorist",
       "than",
       "them",
+      "theodore",
       "there",
       "these",
       "they",
       "third",
       "those",
+      "thousand",
       "threat",
       "threaten",
       "threatening",
@@ -4524,6 +4609,7 @@
       "transcend",
       "transparency",
       "tribute",
+      "troop",
       "truck",
       "trump",
       "ukraine",
@@ -4538,6 +4624,7 @@
       "urges",
       "used",
       "vance",
+      "variou",
       "vice",
       "victim",
       "violation",
@@ -4582,6 +4669,7 @@
     ],
     "entities": [
       "abbas_araghchi",
+      "additional_troop",
       "air_base",
       "air_raid",
       "al-qaida",
@@ -4709,10 +4797,13 @@
       "mecca_warns",
       "meets_lavrov",
       "men_arrested",
+      "middle",
+      "middle_east",
       "near_mecca",
       "near_riyadh",
       "nearly_billion",
       "netanyahu_ahead",
+      "news._uss",
       "november",
       "nypd",
       "nypd_officer",
@@ -4747,6 +4838,7 @@
       "riyadh",
       "riyadh_airport",
       "riyadh_saudi",
+      "roosevelt_arrive",
       "russia",
       "russia_diesel",
       "russia_drone",
@@ -4776,6 +4868,7 @@
       "targeted_mecca",
       "tension_persian",
       "terrorism_charge",
+      "theodore_roosevelt",
       "time_since",
       "trump_addresse",
       "trump_claim",
@@ -4796,6 +4889,8 @@
       "united_states.",
       "urges_ukraine",
       "us",
+      "uss",
+      "uss_theodore",
       "victim_compensation",
       "vladimir_putin",
       "volodymyr_zelensky",
@@ -4810,7 +4905,7 @@
       "zaporizhzhia",
       "zero._alvarez"
     ],
-    "search_text": "000 11-related 11th 120 156 184 2001 2022 2026 25th 355 7-day abbas abbas_araghchi acceptable accusation accuse accused achieved across action additional address addresse administration advance advocate affected agree agreed agreement ahead aimed aims air_base air_raid airport al-qaida al-qaida. alert alert_flame allegation alleged also alternative alvarez america amidst among anger annihilate anniversary announced anti-war ap approache approval approving arabia arabia_claim arabia_east-west araghchi armed arrest arrested arrested_near assault assault_iran assembly assembly_iran assembly_russia asserted assertion assist attack attacking attempting attended attributed attributing authoritie await aware backed ballistic ballot base believe bend better billion bin_laden blockade boat border both brief broader brother budget budget_office called calls cancel cancel_meeting cancer cancer_advocate capabilitie capital caribbean caribbean. caribbean_drug-trafficking casualtie caught caused cautioning cbo cease ceasefire ceremonie ceremony challenge change characterized charge children cia cia_declassifie civilian claim claim_downing claim_houthi claim_missile claim_russia claimed claiming clashe closed coalition combat comes commemorate commemorate_anniversary commemorating commemorating_years commemoration comment committed committed_war communicated compensation compensation_fund complete complex concern concession concluded confirmed confl conflict congressional congressional_budget consequence consequence_saudi consider consider_releasing consideration constitute context continued continuing contributed control controlled controversial controversial_election convention cost costs counterpart crime crisi daily dalla damage damage_shopping damaged dangerou de-escalate deal death declare declare_defiance declassifie declassifie_presidential declassify defend defend_iran defended defense defense_intercept defiance defiant delegation deliver denied depending deployed described desire despite despite_trump destroyed detailing detective deterrent died diesel diesel_refinerie dignitarie diplomacy diplomatic direct discuss discussion dismisse dismisse_german dismisse_iran disruption document dominance donald donald_trump downed downing downing_saudi dozen drone drone_targeted drug drug-trafficking drug-trafficking_boat duma dust each east-west east-west_pipeline effort either election emergency emergency_service. emphasized end end_ongoing ending endorse endorse_netanyahu endorsed endorsement energy engage enrichment envoy erupt erupt_near escalating escalating_houthi escalation estimated european europeans._familie evacuated event exchange expand expansion expected expense expert expert_find explosion explosive export express expressing extend extremist face facility fact-finding failing false familie family family_request fatalitie fatality february february. february._these february_trump find find_ground finding fire firefighter firing first first_time five flame flame_erupt flow foreign formal four freeze freezing front frontline frozen fuel full-scale fund funds gains gathered gaza general general_assembly general_assembly. geography german german_concern germany germany_foreign global globally ground ground_zero ground_zero. group gulf halt halt_energy halts health hearing heavily heightened held highlight hijacker holiest homes honor hopes hormuz hormuz._iran hormuz_iran hormuz_strait hostilitie house house_votes houthi houthi_claim houthi_drone however however_ukraine hundred igniting illnesse impact implication impose incident include including incur indicate indicated individual inflation influence infrastructure initially injury insecurity instance intelligence intended intensification intensified intensity intercept intercept_yemen intercepted international invasion invasion_germany involve involved involvement involving iran iran-backed iran-backed_houthi iran._despite iran_control iran_engage iran_foreign iran_proposal iran_propose iran_tension iran_threaten iran_unveil iran_war iranian-backed iraq iraq. islam islamic islamic_republic. israel israel_election israel_prime issue issue_threat issued jared jared_kushner jd jet_saudi july july. july._resident just justice killed knee kremlin kremlin. kremlin._iran kremlin_party kushner labeling laden large launche launching lavrov lead leader leadership leading least leave lebanon lebanon._germany lifts line lines linked lives lost loud luis made main maintaining mall many marco marco_rubio marked marking marks masoud masoud_pezeshkian measure mecca mecca._u.n. mecca_islam mecca_warns mediator meet meeting meets meets_lavrov memorial men_arrested mentioned meter mideast midterm military militia mines missile mission moment monitored month mood most movement names nation naval near near_mecca near_riyadh nearby nearly nearly_billion negotiate negotiation netanyahu netanyahu_ahead network never next nine noted noting november nuclear nypd nypd_officer observed occurred offense offensive office officer officer_who oil ongoing ongoing_iran ongoing_tension only open operation orchestrating osama other overnight overseeing paid parliament parliamentary part participated parts party party_secure passage past path peace pennsylvania pentagon persian persian_gulf pezeshkian phil phil_alvarez pipeline pipeline_remain place plan planned plume position potential power prepared preparing presidential presidential_brief pressure prevent price prime pro-putin process productive productive_talks profound program progress progress_recent prompted prompting proposal propose propose_reopening proposed putin putting quarter-century questioned raid raid_alert rail raise raise_concern raised rare rather reach read real reasonable rebel received recent record red_sea. refinerie reflect reflected reflecting regarding region rejected rejection related related_cancer release released releasing remain remain_closed remembrance remembrance_ceremonie renewed reopen reopen_strait reopening reopening_strait repair reported representation representative republic republican republican_convention request request_donald resident resolution responded responder response responsibility resulted resulting resume resumption retired reveal rising rising_inflation rising_tension riyadh riyadh_airport riyadh_saudi rubio russia russia_diesel russia_drone russia_foreign russia_parliament same sanction saudi saudi-led saudi_accuse saudi_arabia saudi_arabia. saudi_defense saudi_jet scheduled school sea._saudi seats secure secure_seats security seek seeks seen seizing senate sensitive september september_victim sergei sergei_lavrov service service._smoke seven seven-day seventh several shanksville shanksville_pennsylvania shift shopping shopping_mall shortage shortage_trump shrapnel shut shuttle sideline sides significant silence similar since since_ukraine sites situation smoke smuggling soldier solemn solution somber some speech sport spread square stability stark state stated statement stating step steps steve steve_witkoff stop strait strait_questioned strategie strike striking submission such suggest suggestion supplie support survivor suspected suspicion talks tank tanker target targeted targeted_mecca targeting tehran television tension tension_persian territorial terrorism terrorism_charge terrorist than them there these they third those threat threaten threatening three threshold through thursday tightly time time_since took toward toxic toxin tracking trafficking tragic transcend transparency tribute truck trump trump_addresse trump_claim trump_dismisse trump_endorse trump_urges u.n. u.n._expert uk ukraine ukraine-russia ukraine_agree ukraine_invasion un unchanged undertaken unga united united_nation united_states. unremarkable unveil upcoming urges urges_ukraine us used vance vice victim victim_compensation violation violence visit vladimir vladimir_putin volodymyr volodymyr_zelensky volodymyr_zelenskyy voted votes voting wadephul waive walked wants war war_costs war_crime warfare warned warning warns wave weapon wednesday week weeks where which while who_died within without witkoff working would year years years_since yemen yemen_houthi yemen_red yemeni york zaporizhzhia zelensky zelenskyy zero zero._alvarez"
+    "search_text": "000 11-related 11th 120 156 184 2001 2022 2026 25th 355 7-day abbas abbas_araghchi acceptable accusation accuse accused achieved across action additional additional_troop address addresse administration advance advocate affected agree agreed agreement ahead aimed aims air_base air_raid aircraft airport al-qaida al-qaida. alert alert_flame allegation alleged also alternative alvarez america amidst among anger annihilate anniversary announced anti-war ap approache approval approving arabia arabia_claim arabia_east-west araghchi armed arrest arrested arrested_near arrive arrived assault assault_iran assembly assembly_iran assembly_russia asserted assertion assist attack attacking attempting attended attributed attributing authoritie await aware backed ballistic ballot base believe bend better billion bin_laden blockade boat border both brief bringing broader brother budget budget_office called calls cancel cancel_meeting cancer cancer_advocate capabilitie capital caribbean caribbean. caribbean_drug-trafficking carrier casualtie caught caused cautioning cbo cease ceasefire ceremonie ceremony challenge change characterized charge children cia cia_declassifie civilian claim claim_downing claim_houthi claim_missile claim_russia claimed claiming clashe closed coalition combat comes commemorate commemorate_anniversary commemorating commemorating_years commemoration comment committed committed_war communicated compensation compensation_fund complete complex concern concession concluded confirmed confl conflict congressional congressional_budget consequence consequence_saudi consider consider_releasing consideration constitute context continued continuing contributed control controlled controversial controversial_election convention cost costs counterpart crime crisi daily dalla damage damage_shopping damaged dangerou de-escalate deal death declare declare_defiance declassifie declassifie_presidential declassify defend defend_iran defended defense defense_intercept defiance defiant delegation deliver denied depending deployed deployment described desire despite despite_trump destroyed detailing detective deterrent died diesel diesel_refinerie dignitarie diplomacy diplomatic direct discuss discussion dismisse dismisse_german dismisse_iran disruption document dominance donald donald_trump downed downing downing_saudi dozen drone drone_targeted drug drug-trafficking drug-trafficking_boat duma dust each east east-west east-west_pipeline effort either election emergency emergency_service. emphasized end end_ongoing ending endorse endorse_netanyahu endorsed endorsement energy engage enrichment envoy erupt erupt_near escalating escalating_houthi escalation estimated european europeans._familie evacuated event exchange expand expansion expected expense expert expert_find explosion explosive export express expressing extend extremist face facility fact-finding failing false familie family family_request fatalitie fatality february february. february._these february_trump find find_ground finding fire firefighter firing first first_time five flame flame_erupt flow foreign formal four freeze freezing front frontline frozen fuel full-scale fund funds gains gathered gaza general general_assembly general_assembly. geography german german_concern germany germany_foreign global globally ground ground_zero ground_zero. group gulf halt halt_energy halts health hearing heavily heightened held highlight hijacker holiest homes honor hopes hormuz hormuz._iran hormuz_iran hormuz_strait hostilitie house house_votes houthi houthi_claim houthi_drone however however_ukraine hundred igniting illnesse impact implication impose incident include including incur indicate indicated individual inflation influence infrastructure initially injury insecurity instance intelligence intended intensification intensified intensity intercept intercept_yemen intercepted international invasion invasion_germany involve involved involvement involving iran iran-backed iran-backed_houthi iran._despite iran_control iran_engage iran_foreign iran_proposal iran_propose iran_tension iran_threaten iran_unveil iran_war iranian-backed iraq iraq. islam islamic islamic_republic. israel israel_election israel_prime issue issue_threat issued jared jared_kushner jd jet_saudi july july. july._resident just justice killed knee kremlin kremlin. kremlin._iran kremlin_party kushner labeling laden large launche launching lavrov lead leader leadership leading least leave lebanon lebanon._germany lifts line lines linked lives lost loud luis made main maintaining mall many marco marco_rubio marked marking marks masoud masoud_pezeshkian measure mecca mecca._u.n. mecca_islam mecca_warns mediator meet meeting meets meets_lavrov memorial men_arrested mentioned meter middle middle_east mideast midterm military militia mines missile mission moment monitored month mood most movement names nation naval near near_mecca near_riyadh nearby nearly nearly_billion negotiate negotiation netanyahu netanyahu_ahead network never news._uss next nine noted noting november nuclear nypd nypd_officer observed occurred offense offensive office officer officer_who oil ongoing ongoing_iran ongoing_tension only open operation option orchestrating osama other overnight overseeing paid parliament parliamentary part participated parts party party_secure passage past path peace pennsylvania pentagon persian persian_gulf pezeshkian phil phil_alvarez pipeline pipeline_remain place plan planned plume position potential power prepared preparing presidential presidential_brief pressure prevent price prime pro-putin process productive productive_talks profound program progress progress_recent prompted prompting proposal propose propose_reopening proposed putin putting quarter-century questioned raid raid_alert rail raise raise_concern raised rare rather reach read real reasonable rebel received recent record red_sea. refinerie reflect reflected reflecting regarding region rejected rejection related related_cancer release released releasing remain remain_closed remembrance remembrance_ceremonie renewed reopen reopen_strait reopening reopening_strait repair reported representation representative republic republican republican_convention request request_donald resident resolution responded responder response responsibility resulted resulting resume resumption retired reveal rising rising_inflation rising_tension riyadh riyadh_airport riyadh_saudi roosevelt roosevelt_arrive rubio russia russia_diesel russia_drone russia_foreign russia_parliament same sanction saudi saudi-led saudi_accuse saudi_arabia saudi_arabia. saudi_defense saudi_jet scheduled school sea._saudi seats secure secure_seats security seek seeks seen seizing senate sensitive september september_victim sergei sergei_lavrov service service._smoke seven seven-day seventh several shanksville shanksville_pennsylvania shift shopping shopping_mall shortage shortage_trump shrapnel shut shuttle sideline sides significant silence similar since since_ukraine sites situation smoke smuggling soldier solemn solution somber some speech sport spread square stability stark state stated statement stating step steps steve steve_witkoff stop strait strait_questioned strategie strike striking submission such suggest suggestion supplie support survivor suspected suspicion talks tank tanker target targeted targeted_mecca targeting tehran television tension tension_persian territorial terrorism terrorism_charge terrorist than them theodore theodore_roosevelt there these they third those thousand threat threaten threatening three threshold through thursday tightly time time_since took toward toxic toxin tracking trafficking tragic transcend transparency tribute troop truck trump trump_addresse trump_claim trump_dismisse trump_endorse trump_urges u.n. u.n._expert uk ukraine ukraine-russia ukraine_agree ukraine_invasion un unchanged undertaken unga united united_nation united_states. unremarkable unveil upcoming urges urges_ukraine us used uss uss_theodore vance variou vice victim victim_compensation violation violence visit vladimir vladimir_putin volodymyr volodymyr_zelensky volodymyr_zelenskyy voted votes voting wadephul waive walked wants war war_costs war_crime warfare warned warning warns wave weapon wednesday week weeks where which while who_died within without witkoff working would year years years_since yemen yemen_houthi yemen_red yemeni york zaporizhzhia zelensky zelenskyy zero zero._alvarez"
   },
   "related_events": [
     {
@@ -4848,6 +4943,40 @@
       "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
     },
     {
+      "event_id": "event_protests-erupt-in-israel-against-election-in_a0b546d8ce",
+      "title": "Protests Erupt in Israel Against Election Interference Ahead of October Vote",
+      "summary": "Muninn first tracked this thread on 2026-09-18: Protests Erupt in Israel Against Election Interference Ahead of October Vote. The latest development is Netanyahu Accused of Smearing Arab Parties After Election Loss.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-09-18",
+      "last_seen_at": "2026-10-30",
+      "development_count": 20,
+      "latest_title": "Netanyahu Accused of Smearing Arab Parties After Election Loss",
+      "topic_label": "Israeli Elections",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_protests-erupt-in-israel-against-election-in_a0b546d8ce.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_protests-erupt-in-israel-against-election-in_a0b546d8ce.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_protests-erupt-in-israel-against-election-in_a0b546d8ce"
+    },
+    {
       "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
       "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
       "summary": "Muninn first tracked this thread on 2026-09-18: Macron Implements Measures Against Intensifying Russian Hybrid Threats. The latest development is French PM Announces Major Police Presence for Upcoming Protests.",
@@ -4882,50 +5011,16 @@
       "href": "/timeline.html?event=event_macron-implements-measures-against-intensify_109da09c6f"
     },
     {
-      "event_id": "event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a",
-      "title": "Trump Delays Iran Strikes to Pursue Diplomatic Deal",
-      "summary": "Muninn first tracked this thread on 2026-08-02: Trump Delays Iran Strikes to Pursue Diplomatic Deal. The latest development is Iran Proposes Two-Day Plan to Reopen Strait of Hormuz Amid Ongoing Negotiations.",
-      "activity_status": "active",
-      "stage": "timeline",
-      "stage_label": "Timeline",
-      "first_seen_at": "2026-08-02",
-      "last_seen_at": "2026-11-02",
-      "development_count": 13,
-      "latest_title": "Iran Proposes Two-Day Plan to Reopen Strait of Hormuz Amid Ongoing Negotiations",
-      "topic_label": "Iran Relations",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_trump-delays-iran-strikes-to-pursue-diplomat_16b5722d7a"
-    },
-    {
       "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
       "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
-      "summary": "Muninn first tracked this thread on 2026-07-25: Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse. The latest development is Dozens Killed Amid Ongoing Conflict in Yemen's Taiz Province.",
+      "summary": "Muninn first tracked this thread on 2026-07-25: Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse. The latest development is Saudi Arabia Removes Commander Amid Houthi Advances in Yemen.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-07-25",
-      "last_seen_at": "2026-11-07",
-      "development_count": 35,
-      "latest_title": "Dozens Killed Amid Ongoing Conflict in Yemen's Taiz Province",
+      "last_seen_at": "2026-11-16",
+      "development_count": 36,
+      "latest_title": "Saudi Arabia Removes Commander Amid Houthi Advances in Yemen",
       "topic_label": "Russia-Ukraine War",
       "hero_image": {
         "url": "/Current_news/generated/events/event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea.jpg",
