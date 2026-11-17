@@ -15,7 +15,7 @@
     "summary": "A Ukrainian drone strike ignited a significant fire at a Wildberries warehouse near Saint Petersburg on July 24. The blaze produced thick smoke that spread across the city and led to temporary disruptions at Pulkovo Airport, as reported by Russian authorities.",
     "status": "active",
     "first_seen_at": "2026-07-25",
-    "last_seen_at": "2026-11-16",
+    "last_seen_at": "2026-11-17",
     "timeline": [
       {
         "development_id": "story_b77a481c5a1a5ef9",
@@ -2734,15 +2734,99 @@
         "first_seen_at": "2026-11-16",
         "last_seen_at": "2026-11-16",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_95862a919c85a820",
+        "daily_story_id": "story_95862a919c85a820",
+        "date": "2026-11-17",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Ukraine Launches Major Attack on Kerch Bridge Linking Crimea to Russia",
+        "summary": "Ukraine has executed a significant missile and drone attack on the Kerch Bridge, which connects Russia to the annexed Crimea. This operation, described by President Volodymyr Zelensky as unprecedented, was reportedly planned over several weeks and marks the second consecutive night of strikes on the bridge. The attack has caused substantial damage to the structure, which is a critical link for Russia.",
+        "topic_label": "Ukraine Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "Ukraine attacked the Kerch Bridge linking Crimea to Russia.",
+          "The operation was planned over several weeks.",
+          "Zelensky described the attack as unprecedented.",
+          "This was the second consecutive night of strikes on the bridge."
+        ],
+        "source_count": 4,
+        "sources": [
+          "BBC",
+          "Euronews",
+          "New York Times",
+          "RTE News"
+        ],
+        "source_urls": [
+          "https://www.bbc.co.uk/news/articles/cw772jk4rvmxo?at_medium=RSS&at_campaign=rss",
+          "https://www.euronews.com/2026/11/17/moment-ukrainian-drones-strike-the-kerch-bridge-linking-crimea-to-russia",
+          "https://www.nytimes.com/2026/11/17/world/europe/ukraine-kyiv-russia-kerch-bridge-crimea.html",
+          "https://www.rte.ie/news/ukraine/2026/1117/1599488-russia-ukraine-strikes-bridge"
+        ],
+        "source_details": [
+          {
+            "title": "Putin's Crimean Bridge partly collapses as Zelensky hails 'unprecedented' attack by Ukraine",
+            "source": "BBC",
+            "link": "https://www.bbc.co.uk/news/articles/cw772jk4rvmxo?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          },
+          {
+            "title": "Moment Ukrainian drones strike the Kerch Bridge linking Crimea to Russia",
+            "source": "Euronews",
+            "link": "https://www.euronews.com/2026/11/17/moment-ukrainian-drones-strike-the-kerch-bridge-linking-crimea-to-russia",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Ukraine Attacks Kerch Bridge Linking Russia to Occupied Crimea",
+            "source": "New York Times",
+            "link": "https://www.nytimes.com/2026/11/17/world/europe/ukraine-kyiv-russia-kerch-bridge-crimea.html",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Ukraine strikes Crimea bridge in 'unprecedented' attack",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/ukraine/2026/1117/1599488-russia-ukraine-strikes-bridge",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_4f5c295a6fee8e73",
+          "shared_tokens": [
+            "attack",
+            "conflict",
+            "russia",
+            "significant",
+            "strike",
+            "ukraine"
+          ],
+          "shared_entities": [
+            "russia",
+            "ukraine"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-11-17",
+        "last_seen_at": "2026-11-17",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 36,
+      "public_development_count": 37,
       "questionable_development_count": 2,
       "review_required": true
     },
-    "latest_title": "Saudi Arabia Removes Commander Amid Houthi Advances in Yemen",
-    "latest_summary": "Saudi Arabia has dismissed the commander of its coalition forces fighting the Houthi rebels as they advance towards Aden, the temporary capital. This decision follows recent territorial gains by the Iran-backed Houthis along Yemen's southern coast, prompting Saudi-backed forces to withdraw to defend the city.",
+    "latest_title": "Ukraine Launches Major Attack on Kerch Bridge Linking Crimea to Russia",
+    "latest_summary": "Ukraine has executed a significant missile and drone attack on the Kerch Bridge, which connects Russia to the annexed Crimea. This operation, described by President Volodymyr Zelensky as unprecedented, was reportedly planned over several weeks and marks the second consecutive night of strikes on the bridge. The attack has caused substantial damage to the structure, which is a critical link for Russia.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -2753,29 +2837,29 @@
       "milestone_development_ids": [
         "story_b77a481c5a1a5ef9",
         "story_ae8cefb920450cfe",
-        "story_bad240d0a1102fb2",
-        "story_c99fb7e7c2e8a4e5"
+        "story_0c61c0d1c0a9ccb6",
+        "story_95862a919c85a820"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-11-16",
-      "development_count": 36,
-      "coverage_packet_count": 36,
-      "date_count": 31,
-      "source_count": 96,
-      "independent_source_count": 29,
+      "summary_updated_at": "2026-11-17",
+      "development_count": 37,
+      "coverage_packet_count": 37,
+      "date_count": 32,
+      "source_count": 100,
+      "independent_source_count": 30,
       "first_date": "2026-07-25",
-      "latest_date": "2026-11-16",
-      "latest_update_title": "Saudi Arabia Removes Commander Amid Houthi Advances in Yemen",
+      "latest_date": "2026-11-17",
+      "latest_update_title": "Ukraine Launches Major Attack on Kerch Bridge Linking Crimea to Russia",
       "coverage_score": 1.0,
       "recency_score": 1.0,
       "rank_score": 1.0,
-      "context_summary": "Muninn first tracked this thread on 2026-07-25: Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse. The latest development is Saudi Arabia Removes Commander Amid Houthi Advances in Yemen.",
-      "cta_label": "Explore 36 developments"
+      "context_summary": "Muninn first tracked this thread on 2026-07-25: Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse. The latest development is Ukraine Launches Major Attack on Kerch Bridge Linking Crimea to Russia.",
+      "cta_label": "Explore 37 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "A Ukrainian drone strike ignited a significant fire at a Wildberries warehouse near Saint Petersburg on July 24. A later development was Displacement Crisis as Houthis Advance in Yemen. Most recently, saudi Arabia has dismissed the commander of its coalition forces fighting the Houthi rebels as they advance towards Aden, the temporary capital.",
+      "summary": "A Ukrainian drone strike ignited a significant fire at a Wildberries warehouse near Saint Petersburg on July 24. A later development was Displacement Crisis as Houthis Advance in Yemen. Most recently, ukraine has executed a significant missile and drone attack on the Kerch Bridge, which connects Russia to the annexed Crimea.",
       "key_developments": [
         {
           "development_id": "story_b77a481c5a1a5ef9",
@@ -2788,14 +2872,14 @@
           "title": "Civilian Casualties in Ukraine Reach Highest Monthly Level Since 2022"
         },
         {
-          "development_id": "story_bad240d0a1102fb2",
-          "date": "2026-10-06",
-          "title": "Yemen Government Forces Regain Control Near Bab el-Mandeb Strait"
+          "development_id": "story_0c61c0d1c0a9ccb6",
+          "date": "2026-10-07",
+          "title": "Over 200,000 Displaced Amid Renewed Fighting in Yemen, UN Reports"
         },
         {
-          "development_id": "story_c99fb7e7c2e8a4e5",
-          "date": "2026-11-16",
-          "title": "Saudi Arabia Removes Commander Amid Houthi Advances in Yemen"
+          "development_id": "story_95862a919c85a820",
+          "date": "2026-11-17",
+          "title": "Ukraine Launches Major Attack on Kerch Bridge Linking Crimea to Russia"
         }
       ],
       "sources": [
@@ -3374,13 +3458,77 @@
           "source": "France 24 - English",
           "link": "https://www.france24.com/en/yemen/20261116-saudi-arabia-dismisses-commander-of-anti-houthi-coalition-as-rebels-advance",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Putin's Crimean Bridge partly collapses as Zelensky hails 'unprecedented' attack by Ukraine",
+          "source": "BBC",
+          "link": "https://www.bbc.co.uk/news/articles/cw772jk4rvmxo?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
+        },
+        {
+          "title": "Moment Ukrainian drones strike the Kerch Bridge linking Crimea to Russia",
+          "source": "Euronews",
+          "link": "https://www.euronews.com/2026/11/17/moment-ukrainian-drones-strike-the-kerch-bridge-linking-crimea-to-russia",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Ukraine Attacks Kerch Bridge Linking Russia to Occupied Crimea",
+          "source": "New York Times",
+          "link": "https://www.nytimes.com/2026/11/17/world/europe/ukraine-kyiv-russia-kerch-bridge-crimea.html",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Ukraine strikes Crimea bridge in 'unprecedented' attack",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/ukraine/2026/1117/1599488-russia-ukraine-strikes-bridge",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-11-16",
+      "updated_at": "2026-11-17",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
     "related_events": [
+      {
+        "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
+        "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
+        "relationship": "related_topic",
+        "confidence": 0.95,
+        "shared_entities": [
+          "iran-backed_houthi",
+          "july.",
+          "red_sea.",
+          "russia",
+          "saudi",
+          "saudi_arabia",
+          "ukraine",
+          "un",
+          "united_nation",
+          "us",
+          "volodymyr_zelensky",
+          "volodymyr_zelenskyy",
+          "yemen",
+          "yemen_houthi",
+          "zaporizhzhia"
+        ]
+      },
+      {
+        "event_id": "event_israel-commemorates-third-anniversary-of-oct_c05cefd020",
+        "title": "Israel Commemorates Third Anniversary of October 7 Attacks",
+        "relationship": "related_topic",
+        "confidence": 0.95,
+        "shared_entities": [
+          "donald_tusk",
+          "kyiv",
+          "polish_prime",
+          "russia",
+          "significant",
+          "ukraine",
+          "ukraine_result",
+          "us",
+          "volodymyr_zelenskyy"
+        ]
+      },
       {
         "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
         "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
@@ -3401,6 +3549,7 @@
           "ukraine",
           "ukraine.",
           "ukraine_drone",
+          "ukraine_launche",
           "un",
           "united_nation",
           "us",
@@ -3428,78 +3577,6 @@
           "us",
           "volodymyr_zelensky"
         ]
-      },
-      {
-        "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
-        "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
-        "relationship": "related_topic",
-        "confidence": 0.95,
-        "shared_entities": [
-          "bab",
-          "canada",
-          "capture_strategic",
-          "civilian_casualtie",
-          "concurrently_russia",
-          "el-mandeb",
-          "elon_musk",
-          "fatalitie",
-          "gulf",
-          "houthi",
-          "houthi_capture",
-          "iran-backed_houthi",
-          "kyiv",
-          "kyiv_result",
-          "oleshky",
-          "perim_island",
-          "red",
-          "red_sea",
-          "red_sea.",
-          "region_result",
-          "russia",
-          "russia_missile",
-          "russian-occupied",
-          "saint_petersburg",
-          "saudi",
-          "saudi_airstrike",
-          "saudi_arabia",
-          "starlink",
-          "ukraine",
-          "ukraine.",
-          "ukraine_drone",
-          "un",
-          "united_nation",
-          "us",
-          "visit_canada",
-          "volodymyr_zelensky",
-          "volodymyr_zelenskyy",
-          "yemen",
-          "yemen_houthi",
-          "yemen_result",
-          "zelenskyy_visit"
-        ]
-      },
-      {
-        "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
-        "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
-        "relationship": "related_topic",
-        "confidence": 0.95,
-        "shared_entities": [
-          "iran-backed_houthi",
-          "july.",
-          "red_sea.",
-          "russia",
-          "saudi",
-          "saudi_arabia",
-          "ukraine",
-          "un",
-          "united_nation",
-          "us",
-          "volodymyr_zelensky",
-          "volodymyr_zelenskyy",
-          "yemen",
-          "yemen_houthi",
-          "zaporizhzhia"
-        ]
       }
     ],
     "hero_image": {
@@ -3526,93 +3603,125 @@
       "available": true,
       "title": "About Russia-Ukraine War",
       "subject": "Russia-Ukraine War",
-      "summary": "The Russia-Ukraine War is an interstate conflict rooted in Russia’s 2014 seizure of Crimea and fighting in eastern Ukraine, which expanded into a full-scale Russian armed attack on 24 February 2022. It has involved combat and long-range strikes across Ukraine and, increasingly, attacks affecting Russian territory, alongside major humanitarian, legal, diplomatic and economic consequences.",
+      "summary": "The Russia-Ukraine War is the ongoing armed conflict between Russia and Ukraine, rooted in Russia’s 2014 seizure of Crimea and fighting in eastern Ukraine, and greatly expanded by Russia’s full-scale invasion on February 24, 2022. It includes ground combat, long-range missile and drone attacks, occupation-related abuses, and diplomatic efforts, with effects extending beyond the immediate front lines.",
       "facts": [
         {
-          "label": "Origins",
-          "value": "In March 2014, the UN General Assembly affirmed Ukraine’s sovereignty, political independence, unity and territorial integrity within its internationally recognized borders, and declared that the 16 March 2014 Crimea referendum could not alter Crimea’s status.",
+          "label": "Origins and escalation",
+          "value": "Hostilities began in 2014 following Russia’s seizure of Crimea and the outbreak of fighting in parts of eastern Ukraine; Russia launched its full-scale invasion on February 24, 2022.",
           "source_ids": [
-            "o1"
-          ]
-        },
-        {
-          "label": "Full-scale phase",
-          "value": "The UN Human Rights Monitoring Mission says Russian armed forces launched a full-scale armed attack on Ukraine on 24 February 2022; this is the date generally used for the war’s current large-scale phase.",
-          "source_ids": [
+            "o1",
             "o2"
           ]
         },
         {
           "label": "Parties and geography",
-          "value": "The core belligerents are the Russian Federation and Ukraine. The International Court of Justice’s 16 March 2022 provisional-measures order referred to Russian military operations begun on 24 February 2022 “in the territory of Ukraine.”",
+          "value": "The conflict is principally between the Russian Federation and Ukraine. Although the main fighting has been in and over Ukraine, the war also involves cross-border attacks and security consequences in neighboring states and inside Russia.",
           "source_ids": [
-            "o3"
-          ]
-        },
-        {
-          "label": "International legal position",
-          "value": "On 2 March 2022, the UN General Assembly adopted Resolution ES-11/1, demanding that Russia immediately cease its use of force against Ukraine and withdraw its military forces; the resolution also called for a peaceful resolution through dialogue, negotiations and mediation.",
-          "source_ids": [
+            "o3",
             "o4"
           ]
         },
         {
-          "label": "Humanitarian impact",
-          "value": "UN human-rights monitoring has documented extensive civilian harm, displacement and damage to homes, medical and educational facilities, and critical infrastructure; it cautions that verified civilian-casualty totals understate the actual toll where access and verification are limited.",
+          "label": "International legal position",
+          "value": "United Nations General Assembly resolutions reaffirm Ukraine’s sovereignty, independence and territorial integrity within its internationally recognized borders, and call for Russian forces to withdraw from Ukrainian territory.",
           "source_ids": [
             "o5",
             "o6"
           ]
+        },
+        {
+          "label": "Civilian impact",
+          "value": "UN human-rights monitors have documented extensive civilian deaths and injuries since February 2022, while stressing that verified figures understate the true toll because access and corroboration are limited in some areas.",
+          "source_ids": [
+            "o7",
+            "o8"
+          ]
+        },
+        {
+          "label": "Applicable rules",
+          "value": "As an international armed conflict, hostilities are governed by international humanitarian law, including rules intended to protect civilians and civilian objects and to regulate how parties conduct attacks.",
+          "source_ids": [
+            "o9",
+            "o10"
+          ]
         }
       ],
-      "scope_note": "The selected Muninn timeline follows a limited set of late-July to mid-August 2026 developments, including cross-border strikes, reported casualties and humanitarian findings; it does not provide a comprehensive military, diplomatic or legal history of the war.",
+      "scope_note": "The selected Muninn timeline focuses on a limited set of late-July to mid-August 2026 security, humanitarian and diplomatic developments, not a comprehensive account of the war’s military operations, casualties or negotiations.",
       "sources": [
         {
           "title": "UN",
           "publisher": "UN",
-          "url": "https://digitallibrary.un.org/record/767883/files/A_RES_68_262-EN.pdf",
+          "url": "https://ukraine.un.org/sites/default/files/2023-12/CCA%20Ukraine%202023_final_November%202023.pdf",
           "source_type": "reporting",
           "id": "o1"
         },
         {
-          "title": "Ohchr",
-          "publisher": "Ohchr",
-          "url": "https://ukraine.ohchr.org/en/two-year-update-protection-civilians-impact-hostilities-civilians-24-february-2022-EN",
+          "title": "UN",
+          "publisher": "UN",
+          "url": "https://www.un.org/sg/en/content/sg/statements/2026-02-23/statement-the-secretary-general-the-occasion-of-the-fourth-anniversary-of-the-russian-federations-full-scale-invasion-of-ukraine",
           "source_type": "reporting",
           "id": "o2"
         },
         {
-          "title": "Icj Cij",
-          "publisher": "Icj Cij",
-          "url": "https://api.icj-cij.org/sites/default/files/case-related/182/182-20230609-PRE-01-00-EN.pdf",
+          "title": "UN",
+          "publisher": "UN",
+          "url": "https://ukraine.un.org/en/173380-ukraine-humanitarian-impact-situation-report-no-1-500-pm-26-february-2022",
           "source_type": "reporting",
           "id": "o3"
         },
         {
-          "title": "UN",
-          "publisher": "UN",
-          "url": "https://documents.un.org/api/symbol/access?l=en&s=a%2Fres%2Fes-11%2F1&t=pdf",
+          "title": "Ohchr",
+          "publisher": "Ohchr",
+          "url": "https://www.ohchr.org/sites/default/files/documents/press/hrmmu-civilian-casualties-24feb2022-15feb2023-en.pdf",
           "source_type": "reporting",
           "id": "o4"
         },
         {
-          "title": "Ohchr",
-          "publisher": "Ohchr",
-          "url": "https://ukraine.ohchr.org/sites/default/files/2026-02/2026-02-16%20HRMMU_Four%20Years%20On_fact%20sheet.pdf",
+          "title": "UN",
+          "publisher": "UN",
+          "url": "https://mandates.un.org/mandate/A/RES/ES-11/4?agenda_item=Letter+dated+28+February+2014+from+the+Permanent+Representative+of+Ukraine+to+the+United+Nations+addressed+to+the+President+of+the+Security+Council+%28S%2F2014%2F136%29.",
           "source_type": "reporting",
           "id": "o5"
         },
         {
-          "title": "Unhcr",
-          "publisher": "Unhcr",
-          "url": "https://data.unhcr.org/en/situations/ukraine?app=true",
+          "title": "UN",
+          "publisher": "UN",
+          "url": "https://digitallibrary.un.org/record/767883?In=%5B%27%5B%22%5B%5C%27es%5C%27%5D%22%5D%27%5D&ln=en",
           "source_type": "reporting",
           "id": "o6"
+        },
+        {
+          "title": "Ohchr",
+          "publisher": "Ohchr",
+          "url": "https://www.ohchr.org/sites/default/files/2024-02/two-year-update-protection-civilians-impact-hostilities-civilians-24.pdf",
+          "source_type": "reporting",
+          "id": "o7"
+        },
+        {
+          "title": "Ohchr",
+          "publisher": "Ohchr",
+          "url": "https://ukraine.ohchr.org/en/un-human-rights-reports-dire-human-rights-situation-seven-months-after-start-russian-UA",
+          "source_type": "reporting",
+          "id": "o8"
+        },
+        {
+          "title": "Icrc",
+          "publisher": "Icrc",
+          "url": "https://www.icrc.org/en/article/faq-international-armed-conflict",
+          "source_type": "reporting",
+          "id": "o9"
+        },
+        {
+          "title": "Ohchr",
+          "publisher": "Ohchr",
+          "url": "https://www.ohchr.org/sites/default/files/documents/countries/ua/2022-06-29/2022-06-UkraineArmedAttack-EN.pdf",
+          "source_type": "reporting",
+          "id": "o10"
         }
       ],
-      "publisher_count": 4,
-      "generated_at": "2026-11-02T22:10:55.863546+00:00",
-      "expires_at": "2026-11-09T22:10:55.863546+00:00",
+      "publisher_count": 3,
+      "generated_at": "2026-11-17T21:33:40.393177+00:00",
+      "expires_at": "2026-11-24T21:33:40.393177+00:00",
       "model": "gpt-5.6-terra",
       "provenance": "openai_web_search_source_grounded_event_overview_v1"
     },
@@ -3660,6 +3769,7 @@
       "although",
       "amidst",
       "among",
+      "annexed",
       "appear",
       "approximately",
       "april",
@@ -3689,6 +3799,7 @@
       "bombing",
       "bombs",
       "both",
+      "bridge",
       "broader",
       "brokered",
       "buses",
@@ -3703,6 +3814,7 @@
       "capturing",
       "casualtie",
       "cause",
+      "caused",
       "ceasefire",
       "center",
       "chief",
@@ -3732,15 +3844,19 @@
       "confirming",
       "conflict",
       "conflicting",
+      "connect",
+      "consecutive",
       "continue",
       "contributed",
       "contributing",
       "control",
       "crater",
+      "crimea",
       "crisi",
       "critical",
       "crucial",
       "custody",
+      "damage",
       "data",
       "deadliest",
       "deadly",
@@ -3800,6 +3916,7 @@
       "established",
       "evacuate",
       "evacuated",
+      "executed",
       "expand",
       "experiencing",
       "explosion",
@@ -3888,6 +4005,7 @@
       "july",
       "just",
       "kadha",
+      "kerch",
       "killed",
       "killing",
       "kills",
@@ -3899,12 +4017,15 @@
       "lady",
       "large",
       "largest",
+      "launche",
       "launched",
       "leading",
       "least",
       "leave",
       "level",
       "liberty",
+      "link",
+      "linking",
       "lives",
       "local",
       "localized",
@@ -3942,6 +4063,7 @@
       "nearby",
       "nearly",
       "needs",
+      "night",
       "nine",
       "nizhnekamsk",
       "non-combatant",
@@ -3978,6 +4100,7 @@
       "pentagon",
       "perim",
       "petersburg",
+      "planned",
       "plant",
       "poland",
       "polish",
@@ -4047,6 +4170,7 @@
       "saudi-led",
       "scene",
       "searching",
+      "second",
       "securing",
       "seen",
       "seize",
@@ -4089,6 +4213,8 @@
       "strengthening",
       "strike",
       "struck",
+      "structure",
+      "substantial",
       "such",
       "suffering",
       "supplie",
@@ -4137,6 +4263,7 @@
       "tusk",
       "ukraine",
       "united",
+      "unprecedented",
       "upon",
       "used",
       "variou",
@@ -4187,6 +4314,7 @@
       "bab",
       "belgorod",
       "berezivka",
+      "bridge_linking",
       "buses_result",
       "canada",
       "capture_strategic",
@@ -4242,12 +4370,14 @@
       "iran-backed_houthis.",
       "island_strengthening",
       "july.",
+      "kerch_bridge",
       "korean_missile",
       "kramatorsk_buses",
       "kyiv",
       "kyiv_result",
       "lady_melania",
       "level_since",
+      "linking_crimea",
       "many_missing",
       "melania_trump.",
       "military_deals",
@@ -4294,6 +4424,7 @@
       "russia_claim",
       "russia_missile",
       "russia_shahed",
+      "russia_ukraine",
       "russian-occupied",
       "russian._authoritie",
       "saint",
@@ -4332,6 +4463,7 @@
       "ukraine_drone",
       "ukraine_elon",
       "ukraine_infrastructure",
+      "ukraine_launche",
       "ukraine_odesa",
       "ukraine_reach",
       "ukraine_result",
@@ -4363,9 +4495,77 @@
       "zelensky_visit",
       "zelenskyy_visit"
     ],
-    "search_text": "000 125 153 200 201 2022 2025 2026 243 340 400 437 610 9-year-old account accounted acknowledged across action additional additionally additionally_yemeni aden admission admit advance aerial affect affected ahead aid aimed aims airport airstrike airstrike_concern al-zindani alarming allow allowing along also although amidst among appear approximately april arabia arabia_remove arbitrary archipelago area areas around arrival assault assess assistant atacm attack attribute attributing august authoritie bab beginning behind belgorod berezivka blaze bodycam bolster bombing bombs both broader brokered buses buses_result calls campaign camps canada capabilitie capital capture capture_strategic captured capturing casualtie casualtie_rise cause ceasefire ceasefire_collapse ceasefire_established ceasefire_initiated center chief child children civil civilian civilian_casualtie civilian_clashe civilian_still claim claim_lives claimed clashe coalition coast coincided collaboration collapse commander commenced comply concern concern_ukraine concluded concurrently concurrently_russia concurrently_ukraine condemned condolence conduct confirm confirm_civilian confirmed confirming conflict conflicting continue contributed contributing control control_near crater crisi critical crucial custody data deadliest deadly deadly_ukraine deal deals deals_recent death debri decision decision-making deep defend defense delivery demanded deploying deprived described despite detained detention devastating development dhubab died discovered dismissed displace displace_thousand displaced displacement displacement_crisi displacing displacing_thousand disrupted disruption distribution district djibouti djibouti. donald donald_tusk down downed dozen driver drone early eastern eastern_poland effort el-mandeb elon elon_musk emerged emergency enable energy engage enhance enhancing escalating escalating_ground escalation escaping established evacuate evacuated expand expand_control experiencing explosion face faces facilitated facilitie facility factory familie fatalitie fatalitie_russia fearing fell field fighting finalized fire fired fires first first_lady five fled fleeing follow food food_programme footage force force_regain four frontline full-scale gains global goods government-allied ground ground_fighting gulf hanish held highest highest_civilian highest_monthly highlight highlighted highlighting hospital household houthi houthi_advance houthi_capture houthi_custody houthi_expand houthi_seize however human human_right humanitarian humanitarian_crisi hundred hunger hunger_affect hysterical ignited igniting ill-treatment impact impacting imposed incident included including including_civilian increase increasing indicate indicating indiscriminate individual industrial infrastructure initiated injure injure_dozen injured injurie inside intense intensifie intensified international internet interruption invasion investigation involved involving iran-backed iran-backed_houthi iran-backed_houthis. island island_strengthening july july. just kadha killed killing kills kilometer komyshuvakha korean korean_missile kramatorsk kramatorsk_buses kyiv kyiv_result lady lady_melania large largest launched leading least leave level level_since liberty lives local localized located location logistic long-range loyal macron makeshift many many_missing maritime market marks melania melania_trump. member military military_deals missile missile_downed missing mission mission._drone mokha moment monitor monitoring monitoring_mission. month monthly monthly_level moscow move multi-nation multiple musk musk_admit nation nature near near_bab near_kyiv nearby nearly needs nine nizhnekamsk nizhnekamsk_russia non-combatant normal north north_korean noted november number numerou occur occurred odesa odesa_region offensive office oil oleshky oleshky_ukraine ongoing onset operation oryol other overcrowded overnight panic paris part parts passenger passenger_train passing past pattern payment peace pentagon perim perim_island petersburg petersburg_warehouse plant pm poland poland_polish polish polish_prime port portion poses position possible possible_russia power prime produced programme prompting provided province public pulkovo pulkovo_airport purchase pyongyang question racist raid raids railway raised raising ras_isa reach reach_highest reached reason rebel recaptured recent recently reclaim red red_sea red_sea. refinery refinery_claim regain regain_control regarding region region_result relied remove remove_commander renewed renewed_fighting renewed_violence reported reportedly resident resource response responsible restoration restriction result resulted resulting resurgence retaking revealed review right right_monitoring right_office rise route russia russia_airstrike russia_bombing russia_claim russia_missile russia_shahed russian-occupied russian._authoritie safety saint saint_petersburg satellite saudi saudi-backed saudi-led saudi_airstrike saudi_arabia scene sea._displacement sea_shipping searching securing seen seize seize_strategic seized separate serbia serbia_russia seriously service service_restoration setback seven several severe severe_hunger severely shahed shaya shelter shipping shipping_yemen shooting shortly shot side significant significant_civilian since since_may site sites situation smoke some southern specific speed speed_restriction spread staff staff_member starlink starlink_speed stated stating still still_detained strait strait_force strategic strategic_perim strategic_port strengthening strengthening_control strike struck such suffering supplie support supported surge surged surrounding survivor suspended system taiz taiz_province taneco target targeted tatarstan teams temporary tens tension territorial territory terrorist than there these they thick those thousand threat threatening three through time torture tour toward town train transport trend truce trump turkey tusk ukraine ukraine. ukraine_aid ukraine_conduct ukraine_drone ukraine_elon ukraine_infrastructure ukraine_odesa ukraine_reach ukraine_result ukraine_since ukraine_zaporizhzhia un united united_nation upon us used variou vatican vatican. vatican._ceasefire vicinity victim village violence visit visit_canada visiting vital volodymyr volodymyr_zelensky volodymyr_zelenskyy war warehouse warns warranted waterway wave ways weeks western what which while wildberrie winter withdraw withdrawal woman worker worsening wounded year years yemen yemen_displace yemen_displacing yemen_houthi yemen_result yemen_saudi yemen_saudi-backed yemen_taiz yemen_tens yemen_threatening yemeni yemeni_prime zaporizhzhia zaporizhzhia_ukraine zelensky zelensky_visit zelenskyy zelenskyy_visit"
+    "search_text": "000 125 153 200 201 2022 2025 2026 243 340 400 437 610 9-year-old account accounted acknowledged across action additional additionally additionally_yemeni aden admission admit advance aerial affect affected ahead aid aimed aims airport airstrike airstrike_concern al-zindani alarming allow allowing along also although amidst among annexed appear approximately april arabia arabia_remove arbitrary archipelago area areas around arrival assault assess assistant atacm attack attribute attributing august authoritie bab beginning behind belgorod berezivka blaze bodycam bolster bombing bombs both bridge bridge_linking broader brokered buses buses_result calls campaign camps canada capabilitie capital capture capture_strategic captured capturing casualtie casualtie_rise cause caused ceasefire ceasefire_collapse ceasefire_established ceasefire_initiated center chief child children civil civilian civilian_casualtie civilian_clashe civilian_still claim claim_lives claimed clashe coalition coast coincided collaboration collapse commander commenced comply concern concern_ukraine concluded concurrently concurrently_russia concurrently_ukraine condemned condolence conduct confirm confirm_civilian confirmed confirming conflict conflicting connect consecutive continue contributed contributing control control_near crater crimea crisi critical crucial custody damage data deadliest deadly deadly_ukraine deal deals deals_recent death debri decision decision-making deep defend defense delivery demanded deploying deprived described despite detained detention devastating development dhubab died discovered dismissed displace displace_thousand displaced displacement displacement_crisi displacing displacing_thousand disrupted disruption distribution district djibouti djibouti. donald donald_tusk down downed dozen driver drone early eastern eastern_poland effort el-mandeb elon elon_musk emerged emergency enable energy engage enhance enhancing escalating escalating_ground escalation escaping established evacuate evacuated executed expand expand_control experiencing explosion face faces facilitated facilitie facility factory familie fatalitie fatalitie_russia fearing fell field fighting finalized fire fired fires first first_lady five fled fleeing follow food food_programme footage force force_regain four frontline full-scale gains global goods government-allied ground ground_fighting gulf hanish held highest highest_civilian highest_monthly highlight highlighted highlighting hospital household houthi houthi_advance houthi_capture houthi_custody houthi_expand houthi_seize however human human_right humanitarian humanitarian_crisi hundred hunger hunger_affect hysterical ignited igniting ill-treatment impact impacting imposed incident included including including_civilian increase increasing indicate indicating indiscriminate individual industrial infrastructure initiated injure injure_dozen injured injurie inside intense intensifie intensified international internet interruption invasion investigation involved involving iran-backed iran-backed_houthi iran-backed_houthis. island island_strengthening july july. just kadha kerch kerch_bridge killed killing kills kilometer komyshuvakha korean korean_missile kramatorsk kramatorsk_buses kyiv kyiv_result lady lady_melania large largest launche launched leading least leave level level_since liberty link linking linking_crimea lives local localized located location logistic long-range loyal macron makeshift many many_missing maritime market marks melania melania_trump. member military military_deals missile missile_downed missing mission mission._drone mokha moment monitor monitoring monitoring_mission. month monthly monthly_level moscow move multi-nation multiple musk musk_admit nation nature near near_bab near_kyiv nearby nearly needs night nine nizhnekamsk nizhnekamsk_russia non-combatant normal north north_korean noted november number numerou occur occurred odesa odesa_region offensive office oil oleshky oleshky_ukraine ongoing onset operation oryol other overcrowded overnight panic paris part parts passenger passenger_train passing past pattern payment peace pentagon perim perim_island petersburg petersburg_warehouse planned plant pm poland poland_polish polish polish_prime port portion poses position possible possible_russia power prime produced programme prompting provided province public pulkovo pulkovo_airport purchase pyongyang question racist raid raids railway raised raising ras_isa reach reach_highest reached reason rebel recaptured recent recently reclaim red red_sea red_sea. refinery refinery_claim regain regain_control regarding region region_result relied remove remove_commander renewed renewed_fighting renewed_violence reported reportedly resident resource response responsible restoration restriction result resulted resulting resurgence retaking revealed review right right_monitoring right_office rise route russia russia_airstrike russia_bombing russia_claim russia_missile russia_shahed russia_ukraine russian-occupied russian._authoritie safety saint saint_petersburg satellite saudi saudi-backed saudi-led saudi_airstrike saudi_arabia scene sea._displacement sea_shipping searching second securing seen seize seize_strategic seized separate serbia serbia_russia seriously service service_restoration setback seven several severe severe_hunger severely shahed shaya shelter shipping shipping_yemen shooting shortly shot side significant significant_civilian since since_may site sites situation smoke some southern specific speed speed_restriction spread staff staff_member starlink starlink_speed stated stating still still_detained strait strait_force strategic strategic_perim strategic_port strengthening strengthening_control strike struck structure substantial such suffering supplie support supported surge surged surrounding survivor suspended system taiz taiz_province taneco target targeted tatarstan teams temporary tens tension territorial territory terrorist than there these they thick those thousand threat threatening three through time torture tour toward town train transport trend truce trump turkey tusk ukraine ukraine. ukraine_aid ukraine_conduct ukraine_drone ukraine_elon ukraine_infrastructure ukraine_launche ukraine_odesa ukraine_reach ukraine_result ukraine_since ukraine_zaporizhzhia un united united_nation unprecedented upon us used variou vatican vatican. vatican._ceasefire vicinity victim village violence visit visit_canada visiting vital volodymyr volodymyr_zelensky volodymyr_zelenskyy war warehouse warns warranted waterway wave ways weeks western what which while wildberrie winter withdraw withdrawal woman worker worsening wounded year years yemen yemen_displace yemen_displacing yemen_houthi yemen_result yemen_saudi yemen_saudi-backed yemen_taiz yemen_tens yemen_threatening yemeni yemeni_prime zaporizhzhia zaporizhzhia_ukraine zelensky zelensky_visit zelenskyy zelenskyy_visit"
   },
   "related_events": [
+    {
+      "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
+      "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
+      "summary": "Muninn first tracked this thread on 2026-09-11: Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims. The latest development is USS Theodore Roosevelt Arrives in Middle East with Additional Troops.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-09-11",
+      "last_seen_at": "2026-11-16",
+      "development_count": 39,
+      "latest_title": "USS Theodore Roosevelt Arrives in Middle East with Additional Troops",
+      "topic_label": "9/11 Victim Compensation",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b"
+    },
+    {
+      "event_id": "event_israel-commemorates-third-anniversary-of-oct_c05cefd020",
+      "title": "Israel Commemorates Third Anniversary of October 7 Attacks",
+      "summary": "Muninn first tracked this thread on 2026-10-07: Israel Commemorates Third Anniversary of October 7 Attacks. The latest development is Trump Criticizes Zelenskyy, Suggests Ukraine Needs New Leadership.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-10-07",
+      "last_seen_at": "2026-10-23",
+      "development_count": 7,
+      "latest_title": "Trump Criticizes Zelenskyy, Suggests Ukraine Needs New Leadership",
+      "topic_label": "Israel-Hamas Conflict",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_israel-commemorates-third-anniversary-of-oct_c05cefd020.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_israel-commemorates-third-anniversary-of-oct_c05cefd020.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_israel-commemorates-third-anniversary-of-oct_c05cefd020"
+    },
     {
       "event_id": "event_macron-implements-measures-against-intensify_109da09c6f",
       "title": "Macron Implements Measures Against Intensifying Russian Hybrid Threats",
@@ -4433,74 +4633,6 @@
         "focal_tall_y": 0.48
       },
       "href": "/timeline.html?event=event_sudan-faces-widespread-power-outages-followi_cc7b30bce4"
-    },
-    {
-      "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
-      "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
-      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Estonia to Close All Border Crossings with Russia Following Drone Factory Attack.",
-      "activity_status": "active",
-      "stage": "timeline",
-      "stage_label": "Timeline",
-      "first_seen_at": "2026-07-22",
-      "last_seen_at": "2026-11-15",
-      "development_count": 113,
-      "latest_title": "Estonia to Close All Border Crossings with Russia Following Drone Factory Attack",
-      "topic_label": "Iran War",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
-    },
-    {
-      "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
-      "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
-      "summary": "Muninn first tracked this thread on 2026-09-11: Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims. The latest development is USS Theodore Roosevelt Arrives in Middle East with Additional Troops.",
-      "activity_status": "active",
-      "stage": "timeline",
-      "stage_label": "Timeline",
-      "first_seen_at": "2026-09-11",
-      "last_seen_at": "2026-11-16",
-      "development_count": 39,
-      "latest_title": "USS Theodore Roosevelt Arrives in Middle East with Additional Troops",
-      "topic_label": "9/11 Victim Compensation",
-      "hero_image": {
-        "url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",
-        "source": "Muninn AI illustration",
-        "author": "OpenAI GPT Image 2",
-        "license": "AI-generated content",
-        "image_role": "illustrative",
-        "image_role_label": "AI illustration",
-        "is_ai_generated": true,
-        "generation_model": "gpt-image-2",
-        "generation_quality": "low",
-        "safe_to_crop": true,
-        "allows_crop": true,
-        "focal_x": 0.5,
-        "focal_y": 0.48,
-        "focal_wide_x": 0.5,
-        "focal_wide_y": 0.48,
-        "focal_tall_x": 0.5,
-        "focal_tall_y": 0.48
-      },
-      "href": "/timeline.html?event=event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b"
     }
   ]
 }

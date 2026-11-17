@@ -15,7 +15,7 @@
     "summary": "A tanker collided with a river cruise ship docked in New Orleans, causing the vessel to capsize. Approximately 130 people were on board, and all passengers and crew were accounted for after a large rescue operation. More than 30 individuals were hospitalized due to injuries sustained during the incident.",
     "status": "active",
     "first_seen_at": "2026-11-14",
-    "last_seen_at": "2026-11-15",
+    "last_seen_at": "2026-11-17",
     "timeline": [
       {
         "development_id": "story_448c44630235b947",
@@ -173,15 +173,83 @@
         "first_seen_at": "2026-11-15",
         "last_seen_at": "2026-11-15",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_59bb1f66868608ea",
+        "daily_story_id": "story_59bb1f66868608ea",
+        "date": "2026-11-17",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "All 19 Onboard Die in Russian Military Aircraft Crash in Siberia",
+        "summary": "A military aircraft crashed in the Kemerovo region of Siberia, resulting in the loss of all 19 individuals onboard. Preliminary investigations by Russia's defense ministry suggest that a technical malfunction may have caused the incident. Authorities have dispatched a team to further investigate the crash.",
+        "topic_label": "",
+        "development_type": "investigation",
+        "key_facts": [
+          "Military aircraft crash in Kemerovo region, Siberia",
+          "All 19 onboard died",
+          "Preliminary cause suspected to be a technical malfunction"
+        ],
+        "source_count": 2,
+        "sources": [
+          "BBC",
+          "Channel NewsAsia"
+        ],
+        "source_urls": [
+          "https://www.channelnewsasia.com/world/military-aircraft-crashes-in-siberia-killing-all-19-onboard-russian-state-media-6560391",
+          "https://www.bbc.co.uk/news/articles/cw8085rykkmgo?at_medium=RSS&at_campaign=rss"
+        ],
+        "source_details": [
+          {
+            "title": "Military aircraft crashes in Siberia, killing all 19 onboard: Russian state media",
+            "source": "Channel NewsAsia",
+            "link": "https://www.channelnewsasia.com/world/military-aircraft-crashes-in-siberia-killing-all-19-onboard-russian-state-media-6560391",
+            "source_bias": "center"
+          },
+          {
+            "title": "Russian military plane crashes killing all 19 on board",
+            "source": "BBC",
+            "link": "https://www.bbc.co.uk/news/articles/cw8085rykkmgo?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "crash"
+          ],
+          "shared_incident_anchors": [
+            "all"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "crash",
+            "incident"
+          ],
+          "shared_entities": [
+            "all"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_4bb8d75adfbfeec5",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-11-17",
+        "last_seen_at": "2026-11-17",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 2,
+      "public_development_count": 3,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "All Rescued After Tanker Collision with Cruise Ship on Mississippi River",
-    "latest_summary": "A tanker collided with a luxury paddle wheeler docked in New Orleans, causing the cruise vessel to roll over and sink. Fortunately, all passengers were rescued without fatalities, leading to the incident being referred to as a 'miracle on the Mississippi.' In response, New Orleans port officials have filed a lawsuit seeking at least $1 million in damages and requesting control of the tanker involved in the crash.",
+    "latest_title": "All 19 Onboard Die in Russian Military Aircraft Crash in Siberia",
+    "latest_summary": "A military aircraft crashed in the Kemerovo region of Siberia, resulting in the loss of all 19 individuals onboard. Preliminary investigations by Russia's defense ministry suggest that a technical malfunction may have caused the incident. Authorities have dispatched a team to further investigate the crash.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": false,
@@ -191,28 +259,29 @@
       "display_title": "Tanker Collides with River Cruise Ship in New Orleans, All Passengers Rescued",
       "milestone_development_ids": [
         "story_448c44630235b947",
-        "story_4bb8d75adfbfeec5"
+        "story_4bb8d75adfbfeec5",
+        "story_59bb1f66868608ea"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-11-15",
-      "development_count": 2,
-      "coverage_packet_count": 2,
-      "date_count": 2,
-      "source_count": 7,
-      "independent_source_count": 7,
+      "summary_updated_at": "2026-11-17",
+      "development_count": 3,
+      "coverage_packet_count": 3,
+      "date_count": 3,
+      "source_count": 9,
+      "independent_source_count": 9,
       "first_date": "2026-11-14",
-      "latest_date": "2026-11-15",
-      "latest_update_title": "All Rescued After Tanker Collision with Cruise Ship on Mississippi River",
-      "coverage_score": 0.547,
-      "recency_score": 0.875,
-      "rank_score": 0.737,
-      "context_summary": "Muninn first tracked this thread on 2026-11-14: Tanker Collides with River Cruise Ship in New Orleans, All Passengers Rescued. The latest development is All Rescued After Tanker Collision with Cruise Ship on Mississippi River.",
+      "latest_date": "2026-11-17",
+      "latest_update_title": "All 19 Onboard Die in Russian Military Aircraft Crash in Siberia",
+      "coverage_score": 0.708,
+      "recency_score": 1.0,
+      "rank_score": 0.877,
+      "context_summary": "Muninn first tracked this thread on 2026-11-14: Tanker Collides with River Cruise Ship in New Orleans, All Passengers Rescued. The latest development is All 19 Onboard Die in Russian Military Aircraft Crash in Siberia.",
       "cta_label": ""
     },
     "event_summary": {
       "available": true,
-      "summary": "A tanker collided with a river cruise ship docked in New Orleans, causing the vessel to capsize. Most recently, a tanker collided with a luxury paddle wheeler docked in New Orleans, causing the cruise vessel to roll over and sink.",
+      "summary": "A tanker collided with a river cruise ship docked in New Orleans, causing the vessel to capsize. A later development was All Rescued After Tanker Collision with Cruise Ship on Mississippi River. Most recently, a military aircraft crashed in the Kemerovo region of Siberia, resulting in the loss of all 19 individuals onboard.",
       "key_developments": [
         {
           "development_id": "story_448c44630235b947",
@@ -223,6 +292,11 @@
           "development_id": "story_4bb8d75adfbfeec5",
           "date": "2026-11-15",
           "title": "All Rescued After Tanker Collision with Cruise Ship on Mississippi River"
+        },
+        {
+          "development_id": "story_59bb1f66868608ea",
+          "date": "2026-11-17",
+          "title": "All 19 Onboard Die in Russian Military Aircraft Crash in Siberia"
         }
       ],
       "sources": [
@@ -267,9 +341,21 @@
           "source": "BBC - World",
           "link": "https://www.bbc.co.uk/news/articles/cwe89y2r5j20o?at_medium=RSS&at_campaign=rss",
           "source_bias": "center"
+        },
+        {
+          "title": "Military aircraft crashes in Siberia, killing all 19 onboard: Russian state media",
+          "source": "Channel NewsAsia",
+          "link": "https://www.channelnewsasia.com/world/military-aircraft-crashes-in-siberia-killing-all-19-onboard-russian-state-media-6560391",
+          "source_bias": "center"
+        },
+        {
+          "title": "Russian military plane crashes killing all 19 on board",
+          "source": "BBC",
+          "link": "https://www.bbc.co.uk/news/articles/cw8085rykkmgo?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-11-15",
+      "updated_at": "2026-11-17",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "developing_event",
@@ -385,52 +471,75 @@
     "search_tokens": [
       "130",
       "accounted",
+      "aircraft",
       "approximately",
+      "authoritie",
       "board",
       "capsize",
+      "caused",
       "causing",
       "collide",
       "collided",
       "collision",
       "control",
       "crash",
+      "crashed",
       "crew",
       "cruise",
       "damage",
+      "defense",
+      "dispatched",
       "docked",
       "fatalitie",
       "filed",
       "fortunately",
+      "further",
       "hospitalized",
       "incident",
       "individual",
       "injurie",
+      "investigate",
+      "investigation",
       "involved",
+      "kemerovo",
       "large",
       "lawsuit",
       "leading",
       "least",
+      "loss",
       "luxury",
+      "malfunction",
+      "military",
       "million",
+      "ministry",
       "miracle",
       "mississippi",
+      "onboard",
       "operation",
       "orlean",
       "paddle",
       "passenger",
       "port",
+      "preliminary",
       "referred",
+      "region",
       "requesting",
       "rescue",
       "rescued",
       "response",
+      "resulting",
       "river",
       "roll",
+      "russia",
       "seeking",
       "ship",
+      "siberia",
       "sink",
+      "suggest",
       "sustained",
       "tanker",
+      "team",
+      "technical",
       "than",
       "vessel",
       "wheeler",
@@ -438,12 +547,18 @@
     ],
     "entities": [
       "cruise_ship",
+      "kemerovo",
+      "military_aircraft",
       "mississippi_river",
+      "onboard_die",
       "passenger_rescued",
       "river_cruise",
+      "russia",
+      "russia_military",
+      "siberia",
       "tanker_collide"
     ],
-    "search_text": "130 accounted approximately board capsize causing collide collided collision control crash crew cruise cruise_ship damage docked fatalitie filed fortunately hospitalized incident individual injurie involved large lawsuit leading least luxury million miracle mississippi mississippi_river operation orlean paddle passenger passenger_rescued port referred requesting rescue rescued response river river_cruise roll seeking ship sink sustained tanker tanker_collide than vessel wheeler without"
+    "search_text": "130 accounted aircraft approximately authoritie board capsize caused causing collide collided collision control crash crashed crew cruise cruise_ship damage defense dispatched docked fatalitie filed fortunately further hospitalized incident individual injurie investigate investigation involved kemerovo large lawsuit leading least loss luxury malfunction military military_aircraft million ministry miracle mississippi mississippi_river onboard onboard_die operation orlean paddle passenger passenger_rescued port preliminary referred region requesting rescue rescued response resulting river river_cruise roll russia russia_military seeking ship siberia sink suggest sustained tanker tanker_collide team technical than vessel wheeler without"
   },
   "related_events": []
 }

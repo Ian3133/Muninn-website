@@ -15,7 +15,7 @@
     "summary": "Nvidia has launched an investigation into CEO Jensen Huang's relationship with Alice Huang, a Chinese businesswoman suspected of being a spy for China. Reports indicate that Jensen Huang's affair with Alice Huang may have made him a target of foreign intelligence efforts. Following the announcement of the investigation, Nvidia's stock price experienced a significant drop, and US intelligence officials have raised concerns about the implications of this relationship.",
     "status": "active",
     "first_seen_at": "2026-11-09",
-    "last_seen_at": "2026-11-12",
+    "last_seen_at": "2026-11-17",
     "timeline": [
       {
         "development_id": "story_a7bc7d671a1555ec",
@@ -260,47 +260,123 @@
         "first_seen_at": "2026-11-12",
         "last_seen_at": "2026-11-12",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_85f0e4013e6b0377",
+        "daily_story_id": "story_85f0e4013e6b0377",
+        "date": "2026-11-17",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Jensen Huang to Testify Before Congress on Nvidia's National Security Concerns",
+        "summary": "Jensen Huang, former CEO of Nvidia, has agreed to testify before several congressional committees on December 1 regarding the company's sales to China and potential national security risks. This hearing follows his resignation amid allegations of an affair with a suspected Chinese intelligence asset. Nvidia has also established a national security committee in response to these issues.",
+        "topic_label": "Nvidia National Security",
+        "development_type": "development",
+        "key_facts": [
+          "Jensen Huang will testify on December 1 before Congress.",
+          "The hearing focuses on Nvidia's sales to China and national security.",
+          "Huang resigned following allegations of an affair with a suspected Chinese spy.",
+          "Nvidia has formed a national security committee."
+        ],
+        "source_count": 2,
+        "sources": [
+          "NBC News",
+          "The Guardian"
+        ],
+        "source_urls": [
+          "https://www.nbcnews.com/video/jensen-huang-agrees-to-appear-for-house-interview-on-nvidia-in-december-273650245602",
+          "https://www.theguardian.com/technology/2026/nov/17/jensen-huang-testify-congress-nvidia-affair-spy"
+        ],
+        "source_details": [
+          {
+            "title": "Jensen Huang agrees to appear for House interview on Nvidia in December",
+            "source": "NBC News",
+            "link": "https://www.nbcnews.com/video/jensen-huang-agrees-to-appear-for-house-interview-on-nvidia-in-december-273650245602",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Jensen Huang to testify before Congress on ‘potential breach of national security’",
+            "source": "The Guardian",
+            "link": "https://www.theguardian.com/technology/2026/nov/17/jensen-huang-testify-congress-nvidia-affair-spy",
+            "source_bias": "left"
+          }
+        ],
+        "confidence": 0.382,
+        "match_evidence": {
+          "score": 0.382,
+          "matched_development_id": "story_eb3a541653ca47bd",
+          "shared_tokens": [
+            "affair",
+            "allegation",
+            "china",
+            "concern",
+            "huang",
+            "intelligence",
+            "jensen",
+            "national",
+            "nvidia",
+            "regarding",
+            "resignation",
+            "resigned",
+            "security"
+          ],
+          "shared_entities": [
+            "ceo",
+            "china",
+            "jensen_huang"
+          ],
+          "source_url_match": false,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-11-17",
+        "last_seen_at": "2026-11-17",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 3,
+      "public_development_count": 4,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Nvidia CEO Jensen Huang Resigns Amid Allegations of Affair with Chinese Spy",
-    "latest_summary": "Jensen Huang has resigned as CEO of Nvidia following reports of his involvement with Alice Huang, a Chinese businesswoman alleged to be linked to espionage activities. The resignation comes amid growing scrutiny from shareholders and lawmakers regarding his relationships, which have raised national security concerns. CFO Colette Kress will serve as interim CEO.",
+    "latest_title": "Jensen Huang to Testify Before Congress on Nvidia's National Security Concerns",
+    "latest_summary": "Jensen Huang, former CEO of Nvidia, has agreed to testify before several congressional committees on December 1 regarding the company's sales to China and potential national security risks. This hearing follows his resignation amid allegations of an affair with a suspected Chinese intelligence asset. Nvidia has also established a national security committee in response to these issues.",
     "presentation": {
       "has_context": true,
-      "has_full_timeline": false,
-      "stage": "developing_event",
-      "stage_label": "Developing event",
+      "has_full_timeline": true,
+      "stage": "timeline",
+      "stage_label": "Timeline",
       "base_title": "Nvidia Investigates CEO's Relationship with Alleged Chinese Spy Alice Huang",
-      "display_title": "Nvidia Investigates CEO's Relationship with Alleged Chinese Spy Alice Huang",
+      "display_title": "Nvidia Investigates CEO's Relationship with Alleged Chinese Spy Alice Huang Timeline",
       "milestone_development_ids": [
         "story_a7bc7d671a1555ec",
         "story_459b954220f38e84",
-        "story_eb3a541653ca47bd"
+        "story_eb3a541653ca47bd",
+        "story_85f0e4013e6b0377"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-11-12",
-      "development_count": 3,
-      "coverage_packet_count": 3,
-      "date_count": 3,
-      "source_count": 10,
-      "independent_source_count": 9,
+      "summary_updated_at": "2026-11-17",
+      "development_count": 4,
+      "coverage_packet_count": 4,
+      "date_count": 4,
+      "source_count": 12,
+      "independent_source_count": 10,
       "first_date": "2026-11-09",
-      "latest_date": "2026-11-12",
-      "latest_update_title": "Nvidia CEO Jensen Huang Resigns Amid Allegations of Affair with Chinese Spy",
-      "coverage_score": 0.72,
-      "recency_score": 0.636,
-      "rank_score": 0.671,
-      "context_summary": "Muninn first tracked this thread on 2026-11-09: Nvidia Investigates CEO's Relationship with Alleged Chinese Spy Alice Huang. The latest development is Nvidia CEO Jensen Huang Resigns Amid Allegations of Affair with Chinese Spy.",
-      "cta_label": ""
+      "latest_date": "2026-11-17",
+      "latest_update_title": "Jensen Huang to Testify Before Congress on Nvidia's National Security Concerns",
+      "coverage_score": 0.843,
+      "recency_score": 1.0,
+      "rank_score": 0.934,
+      "context_summary": "Muninn first tracked this thread on 2026-11-09: Nvidia Investigates CEO's Relationship with Alleged Chinese Spy Alice Huang. The latest development is Jensen Huang to Testify Before Congress on Nvidia's National Security Concerns.",
+      "cta_label": "Explore 4 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Nvidia has launched an investigation into CEO Jensen Huang's relationship with Alice Huang, a Chinese businesswoman suspected of being a spy for China. A later development was Investigation into Nvidia CEO Jensen Huang Over Alleged Affair with Chinese Spy. Most recently, jensen Huang has resigned as CEO of Nvidia following reports of his involvement with Alice Huang, a Chinese businesswoman alleged to be linked to espionage activities.",
+      "summary": "Nvidia has launched an investigation into CEO Jensen Huang's relationship with Alice Huang, a Chinese businesswoman suspected of being a spy for China. A later development was Nvidia CEO Jensen Huang Resigns Amid Allegations of Affair with Chinese Spy. Most recently, jensen Huang, former CEO of Nvidia, has agreed to testify before several congressional committees on December 1 regarding the company's sales to China and potential national security risks.",
       "key_developments": [
         {
           "development_id": "story_a7bc7d671a1555ec",
@@ -316,6 +392,11 @@
           "development_id": "story_eb3a541653ca47bd",
           "date": "2026-11-12",
           "title": "Nvidia CEO Jensen Huang Resigns Amid Allegations of Affair with Chinese Spy"
+        },
+        {
+          "development_id": "story_85f0e4013e6b0377",
+          "date": "2026-11-17",
+          "title": "Jensen Huang to Testify Before Congress on Nvidia's National Security Concerns"
         }
       ],
       "sources": [
@@ -378,18 +459,30 @@
           "source": "NBC News",
           "link": "https://www.nbcnews.com/tech/tech-news/nvidia-ceo-jensen-huang-resigns-reports-extramarital-relationships-rcna608402",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Jensen Huang agrees to appear for House interview on Nvidia in December",
+          "source": "NBC News",
+          "link": "https://www.nbcnews.com/video/jensen-huang-agrees-to-appear-for-house-interview-on-nvidia-in-december-273650245602",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Jensen Huang to testify before Congress on ‘potential breach of national security’",
+          "source": "The Guardian",
+          "link": "https://www.theguardian.com/technology/2026/nov/17/jensen-huang-testify-congress-nvidia-affair-spy",
+          "source_bias": "left"
         }
       ],
-      "updated_at": "2026-11-12",
+      "updated_at": "2026-11-17",
       "provenance": "source_grounded_event_memory"
     },
-    "event_stage": "developing_event",
+    "event_stage": "timeline",
     "related_events": [
       {
         "event_id": "event_bessent-criticizes-lutnick-s-department-for_3901438518",
         "title": "Bessent Criticizes Lutnick's Department for Nvidia Chip Export Oversight",
         "relationship": "related_topic",
-        "confidence": 0.833,
+        "confidence": 0.83,
         "shared_entities": [
           "china",
           "huang_resign",
@@ -399,10 +492,23 @@
         ]
       },
       {
+        "event_id": "event_jensen-huang-resigns-leaving-nvidia-s-future_d9e7c4bccf",
+        "title": "Jensen Huang Resigns, Leaving Nvidia's Future Uncertain",
+        "relationship": "related_topic",
+        "confidence": 0.807,
+        "shared_entities": [
+          "ceo",
+          "china",
+          "huang_resign",
+          "jensen_huang",
+          "nvidia_ceo"
+        ]
+      },
+      {
         "event_id": "event_nvidia-shares-decline-amid-internal-probe-of_17ab72516b",
         "title": "Nvidia Shares Decline Amid Internal Probe of CEO Jensen Huang",
         "relationship": "related_topic",
-        "confidence": 0.798,
+        "confidence": 0.796,
         "shared_entities": [
           "ceo",
           "ceo_jensen",
@@ -411,24 +517,12 @@
         ]
       },
       {
-        "event_id": "event_nvidia-board-uninterested-in-jensen-huang-s_6ccd9adb23",
-        "title": "Nvidia Board Uninterested in Jensen Huang's Return Amid Support from Trump",
+        "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+        "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
         "relationship": "related_topic",
-        "confidence": 0.774,
+        "confidence": 0.782,
         "shared_entities": [
-          "ceo",
           "china",
-          "donald_trump",
-          "jensen_huang"
-        ]
-      },
-      {
-        "event_id": "event_anthropic-researcher-warns-of-ai-threat-to-h_57ca070dcc",
-        "title": "Anthropic Researcher Warns of AI Threat to Humanity",
-        "relationship": "related_topic",
-        "confidence": 0.737,
-        "shared_entities": [
-          "ceo",
           "donald_trump",
           "us"
         ]
@@ -438,78 +532,101 @@
       "available": true,
       "title": "About Corporate Espionage",
       "subject": "Corporate Espionage",
-      "summary": "This is a corporate-governance and national-security inquiry concerning whether NVIDIA CEO Jensen Huang was the target of a reported foreign intelligence effort and whether any company information or U.S. security interests were affected. NVIDIA said its board had opened an independent investigation; the underlying espionage-related claims and related shareholder allegations had not been adjudicated as of November 10, 2026.",
+      "summary": "Corporate espionage is the unlawful acquisition or attempted acquisition of a company’s nonpublic commercial or technical information for competitive, commercial, or state benefit. In the United States, allegations involving a foreign government or agent may fall within the distinct federal offense of economic espionage; allegations alone do not establish that trade secrets were obtained, that a foreign nexus existed, or that a crime occurred.",
       "facts": [
         {
-          "label": "Company inquiry",
-          "value": "NVIDIA's board said it initiated an independent investigation in response to national-security concerns raised in news reports. Huang said he would cooperate fully.",
+          "label": "Definition",
+          "value": "The FBI describes economic espionage as foreign power-sponsored or coordinated intelligence activity aimed at unlawfully obtaining sensitive economic, proprietary, or critical-technology information, or unlawfully influencing sensitive economic-policy decisions.",
           "source_ids": [
             "o1"
           ]
         },
         {
-          "label": "Oversight and scope",
-          "value": "According to a shareholder complaint quoting NVIDIA's November 8, 2026 board statement, a committee of independent directors assisted by outside independent counsel would oversee the inquiry and examine available information. The quoted statement said the board had no reason at that point to believe national security or NVIDIA secrets had been compromised.",
+          "label": "Federal legal framework",
+          "value": "The Economic Espionage Act of 1996 created the core federal trade-secret offenses in Chapter 90 of Title 18, including economic espionage (§1831) and theft of trade secrets (§1832).",
           "source_ids": [
-            "o2"
-          ]
-        },
-        {
-          "label": "Corporate context",
-          "value": "Jen-Hsun Huang founded NVIDIA in 1993 and has served continuously as its president, chief executive officer, and a board member, making the inquiry centrally a matter of board oversight of the company's founder-CEO.",
-          "source_ids": [
+            "o2",
             "o3"
           ]
         },
         {
-          "label": "Congressional scrutiny",
-          "value": "On November 4, 2026, the chairs of the House Foreign Affairs Committee, House Select Committee on the CCP, and House Permanent Select Committee on Intelligence requested a closed-door briefing from Huang on NVIDIA's protections against foreign-adversary espionage and his reported interactions with Alice Huang; they proposed November 18, 2026 for the briefing.",
+          "label": "Foreign-government nexus",
+          "value": "Section 1831 applies when a person knowingly steals, receives, transmits, attempts to obtain, or conspires to obtain a trade secret while intending or knowing that the offense will benefit a foreign government, foreign instrumentality, or foreign agent.",
           "source_ids": [
             "o4"
           ]
         },
         {
-          "label": "Legal status",
-          "value": "A proposed federal securities class action filed November 9, 2026 alleged that NVIDIA and Huang made misleading disclosures concerning the matter. A complaint is an allegation by plaintiffs, not a judicial finding of fact or liability.",
+          "label": "Related commercial offense",
+          "value": "Section 1832 separately criminalizes knowingly taking or receiving a trade secret related to interstate or foreign commerce for another’s economic benefit, with intent or knowledge that the owner will be injured; it does not require proof of a foreign-government beneficiary.",
           "source_ids": [
-            "o2"
+            "o5"
+          ]
+        },
+        {
+          "label": "Investigation and prosecution",
+          "value": "The FBI investigates suspected economic espionage and trade-secret theft, while the Justice Department directs prosecutors to prioritize such matters, especially theft involving advanced technology, critical infrastructure, national-security interests, or foreign transfer.",
+          "source_ids": [
+            "o6",
+            "o7"
           ]
         }
       ],
-      "scope_note": "The selected Muninn timeline covers the November 9-10, 2026 developments around the corporate investigation and allegations; it does not establish the truth of espionage claims, resolve the board inquiry, or determine the outcome of any congressional or court process.",
+      "scope_note": "The selected Muninn timeline tracks the reported Nvidia-related allegations, corporate response, leadership developments, and congressional attention from November 9–17, 2026; it does not by itself establish the facts of the allegations, determine criminal liability, or provide a complete record of any government or internal investigation.",
       "sources": [
         {
-          "title": "Nvidia",
-          "publisher": "Nvidia",
-          "url": "https://nvidianews.nvidia.com/_gallery/download_pdf/6af0e34b3d63329de545324b/",
-          "source_type": "reporting",
+          "title": "Fbi",
+          "publisher": "Fbi",
+          "url": "https://www.fbi.gov/about/faqs/what-is-economic-espionage",
+          "source_type": "primary",
           "id": "o1"
         },
         {
-          "title": "Courthousenews",
-          "publisher": "Courthousenews",
-          "url": "https://www.courthousenews.com/wp-content/uploads/2026/11/kistemacher-vs-nvidia-complaint.pdf",
-          "source_type": "reporting",
+          "title": "Congress",
+          "publisher": "Congress",
+          "url": "https://www.congress.gov/104/plaws/publ294/PLAW-104publ294.pdf",
+          "source_type": "primary",
           "id": "o2"
         },
         {
-          "title": "SEC",
-          "publisher": "SEC",
-          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000038/a2026-annualxreportxwebxfi.pdf",
+          "title": "House",
+          "publisher": "House",
+          "url": "https://uscode.house.gov/us/usc/119-118/t18/",
           "source_type": "primary",
           "id": "o3"
         },
         {
           "title": "House",
           "publisher": "House",
-          "url": "https://chinaselectcommittee.house.gov/sites/evo-subsites/selectcommitteeontheccp.house.gov/files/evo-media-document/nvidia-letter-pdf.pdf",
+          "url": "https://uscode.house.gov/us/usc/119-120/t18/s1831/",
           "source_type": "primary",
           "id": "o4"
+        },
+        {
+          "title": "House",
+          "publisher": "House",
+          "url": "https://uscode.house.gov/us/usc/t18/s1832/",
+          "source_type": "primary",
+          "id": "o5"
+        },
+        {
+          "title": "Fbi",
+          "publisher": "Fbi",
+          "url": "https://www.fbi.gov/news/stories/economic-espionage",
+          "source_type": "primary",
+          "id": "o6"
+        },
+        {
+          "title": "Justice",
+          "publisher": "Justice",
+          "url": "https://www.justice.gov/jm/jm-9-50000-chip-guidance",
+          "source_type": "primary",
+          "id": "o7"
         }
       ],
       "publisher_count": 4,
-      "generated_at": "2026-11-10T20:15:30.231805+00:00",
-      "expires_at": "2026-11-17T20:15:30.231805+00:00",
+      "generated_at": "2026-11-17T21:33:40.393177+00:00",
+      "expires_at": "2026-11-24T21:33:40.393177+00:00",
       "model": "gpt-5.6-terra",
       "provenance": "openai_web_search_source_grounded_event_overview_v1"
     },
@@ -536,28 +653,38 @@
     "search_tokens": [
       "activitie",
       "affair",
+      "agreed",
       "alice",
       "allegation",
       "alleged",
+      "also",
       "announcement",
+      "asset",
       "beijing",
       "businesswoman",
       "china",
       "claiming",
       "colette",
       "comes",
+      "committee",
       "company",
       "concern",
+      "congress",
+      "congressional",
+      "december",
       "denied",
       "development",
       "donald",
       "drop",
       "effort",
       "espionage",
+      "established",
       "experienced",
       "facing",
+      "follow",
       "foreign",
       "growing",
+      "hearing",
       "huang",
       "implication",
       "indicate",
@@ -567,6 +694,7 @@
       "investigation",
       "investor",
       "involvement",
+      "issue",
       "jensen",
       "knowing",
       "kress",
@@ -577,6 +705,7 @@
       "misled",
       "national",
       "nvidia",
+      "potential",
       "price",
       "raised",
       "regarding",
@@ -584,9 +713,13 @@
       "resign",
       "resignation",
       "resigned",
+      "response",
+      "risks",
+      "sales",
       "scrutiny",
       "security",
       "serve",
+      "several",
       "shareholder",
       "significant",
       "situation",
@@ -595,6 +728,7 @@
       "stock",
       "suspected",
       "target",
+      "testify",
       "these",
       "trump",
       "under",
@@ -606,6 +740,7 @@
       "alleged_china",
       "ceo",
       "ceo.",
+      "ceo._jensen",
       "ceo_jensen",
       "ceo_relationship",
       "cfo",
@@ -613,20 +748,25 @@
       "china",
       "china_spy",
       "colette_kress",
+      "concern_jensen",
       "donald_trump",
       "fbi",
       "huang_nvidia",
       "huang_resign",
       "investigate_ceo",
       "jensen_huang",
+      "national_security",
       "nvidia_ceo",
       "nvidia_investigate",
+      "nvidia_national",
+      "security_concern",
       "spy_alice",
       "spy_jensen",
       "spy_nvidia",
+      "testify",
       "us"
     ],
-    "search_text": "activitie affair alice alice_huang allegation alleged alleged_affair alleged_china announcement beijing businesswoman ceo ceo. ceo_jensen ceo_relationship cfo cfo_colette china china_spy claiming colette colette_kress comes company concern denied development donald donald_trump drop effort espionage experienced facing fbi foreign growing huang huang_nvidia huang_resign implication indicate intelligence interim investigate investigate_ceo investigation investor involvement jensen jensen_huang knowing kress launched lawsuit linked made misled national nvidia nvidia_ceo nvidia_investigate price raised regarding relationship resign resignation resigned scrutiny security serve shareholder significant situation spoke spy_alice spy_jensen spy_nvidia stated stock suspected target these trump under us which"
+    "search_text": "activitie affair agreed alice alice_huang allegation alleged alleged_affair alleged_china also announcement asset beijing businesswoman ceo ceo. ceo._jensen ceo_jensen ceo_relationship cfo cfo_colette china china_spy claiming colette colette_kress comes committee company concern concern_jensen congress congressional december denied development donald donald_trump drop effort espionage established experienced facing fbi follow foreign growing hearing huang huang_nvidia huang_resign implication indicate intelligence interim investigate investigate_ceo investigation investor involvement issue jensen jensen_huang knowing kress launched lawsuit linked made misled national national_security nvidia nvidia_ceo nvidia_investigate nvidia_national potential price raised regarding relationship resign resignation resigned response risks sales scrutiny security security_concern serve several shareholder significant situation spoke spy_alice spy_jensen spy_nvidia stated stock suspected target testify these trump under us which"
   },
   "related_events": [
     {
@@ -664,20 +804,20 @@
       "href": "/timeline.html?event=event_bessent-criticizes-lutnick-s-department-for_3901438518"
     },
     {
-      "event_id": "event_anthropic-researcher-warns-of-ai-threat-to-h_57ca070dcc",
-      "title": "Anthropic Researcher Warns of AI Threat to Humanity",
-      "summary": "Muninn first tracked this thread on 2026-09-09: Anthropic Researcher Warns of AI Threat to Humanity. The latest development is California Files Lawsuit Against OpenAI Over Cybersecurity Concerns.",
+      "event_id": "event_jensen-huang-resigns-leaving-nvidia-s-future_d9e7c4bccf",
+      "title": "Jensen Huang Resigns, Leaving Nvidia's Future Uncertain",
+      "summary": "Muninn first tracked this thread on 2026-11-12: Jensen Huang Resigns, Leaving Nvidia's Future Uncertain. The latest development is Jensen Huang Expresses Willingness to Return as Nvidia CEO After Resignation.",
       "activity_status": "active",
-      "stage": "timeline",
-      "stage_label": "Timeline",
-      "first_seen_at": "2026-09-09",
-      "last_seen_at": "2026-11-16",
-      "development_count": 13,
-      "latest_title": "California Files Lawsuit Against OpenAI Over Cybersecurity Concerns",
-      "topic_label": "AI Safety",
+      "stage": "developing_event",
+      "stage_label": "Developing event",
+      "first_seen_at": "2026-11-12",
+      "last_seen_at": "2026-11-17",
+      "development_count": 2,
+      "latest_title": "Jensen Huang Expresses Willingness to Return as Nvidia CEO After Resignation",
+      "topic_label": "Nvidia Leadership",
       "hero_image": {
-        "url": "/Current_news/generated/events/event_anthropic-researcher-warns-of-ai-threat-to-h_57ca070dcc.jpg",
-        "thumbnail_url": "/Current_news/generated/events/event_anthropic-researcher-warns-of-ai-threat-to-h_57ca070dcc.jpg",
+        "url": "/Current_news/generated/events/event_jensen-huang-resigns-leaving-nvidia-s-future_d9e7c4bccf.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_jensen-huang-resigns-leaving-nvidia-s-future_d9e7c4bccf.jpg",
         "source": "Muninn AI illustration",
         "author": "OpenAI GPT Image 2",
         "license": "AI-generated content",
@@ -695,7 +835,41 @@
         "focal_tall_x": 0.5,
         "focal_tall_y": 0.48
       },
-      "href": "/timeline.html?event=event_anthropic-researcher-warns-of-ai-threat-to-h_57ca070dcc"
+      "href": "/timeline.html?event=event_jensen-huang-resigns-leaving-nvidia-s-future_d9e7c4bccf"
+    },
+    {
+      "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
+      "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
+      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Iran Denies Allegations of Planning 'Dirty Bomb' Attack on Washington.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-07-22",
+      "last_seen_at": "2026-11-17",
+      "development_count": 116,
+      "latest_title": "Iran Denies Allegations of Planning 'Dirty Bomb' Attack on Washington",
+      "topic_label": "Iran War",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_trump-issues-threats-against-iranian-infrast_ab8030eed4"
     }
   ]
 }
