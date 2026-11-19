@@ -15,7 +15,7 @@
     "summary": "SpaceX's Starship successfully returned from orbit and was captured by launch pad arms in a notable first. The spacecraft's journey lasted 22 hours, culminating in a dramatic midair catch at the Texas launch tower. However, the mission faced challenges as the first-stage booster exploded shortly after liftoff, preventing a planned double catch.",
     "status": "active",
     "first_seen_at": "2026-11-15",
-    "last_seen_at": "2026-11-18",
+    "last_seen_at": "2026-11-19",
     "timeline": [
       {
         "development_id": "story_503351589840e32e",
@@ -180,6 +180,78 @@
         "first_seen_at": "2026-11-18",
         "last_seen_at": "2026-11-18",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_ba2888c588ab7ced",
+        "daily_story_id": "story_ba2888c588ab7ced",
+        "date": "2026-11-19",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Voyager 1 Reaches Record Distance, Communicates from One Light-Day Away",
+        "summary": "NASA's Voyager 1 has successfully communicated with Earth from a distance of over 16 billion miles, equivalent to one light-day. This milestone marks the farthest any human-made object has traveled since its launch in 1977. The signal was received exactly 24 hours after it was sent from the spacecraft.",
+        "topic_label": "Space Exploration",
+        "development_type": "development",
+        "key_facts": [
+          "Voyager 1 launched in 1977",
+          "Communicated from over 16 billion miles away",
+          "Farthest distance traveled by a human-made object"
+        ],
+        "source_count": 3,
+        "sources": [
+          "ABC News",
+          "France 24",
+          "PBS News"
+        ],
+        "source_urls": [
+          "https://www.pbs.org/newshour/science/nasas-voyager-1-calls-earth-from-more-than-16-billion-miles-or-one-light-day-away",
+          "https://abcnews.com/video/138265738",
+          "https://www.france24.com/en/nasa-voyager-1-phones-home-from-record-one-light-day-away-49-years-after-launch"
+        ],
+        "source_details": [
+          {
+            "title": "NASA's Voyager 1 calls Earth from more than 16 billion miles, or one light-day, away",
+            "source": "PBS News",
+            "link": "https://www.pbs.org/newshour/science/nasas-voyager-1-calls-earth-from-more-than-16-billion-miles-or-one-light-day-away",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "WATCH: NASA's Voyager 1 now a light-day away after 1977 launch",
+            "source": "ABC News",
+            "link": "https://abcnews.com/video/138265738",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "NASA's Voyager 1 phones home from record one light-day away, 49 years after launch",
+            "source": "France 24",
+            "link": "https://www.france24.com/en/nasa-voyager-1-phones-home-from-record-one-light-day-away-49-years-after-launch",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_503351589840e32e",
+          "shared_tokens": [
+            "exploration",
+            "milestone",
+            "space",
+            "successfully"
+          ],
+          "shared_entities": [
+            "space_exploration"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-11-19",
+        "last_seen_at": "2026-11-19",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -204,12 +276,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 2,
+      "public_development_count": 3,
       "questionable_development_count": 1,
       "review_required": true
     },
-    "latest_title": "Voyager 1 Achieves Distance Milestone of One Light-Day from Earth",
-    "latest_summary": "NASA's Voyager 1 has reached a significant milestone, becoming the first human-made object to travel one light-day from Earth, which is over 16 billion miles. Launched in 1977, the spacecraft continues to send data back from interstellar space as it approaches its 50th anniversary next year.",
+    "latest_title": "Voyager 1 Reaches Record Distance, Communicates from One Light-Day Away",
+    "latest_summary": "NASA's Voyager 1 has successfully communicated with Earth from a distance of over 16 billion miles, equivalent to one light-day. This milestone marks the farthest any human-made object has traveled since its launch in 1977. The signal was received exactly 24 hours after it was sent from the spacecraft.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": false,
@@ -219,28 +291,29 @@
       "display_title": "SpaceX Achieves Midair Capture of Starship After Orbital Flight",
       "milestone_development_ids": [
         "story_503351589840e32e",
-        "story_818c62295d991cc8"
+        "story_818c62295d991cc8",
+        "story_ba2888c588ab7ced"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-11-18",
-      "development_count": 2,
-      "coverage_packet_count": 2,
-      "date_count": 2,
-      "source_count": 7,
-      "independent_source_count": 6,
+      "summary_updated_at": "2026-11-19",
+      "development_count": 3,
+      "coverage_packet_count": 3,
+      "date_count": 3,
+      "source_count": 10,
+      "independent_source_count": 9,
       "first_date": "2026-11-15",
-      "latest_date": "2026-11-18",
-      "latest_update_title": "Voyager 1 Achieves Distance Milestone of One Light-Day from Earth",
-      "coverage_score": 0.509,
+      "latest_date": "2026-11-19",
+      "latest_update_title": "Voyager 1 Reaches Record Distance, Communicates from One Light-Day Away",
+      "coverage_score": 0.72,
       "recency_score": 1.0,
-      "rank_score": 0.794,
-      "context_summary": "Muninn first tracked this thread on 2026-11-15: SpaceX Achieves Milestone with Successful Rocket Catch. The latest development is Voyager 1 Achieves Distance Milestone of One Light-Day from Earth.",
+      "rank_score": 0.882,
+      "context_summary": "Muninn first tracked this thread on 2026-11-15: SpaceX Achieves Milestone with Successful Rocket Catch. The latest development is Voyager 1 Reaches Record Distance, Communicates from One Light-Day Away.",
       "cta_label": ""
     },
     "event_summary": {
       "available": true,
-      "summary": "SpaceX's Starship successfully returned from orbit and was caught by mechanical arms on the launchpad, marking a significant milestone in the company's efforts to develop fully reusable rockets. Most recently, nASA's Voyager 1 has reached a significant milestone, becoming the first human-made object to travel one light-day from Earth, which is over 16 billion miles.",
+      "summary": "SpaceX's Starship successfully returned from orbit and was caught by mechanical arms on the launchpad, marking a significant milestone in the company's efforts to develop fully reusable rockets. A later development was Voyager 1 Achieves Distance Milestone of One Light-Day from Earth. Most recently, nASA's Voyager 1 has successfully communicated with Earth from a distance of over 16 billion miles, equivalent to one light-day.",
       "key_developments": [
         {
           "development_id": "story_503351589840e32e",
@@ -251,6 +324,11 @@
           "development_id": "story_818c62295d991cc8",
           "date": "2026-11-18",
           "title": "Voyager 1 Achieves Distance Milestone of One Light-Day from Earth"
+        },
+        {
+          "development_id": "story_ba2888c588ab7ced",
+          "date": "2026-11-19",
+          "title": "Voyager 1 Reaches Record Distance, Communicates from One Light-Day Away"
         }
       ],
       "sources": [
@@ -295,9 +373,27 @@
           "source": "NewsNation - Latest",
           "link": "https://www.newsnationnow.com/space/nasa-voyager1-almost-one-light-day",
           "source_bias": "center"
+        },
+        {
+          "title": "NASA's Voyager 1 calls Earth from more than 16 billion miles, or one light-day, away",
+          "source": "PBS News",
+          "link": "https://www.pbs.org/newshour/science/nasas-voyager-1-calls-earth-from-more-than-16-billion-miles-or-one-light-day-away",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "WATCH: NASA's Voyager 1 now a light-day away after 1977 launch",
+          "source": "ABC News",
+          "link": "https://abcnews.com/video/138265738",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "NASA's Voyager 1 phones home from record one light-day away, 49 years after launch",
+          "source": "France 24",
+          "link": "https://www.france24.com/en/nasa-voyager-1-phones-home-from-record-one-light-day-away-49-years-after-launch",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-11-18",
+      "updated_at": "2026-11-19",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "developing_event",
@@ -306,7 +402,7 @@
         "event_id": "event_voyager-1-approaches-new-distance-record-of_1e6527c124",
         "title": "Voyager 1 Approaches New Distance Record of One Light-Day in Interstellar Space",
         "relationship": "related_topic",
-        "confidence": 0.863,
+        "confidence": 0.867,
         "shared_entities": [
           "light-day",
           "nasa",
@@ -315,83 +411,6 @@
         ]
       }
     ],
-    "search_tokens": [
-      "1977",
-      "50th",
-      "achieve",
-      "advancement",
-      "almost",
-      "anniversary",
-      "approache",
-      "arms",
-      "back",
-      "becoming",
-      "billion",
-      "catch",
-      "caught",
-      "company",
-      "continue",
-      "data",
-      "described",
-      "develop",
-      "distance",
-      "earth",
-      "effort",
-      "event",
-      "first",
-      "fully",
-      "highlight",
-      "human-made",
-      "interstellar",
-      "launched",
-      "launchpad",
-      "light-day",
-      "magic",
-      "marking",
-      "mechanical",
-      "miles",
-      "milestone",
-      "nasa",
-      "next",
-      "object",
-      "orbit",
-      "reached",
-      "returned",
-      "reusable",
-      "rocket",
-      "send",
-      "significant",
-      "space",
-      "spacecraft",
-      "spacex",
-      "starship",
-      "successful",
-      "successfully",
-      "technology",
-      "travel",
-      "voyager",
-      "which",
-      "year"
-    ],
-    "entities": [
-      "achieve_distance",
-      "achieve_milestone",
-      "catch_spacex",
-      "distance_milestone",
-      "earth",
-      "earth_nasa",
-      "light-day",
-      "nasa",
-      "nasa_voyager",
-      "one_light-day",
-      "rocket_catch",
-      "spacex",
-      "spacex_achieve",
-      "spacex_starship",
-      "successful_rocket",
-      "voyager_achieve"
-    ],
-    "search_text": "1977 50th achieve achieve_distance achieve_milestone advancement almost anniversary approache arms back becoming billion catch catch_spacex caught company continue data described develop distance distance_milestone earth earth_nasa effort event first fully highlight human-made interstellar launched launchpad light-day magic marking mechanical miles milestone nasa nasa_voyager next object one_light-day orbit reached returned reusable rocket rocket_catch send significant space spacecraft spacex spacex_achieve spacex_starship starship successful successful_rocket successfully technology travel voyager voyager_achieve which year",
     "event_overview": {
       "available": true,
       "title": "About Space Exploration",
@@ -506,7 +525,107 @@
       "focal_wide_y": 0.48,
       "focal_tall_x": 0.5,
       "focal_tall_y": 0.48
-    }
+    },
+    "search_tokens": [
+      "1977",
+      "50th",
+      "achieve",
+      "advancement",
+      "almost",
+      "anniversary",
+      "approache",
+      "arms",
+      "away",
+      "back",
+      "becoming",
+      "billion",
+      "catch",
+      "caught",
+      "communicate",
+      "communicated",
+      "company",
+      "continue",
+      "data",
+      "described",
+      "develop",
+      "distance",
+      "earth",
+      "effort",
+      "equivalent",
+      "event",
+      "exactly",
+      "farthest",
+      "first",
+      "fully",
+      "highlight",
+      "hours",
+      "human-made",
+      "interstellar",
+      "launch",
+      "launched",
+      "launchpad",
+      "light-day",
+      "magic",
+      "marking",
+      "marks",
+      "mechanical",
+      "miles",
+      "milestone",
+      "nasa",
+      "next",
+      "object",
+      "orbit",
+      "reache",
+      "reached",
+      "received",
+      "record",
+      "returned",
+      "reusable",
+      "rocket",
+      "send",
+      "sent",
+      "signal",
+      "significant",
+      "since",
+      "space",
+      "spacecraft",
+      "spacex",
+      "starship",
+      "successful",
+      "successfully",
+      "technology",
+      "travel",
+      "traveled",
+      "voyager",
+      "which",
+      "year"
+    ],
+    "entities": [
+      "achieve_distance",
+      "achieve_milestone",
+      "away_nasa",
+      "catch_spacex",
+      "distance_communicate",
+      "distance_milestone",
+      "earth",
+      "earth_nasa",
+      "light-day",
+      "light-day_away",
+      "nasa",
+      "nasa_voyager",
+      "one",
+      "one_light-day",
+      "reache_record",
+      "record_distance",
+      "rocket_catch",
+      "spacex",
+      "spacex_achieve",
+      "spacex_starship",
+      "successful_rocket",
+      "voyager_achieve",
+      "voyager_reache"
+    ],
+    "search_text": "1977 50th achieve achieve_distance achieve_milestone advancement almost anniversary approache arms away away_nasa back becoming billion catch catch_spacex caught communicate communicated company continue data described develop distance distance_communicate distance_milestone earth earth_nasa effort equivalent event exactly farthest first fully highlight hours human-made interstellar launch launched launchpad light-day light-day_away magic marking marks mechanical miles milestone nasa nasa_voyager next object one one_light-day orbit reache reache_record reached received record record_distance returned reusable rocket rocket_catch send sent signal significant since space spacecraft spacex spacex_achieve spacex_starship starship successful successful_rocket successfully technology travel traveled voyager voyager_achieve voyager_reache which year"
   },
   "related_events": []
 }
