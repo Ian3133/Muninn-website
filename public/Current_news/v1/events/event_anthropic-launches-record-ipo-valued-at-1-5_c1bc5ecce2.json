@@ -15,7 +15,7 @@
     "summary": "Anthropic has begun trading on the Nasdaq following a record initial public offering (IPO) that raised approximately $81.3 billion. This valuation positions the AI company at around $1.5 trillion, surpassing SpaceX's previous record of $75 billion. Despite concerns about market volatility and public sentiment towards AI, the company's shares surged upon debut.",
     "status": "active",
     "first_seen_at": "2026-11-19",
-    "last_seen_at": "2026-11-20",
+    "last_seen_at": "2026-11-21",
     "timeline": [
       {
         "development_id": "story_0d3526d8c3c9eaf6",
@@ -161,15 +161,83 @@
         "first_seen_at": "2026-11-20",
         "last_seen_at": "2026-11-20",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_06ce974b038a38b4",
+        "daily_story_id": "story_06ce974b038a38b4",
+        "date": "2026-11-21",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Protests Erupt Over COP31's Inaction on Fossil Fuels",
+        "summary": "Activists and civil society groups protested during the COP31 climate talks, criticizing the event for failing to advance discussions on moving away from fossil fuels. The talks, held in Turkey, extended into overtime as delegates struggled to reach consensus on key issues, with fossil fuels notably absent from the draft deal.",
+        "topic_label": "COP31 Climate Talks",
+        "development_type": "diplomacy",
+        "key_facts": [
+          "Activists protested against COP31's failure to address fossil fuels.",
+          "The climate talks extended into overtime without reaching key decisions.",
+          "Fossil fuels were not mentioned in the draft deal."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Africanews",
+          "PBS News - Headlines"
+        ],
+        "source_urls": [
+          "http://www.africanews.com/2026/11/20/activists-protest-failure-of-cop31-to-advance-on-moving-away-from-fossil-fuels",
+          "https://www.pbs.org/newshour/world/activists-leaders-criticize-cop31-climate-talks-as-fossil-fuels-go-unmentioned-in-draft-deal"
+        ],
+        "source_details": [
+          {
+            "title": "Activists protest failure of COP31 to advance on moving away from fossil fuels",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/11/20/activists-protest-failure-of-cop31-to-advance-on-moving-away-from-fossil-fuels",
+            "source_bias": "center"
+          },
+          {
+            "title": "Activists, leaders criticize COP31 climate talks as fossil fuels go unmentioned in draft deal",
+            "source": "PBS News - Headlines",
+            "link": "https://www.pbs.org/newshour/world/activists-leaders-criticize-cop31-climate-talks-as-fossil-fuels-go-unmentioned-in-draft-deal",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "protest"
+          ],
+          "shared_incident_anchors": [
+            "protest_erupt"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "erupt",
+            "protest"
+          ],
+          "shared_entities": [
+            "protest_erupt"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_8bb3e48ace165ae4",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-11-21",
+        "last_seen_at": "2026-11-21",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 2,
+      "public_development_count": 3,
       "questionable_development_count": 2,
       "review_required": true
     },
-    "latest_title": "Widespread Protests Erupt Across Europe Over Living Costs and Wages",
-    "latest_summary": "Protests have erupted across Europe, with workers and students taking to the streets in response to rising living costs and demands for better wages and services. The demonstrations, inspired by recent protests in France, have seen significant participation, particularly in Italy, where a strike has disrupted services.",
+    "latest_title": "Protests Erupt Over COP31's Inaction on Fossil Fuels",
+    "latest_summary": "Activists and civil society groups protested during the COP31 climate talks, criticizing the event for failing to advance discussions on moving away from fossil fuels. The talks, held in Turkey, extended into overtime as delegates struggled to reach consensus on key issues, with fossil fuels notably absent from the draft deal.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": false,
@@ -179,28 +247,29 @@
       "display_title": "Anthropic Launches Record IPO, Valued at $1.5 Trillion on Nasdaq",
       "milestone_development_ids": [
         "story_0d3526d8c3c9eaf6",
-        "story_2eef87cf4cbe7dea"
+        "story_2eef87cf4cbe7dea",
+        "story_06ce974b038a38b4"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-11-20",
-      "development_count": 2,
-      "coverage_packet_count": 2,
-      "date_count": 2,
-      "source_count": 7,
-      "independent_source_count": 7,
+      "summary_updated_at": "2026-11-21",
+      "development_count": 3,
+      "coverage_packet_count": 3,
+      "date_count": 3,
+      "source_count": 9,
+      "independent_source_count": 9,
       "first_date": "2026-11-19",
-      "latest_date": "2026-11-20",
-      "latest_update_title": "Widespread Protests Erupt Across Europe Over Living Costs and Wages",
-      "coverage_score": 0.547,
+      "latest_date": "2026-11-21",
+      "latest_update_title": "Protests Erupt Over COP31's Inaction on Fossil Fuels",
+      "coverage_score": 0.708,
       "recency_score": 1.0,
-      "rank_score": 0.81,
-      "context_summary": "Muninn first tracked this thread on 2026-11-19: Anthropic Launches Record IPO, Valued at $1.5 Trillion on Nasdaq. The latest development is Widespread Protests Erupt Across Europe Over Living Costs and Wages.",
+      "rank_score": 0.877,
+      "context_summary": "Muninn first tracked this thread on 2026-11-19: Anthropic Launches Record IPO, Valued at $1.5 Trillion on Nasdaq. The latest development is Protests Erupt Over COP31's Inaction on Fossil Fuels.",
       "cta_label": ""
     },
     "event_summary": {
       "available": true,
-      "summary": "Anthropic has begun trading on the Nasdaq following a record initial public offering (IPO) that raised approximately $81.3 billion. Most recently, protests have erupted across Europe, with workers and students taking to the streets in response to rising living costs and demands for better wages and services.",
+      "summary": "Anthropic has begun trading on the Nasdaq following a record initial public offering (IPO) that raised approximately $81.3 billion. A later development was Widespread Protests Erupt Across Europe Over Living Costs and Wages. Most recently, activists and civil society groups protested during the COP31 climate talks, criticizing the event for failing to advance discussions on moving away from fossil fuels.",
       "key_developments": [
         {
           "development_id": "story_0d3526d8c3c9eaf6",
@@ -211,6 +280,11 @@
           "development_id": "story_2eef87cf4cbe7dea",
           "date": "2026-11-20",
           "title": "Widespread Protests Erupt Across Europe Over Living Costs and Wages"
+        },
+        {
+          "development_id": "story_06ce974b038a38b4",
+          "date": "2026-11-21",
+          "title": "Protests Erupt Over COP31's Inaction on Fossil Fuels"
         }
       ],
       "sources": [
@@ -255,9 +329,21 @@
           "source": "AP - Top News via Google News",
           "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNZFlKamwzV1Zfbm9XMktPSUY2YWxfbUM3aXpna2ZycjFTaVBfOC1DVGExYUhMQ1JFM3h1S0Vkc1h5S0prXzBScTlBNFE1d2o3NlBxTk03T3NoYkFlX2Iza3FtWUZiSktkOGstenR3Nk1vY0QyZ1FPUTdiN1VDRTJNa01qcXIyNFZKS1JlTFRzZTBydTVKcDlTSVM2bG9MRHFfRVhVSDBRbzQ5Yk5JQW9pbVJRVmV3QQ?oc=5",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Activists protest failure of COP31 to advance on moving away from fossil fuels",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/11/20/activists-protest-failure-of-cop31-to-advance-on-moving-away-from-fossil-fuels",
+          "source_bias": "center"
+        },
+        {
+          "title": "Activists, leaders criticize COP31 climate talks as fossil fuels go unmentioned in draft deal",
+          "source": "PBS News - Headlines",
+          "link": "https://www.pbs.org/newshour/world/activists-leaders-criticize-cop31-climate-talks-as-fossil-fuels-go-unmentioned-in-draft-deal",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-11-20",
+      "updated_at": "2026-11-21",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "developing_event",
@@ -266,7 +352,7 @@
         "event_id": "event_france-faces-aftermath-of-violent-protests-w_6d2156f35f",
         "title": "France Faces Aftermath of Violent Protests with Widespread Damage and Arrests",
         "relationship": "related_topic",
-        "confidence": 0.875,
+        "confidence": 0.856,
         "shared_entities": [
           "across_europe",
           "erupt_across",
@@ -277,33 +363,33 @@
         ]
       },
       {
-        "event_id": "event_protests-erupt-in-india-demanding-resignatio_ce12dfc1ae",
-        "title": "Protests Erupt in India Demanding Resignation of Election Chief",
-        "relationship": "related_topic",
-        "confidence": 0.713,
-        "shared_entities": [
-          "france",
-          "protest_erupt"
-        ]
-      },
-      {
         "event_id": "event_protests-in-france-surge-over-rising-living_db38db0044",
         "title": "Protests in France Surge Over Rising Living Costs Amid Union Strikes",
         "relationship": "related_topic",
-        "confidence": 0.709,
+        "confidence": 0.706,
         "shared_entities": [
           "france",
           "living_costs"
         ]
       },
       {
-        "event_id": "event_anthropic-discloses-80-billion-loss-and-ipo_8fab7a4bd6",
-        "title": "Anthropic Discloses $80 Billion Loss and IPO Plans",
+        "event_id": "event_protests-erupt-in-india-demanding-resignatio_ce12dfc1ae",
+        "title": "Protests Erupt in India Demanding Resignation of Election Chief",
         "relationship": "related_topic",
-        "confidence": 0.669,
+        "confidence": 0.695,
         "shared_entities": [
-          "ai",
-          "ipo"
+          "france",
+          "protest_erupt"
+        ]
+      },
+      {
+        "event_id": "event_world-leaders-under-pressure-at-cop31-amid-c_c18b05054b",
+        "title": "World Leaders Under Pressure at COP31 Amid Climate Change Disputes",
+        "relationship": "related_topic",
+        "confidence": 0.689,
+        "shared_entities": [
+          "cop31",
+          "turkey"
         ]
       }
     ],
@@ -396,89 +482,6 @@
       "model": "gpt-5.6-terra",
       "provenance": "openai_web_search_source_grounded_event_overview_v1"
     },
-    "search_tokens": [
-      "across",
-      "anthropic",
-      "approximately",
-      "around",
-      "begun",
-      "better",
-      "billion",
-      "company",
-      "concern",
-      "costs",
-      "debut",
-      "demand",
-      "demonstration",
-      "despite",
-      "disrupted",
-      "erupt",
-      "erupted",
-      "europe",
-      "france",
-      "initial",
-      "inspired",
-      "italy",
-      "launche",
-      "living",
-      "market",
-      "nasdaq",
-      "offering",
-      "participation",
-      "particularly",
-      "position",
-      "previou",
-      "protest",
-      "public",
-      "raised",
-      "recent",
-      "record",
-      "response",
-      "rising",
-      "seen",
-      "sentiment",
-      "service",
-      "share",
-      "significant",
-      "spacex",
-      "street",
-      "strike",
-      "student",
-      "surged",
-      "surpassing",
-      "taking",
-      "toward",
-      "trading",
-      "trillion",
-      "upon",
-      "valuation",
-      "valued",
-      "volatility",
-      "wages",
-      "where",
-      "widespread",
-      "worker"
-    ],
-    "entities": [
-      "across_europe",
-      "ai",
-      "anthropic_launche",
-      "erupt_across",
-      "europe",
-      "france",
-      "ipo",
-      "ipo_valued",
-      "italy",
-      "launche_record",
-      "living_costs",
-      "nasdaq_anthropic",
-      "protest_erupt",
-      "record_ipo",
-      "spacex",
-      "wages_protest",
-      "widespread_protest"
-    ],
-    "search_text": "across across_europe ai anthropic anthropic_launche approximately around begun better billion company concern costs debut demand demonstration despite disrupted erupt erupt_across erupted europe france initial inspired ipo ipo_valued italy launche launche_record living living_costs market nasdaq nasdaq_anthropic offering participation particularly position previou protest protest_erupt public raised recent record record_ipo response rising seen sentiment service share significant spacex street strike student surged surpassing taking toward trading trillion upon valuation valued volatility wages wages_protest where widespread widespread_protest worker",
     "hero_image": {
       "url": "/Current_news/generated/events/event_anthropic-launches-record-ipo-valued-at-1-5_c1bc5ecce2.jpg",
       "thumbnail_url": "/Current_news/generated/events/event_anthropic-launches-record-ipo-valued-at-1-5_c1bc5ecce2.jpg",
@@ -498,7 +501,126 @@
       "focal_wide_y": 0.48,
       "focal_tall_x": 0.5,
       "focal_tall_y": 0.48
-    }
+    },
+    "search_tokens": [
+      "absent",
+      "across",
+      "activist",
+      "advance",
+      "anthropic",
+      "approximately",
+      "around",
+      "away",
+      "begun",
+      "better",
+      "billion",
+      "civil",
+      "climate",
+      "company",
+      "concern",
+      "consensu",
+      "cop31",
+      "costs",
+      "criticizing",
+      "deal",
+      "debut",
+      "delegate",
+      "demand",
+      "demonstration",
+      "despite",
+      "discussion",
+      "disrupted",
+      "draft",
+      "erupt",
+      "erupted",
+      "europe",
+      "event",
+      "extended",
+      "failing",
+      "fossil",
+      "france",
+      "fuels",
+      "group",
+      "held",
+      "inaction",
+      "initial",
+      "inspired",
+      "issue",
+      "italy",
+      "launche",
+      "living",
+      "market",
+      "moving",
+      "nasdaq",
+      "notably",
+      "offering",
+      "overtime",
+      "participation",
+      "particularly",
+      "position",
+      "previou",
+      "protest",
+      "protested",
+      "public",
+      "raised",
+      "reach",
+      "recent",
+      "record",
+      "response",
+      "rising",
+      "seen",
+      "sentiment",
+      "service",
+      "share",
+      "significant",
+      "society",
+      "spacex",
+      "street",
+      "strike",
+      "struggled",
+      "student",
+      "surged",
+      "surpassing",
+      "taking",
+      "talks",
+      "toward",
+      "trading",
+      "trillion",
+      "turkey",
+      "upon",
+      "valuation",
+      "valued",
+      "volatility",
+      "wages",
+      "where",
+      "widespread",
+      "worker"
+    ],
+    "entities": [
+      "across_europe",
+      "ai",
+      "anthropic_launche",
+      "cop31",
+      "cop31_inaction",
+      "erupt_across",
+      "europe",
+      "fossil_fuels",
+      "france",
+      "fuels_activist",
+      "ipo",
+      "ipo_valued",
+      "italy",
+      "launche_record",
+      "living_costs",
+      "nasdaq_anthropic",
+      "protest_erupt",
+      "record_ipo",
+      "spacex",
+      "turkey",
+      "wages_protest",
+      "widespread_protest"
+    ],
+    "search_text": "absent across across_europe activist advance ai anthropic anthropic_launche approximately around away begun better billion civil climate company concern consensu cop31 cop31_inaction costs criticizing deal debut delegate demand demonstration despite discussion disrupted draft erupt erupt_across erupted europe event extended failing fossil fossil_fuels france fuels fuels_activist group held inaction initial inspired ipo ipo_valued issue italy launche launche_record living living_costs market moving nasdaq nasdaq_anthropic notably offering overtime participation particularly position previou protest protest_erupt protested public raised reach recent record record_ipo response rising seen sentiment service share significant society spacex street strike struggled student surged surpassing taking talks toward trading trillion turkey upon valuation valued volatility wages wages_protest where widespread widespread_protest worker"
   },
   "related_events": [
     {
