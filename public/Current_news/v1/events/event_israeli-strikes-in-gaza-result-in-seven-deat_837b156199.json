@@ -15,7 +15,7 @@
     "summary": "Israeli military strikes in Gaza have resulted in the deaths of seven individuals and the destruction of medical supply warehouses. The Gaza Health Ministry condemned the attacks, which occurred amid ongoing uncertainty regarding a disarmament deal with Hamas. Reports indicate that the strikes targeted warehouses near a hospital, which were believed to be storing medical supplies.",
     "status": "active",
     "first_seen_at": "2026-08-01",
-    "last_seen_at": "2026-11-21",
+    "last_seen_at": "2026-11-24",
     "timeline": [
       {
         "development_id": "story_8bc317b8bc17260f",
@@ -1997,15 +1997,102 @@
         "first_seen_at": "2026-11-21",
         "last_seen_at": "2026-11-21",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_7298e39a39d7cb2f",
+        "daily_story_id": "story_7298e39a39d7cb2f",
+        "date": "2026-11-24",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Israeli Airstrikes Kill Seven in Gaza, Including Hamas Official",
+        "summary": "Israeli airstrikes in Gaza resulted in the deaths of seven Palestinians, including Naeem Abu Nahel, a senior Hamas security official, and two police officers. The strikes occurred on Tuesday, according to reports from medics and police sources.",
+        "topic_label": "Gaza Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "Seven Palestinians killed in Israeli airstrikes",
+          "Naeem Abu Nahel, a senior Hamas security official, among the dead",
+          "Two police officers also killed in the strikes"
+        ],
+        "source_count": 3,
+        "sources": [
+          "Al Jazeera English",
+          "BBC - World",
+          "RTE News"
+        ],
+        "source_urls": [
+          "https://www.rte.ie/news/world/2026/1124/1600447-israel-gaza",
+          "https://www.bbc.co.uk/news/articles/c6rrg7ggq190o?at_medium=RSS&at_campaign=rss",
+          "https://www.aljazeera.com/video/newsfeed/2026/11/24/senior-hamas-security-official-killed-in-israeli-drone-strikes?traffic_source=rss"
+        ],
+        "source_details": [
+          {
+            "title": "Seven killed in Israeli strike on Gaza, medics say",
+            "source": "RTE News",
+            "link": "https://www.rte.ie/news/world/2026/1124/1600447-israel-gaza",
+            "source_bias": "center"
+          },
+          {
+            "title": "Israeli air strike kills Hamas internal security chief in Gaza",
+            "source": "BBC - World",
+            "link": "https://www.bbc.co.uk/news/articles/c6rrg7ggq190o?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          },
+          {
+            "title": "Senior Hamas security official killed in Israeli drone strikes",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/video/newsfeed/2026/11/24/senior-hamas-security-official-killed-in-israeli-drone-strikes?traffic_source=rss",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "strike"
+          ],
+          "shared_incident_anchors": [
+            "gaza",
+            "israel",
+            "israel_airstrike"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "airstrike",
+            "conflict",
+            "death",
+            "gaza",
+            "israel",
+            "killed",
+            "palestinian",
+            "resulted",
+            "strike"
+          ],
+          "shared_entities": [
+            "gaza",
+            "israel",
+            "israel_airstrike"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_fc92d2a66c09d67e",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-11-24",
+        "last_seen_at": "2026-11-24",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 23,
+      "public_development_count": 24,
       "questionable_development_count": 1,
       "review_required": true
     },
-    "latest_title": "Israeli Airstrike on Food Aid Vehicle in Gaza Results in Multiple Deaths",
-    "latest_summary": "An Israeli airstrike on a vehicle distributing food aid in Gaza has reportedly killed three Palestinians. This incident is part of ongoing violence in the region, with additional reports indicating that overall strikes have resulted in at least six fatalities. The situation remains tense despite previous ceasefire efforts.",
+    "latest_title": "Israeli Airstrikes Kill Seven in Gaza, Including Hamas Official",
+    "latest_summary": "Israeli airstrikes in Gaza resulted in the deaths of seven Palestinians, including Naeem Abu Nahel, a senior Hamas security official, and two police officers. The strikes occurred on Tuesday, according to reports from medics and police sources.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -2015,30 +2102,30 @@
       "display_title": "Israeli Strikes in Gaza Result in Seven Deaths and Destruction of Medical Warehouses Timeline",
       "milestone_development_ids": [
         "story_8bc317b8bc17260f",
-        "story_345f2cfa835187b3",
+        "story_1c4ec80417229aa5",
         "story_3c0a3a7cdac4a21e",
-        "story_fc92d2a66c09d67e"
+        "story_7298e39a39d7cb2f"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-11-21",
-      "development_count": 23,
-      "coverage_packet_count": 29,
-      "date_count": 22,
-      "source_count": 72,
+      "summary_updated_at": "2026-11-24",
+      "development_count": 24,
+      "coverage_packet_count": 30,
+      "date_count": 23,
+      "source_count": 75,
       "independent_source_count": 24,
       "first_date": "2026-08-01",
-      "latest_date": "2026-11-21",
-      "latest_update_title": "Israeli Airstrike on Food Aid Vehicle in Gaza Results in Multiple Deaths",
+      "latest_date": "2026-11-24",
+      "latest_update_title": "Israeli Airstrikes Kill Seven in Gaza, Including Hamas Official",
       "coverage_score": 1.0,
-      "recency_score": 0.7,
-      "rank_score": 0.826,
-      "context_summary": "Muninn first tracked this thread on 2026-08-01: Israeli Strikes in Gaza Result in Seven Deaths and Destruction of Medical Warehouses. The latest development is Israeli Airstrike on Food Aid Vehicle in Gaza Results in Multiple Deaths.",
-      "cta_label": "Explore 23 developments"
+      "recency_score": 1.0,
+      "rank_score": 1.0,
+      "context_summary": "Muninn first tracked this thread on 2026-08-01: Israeli Strikes in Gaza Result in Seven Deaths and Destruction of Medical Warehouses. The latest development is Israeli Airstrikes Kill Seven in Gaza, Including Hamas Official.",
+      "cta_label": "Explore 24 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Israeli military strikes in Gaza have resulted in the deaths of seven individuals and the destruction of medical supply warehouses. A later development was Israeli Attacks in Gaza Result in Four Deaths, Including a Child. Most recently, an Israeli airstrike on a vehicle distributing food aid in Gaza has reportedly killed three Palestinians.",
+      "summary": "Israeli military strikes in Gaza have resulted in the deaths of seven individuals and the destruction of medical supply warehouses. A later development was Gaza Conditions Deteriorate Ahead of Netanyahu's UN Address. Most recently, israeli airstrikes in Gaza resulted in the deaths of seven Palestinians, including Naeem Abu Nahel, a senior Hamas security official, and two police officers.",
       "key_developments": [
         {
           "development_id": "story_8bc317b8bc17260f",
@@ -2046,9 +2133,9 @@
           "title": "Israeli Strikes in Gaza Result in Seven Deaths and Destruction of Medical Warehouses"
         },
         {
-          "development_id": "story_345f2cfa835187b3",
-          "date": "2026-09-14",
-          "title": "Israeli Airstrike in Gaza Kills Two Hamas Engineers, Injures 13 Others"
+          "development_id": "story_1c4ec80417229aa5",
+          "date": "2026-09-16",
+          "title": "Building Collapse in Gaza City Results in Multiple Fatalities and Missing Persons"
         },
         {
           "development_id": "story_3c0a3a7cdac4a21e",
@@ -2056,9 +2143,9 @@
           "title": "Israeli Forces Remove Memorial at Birzeit University Amid Ongoing Violence in Gaza"
         },
         {
-          "development_id": "story_fc92d2a66c09d67e",
-          "date": "2026-11-21",
-          "title": "Israeli Airstrike on Food Aid Vehicle in Gaza Results in Multiple Deaths"
+          "development_id": "story_7298e39a39d7cb2f",
+          "date": "2026-11-24",
+          "title": "Israeli Airstrikes Kill Seven in Gaza, Including Hamas Official"
         }
       ],
       "sources": [
@@ -2493,9 +2580,27 @@
           "source": "RTE News",
           "link": "https://www.rte.ie/news/world/2026/1121/1600131-israeli-strikes-gaza",
           "source_bias": "center"
+        },
+        {
+          "title": "Seven killed in Israeli strike on Gaza, medics say",
+          "source": "RTE News",
+          "link": "https://www.rte.ie/news/world/2026/1124/1600447-israel-gaza",
+          "source_bias": "center"
+        },
+        {
+          "title": "Israeli air strike kills Hamas internal security chief in Gaza",
+          "source": "BBC - World",
+          "link": "https://www.bbc.co.uk/news/articles/c6rrg7ggq190o?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
+        },
+        {
+          "title": "Senior Hamas security official killed in Israeli drone strikes",
+          "source": "Al Jazeera English",
+          "link": "https://www.aljazeera.com/video/newsfeed/2026/11/24/senior-hamas-security-official-killed-in-israeli-drone-strikes?traffic_source=rss",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-11-21",
+      "updated_at": "2026-11-24",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -2561,7 +2666,7 @@
         "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
         "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
         "relationship": "related_topic",
-        "confidence": 0.798,
+        "confidence": 0.797,
         "shared_entities": [
           "claim_lives",
           "four",
@@ -2934,6 +3039,7 @@
       "macklemore",
       "many",
       "marks",
+      "medic",
       "medical",
       "member",
       "memorial",
@@ -2948,6 +3054,8 @@
       "moral",
       "multi-storey",
       "multiple",
+      "naeem",
+      "nahel",
       "nasser",
       "nation",
       "near",
@@ -2965,6 +3073,7 @@
       "occurred",
       "october",
       "office",
+      "officer",
       "ongoing",
       "only",
       "operation",
@@ -3015,6 +3124,7 @@
       "samir",
       "sanitation",
       "sapling",
+      "security",
       "senior",
       "separate",
       "september",
@@ -3067,6 +3177,7 @@
       "troop",
       "truce",
       "trump",
+      "tuesday",
       "uncertainty",
       "union",
       "united",
@@ -3098,6 +3209,7 @@
       "youni"
     ],
     "entities": [
+      "abu_nahel",
       "abu_youni",
       "addresse_gaza",
       "aid_vehicle",
@@ -3152,6 +3264,7 @@
       "gaza_disarmament",
       "gaza_health",
       "gaza_hospital",
+      "gaza_including",
       "gaza_israel",
       "gaza_result",
       "gaza_strip",
@@ -3167,6 +3280,7 @@
       "his_speech",
       "hospital_claim",
       "including_children",
+      "including_hamas",
       "initiate_ground",
       "injure_other",
       "israel",
@@ -3196,6 +3310,7 @@
       "multiple_casualtie",
       "multiple_fatalitie",
       "multiple_palestinian",
+      "naeem_abu",
       "nasser_medical",
       "nation_general",
       "netanyahu_urges",
@@ -3234,7 +3349,7 @@
       "worsen_camp",
       "yellow_line"
     ],
-    "search_text": "2023 2024 2025 72-year-old abu_youni across action activist additional additionally address addresse addresse_gaza addressed addressing admission adopt agency agreement ahead aid aid_vehicle aimed airstrike airstrike_target al-beik al-din al-duyuk al-hawa al-tahta allegation already also alumni among announcement another area areas around assembly attack attacked august believed benjamin benjamin_netanyahu birzeit birzeit_university board both broader building building_collapse camp camp_condition camps carrying casualtie casualtie_including catastrophic causing ceasefire ceasefire_line ceasefire_tension central central_gaza challenge child child_israel children civil civilian claim claim_lives coincide collapse collapsed comes commander commander_linked commander_resulting commence communicated community complete complex concern concert condemned condition condition_deteriorate condition_israel confirmed conflict constructive continue controversy coward criminal criminal_investigation criticize cross cross_gaza crossed damage damaged dead deal death deceased dedicated defended defense delegate delegate_who describe described despite destruction deteriorate deteriorate_ahead dire disarmament disarmament_deal discuss discusse discusse_gaza dismantled dismissed displaced displacement displacement_israel disproportionate distributing doctor domestic donald donald_trump. dozen early east east._israel effort eight eliminate emphasi emphasized engineer engineer_injure envoy envoy_discusse erupt erupt_outside escalation established eu european european_union event exacerbated expected expressed faced fadda fadda_mohammed familie family family_israel fatalitie fheidat fired first five five-year-old flee focus food food_aid force force_remove four four-year-old fragile garnering gaza gaza. gaza._israel gaza_ceasefire gaza_claim gaza_condition gaza_disarmament gaza_health gaza_hospital gaza_israel gaza_result gaza_strip gaza_strip. general general_assembly genocide ground ground_operation group halting hamas hamas-led hamas-run hamas_commander hamas_disarmament hamas_engineer health health_ministry health_ministry. heavy high highlight highlighting hind hind_rajab hindered his_speech horrific hospital hospital_claim housed humanitarian identified impact inadequate incident including including_children increased incursion indicate indicating individual infestation infrastructure initiate initiate_ground initiated injure injure_other injured injurie international investigation involved israel israel_airstrike israel_force israel_initiate israel_launche israel_prime israel_settler israel_tanks israel_voice jerusalem jerusalem._they khan khan_youni kill killed killing kills labeling launche launche_criminal launched leading least left like line line_causing linked lives lives_including living local lost machinery macklemore macklemore_controversy many marks medical medical_complex medical_warehouse member memorial middle middle_east. military million ministry missing missing_person mladenov mohammed mohammed_fheidat month moral multi-storey multiple multiple_casualtie multiple_fatalitie multiple_palestinian nasser nasser_medical nation nation_general near nearly necessary neighborhood netanyahu netanyahu_urges night nikolay nikolay_mladenov nine noted november numerou nuseirat occurred october october. october._several october_israel office ongoing ongoing_violence only operation other outside overall overcrowded palestinian palestinian_health palestinian_woman palestinians._familie part pattern peace peace_envoy perilou person pest planning played political poses prepare previou previously prime production promised promoted proposed protest protest_erupt protested raising rajab regarding region reiterated remain remove remove_memorial replacing reported reportedly representative rescue rescuer response restriction result resulted resulting role samir samir_abu sanitation sapling senior senior_hamas separate september settler seven several sheeran sheeran_addresse shelter shifa shifa_hospital shot signed significant since situation soldier some southern specifically speech speech_israel spending stance storing strike strip strip._peace stronger structure student suffered suffering suggest supplie supply support surrounding talks tanks tanks_cross target target_hamas targeted targeting teenage tense tension tent territory they threat three toll total troop truce trump un uncertainty union united united_nation university unjustifiable urged urges urges_ceasefire vehicle violation violence voice voice_concern walked walked_out walkout war warehouse warehouse_israel weapon west which while while_palestinian who_walked withdrawal without woman women worsen worsen_camp would wounded year yellow yellow_line youni"
+    "search_text": "2023 2024 2025 72-year-old abu_nahel abu_youni across action activist additional additionally address addresse addresse_gaza addressed addressing admission adopt agency agreement ahead aid aid_vehicle aimed airstrike airstrike_target al-beik al-din al-duyuk al-hawa al-tahta allegation already also alumni among announcement another area areas around assembly attack attacked august believed benjamin benjamin_netanyahu birzeit birzeit_university board both broader building building_collapse camp camp_condition camps carrying casualtie casualtie_including catastrophic causing ceasefire ceasefire_line ceasefire_tension central central_gaza challenge child child_israel children civil civilian claim claim_lives coincide collapse collapsed comes commander commander_linked commander_resulting commence communicated community complete complex concern concert condemned condition condition_deteriorate condition_israel confirmed conflict constructive continue controversy coward criminal criminal_investigation criticize cross cross_gaza crossed damage damaged dead deal death deceased dedicated defended defense delegate delegate_who describe described despite destruction deteriorate deteriorate_ahead dire disarmament disarmament_deal discuss discusse discusse_gaza dismantled dismissed displaced displacement displacement_israel disproportionate distributing doctor domestic donald donald_trump. dozen early east east._israel effort eight eliminate emphasi emphasized engineer engineer_injure envoy envoy_discusse erupt erupt_outside escalation established eu european european_union event exacerbated expected expressed faced fadda fadda_mohammed familie family family_israel fatalitie fheidat fired first five five-year-old flee focus food food_aid force force_remove four four-year-old fragile garnering gaza gaza. gaza._israel gaza_ceasefire gaza_claim gaza_condition gaza_disarmament gaza_health gaza_hospital gaza_including gaza_israel gaza_result gaza_strip gaza_strip. general general_assembly genocide ground ground_operation group halting hamas hamas-led hamas-run hamas_commander hamas_disarmament hamas_engineer health health_ministry health_ministry. heavy high highlight highlighting hind hind_rajab hindered his_speech horrific hospital hospital_claim housed humanitarian identified impact inadequate incident including including_children including_hamas increased incursion indicate indicating individual infestation infrastructure initiate initiate_ground initiated injure injure_other injured injurie international investigation involved israel israel_airstrike israel_force israel_initiate israel_launche israel_prime israel_settler israel_tanks israel_voice jerusalem jerusalem._they khan khan_youni kill killed killing kills labeling launche launche_criminal launched leading least left like line line_causing linked lives lives_including living local lost machinery macklemore macklemore_controversy many marks medic medical medical_complex medical_warehouse member memorial middle middle_east. military million ministry missing missing_person mladenov mohammed mohammed_fheidat month moral multi-storey multiple multiple_casualtie multiple_fatalitie multiple_palestinian naeem naeem_abu nahel nasser nasser_medical nation nation_general near nearly necessary neighborhood netanyahu netanyahu_urges night nikolay nikolay_mladenov nine noted november numerou nuseirat occurred october october. october._several october_israel office officer ongoing ongoing_violence only operation other outside overall overcrowded palestinian palestinian_health palestinian_woman palestinians._familie part pattern peace peace_envoy perilou person pest planning played political poses prepare previou previously prime production promised promoted proposed protest protest_erupt protested raising rajab regarding region reiterated remain remove remove_memorial replacing reported reportedly representative rescue rescuer response restriction result resulted resulting role samir samir_abu sanitation sapling security senior senior_hamas separate september settler seven several sheeran sheeran_addresse shelter shifa shifa_hospital shot signed significant since situation soldier some southern specifically speech speech_israel spending stance storing strike strip strip._peace stronger structure student suffered suffering suggest supplie supply support surrounding talks tanks tanks_cross target target_hamas targeted targeting teenage tense tension tent territory they threat three toll total troop truce trump tuesday un uncertainty union united united_nation university unjustifiable urged urges urges_ceasefire vehicle violation violence voice voice_concern walked walked_out walkout war warehouse warehouse_israel weapon west which while while_palestinian who_walked withdrawal without woman women worsen worsen_camp would wounded year yellow yellow_line youni"
   },
   "related_events": [
     {
@@ -3246,7 +3361,7 @@
       "stage_label": "Timeline",
       "first_seen_at": "2026-07-22",
       "last_seen_at": "2026-11-24",
-      "development_count": 129,
+      "development_count": 131,
       "latest_title": "Rescue Operation Saves Woman Trapped for 22 Hours in Ukraine After Russian Strike",
       "topic_label": "Iran War",
       "hero_image": {

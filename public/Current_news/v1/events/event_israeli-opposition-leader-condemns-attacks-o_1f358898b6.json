@@ -15,7 +15,7 @@
     "summary": "Israeli opposition leader Gadi Eisenkot has condemned a series of arson attacks on Palestinian villages in the occupied West Bank, labeling them as 'Jewish terrorism.' The attacks involved Israeli settlers setting fire to vehicles and properties in multiple locations. In response, Israeli authorities have initiated an investigation into the incidents.",
     "status": "active",
     "first_seen_at": "2026-11-22",
-    "last_seen_at": "2026-11-22",
+    "last_seen_at": "2026-11-24",
     "timeline": [
       {
         "development_id": "story_807be846acbc1f16",
@@ -166,6 +166,75 @@
         "first_seen_at": "2026-11-22",
         "last_seen_at": "2026-11-22",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_42680db72dd335e1",
+        "daily_story_id": "story_42680db72dd335e1",
+        "date": "2026-11-24",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Cameroon Separatist Leader Denies War Crimes Charges in Norway",
+        "summary": "Lucas Cho Ayaba, a leader of the Cameroon separatist movement, pleaded not guilty in a Norwegian court to charges of being an accessory to war crimes and terrorism. He is accused of orchestrating attacks that resulted in civilian casualties.",
+        "topic_label": "Cameroon Conflict",
+        "development_type": "military_action",
+        "key_facts": [
+          "Lucas Cho Ayaba pleaded not guilty to war crimes and terrorism charges.",
+          "The trial is taking place in Norway.",
+          "He is accused of planning attacks that killed and injured civilians."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Africanews",
+          "Al Jazeera English"
+        ],
+        "source_urls": [
+          "http://www.africanews.com/2026/11/24/cameroon-separatist-leader-pleads-not-guilty-at-norway-war-crimes-trial",
+          "https://www.aljazeera.com/news/2026/11/24/cameroon-separatist-leader-pleads-not-guilty-in-war-crimes-trial?traffic_source=rss"
+        ],
+        "source_details": [
+          {
+            "title": "Cameroon separatist leader pleads not guilty at Norway war crimes trial",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/11/24/cameroon-separatist-leader-pleads-not-guilty-at-norway-war-crimes-trial",
+            "source_bias": "center"
+          },
+          {
+            "title": "Cameroon separatist leader pleads not guilty at war crimes trial in Norway",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/news/2026/11/24/cameroon-separatist-leader-pleads-not-guilty-in-war-crimes-trial?traffic_source=rss",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "attack"
+          ],
+          "shared_incident_anchors": [
+            "leader"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "attack",
+            "leader",
+            "terrorism"
+          ],
+          "shared_entities": [
+            "leader"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_dbd9f19eb58e6dc3",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-11-24",
+        "last_seen_at": "2026-11-24",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -196,12 +265,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 2,
+      "public_development_count": 3,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Israeli Opposition Leader Condemns Attacks on Palestinian Villages as 'Jewish Terrorism'",
-    "latest_summary": "Israeli opposition leader Gadi Eisenkot has condemned a series of arson attacks on Palestinian villages in the occupied West Bank, labeling them as 'Jewish terrorism.' The attacks involved Israeli settlers setting fire to vehicles and properties in multiple locations. In response, Israeli authorities have initiated an investigation into the incidents.",
+    "latest_title": "Cameroon Separatist Leader Denies War Crimes Charges in Norway",
+    "latest_summary": "Lucas Cho Ayaba, a leader of the Cameroon separatist movement, pleaded not guilty in a Norwegian court to charges of being an accessory to war crimes and terrorism. He is accused of orchestrating attacks that resulted in civilian casualties.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": false,
@@ -211,28 +280,29 @@
       "display_title": "Israeli Opposition Leader Condemns Attacks on Palestinian Villages as 'Jewish Terrorism'",
       "milestone_development_ids": [
         "story_807be846acbc1f16",
-        "story_dbd9f19eb58e6dc3"
+        "story_dbd9f19eb58e6dc3",
+        "story_42680db72dd335e1"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-11-22",
-      "development_count": 2,
-      "coverage_packet_count": 2,
-      "date_count": 1,
-      "source_count": 6,
-      "independent_source_count": 6,
+      "summary_updated_at": "2026-11-24",
+      "development_count": 3,
+      "coverage_packet_count": 3,
+      "date_count": 2,
+      "source_count": 8,
+      "independent_source_count": 7,
       "first_date": "2026-11-22",
-      "latest_date": "2026-11-22",
-      "latest_update_title": "Israeli Opposition Leader Condemns Attacks on Palestinian Villages as 'Jewish Terrorism'",
-      "coverage_score": 0.457,
-      "recency_score": 0.778,
-      "rank_score": 0.643,
-      "context_summary": "Muninn first tracked this thread on 2026-11-22: Attacks on Four Palestinian Villages in West Bank Attributed to Settlers. The latest development is Israeli Opposition Leader Condemns Attacks on Palestinian Villages as 'Jewish Terrorism'.",
+      "latest_date": "2026-11-24",
+      "latest_update_title": "Cameroon Separatist Leader Denies War Crimes Charges in Norway",
+      "coverage_score": 0.618,
+      "recency_score": 1.0,
+      "rank_score": 0.839,
+      "context_summary": "Muninn first tracked this thread on 2026-11-22: Attacks on Four Palestinian Villages in West Bank Attributed to Settlers. The latest development is Cameroon Separatist Leader Denies War Crimes Charges in Norway.",
       "cta_label": ""
     },
     "event_summary": {
       "available": true,
-      "summary": "On November 22, 2026, four Palestinian villages in the Israeli-occupied West Bank experienced attacks that resulted in burnt-out cars, damaged trucks, and anti-Arab graffiti. Most recently, israeli opposition leader Gadi Eisenkot has condemned a series of arson attacks on Palestinian villages in the occupied West Bank, labeling them as 'Jewish terrorism.' The attacks involved Israeli settlers setting fire to vehicles and properties in multiple locations.",
+      "summary": "On November 22, 2026, four Palestinian villages in the Israeli-occupied West Bank experienced attacks that resulted in burnt-out cars, damaged trucks, and anti-Arab graffiti. A later development was Israeli Opposition Leader Condemns Attacks on Palestinian Villages as 'Jewish Terrorism'. Most recently, lucas Cho Ayaba, a leader of the Cameroon separatist movement, pleaded not guilty in a Norwegian court to charges of being an accessory to war crimes and terrorism.",
       "key_developments": [
         {
           "development_id": "story_807be846acbc1f16",
@@ -243,6 +313,11 @@
           "development_id": "story_dbd9f19eb58e6dc3",
           "date": "2026-11-22",
           "title": "Israeli Opposition Leader Condemns Attacks on Palestinian Villages as 'Jewish Terrorism'"
+        },
+        {
+          "development_id": "story_42680db72dd335e1",
+          "date": "2026-11-24",
+          "title": "Cameroon Separatist Leader Denies War Crimes Charges in Norway"
         }
       ],
       "sources": [
@@ -281,9 +356,21 @@
           "source": "RTE News",
           "link": "https://www.rte.ie/news/middle-east/2026/1122/1600216-west-bank-fires",
           "source_bias": "center"
+        },
+        {
+          "title": "Cameroon separatist leader pleads not guilty at Norway war crimes trial",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/11/24/cameroon-separatist-leader-pleads-not-guilty-at-norway-war-crimes-trial",
+          "source_bias": "center"
+        },
+        {
+          "title": "Cameroon separatist leader pleads not guilty at war crimes trial in Norway",
+          "source": "Al Jazeera English",
+          "link": "https://www.aljazeera.com/news/2026/11/24/cameroon-separatist-leader-pleads-not-guilty-in-war-crimes-trial?traffic_source=rss",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-11-22",
+      "updated_at": "2026-11-24",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "developing_event",
@@ -292,7 +379,7 @@
         "event_id": "event_israeli-opposition-leaders-accuse-netanyahu_4f49b18f52",
         "title": "Israeli Opposition Leaders Accuse Netanyahu of Attempted Coup",
         "relationship": "related_topic",
-        "confidence": 0.757,
+        "confidence": 0.755,
         "shared_entities": [
           "gadi_eisenkot",
           "israel",
@@ -301,10 +388,20 @@
         ]
       },
       {
+        "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
+        "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
+        "relationship": "related_topic",
+        "confidence": 0.703,
+        "shared_entities": [
+          "israel",
+          "war_crime"
+        ]
+      },
+      {
         "event_id": "event_protests-erupt-in-israel-against-election-in_a0b546d8ce",
         "title": "Protests Erupt in Israel Against Election Interference Ahead of October Vote",
         "relationship": "related_topic",
-        "confidence": 0.695,
+        "confidence": 0.688,
         "shared_entities": [
           "israel",
           "west"
@@ -314,20 +411,10 @@
         "event_id": "event_protests-erupt-in-india-demanding-resignatio_ce12dfc1ae",
         "title": "Protests Erupt in India Demanding Resignation of Election Chief",
         "relationship": "related_topic",
-        "confidence": 0.668,
+        "confidence": 0.661,
         "shared_entities": [
           "israel",
           "west"
-        ]
-      },
-      {
-        "event_id": "event_opposition-supporters-in-israel-celebrate-na_b2c5773e41",
-        "title": "Opposition Supporters in Israel Celebrate Narrow Lead in Exit Polls",
-        "relationship": "related_topic",
-        "confidence": 0.661,
-        "shared_entities": [
-          "gadi_eisenkot",
-          "israel"
         ]
       }
     ],
@@ -456,24 +543,35 @@
     },
     "search_tokens": [
       "2026",
+      "accessory",
+      "accused",
       "activist",
       "anti-arab",
       "arson",
       "attack",
       "attributed",
       "authoritie",
+      "ayaba",
       "bank",
       "burnt-out",
+      "cameroon",
       "cars",
+      "casualtie",
+      "charge",
+      "civilian",
       "condemn",
       "condemned",
+      "court",
+      "crime",
       "damaged",
+      "denie",
       "eisenkot",
       "experienced",
       "fire",
       "four",
       "gadi",
       "graffiti",
+      "guilty",
       "incident",
       "initiated",
       "investigation",
@@ -485,14 +583,21 @@
       "leader",
       "local",
       "location",
+      "lucas",
+      "movement",
       "multiple",
+      "norway",
+      "norwegian",
       "november",
       "occupied",
       "opposition",
+      "orchestrating",
       "palestinian",
+      "pleaded",
       "propertie",
       "response",
       "resulted",
+      "separatist",
       "serie",
       "setting",
       "settler",
@@ -502,10 +607,15 @@
       "truck",
       "vehicle",
       "village",
+      "war",
       "west"
     ],
     "entities": [
       "anti-arab",
+      "cameroon_separatist",
+      "cho_ayaba",
+      "crime_charge",
+      "denie_war",
       "gadi_eisenkot",
       "israel",
       "israel_opposition",
@@ -513,15 +623,56 @@
       "israeli-occupied_west",
       "jewish_terrorism",
       "leader_condemn",
+      "leader_denie",
+      "lucas_cho",
+      "norway",
+      "norway_lucas",
+      "norwegian",
       "opposition_leader",
       "palestinian_village",
+      "separatist_leader",
       "settler",
       "terrorism_israel",
+      "war_crime",
       "west"
     ],
-    "search_text": "2026 activist anti-arab arson attack attributed authoritie bank burnt-out cars condemn condemned damaged eisenkot experienced fire four gadi gadi_eisenkot graffiti incident initiated investigation involved israel israel_opposition israeli-occupied israeli-occupied_west jewish jewish_terrorism labeling leader leader_condemn local location multiple november occupied opposition opposition_leader palestinian palestinian_village propertie response resulted serie setting settler terrorism terrorism_israel them these truck vehicle village west"
+    "search_text": "2026 accessory accused activist anti-arab arson attack attributed authoritie ayaba bank burnt-out cameroon cameroon_separatist cars casualtie charge cho_ayaba civilian condemn condemned court crime crime_charge damaged denie denie_war eisenkot experienced fire four gadi gadi_eisenkot graffiti guilty incident initiated investigation involved israel israel_opposition israeli-occupied israeli-occupied_west jewish jewish_terrorism labeling leader leader_condemn leader_denie local location lucas lucas_cho movement multiple norway norway_lucas norwegian november occupied opposition opposition_leader orchestrating palestinian palestinian_village pleaded propertie response resulted separatist separatist_leader serie setting settler terrorism terrorism_israel them these truck vehicle village war war_crime west"
   },
   "related_events": [
+    {
+      "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
+      "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
+      "summary": "Muninn first tracked this thread on 2026-09-11: Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims. The latest development is USS Theodore Roosevelt Arrives in Middle East with Additional Troops.",
+      "activity_status": "active",
+      "stage": "timeline",
+      "stage_label": "Timeline",
+      "first_seen_at": "2026-09-11",
+      "last_seen_at": "2026-11-16",
+      "development_count": 39,
+      "latest_title": "USS Theodore Roosevelt Arrives in Middle East with Additional Troops",
+      "topic_label": "9/11 Victim Compensation",
+      "hero_image": {
+        "url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",
+        "thumbnail_url": "/Current_news/generated/events/event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b.jpg",
+        "source": "Muninn AI illustration",
+        "author": "OpenAI GPT Image 2",
+        "license": "AI-generated content",
+        "image_role": "illustrative",
+        "image_role_label": "AI illustration",
+        "is_ai_generated": true,
+        "generation_model": "gpt-image-2",
+        "generation_quality": "low",
+        "safe_to_crop": true,
+        "allows_crop": true,
+        "focal_x": 0.5,
+        "focal_y": 0.48,
+        "focal_wide_x": 0.5,
+        "focal_wide_y": 0.48,
+        "focal_tall_x": 0.5,
+        "focal_tall_y": 0.48
+      },
+      "href": "/timeline.html?event=event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b"
+    },
     {
       "event_id": "event_protests-erupt-in-israel-against-election-in_a0b546d8ce",
       "title": "Protests Erupt in Israel Against Election Interference Ahead of October Vote",
