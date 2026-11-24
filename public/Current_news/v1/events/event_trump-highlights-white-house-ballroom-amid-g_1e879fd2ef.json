@@ -15,7 +15,7 @@
     "summary": "Following significant losses for the Republican Party in the midterm elections, President Trump hosted an event in the unfinished White House ballroom. During his first public appearance after the elections, he focused on the ballroom's construction and largely avoided discussing the GOP's electoral performance.",
     "status": "active",
     "first_seen_at": "2026-11-04",
-    "last_seen_at": "2026-11-09",
+    "last_seen_at": "2026-11-24",
     "timeline": [
       {
         "development_id": "story_0099bd83247182c5",
@@ -204,47 +204,110 @@
         "first_seen_at": "2026-11-09",
         "last_seen_at": "2026-11-09",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_e61c4875c00975a4",
+        "daily_story_id": "story_e61c4875c00975a4",
+        "date": "2026-11-24",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Denmark's Supreme Court Upholds Controversial Immigration Law",
+        "summary": "Denmark's Supreme Court has ruled that the eviction of 'non-Western' residents under the government's 'ghetto law' does not amount to discrimination. The law, which aims to encourage integration, has been a point of contention in the country's immigration policy.",
+        "topic_label": "Immigration Policy",
+        "development_type": "policy",
+        "key_facts": [
+          "Denmark's Supreme Court ruled on the legality of the 'ghetto law'.",
+          "The law allows for the eviction of 'non-Western' families.",
+          "The court found that these evictions do not constitute discrimination."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Al Jazeera English",
+          "DW - English"
+        ],
+        "source_urls": [
+          "https://www.dw.com/en/denmark-top-court-backs-hardline-immigration-ghetto-law/a-80026478?maca=en-rss-en-all-1573-rdf",
+          "https://www.aljazeera.com/news/2026/11/23/danish-top-courts-ghetto-law-ruling-supports-hardline-immigration-policy?traffic_source=rss"
+        ],
+        "source_details": [
+          {
+            "title": "Denmark: Top court backs hardline immigration 'ghetto law'",
+            "source": "DW - English",
+            "link": "https://www.dw.com/en/denmark-top-court-backs-hardline-immigration-ghetto-law/a-80026478?maca=en-rss-en-all-1573-rdf",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Danish top court’s ‘ghetto law’ ruling supports hardline immigration policy",
+            "source": "Al Jazeera English",
+            "link": "https://www.aljazeera.com/news/2026/11/23/danish-top-courts-ghetto-law-ruling-supports-hardline-immigration-policy?traffic_source=rss",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_c3cb650bb86d021c",
+          "shared_tokens": [
+            "immigration",
+            "policy"
+          ],
+          "shared_entities": [
+            "immigration_policy"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-11-24",
+        "last_seen_at": "2026-11-24",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 3,
+      "public_development_count": 4,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Trump Reflects on Deportation Policy After Midterm Losses",
-    "latest_summary": "In a recent interview, Trump acknowledged that his administration's strict deportation policy may have contributed to the Republican Party's losses in the midterm elections. He expressed a willingness to collaborate with Democrats in the new Congress to reach an immigration agreement.",
+    "latest_title": "Denmark's Supreme Court Upholds Controversial Immigration Law",
+    "latest_summary": "Denmark's Supreme Court has ruled that the eviction of 'non-Western' residents under the government's 'ghetto law' does not amount to discrimination. The law, which aims to encourage integration, has been a point of contention in the country's immigration policy.",
     "presentation": {
       "has_context": true,
-      "has_full_timeline": false,
-      "stage": "developing_event",
-      "stage_label": "Developing event",
+      "has_full_timeline": true,
+      "stage": "timeline",
+      "stage_label": "Timeline",
       "base_title": "Trump Highlights White House Ballroom Amid GOP Midterm Losses",
-      "display_title": "Trump Highlights White House Ballroom Amid GOP Midterm Losses",
+      "display_title": "Trump Highlights White House Ballroom Amid GOP Midterm Losses Timeline",
       "milestone_development_ids": [
         "story_0099bd83247182c5",
         "story_6add1727d7bb8dbf",
-        "story_c3cb650bb86d021c"
+        "story_c3cb650bb86d021c",
+        "story_e61c4875c00975a4"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-11-09",
-      "development_count": 3,
-      "coverage_packet_count": 3,
-      "date_count": 3,
-      "source_count": 6,
-      "independent_source_count": 4,
+      "summary_updated_at": "2026-11-24",
+      "development_count": 4,
+      "coverage_packet_count": 4,
+      "date_count": 4,
+      "source_count": 8,
+      "independent_source_count": 6,
       "first_date": "2026-11-04",
-      "latest_date": "2026-11-09",
-      "latest_update_title": "Trump Reflects on Deportation Policy After Midterm Losses",
-      "coverage_score": 0.52,
-      "recency_score": 0.35,
-      "rank_score": 0.421,
-      "context_summary": "Muninn first tracked this thread on 2026-11-04: Trump Highlights White House Ballroom Amid GOP Midterm Losses. The latest development is Trump Reflects on Deportation Policy After Midterm Losses.",
-      "cta_label": ""
+      "latest_date": "2026-11-24",
+      "latest_update_title": "Denmark's Supreme Court Upholds Controversial Immigration Law",
+      "coverage_score": 0.718,
+      "recency_score": 1.0,
+      "rank_score": 0.882,
+      "context_summary": "Muninn first tracked this thread on 2026-11-04: Trump Highlights White House Ballroom Amid GOP Midterm Losses. The latest development is Denmark's Supreme Court Upholds Controversial Immigration Law.",
+      "cta_label": "Explore 4 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Following significant losses for the Republican Party in the midterm elections, President Trump hosted an event in the unfinished White House ballroom. A later development was Trump Criticizes 'Crooked' Elections Following Midterm Losses. Most recently, in a recent interview, Trump acknowledged that his administration's strict deportation policy may have contributed to the Republican Party's losses in the midterm elections.",
+      "summary": "Following significant losses for the Republican Party in the midterm elections, President Trump hosted an event in the unfinished White House ballroom. A later development was Trump Reflects on Deportation Policy After Midterm Losses. Most recently, denmark's Supreme Court has ruled that the eviction of 'non-Western' residents under the government's 'ghetto law' does not amount to discrimination.",
       "key_developments": [
         {
           "development_id": "story_0099bd83247182c5",
@@ -260,6 +323,11 @@
           "development_id": "story_c3cb650bb86d021c",
           "date": "2026-11-09",
           "title": "Trump Reflects on Deportation Policy After Midterm Losses"
+        },
+        {
+          "development_id": "story_e61c4875c00975a4",
+          "date": "2026-11-24",
+          "title": "Denmark's Supreme Court Upholds Controversial Immigration Law"
         }
       ],
       "sources": [
@@ -298,18 +366,30 @@
           "source": "Africanews",
           "link": "http://www.africanews.com/2026/11/09/trump-says-tough-us-deportation-policy-may-explain-midterm-losses",
           "source_bias": "center"
+        },
+        {
+          "title": "Denmark: Top court backs hardline immigration 'ghetto law'",
+          "source": "DW - English",
+          "link": "https://www.dw.com/en/denmark-top-court-backs-hardline-immigration-ghetto-law/a-80026478?maca=en-rss-en-all-1573-rdf",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Danish top court’s ‘ghetto law’ ruling supports hardline immigration policy",
+          "source": "Al Jazeera English",
+          "link": "https://www.aljazeera.com/news/2026/11/23/danish-top-courts-ghetto-law-ruling-supports-hardline-immigration-policy?traffic_source=rss",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-11-09",
+      "updated_at": "2026-11-24",
       "provenance": "source_grounded_event_memory"
     },
-    "event_stage": "developing_event",
+    "event_stage": "timeline",
     "related_events": [
       {
         "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
         "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
         "relationship": "related_topic",
-        "confidence": 0.89,
+        "confidence": 0.877,
         "shared_entities": [
           "donald_trump",
           "gop",
@@ -323,7 +403,7 @@
         "event_id": "event_foreign-leaders-react-to-gop-midterm-losses_2d665ad838",
         "title": "Foreign Leaders React to GOP Midterm Losses with Bold Statements",
         "relationship": "related_topic",
-        "confidence": 0.745,
+        "confidence": 0.744,
         "shared_entities": [
           "gop",
           "gop_midterm",
@@ -335,7 +415,7 @@
         "event_id": "event_trump-attributes-midterm-losses-to-absence-f_df13e3c0ae",
         "title": "Trump Attributes Midterm Losses to Absence from Ballot",
         "relationship": "related_topic",
-        "confidence": 0.697,
+        "confidence": 0.704,
         "shared_entities": [
           "midterm_losse",
           "republican_party"
@@ -345,7 +425,7 @@
         "event_id": "event_brother-of-nypd-officer-who-died-from-9-11-r_d8e7b9299b",
         "title": "Brother of NYPD Officer Who Died from 9/11-Related Cancer Advocates for Victims",
         "relationship": "related_topic",
-        "confidence": 0.695,
+        "confidence": 0.687,
         "shared_entities": [
           "donald_trump",
           "republican"
@@ -376,6 +456,8 @@
       "acknowledged",
       "administration",
       "agreement",
+      "aims",
+      "amount",
       "appearance",
       "avoided",
       "ballroom",
@@ -384,47 +466,66 @@
       "comment",
       "congress",
       "construction",
+      "contention",
       "contributed",
+      "controversial",
+      "court",
       "criticize",
       "crooked",
       "democrat",
+      "denmark",
       "deportation",
       "disappointing",
+      "discrimination",
       "discussing",
+      "does",
       "donald",
       "election",
       "electoral",
+      "encourage",
       "event",
+      "eviction",
       "expressed",
       "first",
       "focused",
+      "ghetto",
       "highlight",
       "hosted",
       "house",
       "immigration",
+      "integration",
       "interview",
       "labeled",
       "largely",
       "losse",
       "midterm",
+      "non-western",
       "party",
       "performance",
+      "point",
       "policy",
       "public",
       "reach",
       "recent",
       "reflect",
       "republican",
+      "resident",
+      "ruled",
       "significant",
       "strict",
+      "supreme",
       "trump",
+      "under",
       "unfinished",
+      "uphold",
       "victory",
       "wake",
+      "which",
       "white",
       "willingness"
     ],
     "entities": [
+      "controversial_immigration",
       "crooked_election",
       "deportation_policy",
       "donald_trump",
@@ -432,27 +533,31 @@
       "gop_midterm",
       "highlight_white",
       "house_ballroom",
+      "immigration_law",
+      "law_denmark",
       "midterm_losse",
+      "non-western",
       "republican",
       "republican_party",
       "trump_highlight",
       "trump_reflect",
+      "uphold_controversial",
       "white_house"
     ],
-    "search_text": "acknowledged administration agreement appearance avoided ballroom collaborate come comment congress construction contributed criticize crooked crooked_election democrat deportation deportation_policy disappointing discussing donald donald_trump election electoral event expressed first focused gop gop_midterm highlight highlight_white hosted house house_ballroom immigration interview labeled largely losse midterm midterm_losse party performance policy public reach recent reflect republican republican_party significant strict trump trump_highlight trump_reflect unfinished victory wake white white_house willingness"
+    "search_text": "acknowledged administration agreement aims amount appearance avoided ballroom collaborate come comment congress construction contention contributed controversial controversial_immigration court criticize crooked crooked_election democrat denmark deportation deportation_policy disappointing discrimination discussing does donald donald_trump election electoral encourage event eviction expressed first focused ghetto gop gop_midterm highlight highlight_white hosted house house_ballroom immigration immigration_law integration interview labeled largely law_denmark losse midterm midterm_losse non-western party performance point policy public reach recent reflect republican republican_party resident ruled significant strict supreme trump trump_highlight trump_reflect under unfinished uphold uphold_controversial victory wake which white white_house willingness"
   },
   "related_events": [
     {
       "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
       "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
-      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Suspected Drone Strike on Russian Ship in Benghazi Raises Security Concerns.",
+      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Rescue Operation Saves Woman Trapped for 22 Hours in Ukraine After Russian Strike.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-07-22",
-      "last_seen_at": "2026-11-22",
-      "development_count": 127,
-      "latest_title": "Suspected Drone Strike on Russian Ship in Benghazi Raises Security Concerns",
+      "last_seen_at": "2026-11-24",
+      "development_count": 129,
+      "latest_title": "Rescue Operation Saves Woman Trapped for 22 Hours in Ukraine After Russian Strike",
       "topic_label": "Iran War",
       "hero_image": {
         "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",

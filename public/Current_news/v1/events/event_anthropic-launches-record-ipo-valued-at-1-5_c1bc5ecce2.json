@@ -15,7 +15,7 @@
     "summary": "Anthropic has begun trading on the Nasdaq following a record initial public offering (IPO) that raised approximately $81.3 billion. This valuation positions the AI company at around $1.5 trillion, surpassing SpaceX's previous record of $75 billion. Despite concerns about market volatility and public sentiment towards AI, the company's shares surged upon debut.",
     "status": "active",
     "first_seen_at": "2026-11-19",
-    "last_seen_at": "2026-11-21",
+    "last_seen_at": "2026-11-24",
     "timeline": [
       {
         "development_id": "story_0d3526d8c3c9eaf6",
@@ -229,47 +229,117 @@
         "first_seen_at": "2026-11-21",
         "last_seen_at": "2026-11-21",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_4f90403f26447a2e",
+        "daily_story_id": "story_4f90403f26447a2e",
+        "date": "2026-11-24",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Protests Erupt in Belgium Against Austerity Measures Amid Rising Living Costs",
+        "summary": "On November 23, 2026, thousands of workers marched in Brussels to protest proposed austerity measures as Belgium's government faced challenges in finalizing its budget for 2027. The demonstrations turned confrontational, leading police to use tear gas and water cannons to disperse crowds.",
+        "topic_label": "Belgium Protests",
+        "development_type": "development",
+        "key_facts": [
+          "Thousands of workers protested in Brussels.",
+          "The protests were against proposed austerity measures.",
+          "Police deployed tear gas and water cannons during clashes."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Africanews",
+          "Euronews"
+        ],
+        "source_urls": [
+          "https://www.euronews.com/video/2026/11/23/belgium-workers-march-against-spending-cuts-as-living-costs-rise",
+          "http://www.africanews.com/2026/11/23/belgium-workers-march-against-spending-cuts-as-living-costs-rise"
+        ],
+        "source_details": [
+          {
+            "title": "Belgium: Workers march against spending cuts as living costs rise",
+            "source": "Euronews",
+            "link": "https://www.euronews.com/video/2026/11/23/belgium-workers-march-against-spending-cuts-as-living-costs-rise",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Belgium: Workers march against spending cuts as living costs rise",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/11/23/belgium-workers-march-against-spending-cuts-as-living-costs-rise",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "protest"
+          ],
+          "shared_incident_anchors": [
+            "protest_erupt"
+          ],
+          "shared_incident_numbers": [],
+          "shared_tokens": [
+            "erupt",
+            "protest",
+            "protested"
+          ],
+          "shared_entities": [
+            "protest_erupt"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_06ce974b038a38b4",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-11-24",
+        "last_seen_at": "2026-11-24",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 3,
+      "public_development_count": 4,
       "questionable_development_count": 2,
       "review_required": true
     },
-    "latest_title": "Protests Erupt Over COP31's Inaction on Fossil Fuels",
-    "latest_summary": "Activists and civil society groups protested during the COP31 climate talks, criticizing the event for failing to advance discussions on moving away from fossil fuels. The talks, held in Turkey, extended into overtime as delegates struggled to reach consensus on key issues, with fossil fuels notably absent from the draft deal.",
+    "latest_title": "Protests Erupt in Belgium Against Austerity Measures Amid Rising Living Costs",
+    "latest_summary": "On November 23, 2026, thousands of workers marched in Brussels to protest proposed austerity measures as Belgium's government faced challenges in finalizing its budget for 2027. The demonstrations turned confrontational, leading police to use tear gas and water cannons to disperse crowds.",
     "presentation": {
       "has_context": true,
-      "has_full_timeline": false,
-      "stage": "developing_event",
-      "stage_label": "Developing event",
+      "has_full_timeline": true,
+      "stage": "timeline",
+      "stage_label": "Timeline",
       "base_title": "Anthropic Launches Record IPO, Valued at $1.5 Trillion on Nasdaq",
-      "display_title": "Anthropic Launches Record IPO, Valued at $1.5 Trillion on Nasdaq",
+      "display_title": "Anthropic Launches Record IPO, Valued at $1.5 Trillion on Nasdaq Timeline",
       "milestone_development_ids": [
         "story_0d3526d8c3c9eaf6",
         "story_2eef87cf4cbe7dea",
-        "story_06ce974b038a38b4"
+        "story_06ce974b038a38b4",
+        "story_4f90403f26447a2e"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-11-21",
-      "development_count": 3,
-      "coverage_packet_count": 3,
-      "date_count": 3,
-      "source_count": 9,
-      "independent_source_count": 9,
+      "summary_updated_at": "2026-11-24",
+      "development_count": 4,
+      "coverage_packet_count": 4,
+      "date_count": 4,
+      "source_count": 11,
+      "independent_source_count": 10,
       "first_date": "2026-11-19",
-      "latest_date": "2026-11-21",
-      "latest_update_title": "Protests Erupt Over COP31's Inaction on Fossil Fuels",
-      "coverage_score": 0.708,
-      "recency_score": 0.875,
-      "rank_score": 0.805,
-      "context_summary": "Muninn first tracked this thread on 2026-11-19: Anthropic Launches Record IPO, Valued at $1.5 Trillion on Nasdaq. The latest development is Protests Erupt Over COP31's Inaction on Fossil Fuels.",
-      "cta_label": ""
+      "latest_date": "2026-11-24",
+      "latest_update_title": "Protests Erupt in Belgium Against Austerity Measures Amid Rising Living Costs",
+      "coverage_score": 0.831,
+      "recency_score": 1.0,
+      "rank_score": 0.929,
+      "context_summary": "Muninn first tracked this thread on 2026-11-19: Anthropic Launches Record IPO, Valued at $1.5 Trillion on Nasdaq. The latest development is Protests Erupt in Belgium Against Austerity Measures Amid Rising Living Costs.",
+      "cta_label": "Explore 4 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Anthropic has begun trading on the Nasdaq following a record initial public offering (IPO) that raised approximately $81.3 billion. A later development was Widespread Protests Erupt Across Europe Over Living Costs and Wages. Most recently, activists and civil society groups protested during the COP31 climate talks, criticizing the event for failing to advance discussions on moving away from fossil fuels.",
+      "summary": "Anthropic has begun trading on the Nasdaq following a record initial public offering (IPO) that raised approximately $81.3 billion. A later development was Protests Erupt Over COP31's Inaction on Fossil Fuels. Most recently, on November 23, 2026, thousands of workers marched in Brussels to protest proposed austerity measures as Belgium's government faced challenges in finalizing its budget for 2027.",
       "key_developments": [
         {
           "development_id": "story_0d3526d8c3c9eaf6",
@@ -285,6 +355,11 @@
           "development_id": "story_06ce974b038a38b4",
           "date": "2026-11-21",
           "title": "Protests Erupt Over COP31's Inaction on Fossil Fuels"
+        },
+        {
+          "development_id": "story_4f90403f26447a2e",
+          "date": "2026-11-24",
+          "title": "Protests Erupt in Belgium Against Austerity Measures Amid Rising Living Costs"
         }
       ],
       "sources": [
@@ -341,18 +416,30 @@
           "source": "PBS News - Headlines",
           "link": "https://www.pbs.org/newshour/world/activists-leaders-criticize-cop31-climate-talks-as-fossil-fuels-go-unmentioned-in-draft-deal",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Belgium: Workers march against spending cuts as living costs rise",
+          "source": "Euronews",
+          "link": "https://www.euronews.com/video/2026/11/23/belgium-workers-march-against-spending-cuts-as-living-costs-rise",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Belgium: Workers march against spending cuts as living costs rise",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/11/23/belgium-workers-march-against-spending-cuts-as-living-costs-rise",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-11-21",
+      "updated_at": "2026-11-24",
       "provenance": "source_grounded_event_memory"
     },
-    "event_stage": "developing_event",
+    "event_stage": "timeline",
     "related_events": [
       {
         "event_id": "event_france-faces-aftermath-of-violent-protests-w_6d2156f35f",
         "title": "France Faces Aftermath of Violent Protests with Widespread Damage and Arrests",
         "relationship": "related_topic",
-        "confidence": 0.856,
+        "confidence": 0.864,
         "shared_entities": [
           "across_europe",
           "erupt_across",
@@ -366,17 +453,18 @@
         "event_id": "event_protests-in-france-surge-over-rising-living_db38db0044",
         "title": "Protests in France Surge Over Rising Living Costs Amid Union Strikes",
         "relationship": "related_topic",
-        "confidence": 0.706,
+        "confidence": 0.745,
         "shared_entities": [
           "france",
-          "living_costs"
+          "living_costs",
+          "rising_living"
         ]
       },
       {
         "event_id": "event_protests-erupt-in-india-demanding-resignatio_ce12dfc1ae",
         "title": "Protests Erupt in India Demanding Resignation of Election Chief",
         "relationship": "related_topic",
-        "confidence": 0.695,
+        "confidence": 0.701,
         "shared_entities": [
           "france",
           "protest_erupt"
@@ -386,7 +474,7 @@
         "event_id": "event_world-leaders-under-pressure-at-cop31-amid-c_c18b05054b",
         "title": "World Leaders Under Pressure at COP31 Amid Climate Change Disputes",
         "relationship": "related_topic",
-        "confidence": 0.689,
+        "confidence": 0.688,
         "shared_entities": [
           "cop31",
           "turkey"
@@ -503,6 +591,8 @@
       "focal_tall_y": 0.48
     },
     "search_tokens": [
+      "2026",
+      "2027",
       "absent",
       "across",
       "activist",
@@ -510,18 +600,26 @@
       "anthropic",
       "approximately",
       "around",
+      "austerity",
       "away",
       "begun",
+      "belgium",
       "better",
       "billion",
+      "brussel",
+      "budget",
+      "cannon",
+      "challenge",
       "civil",
       "climate",
       "company",
       "concern",
+      "confrontational",
       "consensu",
       "cop31",
       "costs",
       "criticizing",
+      "crowd",
       "deal",
       "debut",
       "delegate",
@@ -529,6 +627,7 @@
       "demonstration",
       "despite",
       "discussion",
+      "disperse",
       "disrupted",
       "draft",
       "erupt",
@@ -536,10 +635,13 @@
       "europe",
       "event",
       "extended",
+      "faced",
       "failing",
+      "finalizing",
       "fossil",
       "france",
       "fuels",
+      "gas",
       "group",
       "held",
       "inaction",
@@ -548,17 +650,22 @@
       "issue",
       "italy",
       "launche",
+      "leading",
       "living",
+      "marched",
       "market",
+      "measure",
       "moving",
       "nasdaq",
       "notably",
+      "november",
       "offering",
       "overtime",
       "participation",
       "particularly",
       "position",
       "previou",
+      "proposed",
       "protest",
       "protested",
       "public",
@@ -583,15 +690,19 @@
       "surpassing",
       "taking",
       "talks",
+      "tear",
+      "thousand",
       "toward",
       "trading",
       "trillion",
       "turkey",
+      "turned",
       "upon",
       "valuation",
       "valued",
       "volatility",
       "wages",
+      "water",
       "where",
       "widespread",
       "worker"
@@ -600,6 +711,9 @@
       "across_europe",
       "ai",
       "anthropic_launche",
+      "austerity_measure",
+      "belgium",
+      "brussel",
       "cop31",
       "cop31_inaction",
       "erupt_across",
@@ -615,12 +729,13 @@
       "nasdaq_anthropic",
       "protest_erupt",
       "record_ipo",
+      "rising_living",
       "spacex",
       "turkey",
       "wages_protest",
       "widespread_protest"
     ],
-    "search_text": "absent across across_europe activist advance ai anthropic anthropic_launche approximately around away begun better billion civil climate company concern consensu cop31 cop31_inaction costs criticizing deal debut delegate demand demonstration despite discussion disrupted draft erupt erupt_across erupted europe event extended failing fossil fossil_fuels france fuels fuels_activist group held inaction initial inspired ipo ipo_valued issue italy launche launche_record living living_costs market moving nasdaq nasdaq_anthropic notably offering overtime participation particularly position previou protest protest_erupt protested public raised reach recent record record_ipo response rising seen sentiment service share significant society spacex street strike struggled student surged surpassing taking talks toward trading trillion turkey upon valuation valued volatility wages wages_protest where widespread widespread_protest worker"
+    "search_text": "2026 2027 absent across across_europe activist advance ai anthropic anthropic_launche approximately around austerity austerity_measure away begun belgium better billion brussel budget cannon challenge civil climate company concern confrontational consensu cop31 cop31_inaction costs criticizing crowd deal debut delegate demand demonstration despite discussion disperse disrupted draft erupt erupt_across erupted europe event extended faced failing finalizing fossil fossil_fuels france fuels fuels_activist gas group held inaction initial inspired ipo ipo_valued issue italy launche launche_record leading living living_costs marched market measure moving nasdaq nasdaq_anthropic notably november offering overtime participation particularly position previou proposed protest protest_erupt protested public raised reach recent record record_ipo response rising rising_living seen sentiment service share significant society spacex street strike struggled student surged surpassing taking talks tear thousand toward trading trillion turkey turned upon valuation valued volatility wages wages_protest water where widespread widespread_protest worker"
   },
   "related_events": [
     {
