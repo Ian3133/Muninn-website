@@ -15,7 +15,7 @@
     "summary": "Anthropic has begun trading on the Nasdaq following a record initial public offering (IPO) that raised approximately $81.3 billion. This valuation positions the AI company at around $1.5 trillion, surpassing SpaceX's previous record of $75 billion. Despite concerns about market volatility and public sentiment towards AI, the company's shares surged upon debut.",
     "status": "active",
     "first_seen_at": "2026-11-19",
-    "last_seen_at": "2026-11-24",
+    "last_seen_at": "2026-11-25",
     "timeline": [
       {
         "development_id": "story_0d3526d8c3c9eaf6",
@@ -298,15 +298,94 @@
         "first_seen_at": "2026-11-24",
         "last_seen_at": "2026-11-24",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_189328dc0a5df69f",
+        "daily_story_id": "story_189328dc0a5df69f",
+        "date": "2026-11-25",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Thousands Protest in Athens Over Rising Living Costs",
+        "summary": "On November 25, 2026, approximately 14,000 people marched in Athens as part of a 24-hour strike against rising living costs and stagnant wages. The industrial action led to significant disruptions, including halted metro services, grounded flights, and ferries remaining in port.",
+        "topic_label": "",
+        "development_type": "military_action",
+        "key_facts": [
+          "14,000 people participated in the march in Athens.",
+          "The protest was part of a 24-hour strike.",
+          "The strike aimed to address rising living costs and stagnant wages.",
+          "The action disrupted metro services, flights, and ferry operations."
+        ],
+        "source_count": 2,
+        "sources": [
+          "Africanews",
+          "Euronews"
+        ],
+        "source_urls": [
+          "https://www.euronews.com/video/2026/11/25/greece-14000-march-in-athens-against-rising-living-costs",
+          "http://www.africanews.com/2026/11/25/greece-14000-march-in-athens-against-rising-living-costs"
+        ],
+        "source_details": [
+          {
+            "title": "Greece: 14,000 march in Athens against rising living costs",
+            "source": "Euronews",
+            "link": "https://www.euronews.com/video/2026/11/25/greece-14000-march-in-athens-against-rising-living-costs",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Greece: 14,000 march in Athens against rising living costs",
+            "source": "Africanews",
+            "link": "http://www.africanews.com/2026/11/25/greece-14000-march-in-athens-against-rising-living-costs",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.9,
+        "match_evidence": {
+          "score": 0.9,
+          "method": "bounded_incident_fingerprint_v1",
+          "incident_types": [
+            "protest"
+          ],
+          "shared_incident_anchors": [
+            "living_costs",
+            "rising_living"
+          ],
+          "shared_incident_numbers": [
+            "2026"
+          ],
+          "shared_tokens": [
+            "2026",
+            "costs",
+            "living",
+            "marched",
+            "november",
+            "protest",
+            "rising",
+            "thousand"
+          ],
+          "shared_entities": [
+            "living_costs",
+            "rising_living"
+          ],
+          "source_url_match": false,
+          "matched_development_id": "story_4f90403f26447a2e",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-11-25",
+        "last_seen_at": "2026-11-25",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 4,
+      "public_development_count": 5,
       "questionable_development_count": 2,
       "review_required": true
     },
-    "latest_title": "Protests Erupt in Belgium Against Austerity Measures Amid Rising Living Costs",
-    "latest_summary": "On November 23, 2026, thousands of workers marched in Brussels to protest proposed austerity measures as Belgium's government faced challenges in finalizing its budget for 2027. The demonstrations turned confrontational, leading police to use tear gas and water cannons to disperse crowds.",
+    "latest_title": "Thousands Protest in Athens Over Rising Living Costs",
+    "latest_summary": "On November 25, 2026, approximately 14,000 people marched in Athens as part of a 24-hour strike against rising living costs and stagnant wages. The industrial action led to significant disruptions, including halted metro services, grounded flights, and ferries remaining in port.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -318,28 +397,29 @@
         "story_0d3526d8c3c9eaf6",
         "story_2eef87cf4cbe7dea",
         "story_06ce974b038a38b4",
-        "story_4f90403f26447a2e"
+        "story_4f90403f26447a2e",
+        "story_189328dc0a5df69f"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-11-24",
-      "development_count": 4,
-      "coverage_packet_count": 4,
-      "date_count": 4,
-      "source_count": 11,
+      "summary_updated_at": "2026-11-25",
+      "development_count": 5,
+      "coverage_packet_count": 5,
+      "date_count": 5,
+      "source_count": 13,
       "independent_source_count": 10,
       "first_date": "2026-11-19",
-      "latest_date": "2026-11-24",
-      "latest_update_title": "Protests Erupt in Belgium Against Austerity Measures Amid Rising Living Costs",
-      "coverage_score": 0.831,
+      "latest_date": "2026-11-25",
+      "latest_update_title": "Thousands Protest in Athens Over Rising Living Costs",
+      "coverage_score": 0.942,
       "recency_score": 1.0,
-      "rank_score": 0.929,
-      "context_summary": "Muninn first tracked this thread on 2026-11-19: Anthropic Launches Record IPO, Valued at $1.5 Trillion on Nasdaq. The latest development is Protests Erupt in Belgium Against Austerity Measures Amid Rising Living Costs.",
-      "cta_label": "Explore 4 developments"
+      "rank_score": 0.976,
+      "context_summary": "Muninn first tracked this thread on 2026-11-19: Anthropic Launches Record IPO, Valued at $1.5 Trillion on Nasdaq. The latest development is Thousands Protest in Athens Over Rising Living Costs.",
+      "cta_label": "Explore 5 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Anthropic has begun trading on the Nasdaq following a record initial public offering (IPO) that raised approximately $81.3 billion. A later development was Protests Erupt Over COP31's Inaction on Fossil Fuels. Most recently, on November 23, 2026, thousands of workers marched in Brussels to protest proposed austerity measures as Belgium's government faced challenges in finalizing its budget for 2027.",
+      "summary": "Anthropic has begun trading on the Nasdaq following a record initial public offering (IPO) that raised approximately $81.3 billion. A later development was Protests Erupt Over COP31's Inaction on Fossil Fuels. Most recently, on November 25, 2026, approximately 14,000 people marched in Athens as part of a 24-hour strike against rising living costs and stagnant wages.",
       "key_developments": [
         {
           "development_id": "story_0d3526d8c3c9eaf6",
@@ -360,6 +440,11 @@
           "development_id": "story_4f90403f26447a2e",
           "date": "2026-11-24",
           "title": "Protests Erupt in Belgium Against Austerity Measures Amid Rising Living Costs"
+        },
+        {
+          "development_id": "story_189328dc0a5df69f",
+          "date": "2026-11-25",
+          "title": "Thousands Protest in Athens Over Rising Living Costs"
         }
       ],
       "sources": [
@@ -428,9 +513,21 @@
           "source": "Africanews",
           "link": "http://www.africanews.com/2026/11/23/belgium-workers-march-against-spending-cuts-as-living-costs-rise",
           "source_bias": "center"
+        },
+        {
+          "title": "Greece: 14,000 march in Athens against rising living costs",
+          "source": "Euronews",
+          "link": "https://www.euronews.com/video/2026/11/25/greece-14000-march-in-athens-against-rising-living-costs",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Greece: 14,000 march in Athens against rising living costs",
+          "source": "Africanews",
+          "link": "http://www.africanews.com/2026/11/25/greece-14000-march-in-athens-against-rising-living-costs",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-11-24",
+      "updated_at": "2026-11-25",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -439,7 +536,7 @@
         "event_id": "event_france-faces-aftermath-of-violent-protests-w_6d2156f35f",
         "title": "France Faces Aftermath of Violent Protests with Widespread Damage and Arrests",
         "relationship": "related_topic",
-        "confidence": 0.864,
+        "confidence": 0.861,
         "shared_entities": [
           "across_europe",
           "erupt_across",
@@ -453,7 +550,7 @@
         "event_id": "event_protests-in-france-surge-over-rising-living_db38db0044",
         "title": "Protests in France Surge Over Rising Living Costs Amid Union Strikes",
         "relationship": "related_topic",
-        "confidence": 0.745,
+        "confidence": 0.751,
         "shared_entities": [
           "france",
           "living_costs",
@@ -464,8 +561,9 @@
         "event_id": "event_protests-erupt-in-india-demanding-resignatio_ce12dfc1ae",
         "title": "Protests Erupt in India Demanding Resignation of Election Chief",
         "relationship": "related_topic",
-        "confidence": 0.701,
+        "confidence": 0.744,
         "shared_entities": [
+          "athen",
           "france",
           "protest_erupt"
         ]
@@ -591,15 +689,19 @@
       "focal_tall_y": 0.48
     },
     "search_tokens": [
+      "000",
       "2026",
       "2027",
+      "24-hour",
       "absent",
       "across",
+      "action",
       "activist",
       "advance",
       "anthropic",
       "approximately",
       "around",
+      "athen",
       "austerity",
       "away",
       "begun",
@@ -629,6 +731,7 @@
       "discussion",
       "disperse",
       "disrupted",
+      "disruption",
       "draft",
       "erupt",
       "erupted",
@@ -637,14 +740,20 @@
       "extended",
       "faced",
       "failing",
+      "ferrie",
       "finalizing",
+      "flight",
       "fossil",
       "france",
       "fuels",
       "gas",
+      "grounded",
       "group",
+      "halted",
       "held",
       "inaction",
+      "including",
+      "industrial",
       "initial",
       "inspired",
       "issue",
@@ -655,14 +764,17 @@
       "marched",
       "market",
       "measure",
+      "metro",
       "moving",
       "nasdaq",
       "notably",
       "november",
       "offering",
       "overtime",
+      "part",
       "participation",
       "particularly",
+      "port",
       "position",
       "previou",
       "proposed",
@@ -673,6 +785,7 @@
       "reach",
       "recent",
       "record",
+      "remaining",
       "response",
       "rising",
       "seen",
@@ -682,6 +795,7 @@
       "significant",
       "society",
       "spacex",
+      "stagnant",
       "street",
       "strike",
       "struggled",
@@ -711,6 +825,7 @@
       "across_europe",
       "ai",
       "anthropic_launche",
+      "athen",
       "austerity_measure",
       "belgium",
       "brussel",
@@ -731,11 +846,12 @@
       "record_ipo",
       "rising_living",
       "spacex",
+      "thousand_protest",
       "turkey",
       "wages_protest",
       "widespread_protest"
     ],
-    "search_text": "2026 2027 absent across across_europe activist advance ai anthropic anthropic_launche approximately around austerity austerity_measure away begun belgium better billion brussel budget cannon challenge civil climate company concern confrontational consensu cop31 cop31_inaction costs criticizing crowd deal debut delegate demand demonstration despite discussion disperse disrupted draft erupt erupt_across erupted europe event extended faced failing finalizing fossil fossil_fuels france fuels fuels_activist gas group held inaction initial inspired ipo ipo_valued issue italy launche launche_record leading living living_costs marched market measure moving nasdaq nasdaq_anthropic notably november offering overtime participation particularly position previou proposed protest protest_erupt protested public raised reach recent record record_ipo response rising rising_living seen sentiment service share significant society spacex street strike struggled student surged surpassing taking talks tear thousand toward trading trillion turkey turned upon valuation valued volatility wages wages_protest water where widespread widespread_protest worker"
+    "search_text": "000 2026 2027 24-hour absent across across_europe action activist advance ai anthropic anthropic_launche approximately around athen austerity austerity_measure away begun belgium better billion brussel budget cannon challenge civil climate company concern confrontational consensu cop31 cop31_inaction costs criticizing crowd deal debut delegate demand demonstration despite discussion disperse disrupted disruption draft erupt erupt_across erupted europe event extended faced failing ferrie finalizing flight fossil fossil_fuels france fuels fuels_activist gas grounded group halted held inaction including industrial initial inspired ipo ipo_valued issue italy launche launche_record leading living living_costs marched market measure metro moving nasdaq nasdaq_anthropic notably november offering overtime part participation particularly port position previou proposed protest protest_erupt protested public raised reach recent record record_ipo remaining response rising rising_living seen sentiment service share significant society spacex stagnant street strike struggled student surged surpassing taking talks tear thousand thousand_protest toward trading trillion turkey turned upon valuation valued volatility wages wages_protest water where widespread widespread_protest worker"
   },
   "related_events": [
     {

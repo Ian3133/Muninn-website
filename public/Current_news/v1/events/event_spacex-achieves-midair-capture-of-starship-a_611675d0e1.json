@@ -15,7 +15,7 @@
     "summary": "SpaceX's Starship successfully returned from orbit and was captured by launch pad arms in a notable first. The spacecraft's journey lasted 22 hours, culminating in a dramatic midair catch at the Texas launch tower. However, the mission faced challenges as the first-stage booster exploded shortly after liftoff, preventing a planned double catch.",
     "status": "active",
     "first_seen_at": "2026-11-15",
-    "last_seen_at": "2026-11-24",
+    "last_seen_at": "2026-11-25",
     "timeline": [
       {
         "development_id": "story_503351589840e32e",
@@ -314,6 +314,70 @@
         "first_seen_at": "2026-11-24",
         "last_seen_at": "2026-11-24",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_c32c296ef9c1058d",
+        "daily_story_id": "story_c32c296ef9c1058d",
+        "date": "2026-11-25",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "China Launches Shenzhou 24 with Two Chinese and One Pakistani Astronaut",
+        "summary": "China has successfully launched the Shenzhou 24 spacecraft, carrying two Chinese astronauts and one Pakistani astronaut. This mission marks the first time a foreign astronaut has joined a crew on a Chinese space station. The crew is set to conduct over 90 scientific experiments and technology tests during their time in space.",
+        "topic_label": "Space Exploration",
+        "development_type": "development",
+        "key_facts": [
+          "Shenzhou 24 launched with two Chinese and one Pakistani astronaut.",
+          "This is the first foreign astronaut on a Chinese space station.",
+          "The crew will perform more than 90 scientific experiments and technology tests."
+        ],
+        "source_count": 2,
+        "sources": [
+          "AP News",
+          "Euronews"
+        ],
+        "source_urls": [
+          "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNR3M0QnJvdnFlSmxYai1OZWNwd0pYOFVKa2t3UDZhLXZkcXVkcmNOZHU2ZEVCQk1HX0liM2ZVb3piZDFiaE5SSkY2MWdZeFNmOVhTWkM3RDdqSHYySDNkSTNwcExoemNqTWtoLWNQV1VDNXota0w3Ym1FLUZxOXFPZnB3UlllbEJySmhJ?oc=5",
+          "https://www.euronews.com/2026/11/25/china-sends-first-foreign-astronaut-to-its-space-station-as-pakistani-joins-shenzhou-24-cr"
+        ],
+        "source_details": [
+          {
+            "title": "China launches Shenzhou 24 spacecraft carrying 2 Chinese and 1 Pakistani astronaut",
+            "source": "AP News",
+            "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNR3M0QnJvdnFlSmxYai1OZWNwd0pYOFVKa2t3UDZhLXZkcXVkcmNOZHU2ZEVCQk1HX0liM2ZVb3piZDFiaE5SSkY2MWdZeFNmOVhTWkM3RDdqSHYySDNkSTNwcExoemNqTWtoLWNQV1VDNXota0w3Ym1FLUZxOXFPZnB3UlllbEJySmhJ?oc=5",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "China sends first foreign astronaut to its space station as Pakistani joins Shenzhou 24 crew",
+            "source": "Euronews",
+            "link": "https://www.euronews.com/2026/11/25/china-sends-first-foreign-astronaut-to-its-space-station-as-pakistani-joins-shenzhou-24-cr",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_503351589840e32e",
+          "shared_tokens": [
+            "exploration",
+            "space",
+            "successfully",
+            "technology"
+          ],
+          "shared_entities": [
+            "space_exploration"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-11-25",
+        "last_seen_at": "2026-11-25",
+        "integrity_status": "trusted"
       }
     ],
     "incident_fingerprint": {
@@ -338,12 +402,12 @@
       "method": "bounded_incident_fingerprint_v1"
     },
     "integrity": {
-      "public_development_count": 4,
+      "public_development_count": 5,
       "questionable_development_count": 1,
       "review_required": true
     },
-    "latest_title": "China Reveals Crew for Upcoming Space Mission Including Pakistani Astronaut",
-    "latest_summary": "China has announced the crew for its upcoming Shenzhou-24 mission, which includes Muhammad Zeeshan Ali, a Pakistani astronaut. Ali will be the first foreigner to board China's Tiangong space station. The mission is set to launch on Wednesday.",
+    "latest_title": "China Launches Shenzhou 24 with Two Chinese and One Pakistani Astronaut",
+    "latest_summary": "China has successfully launched the Shenzhou 24 spacecraft, carrying two Chinese astronauts and one Pakistani astronaut. This mission marks the first time a foreign astronaut has joined a crew on a Chinese space station. The crew is set to conduct over 90 scientific experiments and technology tests during their time in space.",
     "presentation": {
       "has_context": true,
       "has_full_timeline": true,
@@ -355,28 +419,29 @@
         "story_503351589840e32e",
         "story_818c62295d991cc8",
         "story_ba2888c588ab7ced",
-        "story_fbe04cbc3bf7e051"
+        "story_fbe04cbc3bf7e051",
+        "story_c32c296ef9c1058d"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-11-24",
-      "development_count": 4,
-      "coverage_packet_count": 4,
-      "date_count": 4,
-      "source_count": 12,
-      "independent_source_count": 11,
+      "summary_updated_at": "2026-11-25",
+      "development_count": 5,
+      "coverage_packet_count": 5,
+      "date_count": 5,
+      "source_count": 14,
+      "independent_source_count": 12,
       "first_date": "2026-11-15",
-      "latest_date": "2026-11-24",
-      "latest_update_title": "China Reveals Crew for Upcoming Space Mission Including Pakistani Astronaut",
-      "coverage_score": 0.843,
+      "latest_date": "2026-11-25",
+      "latest_update_title": "China Launches Shenzhou 24 with Two Chinese and One Pakistani Astronaut",
+      "coverage_score": 0.942,
       "recency_score": 1.0,
-      "rank_score": 0.934,
-      "context_summary": "Muninn first tracked this thread on 2026-11-15: SpaceX Achieves Milestone with Successful Rocket Catch. The latest development is China Reveals Crew for Upcoming Space Mission Including Pakistani Astronaut.",
-      "cta_label": "Explore 4 developments"
+      "rank_score": 0.976,
+      "context_summary": "Muninn first tracked this thread on 2026-11-15: SpaceX Achieves Milestone with Successful Rocket Catch. The latest development is China Launches Shenzhou 24 with Two Chinese and One Pakistani Astronaut.",
+      "cta_label": "Explore 5 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "SpaceX's Starship successfully returned from orbit and was caught by mechanical arms on the launchpad, marking a significant milestone in the company's efforts to develop fully reusable rockets. A later development was Voyager 1 Reaches Record Distance, Communicates from One Light-Day Away. Most recently, china has announced the crew for its upcoming Shenzhou-24 mission, which includes Muhammad Zeeshan Ali, a Pakistani astronaut.",
+      "summary": "SpaceX's Starship successfully returned from orbit and was caught by mechanical arms on the launchpad, marking a significant milestone in the company's efforts to develop fully reusable rockets. A later development was Voyager 1 Reaches Record Distance, Communicates from One Light-Day Away. Most recently, china has successfully launched the Shenzhou 24 spacecraft, carrying two Chinese astronauts and one Pakistani astronaut.",
       "key_developments": [
         {
           "development_id": "story_503351589840e32e",
@@ -397,6 +462,11 @@
           "development_id": "story_fbe04cbc3bf7e051",
           "date": "2026-11-24",
           "title": "China Reveals Crew for Upcoming Space Mission Including Pakistani Astronaut"
+        },
+        {
+          "development_id": "story_c32c296ef9c1058d",
+          "date": "2026-11-25",
+          "title": "China Launches Shenzhou 24 with Two Chinese and One Pakistani Astronaut"
         }
       ],
       "sources": [
@@ -471,9 +541,21 @@
           "source": "DW - English",
           "link": "https://www.dw.com/en/pakistani-astronaut-to-join-chinese-space-mission/a-80028922?maca=en-rss-en-all-1573-rdf",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "China launches Shenzhou 24 spacecraft carrying 2 Chinese and 1 Pakistani astronaut",
+          "source": "AP News",
+          "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNR3M0QnJvdnFlSmxYai1OZWNwd0pYOFVKa2t3UDZhLXZkcXVkcmNOZHU2ZEVCQk1HX0liM2ZVb3piZDFiaE5SSkY2MWdZeFNmOVhTWkM3RDdqSHYySDNkSTNwcExoemNqTWtoLWNQV1VDNXota0w3Ym1FLUZxOXFPZnB3UlllbEJySmhJ?oc=5",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "China sends first foreign astronaut to its space station as Pakistani joins Shenzhou 24 crew",
+          "source": "Euronews",
+          "link": "https://www.euronews.com/2026/11/25/china-sends-first-foreign-astronaut-to-its-space-station-as-pakistani-joins-shenzhou-24-cr",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-11-24",
+      "updated_at": "2026-11-25",
       "provenance": "source_grounded_event_memory"
     },
     "event_stage": "timeline",
@@ -482,7 +564,7 @@
         "event_id": "event_voyager-1-approaches-new-distance-record-of_1e6527c124",
         "title": "Voyager 1 Approaches New Distance Record of One Light-Day in Interstellar Space",
         "relationship": "related_topic",
-        "confidence": 0.864,
+        "confidence": 0.862,
         "shared_entities": [
           "light-day",
           "nasa",
@@ -622,12 +704,14 @@
       "becoming",
       "billion",
       "board",
+      "carrying",
       "catch",
       "caught",
       "china",
       "communicate",
       "communicated",
       "company",
+      "conduct",
       "continue",
       "crew",
       "data",
@@ -639,8 +723,10 @@
       "equivalent",
       "event",
       "exactly",
+      "experiment",
       "farthest",
       "first",
+      "foreign",
       "foreigner",
       "fully",
       "highlight",
@@ -649,7 +735,9 @@
       "include",
       "including",
       "interstellar",
+      "joined",
       "launch",
+      "launche",
       "launched",
       "launchpad",
       "light-day",
@@ -674,8 +762,10 @@
       "reusable",
       "reveal",
       "rocket",
+      "scientific",
       "send",
       "sent",
+      "shenzhou",
       "shenzhou-24",
       "signal",
       "significant",
@@ -688,7 +778,9 @@
       "successful",
       "successfully",
       "technology",
+      "tests",
       "tiangong",
+      "time",
       "travel",
       "traveled",
       "upcoming",
@@ -705,6 +797,7 @@
       "away_nasa",
       "catch_spacex",
       "china",
+      "china_launche",
       "china_reveal",
       "china_tiangong",
       "distance_communicate",
@@ -712,6 +805,7 @@
       "earth",
       "earth_nasa",
       "including_pakistani",
+      "launche_shenzhou",
       "light-day",
       "light-day_away",
       "mission_including",
@@ -720,6 +814,7 @@
       "nasa_voyager",
       "one",
       "one_light-day",
+      "one_pakistani",
       "pakistani_astronaut",
       "reache_record",
       "record_distance",
@@ -733,9 +828,10 @@
       "upcoming_space",
       "voyager_achieve",
       "voyager_reache",
+      "wednesday._china",
       "zeeshan_ali"
     ],
-    "search_text": "1977 50th achieve achieve_distance achieve_milestone advancement almost anniversary announced approache arms astronaut astronaut_china away away_nasa back becoming billion board catch catch_spacex caught china china_reveal china_tiangong communicate communicated company continue crew data described develop distance distance_communicate distance_milestone earth earth_nasa effort equivalent event exactly farthest first foreigner fully highlight hours human-made include including including_pakistani interstellar launch launched launchpad light-day light-day_away magic marking marks mechanical miles milestone mission mission_including muhammad muhammad_zeeshan nasa nasa_voyager next object one one_light-day orbit pakistani pakistani_astronaut reache reache_record reached received record record_distance returned reusable reveal reveal_crew rocket rocket_catch send sent shenzhou-24 signal significant since space space_mission spacecraft spacex spacex_achieve spacex_starship starship station successful successful_rocket successfully technology tiangong travel traveled upcoming upcoming_space voyager voyager_achieve voyager_reache wednesday which year zeeshan zeeshan_ali"
+    "search_text": "1977 50th achieve achieve_distance achieve_milestone advancement almost anniversary announced approache arms astronaut astronaut_china away away_nasa back becoming billion board carrying catch catch_spacex caught china china_launche china_reveal china_tiangong communicate communicated company conduct continue crew data described develop distance distance_communicate distance_milestone earth earth_nasa effort equivalent event exactly experiment farthest first foreign foreigner fully highlight hours human-made include including including_pakistani interstellar joined launch launche launche_shenzhou launched launchpad light-day light-day_away magic marking marks mechanical miles milestone mission mission_including muhammad muhammad_zeeshan nasa nasa_voyager next object one one_light-day one_pakistani orbit pakistani pakistani_astronaut reache reache_record reached received record record_distance returned reusable reveal reveal_crew rocket rocket_catch scientific send sent shenzhou shenzhou-24 signal significant since space space_mission spacecraft spacex spacex_achieve spacex_starship starship station successful successful_rocket successfully technology tests tiangong time travel traveled upcoming upcoming_space voyager voyager_achieve voyager_reache wednesday wednesday._china which year zeeshan zeeshan_ali"
   },
   "related_events": []
 }

@@ -15,7 +15,7 @@
     "summary": "Ukrainian President Volodymyr Zelenskyy expressed hope that upcoming talks in Abu Dhabi could pave the way for a meeting with Russian President Vladimir Putin. During a meeting in Berlin with German Chancellor Friedrich Merz, both leaders emphasized the importance of including the EU in peace negotiations with Russia. Merz voiced skepticism regarding Russia's commitment to a truce.",
     "status": "active",
     "first_seen_at": "2026-11-03",
-    "last_seen_at": "2026-11-21",
+    "last_seen_at": "2026-11-25",
     "timeline": [
       {
         "development_id": "story_ea6b4bf416a4de64",
@@ -208,47 +208,122 @@
         "first_seen_at": "2026-11-21",
         "last_seen_at": "2026-11-21",
         "integrity_status": "trusted"
+      },
+      {
+        "development_id": "story_46dac66feed06693",
+        "daily_story_id": "story_46dac66feed06693",
+        "date": "2026-11-25",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Leaked Data Suggests Russian Military Death Toll in Ukraine Exceeds 490,000",
+        "summary": "Leaked Russian government data indicates that over 490,000 Russian soldiers have died in the ongoing war in Ukraine. This figure has been corroborated by various analyses, including those from independent media and pro-Ukraine hackers. However, some reports suggest that the death toll could be as high as 700,000, a claim that has been dismissed by Kremlin officials.",
+        "topic_label": "Ukraine War",
+        "development_type": "development",
+        "key_facts": [
+          "Leaked data shows at least 490,334 Russian soldiers have died.",
+          "Some estimates suggest the death toll could be as high as 700,000.",
+          "Kremlin spokesman Dmitry Peskov has dismissed the higher estimates."
+        ],
+        "source_count": 3,
+        "sources": [
+          "CBS News",
+          "Fox News",
+          "France 24"
+        ],
+        "source_urls": [
+          "https://www.cbsnews.com/news/russia-ukraine-war-russian-soldier-death-toll-data-leak",
+          "https://www.foxnews.com/world/putins-war-death-toll-reportedly-tops-700000-russia-scrambles-recruits",
+          "https://www.france24.com/en/video/20261125-russian-casualties-in-ukraine-war-new-reports-suggest-death-toll-as-high-as-700-000"
+        ],
+        "source_details": [
+          {
+            "title": "Leaked data shows 490,000 Russian forces have died in Ukraine war",
+            "source": "CBS News",
+            "link": "https://www.cbsnews.com/news/russia-ukraine-war-russian-soldier-death-toll-data-leak",
+            "source_bias": "lean-left"
+          },
+          {
+            "title": "Putin's war death toll reportedly tops 700,000 as Russia scrambles for recruits",
+            "source": "Fox News",
+            "link": "https://www.foxnews.com/world/putins-war-death-toll-reportedly-tops-700000-russia-scrambles-recruits",
+            "source_bias": "right"
+          },
+          {
+            "title": "Russian casualties in Ukraine war: New reports suggest death toll as high as 700,000",
+            "source": "France 24",
+            "link": "https://www.france24.com/en/video/20261125-russian-casualties-in-ukraine-war-new-reports-suggest-death-toll-as-high-as-700-000",
+            "source_bias": "lean-left"
+          }
+        ],
+        "confidence": 0.72,
+        "match_evidence": {
+          "score": 0.72,
+          "matched_development_id": "story_ea6b4bf416a4de64",
+          "shared_tokens": [
+            "including",
+            "russia",
+            "ukraine",
+            "war"
+          ],
+          "shared_entities": [
+            "russia",
+            "ukraine",
+            "ukraine_war"
+          ],
+          "source_url_match": false,
+          "topic_label_match": true,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-11-25",
+        "last_seen_at": "2026-11-25",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 3,
-      "questionable_development_count": 0,
-      "review_required": false
+      "public_development_count": 4,
+      "questionable_development_count": 1,
+      "review_required": true
     },
-    "latest_title": "Russian Missiles Land in Poland Amid NATO Exercises",
-    "latest_summary": "Two Russian missiles and a suspected drone landed in Poland, which Prime Minister Donald Tusk described as likely an intentional provocation. This incident coincided with European military exercises in Poland related to a potential postwar mission in Ukraine. NATO has labeled the missile landings a 'grave violation' of Polish airspace.",
+    "latest_title": "Leaked Data Suggests Russian Military Death Toll in Ukraine Exceeds 490,000",
+    "latest_summary": "Leaked Russian government data indicates that over 490,000 Russian soldiers have died in the ongoing war in Ukraine. This figure has been corroborated by various analyses, including those from independent media and pro-Ukraine hackers. However, some reports suggest that the death toll could be as high as 700,000, a claim that has been dismissed by Kremlin officials.",
     "presentation": {
       "has_context": true,
-      "has_full_timeline": false,
-      "stage": "developing_event",
-      "stage_label": "Developing event",
+      "has_full_timeline": true,
+      "stage": "timeline",
+      "stage_label": "Timeline",
       "base_title": "Zelenskyy Seeks Path to Putin Meeting Through Abu Dhabi Talks",
-      "display_title": "Zelenskyy Seeks Path to Putin Meeting Through Abu Dhabi Talks",
+      "display_title": "Zelenskyy Seeks Path to Putin Meeting Through Abu Dhabi Talks Timeline",
       "milestone_development_ids": [
         "story_ea6b4bf416a4de64",
         "story_63e20116c46db5f8",
-        "story_84364f92107a317c"
+        "story_84364f92107a317c",
+        "story_46dac66feed06693"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-11-21",
-      "development_count": 3,
-      "coverage_packet_count": 3,
-      "date_count": 3,
-      "source_count": 6,
-      "independent_source_count": 5,
+      "summary_updated_at": "2026-11-25",
+      "development_count": 4,
+      "coverage_packet_count": 4,
+      "date_count": 4,
+      "source_count": 9,
+      "independent_source_count": 8,
       "first_date": "2026-11-03",
-      "latest_date": "2026-11-21",
-      "latest_update_title": "Russian Missiles Land in Poland Amid NATO Exercises",
-      "coverage_score": 0.557,
-      "recency_score": 0.7,
-      "rank_score": 0.64,
-      "context_summary": "Muninn first tracked this thread on 2026-11-03: Zelenskyy Seeks Path to Putin Meeting Through Abu Dhabi Talks. The latest development is Russian Missiles Land in Poland Amid NATO Exercises.",
-      "cta_label": ""
+      "latest_date": "2026-11-25",
+      "latest_update_title": "Leaked Data Suggests Russian Military Death Toll in Ukraine Exceeds 490,000",
+      "coverage_score": 0.806,
+      "recency_score": 1.0,
+      "rank_score": 0.918,
+      "context_summary": "Muninn first tracked this thread on 2026-11-03: Zelenskyy Seeks Path to Putin Meeting Through Abu Dhabi Talks. The latest development is Leaked Data Suggests Russian Military Death Toll in Ukraine Exceeds 490,000.",
+      "cta_label": "Explore 4 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Ukrainian President Volodymyr Zelenskyy expressed hope that upcoming talks in Abu Dhabi could pave the way for a meeting with Russian President Vladimir Putin. A later development was Poland Responds to Russian Airspace Violations During Military Exercises. Most recently, two Russian missiles and a suspected drone landed in Poland, which Prime Minister Donald Tusk described as likely an intentional provocation.",
+      "summary": "Ukrainian President Volodymyr Zelenskyy expressed hope that upcoming talks in Abu Dhabi could pave the way for a meeting with Russian President Vladimir Putin. A later development was Russian Missiles Land in Poland Amid NATO Exercises. Most recently, leaked Russian government data indicates that over 490,000 Russian soldiers have died in the ongoing war in Ukraine.",
       "key_developments": [
         {
           "development_id": "story_ea6b4bf416a4de64",
@@ -264,6 +339,11 @@
           "development_id": "story_84364f92107a317c",
           "date": "2026-11-21",
           "title": "Russian Missiles Land in Poland Amid NATO Exercises"
+        },
+        {
+          "development_id": "story_46dac66feed06693",
+          "date": "2026-11-25",
+          "title": "Leaked Data Suggests Russian Military Death Toll in Ukraine Exceeds 490,000"
         }
       ],
       "sources": [
@@ -302,12 +382,30 @@
           "source": "PBS News - Headlines",
           "link": "https://www.pbs.org/newshour/world/nato-calls-russian-missiles-landing-in-poland-a-grave-violation-of-airspace",
           "source_bias": "lean-left"
+        },
+        {
+          "title": "Leaked data shows 490,000 Russian forces have died in Ukraine war",
+          "source": "CBS News",
+          "link": "https://www.cbsnews.com/news/russia-ukraine-war-russian-soldier-death-toll-data-leak",
+          "source_bias": "lean-left"
+        },
+        {
+          "title": "Putin's war death toll reportedly tops 700,000 as Russia scrambles for recruits",
+          "source": "Fox News",
+          "link": "https://www.foxnews.com/world/putins-war-death-toll-reportedly-tops-700000-russia-scrambles-recruits",
+          "source_bias": "right"
+        },
+        {
+          "title": "Russian casualties in Ukraine war: New reports suggest death toll as high as 700,000",
+          "source": "France 24",
+          "link": "https://www.france24.com/en/video/20261125-russian-casualties-in-ukraine-war-new-reports-suggest-death-toll-as-high-as-700-000",
+          "source_bias": "lean-left"
         }
       ],
-      "updated_at": "2026-11-21",
+      "updated_at": "2026-11-25",
       "provenance": "source_grounded_event_memory"
     },
-    "event_stage": "developing_event",
+    "event_stage": "timeline",
     "related_events": [
       {
         "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
@@ -334,7 +432,7 @@
         "event_id": "event_ukrainian-drone-strike-causes-major-fire-at_bdc5e65aea",
         "title": "Ukrainian Drone Strike Causes Major Fire at Saint Petersburg Warehouse",
         "relationship": "related_topic",
-        "confidence": 0.868,
+        "confidence": 0.87,
         "shared_entities": [
           "donald_tusk",
           "russia",
@@ -356,13 +454,15 @@
         ]
       },
       {
-        "event_id": "event_poland-accuses-russia-of-provocative-airspac_8df8c35ca8",
-        "title": "Poland Accuses Russia of Provocative Airspace Violations",
+        "event_id": "event_russia-ukraine-and-us-begin-peace-talks-in-a_53bc5198f4",
+        "title": "Russia, Ukraine, and US Begin Peace Talks in Abu Dhabi",
         "relationship": "related_topic",
-        "confidence": 0.758,
+        "confidence": 0.761,
         "shared_entities": [
-          "airspace_violation",
-          "russia"
+          "abu",
+          "abu_dhabi",
+          "russia",
+          "ukraine"
         ]
       }
     ],
@@ -483,40 +583,60 @@
       "focal_tall_y": 0.48
     },
     "search_tokens": [
+      "000",
+      "490",
+      "700",
       "airspace",
       "although",
+      "analyse",
       "berlin",
       "both",
       "chancellor",
       "characterized",
+      "claim",
       "coincided",
       "commitment",
       "condemned",
+      "corroborated",
       "damage",
+      "data",
+      "death",
       "described",
       "dhabi",
+      "died",
+      "dismissed",
       "donald",
       "drone",
       "emphasized",
       "european",
+      "exceed",
       "exercise",
       "expressed",
+      "figure",
       "friedrich",
       "german",
       "grave",
+      "hacker",
+      "high",
       "hope",
+      "however",
       "importance",
       "incident",
       "including",
+      "independent",
+      "indicate",
       "injurie",
       "intentional",
       "involving",
+      "kremlin",
       "labeled",
       "land",
       "landed",
       "landing",
       "leader",
+      "leaked",
       "likely",
+      "media",
       "meeting",
       "merz",
       "military",
@@ -525,6 +645,7 @@
       "moscow",
       "nato",
       "negotiation",
+      "ongoing",
       "path",
       "pave",
       "peace",
@@ -533,6 +654,7 @@
       "postwar",
       "potential",
       "prime",
+      "pro-ukraine",
       "provocation",
       "putin",
       "regarding",
@@ -543,20 +665,27 @@
       "russia",
       "seeks",
       "skepticism",
+      "soldier",
+      "some",
+      "suggest",
       "supporting",
       "suspected",
       "talks",
       "territory",
+      "those",
       "through",
+      "toll",
       "troop",
       "truce",
       "tusk",
       "ukraine",
       "upcoming",
+      "variou",
       "violation",
       "vladimir",
       "voiced",
       "volodymyr",
+      "war",
       "which",
       "zelenskyy"
     ],
@@ -566,12 +695,16 @@
       "airspace_violation",
       "berlin",
       "chancellor_friedrich",
+      "data_suggest",
       "dhabi_talks",
       "donald_tusk",
       "eu",
+      "exceed_leaked",
       "exercise_poland",
       "friedrich_merz",
       "german_chancellor",
+      "leaked_data",
+      "leaked_russia",
       "meeting_through",
       "military_exercise",
       "missile_land",
@@ -581,37 +714,41 @@
       "nato_exercise",
       "poland",
       "poland_respond",
+      "pro-ukraine",
       "putin",
       "putin_meeting",
       "russia",
       "russia._merz",
       "russia_airspace",
+      "russia_military",
       "russia_missile",
       "seeks_path",
+      "suggest_russia",
       "talks_ukraine",
       "through_abu",
       "ukraine",
       "ukraine.",
       "ukraine._although",
       "ukraine._nato",
+      "ukraine_exceed",
       "vladimir_putin.",
       "volodymyr_zelenskyy",
       "zelenskyy_seeks"
     ],
-    "search_text": "abu abu_dhabi airspace airspace_violation although berlin both chancellor chancellor_friedrich characterized coincided commitment condemned damage described dhabi dhabi_talks donald donald_tusk drone emphasized eu european exercise exercise_poland expressed friedrich friedrich_merz german german_chancellor grave hope importance incident including injurie intentional involving labeled land landed landing leader likely meeting meeting_through merz military military_exercise missile missile_land mission moscow moscow. moscow._russia nato nato_exercise negotiation path pave peace poland poland_respond polish postwar potential prime provocation putin putin_meeting regarding related reported reportedly respond russia russia._merz russia_airspace russia_missile seeks seeks_path skepticism supporting suspected talks talks_ukraine territory through through_abu troop truce tusk ukraine ukraine. ukraine._although ukraine._nato upcoming violation vladimir vladimir_putin. voiced volodymyr volodymyr_zelenskyy which zelenskyy zelenskyy_seeks"
+    "search_text": "000 490 700 abu abu_dhabi airspace airspace_violation although analyse berlin both chancellor chancellor_friedrich characterized claim coincided commitment condemned corroborated damage data data_suggest death described dhabi dhabi_talks died dismissed donald donald_tusk drone emphasized eu european exceed exceed_leaked exercise exercise_poland expressed figure friedrich friedrich_merz german german_chancellor grave hacker high hope however importance incident including independent indicate injurie intentional involving kremlin labeled land landed landing leader leaked leaked_data leaked_russia likely media meeting meeting_through merz military military_exercise missile missile_land mission moscow moscow. moscow._russia nato nato_exercise negotiation ongoing path pave peace poland poland_respond polish postwar potential prime pro-ukraine provocation putin putin_meeting regarding related reported reportedly respond russia russia._merz russia_airspace russia_military russia_missile seeks seeks_path skepticism soldier some suggest suggest_russia supporting suspected talks talks_ukraine territory those through through_abu toll troop truce tusk ukraine ukraine. ukraine._although ukraine._nato ukraine_exceed upcoming variou violation vladimir vladimir_putin. voiced volodymyr volodymyr_zelenskyy war which zelenskyy zelenskyy_seeks"
   },
   "related_events": [
     {
       "event_id": "event_trump-issues-threats-against-iranian-infrast_ab8030eed4",
       "title": "Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions",
-      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Rescue Operation Saves Woman Trapped for 22 Hours in Ukraine After Russian Strike.",
+      "summary": "Muninn first tracked this thread on 2026-07-22: Trump Issues Threats Against Iranian Infrastructure Amid Strait of Hormuz Tensions. The latest development is Russian Strikes Kill Seven in Ukraine; Kyiv Targets Refineries.",
       "activity_status": "active",
       "stage": "timeline",
       "stage_label": "Timeline",
       "first_seen_at": "2026-07-22",
-      "last_seen_at": "2026-11-24",
-      "development_count": 131,
-      "latest_title": "Rescue Operation Saves Woman Trapped for 22 Hours in Ukraine After Russian Strike",
+      "last_seen_at": "2026-11-25",
+      "development_count": 132,
+      "latest_title": "Russian Strikes Kill Seven in Ukraine; Kyiv Targets Refineries",
       "topic_label": "Iran War",
       "hero_image": {
         "url": "/Current_news/generated/events/event_trump-issues-threats-against-iranian-infrast_ab8030eed4.jpg",
