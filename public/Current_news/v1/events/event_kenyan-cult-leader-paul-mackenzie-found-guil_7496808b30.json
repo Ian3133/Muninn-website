@@ -15,7 +15,7 @@
     "summary": "A Kenyan court has found Paul Mackenzie, a self-proclaimed preacher, and his associates responsible for the murders of 191 people, primarily children, linked to a starvation cult. The verdict was delivered on Monday, with Mackenzie having denied the charges, claiming he did not order the victims to starve in order to 'meet Jesus.'",
     "status": "active",
     "first_seen_at": "2026-10-19",
-    "last_seen_at": "2026-11-08",
+    "last_seen_at": "2026-11-27",
     "timeline": [
       {
         "development_id": "story_ad40c298fb892d65",
@@ -292,47 +292,131 @@
           "story_b19186e99b8dd958"
         ],
         "revision_count": 2
+      },
+      {
+        "development_id": "story_a359ec95902922b1",
+        "daily_story_id": "story_a359ec95902922b1",
+        "date": "2026-11-27",
+        "occurred_at": null,
+        "date_basis": "first_reported_by_muninn",
+        "title": "Kenyan cult leader convicted of manslaughter for 123 deaths, adding to previous murder sentences",
+        "summary": "Paul Mackenzie, the leader of a starvation cult in Kenya, has been found guilty of manslaughter for the deaths of 123 followers. This conviction follows his earlier sentencing to 200 years in prison for the murder of nearly 200 children. Mackenzie has also faced charges related to radicalization and organized criminal activity.",
+        "topic_label": "Kenyan Cult Convictions",
+        "development_type": "development",
+        "key_facts": [
+          "Paul Mackenzie convicted of manslaughter for 123 deaths.",
+          "Previously sentenced to 200 years for the murder of nearly 200 children.",
+          "Also convicted of radicalization and organized criminal activity."
+        ],
+        "source_count": 3,
+        "sources": [
+          "BBC",
+          "Channel NewsAsia",
+          "Sky News"
+        ],
+        "source_urls": [
+          "https://www.channelnewsasia.com/world/kenya-paul-mackenzie-cult-leader-guilty-manslaughter-6588436",
+          "https://www.bbc.co.uk/news/articles/cmy49de4xx1zo?at_medium=RSS&at_campaign=rss",
+          "https://news.sky.com/story/kenyan-cult-leader-in-jail-for-191-murders-convicted-over-another-123-deaths-13617227"
+        ],
+        "source_details": [
+          {
+            "title": "Kenyan starvation cult leader guilty of manslaughter for 123 deaths in latest conviction",
+            "source": "Channel NewsAsia",
+            "link": "https://www.channelnewsasia.com/world/kenya-paul-mackenzie-cult-leader-guilty-manslaughter-6588436",
+            "source_bias": "center"
+          },
+          {
+            "title": "Kenyan doomsday cult leader convicted over further 123 deaths",
+            "source": "BBC",
+            "link": "https://www.bbc.co.uk/news/articles/cmy49de4xx1zo?at_medium=RSS&at_campaign=rss",
+            "source_bias": "center"
+          },
+          {
+            "title": "Kenyan cult leader in jail for 191 murders convicted over another 123 deaths",
+            "source": "Sky News",
+            "link": "https://news.sky.com/story/kenyan-cult-leader-in-jail-for-191-murders-convicted-over-another-123-deaths-13617227",
+            "source_bias": "center"
+          }
+        ],
+        "confidence": 0.457,
+        "match_evidence": {
+          "score": 0.457,
+          "matched_development_id": "story_4b8e3abb62de98ed",
+          "shared_tokens": [
+            "200",
+            "also",
+            "children",
+            "convicted",
+            "cult",
+            "follower",
+            "found",
+            "kenyan",
+            "leader",
+            "mackenzie",
+            "murder",
+            "paul",
+            "prison",
+            "sentenced",
+            "years"
+          ],
+          "shared_entities": [
+            "kenyan_cult",
+            "paul_mackenzie"
+          ],
+          "source_url_match": false,
+          "method": "deterministic_event_match_v2",
+          "threshold": 0.38
+        },
+        "verification": {
+          "provider": "deterministic_source_grounded_event_match_v1",
+          "date_basis": "The exact occurrence time was not extracted; date is when Muninn first reported this development."
+        },
+        "first_seen_at": "2026-11-27",
+        "last_seen_at": "2026-11-27",
+        "integrity_status": "trusted"
       }
     ],
     "integrity": {
-      "public_development_count": 3,
+      "public_development_count": 4,
       "questionable_development_count": 0,
       "review_required": false
     },
-    "latest_title": "Kenyan Cult Leader Sentenced to 200 Years for Murdering 191 People",
-    "latest_summary": "Paul Mackenzie, the leader of a Kenyan doomsday sect, has been sentenced to 200 years in prison for the murders of 190 children and one adult. The court found that he incited his followers to starve themselves and their families in a bid to 'meet Jesus.' Mackenzie and 28 accomplices were convicted for their roles in this tragic incident.",
+    "latest_title": "Kenyan cult leader convicted of manslaughter for 123 deaths, adding to previous murder sentences",
+    "latest_summary": "Paul Mackenzie, the leader of a starvation cult in Kenya, has been found guilty of manslaughter for the deaths of 123 followers. This conviction follows his earlier sentencing to 200 years in prison for the murder of nearly 200 children. Mackenzie has also faced charges related to radicalization and organized criminal activity.",
     "presentation": {
       "has_context": true,
-      "has_full_timeline": false,
-      "stage": "developing_event",
-      "stage_label": "Developing event",
+      "has_full_timeline": true,
+      "stage": "timeline",
+      "stage_label": "Timeline",
       "base_title": "Kenyan Cult Leader Paul Mackenzie Found Guilty of 191 Murders",
-      "display_title": "Kenyan Cult Leader Paul Mackenzie Found Guilty of 191 Murders",
+      "display_title": "Kenyan Cult Leader Paul Mackenzie Found Guilty of 191 Murders Timeline",
       "milestone_development_ids": [
         "story_ad40c298fb892d65",
         "story_f7f8f73f9a80b9dc",
-        "story_4b8e3abb62de98ed"
+        "story_4b8e3abb62de98ed",
+        "story_a359ec95902922b1"
       ],
       "summary_available": true,
       "summary_label": "Read the story so far",
-      "summary_updated_at": "2026-11-06",
-      "development_count": 3,
-      "coverage_packet_count": 5,
-      "date_count": 2,
-      "source_count": 9,
-      "independent_source_count": 7,
+      "summary_updated_at": "2026-11-27",
+      "development_count": 4,
+      "coverage_packet_count": 6,
+      "date_count": 3,
+      "source_count": 12,
+      "independent_source_count": 9,
       "first_date": "2026-10-19",
-      "latest_date": "2026-11-06",
-      "latest_update_title": "Kenyan Cult Leader Sentenced to 200 Years for Murdering 191 People",
-      "coverage_score": 0.63,
-      "recency_score": 0.259,
-      "rank_score": 0.415,
-      "context_summary": "Muninn first tracked this thread on 2026-10-19: Kenya cult leader found guilty of 191 murders, primarily of children. The latest development is Kenyan Cult Leader Sentenced to 200 Years for Murdering 191 People.",
-      "cta_label": ""
+      "latest_date": "2026-11-27",
+      "latest_update_title": "Kenyan cult leader convicted of manslaughter for 123 deaths, adding to previous murder sentences",
+      "coverage_score": 0.803,
+      "recency_score": 1.0,
+      "rank_score": 0.917,
+      "context_summary": "Muninn first tracked this thread on 2026-10-19: Kenya cult leader found guilty of 191 murders, primarily of children. The latest development is Kenyan cult leader convicted of manslaughter for 123 deaths, adding to previous murder sentences.",
+      "cta_label": "Explore 4 developments"
     },
     "event_summary": {
       "available": true,
-      "summary": "Paul Mackenzie, a self-proclaimed pastor, has been found guilty of 191 murder charges, with the majority of the victims being children. A later development was Kenyan Cult Leader Paul Mackenzie Found Guilty of 191 Murders. Most recently, paul Mackenzie, the leader of a Kenyan doomsday sect, has been sentenced to 200 years in prison for the murders of 190 children and one adult.",
+      "summary": "Paul Mackenzie, a self-proclaimed pastor, has been found guilty of 191 murder charges, with the majority of the victims being children. A later development was Kenyan Cult Leader Sentenced to 200 Years for Murdering 191 People. Most recently, paul Mackenzie, the leader of a starvation cult in Kenya, has been found guilty of manslaughter for the deaths of 123 followers.",
       "key_developments": [
         {
           "development_id": "story_ad40c298fb892d65",
@@ -348,6 +432,11 @@
           "development_id": "story_4b8e3abb62de98ed",
           "date": "2026-11-06",
           "title": "Kenyan Cult Leader Sentenced to 200 Years for Murdering 191 People"
+        },
+        {
+          "development_id": "story_a359ec95902922b1",
+          "date": "2026-11-27",
+          "title": "Kenyan cult leader convicted of manslaughter for 123 deaths, adding to previous murder sentences"
         }
       ],
       "sources": [
@@ -404,12 +493,30 @@
           "source": "BBC",
           "link": "https://www.bbc.co.uk/news/articles/cm5yne5984l0o?at_medium=RSS&at_campaign=rss",
           "source_bias": "center"
+        },
+        {
+          "title": "Kenyan starvation cult leader guilty of manslaughter for 123 deaths in latest conviction",
+          "source": "Channel NewsAsia",
+          "link": "https://www.channelnewsasia.com/world/kenya-paul-mackenzie-cult-leader-guilty-manslaughter-6588436",
+          "source_bias": "center"
+        },
+        {
+          "title": "Kenyan doomsday cult leader convicted over further 123 deaths",
+          "source": "BBC",
+          "link": "https://www.bbc.co.uk/news/articles/cmy49de4xx1zo?at_medium=RSS&at_campaign=rss",
+          "source_bias": "center"
+        },
+        {
+          "title": "Kenyan cult leader in jail for 191 murders convicted over another 123 deaths",
+          "source": "Sky News",
+          "link": "https://news.sky.com/story/kenyan-cult-leader-in-jail-for-191-murders-convicted-over-another-123-deaths-13617227",
+          "source_bias": "center"
         }
       ],
-      "updated_at": "2026-11-06",
+      "updated_at": "2026-11-27",
       "provenance": "source_grounded_event_memory"
     },
-    "event_stage": "developing_event",
+    "event_stage": "timeline",
     "related_events": [],
     "hero_image": {
       "url": "/Current_news/generated/events/event_kenyan-cult-leader-paul-mackenzie-found-guil_7496808b30.jpg",
@@ -436,26 +543,35 @@
       "method": "deterministic_cross_day_reconciliation_v1"
     },
     "search_tokens": [
+      "123",
       "190",
       "191",
       "200",
       "accomplice",
+      "activity",
+      "adding",
       "adult",
       "allegedly",
+      "also",
       "associate",
       "belief",
       "charge",
       "children",
       "claiming",
       "convicted",
+      "conviction",
       "court",
+      "criminal",
       "cult",
       "death",
       "delivered",
       "denied",
       "doomsday",
+      "earlier",
       "encouraged",
+      "faced",
       "familie",
+      "follow",
       "follower",
       "found",
       "guilty",
@@ -469,22 +585,30 @@
       "linked",
       "mackenzie",
       "majority",
+      "manslaughter",
       "meet",
       "monday",
       "murder",
       "murdering",
+      "nearly",
       "order",
+      "organized",
       "part",
       "pastor",
       "paul",
       "preacher",
+      "previou",
       "primarily",
       "prison",
+      "radicalization",
+      "related",
       "responsible",
       "roles",
       "sect",
       "self-proclaimed",
+      "sentence",
       "sentenced",
+      "sentencing",
       "starvation",
       "starve",
       "them",
@@ -499,12 +623,117 @@
       "cult_leader",
       "jesus._kenyan",
       "jesus._mackenzie",
+      "kenya",
       "kenyan_cult",
       "leader_paul",
       "leader_sentenced",
       "paul_mackenzie"
     ],
-    "search_text": "190 191 200 accomplice adult allegedly associate belief charge children claiming convicted court cult cult_leader death delivered denied doomsday encouraged familie follower found guilty incident incited jesus jesus._kenyan jesus._mackenzie kenya kenyan kenyan_cult lead leader leader_paul leader_sentenced linked mackenzie majority meet monday murder murdering order part pastor paul paul_mackenzie preacher primarily prison responsible roles sect self-proclaimed sentenced starvation starve them themselve tragic verdict victim would years"
+    "search_text": "123 190 191 200 accomplice activity adding adult allegedly also associate belief charge children claiming convicted conviction court criminal cult cult_leader death delivered denied doomsday earlier encouraged faced familie follow follower found guilty incident incited jesus jesus._kenyan jesus._mackenzie kenya kenyan kenyan_cult lead leader leader_paul leader_sentenced linked mackenzie majority manslaughter meet monday murder murdering nearly order organized part pastor paul paul_mackenzie preacher previou primarily prison radicalization related responsible roles sect self-proclaimed sentence sentenced sentencing starvation starve them themselve tragic verdict victim would years",
+    "event_overview": {
+      "available": true,
+      "title": "About Kenya Cult Case",
+      "subject": "Kenya Cult Case",
+      "summary": "The Kenya cult case, commonly called the Shakahola case, concerns deaths and alleged abuse involving followers of Paul Nthenge Mackenzie’s Good News International Ministries in and around Shakahola Forest in Kilifi County on Kenya’s coast. It has produced several separate criminal proceedings arising from the same broader investigation, including murder, manslaughter, terrorism-related and child-protection allegations.",
+      "facts": [
+        {
+          "label": "Location and period",
+          "value": "The murder case concerned deaths in Shakahola Forest, Kilifi County, between January 2021 and September 2023.",
+          "source_ids": [
+            "o1",
+            "o2"
+          ]
+        },
+        {
+          "label": "Organization",
+          "value": "Mackenzie led Good News International Ministries; Kenya’s Directorate of Criminal Investigations said the church was founded in 2010 and that the court found it operated as a cult.",
+          "source_ids": [
+            "o3"
+          ]
+        },
+        {
+          "label": "Discovery and investigation",
+          "value": "Authorities began uncovering mass graves in the Shakahola area in 2023; reporting based on the investigation has described more than 400 bodies being exhumed there.",
+          "source_ids": [
+            "o4",
+            "o5"
+          ]
+        },
+        {
+          "label": "Murder case",
+          "value": "On October 19, 2026, the Mombasa High Court convicted Mackenzie and 28 co-accused on 191 murder counts involving 190 children and one adult; he was later sentenced to a total of 200 years’ imprisonment, subject to legal challenge or appeal.",
+          "source_ids": [
+            "o3",
+            "o1"
+          ]
+        },
+        {
+          "label": "Separate proceedings",
+          "value": "The broader Shakahola investigation has involved distinct cases with different defendants, charges and alleged victim totals, including a 238-count manslaughter case against Mackenzie and 94 co-accused and terrorism-related proceedings.",
+          "source_ids": [
+            "o6",
+            "o7"
+          ]
+        }
+      ],
+      "scope_note": "The selected Muninn timeline covers major 2026 court outcomes involving Mackenzie, especially the murder sentence and a later manslaughter ruling, but does not encompass the full Shakahola investigation, all co-accused, survivor issues, or every related criminal case.",
+      "sources": [
+        {
+          "title": "Go",
+          "publisher": "Go",
+          "url": "https://www.kenyanews.go.ke/mackenzie-jailed-for-200-years-over-shakahola-massacre/",
+          "source_type": "reporting",
+          "id": "o1"
+        },
+        {
+          "title": "Citizen",
+          "publisher": "Citizen",
+          "url": "https://citizen.digital/article/court-finds-mackenzie-28-others-guilty-over-191-shakahola-deaths-n392346",
+          "source_type": "reporting",
+          "id": "o2"
+        },
+        {
+          "title": "Go",
+          "publisher": "Go",
+          "url": "https://www.dci.go.ke/index.php/dci-welcomes-conviction-paul-mackenzie-and-28-co-accused-shakahola-massacre",
+          "source_type": "reporting",
+          "id": "o3"
+        },
+        {
+          "title": "AP News",
+          "publisher": "AP News",
+          "url": "https://apnews.com/article/0f630098b6368e435099a4388e6d3227",
+          "source_type": "reporting",
+          "id": "o4"
+        },
+        {
+          "title": "Go",
+          "publisher": "Go",
+          "url": "https://www.ombudsman.go.ke/sites/default/files/2024-11/Ombudsman%20Newsletter%20%20July%20-%20September%202024%20%281%29.pdf",
+          "source_type": "reporting",
+          "id": "o5"
+        },
+        {
+          "title": "Citizen",
+          "publisher": "Citizen",
+          "url": "https://citizen.digital/article/shakahola-massacre-mackenzie-94-others-charged-with-238-counts-of-manslaughter-n335365",
+          "source_type": "reporting",
+          "id": "o6"
+        },
+        {
+          "title": "Co",
+          "publisher": "Co",
+          "url": "https://www.the-star.co.ke/news/big-read/2024-01-18-mackenzie-94-co-accused-charged-with-terror-related-offences",
+          "source_type": "reporting",
+          "id": "o7"
+        }
+      ],
+      "publisher_count": 4,
+      "generated_at": "2026-11-27T21:52:45.862346+00:00",
+      "expires_at": "2026-12-04T21:52:45.862346+00:00",
+      "model": "gpt-5.6-terra",
+      "provenance": "openai_web_search_source_grounded_event_overview_v1"
+    }
   },
   "related_events": []
 }
